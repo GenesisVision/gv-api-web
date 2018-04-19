@@ -1,5 +1,5 @@
 swagger-codegen generate -i <url> -l javascript -c config.json -t ./template/es6/
-npm run install
+
 npm run build
 
 # core_api
