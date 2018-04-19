@@ -6,6 +6,7 @@
   "main": "distribution/index.js",
   "scripts": {
     "build": "babel src --out-dir distribution",
+    "precommit": "npm install && npm run build",
     "test": "mocha --compilers js:babel-core/register --recursive"
   },
   "browser": {
