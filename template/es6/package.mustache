@@ -1,0 +1,30 @@
+{
+  "name": "gv-api-web",
+  "version": "0.0.1",
+  "description": "genesis.vision-api-web",
+  "license": "Unlicense",
+  "main": "distribution/index.js",
+  "scripts": {
+    "build": "babel src --out-dir distribution",
+    "prepublish": "run build",
+    "test": "mocha --compilers js:babel-core/register --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "expect.js": "~0.3.1",
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3"
+  }
+}
