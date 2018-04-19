@@ -5,7 +5,7 @@
   "license": "Unlicense",
   "main": "distribution/index.js",
   "scripts": {
-    "build": "npm install && babel src --out-dir distribution",
+    "build": "babel src --out-dir distribution",
     "prepublishOnly": "run build",
     "test": "mocha --compilers js:babel-core/register --recursive"
   },
