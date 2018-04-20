@@ -72,23 +72,15 @@ export default class ManagerApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiManagerAccountNewInvestmentRequestPost operation.
-     * @callback module:api/ManagerApi~apiManagerAccountNewInvestmentRequestPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create new investment request
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewInvestmentRequest} opts.request 
-     * @param {module:api/ManagerApi~apiManagerAccountNewInvestmentRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAccountNewInvestmentRequestPost(authorization, opts, callback) {
+    apiManagerAccountNewInvestmentRequestPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['request'];
 
@@ -116,27 +108,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/account/newInvestmentRequest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faConfirmPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faConfirmPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create new investment request
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewInvestmentRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiManagerAccountNewInvestmentRequestPost(authorization, opts) {
+      return this.apiManagerAccountNewInvestmentRequestPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA confirm
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuth2faConfirmPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RecoveryCodesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
-    apiManagerAuth2faConfirmPost(authorization, opts, callback) {
+    apiManagerAuth2faConfirmPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -164,27 +162,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa/confirm', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faCreatePost operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faCreatePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TwoFactorAuthenticator} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * 2FA confirm
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
+    apiManagerAuth2faConfirmPost(authorization, opts) {
+      return this.apiManagerAuth2faConfirmPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA create
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuth2faCreatePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TwoFactorAuthenticator}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
      */
-    apiManagerAuth2faCreatePost(authorization, opts, callback) {
+    apiManagerAuth2faCreatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -212,26 +216,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa/create', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faDisablePost operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faDisablePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * 2FA create
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/PasswordModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
      */
+    apiManagerAuth2faCreatePost(authorization, opts) {
+      return this.apiManagerAuth2faCreatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA disable
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuth2faDisablePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerAuth2faDisablePost(authorization, opts, callback) {
+    apiManagerAuth2faDisablePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -259,25 +270,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa/disable', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faGet operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TwoFactorStatus} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * 2FA disable
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/PasswordModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerAuth2faDisablePost(authorization, opts) {
+      return this.apiManagerAuth2faDisablePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA status
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerAuth2faGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TwoFactorStatus}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorStatus} and HTTP response
      */
-    apiManagerAuth2faGet(authorization, callback) {
+    apiManagerAuth2faGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -304,27 +321,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faRecoveryCodesNewPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faRecoveryCodesNewPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * 2FA status
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorStatus}
      */
+    apiManagerAuth2faGet(authorization) {
+      return this.apiManagerAuth2faGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA generate new recovery codes
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuth2faRecoveryCodesNewPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RecoveryCodesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
-    apiManagerAuth2faRecoveryCodesNewPost(authorization, opts, callback) {
+    apiManagerAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -352,27 +373,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa/recoveryCodes/new', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuth2faRecoveryCodesPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuth2faRecoveryCodesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * 2FA generate new recovery codes
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/PasswordModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
+    apiManagerAuth2faRecoveryCodesNewPost(authorization, opts) {
+      return this.apiManagerAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * 2FA recovery codes
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuth2faRecoveryCodesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RecoveryCodesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
-    apiManagerAuth2faRecoveryCodesPost(authorization, opts, callback) {
+    apiManagerAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -400,26 +427,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/2fa/recoveryCodes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthChangePasswordPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthChangePasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * 2FA recovery codes
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/PasswordModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
+    apiManagerAuth2faRecoveryCodesPost(authorization, opts) {
+      return this.apiManagerAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Change password
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuthChangePasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerAuthChangePasswordPost(authorization, opts, callback) {
+    apiManagerAuthChangePasswordPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -447,27 +481,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/changePassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthConfirmEmailPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthConfirmEmailPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Change password
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerAuthChangePasswordPost(authorization, opts) {
+      return this.apiManagerAuthChangePasswordPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Confirm email after registration
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
-     * @param {module:api/ManagerApi~apiManagerAuthConfirmEmailPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAuthConfirmEmailPost(opts, callback) {
+    apiManagerAuthConfirmEmailPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -491,25 +531,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/confirmEmail', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthForgotPasswordPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthForgotPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Confirm email after registration
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.userId 
+     * @param {String} opts.code 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiManagerAuthConfirmEmailPost(opts) {
+      return this.apiManagerAuthConfirmEmailPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Forgot password manager
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuthForgotPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerAuthForgotPasswordPost(opts, callback) {
+    apiManagerAuthForgotPasswordPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -531,26 +578,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/forgotPassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthResetPasswordPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthResetPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Forgot password manager
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerAuthForgotPasswordPost(opts) {
+      return this.apiManagerAuthForgotPasswordPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuthResetPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAuthResetPasswordPost(opts, callback) {
+    apiManagerAuthResetPasswordPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -572,26 +624,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/resetPassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthSignInPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthSignInPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Reset password
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiManagerAuthResetPasswordPost(opts) {
+      return this.apiManagerAuthResetPasswordPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuthSignInPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAuthSignInPost(opts, callback) {
+    apiManagerAuthSignInPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -613,25 +670,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/signIn', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthSignUpPost operation.
-     * @callback module:api/ManagerApi~apiManagerAuthSignUpPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Authorize
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LoginViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiManagerAuthSignInPost(opts) {
+      return this.apiManagerAuthSignInPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Register new manager
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerAuthSignUpPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerAuthSignUpPost(opts, callback) {
+    apiManagerAuthSignUpPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -653,25 +716,30 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/signUp', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerAuthUpdateTokenGet operation.
-     * @callback module:api/ManagerApi~apiManagerAuthUpdateTokenGetCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Register new manager
+     * @param {Object} opts Optional parameters
+     * @param {module:model/RegisterManagerViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerAuthSignUpPost(opts) {
+      return this.apiManagerAuthSignUpPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update auth token
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerAuthUpdateTokenGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAuthUpdateTokenGet(authorization, callback) {
+    apiManagerAuthUpdateTokenGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -698,26 +766,30 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/auth/updateToken', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerBrokersPost operation.
-     * @callback module:api/ManagerApi~apiManagerBrokersPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BrokersViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update auth token
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiManagerAuthUpdateTokenGet(authorization) {
+      return this.apiManagerAuthUpdateTokenGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all enabled trade servers
      * @param {Object} opts Optional parameters
      * @param {module:model/BrokersFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerBrokersPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BrokersViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokersViewModel} and HTTP response
      */
-    apiManagerBrokersPost(opts, callback) {
+    apiManagerBrokersPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -739,25 +811,30 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/brokers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerDashboardPendingProgramsGet operation.
-     * @callback module:api/ManagerApi~apiManagerDashboardPendingProgramsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ManagerInvestmentPrograms} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all enabled trade servers
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BrokersFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokersViewModel}
      */
+    apiManagerBrokersPost(opts) {
+      return this.apiManagerBrokersPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Dashboard pending programs
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerDashboardPendingProgramsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ManagerInvestmentPrograms}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerInvestmentPrograms} and HTTP response
      */
-    apiManagerDashboardPendingProgramsGet(authorization, callback) {
+    apiManagerDashboardPendingProgramsGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -784,27 +861,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/dashboard/pendingPrograms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerDashboardProgramsPost operation.
-     * @callback module:api/ManagerApi~apiManagerDashboardProgramsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ManagerInvestmentPrograms} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Dashboard pending programs
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerInvestmentPrograms}
      */
+    apiManagerDashboardPendingProgramsGet(authorization) {
+      return this.apiManagerDashboardPendingProgramsGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Dashboard programs
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerDashboardProgramsFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerDashboardProgramsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ManagerInvestmentPrograms}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerInvestmentPrograms} and HTTP response
      */
-    apiManagerDashboardProgramsPost(authorization, opts, callback) {
+    apiManagerDashboardProgramsPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -832,25 +913,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/dashboard/programs', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerDashboardStatisticGet operation.
-     * @callback module:api/ManagerApi~apiManagerDashboardStatisticGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ManagerDashboardStatistic} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Dashboard programs
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ManagerDashboardProgramsFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerInvestmentPrograms}
      */
+    apiManagerDashboardProgramsPost(authorization, opts) {
+      return this.apiManagerDashboardProgramsPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Dashboard statistic
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerDashboardStatisticGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ManagerDashboardStatistic}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboardStatistic} and HTTP response
      */
-    apiManagerDashboardStatisticGet(authorization, callback) {
+    apiManagerDashboardStatisticGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -877,25 +964,30 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/dashboard/statistic', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentCancelInvestmentRequestPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentCancelInvestmentRequestPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Dashboard statistic
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboardStatistic}
      */
+    apiManagerDashboardStatisticGet(authorization) {
+      return this.apiManagerDashboardStatisticGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Cancel investment request
      * @param {String} requestId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentCancelInvestmentRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentCancelInvestmentRequestPost(requestId, authorization, callback) {
+    apiManagerInvestmentCancelInvestmentRequestPostWithHttpInfo(requestId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'requestId' is set
@@ -928,25 +1020,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investment/cancelInvestmentRequest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentClosePost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentClosePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Cancel investment request
+     * @param {String} requestId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentCancelInvestmentRequestPost(requestId, authorization) {
+      return this.apiManagerInvestmentCancelInvestmentRequestPostWithHttpInfo(requestId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Close existing investment program
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentClosePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentClosePost(investmentProgramId, authorization, callback) {
+    apiManagerInvestmentClosePostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -979,26 +1077,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investment/close', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentInvestPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentInvestPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Close existing investment program
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentClosePost(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentClosePostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Manager deposit in his own investment program
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/Invest} opts.model 
-     * @param {module:api/ManagerApi~apiManagerInvestmentInvestPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentInvestPost(authorization, opts, callback) {
+    apiManagerInvestmentInvestPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -1026,26 +1130,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investment/invest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramBuyTokensGet operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramBuyTokensGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InvestmentProgramBuyToken} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Manager deposit in his own investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/Invest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentInvestPost(authorization, opts) {
+      return this.apiManagerInvestmentInvestPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get investment program buy token model
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramBuyTokensGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InvestmentProgramBuyToken}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramBuyToken} and HTTP response
      */
-    apiManagerInvestmentProgramBuyTokensGet(investmentProgramId, authorization, callback) {
+    apiManagerInvestmentProgramBuyTokensGetWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1078,26 +1188,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/buyTokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramEquityChartGet operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramEquityChartGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TradesChartViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get investment program buy token model
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramBuyToken}
      */
+    apiManagerInvestmentProgramBuyTokensGet(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentProgramBuyTokensGetWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get manager equity chart
      * @param {String} investmentProgramId 
      * @param {module:model/String} timeFrame 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramEquityChartGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TradesChartViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesChartViewModel} and HTTP response
      */
-    apiManagerInvestmentProgramEquityChartGet(investmentProgramId, timeFrame, callback) {
+    apiManagerInvestmentProgramEquityChartGetWithHttpInfo(investmentProgramId, timeFrame) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1130,27 +1245,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/equity/chart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramGet operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InvestmentProgramViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get manager equity chart
+     * @param {String} investmentProgramId 
+     * @param {module:model/String} timeFrame 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesChartViewModel}
      */
+    apiManagerInvestmentProgramEquityChartGet(investmentProgramId, timeFrame) {
+      return this.apiManagerInvestmentProgramEquityChartGetWithHttpInfo(investmentProgramId, timeFrame)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get investment program details by id
      * @param {String} investmentProgramId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InvestmentProgramViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramViewModel} and HTTP response
      */
-    apiManagerInvestmentProgramGet(investmentProgramId, opts, callback) {
+    apiManagerInvestmentProgramGetWithHttpInfo(investmentProgramId, opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -1179,25 +1299,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramPeriodClosePost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramPeriodClosePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get investment program details by id
+     * @param {String} investmentProgramId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramViewModel}
      */
+    apiManagerInvestmentProgramGet(investmentProgramId, opts) {
+      return this.apiManagerInvestmentProgramGetWithHttpInfo(investmentProgramId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Close current period
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramPeriodClosePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentProgramPeriodClosePost(investmentProgramId, authorization, callback) {
+    apiManagerInvestmentProgramPeriodClosePostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1230,27 +1357,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/period/close', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramRequestsPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramRequestsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InvestmentProgramRequests} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Close current period
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentProgramPeriodClosePost(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentProgramPeriodClosePostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get investment program&#39;s requests
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramRequestsFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramRequestsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InvestmentProgramRequests}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramRequests} and HTTP response
      */
-    apiManagerInvestmentProgramRequestsPost(authorization, opts, callback) {
+    apiManagerInvestmentProgramRequestsPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -1278,25 +1410,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/requests', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramTradesChartGet operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramTradesChartGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TradesChartViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get investment program&#39;s requests
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InvestmentProgramRequestsFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramRequests}
      */
+    apiManagerInvestmentProgramRequestsPost(authorization, opts) {
+      return this.apiManagerInvestmentProgramRequestsPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get manager trades chart
      * @param {String} investmentProgramId 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramTradesChartGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TradesChartViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesChartViewModel} and HTTP response
      */
-    apiManagerInvestmentProgramTradesChartGet(investmentProgramId, callback) {
+    apiManagerInvestmentProgramTradesChartGetWithHttpInfo(investmentProgramId) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1323,26 +1461,30 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/trades/chart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramTradesPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramTradesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TradesViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get manager trades chart
+     * @param {String} investmentProgramId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesChartViewModel}
      */
+    apiManagerInvestmentProgramTradesChartGet(investmentProgramId) {
+      return this.apiManagerInvestmentProgramTradesChartGetWithHttpInfo(investmentProgramId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get manager trade history
      * @param {Object} opts Optional parameters
      * @param {module:model/TradesFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramTradesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TradesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
      */
-    apiManagerInvestmentProgramTradesPost(opts, callback) {
+    apiManagerInvestmentProgramTradesPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -1364,26 +1506,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/trades', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramUpdatePost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramUpdatePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get manager trade history
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TradesFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
      */
+    apiManagerInvestmentProgramTradesPost(opts) {
+      return this.apiManagerInvestmentProgramTradesPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update investment program details
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramUpdate} opts.model 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramUpdatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentProgramUpdatePost(authorization, opts, callback) {
+    apiManagerInvestmentProgramUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -1411,25 +1559,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentProgram/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramsFavoritesAddPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramsFavoritesAddPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update investment program details
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InvestmentProgramUpdate} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentProgramUpdatePost(authorization, opts) {
+      return this.apiManagerInvestmentProgramUpdatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add to favorites
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramsFavoritesAddPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization, callback) {
+    apiManagerInvestmentProgramsFavoritesAddPostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1462,25 +1617,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentPrograms/favorites/add', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramsFavoritesRemovePost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramsFavoritesRemovePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add to favorites
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentProgramsFavoritesAddPostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Remove from favorites
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramsFavoritesRemovePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization, callback) {
+    apiManagerInvestmentProgramsFavoritesRemovePostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1513,27 +1674,32 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentPrograms/favorites/remove', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentProgramsPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentProgramsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InvestmentProgramsViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Remove from favorites
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentProgramsFavoritesRemovePostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get public investment program&#39;s list
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:model/InvestmentProgramsFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerInvestmentProgramsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InvestmentProgramsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramsViewModel} and HTTP response
      */
-    apiManagerInvestmentProgramsPost(opts, callback) {
+    apiManagerInvestmentProgramsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -1556,26 +1722,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investmentPrograms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerInvestmentWithdrawPost operation.
-     * @callback module:api/ManagerApi~apiManagerInvestmentWithdrawPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get public investment program&#39;s list
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/InvestmentProgramsFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramsViewModel}
      */
+    apiManagerInvestmentProgramsPost(opts) {
+      return this.apiManagerInvestmentProgramsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Manager withdrawal from his own investment program
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/Invest} opts.model 
-     * @param {module:api/ManagerApi~apiManagerInvestmentWithdrawPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerInvestmentWithdrawPost(authorization, opts, callback) {
+    apiManagerInvestmentWithdrawPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -1603,25 +1776,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/investment/withdraw', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerProfileFullGet operation.
-     * @callback module:api/ManagerApi~apiManagerProfileFullGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProfileFullViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Manager withdrawal from his own investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/Invest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerInvestmentWithdrawPost(authorization, opts) {
+      return this.apiManagerInvestmentWithdrawPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get full profile
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerProfileFullGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProfileFullViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
      */
-    apiManagerProfileFullGet(authorization, callback) {
+    apiManagerProfileFullGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1648,25 +1827,29 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/profile/full', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerProfilePublicGet operation.
-     * @callback module:api/ManagerApi~apiManagerProfilePublicGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProfilePublicViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get full profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
      */
+    apiManagerProfileFullGet(authorization) {
+      return this.apiManagerProfileFullGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get public profile
      * @param {String} userId 
-     * @param {module:api/ManagerApi~apiManagerProfilePublicGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProfilePublicViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
      */
-    apiManagerProfilePublicGet(userId, callback) {
+    apiManagerProfilePublicGetWithHttpInfo(userId) {
       let postBody = null;
 
       // verify the required parameter 'userId' is set
@@ -1693,26 +1876,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/profile/public', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerProfileUpdatePost operation.
-     * @callback module:api/ManagerApi~apiManagerProfileUpdatePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get public profile
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
      */
+    apiManagerProfilePublicGet(userId) {
+      return this.apiManagerProfilePublicGetWithHttpInfo(userId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update profile
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
-     * @param {module:api/ManagerApi~apiManagerProfileUpdatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerProfileUpdatePost(authorization, opts, callback) {
+    apiManagerProfileUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -1740,25 +1928,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/profile/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletAddressGet operation.
-     * @callback module:api/ManagerApi~apiManagerWalletAddressGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WalletAddressViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiManagerProfileUpdatePost(authorization, opts) {
+      return this.apiManagerProfileUpdatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get eth address for GVT depositing
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerWalletAddressGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WalletAddressViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletAddressViewModel} and HTTP response
      */
-    apiManagerWalletAddressGet(authorization, callback) {
+    apiManagerWalletAddressGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1785,25 +1979,29 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet/address', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletGet operation.
-     * @callback module:api/ManagerApi~apiManagerWalletGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WalletsViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get eth address for GVT depositing
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletAddressViewModel}
      */
+    apiManagerWalletAddressGet(authorization) {
+      return this.apiManagerWalletAddressGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get user wallets
      * @param {String} authorization JWT access token
-     * @param {module:api/ManagerApi~apiManagerWalletGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WalletsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsViewModel} and HTTP response
      */
-    apiManagerWalletGet(authorization, callback) {
+    apiManagerWalletGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1830,27 +2028,31 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletStatisticPost operation.
-     * @callback module:api/ManagerApi~apiManagerWalletStatisticPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WalletStatistic} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get user wallets
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsViewModel}
      */
+    apiManagerWalletGet(authorization) {
+      return this.apiManagerWalletGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get user wallet statistic
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/WalletStatisticFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerWalletStatisticPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WalletStatistic}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletStatistic} and HTTP response
      */
-    apiManagerWalletStatisticPost(authorization, opts, callback) {
+    apiManagerWalletStatisticPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -1878,27 +2080,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet/statistic', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletTransactionsInvestmentProgramsListGet operation.
-     * @callback module:api/ManagerApi~apiManagerWalletTransactionsInvestmentProgramsListGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WalletInvestmentPrograms} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get user wallet statistic
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WalletStatisticFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletStatistic}
      */
+    apiManagerWalletStatisticPost(authorization, opts) {
+      return this.apiManagerWalletStatisticPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get user investment programs with tx
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.mask 
-     * @param {module:api/ManagerApi~apiManagerWalletTransactionsInvestmentProgramsListGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WalletInvestmentPrograms}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletInvestmentPrograms} and HTTP response
      */
-    apiManagerWalletTransactionsInvestmentProgramsListGet(authorization, opts, callback) {
+    apiManagerWalletTransactionsInvestmentProgramsListGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -1927,27 +2135,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet/transactions/investmentProgramsList', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletTransactionsPost operation.
-     * @callback module:api/ManagerApi~apiManagerWalletTransactionsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WalletTransactionsViewModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get user investment programs with tx
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.mask 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletInvestmentPrograms}
      */
+    apiManagerWalletTransactionsInvestmentProgramsListGet(authorization, opts) {
+      return this.apiManagerWalletTransactionsInvestmentProgramsListGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get user wallet transactions
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TransactionsFilter} opts.filter 
-     * @param {module:api/ManagerApi~apiManagerWalletTransactionsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WalletTransactionsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletTransactionsViewModel} and HTTP response
      */
-    apiManagerWalletTransactionsPost(authorization, opts, callback) {
+    apiManagerWalletTransactionsPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['filter'];
 
@@ -1975,26 +2189,33 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet/transactions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiManagerWalletWithdrawRequestPost operation.
-     * @callback module:api/ManagerApi~apiManagerWalletWithdrawRequestPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get user wallet transactions
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TransactionsFilter} opts.filter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletTransactionsViewModel}
      */
+    apiManagerWalletTransactionsPost(authorization, opts) {
+      return this.apiManagerWalletTransactionsPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Withdraw request
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/WalletWithdrawRequestModel} opts.request 
-     * @param {module:api/ManagerApi~apiManagerWalletWithdrawRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiManagerWalletWithdrawRequestPost(authorization, opts, callback) {
+    apiManagerWalletWithdrawRequestPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['request'];
 
@@ -2022,8 +2243,22 @@ export default class ManagerApi {
       return this.apiClient.callApi(
         '/api/manager/wallet/withdrawRequest', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Withdraw request
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WalletWithdrawRequestModel} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiManagerWalletWithdrawRequestPost(authorization, opts) {
+      return this.apiManagerWalletWithdrawRequestPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -23,14 +23,12 @@ let apiInstance = new CoreApi.FilesApi();
 
 let id = "id_example"; // String | 
 
-
-apiInstance.apiFilesByIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiFilesByIdGet(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -66,14 +64,12 @@ let apiInstance = new CoreApi.FilesApi();
 
 let id = "id_example"; // String | 
 
-
-apiInstance.apiFilesGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiFilesGet(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -109,14 +105,12 @@ let apiInstance = new CoreApi.FilesApi();
 
 let uploadedFile = "/path/to/file.txt"; // File | Upload File
 
-
-apiInstance.apiFilesUploadPost(uploadedFile, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiFilesUploadPost(uploadedFile).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -58,25 +58,16 @@ var RateApi = function () {
   }
 
   /**
-   * Callback function to receive the result of the apiRatePost operation.
-   * @callback module:api/RateApi~apiRatePostCallback
-   * @param {String} error Error message, if any.
-   * @param {module:model/RateViewModel} data The data returned by the service call.
-   * @param {String} response The complete HTTP response.
-   */
-
-  /**
    * Get rate
    * @param {Object} opts Optional parameters
    * @param {module:model/RequestRate} opts.model 
-   * @param {module:api/RateApi~apiRatePostCallback} callback The callback function, accepting three arguments: error, data, response
-   * data is of type: {@link module:model/RateViewModel}
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
    */
 
 
   _createClass(RateApi, [{
-    key: 'apiRatePost',
-    value: function apiRatePost(opts, callback) {
+    key: 'apiRatePostWithHttpInfo',
+    value: function apiRatePostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -90,7 +81,22 @@ var RateApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _RateViewModel2.default;
 
-      return this.apiClient.callApi('/api/rate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
+      return this.apiClient.callApi('/api/rate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get rate
+     * @param {Object} opts Optional parameters
+     * @param {module:model/RequestRate} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
+     */
+
+  }, {
+    key: 'apiRatePost',
+    value: function apiRatePost(opts) {
+      return this.apiRatePostWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
     }
   }]);
 

@@ -22,14 +22,12 @@ let apiInstance = new CoreApi.RateApi();
 let opts = { 
   'model': new CoreApi.RequestRate() // RequestRate | 
 };
-
-apiInstance.apiRatePost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiRatePost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

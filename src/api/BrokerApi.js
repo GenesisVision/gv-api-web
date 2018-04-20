@@ -45,23 +45,15 @@ export default class BrokerApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiBrokerAccountCreatePost operation.
-     * @callback module:api/BrokerApi~apiBrokerAccountCreatePostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create manager
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewManager} opts.request 
-     * @param {module:api/BrokerApi~apiBrokerAccountCreatePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerAccountCreatePost(authorization, opts, callback) {
+    apiBrokerAccountCreatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['request'];
 
@@ -89,26 +81,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/account/create', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerAuthChangePasswordPost operation.
-     * @callback module:api/BrokerApi~apiBrokerAuthChangePasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create manager
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewManager} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiBrokerAccountCreatePost(authorization, opts) {
+      return this.apiBrokerAccountCreatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Change password
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @param {module:api/BrokerApi~apiBrokerAuthChangePasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerAuthChangePasswordPost(authorization, opts, callback) {
+    apiBrokerAuthChangePasswordPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -136,27 +135,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/auth/changePassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerAuthConfirmEmailPost operation.
-     * @callback module:api/BrokerApi~apiBrokerAuthConfirmEmailPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Change password
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerAuthChangePasswordPost(authorization, opts) {
+      return this.apiBrokerAuthChangePasswordPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Confirm email after registration
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
-     * @param {module:api/BrokerApi~apiBrokerAuthConfirmEmailPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerAuthConfirmEmailPost(opts, callback) {
+    apiBrokerAuthConfirmEmailPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -180,26 +185,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/auth/confirmEmail', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerAuthSignInPost operation.
-     * @callback module:api/BrokerApi~apiBrokerAuthSignInPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Confirm email after registration
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.userId 
+     * @param {String} opts.code 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiBrokerAuthConfirmEmailPost(opts) {
+      return this.apiBrokerAuthConfirmEmailPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
-     * @param {module:api/BrokerApi~apiBrokerAuthSignInPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerAuthSignInPost(opts, callback) {
+    apiBrokerAuthSignInPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -221,25 +232,30 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/auth/signIn', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerAuthUpdateTokenGet operation.
-     * @callback module:api/BrokerApi~apiBrokerAuthUpdateTokenGetCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Authorize
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LoginViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiBrokerAuthSignInPost(opts) {
+      return this.apiBrokerAuthSignInPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update auth token
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerAuthUpdateTokenGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerAuthUpdateTokenGet(authorization, callback) {
+    apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -266,26 +282,30 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/auth/updateToken', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerInitDataGet operation.
-     * @callback module:api/BrokerApi~apiBrokerInitDataGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BrokerInitData} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update auth token
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiBrokerAuthUpdateTokenGet(authorization) {
+      return this.apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get broker initial data
      * @param {String} brokerTradeServerId 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerInitDataGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BrokerInitData}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokerInitData} and HTTP response
      */
-    apiBrokerInitDataGet(brokerTradeServerId, authorization, callback) {
+    apiBrokerInitDataGetWithHttpInfo(brokerTradeServerId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'brokerTradeServerId' is set
@@ -318,26 +338,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/initData', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerManagersAccountsOnlineInfoUpdatePost operation.
-     * @callback module:api/BrokerApi~apiBrokerManagersAccountsOnlineInfoUpdatePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get broker initial data
+     * @param {String} brokerTradeServerId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokerInitData}
      */
+    apiBrokerInitDataGet(brokerTradeServerId, authorization) {
+      return this.apiBrokerInitDataGetWithHttpInfo(brokerTradeServerId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Upload accounts online info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
-     * @param {module:api/BrokerApi~apiBrokerManagersAccountsOnlineInfoUpdatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts, callback) {
+    apiBrokerManagersAccountsOnlineInfoUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['accounts'];
 
@@ -365,26 +391,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/managersAccounts/onlineInfo/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodAccrueProfitsPost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodAccrueProfitsPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Upload accounts online info
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts) {
+      return this.apiBrokerManagersAccountsOnlineInfoUpdatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Accrue investors&#39; profits
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramAccrual} opts.accrual 
-     * @param {module:api/BrokerApi~apiBrokerPeriodAccrueProfitsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodAccrueProfitsPost(authorization, opts, callback) {
+    apiBrokerPeriodAccrueProfitsPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['accrual'];
 
@@ -412,26 +445,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/accrueProfits', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodClosePost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodClosePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Accrue investors&#39; profits
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InvestmentProgramAccrual} opts.accrual 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodAccrueProfitsPost(authorization, opts) {
+      return this.apiBrokerPeriodAccrueProfitsPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Close investment period
      * @param {String} investmentProgramId 
      * @param {Number} currentBalance 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodClosePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodClosePost(investmentProgramId, currentBalance, authorization, callback) {
+    apiBrokerPeriodClosePostWithHttpInfo(investmentProgramId, currentBalance, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -470,26 +510,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/close', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodProcessClosingProgramPost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodProcessClosingProgramPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Close investment period
+     * @param {String} investmentProgramId 
+     * @param {Number} currentBalance 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodClosePost(investmentProgramId, currentBalance, authorization) {
+      return this.apiBrokerPeriodClosePostWithHttpInfo(investmentProgramId, currentBalance, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Close investment program
      * @param {String} investmentProgramId 
      * @param {Number} managerBalance 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodProcessClosingProgramPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodProcessClosingProgramPost(investmentProgramId, managerBalance, authorization, callback) {
+    apiBrokerPeriodProcessClosingProgramPostWithHttpInfo(investmentProgramId, managerBalance, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -528,26 +575,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/processClosingProgram', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodProcessInvestmentRequestsPost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodProcessInvestmentRequestsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Close investment program
+     * @param {String} investmentProgramId 
+     * @param {Number} managerBalance 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodProcessClosingProgramPost(investmentProgramId, managerBalance, authorization) {
+      return this.apiBrokerPeriodProcessClosingProgramPostWithHttpInfo(investmentProgramId, managerBalance, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Process investment requests
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodProcessInvestmentRequestsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerPeriodProcessInvestmentRequestsPost(investmentProgramId, authorization, callback) {
+    apiBrokerPeriodProcessInvestmentRequestsPostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -580,26 +633,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/processInvestmentRequests', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodReevaluateManagerTokenPost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodReevaluateManagerTokenPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Process investment requests
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
+    apiBrokerPeriodProcessInvestmentRequestsPost(investmentProgramId, authorization) {
+      return this.apiBrokerPeriodProcessInvestmentRequestsPostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update manager token initial price/total supply after loss
      * @param {String} investmentProgramId 
      * @param {Number} investorLossShare 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodReevaluateManagerTokenPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodReevaluateManagerTokenPost(investmentProgramId, investorLossShare, authorization, callback) {
+    apiBrokerPeriodReevaluateManagerTokenPostWithHttpInfo(investmentProgramId, investorLossShare, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -638,26 +697,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/reevaluateManagerToken', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodSetStartValuesPost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodSetStartValuesPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update manager token initial price/total supply after loss
+     * @param {String} investmentProgramId 
+     * @param {Number} investorLossShare 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodReevaluateManagerTokenPost(investmentProgramId, investorLossShare, authorization) {
+      return this.apiBrokerPeriodReevaluateManagerTokenPostWithHttpInfo(investmentProgramId, investorLossShare, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set investment period start balance, manager share, manager balance
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/StartValues} opts.model 
-     * @param {module:api/BrokerApi~apiBrokerPeriodSetStartValuesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodSetStartValuesPost(authorization, opts, callback) {
+    apiBrokerPeriodSetStartValuesPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -685,25 +751,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/setStartValues', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodTerminatePost operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodTerminatePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Set investment period start balance, manager share, manager balance
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StartValues} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodSetStartValuesPost(authorization, opts) {
+      return this.apiBrokerPeriodSetStartValuesPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Terminate program
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodTerminatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerPeriodTerminatePost(investmentProgramId, authorization, callback) {
+    apiBrokerPeriodTerminatePostWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -736,26 +809,31 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/terminate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerPeriodlosingDataGet operation.
-     * @callback module:api/BrokerApi~apiBrokerPeriodlosingDataGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClosePeriodData} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Terminate program
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerPeriodTerminatePost(investmentProgramId, authorization) {
+      return this.apiBrokerPeriodTerminatePostWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get data for closing investment period
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @param {module:api/BrokerApi~apiBrokerPeriodlosingDataGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClosePeriodData}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClosePeriodData} and HTTP response
      */
-    apiBrokerPeriodlosingDataGet(investmentProgramId, authorization, callback) {
+    apiBrokerPeriodlosingDataGetWithHttpInfo(investmentProgramId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -788,26 +866,32 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/period/сlosingData', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerTradesIpfsHashUpdatePost operation.
-     * @callback module:api/BrokerApi~apiBrokerTradesIpfsHashUpdatePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get data for closing investment period
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClosePeriodData}
      */
+    apiBrokerPeriodlosingDataGet(investmentProgramId, authorization) {
+      return this.apiBrokerPeriodlosingDataGetWithHttpInfo(investmentProgramId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update manager history ipfs hash
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerHistoryIpfsHash} opts.data 
-     * @param {module:api/BrokerApi~apiBrokerTradesIpfsHashUpdatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerTradesIpfsHashUpdatePost(authorization, opts, callback) {
+    apiBrokerTradesIpfsHashUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['data'];
 
@@ -835,26 +919,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/trades/ipfsHash/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerTradesNewPost operation.
-     * @callback module:api/BrokerApi~apiBrokerTradesNewPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update manager history ipfs hash
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ManagerHistoryIpfsHash} opts.data 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerTradesIpfsHashUpdatePost(authorization, opts) {
+      return this.apiBrokerTradesIpfsHashUpdatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * New trade event
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewTradeEvent} opts.tradeEvent 
-     * @param {module:api/BrokerApi~apiBrokerTradesNewPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerTradesNewPost(authorization, opts, callback) {
+    apiBrokerTradesNewPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['tradeEvent'];
 
@@ -882,26 +973,33 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/trades/new', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the apiBrokerTradesOpenTradesNewPost operation.
-     * @callback module:api/BrokerApi~apiBrokerTradesOpenTradesNewPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * New trade event
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewTradeEvent} opts.tradeEvent 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiBrokerTradesNewPost(authorization, opts) {
+      return this.apiBrokerTradesNewPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * New open trades event
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewOpenTradesEvent} opts.trades 
-     * @param {module:api/BrokerApi~apiBrokerTradesOpenTradesNewPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiBrokerTradesOpenTradesNewPost(authorization, opts, callback) {
+    apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['trades'];
 
@@ -929,8 +1027,22 @@ export default class BrokerApi {
       return this.apiClient.callApi(
         '/api/broker/trades/openTrades/new', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * New open trades event
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewOpenTradesEvent} opts.trades 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiBrokerTradesOpenTradesNewPost(authorization, opts) {
+      return this.apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

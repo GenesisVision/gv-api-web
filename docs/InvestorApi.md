@@ -59,14 +59,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.TwoFactorAuthenticatorConfirm() // TwoFactorAuthenticatorConfirm | 
 };
-
-apiInstance.apiInvestorAuth2faConfirmPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuth2faConfirmPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -106,14 +104,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.PasswordModel() // PasswordModel | 
 };
-
-apiInstance.apiInvestorAuth2faCreatePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuth2faCreatePost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -153,14 +149,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.PasswordModel() // PasswordModel | 
 };
-
-apiInstance.apiInvestorAuth2faDisablePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorAuth2faDisablePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -197,14 +191,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorAuth2faGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuth2faGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -243,14 +235,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.PasswordModel() // PasswordModel | 
 };
-
-apiInstance.apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -290,14 +280,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.PasswordModel() // PasswordModel | 
 };
-
-apiInstance.apiInvestorAuth2faRecoveryCodesPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuth2faRecoveryCodesPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -337,14 +325,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.ChangePasswordViewModel() // ChangePasswordViewModel | 
 };
-
-apiInstance.apiInvestorAuthChangePasswordPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorAuthChangePasswordPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -383,14 +369,12 @@ let opts = {
   'userId': "userId_example", // String | 
   'code': "code_example" // String | 
 };
-
-apiInstance.apiInvestorAuthConfirmEmailPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuthConfirmEmailPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -428,14 +412,12 @@ let apiInstance = new CoreApi.InvestorApi();
 let opts = { 
   'model': new CoreApi.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
 };
-
-apiInstance.apiInvestorAuthForgotPasswordPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorAuthForgotPasswordPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -472,14 +454,12 @@ let apiInstance = new CoreApi.InvestorApi();
 let opts = { 
   'model': new CoreApi.ResetPasswordViewModel() // ResetPasswordViewModel | 
 };
-
-apiInstance.apiInvestorAuthResetPasswordPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuthResetPasswordPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -516,14 +496,12 @@ let apiInstance = new CoreApi.InvestorApi();
 let opts = { 
   'model': new CoreApi.LoginViewModel() // LoginViewModel | 
 };
-
-apiInstance.apiInvestorAuthSignInPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuthSignInPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -560,14 +538,12 @@ let apiInstance = new CoreApi.InvestorApi();
 let opts = { 
   'model': new CoreApi.RegisterInvestorViewModel() // RegisterInvestorViewModel | 
 };
-
-apiInstance.apiInvestorAuthSignUpPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorAuthSignUpPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -603,14 +579,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorAuthUpdateTokenGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorAuthUpdateTokenGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -650,14 +624,12 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'equityChartLength': 56 // Number | 
 };
-
-apiInstance.apiInvestorDashboardGet(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorDashboardGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -697,14 +669,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorInvestmentProgramBuyTokensGet(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramBuyTokensGet(investmentProgramId, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -743,14 +713,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let timeFrame = "timeFrame_example"; // String | 
 
-
-apiInstance.apiInvestorInvestmentProgramEquityChartGet(investmentProgramId, timeFrame, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramEquityChartGet(investmentProgramId, timeFrame).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -790,14 +758,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 let opts = { 
   'authorization': "authorization_example" // String | 
 };
-
-apiInstance.apiInvestorInvestmentProgramGet(investmentProgramId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramGet(investmentProgramId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -837,14 +803,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'filter': new CoreApi.TradesFilter() // TradesFilter | 
 };
-
-apiInstance.apiInvestorInvestmentProgramOpenTradesPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramOpenTradesPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -884,14 +848,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'filter': new CoreApi.InvestmentProgramRequestsFilter() // InvestmentProgramRequestsFilter | 
 };
-
-apiInstance.apiInvestorInvestmentProgramRequestsPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramRequestsPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -928,14 +890,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let investmentProgramId = "investmentProgramId_example"; // String | 
 
-
-apiInstance.apiInvestorInvestmentProgramTradesChartGet(investmentProgramId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramTradesChartGet(investmentProgramId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -972,14 +932,12 @@ let apiInstance = new CoreApi.InvestorApi();
 let opts = { 
   'filter': new CoreApi.TradesFilter() // TradesFilter | 
 };
-
-apiInstance.apiInvestorInvestmentProgramTradesPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramTradesPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1017,14 +975,12 @@ let requestId = "requestId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorInvestmentProgramsCancelInvestmentRequestPost(requestId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorInvestmentProgramsCancelInvestmentRequestPost(requestId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1063,14 +1019,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1109,14 +1063,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1156,14 +1108,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.Invest() // Invest | 
 };
-
-apiInstance.apiInvestorInvestmentProgramsInvestPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramsInvestPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1202,14 +1152,12 @@ let opts = {
   'authorization': "authorization_example", // String | 
   'filter': new CoreApi.InvestmentProgramsFilter() // InvestmentProgramsFilter | 
 };
-
-apiInstance.apiInvestorInvestmentProgramsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorInvestmentProgramsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1249,14 +1197,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.Invest() // Invest | 
 };
-
-apiInstance.apiInvestorInvestmentProgramsWithdrawPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorInvestmentProgramsWithdrawPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1293,14 +1239,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorProfileFullGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorProfileFullGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1336,14 +1280,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let userId = "userId_example"; // String | 
 
-
-apiInstance.apiInvestorProfilePublicGet(userId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorProfilePublicGet(userId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1382,14 +1324,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.UpdateProfileViewModel() // UpdateProfileViewModel | 
 };
-
-apiInstance.apiInvestorProfileUpdatePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorProfileUpdatePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1426,14 +1366,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorWalletAddressGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorWalletAddressGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1469,14 +1407,12 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiInvestorWalletGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorWalletGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1515,14 +1451,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'filter': new CoreApi.WalletStatisticFilter() // WalletStatisticFilter | 
 };
-
-apiInstance.apiInvestorWalletStatisticPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorWalletStatisticPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1562,14 +1496,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'mask': "mask_example" // String | 
 };
-
-apiInstance.apiInvestorWalletTransactionsInvestmentProgramsListGet(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorWalletTransactionsInvestmentProgramsListGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1609,14 +1541,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'filter': new CoreApi.TransactionsFilter() // TransactionsFilter | 
 };
-
-apiInstance.apiInvestorWalletTransactionsPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiInvestorWalletTransactionsPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1656,14 +1586,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'request': new CoreApi.WalletWithdrawRequestModel() // WalletWithdrawRequestModel | 
 };
-
-apiInstance.apiInvestorWalletWithdrawRequestPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiInvestorWalletWithdrawRequestPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

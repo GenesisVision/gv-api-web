@@ -82,15 +82,12 @@ var authorization = "authorization_example"; // {String} JWT access token
 var opts = { 
   'request': new CoreApi.NewManager() // {NewManager} 
 };
+api.apiBrokerAccountCreatePost(authorization, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.apiBrokerAccountCreatePost(authorization, opts, callback);
 
 ```
 

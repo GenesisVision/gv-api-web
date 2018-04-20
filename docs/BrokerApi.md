@@ -41,14 +41,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'request': new CoreApi.NewManager() // NewManager | 
 };
-
-apiInstance.apiBrokerAccountCreatePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerAccountCreatePost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -88,14 +86,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.ChangePasswordViewModel() // ChangePasswordViewModel | 
 };
-
-apiInstance.apiBrokerAuthChangePasswordPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerAuthChangePasswordPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -134,14 +130,12 @@ let opts = {
   'userId': "userId_example", // String | 
   'code': "code_example" // String | 
 };
-
-apiInstance.apiBrokerAuthConfirmEmailPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerAuthConfirmEmailPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -179,14 +173,12 @@ let apiInstance = new CoreApi.BrokerApi();
 let opts = { 
   'model': new CoreApi.LoginViewModel() // LoginViewModel | 
 };
-
-apiInstance.apiBrokerAuthSignInPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerAuthSignInPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -222,14 +214,12 @@ let apiInstance = new CoreApi.BrokerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerAuthUpdateTokenGet(authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerAuthUpdateTokenGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -267,14 +257,12 @@ let brokerTradeServerId = "brokerTradeServerId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerInitDataGet(brokerTradeServerId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerInitDataGet(brokerTradeServerId, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -314,14 +302,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'accounts': [new CoreApi.ManagerAccountOnlineInfo()] // [ManagerAccountOnlineInfo] | 
 };
-
-apiInstance.apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -361,14 +347,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'accrual': new CoreApi.InvestmentProgramAccrual() // InvestmentProgramAccrual | 
 };
-
-apiInstance.apiBrokerPeriodAccrueProfitsPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodAccrueProfitsPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -409,14 +393,12 @@ let currentBalance = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodClosePost(investmentProgramId, currentBalance, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodClosePost(investmentProgramId, currentBalance, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -458,14 +440,12 @@ let managerBalance = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodProcessClosingProgramPost(investmentProgramId, managerBalance, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodProcessClosingProgramPost(investmentProgramId, managerBalance, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -505,14 +485,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodProcessInvestmentRequestsPost(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerPeriodProcessInvestmentRequestsPost(investmentProgramId, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -553,14 +531,12 @@ let investorLossShare = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodReevaluateManagerTokenPost(investmentProgramId, investorLossShare, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodReevaluateManagerTokenPost(investmentProgramId, investorLossShare, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -601,14 +577,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApi.StartValues() // StartValues | 
 };
-
-apiInstance.apiBrokerPeriodSetStartValuesPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodSetStartValuesPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -647,14 +621,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodTerminatePost(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerPeriodTerminatePost(investmentProgramId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -693,14 +665,12 @@ let investmentProgramId = "investmentProgramId_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-
-apiInstance.apiBrokerPeriodlosingDataGet(investmentProgramId, authorization, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiBrokerPeriodlosingDataGet(investmentProgramId, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -740,14 +710,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'data': new CoreApi.ManagerHistoryIpfsHash() // ManagerHistoryIpfsHash | 
 };
-
-apiInstance.apiBrokerTradesIpfsHashUpdatePost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerTradesIpfsHashUpdatePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -787,14 +755,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'tradeEvent': new CoreApi.NewTradeEvent() // NewTradeEvent | 
 };
-
-apiInstance.apiBrokerTradesNewPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerTradesNewPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -834,14 +800,12 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'trades': new CoreApi.NewOpenTradesEvent() // NewOpenTradesEvent | 
 };
-
-apiInstance.apiBrokerTradesOpenTradesNewPost(authorization, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiBrokerTradesOpenTradesNewPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
