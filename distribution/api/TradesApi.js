@@ -54,17 +54,26 @@ var TradesApi = function () {
   }
 
   /**
+   * Callback function to receive the result of the apiTradesIpfsHistoryGet operation.
+   * @callback module:api/TradesApi~apiTradesIpfsHistoryGetCallback
+   * @param {String} error Error message, if any.
+   * @param {module:model/TradesViewModel} data The data returned by the service call.
+   * @param {String} response The complete HTTP response.
+   */
+
+  /**
    * Get trades by IPFS hash id
    * @param {module:model/String} type 
    * @param {Object} opts Optional parameters
    * @param {String} opts.ipfsHashId 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
+   * @param {module:api/TradesApi~apiTradesIpfsHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
+   * data is of type: {@link module:model/TradesViewModel}
    */
 
 
   _createClass(TradesApi, [{
-    key: 'apiTradesIpfsHistoryGetWithHttpInfo',
-    value: function apiTradesIpfsHistoryGetWithHttpInfo(type, opts) {
+    key: 'apiTradesIpfsHistoryGet',
+    value: function apiTradesIpfsHistoryGet(type, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -86,23 +95,7 @@ var TradesApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TradesViewModel2.default;
 
-      return this.apiClient.callApi('/api/trades/ipfsHistory', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get trades by IPFS hash id
-     * @param {module:model/String} type 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.ipfsHashId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
-     */
-
-  }, {
-    key: 'apiTradesIpfsHistoryGet',
-    value: function apiTradesIpfsHistoryGet(type, opts) {
-      return this.apiTradesIpfsHistoryGetWithHttpInfo(type, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
+      return this.apiClient.callApi('/api/trades/ipfsHistory', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
   }]);
 

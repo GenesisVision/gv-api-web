@@ -35,13 +35,20 @@ export default class FilesApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the apiFilesByIdGet operation.
+     * @callback module:api/FilesApi~apiFilesByIdGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Download file
      * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/FilesApi~apiFilesByIdGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    apiFilesByIdGetWithHttpInfo(id) {
+    apiFilesByIdGet(id, callback) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -68,29 +75,24 @@ export default class FilesApi {
       return this.apiClient.callApi(
         '/api/files/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Download file
-     * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiFilesGet operation.
+     * @callback module:api/FilesApi~apiFilesGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    apiFilesByIdGet(id) {
-      return this.apiFilesByIdGetWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Download file
      * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/FilesApi~apiFilesGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    apiFilesGetWithHttpInfo(id) {
+    apiFilesGet(id, callback) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -117,29 +119,25 @@ export default class FilesApi {
       return this.apiClient.callApi(
         '/api/files', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Download file
-     * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiFilesUploadPost operation.
+     * @callback module:api/FilesApi~apiFilesUploadPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UploadResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    apiFilesGet(id) {
-      return this.apiFilesGetWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Upload file
      * @param {File} uploadedFile Upload File
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadResult} and HTTP response
+     * @param {module:api/FilesApi~apiFilesUploadPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UploadResult}
      */
-    apiFilesUploadPostWithHttpInfo(uploadedFile) {
+    apiFilesUploadPost(uploadedFile, callback) {
       let postBody = null;
 
       // verify the required parameter 'uploadedFile' is set
@@ -166,20 +164,8 @@ export default class FilesApi {
       return this.apiClient.callApi(
         '/api/files/upload', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, callback
       );
-    }
-
-    /**
-     * Upload file
-     * @param {File} uploadedFile Upload File
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadResult}
-     */
-    apiFilesUploadPost(uploadedFile) {
-      return this.apiFilesUploadPostWithHttpInfo(uploadedFile)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

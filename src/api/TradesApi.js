@@ -35,15 +35,23 @@ export default class TradesApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the apiTradesIpfsHistoryGet operation.
+     * @callback module:api/TradesApi~apiTradesIpfsHistoryGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TradesViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Get trades by IPFS hash id
      * @param {module:model/String} type 
      * @param {Object} opts Optional parameters
      * @param {String} opts.ipfsHashId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
+     * @param {module:api/TradesApi~apiTradesIpfsHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TradesViewModel}
      */
-    apiTradesIpfsHistoryGetWithHttpInfo(type, opts) {
+    apiTradesIpfsHistoryGet(type, opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -72,22 +80,8 @@ export default class TradesApi {
       return this.apiClient.callApi(
         '/api/trades/ipfsHistory', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, callback
       );
-    }
-
-    /**
-     * Get trades by IPFS hash id
-     * @param {module:model/String} type 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.ipfsHashId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
-     */
-    apiTradesIpfsHistoryGet(type, opts) {
-      return this.apiTradesIpfsHistoryGetWithHttpInfo(type, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

@@ -24,12 +24,14 @@ let type = "type_example"; // String |
 let opts = { 
   'ipfsHashId': "ipfsHashId_example" // String | 
 };
-apiInstance.apiTradesIpfsHistoryGet(type, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
 
+apiInstance.apiTradesIpfsHistoryGet(type, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters

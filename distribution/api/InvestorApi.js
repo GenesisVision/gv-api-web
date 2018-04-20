@@ -182,17 +182,26 @@ var InvestorApi = function () {
   }
 
   /**
+   * Callback function to receive the result of the apiInvestorAuth2faConfirmPost operation.
+   * @callback module:api/InvestorApi~apiInvestorAuth2faConfirmPostCallback
+   * @param {String} error Error message, if any.
+   * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
+   * @param {String} response The complete HTTP response.
+   */
+
+  /**
    * 2FA confirm
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
+   * @param {module:api/InvestorApi~apiInvestorAuth2faConfirmPostCallback} callback The callback function, accepting three arguments: error, data, response
+   * data is of type: {@link module:model/RecoveryCodesViewModel}
    */
 
 
   _createClass(InvestorApi, [{
-    key: 'apiInvestorAuth2faConfirmPostWithHttpInfo',
-    value: function apiInvestorAuth2faConfirmPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuth2faConfirmPost',
+    value: function apiInvestorAuth2faConfirmPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -213,36 +222,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _RecoveryCodesViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA confirm
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
+     * Callback function to receive the result of the apiInvestorAuth2faCreatePost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuth2faCreatePostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TwoFactorAuthenticator} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faConfirmPost',
-    value: function apiInvestorAuth2faConfirmPost(authorization, opts) {
-      return this.apiInvestorAuth2faConfirmPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * 2FA create
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuth2faCreatePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TwoFactorAuthenticator}
      */
 
   }, {
-    key: 'apiInvestorAuth2faCreatePostWithHttpInfo',
-    value: function apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuth2faCreatePost',
+    value: function apiInvestorAuth2faCreatePost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -263,36 +265,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TwoFactorAuthenticator2.default;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA create
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
+     * Callback function to receive the result of the apiInvestorAuth2faDisablePost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuth2faDisablePostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faCreatePost',
-    value: function apiInvestorAuth2faCreatePost(authorization, opts) {
-      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * 2FA disable
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuth2faDisablePostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorAuth2faDisablePostWithHttpInfo',
-    value: function apiInvestorAuth2faDisablePostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuth2faDisablePost',
+    value: function apiInvestorAuth2faDisablePost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -313,34 +307,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa/disable', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa/disable', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA disable
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorAuth2faGet operation.
+     * @callback module:api/InvestorApi~apiInvestorAuth2faGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TwoFactorStatus} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faDisablePost',
-    value: function apiInvestorAuth2faDisablePost(authorization, opts) {
-      return this.apiInvestorAuth2faDisablePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * 2FA status
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorStatus} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuth2faGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TwoFactorStatus}
      */
 
   }, {
-    key: 'apiInvestorAuth2faGetWithHttpInfo',
-    value: function apiInvestorAuth2faGetWithHttpInfo(authorization) {
+    key: 'apiInvestorAuth2faGet',
+    value: function apiInvestorAuth2faGet(authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -360,34 +347,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TwoFactorStatus2.default;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA status
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorStatus}
+     * Callback function to receive the result of the apiInvestorAuth2faRecoveryCodesNewPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuth2faRecoveryCodesNewPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faGet',
-    value: function apiInvestorAuth2faGet(authorization) {
-      return this.apiInvestorAuth2faGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * 2FA generate new recovery codes
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuth2faRecoveryCodesNewPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RecoveryCodesViewModel}
      */
 
   }, {
-    key: 'apiInvestorAuth2faRecoveryCodesNewPostWithHttpInfo',
-    value: function apiInvestorAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuth2faRecoveryCodesNewPost',
+    value: function apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -408,36 +390,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _RecoveryCodesViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa/recoveryCodes/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa/recoveryCodes/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA generate new recovery codes
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
+     * Callback function to receive the result of the apiInvestorAuth2faRecoveryCodesPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuth2faRecoveryCodesPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RecoveryCodesViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faRecoveryCodesNewPost',
-    value: function apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts) {
-      return this.apiInvestorAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * 2FA recovery codes
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuth2faRecoveryCodesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RecoveryCodesViewModel}
      */
 
   }, {
-    key: 'apiInvestorAuth2faRecoveryCodesPostWithHttpInfo',
-    value: function apiInvestorAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuth2faRecoveryCodesPost',
+    value: function apiInvestorAuth2faRecoveryCodesPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -458,36 +433,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _RecoveryCodesViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/auth/2fa/recoveryCodes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/2fa/recoveryCodes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * 2FA recovery codes
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
+     * Callback function to receive the result of the apiInvestorAuthChangePasswordPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthChangePasswordPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuth2faRecoveryCodesPost',
-    value: function apiInvestorAuth2faRecoveryCodesPost(authorization, opts) {
-      return this.apiInvestorAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Change password
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuthChangePasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorAuthChangePasswordPostWithHttpInfo',
-    value: function apiInvestorAuthChangePasswordPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorAuthChangePasswordPost',
+    value: function apiInvestorAuthChangePasswordPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -508,36 +475,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/auth/changePassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/changePassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Change password
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorAuthConfirmEmailPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthConfirmEmailPostCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuthChangePasswordPost',
-    value: function apiInvestorAuthChangePasswordPost(authorization, opts) {
-      return this.apiInvestorAuthChangePasswordPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Confirm email after registration
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuthConfirmEmailPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
      */
 
   }, {
-    key: 'apiInvestorAuthConfirmEmailPostWithHttpInfo',
-    value: function apiInvestorAuthConfirmEmailPostWithHttpInfo(opts) {
+    key: 'apiInvestorAuthConfirmEmailPost',
+    value: function apiInvestorAuthConfirmEmailPost(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -554,158 +514,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = 'String';
 
-      return this.apiClient.callApi('/api/investor/auth/confirmEmail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/confirmEmail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Confirm email after registration
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.userId 
-     * @param {String} opts.code 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
+     * Callback function to receive the result of the apiInvestorAuthForgotPasswordPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthForgotPasswordPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuthConfirmEmailPost',
-    value: function apiInvestorAuthConfirmEmailPost(opts) {
-      return this.apiInvestorAuthConfirmEmailPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Forgot password investor
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'apiInvestorAuthForgotPasswordPostWithHttpInfo',
-    value: function apiInvestorAuthForgotPasswordPostWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = opts['model'];
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/api/investor/auth/forgotPassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Forgot password investor
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ForgotPasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @param {module:api/InvestorApi~apiInvestorAuthForgotPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
     key: 'apiInvestorAuthForgotPasswordPost',
-    value: function apiInvestorAuthForgotPasswordPost(opts) {
-      return this.apiInvestorAuthForgotPasswordPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Reset password
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ResetPasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
-     */
-
-  }, {
-    key: 'apiInvestorAuthResetPasswordPostWithHttpInfo',
-    value: function apiInvestorAuthResetPasswordPostWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = opts['model'];
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi('/api/investor/auth/resetPassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Reset password
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ResetPasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
-     */
-
-  }, {
-    key: 'apiInvestorAuthResetPasswordPost',
-    value: function apiInvestorAuthResetPasswordPost(opts) {
-      return this.apiInvestorAuthResetPasswordPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
-     */
-
-  }, {
-    key: 'apiInvestorAuthSignInPostWithHttpInfo',
-    value: function apiInvestorAuthSignInPostWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = opts['model'];
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi('/api/investor/auth/signIn', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
-     */
-
-  }, {
-    key: 'apiInvestorAuthSignInPost',
-    value: function apiInvestorAuthSignInPost(opts) {
-      return this.apiInvestorAuthSignInPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Register new investor
-     * @param {Object} opts Optional parameters
-     * @param {module:model/RegisterInvestorViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'apiInvestorAuthSignUpPostWithHttpInfo',
-    value: function apiInvestorAuthSignUpPostWithHttpInfo(opts) {
+    value: function apiInvestorAuthForgotPasswordPost(opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -719,33 +548,131 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/auth/signUp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/forgotPassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
+
+    /**
+     * Callback function to receive the result of the apiInvestorAuthResetPasswordPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthResetPasswordPostCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reset password
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {module:api/InvestorApi~apiInvestorAuthResetPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+
+  }, {
+    key: 'apiInvestorAuthResetPasswordPost',
+    value: function apiInvestorAuthResetPasswordPost(opts, callback) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi('/api/investor/auth/resetPassword', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the apiInvestorAuthSignInPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthSignInPostCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Authorize
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LoginViewModel} opts.model 
+     * @param {module:api/InvestorApi~apiInvestorAuthSignInPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+
+  }, {
+    key: 'apiInvestorAuthSignInPost',
+    value: function apiInvestorAuthSignInPost(opts, callback) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi('/api/investor/auth/signIn', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the apiInvestorAuthSignUpPost operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthSignUpPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Register new investor
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @param {module:api/InvestorApi~apiInvestorAuthSignUpPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
     key: 'apiInvestorAuthSignUpPost',
-    value: function apiInvestorAuthSignUpPost(opts) {
-      return this.apiInvestorAuthSignUpPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
+    value: function apiInvestorAuthSignUpPost(opts, callback) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/api/investor/auth/signUp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
+
+    /**
+     * Callback function to receive the result of the apiInvestorAuthUpdateTokenGet operation.
+     * @callback module:api/InvestorApi~apiInvestorAuthUpdateTokenGetCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Update auth token
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorAuthUpdateTokenGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
      */
 
   }, {
-    key: 'apiInvestorAuthUpdateTokenGetWithHttpInfo',
-    value: function apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization) {
+    key: 'apiInvestorAuthUpdateTokenGet',
+    value: function apiInvestorAuthUpdateTokenGet(authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -765,22 +692,16 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = 'String';
 
-      return this.apiClient.callApi('/api/investor/auth/updateToken', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/auth/updateToken', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Update auth token
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
+     * Callback function to receive the result of the apiInvestorDashboardGet operation.
+     * @callback module:api/InvestorApi~apiInvestorDashboardGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InvestorDashboard} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorAuthUpdateTokenGet',
-    value: function apiInvestorAuthUpdateTokenGet(authorization) {
-      return this.apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get investor dashboard
@@ -788,12 +709,13 @@ var InvestorApi = function () {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.sorting 
      * @param {Number} opts.equityChartLength 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestorDashboard} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorDashboardGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InvestorDashboard}
      */
 
   }, {
-    key: 'apiInvestorDashboardGetWithHttpInfo',
-    value: function apiInvestorDashboardGetWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorDashboardGet',
+    value: function apiInvestorDashboardGet(authorization, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -817,36 +739,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvestorDashboard2.default;
 
-      return this.apiClient.callApi('/api/investor/dashboard', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/dashboard', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get investor dashboard
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
-     * @param {Number} opts.equityChartLength 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestorDashboard}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramBuyTokensGet operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramBuyTokensGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InvestmentProgramBuyToken} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorDashboardGet',
-    value: function apiInvestorDashboardGet(authorization, opts) {
-      return this.apiInvestorDashboardGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get investment program buy token model
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramBuyToken} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramBuyTokensGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InvestmentProgramBuyToken}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramBuyTokensGetWithHttpInfo',
-    value: function apiInvestorInvestmentProgramBuyTokensGetWithHttpInfo(investmentProgramId, authorization) {
+    key: 'apiInvestorInvestmentProgramBuyTokensGet',
+    value: function apiInvestorInvestmentProgramBuyTokensGet(investmentProgramId, authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -873,34 +787,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvestmentProgramBuyToken2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/buyTokens', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/buyTokens', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get investment program buy token model
-     * @param {String} investmentProgramId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramBuyToken}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramEquityChartGet operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramEquityChartGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TradesChartViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramBuyTokensGet',
-    value: function apiInvestorInvestmentProgramBuyTokensGet(investmentProgramId, authorization) {
-      return this.apiInvestorInvestmentProgramBuyTokensGetWithHttpInfo(investmentProgramId, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get manager equity chart
      * @param {String} investmentProgramId 
      * @param {module:model/String} timeFrame 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesChartViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramEquityChartGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TradesChartViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramEquityChartGetWithHttpInfo',
-    value: function apiInvestorInvestmentProgramEquityChartGetWithHttpInfo(investmentProgramId, timeFrame) {
+    key: 'apiInvestorInvestmentProgramEquityChartGet',
+    value: function apiInvestorInvestmentProgramEquityChartGet(investmentProgramId, timeFrame, callback) {
       var postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -926,35 +834,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TradesChartViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/equity/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/equity/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get manager equity chart
-     * @param {String} investmentProgramId 
-     * @param {module:model/String} timeFrame 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesChartViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramGet operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InvestmentProgramViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramEquityChartGet',
-    value: function apiInvestorInvestmentProgramEquityChartGet(investmentProgramId, timeFrame) {
-      return this.apiInvestorInvestmentProgramEquityChartGetWithHttpInfo(investmentProgramId, timeFrame).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get investment program details by id
      * @param {String} investmentProgramId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InvestmentProgramViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramGetWithHttpInfo',
-    value: function apiInvestorInvestmentProgramGetWithHttpInfo(investmentProgramId, opts) {
+    key: 'apiInvestorInvestmentProgramGet',
+    value: function apiInvestorInvestmentProgramGet(investmentProgramId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -977,36 +879,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvestmentProgramViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get investment program details by id
-     * @param {String} investmentProgramId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramOpenTradesPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramOpenTradesPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OpenTradesViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramGet',
-    value: function apiInvestorInvestmentProgramGet(investmentProgramId, opts) {
-      return this.apiInvestorInvestmentProgramGetWithHttpInfo(investmentProgramId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get manager open trades
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TradesFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OpenTradesViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramOpenTradesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OpenTradesViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramOpenTradesPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramOpenTradesPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorInvestmentProgramOpenTradesPost',
+    value: function apiInvestorInvestmentProgramOpenTradesPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1027,36 +922,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _OpenTradesViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/openTrades', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/openTrades', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get manager open trades
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TradesFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OpenTradesViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramRequestsPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramRequestsPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InvestmentProgramRequests} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramOpenTradesPost',
-    value: function apiInvestorInvestmentProgramOpenTradesPost(authorization, opts) {
-      return this.apiInvestorInvestmentProgramOpenTradesPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get investment program&#39;s requests
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramRequestsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramRequests} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramRequestsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InvestmentProgramRequests}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramRequestsPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramRequestsPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorInvestmentProgramRequestsPost',
+    value: function apiInvestorInvestmentProgramRequestsPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1077,34 +965,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvestmentProgramRequests2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/requests', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/requests', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get investment program&#39;s requests
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/InvestmentProgramRequestsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramRequests}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramTradesChartGet operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramTradesChartGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TradesChartViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramRequestsPost',
-    value: function apiInvestorInvestmentProgramRequestsPost(authorization, opts) {
-      return this.apiInvestorInvestmentProgramRequestsPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get manager trades chart
      * @param {String} investmentProgramId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesChartViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramTradesChartGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TradesChartViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramTradesChartGetWithHttpInfo',
-    value: function apiInvestorInvestmentProgramTradesChartGetWithHttpInfo(investmentProgramId) {
+    key: 'apiInvestorInvestmentProgramTradesChartGet',
+    value: function apiInvestorInvestmentProgramTradesChartGet(investmentProgramId, callback) {
       var postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1124,33 +1005,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TradesChartViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/trades/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/trades/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get manager trades chart
-     * @param {String} investmentProgramId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesChartViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramTradesPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramTradesPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TradesViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramTradesChartGet',
-    value: function apiInvestorInvestmentProgramTradesChartGet(investmentProgramId) {
-      return this.apiInvestorInvestmentProgramTradesChartGetWithHttpInfo(investmentProgramId).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get manager trade history
      * @param {Object} opts Optional parameters
      * @param {module:model/TradesFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramTradesPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TradesViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramTradesPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramTradesPostWithHttpInfo(opts) {
+    key: 'apiInvestorInvestmentProgramTradesPost',
+    value: function apiInvestorInvestmentProgramTradesPost(opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1164,34 +1040,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _TradesViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentProgram/trades', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentProgram/trades', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get manager trade history
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TradesFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsCancelInvestmentRequestPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsCancelInvestmentRequestPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramTradesPost',
-    value: function apiInvestorInvestmentProgramTradesPost(opts) {
-      return this.apiInvestorInvestmentProgramTradesPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Cancel investment request
      * @param {String} requestId 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsCancelInvestmentRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsCancelInvestmentRequestPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsCancelInvestmentRequestPostWithHttpInfo(requestId, authorization) {
+    key: 'apiInvestorInvestmentProgramsCancelInvestmentRequestPost',
+    value: function apiInvestorInvestmentProgramsCancelInvestmentRequestPost(requestId, authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'requestId' is set
@@ -1218,34 +1087,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms/cancelInvestmentRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms/cancelInvestmentRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Cancel investment request
-     * @param {String} requestId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsFavoritesAddPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsFavoritesAddPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsCancelInvestmentRequestPost',
-    value: function apiInvestorInvestmentProgramsCancelInvestmentRequestPost(requestId, authorization) {
-      return this.apiInvestorInvestmentProgramsCancelInvestmentRequestPostWithHttpInfo(requestId, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Add to favorites
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsFavoritesAddPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsFavoritesAddPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsFavoritesAddPostWithHttpInfo(investmentProgramId, authorization) {
+    key: 'apiInvestorInvestmentProgramsFavoritesAddPost',
+    value: function apiInvestorInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1272,34 +1134,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms/favorites/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms/favorites/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Add to favorites
-     * @param {String} investmentProgramId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsFavoritesRemovePost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsFavoritesRemovePostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsFavoritesAddPost',
-    value: function apiInvestorInvestmentProgramsFavoritesAddPost(investmentProgramId, authorization) {
-      return this.apiInvestorInvestmentProgramsFavoritesAddPostWithHttpInfo(investmentProgramId, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Remove from favorites
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsFavoritesRemovePostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsFavoritesRemovePostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsFavoritesRemovePostWithHttpInfo(investmentProgramId, authorization) {
+    key: 'apiInvestorInvestmentProgramsFavoritesRemovePost',
+    value: function apiInvestorInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'investmentProgramId' is set
@@ -1326,35 +1181,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms/favorites/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms/favorites/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Remove from favorites
-     * @param {String} investmentProgramId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsInvestPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsInvestPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletsViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsFavoritesRemovePost',
-    value: function apiInvestorInvestmentProgramsFavoritesRemovePost(investmentProgramId, authorization) {
-      return this.apiInvestorInvestmentProgramsFavoritesRemovePostWithHttpInfo(investmentProgramId, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Invest in manager
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/Invest} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsInvestPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletsViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsInvestPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsInvestPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorInvestmentProgramsInvestPost',
+    value: function apiInvestorInvestmentProgramsInvestPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -1375,36 +1224,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletsViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms/invest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms/invest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Invest in manager
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/Invest} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InvestmentProgramsViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsInvestPost',
-    value: function apiInvestorInvestmentProgramsInvestPost(authorization, opts) {
-      return this.apiInvestorInvestmentProgramsInvestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get public investment program&#39;s list
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:model/InvestmentProgramsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramsViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InvestmentProgramsViewModel}
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsPostWithHttpInfo(opts) {
+    key: 'apiInvestorInvestmentProgramsPost',
+    value: function apiInvestorInvestmentProgramsPost(opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1420,36 +1262,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvestmentProgramsViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get public investment program&#39;s list
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:model/InvestmentProgramsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramsViewModel}
+     * Callback function to receive the result of the apiInvestorInvestmentProgramsWithdrawPost operation.
+     * @callback module:api/InvestorApi~apiInvestorInvestmentProgramsWithdrawPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsPost',
-    value: function apiInvestorInvestmentProgramsPost(opts) {
-      return this.apiInvestorInvestmentProgramsPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Withdraw from investment program
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/Invest} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorInvestmentProgramsWithdrawPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorInvestmentProgramsWithdrawPostWithHttpInfo',
-    value: function apiInvestorInvestmentProgramsWithdrawPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorInvestmentProgramsWithdrawPost',
+    value: function apiInvestorInvestmentProgramsWithdrawPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -1470,34 +1304,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/investmentPrograms/withdraw', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/investmentPrograms/withdraw', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Withdraw from investment program
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/Invest} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorProfileFullGet operation.
+     * @callback module:api/InvestorApi~apiInvestorProfileFullGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProfileFullViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorInvestmentProgramsWithdrawPost',
-    value: function apiInvestorInvestmentProgramsWithdrawPost(authorization, opts) {
-      return this.apiInvestorInvestmentProgramsWithdrawPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get full profile
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorProfileFullGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ProfileFullViewModel}
      */
 
   }, {
-    key: 'apiInvestorProfileFullGetWithHttpInfo',
-    value: function apiInvestorProfileFullGetWithHttpInfo(authorization) {
+    key: 'apiInvestorProfileFullGet',
+    value: function apiInvestorProfileFullGet(authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1517,32 +1344,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProfileFullViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/profile/full', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/profile/full', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
+     * Callback function to receive the result of the apiInvestorProfilePublicGet operation.
+     * @callback module:api/InvestorApi~apiInvestorProfilePublicGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProfilePublicViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorProfileFullGet',
-    value: function apiInvestorProfileFullGet(authorization) {
-      return this.apiInvestorProfileFullGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get public profile
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorProfilePublicGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ProfilePublicViewModel}
      */
 
   }, {
-    key: 'apiInvestorProfilePublicGetWithHttpInfo',
-    value: function apiInvestorProfilePublicGetWithHttpInfo(userId) {
+    key: 'apiInvestorProfilePublicGet',
+    value: function apiInvestorProfilePublicGet(userId, callback) {
       var postBody = null;
 
       // verify the required parameter 'userId' is set
@@ -1562,34 +1384,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProfilePublicViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/profile/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/profile/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get public profile
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
+     * Callback function to receive the result of the apiInvestorProfileUpdatePost operation.
+     * @callback module:api/InvestorApi~apiInvestorProfileUpdatePostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorProfilePublicGet',
-    value: function apiInvestorProfilePublicGet(userId) {
-      return this.apiInvestorProfilePublicGetWithHttpInfo(userId).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Update profile
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorProfileUpdatePostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorProfileUpdatePostWithHttpInfo',
-    value: function apiInvestorProfileUpdatePostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorProfileUpdatePost',
+    value: function apiInvestorProfileUpdatePost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -1610,34 +1426,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/profile/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/profile/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Update profile
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateProfileViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the apiInvestorWalletAddressGet operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletAddressGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletAddressViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorProfileUpdatePost',
-    value: function apiInvestorProfileUpdatePost(authorization, opts) {
-      return this.apiInvestorProfileUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get eth address for GVT depositing
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletAddressViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletAddressGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletAddressViewModel}
      */
 
   }, {
-    key: 'apiInvestorWalletAddressGetWithHttpInfo',
-    value: function apiInvestorWalletAddressGetWithHttpInfo(authorization) {
+    key: 'apiInvestorWalletAddressGet',
+    value: function apiInvestorWalletAddressGet(authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1657,32 +1466,27 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletAddressViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/wallet/address', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/wallet/address', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get eth address for GVT depositing
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletAddressViewModel}
+     * Callback function to receive the result of the apiInvestorWalletGet operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletsViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorWalletAddressGet',
-    value: function apiInvestorWalletAddressGet(authorization) {
-      return this.apiInvestorWalletAddressGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get user wallets
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletsViewModel}
      */
 
   }, {
-    key: 'apiInvestorWalletGetWithHttpInfo',
-    value: function apiInvestorWalletGetWithHttpInfo(authorization) {
+    key: 'apiInvestorWalletGet',
+    value: function apiInvestorWalletGet(authorization, callback) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1702,34 +1506,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletsViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/wallet', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/wallet', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get user wallets
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsViewModel}
+     * Callback function to receive the result of the apiInvestorWalletStatisticPost operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletStatisticPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletStatistic} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorWalletGet',
-    value: function apiInvestorWalletGet(authorization) {
-      return this.apiInvestorWalletGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get user wallet statistic
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/WalletStatisticFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletStatistic} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletStatisticPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletStatistic}
      */
 
   }, {
-    key: 'apiInvestorWalletStatisticPostWithHttpInfo',
-    value: function apiInvestorWalletStatisticPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorWalletStatisticPost',
+    value: function apiInvestorWalletStatisticPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1750,36 +1549,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletStatistic2.default;
 
-      return this.apiClient.callApi('/api/investor/wallet/statistic', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/wallet/statistic', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get user wallet statistic
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/WalletStatisticFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletStatistic}
+     * Callback function to receive the result of the apiInvestorWalletTransactionsInvestmentProgramsListGet operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletTransactionsInvestmentProgramsListGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletInvestmentPrograms} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorWalletStatisticPost',
-    value: function apiInvestorWalletStatisticPost(authorization, opts) {
-      return this.apiInvestorWalletStatisticPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get user investment programs with tx
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.mask 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletInvestmentPrograms} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletTransactionsInvestmentProgramsListGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletInvestmentPrograms}
      */
 
   }, {
-    key: 'apiInvestorWalletTransactionsInvestmentProgramsListGetWithHttpInfo',
-    value: function apiInvestorWalletTransactionsInvestmentProgramsListGetWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorWalletTransactionsInvestmentProgramsListGet',
+    value: function apiInvestorWalletTransactionsInvestmentProgramsListGet(authorization, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1802,36 +1594,29 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletInvestmentPrograms2.default;
 
-      return this.apiClient.callApi('/api/investor/wallet/transactions/investmentProgramsList', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/wallet/transactions/investmentProgramsList', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get user investment programs with tx
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.mask 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletInvestmentPrograms}
+     * Callback function to receive the result of the apiInvestorWalletTransactionsPost operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletTransactionsPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/WalletTransactionsViewModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorWalletTransactionsInvestmentProgramsListGet',
-    value: function apiInvestorWalletTransactionsInvestmentProgramsListGet(authorization, opts) {
-      return this.apiInvestorWalletTransactionsInvestmentProgramsListGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Get user wallet transactions
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TransactionsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletTransactionsViewModel} and HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletTransactionsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/WalletTransactionsViewModel}
      */
 
   }, {
-    key: 'apiInvestorWalletTransactionsPostWithHttpInfo',
-    value: function apiInvestorWalletTransactionsPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorWalletTransactionsPost',
+    value: function apiInvestorWalletTransactionsPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['filter'];
 
@@ -1852,36 +1637,28 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _WalletTransactionsViewModel2.default;
 
-      return this.apiClient.callApi('/api/investor/wallet/transactions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/api/investor/wallet/transactions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
 
     /**
-     * Get user wallet transactions
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TransactionsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletTransactionsViewModel}
+     * Callback function to receive the result of the apiInvestorWalletWithdrawRequestPost operation.
+     * @callback module:api/InvestorApi~apiInvestorWalletWithdrawRequestPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-
-  }, {
-    key: 'apiInvestorWalletTransactionsPost',
-    value: function apiInvestorWalletTransactionsPost(authorization, opts) {
-      return this.apiInvestorWalletTransactionsPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
     /**
      * Withdraw request
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/WalletWithdrawRequestModel} opts.request 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/InvestorApi~apiInvestorWalletWithdrawRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
 
   }, {
-    key: 'apiInvestorWalletWithdrawRequestPostWithHttpInfo',
-    value: function apiInvestorWalletWithdrawRequestPostWithHttpInfo(authorization, opts) {
+    key: 'apiInvestorWalletWithdrawRequestPost',
+    value: function apiInvestorWalletWithdrawRequestPost(authorization, opts, callback) {
       opts = opts || {};
       var postBody = opts['request'];
 
@@ -1902,23 +1679,7 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/api/investor/wallet/withdrawRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Withdraw request
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/WalletWithdrawRequestModel} opts.request 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'apiInvestorWalletWithdrawRequestPost',
-    value: function apiInvestorWalletWithdrawRequestPost(authorization, opts) {
-      return this.apiInvestorWalletWithdrawRequestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
+      return this.apiClient.callApi('/api/investor/wallet/withdrawRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
   }]);
 
