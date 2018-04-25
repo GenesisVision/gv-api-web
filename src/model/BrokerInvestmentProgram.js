@@ -105,6 +105,12 @@ export default class BrokerInvestmentProgram {
             if (data.hasOwnProperty('tradeIpfsHash')) {
                 obj['tradeIpfsHash'] = ApiClient.convertToType(data['tradeIpfsHash'], 'String');
             }
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
         }
         return obj;
     }
@@ -173,11 +179,33 @@ export default class BrokerInvestmentProgram {
     * @member {String} tradeIpfsHash
     */
     tradeIpfsHash = undefined;
+    /**
+    * @member {Number} balance
+    */
+    balance = undefined;
+    /**
+    * @member {module:model/BrokerInvestmentProgram.StatusEnum} status
+    */
+    status = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>status</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static StatusEnum = {
+    
+        /**
+         * value: "ForClosingDueToInactivity"
+         * @const
+         */
+        "ForClosingDueToInactivity": "ForClosingDueToInactivity"    
+    };
 
 
 

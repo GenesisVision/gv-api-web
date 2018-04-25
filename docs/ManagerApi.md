@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**apiManagerDashboardPendingProgramsGet**](ManagerApi.md#apiManagerDashboardPendingProgramsGet) | **GET** /api/manager/dashboard/pendingPrograms | Dashboard pending programs
 [**apiManagerDashboardProgramsPost**](ManagerApi.md#apiManagerDashboardProgramsPost) | **POST** /api/manager/dashboard/programs | Dashboard programs
 [**apiManagerDashboardStatisticGet**](ManagerApi.md#apiManagerDashboardStatisticGet) | **GET** /api/manager/dashboard/statistic | Dashboard statistic
+[**apiManagerInvestmentAvailableInvestmentsGet**](ManagerApi.md#apiManagerInvestmentAvailableInvestmentsGet) | **GET** /api/manager/investment/availableInvestments | 
 [**apiManagerInvestmentCancelInvestmentRequestPost**](ManagerApi.md#apiManagerInvestmentCancelInvestmentRequestPost) | **POST** /api/manager/investment/cancelInvestmentRequest | Cancel investment request
 [**apiManagerInvestmentClosePost**](ManagerApi.md#apiManagerInvestmentClosePost) | **POST** /api/manager/investment/close | Close existing investment program
 [**apiManagerInvestmentInvestPost**](ManagerApi.md#apiManagerInvestmentInvestPost) | **POST** /api/manager/investment/invest | Manager deposit in his own investment program
@@ -816,6 +817,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ManagerDashboardStatistic**](ManagerDashboardStatistic.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="apiManagerInvestmentAvailableInvestmentsGet"></a>
+# **apiManagerInvestmentAvailableInvestmentsGet**
+> AvailableInvestments apiManagerInvestmentAvailableInvestmentsGet(investmentProgramId, authorization)
+
+
+
+### Example
+```javascript
+import CoreApi from 'core_api';
+
+let apiInstance = new CoreApi.ManagerApi();
+
+let investmentProgramId = "investmentProgramId_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.apiManagerInvestmentAvailableInvestmentsGet(investmentProgramId, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **investmentProgramId** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**AvailableInvestments**](AvailableInvestments.md)
 
 ### Authorization
 

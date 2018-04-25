@@ -19,5 +19,16 @@ Name | Type | Description | Notes
 **login** | **String** |  | [optional] 
 **ipfsHash** | **String** |  | [optional] 
 **tradeIpfsHash** | **String** |  | [optional] 
+**balance** | **Number** |  | [optional] 
+**status** | **String** |  | [optional] 
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `ForClosingDueToInactivity` (value: `"ForClosingDueToInactivity"`)
+
+
 
 

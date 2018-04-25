@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import AvailableInvestments from '../model/AvailableInvestments';
 import BrokersFilter from '../model/BrokersFilter';
 import BrokersViewModel from '../model/BrokersViewModel';
 import ChangePasswordViewModel from '../model/ChangePasswordViewModel';
@@ -975,6 +976,61 @@ export default class ManagerApi {
      */
     apiManagerDashboardStatisticGet(authorization) {
       return this.apiManagerDashboardStatisticGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AvailableInvestments} and HTTP response
+     */
+    apiManagerInvestmentAvailableInvestmentsGetWithHttpInfo(investmentProgramId, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'investmentProgramId' is set
+      if (investmentProgramId === undefined || investmentProgramId === null) {
+        throw new Error("Missing the required parameter 'investmentProgramId' when calling apiManagerInvestmentAvailableInvestmentsGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiManagerInvestmentAvailableInvestmentsGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'investmentProgramId': investmentProgramId
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = AvailableInvestments;
+
+      return this.apiClient.callApi(
+        '/api/manager/investment/availableInvestments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AvailableInvestments}
+     */
+    apiManagerInvestmentAvailableInvestmentsGet(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentAvailableInvestmentsGetWithHttpInfo(investmentProgramId, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

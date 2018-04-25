@@ -67,6 +67,9 @@ export default class ClosePeriodData {
             if (data.hasOwnProperty('canCloseCurrentPeriod')) {
                 obj['canCloseCurrentPeriod'] = ApiClient.convertToType(data['canCloseCurrentPeriod'], 'Boolean');
             }
+            if (data.hasOwnProperty('investmentProgramStatus')) {
+                obj['investmentProgramStatus'] = ApiClient.convertToType(data['investmentProgramStatus'], 'String');
+            }
         }
         return obj;
     }
@@ -83,11 +86,29 @@ export default class ClosePeriodData {
     * @member {Boolean} canCloseCurrentPeriod
     */
     canCloseCurrentPeriod = undefined;
+    /**
+    * @member {module:model/ClosePeriodData.InvestmentProgramStatusEnum} investmentProgramStatus
+    */
+    investmentProgramStatus = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>investmentProgramStatus</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static InvestmentProgramStatusEnum = {
+    
+        /**
+         * value: "ForClosingDueToInactivity"
+         * @const
+         */
+        "ForClosingDueToInactivity": "ForClosingDueToInactivity"    
+    };
 
 
 
