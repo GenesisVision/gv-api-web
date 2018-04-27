@@ -60,6 +60,8 @@ var BrokerInvestmentProgram = function () {
         this.login = undefined;
         this.ipfsHash = undefined;
         this.tradeIpfsHash = undefined;
+        this.balance = undefined;
+        this.status = undefined;
     }
 
     /**
@@ -124,6 +126,12 @@ var BrokerInvestmentProgram = function () {
                 }
                 if (data.hasOwnProperty('tradeIpfsHash')) {
                     obj['tradeIpfsHash'] = _ApiClient2.default.convertToType(data['tradeIpfsHash'], 'String');
+                }
+                if (data.hasOwnProperty('balance')) {
+                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
             }
             return obj;
@@ -193,9 +201,32 @@ var BrokerInvestmentProgram = function () {
         * @member {String} tradeIpfsHash
         */
 
+        /**
+        * @member {Number} balance
+        */
+
+        /**
+        * @member {module:model/BrokerInvestmentProgram.StatusEnum} status
+        */
+
+
+        /**
+        * Allowed values for the <code>status</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return BrokerInvestmentProgram;
 }();
 
+BrokerInvestmentProgram.StatusEnum = {
+
+    /**
+     * value: "ForClosingDueToInactivity"
+     * @const
+     */
+    "ForClosingDueToInactivity": "ForClosingDueToInactivity"
+};
 exports.default = BrokerInvestmentProgram;

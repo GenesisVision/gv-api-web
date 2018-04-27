@@ -51,6 +51,7 @@ var ClosePeriodData = function () {
         this.currentPeriod = undefined;
         this.tokenHolders = undefined;
         this.canCloseCurrentPeriod = undefined;
+        this.investmentProgramStatus = undefined;
     }
 
     /**
@@ -77,6 +78,9 @@ var ClosePeriodData = function () {
                 if (data.hasOwnProperty('canCloseCurrentPeriod')) {
                     obj['canCloseCurrentPeriod'] = _ApiClient2.default.convertToType(data['canCloseCurrentPeriod'], 'Boolean');
                 }
+                if (data.hasOwnProperty('investmentProgramStatus')) {
+                    obj['investmentProgramStatus'] = _ApiClient2.default.convertToType(data['investmentProgramStatus'], 'String');
+                }
             }
             return obj;
         }
@@ -93,9 +97,28 @@ var ClosePeriodData = function () {
         * @member {Boolean} canCloseCurrentPeriod
         */
 
+        /**
+        * @member {module:model/ClosePeriodData.InvestmentProgramStatusEnum} investmentProgramStatus
+        */
+
+
+        /**
+        * Allowed values for the <code>investmentProgramStatus</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return ClosePeriodData;
 }();
 
+ClosePeriodData.InvestmentProgramStatusEnum = {
+
+    /**
+     * value: "ForClosingDueToInactivity"
+     * @const
+     */
+    "ForClosingDueToInactivity": "ForClosingDueToInactivity"
+};
 exports.default = ClosePeriodData;

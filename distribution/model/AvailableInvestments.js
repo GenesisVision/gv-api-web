@@ -21,208 +21,65 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The InvestmentProgramBuyToken model module.
-* @module model/InvestmentProgramBuyToken
+* The AvailableInvestments model module.
+* @module model/AvailableInvestments
 * @version v1
 */
-var InvestmentProgramBuyToken = function () {
+var AvailableInvestments = function () {
     /**
-    * Constructs a new <code>InvestmentProgramBuyToken</code>.
-    * @alias module:model/InvestmentProgramBuyToken
+    * Constructs a new <code>AvailableInvestments</code>.
+    * @alias module:model/AvailableInvestments
     * @class
     */
 
-    function InvestmentProgramBuyToken() {
-        _classCallCheck(this, InvestmentProgramBuyToken);
+    function AvailableInvestments() {
+        _classCallCheck(this, AvailableInvestments);
 
-        this.id = undefined;
-        this.logo = undefined;
-        this.description = undefined;
-        this.manager = undefined;
-        this.level = undefined;
-        this.title = undefined;
-        this.startOfPeriod = undefined;
-        this.endOfPeriod = undefined;
-        this.gvtRate = undefined;
-        this.gvtWalletAmount = undefined;
-        this.periodDuration = undefined;
-        this.currency = undefined;
-        this.availableInvestments = undefined;
+        this.availableInvestmentsGvt = undefined;
+        this.availableInvestmentsUsd = undefined;
     }
 
     /**
-    * Constructs a <code>InvestmentProgramBuyToken</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AvailableInvestments</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/InvestmentProgramBuyToken} obj Optional instance to populate.
-    * @return {module:model/InvestmentProgramBuyToken} The populated <code>InvestmentProgramBuyToken</code> instance.
+    * @param {module:model/AvailableInvestments} obj Optional instance to populate.
+    * @return {module:model/AvailableInvestments} The populated <code>AvailableInvestments</code> instance.
     */
 
 
-    _createClass(InvestmentProgramBuyToken, null, [{
+    _createClass(AvailableInvestments, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new InvestmentProgramBuyToken();
+                obj = obj || new AvailableInvestments();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('availableInvestmentsGvt')) {
+                    obj['availableInvestmentsGvt'] = _ApiClient2.default.convertToType(data['availableInvestmentsGvt'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublicViewModel2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('startOfPeriod')) {
-                    obj['startOfPeriod'] = _ApiClient2.default.convertToType(data['startOfPeriod'], 'Date');
-                }
-                if (data.hasOwnProperty('endOfPeriod')) {
-                    obj['endOfPeriod'] = _ApiClient2.default.convertToType(data['endOfPeriod'], 'Date');
-                }
-                if (data.hasOwnProperty('gvtRate')) {
-                    obj['gvtRate'] = _ApiClient2.default.convertToType(data['gvtRate'], 'Number');
-                }
-                if (data.hasOwnProperty('gvtWalletAmount')) {
-                    obj['gvtWalletAmount'] = _ApiClient2.default.convertToType(data['gvtWalletAmount'], 'Number');
-                }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('availableInvestments')) {
-                    obj['availableInvestments'] = _ApiClient2.default.convertToType(data['availableInvestments'], 'Number');
+                if (data.hasOwnProperty('availableInvestmentsUsd')) {
+                    obj['availableInvestmentsUsd'] = _ApiClient2.default.convertToType(data['availableInvestmentsUsd'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Number} availableInvestmentsGvt
         */
 
         /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {module:model/ProfilePublicViewModel} manager
-        */
-
-        /**
-        * @member {Number} level
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {Date} startOfPeriod
-        */
-
-        /**
-        * @member {Date} endOfPeriod
-        */
-
-        /**
-        * @member {Number} gvtRate
-        */
-
-        /**
-        * @member {Number} gvtWalletAmount
-        */
-
-        /**
-        * @member {Number} periodDuration
-        */
-
-        /**
-        * @member {module:model/InvestmentProgramBuyToken.CurrencyEnum} currency
-        */
-
-        /**
-        * @member {Number} availableInvestments
-        */
-
-
-        /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Number} availableInvestmentsUsd
         */
 
     }]);
 
-    return InvestmentProgramBuyToken;
+    return AvailableInvestments;
 }();
 
-InvestmentProgramBuyToken.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-exports.default = InvestmentProgramBuyToken;
+exports.default = AvailableInvestments;
