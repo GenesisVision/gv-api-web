@@ -172,7 +172,6 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerDashboardPendingProgramsGet**](docs/ManagerApi.md#apiManagerDashboardPendingProgramsGet) | **GET** /api/manager/dashboard/pendingPrograms | Dashboard pending programs
 *CoreApi.ManagerApi* | [**apiManagerDashboardProgramsPost**](docs/ManagerApi.md#apiManagerDashboardProgramsPost) | **POST** /api/manager/dashboard/programs | Dashboard programs
 *CoreApi.ManagerApi* | [**apiManagerDashboardStatisticGet**](docs/ManagerApi.md#apiManagerDashboardStatisticGet) | **GET** /api/manager/dashboard/statistic | Dashboard statistic
-*CoreApi.ManagerApi* | [**apiManagerInvestmentAvailableInvestmentsGet**](docs/ManagerApi.md#apiManagerInvestmentAvailableInvestmentsGet) | **GET** /api/manager/investment/availableInvestments | 
 *CoreApi.ManagerApi* | [**apiManagerInvestmentCancelInvestmentRequestPost**](docs/ManagerApi.md#apiManagerInvestmentCancelInvestmentRequestPost) | **POST** /api/manager/investment/cancelInvestmentRequest | Cancel investment request
 *CoreApi.ManagerApi* | [**apiManagerInvestmentClosePost**](docs/ManagerApi.md#apiManagerInvestmentClosePost) | **POST** /api/manager/investment/close | Close existing investment program
 *CoreApi.ManagerApi* | [**apiManagerInvestmentInvestPost**](docs/ManagerApi.md#apiManagerInvestmentInvestPost) | **POST** /api/manager/investment/invest | Manager deposit in his own investment program
@@ -203,7 +202,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [CoreApi.AvailableInvestments](docs/AvailableInvestments.md)
  - [CoreApi.Broker](docs/Broker.md)
  - [CoreApi.BrokerInitData](docs/BrokerInitData.md)
  - [CoreApi.BrokerInvestmentProgram](docs/BrokerInvestmentProgram.md)

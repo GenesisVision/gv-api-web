@@ -13,7 +13,6 @@
 
 
 import ApiClient from './ApiClient';
-import AvailableInvestments from './model/AvailableInvestments';
 import Broker from './model/Broker';
 import BrokerInitData from './model/BrokerInitData';
 import BrokerInvestmentProgram from './model/BrokerInvestmentProgram';
@@ -149,12 +148,6 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
-
-    /**
-     * The AvailableInvestments model constructor.
-     * @property {module:model/AvailableInvestments}
-     */
-    AvailableInvestments,
 
     /**
      * The Broker model constructor.

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **gvtWalletAmount** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
+**availableInvestments** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

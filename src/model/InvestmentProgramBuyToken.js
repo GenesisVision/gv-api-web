@@ -93,6 +93,9 @@ export default class InvestmentProgramBuyToken {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
+            if (data.hasOwnProperty('availableInvestments')) {
+                obj['availableInvestments'] = ApiClient.convertToType(data['availableInvestments'], 'Number');
+            }
         }
         return obj;
     }
@@ -145,6 +148,10 @@ export default class InvestmentProgramBuyToken {
     * @member {module:model/InvestmentProgramBuyToken.CurrencyEnum} currency
     */
     currency = undefined;
+    /**
+    * @member {Number} availableInvestments
+    */
+    availableInvestments = undefined;
 
 
 
