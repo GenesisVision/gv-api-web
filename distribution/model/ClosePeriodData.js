@@ -116,6 +116,12 @@ var ClosePeriodData = function () {
 ClosePeriodData.InvestmentProgramStatusEnum = {
 
     /**
+     * value: "None"
+     * @const
+     */
+    "None": "None",
+
+    /**
      * value: "ForClosingDueToInactivity"
      * @const
      */

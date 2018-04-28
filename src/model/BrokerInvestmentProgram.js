@@ -201,6 +201,12 @@ export default class BrokerInvestmentProgram {
     static StatusEnum = {
     
         /**
+         * value: "None"
+         * @const
+         */
+        "None": "None",
+    
+        /**
          * value: "ForClosingDueToInactivity"
          * @const
          */

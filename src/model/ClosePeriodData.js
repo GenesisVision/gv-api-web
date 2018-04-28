@@ -104,6 +104,12 @@ export default class ClosePeriodData {
     static InvestmentProgramStatusEnum = {
     
         /**
+         * value: "None"
+         * @const
+         */
+        "None": "None",
+    
+        /**
          * value: "ForClosingDueToInactivity"
          * @const
          */

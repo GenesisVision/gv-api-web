@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 ## Enum: InvestmentProgramStatusEnum
 
 
+* `None` (value: `"None"`)
+
 * `ForClosingDueToInactivity` (value: `"ForClosingDueToInactivity"`)
 
 

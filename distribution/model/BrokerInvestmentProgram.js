@@ -224,6 +224,12 @@ var BrokerInvestmentProgram = function () {
 BrokerInvestmentProgram.StatusEnum = {
 
     /**
+     * value: "None"
+     * @const
+     */
+    "None": "None",
+
+    /**
      * value: "ForClosingDueToInactivity"
      * @const
      */

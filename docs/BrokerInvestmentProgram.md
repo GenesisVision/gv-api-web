@@ -27,6 +27,8 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
+* `None` (value: `"None"`)
+
 * `ForClosingDueToInactivity` (value: `"ForClosingDueToInactivity"`)
 
 
