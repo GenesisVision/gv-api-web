@@ -89,13 +89,25 @@ var _ManagerInvestmentPrograms = require('../model/ManagerInvestmentPrograms');
 
 var _ManagerInvestmentPrograms2 = _interopRequireDefault(_ManagerInvestmentPrograms);
 
+var _ManagerLevelStatistic = require('../model/ManagerLevelStatistic');
+
+var _ManagerLevelStatistic2 = _interopRequireDefault(_ManagerLevelStatistic);
+
 var _NewInvestmentRequest = require('../model/NewInvestmentRequest');
 
 var _NewInvestmentRequest2 = _interopRequireDefault(_NewInvestmentRequest);
 
+var _NewTournamentAccountRequest = require('../model/NewTournamentAccountRequest');
+
+var _NewTournamentAccountRequest2 = _interopRequireDefault(_NewTournamentAccountRequest);
+
 var _PasswordModel = require('../model/PasswordModel');
 
 var _PasswordModel2 = _interopRequireDefault(_PasswordModel);
+
+var _PlatformStatus = require('../model/PlatformStatus');
+
+var _PlatformStatus2 = _interopRequireDefault(_PlatformStatus);
 
 var _ProfileFullViewModel = require('../model/ProfileFullViewModel');
 
@@ -202,7 +214,7 @@ var ManagerApi = function () {
   }
 
   /**
-   * Create new investment request
+   * Create new investment program request
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {module:model/NewInvestmentRequest} opts.request 
@@ -237,7 +249,7 @@ var ManagerApi = function () {
     }
 
     /**
-     * Create new investment request
+     * Create new investment program request
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewInvestmentRequest} opts.request 
@@ -248,6 +260,56 @@ var ManagerApi = function () {
     key: 'apiManagerAccountNewInvestmentRequestPost',
     value: function apiManagerAccountNewInvestmentRequestPost(authorization, opts) {
       return this.apiManagerAccountNewInvestmentRequestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Create new tournament investment program request
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewTournamentAccountRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
+     */
+
+  }, {
+    key: 'apiManagerAccountTournamentNewInvestmentRequestPostWithHttpInfo',
+    value: function apiManagerAccountTournamentNewInvestmentRequestPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiManagerAccountTournamentNewInvestmentRequestPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi('/api/manager/account/tournament/newInvestmentRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Create new tournament investment program request
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewTournamentAccountRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
+     */
+
+  }, {
+    key: 'apiManagerAccountTournamentNewInvestmentRequestPost',
+    value: function apiManagerAccountTournamentNewInvestmentRequestPost(authorization, opts) {
+      return this.apiManagerAccountTournamentNewInvestmentRequestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1351,6 +1413,58 @@ var ManagerApi = function () {
     }
 
     /**
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerLevelStatistic} and HTTP response
+     */
+
+  }, {
+    key: 'apiManagerInvestmentProgramGetlevelstatisticGetWithHttpInfo',
+    value: function apiManagerInvestmentProgramGetlevelstatisticGetWithHttpInfo(investmentProgramId, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'investmentProgramId' is set
+      if (investmentProgramId === undefined || investmentProgramId === null) {
+        throw new Error("Missing the required parameter 'investmentProgramId' when calling apiManagerInvestmentProgramGetlevelstatisticGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiManagerInvestmentProgramGetlevelstatisticGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'investmentProgramId': investmentProgramId
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerLevelStatistic2.default;
+
+      return this.apiClient.callApi('/api/manager/investmentProgram/getlevelstatistic', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @param {String} investmentProgramId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerLevelStatistic}
+     */
+
+  }, {
+    key: 'apiManagerInvestmentProgramGetlevelstatisticGet',
+    value: function apiManagerInvestmentProgramGetlevelstatisticGet(investmentProgramId, authorization) {
+      return this.apiManagerInvestmentProgramGetlevelstatisticGetWithHttpInfo(investmentProgramId, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Close current period
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
@@ -1789,6 +1903,40 @@ var ManagerApi = function () {
     key: 'apiManagerInvestmentWithdrawPost',
     value: function apiManagerInvestmentWithdrawPost(authorization, opts) {
       return this.apiManagerInvestmentWithdrawPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
+     */
+
+  }, {
+    key: 'apiManagerPlatformStatusGetWithHttpInfo',
+    value: function apiManagerPlatformStatusGetWithHttpInfo() {
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _PlatformStatus2.default;
+
+      return this.apiClient.callApi('/api/manager/platformStatus', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
+     */
+
+  }, {
+    key: 'apiManagerPlatformStatusGet',
+    value: function apiManagerPlatformStatusGet() {
+      return this.apiManagerPlatformStatusGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **showActivePrograms** | **Boolean** |  | [optional] 
 **equityChartLength** | **Number** |  | [optional] 
 **showMyFavorites** | **Boolean** |  | [optional] 
+**roundNumber** | **Number** |  | [optional] 
 **skip** | **Number** |  | [optional] 
 **take** | **Number** |  | [optional] 
 

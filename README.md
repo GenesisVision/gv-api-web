@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsInvestPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsInvestPost) | **POST** /api/investor/investmentPrograms/invest | Invest in manager
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsPost) | **POST** /api/investor/investmentPrograms | Get public investment program&#39;s list
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsWithdrawPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsWithdrawPost) | **POST** /api/investor/investmentPrograms/withdraw | Withdraw from investment program
+*CoreApi.InvestorApi* | [**apiInvestorPlatformStatusGet**](docs/InvestorApi.md#apiInvestorPlatformStatusGet) | **GET** /api/investor/platformStatus | 
 *CoreApi.InvestorApi* | [**apiInvestorProfileFullGet**](docs/InvestorApi.md#apiInvestorProfileFullGet) | **GET** /api/investor/profile/full | Get full profile
 *CoreApi.InvestorApi* | [**apiInvestorProfilePublicGet**](docs/InvestorApi.md#apiInvestorProfilePublicGet) | **GET** /api/investor/profile/public | Get public profile
 *CoreApi.InvestorApi* | [**apiInvestorProfileUpdatePost**](docs/InvestorApi.md#apiInvestorProfileUpdatePost) | **POST** /api/investor/profile/update | Update profile
@@ -154,7 +155,8 @@ Class | Method | HTTP request | Description
 *CoreApi.InvestorApi* | [**apiInvestorWalletTransactionsInvestmentProgramsListGet**](docs/InvestorApi.md#apiInvestorWalletTransactionsInvestmentProgramsListGet) | **GET** /api/investor/wallet/transactions/investmentProgramsList | Get user investment programs with tx
 *CoreApi.InvestorApi* | [**apiInvestorWalletTransactionsPost**](docs/InvestorApi.md#apiInvestorWalletTransactionsPost) | **POST** /api/investor/wallet/transactions | Get user wallet transactions
 *CoreApi.InvestorApi* | [**apiInvestorWalletWithdrawRequestPost**](docs/InvestorApi.md#apiInvestorWalletWithdrawRequestPost) | **POST** /api/investor/wallet/withdrawRequest | Withdraw request
-*CoreApi.ManagerApi* | [**apiManagerAccountNewInvestmentRequestPost**](docs/ManagerApi.md#apiManagerAccountNewInvestmentRequestPost) | **POST** /api/manager/account/newInvestmentRequest | Create new investment request
+*CoreApi.ManagerApi* | [**apiManagerAccountNewInvestmentRequestPost**](docs/ManagerApi.md#apiManagerAccountNewInvestmentRequestPost) | **POST** /api/manager/account/newInvestmentRequest | Create new investment program request
+*CoreApi.ManagerApi* | [**apiManagerAccountTournamentNewInvestmentRequestPost**](docs/ManagerApi.md#apiManagerAccountTournamentNewInvestmentRequestPost) | **POST** /api/manager/account/tournament/newInvestmentRequest | Create new tournament investment program request
 *CoreApi.ManagerApi* | [**apiManagerAuth2faConfirmPost**](docs/ManagerApi.md#apiManagerAuth2faConfirmPost) | **POST** /api/manager/auth/2fa/confirm | 2FA confirm
 *CoreApi.ManagerApi* | [**apiManagerAuth2faCreatePost**](docs/ManagerApi.md#apiManagerAuth2faCreatePost) | **POST** /api/manager/auth/2fa/create | 2FA create
 *CoreApi.ManagerApi* | [**apiManagerAuth2faDisablePost**](docs/ManagerApi.md#apiManagerAuth2faDisablePost) | **POST** /api/manager/auth/2fa/disable | 2FA disable
@@ -178,6 +180,7 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramBuyTokensGet**](docs/ManagerApi.md#apiManagerInvestmentProgramBuyTokensGet) | **GET** /api/manager/investmentProgram/buyTokens | Get investment program buy token model
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramEquityChartGet**](docs/ManagerApi.md#apiManagerInvestmentProgramEquityChartGet) | **GET** /api/manager/investmentProgram/equity/chart | Get manager equity chart
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramGet**](docs/ManagerApi.md#apiManagerInvestmentProgramGet) | **GET** /api/manager/investmentProgram | Get investment program details by id
+*CoreApi.ManagerApi* | [**apiManagerInvestmentProgramGetlevelstatisticGet**](docs/ManagerApi.md#apiManagerInvestmentProgramGetlevelstatisticGet) | **GET** /api/manager/investmentProgram/getlevelstatistic | 
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramPeriodClosePost**](docs/ManagerApi.md#apiManagerInvestmentProgramPeriodClosePost) | **POST** /api/manager/investmentProgram/period/close | Close current period
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramRequestsPost**](docs/ManagerApi.md#apiManagerInvestmentProgramRequestsPost) | **POST** /api/manager/investmentProgram/requests | Get investment program&#39;s requests
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramTradesChartGet**](docs/ManagerApi.md#apiManagerInvestmentProgramTradesChartGet) | **GET** /api/manager/investmentProgram/trades/chart | Get manager trades chart
@@ -187,6 +190,7 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramsFavoritesRemovePost**](docs/ManagerApi.md#apiManagerInvestmentProgramsFavoritesRemovePost) | **POST** /api/manager/investmentPrograms/favorites/remove | Remove from favorites
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramsPost**](docs/ManagerApi.md#apiManagerInvestmentProgramsPost) | **POST** /api/manager/investmentPrograms | Get public investment program&#39;s list
 *CoreApi.ManagerApi* | [**apiManagerInvestmentWithdrawPost**](docs/ManagerApi.md#apiManagerInvestmentWithdrawPost) | **POST** /api/manager/investment/withdraw | Manager withdrawal from his own investment program
+*CoreApi.ManagerApi* | [**apiManagerPlatformStatusGet**](docs/ManagerApi.md#apiManagerPlatformStatusGet) | **GET** /api/manager/platformStatus | 
 *CoreApi.ManagerApi* | [**apiManagerProfileFullGet**](docs/ManagerApi.md#apiManagerProfileFullGet) | **GET** /api/manager/profile/full | Get full profile
 *CoreApi.ManagerApi* | [**apiManagerProfilePublicGet**](docs/ManagerApi.md#apiManagerProfilePublicGet) | **GET** /api/manager/profile/public | Get public profile
 *CoreApi.ManagerApi* | [**apiManagerProfileUpdatePost**](docs/ManagerApi.md#apiManagerProfileUpdatePost) | **POST** /api/manager/profile/update | Update profile
@@ -245,6 +249,7 @@ Class | Method | HTTP request | Description
  - [CoreApi.ManagerHistoryIpfsHash](docs/ManagerHistoryIpfsHash.md)
  - [CoreApi.ManagerInvestmentPrograms](docs/ManagerInvestmentPrograms.md)
  - [CoreApi.ManagerIpfsHash](docs/ManagerIpfsHash.md)
+ - [CoreApi.ManagerLevelStatistic](docs/ManagerLevelStatistic.md)
  - [CoreApi.ManagerOpenTrades](docs/ManagerOpenTrades.md)
  - [CoreApi.ManagerProfitChart](docs/ManagerProfitChart.md)
  - [CoreApi.ManagerProfitChartData](docs/ManagerProfitChartData.md)
@@ -252,6 +257,7 @@ Class | Method | HTTP request | Description
  - [CoreApi.NewInvestmentRequest](docs/NewInvestmentRequest.md)
  - [CoreApi.NewManager](docs/NewManager.md)
  - [CoreApi.NewOpenTradesEvent](docs/NewOpenTradesEvent.md)
+ - [CoreApi.NewTournamentAccountRequest](docs/NewTournamentAccountRequest.md)
  - [CoreApi.NewTradeEvent](docs/NewTradeEvent.md)
  - [CoreApi.OpenOrderModel](docs/OpenOrderModel.md)
  - [CoreApi.OpenTradesViewModel](docs/OpenTradesViewModel.md)
@@ -260,6 +266,7 @@ Class | Method | HTTP request | Description
  - [CoreApi.PaymentTxInfo](docs/PaymentTxInfo.md)
  - [CoreApi.Period](docs/Period.md)
  - [CoreApi.PeriodProfitDiagram](docs/PeriodProfitDiagram.md)
+ - [CoreApi.PlatformStatus](docs/PlatformStatus.md)
  - [CoreApi.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApi.ProfilePublicViewModel](docs/ProfilePublicViewModel.md)
  - [CoreApi.ProgramBalances](docs/ProgramBalances.md)

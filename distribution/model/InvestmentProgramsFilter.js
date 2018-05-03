@@ -63,6 +63,7 @@ var InvestmentProgramsFilter = function () {
         this.showActivePrograms = undefined;
         this.equityChartLength = undefined;
         this.showMyFavorites = undefined;
+        this.roundNumber = undefined;
         this.skip = undefined;
         this.take = undefined;
     }
@@ -150,6 +151,9 @@ var InvestmentProgramsFilter = function () {
                 }
                 if (data.hasOwnProperty('showMyFavorites')) {
                     obj['showMyFavorites'] = _ApiClient2.default.convertToType(data['showMyFavorites'], 'Boolean');
+                }
+                if (data.hasOwnProperty('roundNumber')) {
+                    obj['roundNumber'] = _ApiClient2.default.convertToType(data['roundNumber'], 'Number');
                 }
                 if (data.hasOwnProperty('skip')) {
                     obj['skip'] = _ApiClient2.default.convertToType(data['skip'], 'Number');
@@ -251,6 +255,10 @@ var InvestmentProgramsFilter = function () {
 
         /**
         * @member {Boolean} showMyFavorites
+        */
+
+        /**
+        * @member {Number} roundNumber
         */
 
         /**

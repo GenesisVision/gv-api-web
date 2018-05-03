@@ -33,6 +33,9 @@ Name | Type | Description | Notes
 **isOwnProgram** | **Boolean** |  | [optional] 
 **canCloseProgram** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
+**isTournament** | **Boolean** |  | [optional] 
+**roundNumber** | **Number** |  | [optional] 
+**place** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

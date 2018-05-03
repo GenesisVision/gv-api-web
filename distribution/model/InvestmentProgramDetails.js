@@ -110,6 +110,9 @@ var InvestmentProgramDetails = function () {
         this.canCloseProgram = undefined;
         this.canClosePeriod = undefined;
         this.isFavorite = undefined;
+        this.isTournament = undefined;
+        this.roundNumber = undefined;
+        this.place = undefined;
     }
 
     /**
@@ -276,6 +279,15 @@ var InvestmentProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isTournament')) {
+                    obj['isTournament'] = _ApiClient2.default.convertToType(data['isTournament'], 'Boolean');
+                }
+                if (data.hasOwnProperty('roundNumber')) {
+                    obj['roundNumber'] = _ApiClient2.default.convertToType(data['roundNumber'], 'Number');
+                }
+                if (data.hasOwnProperty('place')) {
+                    obj['place'] = _ApiClient2.default.convertToType(data['place'], 'Number');
                 }
             }
             return obj;
@@ -479,6 +491,18 @@ var InvestmentProgramDetails = function () {
 
         /**
         * @member {Boolean} isFavorite
+        */
+
+        /**
+        * @member {Boolean} isTournament
+        */
+
+        /**
+        * @member {Number} roundNumber
+        */
+
+        /**
+        * @member {Number} place
         */
 
 

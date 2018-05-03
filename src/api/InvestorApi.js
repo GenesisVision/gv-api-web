@@ -27,6 +27,7 @@ import InvestorDashboard from '../model/InvestorDashboard';
 import LoginViewModel from '../model/LoginViewModel';
 import OpenTradesViewModel from '../model/OpenTradesViewModel';
 import PasswordModel from '../model/PasswordModel';
+import PlatformStatus from '../model/PlatformStatus';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfilePublicViewModel from '../model/ProfilePublicViewModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
@@ -1476,6 +1477,45 @@ export default class InvestorApi {
      */
     apiInvestorInvestmentProgramsWithdrawPost(authorization, opts) {
       return this.apiInvestorInvestmentProgramsWithdrawPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
+     */
+    apiInvestorPlatformStatusGetWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = PlatformStatus;
+
+      return this.apiClient.callApi(
+        '/api/investor/platformStatus', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
+     */
+    apiInvestorPlatformStatusGet() {
+      return this.apiInvestorPlatformStatusGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

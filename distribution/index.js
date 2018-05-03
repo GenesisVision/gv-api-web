@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TradesApi = exports.RateApi = exports.ManagerApi = exports.InvestorApi = exports.FilesApi = exports.BrokerApi = exports.WalletsViewModel = exports.WalletWithdrawRequestModel = exports.WalletViewModel = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletStatisticFilter = exports.WalletStatistic = exports.WalletInvestmentPrograms = exports.WalletInvestmentProgram = exports.WalletAddressViewModel = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionsFilter = exports.TradesViewModel = exports.TradesFilter = exports.TradesChartViewModel = exports.TradeChart = exports.Token = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RateViewModel = exports.ProgramBalances = exports.ProfilePublicViewModel = exports.ProfileFullViewModel = exports.PeriodProfitDiagram = exports.Period = exports.PaymentTxInfo = exports.PasswordModel = exports.OrderModel = exports.OpenTradesViewModel = exports.OpenOrderModel = exports.NewTradeEvent = exports.NewOpenTradesEvent = exports.NewManager = exports.NewInvestmentRequest = exports.ManagerRequest = exports.ManagerProfitChartData = exports.ManagerProfitChart = exports.ManagerOpenTrades = exports.ManagerIpfsHash = exports.ManagerInvestmentPrograms = exports.ManagerHistoryIpfsHash = exports.ManagerFundChart = exports.ManagerDashboardStatistic = exports.ManagerDashboardProgramsFilter = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorDashboard = exports.InvestorAmount = exports.InvestmentProgramsViewModel = exports.InvestmentProgramsFilter = exports.InvestmentProgramViewModel = exports.InvestmentProgramUpdate = exports.InvestmentProgramTxInfo = exports.InvestmentProgramRequestsFilter = exports.InvestmentProgramRequests = exports.InvestmentProgramRequestTxInfo = exports.InvestmentProgramRequest = exports.InvestmentProgramDetails = exports.InvestmentProgramDashboardManager = exports.InvestmentProgramDashboardInvestor = exports.InvestmentProgramBuyToken = exports.InvestmentProgramAccrual = exports.InvestmentProgram = exports.Invest = exports.IFormFile = exports.FreeTokens = exports.ForgotPasswordViewModel = exports.ErrorViewModel = exports.ErrorMessage = exports.EndOfNextPeriod = exports.DateChart = exports.ClosePeriodData = exports.ChartByDate = exports.Chart = exports.ChangePasswordViewModel = exports.BrokersViewModel = exports.BrokersFilter = exports.BrokerTradeServer = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.Broker = exports.ApiClient = undefined;
+exports.TradesApi = exports.RateApi = exports.ManagerApi = exports.InvestorApi = exports.FilesApi = exports.BrokerApi = exports.WalletsViewModel = exports.WalletWithdrawRequestModel = exports.WalletViewModel = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletStatisticFilter = exports.WalletStatistic = exports.WalletInvestmentPrograms = exports.WalletInvestmentProgram = exports.WalletAddressViewModel = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionsFilter = exports.TradesViewModel = exports.TradesFilter = exports.TradesChartViewModel = exports.TradeChart = exports.Token = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RateViewModel = exports.ProgramBalances = exports.ProfilePublicViewModel = exports.ProfileFullViewModel = exports.PlatformStatus = exports.PeriodProfitDiagram = exports.Period = exports.PaymentTxInfo = exports.PasswordModel = exports.OrderModel = exports.OpenTradesViewModel = exports.OpenOrderModel = exports.NewTradeEvent = exports.NewTournamentAccountRequest = exports.NewOpenTradesEvent = exports.NewManager = exports.NewInvestmentRequest = exports.ManagerRequest = exports.ManagerProfitChartData = exports.ManagerProfitChart = exports.ManagerOpenTrades = exports.ManagerLevelStatistic = exports.ManagerIpfsHash = exports.ManagerInvestmentPrograms = exports.ManagerHistoryIpfsHash = exports.ManagerFundChart = exports.ManagerDashboardStatistic = exports.ManagerDashboardProgramsFilter = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorDashboard = exports.InvestorAmount = exports.InvestmentProgramsViewModel = exports.InvestmentProgramsFilter = exports.InvestmentProgramViewModel = exports.InvestmentProgramUpdate = exports.InvestmentProgramTxInfo = exports.InvestmentProgramRequestsFilter = exports.InvestmentProgramRequests = exports.InvestmentProgramRequestTxInfo = exports.InvestmentProgramRequest = exports.InvestmentProgramDetails = exports.InvestmentProgramDashboardManager = exports.InvestmentProgramDashboardInvestor = exports.InvestmentProgramBuyToken = exports.InvestmentProgramAccrual = exports.InvestmentProgram = exports.Invest = exports.IFormFile = exports.FreeTokens = exports.ForgotPasswordViewModel = exports.ErrorViewModel = exports.ErrorMessage = exports.EndOfNextPeriod = exports.DateChart = exports.ClosePeriodData = exports.ChartByDate = exports.Chart = exports.ChangePasswordViewModel = exports.BrokersViewModel = exports.BrokersFilter = exports.BrokerTradeServer = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.Broker = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -181,6 +181,10 @@ var _ManagerIpfsHash = require('./model/ManagerIpfsHash');
 
 var _ManagerIpfsHash2 = _interopRequireDefault(_ManagerIpfsHash);
 
+var _ManagerLevelStatistic = require('./model/ManagerLevelStatistic');
+
+var _ManagerLevelStatistic2 = _interopRequireDefault(_ManagerLevelStatistic);
+
 var _ManagerOpenTrades = require('./model/ManagerOpenTrades');
 
 var _ManagerOpenTrades2 = _interopRequireDefault(_ManagerOpenTrades);
@@ -208,6 +212,10 @@ var _NewManager2 = _interopRequireDefault(_NewManager);
 var _NewOpenTradesEvent = require('./model/NewOpenTradesEvent');
 
 var _NewOpenTradesEvent2 = _interopRequireDefault(_NewOpenTradesEvent);
+
+var _NewTournamentAccountRequest = require('./model/NewTournamentAccountRequest');
+
+var _NewTournamentAccountRequest2 = _interopRequireDefault(_NewTournamentAccountRequest);
 
 var _NewTradeEvent = require('./model/NewTradeEvent');
 
@@ -240,6 +248,10 @@ var _Period2 = _interopRequireDefault(_Period);
 var _PeriodProfitDiagram = require('./model/PeriodProfitDiagram');
 
 var _PeriodProfitDiagram2 = _interopRequireDefault(_PeriodProfitDiagram);
+
+var _PlatformStatus = require('./model/PlatformStatus');
+
+var _PlatformStatus2 = _interopRequireDefault(_PlatformStatus);
 
 var _ProfileFullViewModel = require('./model/ProfileFullViewModel');
 
@@ -426,6 +438,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @module index
 * @version v1
 */
+/**
+ * Core API
+ * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+ *
+ * OpenAPI spec version: v1
+ * 
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
 exports.Broker = _Broker2.default;
 exports.BrokerInitData = _BrokerInitData2.default;
@@ -470,6 +495,7 @@ exports.ManagerFundChart = _ManagerFundChart2.default;
 exports.ManagerHistoryIpfsHash = _ManagerHistoryIpfsHash2.default;
 exports.ManagerInvestmentPrograms = _ManagerInvestmentPrograms2.default;
 exports.ManagerIpfsHash = _ManagerIpfsHash2.default;
+exports.ManagerLevelStatistic = _ManagerLevelStatistic2.default;
 exports.ManagerOpenTrades = _ManagerOpenTrades2.default;
 exports.ManagerProfitChart = _ManagerProfitChart2.default;
 exports.ManagerProfitChartData = _ManagerProfitChartData2.default;
@@ -477,6 +503,7 @@ exports.ManagerRequest = _ManagerRequest2.default;
 exports.NewInvestmentRequest = _NewInvestmentRequest2.default;
 exports.NewManager = _NewManager2.default;
 exports.NewOpenTradesEvent = _NewOpenTradesEvent2.default;
+exports.NewTournamentAccountRequest = _NewTournamentAccountRequest2.default;
 exports.NewTradeEvent = _NewTradeEvent2.default;
 exports.OpenOrderModel = _OpenOrderModel2.default;
 exports.OpenTradesViewModel = _OpenTradesViewModel2.default;
@@ -485,6 +512,7 @@ exports.PasswordModel = _PasswordModel2.default;
 exports.PaymentTxInfo = _PaymentTxInfo2.default;
 exports.Period = _Period2.default;
 exports.PeriodProfitDiagram = _PeriodProfitDiagram2.default;
+exports.PlatformStatus = _PlatformStatus2.default;
 exports.ProfileFullViewModel = _ProfileFullViewModel2.default;
 exports.ProfilePublicViewModel = _ProfilePublicViewModel2.default;
 exports.ProgramBalances = _ProgramBalances2.default;
@@ -522,15 +550,4 @@ exports.FilesApi = _FilesApi2.default;
 exports.InvestorApi = _InvestorApi2.default;
 exports.ManagerApi = _ManagerApi2.default;
 exports.RateApi = _RateApi2.default;
-exports.TradesApi = _TradesApi2.default; /**
-                                          * Core API
-                                          * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
-                                          *
-                                          * OpenAPI spec version: v1
-                                          * 
-                                          *
-                                          * NOTE: This class is auto generated by the swagger code generator program.
-                                          * https://github.com/swagger-api/swagger-codegen.git
-                                          * Do not edit the class manually.
-                                          *
-                                          */
+exports.TradesApi = _TradesApi2.default;

@@ -132,6 +132,15 @@ export default class InvestmentProgramDashboardManager {
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
+            if (data.hasOwnProperty('isTournament')) {
+                obj['isTournament'] = ApiClient.convertToType(data['isTournament'], 'Boolean');
+            }
+            if (data.hasOwnProperty('roundNumber')) {
+                obj['roundNumber'] = ApiClient.convertToType(data['roundNumber'], 'Number');
+            }
+            if (data.hasOwnProperty('place')) {
+                obj['place'] = ApiClient.convertToType(data['place'], 'Number');
+            }
         }
         return obj;
     }
@@ -236,6 +245,18 @@ export default class InvestmentProgramDashboardManager {
     * @member {Boolean} isFavorite
     */
     isFavorite = undefined;
+    /**
+    * @member {Boolean} isTournament
+    */
+    isTournament = undefined;
+    /**
+    * @member {Number} roundNumber
+    */
+    roundNumber = undefined;
+    /**
+    * @member {Number} place
+    */
+    place = undefined;
 
 
 

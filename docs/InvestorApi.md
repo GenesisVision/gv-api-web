@@ -31,6 +31,7 @@ Method | HTTP request | Description
 [**apiInvestorInvestmentProgramsInvestPost**](InvestorApi.md#apiInvestorInvestmentProgramsInvestPost) | **POST** /api/investor/investmentPrograms/invest | Invest in manager
 [**apiInvestorInvestmentProgramsPost**](InvestorApi.md#apiInvestorInvestmentProgramsPost) | **POST** /api/investor/investmentPrograms | Get public investment program&#39;s list
 [**apiInvestorInvestmentProgramsWithdrawPost**](InvestorApi.md#apiInvestorInvestmentProgramsWithdrawPost) | **POST** /api/investor/investmentPrograms/withdraw | Withdraw from investment program
+[**apiInvestorPlatformStatusGet**](InvestorApi.md#apiInvestorPlatformStatusGet) | **GET** /api/investor/platformStatus | 
 [**apiInvestorProfileFullGet**](InvestorApi.md#apiInvestorProfileFullGet) | **GET** /api/investor/profile/full | Get full profile
 [**apiInvestorProfilePublicGet**](InvestorApi.md#apiInvestorProfilePublicGet) | **GET** /api/investor/profile/public | Get public profile
 [**apiInvestorProfileUpdatePost**](InvestorApi.md#apiInvestorProfileUpdatePost) | **POST** /api/investor/profile/update | Update profile
@@ -1223,6 +1224,41 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="apiInvestorPlatformStatusGet"></a>
+# **apiInvestorPlatformStatusGet**
+> PlatformStatus apiInvestorPlatformStatusGet()
+
+
+
+### Example
+```javascript
+import CoreApi from 'core_api';
+
+let apiInstance = new CoreApi.InvestorApi();
+apiInstance.apiInvestorPlatformStatusGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PlatformStatus**](PlatformStatus.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="apiInvestorProfileFullGet"></a>

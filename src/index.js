@@ -56,6 +56,7 @@ import ManagerFundChart from './model/ManagerFundChart';
 import ManagerHistoryIpfsHash from './model/ManagerHistoryIpfsHash';
 import ManagerInvestmentPrograms from './model/ManagerInvestmentPrograms';
 import ManagerIpfsHash from './model/ManagerIpfsHash';
+import ManagerLevelStatistic from './model/ManagerLevelStatistic';
 import ManagerOpenTrades from './model/ManagerOpenTrades';
 import ManagerProfitChart from './model/ManagerProfitChart';
 import ManagerProfitChartData from './model/ManagerProfitChartData';
@@ -63,6 +64,7 @@ import ManagerRequest from './model/ManagerRequest';
 import NewInvestmentRequest from './model/NewInvestmentRequest';
 import NewManager from './model/NewManager';
 import NewOpenTradesEvent from './model/NewOpenTradesEvent';
+import NewTournamentAccountRequest from './model/NewTournamentAccountRequest';
 import NewTradeEvent from './model/NewTradeEvent';
 import OpenOrderModel from './model/OpenOrderModel';
 import OpenTradesViewModel from './model/OpenTradesViewModel';
@@ -71,6 +73,7 @@ import PasswordModel from './model/PasswordModel';
 import PaymentTxInfo from './model/PaymentTxInfo';
 import Period from './model/Period';
 import PeriodProfitDiagram from './model/PeriodProfitDiagram';
+import PlatformStatus from './model/PlatformStatus';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfilePublicViewModel from './model/ProfilePublicViewModel';
 import ProgramBalances from './model/ProgramBalances';
@@ -408,6 +411,12 @@ export {
     ManagerIpfsHash,
 
     /**
+     * The ManagerLevelStatistic model constructor.
+     * @property {module:model/ManagerLevelStatistic}
+     */
+    ManagerLevelStatistic,
+
+    /**
      * The ManagerOpenTrades model constructor.
      * @property {module:model/ManagerOpenTrades}
      */
@@ -448,6 +457,12 @@ export {
      * @property {module:model/NewOpenTradesEvent}
      */
     NewOpenTradesEvent,
+
+    /**
+     * The NewTournamentAccountRequest model constructor.
+     * @property {module:model/NewTournamentAccountRequest}
+     */
+    NewTournamentAccountRequest,
 
     /**
      * The NewTradeEvent model constructor.
@@ -496,6 +511,12 @@ export {
      * @property {module:model/PeriodProfitDiagram}
      */
     PeriodProfitDiagram,
+
+    /**
+     * The PlatformStatus model constructor.
+     * @property {module:model/PlatformStatus}
+     */
+    PlatformStatus,
 
     /**
      * The ProfileFullViewModel model constructor.

@@ -125,6 +125,9 @@ export default class InvestmentProgramsFilter {
             if (data.hasOwnProperty('showMyFavorites')) {
                 obj['showMyFavorites'] = ApiClient.convertToType(data['showMyFavorites'], 'Boolean');
             }
+            if (data.hasOwnProperty('roundNumber')) {
+                obj['roundNumber'] = ApiClient.convertToType(data['roundNumber'], 'Number');
+            }
             if (data.hasOwnProperty('skip')) {
                 obj['skip'] = ApiClient.convertToType(data['skip'], 'Number');
             }
@@ -227,6 +230,10 @@ export default class InvestmentProgramsFilter {
     * @member {Boolean} showMyFavorites
     */
     showMyFavorites = undefined;
+    /**
+    * @member {Number} roundNumber
+    */
+    roundNumber = undefined;
     /**
     * @member {Number} skip
     */

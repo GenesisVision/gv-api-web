@@ -77,6 +77,10 @@ var _PasswordModel = require('../model/PasswordModel');
 
 var _PasswordModel2 = _interopRequireDefault(_PasswordModel);
 
+var _PlatformStatus = require('../model/PlatformStatus');
+
+var _PlatformStatus2 = _interopRequireDefault(_PlatformStatus);
+
 var _ProfileFullViewModel = require('../model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
@@ -1485,6 +1489,40 @@ var InvestorApi = function () {
     key: 'apiInvestorInvestmentProgramsWithdrawPost',
     value: function apiInvestorInvestmentProgramsWithdrawPost(authorization, opts) {
       return this.apiInvestorInvestmentProgramsWithdrawPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
+     */
+
+  }, {
+    key: 'apiInvestorPlatformStatusGetWithHttpInfo',
+    value: function apiInvestorPlatformStatusGetWithHttpInfo() {
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _PlatformStatus2.default;
+
+      return this.apiClient.callApi('/api/investor/platformStatus', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
+     */
+
+  }, {
+    key: 'apiInvestorPlatformStatusGet',
+    value: function apiInvestorPlatformStatusGet() {
+      return this.apiInvestorPlatformStatusGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
