@@ -48,6 +48,7 @@ var ManagerRequest = function () {
         this.password = undefined;
         this.depositAmount = undefined;
         this.leverage = undefined;
+        this.programDateFrom = undefined;
     }
 
     /**
@@ -89,6 +90,9 @@ var ManagerRequest = function () {
                 if (data.hasOwnProperty('leverage')) {
                     obj['leverage'] = _ApiClient2.default.convertToType(data['leverage'], 'Number');
                 }
+                if (data.hasOwnProperty('programDateFrom')) {
+                    obj['programDateFrom'] = _ApiClient2.default.convertToType(data['programDateFrom'], 'Date');
+                }
             }
             return obj;
         }
@@ -123,6 +127,10 @@ var ManagerRequest = function () {
 
         /**
         * @member {Number} leverage
+        */
+
+        /**
+        * @member {Date} programDateFrom
         */
 
 

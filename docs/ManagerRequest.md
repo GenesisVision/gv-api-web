@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **password** | **String** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
 **leverage** | **Number** |  | [optional] 
+**programDateFrom** | **Date** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

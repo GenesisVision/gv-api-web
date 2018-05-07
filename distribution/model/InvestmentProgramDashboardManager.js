@@ -69,6 +69,7 @@ var InvestmentProgramDashboardManager = function () {
         this.canCloseProgram = undefined;
         this.canClosePeriod = undefined;
         this.isFavorite = undefined;
+        this.isPending = undefined;
         this.isTournament = undefined;
         this.roundNumber = undefined;
         this.place = undefined;
@@ -163,6 +164,9 @@ var InvestmentProgramDashboardManager = function () {
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isPending')) {
+                    obj['isPending'] = _ApiClient2.default.convertToType(data['isPending'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isTournament')) {
                     obj['isTournament'] = _ApiClient2.default.convertToType(data['isTournament'], 'Boolean');
@@ -275,6 +279,10 @@ var InvestmentProgramDashboardManager = function () {
 
         /**
         * @member {Boolean} isFavorite
+        */
+
+        /**
+        * @member {Boolean} isPending
         */
 
         /**

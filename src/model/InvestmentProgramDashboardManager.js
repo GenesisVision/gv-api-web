@@ -132,6 +132,9 @@ export default class InvestmentProgramDashboardManager {
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
+            if (data.hasOwnProperty('isPending')) {
+                obj['isPending'] = ApiClient.convertToType(data['isPending'], 'Boolean');
+            }
             if (data.hasOwnProperty('isTournament')) {
                 obj['isTournament'] = ApiClient.convertToType(data['isTournament'], 'Boolean');
             }
@@ -245,6 +248,10 @@ export default class InvestmentProgramDashboardManager {
     * @member {Boolean} isFavorite
     */
     isFavorite = undefined;
+    /**
+    * @member {Boolean} isPending
+    */
+    isPending = undefined;
     /**
     * @member {Boolean} isTournament
     */

@@ -80,6 +80,9 @@ export default class ManagerRequest {
             if (data.hasOwnProperty('leverage')) {
                 obj['leverage'] = ApiClient.convertToType(data['leverage'], 'Number');
             }
+            if (data.hasOwnProperty('programDateFrom')) {
+                obj['programDateFrom'] = ApiClient.convertToType(data['programDateFrom'], 'Date');
+            }
         }
         return obj;
     }
@@ -116,6 +119,10 @@ export default class ManagerRequest {
     * @member {Number} leverage
     */
     leverage = undefined;
+    /**
+    * @member {Date} programDateFrom
+    */
+    programDateFrom = undefined;
 
 
 

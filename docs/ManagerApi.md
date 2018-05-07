@@ -20,7 +20,6 @@ Method | HTTP request | Description
 [**apiManagerAuthSignUpPost**](ManagerApi.md#apiManagerAuthSignUpPost) | **POST** /api/manager/auth/signUp | Register new manager
 [**apiManagerAuthUpdateTokenGet**](ManagerApi.md#apiManagerAuthUpdateTokenGet) | **GET** /api/manager/auth/updateToken | Update auth token
 [**apiManagerBrokersPost**](ManagerApi.md#apiManagerBrokersPost) | **POST** /api/manager/brokers | Get all enabled trade servers
-[**apiManagerDashboardPendingProgramsGet**](ManagerApi.md#apiManagerDashboardPendingProgramsGet) | **GET** /api/manager/dashboard/pendingPrograms | Dashboard pending programs
 [**apiManagerDashboardProgramsPost**](ManagerApi.md#apiManagerDashboardProgramsPost) | **POST** /api/manager/dashboard/programs | Dashboard programs
 [**apiManagerDashboardStatisticGet**](ManagerApi.md#apiManagerDashboardStatisticGet) | **GET** /api/manager/dashboard/statistic | Dashboard statistic
 [**apiManagerInvestmentCancelInvestmentRequestPost**](ManagerApi.md#apiManagerInvestmentCancelInvestmentRequestPost) | **POST** /api/manager/investment/cancelInvestmentRequest | Cancel investment request
@@ -745,47 +744,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="apiManagerDashboardPendingProgramsGet"></a>
-# **apiManagerDashboardPendingProgramsGet**
-> ManagerInvestmentPrograms apiManagerDashboardPendingProgramsGet(authorization)
-
-Dashboard pending programs
-
-### Example
-```javascript
-import CoreApi from 'core_api';
-
-let apiInstance = new CoreApi.ManagerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.apiManagerDashboardPendingProgramsGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ManagerInvestmentPrograms**](ManagerInvestmentPrograms.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="apiManagerDashboardProgramsPost"></a>

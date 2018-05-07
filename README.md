@@ -171,7 +171,6 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerAuthSignUpPost**](docs/ManagerApi.md#apiManagerAuthSignUpPost) | **POST** /api/manager/auth/signUp | Register new manager
 *CoreApi.ManagerApi* | [**apiManagerAuthUpdateTokenGet**](docs/ManagerApi.md#apiManagerAuthUpdateTokenGet) | **GET** /api/manager/auth/updateToken | Update auth token
 *CoreApi.ManagerApi* | [**apiManagerBrokersPost**](docs/ManagerApi.md#apiManagerBrokersPost) | **POST** /api/manager/brokers | Get all enabled trade servers
-*CoreApi.ManagerApi* | [**apiManagerDashboardPendingProgramsGet**](docs/ManagerApi.md#apiManagerDashboardPendingProgramsGet) | **GET** /api/manager/dashboard/pendingPrograms | Dashboard pending programs
 *CoreApi.ManagerApi* | [**apiManagerDashboardProgramsPost**](docs/ManagerApi.md#apiManagerDashboardProgramsPost) | **POST** /api/manager/dashboard/programs | Dashboard programs
 *CoreApi.ManagerApi* | [**apiManagerDashboardStatisticGet**](docs/ManagerApi.md#apiManagerDashboardStatisticGet) | **GET** /api/manager/dashboard/statistic | Dashboard statistic
 *CoreApi.ManagerApi* | [**apiManagerInvestmentCancelInvestmentRequestPost**](docs/ManagerApi.md#apiManagerInvestmentCancelInvestmentRequestPost) | **POST** /api/manager/investment/cancelInvestmentRequest | Cancel investment request
