@@ -1368,6 +1368,7 @@ var ManagerApi = function () {
     }
 
     /**
+     * Level statistic
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerLevelStatistic} and HTTP response
@@ -1406,6 +1407,7 @@ var ManagerApi = function () {
     }
 
     /**
+     * Level statistic
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerLevelStatistic}
@@ -1863,6 +1865,7 @@ var ManagerApi = function () {
     }
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
      */
 
@@ -1885,6 +1888,7 @@ var ManagerApi = function () {
     }
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
      */
 

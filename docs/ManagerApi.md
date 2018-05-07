@@ -28,7 +28,7 @@ Method | HTTP request | Description
 [**apiManagerInvestmentProgramBuyTokensGet**](ManagerApi.md#apiManagerInvestmentProgramBuyTokensGet) | **GET** /api/manager/investmentProgram/buyTokens | Get investment program buy token model
 [**apiManagerInvestmentProgramEquityChartGet**](ManagerApi.md#apiManagerInvestmentProgramEquityChartGet) | **GET** /api/manager/investmentProgram/equity/chart | Get manager equity chart
 [**apiManagerInvestmentProgramGet**](ManagerApi.md#apiManagerInvestmentProgramGet) | **GET** /api/manager/investmentProgram | Get investment program details by id
-[**apiManagerInvestmentProgramGetlevelstatisticGet**](ManagerApi.md#apiManagerInvestmentProgramGetlevelstatisticGet) | **GET** /api/manager/investmentProgram/getlevelstatistic | 
+[**apiManagerInvestmentProgramGetlevelstatisticGet**](ManagerApi.md#apiManagerInvestmentProgramGetlevelstatisticGet) | **GET** /api/manager/investmentProgram/getlevelstatistic | Level statistic
 [**apiManagerInvestmentProgramPeriodClosePost**](ManagerApi.md#apiManagerInvestmentProgramPeriodClosePost) | **POST** /api/manager/investmentProgram/period/close | Close current period
 [**apiManagerInvestmentProgramRequestsPost**](ManagerApi.md#apiManagerInvestmentProgramRequestsPost) | **POST** /api/manager/investmentProgram/requests | Get investment program&#39;s requests
 [**apiManagerInvestmentProgramTradesChartGet**](ManagerApi.md#apiManagerInvestmentProgramTradesChartGet) | **GET** /api/manager/investmentProgram/trades/chart | Get manager trades chart
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 [**apiManagerInvestmentProgramsFavoritesRemovePost**](ManagerApi.md#apiManagerInvestmentProgramsFavoritesRemovePost) | **POST** /api/manager/investmentPrograms/favorites/remove | Remove from favorites
 [**apiManagerInvestmentProgramsPost**](ManagerApi.md#apiManagerInvestmentProgramsPost) | **POST** /api/manager/investmentPrograms | Get public investment program&#39;s list
 [**apiManagerInvestmentWithdrawPost**](ManagerApi.md#apiManagerInvestmentWithdrawPost) | **POST** /api/manager/investment/withdraw | Manager withdrawal from his own investment program
-[**apiManagerPlatformStatusGet**](ManagerApi.md#apiManagerPlatformStatusGet) | **GET** /api/manager/platformStatus | 
+[**apiManagerPlatformStatusGet**](ManagerApi.md#apiManagerPlatformStatusGet) | **GET** /api/manager/platformStatus | Platform status
 [**apiManagerProfileFullGet**](ManagerApi.md#apiManagerProfileFullGet) | **GET** /api/manager/profile/full | Get full profile
 [**apiManagerProfilePublicGet**](ManagerApi.md#apiManagerProfilePublicGet) | **GET** /api/manager/profile/public | Get public profile
 [**apiManagerProfileUpdatePost**](ManagerApi.md#apiManagerProfileUpdatePost) | **POST** /api/manager/profile/update | Update profile
@@ -1102,7 +1102,7 @@ No authorization required
 # **apiManagerInvestmentProgramGetlevelstatisticGet**
 > ManagerLevelStatistic apiManagerInvestmentProgramGetlevelstatisticGet(investmentProgramId, authorization)
 
-
+Level statistic
 
 ### Example
 ```javascript
@@ -1540,7 +1540,7 @@ No authorization required
 # **apiManagerPlatformStatusGet**
 > PlatformStatus apiManagerPlatformStatusGet()
 
-
+Platform status
 
 ### Example
 ```javascript

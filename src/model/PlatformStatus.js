@@ -59,6 +59,9 @@ export default class PlatformStatus {
             if (data.hasOwnProperty('isTournamentActive')) {
                 obj['isTournamentActive'] = ApiClient.convertToType(data['isTournamentActive'], 'Boolean');
             }
+            if (data.hasOwnProperty('isTournamentRegistrationActive')) {
+                obj['isTournamentRegistrationActive'] = ApiClient.convertToType(data['isTournamentRegistrationActive'], 'Boolean');
+            }
             if (data.hasOwnProperty('tournamentCurrentRound')) {
                 obj['tournamentCurrentRound'] = ApiClient.convertToType(data['tournamentCurrentRound'], 'Number');
             }
@@ -73,6 +76,10 @@ export default class PlatformStatus {
     * @member {Boolean} isTournamentActive
     */
     isTournamentActive = undefined;
+    /**
+    * @member {Boolean} isTournamentRegistrationActive
+    */
+    isTournamentRegistrationActive = undefined;
     /**
     * @member {Number} tournamentCurrentRound
     */

@@ -41,6 +41,7 @@ var PlatformStatus = function () {
         _classCallCheck(this, PlatformStatus);
 
         this.isTournamentActive = undefined;
+        this.isTournamentRegistrationActive = undefined;
         this.tournamentCurrentRound = undefined;
         this.tournamentTotalRounds = undefined;
     }
@@ -63,6 +64,9 @@ var PlatformStatus = function () {
                 if (data.hasOwnProperty('isTournamentActive')) {
                     obj['isTournamentActive'] = _ApiClient2.default.convertToType(data['isTournamentActive'], 'Boolean');
                 }
+                if (data.hasOwnProperty('isTournamentRegistrationActive')) {
+                    obj['isTournamentRegistrationActive'] = _ApiClient2.default.convertToType(data['isTournamentRegistrationActive'], 'Boolean');
+                }
                 if (data.hasOwnProperty('tournamentCurrentRound')) {
                     obj['tournamentCurrentRound'] = _ApiClient2.default.convertToType(data['tournamentCurrentRound'], 'Number');
                 }
@@ -75,6 +79,10 @@ var PlatformStatus = function () {
 
         /**
         * @member {Boolean} isTournamentActive
+        */
+
+        /**
+        * @member {Boolean} isTournamentRegistrationActive
         */
 
         /**

@@ -145,7 +145,7 @@ Class | Method | HTTP request | Description
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsInvestPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsInvestPost) | **POST** /api/investor/investmentPrograms/invest | Invest in manager
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsPost) | **POST** /api/investor/investmentPrograms | Get public investment program&#39;s list
 *CoreApi.InvestorApi* | [**apiInvestorInvestmentProgramsWithdrawPost**](docs/InvestorApi.md#apiInvestorInvestmentProgramsWithdrawPost) | **POST** /api/investor/investmentPrograms/withdraw | Withdraw from investment program
-*CoreApi.InvestorApi* | [**apiInvestorPlatformStatusGet**](docs/InvestorApi.md#apiInvestorPlatformStatusGet) | **GET** /api/investor/platformStatus | 
+*CoreApi.InvestorApi* | [**apiInvestorPlatformStatusGet**](docs/InvestorApi.md#apiInvestorPlatformStatusGet) | **GET** /api/investor/platformStatus | Platform status
 *CoreApi.InvestorApi* | [**apiInvestorProfileFullGet**](docs/InvestorApi.md#apiInvestorProfileFullGet) | **GET** /api/investor/profile/full | Get full profile
 *CoreApi.InvestorApi* | [**apiInvestorProfilePublicGet**](docs/InvestorApi.md#apiInvestorProfilePublicGet) | **GET** /api/investor/profile/public | Get public profile
 *CoreApi.InvestorApi* | [**apiInvestorProfileUpdatePost**](docs/InvestorApi.md#apiInvestorProfileUpdatePost) | **POST** /api/investor/profile/update | Update profile
@@ -179,7 +179,7 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramBuyTokensGet**](docs/ManagerApi.md#apiManagerInvestmentProgramBuyTokensGet) | **GET** /api/manager/investmentProgram/buyTokens | Get investment program buy token model
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramEquityChartGet**](docs/ManagerApi.md#apiManagerInvestmentProgramEquityChartGet) | **GET** /api/manager/investmentProgram/equity/chart | Get manager equity chart
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramGet**](docs/ManagerApi.md#apiManagerInvestmentProgramGet) | **GET** /api/manager/investmentProgram | Get investment program details by id
-*CoreApi.ManagerApi* | [**apiManagerInvestmentProgramGetlevelstatisticGet**](docs/ManagerApi.md#apiManagerInvestmentProgramGetlevelstatisticGet) | **GET** /api/manager/investmentProgram/getlevelstatistic | 
+*CoreApi.ManagerApi* | [**apiManagerInvestmentProgramGetlevelstatisticGet**](docs/ManagerApi.md#apiManagerInvestmentProgramGetlevelstatisticGet) | **GET** /api/manager/investmentProgram/getlevelstatistic | Level statistic
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramPeriodClosePost**](docs/ManagerApi.md#apiManagerInvestmentProgramPeriodClosePost) | **POST** /api/manager/investmentProgram/period/close | Close current period
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramRequestsPost**](docs/ManagerApi.md#apiManagerInvestmentProgramRequestsPost) | **POST** /api/manager/investmentProgram/requests | Get investment program&#39;s requests
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramTradesChartGet**](docs/ManagerApi.md#apiManagerInvestmentProgramTradesChartGet) | **GET** /api/manager/investmentProgram/trades/chart | Get manager trades chart
@@ -189,7 +189,7 @@ Class | Method | HTTP request | Description
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramsFavoritesRemovePost**](docs/ManagerApi.md#apiManagerInvestmentProgramsFavoritesRemovePost) | **POST** /api/manager/investmentPrograms/favorites/remove | Remove from favorites
 *CoreApi.ManagerApi* | [**apiManagerInvestmentProgramsPost**](docs/ManagerApi.md#apiManagerInvestmentProgramsPost) | **POST** /api/manager/investmentPrograms | Get public investment program&#39;s list
 *CoreApi.ManagerApi* | [**apiManagerInvestmentWithdrawPost**](docs/ManagerApi.md#apiManagerInvestmentWithdrawPost) | **POST** /api/manager/investment/withdraw | Manager withdrawal from his own investment program
-*CoreApi.ManagerApi* | [**apiManagerPlatformStatusGet**](docs/ManagerApi.md#apiManagerPlatformStatusGet) | **GET** /api/manager/platformStatus | 
+*CoreApi.ManagerApi* | [**apiManagerPlatformStatusGet**](docs/ManagerApi.md#apiManagerPlatformStatusGet) | **GET** /api/manager/platformStatus | Platform status
 *CoreApi.ManagerApi* | [**apiManagerProfileFullGet**](docs/ManagerApi.md#apiManagerProfileFullGet) | **GET** /api/manager/profile/full | Get full profile
 *CoreApi.ManagerApi* | [**apiManagerProfilePublicGet**](docs/ManagerApi.md#apiManagerProfilePublicGet) | **GET** /api/manager/profile/public | Get public profile
 *CoreApi.ManagerApi* | [**apiManagerProfileUpdatePost**](docs/ManagerApi.md#apiManagerProfileUpdatePost) | **POST** /api/manager/profile/update | Update profile

@@ -1484,6 +1484,7 @@ export default class InvestorApi {
 
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
      */
     apiInvestorPlatformStatusGetWithHttpInfo() {
@@ -1512,6 +1513,7 @@ export default class InvestorApi {
     }
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
      */
     apiInvestorPlatformStatusGet() {

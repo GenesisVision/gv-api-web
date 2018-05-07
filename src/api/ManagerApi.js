@@ -1327,6 +1327,7 @@ export default class ManagerApi {
 
 
     /**
+     * Level statistic
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerLevelStatistic} and HTTP response
@@ -1369,6 +1370,7 @@ export default class ManagerApi {
     }
 
     /**
+     * Level statistic
      * @param {String} investmentProgramId 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerLevelStatistic}
@@ -1859,6 +1861,7 @@ export default class ManagerApi {
 
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatus} and HTTP response
      */
     apiManagerPlatformStatusGetWithHttpInfo() {
@@ -1887,6 +1890,7 @@ export default class ManagerApi {
     }
 
     /**
+     * Platform status
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatus}
      */
     apiManagerPlatformStatusGet() {
