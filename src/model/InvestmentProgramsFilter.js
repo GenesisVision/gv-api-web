@@ -313,7 +313,19 @@ export default class InvestmentProgramsFilter {
          * value: "ByTitleDesc"
          * @const
          */
-        "ByTitleDesc": "ByTitleDesc"    
+        "ByTitleDesc": "ByTitleDesc",
+    
+        /**
+         * value: "ByBalanceAsk"
+         * @const
+         */
+        "ByBalanceAsk": "ByBalanceAsk",
+    
+        /**
+         * value: "ByBalanceDesc"
+         * @const
+         */
+        "ByBalanceDesc": "ByBalanceDesc"    
     };
 
     /**

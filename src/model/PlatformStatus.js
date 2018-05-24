@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import AndroidAppVersion from './AndroidAppVersion';
+import IOsAppVersion from './IOsAppVersion';
 
 
 
@@ -68,6 +70,18 @@ export default class PlatformStatus {
             if (data.hasOwnProperty('tournamentTotalRounds')) {
                 obj['tournamentTotalRounds'] = ApiClient.convertToType(data['tournamentTotalRounds'], 'Number');
             }
+            if (data.hasOwnProperty('programsMinAvgProfit')) {
+                obj['programsMinAvgProfit'] = ApiClient.convertToType(data['programsMinAvgProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('programsMaxAvgProfit')) {
+                obj['programsMaxAvgProfit'] = ApiClient.convertToType(data['programsMaxAvgProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('iOsVersion')) {
+                obj['iOsVersion'] = IOsAppVersion.constructFromObject(data['iOsVersion']);
+            }
+            if (data.hasOwnProperty('androidVersion')) {
+                obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
+            }
         }
         return obj;
     }
@@ -88,6 +102,22 @@ export default class PlatformStatus {
     * @member {Number} tournamentTotalRounds
     */
     tournamentTotalRounds = undefined;
+    /**
+    * @member {Number} programsMinAvgProfit
+    */
+    programsMinAvgProfit = undefined;
+    /**
+    * @member {Number} programsMaxAvgProfit
+    */
+    programsMaxAvgProfit = undefined;
+    /**
+    * @member {module:model/IOsAppVersion} iOsVersion
+    */
+    iOsVersion = undefined;
+    /**
+    * @member {module:model/AndroidAppVersion} androidVersion
+    */
+    androidVersion = undefined;
 
 
 

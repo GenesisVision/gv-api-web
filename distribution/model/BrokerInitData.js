@@ -50,6 +50,7 @@ var BrokerInitData = function () {
 
         this.newManagerRequest = undefined;
         this.investments = undefined;
+        this.hoursOffset = undefined;
     }
 
     /**
@@ -73,6 +74,9 @@ var BrokerInitData = function () {
                 if (data.hasOwnProperty('investments')) {
                     obj['investments'] = _ApiClient2.default.convertToType(data['investments'], [_BrokerInvestmentProgram2.default]);
                 }
+                if (data.hasOwnProperty('hoursOffset')) {
+                    obj['hoursOffset'] = _ApiClient2.default.convertToType(data['hoursOffset'], 'Number');
+                }
             }
             return obj;
         }
@@ -83,6 +87,10 @@ var BrokerInitData = function () {
 
         /**
         * @member {Array.<module:model/BrokerInvestmentProgram>} investments
+        */
+
+        /**
+        * @member {Number} hoursOffset
         */
 
     }]);

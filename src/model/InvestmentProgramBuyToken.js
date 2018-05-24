@@ -96,6 +96,9 @@ export default class InvestmentProgramBuyToken {
             if (data.hasOwnProperty('availableInvestments')) {
                 obj['availableInvestments'] = ApiClient.convertToType(data['availableInvestments'], 'Number');
             }
+            if (data.hasOwnProperty('rateCacheId')) {
+                obj['rateCacheId'] = ApiClient.convertToType(data['rateCacheId'], 'String');
+            }
         }
         return obj;
     }
@@ -152,6 +155,10 @@ export default class InvestmentProgramBuyToken {
     * @member {Number} availableInvestments
     */
     availableInvestments = undefined;
+    /**
+    * @member {String} rateCacheId
+    */
+    rateCacheId = undefined;
 
 
 

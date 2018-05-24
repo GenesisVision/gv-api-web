@@ -75,6 +75,9 @@ export default class BrokerInvestmentProgram {
             if (data.hasOwnProperty('isEnabled')) {
                 obj['isEnabled'] = ApiClient.convertToType(data['isEnabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('isTournamentAccount')) {
+                obj['isTournamentAccount'] = ApiClient.convertToType(data['isTournamentAccount'], 'Boolean');
+            }
             if (data.hasOwnProperty('period')) {
                 obj['period'] = ApiClient.convertToType(data['period'], 'Number');
             }
@@ -139,6 +142,10 @@ export default class BrokerInvestmentProgram {
     * @member {Boolean} isEnabled
     */
     isEnabled = undefined;
+    /**
+    * @member {Boolean} isTournamentAccount
+    */
+    isTournamentAccount = undefined;
     /**
     * @member {Number} period
     */

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **dateTo** | **Date** |  | [optional] 
 **description** | **String** |  | [optional] 
 **isEnabled** | **Boolean** |  | [optional] 
+**isTournamentAccount** | **Boolean** |  | [optional] 
 **period** | **Number** |  | [optional] 
 **feeSuccess** | **Number** |  | [optional] 
 **feeManagement** | **Number** |  | [optional] 

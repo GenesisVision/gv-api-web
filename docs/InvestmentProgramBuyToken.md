@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **periodDuration** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **availableInvestments** | **Number** |  | [optional] 
+**rateCacheId** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

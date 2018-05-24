@@ -13,6 +13,8 @@
 
 
 import ApiClient from './ApiClient';
+import AndroidAppVersion from './model/AndroidAppVersion';
+import AndroidVersion from './model/AndroidVersion';
 import Broker from './model/Broker';
 import BrokerInitData from './model/BrokerInitData';
 import BrokerInvestmentProgram from './model/BrokerInvestmentProgram';
@@ -30,6 +32,7 @@ import ErrorViewModel from './model/ErrorViewModel';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FreeTokens from './model/FreeTokens';
 import IFormFile from './model/IFormFile';
+import IOsAppVersion from './model/IOsAppVersion';
 import Invest from './model/Invest';
 import InvestmentProgram from './model/InvestmentProgram';
 import InvestmentProgramAccrual from './model/InvestmentProgramAccrual';
@@ -153,6 +156,18 @@ export {
     ApiClient,
 
     /**
+     * The AndroidAppVersion model constructor.
+     * @property {module:model/AndroidAppVersion}
+     */
+    AndroidAppVersion,
+
+    /**
+     * The AndroidVersion model constructor.
+     * @property {module:model/AndroidVersion}
+     */
+    AndroidVersion,
+
+    /**
      * The Broker model constructor.
      * @property {module:model/Broker}
      */
@@ -253,6 +268,12 @@ export {
      * @property {module:model/IFormFile}
      */
     IFormFile,
+
+    /**
+     * The IOsAppVersion model constructor.
+     * @property {module:model/IOsAppVersion}
+     */
+    IOsAppVersion,
 
     /**
      * The Invest model constructor.

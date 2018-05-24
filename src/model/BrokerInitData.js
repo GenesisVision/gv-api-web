@@ -64,6 +64,9 @@ export default class BrokerInitData {
             if (data.hasOwnProperty('investments')) {
                 obj['investments'] = ApiClient.convertToType(data['investments'], [BrokerInvestmentProgram]);
             }
+            if (data.hasOwnProperty('hoursOffset')) {
+                obj['hoursOffset'] = ApiClient.convertToType(data['hoursOffset'], 'Number');
+            }
         }
         return obj;
     }
@@ -76,6 +79,10 @@ export default class BrokerInitData {
     * @member {Array.<module:model/BrokerInvestmentProgram>} investments
     */
     investments = undefined;
+    /**
+    * @member {Number} hoursOffset
+    */
+    hoursOffset = undefined;
 
 
 

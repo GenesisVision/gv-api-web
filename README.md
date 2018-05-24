@@ -205,6 +205,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [CoreApi.AndroidAppVersion](docs/AndroidAppVersion.md)
+ - [CoreApi.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApi.Broker](docs/Broker.md)
  - [CoreApi.BrokerInitData](docs/BrokerInitData.md)
  - [CoreApi.BrokerInvestmentProgram](docs/BrokerInvestmentProgram.md)
@@ -222,6 +224,7 @@ Class | Method | HTTP request | Description
  - [CoreApi.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApi.FreeTokens](docs/FreeTokens.md)
  - [CoreApi.IFormFile](docs/IFormFile.md)
+ - [CoreApi.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApi.Invest](docs/Invest.md)
  - [CoreApi.InvestmentProgram](docs/InvestmentProgram.md)
  - [CoreApi.InvestmentProgramAccrual](docs/InvestmentProgramAccrual.md)

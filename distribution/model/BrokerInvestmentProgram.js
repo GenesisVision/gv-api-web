@@ -50,6 +50,7 @@ var BrokerInvestmentProgram = function () {
         this.dateTo = undefined;
         this.description = undefined;
         this.isEnabled = undefined;
+        this.isTournamentAccount = undefined;
         this.period = undefined;
         this.feeSuccess = undefined;
         this.feeManagement = undefined;
@@ -96,6 +97,9 @@ var BrokerInvestmentProgram = function () {
                 }
                 if (data.hasOwnProperty('isEnabled')) {
                     obj['isEnabled'] = _ApiClient2.default.convertToType(data['isEnabled'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isTournamentAccount')) {
+                    obj['isTournamentAccount'] = _ApiClient2.default.convertToType(data['isTournamentAccount'], 'Boolean');
                 }
                 if (data.hasOwnProperty('period')) {
                     obj['period'] = _ApiClient2.default.convertToType(data['period'], 'Number');
@@ -159,6 +163,10 @@ var BrokerInvestmentProgram = function () {
 
         /**
         * @member {Boolean} isEnabled
+        */
+
+        /**
+        * @member {Boolean} isTournamentAccount
         */
 
         /**

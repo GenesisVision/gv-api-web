@@ -21,6 +21,14 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AndroidAppVersion = require('./AndroidAppVersion');
+
+var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
+
+var _IOsAppVersion = require('./IOsAppVersion');
+
+var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,6 +52,10 @@ var PlatformStatus = function () {
         this.isTournamentRegistrationActive = undefined;
         this.tournamentCurrentRound = undefined;
         this.tournamentTotalRounds = undefined;
+        this.programsMinAvgProfit = undefined;
+        this.programsMaxAvgProfit = undefined;
+        this.iOsVersion = undefined;
+        this.androidVersion = undefined;
     }
 
     /**
@@ -73,6 +85,18 @@ var PlatformStatus = function () {
                 if (data.hasOwnProperty('tournamentTotalRounds')) {
                     obj['tournamentTotalRounds'] = _ApiClient2.default.convertToType(data['tournamentTotalRounds'], 'Number');
                 }
+                if (data.hasOwnProperty('programsMinAvgProfit')) {
+                    obj['programsMinAvgProfit'] = _ApiClient2.default.convertToType(data['programsMinAvgProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('programsMaxAvgProfit')) {
+                    obj['programsMaxAvgProfit'] = _ApiClient2.default.convertToType(data['programsMaxAvgProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('iOsVersion')) {
+                    obj['iOsVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOsVersion']);
+                }
+                if (data.hasOwnProperty('androidVersion')) {
+                    obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
+                }
             }
             return obj;
         }
@@ -91,6 +115,22 @@ var PlatformStatus = function () {
 
         /**
         * @member {Number} tournamentTotalRounds
+        */
+
+        /**
+        * @member {Number} programsMinAvgProfit
+        */
+
+        /**
+        * @member {Number} programsMaxAvgProfit
+        */
+
+        /**
+        * @member {module:model/IOsAppVersion} iOsVersion
+        */
+
+        /**
+        * @member {module:model/AndroidAppVersion} androidVersion
         */
 
     }]);
