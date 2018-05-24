@@ -76,8 +76,14 @@ export default class PlatformStatus {
             if (data.hasOwnProperty('programsMaxAvgProfit')) {
                 obj['programsMaxAvgProfit'] = ApiClient.convertToType(data['programsMaxAvgProfit'], 'Number');
             }
-            if (data.hasOwnProperty('iOsVersion')) {
-                obj['iOsVersion'] = IOsAppVersion.constructFromObject(data['iOsVersion']);
+            if (data.hasOwnProperty('programsMinTotalProfit')) {
+                obj['programsMinTotalProfit'] = ApiClient.convertToType(data['programsMinTotalProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('programsMaxTotalProfit')) {
+                obj['programsMaxTotalProfit'] = ApiClient.convertToType(data['programsMaxTotalProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('iOSVersion')) {
+                obj['iOSVersion'] = IOsAppVersion.constructFromObject(data['iOSVersion']);
             }
             if (data.hasOwnProperty('androidVersion')) {
                 obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
@@ -111,9 +117,17 @@ export default class PlatformStatus {
     */
     programsMaxAvgProfit = undefined;
     /**
-    * @member {module:model/IOsAppVersion} iOsVersion
+    * @member {Number} programsMinTotalProfit
     */
-    iOsVersion = undefined;
+    programsMinTotalProfit = undefined;
+    /**
+    * @member {Number} programsMaxTotalProfit
+    */
+    programsMaxTotalProfit = undefined;
+    /**
+    * @member {module:model/IOsAppVersion} iOSVersion
+    */
+    iOSVersion = undefined;
     /**
     * @member {module:model/AndroidAppVersion} androidVersion
     */

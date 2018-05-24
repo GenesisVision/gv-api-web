@@ -83,6 +83,12 @@ export default class InvestmentProgramsFilter {
             if (data.hasOwnProperty('levelMax')) {
                 obj['levelMax'] = ApiClient.convertToType(data['levelMax'], 'Number');
             }
+            if (data.hasOwnProperty('balanceUsdMin')) {
+                obj['balanceUsdMin'] = ApiClient.convertToType(data['balanceUsdMin'], 'Number');
+            }
+            if (data.hasOwnProperty('balanceUsdMax')) {
+                obj['balanceUsdMax'] = ApiClient.convertToType(data['balanceUsdMax'], 'Number');
+            }
             if (data.hasOwnProperty('profitAvgMin')) {
                 obj['profitAvgMin'] = ApiClient.convertToType(data['profitAvgMin'], 'Number');
             }
@@ -174,6 +180,14 @@ export default class InvestmentProgramsFilter {
     * @member {Number} levelMax
     */
     levelMax = undefined;
+    /**
+    * @member {Number} balanceUsdMin
+    */
+    balanceUsdMin = undefined;
+    /**
+    * @member {Number} balanceUsdMax
+    */
+    balanceUsdMax = undefined;
     /**
     * @member {Number} profitAvgMin
     */

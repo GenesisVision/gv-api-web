@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **levelMin** | **Number** |  | [optional] 
 **levelMax** | **Number** |  | [optional] 
+**balanceUsdMin** | **Number** |  | [optional] 
+**balanceUsdMax** | **Number** |  | [optional] 
 **profitAvgMin** | **Number** |  | [optional] 
 **profitAvgMax** | **Number** |  | [optional] 
 **profitTotalMin** | **Number** |  | [optional] 

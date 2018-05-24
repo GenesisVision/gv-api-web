@@ -99,6 +99,12 @@ export default class InvestmentProgramBuyToken {
             if (data.hasOwnProperty('rateCacheId')) {
                 obj['rateCacheId'] = ApiClient.convertToType(data['rateCacheId'], 'String');
             }
+            if (data.hasOwnProperty('managerFee')) {
+                obj['managerFee'] = ApiClient.convertToType(data['managerFee'], 'Number');
+            }
+            if (data.hasOwnProperty('gvFee')) {
+                obj['gvFee'] = ApiClient.convertToType(data['gvFee'], 'Number');
+            }
         }
         return obj;
     }
@@ -159,6 +165,14 @@ export default class InvestmentProgramBuyToken {
     * @member {String} rateCacheId
     */
     rateCacheId = undefined;
+    /**
+    * @member {Number} managerFee
+    */
+    managerFee = undefined;
+    /**
+    * @member {Number} gvFee
+    */
+    gvFee = undefined;
 
 
 

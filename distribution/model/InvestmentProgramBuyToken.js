@@ -58,6 +58,8 @@ var InvestmentProgramBuyToken = function () {
         this.currency = undefined;
         this.availableInvestments = undefined;
         this.rateCacheId = undefined;
+        this.managerFee = undefined;
+        this.gvFee = undefined;
     }
 
     /**
@@ -117,6 +119,12 @@ var InvestmentProgramBuyToken = function () {
                 if (data.hasOwnProperty('rateCacheId')) {
                     obj['rateCacheId'] = _ApiClient2.default.convertToType(data['rateCacheId'], 'String');
                 }
+                if (data.hasOwnProperty('managerFee')) {
+                    obj['managerFee'] = _ApiClient2.default.convertToType(data['managerFee'], 'Number');
+                }
+                if (data.hasOwnProperty('gvFee')) {
+                    obj['gvFee'] = _ApiClient2.default.convertToType(data['gvFee'], 'Number');
+                }
             }
             return obj;
         }
@@ -175,6 +183,14 @@ var InvestmentProgramBuyToken = function () {
 
         /**
         * @member {String} rateCacheId
+        */
+
+        /**
+        * @member {Number} managerFee
+        */
+
+        /**
+        * @member {Number} gvFee
         */
 
 

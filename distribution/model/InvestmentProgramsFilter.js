@@ -49,6 +49,8 @@ var InvestmentProgramsFilter = function () {
         this.name = undefined;
         this.levelMin = undefined;
         this.levelMax = undefined;
+        this.balanceUsdMin = undefined;
+        this.balanceUsdMax = undefined;
         this.profitAvgMin = undefined;
         this.profitAvgMax = undefined;
         this.profitTotalMin = undefined;
@@ -109,6 +111,12 @@ var InvestmentProgramsFilter = function () {
                 }
                 if (data.hasOwnProperty('levelMax')) {
                     obj['levelMax'] = _ApiClient2.default.convertToType(data['levelMax'], 'Number');
+                }
+                if (data.hasOwnProperty('balanceUsdMin')) {
+                    obj['balanceUsdMin'] = _ApiClient2.default.convertToType(data['balanceUsdMin'], 'Number');
+                }
+                if (data.hasOwnProperty('balanceUsdMax')) {
+                    obj['balanceUsdMax'] = _ApiClient2.default.convertToType(data['balanceUsdMax'], 'Number');
                 }
                 if (data.hasOwnProperty('profitAvgMin')) {
                     obj['profitAvgMin'] = _ApiClient2.default.convertToType(data['profitAvgMin'], 'Number');
@@ -199,6 +207,14 @@ var InvestmentProgramsFilter = function () {
 
         /**
         * @member {Number} levelMax
+        */
+
+        /**
+        * @member {Number} balanceUsdMin
+        */
+
+        /**
+        * @member {Number} balanceUsdMax
         */
 
         /**

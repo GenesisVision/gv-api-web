@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **currency** | **String** |  | [optional] 
 **availableInvestments** | **Number** |  | [optional] 
 **rateCacheId** | **String** |  | [optional] 
+**managerFee** | **Number** |  | [optional] 
+**gvFee** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

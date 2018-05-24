@@ -54,7 +54,9 @@ var PlatformStatus = function () {
         this.tournamentTotalRounds = undefined;
         this.programsMinAvgProfit = undefined;
         this.programsMaxAvgProfit = undefined;
-        this.iOsVersion = undefined;
+        this.programsMinTotalProfit = undefined;
+        this.programsMaxTotalProfit = undefined;
+        this.iOSVersion = undefined;
         this.androidVersion = undefined;
     }
 
@@ -91,8 +93,14 @@ var PlatformStatus = function () {
                 if (data.hasOwnProperty('programsMaxAvgProfit')) {
                     obj['programsMaxAvgProfit'] = _ApiClient2.default.convertToType(data['programsMaxAvgProfit'], 'Number');
                 }
-                if (data.hasOwnProperty('iOsVersion')) {
-                    obj['iOsVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOsVersion']);
+                if (data.hasOwnProperty('programsMinTotalProfit')) {
+                    obj['programsMinTotalProfit'] = _ApiClient2.default.convertToType(data['programsMinTotalProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('programsMaxTotalProfit')) {
+                    obj['programsMaxTotalProfit'] = _ApiClient2.default.convertToType(data['programsMaxTotalProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('iOSVersion')) {
+                    obj['iOSVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOSVersion']);
                 }
                 if (data.hasOwnProperty('androidVersion')) {
                     obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
@@ -126,7 +134,15 @@ var PlatformStatus = function () {
         */
 
         /**
-        * @member {module:model/IOsAppVersion} iOsVersion
+        * @member {Number} programsMinTotalProfit
+        */
+
+        /**
+        * @member {Number} programsMaxTotalProfit
+        */
+
+        /**
+        * @member {module:model/IOsAppVersion} iOSVersion
         */
 
         /**
