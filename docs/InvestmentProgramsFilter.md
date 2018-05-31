@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 
 * `ByTitleDesc` (value: `"ByTitleDesc"`)
 
-* `ByBalanceAsk` (value: `"ByBalanceAsk"`)
+* `ByBalanceAsc` (value: `"ByBalanceAsc"`)
 
 * `ByBalanceDesc` (value: `"ByBalanceDesc"`)
 

@@ -330,10 +330,10 @@ export default class InvestmentProgramsFilter {
         "ByTitleDesc": "ByTitleDesc",
     
         /**
-         * value: "ByBalanceAsk"
+         * value: "ByBalanceAsc"
          * @const
          */
-        "ByBalanceAsk": "ByBalanceAsk",
+        "ByBalanceAsc": "ByBalanceAsc",
     
         /**
          * value: "ByBalanceDesc"

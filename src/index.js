@@ -96,6 +96,7 @@ import TradesViewModel from './model/TradesViewModel';
 import TransactionsFilter from './model/TransactionsFilter';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
+import TwoFactorCodeModel from './model/TwoFactorCodeModel';
 import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
@@ -652,6 +653,12 @@ export {
      * @property {module:model/TwoFactorAuthenticatorConfirm}
      */
     TwoFactorAuthenticatorConfirm,
+
+    /**
+     * The TwoFactorCodeModel model constructor.
+     * @property {module:model/TwoFactorCodeModel}
+     */
+    TwoFactorCodeModel,
 
     /**
      * The TwoFactorStatus model constructor.

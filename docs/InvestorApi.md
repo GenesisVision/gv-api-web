@@ -90,7 +90,7 @@ No authorization required
 
 <a name="apiInvestorAuth2faCreatePost"></a>
 # **apiInvestorAuth2faCreatePost**
-> TwoFactorAuthenticator apiInvestorAuth2faCreatePost(authorization, opts)
+> TwoFactorAuthenticator apiInvestorAuth2faCreatePost(authorization)
 
 2FA create
 
@@ -102,10 +102,7 @@ let apiInstance = new CoreApi.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'model': new CoreApi.PasswordModel() // PasswordModel | 
-};
-apiInstance.apiInvestorAuth2faCreatePost(authorization, opts).then((data) => {
+apiInstance.apiInvestorAuth2faCreatePost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -118,7 +115,6 @@ apiInstance.apiInvestorAuth2faCreatePost(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
 
 ### Return type
 
@@ -130,7 +126,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="apiInvestorAuth2faDisablePost"></a>
@@ -148,7 +144,7 @@ let apiInstance = new CoreApi.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApi.PasswordModel() // PasswordModel | 
+  'model': new CoreApi.TwoFactorCodeModel() // TwoFactorCodeModel | 
 };
 apiInstance.apiInvestorAuth2faDisablePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -163,7 +159,7 @@ apiInstance.apiInvestorAuth2faDisablePost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
+ **model** | [**TwoFactorCodeModel**](TwoFactorCodeModel.md)|  | [optional] 
 
 ### Return type
 

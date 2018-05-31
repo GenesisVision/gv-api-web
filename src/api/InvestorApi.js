@@ -39,6 +39,7 @@ import TradesViewModel from '../model/TradesViewModel';
 import TransactionsFilter from '../model/TransactionsFilter';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from '../model/TwoFactorAuthenticatorConfirm';
+import TwoFactorCodeModel from '../model/TwoFactorCodeModel';
 import TwoFactorStatus from '../model/TwoFactorStatus';
 import UpdateProfileViewModel from '../model/UpdateProfileViewModel';
 import WalletAddressViewModel from '../model/WalletAddressViewModel';
@@ -126,13 +127,10 @@ export default class InvestorApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
      */
-    apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
+    apiInvestorAuth2faCreatePostWithHttpInfo(authorization) {
+      let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
@@ -151,7 +149,7 @@ export default class InvestorApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = TwoFactorAuthenticator;
 
@@ -165,12 +163,10 @@ export default class InvestorApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
      */
-    apiInvestorAuth2faCreatePost(authorization, opts) {
-      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts)
+    apiInvestorAuth2faCreatePost(authorization) {
+      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -181,7 +177,7 @@ export default class InvestorApi {
      * 2FA disable
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
+     * @param {module:model/TwoFactorCodeModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorAuth2faDisablePostWithHttpInfo(authorization, opts) {
@@ -220,7 +216,7 @@ export default class InvestorApi {
      * 2FA disable
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/PasswordModel} opts.model 
+     * @param {module:model/TwoFactorCodeModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorAuth2faDisablePost(authorization, opts) {

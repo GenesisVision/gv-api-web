@@ -367,10 +367,10 @@ InvestmentProgramsFilter.SortingEnum = {
     "ByTitleDesc": "ByTitleDesc",
 
     /**
-     * value: "ByBalanceAsk"
+     * value: "ByBalanceAsc"
      * @const
      */
-    "ByBalanceAsk": "ByBalanceAsk",
+    "ByBalanceAsc": "ByBalanceAsc",
 
     /**
      * value: "ByBalanceDesc"

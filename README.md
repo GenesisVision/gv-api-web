@@ -288,6 +288,7 @@ Class | Method | HTTP request | Description
  - [CoreApi.TransactionsFilter](docs/TransactionsFilter.md)
  - [CoreApi.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)
  - [CoreApi.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)
+ - [CoreApi.TwoFactorCodeModel](docs/TwoFactorCodeModel.md)
  - [CoreApi.TwoFactorStatus](docs/TwoFactorStatus.md)
  - [CoreApi.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApi.UploadResult](docs/UploadResult.md)

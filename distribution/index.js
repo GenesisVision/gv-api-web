@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TradesApi = exports.RateApi = exports.ManagerApi = undefined;
-exports.InvestorApi = exports.FilesApi = exports.BrokerApi = exports.WalletsViewModel = exports.WalletWithdrawRequestModel = exports.WalletViewModel = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletStatisticFilter = exports.WalletStatistic = exports.WalletInvestmentPrograms = exports.WalletInvestmentProgram = exports.WalletAddressViewModel = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionsFilter = exports.TradesViewModel = exports.TradesFilter = exports.TradesChartViewModel = exports.TradeChart = exports.Token = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RateViewModel = exports.ProgramBalances = exports.ProfilePublicViewModel = exports.ProfileFullViewModel = exports.PlatformStatus = exports.PeriodProfitDiagram = exports.Period = exports.PaymentTxInfo = exports.PasswordModel = exports.OrderModel = exports.OpenTradesViewModel = exports.OpenOrderModel = exports.NewTradeEvent = exports.NewTournamentAccountRequest = exports.NewOpenTradesEvent = exports.NewManager = exports.NewInvestmentRequest = exports.ManagerRequest = exports.ManagerProfitChartData = exports.ManagerProfitChart = exports.ManagerOpenTrades = exports.ManagerLevelStatistic = exports.ManagerIpfsHash = exports.ManagerInvestmentPrograms = exports.ManagerHistoryIpfsHash = exports.ManagerFundChart = exports.ManagerDashboardStatistic = exports.ManagerDashboardProgramsFilter = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorDashboard = exports.InvestorAmount = exports.InvestmentProgramsViewModel = exports.InvestmentProgramsFilter = exports.InvestmentProgramViewModel = exports.InvestmentProgramUpdate = exports.InvestmentProgramTxInfo = exports.InvestmentProgramRequestsFilter = exports.InvestmentProgramRequests = exports.InvestmentProgramRequestTxInfo = exports.InvestmentProgramRequest = exports.InvestmentProgramDetails = exports.InvestmentProgramDashboardManager = exports.InvestmentProgramDashboardInvestor = exports.InvestmentProgramBuyToken = exports.InvestmentProgramAccrual = exports.InvestmentProgram = exports.Invest = exports.IOsAppVersion = exports.IFormFile = exports.FreeTokens = exports.ForgotPasswordViewModel = exports.ErrorViewModel = exports.ErrorMessage = exports.EndOfNextPeriod = exports.DateChart = exports.ClosePeriodData = exports.ChartByDate = exports.Chart = exports.ChangePasswordViewModel = exports.BrokersViewModel = exports.BrokersFilter = exports.BrokerTradeServer = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.Broker = exports.AndroidVersion = exports.AndroidAppVersion = exports.ApiClient = undefined;
+exports.TradesApi = exports.RateApi = exports.ManagerApi = exports.InvestorApi = undefined;
+exports.FilesApi = exports.BrokerApi = exports.WalletsViewModel = exports.WalletWithdrawRequestModel = exports.WalletViewModel = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletStatisticFilter = exports.WalletStatistic = exports.WalletInvestmentPrograms = exports.WalletInvestmentProgram = exports.WalletAddressViewModel = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionsFilter = exports.TradesViewModel = exports.TradesFilter = exports.TradesChartViewModel = exports.TradeChart = exports.Token = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RateViewModel = exports.ProgramBalances = exports.ProfilePublicViewModel = exports.ProfileFullViewModel = exports.PlatformStatus = exports.PeriodProfitDiagram = exports.Period = exports.PaymentTxInfo = exports.PasswordModel = exports.OrderModel = exports.OpenTradesViewModel = exports.OpenOrderModel = exports.NewTradeEvent = exports.NewTournamentAccountRequest = exports.NewOpenTradesEvent = exports.NewManager = exports.NewInvestmentRequest = exports.ManagerRequest = exports.ManagerProfitChartData = exports.ManagerProfitChart = exports.ManagerOpenTrades = exports.ManagerLevelStatistic = exports.ManagerIpfsHash = exports.ManagerInvestmentPrograms = exports.ManagerHistoryIpfsHash = exports.ManagerFundChart = exports.ManagerDashboardStatistic = exports.ManagerDashboardProgramsFilter = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorDashboard = exports.InvestorAmount = exports.InvestmentProgramsViewModel = exports.InvestmentProgramsFilter = exports.InvestmentProgramViewModel = exports.InvestmentProgramUpdate = exports.InvestmentProgramTxInfo = exports.InvestmentProgramRequestsFilter = exports.InvestmentProgramRequests = exports.InvestmentProgramRequestTxInfo = exports.InvestmentProgramRequest = exports.InvestmentProgramDetails = exports.InvestmentProgramDashboardManager = exports.InvestmentProgramDashboardInvestor = exports.InvestmentProgramBuyToken = exports.InvestmentProgramAccrual = exports.InvestmentProgram = exports.Invest = exports.IOsAppVersion = exports.IFormFile = exports.FreeTokens = exports.ForgotPasswordViewModel = exports.ErrorViewModel = exports.ErrorMessage = exports.EndOfNextPeriod = exports.DateChart = exports.ClosePeriodData = exports.ChartByDate = exports.Chart = exports.ChangePasswordViewModel = exports.BrokersViewModel = exports.BrokersFilter = exports.BrokerTradeServer = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.Broker = exports.AndroidVersion = exports.AndroidAppVersion = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -342,6 +342,10 @@ var _TwoFactorAuthenticatorConfirm = require('./model/TwoFactorAuthenticatorConf
 
 var _TwoFactorAuthenticatorConfirm2 = _interopRequireDefault(_TwoFactorAuthenticatorConfirm);
 
+var _TwoFactorCodeModel = require('./model/TwoFactorCodeModel');
+
+var _TwoFactorCodeModel2 = _interopRequireDefault(_TwoFactorCodeModel);
+
 var _TwoFactorStatus = require('./model/TwoFactorStatus');
 
 var _TwoFactorStatus2 = _interopRequireDefault(_TwoFactorStatus);
@@ -451,6 +455,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @module index
 * @version v1
 */
+/**
+ * Core API
+ * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+ *
+ * OpenAPI spec version: v1
+ * 
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
 exports.AndroidVersion = _AndroidVersion2.default;
@@ -535,6 +552,7 @@ exports.TradesViewModel = _TradesViewModel2.default;
 exports.TransactionsFilter = _TransactionsFilter2.default;
 exports.TwoFactorAuthenticator = _TwoFactorAuthenticator2.default;
 exports.TwoFactorAuthenticatorConfirm = _TwoFactorAuthenticatorConfirm2.default;
+exports.TwoFactorCodeModel = _TwoFactorCodeModel2.default;
 exports.TwoFactorStatus = _TwoFactorStatus2.default;
 exports.UpdateProfileViewModel = _UpdateProfileViewModel2.default;
 exports.UploadResult = _UploadResult2.default;
@@ -553,15 +571,4 @@ exports.FilesApi = _FilesApi2.default;
 exports.InvestorApi = _InvestorApi2.default;
 exports.ManagerApi = _ManagerApi2.default;
 exports.RateApi = _RateApi2.default;
-exports.TradesApi = _TradesApi2.default; /**
-                                          * Core API
-                                          * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
-                                          *
-                                          * OpenAPI spec version: v1
-                                          * 
-                                          *
-                                          * NOTE: This class is auto generated by the swagger code generator program.
-                                          * https://github.com/swagger-api/swagger-codegen.git
-                                          * Do not edit the class manually.
-                                          *
-                                          */
+exports.TradesApi = _TradesApi2.default;
