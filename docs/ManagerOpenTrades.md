@@ -1,4 +1,4 @@
-# CoreApi.ManagerOpenTrades
+# CoreApiV2.ManagerOpenTrades
 
 ## Properties
 Name | Type | Description | Notes

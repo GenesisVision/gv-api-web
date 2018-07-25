@@ -1,4 +1,4 @@
-# CoreApi.InvestmentProgramRequest
+# CoreApiV2.InvestmentProgramRequest
 
 ## Properties
 Name | Type | Description | Notes

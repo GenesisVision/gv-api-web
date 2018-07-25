@@ -1,4 +1,4 @@
-# CoreApi.TwoFactorAuthenticator
+# CoreApiV2.TwoFactorAuthenticator
 
 ## Properties
 Name | Type | Description | Notes

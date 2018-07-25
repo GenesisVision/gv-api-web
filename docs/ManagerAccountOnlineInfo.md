@@ -1,4 +1,4 @@
-# CoreApi.ManagerAccountOnlineInfo
+# CoreApiV2.ManagerAccountOnlineInfo
 
 ## Properties
 Name | Type | Description | Notes

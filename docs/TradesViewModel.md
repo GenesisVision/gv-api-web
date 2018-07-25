@@ -1,4 +1,4 @@
-# CoreApi.TradesViewModel
+# CoreApiV2.TradesViewModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 * `Rumus` (value: `"Rumus"`)
 
 * `Metastock` (value: `"Metastock"`)
+
+* `IDEX` (value: `"IDEX"`)
 
 
 

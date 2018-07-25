@@ -1,4 +1,4 @@
-# CoreApi.RecoveryCodesViewModel
+# CoreApiV2.RecoveryCodesViewModel
 
 ## Properties
 Name | Type | Description | Notes

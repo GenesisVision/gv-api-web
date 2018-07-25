@@ -1,4 +1,4 @@
-# CoreApi.InvestorAmount
+# CoreApiV2.InvestorAmount
 
 ## Properties
 Name | Type | Description | Notes

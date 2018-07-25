@@ -1,4 +1,4 @@
-# CoreApi.OpenOrderModel
+# CoreApiV2.OpenOrderModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CoreApi.RegisterManagerViewModel
+# CoreApiV2.RegisterManagerViewModel
 
 ## Properties
 Name | Type | Description | Notes

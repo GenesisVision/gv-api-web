@@ -1,11 +1,11 @@
-# CoreApi.OrderModel
+# CoreApiV2.OrderModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**login** | **Number** |  | [optional] 
-**ticket** | **Number** |  | [optional] 
+**login** | **String** |  | [optional] 
+**ticket** | **String** |  | [optional] 
 **symbol** | **String** |  | [optional] 
 **volume** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 

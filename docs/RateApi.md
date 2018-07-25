@@ -1,4 +1,4 @@
-# CoreApi.RateApi
+# CoreApiV2.RateApi
 
 All URIs are relative to *https://localhost*
 
@@ -15,12 +15,12 @@ Get rate
 
 ### Example
 ```javascript
-import CoreApi from 'core_api';
+import CoreApiV2 from 'core_api_v2';
 
-let apiInstance = new CoreApi.RateApi();
+let apiInstance = new CoreApiV2.RateApi();
 
 let opts = { 
-  'model': new CoreApi.RequestRate() // RequestRate | 
+  'model': new CoreApiV2.RequestRate() // RequestRate | 
 };
 apiInstance.apiRatePost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

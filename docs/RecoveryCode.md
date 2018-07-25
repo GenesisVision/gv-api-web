@@ -1,4 +1,4 @@
-# CoreApi.RecoveryCode
+# CoreApiV2.RecoveryCode
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CoreApi.AndroidVersion
+# CoreApiV2.AndroidVersion
 
 ## Properties
 Name | Type | Description | Notes

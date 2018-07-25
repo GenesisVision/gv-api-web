@@ -1,4 +1,4 @@
-# CoreApi.FilesApi
+# CoreApiV2.FilesApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,9 +17,9 @@ Download file
 
 ### Example
 ```javascript
-import CoreApi from 'core_api';
+import CoreApiV2 from 'core_api_v2';
 
-let apiInstance = new CoreApi.FilesApi();
+let apiInstance = new CoreApiV2.FilesApi();
 
 let id = "id_example"; // String | 
 
@@ -52,19 +52,20 @@ No authorization required
 
 <a name="apiFilesGet"></a>
 # **apiFilesGet**
-> apiFilesGet(id)
+> apiFilesGet(opts)
 
 Download file
 
 ### Example
 ```javascript
-import CoreApi from 'core_api';
+import CoreApiV2 from 'core_api_v2';
 
-let apiInstance = new CoreApi.FilesApi();
+let apiInstance = new CoreApiV2.FilesApi();
 
-let id = "id_example"; // String | 
-
-apiInstance.apiFilesGet(id).then(() => {
+let opts = { 
+  'id': "id_example" // String | 
+};
+apiInstance.apiFilesGet(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -76,7 +77,7 @@ apiInstance.apiFilesGet(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | [**String**](.md)|  | [optional] 
 
 ### Return type
 
@@ -99,9 +100,9 @@ Upload file
 
 ### Example
 ```javascript
-import CoreApi from 'core_api';
+import CoreApiV2 from 'core_api_v2';
 
-let apiInstance = new CoreApi.FilesApi();
+let apiInstance = new CoreApiV2.FilesApi();
 
 let uploadedFile = "/path/to/file.txt"; // File | Upload File
 

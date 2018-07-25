@@ -1,4 +1,4 @@
-# CoreApi.ChangePasswordViewModel
+# CoreApiV2.ChangePasswordViewModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,17 +1,17 @@
-# CoreApi.ManagerRequest
+# CoreApiV2.ManagerRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**leverage** | **Number** |  | [optional] 
+**password** | **String** |  | [optional] 
+**programDateFrom** | **Date** |  | [optional] 
 **userId** | **String** |  | [optional] 
 **requestId** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**password** | **String** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
-**leverage** | **Number** |  | [optional] 
-**programDateFrom** | **Date** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

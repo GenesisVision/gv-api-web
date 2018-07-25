@@ -1,4 +1,4 @@
-# CoreApi.RequestRate
+# CoreApiV2.RequestRate
 
 ## Properties
 Name | Type | Description | Notes

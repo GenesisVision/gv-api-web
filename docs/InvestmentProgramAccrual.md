@@ -1,4 +1,4 @@
-# CoreApi.InvestmentProgramAccrual
+# CoreApiV2.InvestmentProgramAccrual
 
 ## Properties
 Name | Type | Description | Notes

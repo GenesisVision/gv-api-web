@@ -1,4 +1,4 @@
-# CoreApi.LoginViewModel
+# CoreApiV2.LoginViewModel
 
 ## Properties
 Name | Type | Description | Notes
