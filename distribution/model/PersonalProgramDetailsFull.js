@@ -21,158 +21,97 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
-
-var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
-
-var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
-
-var _ProgramStatistic = require('./ProgramStatistic');
-
-var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramDetailsFull model module.
-* @module model/ProgramDetailsFull
+* The PersonalProgramDetailsFull model module.
+* @module model/PersonalProgramDetailsFull
 * @version v2.0
 */
-var ProgramDetailsFull = function () {
+var PersonalProgramDetailsFull = function () {
     /**
-    * Constructs a new <code>ProgramDetailsFull</code>.
-    * @alias module:model/ProgramDetailsFull
+    * Constructs a new <code>PersonalProgramDetailsFull</code>.
+    * @alias module:model/PersonalProgramDetailsFull
     * @class
     */
 
-    function ProgramDetailsFull() {
-        _classCallCheck(this, ProgramDetailsFull);
+    function PersonalProgramDetailsFull() {
+        _classCallCheck(this, PersonalProgramDetailsFull);
 
-        this.id = undefined;
-        this.avatar = undefined;
-        this.title = undefined;
-        this.level = undefined;
-        this.periodDuration = undefined;
-        this.periodDateStart = undefined;
-        this.periodDateEnd = undefined;
-        this.successFee = undefined;
-        this.availableForInvestment = undefined;
-        this.manager = undefined;
-        this.statistic = undefined;
-        this.personalProgramDetails = undefined;
+        this.isFavorite = undefined;
+        this.isInvested = undefined;
+        this.isOwnProgram = undefined;
+        this.canCloseProgram = undefined;
+        this.canClosePeriod = undefined;
+        this.canInvest = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramDetailsFull</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PersonalProgramDetailsFull</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramDetailsFull} obj Optional instance to populate.
-    * @return {module:model/ProgramDetailsFull} The populated <code>ProgramDetailsFull</code> instance.
+    * @param {module:model/PersonalProgramDetailsFull} obj Optional instance to populate.
+    * @return {module:model/PersonalProgramDetailsFull} The populated <code>PersonalProgramDetailsFull</code> instance.
     */
 
 
-    _createClass(ProgramDetailsFull, null, [{
+    _createClass(PersonalProgramDetailsFull, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramDetailsFull();
+                obj = obj || new PersonalProgramDetailsFull();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('isFavorite')) {
+                    obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('isInvested')) {
+                    obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('isOwnProgram')) {
+                    obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
                 }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                if (data.hasOwnProperty('canCloseProgram')) {
+                    obj['canCloseProgram'] = _ApiClient2.default.convertToType(data['canCloseProgram'], 'Boolean');
                 }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
+                if (data.hasOwnProperty('canClosePeriod')) {
+                    obj['canClosePeriod'] = _ApiClient2.default.convertToType(data['canClosePeriod'], 'Boolean');
                 }
-                if (data.hasOwnProperty('periodDateStart')) {
-                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
-                }
-                if (data.hasOwnProperty('periodDateEnd')) {
-                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
-                }
-                if (data.hasOwnProperty('successFee')) {
-                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
-                }
-                if (data.hasOwnProperty('availableForInvestment')) {
-                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublicViewModel2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);
-                }
-                if (data.hasOwnProperty('personalProgramDetails')) {
-                    obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
+                if (data.hasOwnProperty('canInvest')) {
+                    obj['canInvest'] = _ApiClient2.default.convertToType(data['canInvest'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Boolean} isFavorite
         */
 
         /**
-        * @member {String} avatar
+        * @member {Boolean} isInvested
         */
 
         /**
-        * @member {String} title
+        * @member {Boolean} isOwnProgram
         */
 
         /**
-        * @member {Number} level
+        * @member {Boolean} canCloseProgram
         */
 
         /**
-        * @member {Number} periodDuration
+        * @member {Boolean} canClosePeriod
         */
 
         /**
-        * @member {Date} periodDateStart
-        */
-
-        /**
-        * @member {Date} periodDateEnd
-        */
-
-        /**
-        * @member {Number} successFee
-        */
-
-        /**
-        * @member {Number} availableForInvestment
-        */
-
-        /**
-        * @member {module:model/ProfilePublicViewModel} manager
-        */
-
-        /**
-        * @member {module:model/ProgramStatistic} statistic
-        */
-
-        /**
-        * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
+        * @member {Boolean} canInvest
         */
 
     }]);
 
-    return ProgramDetailsFull;
+    return PersonalProgramDetailsFull;
 }();
 
-exports.default = ProgramDetailsFull;
+exports.default = PersonalProgramDetailsFull;

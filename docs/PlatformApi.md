@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="apiPlatformInfoGet"></a>
 # **apiPlatformInfoGet**
-> PlatformInfo apiPlatformInfoGet()
+> PlatformInfo apiPlatformInfoGet(opts)
 
 Platform info
 
@@ -18,7 +18,11 @@ Platform info
 import CoreApiV2 from 'core_api_v2';
 
 let apiInstance = new CoreApiV2.PlatformApi();
-apiInstance.apiPlatformInfoGet().then((data) => {
+
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiPlatformInfoGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -27,7 +31,10 @@ apiInstance.apiPlatformInfoGet().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

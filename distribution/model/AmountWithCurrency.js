@@ -21,158 +21,116 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
-
-var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
-
-var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
-
-var _ProgramStatistic = require('./ProgramStatistic');
-
-var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramDetailsFull model module.
-* @module model/ProgramDetailsFull
+* The AmountWithCurrency model module.
+* @module model/AmountWithCurrency
 * @version v2.0
 */
-var ProgramDetailsFull = function () {
+var AmountWithCurrency = function () {
     /**
-    * Constructs a new <code>ProgramDetailsFull</code>.
-    * @alias module:model/ProgramDetailsFull
+    * Constructs a new <code>AmountWithCurrency</code>.
+    * @alias module:model/AmountWithCurrency
     * @class
     */
 
-    function ProgramDetailsFull() {
-        _classCallCheck(this, ProgramDetailsFull);
+    function AmountWithCurrency() {
+        _classCallCheck(this, AmountWithCurrency);
 
-        this.id = undefined;
-        this.avatar = undefined;
-        this.title = undefined;
-        this.level = undefined;
-        this.periodDuration = undefined;
-        this.periodDateStart = undefined;
-        this.periodDateEnd = undefined;
-        this.successFee = undefined;
-        this.availableForInvestment = undefined;
-        this.manager = undefined;
-        this.statistic = undefined;
-        this.personalProgramDetails = undefined;
+        this.amount = undefined;
+        this.currency = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramDetailsFull</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AmountWithCurrency</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramDetailsFull} obj Optional instance to populate.
-    * @return {module:model/ProgramDetailsFull} The populated <code>ProgramDetailsFull</code> instance.
+    * @param {module:model/AmountWithCurrency} obj Optional instance to populate.
+    * @return {module:model/AmountWithCurrency} The populated <code>AmountWithCurrency</code> instance.
     */
 
 
-    _createClass(ProgramDetailsFull, null, [{
+    _createClass(AmountWithCurrency, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramDetailsFull();
+                obj = obj || new AmountWithCurrency();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
-                }
-                if (data.hasOwnProperty('periodDateStart')) {
-                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
-                }
-                if (data.hasOwnProperty('periodDateEnd')) {
-                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
-                }
-                if (data.hasOwnProperty('successFee')) {
-                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
-                }
-                if (data.hasOwnProperty('availableForInvestment')) {
-                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublicViewModel2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);
-                }
-                if (data.hasOwnProperty('personalProgramDetails')) {
-                    obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Number} amount
         */
 
         /**
-        * @member {String} avatar
+        * @member {module:model/AmountWithCurrency.CurrencyEnum} currency
         */
 
-        /**
-        * @member {String} title
-        */
 
         /**
-        * @member {Number} level
-        */
-
-        /**
-        * @member {Number} periodDuration
-        */
-
-        /**
-        * @member {Date} periodDateStart
-        */
-
-        /**
-        * @member {Date} periodDateEnd
-        */
-
-        /**
-        * @member {Number} successFee
-        */
-
-        /**
-        * @member {Number} availableForInvestment
-        */
-
-        /**
-        * @member {module:model/ProfilePublicViewModel} manager
-        */
-
-        /**
-        * @member {module:model/ProgramStatistic} statistic
-        */
-
-        /**
-        * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return ProgramDetailsFull;
+    return AmountWithCurrency;
 }();
 
-exports.default = ProgramDetailsFull;
+AmountWithCurrency.CurrencyEnum = {
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
+exports.default = AmountWithCurrency;

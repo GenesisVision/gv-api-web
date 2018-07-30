@@ -56,13 +56,16 @@ var FilesApi = function () {
   /**
    * Download file
    * @param {String} id 
+   * @param {Object} opts Optional parameters
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
 
 
   _createClass(FilesApi, [{
     key: 'apiFilesByIdGetWithHttpInfo',
-    value: function apiFilesByIdGetWithHttpInfo(id) {
+    value: function apiFilesByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -74,7 +77,9 @@ var FilesApi = function () {
         'id': id
       };
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -88,13 +93,15 @@ var FilesApi = function () {
     /**
      * Download file
      * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: 'apiFilesByIdGet',
-    value: function apiFilesByIdGet(id) {
-      return this.apiFilesByIdGetWithHttpInfo(id).then(function (response_and_data) {
+    value: function apiFilesByIdGet(id, opts) {
+      return this.apiFilesByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -103,6 +110,7 @@ var FilesApi = function () {
      * Download file
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -116,7 +124,9 @@ var FilesApi = function () {
       var queryParams = {
         'id': opts['id']
       };
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -131,6 +141,7 @@ var FilesApi = function () {
      * Download file
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 

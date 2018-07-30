@@ -16,7 +16,6 @@ import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import ProgramChart from '../model/ProgramChart';
 import ProgramDetailsFull from '../model/ProgramDetailsFull';
-import ProgramsFilter from '../model/ProgramsFilter';
 import ProgramsList from '../model/ProgramsList';
 import TradesViewModel from '../model/TradesViewModel';
 
@@ -41,131 +40,31 @@ export default class ProgramApi {
 
 
     /**
-     * Program details (authorized)
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
-     */
-    apiProgramAuthDetailsPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling apiProgramAuthDetailsPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'id': opts['id']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramDetailsFull;
-
-      return this.apiClient.callApi(
-        '/api/program/auth/details', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Program details (authorized)
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
-     */
-    apiProgramAuthDetailsPost(authorization, opts) {
-      return this.apiProgramAuthDetailsPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Programs list (authorized)
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ProgramsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
-     */
-    apiProgramAuthListPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['filter'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling apiProgramAuthListPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramsList;
-
-      return this.apiClient.callApi(
-        '/api/program/auth/list', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Programs list (authorized)
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ProgramsFilter} opts.filter 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
-     */
-    apiProgramAuthListPost(authorization, opts) {
-      return this.apiProgramAuthListPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get manager trade history
+     * Get manager chart
+     * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.timeFrame 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
      */
-    apiProgramDetailsChartGetWithHttpInfo(opts) {
+    apiProgramByIdChartGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiProgramByIdChartGet");
+      }
+
 
       let pathParams = {
+        'id': id
       };
       let queryParams = {
         'TimeFrame': opts['timeFrame']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -176,20 +75,22 @@ export default class ProgramApi {
       let returnType = ProgramChart;
 
       return this.apiClient.callApi(
-        '/api/program/details/chart', 'GET',
+        '/api/program/{id}/chart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Get manager trade history
+     * Get manager chart
+     * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.timeFrame 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
      */
-    apiProgramDetailsChartGet(opts) {
-      return this.apiProgramDetailsChartGetWithHttpInfo(opts)
+    apiProgramByIdChartGet(id, opts) {
+      return this.apiProgramByIdChartGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -198,21 +99,30 @@ export default class ProgramApi {
 
     /**
      * Program details
+     * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
+     * @param {String} opts.authorization 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
      */
-    apiProgramDetailsPostWithHttpInfo(opts) {
+    apiProgramByIdGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiProgramByIdGet");
+      }
+
 
       let pathParams = {
+        'id': id
       };
       let queryParams = {
-        'id': opts['id']
       };
       let headerParams = {
+        'Authorization': opts['authorization'],
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -223,7 +133,7 @@ export default class ProgramApi {
       let returnType = ProgramDetailsFull;
 
       return this.apiClient.callApi(
-        '/api/program/details', 'POST',
+        '/api/program/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -231,12 +141,14 @@ export default class ProgramApi {
 
     /**
      * Program details
+     * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
+     * @param {String} opts.authorization 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
      */
-    apiProgramDetailsPost(opts) {
-      return this.apiProgramDetailsPostWithHttpInfo(opts)
+    apiProgramByIdGet(id, opts) {
+      return this.apiProgramByIdGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -245,25 +157,31 @@ export default class ProgramApi {
 
     /**
      * Get manager trade history
+     * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.investmentProgramId 
      * @param {Date} opts.dateFrom 
      * @param {Date} opts.dateTo 
      * @param {String} opts.symbol 
      * @param {module:model/String} opts.sorting 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
      */
-    apiProgramDetailsTradesGetWithHttpInfo(opts) {
+    apiProgramByIdTradesGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiProgramByIdTradesGet");
+      }
+
 
       let pathParams = {
+        'id': id
       };
       let queryParams = {
-        'InvestmentProgramId': opts['investmentProgramId'],
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
         'Symbol': opts['symbol'],
@@ -272,6 +190,7 @@ export default class ProgramApi {
         'Take': opts['take']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -282,7 +201,7 @@ export default class ProgramApi {
       let returnType = TradesViewModel;
 
       return this.apiClient.callApi(
-        '/api/program/details/trades', 'GET',
+        '/api/program/{id}/trades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -290,18 +209,19 @@ export default class ProgramApi {
 
     /**
      * Get manager trade history
+     * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.investmentProgramId 
      * @param {Date} opts.dateFrom 
      * @param {Date} opts.dateTo 
      * @param {String} opts.symbol 
      * @param {module:model/String} opts.sorting 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
      */
-    apiProgramDetailsTradesGet(opts) {
-      return this.apiProgramDetailsTradesGetWithHttpInfo(opts)
+    apiProgramByIdTradesGet(id, opts) {
+      return this.apiProgramByIdTradesGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -311,30 +231,55 @@ export default class ProgramApi {
     /**
      * Programs list
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProgramsFilter} opts.filter 
+     * @param {String} opts.authorization 
+     * @param {Number} opts.levelMin 
+     * @param {Number} opts.levelMax 
+     * @param {Number} opts.profitAvgMin 
+     * @param {Number} opts.profitAvgMax 
+     * @param {module:model/String} opts.timeFrame 
+     * @param {String} opts.mask 
+     * @param {String} opts.facetId 
+     * @param {Boolean} opts.isFavorite 
+     * @param {module:model/String} opts.currency 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
-    apiProgramListPostWithHttpInfo(opts) {
+    apiProgramListGetWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['filter'];
+      let postBody = null;
 
 
       let pathParams = {
       };
       let queryParams = {
+        'LevelMin': opts['levelMin'],
+        'LevelMax': opts['levelMax'],
+        'ProfitAvgMin': opts['profitAvgMin'],
+        'ProfitAvgMax': opts['profitAvgMax'],
+        'TimeFrame': opts['timeFrame'],
+        'Mask': opts['mask'],
+        'FacetId': opts['facetId'],
+        'IsFavorite': opts['isFavorite'],
+        'Currency': opts['currency'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       let headerParams = {
+        'Authorization': opts['authorization'],
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = ProgramsList;
 
       return this.apiClient.callApi(
-        '/api/program/list', 'POST',
+        '/api/program/list', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -343,11 +288,23 @@ export default class ProgramApi {
     /**
      * Programs list
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProgramsFilter} opts.filter 
+     * @param {String} opts.authorization 
+     * @param {Number} opts.levelMin 
+     * @param {Number} opts.levelMax 
+     * @param {Number} opts.profitAvgMin 
+     * @param {Number} opts.profitAvgMax 
+     * @param {module:model/String} opts.timeFrame 
+     * @param {String} opts.mask 
+     * @param {String} opts.facetId 
+     * @param {Boolean} opts.isFavorite 
+     * @param {module:model/String} opts.currency 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
-    apiProgramListPost(opts) {
-      return this.apiProgramListPostWithHttpInfo(opts)
+    apiProgramListGet(opts) {
+      return this.apiProgramListGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

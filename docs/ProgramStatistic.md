@@ -3,10 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balanceBase** | **Number** |  | [optional] 
-**currencyBase** | **String** |  | [optional] 
-**balanceConverted** | **Number** |  | [optional] 
-**currencyConverted** | **String** |  | [optional] 
+**balanceInBase** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceInGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceInFavorite** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
 **investorsCount** | **Number** |  | [optional] 
 **startDate** | **Date** |  | [optional] 
 **startBalance** | **Number** |  | [optional] 
@@ -21,63 +20,21 @@ Name | Type | Description | Notes
 **profitPercent** | **Number** |  | [optional] 
 
 
-<a name="CurrencyBaseEnum"></a>
-## Enum: CurrencyBaseEnum
-
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="CurrencyConvertedEnum"></a>
-## Enum: CurrencyConvertedEnum
-
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
-
-
 <a name="StartCurrencyEnum"></a>
 ## Enum: StartCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
 
-* `ETH` (value: `"ETH"`)
+* `USD` (value: `"USD"`)
 
 * `BTC` (value: `"BTC"`)
 
-* `ADA` (value: `"ADA"`)
+* `Undefined` (value: `"Undefined"`)
 
-* `USD` (value: `"USD"`)
+* `ETH` (value: `"ETH"`)
+
+* `ADA` (value: `"ADA"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -88,17 +45,17 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
 
-* `ETH` (value: `"ETH"`)
+* `USD` (value: `"USD"`)
 
 * `BTC` (value: `"BTC"`)
 
-* `ADA` (value: `"ADA"`)
+* `Undefined` (value: `"Undefined"`)
 
-* `USD` (value: `"USD"`)
+* `ETH` (value: `"ETH"`)
+
+* `ADA` (value: `"ADA"`)
 
 * `EUR` (value: `"EUR"`)
 

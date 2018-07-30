@@ -41,6 +41,7 @@ export default class RateApi {
      * Get rate
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestRate} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
      */
     apiRatePostWithHttpInfo(opts) {
@@ -53,6 +54,7 @@ export default class RateApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -73,6 +75,7 @@ export default class RateApi {
      * Get rate
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestRate} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
      */
     apiRatePost(opts) {

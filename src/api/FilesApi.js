@@ -39,9 +39,12 @@ export default class FilesApi {
     /**
      * Download file
      * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiFilesByIdGetWithHttpInfo(id) {
+    apiFilesByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -56,6 +59,7 @@ export default class FilesApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -75,10 +79,12 @@ export default class FilesApi {
     /**
      * Download file
      * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    apiFilesByIdGet(id) {
-      return this.apiFilesByIdGetWithHttpInfo(id)
+    apiFilesByIdGet(id, opts) {
+      return this.apiFilesByIdGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -89,6 +95,7 @@ export default class FilesApi {
      * Download file
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiFilesGetWithHttpInfo(opts) {
@@ -102,6 +109,7 @@ export default class FilesApi {
         'id': opts['id']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -122,6 +130,7 @@ export default class FilesApi {
      * Download file
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiFilesGet(opts) {

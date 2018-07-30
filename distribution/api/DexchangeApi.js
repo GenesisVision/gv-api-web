@@ -61,6 +61,7 @@ var DexchangeApi = function () {
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {module:model/DExchangeRequest} opts.model 
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DExchangeResponse} and HTTP response
    */
 
@@ -79,7 +80,8 @@ var DexchangeApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -95,6 +97,7 @@ var DexchangeApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/DExchangeRequest} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DExchangeResponse}
      */
 

@@ -19,6 +19,7 @@ import ForgotPasswordViewModel from '../model/ForgotPasswordViewModel';
 import LoginViewModel from '../model/LoginViewModel';
 import PasswordModel from '../model/PasswordModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
+import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
 import ProfilePublicViewModel from '../model/ProfilePublicViewModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
 import RegisterManagerViewModel from '../model/RegisterManagerViewModel';
@@ -54,6 +55,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiManagerAuth2faConfirmPostWithHttpInfo(authorization, opts) {
@@ -71,7 +73,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -93,6 +96,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiManagerAuth2faConfirmPost(authorization, opts) {
@@ -106,9 +110,12 @@ export default class ManagerApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
      */
-    apiManagerAuth2faCreatePostWithHttpInfo(authorization) {
+    apiManagerAuth2faCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -122,7 +129,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -142,10 +150,12 @@ export default class ManagerApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
      */
-    apiManagerAuth2faCreatePost(authorization) {
-      return this.apiManagerAuth2faCreatePostWithHttpInfo(authorization)
+    apiManagerAuth2faCreatePost(authorization, opts) {
+      return this.apiManagerAuth2faCreatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -157,6 +167,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiManagerAuth2faDisablePostWithHttpInfo(authorization, opts) {
@@ -174,7 +185,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -196,6 +208,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiManagerAuth2faDisablePost(authorization, opts) {
@@ -209,9 +222,12 @@ export default class ManagerApi {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorStatus} and HTTP response
      */
-    apiManagerAuth2faGetWithHttpInfo(authorization) {
+    apiManagerAuth2faGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -225,7 +241,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -245,10 +262,12 @@ export default class ManagerApi {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorStatus}
      */
-    apiManagerAuth2faGet(authorization) {
-      return this.apiManagerAuth2faGetWithHttpInfo(authorization)
+    apiManagerAuth2faGet(authorization, opts) {
+      return this.apiManagerAuth2faGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -260,6 +279,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiManagerAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts) {
@@ -277,7 +297,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -299,6 +320,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiManagerAuth2faRecoveryCodesNewPost(authorization, opts) {
@@ -314,6 +336,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiManagerAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts) {
@@ -331,7 +354,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -353,6 +377,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiManagerAuth2faRecoveryCodesPost(authorization, opts) {
@@ -368,6 +393,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiManagerAuthChangePasswordPostWithHttpInfo(authorization, opts) {
@@ -385,7 +411,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -407,6 +434,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiManagerAuthChangePasswordPost(authorization, opts) {
@@ -422,6 +450,7 @@ export default class ManagerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiManagerAuthConfirmEmailPostWithHttpInfo(opts) {
@@ -436,6 +465,7 @@ export default class ManagerApi {
         'code': opts['code']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -457,6 +487,7 @@ export default class ManagerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiManagerAuthConfirmEmailPost(opts) {
@@ -471,6 +502,7 @@ export default class ManagerApi {
      * Forgot password manager
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiManagerAuthForgotPasswordPostWithHttpInfo(opts) {
@@ -483,6 +515,7 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -503,6 +536,7 @@ export default class ManagerApi {
      * Forgot password manager
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiManagerAuthForgotPasswordPost(opts) {
@@ -517,6 +551,7 @@ export default class ManagerApi {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiManagerAuthResetPasswordPostWithHttpInfo(opts) {
@@ -529,6 +564,7 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -549,6 +585,7 @@ export default class ManagerApi {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiManagerAuthResetPasswordPost(opts) {
@@ -563,6 +600,7 @@ export default class ManagerApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiManagerAuthSignInPostWithHttpInfo(opts) {
@@ -575,6 +613,7 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -595,6 +634,7 @@ export default class ManagerApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiManagerAuthSignInPost(opts) {
@@ -609,6 +649,7 @@ export default class ManagerApi {
      * Register new manager
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiManagerAuthSignUpPostWithHttpInfo(opts) {
@@ -621,6 +662,7 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -641,6 +683,7 @@ export default class ManagerApi {
      * Register new manager
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiManagerAuthSignUpPost(opts) {
@@ -654,9 +697,12 @@ export default class ManagerApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiManagerAuthUpdateTokenGetWithHttpInfo(authorization) {
+    apiManagerAuthUpdateTokenGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -670,7 +716,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -690,10 +737,12 @@ export default class ManagerApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    apiManagerAuthUpdateTokenGet(authorization) {
-      return this.apiManagerAuthUpdateTokenGetWithHttpInfo(authorization)
+    apiManagerAuthUpdateTokenGet(authorization, opts) {
+      return this.apiManagerAuthUpdateTokenGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -703,9 +752,12 @@ export default class ManagerApi {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
      */
-    apiManagerProfileFullGetWithHttpInfo(authorization) {
+    apiManagerProfileFullGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -719,7 +771,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -739,10 +792,67 @@ export default class ManagerApi {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
      */
-    apiManagerProfileFullGet(authorization) {
-      return this.apiManagerProfileFullGetWithHttpInfo(authorization)
+    apiManagerProfileFullGet(authorization, opts) {
+      return this.apiManagerProfileFullGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
+     */
+    apiManagerProfileHeaderGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiManagerProfileHeaderGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileHeaderViewModel;
+
+      return this.apiClient.callApi(
+        '/api/manager/profile/header', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
+     */
+    apiManagerProfileHeaderGet(authorization, opts) {
+      return this.apiManagerProfileHeaderGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -753,6 +863,7 @@ export default class ManagerApi {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
      */
     apiManagerProfilePublicGetWithHttpInfo(opts) {
@@ -766,6 +877,7 @@ export default class ManagerApi {
         'userId': opts['userId']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -786,6 +898,7 @@ export default class ManagerApi {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
      */
     apiManagerProfilePublicGet(opts) {
@@ -801,6 +914,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiManagerProfileUpdatePostWithHttpInfo(authorization, opts) {
@@ -818,7 +932,8 @@ export default class ManagerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -840,6 +955,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiManagerProfileUpdatePost(authorization, opts) {

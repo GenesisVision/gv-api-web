@@ -90,22 +90,16 @@ export default class RequestRate {
     static FromEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
     
         /**
-         * value: "ETH"
+         * value: "USD"
          * @const
          */
-        "ETH": "ETH",
+        "USD": "USD",
     
         /**
          * value: "BTC"
@@ -114,16 +108,22 @@ export default class RequestRate {
         "BTC": "BTC",
     
         /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
          * value: "ADA"
          * @const
          */
         "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
     
         /**
          * value: "EUR"
@@ -140,22 +140,16 @@ export default class RequestRate {
     static ToEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
     
         /**
-         * value: "ETH"
+         * value: "USD"
          * @const
          */
-        "ETH": "ETH",
+        "USD": "USD",
     
         /**
          * value: "BTC"
@@ -164,16 +158,22 @@ export default class RequestRate {
         "BTC": "BTC",
     
         /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
          * value: "ADA"
          * @const
          */
         "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
     
         /**
          * value: "EUR"

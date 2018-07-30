@@ -104,22 +104,16 @@ var RequestRate = function () {
 RequestRate.FromEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "USD"
      * @const
      */
-    "ETH": "ETH",
+    "USD": "USD",
 
     /**
      * value: "BTC"
@@ -128,16 +122,22 @@ RequestRate.FromEnum = {
     "BTC": "BTC",
 
     /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
 
     /**
      * value: "EUR"
@@ -148,22 +148,16 @@ RequestRate.FromEnum = {
 RequestRate.ToEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "USD"
      * @const
      */
-    "ETH": "ETH",
+    "USD": "USD",
 
     /**
      * value: "BTC"
@@ -172,16 +166,22 @@ RequestRate.ToEnum = {
     "BTC": "BTC",
 
     /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
 
     /**
      * value: "EUR"

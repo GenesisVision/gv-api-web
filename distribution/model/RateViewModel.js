@@ -112,22 +112,16 @@ var RateViewModel = function () {
 RateViewModel.FromEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "USD"
      * @const
      */
-    "ETH": "ETH",
+    "USD": "USD",
 
     /**
      * value: "BTC"
@@ -136,16 +130,22 @@ RateViewModel.FromEnum = {
     "BTC": "BTC",
 
     /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
 
     /**
      * value: "EUR"
@@ -156,22 +156,16 @@ RateViewModel.FromEnum = {
 RateViewModel.ToEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "USD"
      * @const
      */
-    "ETH": "ETH",
+    "USD": "USD",
 
     /**
      * value: "BTC"
@@ -180,16 +174,22 @@ RateViewModel.ToEnum = {
     "BTC": "BTC",
 
     /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
 
     /**
      * value: "EUR"

@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AmountWithCurrency = require('./AmountWithCurrency');
+
+var _AmountWithCurrency2 = _interopRequireDefault(_AmountWithCurrency);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,10 +44,9 @@ var ProgramDetailsListStatistic = function () {
     function ProgramDetailsListStatistic() {
         _classCallCheck(this, ProgramDetailsListStatistic);
 
-        this.balanceBase = undefined;
-        this.currencyBase = undefined;
-        this.balanceConverted = undefined;
-        this.currencyConverted = undefined;
+        this.balanceInBase = undefined;
+        this.balanceInGVT = undefined;
+        this.balanceInFavorite = undefined;
         this.investorsCount = undefined;
         this.tradesCount = undefined;
         this.drawdownPercent = undefined;
@@ -65,17 +68,14 @@ var ProgramDetailsListStatistic = function () {
             if (data) {
                 obj = obj || new ProgramDetailsListStatistic();
 
-                if (data.hasOwnProperty('balanceBase')) {
-                    obj['balanceBase'] = _ApiClient2.default.convertToType(data['balanceBase'], 'Number');
+                if (data.hasOwnProperty('balanceInBase')) {
+                    obj['balanceInBase'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInBase']);
                 }
-                if (data.hasOwnProperty('currencyBase')) {
-                    obj['currencyBase'] = _ApiClient2.default.convertToType(data['currencyBase'], 'String');
+                if (data.hasOwnProperty('balanceInGVT')) {
+                    obj['balanceInGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInGVT']);
                 }
-                if (data.hasOwnProperty('balanceConverted')) {
-                    obj['balanceConverted'] = _ApiClient2.default.convertToType(data['balanceConverted'], 'Number');
-                }
-                if (data.hasOwnProperty('currencyConverted')) {
-                    obj['currencyConverted'] = _ApiClient2.default.convertToType(data['currencyConverted'], 'String');
+                if (data.hasOwnProperty('balanceInFavorite')) {
+                    obj['balanceInFavorite'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInFavorite']);
                 }
                 if (data.hasOwnProperty('investorsCount')) {
                     obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
@@ -94,19 +94,15 @@ var ProgramDetailsListStatistic = function () {
         }
 
         /**
-        * @member {Number} balanceBase
+        * @member {module:model/AmountWithCurrency} balanceInBase
         */
 
         /**
-        * @member {module:model/ProgramDetailsListStatistic.CurrencyBaseEnum} currencyBase
+        * @member {module:model/AmountWithCurrency} balanceInGVT
         */
 
         /**
-        * @member {Number} balanceConverted
-        */
-
-        /**
-        * @member {module:model/ProgramDetailsListStatistic.CurrencyConvertedEnum} currencyConverted
+        * @member {module:model/AmountWithCurrency} balanceInFavorite
         */
 
         /**
@@ -125,111 +121,9 @@ var ProgramDetailsListStatistic = function () {
         * @member {Number} profitPercent
         */
 
-
-        /**
-        * Allowed values for the <code>currencyBase</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-
-        /**
-        * Allowed values for the <code>currencyConverted</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
     return ProgramDetailsListStatistic;
 }();
 
-ProgramDetailsListStatistic.CurrencyBaseEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-ProgramDetailsListStatistic.CurrencyConvertedEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
 exports.default = ProgramDetailsListStatistic;

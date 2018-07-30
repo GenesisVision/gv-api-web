@@ -1,15 +1,10 @@
-# CoreApiV2.OefManagerRequest
+# CoreApiV2.AmountWithCurrency
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assetParts** | [**[OefAssetPart]**](OefAssetPart.md) |  | [optional] 
-**userId** | **String** |  | [optional] 
-**requestId** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
+**amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**depositAmount** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

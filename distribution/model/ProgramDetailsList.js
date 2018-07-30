@@ -25,6 +25,10 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
+var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
+
+var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
+
 var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
 
 var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
@@ -56,6 +60,7 @@ var ProgramDetailsList = function () {
         this.avatar = undefined;
         this.title = undefined;
         this.description = undefined;
+        this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
         this.periodDateStart = undefined;
@@ -64,8 +69,7 @@ var ProgramDetailsList = function () {
         this.manager = undefined;
         this.statistic = undefined;
         this.chart = undefined;
-        this.isFavorite = undefined;
-        this.isInvested = undefined;
+        this.personalProgramDetails = undefined;
     }
 
     /**
@@ -95,6 +99,9 @@ var ProgramDetailsList = function () {
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
                 }
@@ -119,11 +126,8 @@ var ProgramDetailsList = function () {
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('isFavorite')) {
-                    obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isInvested')) {
-                    obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
+                if (data.hasOwnProperty('personalProgramDetails')) {
+                    obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
                 }
             }
             return obj;
@@ -143,6 +147,10 @@ var ProgramDetailsList = function () {
 
         /**
         * @member {String} description
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsList.CurrencyEnum} currency
         */
 
         /**
@@ -178,11 +186,15 @@ var ProgramDetailsList = function () {
         */
 
         /**
-        * @member {Boolean} isFavorite
+        * Fields for authorized user
+        * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
         */
 
+
         /**
-        * @member {Boolean} isInvested
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
@@ -190,4 +202,48 @@ var ProgramDetailsList = function () {
     return ProgramDetailsList;
 }();
 
+ProgramDetailsList.CurrencyEnum = {
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 exports.default = ProgramDetailsList;

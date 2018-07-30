@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="apiFilesByIdGet"></a>
 # **apiFilesByIdGet**
-> apiFilesByIdGet(id)
+> apiFilesByIdGet(id, opts)
 
 Download file
 
@@ -23,7 +23,10 @@ let apiInstance = new CoreApiV2.FilesApi();
 
 let id = "id_example"; // String | 
 
-apiInstance.apiFilesByIdGet(id).then(() => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiFilesByIdGet(id, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -36,6 +39,7 @@ apiInstance.apiFilesByIdGet(id).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -63,7 +67,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.FilesApi();
 
 let opts = { 
-  'id': "id_example" // String | 
+  'id': "id_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiFilesGet(opts).then(() => {
   console.log('API called successfully.');
@@ -78,6 +83,7 @@ apiInstance.apiFilesGet(opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

@@ -80,7 +80,8 @@ var api = new CoreApiV2.BrokerApi()
 var authorization = "authorization_example"; // {String} JWT access token
 
 var opts = { 
-  'request': new CoreApiV2.NewManager() // {NewManager} 
+  'request': new CoreApiV2.NewManager(), // {NewManager} 
+  'apiVersion': "apiVersion_example" // {String} 
 };
 api.apiBrokerAccountCreatePost(authorization, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +124,6 @@ Class | Method | HTTP request | Description
 *CoreApiV2.BrokerApi* | [**apiBrokerTradehistoryGet**](docs/BrokerApi.md#apiBrokerTradehistoryGet) | **GET** /api/broker/tradehistory | 
 *CoreApiV2.BrokerApi* | [**apiBrokerTradesIpfsHashUpdatePost**](docs/BrokerApi.md#apiBrokerTradesIpfsHashUpdatePost) | **POST** /api/broker/trades/ipfsHash/update | Update manager history ipfs hash
 *CoreApiV2.BrokerApi* | [**apiBrokerTradesNewPost**](docs/BrokerApi.md#apiBrokerTradesNewPost) | **POST** /api/broker/trades/new | New trade event
-*CoreApiV2.BrokerApi* | [**apiBrokerTradesOpenTradesNewPost**](docs/BrokerApi.md#apiBrokerTradesOpenTradesNewPost) | **POST** /api/broker/trades/openTrades/new | New open trades event
 *CoreApiV2.DexchangeApi* | [**apiDexchangeNodePost**](docs/DexchangeApi.md#apiDexchangeNodePost) | **POST** /api/dexchange/node | 
 *CoreApiV2.FilesApi* | [**apiFilesByIdGet**](docs/FilesApi.md#apiFilesByIdGet) | **GET** /api/files/{id} | Download file
 *CoreApiV2.FilesApi* | [**apiFilesGet**](docs/FilesApi.md#apiFilesGet) | **GET** /api/files | Download file
@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *CoreApiV2.InvestorApi* | [**apiInvestorAuthSignUpPost**](docs/InvestorApi.md#apiInvestorAuthSignUpPost) | **POST** /api/investor/auth/signUp | Register new investor
 *CoreApiV2.InvestorApi* | [**apiInvestorAuthUpdateTokenGet**](docs/InvestorApi.md#apiInvestorAuthUpdateTokenGet) | **GET** /api/investor/auth/updateToken | Update auth token
 *CoreApiV2.InvestorApi* | [**apiInvestorProfileFullGet**](docs/InvestorApi.md#apiInvestorProfileFullGet) | **GET** /api/investor/profile/full | Get full profile
+*CoreApiV2.InvestorApi* | [**apiInvestorProfileHeaderGet**](docs/InvestorApi.md#apiInvestorProfileHeaderGet) | **GET** /api/investor/profile/header | Get header profile
 *CoreApiV2.InvestorApi* | [**apiInvestorProfilePublicGet**](docs/InvestorApi.md#apiInvestorProfilePublicGet) | **GET** /api/investor/profile/public | Get public profile
 *CoreApiV2.InvestorApi* | [**apiInvestorProfileUpdatePost**](docs/InvestorApi.md#apiInvestorProfileUpdatePost) | **POST** /api/investor/profile/update | Update profile
 *CoreApiV2.ManagerApi* | [**apiManagerAuth2faConfirmPost**](docs/ManagerApi.md#apiManagerAuth2faConfirmPost) | **POST** /api/manager/auth/2fa/confirm | 2FA confirm
@@ -158,20 +159,20 @@ Class | Method | HTTP request | Description
 *CoreApiV2.ManagerApi* | [**apiManagerAuthSignUpPost**](docs/ManagerApi.md#apiManagerAuthSignUpPost) | **POST** /api/manager/auth/signUp | Register new manager
 *CoreApiV2.ManagerApi* | [**apiManagerAuthUpdateTokenGet**](docs/ManagerApi.md#apiManagerAuthUpdateTokenGet) | **GET** /api/manager/auth/updateToken | Update auth token
 *CoreApiV2.ManagerApi* | [**apiManagerProfileFullGet**](docs/ManagerApi.md#apiManagerProfileFullGet) | **GET** /api/manager/profile/full | Get full profile
+*CoreApiV2.ManagerApi* | [**apiManagerProfileHeaderGet**](docs/ManagerApi.md#apiManagerProfileHeaderGet) | **GET** /api/manager/profile/header | Get header profile
 *CoreApiV2.ManagerApi* | [**apiManagerProfilePublicGet**](docs/ManagerApi.md#apiManagerProfilePublicGet) | **GET** /api/manager/profile/public | Get public profile
 *CoreApiV2.ManagerApi* | [**apiManagerProfileUpdatePost**](docs/ManagerApi.md#apiManagerProfileUpdatePost) | **POST** /api/manager/profile/update | Update profile
 *CoreApiV2.PlatformApi* | [**apiPlatformInfoGet**](docs/PlatformApi.md#apiPlatformInfoGet) | **GET** /api/platform/info | Platform info
-*CoreApiV2.ProgramApi* | [**apiProgramAuthDetailsPost**](docs/ProgramApi.md#apiProgramAuthDetailsPost) | **POST** /api/program/auth/details | Program details (authorized)
-*CoreApiV2.ProgramApi* | [**apiProgramAuthListPost**](docs/ProgramApi.md#apiProgramAuthListPost) | **POST** /api/program/auth/list | Programs list (authorized)
-*CoreApiV2.ProgramApi* | [**apiProgramDetailsChartGet**](docs/ProgramApi.md#apiProgramDetailsChartGet) | **GET** /api/program/details/chart | Get manager trade history
-*CoreApiV2.ProgramApi* | [**apiProgramDetailsPost**](docs/ProgramApi.md#apiProgramDetailsPost) | **POST** /api/program/details | Program details
-*CoreApiV2.ProgramApi* | [**apiProgramDetailsTradesGet**](docs/ProgramApi.md#apiProgramDetailsTradesGet) | **GET** /api/program/details/trades | Get manager trade history
-*CoreApiV2.ProgramApi* | [**apiProgramListPost**](docs/ProgramApi.md#apiProgramListPost) | **POST** /api/program/list | Programs list
+*CoreApiV2.ProgramApi* | [**apiProgramByIdChartGet**](docs/ProgramApi.md#apiProgramByIdChartGet) | **GET** /api/program/{id}/chart | Get manager chart
+*CoreApiV2.ProgramApi* | [**apiProgramByIdGet**](docs/ProgramApi.md#apiProgramByIdGet) | **GET** /api/program/{id} | Program details
+*CoreApiV2.ProgramApi* | [**apiProgramByIdTradesGet**](docs/ProgramApi.md#apiProgramByIdTradesGet) | **GET** /api/program/{id}/trades | Get manager trade history
+*CoreApiV2.ProgramApi* | [**apiProgramListGet**](docs/ProgramApi.md#apiProgramListGet) | **GET** /api/program/list | Programs list
 *CoreApiV2.RateApi* | [**apiRatePost**](docs/RateApi.md#apiRatePost) | **POST** /api/rate | Get rate
 
 
 ## Documentation for Models
 
+ - [CoreApiV2.AmountWithCurrency](docs/AmountWithCurrency.md)
  - [CoreApiV2.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV2.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApiV2.BrokerAssetsPartChangeRequest](docs/BrokerAssetsPartChangeRequest.md)
@@ -187,6 +188,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV2.DExchangeResponse](docs/DExchangeResponse.md)
  - [CoreApiV2.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV2.ErrorViewModel](docs/ErrorViewModel.md)
+ - [CoreApiV2.Facet](docs/Facet.md)
  - [CoreApiV2.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV2.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV2.InvestmentProgramAccrual](docs/InvestmentProgramAccrual.md)
@@ -196,26 +198,24 @@ Class | Method | HTTP request | Description
  - [CoreApiV2.ManagerAccountOnlineInfo](docs/ManagerAccountOnlineInfo.md)
  - [CoreApiV2.ManagerHistoryIpfsHash](docs/ManagerHistoryIpfsHash.md)
  - [CoreApiV2.ManagerIpfsHash](docs/ManagerIpfsHash.md)
- - [CoreApiV2.ManagerOpenTrades](docs/ManagerOpenTrades.md)
  - [CoreApiV2.ManagerRequest](docs/ManagerRequest.md)
  - [CoreApiV2.NewManager](docs/NewManager.md)
- - [CoreApiV2.NewOpenTradesEvent](docs/NewOpenTradesEvent.md)
  - [CoreApiV2.NewTradeEvent](docs/NewTradeEvent.md)
  - [CoreApiV2.OefAssetPart](docs/OefAssetPart.md)
  - [CoreApiV2.OefManagerRequest](docs/OefManagerRequest.md)
- - [CoreApiV2.OpenOrderModel](docs/OpenOrderModel.md)
  - [CoreApiV2.OrderModel](docs/OrderModel.md)
  - [CoreApiV2.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV2.Period](docs/Period.md)
+ - [CoreApiV2.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
  - [CoreApiV2.PlatformInfo](docs/PlatformInfo.md)
  - [CoreApiV2.ProfileFullViewModel](docs/ProfileFullViewModel.md)
+ - [CoreApiV2.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
  - [CoreApiV2.ProfilePublicViewModel](docs/ProfilePublicViewModel.md)
  - [CoreApiV2.ProgramChart](docs/ProgramChart.md)
  - [CoreApiV2.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV2.ProgramDetailsList](docs/ProgramDetailsList.md)
  - [CoreApiV2.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
  - [CoreApiV2.ProgramStatistic](docs/ProgramStatistic.md)
- - [CoreApiV2.ProgramsFilter](docs/ProgramsFilter.md)
  - [CoreApiV2.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV2.RateViewModel](docs/RateViewModel.md)
  - [CoreApiV2.RealOefAssetPart](docs/RealOefAssetPart.md)
@@ -234,6 +234,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV2.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApiV2.UploadResult](docs/UploadResult.md)
  - [CoreApiV2.UsersRealAssets](docs/UsersRealAssets.md)
+ - [CoreApiV2.WalletViewModel](docs/WalletViewModel.md)
 
 
 ## Documentation for Authorization

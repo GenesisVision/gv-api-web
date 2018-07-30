@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
+import Facet from './Facet';
 import IOsAppVersion from './IOsAppVersion';
 
 
@@ -64,6 +65,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('androidVersion')) {
                 obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
             }
+            if (data.hasOwnProperty('facets')) {
+                obj['facets'] = ApiClient.convertToType(data['facets'], [Facet]);
+            }
         }
         return obj;
     }
@@ -76,6 +80,10 @@ export default class PlatformInfo {
     * @member {module:model/AndroidAppVersion} androidVersion
     */
     androidVersion = undefined;
+    /**
+    * @member {Array.<module:model/Facet>} facets
+    */
+    facets = undefined;
 
 
 

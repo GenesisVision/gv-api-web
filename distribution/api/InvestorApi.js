@@ -45,6 +45,10 @@ var _ProfileFullViewModel = require('../model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
 
+var _ProfileHeaderViewModel = require('../model/ProfileHeaderViewModel');
+
+var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
+
 var _ProfilePublicViewModel = require('../model/ProfilePublicViewModel');
 
 var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
@@ -110,6 +114,7 @@ var InvestorApi = function () {
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
    */
 
@@ -128,7 +133,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -145,6 +151,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
 
@@ -159,12 +166,15 @@ var InvestorApi = function () {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
      */
 
   }, {
     key: 'apiInvestorAuth2faCreatePostWithHttpInfo',
-    value: function apiInvestorAuth2faCreatePostWithHttpInfo(authorization) {
+    value: function apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -175,7 +185,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -190,13 +201,15 @@ var InvestorApi = function () {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
      */
 
   }, {
     key: 'apiInvestorAuth2faCreatePost',
-    value: function apiInvestorAuth2faCreatePost(authorization) {
-      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiInvestorAuth2faCreatePost(authorization, opts) {
+      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -206,6 +219,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -223,7 +237,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -240,6 +255,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -254,12 +270,15 @@ var InvestorApi = function () {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorStatus} and HTTP response
      */
 
   }, {
     key: 'apiInvestorAuth2faGetWithHttpInfo',
-    value: function apiInvestorAuth2faGetWithHttpInfo(authorization) {
+    value: function apiInvestorAuth2faGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -270,7 +289,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -285,13 +305,15 @@ var InvestorApi = function () {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorStatus}
      */
 
   }, {
     key: 'apiInvestorAuth2faGet',
-    value: function apiInvestorAuth2faGet(authorization) {
-      return this.apiInvestorAuth2faGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiInvestorAuth2faGet(authorization, opts) {
+      return this.apiInvestorAuth2faGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -301,6 +323,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
 
@@ -318,7 +341,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -335,6 +359,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
 
@@ -351,6 +376,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
 
@@ -368,7 +394,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -385,6 +412,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
 
@@ -401,6 +429,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -418,7 +447,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -435,6 +465,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -451,6 +482,7 @@ var InvestorApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -465,7 +497,9 @@ var InvestorApi = function () {
         'userId': opts['userId'],
         'code': opts['code']
       };
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -481,6 +515,7 @@ var InvestorApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -496,6 +531,7 @@ var InvestorApi = function () {
      * Forgot password investor
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -507,7 +543,9 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -522,6 +560,7 @@ var InvestorApi = function () {
      * Forgot password investor
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -537,6 +576,7 @@ var InvestorApi = function () {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -548,7 +588,9 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -563,6 +605,7 @@ var InvestorApi = function () {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -578,6 +621,7 @@ var InvestorApi = function () {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -589,7 +633,9 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -604,6 +650,7 @@ var InvestorApi = function () {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -619,6 +666,7 @@ var InvestorApi = function () {
      * Register new investor
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -630,7 +678,9 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -645,6 +695,7 @@ var InvestorApi = function () {
      * Register new investor
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -659,12 +710,15 @@ var InvestorApi = function () {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
   }, {
     key: 'apiInvestorAuthUpdateTokenGetWithHttpInfo',
-    value: function apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization) {
+    value: function apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -675,7 +729,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -690,13 +745,15 @@ var InvestorApi = function () {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
   }, {
     key: 'apiInvestorAuthUpdateTokenGet',
-    value: function apiInvestorAuthUpdateTokenGet(authorization) {
-      return this.apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiInvestorAuthUpdateTokenGet(authorization, opts) {
+      return this.apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -704,12 +761,15 @@ var InvestorApi = function () {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
      */
 
   }, {
     key: 'apiInvestorProfileFullGetWithHttpInfo',
-    value: function apiInvestorProfileFullGetWithHttpInfo(authorization) {
+    value: function apiInvestorProfileFullGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -720,7 +780,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -735,13 +796,66 @@ var InvestorApi = function () {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
      */
 
   }, {
     key: 'apiInvestorProfileFullGet',
-    value: function apiInvestorProfileFullGet(authorization) {
-      return this.apiInvestorProfileFullGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiInvestorProfileFullGet(authorization, opts) {
+      return this.apiInvestorProfileFullGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
+     */
+
+  }, {
+    key: 'apiInvestorProfileHeaderGetWithHttpInfo',
+    value: function apiInvestorProfileHeaderGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiInvestorProfileHeaderGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProfileHeaderViewModel2.default;
+
+      return this.apiClient.callApi('/api/investor/profile/header', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
+     */
+
+  }, {
+    key: 'apiInvestorProfileHeaderGet',
+    value: function apiInvestorProfileHeaderGet(authorization, opts) {
+      return this.apiInvestorProfileHeaderGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -750,6 +864,7 @@ var InvestorApi = function () {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
      */
 
@@ -763,7 +878,9 @@ var InvestorApi = function () {
       var queryParams = {
         'userId': opts['userId']
       };
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -778,6 +895,7 @@ var InvestorApi = function () {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
      */
 
@@ -794,6 +912,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -811,7 +930,8 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -828,6 +948,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 

@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublicViewModel from './ProfilePublicViewModel';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
 
@@ -71,6 +72,9 @@ export default class ProgramDetailsList {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
@@ -95,11 +99,8 @@ export default class ProgramDetailsList {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('isFavorite')) {
-                obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isInvested')) {
-                obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
+            if (data.hasOwnProperty('personalProgramDetails')) {
+                obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
             }
         }
         return obj;
@@ -121,6 +122,10 @@ export default class ProgramDetailsList {
     * @member {String} description
     */
     description = undefined;
+    /**
+    * @member {module:model/ProgramDetailsList.CurrencyEnum} currency
+    */
+    currency = undefined;
     /**
     * @member {Number} level
     */
@@ -154,18 +159,65 @@ export default class ProgramDetailsList {
     */
     chart = undefined;
     /**
-    * @member {Boolean} isFavorite
+    * Fields for authorized user
+    * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
     */
-    isFavorite = undefined;
+    personalProgramDetails = undefined;
+
+
+
+
+
+
     /**
-    * @member {Boolean} isInvested
+    * Allowed values for the <code>currency</code> property.
+    * @enum {String}
+    * @readonly
     */
-    isInvested = undefined;
-
-
-
-
-
+    static CurrencyEnum = {
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "ADA"
+         * @const
+         */
+        "ADA": "ADA",
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        "EUR": "EUR"    
+    };
 
 
 

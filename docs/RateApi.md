@@ -20,7 +20,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.RateApi();
 
 let opts = { 
-  'model': new CoreApiV2.RequestRate() // RequestRate | 
+  'model': new CoreApiV2.RequestRate(), // RequestRate | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiRatePost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -35,6 +36,7 @@ apiInstance.apiRatePost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**RequestRate**](RequestRate.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

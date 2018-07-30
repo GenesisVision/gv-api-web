@@ -77,18 +77,6 @@ export default class OrderModel {
             if (data.hasOwnProperty('direction')) {
                 obj['direction'] = ApiClient.convertToType(data['direction'], 'String');
             }
-            if (data.hasOwnProperty('dateOpen')) {
-                obj['dateOpen'] = ApiClient.convertToType(data['dateOpen'], 'Date');
-            }
-            if (data.hasOwnProperty('dateClose')) {
-                obj['dateClose'] = ApiClient.convertToType(data['dateClose'], 'Date');
-            }
-            if (data.hasOwnProperty('priceOpen')) {
-                obj['priceOpen'] = ApiClient.convertToType(data['priceOpen'], 'Number');
-            }
-            if (data.hasOwnProperty('priceClose')) {
-                obj['priceClose'] = ApiClient.convertToType(data['priceClose'], 'Number');
-            }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
@@ -130,22 +118,6 @@ export default class OrderModel {
     * @member {module:model/OrderModel.DirectionEnum} direction
     */
     direction = undefined;
-    /**
-    * @member {Date} dateOpen
-    */
-    dateOpen = undefined;
-    /**
-    * @member {Date} dateClose
-    */
-    dateClose = undefined;
-    /**
-    * @member {Number} priceOpen
-    */
-    priceOpen = undefined;
-    /**
-    * @member {Number} priceClose
-    */
-    priceClose = undefined;
     /**
     * @member {Date} date
     */

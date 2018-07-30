@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**apiInvestorAuthSignUpPost**](InvestorApi.md#apiInvestorAuthSignUpPost) | **POST** /api/investor/auth/signUp | Register new investor
 [**apiInvestorAuthUpdateTokenGet**](InvestorApi.md#apiInvestorAuthUpdateTokenGet) | **GET** /api/investor/auth/updateToken | Update auth token
 [**apiInvestorProfileFullGet**](InvestorApi.md#apiInvestorProfileFullGet) | **GET** /api/investor/profile/full | Get full profile
+[**apiInvestorProfileHeaderGet**](InvestorApi.md#apiInvestorProfileHeaderGet) | **GET** /api/investor/profile/header | Get header profile
 [**apiInvestorProfilePublicGet**](InvestorApi.md#apiInvestorProfilePublicGet) | **GET** /api/investor/profile/public | Get public profile
 [**apiInvestorProfileUpdatePost**](InvestorApi.md#apiInvestorProfileUpdatePost) | **POST** /api/investor/profile/update | Update profile
 
@@ -37,7 +38,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.TwoFactorAuthenticatorConfirm() // TwoFactorAuthenticatorConfirm | 
+  'model': new CoreApiV2.TwoFactorAuthenticatorConfirm(), // TwoFactorAuthenticatorConfirm | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuth2faConfirmPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -53,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**TwoFactorAuthenticatorConfirm**](TwoFactorAuthenticatorConfirm.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -69,7 +72,7 @@ No authorization required
 
 <a name="apiInvestorAuth2faCreatePost"></a>
 # **apiInvestorAuth2faCreatePost**
-> TwoFactorAuthenticator apiInvestorAuth2faCreatePost(authorization)
+> TwoFactorAuthenticator apiInvestorAuth2faCreatePost(authorization, opts)
 
 2FA create
 
@@ -81,7 +84,10 @@ let apiInstance = new CoreApiV2.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiInvestorAuth2faCreatePost(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiInvestorAuth2faCreatePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -94,6 +100,7 @@ apiInstance.apiInvestorAuth2faCreatePost(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -123,7 +130,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.TwoFactorCodeModel() // TwoFactorCodeModel | 
+  'model': new CoreApiV2.TwoFactorCodeModel(), // TwoFactorCodeModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuth2faDisablePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -139,6 +147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**TwoFactorCodeModel**](TwoFactorCodeModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -155,7 +164,7 @@ No authorization required
 
 <a name="apiInvestorAuth2faGet"></a>
 # **apiInvestorAuth2faGet**
-> TwoFactorStatus apiInvestorAuth2faGet(authorization)
+> TwoFactorStatus apiInvestorAuth2faGet(authorization, opts)
 
 2FA status
 
@@ -167,7 +176,10 @@ let apiInstance = new CoreApiV2.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiInvestorAuth2faGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiInvestorAuth2faGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -180,6 +192,7 @@ apiInstance.apiInvestorAuth2faGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -209,7 +222,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.PasswordModel() // PasswordModel | 
+  'model': new CoreApiV2.PasswordModel(), // PasswordModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -225,6 +239,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -254,7 +269,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.PasswordModel() // PasswordModel | 
+  'model': new CoreApiV2.PasswordModel(), // PasswordModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuth2faRecoveryCodesPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -270,6 +286,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -299,7 +316,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.ChangePasswordViewModel() // ChangePasswordViewModel | 
+  'model': new CoreApiV2.ChangePasswordViewModel(), // ChangePasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthChangePasswordPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -315,6 +333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**ChangePasswordViewModel**](ChangePasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -343,7 +362,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
   'userId': "userId_example", // String | 
-  'code': "code_example" // String | 
+  'code': "code_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthConfirmEmailPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -359,6 +379,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  | [optional] 
  **code** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -386,7 +407,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
-  'model': new CoreApiV2.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
+  'model': new CoreApiV2.ForgotPasswordViewModel(), // ForgotPasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthForgotPasswordPost(opts).then(() => {
   console.log('API called successfully.');
@@ -401,6 +423,7 @@ apiInstance.apiInvestorAuthForgotPasswordPost(opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**ForgotPasswordViewModel**](ForgotPasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -428,7 +451,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
-  'model': new CoreApiV2.ResetPasswordViewModel() // ResetPasswordViewModel | 
+  'model': new CoreApiV2.ResetPasswordViewModel(), // ResetPasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthResetPasswordPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -443,6 +467,7 @@ apiInstance.apiInvestorAuthResetPasswordPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**ResetPasswordViewModel**](ResetPasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -470,7 +495,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
-  'model': new CoreApiV2.LoginViewModel() // LoginViewModel | 
+  'model': new CoreApiV2.LoginViewModel(), // LoginViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthSignInPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -485,6 +511,7 @@ apiInstance.apiInvestorAuthSignInPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -512,7 +539,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
-  'model': new CoreApiV2.RegisterInvestorViewModel() // RegisterInvestorViewModel | 
+  'model': new CoreApiV2.RegisterInvestorViewModel(), // RegisterInvestorViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorAuthSignUpPost(opts).then(() => {
   console.log('API called successfully.');
@@ -527,6 +555,7 @@ apiInstance.apiInvestorAuthSignUpPost(opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**RegisterInvestorViewModel**](RegisterInvestorViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -543,7 +572,7 @@ No authorization required
 
 <a name="apiInvestorAuthUpdateTokenGet"></a>
 # **apiInvestorAuthUpdateTokenGet**
-> &#39;String&#39; apiInvestorAuthUpdateTokenGet(authorization)
+> &#39;String&#39; apiInvestorAuthUpdateTokenGet(authorization, opts)
 
 Update auth token
 
@@ -555,7 +584,10 @@ let apiInstance = new CoreApiV2.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiInvestorAuthUpdateTokenGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiInvestorAuthUpdateTokenGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -568,6 +600,7 @@ apiInstance.apiInvestorAuthUpdateTokenGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -584,7 +617,7 @@ No authorization required
 
 <a name="apiInvestorProfileFullGet"></a>
 # **apiInvestorProfileFullGet**
-> ProfileFullViewModel apiInvestorProfileFullGet(authorization)
+> ProfileFullViewModel apiInvestorProfileFullGet(authorization, opts)
 
 Get full profile
 
@@ -596,7 +629,10 @@ let apiInstance = new CoreApiV2.InvestorApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiInvestorProfileFullGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiInvestorProfileFullGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -609,10 +645,56 @@ apiInstance.apiInvestorProfileFullGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
 [**ProfileFullViewModel**](ProfileFullViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="apiInvestorProfileHeaderGet"></a>
+# **apiInvestorProfileHeaderGet**
+> ProfileHeaderViewModel apiInvestorProfileHeaderGet(authorization, opts)
+
+Get header profile
+
+### Example
+```javascript
+import CoreApiV2 from 'core_api_v2';
+
+let apiInstance = new CoreApiV2.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiInvestorProfileHeaderGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**ProfileHeaderViewModel**](ProfileHeaderViewModel.md)
 
 ### Authorization
 
@@ -636,7 +718,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.InvestorApi();
 
 let opts = { 
-  'userId': "userId_example" // String | 
+  'userId': "userId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorProfilePublicGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -651,6 +734,7 @@ apiInstance.apiInvestorProfilePublicGet(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -680,7 +764,8 @@ let apiInstance = new CoreApiV2.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.UpdateProfileViewModel() // UpdateProfileViewModel | 
+  'model': new CoreApiV2.UpdateProfileViewModel(), // UpdateProfileViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiInvestorProfileUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -696,6 +781,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**UpdateProfileViewModel**](UpdateProfileViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

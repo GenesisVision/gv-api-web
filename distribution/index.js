@@ -3,11 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RateApi = exports.ProgramApi = exports.PlatformApi = exports.ManagerApi = exports.InvestorApi = exports.FilesApi = exports.DexchangeApi = exports.BrokerApi = exports.UsersRealAssets = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RealOefAssetPart = exports.RateViewModel = exports.ProgramsList = exports.ProgramsFilter = exports.ProgramStatistic = exports.ProgramDetailsListStatistic = exports.ProgramDetailsList = exports.ProgramDetailsFull = exports.ProgramChart = exports.ProfilePublicViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.Period = exports.PasswordModel = exports.OrderModel = exports.OpenOrderModel = exports.OefManagerRequest = exports.OefAssetPart = exports.NewTradeEvent = exports.NewOpenTradesEvent = exports.NewManager = exports.ManagerRequest = exports.ManagerOpenTrades = exports.ManagerIpfsHash = exports.ManagerHistoryIpfsHash = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorAmount = exports.InvestmentProgramRequest = exports.InvestmentProgramAccrual = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.ErrorViewModel = exports.ErrorMessage = exports.DExchangeResponse = exports.DExchangeRequest = exports.ClosePeriodData = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokerOefInvestmentProgram = exports.BrokerOefInitData = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.BrokerAssetsPartChangeRequest = exports.AndroidVersion = exports.AndroidAppVersion = exports.ApiClient = undefined;
+exports.RateApi = exports.ProgramApi = exports.PlatformApi = exports.ManagerApi = exports.InvestorApi = exports.FilesApi = exports.DexchangeApi = exports.BrokerApi = exports.WalletViewModel = exports.UsersRealAssets = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RealOefAssetPart = exports.RateViewModel = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramDetailsListStatistic = exports.ProgramDetailsList = exports.ProgramDetailsFull = exports.ProgramChart = exports.ProfilePublicViewModel = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PersonalProgramDetailsFull = exports.Period = exports.PasswordModel = exports.OrderModel = exports.OefManagerRequest = exports.OefAssetPart = exports.NewTradeEvent = exports.NewManager = exports.ManagerRequest = exports.ManagerIpfsHash = exports.ManagerHistoryIpfsHash = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorAmount = exports.InvestmentProgramRequest = exports.InvestmentProgramAccrual = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DExchangeResponse = exports.DExchangeRequest = exports.ClosePeriodData = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokerOefInvestmentProgram = exports.BrokerOefInitData = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.BrokerAssetsPartChangeRequest = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
+
+var _AmountWithCurrency = require('./model/AmountWithCurrency');
+
+var _AmountWithCurrency2 = _interopRequireDefault(_AmountWithCurrency);
 
 var _AndroidAppVersion = require('./model/AndroidAppVersion');
 
@@ -69,6 +73,10 @@ var _ErrorViewModel = require('./model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _Facet = require('./model/Facet');
+
+var _Facet2 = _interopRequireDefault(_Facet);
+
 var _ForgotPasswordViewModel = require('./model/ForgotPasswordViewModel');
 
 var _ForgotPasswordViewModel2 = _interopRequireDefault(_ForgotPasswordViewModel);
@@ -105,10 +113,6 @@ var _ManagerIpfsHash = require('./model/ManagerIpfsHash');
 
 var _ManagerIpfsHash2 = _interopRequireDefault(_ManagerIpfsHash);
 
-var _ManagerOpenTrades = require('./model/ManagerOpenTrades');
-
-var _ManagerOpenTrades2 = _interopRequireDefault(_ManagerOpenTrades);
-
 var _ManagerRequest = require('./model/ManagerRequest');
 
 var _ManagerRequest2 = _interopRequireDefault(_ManagerRequest);
@@ -116,10 +120,6 @@ var _ManagerRequest2 = _interopRequireDefault(_ManagerRequest);
 var _NewManager = require('./model/NewManager');
 
 var _NewManager2 = _interopRequireDefault(_NewManager);
-
-var _NewOpenTradesEvent = require('./model/NewOpenTradesEvent');
-
-var _NewOpenTradesEvent2 = _interopRequireDefault(_NewOpenTradesEvent);
 
 var _NewTradeEvent = require('./model/NewTradeEvent');
 
@@ -133,10 +133,6 @@ var _OefManagerRequest = require('./model/OefManagerRequest');
 
 var _OefManagerRequest2 = _interopRequireDefault(_OefManagerRequest);
 
-var _OpenOrderModel = require('./model/OpenOrderModel');
-
-var _OpenOrderModel2 = _interopRequireDefault(_OpenOrderModel);
-
 var _OrderModel = require('./model/OrderModel');
 
 var _OrderModel2 = _interopRequireDefault(_OrderModel);
@@ -149,6 +145,10 @@ var _Period = require('./model/Period');
 
 var _Period2 = _interopRequireDefault(_Period);
 
+var _PersonalProgramDetailsFull = require('./model/PersonalProgramDetailsFull');
+
+var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
+
 var _PlatformInfo = require('./model/PlatformInfo');
 
 var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
@@ -156,6 +156,10 @@ var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
 var _ProfileFullViewModel = require('./model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
+
+var _ProfileHeaderViewModel = require('./model/ProfileHeaderViewModel');
+
+var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
 
 var _ProfilePublicViewModel = require('./model/ProfilePublicViewModel');
 
@@ -180,10 +184,6 @@ var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListSt
 var _ProgramStatistic = require('./model/ProgramStatistic');
 
 var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
-
-var _ProgramsFilter = require('./model/ProgramsFilter');
-
-var _ProgramsFilter2 = _interopRequireDefault(_ProgramsFilter);
 
 var _ProgramsList = require('./model/ProgramsList');
 
@@ -257,6 +257,10 @@ var _UsersRealAssets = require('./model/UsersRealAssets');
 
 var _UsersRealAssets2 = _interopRequireDefault(_UsersRealAssets);
 
+var _WalletViewModel = require('./model/WalletViewModel');
+
+var _WalletViewModel2 = _interopRequireDefault(_WalletViewModel);
+
 var _BrokerApi = require('./api/BrokerApi');
 
 var _BrokerApi2 = _interopRequireDefault(_BrokerApi);
@@ -322,7 +326,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @module index
 * @version v2.0
 */
+/**
+ * Core API v2
+ * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+ *
+ * OpenAPI spec version: v2.0
+ * 
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
+exports.AmountWithCurrency = _AmountWithCurrency2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
 exports.AndroidVersion = _AndroidVersion2.default;
 exports.BrokerAssetsPartChangeRequest = _BrokerAssetsPartChangeRequest2.default;
@@ -338,6 +356,7 @@ exports.DExchangeRequest = _DExchangeRequest2.default;
 exports.DExchangeResponse = _DExchangeResponse2.default;
 exports.ErrorMessage = _ErrorMessage2.default;
 exports.ErrorViewModel = _ErrorViewModel2.default;
+exports.Facet = _Facet2.default;
 exports.ForgotPasswordViewModel = _ForgotPasswordViewModel2.default;
 exports.IOsAppVersion = _IOsAppVersion2.default;
 exports.InvestmentProgramAccrual = _InvestmentProgramAccrual2.default;
@@ -347,26 +366,24 @@ exports.LoginViewModel = _LoginViewModel2.default;
 exports.ManagerAccountOnlineInfo = _ManagerAccountOnlineInfo2.default;
 exports.ManagerHistoryIpfsHash = _ManagerHistoryIpfsHash2.default;
 exports.ManagerIpfsHash = _ManagerIpfsHash2.default;
-exports.ManagerOpenTrades = _ManagerOpenTrades2.default;
 exports.ManagerRequest = _ManagerRequest2.default;
 exports.NewManager = _NewManager2.default;
-exports.NewOpenTradesEvent = _NewOpenTradesEvent2.default;
 exports.NewTradeEvent = _NewTradeEvent2.default;
 exports.OefAssetPart = _OefAssetPart2.default;
 exports.OefManagerRequest = _OefManagerRequest2.default;
-exports.OpenOrderModel = _OpenOrderModel2.default;
 exports.OrderModel = _OrderModel2.default;
 exports.PasswordModel = _PasswordModel2.default;
 exports.Period = _Period2.default;
+exports.PersonalProgramDetailsFull = _PersonalProgramDetailsFull2.default;
 exports.PlatformInfo = _PlatformInfo2.default;
 exports.ProfileFullViewModel = _ProfileFullViewModel2.default;
+exports.ProfileHeaderViewModel = _ProfileHeaderViewModel2.default;
 exports.ProfilePublicViewModel = _ProfilePublicViewModel2.default;
 exports.ProgramChart = _ProgramChart2.default;
 exports.ProgramDetailsFull = _ProgramDetailsFull2.default;
 exports.ProgramDetailsList = _ProgramDetailsList2.default;
 exports.ProgramDetailsListStatistic = _ProgramDetailsListStatistic2.default;
 exports.ProgramStatistic = _ProgramStatistic2.default;
-exports.ProgramsFilter = _ProgramsFilter2.default;
 exports.ProgramsList = _ProgramsList2.default;
 exports.RateViewModel = _RateViewModel2.default;
 exports.RealOefAssetPart = _RealOefAssetPart2.default;
@@ -385,6 +402,7 @@ exports.TwoFactorStatus = _TwoFactorStatus2.default;
 exports.UpdateProfileViewModel = _UpdateProfileViewModel2.default;
 exports.UploadResult = _UploadResult2.default;
 exports.UsersRealAssets = _UsersRealAssets2.default;
+exports.WalletViewModel = _WalletViewModel2.default;
 exports.BrokerApi = _BrokerApi2.default;
 exports.DexchangeApi = _DexchangeApi2.default;
 exports.FilesApi = _FilesApi2.default;
@@ -392,15 +410,4 @@ exports.InvestorApi = _InvestorApi2.default;
 exports.ManagerApi = _ManagerApi2.default;
 exports.PlatformApi = _PlatformApi2.default;
 exports.ProgramApi = _ProgramApi2.default;
-exports.RateApi = _RateApi2.default; /**
-                                      * Core API v2
-                                      * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
-                                      *
-                                      * OpenAPI spec version: v2.0
-                                      * 
-                                      *
-                                      * NOTE: This class is auto generated by the swagger code generator program.
-                                      * https://github.com/swagger-api/swagger-codegen.git
-                                      * Do not edit the class manually.
-                                      *
-                                      */
+exports.RateApi = _RateApi2.default;

@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublicViewModel from './ProfilePublicViewModel';
 import ProgramStatistic from './ProgramStatistic';
 
@@ -91,23 +92,8 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
             }
-            if (data.hasOwnProperty('isFavorite')) {
-                obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isInvested')) {
-                obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isOwnProgram')) {
-                obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canCloseProgram')) {
-                obj['canCloseProgram'] = ApiClient.convertToType(data['canCloseProgram'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canClosePeriod')) {
-                obj['canClosePeriod'] = ApiClient.convertToType(data['canClosePeriod'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canInvest')) {
-                obj['canInvest'] = ApiClient.convertToType(data['canInvest'], 'Boolean');
+            if (data.hasOwnProperty('personalProgramDetails')) {
+                obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
             }
         }
         return obj;
@@ -158,29 +144,10 @@ export default class ProgramDetailsFull {
     */
     statistic = undefined;
     /**
-    * @member {Boolean} isFavorite
+    * Fields for authorized user
+    * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
     */
-    isFavorite = undefined;
-    /**
-    * @member {Boolean} isInvested
-    */
-    isInvested = undefined;
-    /**
-    * @member {Boolean} isOwnProgram
-    */
-    isOwnProgram = undefined;
-    /**
-    * @member {Boolean} canCloseProgram
-    */
-    canCloseProgram = undefined;
-    /**
-    * @member {Boolean} canClosePeriod
-    */
-    canClosePeriod = undefined;
-    /**
-    * @member {Boolean} canInvest
-    */
-    canInvest = undefined;
+    personalProgramDetails = undefined;
 
 
 

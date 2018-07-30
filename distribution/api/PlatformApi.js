@@ -55,18 +55,23 @@ var PlatformApi = function () {
 
   /**
    * Platform info
+   * @param {Object} opts Optional parameters
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformInfo} and HTTP response
    */
 
 
   _createClass(PlatformApi, [{
     key: 'apiPlatformInfoGetWithHttpInfo',
-    value: function apiPlatformInfoGetWithHttpInfo() {
+    value: function apiPlatformInfoGetWithHttpInfo(opts) {
+      opts = opts || {};
       var postBody = null;
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -79,13 +84,15 @@ var PlatformApi = function () {
 
     /**
      * Platform info
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformInfo}
      */
 
   }, {
     key: 'apiPlatformInfoGet',
-    value: function apiPlatformInfoGet() {
-      return this.apiPlatformInfoGetWithHttpInfo().then(function (response_and_data) {
+    value: function apiPlatformInfoGet(opts) {
+      return this.apiPlatformInfoGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

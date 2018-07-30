@@ -4,19 +4,17 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiProgramAuthDetailsPost**](ProgramApi.md#apiProgramAuthDetailsPost) | **POST** /api/program/auth/details | Program details (authorized)
-[**apiProgramAuthListPost**](ProgramApi.md#apiProgramAuthListPost) | **POST** /api/program/auth/list | Programs list (authorized)
-[**apiProgramDetailsChartGet**](ProgramApi.md#apiProgramDetailsChartGet) | **GET** /api/program/details/chart | Get manager trade history
-[**apiProgramDetailsPost**](ProgramApi.md#apiProgramDetailsPost) | **POST** /api/program/details | Program details
-[**apiProgramDetailsTradesGet**](ProgramApi.md#apiProgramDetailsTradesGet) | **GET** /api/program/details/trades | Get manager trade history
-[**apiProgramListPost**](ProgramApi.md#apiProgramListPost) | **POST** /api/program/list | Programs list
+[**apiProgramByIdChartGet**](ProgramApi.md#apiProgramByIdChartGet) | **GET** /api/program/{id}/chart | Get manager chart
+[**apiProgramByIdGet**](ProgramApi.md#apiProgramByIdGet) | **GET** /api/program/{id} | Program details
+[**apiProgramByIdTradesGet**](ProgramApi.md#apiProgramByIdTradesGet) | **GET** /api/program/{id}/trades | Get manager trade history
+[**apiProgramListGet**](ProgramApi.md#apiProgramListGet) | **GET** /api/program/list | Programs list
 
 
-<a name="apiProgramAuthDetailsPost"></a>
-# **apiProgramAuthDetailsPost**
-> ProgramDetailsFull apiProgramAuthDetailsPost(authorization, opts)
+<a name="apiProgramByIdChartGet"></a>
+# **apiProgramByIdChartGet**
+> ProgramChart apiProgramByIdChartGet(id, opts)
 
-Program details (authorized)
+Get manager chart
 
 ### Example
 ```javascript
@@ -24,12 +22,13 @@ import CoreApiV2 from 'core_api_v2';
 
 let apiInstance = new CoreApiV2.ProgramApi();
 
-let authorization = "authorization_example"; // String | JWT access token
+let id = "id_example"; // String | 
 
 let opts = { 
-  'id': "id_example" // String | 
+  'timeFrame': "timeFrame_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
-apiInstance.apiProgramAuthDetailsPost(authorization, opts).then((data) => {
+apiInstance.apiProgramByIdChartGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -41,95 +40,9 @@ apiInstance.apiProgramAuthDetailsPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **id** | [**String**](.md)|  | [optional] 
-
-### Return type
-
-[**ProgramDetailsFull**](ProgramDetailsFull.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="apiProgramAuthListPost"></a>
-# **apiProgramAuthListPost**
-> ProgramsList apiProgramAuthListPost(authorization, opts)
-
-Programs list (authorized)
-
-### Example
-```javascript
-import CoreApiV2 from 'core_api_v2';
-
-let apiInstance = new CoreApiV2.ProgramApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'filter': new CoreApiV2.ProgramsFilter() // ProgramsFilter | 
-};
-apiInstance.apiProgramAuthListPost(authorization, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **filter** | [**ProgramsFilter**](ProgramsFilter.md)|  | [optional] 
-
-### Return type
-
-[**ProgramsList**](ProgramsList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="apiProgramDetailsChartGet"></a>
-# **apiProgramDetailsChartGet**
-> ProgramChart apiProgramDetailsChartGet(opts)
-
-Get manager trade history
-
-### Example
-```javascript
-import CoreApiV2 from 'core_api_v2';
-
-let apiInstance = new CoreApiV2.ProgramApi();
-
-let opts = { 
-  'timeFrame': "timeFrame_example" // String | 
-};
-apiInstance.apiProgramDetailsChartGet(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
  **timeFrame** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -144,9 +57,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramDetailsPost"></a>
-# **apiProgramDetailsPost**
-> ProgramDetailsFull apiProgramDetailsPost(opts)
+<a name="apiProgramByIdGet"></a>
+# **apiProgramByIdGet**
+> ProgramDetailsFull apiProgramByIdGet(id, opts)
 
 Program details
 
@@ -156,10 +69,13 @@ import CoreApiV2 from 'core_api_v2';
 
 let apiInstance = new CoreApiV2.ProgramApi();
 
+let id = "id_example"; // String | 
+
 let opts = { 
-  'id': "id_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
-apiInstance.apiProgramDetailsPost(opts).then((data) => {
+apiInstance.apiProgramByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -171,7 +87,9 @@ apiInstance.apiProgramDetailsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | [optional] 
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -186,9 +104,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramDetailsTradesGet"></a>
-# **apiProgramDetailsTradesGet**
-> TradesViewModel apiProgramDetailsTradesGet(opts)
+<a name="apiProgramByIdTradesGet"></a>
+# **apiProgramByIdTradesGet**
+> TradesViewModel apiProgramByIdTradesGet(id, opts)
 
 Get manager trade history
 
@@ -198,16 +116,18 @@ import CoreApiV2 from 'core_api_v2';
 
 let apiInstance = new CoreApiV2.ProgramApi();
 
+let id = "id_example"; // String | 
+
 let opts = { 
-  'investmentProgramId': "investmentProgramId_example", // String | 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'symbol': "symbol_example", // String | 
   'sorting': "sorting_example", // String | 
   'skip': 56, // Number | 
-  'take': 56 // Number | 
+  'take': 56, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
-apiInstance.apiProgramDetailsTradesGet(opts).then((data) => {
+apiInstance.apiProgramByIdTradesGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -219,13 +139,14 @@ apiInstance.apiProgramDetailsTradesGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **investmentProgramId** | [**String**](.md)|  | [optional] 
+ **id** | [**String**](.md)|  | 
  **dateFrom** | **Date**|  | [optional] 
  **dateTo** | **Date**|  | [optional] 
  **symbol** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -240,9 +161,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramListPost"></a>
-# **apiProgramListPost**
-> ProgramsList apiProgramListPost(opts)
+<a name="apiProgramListGet"></a>
+# **apiProgramListGet**
+> ProgramsList apiProgramListGet(opts)
 
 Programs list
 
@@ -253,9 +174,21 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ProgramApi();
 
 let opts = { 
-  'filter': new CoreApiV2.ProgramsFilter() // ProgramsFilter | 
+  'authorization': "authorization_example", // String | 
+  'levelMin': 56, // Number | 
+  'levelMax': 56, // Number | 
+  'profitAvgMin': 1.2, // Number | 
+  'profitAvgMax': 1.2, // Number | 
+  'timeFrame': "timeFrame_example", // String | 
+  'mask': "mask_example", // String | 
+  'facetId': "facetId_example", // String | 
+  'isFavorite': true, // Boolean | 
+  'currency': "currency_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
-apiInstance.apiProgramListPost(opts).then((data) => {
+apiInstance.apiProgramListGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -267,7 +200,19 @@ apiInstance.apiProgramListPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**ProgramsFilter**](ProgramsFilter.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+ **levelMin** | **Number**|  | [optional] 
+ **levelMax** | **Number**|  | [optional] 
+ **profitAvgMin** | **Number**|  | [optional] 
+ **profitAvgMax** | **Number**|  | [optional] 
+ **timeFrame** | **String**|  | [optional] 
+ **mask** | **String**|  | [optional] 
+ **facetId** | [**String**](.md)|  | [optional] 
+ **isFavorite** | **Boolean**|  | [optional] 
+ **currency** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -279,6 +224,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 

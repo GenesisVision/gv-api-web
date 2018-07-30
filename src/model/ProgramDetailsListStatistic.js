@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import AmountWithCurrency from './AmountWithCurrency';
 
 
 
@@ -56,17 +57,14 @@ export default class ProgramDetailsListStatistic {
             
             
 
-            if (data.hasOwnProperty('balanceBase')) {
-                obj['balanceBase'] = ApiClient.convertToType(data['balanceBase'], 'Number');
+            if (data.hasOwnProperty('balanceInBase')) {
+                obj['balanceInBase'] = AmountWithCurrency.constructFromObject(data['balanceInBase']);
             }
-            if (data.hasOwnProperty('currencyBase')) {
-                obj['currencyBase'] = ApiClient.convertToType(data['currencyBase'], 'String');
+            if (data.hasOwnProperty('balanceInGVT')) {
+                obj['balanceInGVT'] = AmountWithCurrency.constructFromObject(data['balanceInGVT']);
             }
-            if (data.hasOwnProperty('balanceConverted')) {
-                obj['balanceConverted'] = ApiClient.convertToType(data['balanceConverted'], 'Number');
-            }
-            if (data.hasOwnProperty('currencyConverted')) {
-                obj['currencyConverted'] = ApiClient.convertToType(data['currencyConverted'], 'String');
+            if (data.hasOwnProperty('balanceInFavorite')) {
+                obj['balanceInFavorite'] = AmountWithCurrency.constructFromObject(data['balanceInFavorite']);
             }
             if (data.hasOwnProperty('investorsCount')) {
                 obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'Number');
@@ -85,21 +83,17 @@ export default class ProgramDetailsListStatistic {
     }
 
     /**
-    * @member {Number} balanceBase
+    * @member {module:model/AmountWithCurrency} balanceInBase
     */
-    balanceBase = undefined;
+    balanceInBase = undefined;
     /**
-    * @member {module:model/ProgramDetailsListStatistic.CurrencyBaseEnum} currencyBase
+    * @member {module:model/AmountWithCurrency} balanceInGVT
     */
-    currencyBase = undefined;
+    balanceInGVT = undefined;
     /**
-    * @member {Number} balanceConverted
+    * @member {module:model/AmountWithCurrency} balanceInFavorite
     */
-    balanceConverted = undefined;
-    /**
-    * @member {module:model/ProgramDetailsListStatistic.CurrencyConvertedEnum} currencyConverted
-    */
-    currencyConverted = undefined;
+    balanceInFavorite = undefined;
     /**
     * @member {Number} investorsCount
     */
@@ -121,106 +115,6 @@ export default class ProgramDetailsListStatistic {
 
 
 
-
-    /**
-    * Allowed values for the <code>currencyBase</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static CurrencyBaseEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
-
-    /**
-    * Allowed values for the <code>currencyConverted</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static CurrencyConvertedEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
 
 
 

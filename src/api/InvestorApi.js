@@ -19,6 +19,7 @@ import ForgotPasswordViewModel from '../model/ForgotPasswordViewModel';
 import LoginViewModel from '../model/LoginViewModel';
 import PasswordModel from '../model/PasswordModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
+import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
 import ProfilePublicViewModel from '../model/ProfilePublicViewModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from '../model/RegisterInvestorViewModel';
@@ -54,6 +55,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiInvestorAuth2faConfirmPostWithHttpInfo(authorization, opts) {
@@ -71,7 +73,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -93,6 +96,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorAuthenticatorConfirm} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiInvestorAuth2faConfirmPost(authorization, opts) {
@@ -106,9 +110,12 @@ export default class InvestorApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorAuthenticator} and HTTP response
      */
-    apiInvestorAuth2faCreatePostWithHttpInfo(authorization) {
+    apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -122,7 +129,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -142,10 +150,12 @@ export default class InvestorApi {
     /**
      * 2FA create
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorAuthenticator}
      */
-    apiInvestorAuth2faCreatePost(authorization) {
-      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization)
+    apiInvestorAuth2faCreatePost(authorization, opts) {
+      return this.apiInvestorAuth2faCreatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -157,6 +167,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorAuth2faDisablePostWithHttpInfo(authorization, opts) {
@@ -174,7 +185,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -196,6 +208,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/TwoFactorCodeModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorAuth2faDisablePost(authorization, opts) {
@@ -209,9 +222,12 @@ export default class InvestorApi {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TwoFactorStatus} and HTTP response
      */
-    apiInvestorAuth2faGetWithHttpInfo(authorization) {
+    apiInvestorAuth2faGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -225,7 +241,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -245,10 +262,12 @@ export default class InvestorApi {
     /**
      * 2FA status
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TwoFactorStatus}
      */
-    apiInvestorAuth2faGet(authorization) {
-      return this.apiInvestorAuth2faGetWithHttpInfo(authorization)
+    apiInvestorAuth2faGet(authorization, opts) {
+      return this.apiInvestorAuth2faGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -260,6 +279,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiInvestorAuth2faRecoveryCodesNewPostWithHttpInfo(authorization, opts) {
@@ -277,7 +297,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -299,6 +320,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiInvestorAuth2faRecoveryCodesNewPost(authorization, opts) {
@@ -314,6 +336,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RecoveryCodesViewModel} and HTTP response
      */
     apiInvestorAuth2faRecoveryCodesPostWithHttpInfo(authorization, opts) {
@@ -331,7 +354,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -353,6 +377,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/PasswordModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RecoveryCodesViewModel}
      */
     apiInvestorAuth2faRecoveryCodesPost(authorization, opts) {
@@ -368,6 +393,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorAuthChangePasswordPostWithHttpInfo(authorization, opts) {
@@ -385,7 +411,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -407,6 +434,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorAuthChangePasswordPost(authorization, opts) {
@@ -422,6 +450,7 @@ export default class InvestorApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiInvestorAuthConfirmEmailPostWithHttpInfo(opts) {
@@ -436,6 +465,7 @@ export default class InvestorApi {
         'code': opts['code']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -457,6 +487,7 @@ export default class InvestorApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiInvestorAuthConfirmEmailPost(opts) {
@@ -471,6 +502,7 @@ export default class InvestorApi {
      * Forgot password investor
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorAuthForgotPasswordPostWithHttpInfo(opts) {
@@ -483,6 +515,7 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -503,6 +536,7 @@ export default class InvestorApi {
      * Forgot password investor
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorAuthForgotPasswordPost(opts) {
@@ -517,6 +551,7 @@ export default class InvestorApi {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiInvestorAuthResetPasswordPostWithHttpInfo(opts) {
@@ -529,6 +564,7 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -549,6 +585,7 @@ export default class InvestorApi {
      * Reset password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiInvestorAuthResetPasswordPost(opts) {
@@ -563,6 +600,7 @@ export default class InvestorApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiInvestorAuthSignInPostWithHttpInfo(opts) {
@@ -575,6 +613,7 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -595,6 +634,7 @@ export default class InvestorApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiInvestorAuthSignInPost(opts) {
@@ -609,6 +649,7 @@ export default class InvestorApi {
      * Register new investor
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorAuthSignUpPostWithHttpInfo(opts) {
@@ -621,6 +662,7 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -641,6 +683,7 @@ export default class InvestorApi {
      * Register new investor
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorAuthSignUpPost(opts) {
@@ -654,9 +697,12 @@ export default class InvestorApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization) {
+    apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -670,7 +716,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -690,10 +737,12 @@ export default class InvestorApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    apiInvestorAuthUpdateTokenGet(authorization) {
-      return this.apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization)
+    apiInvestorAuthUpdateTokenGet(authorization, opts) {
+      return this.apiInvestorAuthUpdateTokenGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -703,9 +752,12 @@ export default class InvestorApi {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
      */
-    apiInvestorProfileFullGetWithHttpInfo(authorization) {
+    apiInvestorProfileFullGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -719,7 +771,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -739,10 +792,67 @@ export default class InvestorApi {
     /**
      * Get full profile
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
      */
-    apiInvestorProfileFullGet(authorization) {
-      return this.apiInvestorProfileFullGetWithHttpInfo(authorization)
+    apiInvestorProfileFullGet(authorization, opts) {
+      return this.apiInvestorProfileFullGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
+     */
+    apiInvestorProfileHeaderGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling apiInvestorProfileHeaderGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileHeaderViewModel;
+
+      return this.apiClient.callApi(
+        '/api/investor/profile/header', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
+     */
+    apiInvestorProfileHeaderGet(authorization, opts) {
+      return this.apiInvestorProfileHeaderGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -753,6 +863,7 @@ export default class InvestorApi {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
      */
     apiInvestorProfilePublicGetWithHttpInfo(opts) {
@@ -766,6 +877,7 @@ export default class InvestorApi {
         'userId': opts['userId']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -786,6 +898,7 @@ export default class InvestorApi {
      * Get public profile
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
      */
     apiInvestorProfilePublicGet(opts) {
@@ -801,6 +914,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiInvestorProfileUpdatePostWithHttpInfo(authorization, opts) {
@@ -818,7 +932,8 @@ export default class InvestorApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -840,6 +955,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProfileViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiInvestorProfileUpdatePost(authorization, opts) {

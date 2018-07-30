@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**apiManagerAuthSignUpPost**](ManagerApi.md#apiManagerAuthSignUpPost) | **POST** /api/manager/auth/signUp | Register new manager
 [**apiManagerAuthUpdateTokenGet**](ManagerApi.md#apiManagerAuthUpdateTokenGet) | **GET** /api/manager/auth/updateToken | Update auth token
 [**apiManagerProfileFullGet**](ManagerApi.md#apiManagerProfileFullGet) | **GET** /api/manager/profile/full | Get full profile
+[**apiManagerProfileHeaderGet**](ManagerApi.md#apiManagerProfileHeaderGet) | **GET** /api/manager/profile/header | Get header profile
 [**apiManagerProfilePublicGet**](ManagerApi.md#apiManagerProfilePublicGet) | **GET** /api/manager/profile/public | Get public profile
 [**apiManagerProfileUpdatePost**](ManagerApi.md#apiManagerProfileUpdatePost) | **POST** /api/manager/profile/update | Update profile
 
@@ -37,7 +38,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.TwoFactorAuthenticatorConfirm() // TwoFactorAuthenticatorConfirm | 
+  'model': new CoreApiV2.TwoFactorAuthenticatorConfirm(), // TwoFactorAuthenticatorConfirm | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuth2faConfirmPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -53,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**TwoFactorAuthenticatorConfirm**](TwoFactorAuthenticatorConfirm.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -69,7 +72,7 @@ No authorization required
 
 <a name="apiManagerAuth2faCreatePost"></a>
 # **apiManagerAuth2faCreatePost**
-> TwoFactorAuthenticator apiManagerAuth2faCreatePost(authorization)
+> TwoFactorAuthenticator apiManagerAuth2faCreatePost(authorization, opts)
 
 2FA create
 
@@ -81,7 +84,10 @@ let apiInstance = new CoreApiV2.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiManagerAuth2faCreatePost(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiManagerAuth2faCreatePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -94,6 +100,7 @@ apiInstance.apiManagerAuth2faCreatePost(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -123,7 +130,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.TwoFactorCodeModel() // TwoFactorCodeModel | 
+  'model': new CoreApiV2.TwoFactorCodeModel(), // TwoFactorCodeModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuth2faDisablePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -139,6 +147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**TwoFactorCodeModel**](TwoFactorCodeModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -155,7 +164,7 @@ No authorization required
 
 <a name="apiManagerAuth2faGet"></a>
 # **apiManagerAuth2faGet**
-> TwoFactorStatus apiManagerAuth2faGet(authorization)
+> TwoFactorStatus apiManagerAuth2faGet(authorization, opts)
 
 2FA status
 
@@ -167,7 +176,10 @@ let apiInstance = new CoreApiV2.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiManagerAuth2faGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiManagerAuth2faGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -180,6 +192,7 @@ apiInstance.apiManagerAuth2faGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -209,7 +222,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.PasswordModel() // PasswordModel | 
+  'model': new CoreApiV2.PasswordModel(), // PasswordModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuth2faRecoveryCodesNewPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -225,6 +239,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -254,7 +269,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.PasswordModel() // PasswordModel | 
+  'model': new CoreApiV2.PasswordModel(), // PasswordModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuth2faRecoveryCodesPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -270,6 +286,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**PasswordModel**](PasswordModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -299,7 +316,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.ChangePasswordViewModel() // ChangePasswordViewModel | 
+  'model': new CoreApiV2.ChangePasswordViewModel(), // ChangePasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthChangePasswordPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -315,6 +333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**ChangePasswordViewModel**](ChangePasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -343,7 +362,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
   'userId': "userId_example", // String | 
-  'code': "code_example" // String | 
+  'code': "code_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthConfirmEmailPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -359,6 +379,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  | [optional] 
  **code** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -386,7 +407,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
-  'model': new CoreApiV2.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
+  'model': new CoreApiV2.ForgotPasswordViewModel(), // ForgotPasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthForgotPasswordPost(opts).then(() => {
   console.log('API called successfully.');
@@ -401,6 +423,7 @@ apiInstance.apiManagerAuthForgotPasswordPost(opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**ForgotPasswordViewModel**](ForgotPasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -428,7 +451,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
-  'model': new CoreApiV2.ResetPasswordViewModel() // ResetPasswordViewModel | 
+  'model': new CoreApiV2.ResetPasswordViewModel(), // ResetPasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthResetPasswordPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -443,6 +467,7 @@ apiInstance.apiManagerAuthResetPasswordPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**ResetPasswordViewModel**](ResetPasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -470,7 +495,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
-  'model': new CoreApiV2.LoginViewModel() // LoginViewModel | 
+  'model': new CoreApiV2.LoginViewModel(), // LoginViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthSignInPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -485,6 +511,7 @@ apiInstance.apiManagerAuthSignInPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -512,7 +539,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
-  'model': new CoreApiV2.RegisterManagerViewModel() // RegisterManagerViewModel | 
+  'model': new CoreApiV2.RegisterManagerViewModel(), // RegisterManagerViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerAuthSignUpPost(opts).then(() => {
   console.log('API called successfully.');
@@ -527,6 +555,7 @@ apiInstance.apiManagerAuthSignUpPost(opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**RegisterManagerViewModel**](RegisterManagerViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -543,7 +572,7 @@ No authorization required
 
 <a name="apiManagerAuthUpdateTokenGet"></a>
 # **apiManagerAuthUpdateTokenGet**
-> &#39;String&#39; apiManagerAuthUpdateTokenGet(authorization)
+> &#39;String&#39; apiManagerAuthUpdateTokenGet(authorization, opts)
 
 Update auth token
 
@@ -555,7 +584,10 @@ let apiInstance = new CoreApiV2.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiManagerAuthUpdateTokenGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiManagerAuthUpdateTokenGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -568,6 +600,7 @@ apiInstance.apiManagerAuthUpdateTokenGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -584,7 +617,7 @@ No authorization required
 
 <a name="apiManagerProfileFullGet"></a>
 # **apiManagerProfileFullGet**
-> ProfileFullViewModel apiManagerProfileFullGet(authorization)
+> ProfileFullViewModel apiManagerProfileFullGet(authorization, opts)
 
 Get full profile
 
@@ -596,7 +629,10 @@ let apiInstance = new CoreApiV2.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiManagerProfileFullGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiManagerProfileFullGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -609,10 +645,56 @@ apiInstance.apiManagerProfileFullGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
 [**ProfileFullViewModel**](ProfileFullViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="apiManagerProfileHeaderGet"></a>
+# **apiManagerProfileHeaderGet**
+> ProfileHeaderViewModel apiManagerProfileHeaderGet(authorization, opts)
+
+Get header profile
+
+### Example
+```javascript
+import CoreApiV2 from 'core_api_v2';
+
+let apiInstance = new CoreApiV2.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiManagerProfileHeaderGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**ProfileHeaderViewModel**](ProfileHeaderViewModel.md)
 
 ### Authorization
 
@@ -636,7 +718,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.ManagerApi();
 
 let opts = { 
-  'userId': "userId_example" // String | 
+  'userId': "userId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerProfilePublicGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -651,6 +734,7 @@ apiInstance.apiManagerProfilePublicGet(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -680,7 +764,8 @@ let apiInstance = new CoreApiV2.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.UpdateProfileViewModel() // UpdateProfileViewModel | 
+  'model': new CoreApiV2.UpdateProfileViewModel(), // UpdateProfileViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiManagerProfileUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -696,6 +781,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**UpdateProfileViewModel**](UpdateProfileViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

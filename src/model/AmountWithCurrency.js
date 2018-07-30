@@ -19,14 +19,14 @@ import ApiClient from '../ApiClient';
 
 
 /**
-* The WalletViewModel model module.
-* @module model/WalletViewModel
+* The AmountWithCurrency model module.
+* @module model/AmountWithCurrency
 * @version v2.0
 */
-export default class WalletViewModel {
+export default class AmountWithCurrency {
     /**
-    * Constructs a new <code>WalletViewModel</code>.
-    * @alias module:model/WalletViewModel
+    * Constructs a new <code>AmountWithCurrency</code>.
+    * @alias module:model/AmountWithCurrency
     * @class
     */
 
@@ -42,23 +42,20 @@ export default class WalletViewModel {
     }
 
     /**
-    * Constructs a <code>WalletViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AmountWithCurrency</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WalletViewModel} obj Optional instance to populate.
-    * @return {module:model/WalletViewModel} The populated <code>WalletViewModel</code> instance.
+    * @param {module:model/AmountWithCurrency} obj Optional instance to populate.
+    * @return {module:model/AmountWithCurrency} The populated <code>AmountWithCurrency</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new WalletViewModel();
+            obj = obj || new AmountWithCurrency();
 
             
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
@@ -70,15 +67,11 @@ export default class WalletViewModel {
     }
 
     /**
-    * @member {String} id
-    */
-    id = undefined;
-    /**
     * @member {Number} amount
     */
     amount = undefined;
     /**
-    * @member {module:model/WalletViewModel.CurrencyEnum} currency
+    * @member {module:model/AmountWithCurrency.CurrencyEnum} currency
     */
     currency = undefined;
 

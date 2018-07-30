@@ -47,10 +47,6 @@ var OrderModel = function () {
         this.volume = undefined;
         this.profit = undefined;
         this.direction = undefined;
-        this.dateOpen = undefined;
-        this.dateClose = undefined;
-        this.priceOpen = undefined;
-        this.priceClose = undefined;
         this.date = undefined;
         this.price = undefined;
         this.entry = undefined;
@@ -92,18 +88,6 @@ var OrderModel = function () {
                 if (data.hasOwnProperty('direction')) {
                     obj['direction'] = _ApiClient2.default.convertToType(data['direction'], 'String');
                 }
-                if (data.hasOwnProperty('dateOpen')) {
-                    obj['dateOpen'] = _ApiClient2.default.convertToType(data['dateOpen'], 'Date');
-                }
-                if (data.hasOwnProperty('dateClose')) {
-                    obj['dateClose'] = _ApiClient2.default.convertToType(data['dateClose'], 'Date');
-                }
-                if (data.hasOwnProperty('priceOpen')) {
-                    obj['priceOpen'] = _ApiClient2.default.convertToType(data['priceOpen'], 'Number');
-                }
-                if (data.hasOwnProperty('priceClose')) {
-                    obj['priceClose'] = _ApiClient2.default.convertToType(data['priceClose'], 'Number');
-                }
                 if (data.hasOwnProperty('date')) {
                     obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
@@ -143,22 +127,6 @@ var OrderModel = function () {
 
         /**
         * @member {module:model/OrderModel.DirectionEnum} direction
-        */
-
-        /**
-        * @member {Date} dateOpen
-        */
-
-        /**
-        * @member {Date} dateClose
-        */
-
-        /**
-        * @member {Number} priceOpen
-        */
-
-        /**
-        * @member {Number} priceClose
         */
 
         /**

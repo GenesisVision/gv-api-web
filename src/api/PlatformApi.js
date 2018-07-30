@@ -38,9 +38,12 @@ export default class PlatformApi {
 
     /**
      * Platform info
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformInfo} and HTTP response
      */
-    apiPlatformInfoGetWithHttpInfo() {
+    apiPlatformInfoGetWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
 
@@ -49,6 +52,7 @@ export default class PlatformApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -67,10 +71,12 @@ export default class PlatformApi {
 
     /**
      * Platform info
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformInfo}
      */
-    apiPlatformInfoGet() {
-      return this.apiPlatformInfoGetWithHttpInfo()
+    apiPlatformInfoGet(opts) {
+      return this.apiPlatformInfoGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

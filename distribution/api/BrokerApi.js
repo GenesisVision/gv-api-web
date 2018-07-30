@@ -61,10 +61,6 @@ var _NewManager = require('../model/NewManager');
 
 var _NewManager2 = _interopRequireDefault(_NewManager);
 
-var _NewOpenTradesEvent = require('../model/NewOpenTradesEvent');
-
-var _NewOpenTradesEvent2 = _interopRequireDefault(_NewOpenTradesEvent);
-
 var _NewTradeEvent = require('../model/NewTradeEvent');
 
 var _NewTradeEvent2 = _interopRequireDefault(_NewTradeEvent);
@@ -106,6 +102,7 @@ var BrokerApi = function () {
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {module:model/NewManager} opts.request 
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
    */
 
@@ -124,7 +121,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -141,6 +139,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewManager} opts.request 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -157,6 +156,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.requestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -176,7 +176,8 @@ var BrokerApi = function () {
         'requestId': opts['requestId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -193,6 +194,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.requestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -209,6 +211,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -226,7 +229,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -243,6 +247,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -259,6 +264,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -273,7 +279,9 @@ var BrokerApi = function () {
         'userId': opts['userId'],
         'code': opts['code']
       };
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -289,6 +297,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -304,6 +313,7 @@ var BrokerApi = function () {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -315,7 +325,9 @@ var BrokerApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -330,6 +342,7 @@ var BrokerApi = function () {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -344,12 +357,15 @@ var BrokerApi = function () {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
   }, {
     key: 'apiBrokerAuthUpdateTokenGetWithHttpInfo',
-    value: function apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization) {
+    value: function apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -360,7 +376,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -375,25 +392,30 @@ var BrokerApi = function () {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
   }, {
     key: 'apiBrokerAuthUpdateTokenGet',
-    value: function apiBrokerAuthUpdateTokenGet(authorization) {
-      return this.apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiBrokerAuthUpdateTokenGet(authorization, opts) {
+      return this.apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<'String'>} and HTTP response
      */
 
   }, {
     key: 'apiBrokerFreeaddressesGetWithHttpInfo',
-    value: function apiBrokerFreeaddressesGetWithHttpInfo(authorization) {
+    value: function apiBrokerFreeaddressesGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -404,7 +426,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -418,13 +441,15 @@ var BrokerApi = function () {
 
     /**
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<'String'>}
      */
 
   }, {
     key: 'apiBrokerFreeaddressesGet',
-    value: function apiBrokerFreeaddressesGet(authorization) {
-      return this.apiBrokerFreeaddressesGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function apiBrokerFreeaddressesGet(authorization, opts) {
+      return this.apiBrokerFreeaddressesGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -434,6 +459,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokerInitData} and HTTP response
      */
 
@@ -453,7 +479,8 @@ var BrokerApi = function () {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -470,6 +497,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokerInitData}
      */
 
@@ -486,6 +514,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -503,7 +532,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -520,6 +550,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -536,6 +567,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UsersRealAssets} and HTTP response
      */
 
@@ -555,7 +587,8 @@ var BrokerApi = function () {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -572,6 +605,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UsersRealAssets}
      */
 
@@ -588,6 +622,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokerOefInitData} and HTTP response
      */
 
@@ -607,7 +642,8 @@ var BrokerApi = function () {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -624,6 +660,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokerOefInitData}
      */
 
@@ -641,6 +678,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
      * @param {module:model/UsersRealAssets} opts.assets 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -660,7 +698,8 @@ var BrokerApi = function () {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -678,6 +717,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
      * @param {module:model/UsersRealAssets} opts.assets 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -694,6 +734,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramAccrual} opts.accrual 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -711,7 +752,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -728,6 +770,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramAccrual} opts.accrual 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -745,6 +788,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.currentBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -765,7 +809,8 @@ var BrokerApi = function () {
         'currentBalance': opts['currentBalance']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -783,6 +828,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.currentBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -799,6 +845,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetsRequestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -818,7 +865,8 @@ var BrokerApi = function () {
         'assetsRequestId': opts['assetsRequestId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -835,6 +883,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetsRequestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -852,6 +901,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -872,7 +922,8 @@ var BrokerApi = function () {
         'managerBalance': opts['managerBalance']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -890,6 +941,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -907,6 +959,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -927,7 +980,8 @@ var BrokerApi = function () {
         'managerBalance': opts['managerBalance']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -945,6 +999,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -962,6 +1017,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -982,7 +1038,8 @@ var BrokerApi = function () {
         'managerBalance': opts['managerBalance']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1000,6 +1057,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1016,6 +1074,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
@@ -1035,7 +1094,8 @@ var BrokerApi = function () {
         'investmentProgramId': opts['investmentProgramId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1052,6 +1112,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
@@ -1069,6 +1130,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.investorLossShare 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -1089,7 +1151,8 @@ var BrokerApi = function () {
         'investorLossShare': opts['investorLossShare']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1107,6 +1170,7 @@ var BrokerApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.investorLossShare 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1123,6 +1187,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/StartValues} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -1140,7 +1205,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1157,6 +1223,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/StartValues} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1173,6 +1240,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -1192,7 +1260,8 @@ var BrokerApi = function () {
         'investmentProgramId': opts['investmentProgramId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1209,6 +1278,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1225,6 +1295,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClosePeriodData} and HTTP response
      */
 
@@ -1244,7 +1315,8 @@ var BrokerApi = function () {
         'investmentProgramId': opts['investmentProgramId']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1261,6 +1333,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClosePeriodData}
      */
 
@@ -1278,6 +1351,7 @@ var BrokerApi = function () {
      * @param {String} opts.investmentProgramId 
      * @param {Date} opts.start 
      * @param {Date} opts.end 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<'String'>} and HTTP response
      */
 
@@ -1299,7 +1373,8 @@ var BrokerApi = function () {
         'end': opts['end']
       };
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1317,6 +1392,7 @@ var BrokerApi = function () {
      * @param {String} opts.investmentProgramId 
      * @param {Date} opts.start 
      * @param {Date} opts.end 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<'String'>}
      */
 
@@ -1333,6 +1409,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerHistoryIpfsHash} opts.data 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -1350,7 +1427,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1367,6 +1445,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerHistoryIpfsHash} opts.data 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1383,6 +1462,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewTradeEvent} opts.tradeEvent 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -1400,7 +1480,8 @@ var BrokerApi = function () {
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       var formParams = {};
 
@@ -1417,6 +1498,7 @@ var BrokerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewTradeEvent} opts.tradeEvent 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
@@ -1424,56 +1506,6 @@ var BrokerApi = function () {
     key: 'apiBrokerTradesNewPost',
     value: function apiBrokerTradesNewPost(authorization, opts) {
       return this.apiBrokerTradesNewPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * New open trades event
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/NewOpenTradesEvent} opts.trades 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'apiBrokerTradesOpenTradesNewPostWithHttpInfo',
-    value: function apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      var postBody = opts['trades'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling apiBrokerTradesOpenTradesNewPost");
-      }
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/api/broker/trades/openTrades/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * New open trades event
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/NewOpenTradesEvent} opts.trades 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'apiBrokerTradesOpenTradesNewPost',
-    value: function apiBrokerTradesOpenTradesNewPost(authorization, opts) {
-      return this.apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

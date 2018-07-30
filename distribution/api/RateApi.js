@@ -61,6 +61,7 @@ var RateApi = function () {
    * Get rate
    * @param {Object} opts Optional parameters
    * @param {module:model/RequestRate} opts.model 
+   * @param {String} opts.apiVersion 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
    */
 
@@ -73,7 +74,9 @@ var RateApi = function () {
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'api-version': opts['apiVersion']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -88,6 +91,7 @@ var RateApi = function () {
      * Get rate
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestRate} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
      */
 

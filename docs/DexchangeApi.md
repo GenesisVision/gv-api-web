@@ -22,7 +22,8 @@ let apiInstance = new CoreApiV2.DexchangeApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.DExchangeRequest() // DExchangeRequest | 
+  'model': new CoreApiV2.DExchangeRequest(), // DExchangeRequest | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiDexchangeNodePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -38,6 +39,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**DExchangeRequest**](DExchangeRequest.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

@@ -23,7 +23,6 @@ import LoginViewModel from '../model/LoginViewModel';
 import ManagerAccountOnlineInfo from '../model/ManagerAccountOnlineInfo';
 import ManagerHistoryIpfsHash from '../model/ManagerHistoryIpfsHash';
 import NewManager from '../model/NewManager';
-import NewOpenTradesEvent from '../model/NewOpenTradesEvent';
 import NewTradeEvent from '../model/NewTradeEvent';
 import StartValues from '../model/StartValues';
 import UsersRealAssets from '../model/UsersRealAssets';
@@ -53,6 +52,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewManager} opts.request 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiBrokerAccountCreatePostWithHttpInfo(authorization, opts) {
@@ -70,7 +70,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -92,6 +93,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewManager} opts.request 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiBrokerAccountCreatePost(authorization, opts) {
@@ -107,6 +109,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.requestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiBrokerAccountOefCreatePostWithHttpInfo(authorization, opts) {
@@ -125,7 +128,8 @@ export default class BrokerApi {
         'requestId': opts['requestId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -147,6 +151,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.requestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiBrokerAccountOefCreatePost(authorization, opts) {
@@ -162,6 +167,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerAuthChangePasswordPostWithHttpInfo(authorization, opts) {
@@ -179,7 +185,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -201,6 +208,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerAuthChangePasswordPost(authorization, opts) {
@@ -216,6 +224,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiBrokerAuthConfirmEmailPostWithHttpInfo(opts) {
@@ -230,6 +239,7 @@ export default class BrokerApi {
         'code': opts['code']
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -251,6 +261,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiBrokerAuthConfirmEmailPost(opts) {
@@ -265,6 +276,7 @@ export default class BrokerApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiBrokerAuthSignInPostWithHttpInfo(opts) {
@@ -277,6 +289,7 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -297,6 +310,7 @@ export default class BrokerApi {
      * Authorize
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiBrokerAuthSignInPost(opts) {
@@ -310,9 +324,12 @@ export default class BrokerApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization) {
+    apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -326,7 +343,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -346,10 +364,12 @@ export default class BrokerApi {
     /**
      * Update auth token
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    apiBrokerAuthUpdateTokenGet(authorization) {
-      return this.apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization)
+    apiBrokerAuthUpdateTokenGet(authorization, opts) {
+      return this.apiBrokerAuthUpdateTokenGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -358,9 +378,12 @@ export default class BrokerApi {
 
     /**
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<'String'>} and HTTP response
      */
-    apiBrokerFreeaddressesGetWithHttpInfo(authorization) {
+    apiBrokerFreeaddressesGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -374,7 +397,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -393,10 +417,12 @@ export default class BrokerApi {
 
     /**
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<'String'>}
      */
-    apiBrokerFreeaddressesGet(authorization) {
-      return this.apiBrokerFreeaddressesGetWithHttpInfo(authorization)
+    apiBrokerFreeaddressesGet(authorization, opts) {
+      return this.apiBrokerFreeaddressesGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -408,6 +434,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokerInitData} and HTTP response
      */
     apiBrokerInitDataGetWithHttpInfo(authorization, opts) {
@@ -426,7 +453,8 @@ export default class BrokerApi {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -448,6 +476,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokerInitData}
      */
     apiBrokerInitDataGet(authorization, opts) {
@@ -463,6 +492,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerManagersAccountsOnlineInfoUpdatePostWithHttpInfo(authorization, opts) {
@@ -480,7 +510,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -502,6 +533,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/ManagerAccountOnlineInfo>} opts.accounts 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts) {
@@ -517,6 +549,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UsersRealAssets} and HTTP response
      */
     apiBrokerOefGetRealAssetsGetWithHttpInfo(authorization, opts) {
@@ -535,7 +568,8 @@ export default class BrokerApi {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -557,6 +591,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UsersRealAssets}
      */
     apiBrokerOefGetRealAssetsGet(authorization, opts) {
@@ -572,6 +607,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokerOefInitData} and HTTP response
      */
     apiBrokerOefInitDataGetWithHttpInfo(authorization, opts) {
@@ -590,7 +626,8 @@ export default class BrokerApi {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -612,6 +649,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokerOefInitData}
      */
     apiBrokerOefInitDataGet(authorization, opts) {
@@ -628,6 +666,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
      * @param {module:model/UsersRealAssets} opts.assets 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerOefSetRealAssetsPostWithHttpInfo(authorization, opts) {
@@ -646,7 +685,8 @@ export default class BrokerApi {
         'brokerTradeServerId': opts['brokerTradeServerId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -669,6 +709,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.brokerTradeServerId 
      * @param {module:model/UsersRealAssets} opts.assets 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerOefSetRealAssetsPost(authorization, opts) {
@@ -684,6 +725,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramAccrual} opts.accrual 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodAccrueProfitsPostWithHttpInfo(authorization, opts) {
@@ -701,7 +743,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -723,6 +766,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/InvestmentProgramAccrual} opts.accrual 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodAccrueProfitsPost(authorization, opts) {
@@ -739,6 +783,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.currentBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodClosePostWithHttpInfo(authorization, opts) {
@@ -758,7 +803,8 @@ export default class BrokerApi {
         'currentBalance': opts['currentBalance']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -781,6 +827,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.currentBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodClosePost(authorization, opts) {
@@ -796,6 +843,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetsRequestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodOefApplyAssetPartsPostWithHttpInfo(authorization, opts) {
@@ -814,7 +862,8 @@ export default class BrokerApi {
         'assetsRequestId': opts['assetsRequestId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -836,6 +885,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetsRequestId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodOefApplyAssetPartsPost(authorization, opts) {
@@ -852,6 +902,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodOefProcessClosingProgramPostWithHttpInfo(authorization, opts) {
@@ -871,7 +922,8 @@ export default class BrokerApi {
         'managerBalance': opts['managerBalance']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -894,6 +946,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodOefProcessClosingProgramPost(authorization, opts) {
@@ -910,6 +963,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodOefProcessForceClosingProgramPostWithHttpInfo(authorization, opts) {
@@ -929,7 +983,8 @@ export default class BrokerApi {
         'managerBalance': opts['managerBalance']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -952,6 +1007,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodOefProcessForceClosingProgramPost(authorization, opts) {
@@ -968,6 +1024,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodProcessClosingProgramPostWithHttpInfo(authorization, opts) {
@@ -987,7 +1044,8 @@ export default class BrokerApi {
         'managerBalance': opts['managerBalance']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1010,6 +1068,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.managerBalance 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodProcessClosingProgramPost(authorization, opts) {
@@ -1025,6 +1084,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     apiBrokerPeriodProcessInvestmentRequestsPostWithHttpInfo(authorization, opts) {
@@ -1043,7 +1103,8 @@ export default class BrokerApi {
         'investmentProgramId': opts['investmentProgramId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1065,6 +1126,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     apiBrokerPeriodProcessInvestmentRequestsPost(authorization, opts) {
@@ -1081,6 +1143,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.investorLossShare 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodReevaluateManagerTokenPostWithHttpInfo(authorization, opts) {
@@ -1100,7 +1163,8 @@ export default class BrokerApi {
         'investorLossShare': opts['investorLossShare']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1123,6 +1187,7 @@ export default class BrokerApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
      * @param {Number} opts.investorLossShare 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodReevaluateManagerTokenPost(authorization, opts) {
@@ -1138,6 +1203,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/StartValues} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodSetStartValuesPostWithHttpInfo(authorization, opts) {
@@ -1155,7 +1221,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1177,6 +1244,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/StartValues} opts.model 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodSetStartValuesPost(authorization, opts) {
@@ -1192,6 +1260,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerPeriodTerminatePostWithHttpInfo(authorization, opts) {
@@ -1210,7 +1279,8 @@ export default class BrokerApi {
         'investmentProgramId': opts['investmentProgramId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1232,6 +1302,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerPeriodTerminatePost(authorization, opts) {
@@ -1247,6 +1318,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClosePeriodData} and HTTP response
      */
     apiBrokerPeriodlosingDataGetWithHttpInfo(authorization, opts) {
@@ -1265,7 +1337,8 @@ export default class BrokerApi {
         'investmentProgramId': opts['investmentProgramId']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1287,6 +1360,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.investmentProgramId 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClosePeriodData}
      */
     apiBrokerPeriodlosingDataGet(authorization, opts) {
@@ -1303,6 +1377,7 @@ export default class BrokerApi {
      * @param {String} opts.investmentProgramId 
      * @param {Date} opts.start 
      * @param {Date} opts.end 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<'String'>} and HTTP response
      */
     apiBrokerTradehistoryGetWithHttpInfo(authorization, opts) {
@@ -1323,7 +1398,8 @@ export default class BrokerApi {
         'end': opts['end']
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1346,6 +1422,7 @@ export default class BrokerApi {
      * @param {String} opts.investmentProgramId 
      * @param {Date} opts.start 
      * @param {Date} opts.end 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<'String'>}
      */
     apiBrokerTradehistoryGet(authorization, opts) {
@@ -1361,6 +1438,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerHistoryIpfsHash} opts.data 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerTradesIpfsHashUpdatePostWithHttpInfo(authorization, opts) {
@@ -1378,7 +1456,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1400,6 +1479,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ManagerHistoryIpfsHash} opts.data 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerTradesIpfsHashUpdatePost(authorization, opts) {
@@ -1415,6 +1495,7 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewTradeEvent} opts.tradeEvent 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiBrokerTradesNewPostWithHttpInfo(authorization, opts) {
@@ -1432,7 +1513,8 @@ export default class BrokerApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
+        'Authorization': authorization,
+        'api-version': opts['apiVersion']
       };
       let formParams = {
       };
@@ -1454,64 +1536,11 @@ export default class BrokerApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/NewTradeEvent} opts.tradeEvent 
+     * @param {String} opts.apiVersion 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiBrokerTradesNewPost(authorization, opts) {
       return this.apiBrokerTradesNewPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * New open trades event
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/NewOpenTradesEvent} opts.trades 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['trades'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling apiBrokerTradesOpenTradesNewPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/api/broker/trades/openTrades/new', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * New open trades event
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/NewOpenTradesEvent} opts.trades 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    apiBrokerTradesOpenTradesNewPost(authorization, opts) {
-      return this.apiBrokerTradesOpenTradesNewPostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

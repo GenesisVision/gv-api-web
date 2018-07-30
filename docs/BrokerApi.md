@@ -30,7 +30,6 @@ Method | HTTP request | Description
 [**apiBrokerTradehistoryGet**](BrokerApi.md#apiBrokerTradehistoryGet) | **GET** /api/broker/tradehistory | 
 [**apiBrokerTradesIpfsHashUpdatePost**](BrokerApi.md#apiBrokerTradesIpfsHashUpdatePost) | **POST** /api/broker/trades/ipfsHash/update | Update manager history ipfs hash
 [**apiBrokerTradesNewPost**](BrokerApi.md#apiBrokerTradesNewPost) | **POST** /api/broker/trades/new | New trade event
-[**apiBrokerTradesOpenTradesNewPost**](BrokerApi.md#apiBrokerTradesOpenTradesNewPost) | **POST** /api/broker/trades/openTrades/new | New open trades event
 
 
 <a name="apiBrokerAccountCreatePost"></a>
@@ -48,7 +47,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'request': new CoreApiV2.NewManager() // NewManager | 
+  'request': new CoreApiV2.NewManager(), // NewManager | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerAccountCreatePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -64,6 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **request** | [**NewManager**](NewManager.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -93,7 +94,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'requestId': "requestId_example" // String | 
+  'requestId': "requestId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerAccountOefCreatePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -109,6 +111,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **requestId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -138,7 +141,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.ChangePasswordViewModel() // ChangePasswordViewModel | 
+  'model': new CoreApiV2.ChangePasswordViewModel(), // ChangePasswordViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerAuthChangePasswordPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -154,6 +158,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**ChangePasswordViewModel**](ChangePasswordViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -182,7 +187,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 
 let opts = { 
   'userId': "userId_example", // String | 
-  'code': "code_example" // String | 
+  'code': "code_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerAuthConfirmEmailPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -198,6 +204,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  | [optional] 
  **code** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -225,7 +232,8 @@ import CoreApiV2 from 'core_api_v2';
 let apiInstance = new CoreApiV2.BrokerApi();
 
 let opts = { 
-  'model': new CoreApiV2.LoginViewModel() // LoginViewModel | 
+  'model': new CoreApiV2.LoginViewModel(), // LoginViewModel | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerAuthSignInPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -240,6 +248,7 @@ apiInstance.apiBrokerAuthSignInPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -256,7 +265,7 @@ No authorization required
 
 <a name="apiBrokerAuthUpdateTokenGet"></a>
 # **apiBrokerAuthUpdateTokenGet**
-> &#39;String&#39; apiBrokerAuthUpdateTokenGet(authorization)
+> &#39;String&#39; apiBrokerAuthUpdateTokenGet(authorization, opts)
 
 Update auth token
 
@@ -268,7 +277,10 @@ let apiInstance = new CoreApiV2.BrokerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiBrokerAuthUpdateTokenGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiBrokerAuthUpdateTokenGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -281,6 +293,7 @@ apiInstance.apiBrokerAuthUpdateTokenGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -297,7 +310,7 @@ No authorization required
 
 <a name="apiBrokerFreeaddressesGet"></a>
 # **apiBrokerFreeaddressesGet**
-> [&#39;String&#39;] apiBrokerFreeaddressesGet(authorization)
+> [&#39;String&#39;] apiBrokerFreeaddressesGet(authorization, opts)
 
 
 
@@ -309,7 +322,10 @@ let apiInstance = new CoreApiV2.BrokerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.apiBrokerFreeaddressesGet(authorization).then((data) => {
+let opts = { 
+  'apiVersion': "apiVersion_example" // String | 
+};
+apiInstance.apiBrokerFreeaddressesGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -322,6 +338,7 @@ apiInstance.apiBrokerFreeaddressesGet(authorization).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -351,7 +368,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'brokerTradeServerId': "brokerTradeServerId_example" // String | 
+  'brokerTradeServerId': "brokerTradeServerId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerInitDataGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -367,6 +385,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **brokerTradeServerId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -396,7 +415,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'accounts': [new CoreApiV2.ManagerAccountOnlineInfo()] // [ManagerAccountOnlineInfo] | 
+  'accounts': [new CoreApiV2.ManagerAccountOnlineInfo()], // [ManagerAccountOnlineInfo] | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerManagersAccountsOnlineInfoUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -412,6 +432,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **accounts** | [**[ManagerAccountOnlineInfo]**](ManagerAccountOnlineInfo.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -441,7 +462,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'brokerTradeServerId': "brokerTradeServerId_example" // String | 
+  'brokerTradeServerId': "brokerTradeServerId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerOefGetRealAssetsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -457,6 +479,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **brokerTradeServerId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -486,7 +509,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'brokerTradeServerId': "brokerTradeServerId_example" // String | 
+  'brokerTradeServerId': "brokerTradeServerId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerOefInitDataGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -502,6 +526,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **brokerTradeServerId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -532,7 +557,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'brokerTradeServerId': "brokerTradeServerId_example", // String | 
-  'assets': new CoreApiV2.UsersRealAssets() // UsersRealAssets | 
+  'assets': new CoreApiV2.UsersRealAssets(), // UsersRealAssets | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerOefSetRealAssetsPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -549,6 +575,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **brokerTradeServerId** | [**String**](.md)|  | [optional] 
  **assets** | [**UsersRealAssets**](UsersRealAssets.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -578,7 +605,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'accrual': new CoreApiV2.InvestmentProgramAccrual() // InvestmentProgramAccrual | 
+  'accrual': new CoreApiV2.InvestmentProgramAccrual(), // InvestmentProgramAccrual | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodAccrueProfitsPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -594,6 +622,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **accrual** | [**InvestmentProgramAccrual**](InvestmentProgramAccrual.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -624,7 +653,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
-  'currentBalance': 1.2 // Number | 
+  'currentBalance': 1.2, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodClosePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -641,6 +671,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **currentBalance** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -670,7 +701,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'assetsRequestId': "assetsRequestId_example" // String | 
+  'assetsRequestId': "assetsRequestId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodOefApplyAssetPartsPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -686,6 +718,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **assetsRequestId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -716,7 +749,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
-  'managerBalance': 1.2 // Number | 
+  'managerBalance': 1.2, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodOefProcessClosingProgramPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -733,6 +767,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **managerBalance** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -763,7 +798,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
-  'managerBalance': 1.2 // Number | 
+  'managerBalance': 1.2, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodOefProcessForceClosingProgramPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -780,6 +816,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **managerBalance** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -810,7 +847,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
-  'managerBalance': 1.2 // Number | 
+  'managerBalance': 1.2, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodProcessClosingProgramPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -827,6 +865,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **managerBalance** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -856,7 +895,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'investmentProgramId': "investmentProgramId_example" // String | 
+  'investmentProgramId': "investmentProgramId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodProcessInvestmentRequestsPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -872,6 +912,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -902,7 +943,8 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
-  'investorLossShare': 1.2 // Number | 
+  'investorLossShare': 1.2, // Number | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodReevaluateManagerTokenPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -919,6 +961,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **investorLossShare** | **Number**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -948,7 +991,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.StartValues() // StartValues | 
+  'model': new CoreApiV2.StartValues(), // StartValues | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodSetStartValuesPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -964,6 +1008,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**StartValues**](StartValues.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -993,7 +1038,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'investmentProgramId': "investmentProgramId_example" // String | 
+  'investmentProgramId': "investmentProgramId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodTerminatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -1009,6 +1055,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1038,7 +1085,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'investmentProgramId': "investmentProgramId_example" // String | 
+  'investmentProgramId': "investmentProgramId_example", // String | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerPeriodlosingDataGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1054,6 +1102,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **investmentProgramId** | [**String**](.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1085,7 +1134,8 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'investmentProgramId': "investmentProgramId_example", // String | 
   'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
+  'end': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerTradehistoryGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1103,6 +1153,7 @@ Name | Type | Description  | Notes
  **investmentProgramId** | [**String**](.md)|  | [optional] 
  **start** | **Date**|  | [optional] 
  **end** | **Date**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1132,7 +1183,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'data': new CoreApiV2.ManagerHistoryIpfsHash() // ManagerHistoryIpfsHash | 
+  'data': new CoreApiV2.ManagerHistoryIpfsHash(), // ManagerHistoryIpfsHash | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerTradesIpfsHashUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -1148,6 +1200,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **data** | [**ManagerHistoryIpfsHash**](ManagerHistoryIpfsHash.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1177,7 +1230,8 @@ let apiInstance = new CoreApiV2.BrokerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'tradeEvent': new CoreApiV2.NewTradeEvent() // NewTradeEvent | 
+  'tradeEvent': new CoreApiV2.NewTradeEvent(), // NewTradeEvent | 
+  'apiVersion': "apiVersion_example" // String | 
 };
 apiInstance.apiBrokerTradesNewPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -1193,51 +1247,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **tradeEvent** | [**NewTradeEvent**](NewTradeEvent.md)|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="apiBrokerTradesOpenTradesNewPost"></a>
-# **apiBrokerTradesOpenTradesNewPost**
-> apiBrokerTradesOpenTradesNewPost(authorization, opts)
-
-New open trades event
-
-### Example
-```javascript
-import CoreApiV2 from 'core_api_v2';
-
-let apiInstance = new CoreApiV2.BrokerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'trades': new CoreApiV2.NewOpenTradesEvent() // NewOpenTradesEvent | 
-};
-apiInstance.apiBrokerTradesOpenTradesNewPost(authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **trades** | [**NewOpenTradesEvent**](NewOpenTradesEvent.md)|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

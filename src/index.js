@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import BrokerAssetsPartChangeRequest from './model/BrokerAssetsPartChangeRequest';
@@ -28,6 +29,7 @@ import DExchangeRequest from './model/DExchangeRequest';
 import DExchangeResponse from './model/DExchangeResponse';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
+import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
 import InvestmentProgramAccrual from './model/InvestmentProgramAccrual';
@@ -37,26 +39,24 @@ import LoginViewModel from './model/LoginViewModel';
 import ManagerAccountOnlineInfo from './model/ManagerAccountOnlineInfo';
 import ManagerHistoryIpfsHash from './model/ManagerHistoryIpfsHash';
 import ManagerIpfsHash from './model/ManagerIpfsHash';
-import ManagerOpenTrades from './model/ManagerOpenTrades';
 import ManagerRequest from './model/ManagerRequest';
 import NewManager from './model/NewManager';
-import NewOpenTradesEvent from './model/NewOpenTradesEvent';
 import NewTradeEvent from './model/NewTradeEvent';
 import OefAssetPart from './model/OefAssetPart';
 import OefManagerRequest from './model/OefManagerRequest';
-import OpenOrderModel from './model/OpenOrderModel';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
 import Period from './model/Period';
+import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PlatformInfo from './model/PlatformInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
+import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublicViewModel from './model/ProfilePublicViewModel';
 import ProgramChart from './model/ProgramChart';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsList from './model/ProgramDetailsList';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramStatistic from './model/ProgramStatistic';
-import ProgramsFilter from './model/ProgramsFilter';
 import ProgramsList from './model/ProgramsList';
 import RateViewModel from './model/RateViewModel';
 import RealOefAssetPart from './model/RealOefAssetPart';
@@ -75,6 +75,7 @@ import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import UsersRealAssets from './model/UsersRealAssets';
+import WalletViewModel from './model/WalletViewModel';
 import BrokerApi from './api/BrokerApi';
 import DexchangeApi from './api/DexchangeApi';
 import FilesApi from './api/FilesApi';
@@ -122,6 +123,12 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The AmountWithCurrency model constructor.
+     * @property {module:model/AmountWithCurrency}
+     */
+    AmountWithCurrency,
 
     /**
      * The AndroidAppVersion model constructor.
@@ -214,6 +221,12 @@ export {
     ErrorViewModel,
 
     /**
+     * The Facet model constructor.
+     * @property {module:model/Facet}
+     */
+    Facet,
+
+    /**
      * The ForgotPasswordViewModel model constructor.
      * @property {module:model/ForgotPasswordViewModel}
      */
@@ -268,12 +281,6 @@ export {
     ManagerIpfsHash,
 
     /**
-     * The ManagerOpenTrades model constructor.
-     * @property {module:model/ManagerOpenTrades}
-     */
-    ManagerOpenTrades,
-
-    /**
      * The ManagerRequest model constructor.
      * @property {module:model/ManagerRequest}
      */
@@ -284,12 +291,6 @@ export {
      * @property {module:model/NewManager}
      */
     NewManager,
-
-    /**
-     * The NewOpenTradesEvent model constructor.
-     * @property {module:model/NewOpenTradesEvent}
-     */
-    NewOpenTradesEvent,
 
     /**
      * The NewTradeEvent model constructor.
@@ -310,12 +311,6 @@ export {
     OefManagerRequest,
 
     /**
-     * The OpenOrderModel model constructor.
-     * @property {module:model/OpenOrderModel}
-     */
-    OpenOrderModel,
-
-    /**
      * The OrderModel model constructor.
      * @property {module:model/OrderModel}
      */
@@ -334,6 +329,12 @@ export {
     Period,
 
     /**
+     * The PersonalProgramDetailsFull model constructor.
+     * @property {module:model/PersonalProgramDetailsFull}
+     */
+    PersonalProgramDetailsFull,
+
+    /**
      * The PlatformInfo model constructor.
      * @property {module:model/PlatformInfo}
      */
@@ -344,6 +345,12 @@ export {
      * @property {module:model/ProfileFullViewModel}
      */
     ProfileFullViewModel,
+
+    /**
+     * The ProfileHeaderViewModel model constructor.
+     * @property {module:model/ProfileHeaderViewModel}
+     */
+    ProfileHeaderViewModel,
 
     /**
      * The ProfilePublicViewModel model constructor.
@@ -380,12 +387,6 @@ export {
      * @property {module:model/ProgramStatistic}
      */
     ProgramStatistic,
-
-    /**
-     * The ProgramsFilter model constructor.
-     * @property {module:model/ProgramsFilter}
-     */
-    ProgramsFilter,
 
     /**
      * The ProgramsList model constructor.
@@ -494,6 +495,12 @@ export {
      * @property {module:model/UsersRealAssets}
      */
     UsersRealAssets,
+
+    /**
+     * The WalletViewModel model constructor.
+     * @property {module:model/WalletViewModel}
+     */
+    WalletViewModel,
 
     /**
     * The BrokerApi service constructor.

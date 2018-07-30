@@ -25,6 +25,10 @@ var _AndroidAppVersion = require('./AndroidAppVersion');
 
 var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
 
+var _Facet = require('./Facet');
+
+var _Facet2 = _interopRequireDefault(_Facet);
+
 var _IOsAppVersion = require('./IOsAppVersion');
 
 var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
@@ -50,6 +54,7 @@ var PlatformInfo = function () {
 
         this.iOSVersion = undefined;
         this.androidVersion = undefined;
+        this.facets = undefined;
     }
 
     /**
@@ -73,6 +78,9 @@ var PlatformInfo = function () {
                 if (data.hasOwnProperty('androidVersion')) {
                     obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
                 }
+                if (data.hasOwnProperty('facets')) {
+                    obj['facets'] = _ApiClient2.default.convertToType(data['facets'], [_Facet2.default]);
+                }
             }
             return obj;
         }
@@ -83,6 +91,10 @@ var PlatformInfo = function () {
 
         /**
         * @member {module:model/AndroidAppVersion} androidVersion
+        */
+
+        /**
+        * @member {Array.<module:model/Facet>} facets
         */
 
     }]);
