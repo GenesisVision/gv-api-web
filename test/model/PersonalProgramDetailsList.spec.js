@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CoreApiV10.ManagerAccountOnlineInfo();
+    instance = new CoreApiV10.PersonalProgramDetailsList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('ManagerAccountOnlineInfo', function() {
-    it('should create an instance of ManagerAccountOnlineInfo', function() {
-      // uncomment below and update the code to test ManagerAccountOnlineInfo
-      //var instane = new CoreApiV10.ManagerAccountOnlineInfo();
-      //expect(instance).to.be.a(CoreApiV10.ManagerAccountOnlineInfo);
+  describe('PersonalProgramDetailsList', function() {
+    it('should create an instance of PersonalProgramDetailsList', function() {
+      // uncomment below and update the code to test PersonalProgramDetailsList
+      //var instane = new CoreApiV10.PersonalProgramDetailsList();
+      //expect(instance).to.be.a(CoreApiV10.PersonalProgramDetailsList);
     });
 
-    it('should have the property managerId (base name: "managerId")', function() {
-      // uncomment below and update the code to test the property managerId
-      //var instane = new CoreApiV10.ManagerAccountOnlineInfo();
+    it('should have the property isFavorite (base name: "isFavorite")', function() {
+      // uncomment below and update the code to test the property isFavorite
+      //var instane = new CoreApiV10.PersonalProgramDetailsList();
       //expect(instance).to.be();
     });
 
-    it('should have the property balance (base name: "balance")', function() {
-      // uncomment below and update the code to test the property balance
-      //var instane = new CoreApiV10.ManagerAccountOnlineInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property equity (base name: "equity")', function() {
-      // uncomment below and update the code to test the property equity
-      //var instane = new CoreApiV10.ManagerAccountOnlineInfo();
+    it('should have the property isInvested (base name: "isInvested")', function() {
+      // uncomment below and update the code to test the property isInvested
+      //var instane = new CoreApiV10.PersonalProgramDetailsList();
       //expect(instance).to.be();
     });
 

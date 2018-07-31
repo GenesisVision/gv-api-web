@@ -190,6 +190,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.Period](docs/Period.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
+ - [CoreApiV10.PersonalProgramDetailsList](docs/PersonalProgramDetailsList.md)
  - [CoreApiV10.PlatformAsset](docs/PlatformAsset.md)
  - [CoreApiV10.PlatformAssets](docs/PlatformAssets.md)
  - [CoreApiV10.PlatformInfo](docs/PlatformInfo.md)

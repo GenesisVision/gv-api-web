@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
+import PersonalProgramDetailsList from './PersonalProgramDetailsList';
 import ProfilePublicViewModel from './ProfilePublicViewModel';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
 
@@ -100,7 +100,7 @@ export default class ProgramDetailsList {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
             if (data.hasOwnProperty('personalProgramDetails')) {
-                obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
+                obj['personalProgramDetails'] = PersonalProgramDetailsList.constructFromObject(data['personalProgramDetails']);
             }
         }
         return obj;
@@ -160,7 +160,7 @@ export default class ProgramDetailsList {
     chart = undefined;
     /**
     * Fields for authorized user
-    * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
+    * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
     */
     personalProgramDetails = undefined;
 

@@ -48,6 +48,7 @@ import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
 import Period from './model/Period';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
+import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
@@ -336,6 +337,12 @@ export {
      * @property {module:model/PersonalProgramDetailsFull}
      */
     PersonalProgramDetailsFull,
+
+    /**
+     * The PersonalProgramDetailsList model constructor.
+     * @property {module:model/PersonalProgramDetailsList}
+     */
+    PersonalProgramDetailsList,
 
     /**
      * The PlatformAsset model constructor.

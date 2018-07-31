@@ -21,229 +21,65 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartSimple = require('./ChartSimple');
-
-var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
-
-var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
-
-var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
-
-var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
-
-var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
-
-var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramDetailsList model module.
-* @module model/ProgramDetailsList
+* The PersonalProgramDetailsList model module.
+* @module model/PersonalProgramDetailsList
 * @version v1.0
 */
-var ProgramDetailsList = function () {
+var PersonalProgramDetailsList = function () {
     /**
-    * Constructs a new <code>ProgramDetailsList</code>.
-    * @alias module:model/ProgramDetailsList
+    * Constructs a new <code>PersonalProgramDetailsList</code>.
+    * @alias module:model/PersonalProgramDetailsList
     * @class
     */
 
-    function ProgramDetailsList() {
-        _classCallCheck(this, ProgramDetailsList);
+    function PersonalProgramDetailsList() {
+        _classCallCheck(this, PersonalProgramDetailsList);
 
-        this.id = undefined;
-        this.avatar = undefined;
-        this.title = undefined;
-        this.description = undefined;
-        this.currency = undefined;
-        this.level = undefined;
-        this.periodDuration = undefined;
-        this.periodDateStart = undefined;
-        this.periodDateEnd = undefined;
-        this.availableForInvestment = undefined;
-        this.manager = undefined;
-        this.statistic = undefined;
-        this.chart = undefined;
-        this.personalProgramDetails = undefined;
+        this.isFavorite = undefined;
+        this.isInvested = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramDetailsList</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PersonalProgramDetailsList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramDetailsList} obj Optional instance to populate.
-    * @return {module:model/ProgramDetailsList} The populated <code>ProgramDetailsList</code> instance.
+    * @param {module:model/PersonalProgramDetailsList} obj Optional instance to populate.
+    * @return {module:model/PersonalProgramDetailsList} The populated <code>PersonalProgramDetailsList</code> instance.
     */
 
 
-    _createClass(ProgramDetailsList, null, [{
+    _createClass(PersonalProgramDetailsList, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramDetailsList();
+                obj = obj || new PersonalProgramDetailsList();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('isFavorite')) {
+                    obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
-                }
-                if (data.hasOwnProperty('periodDateStart')) {
-                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
-                }
-                if (data.hasOwnProperty('periodDateEnd')) {
-                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
-                }
-                if (data.hasOwnProperty('availableForInvestment')) {
-                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublicViewModel2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
-                }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
-                }
-                if (data.hasOwnProperty('personalProgramDetails')) {
-                    obj['personalProgramDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalProgramDetails']);
+                if (data.hasOwnProperty('isInvested')) {
+                    obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Boolean} isFavorite
         */
 
         /**
-        * @member {String} avatar
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {module:model/ProgramDetailsList.CurrencyEnum} currency
-        */
-
-        /**
-        * @member {Number} level
-        */
-
-        /**
-        * @member {Number} periodDuration
-        */
-
-        /**
-        * @member {Date} periodDateStart
-        */
-
-        /**
-        * @member {Date} periodDateEnd
-        */
-
-        /**
-        * @member {Number} availableForInvestment
-        */
-
-        /**
-        * @member {module:model/ProfilePublicViewModel} manager
-        */
-
-        /**
-        * @member {module:model/ProgramDetailsListStatistic} statistic
-        */
-
-        /**
-        * @member {Array.<module:model/ChartSimple>} chart
-        */
-
-        /**
-        * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
-        */
-
-
-        /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Boolean} isInvested
         */
 
     }]);
 
-    return ProgramDetailsList;
+    return PersonalProgramDetailsList;
 }();
 
-ProgramDetailsList.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-exports.default = ProgramDetailsList;
+exports.default = PersonalProgramDetailsList;
