@@ -65,8 +65,14 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
@@ -108,9 +114,17 @@ export default class ProgramDetailsFull {
     */
     avatar = undefined;
     /**
+    * @member {String} description
+    */
+    description = undefined;
+    /**
     * @member {String} title
     */
     title = undefined;
+    /**
+    * @member {module:model/ProgramDetailsFull.CurrencyEnum} currency
+    */
+    currency = undefined;
     /**
     * @member {Number} level
     */
@@ -153,6 +167,56 @@ export default class ProgramDetailsFull {
 
 
 
+
+    /**
+    * Allowed values for the <code>currency</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static CurrencyEnum = {
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "ADA"
+         * @const
+         */
+        "ADA": "ADA",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        "EUR": "EUR"    
+    };
 
 
 

@@ -417,19 +417,13 @@ export default class AuthApi {
 
     /**
      * Forgot password for investor
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10AuthPasswordForgotInvestorPostWithHttpInfo(authorization, opts) {
+    v10AuthPasswordForgotInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordForgotInvestorPost");
-      }
 
 
       let pathParams = {
@@ -437,7 +431,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -456,13 +449,12 @@ export default class AuthApi {
 
     /**
      * Forgot password for investor
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10AuthPasswordForgotInvestorPost(authorization, opts) {
-      return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(authorization, opts)
+    v10AuthPasswordForgotInvestorPost(opts) {
+      return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -471,19 +463,13 @@ export default class AuthApi {
 
     /**
      * Forgot password for manager
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10AuthPasswordForgotManagerPostWithHttpInfo(authorization, opts) {
+    v10AuthPasswordForgotManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordForgotManagerPost");
-      }
 
 
       let pathParams = {
@@ -491,7 +477,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -510,13 +495,12 @@ export default class AuthApi {
 
     /**
      * Forgot password for manager
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10AuthPasswordForgotManagerPost(authorization, opts) {
-      return this.v10AuthPasswordForgotManagerPostWithHttpInfo(authorization, opts)
+    v10AuthPasswordForgotManagerPost(opts) {
+      return this.v10AuthPasswordForgotManagerPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -525,19 +509,13 @@ export default class AuthApi {
 
     /**
      * Reset password
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthPasswordResetPostWithHttpInfo(authorization, opts) {
+    v10AuthPasswordResetPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordResetPost");
-      }
 
 
       let pathParams = {
@@ -545,7 +523,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -564,13 +541,12 @@ export default class AuthApi {
 
     /**
      * Reset password
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10AuthPasswordResetPost(authorization, opts) {
-      return this.v10AuthPasswordResetPostWithHttpInfo(authorization, opts)
+    v10AuthPasswordResetPost(opts) {
+      return this.v10AuthPasswordResetPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -579,19 +555,13 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthSigninBrokerPostWithHttpInfo(authorization, opts) {
+    v10AuthSigninBrokerPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninBrokerPost");
-      }
 
 
       let pathParams = {
@@ -599,7 +569,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -618,13 +587,12 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10AuthSigninBrokerPost(authorization, opts) {
-      return this.v10AuthSigninBrokerPostWithHttpInfo(authorization, opts)
+    v10AuthSigninBrokerPost(opts) {
+      return this.v10AuthSigninBrokerPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -633,19 +601,13 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthSigninInvestorPostWithHttpInfo(authorization, opts) {
+    v10AuthSigninInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninInvestorPost");
-      }
 
 
       let pathParams = {
@@ -653,7 +615,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -672,13 +633,12 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10AuthSigninInvestorPost(authorization, opts) {
-      return this.v10AuthSigninInvestorPostWithHttpInfo(authorization, opts)
+    v10AuthSigninInvestorPost(opts) {
+      return this.v10AuthSigninInvestorPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -687,19 +647,13 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthSigninManagerPostWithHttpInfo(authorization, opts) {
+    v10AuthSigninManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninManagerPost");
-      }
 
 
       let pathParams = {
@@ -707,7 +661,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -726,13 +679,12 @@ export default class AuthApi {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10AuthSigninManagerPost(authorization, opts) {
-      return this.v10AuthSigninManagerPostWithHttpInfo(authorization, opts)
+    v10AuthSigninManagerPost(opts) {
+      return this.v10AuthSigninManagerPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -741,20 +693,14 @@ export default class AuthApi {
 
     /**
      * Confirm email after registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthSignupConfirmPostWithHttpInfo(authorization, opts) {
+    v10AuthSignupConfirmPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupConfirmPost");
-      }
 
 
       let pathParams = {
@@ -764,7 +710,6 @@ export default class AuthApi {
         'code': opts['code']
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -783,14 +728,13 @@ export default class AuthApi {
 
     /**
      * Confirm email after registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10AuthSignupConfirmPost(authorization, opts) {
-      return this.v10AuthSignupConfirmPostWithHttpInfo(authorization, opts)
+    v10AuthSignupConfirmPost(opts) {
+      return this.v10AuthSignupConfirmPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -799,19 +743,13 @@ export default class AuthApi {
 
     /**
      * New investor registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10AuthSignupInvestorPostWithHttpInfo(authorization, opts) {
+    v10AuthSignupInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupInvestorPost");
-      }
 
 
       let pathParams = {
@@ -819,7 +757,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -838,13 +775,12 @@ export default class AuthApi {
 
     /**
      * New investor registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10AuthSignupInvestorPost(authorization, opts) {
-      return this.v10AuthSignupInvestorPostWithHttpInfo(authorization, opts)
+    v10AuthSignupInvestorPost(opts) {
+      return this.v10AuthSignupInvestorPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -853,19 +789,13 @@ export default class AuthApi {
 
     /**
      * New manager registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10AuthSignupManagerPostWithHttpInfo(authorization, opts) {
+    v10AuthSignupManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupManagerPost");
-      }
 
 
       let pathParams = {
@@ -873,7 +803,6 @@ export default class AuthApi {
       let queryParams = {
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -892,13 +821,12 @@ export default class AuthApi {
 
     /**
      * New manager registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10AuthSignupManagerPost(authorization, opts) {
-      return this.v10AuthSignupManagerPostWithHttpInfo(authorization, opts)
+    v10AuthSignupManagerPost(opts) {
+      return this.v10AuthSignupManagerPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -54,7 +54,9 @@ var ProgramDetailsFull = function () {
 
         this.id = undefined;
         this.avatar = undefined;
+        this.description = undefined;
         this.title = undefined;
+        this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
         this.periodDateStart = undefined;
@@ -87,8 +89,14 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
@@ -130,7 +138,15 @@ var ProgramDetailsFull = function () {
         */
 
         /**
+        * @member {String} description
+        */
+
+        /**
         * @member {String} title
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsFull.CurrencyEnum} currency
         */
 
         /**
@@ -170,9 +186,60 @@ var ProgramDetailsFull = function () {
         * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
         */
 
+
+        /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return ProgramDetailsFull;
 }();
 
+ProgramDetailsFull.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 exports.default = ProgramDetailsFull;

@@ -63,9 +63,6 @@ export default class TradesViewModel {
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
-            if (data.hasOwnProperty('tradeServerType')) {
-                obj['tradeServerType'] = ApiClient.convertToType(data['tradeServerType'], 'String');
-            }
         }
         return obj;
     }
@@ -78,71 +75,11 @@ export default class TradesViewModel {
     * @member {Number} total
     */
     total = undefined;
-    /**
-    * @member {module:model/TradesViewModel.TradeServerTypeEnum} tradeServerType
-    */
-    tradeServerType = undefined;
 
 
 
 
 
-
-    /**
-    * Allowed values for the <code>tradeServerType</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static TradeServerTypeEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "MetaTrader4"
-         * @const
-         */
-        "MetaTrader4": "MetaTrader4",
-    
-        /**
-         * value: "MetaTrader5"
-         * @const
-         */
-        "MetaTrader5": "MetaTrader5",
-    
-        /**
-         * value: "NinjaTrader"
-         * @const
-         */
-        "NinjaTrader": "NinjaTrader",
-    
-        /**
-         * value: "cTrader"
-         * @const
-         */
-        "cTrader": "cTrader",
-    
-        /**
-         * value: "Rumus"
-         * @const
-         */
-        "Rumus": "Rumus",
-    
-        /**
-         * value: "Metastock"
-         * @const
-         */
-        "Metastock": "Metastock",
-    
-        /**
-         * value: "IDEX"
-         * @const
-         */
-        "IDEX": "IDEX"    
-    };
 
 
 

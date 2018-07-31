@@ -440,7 +440,6 @@ var AuthApi = function () {
 
     /**
      * Forgot password for investor
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -448,20 +447,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordForgotInvestorPostWithHttpInfo',
-    value: function v10AuthPasswordForgotInvestorPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthPasswordForgotInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordForgotInvestorPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -474,7 +466,6 @@ var AuthApi = function () {
 
     /**
      * Forgot password for investor
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -482,15 +473,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordForgotInvestorPost',
-    value: function v10AuthPasswordForgotInvestorPost(authorization, opts) {
-      return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthPasswordForgotInvestorPost(opts) {
+      return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Forgot password for manager
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -498,20 +488,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordForgotManagerPostWithHttpInfo',
-    value: function v10AuthPasswordForgotManagerPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthPasswordForgotManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordForgotManagerPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -524,7 +507,6 @@ var AuthApi = function () {
 
     /**
      * Forgot password for manager
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ForgotPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -532,15 +514,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordForgotManagerPost',
-    value: function v10AuthPasswordForgotManagerPost(authorization, opts) {
-      return this.v10AuthPasswordForgotManagerPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthPasswordForgotManagerPost(opts) {
+      return this.v10AuthPasswordForgotManagerPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Reset password
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
@@ -548,20 +529,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordResetPostWithHttpInfo',
-    value: function v10AuthPasswordResetPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthPasswordResetPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordResetPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -574,7 +548,6 @@ var AuthApi = function () {
 
     /**
      * Reset password
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetPasswordViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
@@ -582,15 +555,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthPasswordResetPost',
-    value: function v10AuthPasswordResetPost(authorization, opts) {
-      return this.v10AuthPasswordResetPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthPasswordResetPost(opts) {
+      return this.v10AuthPasswordResetPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
@@ -598,20 +570,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninBrokerPostWithHttpInfo',
-    value: function v10AuthSigninBrokerPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSigninBrokerPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninBrokerPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -624,7 +589,6 @@ var AuthApi = function () {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
@@ -632,15 +596,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninBrokerPost',
-    value: function v10AuthSigninBrokerPost(authorization, opts) {
-      return this.v10AuthSigninBrokerPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSigninBrokerPost(opts) {
+      return this.v10AuthSigninBrokerPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
@@ -648,20 +611,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninInvestorPostWithHttpInfo',
-    value: function v10AuthSigninInvestorPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSigninInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninInvestorPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -674,7 +630,6 @@ var AuthApi = function () {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
@@ -682,15 +637,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninInvestorPost',
-    value: function v10AuthSigninInvestorPost(authorization, opts) {
-      return this.v10AuthSigninInvestorPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSigninInvestorPost(opts) {
+      return this.v10AuthSigninInvestorPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
@@ -698,20 +652,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninManagerPostWithHttpInfo',
-    value: function v10AuthSigninManagerPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSigninManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSigninManagerPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -724,7 +671,6 @@ var AuthApi = function () {
 
     /**
      * Authorize
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
@@ -732,15 +678,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSigninManagerPost',
-    value: function v10AuthSigninManagerPost(authorization, opts) {
-      return this.v10AuthSigninManagerPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSigninManagerPost(opts) {
+      return this.v10AuthSigninManagerPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Confirm email after registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
@@ -749,23 +694,16 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupConfirmPostWithHttpInfo',
-    value: function v10AuthSignupConfirmPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSignupConfirmPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupConfirmPost");
-      }
 
       var pathParams = {};
       var queryParams = {
         'userId': opts['userId'],
         'code': opts['code']
       };
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -778,7 +716,6 @@ var AuthApi = function () {
 
     /**
      * Confirm email after registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId 
      * @param {String} opts.code 
@@ -787,15 +724,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupConfirmPost',
-    value: function v10AuthSignupConfirmPost(authorization, opts) {
-      return this.v10AuthSignupConfirmPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSignupConfirmPost(opts) {
+      return this.v10AuthSignupConfirmPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * New investor registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -803,20 +739,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupInvestorPostWithHttpInfo',
-    value: function v10AuthSignupInvestorPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSignupInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupInvestorPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -829,7 +758,6 @@ var AuthApi = function () {
 
     /**
      * New investor registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterInvestorViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -837,15 +765,14 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupInvestorPost',
-    value: function v10AuthSignupInvestorPost(authorization, opts) {
-      return this.v10AuthSignupInvestorPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSignupInvestorPost(opts) {
+      return this.v10AuthSignupInvestorPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * New manager registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -853,20 +780,13 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupManagerPostWithHttpInfo',
-    value: function v10AuthSignupManagerPostWithHttpInfo(authorization, opts) {
+    value: function v10AuthSignupManagerPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthSignupManagerPost");
-      }
-
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -879,7 +799,6 @@ var AuthApi = function () {
 
     /**
      * New manager registration
-     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterManagerViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -887,8 +806,8 @@ var AuthApi = function () {
 
   }, {
     key: 'v10AuthSignupManagerPost',
-    value: function v10AuthSignupManagerPost(authorization, opts) {
-      return this.v10AuthSignupManagerPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    value: function v10AuthSignupManagerPost(opts) {
+      return this.v10AuthSignupManagerPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -332,7 +332,7 @@ No authorization required
 
 <a name="v10AuthPasswordForgotInvestorPost"></a>
 # **v10AuthPasswordForgotInvestorPost**
-> v10AuthPasswordForgotInvestorPost(authorization, opts)
+> v10AuthPasswordForgotInvestorPost(opts)
 
 Forgot password for investor
 
@@ -342,12 +342,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordForgotInvestorPost(authorization, opts).then(() => {
+apiInstance.v10AuthPasswordForgotInvestorPost(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -359,7 +357,6 @@ apiInstance.v10AuthPasswordForgotInvestorPost(authorization, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**ForgotPasswordViewModel**](ForgotPasswordViewModel.md)|  | [optional] 
 
 ### Return type
@@ -377,7 +374,7 @@ No authorization required
 
 <a name="v10AuthPasswordForgotManagerPost"></a>
 # **v10AuthPasswordForgotManagerPost**
-> v10AuthPasswordForgotManagerPost(authorization, opts)
+> v10AuthPasswordForgotManagerPost(opts)
 
 Forgot password for manager
 
@@ -387,12 +384,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordForgotManagerPost(authorization, opts).then(() => {
+apiInstance.v10AuthPasswordForgotManagerPost(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -404,7 +399,6 @@ apiInstance.v10AuthPasswordForgotManagerPost(authorization, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**ForgotPasswordViewModel**](ForgotPasswordViewModel.md)|  | [optional] 
 
 ### Return type
@@ -422,7 +416,7 @@ No authorization required
 
 <a name="v10AuthPasswordResetPost"></a>
 # **v10AuthPasswordResetPost**
-> &#39;String&#39; v10AuthPasswordResetPost(authorization, opts)
+> &#39;String&#39; v10AuthPasswordResetPost(opts)
 
 Reset password
 
@@ -432,12 +426,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.ResetPasswordViewModel() // ResetPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordResetPost(authorization, opts).then((data) => {
+apiInstance.v10AuthPasswordResetPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -449,7 +441,6 @@ apiInstance.v10AuthPasswordResetPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**ResetPasswordViewModel**](ResetPasswordViewModel.md)|  | [optional] 
 
 ### Return type
@@ -467,7 +458,7 @@ No authorization required
 
 <a name="v10AuthSigninBrokerPost"></a>
 # **v10AuthSigninBrokerPost**
-> &#39;String&#39; v10AuthSigninBrokerPost(authorization, opts)
+> &#39;String&#39; v10AuthSigninBrokerPost(opts)
 
 Authorize
 
@@ -477,12 +468,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
 };
-apiInstance.v10AuthSigninBrokerPost(authorization, opts).then((data) => {
+apiInstance.v10AuthSigninBrokerPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -494,7 +483,6 @@ apiInstance.v10AuthSigninBrokerPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
 
 ### Return type
@@ -512,7 +500,7 @@ No authorization required
 
 <a name="v10AuthSigninInvestorPost"></a>
 # **v10AuthSigninInvestorPost**
-> &#39;String&#39; v10AuthSigninInvestorPost(authorization, opts)
+> &#39;String&#39; v10AuthSigninInvestorPost(opts)
 
 Authorize
 
@@ -522,12 +510,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
 };
-apiInstance.v10AuthSigninInvestorPost(authorization, opts).then((data) => {
+apiInstance.v10AuthSigninInvestorPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -539,7 +525,6 @@ apiInstance.v10AuthSigninInvestorPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
 
 ### Return type
@@ -557,7 +542,7 @@ No authorization required
 
 <a name="v10AuthSigninManagerPost"></a>
 # **v10AuthSigninManagerPost**
-> &#39;String&#39; v10AuthSigninManagerPost(authorization, opts)
+> &#39;String&#39; v10AuthSigninManagerPost(opts)
 
 Authorize
 
@@ -567,12 +552,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
 };
-apiInstance.v10AuthSigninManagerPost(authorization, opts).then((data) => {
+apiInstance.v10AuthSigninManagerPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -584,7 +567,6 @@ apiInstance.v10AuthSigninManagerPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
 
 ### Return type
@@ -602,7 +584,7 @@ No authorization required
 
 <a name="v10AuthSignupConfirmPost"></a>
 # **v10AuthSignupConfirmPost**
-> &#39;String&#39; v10AuthSignupConfirmPost(authorization, opts)
+> &#39;String&#39; v10AuthSignupConfirmPost(opts)
 
 Confirm email after registration
 
@@ -612,13 +594,11 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'userId': "userId_example", // String | 
   'code': "code_example" // String | 
 };
-apiInstance.v10AuthSignupConfirmPost(authorization, opts).then((data) => {
+apiInstance.v10AuthSignupConfirmPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -630,7 +610,6 @@ apiInstance.v10AuthSignupConfirmPost(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **userId** | **String**|  | [optional] 
  **code** | **String**|  | [optional] 
 
@@ -649,7 +628,7 @@ No authorization required
 
 <a name="v10AuthSignupInvestorPost"></a>
 # **v10AuthSignupInvestorPost**
-> v10AuthSignupInvestorPost(authorization, opts)
+> v10AuthSignupInvestorPost(opts)
 
 New investor registration
 
@@ -659,12 +638,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.RegisterInvestorViewModel() // RegisterInvestorViewModel | 
 };
-apiInstance.v10AuthSignupInvestorPost(authorization, opts).then(() => {
+apiInstance.v10AuthSignupInvestorPost(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -676,7 +653,6 @@ apiInstance.v10AuthSignupInvestorPost(authorization, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**RegisterInvestorViewModel**](RegisterInvestorViewModel.md)|  | [optional] 
 
 ### Return type
@@ -694,7 +670,7 @@ No authorization required
 
 <a name="v10AuthSignupManagerPost"></a>
 # **v10AuthSignupManagerPost**
-> v10AuthSignupManagerPost(authorization, opts)
+> v10AuthSignupManagerPost(opts)
 
 New manager registration
 
@@ -704,12 +680,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.AuthApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'model': new CoreApiV10.RegisterManagerViewModel() // RegisterManagerViewModel | 
 };
-apiInstance.v10AuthSignupManagerPost(authorization, opts).then(() => {
+apiInstance.v10AuthSignupManagerPost(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -721,7 +695,6 @@ apiInstance.v10AuthSignupManagerPost(authorization, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
  **model** | [**RegisterManagerViewModel**](RegisterManagerViewModel.md)|  | [optional] 
 
 ### Return type

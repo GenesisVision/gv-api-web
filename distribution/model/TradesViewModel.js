@@ -46,7 +46,6 @@ var TradesViewModel = function () {
 
         this.trades = undefined;
         this.total = undefined;
-        this.tradeServerType = undefined;
     }
 
     /**
@@ -70,9 +69,6 @@ var TradesViewModel = function () {
                 if (data.hasOwnProperty('total')) {
                     obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
-                if (data.hasOwnProperty('tradeServerType')) {
-                    obj['tradeServerType'] = _ApiClient2.default.convertToType(data['tradeServerType'], 'String');
-                }
             }
             return obj;
         }
@@ -85,70 +81,9 @@ var TradesViewModel = function () {
         * @member {Number} total
         */
 
-        /**
-        * @member {module:model/TradesViewModel.TradeServerTypeEnum} tradeServerType
-        */
-
-
-        /**
-        * Allowed values for the <code>tradeServerType</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
     return TradesViewModel;
 }();
 
-TradesViewModel.TradeServerTypeEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "MetaTrader4"
-     * @const
-     */
-    "MetaTrader4": "MetaTrader4",
-
-    /**
-     * value: "MetaTrader5"
-     * @const
-     */
-    "MetaTrader5": "MetaTrader5",
-
-    /**
-     * value: "NinjaTrader"
-     * @const
-     */
-    "NinjaTrader": "NinjaTrader",
-
-    /**
-     * value: "cTrader"
-     * @const
-     */
-    "cTrader": "cTrader",
-
-    /**
-     * value: "Rumus"
-     * @const
-     */
-    "Rumus": "Rumus",
-
-    /**
-     * value: "Metastock"
-     * @const
-     */
-    "Metastock": "Metastock",
-
-    /**
-     * value: "IDEX"
-     * @const
-     */
-    "IDEX": "IDEX"
-};
 exports.default = TradesViewModel;
