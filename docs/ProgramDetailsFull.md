@@ -1,4 +1,4 @@
-# CoreApiV2.ProgramDetailsFull
+# CoreApiV10.ProgramDetailsFull
 
 ## Properties
 Name | Type | Description | Notes

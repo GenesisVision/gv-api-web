@@ -1,4 +1,4 @@
-# CoreApiV2.StartValues
+# CoreApiV10.StartValues
 
 ## Properties
 Name | Type | Description | Notes

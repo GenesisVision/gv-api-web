@@ -1,4 +1,4 @@
-# CoreApiV2.ForgotPasswordViewModel
+# CoreApiV10.ForgotPasswordViewModel
 
 ## Properties
 Name | Type | Description | Notes

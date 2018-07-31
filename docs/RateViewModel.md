@@ -1,4 +1,4 @@
-# CoreApiV2.RateViewModel
+# CoreApiV10.RateViewModel
 
 ## Properties
 Name | Type | Description | Notes

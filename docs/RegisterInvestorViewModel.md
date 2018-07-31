@@ -1,4 +1,4 @@
-# CoreApiV2.RegisterInvestorViewModel
+# CoreApiV10.RegisterInvestorViewModel
 
 ## Properties
 Name | Type | Description | Notes

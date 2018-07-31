@@ -1,34 +1,33 @@
-# CoreApiV2.ProgramApi
+# CoreApiV10.ProgramApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiProgramByIdChartGet**](ProgramApi.md#apiProgramByIdChartGet) | **GET** /api/program/{id}/chart | Get manager chart
-[**apiProgramByIdGet**](ProgramApi.md#apiProgramByIdGet) | **GET** /api/program/{id} | Program details
-[**apiProgramByIdTradesGet**](ProgramApi.md#apiProgramByIdTradesGet) | **GET** /api/program/{id}/trades | Get manager trade history
-[**apiProgramListGet**](ProgramApi.md#apiProgramListGet) | **GET** /api/program/list | Programs list
+[**v10ProgramByIdChartGet**](ProgramApi.md#v10ProgramByIdChartGet) | **GET** /v1.0/program/{id}/chart | Get manager chart
+[**v10ProgramByIdGet**](ProgramApi.md#v10ProgramByIdGet) | **GET** /v1.0/program/{id} | Program details
+[**v10ProgramByIdTradesGet**](ProgramApi.md#v10ProgramByIdTradesGet) | **GET** /v1.0/program/{id}/trades | Get manager trade history
+[**v10ProgramListGet**](ProgramApi.md#v10ProgramListGet) | **GET** /v1.0/program/list | Programs list
 
 
-<a name="apiProgramByIdChartGet"></a>
-# **apiProgramByIdChartGet**
-> ProgramChart apiProgramByIdChartGet(id, opts)
+<a name="v10ProgramByIdChartGet"></a>
+# **v10ProgramByIdChartGet**
+> ProgramChart v10ProgramByIdChartGet(id, opts)
 
 Get manager chart
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.ProgramApi();
+let apiInstance = new CoreApiV10.ProgramApi();
 
 let id = "id_example"; // String | 
 
 let opts = { 
-  'timeFrame': "timeFrame_example", // String | 
-  'apiVersion': "apiVersion_example" // String | 
+  'timeFrame': "timeFrame_example" // String | 
 };
-apiInstance.apiProgramByIdChartGet(id, opts).then((data) => {
+apiInstance.v10ProgramByIdChartGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -42,7 +41,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **timeFrame** | **String**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -57,25 +55,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramByIdGet"></a>
-# **apiProgramByIdGet**
-> ProgramDetailsFull apiProgramByIdGet(id, opts)
+<a name="v10ProgramByIdGet"></a>
+# **v10ProgramByIdGet**
+> ProgramDetailsFull v10ProgramByIdGet(id, opts)
 
 Program details
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.ProgramApi();
+let apiInstance = new CoreApiV10.ProgramApi();
 
 let id = "id_example"; // String | 
 
 let opts = { 
-  'authorization': "authorization_example", // String | 
-  'apiVersion': "apiVersion_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
-apiInstance.apiProgramByIdGet(id, opts).then((data) => {
+apiInstance.v10ProgramByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -89,7 +86,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -104,17 +100,17 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramByIdTradesGet"></a>
-# **apiProgramByIdTradesGet**
-> TradesViewModel apiProgramByIdTradesGet(id, opts)
+<a name="v10ProgramByIdTradesGet"></a>
+# **v10ProgramByIdTradesGet**
+> TradesViewModel v10ProgramByIdTradesGet(id, opts)
 
 Get manager trade history
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.ProgramApi();
+let apiInstance = new CoreApiV10.ProgramApi();
 
 let id = "id_example"; // String | 
 
@@ -124,10 +120,9 @@ let opts = {
   'symbol': "symbol_example", // String | 
   'sorting': "sorting_example", // String | 
   'skip': 56, // Number | 
-  'take': 56, // Number | 
-  'apiVersion': "apiVersion_example" // String | 
+  'take': 56 // Number | 
 };
-apiInstance.apiProgramByIdTradesGet(id, opts).then((data) => {
+apiInstance.v10ProgramByIdTradesGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -146,7 +141,6 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
@@ -161,17 +155,17 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiProgramListGet"></a>
-# **apiProgramListGet**
-> ProgramsList apiProgramListGet(opts)
+<a name="v10ProgramListGet"></a>
+# **v10ProgramListGet**
+> ProgramsList v10ProgramListGet(opts)
 
 Programs list
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.ProgramApi();
+let apiInstance = new CoreApiV10.ProgramApi();
 
 let opts = { 
   'authorization': "authorization_example", // String | 
@@ -185,10 +179,9 @@ let opts = {
   'isFavorite': true, // Boolean | 
   'currency': "currency_example", // String | 
   'skip': 56, // Number | 
-  'take': 56, // Number | 
-  'apiVersion': "apiVersion_example" // String | 
+  'take': 56 // Number | 
 };
-apiInstance.apiProgramListGet(opts).then((data) => {
+apiInstance.v10ProgramListGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -212,7 +205,6 @@ Name | Type | Description  | Notes
  **currency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

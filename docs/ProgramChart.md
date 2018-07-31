@@ -1,4 +1,4 @@
-# CoreApiV2.ProgramChart
+# CoreApiV10.ProgramChart
 
 ## Properties
 Name | Type | Description | Notes

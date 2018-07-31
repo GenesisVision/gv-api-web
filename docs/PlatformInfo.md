@@ -1,4 +1,4 @@
-# CoreApiV2.PlatformInfo
+# CoreApiV10.PlatformInfo
 
 ## Properties
 Name | Type | Description | Notes

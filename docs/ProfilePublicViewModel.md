@@ -1,4 +1,4 @@
-# CoreApiV2.ProfilePublicViewModel
+# CoreApiV10.ProfilePublicViewModel
 
 ## Properties
 Name | Type | Description | Notes

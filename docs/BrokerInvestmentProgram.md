@@ -1,4 +1,4 @@
-# CoreApiV2.BrokerInvestmentProgram
+# CoreApiV10.BrokerInvestmentProgram
 
 ## Properties
 Name | Type | Description | Notes

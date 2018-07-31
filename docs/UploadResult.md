@@ -1,4 +1,4 @@
-# CoreApiV2.UploadResult
+# CoreApiV10.UploadResult
 
 ## Properties
 Name | Type | Description | Notes

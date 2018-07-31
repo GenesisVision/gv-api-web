@@ -1,4 +1,4 @@
-# CoreApiV2.PasswordModel
+# CoreApiV10.PasswordModel
 
 ## Properties
 Name | Type | Description | Notes

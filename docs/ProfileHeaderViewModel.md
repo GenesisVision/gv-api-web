@@ -1,4 +1,4 @@
-# CoreApiV2.ProfileHeaderViewModel
+# CoreApiV10.ProfileHeaderViewModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,5 +9,8 @@ Name | Type | Description | Notes
 **wallets** | [**[WalletViewModel]**](WalletViewModel.md) |  | [optional] 
 **hasNotifications** | **Boolean** |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
+**totalBalanceGvt** | **Number** |  | [optional] 
+**totalInvestedGvt** | **Number** |  | [optional] 
+**totalAvailableGvt** | **Number** |  | [optional] 
 
 

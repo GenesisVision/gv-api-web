@@ -1,4 +1,4 @@
-# CoreApiV2.Facet
+# CoreApiV10.Facet
 
 ## Properties
 Name | Type | Description | Notes

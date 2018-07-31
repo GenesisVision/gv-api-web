@@ -1,4 +1,4 @@
-# CoreApiV2.UpdateProfileViewModel
+# CoreApiV10.UpdateProfileViewModel
 
 ## Properties
 Name | Type | Description | Notes

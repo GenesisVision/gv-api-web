@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RateApi = exports.ProgramApi = exports.PlatformApi = exports.ManagerApi = exports.InvestorApi = exports.FilesApi = exports.DexchangeApi = exports.BrokerApi = exports.WalletViewModel = exports.UsersRealAssets = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RealOefAssetPart = exports.RateViewModel = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramDetailsListStatistic = exports.ProgramDetailsList = exports.ProgramDetailsFull = exports.ProgramChart = exports.ProfilePublicViewModel = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PersonalProgramDetailsFull = exports.Period = exports.PasswordModel = exports.OrderModel = exports.OefManagerRequest = exports.OefAssetPart = exports.NewTradeEvent = exports.NewManager = exports.ManagerRequest = exports.ManagerIpfsHash = exports.ManagerHistoryIpfsHash = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorAmount = exports.InvestmentProgramRequest = exports.InvestmentProgramAccrual = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DExchangeResponse = exports.DExchangeRequest = exports.ClosePeriodData = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokerOefInvestmentProgram = exports.BrokerOefInitData = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.BrokerAssetsPartChangeRequest = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
+exports.RateApi = exports.ProgramApi = exports.ProfileApi = exports.PlatformApi = exports.OefApi = exports.FileApi = exports.DexchangeApi = exports.BrokerApi = exports.AuthApi = exports.WalletViewModel = exports.UsersRealAssets = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StartValues = exports.ResetPasswordViewModel = exports.RequestRate = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RealOefAssetPart = exports.RateViewModel = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramDetailsListStatistic = exports.ProgramDetailsList = exports.ProgramDetailsFull = exports.ProgramChart = exports.ProfilePublicViewModel = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsFull = exports.Period = exports.PasswordModel = exports.OrderModel = exports.OefManagerRequest = exports.OefAssetPart = exports.NewTradeEvent = exports.NewManager = exports.ManagerRequest = exports.ManagerIpfsHash = exports.ManagerHistoryIpfsHash = exports.ManagerAccountOnlineInfo = exports.LoginViewModel = exports.InvestorAmount = exports.InvestmentProgramRequest = exports.InvestmentProgramAccrual = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DExchangeResponse = exports.DExchangeRequest = exports.ClosePeriodData = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokerOefInvestmentProgram = exports.BrokerOefInitData = exports.BrokerInvestmentProgram = exports.BrokerInitData = exports.BrokerAssetsPartChangeRequest = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -149,6 +149,14 @@ var _PersonalProgramDetailsFull = require('./model/PersonalProgramDetailsFull');
 
 var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
 
+var _PlatformAsset = require('./model/PlatformAsset');
+
+var _PlatformAsset2 = _interopRequireDefault(_PlatformAsset);
+
+var _PlatformAssets = require('./model/PlatformAssets');
+
+var _PlatformAssets2 = _interopRequireDefault(_PlatformAssets);
+
 var _PlatformInfo = require('./model/PlatformInfo');
 
 var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
@@ -261,6 +269,10 @@ var _WalletViewModel = require('./model/WalletViewModel');
 
 var _WalletViewModel2 = _interopRequireDefault(_WalletViewModel);
 
+var _AuthApi = require('./api/AuthApi');
+
+var _AuthApi2 = _interopRequireDefault(_AuthApi);
+
 var _BrokerApi = require('./api/BrokerApi');
 
 var _BrokerApi2 = _interopRequireDefault(_BrokerApi);
@@ -269,21 +281,21 @@ var _DexchangeApi = require('./api/DexchangeApi');
 
 var _DexchangeApi2 = _interopRequireDefault(_DexchangeApi);
 
-var _FilesApi = require('./api/FilesApi');
+var _FileApi = require('./api/FileApi');
 
-var _FilesApi2 = _interopRequireDefault(_FilesApi);
+var _FileApi2 = _interopRequireDefault(_FileApi);
 
-var _InvestorApi = require('./api/InvestorApi');
+var _OefApi = require('./api/OefApi');
 
-var _InvestorApi2 = _interopRequireDefault(_InvestorApi);
-
-var _ManagerApi = require('./api/ManagerApi');
-
-var _ManagerApi2 = _interopRequireDefault(_ManagerApi);
+var _OefApi2 = _interopRequireDefault(_OefApi);
 
 var _PlatformApi = require('./api/PlatformApi');
 
 var _PlatformApi2 = _interopRequireDefault(_PlatformApi);
+
+var _ProfileApi = require('./api/ProfileApi');
+
+var _ProfileApi2 = _interopRequireDefault(_ProfileApi);
 
 var _ProgramApi = require('./api/ProgramApi');
 
@@ -301,9 +313,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var CoreApiV2 = require('index'); // See note below*.
-* var xxxSvc = new CoreApiV2.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new CoreApiV2.Yyy(); // Construct a model instance.
+* var CoreApiV10 = require('index'); // See note below*.
+* var xxxSvc = new CoreApiV10.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new CoreApiV10.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -315,8 +327,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new CoreApiV2.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new CoreApiV2.Yyy(); // Construct a model instance.
+* var xxxSvc = new CoreApiV10.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new CoreApiV10.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -324,21 +336,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * </pre>
 * </p>
 * @module index
-* @version v2.0
+* @version v1.0
 */
-/**
- * Core API v2
- * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
- *
- * OpenAPI spec version: v2.0
- * 
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- *
- */
-
 exports.ApiClient = _ApiClient2.default;
 exports.AmountWithCurrency = _AmountWithCurrency2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
@@ -375,6 +374,8 @@ exports.OrderModel = _OrderModel2.default;
 exports.PasswordModel = _PasswordModel2.default;
 exports.Period = _Period2.default;
 exports.PersonalProgramDetailsFull = _PersonalProgramDetailsFull2.default;
+exports.PlatformAsset = _PlatformAsset2.default;
+exports.PlatformAssets = _PlatformAssets2.default;
 exports.PlatformInfo = _PlatformInfo2.default;
 exports.ProfileFullViewModel = _ProfileFullViewModel2.default;
 exports.ProfileHeaderViewModel = _ProfileHeaderViewModel2.default;
@@ -403,11 +404,23 @@ exports.UpdateProfileViewModel = _UpdateProfileViewModel2.default;
 exports.UploadResult = _UploadResult2.default;
 exports.UsersRealAssets = _UsersRealAssets2.default;
 exports.WalletViewModel = _WalletViewModel2.default;
+exports.AuthApi = _AuthApi2.default;
 exports.BrokerApi = _BrokerApi2.default;
 exports.DexchangeApi = _DexchangeApi2.default;
-exports.FilesApi = _FilesApi2.default;
-exports.InvestorApi = _InvestorApi2.default;
-exports.ManagerApi = _ManagerApi2.default;
+exports.FileApi = _FileApi2.default;
+exports.OefApi = _OefApi2.default;
 exports.PlatformApi = _PlatformApi2.default;
+exports.ProfileApi = _ProfileApi2.default;
 exports.ProgramApi = _ProgramApi2.default;
-exports.RateApi = _RateApi2.default;
+exports.RateApi = _RateApi2.default; /**
+                                      * Core API v1.0
+                                      * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+                                      *
+                                      * OpenAPI spec version: v1.0
+                                      * 
+                                      *
+                                      * NOTE: This class is auto generated by the swagger code generator program.
+                                      * https://github.com/swagger-api/swagger-codegen.git
+                                      * Do not edit the class manually.
+                                      *
+                                      */

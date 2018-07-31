@@ -1,4 +1,4 @@
-# CoreApiV2.ProgramsList
+# CoreApiV10.ProgramsList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CoreApiV2.AmountWithCurrency
+# CoreApiV10.AmountWithCurrency
 
 ## Properties
 Name | Type | Description | Notes

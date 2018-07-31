@@ -1,4 +1,4 @@
-# CoreApiV2.ManagerIpfsHash
+# CoreApiV10.ManagerIpfsHash
 
 ## Properties
 Name | Type | Description | Notes

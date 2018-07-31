@@ -1,4 +1,4 @@
-# CoreApiV2.BrokerAssetsPartChangeRequest
+# CoreApiV10.BrokerAssetsPartChangeRequest
 
 ## Properties
 Name | Type | Description | Notes

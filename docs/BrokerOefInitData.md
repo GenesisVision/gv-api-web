@@ -1,4 +1,4 @@
-# CoreApiV2.BrokerOefInitData
+# CoreApiV10.BrokerOefInitData
 
 ## Properties
 Name | Type | Description | Notes

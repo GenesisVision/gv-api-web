@@ -1,4 +1,4 @@
-# CoreApiV2.ManagerRequest
+# CoreApiV10.ManagerRequest
 
 ## Properties
 Name | Type | Description | Notes

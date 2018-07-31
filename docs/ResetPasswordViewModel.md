@@ -1,4 +1,4 @@
-# CoreApiV2.ResetPasswordViewModel
+# CoreApiV10.ResetPasswordViewModel
 
 ## Properties
 Name | Type | Description | Notes

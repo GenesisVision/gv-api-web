@@ -1,4 +1,4 @@
-# CoreApiV2.OefManagerRequest
+# CoreApiV10.OefManagerRequest
 
 ## Properties
 Name | Type | Description | Notes

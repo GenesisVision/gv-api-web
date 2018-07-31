@@ -1,29 +1,28 @@
-# CoreApiV2.RateApi
+# CoreApiV10.RateApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiRatePost**](RateApi.md#apiRatePost) | **POST** /api/rate | Get rate
+[**v10RatePost**](RateApi.md#v10RatePost) | **POST** /v1.0/rate | Get rate
 
 
-<a name="apiRatePost"></a>
-# **apiRatePost**
-> RateViewModel apiRatePost(opts)
+<a name="v10RatePost"></a>
+# **v10RatePost**
+> RateViewModel v10RatePost(opts)
 
 Get rate
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.RateApi();
+let apiInstance = new CoreApiV10.RateApi();
 
 let opts = { 
-  'model': new CoreApiV2.RequestRate(), // RequestRate | 
-  'apiVersion': "apiVersion_example" // String | 
+  'model': new CoreApiV10.RequestRate() // RequestRate | 
 };
-apiInstance.apiRatePost(opts).then((data) => {
+apiInstance.v10RatePost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -36,7 +35,6 @@ apiInstance.apiRatePost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **model** | [**RequestRate**](RequestRate.md)|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

@@ -1,4 +1,4 @@
-# CoreApiV2.UsersRealAssets
+# CoreApiV10.UsersRealAssets
 
 ## Properties
 Name | Type | Description | Notes

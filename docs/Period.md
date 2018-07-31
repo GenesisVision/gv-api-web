@@ -1,4 +1,4 @@
-# CoreApiV2.Period
+# CoreApiV10.Period
 
 ## Properties
 Name | Type | Description | Notes

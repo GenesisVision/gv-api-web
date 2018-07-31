@@ -1,4 +1,4 @@
-# CoreApiV2.OrderModel
+# CoreApiV10.OrderModel
 
 ## Properties
 Name | Type | Description | Notes

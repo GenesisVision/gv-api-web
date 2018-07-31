@@ -1,4 +1,4 @@
-# CoreApiV2.IOsAppVersion
+# CoreApiV10.IOsAppVersion
 
 ## Properties
 Name | Type | Description | Notes

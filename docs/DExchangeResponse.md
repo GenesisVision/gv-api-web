@@ -1,4 +1,4 @@
-# CoreApiV2.DExchangeResponse
+# CoreApiV10.DExchangeResponse
 
 ## Properties
 Name | Type | Description | Notes

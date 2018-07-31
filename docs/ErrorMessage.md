@@ -1,4 +1,4 @@
-# CoreApiV2.ErrorMessage
+# CoreApiV10.ErrorMessage
 
 ## Properties
 Name | Type | Description | Notes

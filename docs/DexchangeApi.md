@@ -1,31 +1,30 @@
-# CoreApiV2.DexchangeApi
+# CoreApiV10.DexchangeApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiDexchangeNodePost**](DexchangeApi.md#apiDexchangeNodePost) | **POST** /api/dexchange/node | 
+[**v10DexchangeNodePost**](DexchangeApi.md#v10DexchangeNodePost) | **POST** /v1.0/dexchange/node | 
 
 
-<a name="apiDexchangeNodePost"></a>
-# **apiDexchangeNodePost**
-> DExchangeResponse apiDexchangeNodePost(authorization, opts)
+<a name="v10DexchangeNodePost"></a>
+# **v10DexchangeNodePost**
+> DExchangeResponse v10DexchangeNodePost(authorization, opts)
 
 
 
 ### Example
 ```javascript
-import CoreApiV2 from 'core_api_v2';
+import CoreApiV10 from 'core_api_v10';
 
-let apiInstance = new CoreApiV2.DexchangeApi();
+let apiInstance = new CoreApiV10.DexchangeApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV2.DExchangeRequest(), // DExchangeRequest | 
-  'apiVersion': "apiVersion_example" // String | 
+  'model': new CoreApiV10.DExchangeRequest() // DExchangeRequest | 
 };
-apiInstance.apiDexchangeNodePost(authorization, opts).then((data) => {
+apiInstance.v10DexchangeNodePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -39,7 +38,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **model** | [**DExchangeRequest**](DExchangeRequest.md)|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 

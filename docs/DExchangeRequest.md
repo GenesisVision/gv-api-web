@@ -1,4 +1,4 @@
-# CoreApiV2.DExchangeRequest
+# CoreApiV10.DExchangeRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CoreApiV2.TwoFactorCodeModel
+# CoreApiV10.TwoFactorCodeModel
 
 ## Properties
 Name | Type | Description | Notes

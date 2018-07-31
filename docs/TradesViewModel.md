@@ -1,4 +1,4 @@
-# CoreApiV2.TradesViewModel
+# CoreApiV10.TradesViewModel
 
 ## Properties
 Name | Type | Description | Notes

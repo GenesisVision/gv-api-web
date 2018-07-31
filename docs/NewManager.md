@@ -1,4 +1,4 @@
-# CoreApiV2.NewManager
+# CoreApiV10.NewManager
 
 ## Properties
 Name | Type | Description | Notes

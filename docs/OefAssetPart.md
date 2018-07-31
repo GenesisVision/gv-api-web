@@ -1,4 +1,4 @@
-# CoreApiV2.OefAssetPart
+# CoreApiV10.OefAssetPart
 
 ## Properties
 Name | Type | Description | Notes

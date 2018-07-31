@@ -1,4 +1,4 @@
-# CoreApiV2.ProgramStatistic
+# CoreApiV10.ProgramStatistic
 
 ## Properties
 Name | Type | Description | Notes

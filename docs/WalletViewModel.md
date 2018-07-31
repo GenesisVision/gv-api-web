@@ -1,4 +1,4 @@
-# CoreApiV2.WalletViewModel
+# CoreApiV10.WalletViewModel
 
 ## Properties
 Name | Type | Description | Notes

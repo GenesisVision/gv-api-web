@@ -1,4 +1,4 @@
-# CoreApiV2.NewTradeEvent
+# CoreApiV10.NewTradeEvent
 
 ## Properties
 Name | Type | Description | Notes

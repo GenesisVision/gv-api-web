@@ -1,4 +1,4 @@
-# CoreApiV2.ClosePeriodData
+# CoreApiV10.ClosePeriodData
 
 ## Properties
 Name | Type | Description | Notes

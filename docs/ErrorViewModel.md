@@ -1,4 +1,4 @@
-# CoreApiV2.ErrorViewModel
+# CoreApiV10.ErrorViewModel
 
 ## Properties
 Name | Type | Description | Notes

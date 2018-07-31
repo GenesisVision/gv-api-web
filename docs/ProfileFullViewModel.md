@@ -1,4 +1,4 @@
-# CoreApiV2.ProfileFullViewModel
+# CoreApiV10.ProfileFullViewModel
 
 ## Properties
 Name | Type | Description | Notes
