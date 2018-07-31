@@ -124,28 +124,16 @@ export default class OefManagerRequest {
     static CurrencyEnum = {
     
         /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
         "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
     
         /**
          * value: "ETH"
@@ -154,10 +142,22 @@ export default class OefManagerRequest {
         "ETH": "ETH",
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
          * value: "ADA"
          * @const
          */
         "ADA": "ADA",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
     
         /**
          * value: "EUR"

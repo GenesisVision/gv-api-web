@@ -12,17 +12,17 @@ Name | Type | Description | Notes
 ## Enum: FromEnum
 
 
-* `GVT` (value: `"GVT"`)
-
-* `USD` (value: `"USD"`)
-
-* `BTC` (value: `"BTC"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -33,17 +33,17 @@ Name | Type | Description | Notes
 ## Enum: ToEnum
 
 
-* `GVT` (value: `"GVT"`)
-
-* `USD` (value: `"USD"`)
-
-* `BTC` (value: `"BTC"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 

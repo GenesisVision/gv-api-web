@@ -205,28 +205,16 @@ var ProgramDetailsList = function () {
 ProgramDetailsList.CurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
@@ -235,10 +223,22 @@ ProgramDetailsList.CurrencyEnum = {
     "ETH": "ETH",
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
 
     /**
      * value: "EUR"

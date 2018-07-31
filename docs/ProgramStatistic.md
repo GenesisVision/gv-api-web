@@ -24,17 +24,17 @@ Name | Type | Description | Notes
 ## Enum: StartCurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
-* `USD` (value: `"USD"`)
-
-* `BTC` (value: `"BTC"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -45,17 +45,17 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
-* `USD` (value: `"USD"`)
-
-* `BTC` (value: `"BTC"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 

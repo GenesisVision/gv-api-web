@@ -97,28 +97,16 @@ export default class RateViewModel {
     static FromEnum = {
     
         /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
         "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
     
         /**
          * value: "ETH"
@@ -127,10 +115,22 @@ export default class RateViewModel {
         "ETH": "ETH",
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
          * value: "ADA"
          * @const
          */
         "ADA": "ADA",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
     
         /**
          * value: "EUR"
@@ -147,28 +147,16 @@ export default class RateViewModel {
     static ToEnum = {
     
         /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
         "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
     
         /**
          * value: "ETH"
@@ -177,10 +165,22 @@ export default class RateViewModel {
         "ETH": "ETH",
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
          * value: "ADA"
          * @const
          */
         "ADA": "ADA",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
     
         /**
          * value: "EUR"

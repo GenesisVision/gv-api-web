@@ -207,28 +207,16 @@ var ProgramStatistic = function () {
 ProgramStatistic.StartCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
@@ -237,10 +225,22 @@ ProgramStatistic.StartCurrencyEnum = {
     "ETH": "ETH",
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
 
     /**
      * value: "EUR"
@@ -251,28 +251,16 @@ ProgramStatistic.StartCurrencyEnum = {
 ProgramStatistic.InvestedCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
@@ -281,10 +269,22 @@ ProgramStatistic.InvestedCurrencyEnum = {
     "ETH": "ETH",
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
      * value: "ADA"
      * @const
      */
     "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
 
     /**
      * value: "EUR"
