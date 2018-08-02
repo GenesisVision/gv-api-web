@@ -57,14 +57,14 @@ export default class ProgramStatistic {
             
             
 
-            if (data.hasOwnProperty('balanceInBase')) {
-                obj['balanceInBase'] = AmountWithCurrency.constructFromObject(data['balanceInBase']);
+            if (data.hasOwnProperty('balanceBase')) {
+                obj['balanceBase'] = AmountWithCurrency.constructFromObject(data['balanceBase']);
             }
-            if (data.hasOwnProperty('balanceInGVT')) {
-                obj['balanceInGVT'] = AmountWithCurrency.constructFromObject(data['balanceInGVT']);
+            if (data.hasOwnProperty('balanceGVT')) {
+                obj['balanceGVT'] = AmountWithCurrency.constructFromObject(data['balanceGVT']);
             }
-            if (data.hasOwnProperty('balanceInFavorite')) {
-                obj['balanceInFavorite'] = AmountWithCurrency.constructFromObject(data['balanceInFavorite']);
+            if (data.hasOwnProperty('balanceSecondary')) {
+                obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
             }
             if (data.hasOwnProperty('investorsCount')) {
                 obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'Number');
@@ -107,17 +107,17 @@ export default class ProgramStatistic {
     }
 
     /**
-    * @member {module:model/AmountWithCurrency} balanceInBase
+    * @member {module:model/AmountWithCurrency} balanceBase
     */
-    balanceInBase = undefined;
+    balanceBase = undefined;
     /**
-    * @member {module:model/AmountWithCurrency} balanceInGVT
+    * @member {module:model/AmountWithCurrency} balanceGVT
     */
-    balanceInGVT = undefined;
+    balanceGVT = undefined;
     /**
-    * @member {module:model/AmountWithCurrency} balanceInFavorite
+    * @member {module:model/AmountWithCurrency} balanceSecondary
     */
-    balanceInFavorite = undefined;
+    balanceSecondary = undefined;
     /**
     * @member {Number} investorsCount
     */

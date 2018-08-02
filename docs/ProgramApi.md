@@ -5,6 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10ProgramByIdChartGet**](ProgramApi.md#v10ProgramByIdChartGet) | **GET** /v1.0/program/{id}/chart | Get manager chart
+[**v10ProgramByIdFavoriteAddPost**](ProgramApi.md#v10ProgramByIdFavoriteAddPost) | **POST** /v1.0/program/{id}/favorite/add | Add to favorites
+[**v10ProgramByIdFavoriteRemovePost**](ProgramApi.md#v10ProgramByIdFavoriteRemovePost) | **POST** /v1.0/program/{id}/favorite/remove | Remove from favorites
 [**v10ProgramByIdGet**](ProgramApi.md#v10ProgramByIdGet) | **GET** /v1.0/program/{id} | Program details
 [**v10ProgramByIdTradesGet**](ProgramApi.md#v10ProgramByIdTradesGet) | **GET** /v1.0/program/{id}/trades | Get manager trade history
 [**v10ProgramListGet**](ProgramApi.md#v10ProgramListGet) | **GET** /v1.0/program/list | Programs list
@@ -45,6 +47,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramChart**](ProgramChart.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramByIdFavoriteAddPost"></a>
+# **v10ProgramByIdFavoriteAddPost**
+> v10ProgramByIdFavoriteAddPost(id, authorization)
+
+Add to favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ProgramByIdFavoriteAddPost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramByIdFavoriteRemovePost"></a>
+# **v10ProgramByIdFavoriteRemovePost**
+> v10ProgramByIdFavoriteRemovePost(id, authorization)
+
+Remove from favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ProgramByIdFavoriteRemovePost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

@@ -13,7 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import WalletViewModel from './WalletViewModel';
 
 
 
@@ -66,9 +65,6 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
-            if (data.hasOwnProperty('wallets')) {
-                obj['wallets'] = ApiClient.convertToType(data['wallets'], [WalletViewModel]);
-            }
             if (data.hasOwnProperty('hasNotifications')) {
                 obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
             }
@@ -78,11 +74,11 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('totalBalanceGvt')) {
                 obj['totalBalanceGvt'] = ApiClient.convertToType(data['totalBalanceGvt'], 'Number');
             }
-            if (data.hasOwnProperty('totalInvestedGvt')) {
-                obj['totalInvestedGvt'] = ApiClient.convertToType(data['totalInvestedGvt'], 'Number');
+            if (data.hasOwnProperty('investedGvt')) {
+                obj['investedGvt'] = ApiClient.convertToType(data['investedGvt'], 'Number');
             }
-            if (data.hasOwnProperty('totalAvailableGvt')) {
-                obj['totalAvailableGvt'] = ApiClient.convertToType(data['totalAvailableGvt'], 'Number');
+            if (data.hasOwnProperty('availableGvt')) {
+                obj['availableGvt'] = ApiClient.convertToType(data['availableGvt'], 'Number');
             }
         }
         return obj;
@@ -101,10 +97,6 @@ export default class ProfileHeaderViewModel {
     */
     avatar = undefined;
     /**
-    * @member {Array.<module:model/WalletViewModel>} wallets
-    */
-    wallets = undefined;
-    /**
     * @member {Boolean} hasNotifications
     */
     hasNotifications = undefined;
@@ -117,13 +109,13 @@ export default class ProfileHeaderViewModel {
     */
     totalBalanceGvt = undefined;
     /**
-    * @member {Number} totalInvestedGvt
+    * @member {Number} investedGvt
     */
-    totalInvestedGvt = undefined;
+    investedGvt = undefined;
     /**
-    * @member {Number} totalAvailableGvt
+    * @member {Number} availableGvt
     */
-    totalAvailableGvt = undefined;
+    availableGvt = undefined;
 
 
 

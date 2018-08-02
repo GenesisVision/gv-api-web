@@ -78,7 +78,6 @@ import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import UsersRealAssets from './model/UsersRealAssets';
-import WalletViewModel from './model/WalletViewModel';
 import AuthApi from './api/AuthApi';
 import BrokerApi from './api/BrokerApi';
 import DexchangeApi from './api/DexchangeApi';
@@ -517,12 +516,6 @@ export {
      * @property {module:model/UsersRealAssets}
      */
     UsersRealAssets,
-
-    /**
-     * The WalletViewModel model constructor.
-     * @property {module:model/WalletViewModel}
-     */
-    WalletViewModel,
 
     /**
     * The AuthApi service constructor.

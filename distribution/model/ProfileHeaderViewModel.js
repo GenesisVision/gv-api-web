@@ -21,10 +21,6 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _WalletViewModel = require('./WalletViewModel');
-
-var _WalletViewModel2 = _interopRequireDefault(_WalletViewModel);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47,12 +43,11 @@ var ProfileHeaderViewModel = function () {
         this.id = undefined;
         this.name = undefined;
         this.avatar = undefined;
-        this.wallets = undefined;
         this.hasNotifications = undefined;
         this.favoritesCount = undefined;
         this.totalBalanceGvt = undefined;
-        this.totalInvestedGvt = undefined;
-        this.totalAvailableGvt = undefined;
+        this.investedGvt = undefined;
+        this.availableGvt = undefined;
     }
 
     /**
@@ -79,9 +74,6 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
-                if (data.hasOwnProperty('wallets')) {
-                    obj['wallets'] = _ApiClient2.default.convertToType(data['wallets'], [_WalletViewModel2.default]);
-                }
                 if (data.hasOwnProperty('hasNotifications')) {
                     obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
                 }
@@ -91,11 +83,11 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('totalBalanceGvt')) {
                     obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
                 }
-                if (data.hasOwnProperty('totalInvestedGvt')) {
-                    obj['totalInvestedGvt'] = _ApiClient2.default.convertToType(data['totalInvestedGvt'], 'Number');
+                if (data.hasOwnProperty('investedGvt')) {
+                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
                 }
-                if (data.hasOwnProperty('totalAvailableGvt')) {
-                    obj['totalAvailableGvt'] = _ApiClient2.default.convertToType(data['totalAvailableGvt'], 'Number');
+                if (data.hasOwnProperty('availableGvt')) {
+                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
                 }
             }
             return obj;
@@ -114,10 +106,6 @@ var ProfileHeaderViewModel = function () {
         */
 
         /**
-        * @member {Array.<module:model/WalletViewModel>} wallets
-        */
-
-        /**
         * @member {Boolean} hasNotifications
         */
 
@@ -130,11 +118,11 @@ var ProfileHeaderViewModel = function () {
         */
 
         /**
-        * @member {Number} totalInvestedGvt
+        * @member {Number} investedGvt
         */
 
         /**
-        * @member {Number} totalAvailableGvt
+        * @member {Number} availableGvt
         */
 
     }]);

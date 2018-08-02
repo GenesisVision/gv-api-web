@@ -147,6 +147,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
 *CoreApiV10.ProgramApi* | [**v10ProgramByIdChartGet**](docs/ProgramApi.md#v10ProgramByIdChartGet) | **GET** /v1.0/program/{id}/chart | Get manager chart
+*CoreApiV10.ProgramApi* | [**v10ProgramByIdFavoriteAddPost**](docs/ProgramApi.md#v10ProgramByIdFavoriteAddPost) | **POST** /v1.0/program/{id}/favorite/add | Add to favorites
+*CoreApiV10.ProgramApi* | [**v10ProgramByIdFavoriteRemovePost**](docs/ProgramApi.md#v10ProgramByIdFavoriteRemovePost) | **POST** /v1.0/program/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.ProgramApi* | [**v10ProgramByIdGet**](docs/ProgramApi.md#v10ProgramByIdGet) | **GET** /v1.0/program/{id} | Program details
 *CoreApiV10.ProgramApi* | [**v10ProgramByIdTradesGet**](docs/ProgramApi.md#v10ProgramByIdTradesGet) | **GET** /v1.0/program/{id}/trades | Get manager trade history
 *CoreApiV10.ProgramApi* | [**v10ProgramListGet**](docs/ProgramApi.md#v10ProgramListGet) | **GET** /v1.0/program/list | Programs list
@@ -220,7 +222,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.UsersRealAssets](docs/UsersRealAssets.md)
- - [CoreApiV10.WalletViewModel](docs/WalletViewModel.md)
 
 
 ## Documentation for Authorization

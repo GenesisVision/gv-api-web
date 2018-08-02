@@ -53,6 +53,7 @@ var UpdateProfileViewModel = function () {
         this.birthday = undefined;
         this.gender = undefined;
         this.avatar = undefined;
+        this.favoriteCurrency = undefined;
     }
 
     /**
@@ -108,6 +109,9 @@ var UpdateProfileViewModel = function () {
                 }
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                }
+                if (data.hasOwnProperty('favoriteCurrency')) {
+                    obj['favoriteCurrency'] = _ApiClient2.default.convertToType(data['favoriteCurrency'], 'String');
                 }
             }
             return obj;
@@ -165,9 +169,64 @@ var UpdateProfileViewModel = function () {
         * @member {String} avatar
         */
 
+        /**
+        * @member {module:model/UpdateProfileViewModel.FavoriteCurrencyEnum} favoriteCurrency
+        */
+
+
+        /**
+        * Allowed values for the <code>favoriteCurrency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return UpdateProfileViewModel;
 }();
 
+UpdateProfileViewModel.FavoriteCurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 exports.default = UpdateProfileViewModel;
