@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,94 +21,132 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
+var _ChartSimple = require('./ChartSimple');
 
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _RateViewModel = require('../model/RateViewModel');
+var _ValueChartBar = require('./ValueChartBar');
 
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
+var _ValueChartBar2 = _interopRequireDefault(_ValueChartBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @module api/RateApi
+* The DashboardChartValue model module.
+* @module model/DashboardChartValue
 * @version v1.0
 */
-var RateApi = function () {
+var DashboardChartValue = function () {
+    /**
+    * Constructs a new <code>DashboardChartValue</code>.
+    * @alias module:model/DashboardChartValue
+    * @class
+    */
 
-  /**
-  * Constructs a new RateApi. 
-  * @alias module:api/RateApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+    function DashboardChartValue() {
+        _classCallCheck(this, DashboardChartValue);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Get rate
-   * @param {String} from 
-   * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
-   */
-
-
-  _createClass(RateApi, [{
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.bars = undefined;
+        this.chart = undefined;
+        this.currency = undefined;
     }
 
     /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
-     */
+    * Constructs a <code>DashboardChartValue</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/DashboardChartValue} obj Optional instance to populate.
+    * @return {module:model/DashboardChartValue} The populated <code>DashboardChartValue</code> instance.
+    */
 
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return RateApi;
+    _createClass(DashboardChartValue, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new DashboardChartValue();
+
+                if (data.hasOwnProperty('bars')) {
+                    obj['bars'] = _ApiClient2.default.convertToType(data['bars'], [_ValueChartBar2.default]);
+                }
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {Array.<module:model/ValueChartBar>} bars
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} chart
+        */
+
+        /**
+        * @member {module:model/DashboardChartValue.CurrencyEnum} currency
+        */
+
+
+        /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+    }]);
+
+    return DashboardChartValue;
 }();
 
-exports.default = RateApi;
+DashboardChartValue.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
+exports.default = DashboardChartValue;

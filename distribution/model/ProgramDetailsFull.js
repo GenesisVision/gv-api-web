@@ -21,13 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ManagerProfile = require('./ManagerProfile');
+
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
+
 var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
 
 var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
-
-var _ProfilePublicViewModel = require('./ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
 
 var _ProgramStatistic = require('./ProgramStatistic');
 
@@ -117,7 +117,7 @@ var ProgramDetailsFull = function () {
                     obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
                 }
                 if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublicViewModel2.default.constructFromObject(data['manager']);
+                    obj['manager'] = _ManagerProfile2.default.constructFromObject(data['manager']);
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);
@@ -174,7 +174,7 @@ var ProgramDetailsFull = function () {
         */
 
         /**
-        * @member {module:model/ProfilePublicViewModel} manager
+        * @member {module:model/ManagerProfile} manager
         */
 
         /**

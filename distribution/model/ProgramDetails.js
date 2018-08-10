@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,94 +21,229 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
+var _ChartSimple = require('./ChartSimple');
 
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _RateViewModel = require('../model/RateViewModel');
+var _ManagerProfile = require('./ManagerProfile');
 
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
+
+var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
+
+var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
+
+var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
+
+var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @module api/RateApi
+* The ProgramDetails model module.
+* @module model/ProgramDetails
 * @version v1.0
 */
-var RateApi = function () {
+var ProgramDetails = function () {
+    /**
+    * Constructs a new <code>ProgramDetails</code>.
+    * @alias module:model/ProgramDetails
+    * @class
+    */
 
-  /**
-  * Constructs a new RateApi. 
-  * @alias module:api/RateApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+    function ProgramDetails() {
+        _classCallCheck(this, ProgramDetails);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Get rate
-   * @param {String} from 
-   * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
-   */
-
-
-  _createClass(RateApi, [{
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.id = undefined;
+        this.avatar = undefined;
+        this.title = undefined;
+        this.description = undefined;
+        this.currency = undefined;
+        this.level = undefined;
+        this.periodDuration = undefined;
+        this.periodDateStart = undefined;
+        this.periodDateEnd = undefined;
+        this.availableForInvestment = undefined;
+        this.manager = undefined;
+        this.statistic = undefined;
+        this.chart = undefined;
+        this.personalProgramDetails = undefined;
     }
 
     /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
-     */
+    * Constructs a <code>ProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/ProgramDetails} obj Optional instance to populate.
+    * @return {module:model/ProgramDetails} The populated <code>ProgramDetails</code> instance.
+    */
 
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return RateApi;
+    _createClass(ProgramDetails, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new ProgramDetails();
+
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('avatar')) {
+                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('periodDuration')) {
+                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
+                }
+                if (data.hasOwnProperty('periodDateStart')) {
+                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
+                }
+                if (data.hasOwnProperty('periodDateEnd')) {
+                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
+                }
+                if (data.hasOwnProperty('availableForInvestment')) {
+                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
+                }
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ManagerProfile2.default.constructFromObject(data['manager']);
+                }
+                if (data.hasOwnProperty('statistic')) {
+                    obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
+                }
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                }
+                if (data.hasOwnProperty('personalProgramDetails')) {
+                    obj['personalProgramDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalProgramDetails']);
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {String} id
+        */
+
+        /**
+        * @member {String} avatar
+        */
+
+        /**
+        * @member {String} title
+        */
+
+        /**
+        * @member {String} description
+        */
+
+        /**
+        * @member {module:model/ProgramDetails.CurrencyEnum} currency
+        */
+
+        /**
+        * @member {Number} level
+        */
+
+        /**
+        * @member {Number} periodDuration
+        */
+
+        /**
+        * @member {Date} periodDateStart
+        */
+
+        /**
+        * @member {Date} periodDateEnd
+        */
+
+        /**
+        * @member {Number} availableForInvestment
+        */
+
+        /**
+        * @member {module:model/ManagerProfile} manager
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsListStatistic} statistic
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} chart
+        */
+
+        /**
+        * Fields for authorized user
+        * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
+        */
+
+
+        /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+    }]);
+
+    return ProgramDetails;
 }();
 
-exports.default = RateApi;
+ProgramDetails.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
+exports.default = ProgramDetails;

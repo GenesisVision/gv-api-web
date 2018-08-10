@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _ManagerProfile = require('../model/ManagerProfile');
+
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
+
 var _ProfileFullViewModel = require('../model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
@@ -32,10 +36,6 @@ var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
 var _ProfileHeaderViewModel = require('../model/ProfileHeaderViewModel');
 
 var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
-
-var _ProfilePublicViewModel = require('../model/ProfilePublicViewModel');
-
-var _ProfilePublicViewModel2 = _interopRequireDefault(_ProfilePublicViewModel);
 
 var _UpdateProfileViewModel = require('../model/UpdateProfileViewModel');
 
@@ -68,7 +68,7 @@ var ProfileApi = function () {
   /**
    * Get public profile
    * @param {String} id 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfile} and HTTP response
    */
 
 
@@ -92,7 +92,7 @@ var ProfileApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProfilePublicViewModel2.default;
+      var returnType = _ManagerProfile2.default;
 
       return this.apiClient.callApi('/v1.0/profile/{id}/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -100,7 +100,7 @@ var ProfileApi = function () {
     /**
      * Get public profile
      * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProfile}
      */
 
   }, {

@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ProgramDetailsList = require('./ProgramDetailsList');
+var _ProgramDetails = require('./ProgramDetails');
 
-var _ProgramDetailsList2 = _interopRequireDefault(_ProgramDetailsList);
+var _ProgramDetails2 = _interopRequireDefault(_ProgramDetails);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -64,7 +64,7 @@ var ProgramsList = function () {
                 obj = obj || new ProgramsList();
 
                 if (data.hasOwnProperty('programs')) {
-                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], [_ProgramDetailsList2.default]);
+                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], [_ProgramDetails2.default]);
                 }
                 if (data.hasOwnProperty('total')) {
                     obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
@@ -74,7 +74,7 @@ var ProgramsList = function () {
         }
 
         /**
-        * @member {Array.<module:model/ProgramDetailsList>} programs
+        * @member {Array.<module:model/ProgramDetails>} programs
         */
 
         /**

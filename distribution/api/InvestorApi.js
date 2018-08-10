@@ -21,94 +21,216 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _DashboardChartValue = require('../model/DashboardChartValue');
+
+var _DashboardChartValue2 = _interopRequireDefault(_DashboardChartValue);
+
+var _DashboardPortfolioEvents = require('../model/DashboardPortfolioEvents');
+
+var _DashboardPortfolioEvents2 = _interopRequireDefault(_DashboardPortfolioEvents);
+
+var _DashboardProgramsList = require('../model/DashboardProgramsList');
+
+var _DashboardProgramsList2 = _interopRequireDefault(_DashboardProgramsList);
+
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _RateViewModel = require('../model/RateViewModel');
-
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @module api/RateApi
+* Investor service.
+* @module api/InvestorApi
 * @version v1.0
 */
-var RateApi = function () {
+var InvestorApi = function () {
 
   /**
-  * Constructs a new RateApi. 
-  * @alias module:api/RateApi
+  * Constructs a new InvestorApi. 
+  * @alias module:api/InvestorApi
   * @class
   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
   * default to {@link module:ApiClient#instance} if unspecified.
   */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+  function InvestorApi(apiClient) {
+    _classCallCheck(this, InvestorApi);
 
     this.apiClient = apiClient || _ApiClient2.default.instance;
   }
 
   /**
-   * Get rate
-   * @param {String} from 
-   * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
+   * Value chart
+   * @param {String} authorization JWT access token
+   * @param {Object} opts Optional parameters
+   * @param {Date} opts.from 
+   * @param {Date} opts.to 
+   * @param {module:model/String} opts.currency 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
    */
 
 
-  _createClass(RateApi, [{
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
+  _createClass(InvestorApi, [{
+    key: 'v10InvestorDashboardChartValueGetWithHttpInfo',
+    value: function v10InvestorDashboardChartValueGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorDashboardChartValueGet");
       }
 
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
+      var pathParams = {};
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'currency': opts['currency']
       };
-      var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
+      var returnType = _DashboardChartValue2.default;
 
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/investor/dashboard/chart/value', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
+     * Value chart
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {module:model/String} opts.currency 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
      */
 
   }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
+    key: 'v10InvestorDashboardChartValueGet',
+    value: function v10InvestorDashboardChartValueGet(authorization, opts) {
+      return this.v10InvestorDashboardChartValueGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Portfolio events
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardPortfolioEvents} and HTTP response
+     */
+
+  }, {
+    key: 'v10InvestorDashboardEventsGetWithHttpInfo',
+    value: function v10InvestorDashboardEventsGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorDashboardEventsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _DashboardPortfolioEvents2.default;
+
+      return this.apiClient.callApi('/v1.0/investor/dashboard/events', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Portfolio events
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardPortfolioEvents}
+     */
+
+  }, {
+    key: 'v10InvestorDashboardEventsGet',
+    value: function v10InvestorDashboardEventsGet(authorization) {
+      return this.v10InvestorDashboardEventsGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Programs list
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardProgramsList} and HTTP response
+     */
+
+  }, {
+    key: 'v10InvestorDashboardProgramListGetWithHttpInfo',
+    value: function v10InvestorDashboardProgramListGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorDashboardProgramListGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _DashboardProgramsList2.default;
+
+      return this.apiClient.callApi('/v1.0/investor/dashboard/program/list', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Programs list
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardProgramsList}
+     */
+
+  }, {
+    key: 'v10InvestorDashboardProgramListGet',
+    value: function v10InvestorDashboardProgramListGet(authorization, opts) {
+      return this.v10InvestorDashboardProgramListGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
   }]);
 
-  return RateApi;
+  return InvestorApi;
 }();
 
-exports.default = RateApi;
+exports.default = InvestorApi;

@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,94 +21,251 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
+var _ChartSimple = require('./ChartSimple');
 
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _RateViewModel = require('../model/RateViewModel');
+var _ManagerProfile = require('./ManagerProfile');
 
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @module api/RateApi
+* The DashboardProgramDetails model module.
+* @module model/DashboardProgramDetails
 * @version v1.0
 */
-var RateApi = function () {
+var DashboardProgramDetails = function () {
+    /**
+    * Constructs a new <code>DashboardProgramDetails</code>.
+    * @alias module:model/DashboardProgramDetails
+    * @class
+    */
 
-  /**
-  * Constructs a new RateApi. 
-  * @alias module:api/RateApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+    function DashboardProgramDetails() {
+        _classCallCheck(this, DashboardProgramDetails);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Get rate
-   * @param {String} from 
-   * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
-   */
-
-
-  _createClass(RateApi, [{
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.id = undefined;
+        this.avatar = undefined;
+        this.level = undefined;
+        this.title = undefined;
+        this.description = undefined;
+        this.currency = undefined;
+        this.manager = undefined;
+        this.share = undefined;
+        this.timeLeft = undefined;
+        this.value = undefined;
+        this.profit = undefined;
+        this.status = undefined;
+        this.chart = undefined;
     }
 
     /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
-     */
+    * Constructs a <code>DashboardProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/DashboardProgramDetails} obj Optional instance to populate.
+    * @return {module:model/DashboardProgramDetails} The populated <code>DashboardProgramDetails</code> instance.
+    */
 
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return RateApi;
+    _createClass(DashboardProgramDetails, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new DashboardProgramDetails();
+
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('avatar')) {
+                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                }
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ManagerProfile2.default.constructFromObject(data['manager']);
+                }
+                if (data.hasOwnProperty('share')) {
+                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
+                }
+                if (data.hasOwnProperty('timeLeft')) {
+                    obj['timeLeft'] = _ApiClient2.default.convertToType(data['timeLeft'], 'Number');
+                }
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {String} id
+        */
+
+        /**
+        * @member {String} avatar
+        */
+
+        /**
+        * @member {Number} level
+        */
+
+        /**
+        * @member {String} title
+        */
+
+        /**
+        * @member {String} description
+        */
+
+        /**
+        * @member {module:model/DashboardProgramDetails.CurrencyEnum} currency
+        */
+
+        /**
+        * @member {module:model/ManagerProfile} manager
+        */
+
+        /**
+        * @member {Number} share
+        */
+
+        /**
+        * @member {Number} timeLeft
+        */
+
+        /**
+        * @member {Number} value
+        */
+
+        /**
+        * @member {Number} profit
+        */
+
+        /**
+        * @member {module:model/DashboardProgramDetails.StatusEnum} status
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} chart
+        */
+
+
+        /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>status</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+    }]);
+
+    return DashboardProgramDetails;
 }();
 
-exports.default = RateApi;
+DashboardProgramDetails.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
+DashboardProgramDetails.StatusEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+
+    /**
+     * value: "Withdrawing"
+     * @const
+     */
+    "Withdrawing": "Withdrawing",
+
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended"
+};
+exports.default = DashboardProgramDetails;

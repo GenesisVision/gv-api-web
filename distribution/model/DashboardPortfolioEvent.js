@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,94 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
-
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _RateViewModel = require('../model/RateViewModel');
-
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @module api/RateApi
+* The DashboardPortfolioEvent model module.
+* @module model/DashboardPortfolioEvent
 * @version v1.0
 */
-var RateApi = function () {
+var DashboardPortfolioEvent = function () {
+    /**
+    * Constructs a new <code>DashboardPortfolioEvent</code>.
+    * @alias module:model/DashboardPortfolioEvent
+    * @class
+    */
 
-  /**
-  * Constructs a new RateApi. 
-  * @alias module:api/RateApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+    function DashboardPortfolioEvent() {
+        _classCallCheck(this, DashboardPortfolioEvent);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Get rate
-   * @param {String} from 
-   * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
-   */
-
-
-  _createClass(RateApi, [{
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.date = undefined;
+        this.description = undefined;
+        this.value = undefined;
     }
 
     /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
-     */
+    * Constructs a <code>DashboardPortfolioEvent</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/DashboardPortfolioEvent} obj Optional instance to populate.
+    * @return {module:model/DashboardPortfolioEvent} The populated <code>DashboardPortfolioEvent</code> instance.
+    */
 
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return RateApi;
+    _createClass(DashboardPortfolioEvent, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new DashboardPortfolioEvent();
+
+                if (data.hasOwnProperty('date')) {
+                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {Date} date
+        */
+
+        /**
+        * @member {String} description
+        */
+
+        /**
+        * @member {Number} value
+        */
+
+    }]);
+
+    return DashboardPortfolioEvent;
 }();
 
-exports.default = RateApi;
+exports.default = DashboardPortfolioEvent;
