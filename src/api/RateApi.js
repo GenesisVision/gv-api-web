@@ -15,7 +15,6 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import RateViewModel from '../model/RateViewModel';
-import RequestRate from '../model/RequestRate';
 
 /**
 * Rate service.
@@ -39,16 +38,27 @@ export default class RateApi {
 
     /**
      * Get rate
-     * @param {Object} opts Optional parameters
-     * @param {module:model/RequestRate} opts.model 
+     * @param {String} from 
+     * @param {String} to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
      */
-    v10RatePostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
+    v10RateByFromByToGetWithHttpInfo(from, to) {
+      let postBody = null;
+
+      // verify the required parameter 'from' is set
+      if (from === undefined || from === null) {
+        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
+      }
+
+      // verify the required parameter 'to' is set
+      if (to === undefined || to === null) {
+        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
+      }
 
 
       let pathParams = {
+        'from': from,
+        'to': to
       };
       let queryParams = {
       };
@@ -58,12 +68,12 @@ export default class RateApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = RateViewModel;
 
       return this.apiClient.callApi(
-        '/v1.0/rate', 'POST',
+        '/v1.0/rate/{from}/{to}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -71,12 +81,12 @@ export default class RateApi {
 
     /**
      * Get rate
-     * @param {Object} opts Optional parameters
-     * @param {module:model/RequestRate} opts.model 
+     * @param {String} from 
+     * @param {String} to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
      */
-    v10RatePost(opts) {
-      return this.v10RatePostWithHttpInfo(opts)
+    v10RateByFromByToGet(from, to) {
+      return this.v10RateByFromByToGetWithHttpInfo(from, to)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

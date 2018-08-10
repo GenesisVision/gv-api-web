@@ -14,9 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import ManagerProfile from '../model/ManagerProfile';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
-import ProfilePublicViewModel from '../model/ProfilePublicViewModel';
 import UpdateProfileViewModel from '../model/UpdateProfileViewModel';
 
 /**
@@ -42,7 +42,7 @@ export default class ProfileApi {
     /**
      * Get public profile
      * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublicViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfile} and HTTP response
      */
     v10ProfileByIdPublicGetWithHttpInfo(id) {
       let postBody = null;
@@ -66,7 +66,7 @@ export default class ProfileApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfilePublicViewModel;
+      let returnType = ManagerProfile;
 
       return this.apiClient.callApi(
         '/v1.0/profile/{id}/public', 'GET',
@@ -78,7 +78,7 @@ export default class ProfileApi {
     /**
      * Get public profile
      * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublicViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProfile}
      */
     v10ProfileByIdPublicGet(id) {
       return this.v10ProfileByIdPublicGetWithHttpInfo(id)

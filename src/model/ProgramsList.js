@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ProgramDetailsList from './ProgramDetailsList';
+import ProgramDetails from './ProgramDetails';
 
 
 
@@ -58,7 +58,7 @@ export default class ProgramsList {
             
 
             if (data.hasOwnProperty('programs')) {
-                obj['programs'] = ApiClient.convertToType(data['programs'], [ProgramDetailsList]);
+                obj['programs'] = ApiClient.convertToType(data['programs'], [ProgramDetails]);
             }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
@@ -68,7 +68,7 @@ export default class ProgramsList {
     }
 
     /**
-    * @member {Array.<module:model/ProgramDetailsList>} programs
+    * @member {Array.<module:model/ProgramDetails>} programs
     */
     programs = undefined;
     /**

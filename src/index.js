@@ -16,37 +16,26 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
-import BrokerAssetsPartChangeRequest from './model/BrokerAssetsPartChangeRequest';
-import BrokerInitData from './model/BrokerInitData';
-import BrokerInvestmentProgram from './model/BrokerInvestmentProgram';
-import BrokerOefInitData from './model/BrokerOefInitData';
-import BrokerOefInvestmentProgram from './model/BrokerOefInvestmentProgram';
+import AssetsValue from './model/AssetsValue';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartProgramDetails from './model/ChartProgramDetails';
 import ChartSimple from './model/ChartSimple';
-import ClosePeriodData from './model/ClosePeriodData';
 import DExchangeRequest from './model/DExchangeRequest';
 import DExchangeResponse from './model/DExchangeResponse';
+import DashboardChartValue from './model/DashboardChartValue';
+import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
+import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
+import DashboardProgramDetails from './model/DashboardProgramDetails';
+import DashboardProgramsList from './model/DashboardProgramsList';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
-import InvestmentProgramAccrual from './model/InvestmentProgramAccrual';
-import InvestmentProgramRequest from './model/InvestmentProgramRequest';
-import InvestorAmount from './model/InvestorAmount';
 import LoginViewModel from './model/LoginViewModel';
-import ManagerAccountOnlineInfo from './model/ManagerAccountOnlineInfo';
-import ManagerHistoryIpfsHash from './model/ManagerHistoryIpfsHash';
-import ManagerIpfsHash from './model/ManagerIpfsHash';
-import ManagerRequest from './model/ManagerRequest';
-import NewManager from './model/NewManager';
-import NewTradeEvent from './model/NewTradeEvent';
-import OefAssetPart from './model/OefAssetPart';
-import OefManagerRequest from './model/OefManagerRequest';
+import ManagerProfile from './model/ManagerProfile';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
-import Period from './model/Period';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
@@ -54,22 +43,18 @@ import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
-import ProfilePublicViewModel from './model/ProfilePublicViewModel';
 import ProgramChart from './model/ProgramChart';
+import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
-import ProgramDetailsList from './model/ProgramDetailsList';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramsList from './model/ProgramsList';
 import RateViewModel from './model/RateViewModel';
-import RealOefAssetPart from './model/RealOefAssetPart';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
-import RequestRate from './model/RequestRate';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
-import StartValues from './model/StartValues';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
@@ -77,11 +62,11 @@ import TwoFactorCodeModel from './model/TwoFactorCodeModel';
 import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
-import UsersRealAssets from './model/UsersRealAssets';
+import ValueChartBar from './model/ValueChartBar';
 import AuthApi from './api/AuthApi';
-import BrokerApi from './api/BrokerApi';
 import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
+import InvestorApi from './api/InvestorApi';
 import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
@@ -146,34 +131,10 @@ export {
     AndroidVersion,
 
     /**
-     * The BrokerAssetsPartChangeRequest model constructor.
-     * @property {module:model/BrokerAssetsPartChangeRequest}
+     * The AssetsValue model constructor.
+     * @property {module:model/AssetsValue}
      */
-    BrokerAssetsPartChangeRequest,
-
-    /**
-     * The BrokerInitData model constructor.
-     * @property {module:model/BrokerInitData}
-     */
-    BrokerInitData,
-
-    /**
-     * The BrokerInvestmentProgram model constructor.
-     * @property {module:model/BrokerInvestmentProgram}
-     */
-    BrokerInvestmentProgram,
-
-    /**
-     * The BrokerOefInitData model constructor.
-     * @property {module:model/BrokerOefInitData}
-     */
-    BrokerOefInitData,
-
-    /**
-     * The BrokerOefInvestmentProgram model constructor.
-     * @property {module:model/BrokerOefInvestmentProgram}
-     */
-    BrokerOefInvestmentProgram,
+    AssetsValue,
 
     /**
      * The ChangePasswordViewModel model constructor.
@@ -194,12 +155,6 @@ export {
     ChartSimple,
 
     /**
-     * The ClosePeriodData model constructor.
-     * @property {module:model/ClosePeriodData}
-     */
-    ClosePeriodData,
-
-    /**
      * The DExchangeRequest model constructor.
      * @property {module:model/DExchangeRequest}
      */
@@ -210,6 +165,36 @@ export {
      * @property {module:model/DExchangeResponse}
      */
     DExchangeResponse,
+
+    /**
+     * The DashboardChartValue model constructor.
+     * @property {module:model/DashboardChartValue}
+     */
+    DashboardChartValue,
+
+    /**
+     * The DashboardPortfolioEvent model constructor.
+     * @property {module:model/DashboardPortfolioEvent}
+     */
+    DashboardPortfolioEvent,
+
+    /**
+     * The DashboardPortfolioEvents model constructor.
+     * @property {module:model/DashboardPortfolioEvents}
+     */
+    DashboardPortfolioEvents,
+
+    /**
+     * The DashboardProgramDetails model constructor.
+     * @property {module:model/DashboardProgramDetails}
+     */
+    DashboardProgramDetails,
+
+    /**
+     * The DashboardProgramsList model constructor.
+     * @property {module:model/DashboardProgramsList}
+     */
+    DashboardProgramsList,
 
     /**
      * The ErrorMessage model constructor.
@@ -242,76 +227,16 @@ export {
     IOsAppVersion,
 
     /**
-     * The InvestmentProgramAccrual model constructor.
-     * @property {module:model/InvestmentProgramAccrual}
-     */
-    InvestmentProgramAccrual,
-
-    /**
-     * The InvestmentProgramRequest model constructor.
-     * @property {module:model/InvestmentProgramRequest}
-     */
-    InvestmentProgramRequest,
-
-    /**
-     * The InvestorAmount model constructor.
-     * @property {module:model/InvestorAmount}
-     */
-    InvestorAmount,
-
-    /**
      * The LoginViewModel model constructor.
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
 
     /**
-     * The ManagerAccountOnlineInfo model constructor.
-     * @property {module:model/ManagerAccountOnlineInfo}
+     * The ManagerProfile model constructor.
+     * @property {module:model/ManagerProfile}
      */
-    ManagerAccountOnlineInfo,
-
-    /**
-     * The ManagerHistoryIpfsHash model constructor.
-     * @property {module:model/ManagerHistoryIpfsHash}
-     */
-    ManagerHistoryIpfsHash,
-
-    /**
-     * The ManagerIpfsHash model constructor.
-     * @property {module:model/ManagerIpfsHash}
-     */
-    ManagerIpfsHash,
-
-    /**
-     * The ManagerRequest model constructor.
-     * @property {module:model/ManagerRequest}
-     */
-    ManagerRequest,
-
-    /**
-     * The NewManager model constructor.
-     * @property {module:model/NewManager}
-     */
-    NewManager,
-
-    /**
-     * The NewTradeEvent model constructor.
-     * @property {module:model/NewTradeEvent}
-     */
-    NewTradeEvent,
-
-    /**
-     * The OefAssetPart model constructor.
-     * @property {module:model/OefAssetPart}
-     */
-    OefAssetPart,
-
-    /**
-     * The OefManagerRequest model constructor.
-     * @property {module:model/OefManagerRequest}
-     */
-    OefManagerRequest,
+    ManagerProfile,
 
     /**
      * The OrderModel model constructor.
@@ -324,12 +249,6 @@ export {
      * @property {module:model/PasswordModel}
      */
     PasswordModel,
-
-    /**
-     * The Period model constructor.
-     * @property {module:model/Period}
-     */
-    Period,
 
     /**
      * The PersonalProgramDetailsFull model constructor.
@@ -374,28 +293,22 @@ export {
     ProfileHeaderViewModel,
 
     /**
-     * The ProfilePublicViewModel model constructor.
-     * @property {module:model/ProfilePublicViewModel}
-     */
-    ProfilePublicViewModel,
-
-    /**
      * The ProgramChart model constructor.
      * @property {module:model/ProgramChart}
      */
     ProgramChart,
 
     /**
+     * The ProgramDetails model constructor.
+     * @property {module:model/ProgramDetails}
+     */
+    ProgramDetails,
+
+    /**
      * The ProgramDetailsFull model constructor.
      * @property {module:model/ProgramDetailsFull}
      */
     ProgramDetailsFull,
-
-    /**
-     * The ProgramDetailsList model constructor.
-     * @property {module:model/ProgramDetailsList}
-     */
-    ProgramDetailsList,
 
     /**
      * The ProgramDetailsListStatistic model constructor.
@@ -422,12 +335,6 @@ export {
     RateViewModel,
 
     /**
-     * The RealOefAssetPart model constructor.
-     * @property {module:model/RealOefAssetPart}
-     */
-    RealOefAssetPart,
-
-    /**
      * The RecoveryCode model constructor.
      * @property {module:model/RecoveryCode}
      */
@@ -452,22 +359,10 @@ export {
     RegisterManagerViewModel,
 
     /**
-     * The RequestRate model constructor.
-     * @property {module:model/RequestRate}
-     */
-    RequestRate,
-
-    /**
      * The ResetPasswordViewModel model constructor.
      * @property {module:model/ResetPasswordViewModel}
      */
     ResetPasswordViewModel,
-
-    /**
-     * The StartValues model constructor.
-     * @property {module:model/StartValues}
-     */
-    StartValues,
 
     /**
      * The TradesViewModel model constructor.
@@ -512,22 +407,16 @@ export {
     UploadResult,
 
     /**
-     * The UsersRealAssets model constructor.
-     * @property {module:model/UsersRealAssets}
+     * The ValueChartBar model constructor.
+     * @property {module:model/ValueChartBar}
      */
-    UsersRealAssets,
+    ValueChartBar,
 
     /**
     * The AuthApi service constructor.
     * @property {module:api/AuthApi}
     */
     AuthApi,
-
-    /**
-    * The BrokerApi service constructor.
-    * @property {module:api/BrokerApi}
-    */
-    BrokerApi,
 
     /**
     * The DexchangeApi service constructor.
@@ -540,6 +429,12 @@ export {
     * @property {module:api/FileApi}
     */
     FileApi,
+
+    /**
+    * The InvestorApi service constructor.
+    * @property {module:api/InvestorApi}
+    */
+    InvestorApi,
 
     /**
     * The OefApi service constructor.

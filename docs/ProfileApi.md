@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="v10ProfileByIdPublicGet"></a>
 # **v10ProfileByIdPublicGet**
-> ProfilePublicViewModel v10ProfileByIdPublicGet(id)
+> ManagerProfile v10ProfileByIdPublicGet(id)
 
 Get public profile
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfilePublicViewModel**](ProfilePublicViewModel.md)
+[**ManagerProfile**](ManagerProfile.md)
 
 ### Authorization
 

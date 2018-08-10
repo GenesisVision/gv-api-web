@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**programs** | [**[ProgramDetailsList]**](ProgramDetailsList.md) |  | [optional] 
+**programs** | [**[ProgramDetails]**](ProgramDetails.md) |  | [optional] 
 **total** | **Number** |  | [optional] 
 
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10RatePost**](RateApi.md#v10RatePost) | **POST** /v1.0/rate | Get rate
+[**v10RateByFromByToGet**](RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 
 
-<a name="v10RatePost"></a>
-# **v10RatePost**
-> RateViewModel v10RatePost(opts)
+<a name="v10RateByFromByToGet"></a>
+# **v10RateByFromByToGet**
+> RateViewModel v10RateByFromByToGet(from, to)
 
 Get rate
 
@@ -19,10 +19,11 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.RateApi();
 
-let opts = { 
-  'model': new CoreApiV10.RequestRate() // RequestRate | 
-};
-apiInstance.v10RatePost(opts).then((data) => {
+let from = "from_example"; // String | 
+
+let to = "to_example"; // String | 
+
+apiInstance.v10RateByFromByToGet(from, to).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -34,7 +35,8 @@ apiInstance.v10RatePost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**RequestRate**](RequestRate.md)|  | [optional] 
+ **from** | **String**|  | 
+ **to** | **String**|  | 
 
 ### Return type
 
@@ -46,6 +48,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 

@@ -43,7 +43,8 @@ export default class ProgramApi {
      * Get manager chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.timeFrame 
+     * @param {Date} opts.chartDateFrom 
+     * @param {Date} opts.chartDateTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
      */
     v10ProgramByIdChartGetWithHttpInfo(id, opts) {
@@ -60,7 +61,8 @@ export default class ProgramApi {
         'id': id
       };
       let queryParams = {
-        'TimeFrame': opts['timeFrame']
+        'ChartDateFrom': opts['chartDateFrom'],
+        'ChartDateTo': opts['chartDateTo']
       };
       let headerParams = {
       };
@@ -83,7 +85,8 @@ export default class ProgramApi {
      * Get manager chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.timeFrame 
+     * @param {Date} opts.chartDateFrom 
+     * @param {Date} opts.chartDateTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
      */
     v10ProgramByIdChartGet(id, opts) {
@@ -341,11 +344,14 @@ export default class ProgramApi {
      * @param {Number} opts.levelMax 
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
-     * @param {module:model/String} opts.timeFrame 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {module:model/String} opts.sorting 
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
      * @param {module:model/String} opts.currency 
+     * @param {Array.<String>} opts.ids 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
@@ -362,11 +368,14 @@ export default class ProgramApi {
         'LevelMax': opts['levelMax'],
         'ProfitAvgMin': opts['profitAvgMin'],
         'ProfitAvgMax': opts['profitAvgMax'],
-        'TimeFrame': opts['timeFrame'],
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'Sorting': opts['sorting'],
         'Mask': opts['mask'],
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
         'Currency': opts['currency'],
+        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -396,11 +405,14 @@ export default class ProgramApi {
      * @param {Number} opts.levelMax 
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
-     * @param {module:model/String} opts.timeFrame 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {module:model/String} opts.sorting 
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
      * @param {module:model/String} opts.currency 
+     * @param {Array.<String>} opts.ids 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}

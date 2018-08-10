@@ -27,7 +27,8 @@ let apiInstance = new CoreApiV10.ProgramApi();
 let id = "id_example"; // String | 
 
 let opts = { 
-  'timeFrame': "timeFrame_example" // String | 
+  'chartDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartDateTo': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
 apiInstance.v10ProgramByIdChartGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +43,8 @@ apiInstance.v10ProgramByIdChartGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
- **timeFrame** | **String**|  | [optional] 
+ **chartDateFrom** | **Date**|  | [optional] 
+ **chartDateTo** | **Date**|  | [optional] 
 
 ### Return type
 
@@ -263,11 +265,14 @@ let opts = {
   'levelMax': 56, // Number | 
   'profitAvgMin': 1.2, // Number | 
   'profitAvgMax': 1.2, // Number | 
-  'timeFrame': "timeFrame_example", // String | 
+  'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'sorting': "sorting_example", // String | 
   'mask': "mask_example", // String | 
   'facetId': "facetId_example", // String | 
   'isFavorite': true, // Boolean | 
   'currency': "currency_example", // String | 
+  'ids': ["ids_example"], // [String] | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -288,11 +293,14 @@ Name | Type | Description  | Notes
  **levelMax** | **Number**|  | [optional] 
  **profitAvgMin** | **Number**|  | [optional] 
  **profitAvgMax** | **Number**|  | [optional] 
- **timeFrame** | **String**|  | [optional] 
+ **statisticDateFrom** | **Date**|  | [optional] 
+ **statisticDateTo** | **Date**|  | [optional] 
+ **sorting** | **String**|  | [optional] 
  **mask** | **String**|  | [optional] 
  **facetId** | [**String**](.md)|  | [optional] 
  **isFavorite** | **Boolean**|  | [optional] 
  **currency** | **String**|  | [optional] 
+ **ids** | [**[String]**](String.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

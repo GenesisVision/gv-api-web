@@ -114,32 +114,12 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthSignupInvestorPost**](docs/AuthApi.md#v10AuthSignupInvestorPost) | **POST** /v1.0/auth/signup/investor | New investor registration
 *CoreApiV10.AuthApi* | [**v10AuthSignupManagerPost**](docs/AuthApi.md#v10AuthSignupManagerPost) | **POST** /v1.0/auth/signup/manager | New manager registration
 *CoreApiV10.AuthApi* | [**v10AuthTokenUpdatePost**](docs/AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
-*CoreApiV10.BrokerApi* | [**v10BrokerAccountCreatePost**](docs/BrokerApi.md#v10BrokerAccountCreatePost) | **POST** /v1.0/broker/account/create | Create manager
-*CoreApiV10.BrokerApi* | [**v10BrokerAccountOefCreatePost**](docs/BrokerApi.md#v10BrokerAccountOefCreatePost) | **POST** /v1.0/broker/account/oef/create | Create OEF manager
-*CoreApiV10.BrokerApi* | [**v10BrokerFreeaddressesGet**](docs/BrokerApi.md#v10BrokerFreeaddressesGet) | **GET** /v1.0/broker/freeaddresses | 
-*CoreApiV10.BrokerApi* | [**v10BrokerInitDataGet**](docs/BrokerApi.md#v10BrokerInitDataGet) | **GET** /v1.0/broker/initData | Get broker initial data
-*CoreApiV10.BrokerApi* | [**v10BrokerManagersAccountsOnlineInfoUpdatePost**](docs/BrokerApi.md#v10BrokerManagersAccountsOnlineInfoUpdatePost) | **POST** /v1.0/broker/managersAccounts/onlineInfo/update | Upload accounts online info
-*CoreApiV10.BrokerApi* | [**v10BrokerOefAssetAllGet**](docs/BrokerApi.md#v10BrokerOefAssetAllGet) | **GET** /v1.0/broker/oef/asset/all | Get all supported assets for OEFs
-*CoreApiV10.BrokerApi* | [**v10BrokerOefGetRealAssetsGet**](docs/BrokerApi.md#v10BrokerOefGetRealAssetsGet) | **GET** /v1.0/broker/oef/getRealAssets | Get real assets distribution for broker&#39;s clients
-*CoreApiV10.BrokerApi* | [**v10BrokerOefInitDataGet**](docs/BrokerApi.md#v10BrokerOefInitDataGet) | **GET** /v1.0/broker/oef/initData | Get broker OEF initial data
-*CoreApiV10.BrokerApi* | [**v10BrokerOefSetRealAssetsPost**](docs/BrokerApi.md#v10BrokerOefSetRealAssetsPost) | **POST** /v1.0/broker/oef/setRealAssets | Update real assets distribution
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodAccrueProfitsPost**](docs/BrokerApi.md#v10BrokerPeriodAccrueProfitsPost) | **POST** /v1.0/broker/period/accrueProfits | Accrue investors&#39; profits
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodClosePost**](docs/BrokerApi.md#v10BrokerPeriodClosePost) | **POST** /v1.0/broker/period/close | Close investment period
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodOefApplyAssetPartsPost**](docs/BrokerApi.md#v10BrokerPeriodOefApplyAssetPartsPost) | **POST** /v1.0/broker/period/oef/applyAssetParts | Apply new requested assets parts
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodOefProcessClosingProgramPost**](docs/BrokerApi.md#v10BrokerPeriodOefProcessClosingProgramPost) | **POST** /v1.0/broker/period/oef/processClosingProgram | Close OEF investment program
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodOefProcessForceClosingProgramPost**](docs/BrokerApi.md#v10BrokerPeriodOefProcessForceClosingProgramPost) | **POST** /v1.0/broker/period/oef/processForceClosingProgram | Force close OEF investment program
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodProcessClosingProgramPost**](docs/BrokerApi.md#v10BrokerPeriodProcessClosingProgramPost) | **POST** /v1.0/broker/period/processClosingProgram | Close investment program
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodProcessInvestmentRequestsPost**](docs/BrokerApi.md#v10BrokerPeriodProcessInvestmentRequestsPost) | **POST** /v1.0/broker/period/processInvestmentRequests | Process investment requests
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodReevaluateManagerTokenPost**](docs/BrokerApi.md#v10BrokerPeriodReevaluateManagerTokenPost) | **POST** /v1.0/broker/period/reevaluateManagerToken | Update manager token initial price/total supply after loss
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodSetStartValuesPost**](docs/BrokerApi.md#v10BrokerPeriodSetStartValuesPost) | **POST** /v1.0/broker/period/setStartValues | Set investment period start balance, manager share, manager balance
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodTerminatePost**](docs/BrokerApi.md#v10BrokerPeriodTerminatePost) | **POST** /v1.0/broker/period/terminate | Terminate program
-*CoreApiV10.BrokerApi* | [**v10BrokerPeriodlosingDataGet**](docs/BrokerApi.md#v10BrokerPeriodlosingDataGet) | **GET** /v1.0/broker/period/сlosingData | Get data for closing investment period
-*CoreApiV10.BrokerApi* | [**v10BrokerTradehistoryGet**](docs/BrokerApi.md#v10BrokerTradehistoryGet) | **GET** /v1.0/broker/tradehistory | 
-*CoreApiV10.BrokerApi* | [**v10BrokerTradesIpfsHashUpdatePost**](docs/BrokerApi.md#v10BrokerTradesIpfsHashUpdatePost) | **POST** /v1.0/broker/trades/ipfsHash/update | Update manager history ipfs hash
-*CoreApiV10.BrokerApi* | [**v10BrokerTradesNewPost**](docs/BrokerApi.md#v10BrokerTradesNewPost) | **POST** /v1.0/broker/trades/new | New trade event
 *CoreApiV10.DexchangeApi* | [**v10DexchangeNodePost**](docs/DexchangeApi.md#v10DexchangeNodePost) | **POST** /v1.0/dexchange/node | 
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
+*CoreApiV10.InvestorApi* | [**v10InvestorDashboardChartValueGet**](docs/InvestorApi.md#v10InvestorDashboardChartValueGet) | **GET** /v1.0/investor/dashboard/chart/value | Value chart
+*CoreApiV10.InvestorApi* | [**v10InvestorDashboardEventsGet**](docs/InvestorApi.md#v10InvestorDashboardEventsGet) | **GET** /v1.0/investor/dashboard/events | Portfolio events
+*CoreApiV10.InvestorApi* | [**v10InvestorDashboardProgramListGet**](docs/InvestorApi.md#v10InvestorDashboardProgramListGet) | **GET** /v1.0/investor/dashboard/program/list | Programs list
 *CoreApiV10.OefApi* | [**v10OefAssetAllGet**](docs/OefApi.md#v10OefAssetAllGet) | **GET** /v1.0/oef/asset/all | Get all supported assets for OEFs
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileByIdPublicGet**](docs/ProfileApi.md#v10ProfileByIdPublicGet) | **GET** /v1.0/profile/{id}/public | Get public profile
@@ -152,7 +132,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramApi* | [**v10ProgramByIdGet**](docs/ProgramApi.md#v10ProgramByIdGet) | **GET** /v1.0/program/{id} | Program details
 *CoreApiV10.ProgramApi* | [**v10ProgramByIdTradesGet**](docs/ProgramApi.md#v10ProgramByIdTradesGet) | **GET** /v1.0/program/{id}/trades | Get manager trade history
 *CoreApiV10.ProgramApi* | [**v10ProgramListGet**](docs/ProgramApi.md#v10ProgramListGet) | **GET** /v1.0/program/list | Programs list
-*CoreApiV10.RateApi* | [**v10RatePost**](docs/RateApi.md#v10RatePost) | **POST** /v1.0/rate | Get rate
+*CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 
 
 ## Documentation for Models
@@ -160,37 +140,26 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AmountWithCurrency](docs/AmountWithCurrency.md)
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
- - [CoreApiV10.BrokerAssetsPartChangeRequest](docs/BrokerAssetsPartChangeRequest.md)
- - [CoreApiV10.BrokerInitData](docs/BrokerInitData.md)
- - [CoreApiV10.BrokerInvestmentProgram](docs/BrokerInvestmentProgram.md)
- - [CoreApiV10.BrokerOefInitData](docs/BrokerOefInitData.md)
- - [CoreApiV10.BrokerOefInvestmentProgram](docs/BrokerOefInvestmentProgram.md)
+ - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
  - [CoreApiV10.ChartProgramDetails](docs/ChartProgramDetails.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
- - [CoreApiV10.ClosePeriodData](docs/ClosePeriodData.md)
  - [CoreApiV10.DExchangeRequest](docs/DExchangeRequest.md)
  - [CoreApiV10.DExchangeResponse](docs/DExchangeResponse.md)
+ - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
+ - [CoreApiV10.DashboardPortfolioEvent](docs/DashboardPortfolioEvent.md)
+ - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
+ - [CoreApiV10.DashboardProgramDetails](docs/DashboardProgramDetails.md)
+ - [CoreApiV10.DashboardProgramsList](docs/DashboardProgramsList.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
- - [CoreApiV10.InvestmentProgramAccrual](docs/InvestmentProgramAccrual.md)
- - [CoreApiV10.InvestmentProgramRequest](docs/InvestmentProgramRequest.md)
- - [CoreApiV10.InvestorAmount](docs/InvestorAmount.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
- - [CoreApiV10.ManagerAccountOnlineInfo](docs/ManagerAccountOnlineInfo.md)
- - [CoreApiV10.ManagerHistoryIpfsHash](docs/ManagerHistoryIpfsHash.md)
- - [CoreApiV10.ManagerIpfsHash](docs/ManagerIpfsHash.md)
- - [CoreApiV10.ManagerRequest](docs/ManagerRequest.md)
- - [CoreApiV10.NewManager](docs/NewManager.md)
- - [CoreApiV10.NewTradeEvent](docs/NewTradeEvent.md)
- - [CoreApiV10.OefAssetPart](docs/OefAssetPart.md)
- - [CoreApiV10.OefManagerRequest](docs/OefManagerRequest.md)
+ - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
- - [CoreApiV10.Period](docs/Period.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsList](docs/PersonalProgramDetailsList.md)
  - [CoreApiV10.PlatformAsset](docs/PlatformAsset.md)
@@ -198,22 +167,18 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PlatformInfo](docs/PlatformInfo.md)
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
- - [CoreApiV10.ProfilePublicViewModel](docs/ProfilePublicViewModel.md)
  - [CoreApiV10.ProgramChart](docs/ProgramChart.md)
+ - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
- - [CoreApiV10.ProgramDetailsList](docs/ProgramDetailsList.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV10.RateViewModel](docs/RateViewModel.md)
- - [CoreApiV10.RealOefAssetPart](docs/RealOefAssetPart.md)
  - [CoreApiV10.RecoveryCode](docs/RecoveryCode.md)
  - [CoreApiV10.RecoveryCodesViewModel](docs/RecoveryCodesViewModel.md)
  - [CoreApiV10.RegisterInvestorViewModel](docs/RegisterInvestorViewModel.md)
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
- - [CoreApiV10.RequestRate](docs/RequestRate.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
- - [CoreApiV10.StartValues](docs/StartValues.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)
  - [CoreApiV10.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)
@@ -221,7 +186,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.TwoFactorStatus](docs/TwoFactorStatus.md)
  - [CoreApiV10.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
- - [CoreApiV10.UsersRealAssets](docs/UsersRealAssets.md)
+ - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
 
 
 ## Documentation for Authorization
