@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
-**hasNotifications** | **Boolean** |  | [optional] 
+**notificationsAmount** | **Number** |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 **totalBalanceGvt** | **Number** |  | [optional] 
 **investedGvt** | **Number** |  | [optional] 
