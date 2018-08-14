@@ -43,7 +43,7 @@ var ProfileHeaderViewModel = function () {
         this.id = undefined;
         this.name = undefined;
         this.avatar = undefined;
-        this.hasNotifications = undefined;
+        this.notificationsAmount = undefined;
         this.favoritesCount = undefined;
         this.totalBalanceGvt = undefined;
         this.investedGvt = undefined;
@@ -74,8 +74,8 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
-                if (data.hasOwnProperty('hasNotifications')) {
-                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
+                if (data.hasOwnProperty('notificationsAmount')) {
+                    obj['notificationsAmount'] = _ApiClient2.default.convertToType(data['notificationsAmount'], 'Number');
                 }
                 if (data.hasOwnProperty('favoritesCount')) {
                     obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
@@ -106,7 +106,7 @@ var ProfileHeaderViewModel = function () {
         */
 
         /**
-        * @member {Boolean} hasNotifications
+        * @member {Number} notificationsAmount
         */
 
         /**
