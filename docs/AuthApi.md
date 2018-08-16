@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**v10AuthPasswordForgotInvestorPost**](AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 [**v10AuthPasswordForgotManagerPost**](AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 [**v10AuthPasswordResetPost**](AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
+[**v10AuthResendconfirmationlinkPost**](AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 [**v10AuthSigninBrokerPost**](AuthApi.md#v10AuthSigninBrokerPost) | **POST** /v1.0/auth/signin/broker | Authorize
 [**v10AuthSigninInvestorPost**](AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 [**v10AuthSigninManagerPost**](AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
@@ -446,6 +447,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10AuthResendconfirmationlinkPost"></a>
+# **v10AuthResendconfirmationlinkPost**
+> v10AuthResendconfirmationlinkPost(opts)
+
+Resend Confirmation Link
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.AuthApi();
+
+let opts = { 
+  'model': new CoreApiV10.ResendConfirmationViewModel() // ResendConfirmationViewModel | 
+};
+apiInstance.v10AuthResendconfirmationlinkPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **model** | [**ResendConfirmationViewModel**](ResendConfirmationViewModel.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

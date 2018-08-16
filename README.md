@@ -107,6 +107,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotInvestorPost**](docs/AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 *CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
+*CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 *CoreApiV10.AuthApi* | [**v10AuthSigninBrokerPost**](docs/AuthApi.md#v10AuthSigninBrokerPost) | **POST** /v1.0/auth/signin/broker | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSigninManagerPost**](docs/AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
@@ -178,6 +179,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RecoveryCodesViewModel](docs/RecoveryCodesViewModel.md)
  - [CoreApiV10.RegisterInvestorViewModel](docs/RegisterInvestorViewModel.md)
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
+ - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)

@@ -54,6 +54,7 @@ import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
+import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -357,6 +358,12 @@ export {
      * @property {module:model/RegisterManagerViewModel}
      */
     RegisterManagerViewModel,
+
+    /**
+     * The ResendConfirmationViewModel model constructor.
+     * @property {module:model/ResendConfirmationViewModel}
+     */
+    ResendConfirmationViewModel,
 
     /**
      * The ResetPasswordViewModel model constructor.

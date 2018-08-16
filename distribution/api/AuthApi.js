@@ -53,6 +53,10 @@ var _RegisterManagerViewModel = require('../model/RegisterManagerViewModel');
 
 var _RegisterManagerViewModel2 = _interopRequireDefault(_RegisterManagerViewModel);
 
+var _ResendConfirmationViewModel = require('../model/ResendConfirmationViewModel');
+
+var _ResendConfirmationViewModel2 = _interopRequireDefault(_ResendConfirmationViewModel);
+
 var _ResetPasswordViewModel = require('../model/ResetPasswordViewModel');
 
 var _ResetPasswordViewModel2 = _interopRequireDefault(_ResetPasswordViewModel);
@@ -557,6 +561,47 @@ var AuthApi = function () {
     key: 'v10AuthPasswordResetPost',
     value: function v10AuthPasswordResetPost(opts) {
       return this.v10AuthPasswordResetPostWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Resend Confirmation Link
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResendConfirmationViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10AuthResendconfirmationlinkPostWithHttpInfo',
+    value: function v10AuthResendconfirmationlinkPostWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/auth/resendconfirmationlink', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Resend Confirmation Link
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResendConfirmationViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10AuthResendconfirmationlinkPost',
+    value: function v10AuthResendconfirmationlinkPost(opts) {
+      return this.v10AuthResendconfirmationlinkPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -21,6 +21,7 @@ import PasswordModel from '../model/PasswordModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from '../model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from '../model/RegisterManagerViewModel';
+import ResendConfirmationViewModel from '../model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from '../model/ResetPasswordViewModel';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from '../model/TwoFactorAuthenticatorConfirm';
@@ -547,6 +548,52 @@ export default class AuthApi {
      */
     v10AuthPasswordResetPost(opts) {
       return this.v10AuthPasswordResetPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Resend Confirmation Link
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResendConfirmationViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10AuthResendconfirmationlinkPostWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/resendconfirmationlink', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Resend Confirmation Link
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResendConfirmationViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10AuthResendconfirmationlinkPost(opts) {
+      return this.v10AuthResendconfirmationlinkPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
