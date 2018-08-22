@@ -53,7 +53,7 @@ var ProgramDetailsFull = function () {
         _classCallCheck(this, ProgramDetailsFull);
 
         this.id = undefined;
-        this.avatar = undefined;
+        this.logo = undefined;
         this.description = undefined;
         this.title = undefined;
         this.currency = undefined;
@@ -86,8 +86,8 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
@@ -134,7 +134,7 @@ var ProgramDetailsFull = function () {
         */
 
         /**
-        * @member {String} avatar
+        * @member {String} logo
         */
 
         /**

@@ -62,6 +62,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
@@ -92,6 +95,10 @@ export default class ProfileHeaderViewModel {
     * @member {String} name
     */
     name = undefined;
+    /**
+    * @member {String} email
+    */
+    email = undefined;
     /**
     * @member {String} avatar
     */

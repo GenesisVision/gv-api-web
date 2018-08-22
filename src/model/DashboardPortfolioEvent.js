@@ -65,6 +65,12 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
         }
         return obj;
     }
@@ -81,11 +87,33 @@ export default class DashboardPortfolioEvent {
     * @member {Number} value
     */
     value = undefined;
+    /**
+    * @member {module:model/DashboardPortfolioEvent.TypeEnum} type
+    */
+    type = undefined;
+    /**
+    * @member {String} logo
+    */
+    logo = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>type</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static TypeEnum = {
+    
+        /**
+         * value: "Notification"
+         * @const
+         */
+        "Notification": "Notification"    
+    };
 
 
 

@@ -49,7 +49,7 @@ var DashboardProgramDetails = function () {
         _classCallCheck(this, DashboardProgramDetails);
 
         this.id = undefined;
-        this.avatar = undefined;
+        this.logo = undefined;
         this.level = undefined;
         this.title = undefined;
         this.description = undefined;
@@ -81,8 +81,8 @@ var DashboardProgramDetails = function () {
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
@@ -126,7 +126,7 @@ var DashboardProgramDetails = function () {
         */
 
         /**
-        * @member {String} avatar
+        * @member {String} logo
         */
 
         /**

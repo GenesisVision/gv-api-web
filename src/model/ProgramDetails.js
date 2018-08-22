@@ -63,8 +63,8 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -111,9 +111,9 @@ export default class ProgramDetails {
     */
     id = undefined;
     /**
-    * @member {String} avatar
+    * @member {String} logo
     */
-    avatar = undefined;
+    logo = undefined;
     /**
     * @member {String} title
     */

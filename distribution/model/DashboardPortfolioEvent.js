@@ -43,6 +43,8 @@ var DashboardPortfolioEvent = function () {
         this.date = undefined;
         this.description = undefined;
         this.value = undefined;
+        this.type = undefined;
+        this.logo = undefined;
     }
 
     /**
@@ -69,6 +71,12 @@ var DashboardPortfolioEvent = function () {
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
             }
             return obj;
         }
@@ -85,9 +93,32 @@ var DashboardPortfolioEvent = function () {
         * @member {Number} value
         */
 
+        /**
+        * @member {module:model/DashboardPortfolioEvent.TypeEnum} type
+        */
+
+        /**
+        * @member {String} logo
+        */
+
+
+        /**
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return DashboardPortfolioEvent;
 }();
 
+DashboardPortfolioEvent.TypeEnum = {
+
+    /**
+     * value: "Notification"
+     * @const
+     */
+    "Notification": "Notification"
+};
 exports.default = DashboardPortfolioEvent;

@@ -42,6 +42,7 @@ var ProfileHeaderViewModel = function () {
 
         this.id = undefined;
         this.name = undefined;
+        this.email = undefined;
         this.avatar = undefined;
         this.notificationsAmount = undefined;
         this.favoritesCount = undefined;
@@ -71,6 +72,9 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('name')) {
                     obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
+                if (data.hasOwnProperty('email')) {
+                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                }
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
@@ -99,6 +103,10 @@ var ProfileHeaderViewModel = function () {
 
         /**
         * @member {String} name
+        */
+
+        /**
+        * @member {String} email
         */
 
         /**
