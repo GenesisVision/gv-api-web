@@ -44,6 +44,9 @@ var AssetsValue = function () {
         this.id = undefined;
         this.title = undefined;
         this.avatar = undefined;
+        this.value = undefined;
+        this.changePercent = undefined;
+        this.changeValue = undefined;
     }
 
     /**
@@ -73,6 +76,15 @@ var AssetsValue = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+                if (data.hasOwnProperty('changePercent')) {
+                    obj['changePercent'] = _ApiClient2.default.convertToType(data['changePercent'], 'Number');
+                }
+                if (data.hasOwnProperty('changeValue')) {
+                    obj['changeValue'] = _ApiClient2.default.convertToType(data['changeValue'], 'Number');
+                }
             }
             return obj;
         }
@@ -93,6 +105,18 @@ var AssetsValue = function () {
         * @member {String} avatar
         */
 
+        /**
+        * @member {Number} value
+        */
+
+        /**
+        * @member {Number} changePercent
+        */
+
+        /**
+        * @member {Number} changeValue
+        */
+
 
         /**
         * Allowed values for the <code>type</code> property.
@@ -106,6 +130,12 @@ var AssetsValue = function () {
 }();
 
 AssetsValue.TypeEnum = {
+
+    /**
+     * value: "All"
+     * @const
+     */
+    "All": "All",
 
     /**
      * value: "Program"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **periodDateStart** | **Date** |  | [optional] 
 **periodDateEnd** | **Date** |  | [optional] 
 **availableForInvestment** | **Number** |  | [optional] 
-**manager** | [**ManagerProfile**](ManagerProfile.md) |  | [optional] 
+**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsList**](PersonalProgramDetailsList.md) | Fields for authorized user | [optional] 

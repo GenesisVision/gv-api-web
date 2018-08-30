@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import ManagerProfile from './ManagerProfile';
+import ProfilePublic from './ProfilePublic';
 
 
 
@@ -77,25 +77,43 @@ export default class DashboardProgramDetails {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
             if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ManagerProfile.constructFromObject(data['manager']);
+                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
             if (data.hasOwnProperty('share')) {
                 obj['share'] = ApiClient.convertToType(data['share'], 'Number');
             }
-            if (data.hasOwnProperty('timeLeft')) {
-                obj['timeLeft'] = ApiClient.convertToType(data['timeLeft'], 'Number');
+            if (data.hasOwnProperty('currentValue')) {
+                obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'Number');
             }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            if (data.hasOwnProperty('profitPercent')) {
+                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
             }
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            if (data.hasOwnProperty('profitValue')) {
+                obj['profitValue'] = ApiClient.convertToType(data['profitValue'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
+            }
+            if (data.hasOwnProperty('periodStarts')) {
+                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
+            }
+            if (data.hasOwnProperty('isReinvesting')) {
+                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
+            }
+            if (data.hasOwnProperty('profit')) {
+                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            }
+            if (data.hasOwnProperty('timeLeft')) {
+                obj['timeLeft'] = ApiClient.convertToType(data['timeLeft'], 'Number');
+            }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
         }
         return obj;
@@ -126,7 +144,7 @@ export default class DashboardProgramDetails {
     */
     currency = undefined;
     /**
-    * @member {module:model/ManagerProfile} manager
+    * @member {module:model/ProfilePublic} manager
     */
     manager = undefined;
     /**
@@ -134,17 +152,17 @@ export default class DashboardProgramDetails {
     */
     share = undefined;
     /**
-    * @member {Number} timeLeft
+    * @member {Number} currentValue
     */
-    timeLeft = undefined;
+    currentValue = undefined;
     /**
-    * @member {Number} value
+    * @member {Number} profitPercent
     */
-    value = undefined;
+    profitPercent = undefined;
     /**
-    * @member {Number} profit
+    * @member {Number} profitValue
     */
-    profit = undefined;
+    profitValue = undefined;
     /**
     * @member {module:model/DashboardProgramDetails.StatusEnum} status
     */
@@ -153,6 +171,30 @@ export default class DashboardProgramDetails {
     * @member {Array.<module:model/ChartSimple>} chart
     */
     chart = undefined;
+    /**
+    * @member {Date} periodStarts
+    */
+    periodStarts = undefined;
+    /**
+    * @member {Date} periodEnds
+    */
+    periodEnds = undefined;
+    /**
+    * @member {Boolean} isReinvesting
+    */
+    isReinvesting = undefined;
+    /**
+    * @member {Number} profit
+    */
+    profit = undefined;
+    /**
+    * @member {Number} timeLeft
+    */
+    timeLeft = undefined;
+    /**
+    * @member {Number} value
+    */
+    value = undefined;
 
 
 

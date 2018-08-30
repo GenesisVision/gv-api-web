@@ -25,21 +25,17 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _ProgramChart = require('../model/ProgramChart');
+var _InvestToProgram = require('../model/InvestToProgram');
 
-var _ProgramChart2 = _interopRequireDefault(_ProgramChart);
+var _InvestToProgram2 = _interopRequireDefault(_InvestToProgram);
 
-var _ProgramDetailsFull = require('../model/ProgramDetailsFull');
+var _NewProgramRequest = require('../model/NewProgramRequest');
 
-var _ProgramDetailsFull2 = _interopRequireDefault(_ProgramDetailsFull);
+var _NewProgramRequest2 = _interopRequireDefault(_NewProgramRequest);
 
-var _ProgramsList = require('../model/ProgramsList');
+var _WalletsViewModel = require('../model/WalletsViewModel');
 
-var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
-
-var _TradesViewModel = require('../model/TradesViewModel');
-
-var _TradesViewModel2 = _interopRequireDefault(_TradesViewModel);
+var _WalletsViewModel2 = _interopRequireDefault(_WalletsViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66,370 +62,154 @@ var ProgramApi = function () {
   }
 
   /**
-   * Get manager chart
-   * @param {String} id 
+   * Cancel investment request
+   * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
-   * @param {Date} opts.chartDateFrom 
-   * @param {Date} opts.chartDateTo 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
+   * @param {String} opts.requestId 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
 
 
   _createClass(ProgramApi, [{
-    key: 'v10ProgramByIdChartGetWithHttpInfo',
-    value: function v10ProgramByIdChartGetWithHttpInfo(id, opts) {
+    key: 'v10ProgramCancelInvestmentRequestPostWithHttpInfo',
+    value: function v10ProgramCancelInvestmentRequestPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramByIdChartGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'ChartDateFrom': opts['chartDateFrom'],
-        'ChartDateTo': opts['chartDateTo']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramChart2.default;
-
-      return this.apiClient.callApi('/v1.0/program/{id}/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get manager chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.chartDateFrom 
-     * @param {Date} opts.chartDateTo 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
-     */
-
-  }, {
-    key: 'v10ProgramByIdChartGet',
-    value: function v10ProgramByIdChartGet(id, opts) {
-      return this.v10ProgramByIdChartGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Add to favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramByIdFavoriteAddPostWithHttpInfo',
-    value: function v10ProgramByIdFavoriteAddPostWithHttpInfo(id, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramByIdFavoriteAddPost");
-      }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramByIdFavoriteAddPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramCancelInvestmentRequestPost");
       }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/program/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Add to favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'v10ProgramByIdFavoriteAddPost',
-    value: function v10ProgramByIdFavoriteAddPost(id, authorization) {
-      return this.v10ProgramByIdFavoriteAddPostWithHttpInfo(id, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Remove from favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramByIdFavoriteRemovePostWithHttpInfo',
-    value: function v10ProgramByIdFavoriteRemovePostWithHttpInfo(id, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramByIdFavoriteRemovePost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramByIdFavoriteRemovePost");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/program/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Remove from favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'v10ProgramByIdFavoriteRemovePost',
-    value: function v10ProgramByIdFavoriteRemovePost(id, authorization) {
-      return this.v10ProgramByIdFavoriteRemovePostWithHttpInfo(id, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Program details
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramByIdGetWithHttpInfo',
-    value: function v10ProgramByIdGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramByIdGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': opts['authorization']
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramDetailsFull2.default;
-
-      return this.apiClient.callApi('/v1.0/program/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Program details
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
-     */
-
-  }, {
-    key: 'v10ProgramByIdGet',
-    value: function v10ProgramByIdGet(id, opts) {
-      return this.v10ProgramByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get manager trade history
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {String} opts.symbol 
-     * @param {module:model/String} opts.sorting 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramByIdTradesGetWithHttpInfo',
-    value: function v10ProgramByIdTradesGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramByIdTradesGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'Symbol': opts['symbol'],
-        'Sorting': opts['sorting'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _TradesViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/program/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get manager trade history
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {String} opts.symbol 
-     * @param {module:model/String} opts.sorting 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
-     */
-
-  }, {
-    key: 'v10ProgramByIdTradesGet',
-    value: function v10ProgramByIdTradesGet(id, opts) {
-      return this.v10ProgramByIdTradesGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Programs list
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {Number} opts.levelMin 
-     * @param {Number} opts.levelMax 
-     * @param {Number} opts.profitAvgMin 
-     * @param {Number} opts.profitAvgMax 
-     * @param {Date} opts.statisticDateFrom 
-     * @param {Date} opts.statisticDateTo 
-     * @param {module:model/String} opts.sorting 
-     * @param {String} opts.mask 
-     * @param {String} opts.facetId 
-     * @param {Boolean} opts.isFavorite 
-     * @param {module:model/String} opts.currency 
-     * @param {Array.<String>} opts.ids 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramListGetWithHttpInfo',
-    value: function v10ProgramListGetWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
 
       var pathParams = {};
       var queryParams = {
-        'LevelMin': opts['levelMin'],
-        'LevelMax': opts['levelMax'],
-        'ProfitAvgMin': opts['profitAvgMin'],
-        'ProfitAvgMax': opts['profitAvgMax'],
-        'StatisticDateFrom': opts['statisticDateFrom'],
-        'StatisticDateTo': opts['statisticDateTo'],
-        'Sorting': opts['sorting'],
-        'Mask': opts['mask'],
-        'FacetId': opts['facetId'],
-        'IsFavorite': opts['isFavorite'],
-        'Currency': opts['currency'],
-        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
-        'Skip': opts['skip'],
-        'Take': opts['take']
+        'requestId': opts['requestId']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
+        'Authorization': authorization
       };
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramsList2.default;
+      var returnType = null;
 
-      return this.apiClient.callApi('/v1.0/program/list', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/program/cancelInvestmentRequest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Programs list
+     * Cancel investment request
+     * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {Number} opts.levelMin 
-     * @param {Number} opts.levelMax 
-     * @param {Number} opts.profitAvgMin 
-     * @param {Number} opts.profitAvgMax 
-     * @param {Date} opts.statisticDateFrom 
-     * @param {Date} opts.statisticDateTo 
-     * @param {module:model/String} opts.sorting 
-     * @param {String} opts.mask 
-     * @param {String} opts.facetId 
-     * @param {Boolean} opts.isFavorite 
-     * @param {module:model/String} opts.currency 
-     * @param {Array.<String>} opts.ids 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
+     * @param {String} opts.requestId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: 'v10ProgramListGet',
-    value: function v10ProgramListGet(opts) {
-      return this.v10ProgramListGetWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10ProgramCancelInvestmentRequestPost',
+    value: function v10ProgramCancelInvestmentRequestPost(authorization, opts) {
+      return this.v10ProgramCancelInvestmentRequestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Create a investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewProgramRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramCreatePostWithHttpInfo',
+    value: function v10ProgramCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramCreatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/program/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Create a investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewProgramRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ProgramCreatePost',
+    value: function v10ProgramCreatePost(authorization, opts) {
+      return this.v10ProgramCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Invest to program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InvestToProgram} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsViewModel} and HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramInvestPostWithHttpInfo',
+    value: function v10ProgramInvestPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramInvestPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _WalletsViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/program/invest', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Invest to program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InvestToProgram} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsViewModel}
+     */
+
+  }, {
+    key: 'v10ProgramInvestPost',
+    value: function v10ProgramInvestPost(authorization, opts) {
+      return this.v10ProgramInvestPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**assetId** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
-**description** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **type** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
@@ -14,7 +15,19 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Notification` (value: `"Notification"`)
+* `All` (value: `"All"`)
+
+* `Invest` (value: `"Invest"`)
+
+* `Withdraw` (value: `"Withdraw"`)
+
+* `Profit` (value: `"Profit"`)
+
+* `Reinvest` (value: `"Reinvest"`)
+
+* `Canceled` (value: `"Canceled"`)
+
+* `Ended` (value: `"Ended"`)
 
 
 

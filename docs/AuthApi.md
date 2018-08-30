@@ -15,7 +15,6 @@ Method | HTTP request | Description
 [**v10AuthPasswordForgotManagerPost**](AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 [**v10AuthPasswordResetPost**](AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
 [**v10AuthResendconfirmationlinkPost**](AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
-[**v10AuthSigninBrokerPost**](AuthApi.md#v10AuthSigninBrokerPost) | **POST** /v1.0/auth/signin/broker | Authorize
 [**v10AuthSigninInvestorPost**](AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 [**v10AuthSigninManagerPost**](AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
 [**v10AuthSignupConfirmPost**](AuthApi.md#v10AuthSignupConfirmPost) | **POST** /v1.0/auth/signup/confirm | Confirm email after registration
@@ -489,48 +488,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10AuthSigninBrokerPost"></a>
-# **v10AuthSigninBrokerPost**
-> &#39;String&#39; v10AuthSigninBrokerPost(opts)
-
-Authorize
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.AuthApi();
-
-let opts = { 
-  'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
-};
-apiInstance.v10AuthSigninBrokerPost(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **model** | [**LoginViewModel**](LoginViewModel.md)|  | [optional] 
-
-### Return type
-
-**&#39;String&#39;**
 
 ### Authorization
 

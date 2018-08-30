@@ -27,13 +27,16 @@ import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardProgramsList from './model/DashboardProgramsList';
+import DashboardSummary from './model/DashboardSummary';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
+import InvestInfo from './model/InvestInfo';
+import InvestToProgram from './model/InvestToProgram';
 import LoginViewModel from './model/LoginViewModel';
-import ManagerProfile from './model/ManagerProfile';
+import NewProgramRequest from './model/NewProgramRequest';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
@@ -43,10 +46,15 @@ import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
+import ProfilePublic from './model/ProfilePublic';
 import ProgramChart from './model/ProgramChart';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
+import ProgramRequest from './model/ProgramRequest';
+import ProgramRequests from './model/ProgramRequests';
+import ProgramSet from './model/ProgramSet';
+import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramsList from './model/ProgramsList';
 import RateViewModel from './model/RateViewModel';
@@ -64,6 +72,10 @@ import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
+import WalletSummary from './model/WalletSummary';
+import WalletViewModel from './model/WalletViewModel';
+import WalletsViewModel from './model/WalletsViewModel';
+import WithdrawInfo from './model/WithdrawInfo';
 import AuthApi from './api/AuthApi';
 import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
@@ -72,7 +84,9 @@ import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
 import ProgramApi from './api/ProgramApi';
+import ProgramsApi from './api/ProgramsApi';
 import RateApi from './api/RateApi';
+import WalletApi from './api/WalletApi';
 
 
 /**
@@ -198,6 +212,12 @@ export {
     DashboardProgramsList,
 
     /**
+     * The DashboardSummary model constructor.
+     * @property {module:model/DashboardSummary}
+     */
+    DashboardSummary,
+
+    /**
      * The ErrorMessage model constructor.
      * @property {module:model/ErrorMessage}
      */
@@ -228,16 +248,28 @@ export {
     IOsAppVersion,
 
     /**
+     * The InvestInfo model constructor.
+     * @property {module:model/InvestInfo}
+     */
+    InvestInfo,
+
+    /**
+     * The InvestToProgram model constructor.
+     * @property {module:model/InvestToProgram}
+     */
+    InvestToProgram,
+
+    /**
      * The LoginViewModel model constructor.
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
 
     /**
-     * The ManagerProfile model constructor.
-     * @property {module:model/ManagerProfile}
+     * The NewProgramRequest model constructor.
+     * @property {module:model/NewProgramRequest}
      */
-    ManagerProfile,
+    NewProgramRequest,
 
     /**
      * The OrderModel model constructor.
@@ -294,6 +326,12 @@ export {
     ProfileHeaderViewModel,
 
     /**
+     * The ProfilePublic model constructor.
+     * @property {module:model/ProfilePublic}
+     */
+    ProfilePublic,
+
+    /**
      * The ProgramChart model constructor.
      * @property {module:model/ProgramChart}
      */
@@ -316,6 +354,30 @@ export {
      * @property {module:model/ProgramDetailsListStatistic}
      */
     ProgramDetailsListStatistic,
+
+    /**
+     * The ProgramRequest model constructor.
+     * @property {module:model/ProgramRequest}
+     */
+    ProgramRequest,
+
+    /**
+     * The ProgramRequests model constructor.
+     * @property {module:model/ProgramRequests}
+     */
+    ProgramRequests,
+
+    /**
+     * The ProgramSet model constructor.
+     * @property {module:model/ProgramSet}
+     */
+    ProgramSet,
+
+    /**
+     * The ProgramSets model constructor.
+     * @property {module:model/ProgramSets}
+     */
+    ProgramSets,
 
     /**
      * The ProgramStatistic model constructor.
@@ -420,6 +482,30 @@ export {
     ValueChartBar,
 
     /**
+     * The WalletSummary model constructor.
+     * @property {module:model/WalletSummary}
+     */
+    WalletSummary,
+
+    /**
+     * The WalletViewModel model constructor.
+     * @property {module:model/WalletViewModel}
+     */
+    WalletViewModel,
+
+    /**
+     * The WalletsViewModel model constructor.
+     * @property {module:model/WalletsViewModel}
+     */
+    WalletsViewModel,
+
+    /**
+     * The WithdrawInfo model constructor.
+     * @property {module:model/WithdrawInfo}
+     */
+    WithdrawInfo,
+
+    /**
     * The AuthApi service constructor.
     * @property {module:api/AuthApi}
     */
@@ -468,8 +554,20 @@ export {
     ProgramApi,
 
     /**
+    * The ProgramsApi service constructor.
+    * @property {module:api/ProgramsApi}
+    */
+    ProgramsApi,
+
+    /**
     * The RateApi service constructor.
     * @property {module:api/RateApi}
     */
-    RateApi
+    RateApi,
+
+    /**
+    * The WalletApi service constructor.
+    * @property {module:api/WalletApi}
+    */
+    WalletApi
 };

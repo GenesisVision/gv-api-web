@@ -108,7 +108,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 *CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
 *CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
-*CoreApiV10.AuthApi* | [**v10AuthSigninBrokerPost**](docs/AuthApi.md#v10AuthSigninBrokerPost) | **POST** /v1.0/auth/signin/broker | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSigninManagerPost**](docs/AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSignupConfirmPost**](docs/AuthApi.md#v10AuthSignupConfirmPost) | **POST** /v1.0/auth/signup/confirm | Confirm email after registration
@@ -118,22 +117,37 @@ Class | Method | HTTP request | Description
 *CoreApiV10.DexchangeApi* | [**v10DexchangeNodePost**](docs/DexchangeApi.md#v10DexchangeNodePost) | **POST** /v1.0/dexchange/node | 
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
-*CoreApiV10.InvestorApi* | [**v10InvestorDashboardChartValueGet**](docs/InvestorApi.md#v10InvestorDashboardChartValueGet) | **GET** /v1.0/investor/dashboard/chart/value | Value chart
-*CoreApiV10.InvestorApi* | [**v10InvestorDashboardEventsGet**](docs/InvestorApi.md#v10InvestorDashboardEventsGet) | **GET** /v1.0/investor/dashboard/events | Portfolio events
-*CoreApiV10.InvestorApi* | [**v10InvestorDashboardProgramListGet**](docs/InvestorApi.md#v10InvestorDashboardProgramListGet) | **GET** /v1.0/investor/dashboard/program/list | Programs list
+*CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashdoard info
+*CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
+*CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | investing
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOffPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOnPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsGet) | **GET** /v1.0/investor/programs/{id}/requests | Ger requests
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
 *CoreApiV10.OefApi* | [**v10OefAssetAllGet**](docs/OefApi.md#v10OefAssetAllGet) | **GET** /v1.0/oef/asset/all | Get all supported assets for OEFs
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileByIdPublicGet**](docs/ProfileApi.md#v10ProfileByIdPublicGet) | **GET** /v1.0/profile/{id}/public | Get public profile
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
-*CoreApiV10.ProgramApi* | [**v10ProgramByIdChartGet**](docs/ProgramApi.md#v10ProgramByIdChartGet) | **GET** /v1.0/program/{id}/chart | Get manager chart
-*CoreApiV10.ProgramApi* | [**v10ProgramByIdFavoriteAddPost**](docs/ProgramApi.md#v10ProgramByIdFavoriteAddPost) | **POST** /v1.0/program/{id}/favorite/add | Add to favorites
-*CoreApiV10.ProgramApi* | [**v10ProgramByIdFavoriteRemovePost**](docs/ProgramApi.md#v10ProgramByIdFavoriteRemovePost) | **POST** /v1.0/program/{id}/favorite/remove | Remove from favorites
-*CoreApiV10.ProgramApi* | [**v10ProgramByIdGet**](docs/ProgramApi.md#v10ProgramByIdGet) | **GET** /v1.0/program/{id} | Program details
-*CoreApiV10.ProgramApi* | [**v10ProgramByIdTradesGet**](docs/ProgramApi.md#v10ProgramByIdTradesGet) | **GET** /v1.0/program/{id}/trades | Get manager trade history
-*CoreApiV10.ProgramApi* | [**v10ProgramListGet**](docs/ProgramApi.md#v10ProgramListGet) | **GET** /v1.0/program/list | Programs list
+*CoreApiV10.ProgramApi* | [**v10ProgramCancelInvestmentRequestPost**](docs/ProgramApi.md#v10ProgramCancelInvestmentRequestPost) | **POST** /v1.0/program/cancelInvestmentRequest | Cancel investment request
+*CoreApiV10.ProgramApi* | [**v10ProgramCreatePost**](docs/ProgramApi.md#v10ProgramCreatePost) | **POST** /v1.0/program/create | Create a investment program
+*CoreApiV10.ProgramApi* | [**v10ProgramInvestPost**](docs/ProgramApi.md#v10ProgramInvestPost) | **POST** /v1.0/program/invest | Invest to program
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartGet**](docs/ProgramsApi.md#v10ProgramsByIdChartGet) | **GET** /v1.0/programs/{id}/chart | Program chart
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
+*CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
+*CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
+*CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
+*CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
 
 
 ## Documentation for Models
@@ -152,13 +166,16 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
  - [CoreApiV10.DashboardProgramDetails](docs/DashboardProgramDetails.md)
  - [CoreApiV10.DashboardProgramsList](docs/DashboardProgramsList.md)
+ - [CoreApiV10.DashboardSummary](docs/DashboardSummary.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
+ - [CoreApiV10.InvestInfo](docs/InvestInfo.md)
+ - [CoreApiV10.InvestToProgram](docs/InvestToProgram.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
- - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
+ - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
@@ -168,10 +185,15 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PlatformInfo](docs/PlatformInfo.md)
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
+ - [CoreApiV10.ProfilePublic](docs/ProfilePublic.md)
  - [CoreApiV10.ProgramChart](docs/ProgramChart.md)
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
+ - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)
+ - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
+ - [CoreApiV10.ProgramSet](docs/ProgramSet.md)
+ - [CoreApiV10.ProgramSets](docs/ProgramSets.md)
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV10.RateViewModel](docs/RateViewModel.md)
@@ -189,6 +211,10 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
+ - [CoreApiV10.WalletSummary](docs/WalletSummary.md)
+ - [CoreApiV10.WalletViewModel](docs/WalletViewModel.md)
+ - [CoreApiV10.WalletsViewModel](docs/WalletsViewModel.md)
+ - [CoreApiV10.WithdrawInfo](docs/WithdrawInfo.md)
 
 
 ## Documentation for Authorization

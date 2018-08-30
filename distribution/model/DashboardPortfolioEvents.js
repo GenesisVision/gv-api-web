@@ -45,6 +45,7 @@ var DashboardPortfolioEvents = function () {
         _classCallCheck(this, DashboardPortfolioEvents);
 
         this.events = undefined;
+        this.total = undefined;
     }
 
     /**
@@ -65,12 +66,19 @@ var DashboardPortfolioEvents = function () {
                 if (data.hasOwnProperty('events')) {
                     obj['events'] = _ApiClient2.default.convertToType(data['events'], [_DashboardPortfolioEvent2.default]);
                 }
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
+                }
             }
             return obj;
         }
 
         /**
         * @member {Array.<module:model/DashboardPortfolioEvent>} events
+        */
+
+        /**
+        * @member {Number} total
         */
 
     }]);

@@ -68,6 +68,15 @@ export default class AssetsValue {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            }
+            if (data.hasOwnProperty('changePercent')) {
+                obj['changePercent'] = ApiClient.convertToType(data['changePercent'], 'Number');
+            }
+            if (data.hasOwnProperty('changeValue')) {
+                obj['changeValue'] = ApiClient.convertToType(data['changeValue'], 'Number');
+            }
         }
         return obj;
     }
@@ -88,6 +97,18 @@ export default class AssetsValue {
     * @member {String} avatar
     */
     avatar = undefined;
+    /**
+    * @member {Number} value
+    */
+    value = undefined;
+    /**
+    * @member {Number} changePercent
+    */
+    changePercent = undefined;
+    /**
+    * @member {Number} changeValue
+    */
+    changeValue = undefined;
 
 
 
@@ -100,6 +121,12 @@ export default class AssetsValue {
     * @readonly
     */
     static TypeEnum = {
+    
+        /**
+         * value: "All"
+         * @const
+         */
+        "All": "All",
     
         /**
          * value: "Program"

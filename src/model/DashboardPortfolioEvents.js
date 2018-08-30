@@ -60,6 +60,9 @@ export default class DashboardPortfolioEvents {
             if (data.hasOwnProperty('events')) {
                 obj['events'] = ApiClient.convertToType(data['events'], [DashboardPortfolioEvent]);
             }
+            if (data.hasOwnProperty('total')) {
+                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
+            }
         }
         return obj;
     }
@@ -68,6 +71,10 @@ export default class DashboardPortfolioEvents {
     * @member {Array.<module:model/DashboardPortfolioEvent>} events
     */
     events = undefined;
+    /**
+    * @member {Number} total
+    */
+    total = undefined;
 
 
 

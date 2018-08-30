@@ -14,8 +14,8 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import ManagerProfile from './ManagerProfile';
 import PersonalProgramDetailsList from './PersonalProgramDetailsList';
+import ProfilePublic from './ProfilePublic';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
 
 
@@ -91,7 +91,7 @@ export default class ProgramDetails {
                 obj['availableForInvestment'] = ApiClient.convertToType(data['availableForInvestment'], 'Number');
             }
             if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ManagerProfile.constructFromObject(data['manager']);
+                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
@@ -147,7 +147,7 @@ export default class ProgramDetails {
     */
     availableForInvestment = undefined;
     /**
-    * @member {module:model/ManagerProfile} manager
+    * @member {module:model/ProfilePublic} manager
     */
     manager = undefined;
     /**

@@ -40,8 +40,9 @@ var DashboardPortfolioEvent = function () {
     function DashboardPortfolioEvent() {
         _classCallCheck(this, DashboardPortfolioEvent);
 
+        this.assetId = undefined;
         this.date = undefined;
-        this.description = undefined;
+        this.title = undefined;
         this.value = undefined;
         this.type = undefined;
         this.logo = undefined;
@@ -62,11 +63,14 @@ var DashboardPortfolioEvent = function () {
             if (data) {
                 obj = obj || new DashboardPortfolioEvent();
 
+                if (data.hasOwnProperty('assetId')) {
+                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
+                }
                 if (data.hasOwnProperty('date')) {
                     obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
@@ -82,11 +86,15 @@ var DashboardPortfolioEvent = function () {
         }
 
         /**
+        * @member {String} assetId
+        */
+
+        /**
         * @member {Date} date
         */
 
         /**
-        * @member {String} description
+        * @member {String} title
         */
 
         /**
@@ -116,9 +124,45 @@ var DashboardPortfolioEvent = function () {
 DashboardPortfolioEvent.TypeEnum = {
 
     /**
-     * value: "Notification"
+     * value: "All"
      * @const
      */
-    "Notification": "Notification"
+    "All": "All",
+
+    /**
+     * value: "Invest"
+     * @const
+     */
+    "Invest": "Invest",
+
+    /**
+     * value: "Withdraw"
+     * @const
+     */
+    "Withdraw": "Withdraw",
+
+    /**
+     * value: "Profit"
+     * @const
+     */
+    "Profit": "Profit",
+
+    /**
+     * value: "Reinvest"
+     * @const
+     */
+    "Reinvest": "Reinvest",
+
+    /**
+     * value: "Canceled"
+     * @const
+     */
+    "Canceled": "Canceled",
+
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended"
 };
 exports.default = DashboardPortfolioEvent;

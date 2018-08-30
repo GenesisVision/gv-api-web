@@ -64,8 +64,23 @@ export default class DashboardChartValue {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            }
+            if (data.hasOwnProperty('valueCurrency')) {
+                obj['valueCurrency'] = ApiClient.convertToType(data['valueCurrency'], 'Number');
+            }
+            if (data.hasOwnProperty('changePercent')) {
+                obj['changePercent'] = ApiClient.convertToType(data['changePercent'], 'Number');
+            }
+            if (data.hasOwnProperty('changeValue')) {
+                obj['changeValue'] = ApiClient.convertToType(data['changeValue'], 'Number');
+            }
+            if (data.hasOwnProperty('changeValueCurrency')) {
+                obj['changeValueCurrency'] = ApiClient.convertToType(data['changeValueCurrency'], 'Number');
+            }
+            if (data.hasOwnProperty('rate')) {
+                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
         }
         return obj;
@@ -80,64 +95,34 @@ export default class DashboardChartValue {
     */
     chart = undefined;
     /**
-    * @member {module:model/DashboardChartValue.CurrencyEnum} currency
+    * @member {Number} value
     */
-    currency = undefined;
-
-
-
-
-
-
+    value = undefined;
     /**
-    * Allowed values for the <code>currency</code> property.
-    * @enum {String}
-    * @readonly
+    * @member {Number} valueCurrency
     */
-    static CurrencyEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
+    valueCurrency = undefined;
+    /**
+    * @member {Number} changePercent
+    */
+    changePercent = undefined;
+    /**
+    * @member {Number} changeValue
+    */
+    changeValue = undefined;
+    /**
+    * @member {Number} changeValueCurrency
+    */
+    changeValueCurrency = undefined;
+    /**
+    * @member {Number} rate
+    */
+    rate = undefined;
+
+
+
+
+
 
 
 

@@ -25,13 +25,13 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _ManagerProfile = require('./ManagerProfile');
-
-var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
-
 var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
 
 var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
+
+var _ProfilePublic = require('./ProfilePublic');
+
+var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
 
 var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
 
@@ -118,7 +118,7 @@ var ProgramDetails = function () {
                     obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
                 }
                 if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ManagerProfile2.default.constructFromObject(data['manager']);
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
@@ -174,7 +174,7 @@ var ProgramDetails = function () {
         */
 
         /**
-        * @member {module:model/ManagerProfile} manager
+        * @member {module:model/ProfilePublic} manager
         */
 
         /**

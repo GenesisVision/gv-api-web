@@ -56,11 +56,14 @@ export default class DashboardPortfolioEvent {
             
             
 
+            if (data.hasOwnProperty('assetId')) {
+                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'String');
+            }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
@@ -76,13 +79,17 @@ export default class DashboardPortfolioEvent {
     }
 
     /**
+    * @member {String} assetId
+    */
+    assetId = undefined;
+    /**
     * @member {Date} date
     */
     date = undefined;
     /**
-    * @member {String} description
+    * @member {String} title
     */
-    description = undefined;
+    title = undefined;
     /**
     * @member {Number} value
     */
@@ -109,10 +116,46 @@ export default class DashboardPortfolioEvent {
     static TypeEnum = {
     
         /**
-         * value: "Notification"
+         * value: "All"
          * @const
          */
-        "Notification": "Notification"    
+        "All": "All",
+    
+        /**
+         * value: "Invest"
+         * @const
+         */
+        "Invest": "Invest",
+    
+        /**
+         * value: "Withdraw"
+         * @const
+         */
+        "Withdraw": "Withdraw",
+    
+        /**
+         * value: "Profit"
+         * @const
+         */
+        "Profit": "Profit",
+    
+        /**
+         * value: "Reinvest"
+         * @const
+         */
+        "Reinvest": "Reinvest",
+    
+        /**
+         * value: "Canceled"
+         * @const
+         */
+        "Canceled": "Canceled",
+    
+        /**
+         * value: "Ended"
+         * @const
+         */
+        "Ended": "Ended"    
     };
 
 

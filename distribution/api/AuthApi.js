@@ -614,47 +614,6 @@ var AuthApi = function () {
      */
 
   }, {
-    key: 'v10AuthSigninBrokerPostWithHttpInfo',
-    value: function v10AuthSigninBrokerPostWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = opts['model'];
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi('/v1.0/auth/signin/broker', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
-     */
-
-  }, {
-    key: 'v10AuthSigninBrokerPost',
-    value: function v10AuthSigninBrokerPost(opts) {
-      return this.v10AuthSigninBrokerPostWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
-     */
-
-  }, {
     key: 'v10AuthSigninInvestorPostWithHttpInfo',
     value: function v10AuthSigninInvestorPostWithHttpInfo(opts) {
       opts = opts || {};

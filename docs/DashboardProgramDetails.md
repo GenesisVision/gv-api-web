@@ -9,13 +9,19 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**manager** | [**ManagerProfile**](ManagerProfile.md) |  | [optional] 
+**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **share** | **Number** |  | [optional] 
-**timeLeft** | **Number** |  | [optional] 
-**value** | **Number** |  | [optional] 
-**profit** | **Number** |  | [optional] 
+**currentValue** | **Number** |  | [optional] 
+**profitPercent** | **Number** |  | [optional] 
+**profitValue** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
+**periodStarts** | **Date** |  | [optional] 
+**periodEnds** | **Date** |  | [optional] 
+**isReinvesting** | **Boolean** |  | [optional] 
+**profit** | **Number** |  | [optional] 
+**timeLeft** | **Number** |  | [optional] 
+**value** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

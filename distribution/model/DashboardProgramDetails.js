@@ -25,9 +25,9 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _ManagerProfile = require('./ManagerProfile');
+var _ProfilePublic = require('./ProfilePublic');
 
-var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
+var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56,11 +56,17 @@ var DashboardProgramDetails = function () {
         this.currency = undefined;
         this.manager = undefined;
         this.share = undefined;
-        this.timeLeft = undefined;
-        this.value = undefined;
-        this.profit = undefined;
+        this.currentValue = undefined;
+        this.profitPercent = undefined;
+        this.profitValue = undefined;
         this.status = undefined;
         this.chart = undefined;
+        this.periodStarts = undefined;
+        this.periodEnds = undefined;
+        this.isReinvesting = undefined;
+        this.profit = undefined;
+        this.timeLeft = undefined;
+        this.value = undefined;
     }
 
     /**
@@ -97,25 +103,43 @@ var DashboardProgramDetails = function () {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
                 if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ManagerProfile2.default.constructFromObject(data['manager']);
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
                 }
                 if (data.hasOwnProperty('share')) {
                     obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
                 }
-                if (data.hasOwnProperty('timeLeft')) {
-                    obj['timeLeft'] = _ApiClient2.default.convertToType(data['timeLeft'], 'Number');
+                if (data.hasOwnProperty('currentValue')) {
+                    obj['currentValue'] = _ApiClient2.default.convertToType(data['currentValue'], 'Number');
                 }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                if (data.hasOwnProperty('profitPercent')) {
+                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
                 }
-                if (data.hasOwnProperty('profit')) {
-                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                if (data.hasOwnProperty('profitValue')) {
+                    obj['profitValue'] = _ApiClient2.default.convertToType(data['profitValue'], 'Number');
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                }
+                if (data.hasOwnProperty('periodStarts')) {
+                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
+                }
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                }
+                if (data.hasOwnProperty('isReinvesting')) {
+                    obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('timeLeft')) {
+                    obj['timeLeft'] = _ApiClient2.default.convertToType(data['timeLeft'], 'Number');
+                }
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
             }
             return obj;
@@ -146,7 +170,7 @@ var DashboardProgramDetails = function () {
         */
 
         /**
-        * @member {module:model/ManagerProfile} manager
+        * @member {module:model/ProfilePublic} manager
         */
 
         /**
@@ -154,15 +178,15 @@ var DashboardProgramDetails = function () {
         */
 
         /**
-        * @member {Number} timeLeft
+        * @member {Number} currentValue
         */
 
         /**
-        * @member {Number} value
+        * @member {Number} profitPercent
         */
 
         /**
-        * @member {Number} profit
+        * @member {Number} profitValue
         */
 
         /**
@@ -171,6 +195,30 @@ var DashboardProgramDetails = function () {
 
         /**
         * @member {Array.<module:model/ChartSimple>} chart
+        */
+
+        /**
+        * @member {Date} periodStarts
+        */
+
+        /**
+        * @member {Date} periodEnds
+        */
+
+        /**
+        * @member {Boolean} isReinvesting
+        */
+
+        /**
+        * @member {Number} profit
+        */
+
+        /**
+        * @member {Number} timeLeft
+        */
+
+        /**
+        * @member {Number} value
         */
 
 

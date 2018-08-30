@@ -606,52 +606,6 @@ export default class AuthApi {
      * @param {module:model/LoginViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10AuthSigninBrokerPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/signin/broker', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
-     */
-    v10AuthSigninBrokerPost(opts) {
-      return this.v10AuthSigninBrokerPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Authorize
-     * @param {Object} opts Optional parameters
-     * @param {module:model/LoginViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
-     */
     v10AuthSigninInvestorPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];

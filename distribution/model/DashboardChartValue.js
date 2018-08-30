@@ -50,7 +50,12 @@ var DashboardChartValue = function () {
 
         this.bars = undefined;
         this.chart = undefined;
-        this.currency = undefined;
+        this.value = undefined;
+        this.valueCurrency = undefined;
+        this.changePercent = undefined;
+        this.changeValue = undefined;
+        this.changeValueCurrency = undefined;
+        this.rate = undefined;
     }
 
     /**
@@ -74,8 +79,23 @@ var DashboardChartValue = function () {
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+                if (data.hasOwnProperty('valueCurrency')) {
+                    obj['valueCurrency'] = _ApiClient2.default.convertToType(data['valueCurrency'], 'Number');
+                }
+                if (data.hasOwnProperty('changePercent')) {
+                    obj['changePercent'] = _ApiClient2.default.convertToType(data['changePercent'], 'Number');
+                }
+                if (data.hasOwnProperty('changeValue')) {
+                    obj['changeValue'] = _ApiClient2.default.convertToType(data['changeValue'], 'Number');
+                }
+                if (data.hasOwnProperty('changeValueCurrency')) {
+                    obj['changeValueCurrency'] = _ApiClient2.default.convertToType(data['changeValueCurrency'], 'Number');
+                }
+                if (data.hasOwnProperty('rate')) {
+                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
             }
             return obj;
@@ -90,14 +110,27 @@ var DashboardChartValue = function () {
         */
 
         /**
-        * @member {module:model/DashboardChartValue.CurrencyEnum} currency
+        * @member {Number} value
         */
 
+        /**
+        * @member {Number} valueCurrency
+        */
 
         /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Number} changePercent
+        */
+
+        /**
+        * @member {Number} changeValue
+        */
+
+        /**
+        * @member {Number} changeValueCurrency
+        */
+
+        /**
+        * @member {Number} rate
         */
 
     }]);
@@ -105,48 +138,4 @@ var DashboardChartValue = function () {
     return DashboardChartValue;
 }();
 
-DashboardChartValue.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
 exports.default = DashboardChartValue;

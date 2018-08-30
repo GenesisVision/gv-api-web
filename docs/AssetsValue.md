@@ -7,11 +7,16 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
+**value** | **Number** |  | [optional] 
+**changePercent** | **Number** |  | [optional] 
+**changeValue** | **Number** |  | [optional] 
 
 
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum
 
+
+* `All` (value: `"All"`)
 
 * `Program` (value: `"Program"`)
 

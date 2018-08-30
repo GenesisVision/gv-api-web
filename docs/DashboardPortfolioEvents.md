@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **events** | [**[DashboardPortfolioEvent]**](DashboardPortfolioEvent.md) |  | [optional] 
+**total** | **Number** |  | [optional] 
 
 
