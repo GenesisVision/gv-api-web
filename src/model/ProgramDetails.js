@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import DashboardProgramDetails from './DashboardProgramDetails';
 import PersonalProgramDetailsList from './PersonalProgramDetailsList';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
@@ -81,14 +82,17 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('periodDuration')) {
                 obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'Number');
             }
-            if (data.hasOwnProperty('periodDateStart')) {
-                obj['periodDateStart'] = ApiClient.convertToType(data['periodDateStart'], 'Date');
+            if (data.hasOwnProperty('periodStarts')) {
+                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
             }
-            if (data.hasOwnProperty('periodDateEnd')) {
-                obj['periodDateEnd'] = ApiClient.convertToType(data['periodDateEnd'], 'Date');
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
-            if (data.hasOwnProperty('availableForInvestment')) {
-                obj['availableForInvestment'] = ApiClient.convertToType(data['availableForInvestment'], 'Number');
+            if (data.hasOwnProperty('isReinvesting')) {
+                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
+            }
+            if (data.hasOwnProperty('availableInvestment')) {
+                obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
@@ -101,6 +105,9 @@ export default class ProgramDetails {
             }
             if (data.hasOwnProperty('personalProgramDetails')) {
                 obj['personalProgramDetails'] = PersonalProgramDetailsList.constructFromObject(data['personalProgramDetails']);
+            }
+            if (data.hasOwnProperty('dashboardProgramDetails')) {
+                obj['dashboardProgramDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardProgramDetails']);
             }
         }
         return obj;
@@ -135,17 +142,21 @@ export default class ProgramDetails {
     */
     periodDuration = undefined;
     /**
-    * @member {Date} periodDateStart
+    * @member {Date} periodStarts
     */
-    periodDateStart = undefined;
+    periodStarts = undefined;
     /**
-    * @member {Date} periodDateEnd
+    * @member {Date} periodEnds
     */
-    periodDateEnd = undefined;
+    periodEnds = undefined;
     /**
-    * @member {Number} availableForInvestment
+    * @member {Boolean} isReinvesting
     */
-    availableForInvestment = undefined;
+    isReinvesting = undefined;
+    /**
+    * @member {Number} availableInvestment
+    */
+    availableInvestment = undefined;
     /**
     * @member {module:model/ProfilePublic} manager
     */
@@ -163,6 +174,11 @@ export default class ProgramDetails {
     * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
     */
     personalProgramDetails = undefined;
+    /**
+    * Fields for dashboard
+    * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
+    */
+    dashboardProgramDetails = undefined;
 
 
 

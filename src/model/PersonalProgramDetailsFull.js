@@ -65,14 +65,17 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
-            if (data.hasOwnProperty('canCloseProgram')) {
-                obj['canCloseProgram'] = ApiClient.convertToType(data['canCloseProgram'], 'Boolean');
+            if (data.hasOwnProperty('invested')) {
+                obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
             }
-            if (data.hasOwnProperty('canClosePeriod')) {
-                obj['canClosePeriod'] = ApiClient.convertToType(data['canClosePeriod'], 'Boolean');
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
-            if (data.hasOwnProperty('canInvest')) {
-                obj['canInvest'] = ApiClient.convertToType(data['canInvest'], 'Boolean');
+            if (data.hasOwnProperty('profit')) {
+                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            }
+            if (data.hasOwnProperty('investmentProgramStatus')) {
+                obj['investmentProgramStatus'] = ApiClient.convertToType(data['investmentProgramStatus'], 'String');
             }
         }
         return obj;
@@ -91,22 +94,58 @@ export default class PersonalProgramDetailsFull {
     */
     isOwnProgram = undefined;
     /**
-    * @member {Boolean} canCloseProgram
+    * @member {Number} invested
     */
-    canCloseProgram = undefined;
+    invested = undefined;
     /**
-    * @member {Boolean} canClosePeriod
+    * @member {Number} value
     */
-    canClosePeriod = undefined;
+    value = undefined;
     /**
-    * @member {Boolean} canInvest
+    * @member {Number} profit
     */
-    canInvest = undefined;
+    profit = undefined;
+    /**
+    * @member {module:model/PersonalProgramDetailsFull.InvestmentProgramStatusEnum} investmentProgramStatus
+    */
+    investmentProgramStatus = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>investmentProgramStatus</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static InvestmentProgramStatusEnum = {
+    
+        /**
+         * value: "Active"
+         * @const
+         */
+        "Active": "Active",
+    
+        /**
+         * value: "Investing"
+         * @const
+         */
+        "Investing": "Investing",
+    
+        /**
+         * value: "Withdrawing"
+         * @const
+         */
+        "Withdrawing": "Withdrawing",
+    
+        /**
+         * value: "Ended"
+         * @const
+         */
+        "Ended": "Ended"    
+    };
 
 
 

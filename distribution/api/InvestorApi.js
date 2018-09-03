@@ -29,10 +29,6 @@ var _DashboardPortfolioEvents = require('../model/DashboardPortfolioEvents');
 
 var _DashboardPortfolioEvents2 = _interopRequireDefault(_DashboardPortfolioEvents);
 
-var _DashboardProgramsList = require('../model/DashboardProgramsList');
-
-var _DashboardProgramsList2 = _interopRequireDefault(_DashboardProgramsList);
-
 var _DashboardSummary = require('../model/DashboardSummary');
 
 var _DashboardSummary2 = _interopRequireDefault(_DashboardSummary);
@@ -48,6 +44,10 @@ var _InvestInfo2 = _interopRequireDefault(_InvestInfo);
 var _ProgramRequests = require('../model/ProgramRequests');
 
 var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
+
+var _ProgramsList = require('../model/ProgramsList');
+
+var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
 var _WithdrawInfo = require('../model/WithdrawInfo');
 
@@ -81,11 +81,16 @@ var InvestorApi = function () {
    * Summary dashdoard info
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
-   * @param {module:model/String} opts.sorting 
+   * @param {String} opts.assetId 
    * @param {Date} opts.from 
    * @param {Date} opts.to 
+   * @param {module:model/String} opts.type 
+   * @param {module:model/String} opts.assetType 
    * @param {Number} opts.skip 
    * @param {Number} opts.take 
+   * @param {module:model/String} opts.chartCurrency 
+   * @param {Date} opts.chartFrom 
+   * @param {Date} opts.chartTo 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
    */
 
@@ -103,11 +108,16 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {
-        'Sorting': opts['sorting'],
+        'AssetId': opts['assetId'],
         'From': opts['from'],
         'To': opts['to'],
+        'Type': opts['type'],
+        'AssetType': opts['assetType'],
         'Skip': opts['skip'],
-        'Take': opts['take']
+        'Take': opts['take'],
+        'chartCurrency': opts['chartCurrency'],
+        'chartFrom': opts['chartFrom'],
+        'chartTo': opts['chartTo']
       };
       var headerParams = {
         'Authorization': authorization
@@ -126,11 +136,16 @@ var InvestorApi = function () {
      * Summary dashdoard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
+     * @param {String} opts.assetId 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
+     * @param {module:model/String} opts.chartCurrency 
+     * @param {Date} opts.chartFrom 
+     * @param {Date} opts.chartTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
      */
 
@@ -146,7 +161,7 @@ var InvestorApi = function () {
      * Portfolio charts
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.currency 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
@@ -186,7 +201,7 @@ var InvestorApi = function () {
      * Portfolio charts
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.currency 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
@@ -689,7 +704,7 @@ var InvestorApi = function () {
      * @param {Date} opts.to 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardProgramsList} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
 
   }, {
@@ -719,7 +734,7 @@ var InvestorApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _DashboardProgramsList2.default;
+      var returnType = _ProgramsList2.default;
 
       return this.apiClient.callApi('/v1.0/investor/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -733,7 +748,7 @@ var InvestorApi = function () {
      * @param {Date} opts.to 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardProgramsList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
 
   }, {

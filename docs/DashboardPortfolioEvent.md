@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 
 * `Profit` (value: `"Profit"`)
 
+* `Loss` (value: `"Loss"`)
+
 * `Reinvest` (value: `"Reinvest"`)
 
 * `Canceled` (value: `"Canceled"`)

@@ -54,7 +54,7 @@ No authorization required
 
 <a name="v10WalletTransactionsGet"></a>
 # **v10WalletTransactionsGet**
-> WalletSummary v10WalletTransactionsGet(authorization, opts)
+> WalletTransactionsViewModel v10WalletTransactionsGet(authorization, opts)
 
 Wallet transactions
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WalletSummary**](WalletSummary.md)
+[**WalletTransactionsViewModel**](WalletTransactionsViewModel.md)
 
 ### Authorization
 

@@ -129,15 +129,13 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreatePost**](docs/ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 *CoreApiV10.OefApi* | [**v10OefAssetAllGet**](docs/OefApi.md#v10OefAssetAllGet) | **GET** /v1.0/oef/asset/all | Get all supported assets for OEFs
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileByIdPublicGet**](docs/ProfileApi.md#v10ProfileByIdPublicGet) | **GET** /v1.0/profile/{id}/public | Get public profile
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
-*CoreApiV10.ProgramApi* | [**v10ProgramCancelInvestmentRequestPost**](docs/ProgramApi.md#v10ProgramCancelInvestmentRequestPost) | **POST** /v1.0/program/cancelInvestmentRequest | Cancel investment request
-*CoreApiV10.ProgramApi* | [**v10ProgramCreatePost**](docs/ProgramApi.md#v10ProgramCreatePost) | **POST** /v1.0/program/create | Create a investment program
-*CoreApiV10.ProgramApi* | [**v10ProgramInvestPost**](docs/ProgramApi.md#v10ProgramInvestPost) | **POST** /v1.0/program/invest | Invest to program
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartGet**](docs/ProgramsApi.md#v10ProgramsByIdChartGet) | **GET** /v1.0/programs/{id}/chart | Program chart
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
@@ -165,7 +163,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.DashboardPortfolioEvent](docs/DashboardPortfolioEvent.md)
  - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
  - [CoreApiV10.DashboardProgramDetails](docs/DashboardProgramDetails.md)
- - [CoreApiV10.DashboardProgramsList](docs/DashboardProgramsList.md)
  - [CoreApiV10.DashboardSummary](docs/DashboardSummary.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
@@ -173,7 +170,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.InvestInfo](docs/InvestInfo.md)
- - [CoreApiV10.InvestToProgram](docs/InvestToProgram.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
@@ -212,8 +208,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
  - [CoreApiV10.WalletSummary](docs/WalletSummary.md)
- - [CoreApiV10.WalletViewModel](docs/WalletViewModel.md)
- - [CoreApiV10.WalletsViewModel](docs/WalletsViewModel.md)
+ - [CoreApiV10.WalletTransaction](docs/WalletTransaction.md)
+ - [CoreApiV10.WalletTransactionsViewModel](docs/WalletTransactionsViewModel.md)
  - [CoreApiV10.WithdrawInfo](docs/WithdrawInfo.md)
 
 

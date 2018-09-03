@@ -66,6 +66,18 @@ export default class ProgramStatistic {
             if (data.hasOwnProperty('balanceSecondary')) {
                 obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
             }
+            if (data.hasOwnProperty('currentValue')) {
+                obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'Number');
+            }
+            if (data.hasOwnProperty('profitPercent')) {
+                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
+            }
+            if (data.hasOwnProperty('profitValue')) {
+                obj['profitValue'] = ApiClient.convertToType(data['profitValue'], 'Number');
+            }
+            if (data.hasOwnProperty('drawdownPercent')) {
+                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'Number');
+            }
             if (data.hasOwnProperty('investorsCount')) {
                 obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'Number');
             }
@@ -96,12 +108,6 @@ export default class ProgramStatistic {
             if (data.hasOwnProperty('sharpeRatioPercent')) {
                 obj['sharpeRatioPercent'] = ApiClient.convertToType(data['sharpeRatioPercent'], 'Number');
             }
-            if (data.hasOwnProperty('drawdownPercent')) {
-                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'Number');
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
-            }
         }
         return obj;
     }
@@ -118,6 +124,22 @@ export default class ProgramStatistic {
     * @member {module:model/AmountWithCurrency} balanceSecondary
     */
     balanceSecondary = undefined;
+    /**
+    * @member {Number} currentValue
+    */
+    currentValue = undefined;
+    /**
+    * @member {Number} profitPercent
+    */
+    profitPercent = undefined;
+    /**
+    * @member {Number} profitValue
+    */
+    profitValue = undefined;
+    /**
+    * @member {Number} drawdownPercent
+    */
+    drawdownPercent = undefined;
     /**
     * @member {Number} investorsCount
     */
@@ -158,14 +180,6 @@ export default class ProgramStatistic {
     * @member {Number} sharpeRatioPercent
     */
     sharpeRatioPercent = undefined;
-    /**
-    * @member {Number} drawdownPercent
-    */
-    drawdownPercent = undefined;
-    /**
-    * @member {Number} profitPercent
-    */
-    profitPercent = undefined;
 
 
 

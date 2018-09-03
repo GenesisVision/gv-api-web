@@ -33,11 +33,16 @@ let apiInstance = new CoreApiV10.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'sorting': "sorting_example", // String | 
+  'assetId': "assetId_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'type': "type_example", // String | 
+  'assetType': "assetType_example", // String | 
   'skip': 56, // Number | 
-  'take': 56 // Number | 
+  'take': 56, // Number | 
+  'chartCurrency': "chartCurrency_example", // String | 
+  'chartFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartTo': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
 apiInstance.v10InvestorGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -52,11 +57,16 @@ apiInstance.v10InvestorGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **sorting** | **String**|  | [optional] 
+ **assetId** | [**String**](.md)|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
+ **type** | **String**|  | [optional] 
+ **assetType** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
+ **chartCurrency** | **String**|  | [optional] 
+ **chartFrom** | **Date**|  | [optional] 
+ **chartTo** | **Date**|  | [optional] 
 
 ### Return type
 
@@ -103,7 +113,7 @@ apiInstance.v10InvestorPortfolioChartGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **currency** | [**String**](.md)|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
 
@@ -499,7 +509,7 @@ No authorization required
 
 <a name="v10InvestorProgramsGet"></a>
 # **v10InvestorProgramsGet**
-> DashboardProgramsList v10InvestorProgramsGet(authorization, opts)
+> ProgramsList v10InvestorProgramsGet(authorization, opts)
 
 Programs list
 
@@ -539,7 +549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DashboardProgramsList**](DashboardProgramsList.md)
+[**ProgramsList**](ProgramsList.md)
 
 ### Authorization
 

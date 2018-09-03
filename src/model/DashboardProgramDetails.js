@@ -13,8 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import ChartSimple from './ChartSimple';
-import ProfilePublic from './ProfilePublic';
 
 
 
@@ -58,236 +56,22 @@ export default class DashboardProgramDetails {
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
-            }
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
-            }
-            if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
             if (data.hasOwnProperty('share')) {
                 obj['share'] = ApiClient.convertToType(data['share'], 'Number');
-            }
-            if (data.hasOwnProperty('currentValue')) {
-                obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'Number');
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
-            }
-            if (data.hasOwnProperty('profitValue')) {
-                obj['profitValue'] = ApiClient.convertToType(data['profitValue'], 'Number');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
-            }
-            if (data.hasOwnProperty('periodStarts')) {
-                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
-            if (data.hasOwnProperty('isReinvesting')) {
-                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
-            }
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeLeft')) {
-                obj['timeLeft'] = ApiClient.convertToType(data['timeLeft'], 'Number');
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-    * @member {String} id
-    */
-    id = undefined;
-    /**
-    * @member {String} logo
-    */
-    logo = undefined;
-    /**
-    * @member {Number} level
-    */
-    level = undefined;
-    /**
-    * @member {String} title
-    */
-    title = undefined;
-    /**
-    * @member {String} description
-    */
-    description = undefined;
-    /**
-    * @member {module:model/DashboardProgramDetails.CurrencyEnum} currency
-    */
-    currency = undefined;
-    /**
-    * @member {module:model/ProfilePublic} manager
-    */
-    manager = undefined;
-    /**
     * @member {Number} share
     */
     share = undefined;
-    /**
-    * @member {Number} currentValue
-    */
-    currentValue = undefined;
-    /**
-    * @member {Number} profitPercent
-    */
-    profitPercent = undefined;
-    /**
-    * @member {Number} profitValue
-    */
-    profitValue = undefined;
-    /**
-    * @member {module:model/DashboardProgramDetails.StatusEnum} status
-    */
-    status = undefined;
-    /**
-    * @member {Array.<module:model/ChartSimple>} chart
-    */
-    chart = undefined;
-    /**
-    * @member {Date} periodStarts
-    */
-    periodStarts = undefined;
-    /**
-    * @member {Date} periodEnds
-    */
-    periodEnds = undefined;
-    /**
-    * @member {Boolean} isReinvesting
-    */
-    isReinvesting = undefined;
-    /**
-    * @member {Number} profit
-    */
-    profit = undefined;
-    /**
-    * @member {Number} timeLeft
-    */
-    timeLeft = undefined;
-    /**
-    * @member {Number} value
-    */
-    value = undefined;
 
 
 
 
 
-
-    /**
-    * Allowed values for the <code>currency</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static CurrencyEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
-
-    /**
-    * Allowed values for the <code>status</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static StatusEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "Pending"
-         * @const
-         */
-        "Pending": "Pending",
-    
-        /**
-         * value: "Active"
-         * @const
-         */
-        "Active": "Active",
-    
-        /**
-         * value: "Withdrawing"
-         * @const
-         */
-        "Withdrawing": "Withdrawing",
-    
-        /**
-         * value: "Ended"
-         * @const
-         */
-        "Ended": "Ended"    
-    };
 
 
 

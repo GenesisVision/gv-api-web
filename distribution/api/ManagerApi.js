@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,57 +21,91 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ErrorViewModel = require('../model/ErrorViewModel');
+
+var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+
+var _NewProgramRequest = require('../model/NewProgramRequest');
+
+var _NewProgramRequest2 = _interopRequireDefault(_NewProgramRequest);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The DashboardProgramDetails model module.
-* @module model/DashboardProgramDetails
+* Manager service.
+* @module api/ManagerApi
 * @version v1.0
 */
-var DashboardProgramDetails = function () {
-    /**
-    * Constructs a new <code>DashboardProgramDetails</code>.
-    * @alias module:model/DashboardProgramDetails
-    * @class
-    */
+var ManagerApi = function () {
 
-    function DashboardProgramDetails() {
-        _classCallCheck(this, DashboardProgramDetails);
+  /**
+  * Constructs a new ManagerApi. 
+  * @alias module:api/ManagerApi
+  * @class
+  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+  * default to {@link module:ApiClient#instance} if unspecified.
+  */
+  function ManagerApi(apiClient) {
+    _classCallCheck(this, ManagerApi);
 
-        this.share = undefined;
+    this.apiClient = apiClient || _ApiClient2.default.instance;
+  }
+
+  /**
+   * Create an investment program
+   * @param {String} authorization JWT access token
+   * @param {Object} opts Optional parameters
+   * @param {module:model/NewProgramRequest} opts.request 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+   */
+
+
+  _createClass(ManagerApi, [{
+    key: 'v10ManagerProgramsCreatePostWithHttpInfo',
+    value: function v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsCreatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-    * Constructs a <code>DashboardProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
-    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-    * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/DashboardProgramDetails} obj Optional instance to populate.
-    * @return {module:model/DashboardProgramDetails} The populated <code>DashboardProgramDetails</code> instance.
-    */
+     * Create an investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewProgramRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
 
+  }, {
+    key: 'v10ManagerProgramsCreatePost',
+    value: function v10ManagerProgramsCreatePost(authorization, opts) {
+      return this.v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }]);
 
-    _createClass(DashboardProgramDetails, null, [{
-        key: 'constructFromObject',
-        value: function constructFromObject(data, obj) {
-            if (data) {
-                obj = obj || new DashboardProgramDetails();
-
-                if (data.hasOwnProperty('share')) {
-                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
-                }
-            }
-            return obj;
-        }
-
-        /**
-        * @member {Number} share
-        */
-
-    }]);
-
-    return DashboardProgramDetails;
+  return ManagerApi;
 }();
 
-exports.default = DashboardProgramDetails;
+exports.default = ManagerApi;

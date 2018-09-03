@@ -140,6 +140,12 @@ export default class DashboardPortfolioEvent {
         "Profit": "Profit",
     
         /**
+         * value: "Loss"
+         * @const
+         */
+        "Loss": "Loss",
+    
+        /**
          * value: "Reinvest"
          * @const
          */

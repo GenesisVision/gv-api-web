@@ -47,10 +47,12 @@ var ProgramDetailsListStatistic = function () {
         this.balanceInBase = undefined;
         this.balanceInGVT = undefined;
         this.balanceInFavorite = undefined;
+        this.currentValue = undefined;
+        this.profitPercent = undefined;
+        this.profitValue = undefined;
+        this.drawdownPercent = undefined;
         this.investorsCount = undefined;
         this.tradesCount = undefined;
-        this.drawdownPercent = undefined;
-        this.profitPercent = undefined;
     }
 
     /**
@@ -77,17 +79,23 @@ var ProgramDetailsListStatistic = function () {
                 if (data.hasOwnProperty('balanceInFavorite')) {
                     obj['balanceInFavorite'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInFavorite']);
                 }
+                if (data.hasOwnProperty('currentValue')) {
+                    obj['currentValue'] = _ApiClient2.default.convertToType(data['currentValue'], 'Number');
+                }
+                if (data.hasOwnProperty('profitPercent')) {
+                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
+                }
+                if (data.hasOwnProperty('profitValue')) {
+                    obj['profitValue'] = _ApiClient2.default.convertToType(data['profitValue'], 'Number');
+                }
+                if (data.hasOwnProperty('drawdownPercent')) {
+                    obj['drawdownPercent'] = _ApiClient2.default.convertToType(data['drawdownPercent'], 'Number');
+                }
                 if (data.hasOwnProperty('investorsCount')) {
                     obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
                 }
                 if (data.hasOwnProperty('tradesCount')) {
                     obj['tradesCount'] = _ApiClient2.default.convertToType(data['tradesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('drawdownPercent')) {
-                    obj['drawdownPercent'] = _ApiClient2.default.convertToType(data['drawdownPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
                 }
             }
             return obj;
@@ -106,11 +114,15 @@ var ProgramDetailsListStatistic = function () {
         */
 
         /**
-        * @member {Number} investorsCount
+        * @member {Number} currentValue
         */
 
         /**
-        * @member {Number} tradesCount
+        * @member {Number} profitPercent
+        */
+
+        /**
+        * @member {Number} profitValue
         */
 
         /**
@@ -118,7 +130,11 @@ var ProgramDetailsListStatistic = function () {
         */
 
         /**
-        * @member {Number} profitPercent
+        * @member {Number} investorsCount
+        */
+
+        /**
+        * @member {Number} tradesCount
         */
 
     }]);

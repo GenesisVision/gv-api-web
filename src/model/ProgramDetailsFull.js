@@ -80,17 +80,23 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('periodDuration')) {
                 obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'Number');
             }
-            if (data.hasOwnProperty('periodDateStart')) {
-                obj['periodDateStart'] = ApiClient.convertToType(data['periodDateStart'], 'Date');
+            if (data.hasOwnProperty('periodStarts')) {
+                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
             }
-            if (data.hasOwnProperty('periodDateEnd')) {
-                obj['periodDateEnd'] = ApiClient.convertToType(data['periodDateEnd'], 'Date');
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
-            if (data.hasOwnProperty('successFee')) {
-                obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
+            if (data.hasOwnProperty('entryFee')) {
+                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('availableForInvestment')) {
-                obj['availableForInvestment'] = ApiClient.convertToType(data['availableForInvestment'], 'Number');
+            if (data.hasOwnProperty('isReinvesting')) {
+                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('availableInvestment')) {
+                obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
@@ -134,21 +140,29 @@ export default class ProgramDetailsFull {
     */
     periodDuration = undefined;
     /**
-    * @member {Date} periodDateStart
+    * @member {Date} periodStarts
     */
-    periodDateStart = undefined;
+    periodStarts = undefined;
     /**
-    * @member {Date} periodDateEnd
+    * @member {Date} periodEnds
     */
-    periodDateEnd = undefined;
+    periodEnds = undefined;
     /**
-    * @member {Number} successFee
+    * @member {Number} entryFee
     */
-    successFee = undefined;
+    entryFee = undefined;
     /**
-    * @member {Number} availableForInvestment
+    * @member {Boolean} isReinvesting
     */
-    availableForInvestment = undefined;
+    isReinvesting = undefined;
+    /**
+    * @member {module:model/ProgramDetailsFull.StatusEnum} status
+    */
+    status = undefined;
+    /**
+    * @member {Number} availableInvestment
+    */
+    availableInvestment = undefined;
     /**
     * @member {module:model/ProfilePublic} manager
     */
@@ -216,6 +230,50 @@ export default class ProgramDetailsFull {
          * @const
          */
         "EUR": "EUR"    
+    };
+
+    /**
+    * Allowed values for the <code>status</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static StatusEnum = {
+    
+        /**
+         * value: "None"
+         * @const
+         */
+        "None": "None",
+    
+        /**
+         * value: "Pending"
+         * @const
+         */
+        "Pending": "Pending",
+    
+        /**
+         * value: "ErrorCreating"
+         * @const
+         */
+        "ErrorCreating": "ErrorCreating",
+    
+        /**
+         * value: "Active"
+         * @const
+         */
+        "Active": "Active",
+    
+        /**
+         * value: "Closed"
+         * @const
+         */
+        "Closed": "Closed",
+    
+        /**
+         * value: "Archived"
+         * @const
+         */
+        "Archived": "Archived"    
     };
 
 

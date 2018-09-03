@@ -428,10 +428,16 @@ export default class ProgramsApi {
 
     /**
      * Programs sets
+     * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
      */
-    v10ProgramsSetsGetWithHttpInfo() {
+    v10ProgramsSetsGetWithHttpInfo(authorization) {
       let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsSetsGet");
+      }
 
 
       let pathParams = {
@@ -439,6 +445,7 @@ export default class ProgramsApi {
       let queryParams = {
       };
       let headerParams = {
+        'Authorization': authorization
       };
       let formParams = {
       };
@@ -457,10 +464,11 @@ export default class ProgramsApi {
 
     /**
      * Programs sets
+     * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
      */
-    v10ProgramsSetsGet() {
-      return this.v10ProgramsSetsGetWithHttpInfo()
+    v10ProgramsSetsGet(authorization) {
+      return this.v10ProgramsSetsGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

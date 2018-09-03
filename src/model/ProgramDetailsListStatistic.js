@@ -66,17 +66,23 @@ export default class ProgramDetailsListStatistic {
             if (data.hasOwnProperty('balanceInFavorite')) {
                 obj['balanceInFavorite'] = AmountWithCurrency.constructFromObject(data['balanceInFavorite']);
             }
+            if (data.hasOwnProperty('currentValue')) {
+                obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'Number');
+            }
+            if (data.hasOwnProperty('profitPercent')) {
+                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
+            }
+            if (data.hasOwnProperty('profitValue')) {
+                obj['profitValue'] = ApiClient.convertToType(data['profitValue'], 'Number');
+            }
+            if (data.hasOwnProperty('drawdownPercent')) {
+                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'Number');
+            }
             if (data.hasOwnProperty('investorsCount')) {
                 obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'Number');
             }
             if (data.hasOwnProperty('tradesCount')) {
                 obj['tradesCount'] = ApiClient.convertToType(data['tradesCount'], 'Number');
-            }
-            if (data.hasOwnProperty('drawdownPercent')) {
-                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'Number');
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
             }
         }
         return obj;
@@ -95,6 +101,22 @@ export default class ProgramDetailsListStatistic {
     */
     balanceInFavorite = undefined;
     /**
+    * @member {Number} currentValue
+    */
+    currentValue = undefined;
+    /**
+    * @member {Number} profitPercent
+    */
+    profitPercent = undefined;
+    /**
+    * @member {Number} profitValue
+    */
+    profitValue = undefined;
+    /**
+    * @member {Number} drawdownPercent
+    */
+    drawdownPercent = undefined;
+    /**
     * @member {Number} investorsCount
     */
     investorsCount = undefined;
@@ -102,14 +124,6 @@ export default class ProgramDetailsListStatistic {
     * @member {Number} tradesCount
     */
     tradesCount = undefined;
-    /**
-    * @member {Number} drawdownPercent
-    */
-    drawdownPercent = undefined;
-    /**
-    * @member {Number} profitPercent
-    */
-    profitPercent = undefined;
 
 
 

@@ -29,6 +29,10 @@ var _WalletSummary = require('../model/WalletSummary');
 
 var _WalletSummary2 = _interopRequireDefault(_WalletSummary);
 
+var _WalletTransactionsViewModel = require('../model/WalletTransactionsViewModel');
+
+var _WalletTransactionsViewModel2 = _interopRequireDefault(_WalletTransactionsViewModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -119,7 +123,7 @@ var WalletApi = function () {
      * @param {module:model/String} opts.txAction 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletSummary} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletTransactionsViewModel} and HTTP response
      */
 
   }, {
@@ -151,7 +155,7 @@ var WalletApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _WalletSummary2.default;
+      var returnType = _WalletTransactionsViewModel2.default;
 
       return this.apiClient.callApi('/v1.0/wallet/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -167,7 +171,7 @@ var WalletApi = function () {
      * @param {module:model/String} opts.txAction 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletSummary}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletTransactionsViewModel}
      */
 
   }, {

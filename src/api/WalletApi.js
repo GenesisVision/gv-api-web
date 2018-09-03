@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import WalletSummary from '../model/WalletSummary';
+import WalletTransactionsViewModel from '../model/WalletTransactionsViewModel';
 
 /**
 * Wallet service.
@@ -104,7 +105,7 @@ export default class WalletApi {
      * @param {module:model/String} opts.txAction 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletSummary} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletTransactionsViewModel} and HTTP response
      */
     v10WalletTransactionsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -136,7 +137,7 @@ export default class WalletApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = WalletSummary;
+      let returnType = WalletTransactionsViewModel;
 
       return this.apiClient.callApi(
         '/v1.0/wallet/transactions', 'GET',
@@ -156,7 +157,7 @@ export default class WalletApi {
      * @param {module:model/String} opts.txAction 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletSummary}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletTransactionsViewModel}
      */
     v10WalletTransactionsGet(authorization, opts) {
       return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts)

@@ -21,57 +21,69 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _WalletTransaction = require('./WalletTransaction');
+
+var _WalletTransaction2 = _interopRequireDefault(_WalletTransaction);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The DashboardProgramDetails model module.
-* @module model/DashboardProgramDetails
+* The WalletTransactionsViewModel model module.
+* @module model/WalletTransactionsViewModel
 * @version v1.0
 */
-var DashboardProgramDetails = function () {
+var WalletTransactionsViewModel = function () {
     /**
-    * Constructs a new <code>DashboardProgramDetails</code>.
-    * @alias module:model/DashboardProgramDetails
+    * Constructs a new <code>WalletTransactionsViewModel</code>.
+    * @alias module:model/WalletTransactionsViewModel
     * @class
     */
 
-    function DashboardProgramDetails() {
-        _classCallCheck(this, DashboardProgramDetails);
+    function WalletTransactionsViewModel() {
+        _classCallCheck(this, WalletTransactionsViewModel);
 
-        this.share = undefined;
+        this.transactions = undefined;
+        this.total = undefined;
     }
 
     /**
-    * Constructs a <code>DashboardProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WalletTransactionsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/DashboardProgramDetails} obj Optional instance to populate.
-    * @return {module:model/DashboardProgramDetails} The populated <code>DashboardProgramDetails</code> instance.
+    * @param {module:model/WalletTransactionsViewModel} obj Optional instance to populate.
+    * @return {module:model/WalletTransactionsViewModel} The populated <code>WalletTransactionsViewModel</code> instance.
     */
 
 
-    _createClass(DashboardProgramDetails, null, [{
+    _createClass(WalletTransactionsViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new DashboardProgramDetails();
+                obj = obj || new WalletTransactionsViewModel();
 
-                if (data.hasOwnProperty('share')) {
-                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
+                if (data.hasOwnProperty('transactions')) {
+                    obj['transactions'] = _ApiClient2.default.convertToType(data['transactions'], [_WalletTransaction2.default]);
+                }
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} share
+        * @member {Array.<module:model/WalletTransaction>} transactions
+        */
+
+        /**
+        * @member {Number} total
         */
 
     }]);
 
-    return DashboardProgramDetails;
+    return WalletTransactionsViewModel;
 }();
 
-exports.default = DashboardProgramDetails;
+exports.default = WalletTransactionsViewModel;

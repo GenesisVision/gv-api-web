@@ -440,17 +440,25 @@ var ProgramsApi = function () {
 
     /**
      * Programs sets
+     * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
      */
 
   }, {
     key: 'v10ProgramsSetsGetWithHttpInfo',
-    value: function v10ProgramsSetsGetWithHttpInfo() {
+    value: function v10ProgramsSetsGetWithHttpInfo(authorization) {
       var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsSetsGet");
+      }
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
@@ -463,13 +471,14 @@ var ProgramsApi = function () {
 
     /**
      * Programs sets
+     * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
      */
 
   }, {
     key: 'v10ProgramsSetsGet',
-    value: function v10ProgramsSetsGet() {
-      return this.v10ProgramsSetsGetWithHttpInfo().then(function (response_and_data) {
+    value: function v10ProgramsSetsGet(authorization) {
+      return this.v10ProgramsSetsGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

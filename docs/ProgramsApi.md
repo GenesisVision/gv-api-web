@@ -320,7 +320,7 @@ No authorization required
 
 <a name="v10ProgramsSetsGet"></a>
 # **v10ProgramsSetsGet**
-> ProgramSets v10ProgramsSetsGet()
+> ProgramSets v10ProgramsSetsGet(authorization)
 
 Programs sets
 
@@ -329,7 +329,10 @@ Programs sets
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ProgramsApi();
-apiInstance.v10ProgramsSetsGet().then((data) => {
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ProgramsSetsGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -338,7 +341,10 @@ apiInstance.v10ProgramsSetsGet().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
 
 ### Return type
 

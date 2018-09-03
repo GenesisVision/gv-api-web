@@ -21,206 +21,221 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AmountWithCurrency = require('./AmountWithCurrency');
-
-var _AmountWithCurrency2 = _interopRequireDefault(_AmountWithCurrency);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramStatistic model module.
-* @module model/ProgramStatistic
+* The WalletTransaction model module.
+* @module model/WalletTransaction
 * @version v1.0
 */
-var ProgramStatistic = function () {
+var WalletTransaction = function () {
     /**
-    * Constructs a new <code>ProgramStatistic</code>.
-    * @alias module:model/ProgramStatistic
+    * Constructs a new <code>WalletTransaction</code>.
+    * @alias module:model/WalletTransaction
     * @class
     */
 
-    function ProgramStatistic() {
-        _classCallCheck(this, ProgramStatistic);
+    function WalletTransaction() {
+        _classCallCheck(this, WalletTransaction);
 
-        this.balanceBase = undefined;
-        this.balanceGVT = undefined;
-        this.balanceSecondary = undefined;
-        this.currentValue = undefined;
-        this.profitPercent = undefined;
-        this.profitValue = undefined;
-        this.drawdownPercent = undefined;
-        this.investorsCount = undefined;
-        this.startDate = undefined;
-        this.startBalance = undefined;
-        this.startCurrency = undefined;
-        this.investedAmount = undefined;
-        this.investedCurrency = undefined;
-        this.tradesCount = undefined;
-        this.tradesSuccessCount = undefined;
-        this.profitFactorPercent = undefined;
-        this.sharpeRatioPercent = undefined;
+        this.id = undefined;
+        this.amount = undefined;
+        this.amountConverted = undefined;
+        this.date = undefined;
+        this.number = undefined;
+        this.sourceId = undefined;
+        this.sourceType = undefined;
+        this.sourceCurrency = undefined;
+        this.action = undefined;
+        this.destinationId = undefined;
+        this.destinationType = undefined;
+        this.destinationCurrency = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramStatistic</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WalletTransaction</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramStatistic} obj Optional instance to populate.
-    * @return {module:model/ProgramStatistic} The populated <code>ProgramStatistic</code> instance.
+    * @param {module:model/WalletTransaction} obj Optional instance to populate.
+    * @return {module:model/WalletTransaction} The populated <code>WalletTransaction</code> instance.
     */
 
 
-    _createClass(ProgramStatistic, null, [{
+    _createClass(WalletTransaction, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramStatistic();
+                obj = obj || new WalletTransaction();
 
-                if (data.hasOwnProperty('balanceBase')) {
-                    obj['balanceBase'] = _AmountWithCurrency2.default.constructFromObject(data['balanceBase']);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('balanceGVT')) {
-                    obj['balanceGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceGVT']);
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
-                if (data.hasOwnProperty('balanceSecondary')) {
-                    obj['balanceSecondary'] = _AmountWithCurrency2.default.constructFromObject(data['balanceSecondary']);
+                if (data.hasOwnProperty('amountConverted')) {
+                    obj['amountConverted'] = _ApiClient2.default.convertToType(data['amountConverted'], 'Number');
                 }
-                if (data.hasOwnProperty('currentValue')) {
-                    obj['currentValue'] = _ApiClient2.default.convertToType(data['currentValue'], 'Number');
+                if (data.hasOwnProperty('date')) {
+                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
+                if (data.hasOwnProperty('number')) {
+                    obj['number'] = _ApiClient2.default.convertToType(data['number'], 'Number');
                 }
-                if (data.hasOwnProperty('profitValue')) {
-                    obj['profitValue'] = _ApiClient2.default.convertToType(data['profitValue'], 'Number');
+                if (data.hasOwnProperty('sourceId')) {
+                    obj['sourceId'] = _ApiClient2.default.convertToType(data['sourceId'], 'String');
                 }
-                if (data.hasOwnProperty('drawdownPercent')) {
-                    obj['drawdownPercent'] = _ApiClient2.default.convertToType(data['drawdownPercent'], 'Number');
+                if (data.hasOwnProperty('sourceType')) {
+                    obj['sourceType'] = _ApiClient2.default.convertToType(data['sourceType'], 'String');
                 }
-                if (data.hasOwnProperty('investorsCount')) {
-                    obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
+                if (data.hasOwnProperty('sourceCurrency')) {
+                    obj['sourceCurrency'] = _ApiClient2.default.convertToType(data['sourceCurrency'], 'String');
                 }
-                if (data.hasOwnProperty('startDate')) {
-                    obj['startDate'] = _ApiClient2.default.convertToType(data['startDate'], 'Date');
+                if (data.hasOwnProperty('action')) {
+                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
                 }
-                if (data.hasOwnProperty('startBalance')) {
-                    obj['startBalance'] = _ApiClient2.default.convertToType(data['startBalance'], 'Number');
+                if (data.hasOwnProperty('destinationId')) {
+                    obj['destinationId'] = _ApiClient2.default.convertToType(data['destinationId'], 'String');
                 }
-                if (data.hasOwnProperty('startCurrency')) {
-                    obj['startCurrency'] = _ApiClient2.default.convertToType(data['startCurrency'], 'String');
+                if (data.hasOwnProperty('destinationType')) {
+                    obj['destinationType'] = _ApiClient2.default.convertToType(data['destinationType'], 'String');
                 }
-                if (data.hasOwnProperty('investedAmount')) {
-                    obj['investedAmount'] = _ApiClient2.default.convertToType(data['investedAmount'], 'Number');
-                }
-                if (data.hasOwnProperty('investedCurrency')) {
-                    obj['investedCurrency'] = _ApiClient2.default.convertToType(data['investedCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('tradesCount')) {
-                    obj['tradesCount'] = _ApiClient2.default.convertToType(data['tradesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('tradesSuccessCount')) {
-                    obj['tradesSuccessCount'] = _ApiClient2.default.convertToType(data['tradesSuccessCount'], 'Number');
-                }
-                if (data.hasOwnProperty('profitFactorPercent')) {
-                    obj['profitFactorPercent'] = _ApiClient2.default.convertToType(data['profitFactorPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('sharpeRatioPercent')) {
-                    obj['sharpeRatioPercent'] = _ApiClient2.default.convertToType(data['sharpeRatioPercent'], 'Number');
+                if (data.hasOwnProperty('destinationCurrency')) {
+                    obj['destinationCurrency'] = _ApiClient2.default.convertToType(data['destinationCurrency'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceBase
+        * @member {String} id
         */
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceGVT
+        * @member {Number} amount
         */
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceSecondary
+        * @member {Number} amountConverted
         */
 
         /**
-        * @member {Number} currentValue
+        * @member {Date} date
         */
 
         /**
-        * @member {Number} profitPercent
+        * @member {Number} number
         */
 
         /**
-        * @member {Number} profitValue
+        * @member {String} sourceId
         */
 
         /**
-        * @member {Number} drawdownPercent
+        * @member {module:model/WalletTransaction.SourceTypeEnum} sourceType
         */
 
         /**
-        * @member {Number} investorsCount
+        * @member {module:model/WalletTransaction.SourceCurrencyEnum} sourceCurrency
         */
 
         /**
-        * @member {Date} startDate
+        * @member {module:model/WalletTransaction.ActionEnum} action
         */
 
         /**
-        * @member {Number} startBalance
+        * @member {String} destinationId
         */
 
         /**
-        * @member {module:model/ProgramStatistic.StartCurrencyEnum} startCurrency
+        * @member {module:model/WalletTransaction.DestinationTypeEnum} destinationType
         */
 
         /**
-        * @member {Number} investedAmount
-        */
-
-        /**
-        * @member {module:model/ProgramStatistic.InvestedCurrencyEnum} investedCurrency
-        */
-
-        /**
-        * @member {Number} tradesCount
-        */
-
-        /**
-        * @member {Number} tradesSuccessCount
-        */
-
-        /**
-        * @member {Number} profitFactorPercent
-        */
-
-        /**
-        * @member {Number} sharpeRatioPercent
+        * @member {module:model/WalletTransaction.DestinationCurrencyEnum} destinationCurrency
         */
 
 
         /**
-        * Allowed values for the <code>startCurrency</code> property.
+        * Allowed values for the <code>sourceType</code> property.
         * @enum {String}
         * @readonly
         */
 
 
         /**
-        * Allowed values for the <code>investedCurrency</code> property.
+        * Allowed values for the <code>sourceCurrency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>action</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>destinationType</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>destinationCurrency</code> property.
         * @enum {String}
         * @readonly
         */
 
     }]);
 
-    return ProgramStatistic;
+    return WalletTransaction;
 }();
 
-ProgramStatistic.StartCurrencyEnum = {
+WalletTransaction.SourceTypeEnum = {
+
+    /**
+     * value: "Wallet"
+     * @const
+     */
+    "Wallet": "Wallet",
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund",
+
+    /**
+     * value: "ProgramRequest"
+     * @const
+     */
+    "ProgramRequest": "ProgramRequest",
+
+    /**
+     * value: "WithdrawalRequest"
+     * @const
+     */
+    "WithdrawalRequest": "WithdrawalRequest",
+
+    /**
+     * value: "PaymentTransaction"
+     * @const
+     */
+    "PaymentTransaction": "PaymentTransaction"
+};
+WalletTransaction.SourceCurrencyEnum = {
 
     /**
      * value: "Undefined"
@@ -264,7 +279,107 @@ ProgramStatistic.StartCurrencyEnum = {
      */
     "EUR": "EUR"
 };
-ProgramStatistic.InvestedCurrencyEnum = {
+WalletTransaction.ActionEnum = {
+
+    /**
+     * value: "Transfer"
+     * @const
+     */
+    "Transfer": "Transfer",
+
+    /**
+     * value: "ProgramOpen"
+     * @const
+     */
+    "ProgramOpen": "ProgramOpen",
+
+    /**
+     * value: "ProgramProfit"
+     * @const
+     */
+    "ProgramProfit": "ProgramProfit",
+
+    /**
+     * value: "ProgramInvest"
+     * @const
+     */
+    "ProgramInvest": "ProgramInvest",
+
+    /**
+     * value: "ProgramWithdrawal"
+     * @const
+     */
+    "ProgramWithdrawal": "ProgramWithdrawal",
+
+    /**
+     * value: "ProgramRefundPartialExecution"
+     * @const
+     */
+    "ProgramRefundPartialExecution": "ProgramRefundPartialExecution",
+
+    /**
+     * value: "ProgramRefundClose"
+     * @const
+     */
+    "ProgramRefundClose": "ProgramRefundClose",
+
+    /**
+     * value: "ProgramRequestInvest"
+     * @const
+     */
+    "ProgramRequestInvest": "ProgramRequestInvest",
+
+    /**
+     * value: "ProgramRequestWithdrawal"
+     * @const
+     */
+    "ProgramRequestWithdrawal": "ProgramRequestWithdrawal",
+
+    /**
+     * value: "ProgramRequestCancel"
+     * @const
+     */
+    "ProgramRequestCancel": "ProgramRequestCancel"
+};
+WalletTransaction.DestinationTypeEnum = {
+
+    /**
+     * value: "Wallet"
+     * @const
+     */
+    "Wallet": "Wallet",
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund",
+
+    /**
+     * value: "ProgramRequest"
+     * @const
+     */
+    "ProgramRequest": "ProgramRequest",
+
+    /**
+     * value: "WithdrawalRequest"
+     * @const
+     */
+    "WithdrawalRequest": "WithdrawalRequest",
+
+    /**
+     * value: "PaymentTransaction"
+     * @const
+     */
+    "PaymentTransaction": "PaymentTransaction"
+};
+WalletTransaction.DestinationCurrencyEnum = {
 
     /**
      * value: "Undefined"
@@ -308,4 +423,4 @@ ProgramStatistic.InvestedCurrencyEnum = {
      */
     "EUR": "EUR"
 };
-exports.default = ProgramStatistic;
+exports.default = WalletTransaction;

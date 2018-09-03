@@ -10,10 +10,12 @@ Name | Type | Description | Notes
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
-**periodDateStart** | **Date** |  | [optional] 
-**periodDateEnd** | **Date** |  | [optional] 
-**successFee** | **Number** |  | [optional] 
-**availableForInvestment** | **Number** |  | [optional] 
+**periodStarts** | **Date** |  | [optional] 
+**periodEnds** | **Date** |  | [optional] 
+**entryFee** | **Number** |  | [optional] 
+**isReinvesting** | **Boolean** |  | [optional] 
+**status** | **String** |  | [optional] 
+**availableInvestment** | **Number** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
@@ -36,6 +38,25 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `None` (value: `"None"`)
+
+* `Pending` (value: `"Pending"`)
+
+* `ErrorCreating` (value: `"ErrorCreating"`)
+
+* `Active` (value: `"Active"`)
+
+* `Closed` (value: `"Closed"`)
+
+* `Archived` (value: `"Archived"`)
 
 
 

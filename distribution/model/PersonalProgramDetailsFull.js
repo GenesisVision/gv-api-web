@@ -43,9 +43,10 @@ var PersonalProgramDetailsFull = function () {
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
-        this.canCloseProgram = undefined;
-        this.canClosePeriod = undefined;
-        this.canInvest = undefined;
+        this.invested = undefined;
+        this.value = undefined;
+        this.profit = undefined;
+        this.investmentProgramStatus = undefined;
     }
 
     /**
@@ -72,14 +73,17 @@ var PersonalProgramDetailsFull = function () {
                 if (data.hasOwnProperty('isOwnProgram')) {
                     obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
                 }
-                if (data.hasOwnProperty('canCloseProgram')) {
-                    obj['canCloseProgram'] = _ApiClient2.default.convertToType(data['canCloseProgram'], 'Boolean');
+                if (data.hasOwnProperty('invested')) {
+                    obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
                 }
-                if (data.hasOwnProperty('canClosePeriod')) {
-                    obj['canClosePeriod'] = _ApiClient2.default.convertToType(data['canClosePeriod'], 'Boolean');
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
-                if (data.hasOwnProperty('canInvest')) {
-                    obj['canInvest'] = _ApiClient2.default.convertToType(data['canInvest'], 'Boolean');
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentProgramStatus')) {
+                    obj['investmentProgramStatus'] = _ApiClient2.default.convertToType(data['investmentProgramStatus'], 'String');
                 }
             }
             return obj;
@@ -98,15 +102,26 @@ var PersonalProgramDetailsFull = function () {
         */
 
         /**
-        * @member {Boolean} canCloseProgram
+        * @member {Number} invested
         */
 
         /**
-        * @member {Boolean} canClosePeriod
+        * @member {Number} value
         */
 
         /**
-        * @member {Boolean} canInvest
+        * @member {Number} profit
+        */
+
+        /**
+        * @member {module:model/PersonalProgramDetailsFull.InvestmentProgramStatusEnum} investmentProgramStatus
+        */
+
+
+        /**
+        * Allowed values for the <code>investmentProgramStatus</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
@@ -114,4 +129,30 @@ var PersonalProgramDetailsFull = function () {
     return PersonalProgramDetailsFull;
 }();
 
+PersonalProgramDetailsFull.InvestmentProgramStatusEnum = {
+
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+
+    /**
+     * value: "Investing"
+     * @const
+     */
+    "Investing": "Investing",
+
+    /**
+     * value: "Withdrawing"
+     * @const
+     */
+    "Withdrawing": "Withdrawing",
+
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended"
+};
 exports.default = PersonalProgramDetailsFull;

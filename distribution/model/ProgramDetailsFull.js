@@ -59,10 +59,12 @@ var ProgramDetailsFull = function () {
         this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
-        this.periodDateStart = undefined;
-        this.periodDateEnd = undefined;
-        this.successFee = undefined;
-        this.availableForInvestment = undefined;
+        this.periodStarts = undefined;
+        this.periodEnds = undefined;
+        this.entryFee = undefined;
+        this.isReinvesting = undefined;
+        this.status = undefined;
+        this.availableInvestment = undefined;
         this.manager = undefined;
         this.statistic = undefined;
         this.personalProgramDetails = undefined;
@@ -104,17 +106,23 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('periodDuration')) {
                     obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
                 }
-                if (data.hasOwnProperty('periodDateStart')) {
-                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
+                if (data.hasOwnProperty('periodStarts')) {
+                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
                 }
-                if (data.hasOwnProperty('periodDateEnd')) {
-                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
-                if (data.hasOwnProperty('successFee')) {
-                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
+                if (data.hasOwnProperty('entryFee')) {
+                    obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('availableForInvestment')) {
-                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
+                if (data.hasOwnProperty('isReinvesting')) {
+                    obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('availableInvestment')) {
+                    obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
@@ -158,19 +166,27 @@ var ProgramDetailsFull = function () {
         */
 
         /**
-        * @member {Date} periodDateStart
+        * @member {Date} periodStarts
         */
 
         /**
-        * @member {Date} periodDateEnd
+        * @member {Date} periodEnds
         */
 
         /**
-        * @member {Number} successFee
+        * @member {Number} entryFee
         */
 
         /**
-        * @member {Number} availableForInvestment
+        * @member {Boolean} isReinvesting
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsFull.StatusEnum} status
+        */
+
+        /**
+        * @member {Number} availableInvestment
         */
 
         /**
@@ -189,6 +205,13 @@ var ProgramDetailsFull = function () {
 
         /**
         * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>status</code> property.
         * @enum {String}
         * @readonly
         */
@@ -241,5 +264,43 @@ ProgramDetailsFull.CurrencyEnum = {
      * @const
      */
     "EUR": "EUR"
+};
+ProgramDetailsFull.StatusEnum = {
+
+    /**
+     * value: "None"
+     * @const
+     */
+    "None": "None",
+
+    /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
+     * value: "ErrorCreating"
+     * @const
+     */
+    "ErrorCreating": "ErrorCreating",
+
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+
+    /**
+     * value: "Closed"
+     * @const
+     */
+    "Closed": "Closed",
+
+    /**
+     * value: "Archived"
+     * @const
+     */
+    "Archived": "Archived"
 };
 exports.default = ProgramDetailsFull;

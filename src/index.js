@@ -26,7 +26,6 @@ import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
-import DashboardProgramsList from './model/DashboardProgramsList';
 import DashboardSummary from './model/DashboardSummary';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
@@ -34,7 +33,6 @@ import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
 import InvestInfo from './model/InvestInfo';
-import InvestToProgram from './model/InvestToProgram';
 import LoginViewModel from './model/LoginViewModel';
 import NewProgramRequest from './model/NewProgramRequest';
 import OrderModel from './model/OrderModel';
@@ -73,17 +71,17 @@ import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
 import WalletSummary from './model/WalletSummary';
-import WalletViewModel from './model/WalletViewModel';
-import WalletsViewModel from './model/WalletsViewModel';
+import WalletTransaction from './model/WalletTransaction';
+import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WithdrawInfo from './model/WithdrawInfo';
 import AuthApi from './api/AuthApi';
 import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
 import InvestorApi from './api/InvestorApi';
+import ManagerApi from './api/ManagerApi';
 import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
-import ProgramApi from './api/ProgramApi';
 import ProgramsApi from './api/ProgramsApi';
 import RateApi from './api/RateApi';
 import WalletApi from './api/WalletApi';
@@ -206,12 +204,6 @@ export {
     DashboardProgramDetails,
 
     /**
-     * The DashboardProgramsList model constructor.
-     * @property {module:model/DashboardProgramsList}
-     */
-    DashboardProgramsList,
-
-    /**
      * The DashboardSummary model constructor.
      * @property {module:model/DashboardSummary}
      */
@@ -252,12 +244,6 @@ export {
      * @property {module:model/InvestInfo}
      */
     InvestInfo,
-
-    /**
-     * The InvestToProgram model constructor.
-     * @property {module:model/InvestToProgram}
-     */
-    InvestToProgram,
 
     /**
      * The LoginViewModel model constructor.
@@ -488,16 +474,16 @@ export {
     WalletSummary,
 
     /**
-     * The WalletViewModel model constructor.
-     * @property {module:model/WalletViewModel}
+     * The WalletTransaction model constructor.
+     * @property {module:model/WalletTransaction}
      */
-    WalletViewModel,
+    WalletTransaction,
 
     /**
-     * The WalletsViewModel model constructor.
-     * @property {module:model/WalletsViewModel}
+     * The WalletTransactionsViewModel model constructor.
+     * @property {module:model/WalletTransactionsViewModel}
      */
-    WalletsViewModel,
+    WalletTransactionsViewModel,
 
     /**
      * The WithdrawInfo model constructor.
@@ -530,6 +516,12 @@ export {
     InvestorApi,
 
     /**
+    * The ManagerApi service constructor.
+    * @property {module:api/ManagerApi}
+    */
+    ManagerApi,
+
+    /**
     * The OefApi service constructor.
     * @property {module:api/OefApi}
     */
@@ -546,12 +538,6 @@ export {
     * @property {module:api/ProfileApi}
     */
     ProfileApi,
-
-    /**
-    * The ProgramApi service constructor.
-    * @property {module:api/ProgramApi}
-    */
-    ProgramApi,
 
     /**
     * The ProgramsApi service constructor.

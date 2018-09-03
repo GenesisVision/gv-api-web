@@ -15,11 +15,11 @@
 import ApiClient from "../ApiClient";
 import DashboardChartValue from '../model/DashboardChartValue';
 import DashboardPortfolioEvents from '../model/DashboardPortfolioEvents';
-import DashboardProgramsList from '../model/DashboardProgramsList';
 import DashboardSummary from '../model/DashboardSummary';
 import ErrorViewModel from '../model/ErrorViewModel';
 import InvestInfo from '../model/InvestInfo';
 import ProgramRequests from '../model/ProgramRequests';
+import ProgramsList from '../model/ProgramsList';
 import WithdrawInfo from '../model/WithdrawInfo';
 
 /**
@@ -46,11 +46,16 @@ export default class InvestorApi {
      * Summary dashdoard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
+     * @param {String} opts.assetId 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
+     * @param {module:model/String} opts.chartCurrency 
+     * @param {Date} opts.chartFrom 
+     * @param {Date} opts.chartTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
      */
     v10InvestorGetWithHttpInfo(authorization, opts) {
@@ -66,11 +71,16 @@ export default class InvestorApi {
       let pathParams = {
       };
       let queryParams = {
-        'Sorting': opts['sorting'],
+        'AssetId': opts['assetId'],
         'From': opts['from'],
         'To': opts['to'],
+        'Type': opts['type'],
+        'AssetType': opts['assetType'],
         'Skip': opts['skip'],
-        'Take': opts['take']
+        'Take': opts['take'],
+        'chartCurrency': opts['chartCurrency'],
+        'chartFrom': opts['chartFrom'],
+        'chartTo': opts['chartTo']
       };
       let headerParams = {
         'Authorization': authorization
@@ -94,11 +104,16 @@ export default class InvestorApi {
      * Summary dashdoard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
+     * @param {String} opts.assetId 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
+     * @param {module:model/String} opts.chartCurrency 
+     * @param {Date} opts.chartFrom 
+     * @param {Date} opts.chartTo 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
      */
     v10InvestorGet(authorization, opts) {
@@ -113,7 +128,7 @@ export default class InvestorApi {
      * Portfolio charts
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.currency 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
@@ -157,7 +172,7 @@ export default class InvestorApi {
      * Portfolio charts
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.currency 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
@@ -683,7 +698,7 @@ export default class InvestorApi {
      * @param {Date} opts.to 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardProgramsList} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
     v10InvestorProgramsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -713,7 +728,7 @@ export default class InvestorApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = DashboardProgramsList;
+      let returnType = ProgramsList;
 
       return this.apiClient.callApi(
         '/v1.0/investor/programs', 'GET',
@@ -731,7 +746,7 @@ export default class InvestorApi {
      * @param {Date} opts.to 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardProgramsList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
     v10InvestorProgramsGet(authorization, opts) {
       return this.v10InvestorProgramsGetWithHttpInfo(authorization, opts)

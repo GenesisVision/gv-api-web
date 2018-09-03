@@ -25,6 +25,10 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
+var _DashboardProgramDetails = require('./DashboardProgramDetails');
+
+var _DashboardProgramDetails2 = _interopRequireDefault(_DashboardProgramDetails);
+
 var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
 
 var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
@@ -63,13 +67,15 @@ var ProgramDetails = function () {
         this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
-        this.periodDateStart = undefined;
-        this.periodDateEnd = undefined;
-        this.availableForInvestment = undefined;
+        this.periodStarts = undefined;
+        this.periodEnds = undefined;
+        this.isReinvesting = undefined;
+        this.availableInvestment = undefined;
         this.manager = undefined;
         this.statistic = undefined;
         this.chart = undefined;
         this.personalProgramDetails = undefined;
+        this.dashboardProgramDetails = undefined;
     }
 
     /**
@@ -108,14 +114,17 @@ var ProgramDetails = function () {
                 if (data.hasOwnProperty('periodDuration')) {
                     obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
                 }
-                if (data.hasOwnProperty('periodDateStart')) {
-                    obj['periodDateStart'] = _ApiClient2.default.convertToType(data['periodDateStart'], 'Date');
+                if (data.hasOwnProperty('periodStarts')) {
+                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
                 }
-                if (data.hasOwnProperty('periodDateEnd')) {
-                    obj['periodDateEnd'] = _ApiClient2.default.convertToType(data['periodDateEnd'], 'Date');
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
-                if (data.hasOwnProperty('availableForInvestment')) {
-                    obj['availableForInvestment'] = _ApiClient2.default.convertToType(data['availableForInvestment'], 'Number');
+                if (data.hasOwnProperty('isReinvesting')) {
+                    obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
+                }
+                if (data.hasOwnProperty('availableInvestment')) {
+                    obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
@@ -128,6 +137,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('personalProgramDetails')) {
                     obj['personalProgramDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalProgramDetails']);
+                }
+                if (data.hasOwnProperty('dashboardProgramDetails')) {
+                    obj['dashboardProgramDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardProgramDetails']);
                 }
             }
             return obj;
@@ -162,15 +174,19 @@ var ProgramDetails = function () {
         */
 
         /**
-        * @member {Date} periodDateStart
+        * @member {Date} periodStarts
         */
 
         /**
-        * @member {Date} periodDateEnd
+        * @member {Date} periodEnds
         */
 
         /**
-        * @member {Number} availableForInvestment
+        * @member {Boolean} isReinvesting
+        */
+
+        /**
+        * @member {Number} availableInvestment
         */
 
         /**
@@ -188,6 +204,11 @@ var ProgramDetails = function () {
         /**
         * Fields for authorized user
         * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
+        */
+
+        /**
+        * Fields for dashboard
+        * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
         */
 
 
