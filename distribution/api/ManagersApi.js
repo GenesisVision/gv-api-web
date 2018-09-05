@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,97 +21,140 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ErrorViewModel = require('../model/ErrorViewModel');
+
+var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+
+var _ManagerProfile = require('../model/ManagerProfile');
+
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
+
+var _NewProgramRequest = require('../model/NewProgramRequest');
+
+var _NewProgramRequest2 = _interopRequireDefault(_NewProgramRequest);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ManagerProfile model module.
-* @module model/ManagerProfile
+* Managers service.
+* @module api/ManagersApi
 * @version v1.0
 */
-var ManagerProfile = function () {
-    /**
-    * Constructs a new <code>ManagerProfile</code>.
-    * @alias module:model/ManagerProfile
-    * @class
-    */
+var ManagersApi = function () {
 
-    function ManagerProfile() {
-        _classCallCheck(this, ManagerProfile);
+  /**
+  * Constructs a new ManagersApi. 
+  * @alias module:api/ManagersApi
+  * @class
+  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+  * default to {@link module:ApiClient#instance} if unspecified.
+  */
+  function ManagersApi(apiClient) {
+    _classCallCheck(this, ManagersApi);
 
-        this.id = undefined;
-        this.username = undefined;
-        this.about = undefined;
-        this.avatar = undefined;
-        this.regDate = undefined;
-        this.assets = undefined;
+    this.apiClient = apiClient || _ApiClient2.default.instance;
+  }
+
+  /**
+   * Manager profile
+   * @param {String} id 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfile} and HTTP response
+   */
+
+
+  _createClass(ManagersApi, [{
+    key: 'v10ManagersByIdGetWithHttpInfo',
+    value: function v10ManagersByIdGetWithHttpInfo(id) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersByIdGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerProfile2.default;
+
+      return this.apiClient.callApi('/v1.0/managers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-    * Constructs a <code>ManagerProfile</code> from a plain JavaScript object, optionally creating a new instance.
-    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-    * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ManagerProfile} obj Optional instance to populate.
-    * @return {module:model/ManagerProfile} The populated <code>ManagerProfile</code> instance.
-    */
+     * Manager profile
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProfile}
+     */
 
+  }, {
+    key: 'v10ManagersByIdGet',
+    value: function v10ManagersByIdGet(id) {
+      return this.v10ManagersByIdGetWithHttpInfo(id).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
 
-    _createClass(ManagerProfile, null, [{
-        key: 'constructFromObject',
-        value: function constructFromObject(data, obj) {
-            if (data) {
-                obj = obj || new ManagerProfile();
+    /**
+     * Create an investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewProgramRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('username')) {
-                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
-                }
-                if (data.hasOwnProperty('about')) {
-                    obj['about'] = _ApiClient2.default.convertToType(data['about'], 'String');
-                }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('regDate')) {
-                    obj['regDate'] = _ApiClient2.default.convertToType(data['regDate'], 'Date');
-                }
-                if (data.hasOwnProperty('assets')) {
-                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], ['String']);
-                }
-            }
-            return obj;
-        }
+  }, {
+    key: 'v10ManagersProgramsCreatePostWithHttpInfo',
+    value: function v10ManagersProgramsCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['request'];
 
-        /**
-        * @member {String} id
-        */
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsCreatePost");
+      }
 
-        /**
-        * @member {String} username
-        */
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
 
-        /**
-        * @member {String} about
-        */
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
 
-        /**
-        * @member {String} avatar
-        */
+      return this.apiClient.callApi('/v1.0/managers/programs/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
 
-        /**
-        * @member {Date} regDate
-        */
+    /**
+     * Create an investment program
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewProgramRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
 
-        /**
-        * @member {Array.<String>} assets
-        */
+  }, {
+    key: 'v10ManagersProgramsCreatePost',
+    value: function v10ManagersProgramsCreatePost(authorization, opts) {
+      return this.v10ManagersProgramsCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }]);
 
-    }]);
-
-    return ManagerProfile;
+  return ManagersApi;
 }();
 
-exports.default = ManagerProfile;
+exports.default = ManagersApi;

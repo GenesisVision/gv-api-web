@@ -65,6 +65,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
+            if (data.hasOwnProperty('isReinvest')) {
+                obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
+            }
             if (data.hasOwnProperty('invested')) {
                 obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
             }
@@ -93,6 +96,10 @@ export default class PersonalProgramDetailsFull {
     * @member {Boolean} isOwnProgram
     */
     isOwnProgram = undefined;
+    /**
+    * @member {Boolean} isReinvest
+    */
+    isReinvest = undefined;
     /**
     * @member {Number} invested
     */

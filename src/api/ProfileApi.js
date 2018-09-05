@@ -16,7 +16,6 @@ import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
-import ProfilePublic from '../model/ProfilePublic';
 import UpdateProfileViewModel from '../model/UpdateProfileViewModel';
 
 /**
@@ -37,55 +36,6 @@ export default class ProfileApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
-    /**
-     * Get public profile
-     * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublic} and HTTP response
-     */
-    v10ProfileByIdPublicGetWithHttpInfo(id) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProfileByIdPublicGet");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfilePublic;
-
-      return this.apiClient.callApi(
-        '/v1.0/profile/{id}/public', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get public profile
-     * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublic}
-     */
-    v10ProfileByIdPublicGet(id) {
-      return this.v10ProfileByIdPublicGetWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**

@@ -34,6 +34,7 @@ import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
 import InvestInfo from './model/InvestInfo';
 import LoginViewModel from './model/LoginViewModel';
+import ManagerProfile from './model/ManagerProfile';
 import NewProgramRequest from './model/NewProgramRequest';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
@@ -78,7 +79,7 @@ import AuthApi from './api/AuthApi';
 import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
 import InvestorApi from './api/InvestorApi';
-import ManagerApi from './api/ManagerApi';
+import ManagersApi from './api/ManagersApi';
 import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
@@ -250,6 +251,12 @@ export {
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
+
+    /**
+     * The ManagerProfile model constructor.
+     * @property {module:model/ManagerProfile}
+     */
+    ManagerProfile,
 
     /**
      * The NewProgramRequest model constructor.
@@ -516,10 +523,10 @@ export {
     InvestorApi,
 
     /**
-    * The ManagerApi service constructor.
-    * @property {module:api/ManagerApi}
+    * The ManagersApi service constructor.
+    * @property {module:api/ManagersApi}
     */
-    ManagerApi,
+    ManagersApi,
 
     /**
     * The OefApi service constructor.

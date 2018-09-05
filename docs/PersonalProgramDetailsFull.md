@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
+**isReinvest** | **Boolean** |  | [optional] 
 **invested** | **Number** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 

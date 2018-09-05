@@ -43,6 +43,7 @@ var PersonalProgramDetailsFull = function () {
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
+        this.isReinvest = undefined;
         this.invested = undefined;
         this.value = undefined;
         this.profit = undefined;
@@ -73,6 +74,9 @@ var PersonalProgramDetailsFull = function () {
                 if (data.hasOwnProperty('isOwnProgram')) {
                     obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
                 }
+                if (data.hasOwnProperty('isReinvest')) {
+                    obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
+                }
                 if (data.hasOwnProperty('invested')) {
                     obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
                 }
@@ -99,6 +103,10 @@ var PersonalProgramDetailsFull = function () {
 
         /**
         * @member {Boolean} isOwnProgram
+        */
+
+        /**
+        * @member {Boolean} isReinvest
         */
 
         /**

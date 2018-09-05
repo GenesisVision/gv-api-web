@@ -62,8 +62,17 @@ export default class ManagerProfile {
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
             }
+            if (data.hasOwnProperty('about')) {
+                obj['about'] = ApiClient.convertToType(data['about'], 'String');
+            }
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
+            }
+            if (data.hasOwnProperty('regDate')) {
+                obj['regDate'] = ApiClient.convertToType(data['regDate'], 'Date');
+            }
+            if (data.hasOwnProperty('assets')) {
+                obj['assets'] = ApiClient.convertToType(data['assets'], ['String']);
             }
         }
         return obj;
@@ -78,9 +87,21 @@ export default class ManagerProfile {
     */
     username = undefined;
     /**
+    * @member {String} about
+    */
+    about = undefined;
+    /**
     * @member {String} avatar
     */
     avatar = undefined;
+    /**
+    * @member {Date} regDate
+    */
+    regDate = undefined;
+    /**
+    * @member {Array.<String>} assets
+    */
+    assets = undefined;
 
 
 

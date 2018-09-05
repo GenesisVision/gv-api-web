@@ -33,10 +33,6 @@ var _ProfileHeaderViewModel = require('../model/ProfileHeaderViewModel');
 
 var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
 
-var _ProfilePublic = require('../model/ProfilePublic');
-
-var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
-
 var _UpdateProfileViewModel = require('../model/UpdateProfileViewModel');
 
 var _UpdateProfileViewModel2 = _interopRequireDefault(_UpdateProfileViewModel);
@@ -66,58 +62,13 @@ var ProfileApi = function () {
   }
 
   /**
-   * Get public profile
-   * @param {String} id 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfilePublic} and HTTP response
+   * Get full profile
+   * @param {String} authorization JWT access token
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
    */
 
 
   _createClass(ProfileApi, [{
-    key: 'v10ProfileByIdPublicGetWithHttpInfo',
-    value: function v10ProfileByIdPublicGetWithHttpInfo(id) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProfileByIdPublicGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProfilePublic2.default;
-
-      return this.apiClient.callApi('/v1.0/profile/{id}/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get public profile
-     * @param {String} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfilePublic}
-     */
-
-  }, {
-    key: 'v10ProfileByIdPublicGet',
-    value: function v10ProfileByIdPublicGet(id) {
-      return this.v10ProfileByIdPublicGetWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
-     */
-
-  }, {
     key: 'v10ProfileGetWithHttpInfo',
     value: function v10ProfileGetWithHttpInfo(authorization) {
       var postBody = null;
