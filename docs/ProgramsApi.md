@@ -28,8 +28,9 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 let id = "id_example"; // String | 
 
 let opts = { 
-  'chartDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartDateTo': new Date("2013-10-20T19:20:30+01:00") // Date | 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'maxPointCount': 56 // Number | 
 };
 apiInstance.v10ProgramsByIdChartGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -44,8 +45,9 @@ apiInstance.v10ProgramsByIdChartGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
- **chartDateFrom** | **Date**|  | [optional] 
- **chartDateTo** | **Date**|  | [optional] 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **maxPointCount** | **Number**|  | [optional] 
 
 ### Return type
 

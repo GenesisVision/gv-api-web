@@ -44,8 +44,9 @@ export default class ProgramsApi {
      * Program chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.chartDateFrom 
-     * @param {Date} opts.chartDateTo 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
      */
     v10ProgramsByIdChartGetWithHttpInfo(id, opts) {
@@ -62,8 +63,9 @@ export default class ProgramsApi {
         'id': id
       };
       let queryParams = {
-        'ChartDateFrom': opts['chartDateFrom'],
-        'ChartDateTo': opts['chartDateTo']
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
       };
       let headerParams = {
       };
@@ -86,8 +88,9 @@ export default class ProgramsApi {
      * Program chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.chartDateFrom 
-     * @param {Date} opts.chartDateTo 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
      */
     v10ProgramsByIdChartGet(id, opts) {

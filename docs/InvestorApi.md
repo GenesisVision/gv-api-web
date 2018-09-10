@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing
 [**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-[**v10InvestorProgramsByIdRequestsGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsGet) | **GET** /v1.0/investor/programs/{id}/requests | Ger requests
+[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get requests
 [**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
 [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
@@ -369,11 +369,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorProgramsByIdRequestsGet"></a>
-# **v10InvestorProgramsByIdRequestsGet**
-> ProgramRequests v10InvestorProgramsByIdRequestsGet(id, authorization)
+<a name="v10InvestorProgramsByIdRequestsBySkipByTakeGet"></a>
+# **v10InvestorProgramsByIdRequestsBySkipByTakeGet**
+> ProgramRequests v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
 
-Ger requests
+Get requests
 
 ### Example
 ```javascript
@@ -383,9 +383,13 @@ let apiInstance = new CoreApiV10.InvestorApi();
 
 let id = "id_example"; // String | 
 
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdRequestsGet(id, authorization).then((data) => {
+apiInstance.v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -398,6 +402,8 @@ apiInstance.v10InvestorProgramsByIdRequestsGet(id, authorization).then((data) =>
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
 
 ### Return type

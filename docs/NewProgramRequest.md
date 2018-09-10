@@ -6,11 +6,12 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**tradingPlatformId** | **String** |  | [optional] 
+**tradingServerId** | **String** |  | [optional] 
 **periodLength** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
+**depositAmount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **leverage** | **Number** |  | [optional] 
 

@@ -43,11 +43,12 @@ var NewProgramRequest = function () {
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
-        this.tradingPlatformId = undefined;
+        this.tradingServerId = undefined;
         this.periodLength = undefined;
         this.successFee = undefined;
         this.entryFee = undefined;
         this.stopOutLevel = undefined;
+        this.depositAmount = undefined;
         this.currency = undefined;
         this.leverage = undefined;
     }
@@ -76,8 +77,8 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('tradingPlatformId')) {
-                    obj['tradingPlatformId'] = _ApiClient2.default.convertToType(data['tradingPlatformId'], 'String');
+                if (data.hasOwnProperty('tradingServerId')) {
+                    obj['tradingServerId'] = _ApiClient2.default.convertToType(data['tradingServerId'], 'String');
                 }
                 if (data.hasOwnProperty('periodLength')) {
                     obj['periodLength'] = _ApiClient2.default.convertToType(data['periodLength'], 'Number');
@@ -90,6 +91,9 @@ var NewProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('stopOutLevel')) {
                     obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
+                }
+                if (data.hasOwnProperty('depositAmount')) {
+                    obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
@@ -114,7 +118,7 @@ var NewProgramRequest = function () {
         */
 
         /**
-        * @member {String} tradingPlatformId
+        * @member {String} tradingServerId
         */
 
         /**
@@ -131,6 +135,10 @@ var NewProgramRequest = function () {
 
         /**
         * @member {Number} stopOutLevel
+        */
+
+        /**
+        * @member {Number} depositAmount
         */
 
         /**

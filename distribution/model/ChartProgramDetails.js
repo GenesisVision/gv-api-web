@@ -21,6 +21,14 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ChartSimple = require('./ChartSimple');
+
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
+
+var _StatisticProgramDetails = require('./StatisticProgramDetails');
+
+var _StatisticProgramDetails2 = _interopRequireDefault(_StatisticProgramDetails);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,8 +48,9 @@ var ChartProgramDetails = function () {
     function ChartProgramDetails() {
         _classCallCheck(this, ChartProgramDetails);
 
-        this.value = undefined;
-        this.date = undefined;
+        this.equityChart = undefined;
+        this.pnLChart = undefined;
+        this.statistic = undefined;
     }
 
     /**
@@ -59,22 +68,29 @@ var ChartProgramDetails = function () {
             if (data) {
                 obj = obj || new ChartProgramDetails();
 
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                if (data.hasOwnProperty('equityChart')) {
+                    obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                if (data.hasOwnProperty('pnLChart')) {
+                    obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
+                }
+                if (data.hasOwnProperty('statistic')) {
+                    obj['statistic'] = _StatisticProgramDetails2.default.constructFromObject(data['statistic']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} value
+        * @member {Array.<module:model/ChartSimple>} equityChart
         */
 
         /**
-        * @member {Date} date
+        * @member {Array.<module:model/ChartSimple>} pnLChart
+        */
+
+        /**
+        * @member {module:model/StatisticProgramDetails} statistic
         */
 
     }]);

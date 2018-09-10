@@ -25,9 +25,9 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _RateViewModel = require('../model/RateViewModel');
+var _RatesModel = require('../model/RatesModel');
 
-var _RateViewModel2 = _interopRequireDefault(_RateViewModel);
+var _RatesModel2 = _interopRequireDefault(_RatesModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57,7 +57,7 @@ var RateApi = function () {
    * Get rate
    * @param {String} from 
    * @param {String} to 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
    */
 
 
@@ -87,7 +87,7 @@ var RateApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RateViewModel2.default;
+      var returnType = 'Number';
 
       return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -96,13 +96,59 @@ var RateApi = function () {
      * Get rate
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
 
   }, {
     key: 'v10RateByFromByToGet',
     value: function v10RateByFromByToGet(from, to) {
       return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get rates
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.from 
+     * @param {Array.<String>} opts.to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RatesModel} and HTTP response
+     */
+
+  }, {
+    key: 'v10RateGetWithHttpInfo',
+    value: function v10RateGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {
+        'from': this.apiClient.buildCollectionParam(opts['from'], 'multi'),
+        'to': this.apiClient.buildCollectionParam(opts['to'], 'multi')
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _RatesModel2.default;
+
+      return this.apiClient.callApi('/v1.0/rate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get rates
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.from 
+     * @param {Array.<String>} opts.to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RatesModel}
+     */
+
+  }, {
+    key: 'v10RateGet',
+    value: function v10RateGet(opts) {
+      return this.v10RateGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

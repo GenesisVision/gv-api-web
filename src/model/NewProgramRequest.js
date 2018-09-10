@@ -65,8 +65,8 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
-            if (data.hasOwnProperty('tradingPlatformId')) {
-                obj['tradingPlatformId'] = ApiClient.convertToType(data['tradingPlatformId'], 'String');
+            if (data.hasOwnProperty('tradingServerId')) {
+                obj['tradingServerId'] = ApiClient.convertToType(data['tradingServerId'], 'String');
             }
             if (data.hasOwnProperty('periodLength')) {
                 obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'Number');
@@ -79,6 +79,9 @@ export default class NewProgramRequest {
             }
             if (data.hasOwnProperty('stopOutLevel')) {
                 obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
+            }
+            if (data.hasOwnProperty('depositAmount')) {
+                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
@@ -103,9 +106,9 @@ export default class NewProgramRequest {
     */
     logo = undefined;
     /**
-    * @member {String} tradingPlatformId
+    * @member {String} tradingServerId
     */
-    tradingPlatformId = undefined;
+    tradingServerId = undefined;
     /**
     * @member {Number} periodLength
     */
@@ -122,6 +125,10 @@ export default class NewProgramRequest {
     * @member {Number} stopOutLevel
     */
     stopOutLevel = undefined;
+    /**
+    * @member {Number} depositAmount
+    */
+    depositAmount = undefined;
     /**
     * @member {module:model/NewProgramRequest.CurrencyEnum} currency
     */

@@ -17,9 +17,13 @@ import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetsValue from './model/AssetsValue';
+import Broker from './model/Broker';
+import BrokerTradingServer from './model/BrokerTradingServer';
+import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartProgramDetails from './model/ChartProgramDetails';
 import ChartSimple from './model/ChartSimple';
+import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DExchangeRequest from './model/DExchangeRequest';
 import DExchangeResponse from './model/DExchangeResponse';
 import DashboardChartValue from './model/DashboardChartValue';
@@ -33,6 +37,7 @@ import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import IOsAppVersion from './model/IOsAppVersion';
 import InvestInfo from './model/InvestInfo';
+import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerProfile from './model/ManagerProfile';
 import NewProgramRequest from './model/NewProgramRequest';
@@ -56,13 +61,16 @@ import ProgramSet from './model/ProgramSet';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramsList from './model/ProgramsList';
-import RateViewModel from './model/RateViewModel';
+import RateItem from './model/RateItem';
+import RatesModel from './model/RatesModel';
+import RatesModelRates from './model/RatesModelRates';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
+import StatisticProgramDetails from './model/StatisticProgramDetails';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
@@ -71,11 +79,13 @@ import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
+import WalletInfo from './model/WalletInfo';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WithdrawInfo from './model/WithdrawInfo';
 import AuthApi from './api/AuthApi';
+import BrokersApi from './api/BrokersApi';
 import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
 import InvestorApi from './api/InvestorApi';
@@ -151,6 +161,24 @@ export {
     AssetsValue,
 
     /**
+     * The Broker model constructor.
+     * @property {module:model/Broker}
+     */
+    Broker,
+
+    /**
+     * The BrokerTradingServer model constructor.
+     * @property {module:model/BrokerTradingServer}
+     */
+    BrokerTradingServer,
+
+    /**
+     * The BrokersInfo model constructor.
+     * @property {module:model/BrokersInfo}
+     */
+    BrokersInfo,
+
+    /**
      * The ChangePasswordViewModel model constructor.
      * @property {module:model/ChangePasswordViewModel}
      */
@@ -167,6 +195,12 @@ export {
      * @property {module:model/ChartSimple}
      */
     ChartSimple,
+
+    /**
+     * The CreateWithdrawalRequestModel model constructor.
+     * @property {module:model/CreateWithdrawalRequestModel}
+     */
+    CreateWithdrawalRequestModel,
 
     /**
      * The DExchangeRequest model constructor.
@@ -245,6 +279,12 @@ export {
      * @property {module:model/InvestInfo}
      */
     InvestInfo,
+
+    /**
+     * The InvestmentProgramUpdate model constructor.
+     * @property {module:model/InvestmentProgramUpdate}
+     */
+    InvestmentProgramUpdate,
 
     /**
      * The LoginViewModel model constructor.
@@ -385,10 +425,22 @@ export {
     ProgramsList,
 
     /**
-     * The RateViewModel model constructor.
-     * @property {module:model/RateViewModel}
+     * The RateItem model constructor.
+     * @property {module:model/RateItem}
      */
-    RateViewModel,
+    RateItem,
+
+    /**
+     * The RatesModel model constructor.
+     * @property {module:model/RatesModel}
+     */
+    RatesModel,
+
+    /**
+     * The RatesModelRates model constructor.
+     * @property {module:model/RatesModelRates}
+     */
+    RatesModelRates,
 
     /**
      * The RecoveryCode model constructor.
@@ -425,6 +477,12 @@ export {
      * @property {module:model/ResetPasswordViewModel}
      */
     ResetPasswordViewModel,
+
+    /**
+     * The StatisticProgramDetails model constructor.
+     * @property {module:model/StatisticProgramDetails}
+     */
+    StatisticProgramDetails,
 
     /**
      * The TradesViewModel model constructor.
@@ -475,6 +533,12 @@ export {
     ValueChartBar,
 
     /**
+     * The WalletInfo model constructor.
+     * @property {module:model/WalletInfo}
+     */
+    WalletInfo,
+
+    /**
      * The WalletSummary model constructor.
      * @property {module:model/WalletSummary}
      */
@@ -503,6 +567,12 @@ export {
     * @property {module:api/AuthApi}
     */
     AuthApi,
+
+    /**
+    * The BrokersApi service constructor.
+    * @property {module:api/BrokersApi}
+    */
+    BrokersApi,
 
     /**
     * The DexchangeApi service constructor.

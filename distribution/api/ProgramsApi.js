@@ -73,8 +73,9 @@ var ProgramsApi = function () {
    * Program chart
    * @param {String} id 
    * @param {Object} opts Optional parameters
-   * @param {Date} opts.chartDateFrom 
-   * @param {Date} opts.chartDateTo 
+   * @param {Date} opts.dateFrom 
+   * @param {Date} opts.dateTo 
+   * @param {Number} opts.maxPointCount 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
    */
 
@@ -94,8 +95,9 @@ var ProgramsApi = function () {
         'id': id
       };
       var queryParams = {
-        'ChartDateFrom': opts['chartDateFrom'],
-        'ChartDateTo': opts['chartDateTo']
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
       };
       var headerParams = {};
       var formParams = {};
@@ -112,8 +114,9 @@ var ProgramsApi = function () {
      * Program chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.chartDateFrom 
-     * @param {Date} opts.chartDateTo 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
      */
 

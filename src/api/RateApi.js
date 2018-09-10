@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import RateViewModel from '../model/RateViewModel';
+import RatesModel from '../model/RatesModel';
 
 /**
 * Rate service.
@@ -40,7 +40,7 @@ export default class RateApi {
      * Get rate
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RateViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     v10RateByFromByToGetWithHttpInfo(from, to) {
       let postBody = null;
@@ -70,7 +70,7 @@ export default class RateApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RateViewModel;
+      let returnType = 'Number';
 
       return this.apiClient.callApi(
         '/v1.0/rate/{from}/{to}', 'GET',
@@ -83,10 +83,60 @@ export default class RateApi {
      * Get rate
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RateViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     v10RateByFromByToGet(from, to) {
       return this.v10RateByFromByToGetWithHttpInfo(from, to)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get rates
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.from 
+     * @param {Array.<String>} opts.to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RatesModel} and HTTP response
+     */
+    v10RateGetWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'from': this.apiClient.buildCollectionParam(opts['from'], 'multi'),
+        'to': this.apiClient.buildCollectionParam(opts['to'], 'multi')
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RatesModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/rate', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get rates
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.from 
+     * @param {Array.<String>} opts.to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RatesModel}
+     */
+    v10RateGet(opts) {
+      return this.v10RateGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

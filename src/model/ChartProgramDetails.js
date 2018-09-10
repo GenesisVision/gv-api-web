@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import ChartSimple from './ChartSimple';
+import StatisticProgramDetails from './StatisticProgramDetails';
 
 
 
@@ -56,24 +58,31 @@ export default class ChartProgramDetails {
             
             
 
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            if (data.hasOwnProperty('equityChart')) {
+                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
+            if (data.hasOwnProperty('pnLChart')) {
+                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
+            }
+            if (data.hasOwnProperty('statistic')) {
+                obj['statistic'] = StatisticProgramDetails.constructFromObject(data['statistic']);
             }
         }
         return obj;
     }
 
     /**
-    * @member {Number} value
+    * @member {Array.<module:model/ChartSimple>} equityChart
     */
-    value = undefined;
+    equityChart = undefined;
     /**
-    * @member {Date} date
+    * @member {Array.<module:model/ChartSimple>} pnLChart
     */
-    date = undefined;
+    pnLChart = undefined;
+    /**
+    * @member {module:model/StatisticProgramDetails} statistic
+    */
+    statistic = undefined;
 
 
 

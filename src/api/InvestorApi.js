@@ -503,27 +503,41 @@ export default class InvestorApi {
 
 
     /**
-     * Ger requests
+     * Get requests
      * @param {String} id 
+     * @param {Number} skip 
+     * @param {Number} take 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
      */
-    v10InvestorProgramsByIdRequestsGetWithHttpInfo(id, authorization) {
+    v10InvestorProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdRequestsGet");
+        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+      }
+
+      // verify the required parameter 'skip' is set
+      if (skip === undefined || skip === null) {
+        throw new Error("Missing the required parameter 'skip' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+      }
+
+      // verify the required parameter 'take' is set
+      if (take === undefined || take === null) {
+        throw new Error("Missing the required parameter 'take' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdRequestsGet");
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
       }
 
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'skip': skip,
+        'take': take
       };
       let queryParams = {
       };
@@ -539,20 +553,22 @@ export default class InvestorApi {
       let returnType = ProgramRequests;
 
       return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/requests', 'GET',
+        '/v1.0/investor/programs/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Ger requests
+     * Get requests
      * @param {String} id 
+     * @param {Number} skip 
+     * @param {Number} take 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
      */
-    v10InvestorProgramsByIdRequestsGet(id, authorization) {
-      return this.v10InvestorProgramsByIdRequestsGetWithHttpInfo(id, authorization)
+    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
+      return this.v10InvestorProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
