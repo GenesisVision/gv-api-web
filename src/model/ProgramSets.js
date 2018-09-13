@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ProgramSet from './ProgramSet';
+import Facet from './Facet';
 
 
 
@@ -58,7 +58,7 @@ export default class ProgramSets {
             
 
             if (data.hasOwnProperty('sets')) {
-                obj['sets'] = ApiClient.convertToType(data['sets'], [ProgramSet]);
+                obj['sets'] = ApiClient.convertToType(data['sets'], [Facet]);
             }
             if (data.hasOwnProperty('favoritesCount')) {
                 obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'Number');
@@ -68,7 +68,7 @@ export default class ProgramSets {
     }
 
     /**
-    * @member {Array.<module:model/ProgramSet>} sets
+    * @member {Array.<module:model/Facet>} sets
     */
     sets = undefined;
     /**

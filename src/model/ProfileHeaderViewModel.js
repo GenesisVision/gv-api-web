@@ -68,8 +68,8 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
-            if (data.hasOwnProperty('notificationsAmount')) {
-                obj['notificationsAmount'] = ApiClient.convertToType(data['notificationsAmount'], 'Number');
+            if (data.hasOwnProperty('notificationsCount')) {
+                obj['notificationsCount'] = ApiClient.convertToType(data['notificationsCount'], 'Number');
             }
             if (data.hasOwnProperty('favoritesCount')) {
                 obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'Number');
@@ -104,9 +104,9 @@ export default class ProfileHeaderViewModel {
     */
     avatar = undefined;
     /**
-    * @member {Number} notificationsAmount
+    * @member {Number} notificationsCount
     */
-    notificationsAmount = undefined;
+    notificationsCount = undefined;
     /**
     * @member {Number} favoritesCount
     */

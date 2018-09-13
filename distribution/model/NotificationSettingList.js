@@ -21,121 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _NotificationSettingViewModel = require('./NotificationSettingViewModel');
+
+var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
+
+var _ProgramNotificationSettingList = require('./ProgramNotificationSettingList');
+
+var _ProgramNotificationSettingList2 = _interopRequireDefault(_ProgramNotificationSettingList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProfileHeaderViewModel model module.
-* @module model/ProfileHeaderViewModel
+* The NotificationSettingList model module.
+* @module model/NotificationSettingList
 * @version v1.0
 */
-var ProfileHeaderViewModel = function () {
+var NotificationSettingList = function () {
     /**
-    * Constructs a new <code>ProfileHeaderViewModel</code>.
-    * @alias module:model/ProfileHeaderViewModel
+    * Constructs a new <code>NotificationSettingList</code>.
+    * @alias module:model/NotificationSettingList
     * @class
     */
 
-    function ProfileHeaderViewModel() {
-        _classCallCheck(this, ProfileHeaderViewModel);
+    function NotificationSettingList() {
+        _classCallCheck(this, NotificationSettingList);
 
-        this.id = undefined;
-        this.name = undefined;
-        this.email = undefined;
-        this.avatar = undefined;
-        this.notificationsCount = undefined;
-        this.favoritesCount = undefined;
-        this.totalBalanceGvt = undefined;
-        this.investedGvt = undefined;
-        this.availableGvt = undefined;
+        this.settingsGeneral = undefined;
+        this.settingsProgram = undefined;
     }
 
     /**
-    * Constructs a <code>ProfileHeaderViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>NotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProfileHeaderViewModel} obj Optional instance to populate.
-    * @return {module:model/ProfileHeaderViewModel} The populated <code>ProfileHeaderViewModel</code> instance.
+    * @param {module:model/NotificationSettingList} obj Optional instance to populate.
+    * @return {module:model/NotificationSettingList} The populated <code>NotificationSettingList</code> instance.
     */
 
 
-    _createClass(ProfileHeaderViewModel, null, [{
+    _createClass(NotificationSettingList, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileHeaderViewModel();
+                obj = obj || new NotificationSettingList();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('settingsGeneral')) {
+                    obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
-                }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
-                }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('notificationsCount')) {
-                    obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('favoritesCount')) {
-                    obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalanceGvt')) {
-                    obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('investedGvt')) {
-                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableGvt')) {
-                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
+                if (data.hasOwnProperty('settingsProgram')) {
+                    obj['settingsProgram'] = _ApiClient2.default.convertToType(data['settingsProgram'], [_ProgramNotificationSettingList2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Array.<module:model/NotificationSettingViewModel>} settingsGeneral
         */
 
         /**
-        * @member {String} name
-        */
-
-        /**
-        * @member {String} email
-        */
-
-        /**
-        * @member {String} avatar
-        */
-
-        /**
-        * @member {Number} notificationsCount
-        */
-
-        /**
-        * @member {Number} favoritesCount
-        */
-
-        /**
-        * @member {Number} totalBalanceGvt
-        */
-
-        /**
-        * @member {Number} investedGvt
-        */
-
-        /**
-        * @member {Number} availableGvt
+        * @member {Array.<module:model/ProgramNotificationSettingList>} settingsProgram
         */
 
     }]);
 
-    return ProfileHeaderViewModel;
+    return NotificationSettingList;
 }();
 
-exports.default = ProfileHeaderViewModel;
+exports.default = NotificationSettingList;

@@ -44,6 +44,7 @@ var Facet = function () {
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
+        this.count = undefined;
     }
 
     /**
@@ -73,6 +74,9 @@ var Facet = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('count')) {
+                    obj['count'] = _ApiClient2.default.convertToType(data['count'], 'Number');
+                }
             }
             return obj;
         }
@@ -91,6 +95,10 @@ var Facet = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {Number} count
         */
 
     }]);

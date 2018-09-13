@@ -26,116 +26,159 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProfileHeaderViewModel model module.
-* @module model/ProfileHeaderViewModel
+* The NotificationViewModel model module.
+* @module model/NotificationViewModel
 * @version v1.0
 */
-var ProfileHeaderViewModel = function () {
+var NotificationViewModel = function () {
     /**
-    * Constructs a new <code>ProfileHeaderViewModel</code>.
-    * @alias module:model/ProfileHeaderViewModel
+    * Constructs a new <code>NotificationViewModel</code>.
+    * @alias module:model/NotificationViewModel
     * @class
     */
 
-    function ProfileHeaderViewModel() {
-        _classCallCheck(this, ProfileHeaderViewModel);
+    function NotificationViewModel() {
+        _classCallCheck(this, NotificationViewModel);
 
-        this.id = undefined;
-        this.name = undefined;
-        this.email = undefined;
-        this.avatar = undefined;
-        this.notificationsCount = undefined;
-        this.favoritesCount = undefined;
-        this.totalBalanceGvt = undefined;
-        this.investedGvt = undefined;
-        this.availableGvt = undefined;
+        this.text = undefined;
+        this.date = undefined;
+        this.type = undefined;
+        this.programId = undefined;
+        this.managerId = undefined;
     }
 
     /**
-    * Constructs a <code>ProfileHeaderViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>NotificationViewModel</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProfileHeaderViewModel} obj Optional instance to populate.
-    * @return {module:model/ProfileHeaderViewModel} The populated <code>ProfileHeaderViewModel</code> instance.
+    * @param {module:model/NotificationViewModel} obj Optional instance to populate.
+    * @return {module:model/NotificationViewModel} The populated <code>NotificationViewModel</code> instance.
     */
 
 
-    _createClass(ProfileHeaderViewModel, null, [{
+    _createClass(NotificationViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileHeaderViewModel();
+                obj = obj || new NotificationViewModel();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('text')) {
+                    obj['text'] = _ApiClient2.default.convertToType(data['text'], 'String');
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('date')) {
+                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('programId')) {
+                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
-                if (data.hasOwnProperty('notificationsCount')) {
-                    obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('favoritesCount')) {
-                    obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalanceGvt')) {
-                    obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('investedGvt')) {
-                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableGvt')) {
-                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
+                if (data.hasOwnProperty('managerId')) {
+                    obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {String} text
         */
 
         /**
-        * @member {String} name
+        * @member {Date} date
         */
 
         /**
-        * @member {String} email
+        * @member {module:model/NotificationViewModel.TypeEnum} type
         */
 
         /**
-        * @member {String} avatar
+        * @member {String} programId
         */
 
         /**
-        * @member {Number} notificationsCount
+        * @member {String} managerId
         */
 
-        /**
-        * @member {Number} favoritesCount
-        */
 
         /**
-        * @member {Number} totalBalanceGvt
-        */
-
-        /**
-        * @member {Number} investedGvt
-        */
-
-        /**
-        * @member {Number} availableGvt
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return ProfileHeaderViewModel;
+    return NotificationViewModel;
 }();
 
-exports.default = ProfileHeaderViewModel;
+NotificationViewModel.TypeEnum = {
+
+    /**
+     * value: "PlatformNewsAndUpdates"
+     * @const
+     */
+    "PlatformNewsAndUpdates": "PlatformNewsAndUpdates",
+
+    /**
+     * value: "PlatformEmergency"
+     * @const
+     */
+    "PlatformEmergency": "PlatformEmergency",
+
+    /**
+     * value: "PlatformOther"
+     * @const
+     */
+    "PlatformOther": "PlatformOther",
+
+    /**
+     * value: "ProfileUpdated"
+     * @const
+     */
+    "ProfileUpdated": "ProfileUpdated",
+
+    /**
+     * value: "ProfilePwdUpdated"
+     * @const
+     */
+    "ProfilePwdUpdated": "ProfilePwdUpdated",
+
+    /**
+     * value: "ProfileVerification"
+     * @const
+     */
+    "ProfileVerification": "ProfileVerification",
+
+    /**
+     * value: "Profile2FA"
+     * @const
+     */
+    "Profile2FA": "Profile2FA",
+
+    /**
+     * value: "ProgramNewsAndUpdates"
+     * @const
+     */
+    "ProgramNewsAndUpdates": "ProgramNewsAndUpdates",
+
+    /**
+     * value: "ProgramEndOfPeriod"
+     * @const
+     */
+    "ProgramEndOfPeriod": "ProgramEndOfPeriod",
+
+    /**
+     * value: "ProgramCondition"
+     * @const
+     */
+    "ProgramCondition": "ProgramCondition",
+
+    /**
+     * value: "ManagerNewProgram"
+     * @const
+     */
+    "ManagerNewProgram": "ManagerNewProgram"
+};
+exports.default = NotificationViewModel;

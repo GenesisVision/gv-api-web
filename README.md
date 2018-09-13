@@ -137,6 +137,11 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program details
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsCreatePost**](docs/ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel request
+*CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | 
+*CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | 
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | 
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | 
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | 
 *CoreApiV10.OefApi* | [**v10OefAssetAllGet**](docs/OefApi.md#v10OefAssetAllGet) | **GET** /v1.0/oef/asset/all | Get all supported assets for OEFs
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
@@ -190,6 +195,10 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
+ - [CoreApiV10.NotificationList](docs/NotificationList.md)
+ - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
+ - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
+ - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
@@ -204,9 +213,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
+ - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)
  - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
- - [CoreApiV10.ProgramSet](docs/ProgramSet.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)

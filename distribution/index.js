@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WalletApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.OefApi = exports.ManagersApi = exports.InvestorApi = exports.FileApi = exports.DexchangeApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StatisticProgramDetails = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramSet = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsList = exports.PersonalProgramDetailsFull = exports.PasswordModel = exports.OrderModel = exports.NewProgramRequest = exports.ManagerProfile = exports.LoginViewModel = exports.InvestmentProgramUpdate = exports.InvestInfo = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.DExchangeResponse = exports.DExchangeRequest = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerTradingServer = exports.Broker = exports.AssetsValue = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
+exports.WalletApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.OefApi = exports.NotificationsApi = exports.ManagersApi = exports.InvestorApi = exports.FileApi = exports.DexchangeApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StatisticProgramDetails = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramNotificationSettingList = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsList = exports.PersonalProgramDetailsFull = exports.PasswordModel = exports.OrderModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.ManagerProfile = exports.LoginViewModel = exports.InvestmentProgramUpdate = exports.InvestInfo = exports.IOsAppVersion = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.DExchangeResponse = exports.DExchangeRequest = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChartProgramDetails = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerTradingServer = exports.Broker = exports.AssetsValue = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -121,6 +121,22 @@ var _NewProgramRequest = require('./model/NewProgramRequest');
 
 var _NewProgramRequest2 = _interopRequireDefault(_NewProgramRequest);
 
+var _NotificationList = require('./model/NotificationList');
+
+var _NotificationList2 = _interopRequireDefault(_NotificationList);
+
+var _NotificationSettingList = require('./model/NotificationSettingList');
+
+var _NotificationSettingList2 = _interopRequireDefault(_NotificationSettingList);
+
+var _NotificationSettingViewModel = require('./model/NotificationSettingViewModel');
+
+var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
+
+var _NotificationViewModel = require('./model/NotificationViewModel');
+
+var _NotificationViewModel2 = _interopRequireDefault(_NotificationViewModel);
+
 var _OrderModel = require('./model/OrderModel');
 
 var _OrderModel2 = _interopRequireDefault(_OrderModel);
@@ -177,6 +193,10 @@ var _ProgramDetailsListStatistic = require('./model/ProgramDetailsListStatistic'
 
 var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
 
+var _ProgramNotificationSettingList = require('./model/ProgramNotificationSettingList');
+
+var _ProgramNotificationSettingList2 = _interopRequireDefault(_ProgramNotificationSettingList);
+
 var _ProgramRequest = require('./model/ProgramRequest');
 
 var _ProgramRequest2 = _interopRequireDefault(_ProgramRequest);
@@ -184,10 +204,6 @@ var _ProgramRequest2 = _interopRequireDefault(_ProgramRequest);
 var _ProgramRequests = require('./model/ProgramRequests');
 
 var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
-
-var _ProgramSet = require('./model/ProgramSet');
-
-var _ProgramSet2 = _interopRequireDefault(_ProgramSet);
 
 var _ProgramSets = require('./model/ProgramSets');
 
@@ -317,6 +333,10 @@ var _ManagersApi = require('./api/ManagersApi');
 
 var _ManagersApi2 = _interopRequireDefault(_ManagersApi);
 
+var _NotificationsApi = require('./api/NotificationsApi');
+
+var _NotificationsApi2 = _interopRequireDefault(_NotificationsApi);
+
 var _OefApi = require('./api/OefApi');
 
 var _OefApi2 = _interopRequireDefault(_OefApi);
@@ -374,19 +394,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @module index
 * @version v1.0
 */
-/**
- * Core API v1.0
- * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
- *
- * OpenAPI spec version: v1.0
- * 
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- *
- */
-
 exports.ApiClient = _ApiClient2.default;
 exports.AmountWithCurrency = _AmountWithCurrency2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
@@ -416,6 +423,10 @@ exports.InvestmentProgramUpdate = _InvestmentProgramUpdate2.default;
 exports.LoginViewModel = _LoginViewModel2.default;
 exports.ManagerProfile = _ManagerProfile2.default;
 exports.NewProgramRequest = _NewProgramRequest2.default;
+exports.NotificationList = _NotificationList2.default;
+exports.NotificationSettingList = _NotificationSettingList2.default;
+exports.NotificationSettingViewModel = _NotificationSettingViewModel2.default;
+exports.NotificationViewModel = _NotificationViewModel2.default;
 exports.OrderModel = _OrderModel2.default;
 exports.PasswordModel = _PasswordModel2.default;
 exports.PersonalProgramDetailsFull = _PersonalProgramDetailsFull2.default;
@@ -430,9 +441,9 @@ exports.ProgramChart = _ProgramChart2.default;
 exports.ProgramDetails = _ProgramDetails2.default;
 exports.ProgramDetailsFull = _ProgramDetailsFull2.default;
 exports.ProgramDetailsListStatistic = _ProgramDetailsListStatistic2.default;
+exports.ProgramNotificationSettingList = _ProgramNotificationSettingList2.default;
 exports.ProgramRequest = _ProgramRequest2.default;
 exports.ProgramRequests = _ProgramRequests2.default;
-exports.ProgramSet = _ProgramSet2.default;
 exports.ProgramSets = _ProgramSets2.default;
 exports.ProgramStatistic = _ProgramStatistic2.default;
 exports.ProgramsList = _ProgramsList2.default;
@@ -465,9 +476,21 @@ exports.DexchangeApi = _DexchangeApi2.default;
 exports.FileApi = _FileApi2.default;
 exports.InvestorApi = _InvestorApi2.default;
 exports.ManagersApi = _ManagersApi2.default;
+exports.NotificationsApi = _NotificationsApi2.default;
 exports.OefApi = _OefApi2.default;
 exports.PlatformApi = _PlatformApi2.default;
 exports.ProfileApi = _ProfileApi2.default;
 exports.ProgramsApi = _ProgramsApi2.default;
 exports.RateApi = _RateApi2.default;
-exports.WalletApi = _WalletApi2.default;
+exports.WalletApi = _WalletApi2.default; /**
+                                          * Core API v1.0
+                                          * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+                                          *
+                                          * OpenAPI spec version: v1.0
+                                          * 
+                                          *
+                                          * NOTE: This class is auto generated by the swagger code generator program.
+                                          * https://github.com/swagger-api/swagger-codegen.git
+                                          * Do not edit the class manually.
+                                          *
+                                          */

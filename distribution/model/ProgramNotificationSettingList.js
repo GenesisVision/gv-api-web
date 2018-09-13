@@ -21,121 +21,101 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _NotificationSettingViewModel = require('./NotificationSettingViewModel');
+
+var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProfileHeaderViewModel model module.
-* @module model/ProfileHeaderViewModel
+* The ProgramNotificationSettingList model module.
+* @module model/ProgramNotificationSettingList
 * @version v1.0
 */
-var ProfileHeaderViewModel = function () {
+var ProgramNotificationSettingList = function () {
     /**
-    * Constructs a new <code>ProfileHeaderViewModel</code>.
-    * @alias module:model/ProfileHeaderViewModel
+    * Constructs a new <code>ProgramNotificationSettingList</code>.
+    * @alias module:model/ProgramNotificationSettingList
     * @class
     */
 
-    function ProfileHeaderViewModel() {
-        _classCallCheck(this, ProfileHeaderViewModel);
+    function ProgramNotificationSettingList() {
+        _classCallCheck(this, ProgramNotificationSettingList);
 
-        this.id = undefined;
-        this.name = undefined;
-        this.email = undefined;
-        this.avatar = undefined;
-        this.notificationsCount = undefined;
-        this.favoritesCount = undefined;
-        this.totalBalanceGvt = undefined;
-        this.investedGvt = undefined;
-        this.availableGvt = undefined;
+        this.programId = undefined;
+        this.title = undefined;
+        this.logo = undefined;
+        this.level = undefined;
+        this.settingsGeneral = undefined;
+        this.settingsCustom = undefined;
     }
 
     /**
-    * Constructs a <code>ProfileHeaderViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ProgramNotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProfileHeaderViewModel} obj Optional instance to populate.
-    * @return {module:model/ProfileHeaderViewModel} The populated <code>ProfileHeaderViewModel</code> instance.
+    * @param {module:model/ProgramNotificationSettingList} obj Optional instance to populate.
+    * @return {module:model/ProgramNotificationSettingList} The populated <code>ProgramNotificationSettingList</code> instance.
     */
 
 
-    _createClass(ProfileHeaderViewModel, null, [{
+    _createClass(ProgramNotificationSettingList, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileHeaderViewModel();
+                obj = obj || new ProgramNotificationSettingList();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('programId')) {
+                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
                 }
-                if (data.hasOwnProperty('notificationsCount')) {
-                    obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
+                if (data.hasOwnProperty('settingsGeneral')) {
+                    obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
                 }
-                if (data.hasOwnProperty('favoritesCount')) {
-                    obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalanceGvt')) {
-                    obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('investedGvt')) {
-                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableGvt')) {
-                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
+                if (data.hasOwnProperty('settingsCustom')) {
+                    obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {String} programId
         */
 
         /**
-        * @member {String} name
+        * @member {String} title
         */
 
         /**
-        * @member {String} email
+        * @member {String} logo
         */
 
         /**
-        * @member {String} avatar
+        * @member {Number} level
         */
 
         /**
-        * @member {Number} notificationsCount
+        * @member {Array.<module:model/NotificationSettingViewModel>} settingsGeneral
         */
 
         /**
-        * @member {Number} favoritesCount
-        */
-
-        /**
-        * @member {Number} totalBalanceGvt
-        */
-
-        /**
-        * @member {Number} investedGvt
-        */
-
-        /**
-        * @member {Number} availableGvt
+        * @member {Array.<module:model/NotificationSettingViewModel>} settingsCustom
         */
 
     }]);
 
-    return ProfileHeaderViewModel;
+    return ProgramNotificationSettingList;
 }();
 
-exports.default = ProfileHeaderViewModel;
+exports.default = ProgramNotificationSettingList;

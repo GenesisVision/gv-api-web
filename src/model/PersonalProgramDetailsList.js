@@ -62,6 +62,9 @@ export default class PersonalProgramDetailsList {
             if (data.hasOwnProperty('isInvested')) {
                 obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
             }
+            if (data.hasOwnProperty('hasNotifications')) {
+                obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -74,6 +77,10 @@ export default class PersonalProgramDetailsList {
     * @member {Boolean} isInvested
     */
     isInvested = undefined;
+    /**
+    * @member {Boolean} hasNotifications
+    */
+    hasNotifications = undefined;
 
 
 

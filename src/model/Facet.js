@@ -68,6 +68,9 @@ export default class Facet {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('count')) {
+                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+            }
         }
         return obj;
     }
@@ -88,6 +91,10 @@ export default class Facet {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {Number} count
+    */
+    count = undefined;
 
 
 

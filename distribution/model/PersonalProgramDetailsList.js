@@ -42,6 +42,7 @@ var PersonalProgramDetailsList = function () {
 
         this.isFavorite = undefined;
         this.isInvested = undefined;
+        this.hasNotifications = undefined;
     }
 
     /**
@@ -65,6 +66,9 @@ var PersonalProgramDetailsList = function () {
                 if (data.hasOwnProperty('isInvested')) {
                     obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
                 }
+                if (data.hasOwnProperty('hasNotifications')) {
+                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -75,6 +79,10 @@ var PersonalProgramDetailsList = function () {
 
         /**
         * @member {Boolean} isInvested
+        */
+
+        /**
+        * @member {Boolean} hasNotifications
         */
 
     }]);

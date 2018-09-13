@@ -44,6 +44,7 @@ var PersonalProgramDetailsFull = function () {
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
         this.isReinvest = undefined;
+        this.hasNotifications = undefined;
         this.invested = undefined;
         this.value = undefined;
         this.profit = undefined;
@@ -77,6 +78,9 @@ var PersonalProgramDetailsFull = function () {
                 if (data.hasOwnProperty('isReinvest')) {
                     obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
                 }
+                if (data.hasOwnProperty('hasNotifications')) {
+                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
+                }
                 if (data.hasOwnProperty('invested')) {
                     obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
                 }
@@ -107,6 +111,10 @@ var PersonalProgramDetailsFull = function () {
 
         /**
         * @member {Boolean} isReinvest
+        */
+
+        /**
+        * @member {Boolean} hasNotifications
         */
 
         /**

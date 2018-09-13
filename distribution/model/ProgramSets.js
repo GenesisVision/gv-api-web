@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ProgramSet = require('./ProgramSet');
+var _Facet = require('./Facet');
 
-var _ProgramSet2 = _interopRequireDefault(_ProgramSet);
+var _Facet2 = _interopRequireDefault(_Facet);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -64,7 +64,7 @@ var ProgramSets = function () {
                 obj = obj || new ProgramSets();
 
                 if (data.hasOwnProperty('sets')) {
-                    obj['sets'] = _ApiClient2.default.convertToType(data['sets'], [_ProgramSet2.default]);
+                    obj['sets'] = _ApiClient2.default.convertToType(data['sets'], [_Facet2.default]);
                 }
                 if (data.hasOwnProperty('favoritesCount')) {
                     obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
@@ -74,7 +74,7 @@ var ProgramSets = function () {
         }
 
         /**
-        * @member {Array.<module:model/ProgramSet>} sets
+        * @member {Array.<module:model/Facet>} sets
         */
 
         /**

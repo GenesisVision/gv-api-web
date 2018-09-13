@@ -41,6 +41,10 @@ import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerProfile from './model/ManagerProfile';
 import NewProgramRequest from './model/NewProgramRequest';
+import NotificationList from './model/NotificationList';
+import NotificationSettingList from './model/NotificationSettingList';
+import NotificationSettingViewModel from './model/NotificationSettingViewModel';
+import NotificationViewModel from './model/NotificationViewModel';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
@@ -55,9 +59,9 @@ import ProgramChart from './model/ProgramChart';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
+import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
-import ProgramSet from './model/ProgramSet';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramsList from './model/ProgramsList';
@@ -90,6 +94,7 @@ import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
 import InvestorApi from './api/InvestorApi';
 import ManagersApi from './api/ManagersApi';
+import NotificationsApi from './api/NotificationsApi';
 import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
@@ -305,6 +310,30 @@ export {
     NewProgramRequest,
 
     /**
+     * The NotificationList model constructor.
+     * @property {module:model/NotificationList}
+     */
+    NotificationList,
+
+    /**
+     * The NotificationSettingList model constructor.
+     * @property {module:model/NotificationSettingList}
+     */
+    NotificationSettingList,
+
+    /**
+     * The NotificationSettingViewModel model constructor.
+     * @property {module:model/NotificationSettingViewModel}
+     */
+    NotificationSettingViewModel,
+
+    /**
+     * The NotificationViewModel model constructor.
+     * @property {module:model/NotificationViewModel}
+     */
+    NotificationViewModel,
+
+    /**
      * The OrderModel model constructor.
      * @property {module:model/OrderModel}
      */
@@ -389,6 +418,12 @@ export {
     ProgramDetailsListStatistic,
 
     /**
+     * The ProgramNotificationSettingList model constructor.
+     * @property {module:model/ProgramNotificationSettingList}
+     */
+    ProgramNotificationSettingList,
+
+    /**
      * The ProgramRequest model constructor.
      * @property {module:model/ProgramRequest}
      */
@@ -399,12 +434,6 @@ export {
      * @property {module:model/ProgramRequests}
      */
     ProgramRequests,
-
-    /**
-     * The ProgramSet model constructor.
-     * @property {module:model/ProgramSet}
-     */
-    ProgramSet,
 
     /**
      * The ProgramSets model constructor.
@@ -597,6 +626,12 @@ export {
     * @property {module:api/ManagersApi}
     */
     ManagersApi,
+
+    /**
+    * The NotificationsApi service constructor.
+    * @property {module:api/NotificationsApi}
+    */
+    NotificationsApi,
 
     /**
     * The OefApi service constructor.
