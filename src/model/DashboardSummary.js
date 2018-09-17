@@ -16,6 +16,7 @@ import ApiClient from '../ApiClient';
 import DashboardChartValue from './DashboardChartValue';
 import DashboardPortfolioEvents from './DashboardPortfolioEvents';
 import ProfileHeaderViewModel from './ProfileHeaderViewModel';
+import ProgramRequests from './ProgramRequests';
 
 
 
@@ -74,6 +75,9 @@ export default class DashboardSummary {
             if (data.hasOwnProperty('fundsCount')) {
                 obj['fundsCount'] = ApiClient.convertToType(data['fundsCount'], 'Number');
             }
+            if (data.hasOwnProperty('requests')) {
+                obj['requests'] = ProgramRequests.constructFromObject(data['requests']);
+            }
         }
         return obj;
     }
@@ -98,6 +102,10 @@ export default class DashboardSummary {
     * @member {Number} fundsCount
     */
     fundsCount = undefined;
+    /**
+    * @member {module:model/ProgramRequests} requests
+    */
+    requests = undefined;
 
 
 

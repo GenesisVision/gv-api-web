@@ -61,9 +61,6 @@ export default class ChartProgramDetails {
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('pnLChart')) {
-                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
-            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = StatisticProgramDetails.constructFromObject(data['statistic']);
             }
@@ -75,10 +72,6 @@ export default class ChartProgramDetails {
     * @member {Array.<module:model/ChartSimple>} equityChart
     */
     equityChart = undefined;
-    /**
-    * @member {Array.<module:model/ChartSimple>} pnLChart
-    */
-    pnLChart = undefined;
     /**
     * @member {module:model/StatisticProgramDetails} statistic
     */

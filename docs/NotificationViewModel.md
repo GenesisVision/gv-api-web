@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **programId** | **String** |  | [optional] 
 **managerId** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
 
 
 <a name="TypeEnum"></a>

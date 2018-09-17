@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**pnLChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **statistic** | [**StatisticProgramDetails**](StatisticProgramDetails.md) |  | [optional] 
 
 

@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartProgramDetails from './ChartProgramDetails';
+import ChartSimple from './ChartSimple';
 
 
 
@@ -57,17 +58,59 @@ export default class ProgramChart {
             
             
 
+            if (data.hasOwnProperty('equity')) {
+                obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
+            }
+            if (data.hasOwnProperty('totalProfit')) {
+                obj['totalProfit'] = ApiClient.convertToType(data['totalProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('sharpeRatio')) {
+                obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
+            }
+            if (data.hasOwnProperty('sortinoRatio')) {
+                obj['sortinoRatio'] = ApiClient.convertToType(data['sortinoRatio'], 'Number');
+            }
+            if (data.hasOwnProperty('calmarRatio')) {
+                obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
+            }
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartProgramDetails]);
+            }
+            if (data.hasOwnProperty('pnLChart')) {
+                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
         }
         return obj;
     }
 
     /**
+    * @member {Number} equity
+    */
+    equity = undefined;
+    /**
+    * @member {Number} totalProfit
+    */
+    totalProfit = undefined;
+    /**
+    * @member {Number} sharpeRatio
+    */
+    sharpeRatio = undefined;
+    /**
+    * @member {Number} sortinoRatio
+    */
+    sortinoRatio = undefined;
+    /**
+    * @member {Number} calmarRatio
+    */
+    calmarRatio = undefined;
+    /**
     * @member {Array.<module:model/ChartProgramDetails>} chart
     */
     chart = undefined;
+    /**
+    * @member {Array.<module:model/ChartSimple>} pnLChart
+    */
+    pnLChart = undefined;
 
 
 

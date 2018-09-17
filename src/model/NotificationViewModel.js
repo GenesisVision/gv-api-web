@@ -71,6 +71,9 @@ export default class NotificationViewModel {
             if (data.hasOwnProperty('managerId')) {
                 obj['managerId'] = ApiClient.convertToType(data['managerId'], 'String');
             }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
         }
         return obj;
     }
@@ -95,6 +98,10 @@ export default class NotificationViewModel {
     * @member {String} managerId
     */
     managerId = undefined;
+    /**
+    * @member {String} logo
+    */
+    logo = undefined;
 
 
 

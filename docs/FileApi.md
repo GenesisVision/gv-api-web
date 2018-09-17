@@ -51,7 +51,7 @@ No authorization required
 
 <a name="v10FileUploadPost"></a>
 # **v10FileUploadPost**
-> UploadResult v10FileUploadPost(opts)
+> UploadResult v10FileUploadPost(uploadedFile, opts)
 
 Upload file
 
@@ -61,15 +61,12 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.FileApi();
 
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
+
 let opts = { 
-  'contentType': "contentType_example", // String | 
-  'contentDisposition': "contentDisposition_example", // String | 
-  'headers': {key: "headers_example"}, // {String: String} | 
-  'length': 789, // Number | 
-  'name': "name_example", // String | 
-  'fileName': "fileName_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
-apiInstance.v10FileUploadPost(opts).then((data) => {
+apiInstance.v10FileUploadPost(uploadedFile, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -81,12 +78,8 @@ apiInstance.v10FileUploadPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentType** | **String**|  | [optional] 
- **contentDisposition** | **String**|  | [optional] 
- **headers** | [**{String: String}**](String.md)|  | [optional] 
- **length** | **Number**|  | [optional] 
- **name** | **String**|  | [optional] 
- **fileName** | **String**|  | [optional] 
+ **uploadedFile** | **File**| Upload File | 
+ **authorization** | **String**|  | [optional] 
 
 ### Return type
 
@@ -98,6 +91,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: text/plain, application/json, text/json
 

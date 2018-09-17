@@ -33,6 +33,10 @@ var _ProfileHeaderViewModel = require('./ProfileHeaderViewModel');
 
 var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
 
+var _ProgramRequests = require('./ProgramRequests');
+
+var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57,6 +61,7 @@ var DashboardSummary = function () {
         this.profileHeader = undefined;
         this.programsCount = undefined;
         this.fundsCount = undefined;
+        this.requests = undefined;
     }
 
     /**
@@ -89,6 +94,9 @@ var DashboardSummary = function () {
                 if (data.hasOwnProperty('fundsCount')) {
                     obj['fundsCount'] = _ApiClient2.default.convertToType(data['fundsCount'], 'Number');
                 }
+                if (data.hasOwnProperty('requests')) {
+                    obj['requests'] = _ProgramRequests2.default.constructFromObject(data['requests']);
+                }
             }
             return obj;
         }
@@ -111,6 +119,10 @@ var DashboardSummary = function () {
 
         /**
         * @member {Number} fundsCount
+        */
+
+        /**
+        * @member {module:model/ProgramRequests} requests
         */
 
     }]);

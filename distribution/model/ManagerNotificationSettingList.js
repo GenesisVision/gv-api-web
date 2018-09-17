@@ -21,73 +21,93 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartSimple = require('./ChartSimple');
+var _NotificationSettingViewModel = require('./NotificationSettingViewModel');
 
-var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
-
-var _StatisticProgramDetails = require('./StatisticProgramDetails');
-
-var _StatisticProgramDetails2 = _interopRequireDefault(_StatisticProgramDetails);
+var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ChartProgramDetails model module.
-* @module model/ChartProgramDetails
+* The ManagerNotificationSettingList model module.
+* @module model/ManagerNotificationSettingList
 * @version v1.0
 */
-var ChartProgramDetails = function () {
+var ManagerNotificationSettingList = function () {
     /**
-    * Constructs a new <code>ChartProgramDetails</code>.
-    * @alias module:model/ChartProgramDetails
+    * Constructs a new <code>ManagerNotificationSettingList</code>.
+    * @alias module:model/ManagerNotificationSettingList
     * @class
     */
 
-    function ChartProgramDetails() {
-        _classCallCheck(this, ChartProgramDetails);
+    function ManagerNotificationSettingList() {
+        _classCallCheck(this, ManagerNotificationSettingList);
 
-        this.equityChart = undefined;
-        this.statistic = undefined;
+        this.managerId = undefined;
+        this.username = undefined;
+        this.avatar = undefined;
+        this.about = undefined;
+        this.settingsGeneral = undefined;
     }
 
     /**
-    * Constructs a <code>ChartProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ManagerNotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ChartProgramDetails} obj Optional instance to populate.
-    * @return {module:model/ChartProgramDetails} The populated <code>ChartProgramDetails</code> instance.
+    * @param {module:model/ManagerNotificationSettingList} obj Optional instance to populate.
+    * @return {module:model/ManagerNotificationSettingList} The populated <code>ManagerNotificationSettingList</code> instance.
     */
 
 
-    _createClass(ChartProgramDetails, null, [{
+    _createClass(ManagerNotificationSettingList, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ChartProgramDetails();
+                obj = obj || new ManagerNotificationSettingList();
 
-                if (data.hasOwnProperty('equityChart')) {
-                    obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
+                if (data.hasOwnProperty('managerId')) {
+                    obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
                 }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _StatisticProgramDetails2.default.constructFromObject(data['statistic']);
+                if (data.hasOwnProperty('username')) {
+                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
+                }
+                if (data.hasOwnProperty('avatar')) {
+                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                }
+                if (data.hasOwnProperty('about')) {
+                    obj['about'] = _ApiClient2.default.convertToType(data['about'], 'String');
+                }
+                if (data.hasOwnProperty('settingsGeneral')) {
+                    obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Array.<module:model/ChartSimple>} equityChart
+        * @member {String} managerId
         */
 
         /**
-        * @member {module:model/StatisticProgramDetails} statistic
+        * @member {String} username
+        */
+
+        /**
+        * @member {String} avatar
+        */
+
+        /**
+        * @member {String} about
+        */
+
+        /**
+        * @member {Array.<module:model/NotificationSettingViewModel>} settingsGeneral
         */
 
     }]);
 
-    return ChartProgramDetails;
+    return ManagerNotificationSettingList;
 }();
 
-exports.default = ChartProgramDetails;
+exports.default = ManagerNotificationSettingList;

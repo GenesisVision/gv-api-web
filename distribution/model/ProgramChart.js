@@ -25,6 +25,10 @@ var _ChartProgramDetails = require('./ChartProgramDetails');
 
 var _ChartProgramDetails2 = _interopRequireDefault(_ChartProgramDetails);
 
+var _ChartSimple = require('./ChartSimple');
+
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,7 +48,13 @@ var ProgramChart = function () {
     function ProgramChart() {
         _classCallCheck(this, ProgramChart);
 
+        this.equity = undefined;
+        this.totalProfit = undefined;
+        this.sharpeRatio = undefined;
+        this.sortinoRatio = undefined;
+        this.calmarRatio = undefined;
         this.chart = undefined;
+        this.pnLChart = undefined;
     }
 
     /**
@@ -62,15 +72,57 @@ var ProgramChart = function () {
             if (data) {
                 obj = obj || new ProgramChart();
 
+                if (data.hasOwnProperty('equity')) {
+                    obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
+                }
+                if (data.hasOwnProperty('totalProfit')) {
+                    obj['totalProfit'] = _ApiClient2.default.convertToType(data['totalProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('sharpeRatio')) {
+                    obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
+                }
+                if (data.hasOwnProperty('sortinoRatio')) {
+                    obj['sortinoRatio'] = _ApiClient2.default.convertToType(data['sortinoRatio'], 'Number');
+                }
+                if (data.hasOwnProperty('calmarRatio')) {
+                    obj['calmarRatio'] = _ApiClient2.default.convertToType(data['calmarRatio'], 'Number');
+                }
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartProgramDetails2.default]);
+                }
+                if (data.hasOwnProperty('pnLChart')) {
+                    obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
                 }
             }
             return obj;
         }
 
         /**
+        * @member {Number} equity
+        */
+
+        /**
+        * @member {Number} totalProfit
+        */
+
+        /**
+        * @member {Number} sharpeRatio
+        */
+
+        /**
+        * @member {Number} sortinoRatio
+        */
+
+        /**
+        * @member {Number} calmarRatio
+        */
+
+        /**
         * @member {Array.<module:model/ChartProgramDetails>} chart
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} pnLChart
         */
 
     }]);

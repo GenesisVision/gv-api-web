@@ -101,36 +101,34 @@ var FileApi = function () {
 
     /**
      * Upload file
+     * @param {File} uploadedFile Upload File
      * @param {Object} opts Optional parameters
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadResult} and HTTP response
      */
 
   }, {
     key: 'v10FileUploadPostWithHttpInfo',
-    value: function v10FileUploadPostWithHttpInfo(opts) {
+    value: function v10FileUploadPostWithHttpInfo(uploadedFile, opts) {
       opts = opts || {};
       var postBody = null;
 
+      // verify the required parameter 'uploadedFile' is set
+      if (uploadedFile === undefined || uploadedFile === null) {
+        throw new Error("Missing the required parameter 'uploadedFile' when calling v10FileUploadPost");
+      }
+
       var pathParams = {};
-      var queryParams = {
-        'ContentType': opts['contentType'],
-        'ContentDisposition': opts['contentDisposition'],
-        'Headers': opts['headers'],
-        'Length': opts['length'],
-        'Name': opts['name'],
-        'FileName': opts['fileName']
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': opts['authorization']
       };
-      var headerParams = {};
-      var formParams = {};
+      var formParams = {
+        'uploadedFile': uploadedFile
+      };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _UploadResult2.default;
 
@@ -139,20 +137,16 @@ var FileApi = function () {
 
     /**
      * Upload file
+     * @param {File} uploadedFile Upload File
      * @param {Object} opts Optional parameters
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadResult}
      */
 
   }, {
     key: 'v10FileUploadPost',
-    value: function v10FileUploadPost(opts) {
-      return this.v10FileUploadPostWithHttpInfo(opts).then(function (response_and_data) {
+    value: function v10FileUploadPost(uploadedFile, opts) {
+      return this.v10FileUploadPostWithHttpInfo(uploadedFile, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

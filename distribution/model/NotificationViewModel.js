@@ -45,6 +45,7 @@ var NotificationViewModel = function () {
         this.type = undefined;
         this.programId = undefined;
         this.managerId = undefined;
+        this.logo = undefined;
     }
 
     /**
@@ -77,6 +78,9 @@ var NotificationViewModel = function () {
                 if (data.hasOwnProperty('managerId')) {
                     obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
                 }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
             }
             return obj;
         }
@@ -99,6 +103,10 @@ var NotificationViewModel = function () {
 
         /**
         * @member {String} managerId
+        */
+
+        /**
+        * @member {String} logo
         */
 
 

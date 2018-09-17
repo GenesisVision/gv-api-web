@@ -21,6 +21,14 @@ Name | Type | Description | Notes
 
 * `PlatformOther` (value: `"PlatformOther"`)
 
+* `ProfileUpdated` (value: `"ProfileUpdated"`)
+
+* `ProfilePwdUpdated` (value: `"ProfilePwdUpdated"`)
+
+* `ProfileVerification` (value: `"ProfileVerification"`)
+
+* `Profile2FA` (value: `"Profile2FA"`)
+
 * `ProgramNewsAndUpdates` (value: `"ProgramNewsAndUpdates"`)
 
 * `ProgramEndOfPeriod` (value: `"ProgramEndOfPeriod"`)
@@ -39,6 +47,8 @@ Name | Type | Description | Notes
 * `Empty` (value: `"Empty"`)
 
 * `Profit` (value: `"Profit"`)
+
+* `Level` (value: `"Level"`)
 
 
 

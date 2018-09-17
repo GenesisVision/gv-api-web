@@ -43,9 +43,8 @@ var StatisticProgramDetails = function () {
         this.pnL = undefined;
         this.investors = undefined;
         this.trades = undefined;
-        this.successTrades = undefined;
+        this.successTradesPercent = undefined;
         this.profitFactor = undefined;
-        this.sharpeRatio = undefined;
         this.maxDrawdown = undefined;
         this.periodStarts = undefined;
         this.periodEnds = undefined;
@@ -75,14 +74,11 @@ var StatisticProgramDetails = function () {
                 if (data.hasOwnProperty('trades')) {
                     obj['trades'] = _ApiClient2.default.convertToType(data['trades'], 'Number');
                 }
-                if (data.hasOwnProperty('successTrades')) {
-                    obj['successTrades'] = _ApiClient2.default.convertToType(data['successTrades'], 'Number');
+                if (data.hasOwnProperty('successTradesPercent')) {
+                    obj['successTradesPercent'] = _ApiClient2.default.convertToType(data['successTradesPercent'], 'Number');
                 }
                 if (data.hasOwnProperty('profitFactor')) {
                     obj['profitFactor'] = _ApiClient2.default.convertToType(data['profitFactor'], 'Number');
-                }
-                if (data.hasOwnProperty('sharpeRatio')) {
-                    obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
                 }
                 if (data.hasOwnProperty('maxDrawdown')) {
                     obj['maxDrawdown'] = _ApiClient2.default.convertToType(data['maxDrawdown'], 'Number');
@@ -110,15 +106,11 @@ var StatisticProgramDetails = function () {
         */
 
         /**
-        * @member {Number} successTrades
+        * @member {Number} successTradesPercent
         */
 
         /**
         * @member {Number} profitFactor
-        */
-
-        /**
-        * @member {Number} sharpeRatio
         */
 
         /**

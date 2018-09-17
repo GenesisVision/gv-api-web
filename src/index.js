@@ -39,6 +39,7 @@ import IOsAppVersion from './model/IOsAppVersion';
 import InvestInfo from './model/InvestInfo';
 import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
+import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerProfile from './model/ManagerProfile';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
@@ -296,6 +297,12 @@ export {
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
+
+    /**
+     * The ManagerNotificationSettingList model constructor.
+     * @property {module:model/ManagerNotificationSettingList}
+     */
+    ManagerNotificationSettingList,
 
     /**
      * The ManagerProfile model constructor.

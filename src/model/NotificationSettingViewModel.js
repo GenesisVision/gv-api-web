@@ -134,6 +134,30 @@ export default class NotificationSettingViewModel {
         "PlatformOther": "PlatformOther",
     
         /**
+         * value: "ProfileUpdated"
+         * @const
+         */
+        "ProfileUpdated": "ProfileUpdated",
+    
+        /**
+         * value: "ProfilePwdUpdated"
+         * @const
+         */
+        "ProfilePwdUpdated": "ProfilePwdUpdated",
+    
+        /**
+         * value: "ProfileVerification"
+         * @const
+         */
+        "ProfileVerification": "ProfileVerification",
+    
+        /**
+         * value: "Profile2FA"
+         * @const
+         */
+        "Profile2FA": "Profile2FA",
+    
+        /**
          * value: "ProgramNewsAndUpdates"
          * @const
          */
@@ -175,7 +199,13 @@ export default class NotificationSettingViewModel {
          * value: "Profit"
          * @const
          */
-        "Profit": "Profit"    
+        "Profit": "Profit",
+    
+        /**
+         * value: "Level"
+         * @const
+         */
+        "Level": "Level"    
     };
 
 

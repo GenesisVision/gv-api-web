@@ -270,6 +270,7 @@ let opts = {
   'profitAvgMax': 1.2, // Number | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
   'sorting': "sorting_example", // String | 
   'mask': "mask_example", // String | 
   'facetId': "facetId_example", // String | 
@@ -298,6 +299,7 @@ Name | Type | Description  | Notes
  **profitAvgMax** | **Number**|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **mask** | **String**|  | [optional] 
  **facetId** | [**String**](.md)|  | [optional] 

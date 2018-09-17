@@ -43,7 +43,7 @@ export default class InvestorApi {
 
 
     /**
-     * Summary dashdoard info
+     * Summary dashboard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetId 
@@ -56,6 +56,8 @@ export default class InvestorApi {
      * @param {module:model/String} opts.chartCurrency 
      * @param {Date} opts.chartFrom 
      * @param {Date} opts.chartTo 
+     * @param {Number} opts.requestsSkip 
+     * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
      */
     v10InvestorGetWithHttpInfo(authorization, opts) {
@@ -80,7 +82,9 @@ export default class InvestorApi {
         'Take': opts['take'],
         'chartCurrency': opts['chartCurrency'],
         'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo']
+        'chartTo': opts['chartTo'],
+        'requestsSkip': opts['requestsSkip'],
+        'requestsTake': opts['requestsTake']
       };
       let headerParams = {
         'Authorization': authorization
@@ -101,7 +105,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Summary dashdoard info
+     * Summary dashboard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.assetId 
@@ -114,6 +118,8 @@ export default class InvestorApi {
      * @param {module:model/String} opts.chartCurrency 
      * @param {Date} opts.chartFrom 
      * @param {Date} opts.chartTo 
+     * @param {Number} opts.requestsSkip 
+     * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
      */
     v10InvestorGet(authorization, opts) {
@@ -503,7 +509,7 @@ export default class InvestorApi {
 
 
     /**
-     * Get requests
+     * Get program requests
      * @param {String} id 
      * @param {Number} skip 
      * @param {Number} take 
@@ -560,7 +566,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Get requests
+     * Get program requests
      * @param {String} id 
      * @param {Number} skip 
      * @param {Number} take 
@@ -712,6 +718,7 @@ export default class InvestorApi {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.chartPointsCount 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
@@ -732,6 +739,7 @@ export default class InvestorApi {
         'Sorting': opts['sorting'],
         'From': opts['from'],
         'To': opts['to'],
+        'ChartPointsCount': opts['chartPointsCount'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -760,6 +768,7 @@ export default class InvestorApi {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.chartPointsCount 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
@@ -823,6 +832,77 @@ export default class InvestorApi {
      */
     v10InvestorProgramsRequestsByIdCancelPost(id, authorization) {
       return this.v10InvestorProgramsRequestsByIdCancelPostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get all requests
+     * @param {Number} skip 
+     * @param {Number} take 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
+     */
+    v10InvestorRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'skip' is set
+      if (skip === undefined || skip === null) {
+        throw new Error("Missing the required parameter 'skip' when calling v10InvestorRequestsBySkipByTakeGet");
+      }
+
+      // verify the required parameter 'take' is set
+      if (take === undefined || take === null) {
+        throw new Error("Missing the required parameter 'take' when calling v10InvestorRequestsBySkipByTakeGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorRequestsBySkipByTakeGet");
+      }
+
+
+      let pathParams = {
+        'skip': skip,
+        'take': take
+      };
+      let queryParams = {
+        'id': opts['id']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramRequests;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/requests/{skip}/{take}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get all requests
+     * @param {Number} skip 
+     * @param {Number} take 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
+     */
+    v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, opts) {
+      return this.v10InvestorRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ManagerNotificationSettingList = require('./ManagerNotificationSettingList');
+
+var _ManagerNotificationSettingList2 = _interopRequireDefault(_ManagerNotificationSettingList);
+
 var _NotificationSettingViewModel = require('./NotificationSettingViewModel');
 
 var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
@@ -50,6 +54,7 @@ var NotificationSettingList = function () {
 
         this.settingsGeneral = undefined;
         this.settingsProgram = undefined;
+        this.settingsManager = undefined;
     }
 
     /**
@@ -73,6 +78,9 @@ var NotificationSettingList = function () {
                 if (data.hasOwnProperty('settingsProgram')) {
                     obj['settingsProgram'] = _ApiClient2.default.convertToType(data['settingsProgram'], [_ProgramNotificationSettingList2.default]);
                 }
+                if (data.hasOwnProperty('settingsManager')) {
+                    obj['settingsManager'] = _ApiClient2.default.convertToType(data['settingsManager'], [_ManagerNotificationSettingList2.default]);
+                }
             }
             return obj;
         }
@@ -83,6 +91,10 @@ var NotificationSettingList = function () {
 
         /**
         * @member {Array.<module:model/ProgramNotificationSettingList>} settingsProgram
+        */
+
+        /**
+        * @member {Array.<module:model/ManagerNotificationSettingList>} settingsManager
         */
 
     }]);

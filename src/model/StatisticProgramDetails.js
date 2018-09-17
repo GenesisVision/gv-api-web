@@ -65,14 +65,11 @@ export default class StatisticProgramDetails {
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], 'Number');
             }
-            if (data.hasOwnProperty('successTrades')) {
-                obj['successTrades'] = ApiClient.convertToType(data['successTrades'], 'Number');
+            if (data.hasOwnProperty('successTradesPercent')) {
+                obj['successTradesPercent'] = ApiClient.convertToType(data['successTradesPercent'], 'Number');
             }
             if (data.hasOwnProperty('profitFactor')) {
                 obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
-            }
-            if (data.hasOwnProperty('sharpeRatio')) {
-                obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
             }
             if (data.hasOwnProperty('maxDrawdown')) {
                 obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
@@ -100,17 +97,13 @@ export default class StatisticProgramDetails {
     */
     trades = undefined;
     /**
-    * @member {Number} successTrades
+    * @member {Number} successTradesPercent
     */
-    successTrades = undefined;
+    successTradesPercent = undefined;
     /**
     * @member {Number} profitFactor
     */
     profitFactor = undefined;
-    /**
-    * @member {Number} sharpeRatio
-    */
-    sharpeRatio = undefined;
     /**
     * @member {Number} maxDrawdown
     */

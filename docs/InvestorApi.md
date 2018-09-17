@@ -4,25 +4,26 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashdoard info
+[**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
 [**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | investing
 [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing
 [**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get requests
+[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program requests
 [**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
 [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
 [**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
+[**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 
 
 <a name="v10InvestorGet"></a>
 # **v10InvestorGet**
 > DashboardSummary v10InvestorGet(authorization, opts)
 
-Summary dashdoard info
+Summary dashboard info
 
 ### Example
 ```javascript
@@ -42,7 +43,9 @@ let opts = {
   'take': 56, // Number | 
   'chartCurrency': "chartCurrency_example", // String | 
   'chartFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartTo': new Date("2013-10-20T19:20:30+01:00") // Date | 
+  'chartTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'requestsSkip': 56, // Number | 
+  'requestsTake': 56 // Number | 
 };
 apiInstance.v10InvestorGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -67,6 +70,8 @@ Name | Type | Description  | Notes
  **chartCurrency** | **String**|  | [optional] 
  **chartFrom** | **Date**|  | [optional] 
  **chartTo** | **Date**|  | [optional] 
+ **requestsSkip** | **Number**|  | [optional] 
+ **requestsTake** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -373,7 +378,7 @@ No authorization required
 # **v10InvestorProgramsByIdRequestsBySkipByTakeGet**
 > ProgramRequests v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
 
-Get requests
+Get program requests
 
 ### Example
 ```javascript
@@ -531,6 +536,7 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -550,6 +556,7 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -600,6 +607,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorRequestsBySkipByTakeGet"></a>
+# **v10InvestorRequestsBySkipByTakeGet**
+> ProgramRequests v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, opts)
+
+Get all requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'id': "id_example" // String | 
+};
+apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+ **id** | [**String**](.md)|  | [optional] 
+
+### Return type
+
+[**ProgramRequests**](ProgramRequests.md)
 
 ### Authorization
 
