@@ -107,6 +107,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotInvestorPost**](docs/AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 *CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
+*CoreApiV10.AuthApi* | [**v10AuthPhoneRequestVerificationCodePost**](docs/AuthApi.md#v10AuthPhoneRequestVerificationCodePost) | **POST** /v1.0/auth/phone/requestVerificationCode | Request phone number verification code
+*CoreApiV10.AuthApi* | [**v10AuthPhoneVerifyPost**](docs/AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
 *CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 *CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 *CoreApiV10.AuthApi* | [**v10AuthSigninManagerPost**](docs/AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
@@ -115,9 +117,18 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthSignupManagerPost**](docs/AuthApi.md#v10AuthSignupManagerPost) | **POST** /v1.0/auth/signup/manager | New manager registration
 *CoreApiV10.AuthApi* | [**v10AuthTokenUpdatePost**](docs/AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
 *CoreApiV10.BrokersApi* | [**v10BrokersGet**](docs/BrokersApi.md#v10BrokersGet) | **GET** /v1.0/brokers | Get all trade servers
-*CoreApiV10.DexchangeApi* | [**v10DexchangeNodePost**](docs/DexchangeApi.md#v10DexchangeNodePost) | **POST** /v1.0/dexchange/node | 
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
+*CoreApiV10.FundsApi* | [**v10FundsAssetsGet**](docs/FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+*CoreApiV10.FundsApi* | [**v10FundsByIdChartGet**](docs/FundsApi.md#v10FundsByIdChartGet) | **GET** /v1.0/funds/{id}/chart | Fund chart
+*CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteAddPost**](docs/FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
+*CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteRemovePost**](docs/FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
+*CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
+*CoreApiV10.FundsApi* | [**v10FundsByIdRebalancingGet**](docs/FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
+*CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program requests
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel request
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -132,6 +143,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsCreatePost**](docs/ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdPeriodClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get requests
@@ -143,8 +155,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | 
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | 
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | 
-*CoreApiV10.OefApi* | [**v10OefAssetAllGet**](docs/OefApi.md#v10OefAssetAllGet) | **GET** /v1.0/oef/asset/all | Get all supported assets for OEFs
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
+*CoreApiV10.PlatformApi* | [**v10PlatformPaymentInfoGet**](docs/PlatformApi.md#v10PlatformPaymentInfoGet) | **GET** /v1.0/platform/payment/info | Platform payment info
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
@@ -176,11 +188,12 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.BrokerTradingServer](docs/BrokerTradingServer.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
+ - [CoreApiV10.ChartFundDetails](docs/ChartFundDetails.md)
  - [CoreApiV10.ChartProgramDetails](docs/ChartProgramDetails.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.CreateWithdrawalRequestModel](docs/CreateWithdrawalRequestModel.md)
- - [CoreApiV10.DExchangeRequest](docs/DExchangeRequest.md)
- - [CoreApiV10.DExchangeResponse](docs/DExchangeResponse.md)
+ - [CoreApiV10.CurrencyInfo](docs/CurrencyInfo.md)
+ - [CoreApiV10.CurrencyWithCommissionInfo](docs/CurrencyWithCommissionInfo.md)
  - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
  - [CoreApiV10.DashboardPortfolioEvent](docs/DashboardPortfolioEvent.md)
  - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
@@ -190,24 +203,37 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
+ - [CoreApiV10.FundAssetPartDetails](docs/FundAssetPartDetails.md)
+ - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
+ - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
+ - [CoreApiV10.FundChart](docs/FundChart.md)
+ - [CoreApiV10.FundDetails](docs/FundDetails.md)
+ - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
+ - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
+ - [CoreApiV10.FundStatistic](docs/FundStatistic.md)
+ - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.InvestInfo](docs/InvestInfo.md)
  - [CoreApiV10.InvestmentProgramUpdate](docs/InvestmentProgramUpdate.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
+ - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.NotificationList](docs/NotificationList.md)
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
+ - [CoreApiV10.OefAssetPart](docs/OefAssetPart.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
+ - [CoreApiV10.PersonalFundDetailsFull](docs/PersonalFundDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsList](docs/PersonalProgramDetailsList.md)
  - [CoreApiV10.PlatformAsset](docs/PlatformAsset.md)
  - [CoreApiV10.PlatformAssets](docs/PlatformAssets.md)
  - [CoreApiV10.PlatformInfo](docs/PlatformInfo.md)
+ - [CoreApiV10.PlatformPaymentInfo](docs/PlatformPaymentInfo.md)
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
  - [CoreApiV10.ProfilePublic](docs/ProfilePublic.md)
@@ -224,12 +250,15 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RateItem](docs/RateItem.md)
  - [CoreApiV10.RatesModel](docs/RatesModel.md)
  - [CoreApiV10.RatesModelRates](docs/RatesModelRates.md)
+ - [CoreApiV10.RebalancesViewModel](docs/RebalancesViewModel.md)
+ - [CoreApiV10.RebalancingModel](docs/RebalancingModel.md)
  - [CoreApiV10.RecoveryCode](docs/RecoveryCode.md)
  - [CoreApiV10.RecoveryCodesViewModel](docs/RecoveryCodesViewModel.md)
  - [CoreApiV10.RegisterInvestorViewModel](docs/RegisterInvestorViewModel.md)
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
+ - [CoreApiV10.StatisticFundDetails](docs/StatisticFundDetails.md)
  - [CoreApiV10.StatisticProgramDetails](docs/StatisticProgramDetails.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)

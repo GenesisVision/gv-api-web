@@ -77,6 +77,9 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
             if (data.hasOwnProperty('canCancelRequest')) {
                 obj['canCancelRequest'] = ApiClient.convertToType(data['canCancelRequest'], 'Boolean');
             }
@@ -112,6 +115,10 @@ export default class ProgramRequest {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {String} title
+    */
+    title = undefined;
     /**
     * @member {Boolean} canCancelRequest
     */

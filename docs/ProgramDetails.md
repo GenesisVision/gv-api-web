@@ -3,10 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**logo** | **String** |  | [optional] 
-**title** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
@@ -14,8 +10,12 @@ Name | Type | Description | Notes
 **periodEnds** | **Date** |  | [optional] 
 **isReinvesting** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
-**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
+**id** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsList**](PersonalProgramDetailsList.md) | Fields for authorized user | [optional] 
 **dashboardProgramDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 

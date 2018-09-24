@@ -268,14 +268,14 @@ let opts = {
   'levelMax': 56, // Number | 
   'profitAvgMin': 1.2, // Number | 
   'profitAvgMax': 1.2, // Number | 
+  'sorting': "sorting_example", // String | 
+  'currency': "currency_example", // String | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
-  'sorting': "sorting_example", // String | 
   'mask': "mask_example", // String | 
   'facetId': "facetId_example", // String | 
   'isFavorite': true, // Boolean | 
-  'currency': "currency_example", // String | 
   'ids': ["ids_example"], // [String] | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
@@ -297,14 +297,14 @@ Name | Type | Description  | Notes
  **levelMax** | **Number**|  | [optional] 
  **profitAvgMin** | **Number**|  | [optional] 
  **profitAvgMax** | **Number**|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
- **sorting** | **String**|  | [optional] 
  **mask** | **String**|  | [optional] 
  **facetId** | [**String**](.md)|  | [optional] 
  **isFavorite** | **Boolean**|  | [optional] 
- **currency** | **String**|  | [optional] 
  **ids** | [**[String]**](String.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 

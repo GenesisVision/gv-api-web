@@ -61,18 +61,6 @@ export default class ProgramDetails {
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -94,11 +82,23 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
-            if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('manager')) {
+                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
@@ -113,22 +113,6 @@ export default class ProgramDetails {
         return obj;
     }
 
-    /**
-    * @member {String} id
-    */
-    id = undefined;
-    /**
-    * @member {String} logo
-    */
-    logo = undefined;
-    /**
-    * @member {String} title
-    */
-    title = undefined;
-    /**
-    * @member {String} description
-    */
-    description = undefined;
     /**
     * @member {module:model/ProgramDetails.CurrencyEnum} currency
     */
@@ -158,13 +142,29 @@ export default class ProgramDetails {
     */
     availableInvestment = undefined;
     /**
-    * @member {module:model/ProfilePublic} manager
-    */
-    manager = undefined;
-    /**
     * @member {module:model/ProgramDetailsListStatistic} statistic
     */
     statistic = undefined;
+    /**
+    * @member {String} id
+    */
+    id = undefined;
+    /**
+    * @member {String} logo
+    */
+    logo = undefined;
+    /**
+    * @member {String} title
+    */
+    title = undefined;
+    /**
+    * @member {String} description
+    */
+    description = undefined;
+    /**
+    * @member {module:model/ProfilePublic} manager
+    */
+    manager = undefined;
     /**
     * @member {Array.<module:model/ChartSimple>} chart
     */

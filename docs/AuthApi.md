@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**v10AuthPasswordForgotInvestorPost**](AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 [**v10AuthPasswordForgotManagerPost**](AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 [**v10AuthPasswordResetPost**](AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
+[**v10AuthPhoneRequestVerificationCodePost**](AuthApi.md#v10AuthPhoneRequestVerificationCodePost) | **POST** /v1.0/auth/phone/requestVerificationCode | Request phone number verification code
+[**v10AuthPhoneVerifyPost**](AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
 [**v10AuthResendconfirmationlinkPost**](AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 [**v10AuthSigninInvestorPost**](AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
 [**v10AuthSigninManagerPost**](AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
@@ -454,6 +456,92 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10AuthPhoneRequestVerificationCodePost"></a>
+# **v10AuthPhoneRequestVerificationCodePost**
+> v10AuthPhoneRequestVerificationCodePost(authorization)
+
+Request phone number verification code
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.AuthApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10AuthPhoneRequestVerificationCodePost(authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10AuthPhoneVerifyPost"></a>
+# **v10AuthPhoneVerifyPost**
+> v10AuthPhoneVerifyPost(authorization, opts)
+
+Verify phone number
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.AuthApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'token': "token_example" // String | 
+};
+apiInstance.v10AuthPhoneVerifyPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **token** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10AuthResendconfirmationlinkPost"></a>

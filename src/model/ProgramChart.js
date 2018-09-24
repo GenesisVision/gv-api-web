@@ -58,6 +58,12 @@ export default class ProgramChart {
             
             
 
+            if (data.hasOwnProperty('chart')) {
+                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartProgramDetails]);
+            }
+            if (data.hasOwnProperty('pnLChart')) {
+                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
+            }
             if (data.hasOwnProperty('equity')) {
                 obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
             }
@@ -73,16 +79,18 @@ export default class ProgramChart {
             if (data.hasOwnProperty('calmarRatio')) {
                 obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
             }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartProgramDetails]);
-            }
-            if (data.hasOwnProperty('pnLChart')) {
-                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
-            }
         }
         return obj;
     }
 
+    /**
+    * @member {Array.<module:model/ChartProgramDetails>} chart
+    */
+    chart = undefined;
+    /**
+    * @member {Array.<module:model/ChartSimple>} pnLChart
+    */
+    pnLChart = undefined;
     /**
     * @member {Number} equity
     */
@@ -103,14 +111,6 @@ export default class ProgramChart {
     * @member {Number} calmarRatio
     */
     calmarRatio = undefined;
-    /**
-    * @member {Array.<module:model/ChartProgramDetails>} chart
-    */
-    chart = undefined;
-    /**
-    * @member {Array.<module:model/ChartSimple>} pnLChart
-    */
-    pnLChart = undefined;
 
 
 

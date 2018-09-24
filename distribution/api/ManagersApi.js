@@ -33,6 +33,10 @@ var _ManagerProfile = require('../model/ManagerProfile');
 
 var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
 
+var _NewFundRequest = require('../model/NewFundRequest');
+
+var _NewFundRequest2 = _interopRequireDefault(_NewFundRequest);
+
 var _NewProgramRequest = require('../model/NewProgramRequest');
 
 var _NewProgramRequest2 = _interopRequireDefault(_NewProgramRequest);
@@ -107,6 +111,56 @@ var ManagersApi = function () {
     key: 'v10ManagersByIdGet',
     value: function v10ManagersByIdGet(id) {
       return this.v10ManagersByIdGetWithHttpInfo(id).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Create fund
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewFundRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagersFundsCreatePostWithHttpInfo',
+    value: function v10ManagersFundsCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsCreatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/managers/funds/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Create fund
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewFundRequest} opts.request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ManagersFundsCreatePost',
+    value: function v10ManagersFundsCreatePost(authorization, opts) {
+      return this.v10ManagersFundsCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

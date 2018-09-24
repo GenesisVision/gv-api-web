@@ -1,0 +1,351 @@
+# CoreApiV10.FundsApi
+
+All URIs are relative to *https://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v10FundsAssetsGet**](FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+[**v10FundsByIdChartGet**](FundsApi.md#v10FundsByIdChartGet) | **GET** /v1.0/funds/{id}/chart | Fund chart
+[**v10FundsByIdFavoriteAddPost**](FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
+[**v10FundsByIdFavoriteRemovePost**](FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
+[**v10FundsByIdGet**](FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
+[**v10FundsByIdRebalancingGet**](FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
+[**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
+
+
+<a name="v10FundsAssetsGet"></a>
+# **v10FundsAssetsGet**
+> PlatformAssets v10FundsAssetsGet(authorization)
+
+Get all supported assets for funds
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10FundsAssetsGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**PlatformAssets**](PlatformAssets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdChartGet"></a>
+# **v10FundsByIdChartGet**
+> FundChart v10FundsByIdChartGet(id, opts)
+
+Fund chart
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'maxPointCount': 56 // Number | 
+};
+apiInstance.v10FundsByIdChartGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **maxPointCount** | **Number**|  | [optional] 
+
+### Return type
+
+[**FundChart**](FundChart.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdFavoriteAddPost"></a>
+# **v10FundsByIdFavoriteAddPost**
+> v10FundsByIdFavoriteAddPost(id, authorization)
+
+Add to favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10FundsByIdFavoriteAddPost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdFavoriteRemovePost"></a>
+# **v10FundsByIdFavoriteRemovePost**
+> v10FundsByIdFavoriteRemovePost(id, authorization)
+
+Remove from favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10FundsByIdFavoriteRemovePost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdGet"></a>
+# **v10FundsByIdGet**
+> FundDetailsFull v10FundsByIdGet(id, opts)
+
+Funds details
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'authorization': "authorization_example" // String | 
+};
+apiInstance.v10FundsByIdGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**FundDetailsFull**](FundDetailsFull.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdRebalancingGet"></a>
+# **v10FundsByIdRebalancingGet**
+> RebalancesViewModel v10FundsByIdRebalancingGet(id, opts)
+
+Rebalancing history
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10FundsByIdRebalancingGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**RebalancesViewModel**](RebalancesViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsGet"></a>
+# **v10FundsGet**
+> FundsList v10FundsGet(opts)
+
+Funds list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let opts = { 
+  'authorization': "authorization_example", // String | 
+  'sorting': "sorting_example", // String | 
+  'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'mask': "mask_example", // String | 
+  'facetId': "facetId_example", // String | 
+  'isFavorite': true, // Boolean | 
+  'ids': ["ids_example"], // [String] | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10FundsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **statisticDateFrom** | **Date**|  | [optional] 
+ **statisticDateTo** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **mask** | **String**|  | [optional] 
+ **facetId** | [**String**](.md)|  | [optional] 
+ **isFavorite** | **Boolean**|  | [optional] 
+ **ids** | [**[String]**](String.md)|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**FundsList**](FundsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+

@@ -3,12 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**isReinvest** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
-**isReinvest** | **Boolean** |  | [optional] 
 **hasNotifications** | **Boolean** |  | [optional] 
-**invested** | **Number** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
 **investmentProgramStatus** | **String** |  | [optional] 

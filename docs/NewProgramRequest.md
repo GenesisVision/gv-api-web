@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**periodLength** | **Number** |  | [optional] 
+**successFee** | **Number** |  | [optional] 
+**stopOutLevel** | **Number** |  | [optional] 
+**currency** | **String** |  | [optional] 
+**leverage** | **Number** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **tradingServerId** | **String** |  | [optional] 
-**periodLength** | **Number** |  | [optional] 
-**successFee** | **Number** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
-**stopOutLevel** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
-**currency** | **String** |  | [optional] 
-**leverage** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

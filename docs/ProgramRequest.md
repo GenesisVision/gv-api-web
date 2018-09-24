@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **canCancelRequest** | **Boolean** |  | [optional] 
 
 

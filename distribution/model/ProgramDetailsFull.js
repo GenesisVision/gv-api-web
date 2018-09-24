@@ -52,22 +52,23 @@ var ProgramDetailsFull = function () {
     function ProgramDetailsFull() {
         _classCallCheck(this, ProgramDetailsFull);
 
-        this.id = undefined;
-        this.logo = undefined;
-        this.description = undefined;
-        this.title = undefined;
         this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
         this.periodStarts = undefined;
         this.periodEnds = undefined;
         this.entryFee = undefined;
+        this.successFee = undefined;
         this.isReinvesting = undefined;
-        this.status = undefined;
         this.availableInvestment = undefined;
-        this.manager = undefined;
         this.statistic = undefined;
         this.personalProgramDetails = undefined;
+        this.id = undefined;
+        this.logo = undefined;
+        this.description = undefined;
+        this.title = undefined;
+        this.status = undefined;
+        this.manager = undefined;
     }
 
     /**
@@ -85,18 +86,6 @@ var ProgramDetailsFull = function () {
             if (data) {
                 obj = obj || new ProgramDetailsFull();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
@@ -115,17 +104,14 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
+                if (data.hasOwnProperty('successFee')) {
+                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
+                }
                 if (data.hasOwnProperty('isReinvesting')) {
                     obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
                 }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);
@@ -133,25 +119,27 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('personalProgramDetails')) {
                     obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
                 }
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
+                }
             }
             return obj;
         }
-
-        /**
-        * @member {String} id
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {String} title
-        */
 
         /**
         * @member {module:model/ProgramDetailsFull.CurrencyEnum} currency
@@ -178,19 +166,15 @@ var ProgramDetailsFull = function () {
         */
 
         /**
+        * @member {Number} successFee
+        */
+
+        /**
         * @member {Boolean} isReinvesting
         */
 
         /**
-        * @member {module:model/ProgramDetailsFull.StatusEnum} status
-        */
-
-        /**
         * @member {Number} availableInvestment
-        */
-
-        /**
-        * @member {module:model/ProfilePublic} manager
         */
 
         /**
@@ -200,6 +184,30 @@ var ProgramDetailsFull = function () {
         /**
         * Fields for authorized user
         * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails
+        */
+
+        /**
+        * @member {String} id
+        */
+
+        /**
+        * @member {String} logo
+        */
+
+        /**
+        * @member {String} description
+        */
+
+        /**
+        * @member {String} title
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsFull.StatusEnum} status
+        */
+
+        /**
+        * @member {module:model/ProfilePublic} manager
         */
 
 
@@ -301,6 +309,12 @@ ProgramDetailsFull.StatusEnum = {
      * value: "Archived"
      * @const
      */
-    "Archived": "Archived"
+    "Archived": "Archived",
+
+    /**
+     * value: "ClosedDueToInactivity"
+     * @const
+     */
+    "ClosedDueToInactivity": "ClosedDueToInactivity"
 };
 exports.default = ProgramDetailsFull;

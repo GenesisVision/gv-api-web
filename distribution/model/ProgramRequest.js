@@ -47,6 +47,7 @@ var ProgramRequest = function () {
         this.type = undefined;
         this.status = undefined;
         this.logo = undefined;
+        this.title = undefined;
         this.canCancelRequest = undefined;
     }
 
@@ -86,6 +87,9 @@ var ProgramRequest = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
                 if (data.hasOwnProperty('canCancelRequest')) {
                     obj['canCancelRequest'] = _ApiClient2.default.convertToType(data['canCancelRequest'], 'Boolean');
                 }
@@ -119,6 +123,10 @@ var ProgramRequest = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} title
         */
 
         /**

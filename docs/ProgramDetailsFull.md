@@ -3,22 +3,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**logo** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**title** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
 **periodStarts** | **Date** |  | [optional] 
 **periodEnds** | **Date** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
+**successFee** | **Number** |  | [optional] 
 **isReinvesting** | **Boolean** |  | [optional] 
-**status** | **String** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
-**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
+**id** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
@@ -57,6 +58,8 @@ Name | Type | Description | Notes
 * `Closed` (value: `"Closed"`)
 
 * `Archived` (value: `"Archived"`)
+
+* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
 
 
 

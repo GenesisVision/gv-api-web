@@ -348,14 +348,14 @@ export default class ProgramsApi {
      * @param {Number} opts.levelMax 
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
+     * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
-     * @param {module:model/String} opts.sorting 
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
-     * @param {module:model/String} opts.currency 
      * @param {Array.<String>} opts.ids 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
@@ -373,14 +373,14 @@ export default class ProgramsApi {
         'LevelMax': opts['levelMax'],
         'ProfitAvgMin': opts['profitAvgMin'],
         'ProfitAvgMax': opts['profitAvgMax'],
+        'Sorting': opts['sorting'],
+        'Currency': opts['currency'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
-        'Sorting': opts['sorting'],
         'Mask': opts['mask'],
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
-        'Currency': opts['currency'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'Skip': opts['skip'],
         'Take': opts['take']
@@ -411,14 +411,14 @@ export default class ProgramsApi {
      * @param {Number} opts.levelMax 
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
+     * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currency 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
-     * @param {module:model/String} opts.sorting 
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
-     * @param {module:model/String} opts.currency 
      * @param {Array.<String>} opts.ids 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 

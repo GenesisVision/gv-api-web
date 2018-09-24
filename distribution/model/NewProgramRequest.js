@@ -40,17 +40,17 @@ var NewProgramRequest = function () {
     function NewProgramRequest() {
         _classCallCheck(this, NewProgramRequest);
 
+        this.periodLength = undefined;
+        this.successFee = undefined;
+        this.stopOutLevel = undefined;
+        this.currency = undefined;
+        this.leverage = undefined;
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
         this.tradingServerId = undefined;
-        this.periodLength = undefined;
-        this.successFee = undefined;
         this.entryFee = undefined;
-        this.stopOutLevel = undefined;
         this.depositAmount = undefined;
-        this.currency = undefined;
-        this.leverage = undefined;
     }
 
     /**
@@ -68,6 +68,21 @@ var NewProgramRequest = function () {
             if (data) {
                 obj = obj || new NewProgramRequest();
 
+                if (data.hasOwnProperty('periodLength')) {
+                    obj['periodLength'] = _ApiClient2.default.convertToType(data['periodLength'], 'Number');
+                }
+                if (data.hasOwnProperty('successFee')) {
+                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
+                }
+                if (data.hasOwnProperty('stopOutLevel')) {
+                    obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('leverage')) {
+                    obj['leverage'] = _ApiClient2.default.convertToType(data['leverage'], 'Number');
+                }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
@@ -80,30 +95,35 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('tradingServerId')) {
                     obj['tradingServerId'] = _ApiClient2.default.convertToType(data['tradingServerId'], 'String');
                 }
-                if (data.hasOwnProperty('periodLength')) {
-                    obj['periodLength'] = _ApiClient2.default.convertToType(data['periodLength'], 'Number');
-                }
-                if (data.hasOwnProperty('successFee')) {
-                    obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
-                }
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
-                }
-                if (data.hasOwnProperty('stopOutLevel')) {
-                    obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
                 }
                 if (data.hasOwnProperty('depositAmount')) {
                     obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('leverage')) {
-                    obj['leverage'] = _ApiClient2.default.convertToType(data['leverage'], 'Number');
-                }
             }
             return obj;
         }
+
+        /**
+        * @member {Number} periodLength
+        */
+
+        /**
+        * @member {Number} successFee
+        */
+
+        /**
+        * @member {Number} stopOutLevel
+        */
+
+        /**
+        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
+        */
+
+        /**
+        * @member {Number} leverage
+        */
 
         /**
         * @member {String} title
@@ -122,31 +142,11 @@ var NewProgramRequest = function () {
         */
 
         /**
-        * @member {Number} periodLength
-        */
-
-        /**
-        * @member {Number} successFee
-        */
-
-        /**
         * @member {Number} entryFee
         */
 
         /**
-        * @member {Number} stopOutLevel
-        */
-
-        /**
         * @member {Number} depositAmount
-        */
-
-        /**
-        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
-        */
-
-        /**
-        * @member {Number} leverage
         */
 
 

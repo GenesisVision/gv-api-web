@@ -21,11 +21,12 @@ import Broker from './model/Broker';
 import BrokerTradingServer from './model/BrokerTradingServer';
 import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
+import ChartFundDetails from './model/ChartFundDetails';
 import ChartProgramDetails from './model/ChartProgramDetails';
 import ChartSimple from './model/ChartSimple';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
-import DExchangeRequest from './model/DExchangeRequest';
-import DExchangeResponse from './model/DExchangeResponse';
+import CurrencyInfo from './model/CurrencyInfo';
+import CurrencyWithCommissionInfo from './model/CurrencyWithCommissionInfo';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
@@ -35,24 +36,37 @@ import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
+import FundAssetPartDetails from './model/FundAssetPartDetails';
+import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
+import FundAssetPercent from './model/FundAssetPercent';
+import FundChart from './model/FundChart';
+import FundDetails from './model/FundDetails';
+import FundDetailsFull from './model/FundDetailsFull';
+import FundDetailsListStatistic from './model/FundDetailsListStatistic';
+import FundStatistic from './model/FundStatistic';
+import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import InvestInfo from './model/InvestInfo';
 import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerProfile from './model/ManagerProfile';
+import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
+import OefAssetPart from './model/OefAssetPart';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
+import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
+import PlatformPaymentInfo from './model/PlatformPaymentInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
@@ -69,12 +83,15 @@ import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
 import RatesModelRates from './model/RatesModelRates';
+import RebalancesViewModel from './model/RebalancesViewModel';
+import RebalancingModel from './model/RebalancingModel';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
+import StatisticFundDetails from './model/StatisticFundDetails';
 import StatisticProgramDetails from './model/StatisticProgramDetails';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -91,12 +108,11 @@ import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WithdrawInfo from './model/WithdrawInfo';
 import AuthApi from './api/AuthApi';
 import BrokersApi from './api/BrokersApi';
-import DexchangeApi from './api/DexchangeApi';
 import FileApi from './api/FileApi';
+import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
 import ManagersApi from './api/ManagersApi';
 import NotificationsApi from './api/NotificationsApi';
-import OefApi from './api/OefApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
 import ProgramsApi from './api/ProgramsApi';
@@ -191,6 +207,12 @@ export {
     ChangePasswordViewModel,
 
     /**
+     * The ChartFundDetails model constructor.
+     * @property {module:model/ChartFundDetails}
+     */
+    ChartFundDetails,
+
+    /**
      * The ChartProgramDetails model constructor.
      * @property {module:model/ChartProgramDetails}
      */
@@ -209,16 +231,16 @@ export {
     CreateWithdrawalRequestModel,
 
     /**
-     * The DExchangeRequest model constructor.
-     * @property {module:model/DExchangeRequest}
+     * The CurrencyInfo model constructor.
+     * @property {module:model/CurrencyInfo}
      */
-    DExchangeRequest,
+    CurrencyInfo,
 
     /**
-     * The DExchangeResponse model constructor.
-     * @property {module:model/DExchangeResponse}
+     * The CurrencyWithCommissionInfo model constructor.
+     * @property {module:model/CurrencyWithCommissionInfo}
      */
-    DExchangeResponse,
+    CurrencyWithCommissionInfo,
 
     /**
      * The DashboardChartValue model constructor.
@@ -275,6 +297,60 @@ export {
     ForgotPasswordViewModel,
 
     /**
+     * The FundAssetPartDetails model constructor.
+     * @property {module:model/FundAssetPartDetails}
+     */
+    FundAssetPartDetails,
+
+    /**
+     * The FundAssetPartWithIcon model constructor.
+     * @property {module:model/FundAssetPartWithIcon}
+     */
+    FundAssetPartWithIcon,
+
+    /**
+     * The FundAssetPercent model constructor.
+     * @property {module:model/FundAssetPercent}
+     */
+    FundAssetPercent,
+
+    /**
+     * The FundChart model constructor.
+     * @property {module:model/FundChart}
+     */
+    FundChart,
+
+    /**
+     * The FundDetails model constructor.
+     * @property {module:model/FundDetails}
+     */
+    FundDetails,
+
+    /**
+     * The FundDetailsFull model constructor.
+     * @property {module:model/FundDetailsFull}
+     */
+    FundDetailsFull,
+
+    /**
+     * The FundDetailsListStatistic model constructor.
+     * @property {module:model/FundDetailsListStatistic}
+     */
+    FundDetailsListStatistic,
+
+    /**
+     * The FundStatistic model constructor.
+     * @property {module:model/FundStatistic}
+     */
+    FundStatistic,
+
+    /**
+     * The FundsList model constructor.
+     * @property {module:model/FundsList}
+     */
+    FundsList,
+
+    /**
      * The IOsAppVersion model constructor.
      * @property {module:model/IOsAppVersion}
      */
@@ -311,6 +387,12 @@ export {
     ManagerProfile,
 
     /**
+     * The NewFundRequest model constructor.
+     * @property {module:model/NewFundRequest}
+     */
+    NewFundRequest,
+
+    /**
      * The NewProgramRequest model constructor.
      * @property {module:model/NewProgramRequest}
      */
@@ -341,6 +423,12 @@ export {
     NotificationViewModel,
 
     /**
+     * The OefAssetPart model constructor.
+     * @property {module:model/OefAssetPart}
+     */
+    OefAssetPart,
+
+    /**
      * The OrderModel model constructor.
      * @property {module:model/OrderModel}
      */
@@ -351,6 +439,12 @@ export {
      * @property {module:model/PasswordModel}
      */
     PasswordModel,
+
+    /**
+     * The PersonalFundDetailsFull model constructor.
+     * @property {module:model/PersonalFundDetailsFull}
+     */
+    PersonalFundDetailsFull,
 
     /**
      * The PersonalProgramDetailsFull model constructor.
@@ -381,6 +475,12 @@ export {
      * @property {module:model/PlatformInfo}
      */
     PlatformInfo,
+
+    /**
+     * The PlatformPaymentInfo model constructor.
+     * @property {module:model/PlatformPaymentInfo}
+     */
+    PlatformPaymentInfo,
 
     /**
      * The ProfileFullViewModel model constructor.
@@ -479,6 +579,18 @@ export {
     RatesModelRates,
 
     /**
+     * The RebalancesViewModel model constructor.
+     * @property {module:model/RebalancesViewModel}
+     */
+    RebalancesViewModel,
+
+    /**
+     * The RebalancingModel model constructor.
+     * @property {module:model/RebalancingModel}
+     */
+    RebalancingModel,
+
+    /**
      * The RecoveryCode model constructor.
      * @property {module:model/RecoveryCode}
      */
@@ -513,6 +625,12 @@ export {
      * @property {module:model/ResetPasswordViewModel}
      */
     ResetPasswordViewModel,
+
+    /**
+     * The StatisticFundDetails model constructor.
+     * @property {module:model/StatisticFundDetails}
+     */
+    StatisticFundDetails,
 
     /**
      * The StatisticProgramDetails model constructor.
@@ -611,16 +729,16 @@ export {
     BrokersApi,
 
     /**
-    * The DexchangeApi service constructor.
-    * @property {module:api/DexchangeApi}
-    */
-    DexchangeApi,
-
-    /**
     * The FileApi service constructor.
     * @property {module:api/FileApi}
     */
     FileApi,
+
+    /**
+    * The FundsApi service constructor.
+    * @property {module:api/FundsApi}
+    */
+    FundsApi,
 
     /**
     * The InvestorApi service constructor.
@@ -639,12 +757,6 @@ export {
     * @property {module:api/NotificationsApi}
     */
     NotificationsApi,
-
-    /**
-    * The OefApi service constructor.
-    * @property {module:api/OefApi}
-    */
-    OefApi,
 
     /**
     * The PlatformApi service constructor.

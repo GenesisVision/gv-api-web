@@ -40,12 +40,11 @@ var PersonalProgramDetailsFull = function () {
     function PersonalProgramDetailsFull() {
         _classCallCheck(this, PersonalProgramDetailsFull);
 
+        this.isReinvest = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
-        this.isReinvest = undefined;
         this.hasNotifications = undefined;
-        this.invested = undefined;
         this.value = undefined;
         this.profit = undefined;
         this.investmentProgramStatus = undefined;
@@ -66,6 +65,9 @@ var PersonalProgramDetailsFull = function () {
             if (data) {
                 obj = obj || new PersonalProgramDetailsFull();
 
+                if (data.hasOwnProperty('isReinvest')) {
+                    obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
+                }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
                 }
@@ -75,14 +77,8 @@ var PersonalProgramDetailsFull = function () {
                 if (data.hasOwnProperty('isOwnProgram')) {
                     obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
                 }
-                if (data.hasOwnProperty('isReinvest')) {
-                    obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
-                }
                 if (data.hasOwnProperty('hasNotifications')) {
                     obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
-                }
-                if (data.hasOwnProperty('invested')) {
-                    obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
@@ -98,6 +94,10 @@ var PersonalProgramDetailsFull = function () {
         }
 
         /**
+        * @member {Boolean} isReinvest
+        */
+
+        /**
         * @member {Boolean} isFavorite
         */
 
@@ -110,15 +110,7 @@ var PersonalProgramDetailsFull = function () {
         */
 
         /**
-        * @member {Boolean} isReinvest
-        */
-
-        /**
         * @member {Boolean} hasNotifications
-        */
-
-        /**
-        * @member {Number} invested
         */
 
         /**

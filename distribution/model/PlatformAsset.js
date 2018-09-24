@@ -44,6 +44,7 @@ var PlatformAsset = function () {
         this.name = undefined;
         this.symbol = undefined;
         this.description = undefined;
+        this.icon = undefined;
     }
 
     /**
@@ -73,6 +74,9 @@ var PlatformAsset = function () {
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
+                if (data.hasOwnProperty('icon')) {
+                    obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
+                }
             }
             return obj;
         }
@@ -91,6 +95,10 @@ var PlatformAsset = function () {
 
         /**
         * @member {String} description
+        */
+
+        /**
+        * @member {String} icon
         */
 
     }]);

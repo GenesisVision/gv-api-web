@@ -60,10 +60,6 @@ var ProgramDetails = function () {
     function ProgramDetails() {
         _classCallCheck(this, ProgramDetails);
 
-        this.id = undefined;
-        this.logo = undefined;
-        this.title = undefined;
-        this.description = undefined;
         this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
@@ -71,8 +67,12 @@ var ProgramDetails = function () {
         this.periodEnds = undefined;
         this.isReinvesting = undefined;
         this.availableInvestment = undefined;
-        this.manager = undefined;
         this.statistic = undefined;
+        this.id = undefined;
+        this.logo = undefined;
+        this.title = undefined;
+        this.description = undefined;
+        this.manager = undefined;
         this.chart = undefined;
         this.personalProgramDetails = undefined;
         this.dashboardProgramDetails = undefined;
@@ -93,18 +93,6 @@ var ProgramDetails = function () {
             if (data) {
                 obj = obj || new ProgramDetails();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
@@ -126,11 +114,23 @@ var ProgramDetails = function () {
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
                 }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
-                }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
+                }
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
                 }
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
@@ -144,22 +144,6 @@ var ProgramDetails = function () {
             }
             return obj;
         }
-
-        /**
-        * @member {String} id
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {String} description
-        */
 
         /**
         * @member {module:model/ProgramDetails.CurrencyEnum} currency
@@ -190,11 +174,27 @@ var ProgramDetails = function () {
         */
 
         /**
-        * @member {module:model/ProfilePublic} manager
+        * @member {module:model/ProgramDetailsListStatistic} statistic
         */
 
         /**
-        * @member {module:model/ProgramDetailsListStatistic} statistic
+        * @member {String} id
+        */
+
+        /**
+        * @member {String} logo
+        */
+
+        /**
+        * @member {String} title
+        */
+
+        /**
+        * @member {String} description
+        */
+
+        /**
+        * @member {module:model/ProfilePublic} manager
         */
 
         /**

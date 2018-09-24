@@ -56,6 +56,9 @@ export default class PersonalProgramDetailsFull {
             
             
 
+            if (data.hasOwnProperty('isReinvest')) {
+                obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -65,14 +68,8 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
-            if (data.hasOwnProperty('isReinvest')) {
-                obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
-            }
             if (data.hasOwnProperty('hasNotifications')) {
                 obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
-            }
-            if (data.hasOwnProperty('invested')) {
-                obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
@@ -88,6 +85,10 @@ export default class PersonalProgramDetailsFull {
     }
 
     /**
+    * @member {Boolean} isReinvest
+    */
+    isReinvest = undefined;
+    /**
     * @member {Boolean} isFavorite
     */
     isFavorite = undefined;
@@ -100,17 +101,9 @@ export default class PersonalProgramDetailsFull {
     */
     isOwnProgram = undefined;
     /**
-    * @member {Boolean} isReinvest
-    */
-    isReinvest = undefined;
-    /**
     * @member {Boolean} hasNotifications
     */
     hasNotifications = undefined;
-    /**
-    * @member {Number} invested
-    */
-    invested = undefined;
     /**
     * @member {Number} value
     */

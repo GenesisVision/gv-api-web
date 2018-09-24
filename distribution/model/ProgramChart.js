@@ -48,13 +48,13 @@ var ProgramChart = function () {
     function ProgramChart() {
         _classCallCheck(this, ProgramChart);
 
+        this.chart = undefined;
+        this.pnLChart = undefined;
         this.equity = undefined;
         this.totalProfit = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
         this.calmarRatio = undefined;
-        this.chart = undefined;
-        this.pnLChart = undefined;
     }
 
     /**
@@ -72,6 +72,12 @@ var ProgramChart = function () {
             if (data) {
                 obj = obj || new ProgramChart();
 
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartProgramDetails2.default]);
+                }
+                if (data.hasOwnProperty('pnLChart')) {
+                    obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
+                }
                 if (data.hasOwnProperty('equity')) {
                     obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
                 }
@@ -87,15 +93,17 @@ var ProgramChart = function () {
                 if (data.hasOwnProperty('calmarRatio')) {
                     obj['calmarRatio'] = _ApiClient2.default.convertToType(data['calmarRatio'], 'Number');
                 }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartProgramDetails2.default]);
-                }
-                if (data.hasOwnProperty('pnLChart')) {
-                    obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
-                }
             }
             return obj;
         }
+
+        /**
+        * @member {Array.<module:model/ChartProgramDetails>} chart
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} pnLChart
+        */
 
         /**
         * @member {Number} equity
@@ -115,14 +123,6 @@ var ProgramChart = function () {
 
         /**
         * @member {Number} calmarRatio
-        */
-
-        /**
-        * @member {Array.<module:model/ChartProgramDetails>} chart
-        */
-
-        /**
-        * @member {Array.<module:model/ChartSimple>} pnLChart
         */
 
     }]);

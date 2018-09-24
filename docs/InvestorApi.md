@@ -4,6 +4,9 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program requests
+[**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
+[**v10InvestorFundsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel request
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -18,6 +21,155 @@ Method | HTTP request | Description
 [**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 
+
+<a name="v10InvestorFundsByIdRequestsBySkipByTakeGet"></a>
+# **v10InvestorFundsByIdRequestsBySkipByTakeGet**
+> ProgramRequests v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
+
+Get program requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequests**](ProgramRequests.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorFundsGet"></a>
+# **v10InvestorFundsGet**
+> FundsList v10InvestorFundsGet(authorization, opts)
+
+Funds list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10InvestorFundsGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**FundsList**](FundsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorFundsRequestsByIdCancelPost"></a>
+# **v10InvestorFundsRequestsByIdCancelPost**
+> v10InvestorFundsRequestsByIdCancelPost(id, authorization)
+
+Cancel request
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsRequestsByIdCancelPost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10InvestorGet"></a>
 # **v10InvestorGet**
@@ -619,7 +771,7 @@ No authorization required
 
 <a name="v10InvestorRequestsBySkipByTakeGet"></a>
 # **v10InvestorRequestsBySkipByTakeGet**
-> ProgramRequests v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, opts)
+> ProgramRequests v10InvestorRequestsBySkipByTakeGet(skip, take, authorization)
 
 Get all requests
 
@@ -635,10 +787,7 @@ let take = 56; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'id': "id_example" // String | 
-};
-apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, opts).then((data) => {
+apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -653,7 +802,6 @@ Name | Type | Description  | Notes
  **skip** | **Number**|  | 
  **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **id** | [**String**](.md)|  | [optional] 
 
 ### Return type
 
