@@ -25,8 +25,6 @@ import ChartFundDetails from './model/ChartFundDetails';
 import ChartProgramDetails from './model/ChartProgramDetails';
 import ChartSimple from './model/ChartSimple';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
-import CurrencyInfo from './model/CurrencyInfo';
-import CurrencyWithCommissionInfo from './model/CurrencyWithCommissionInfo';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
@@ -43,10 +41,11 @@ import FundChart from './model/FundChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
+import FundInvestInfo from './model/FundInvestInfo';
 import FundStatistic from './model/FundStatistic';
+import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
-import InvestInfo from './model/InvestInfo';
 import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
@@ -66,7 +65,6 @@ import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
-import PlatformPaymentInfo from './model/PlatformPaymentInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
@@ -74,11 +72,13 @@ import ProgramChart from './model/ProgramChart';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
+import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
+import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
@@ -105,7 +105,9 @@ import WalletInfo from './model/WalletInfo';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
-import WithdrawInfo from './model/WithdrawInfo';
+import WalletWithdrawalInfo from './model/WalletWithdrawalInfo';
+import WalletsInfo from './model/WalletsInfo';
+import WithdrawalSummary from './model/WithdrawalSummary';
 import AuthApi from './api/AuthApi';
 import BrokersApi from './api/BrokersApi';
 import FileApi from './api/FileApi';
@@ -231,18 +233,6 @@ export {
     CreateWithdrawalRequestModel,
 
     /**
-     * The CurrencyInfo model constructor.
-     * @property {module:model/CurrencyInfo}
-     */
-    CurrencyInfo,
-
-    /**
-     * The CurrencyWithCommissionInfo model constructor.
-     * @property {module:model/CurrencyWithCommissionInfo}
-     */
-    CurrencyWithCommissionInfo,
-
-    /**
      * The DashboardChartValue model constructor.
      * @property {module:model/DashboardChartValue}
      */
@@ -339,10 +329,22 @@ export {
     FundDetailsListStatistic,
 
     /**
+     * The FundInvestInfo model constructor.
+     * @property {module:model/FundInvestInfo}
+     */
+    FundInvestInfo,
+
+    /**
      * The FundStatistic model constructor.
      * @property {module:model/FundStatistic}
      */
     FundStatistic,
+
+    /**
+     * The FundWithdrawInfo model constructor.
+     * @property {module:model/FundWithdrawInfo}
+     */
+    FundWithdrawInfo,
 
     /**
      * The FundsList model constructor.
@@ -355,12 +357,6 @@ export {
      * @property {module:model/IOsAppVersion}
      */
     IOsAppVersion,
-
-    /**
-     * The InvestInfo model constructor.
-     * @property {module:model/InvestInfo}
-     */
-    InvestInfo,
 
     /**
      * The InvestmentProgramUpdate model constructor.
@@ -477,12 +473,6 @@ export {
     PlatformInfo,
 
     /**
-     * The PlatformPaymentInfo model constructor.
-     * @property {module:model/PlatformPaymentInfo}
-     */
-    PlatformPaymentInfo,
-
-    /**
      * The ProfileFullViewModel model constructor.
      * @property {module:model/ProfileFullViewModel}
      */
@@ -525,6 +515,12 @@ export {
     ProgramDetailsListStatistic,
 
     /**
+     * The ProgramInvestInfo model constructor.
+     * @property {module:model/ProgramInvestInfo}
+     */
+    ProgramInvestInfo,
+
+    /**
      * The ProgramNotificationSettingList model constructor.
      * @property {module:model/ProgramNotificationSettingList}
      */
@@ -553,6 +549,12 @@ export {
      * @property {module:model/ProgramStatistic}
      */
     ProgramStatistic,
+
+    /**
+     * The ProgramWithdrawInfo model constructor.
+     * @property {module:model/ProgramWithdrawInfo}
+     */
+    ProgramWithdrawInfo,
 
     /**
      * The ProgramsList model constructor.
@@ -711,10 +713,22 @@ export {
     WalletTransactionsViewModel,
 
     /**
-     * The WithdrawInfo model constructor.
-     * @property {module:model/WithdrawInfo}
+     * The WalletWithdrawalInfo model constructor.
+     * @property {module:model/WalletWithdrawalInfo}
      */
-    WithdrawInfo,
+    WalletWithdrawalInfo,
+
+    /**
+     * The WalletsInfo model constructor.
+     * @property {module:model/WalletsInfo}
+     */
+    WalletsInfo,
+
+    /**
+     * The WithdrawalSummary model constructor.
+     * @property {module:model/WithdrawalSummary}
+     */
+    WithdrawalSummary,
 
     /**
     * The AuthApi service constructor.

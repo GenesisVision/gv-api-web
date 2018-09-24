@@ -4,17 +4,21 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program requests
+[**v10InvestorFundsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
+[**v10InvestorFundsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
+[**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+[**v10InvestorFundsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{amount} | Withdrawal
+[**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal
 [**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
 [**v10InvestorFundsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel request
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
-[**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | investing
-[**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing
+[**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program
+[**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program requests
+[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 [**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
 [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
@@ -22,11 +26,105 @@ Method | HTTP request | Description
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 
 
+<a name="v10InvestorFundsByIdInvestByAmountPost"></a>
+# **v10InvestorFundsByIdInvestByAmountPost**
+> v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization)
+
+Investing into the fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let amount = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorFundsByIdInvestInfoByCurrencyGet"></a>
+# **v10InvestorFundsByIdInvestInfoByCurrencyGet**
+> FundInvestInfo v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+
+Data for investing into the fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**FundInvestInfo**](FundInvestInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
 <a name="v10InvestorFundsByIdRequestsBySkipByTakeGet"></a>
 # **v10InvestorFundsByIdRequestsBySkipByTakeGet**
 > ProgramRequests v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
 
-Get program requests
+Get program/fund requests
 
 ### Example
 ```javascript
@@ -62,6 +160,100 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramRequests**](ProgramRequests.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorFundsByIdWithdrawByAmountPost"></a>
+# **v10InvestorFundsByIdWithdrawByAmountPost**
+> v10InvestorFundsByIdWithdrawByAmountPost(id, amount, authorization)
+
+Withdrawal
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let amount = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsByIdWithdrawByAmountPost(id, amount, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorFundsByIdWithdrawInfoByCurrencyGet"></a>
+# **v10InvestorFundsByIdWithdrawInfoByCurrencyGet**
+> FundWithdrawInfo v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+
+Data for withdrawal
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**FundWithdrawInfo**](FundWithdrawInfo.md)
 
 ### Authorization
 
@@ -348,7 +540,7 @@ No authorization required
 # **v10InvestorProgramsByIdInvestByAmountPost**
 > v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization)
 
-investing
+Investing into the program
 
 ### Example
 ```javascript
@@ -393,9 +585,9 @@ No authorization required
 
 <a name="v10InvestorProgramsByIdInvestInfoByCurrencyGet"></a>
 # **v10InvestorProgramsByIdInvestInfoByCurrencyGet**
-> InvestInfo v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+> ProgramInvestInfo v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization)
 
-Data for investing
+Data for investing into the program
 
 ### Example
 ```javascript
@@ -427,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvestInfo**](InvestInfo.md)
+[**ProgramInvestInfo**](ProgramInvestInfo.md)
 
 ### Authorization
 
@@ -530,7 +722,7 @@ No authorization required
 # **v10InvestorProgramsByIdRequestsBySkipByTakeGet**
 > ProgramRequests v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
 
-Get program requests
+Get program/fund requests
 
 ### Example
 ```javascript
@@ -625,7 +817,7 @@ No authorization required
 
 <a name="v10InvestorProgramsByIdWithdrawInfoByCurrencyGet"></a>
 # **v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**
-> WithdrawInfo v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+> ProgramWithdrawInfo v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
 
 Data for withdrawal
 
@@ -659,7 +851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WithdrawInfo**](WithdrawInfo.md)
+[**ProgramWithdrawInfo**](ProgramWithdrawInfo.md)
 
 ### Authorization
 

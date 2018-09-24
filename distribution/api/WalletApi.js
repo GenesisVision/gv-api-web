@@ -29,10 +29,6 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _WalletInfo = require('../model/WalletInfo');
-
-var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
-
 var _WalletSummary = require('../model/WalletSummary');
 
 var _WalletSummary2 = _interopRequireDefault(_WalletSummary);
@@ -40,6 +36,14 @@ var _WalletSummary2 = _interopRequireDefault(_WalletSummary);
 var _WalletTransactionsViewModel = require('../model/WalletTransactionsViewModel');
 
 var _WalletTransactionsViewModel2 = _interopRequireDefault(_WalletTransactionsViewModel);
+
+var _WalletsInfo = require('../model/WalletsInfo');
+
+var _WalletsInfo2 = _interopRequireDefault(_WalletsInfo);
+
+var _WithdrawalSummary = require('../model/WithdrawalSummary');
+
+var _WithdrawalSummary2 = _interopRequireDefault(_WithdrawalSummary);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66,30 +70,22 @@ var WalletApi = function () {
   }
 
   /**
-   * @param {module:model/String} currency 
    * @param {String} authorization JWT access token
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletInfo} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsInfo} and HTTP response
    */
 
 
   _createClass(WalletApi, [{
-    key: 'v10WalletAddressByCurrencyGetWithHttpInfo',
-    value: function v10WalletAddressByCurrencyGetWithHttpInfo(currency, authorization) {
+    key: 'v10WalletAddressesGetWithHttpInfo',
+    value: function v10WalletAddressesGetWithHttpInfo(authorization) {
       var postBody = null;
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling v10WalletAddressByCurrencyGet");
-      }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10WalletAddressByCurrencyGet");
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletAddressesGet");
       }
 
-      var pathParams = {
-        'currency': currency
-      };
+      var pathParams = {};
       var queryParams = {};
       var headerParams = {
         'Authorization': authorization
@@ -99,21 +95,20 @@ var WalletApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _WalletInfo2.default;
+      var returnType = _WalletsInfo2.default;
 
-      return this.apiClient.callApi('/v1.0/wallet/address/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/wallet/addresses', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletInfo}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsInfo}
      */
 
   }, {
-    key: 'v10WalletAddressByCurrencyGet',
-    value: function v10WalletAddressByCurrencyGet(currency, authorization) {
-      return this.v10WalletAddressByCurrencyGetWithHttpInfo(currency, authorization).then(function (response_and_data) {
+    key: 'v10WalletAddressesGet',
+    value: function v10WalletAddressesGet(authorization) {
+      return this.v10WalletAddressesGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -238,6 +233,49 @@ var WalletApi = function () {
     key: 'v10WalletTransactionsGet',
     value: function v10WalletTransactionsGet(authorization, opts) {
       return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WithdrawalSummary} and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletWithdrawInfoGetWithHttpInfo',
+    value: function v10WalletWithdrawInfoGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletWithdrawInfoGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _WithdrawalSummary2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/withdraw/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WithdrawalSummary}
+     */
+
+  }, {
+    key: 'v10WalletWithdrawInfoGet',
+    value: function v10WalletWithdrawInfoGet(authorization) {
+      return this.v10WalletWithdrawInfoGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

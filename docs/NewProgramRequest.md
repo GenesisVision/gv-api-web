@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **periodLength** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
-**currency** | **String** |  | [optional] 
 **leverage** | **Number** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
@@ -14,6 +13,7 @@ Name | Type | Description | Notes
 **tradingServerId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
+**currency** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

@@ -19,14 +19,14 @@ import ApiClient from '../ApiClient';
 
 
 /**
-* The WalletInfo model module.
-* @module model/WalletInfo
+* The WalletWithdrawalInfo model module.
+* @module model/WalletWithdrawalInfo
 * @version v1.0
 */
-export default class WalletInfo {
+export default class WalletWithdrawalInfo {
     /**
-    * Constructs a new <code>WalletInfo</code>.
-    * @alias module:model/WalletInfo
+    * Constructs a new <code>WalletWithdrawalInfo</code>.
+    * @alias module:model/WalletWithdrawalInfo
     * @class
     */
 
@@ -42,15 +42,15 @@ export default class WalletInfo {
     }
 
     /**
-    * Constructs a <code>WalletInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WalletWithdrawalInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WalletInfo} obj Optional instance to populate.
-    * @return {module:model/WalletInfo} The populated <code>WalletInfo</code> instance.
+    * @param {module:model/WalletWithdrawalInfo} obj Optional instance to populate.
+    * @return {module:model/WalletWithdrawalInfo} The populated <code>WalletWithdrawalInfo</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new WalletInfo();
+            obj = obj || new WalletWithdrawalInfo();
 
             
             
@@ -59,34 +59,26 @@ export default class WalletInfo {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('rateToGVT')) {
-                obj['rateToGVT'] = ApiClient.convertToType(data['rateToGVT'], 'Number');
-            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('commission')) {
+                obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
+            }
+            if (data.hasOwnProperty('rateToGvt')) {
+                obj['rateToGvt'] = ApiClient.convertToType(data['rateToGvt'], 'Number');
+            }
         }
         return obj;
     }
 
     /**
-    * @member {module:model/WalletInfo.CurrencyEnum} currency
+    * @member {module:model/WalletWithdrawalInfo.CurrencyEnum} currency
     */
     currency = undefined;
-    /**
-    * @member {String} address
-    */
-    address = undefined;
-    /**
-    * @member {Number} rateToGVT
-    */
-    rateToGVT = undefined;
     /**
     * @member {String} description
     */
@@ -95,6 +87,14 @@ export default class WalletInfo {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {Number} commission
+    */
+    commission = undefined;
+    /**
+    * @member {Number} rateToGvt
+    */
+    rateToGvt = undefined;
 
 
 

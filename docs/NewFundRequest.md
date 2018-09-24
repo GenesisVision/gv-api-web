@@ -12,5 +12,27 @@ Name | Type | Description | Notes
 **tradingServerId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
+**currency** | **String** |  | [optional] 
+
+
+<a name="CurrencyEnum"></a>
+## Enum: CurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 

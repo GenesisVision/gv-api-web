@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WalletApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = undefined;
-exports.ManagersApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StatisticProgramDetails = exports.StatisticFundDetails = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RebalancingModel = exports.RebalancesViewModel = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramNotificationSettingList = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformPaymentInfo = exports.PlatformInfo = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsList = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PasswordModel = exports.OrderModel = exports.OefAssetPart = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.ManagerProfile = exports.ManagerNotificationSettingList = exports.LoginViewModel = exports.InvestmentProgramUpdate = exports.InvestInfo = exports.IOsAppVersion = exports.FundsList = exports.FundStatistic = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundChart = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPartDetails = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CurrencyWithCommissionInfo = exports.CurrencyInfo = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChartProgramDetails = exports.ChartFundDetails = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerTradingServer = exports.Broker = exports.AssetsValue = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
+exports.WalletApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagersApi = exports.InvestorApi = undefined;
+exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WalletsInfo = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.StatisticProgramDetails = exports.StatisticFundDetails = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RebalancingModel = exports.RebalancesViewModel = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramWithdrawInfo = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramNotificationSettingList = exports.ProgramInvestInfo = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformInfo = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsList = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PasswordModel = exports.OrderModel = exports.OefAssetPart = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.ManagerProfile = exports.ManagerNotificationSettingList = exports.LoginViewModel = exports.InvestmentProgramUpdate = exports.IOsAppVersion = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundInvestInfo = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundChart = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPartDetails = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChartProgramDetails = exports.ChartFundDetails = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerTradingServer = exports.Broker = exports.AssetsValue = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -57,14 +57,6 @@ var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 var _CreateWithdrawalRequestModel = require('./model/CreateWithdrawalRequestModel');
 
 var _CreateWithdrawalRequestModel2 = _interopRequireDefault(_CreateWithdrawalRequestModel);
-
-var _CurrencyInfo = require('./model/CurrencyInfo');
-
-var _CurrencyInfo2 = _interopRequireDefault(_CurrencyInfo);
-
-var _CurrencyWithCommissionInfo = require('./model/CurrencyWithCommissionInfo');
-
-var _CurrencyWithCommissionInfo2 = _interopRequireDefault(_CurrencyWithCommissionInfo);
 
 var _DashboardChartValue = require('./model/DashboardChartValue');
 
@@ -130,9 +122,17 @@ var _FundDetailsListStatistic = require('./model/FundDetailsListStatistic');
 
 var _FundDetailsListStatistic2 = _interopRequireDefault(_FundDetailsListStatistic);
 
+var _FundInvestInfo = require('./model/FundInvestInfo');
+
+var _FundInvestInfo2 = _interopRequireDefault(_FundInvestInfo);
+
 var _FundStatistic = require('./model/FundStatistic');
 
 var _FundStatistic2 = _interopRequireDefault(_FundStatistic);
+
+var _FundWithdrawInfo = require('./model/FundWithdrawInfo');
+
+var _FundWithdrawInfo2 = _interopRequireDefault(_FundWithdrawInfo);
 
 var _FundsList = require('./model/FundsList');
 
@@ -141,10 +141,6 @@ var _FundsList2 = _interopRequireDefault(_FundsList);
 var _IOsAppVersion = require('./model/IOsAppVersion');
 
 var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
-
-var _InvestInfo = require('./model/InvestInfo');
-
-var _InvestInfo2 = _interopRequireDefault(_InvestInfo);
 
 var _InvestmentProgramUpdate = require('./model/InvestmentProgramUpdate');
 
@@ -222,10 +218,6 @@ var _PlatformInfo = require('./model/PlatformInfo');
 
 var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
 
-var _PlatformPaymentInfo = require('./model/PlatformPaymentInfo');
-
-var _PlatformPaymentInfo2 = _interopRequireDefault(_PlatformPaymentInfo);
-
 var _ProfileFullViewModel = require('./model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
@@ -254,6 +246,10 @@ var _ProgramDetailsListStatistic = require('./model/ProgramDetailsListStatistic'
 
 var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
 
+var _ProgramInvestInfo = require('./model/ProgramInvestInfo');
+
+var _ProgramInvestInfo2 = _interopRequireDefault(_ProgramInvestInfo);
+
 var _ProgramNotificationSettingList = require('./model/ProgramNotificationSettingList');
 
 var _ProgramNotificationSettingList2 = _interopRequireDefault(_ProgramNotificationSettingList);
@@ -273,6 +269,10 @@ var _ProgramSets2 = _interopRequireDefault(_ProgramSets);
 var _ProgramStatistic = require('./model/ProgramStatistic');
 
 var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
+
+var _ProgramWithdrawInfo = require('./model/ProgramWithdrawInfo');
+
+var _ProgramWithdrawInfo2 = _interopRequireDefault(_ProgramWithdrawInfo);
 
 var _ProgramsList = require('./model/ProgramsList');
 
@@ -378,9 +378,17 @@ var _WalletTransactionsViewModel = require('./model/WalletTransactionsViewModel'
 
 var _WalletTransactionsViewModel2 = _interopRequireDefault(_WalletTransactionsViewModel);
 
-var _WithdrawInfo = require('./model/WithdrawInfo');
+var _WalletWithdrawalInfo = require('./model/WalletWithdrawalInfo');
 
-var _WithdrawInfo2 = _interopRequireDefault(_WithdrawInfo);
+var _WalletWithdrawalInfo2 = _interopRequireDefault(_WalletWithdrawalInfo);
+
+var _WalletsInfo = require('./model/WalletsInfo');
+
+var _WalletsInfo2 = _interopRequireDefault(_WalletsInfo);
+
+var _WithdrawalSummary = require('./model/WithdrawalSummary');
+
+var _WithdrawalSummary2 = _interopRequireDefault(_WithdrawalSummary);
 
 var _AuthApi = require('./api/AuthApi');
 
@@ -489,8 +497,6 @@ exports.ChartFundDetails = _ChartFundDetails2.default;
 exports.ChartProgramDetails = _ChartProgramDetails2.default;
 exports.ChartSimple = _ChartSimple2.default;
 exports.CreateWithdrawalRequestModel = _CreateWithdrawalRequestModel2.default;
-exports.CurrencyInfo = _CurrencyInfo2.default;
-exports.CurrencyWithCommissionInfo = _CurrencyWithCommissionInfo2.default;
 exports.DashboardChartValue = _DashboardChartValue2.default;
 exports.DashboardPortfolioEvent = _DashboardPortfolioEvent2.default;
 exports.DashboardPortfolioEvents = _DashboardPortfolioEvents2.default;
@@ -507,10 +513,11 @@ exports.FundChart = _FundChart2.default;
 exports.FundDetails = _FundDetails2.default;
 exports.FundDetailsFull = _FundDetailsFull2.default;
 exports.FundDetailsListStatistic = _FundDetailsListStatistic2.default;
+exports.FundInvestInfo = _FundInvestInfo2.default;
 exports.FundStatistic = _FundStatistic2.default;
+exports.FundWithdrawInfo = _FundWithdrawInfo2.default;
 exports.FundsList = _FundsList2.default;
 exports.IOsAppVersion = _IOsAppVersion2.default;
-exports.InvestInfo = _InvestInfo2.default;
 exports.InvestmentProgramUpdate = _InvestmentProgramUpdate2.default;
 exports.LoginViewModel = _LoginViewModel2.default;
 exports.ManagerNotificationSettingList = _ManagerNotificationSettingList2.default;
@@ -530,7 +537,6 @@ exports.PersonalProgramDetailsList = _PersonalProgramDetailsList2.default;
 exports.PlatformAsset = _PlatformAsset2.default;
 exports.PlatformAssets = _PlatformAssets2.default;
 exports.PlatformInfo = _PlatformInfo2.default;
-exports.PlatformPaymentInfo = _PlatformPaymentInfo2.default;
 exports.ProfileFullViewModel = _ProfileFullViewModel2.default;
 exports.ProfileHeaderViewModel = _ProfileHeaderViewModel2.default;
 exports.ProfilePublic = _ProfilePublic2.default;
@@ -538,11 +544,13 @@ exports.ProgramChart = _ProgramChart2.default;
 exports.ProgramDetails = _ProgramDetails2.default;
 exports.ProgramDetailsFull = _ProgramDetailsFull2.default;
 exports.ProgramDetailsListStatistic = _ProgramDetailsListStatistic2.default;
+exports.ProgramInvestInfo = _ProgramInvestInfo2.default;
 exports.ProgramNotificationSettingList = _ProgramNotificationSettingList2.default;
 exports.ProgramRequest = _ProgramRequest2.default;
 exports.ProgramRequests = _ProgramRequests2.default;
 exports.ProgramSets = _ProgramSets2.default;
 exports.ProgramStatistic = _ProgramStatistic2.default;
+exports.ProgramWithdrawInfo = _ProgramWithdrawInfo2.default;
 exports.ProgramsList = _ProgramsList2.default;
 exports.RateItem = _RateItem2.default;
 exports.RatesModel = _RatesModel2.default;
@@ -569,7 +577,9 @@ exports.WalletInfo = _WalletInfo2.default;
 exports.WalletSummary = _WalletSummary2.default;
 exports.WalletTransaction = _WalletTransaction2.default;
 exports.WalletTransactionsViewModel = _WalletTransactionsViewModel2.default;
-exports.WithdrawInfo = _WithdrawInfo2.default;
+exports.WalletWithdrawalInfo = _WalletWithdrawalInfo2.default;
+exports.WalletsInfo = _WalletsInfo2.default;
+exports.WithdrawalSummary = _WithdrawalSummary2.default;
 exports.AuthApi = _AuthApi2.default;
 exports.BrokersApi = _BrokersApi2.default;
 exports.FileApi = _FileApi2.default;

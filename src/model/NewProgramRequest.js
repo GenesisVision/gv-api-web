@@ -65,9 +65,6 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('stopOutLevel')) {
                 obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
             }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
-            }
             if (data.hasOwnProperty('leverage')) {
                 obj['leverage'] = ApiClient.convertToType(data['leverage'], 'Number');
             }
@@ -89,6 +86,9 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('depositAmount')) {
                 obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
             }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
         }
         return obj;
     }
@@ -105,10 +105,6 @@ export default class NewProgramRequest {
     * @member {Number} stopOutLevel
     */
     stopOutLevel = undefined;
-    /**
-    * @member {module:model/NewProgramRequest.CurrencyEnum} currency
-    */
-    currency = undefined;
     /**
     * @member {Number} leverage
     */
@@ -137,6 +133,10 @@ export default class NewProgramRequest {
     * @member {Number} depositAmount
     */
     depositAmount = undefined;
+    /**
+    * @member {module:model/NewProgramRequest.CurrencyEnum} currency
+    */
+    currency = undefined;
 
 
 

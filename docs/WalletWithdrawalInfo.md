@@ -1,13 +1,13 @@
-# CoreApiV10.WalletInfo
+# CoreApiV10.WalletWithdrawalInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **String** |  | [optional] 
-**address** | **String** |  | [optional] 
-**rateToGVT** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**commission** | **Number** |  | [optional] 
+**rateToGvt** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

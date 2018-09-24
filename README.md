@@ -126,17 +126,21 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
 *CoreApiV10.FundsApi* | [**v10FundsByIdRebalancingGet**](docs/FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program requests
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{amount} | Withdrawal
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel request
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | investing
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOffPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOnPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program requests
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
@@ -156,7 +160,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | 
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | 
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
-*CoreApiV10.PlatformApi* | [**v10PlatformPaymentInfoGet**](docs/PlatformApi.md#v10PlatformPaymentInfoGet) | **GET** /v1.0/platform/payment/info | Platform payment info
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
@@ -169,9 +172,10 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 *CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
-*CoreApiV10.WalletApi* | [**v10WalletAddressByCurrencyGet**](docs/WalletApi.md#v10WalletAddressByCurrencyGet) | **GET** /v1.0/wallet/address/{currency} | 
+*CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
+*CoreApiV10.WalletApi* | [**v10WalletWithdrawInfoGet**](docs/WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestCancelByTxIdPost**](docs/WalletApi.md#v10WalletWithdrawRequestCancelByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestConfirmPost**](docs/WalletApi.md#v10WalletWithdrawRequestConfirmPost) | **POST** /v1.0/wallet/withdraw/request/confirm | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestNewPost**](docs/WalletApi.md#v10WalletWithdrawRequestNewPost) | **POST** /v1.0/wallet/withdraw/request/new | 
@@ -192,8 +196,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ChartProgramDetails](docs/ChartProgramDetails.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.CreateWithdrawalRequestModel](docs/CreateWithdrawalRequestModel.md)
- - [CoreApiV10.CurrencyInfo](docs/CurrencyInfo.md)
- - [CoreApiV10.CurrencyWithCommissionInfo](docs/CurrencyWithCommissionInfo.md)
  - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
  - [CoreApiV10.DashboardPortfolioEvent](docs/DashboardPortfolioEvent.md)
  - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
@@ -210,10 +212,11 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundDetails](docs/FundDetails.md)
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
  - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
+ - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
  - [CoreApiV10.FundStatistic](docs/FundStatistic.md)
+ - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
- - [CoreApiV10.InvestInfo](docs/InvestInfo.md)
  - [CoreApiV10.InvestmentProgramUpdate](docs/InvestmentProgramUpdate.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
@@ -233,7 +236,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PlatformAsset](docs/PlatformAsset.md)
  - [CoreApiV10.PlatformAssets](docs/PlatformAssets.md)
  - [CoreApiV10.PlatformInfo](docs/PlatformInfo.md)
- - [CoreApiV10.PlatformPaymentInfo](docs/PlatformPaymentInfo.md)
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
  - [CoreApiV10.ProfilePublic](docs/ProfilePublic.md)
@@ -241,11 +243,13 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
+ - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)
  - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
+ - [CoreApiV10.ProgramWithdrawInfo](docs/ProgramWithdrawInfo.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV10.RateItem](docs/RateItem.md)
  - [CoreApiV10.RatesModel](docs/RatesModel.md)
@@ -272,7 +276,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.WalletSummary](docs/WalletSummary.md)
  - [CoreApiV10.WalletTransaction](docs/WalletTransaction.md)
  - [CoreApiV10.WalletTransactionsViewModel](docs/WalletTransactionsViewModel.md)
- - [CoreApiV10.WithdrawInfo](docs/WithdrawInfo.md)
+ - [CoreApiV10.WalletWithdrawalInfo](docs/WalletWithdrawalInfo.md)
+ - [CoreApiV10.WalletsInfo](docs/WalletsInfo.md)
+ - [CoreApiV10.WithdrawalSummary](docs/WithdrawalSummary.md)
 
 
 ## Documentation for Authorization

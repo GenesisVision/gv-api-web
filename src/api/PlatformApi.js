@@ -15,7 +15,6 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import PlatformInfo from '../model/PlatformInfo';
-import PlatformPaymentInfo from '../model/PlatformPaymentInfo';
 
 /**
 * Platform service.
@@ -72,47 +71,6 @@ export default class PlatformApi {
      */
     v10PlatformInfoGet() {
       return this.v10PlatformInfoGetWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Platform payment info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformPaymentInfo} and HTTP response
-     */
-    v10PlatformPaymentInfoGetWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = PlatformPaymentInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/payment/info', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Platform payment info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformPaymentInfo}
-     */
-    v10PlatformPaymentInfoGet() {
-      return this.v10PlatformPaymentInfoGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -5,7 +5,6 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10PlatformInfoGet**](PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
-[**v10PlatformPaymentInfoGet**](PlatformApi.md#v10PlatformPaymentInfoGet) | **GET** /v1.0/platform/payment/info | Platform payment info
 
 
 <a name="v10PlatformInfoGet"></a>
@@ -33,41 +32,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**PlatformInfo**](PlatformInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10PlatformPaymentInfoGet"></a>
-# **v10PlatformPaymentInfoGet**
-> PlatformPaymentInfo v10PlatformPaymentInfoGet()
-
-Platform payment info
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.PlatformApi();
-apiInstance.v10PlatformPaymentInfoGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**PlatformPaymentInfo**](PlatformPaymentInfo.md)
 
 ### Authorization
 

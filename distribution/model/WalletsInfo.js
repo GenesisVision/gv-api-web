@@ -21,140 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _WalletInfo = require('./WalletInfo');
+
+var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The WalletInfo model module.
-* @module model/WalletInfo
+* The WalletsInfo model module.
+* @module model/WalletsInfo
 * @version v1.0
 */
-var WalletInfo = function () {
+var WalletsInfo = function () {
     /**
-    * Constructs a new <code>WalletInfo</code>.
-    * @alias module:model/WalletInfo
+    * Constructs a new <code>WalletsInfo</code>.
+    * @alias module:model/WalletsInfo
     * @class
     */
 
-    function WalletInfo() {
-        _classCallCheck(this, WalletInfo);
+    function WalletsInfo() {
+        _classCallCheck(this, WalletsInfo);
 
-        this.currency = undefined;
-        this.address = undefined;
-        this.rateToGVT = undefined;
-        this.description = undefined;
-        this.logo = undefined;
+        this.wallets = undefined;
     }
 
     /**
-    * Constructs a <code>WalletInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WalletsInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WalletInfo} obj Optional instance to populate.
-    * @return {module:model/WalletInfo} The populated <code>WalletInfo</code> instance.
+    * @param {module:model/WalletsInfo} obj Optional instance to populate.
+    * @return {module:model/WalletsInfo} The populated <code>WalletsInfo</code> instance.
     */
 
 
-    _createClass(WalletInfo, null, [{
+    _createClass(WalletsInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletInfo();
+                obj = obj || new WalletsInfo();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('address')) {
-                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
-                }
-                if (data.hasOwnProperty('rateToGVT')) {
-                    obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('wallets')) {
+                    obj['wallets'] = _ApiClient2.default.convertToType(data['wallets'], [_WalletInfo2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/WalletInfo.CurrencyEnum} currency
-        */
-
-        /**
-        * @member {String} address
-        */
-
-        /**
-        * @member {Number} rateToGVT
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-
-        /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Array.<module:model/WalletInfo>} wallets
         */
 
     }]);
 
-    return WalletInfo;
+    return WalletsInfo;
 }();
 
-WalletInfo.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-exports.default = WalletInfo;
+exports.default = WalletsInfo;

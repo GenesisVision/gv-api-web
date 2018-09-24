@@ -26,135 +26,92 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The WalletInfo model module.
-* @module model/WalletInfo
+* The ProgramInvestInfo model module.
+* @module model/ProgramInvestInfo
 * @version v1.0
 */
-var WalletInfo = function () {
+var ProgramInvestInfo = function () {
     /**
-    * Constructs a new <code>WalletInfo</code>.
-    * @alias module:model/WalletInfo
+    * Constructs a new <code>ProgramInvestInfo</code>.
+    * @alias module:model/ProgramInvestInfo
     * @class
     */
 
-    function WalletInfo() {
-        _classCallCheck(this, WalletInfo);
+    function ProgramInvestInfo() {
+        _classCallCheck(this, ProgramInvestInfo);
 
-        this.currency = undefined;
-        this.address = undefined;
-        this.rateToGVT = undefined;
-        this.description = undefined;
-        this.logo = undefined;
+        this.availableToInvest = undefined;
+        this.title = undefined;
+        this.availableInWallet = undefined;
+        this.entryFee = undefined;
+        this.periodEnds = undefined;
+        this.rate = undefined;
     }
 
     /**
-    * Constructs a <code>WalletInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ProgramInvestInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WalletInfo} obj Optional instance to populate.
-    * @return {module:model/WalletInfo} The populated <code>WalletInfo</code> instance.
+    * @param {module:model/ProgramInvestInfo} obj Optional instance to populate.
+    * @return {module:model/ProgramInvestInfo} The populated <code>ProgramInvestInfo</code> instance.
     */
 
 
-    _createClass(WalletInfo, null, [{
+    _createClass(ProgramInvestInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletInfo();
+                obj = obj || new ProgramInvestInfo();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('availableToInvest')) {
+                    obj['availableToInvest'] = _ApiClient2.default.convertToType(data['availableToInvest'], 'Number');
                 }
-                if (data.hasOwnProperty('address')) {
-                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('rateToGVT')) {
-                    obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
+                if (data.hasOwnProperty('availableInWallet')) {
+                    obj['availableInWallet'] = _ApiClient2.default.convertToType(data['availableInWallet'], 'Number');
                 }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                if (data.hasOwnProperty('entryFee')) {
+                    obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                }
+                if (data.hasOwnProperty('rate')) {
+                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/WalletInfo.CurrencyEnum} currency
+        * @member {Number} availableToInvest
         */
 
         /**
-        * @member {String} address
+        * @member {String} title
         */
 
         /**
-        * @member {Number} rateToGVT
+        * @member {Number} availableInWallet
         */
 
         /**
-        * @member {String} description
+        * @member {Number} entryFee
         */
 
         /**
-        * @member {String} logo
+        * @member {Date} periodEnds
         */
 
-
         /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Number} rate
         */
 
     }]);
 
-    return WalletInfo;
+    return ProgramInvestInfo;
 }();
 
-WalletInfo.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-exports.default = WalletInfo;
+exports.default = ProgramInvestInfo;

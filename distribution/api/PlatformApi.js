@@ -29,10 +29,6 @@ var _PlatformInfo = require('../model/PlatformInfo');
 
 var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
 
-var _PlatformPaymentInfo = require('../model/PlatformPaymentInfo');
-
-var _PlatformPaymentInfo2 = _interopRequireDefault(_PlatformPaymentInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90,42 +86,6 @@ var PlatformApi = function () {
     key: 'v10PlatformInfoGet',
     value: function v10PlatformInfoGet() {
       return this.v10PlatformInfoGetWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Platform payment info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformPaymentInfo} and HTTP response
-     */
-
-  }, {
-    key: 'v10PlatformPaymentInfoGetWithHttpInfo',
-    value: function v10PlatformPaymentInfoGetWithHttpInfo() {
-      var postBody = null;
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _PlatformPaymentInfo2.default;
-
-      return this.apiClient.callApi('/v1.0/platform/payment/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Platform payment info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformPaymentInfo}
-     */
-
-  }, {
-    key: 'v10PlatformPaymentInfoGet',
-    value: function v10PlatformPaymentInfoGet() {
-      return this.v10PlatformPaymentInfoGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

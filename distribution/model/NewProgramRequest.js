@@ -43,7 +43,6 @@ var NewProgramRequest = function () {
         this.periodLength = undefined;
         this.successFee = undefined;
         this.stopOutLevel = undefined;
-        this.currency = undefined;
         this.leverage = undefined;
         this.title = undefined;
         this.description = undefined;
@@ -51,6 +50,7 @@ var NewProgramRequest = function () {
         this.tradingServerId = undefined;
         this.entryFee = undefined;
         this.depositAmount = undefined;
+        this.currency = undefined;
     }
 
     /**
@@ -77,9 +77,6 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('stopOutLevel')) {
                     obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
                 if (data.hasOwnProperty('leverage')) {
                     obj['leverage'] = _ApiClient2.default.convertToType(data['leverage'], 'Number');
                 }
@@ -101,6 +98,9 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('depositAmount')) {
                     obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
                 }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
             }
             return obj;
         }
@@ -115,10 +115,6 @@ var NewProgramRequest = function () {
 
         /**
         * @member {Number} stopOutLevel
-        */
-
-        /**
-        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
         */
 
         /**
@@ -147,6 +143,10 @@ var NewProgramRequest = function () {
 
         /**
         * @member {Number} depositAmount
+        */
+
+        /**
+        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
         */
 
 
