@@ -49,7 +49,6 @@ var NewProgramRequest = function () {
         this.logo = undefined;
         this.tradingServerId = undefined;
         this.entryFee = undefined;
-        this.depositAmount = undefined;
         this.currency = undefined;
     }
 
@@ -95,9 +94,6 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('depositAmount')) {
-                    obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
-                }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
@@ -139,10 +135,6 @@ var NewProgramRequest = function () {
 
         /**
         * @member {Number} entryFee
-        */
-
-        /**
-        * @member {Number} depositAmount
         */
 
         /**

@@ -21,7 +21,6 @@ import Broker from './model/Broker';
 import BrokerTradingServer from './model/BrokerTradingServer';
 import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
-import ChartFundDetails from './model/ChartFundDetails';
 import ChartProgramDetails from './model/ChartProgramDetails';
 import ChartSimple from './model/ChartSimple';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
@@ -91,7 +90,6 @@ import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
-import StatisticFundDetails from './model/StatisticFundDetails';
 import StatisticProgramDetails from './model/StatisticProgramDetails';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -207,12 +205,6 @@ export {
      * @property {module:model/ChangePasswordViewModel}
      */
     ChangePasswordViewModel,
-
-    /**
-     * The ChartFundDetails model constructor.
-     * @property {module:model/ChartFundDetails}
-     */
-    ChartFundDetails,
 
     /**
      * The ChartProgramDetails model constructor.
@@ -627,12 +619,6 @@ export {
      * @property {module:model/ResetPasswordViewModel}
      */
     ResetPasswordViewModel,
-
-    /**
-     * The StatisticFundDetails model constructor.
-     * @property {module:model/StatisticFundDetails}
-     */
-    StatisticFundDetails,
 
     /**
      * The StatisticProgramDetails model constructor.

@@ -5,5 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset** | **String** |  | [optional] 
 **percent** | **Number** |  | [optional] 
+**icon** | **String** |  | [optional] 
 
 

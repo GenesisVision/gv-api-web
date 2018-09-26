@@ -42,6 +42,7 @@ var FundAssetPercent = function () {
 
         this.asset = undefined;
         this.percent = undefined;
+        this.icon = undefined;
     }
 
     /**
@@ -65,6 +66,9 @@ var FundAssetPercent = function () {
                 if (data.hasOwnProperty('percent')) {
                     obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
                 }
+                if (data.hasOwnProperty('icon')) {
+                    obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
+                }
             }
             return obj;
         }
@@ -75,6 +79,10 @@ var FundAssetPercent = function () {
 
         /**
         * @member {Number} percent
+        */
+
+        /**
+        * @member {String} icon
         */
 
     }]);

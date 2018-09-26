@@ -57,11 +57,11 @@ export default class FundDetailsListStatistic {
             
             
 
-            if (data.hasOwnProperty('balanceInGVT')) {
-                obj['balanceInGVT'] = AmountWithCurrency.constructFromObject(data['balanceInGVT']);
+            if (data.hasOwnProperty('balanceGVT')) {
+                obj['balanceGVT'] = AmountWithCurrency.constructFromObject(data['balanceGVT']);
             }
-            if (data.hasOwnProperty('balanceInFavorite')) {
-                obj['balanceInFavorite'] = AmountWithCurrency.constructFromObject(data['balanceInFavorite']);
+            if (data.hasOwnProperty('balanceSecondary')) {
+                obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
             }
             if (data.hasOwnProperty('profitPercent')) {
                 obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
@@ -77,13 +77,13 @@ export default class FundDetailsListStatistic {
     }
 
     /**
-    * @member {module:model/AmountWithCurrency} balanceInGVT
+    * @member {module:model/AmountWithCurrency} balanceGVT
     */
-    balanceInGVT = undefined;
+    balanceGVT = undefined;
     /**
-    * @member {module:model/AmountWithCurrency} balanceInFavorite
+    * @member {module:model/AmountWithCurrency} balanceSecondary
     */
-    balanceInFavorite = undefined;
+    balanceSecondary = undefined;
     /**
     * @member {Number} profitPercent
     */

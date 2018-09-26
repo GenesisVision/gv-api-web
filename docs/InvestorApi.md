@@ -7,10 +7,10 @@ Method | HTTP request | Description
 [**v10InvestorFundsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
 [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorFundsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{amount} | Withdrawal
-[**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal
+[**v10InvestorFundsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{amount} | Withdrawal from investment program/fund
+[**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
-[**v10InvestorFundsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel request
+[**v10InvestorFundsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -19,10 +19,10 @@ Method | HTTP request | Description
 [**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal
-[**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal
+[**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal from investment program/fund
+[**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
-[**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel request
+[**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 
 
@@ -174,7 +174,7 @@ No authorization required
 # **v10InvestorFundsByIdWithdrawByAmountPost**
 > v10InvestorFundsByIdWithdrawByAmountPost(id, amount, authorization)
 
-Withdrawal
+Withdrawal from investment program/fund
 
 ### Example
 ```javascript
@@ -221,7 +221,7 @@ No authorization required
 # **v10InvestorFundsByIdWithdrawInfoByCurrencyGet**
 > FundWithdrawInfo v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
 
-Data for withdrawal
+Data for withdrawal from fund
 
 ### Example
 ```javascript
@@ -283,6 +283,7 @@ let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -303,6 +304,7 @@ Name | Type | Description  | Notes
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -323,7 +325,7 @@ No authorization required
 # **v10InvestorFundsRequestsByIdCancelPost**
 > v10InvestorFundsRequestsByIdCancelPost(id, authorization)
 
-Cancel request
+Cancel investment program/fund request
 
 ### Example
 ```javascript
@@ -772,7 +774,7 @@ No authorization required
 # **v10InvestorProgramsByIdWithdrawByAmountPost**
 > v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization)
 
-Withdrawal
+Withdrawal from investment program/fund
 
 ### Example
 ```javascript
@@ -819,7 +821,7 @@ No authorization required
 # **v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**
 > ProgramWithdrawInfo v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
 
-Data for withdrawal
+Data for withdrawal from investment program
 
 ### Example
 ```javascript
@@ -881,6 +883,7 @@ let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -901,6 +904,7 @@ Name | Type | Description  | Notes
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -921,7 +925,7 @@ No authorization required
 # **v10InvestorProgramsRequestsByIdCancelPost**
 > v10InvestorProgramsRequestsByIdCancelPost(id, authorization)
 
-Cancel request
+Cancel investment program/fund request
 
 ### Example
 ```javascript

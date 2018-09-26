@@ -44,8 +44,8 @@ var FundDetailsListStatistic = function () {
     function FundDetailsListStatistic() {
         _classCallCheck(this, FundDetailsListStatistic);
 
-        this.balanceInGVT = undefined;
-        this.balanceInFavorite = undefined;
+        this.balanceGVT = undefined;
+        this.balanceSecondary = undefined;
         this.profitPercent = undefined;
         this.drawdownPercent = undefined;
         this.investorsCount = undefined;
@@ -66,11 +66,11 @@ var FundDetailsListStatistic = function () {
             if (data) {
                 obj = obj || new FundDetailsListStatistic();
 
-                if (data.hasOwnProperty('balanceInGVT')) {
-                    obj['balanceInGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInGVT']);
+                if (data.hasOwnProperty('balanceGVT')) {
+                    obj['balanceGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceGVT']);
                 }
-                if (data.hasOwnProperty('balanceInFavorite')) {
-                    obj['balanceInFavorite'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInFavorite']);
+                if (data.hasOwnProperty('balanceSecondary')) {
+                    obj['balanceSecondary'] = _AmountWithCurrency2.default.constructFromObject(data['balanceSecondary']);
                 }
                 if (data.hasOwnProperty('profitPercent')) {
                     obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
@@ -86,11 +86,11 @@ var FundDetailsListStatistic = function () {
         }
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceInGVT
+        * @member {module:model/AmountWithCurrency} balanceGVT
         */
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceInFavorite
+        * @member {module:model/AmountWithCurrency} balanceSecondary
         */
 
         /**

@@ -249,7 +249,7 @@ export default class InvestorApi {
 
 
     /**
-     * Withdrawal
+     * Withdrawal from investment program/fund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -299,7 +299,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Withdrawal
+     * Withdrawal from investment program/fund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -314,7 +314,7 @@ export default class InvestorApi {
 
 
     /**
-     * Data for withdrawal
+     * Data for withdrawal from fund
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
@@ -364,7 +364,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Data for withdrawal
+     * Data for withdrawal from fund
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
@@ -386,6 +386,7 @@ export default class InvestorApi {
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
@@ -407,6 +408,7 @@ export default class InvestorApi {
         'From': opts['from'],
         'To': opts['to'],
         'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -436,6 +438,7 @@ export default class InvestorApi {
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}
@@ -449,7 +452,7 @@ export default class InvestorApi {
 
 
     /**
-     * Cancel request
+     * Cancel investment program/fund request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -492,7 +495,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Cancel request
+     * Cancel investment program/fund request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1045,7 +1048,7 @@ export default class InvestorApi {
 
 
     /**
-     * Withdrawal
+     * Withdrawal from investment program/fund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -1095,7 +1098,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Withdrawal
+     * Withdrawal from investment program/fund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -1110,7 +1113,7 @@ export default class InvestorApi {
 
 
     /**
-     * Data for withdrawal
+     * Data for withdrawal from investment program
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
@@ -1160,7 +1163,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Data for withdrawal
+     * Data for withdrawal from investment program
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
@@ -1182,6 +1185,7 @@ export default class InvestorApi {
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
@@ -1203,6 +1207,7 @@ export default class InvestorApi {
         'From': opts['from'],
         'To': opts['to'],
         'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1232,6 +1237,7 @@ export default class InvestorApi {
      * @param {Date} opts.from 
      * @param {Date} opts.to 
      * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
@@ -1245,7 +1251,7 @@ export default class InvestorApi {
 
 
     /**
-     * Cancel request
+     * Cancel investment program/fund request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1288,7 +1294,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Cancel request
+     * Cancel investment program/fund request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

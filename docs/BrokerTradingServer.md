@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **host** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **leverages** | **[Number]** |  | [optional] 
+**currencies** | **[String]** |  | [optional] 
 
 
 <a name="TypeEnum"></a>

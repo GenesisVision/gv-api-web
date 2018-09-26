@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balanceInBase** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
-**balanceInGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
-**balanceInFavorite** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceBase** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceSecondary** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
 **currentValue** | **Number** |  | [optional] 
 **profitPercent** | **Number** |  | [optional] 
 **profitValue** | **Number** |  | [optional] 

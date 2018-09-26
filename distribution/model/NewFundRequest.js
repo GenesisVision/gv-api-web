@@ -52,7 +52,6 @@ var NewFundRequest = function () {
         this.logo = undefined;
         this.tradingServerId = undefined;
         this.entryFee = undefined;
-        this.depositAmount = undefined;
         this.currency = undefined;
     }
 
@@ -95,9 +94,6 @@ var NewFundRequest = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('depositAmount')) {
-                    obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
-                }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
@@ -135,10 +131,6 @@ var NewFundRequest = function () {
 
         /**
         * @member {Number} entryFee
-        */
-
-        /**
-        * @member {Number} depositAmount
         */
 
         /**

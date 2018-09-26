@@ -47,6 +47,7 @@ var BrokerTradingServer = function () {
         this.host = undefined;
         this.type = undefined;
         this.leverages = undefined;
+        this.currencies = undefined;
     }
 
     /**
@@ -85,6 +86,9 @@ var BrokerTradingServer = function () {
                 if (data.hasOwnProperty('leverages')) {
                     obj['leverages'] = _ApiClient2.default.convertToType(data['leverages'], ['Number']);
                 }
+                if (data.hasOwnProperty('currencies')) {
+                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                }
             }
             return obj;
         }
@@ -115,6 +119,10 @@ var BrokerTradingServer = function () {
 
         /**
         * @member {Array.<Number>} leverages
+        */
+
+        /**
+        * @member {Array.<String>} currencies
         */
 
 

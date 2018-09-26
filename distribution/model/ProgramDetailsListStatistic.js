@@ -44,9 +44,9 @@ var ProgramDetailsListStatistic = function () {
     function ProgramDetailsListStatistic() {
         _classCallCheck(this, ProgramDetailsListStatistic);
 
-        this.balanceInBase = undefined;
-        this.balanceInGVT = undefined;
-        this.balanceInFavorite = undefined;
+        this.balanceBase = undefined;
+        this.balanceGVT = undefined;
+        this.balanceSecondary = undefined;
         this.currentValue = undefined;
         this.profitPercent = undefined;
         this.profitValue = undefined;
@@ -70,14 +70,14 @@ var ProgramDetailsListStatistic = function () {
             if (data) {
                 obj = obj || new ProgramDetailsListStatistic();
 
-                if (data.hasOwnProperty('balanceInBase')) {
-                    obj['balanceInBase'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInBase']);
+                if (data.hasOwnProperty('balanceBase')) {
+                    obj['balanceBase'] = _AmountWithCurrency2.default.constructFromObject(data['balanceBase']);
                 }
-                if (data.hasOwnProperty('balanceInGVT')) {
-                    obj['balanceInGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInGVT']);
+                if (data.hasOwnProperty('balanceGVT')) {
+                    obj['balanceGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceGVT']);
                 }
-                if (data.hasOwnProperty('balanceInFavorite')) {
-                    obj['balanceInFavorite'] = _AmountWithCurrency2.default.constructFromObject(data['balanceInFavorite']);
+                if (data.hasOwnProperty('balanceSecondary')) {
+                    obj['balanceSecondary'] = _AmountWithCurrency2.default.constructFromObject(data['balanceSecondary']);
                 }
                 if (data.hasOwnProperty('currentValue')) {
                     obj['currentValue'] = _ApiClient2.default.convertToType(data['currentValue'], 'Number');
@@ -102,15 +102,15 @@ var ProgramDetailsListStatistic = function () {
         }
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceInBase
+        * @member {module:model/AmountWithCurrency} balanceBase
         */
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceInGVT
+        * @member {module:model/AmountWithCurrency} balanceGVT
         */
 
         /**
-        * @member {module:model/AmountWithCurrency} balanceInFavorite
+        * @member {module:model/AmountWithCurrency} balanceSecondary
         */
 
         /**

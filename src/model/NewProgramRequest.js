@@ -83,9 +83,6 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('depositAmount')) {
-                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
-            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -129,10 +126,6 @@ export default class NewProgramRequest {
     * @member {Number} entryFee
     */
     entryFee = undefined;
-    /**
-    * @member {Number} depositAmount
-    */
-    depositAmount = undefined;
     /**
     * @member {module:model/NewProgramRequest.CurrencyEnum} currency
     */

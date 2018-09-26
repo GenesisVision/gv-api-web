@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ChartFundDetails from './ChartFundDetails';
+import ChartSimple from './ChartSimple';
 
 
 
@@ -60,8 +60,20 @@ export default class FundChart {
             if (data.hasOwnProperty('rebalances')) {
                 obj['rebalances'] = ApiClient.convertToType(data['rebalances'], 'Number');
             }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartFundDetails]);
+            if (data.hasOwnProperty('startInvestors')) {
+                obj['startInvestors'] = ApiClient.convertToType(data['startInvestors'], 'Number');
+            }
+            if (data.hasOwnProperty('endInvestors')) {
+                obj['endInvestors'] = ApiClient.convertToType(data['endInvestors'], 'Number');
+            }
+            if (data.hasOwnProperty('lastPeriodStarts')) {
+                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('lastPeriodEnds')) {
+                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
+            }
+            if (data.hasOwnProperty('equityChart')) {
+                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
             if (data.hasOwnProperty('equity')) {
                 obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
@@ -87,9 +99,25 @@ export default class FundChart {
     */
     rebalances = undefined;
     /**
-    * @member {Array.<module:model/ChartFundDetails>} chart
+    * @member {Number} startInvestors
     */
-    chart = undefined;
+    startInvestors = undefined;
+    /**
+    * @member {Number} endInvestors
+    */
+    endInvestors = undefined;
+    /**
+    * @member {Date} lastPeriodStarts
+    */
+    lastPeriodStarts = undefined;
+    /**
+    * @member {Date} lastPeriodEnds
+    */
+    lastPeriodEnds = undefined;
+    /**
+    * @member {Array.<module:model/ChartSimple>} equityChart
+    */
+    equityChart = undefined;
     /**
     * @member {Number} equity
     */

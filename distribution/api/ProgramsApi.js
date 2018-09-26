@@ -241,6 +241,7 @@ var ProgramsApi = function () {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
      */
 
@@ -258,7 +259,9 @@ var ProgramsApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'currencySecondary': opts['currencySecondary']
+      };
       var headerParams = {
         'Authorization': opts['authorization']
       };
@@ -277,6 +280,7 @@ var ProgramsApi = function () {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
      */
 
@@ -364,7 +368,8 @@ var ProgramsApi = function () {
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
      * @param {module:model/String} opts.sorting 
-     * @param {module:model/String} opts.currency 
+     * @param {module:model/String} opts.programCurrency 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
@@ -390,7 +395,8 @@ var ProgramsApi = function () {
         'ProfitAvgMin': opts['profitAvgMin'],
         'ProfitAvgMax': opts['profitAvgMax'],
         'Sorting': opts['sorting'],
-        'Currency': opts['currency'],
+        'ProgramCurrency': opts['programCurrency'],
+        'CurrencySecondary': opts['currencySecondary'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -423,7 +429,8 @@ var ProgramsApi = function () {
      * @param {Number} opts.profitAvgMin 
      * @param {Number} opts.profitAvgMax 
      * @param {module:model/String} opts.sorting 
-     * @param {module:model/String} opts.currency 
+     * @param {module:model/String} opts.programCurrency 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 

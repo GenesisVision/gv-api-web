@@ -165,7 +165,8 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 let id = "id_example"; // String | 
 
 let opts = { 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'currencySecondary': "currencySecondary_example" // String | 
 };
 apiInstance.v10ProgramsByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -181,6 +182,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
 
 ### Return type
 
@@ -269,7 +271,8 @@ let opts = {
   'profitAvgMin': 1.2, // Number | 
   'profitAvgMax': 1.2, // Number | 
   'sorting': "sorting_example", // String | 
-  'currency': "currency_example", // String | 
+  'programCurrency': "programCurrency_example", // String | 
+  'currencySecondary': "currencySecondary_example", // String | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
@@ -298,7 +301,8 @@ Name | Type | Description  | Notes
  **profitAvgMin** | **Number**|  | [optional] 
  **profitAvgMax** | **Number**|  | [optional] 
  **sorting** | **String**|  | [optional] 
- **currency** | **String**|  | [optional] 
+ **programCurrency** | **String**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 

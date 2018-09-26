@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balanceInGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
-**balanceInFavorite** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
+**balanceSecondary** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
 **profitPercent** | **Number** |  | [optional] 
 **drawdownPercent** | **Number** |  | [optional] 
 **investorsCount** | **Number** |  | [optional] 

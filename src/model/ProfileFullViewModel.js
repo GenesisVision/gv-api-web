@@ -101,9 +101,6 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('favoriteCurrency')) {
-                obj['favoriteCurrency'] = ApiClient.convertToType(data['favoriteCurrency'], 'String');
-            }
         }
         return obj;
     }
@@ -168,65 +165,11 @@ export default class ProfileFullViewModel {
     * @member {String} userName
     */
     userName = undefined;
-    /**
-    * @member {module:model/ProfileFullViewModel.FavoriteCurrencyEnum} favoriteCurrency
-    */
-    favoriteCurrency = undefined;
 
 
 
 
 
-
-    /**
-    * Allowed values for the <code>favoriteCurrency</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static FavoriteCurrencyEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
 
 
 

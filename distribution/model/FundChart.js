@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartFundDetails = require('./ChartFundDetails');
+var _ChartSimple = require('./ChartSimple');
 
-var _ChartFundDetails2 = _interopRequireDefault(_ChartFundDetails);
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,7 +45,11 @@ var FundChart = function () {
         _classCallCheck(this, FundChart);
 
         this.rebalances = undefined;
-        this.chart = undefined;
+        this.startInvestors = undefined;
+        this.endInvestors = undefined;
+        this.lastPeriodStarts = undefined;
+        this.lastPeriodEnds = undefined;
+        this.equityChart = undefined;
         this.equity = undefined;
         this.totalProfit = undefined;
         this.sharpeRatio = undefined;
@@ -71,8 +75,20 @@ var FundChart = function () {
                 if (data.hasOwnProperty('rebalances')) {
                     obj['rebalances'] = _ApiClient2.default.convertToType(data['rebalances'], 'Number');
                 }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartFundDetails2.default]);
+                if (data.hasOwnProperty('startInvestors')) {
+                    obj['startInvestors'] = _ApiClient2.default.convertToType(data['startInvestors'], 'Number');
+                }
+                if (data.hasOwnProperty('endInvestors')) {
+                    obj['endInvestors'] = _ApiClient2.default.convertToType(data['endInvestors'], 'Number');
+                }
+                if (data.hasOwnProperty('lastPeriodStarts')) {
+                    obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
+                }
+                if (data.hasOwnProperty('lastPeriodEnds')) {
+                    obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
+                }
+                if (data.hasOwnProperty('equityChart')) {
+                    obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
                 }
                 if (data.hasOwnProperty('equity')) {
                     obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
@@ -98,7 +114,23 @@ var FundChart = function () {
         */
 
         /**
-        * @member {Array.<module:model/ChartFundDetails>} chart
+        * @member {Number} startInvestors
+        */
+
+        /**
+        * @member {Number} endInvestors
+        */
+
+        /**
+        * @member {Date} lastPeriodStarts
+        */
+
+        /**
+        * @member {Date} lastPeriodEnds
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} equityChart
         */
 
         /**

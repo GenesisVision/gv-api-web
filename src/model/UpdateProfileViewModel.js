@@ -95,9 +95,6 @@ export default class UpdateProfileViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
-            if (data.hasOwnProperty('favoriteCurrency')) {
-                obj['favoriteCurrency'] = ApiClient.convertToType(data['favoriteCurrency'], 'String');
-            }
         }
         return obj;
     }
@@ -154,65 +151,11 @@ export default class UpdateProfileViewModel {
     * @member {String} avatar
     */
     avatar = undefined;
-    /**
-    * @member {module:model/UpdateProfileViewModel.FavoriteCurrencyEnum} favoriteCurrency
-    */
-    favoriteCurrency = undefined;
 
 
 
 
 
-
-    /**
-    * Allowed values for the <code>favoriteCurrency</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static FavoriteCurrencyEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
 
 
 

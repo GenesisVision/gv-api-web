@@ -286,6 +286,7 @@ var FundsApi = function () {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundDetailsFull} and HTTP response
      */
 
@@ -303,7 +304,9 @@ var FundsApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'currencySecondary': opts['currencySecondary']
+      };
       var headerParams = {
         'Authorization': opts['authorization']
       };
@@ -322,6 +325,7 @@ var FundsApi = function () {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundDetailsFull}
      */
 
@@ -399,6 +403,7 @@ var FundsApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
@@ -420,6 +425,7 @@ var FundsApi = function () {
       var pathParams = {};
       var queryParams = {
         'Sorting': opts['sorting'],
+        'CurrencySecondary': opts['currencySecondary'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -448,6 +454,7 @@ var FundsApi = function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 

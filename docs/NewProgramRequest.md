@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **tradingServerId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
-**depositAmount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 
 

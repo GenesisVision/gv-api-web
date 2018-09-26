@@ -77,6 +77,9 @@ export default class BrokerTradingServer {
             if (data.hasOwnProperty('leverages')) {
                 obj['leverages'] = ApiClient.convertToType(data['leverages'], ['Number']);
             }
+            if (data.hasOwnProperty('currencies')) {
+                obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
+            }
         }
         return obj;
     }
@@ -109,6 +112,10 @@ export default class BrokerTradingServer {
     * @member {Array.<Number>} leverages
     */
     leverages = undefined;
+    /**
+    * @member {Array.<String>} currencies
+    */
+    currencies = undefined;
 
 
 
