@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import BrokerTradingServer from './BrokerTradingServer';
+import BrokerAccountType from './BrokerAccountType';
 
 
 
@@ -57,9 +57,6 @@ export default class Broker {
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -69,20 +66,28 @@ export default class Broker {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
-            if (data.hasOwnProperty('registrationDate')) {
-                obj['registrationDate'] = ApiClient.convertToType(data['registrationDate'], 'Date');
+            if (data.hasOwnProperty('terms')) {
+                obj['terms'] = ApiClient.convertToType(data['terms'], 'String');
             }
-            if (data.hasOwnProperty('servers')) {
-                obj['servers'] = ApiClient.convertToType(data['servers'], [BrokerTradingServer]);
+            if (data.hasOwnProperty('assets')) {
+                obj['assets'] = ApiClient.convertToType(data['assets'], 'String');
+            }
+            if (data.hasOwnProperty('fee')) {
+                obj['fee'] = ApiClient.convertToType(data['fee'], 'Number');
+            }
+            if (data.hasOwnProperty('leverageMin')) {
+                obj['leverageMin'] = ApiClient.convertToType(data['leverageMin'], 'Number');
+            }
+            if (data.hasOwnProperty('leverageMax')) {
+                obj['leverageMax'] = ApiClient.convertToType(data['leverageMax'], 'Number');
+            }
+            if (data.hasOwnProperty('accountTypes')) {
+                obj['accountTypes'] = ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]);
             }
         }
         return obj;
     }
 
-    /**
-    * @member {String} id
-    */
-    id = undefined;
     /**
     * @member {String} name
     */
@@ -96,13 +101,29 @@ export default class Broker {
     */
     logo = undefined;
     /**
-    * @member {Date} registrationDate
+    * @member {String} terms
     */
-    registrationDate = undefined;
+    terms = undefined;
     /**
-    * @member {Array.<module:model/BrokerTradingServer>} servers
+    * @member {String} assets
     */
-    servers = undefined;
+    assets = undefined;
+    /**
+    * @member {Number} fee
+    */
+    fee = undefined;
+    /**
+    * @member {Number} leverageMin
+    */
+    leverageMin = undefined;
+    /**
+    * @member {Number} leverageMax
+    */
+    leverageMax = undefined;
+    /**
+    * @member {Array.<module:model/BrokerAccountType>} accountTypes
+    */
+    accountTypes = undefined;
 
 
 

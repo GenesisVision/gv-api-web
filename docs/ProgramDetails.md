@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **periodDuration** | **Number** |  | [optional] 
 **periodStarts** | **Date** |  | [optional] 
 **periodEnds** | **Date** |  | [optional] 
-**isReinvesting** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsList**](PersonalProgramDetailsList.md) | Fields for authorized user | [optional] 
@@ -25,19 +25,40 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
+* `BTC` (value: `"BTC"`)
+
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
-
 * `ADA` (value: `"ADA"`)
 
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `None` (value: `"None"`)
+
+* `Pending` (value: `"Pending"`)
+
+* `ErrorCreating` (value: `"ErrorCreating"`)
+
+* `Active` (value: `"Active"`)
+
+* `Closed` (value: `"Closed"`)
+
+* `Archived` (value: `"Archived"`)
+
+* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
 
 
 

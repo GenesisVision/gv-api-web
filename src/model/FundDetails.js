@@ -83,6 +83,9 @@ export default class FundDetails {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
@@ -128,6 +131,10 @@ export default class FundDetails {
     */
     description = undefined;
     /**
+    * @member {module:model/FundDetails.StatusEnum} status
+    */
+    status = undefined;
+    /**
     * @member {module:model/ProfilePublic} manager
     */
     manager = undefined;
@@ -150,6 +157,56 @@ export default class FundDetails {
 
 
 
+
+    /**
+    * Allowed values for the <code>status</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static StatusEnum = {
+    
+        /**
+         * value: "None"
+         * @const
+         */
+        "None": "None",
+    
+        /**
+         * value: "Pending"
+         * @const
+         */
+        "Pending": "Pending",
+    
+        /**
+         * value: "ErrorCreating"
+         * @const
+         */
+        "ErrorCreating": "ErrorCreating",
+    
+        /**
+         * value: "Active"
+         * @const
+         */
+        "Active": "Active",
+    
+        /**
+         * value: "Closed"
+         * @const
+         */
+        "Closed": "Closed",
+    
+        /**
+         * value: "Archived"
+         * @const
+         */
+        "Archived": "Archived",
+    
+        /**
+         * value: "ClosedDueToInactivity"
+         * @const
+         */
+        "ClosedDueToInactivity": "ClosedDueToInactivity"    
+    };
 
 
 

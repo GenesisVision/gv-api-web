@@ -10,9 +10,31 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsList**](PersonalProgramDetailsList.md) | Fields for authorized user | [optional] 
 **dashboardProgramDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `None` (value: `"None"`)
+
+* `Pending` (value: `"Pending"`)
+
+* `ErrorCreating` (value: `"ErrorCreating"`)
+
+* `Active` (value: `"Active"`)
+
+* `Closed` (value: `"Closed"`)
+
+* `Archived` (value: `"Archived"`)
+
+* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
+
+
 
 

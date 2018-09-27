@@ -13,12 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
+import AssetsPartsChangeRequest from '../model/AssetsPartsChangeRequest';
 import ErrorViewModel from '../model/ErrorViewModel';
-import InvestmentProgramUpdate from '../model/InvestmentProgramUpdate';
 import ManagerProfile from '../model/ManagerProfile';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramRequests from '../model/ProgramRequests';
+import ProgramUpdate from '../model/ProgramUpdate';
 
 /**
 * Managers service.
@@ -83,6 +84,68 @@ export default class ManagersApi {
      */
     v10ManagersByIdGet(id) {
       return this.v10ManagersByIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update fund assets parts
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ManagersFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersFundsByIdAssetsUpdatePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsByIdAssetsUpdatePost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/funds/{id}/assets/update', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Update fund assets parts
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ManagersFundsByIdAssetsUpdatePost(id, authorization, opts) {
+      return this.v10ManagersFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -224,7 +287,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/InvestmentProgramUpdate} opts.model 
+     * @param {module:model/ProgramUpdate} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     v10ManagersFundsByIdUpdatePostWithHttpInfo(id, authorization, opts) {
@@ -270,7 +333,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/InvestmentProgramUpdate} opts.model 
+     * @param {module:model/ProgramUpdate} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     v10ManagersFundsByIdUpdatePost(id, authorization, opts) {
@@ -340,12 +403,12 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
-    v10ManagersFundsGetInvestmentAmountPostWithHttpInfo(authorization) {
+    v10ManagersFundsInvestmentAmountGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsGetInvestmentAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsInvestmentAmountGet");
       }
 
 
@@ -365,7 +428,7 @@ export default class ManagersApi {
       let returnType = 'Number';
 
       return this.apiClient.callApi(
-        '/v1.0/managers/funds/getInvestmentAmount', 'POST',
+        '/v1.0/managers/funds/investment/amount', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -376,8 +439,8 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
-    v10ManagersFundsGetInvestmentAmountPost(authorization) {
-      return this.v10ManagersFundsGetInvestmentAmountPostWithHttpInfo(authorization)
+    v10ManagersFundsInvestmentAmountGet(authorization) {
+      return this.v10ManagersFundsInvestmentAmountGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -633,7 +696,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/InvestmentProgramUpdate} opts.model 
+     * @param {module:model/ProgramUpdate} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     v10ManagersProgramsByIdUpdatePostWithHttpInfo(id, authorization, opts) {
@@ -679,7 +742,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/InvestmentProgramUpdate} opts.model 
+     * @param {module:model/ProgramUpdate} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     v10ManagersProgramsByIdUpdatePost(id, authorization, opts) {
@@ -749,12 +812,12 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
-    v10ManagersProgramsGetInvestmentAmountPostWithHttpInfo(authorization) {
+    v10ManagersProgramsInvestmentAmountGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsGetInvestmentAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsInvestmentAmountGet");
       }
 
 
@@ -774,7 +837,7 @@ export default class ManagersApi {
       let returnType = 'Number';
 
       return this.apiClient.callApi(
-        '/v1.0/managers/programs/getInvestmentAmount', 'POST',
+        '/v1.0/managers/programs/investment/amount', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -785,8 +848,8 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
-    v10ManagersProgramsGetInvestmentAmountPost(authorization) {
-      return this.v10ManagersProgramsGetInvestmentAmountPostWithHttpInfo(authorization)
+    v10ManagersProgramsInvestmentAmountGet(authorization) {
+      return this.v10ManagersProgramsInvestmentAmountGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

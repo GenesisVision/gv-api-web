@@ -21,57 +21,47 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _BrokerAccountType = require('./BrokerAccountType');
-
-var _BrokerAccountType2 = _interopRequireDefault(_BrokerAccountType);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Broker model module.
-* @module model/Broker
+* The ProgramUpdate model module.
+* @module model/ProgramUpdate
 * @version v1.0
 */
-var Broker = function () {
+var ProgramUpdate = function () {
     /**
-    * Constructs a new <code>Broker</code>.
-    * @alias module:model/Broker
+    * Constructs a new <code>ProgramUpdate</code>.
+    * @alias module:model/ProgramUpdate
     * @class
     */
 
-    function Broker() {
-        _classCallCheck(this, Broker);
+    function ProgramUpdate() {
+        _classCallCheck(this, ProgramUpdate);
 
-        this.name = undefined;
+        this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
-        this.terms = undefined;
-        this.assets = undefined;
-        this.fee = undefined;
-        this.leverageMin = undefined;
-        this.leverageMax = undefined;
-        this.accountTypes = undefined;
     }
 
     /**
-    * Constructs a <code>Broker</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ProgramUpdate</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Broker} obj Optional instance to populate.
-    * @return {module:model/Broker} The populated <code>Broker</code> instance.
+    * @param {module:model/ProgramUpdate} obj Optional instance to populate.
+    * @return {module:model/ProgramUpdate} The populated <code>ProgramUpdate</code> instance.
     */
 
 
-    _createClass(Broker, null, [{
+    _createClass(ProgramUpdate, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Broker();
+                obj = obj || new ProgramUpdate();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
@@ -79,30 +69,12 @@ var Broker = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('terms')) {
-                    obj['terms'] = _ApiClient2.default.convertToType(data['terms'], 'String');
-                }
-                if (data.hasOwnProperty('assets')) {
-                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], 'String');
-                }
-                if (data.hasOwnProperty('fee')) {
-                    obj['fee'] = _ApiClient2.default.convertToType(data['fee'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMin')) {
-                    obj['leverageMin'] = _ApiClient2.default.convertToType(data['leverageMin'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMax')) {
-                    obj['leverageMax'] = _ApiClient2.default.convertToType(data['leverageMax'], 'Number');
-                }
-                if (data.hasOwnProperty('accountTypes')) {
-                    obj['accountTypes'] = _ApiClient2.default.convertToType(data['accountTypes'], [_BrokerAccountType2.default]);
-                }
             }
             return obj;
         }
 
         /**
-        * @member {String} name
+        * @member {String} title
         */
 
         /**
@@ -113,33 +85,9 @@ var Broker = function () {
         * @member {String} logo
         */
 
-        /**
-        * @member {String} terms
-        */
-
-        /**
-        * @member {String} assets
-        */
-
-        /**
-        * @member {Number} fee
-        */
-
-        /**
-        * @member {Number} leverageMin
-        */
-
-        /**
-        * @member {Number} leverageMax
-        */
-
-        /**
-        * @member {Array.<module:model/BrokerAccountType>} accountTypes
-        */
-
     }]);
 
-    return Broker;
+    return ProgramUpdate;
 }();
 
-exports.default = Broker;
+exports.default = ProgramUpdate;

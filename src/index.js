@@ -16,9 +16,10 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
+import AssetsPartsChangeRequest from './model/AssetsPartsChangeRequest';
 import AssetsValue from './model/AssetsValue';
 import Broker from './model/Broker';
-import BrokerTradingServer from './model/BrokerTradingServer';
+import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartProgramDetails from './model/ChartProgramDetails';
@@ -45,7 +46,6 @@ import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
-import InvestmentProgramUpdate from './model/InvestmentProgramUpdate';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerProfile from './model/ManagerProfile';
@@ -77,6 +77,7 @@ import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
+import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
@@ -177,6 +178,12 @@ export {
     AndroidVersion,
 
     /**
+     * The AssetsPartsChangeRequest model constructor.
+     * @property {module:model/AssetsPartsChangeRequest}
+     */
+    AssetsPartsChangeRequest,
+
+    /**
      * The AssetsValue model constructor.
      * @property {module:model/AssetsValue}
      */
@@ -189,10 +196,10 @@ export {
     Broker,
 
     /**
-     * The BrokerTradingServer model constructor.
-     * @property {module:model/BrokerTradingServer}
+     * The BrokerAccountType model constructor.
+     * @property {module:model/BrokerAccountType}
      */
-    BrokerTradingServer,
+    BrokerAccountType,
 
     /**
      * The BrokersInfo model constructor.
@@ -349,12 +356,6 @@ export {
      * @property {module:model/IOsAppVersion}
      */
     IOsAppVersion,
-
-    /**
-     * The InvestmentProgramUpdate model constructor.
-     * @property {module:model/InvestmentProgramUpdate}
-     */
-    InvestmentProgramUpdate,
 
     /**
      * The LoginViewModel model constructor.
@@ -541,6 +542,12 @@ export {
      * @property {module:model/ProgramStatistic}
      */
     ProgramStatistic,
+
+    /**
+     * The ProgramUpdate model constructor.
+     * @property {module:model/ProgramUpdate}
+     */
+    ProgramUpdate,
 
     /**
      * The ProgramWithdrawInfo model constructor.

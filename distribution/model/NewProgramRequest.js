@@ -47,7 +47,7 @@ var NewProgramRequest = function () {
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
-        this.tradingServerId = undefined;
+        this.brokerAccountTypeId = undefined;
         this.entryFee = undefined;
         this.currency = undefined;
     }
@@ -88,8 +88,8 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('tradingServerId')) {
-                    obj['tradingServerId'] = _ApiClient2.default.convertToType(data['tradingServerId'], 'String');
+                if (data.hasOwnProperty('brokerAccountTypeId')) {
+                    obj['brokerAccountTypeId'] = _ApiClient2.default.convertToType(data['brokerAccountTypeId'], 'String');
                 }
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
@@ -130,7 +130,7 @@ var NewProgramRequest = function () {
         */
 
         /**
-        * @member {String} tradingServerId
+        * @member {String} brokerAccountTypeId
         */
 
         /**
@@ -156,6 +156,12 @@ var NewProgramRequest = function () {
 NewProgramRequest.CurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -172,12 +178,6 @@ NewProgramRequest.CurrencyEnum = {
      * @const
      */
     "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"

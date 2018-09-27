@@ -116,6 +116,12 @@ var WalletWithdrawalInfo = function () {
 WalletWithdrawalInfo.CurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -132,12 +138,6 @@ WalletWithdrawalInfo.CurrencyEnum = {
      * @const
      */
     "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"

@@ -3,11 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**registrationDate** | **Date** |  | [optional] 
-**servers** | [**[BrokerTradingServer]**](BrokerTradingServer.md) |  | [optional] 
+**terms** | **String** |  | [optional] 
+**assets** | **String** |  | [optional] 
+**fee** | **Number** |  | [optional] 
+**leverageMin** | **Number** |  | [optional] 
+**leverageMax** | **Number** |  | [optional] 
+**accountTypes** | [**[BrokerAccountType]**](BrokerAccountType.md) |  | [optional] 
 
 

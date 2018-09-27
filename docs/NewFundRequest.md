@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**tradingServerId** | **String** |  | [optional] 
+**brokerAccountTypeId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 
@@ -18,13 +18,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
+* `BTC` (value: `"BTC"`)
+
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
 

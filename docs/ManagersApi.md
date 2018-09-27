@@ -5,18 +5,19 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10ManagersByIdGet**](ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
+[**v10ManagersFundsByIdAssetsUpdatePost**](ManagersApi.md#v10ManagersFundsByIdAssetsUpdatePost) | **POST** /v1.0/managers/funds/{id}/assets/update | Update fund assets parts
 [**v10ManagersFundsByIdClosePost**](ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
 [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersFundsByIdUpdatePost**](ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
 [**v10ManagersFundsCreatePost**](ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
-[**v10ManagersFundsGetInvestmentAmountPost**](ManagersApi.md#v10ManagersFundsGetInvestmentAmountPost) | **POST** /v1.0/managers/funds/getInvestmentAmount | Get GVT investment to create fund
+[**v10ManagersFundsInvestmentAmountGet**](ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 [**v10ManagersFundsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagersProgramsByIdClosePost**](ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program/fund
 [**v10ManagersProgramsByIdPeriodClosePost**](ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersProgramsByIdUpdatePost**](ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
 [**v10ManagersProgramsCreatePost**](ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
-[**v10ManagersProgramsGetInvestmentAmountPost**](ManagersApi.md#v10ManagersProgramsGetInvestmentAmountPost) | **POST** /v1.0/managers/programs/getInvestmentAmount | Get GVT investment to create program
+[**v10ManagersProgramsInvestmentAmountGet**](ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 [**v10ManagersProgramsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
 
 
@@ -59,6 +60,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersFundsByIdAssetsUpdatePost"></a>
+# **v10ManagersFundsByIdAssetsUpdatePost**
+> v10ManagersFundsByIdAssetsUpdatePost(id, authorization, opts)
+
+Update fund assets parts
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.AssetsPartsChangeRequest() // AssetsPartsChangeRequest | 
+};
+apiInstance.v10ManagersFundsByIdAssetsUpdatePost(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **model** | [**AssetsPartsChangeRequest**](AssetsPartsChangeRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagersFundsByIdClosePost"></a>
@@ -172,7 +221,7 @@ let id = "id_example"; // String |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.InvestmentProgramUpdate() // InvestmentProgramUpdate | 
+  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
 };
 apiInstance.v10ManagersFundsByIdUpdatePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -188,7 +237,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **model** | [**InvestmentProgramUpdate**](InvestmentProgramUpdate.md)|  | [optional] 
+ **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
 
 ### Return type
 
@@ -248,9 +297,9 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagersFundsGetInvestmentAmountPost"></a>
-# **v10ManagersFundsGetInvestmentAmountPost**
-> &#39;Number&#39; v10ManagersFundsGetInvestmentAmountPost(authorization)
+<a name="v10ManagersFundsInvestmentAmountGet"></a>
+# **v10ManagersFundsInvestmentAmountGet**
+> &#39;Number&#39; v10ManagersFundsInvestmentAmountGet(authorization)
 
 Get GVT investment to create fund
 
@@ -262,7 +311,7 @@ let apiInstance = new CoreApiV10.ManagersApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagersFundsGetInvestmentAmountPost(authorization).then((data) => {
+apiInstance.v10ManagersFundsInvestmentAmountGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -488,7 +537,7 @@ let id = "id_example"; // String |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.InvestmentProgramUpdate() // InvestmentProgramUpdate | 
+  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
 };
 apiInstance.v10ManagersProgramsByIdUpdatePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -504,7 +553,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **model** | [**InvestmentProgramUpdate**](InvestmentProgramUpdate.md)|  | [optional] 
+ **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
 
 ### Return type
 
@@ -564,9 +613,9 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagersProgramsGetInvestmentAmountPost"></a>
-# **v10ManagersProgramsGetInvestmentAmountPost**
-> &#39;Number&#39; v10ManagersProgramsGetInvestmentAmountPost(authorization)
+<a name="v10ManagersProgramsInvestmentAmountGet"></a>
+# **v10ManagersProgramsInvestmentAmountGet**
+> &#39;Number&#39; v10ManagersProgramsInvestmentAmountGet(authorization)
 
 Get GVT investment to create program
 
@@ -578,7 +627,7 @@ let apiInstance = new CoreApiV10.ManagersApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagersProgramsGetInvestmentAmountPost(authorization).then((data) => {
+apiInstance.v10ManagersProgramsInvestmentAmountGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

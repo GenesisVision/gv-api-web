@@ -77,8 +77,8 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
-            if (data.hasOwnProperty('tradingServerId')) {
-                obj['tradingServerId'] = ApiClient.convertToType(data['tradingServerId'], 'String');
+            if (data.hasOwnProperty('brokerAccountTypeId')) {
+                obj['brokerAccountTypeId'] = ApiClient.convertToType(data['brokerAccountTypeId'], 'String');
             }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
@@ -119,9 +119,9 @@ export default class NewProgramRequest {
     */
     logo = undefined;
     /**
-    * @member {String} tradingServerId
+    * @member {String} brokerAccountTypeId
     */
-    tradingServerId = undefined;
+    brokerAccountTypeId = undefined;
     /**
     * @member {Number} entryFee
     */
@@ -144,6 +144,12 @@ export default class NewProgramRequest {
     static CurrencyEnum = {
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
          * value: "Undefined"
          * @const
          */
@@ -160,12 +166,6 @@ export default class NewProgramRequest {
          * @const
          */
         "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
     
         /**
          * value: "ADA"

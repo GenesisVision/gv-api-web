@@ -21,125 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _BrokerAccountType = require('./BrokerAccountType');
+var _OefAssetPart = require('./OefAssetPart');
 
-var _BrokerAccountType2 = _interopRequireDefault(_BrokerAccountType);
+var _OefAssetPart2 = _interopRequireDefault(_OefAssetPart);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Broker model module.
-* @module model/Broker
+* The AssetsPartsChangeRequest model module.
+* @module model/AssetsPartsChangeRequest
 * @version v1.0
 */
-var Broker = function () {
+var AssetsPartsChangeRequest = function () {
     /**
-    * Constructs a new <code>Broker</code>.
-    * @alias module:model/Broker
+    * Constructs a new <code>AssetsPartsChangeRequest</code>.
+    * @alias module:model/AssetsPartsChangeRequest
     * @class
     */
 
-    function Broker() {
-        _classCallCheck(this, Broker);
+    function AssetsPartsChangeRequest() {
+        _classCallCheck(this, AssetsPartsChangeRequest);
 
-        this.name = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.terms = undefined;
-        this.assets = undefined;
-        this.fee = undefined;
-        this.leverageMin = undefined;
-        this.leverageMax = undefined;
-        this.accountTypes = undefined;
+        this.assetsParts = undefined;
     }
 
     /**
-    * Constructs a <code>Broker</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AssetsPartsChangeRequest</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Broker} obj Optional instance to populate.
-    * @return {module:model/Broker} The populated <code>Broker</code> instance.
+    * @param {module:model/AssetsPartsChangeRequest} obj Optional instance to populate.
+    * @return {module:model/AssetsPartsChangeRequest} The populated <code>AssetsPartsChangeRequest</code> instance.
     */
 
 
-    _createClass(Broker, null, [{
+    _createClass(AssetsPartsChangeRequest, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Broker();
+                obj = obj || new AssetsPartsChangeRequest();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('terms')) {
-                    obj['terms'] = _ApiClient2.default.convertToType(data['terms'], 'String');
-                }
-                if (data.hasOwnProperty('assets')) {
-                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], 'String');
-                }
-                if (data.hasOwnProperty('fee')) {
-                    obj['fee'] = _ApiClient2.default.convertToType(data['fee'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMin')) {
-                    obj['leverageMin'] = _ApiClient2.default.convertToType(data['leverageMin'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMax')) {
-                    obj['leverageMax'] = _ApiClient2.default.convertToType(data['leverageMax'], 'Number');
-                }
-                if (data.hasOwnProperty('accountTypes')) {
-                    obj['accountTypes'] = _ApiClient2.default.convertToType(data['accountTypes'], [_BrokerAccountType2.default]);
+                if (data.hasOwnProperty('assetsParts')) {
+                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_OefAssetPart2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} name
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {String} terms
-        */
-
-        /**
-        * @member {String} assets
-        */
-
-        /**
-        * @member {Number} fee
-        */
-
-        /**
-        * @member {Number} leverageMin
-        */
-
-        /**
-        * @member {Number} leverageMax
-        */
-
-        /**
-        * @member {Array.<module:model/BrokerAccountType>} accountTypes
+        * @member {Array.<module:model/OefAssetPart>} assetsParts
         */
 
     }]);
 
-    return Broker;
+    return AssetsPartsChangeRequest;
 }();
 
-exports.default = Broker;
+exports.default = AssetsPartsChangeRequest;

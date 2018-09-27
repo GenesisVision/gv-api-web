@@ -568,17 +568,17 @@ var AuthApi = function () {
     /**
      * Request phone number verification code
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
 
   }, {
-    key: 'v10AuthPhoneRequestVerificationCodePostWithHttpInfo',
-    value: function v10AuthPhoneRequestVerificationCodePostWithHttpInfo(authorization) {
+    key: 'v10AuthPhoneCodePostWithHttpInfo',
+    value: function v10AuthPhoneCodePostWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneRequestVerificationCodePost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
       }
 
       var pathParams = {};
@@ -591,21 +591,21 @@ var AuthApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
+      var returnType = 'Number';
 
-      return this.apiClient.callApi('/v1.0/auth/phone/requestVerificationCode', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/auth/phone/code', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
      * Request phone number verification code
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
 
   }, {
-    key: 'v10AuthPhoneRequestVerificationCodePost',
-    value: function v10AuthPhoneRequestVerificationCodePost(authorization) {
-      return this.v10AuthPhoneRequestVerificationCodePostWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'v10AuthPhoneCodePost',
+    value: function v10AuthPhoneCodePost(authorization) {
+      return this.v10AuthPhoneCodePostWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -557,14 +557,14 @@ export default class AuthApi {
     /**
      * Request phone number verification code
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
-    v10AuthPhoneRequestVerificationCodePostWithHttpInfo(authorization) {
+    v10AuthPhoneCodePostWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneRequestVerificationCodePost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
       }
 
 
@@ -581,10 +581,10 @@ export default class AuthApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = 'Number';
 
       return this.apiClient.callApi(
-        '/v1.0/auth/phone/requestVerificationCode', 'POST',
+        '/v1.0/auth/phone/code', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -593,10 +593,10 @@ export default class AuthApi {
     /**
      * Request phone number verification code
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
-    v10AuthPhoneRequestVerificationCodePost(authorization) {
-      return this.v10AuthPhoneRequestVerificationCodePostWithHttpInfo(authorization)
+    v10AuthPhoneCodePost(authorization) {
+      return this.v10AuthPhoneCodePostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

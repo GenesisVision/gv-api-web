@@ -21,85 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _BrokerAccountType = require('./BrokerAccountType');
-
-var _BrokerAccountType2 = _interopRequireDefault(_BrokerAccountType);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Broker model module.
-* @module model/Broker
+* The BrokerAccountType model module.
+* @module model/BrokerAccountType
 * @version v1.0
 */
-var Broker = function () {
+var BrokerAccountType = function () {
     /**
-    * Constructs a new <code>Broker</code>.
-    * @alias module:model/Broker
+    * Constructs a new <code>BrokerAccountType</code>.
+    * @alias module:model/BrokerAccountType
     * @class
     */
 
-    function Broker() {
-        _classCallCheck(this, Broker);
+    function BrokerAccountType() {
+        _classCallCheck(this, BrokerAccountType);
 
+        this.id = undefined;
         this.name = undefined;
         this.description = undefined;
-        this.logo = undefined;
-        this.terms = undefined;
-        this.assets = undefined;
-        this.fee = undefined;
-        this.leverageMin = undefined;
-        this.leverageMax = undefined;
-        this.accountTypes = undefined;
+        this.type = undefined;
+        this.leverages = undefined;
+        this.currencies = undefined;
     }
 
     /**
-    * Constructs a <code>Broker</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>BrokerAccountType</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Broker} obj Optional instance to populate.
-    * @return {module:model/Broker} The populated <code>Broker</code> instance.
+    * @param {module:model/BrokerAccountType} obj Optional instance to populate.
+    * @return {module:model/BrokerAccountType} The populated <code>BrokerAccountType</code> instance.
     */
 
 
-    _createClass(Broker, null, [{
+    _createClass(BrokerAccountType, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Broker();
+                obj = obj || new BrokerAccountType();
 
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
                 if (data.hasOwnProperty('name')) {
                     obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('terms')) {
-                    obj['terms'] = _ApiClient2.default.convertToType(data['terms'], 'String');
+                if (data.hasOwnProperty('leverages')) {
+                    obj['leverages'] = _ApiClient2.default.convertToType(data['leverages'], ['Number']);
                 }
-                if (data.hasOwnProperty('assets')) {
-                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], 'String');
-                }
-                if (data.hasOwnProperty('fee')) {
-                    obj['fee'] = _ApiClient2.default.convertToType(data['fee'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMin')) {
-                    obj['leverageMin'] = _ApiClient2.default.convertToType(data['leverageMin'], 'Number');
-                }
-                if (data.hasOwnProperty('leverageMax')) {
-                    obj['leverageMax'] = _ApiClient2.default.convertToType(data['leverageMax'], 'Number');
-                }
-                if (data.hasOwnProperty('accountTypes')) {
-                    obj['accountTypes'] = _ApiClient2.default.convertToType(data['accountTypes'], [_BrokerAccountType2.default]);
+                if (data.hasOwnProperty('currencies')) {
+                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
                 }
             }
             return obj;
         }
+
+        /**
+        * @member {String} id
+        */
 
         /**
         * @member {String} name
@@ -110,36 +98,77 @@ var Broker = function () {
         */
 
         /**
-        * @member {String} logo
+        * @member {module:model/BrokerAccountType.TypeEnum} type
         */
 
         /**
-        * @member {String} terms
+        * @member {Array.<Number>} leverages
         */
 
         /**
-        * @member {String} assets
+        * @member {Array.<String>} currencies
         */
 
-        /**
-        * @member {Number} fee
-        */
 
         /**
-        * @member {Number} leverageMin
-        */
-
-        /**
-        * @member {Number} leverageMax
-        */
-
-        /**
-        * @member {Array.<module:model/BrokerAccountType>} accountTypes
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return Broker;
+    return BrokerAccountType;
 }();
 
-exports.default = Broker;
+BrokerAccountType.TypeEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "MetaTrader4"
+     * @const
+     */
+    "MetaTrader4": "MetaTrader4",
+
+    /**
+     * value: "MetaTrader5"
+     * @const
+     */
+    "MetaTrader5": "MetaTrader5",
+
+    /**
+     * value: "NinjaTrader"
+     * @const
+     */
+    "NinjaTrader": "NinjaTrader",
+
+    /**
+     * value: "cTrader"
+     * @const
+     */
+    "cTrader": "cTrader",
+
+    /**
+     * value: "Rumus"
+     * @const
+     */
+    "Rumus": "Rumus",
+
+    /**
+     * value: "Metastock"
+     * @const
+     */
+    "Metastock": "Metastock",
+
+    /**
+     * value: "IDEX"
+     * @const
+     */
+    "IDEX": "IDEX"
+};
+exports.default = BrokerAccountType;

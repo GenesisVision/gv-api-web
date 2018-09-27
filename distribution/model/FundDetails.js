@@ -71,6 +71,7 @@ var FundDetails = function () {
         this.logo = undefined;
         this.title = undefined;
         this.description = undefined;
+        this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
         this.personalProgramDetails = undefined;
@@ -112,6 +113,9 @@ var FundDetails = function () {
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
@@ -158,6 +162,10 @@ var FundDetails = function () {
         */
 
         /**
+        * @member {module:model/FundDetails.StatusEnum} status
+        */
+
+        /**
         * @member {module:model/ProfilePublic} manager
         */
 
@@ -175,9 +183,60 @@ var FundDetails = function () {
         * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
         */
 
+
+        /**
+        * Allowed values for the <code>status</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return FundDetails;
 }();
 
+FundDetails.StatusEnum = {
+
+    /**
+     * value: "None"
+     * @const
+     */
+    "None": "None",
+
+    /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
+     * value: "ErrorCreating"
+     * @const
+     */
+    "ErrorCreating": "ErrorCreating",
+
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+
+    /**
+     * value: "Closed"
+     * @const
+     */
+    "Closed": "Closed",
+
+    /**
+     * value: "Archived"
+     * @const
+     */
+    "Archived": "Archived",
+
+    /**
+     * value: "ClosedDueToInactivity"
+     * @const
+     */
+    "ClosedDueToInactivity": "ClosedDueToInactivity"
+};
 exports.default = FundDetails;

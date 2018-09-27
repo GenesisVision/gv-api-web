@@ -107,7 +107,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotInvestorPost**](docs/AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 *CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
-*CoreApiV10.AuthApi* | [**v10AuthPhoneRequestVerificationCodePost**](docs/AuthApi.md#v10AuthPhoneRequestVerificationCodePost) | **POST** /v1.0/auth/phone/requestVerificationCode | Request phone number verification code
+*CoreApiV10.AuthApi* | [**v10AuthPhoneCodePost**](docs/AuthApi.md#v10AuthPhoneCodePost) | **POST** /v1.0/auth/phone/code | Request phone number verification code
 *CoreApiV10.AuthApi* | [**v10AuthPhoneVerifyPost**](docs/AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
 *CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 *CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
@@ -147,18 +147,19 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdAssetsUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdAssetsUpdatePost) | **POST** /v1.0/managers/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdClosePost**](docs/ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsCreatePost**](docs/ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
-*CoreApiV10.ManagersApi* | [**v10ManagersFundsGetInvestmentAmountPost**](docs/ManagersApi.md#v10ManagersFundsGetInvestmentAmountPost) | **POST** /v1.0/managers/funds/getInvestmentAmount | Get GVT investment to create fund
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program/fund
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdPeriodClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsCreatePost**](docs/ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
-*CoreApiV10.ManagersApi* | [**v10ManagersProgramsGetInvestmentAmountPost**](docs/ManagersApi.md#v10ManagersProgramsGetInvestmentAmountPost) | **POST** /v1.0/managers/programs/getInvestmentAmount | Get GVT investment to create program
+*CoreApiV10.ManagersApi* | [**v10ManagersProgramsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | 
 *CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | 
@@ -193,9 +194,10 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AmountWithCurrency](docs/AmountWithCurrency.md)
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
+ - [CoreApiV10.AssetsPartsChangeRequest](docs/AssetsPartsChangeRequest.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.Broker](docs/Broker.md)
- - [CoreApiV10.BrokerTradingServer](docs/BrokerTradingServer.md)
+ - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
  - [CoreApiV10.ChartProgramDetails](docs/ChartProgramDetails.md)
@@ -222,7 +224,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
- - [CoreApiV10.InvestmentProgramUpdate](docs/InvestmentProgramUpdate.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
@@ -254,6 +255,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
+ - [CoreApiV10.ProgramUpdate](docs/ProgramUpdate.md)
  - [CoreApiV10.ProgramWithdrawInfo](docs/ProgramWithdrawInfo.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV10.RateItem](docs/RateItem.md)

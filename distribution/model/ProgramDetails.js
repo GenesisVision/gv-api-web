@@ -65,13 +65,13 @@ var ProgramDetails = function () {
         this.periodDuration = undefined;
         this.periodStarts = undefined;
         this.periodEnds = undefined;
-        this.isReinvesting = undefined;
         this.availableInvestment = undefined;
         this.statistic = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.title = undefined;
         this.description = undefined;
+        this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
         this.personalProgramDetails = undefined;
@@ -108,9 +108,6 @@ var ProgramDetails = function () {
                 if (data.hasOwnProperty('periodEnds')) {
                     obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
-                if (data.hasOwnProperty('isReinvesting')) {
-                    obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
-                }
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
                 }
@@ -128,6 +125,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
@@ -166,10 +166,6 @@ var ProgramDetails = function () {
         */
 
         /**
-        * @member {Boolean} isReinvesting
-        */
-
-        /**
         * @member {Number} availableInvestment
         */
 
@@ -191,6 +187,10 @@ var ProgramDetails = function () {
 
         /**
         * @member {String} description
+        */
+
+        /**
+        * @member {module:model/ProgramDetails.StatusEnum} status
         */
 
         /**
@@ -218,12 +218,25 @@ var ProgramDetails = function () {
         * @readonly
         */
 
+
+        /**
+        * Allowed values for the <code>status</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return ProgramDetails;
 }();
 
 ProgramDetails.CurrencyEnum = {
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "Undefined"
@@ -244,12 +257,6 @@ ProgramDetails.CurrencyEnum = {
     "ETH": "ETH",
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "ADA"
      * @const
      */
@@ -266,5 +273,49 @@ ProgramDetails.CurrencyEnum = {
      * @const
      */
     "EUR": "EUR"
+};
+ProgramDetails.StatusEnum = {
+
+    /**
+     * value: "None"
+     * @const
+     */
+    "None": "None",
+
+    /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
+     * value: "ErrorCreating"
+     * @const
+     */
+    "ErrorCreating": "ErrorCreating",
+
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+
+    /**
+     * value: "Closed"
+     * @const
+     */
+    "Closed": "Closed",
+
+    /**
+     * value: "Archived"
+     * @const
+     */
+    "Archived": "Archived",
+
+    /**
+     * value: "ClosedDueToInactivity"
+     * @const
+     */
+    "ClosedDueToInactivity": "ClosedDueToInactivity"
 };
 exports.default = ProgramDetails;

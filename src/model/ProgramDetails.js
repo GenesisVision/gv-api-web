@@ -76,9 +76,6 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('periodEnds')) {
                 obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
-            if (data.hasOwnProperty('isReinvesting')) {
-                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
-            }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
@@ -96,6 +93,9 @@ export default class ProgramDetails {
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
@@ -134,10 +134,6 @@ export default class ProgramDetails {
     */
     periodEnds = undefined;
     /**
-    * @member {Boolean} isReinvesting
-    */
-    isReinvesting = undefined;
-    /**
     * @member {Number} availableInvestment
     */
     availableInvestment = undefined;
@@ -161,6 +157,10 @@ export default class ProgramDetails {
     * @member {String} description
     */
     description = undefined;
+    /**
+    * @member {module:model/ProgramDetails.StatusEnum} status
+    */
+    status = undefined;
     /**
     * @member {module:model/ProfilePublic} manager
     */
@@ -193,6 +193,12 @@ export default class ProgramDetails {
     static CurrencyEnum = {
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
          * value: "Undefined"
          * @const
          */
@@ -211,12 +217,6 @@ export default class ProgramDetails {
         "ETH": "ETH",
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "ADA"
          * @const
          */
@@ -233,6 +233,56 @@ export default class ProgramDetails {
          * @const
          */
         "EUR": "EUR"    
+    };
+
+    /**
+    * Allowed values for the <code>status</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static StatusEnum = {
+    
+        /**
+         * value: "None"
+         * @const
+         */
+        "None": "None",
+    
+        /**
+         * value: "Pending"
+         * @const
+         */
+        "Pending": "Pending",
+    
+        /**
+         * value: "ErrorCreating"
+         * @const
+         */
+        "ErrorCreating": "ErrorCreating",
+    
+        /**
+         * value: "Active"
+         * @const
+         */
+        "Active": "Active",
+    
+        /**
+         * value: "Closed"
+         * @const
+         */
+        "Closed": "Closed",
+    
+        /**
+         * value: "Archived"
+         * @const
+         */
+        "Archived": "Archived",
+    
+        /**
+         * value: "ClosedDueToInactivity"
+         * @const
+         */
+        "ClosedDueToInactivity": "ClosedDueToInactivity"    
     };
 
 
