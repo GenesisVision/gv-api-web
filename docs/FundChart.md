@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **sharpeRatio** | **Number** |  | [optional] 
 **sortinoRatio** | **Number** |  | [optional] 
 **calmarRatio** | **Number** |  | [optional] 
+**rate** | **Number** |  | [optional] 
 
 

@@ -173,6 +173,12 @@ NotificationSettingViewModel.TypeEnum = {
     "Profile2FA": "Profile2FA",
 
     /**
+     * value: "ProfileSecurity"
+     * @const
+     */
+    "ProfileSecurity": "ProfileSecurity",
+
+    /**
      * value: "ProgramNewsAndUpdates"
      * @const
      */

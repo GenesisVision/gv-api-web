@@ -79,6 +79,9 @@ export default class ProgramChart {
             if (data.hasOwnProperty('calmarRatio')) {
                 obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
             }
+            if (data.hasOwnProperty('rate')) {
+                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
+            }
         }
         return obj;
     }
@@ -111,6 +114,10 @@ export default class ProgramChart {
     * @member {Number} calmarRatio
     */
     calmarRatio = undefined;
+    /**
+    * @member {Number} rate
+    */
+    rate = undefined;
 
 
 

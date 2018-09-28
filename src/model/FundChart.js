@@ -90,6 +90,9 @@ export default class FundChart {
             if (data.hasOwnProperty('calmarRatio')) {
                 obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
             }
+            if (data.hasOwnProperty('rate')) {
+                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
+            }
         }
         return obj;
     }
@@ -138,6 +141,10 @@ export default class FundChart {
     * @member {Number} calmarRatio
     */
     calmarRatio = undefined;
+    /**
+    * @member {Number} rate
+    */
+    rate = undefined;
 
 
 

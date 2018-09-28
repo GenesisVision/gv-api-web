@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **rememberMe** | **Boolean** |  | [optional] 
 **twoFactorCode** | **String** |  | [optional] 
 **recoveryCode** | **String** |  | [optional] 
+**client** | **String** |  | [optional] 
 
 

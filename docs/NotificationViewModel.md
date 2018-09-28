@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 
 * `Profile2FA` (value: `"Profile2FA"`)
 
+* `ProfileSecurity` (value: `"ProfileSecurity"`)
+
 * `ProgramNewsAndUpdates` (value: `"ProgramNewsAndUpdates"`)
 
 * `ProgramEndOfPeriod` (value: `"ProgramEndOfPeriod"`)

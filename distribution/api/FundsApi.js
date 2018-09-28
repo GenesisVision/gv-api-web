@@ -116,64 +116,6 @@ var FundsApi = function () {
     }
 
     /**
-     * Fund chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundChart} and HTTP response
-     */
-
-  }, {
-    key: 'v10FundsByIdChartGetWithHttpInfo',
-    value: function v10FundsByIdChartGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _FundChart2.default;
-
-      return this.apiClient.callApi('/v1.0/funds/{id}/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Fund chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundChart}
-     */
-
-  }, {
-    key: 'v10FundsByIdChartGet',
-    value: function v10FundsByIdChartGet(id, opts) {
-      return this.v10FundsByIdChartGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
      * Add to favorites
      * @param {String} id 
      * @param {String} authorization JWT access token
@@ -333,6 +275,67 @@ var FundsApi = function () {
     key: 'v10FundsByIdGet',
     value: function v10FundsByIdGet(id, opts) {
       return this.v10FundsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Fund profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.currency 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundChart} and HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdProfitchartGetWithHttpInfo',
+    value: function v10FundsByIdProfitchartGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdProfitchartGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'currency': opts['currency'],
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _FundChart2.default;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}/profitchart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Fund profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.currency 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundChart}
+     */
+
+  }, {
+    key: 'v10FundsByIdProfitchartGet',
+    value: function v10FundsByIdProfitchartGet(id, opts) {
+      return this.v10FundsByIdProfitchartGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

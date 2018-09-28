@@ -914,6 +914,51 @@ var AuthApi = function () {
     }
 
     /**
+     * Logout from another devices
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
+     */
+
+  }, {
+    key: 'v10AuthTokenDevicesLogoutPostWithHttpInfo',
+    value: function v10AuthTokenDevicesLogoutPostWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthTokenDevicesLogoutPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi('/v1.0/auth/token/devices/logout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Logout from another devices
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
+     */
+
+  }, {
+    key: 'v10AuthTokenDevicesLogoutPost',
+    value: function v10AuthTokenDevicesLogoutPost(authorization) {
+      return this.v10AuthTokenDevicesLogoutPostWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Update auth token
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response

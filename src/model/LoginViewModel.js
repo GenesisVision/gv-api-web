@@ -73,6 +73,9 @@ export default class LoginViewModel {
             if (data.hasOwnProperty('recoveryCode')) {
                 obj['recoveryCode'] = ApiClient.convertToType(data['recoveryCode'], 'String');
             }
+            if (data.hasOwnProperty('client')) {
+                obj['client'] = ApiClient.convertToType(data['client'], 'String');
+            }
         }
         return obj;
     }
@@ -97,6 +100,10 @@ export default class LoginViewModel {
     * @member {String} recoveryCode
     */
     recoveryCode = undefined;
+    /**
+    * @member {String} client
+    */
+    client = undefined;
 
 
 

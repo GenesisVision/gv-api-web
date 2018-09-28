@@ -47,6 +47,7 @@ var LoginViewModel = function () {
         this.rememberMe = undefined;
         this.twoFactorCode = undefined;
         this.recoveryCode = undefined;
+        this.client = undefined;
 
 
         this['email'] = email;this['password'] = password;
@@ -82,6 +83,9 @@ var LoginViewModel = function () {
                 if (data.hasOwnProperty('recoveryCode')) {
                     obj['recoveryCode'] = _ApiClient2.default.convertToType(data['recoveryCode'], 'String');
                 }
+                if (data.hasOwnProperty('client')) {
+                    obj['client'] = _ApiClient2.default.convertToType(data['client'], 'String');
+                }
             }
             return obj;
         }
@@ -104,6 +108,10 @@ var LoginViewModel = function () {
 
         /**
         * @member {String} recoveryCode
+        */
+
+        /**
+        * @member {String} client
         */
 
     }]);

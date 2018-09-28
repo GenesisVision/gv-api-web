@@ -223,12 +223,6 @@ var ProgramStatistic = function () {
 ProgramStatistic.StartCurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -245,6 +239,12 @@ ProgramStatistic.StartCurrencyEnum = {
      * @const
      */
     "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"
@@ -267,12 +267,6 @@ ProgramStatistic.StartCurrencyEnum = {
 ProgramStatistic.InvestedCurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -289,6 +283,12 @@ ProgramStatistic.InvestedCurrencyEnum = {
      * @const
      */
     "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

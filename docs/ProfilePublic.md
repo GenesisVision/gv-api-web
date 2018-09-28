@@ -6,5 +6,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **username** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
+**registrationDate** | **Date** |  | [optional] 
 
 

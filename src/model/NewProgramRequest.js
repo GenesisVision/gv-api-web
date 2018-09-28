@@ -144,12 +144,6 @@ export default class NewProgramRequest {
     static CurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -166,6 +160,12 @@ export default class NewProgramRequest {
          * @const
          */
         "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"

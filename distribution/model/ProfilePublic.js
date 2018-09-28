@@ -43,6 +43,7 @@ var ProfilePublic = function () {
         this.id = undefined;
         this.username = undefined;
         this.avatar = undefined;
+        this.registrationDate = undefined;
     }
 
     /**
@@ -69,6 +70,9 @@ var ProfilePublic = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
+                if (data.hasOwnProperty('registrationDate')) {
+                    obj['registrationDate'] = _ApiClient2.default.convertToType(data['registrationDate'], 'Date');
+                }
             }
             return obj;
         }
@@ -83,6 +87,10 @@ var ProfilePublic = function () {
 
         /**
         * @member {String} avatar
+        */
+
+        /**
+        * @member {Date} registrationDate
         */
 
     }]);

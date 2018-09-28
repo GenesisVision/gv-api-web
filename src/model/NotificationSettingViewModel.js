@@ -158,6 +158,12 @@ export default class NotificationSettingViewModel {
         "Profile2FA": "Profile2FA",
     
         /**
+         * value: "ProfileSecurity"
+         * @const
+         */
+        "ProfileSecurity": "ProfileSecurity",
+    
+        /**
          * value: "ProgramNewsAndUpdates"
          * @const
          */

@@ -65,6 +65,9 @@ export default class ProfilePublic {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('registrationDate')) {
+                obj['registrationDate'] = ApiClient.convertToType(data['registrationDate'], 'Date');
+            }
         }
         return obj;
     }
@@ -81,6 +84,10 @@ export default class ProfilePublic {
     * @member {String} avatar
     */
     avatar = undefined;
+    /**
+    * @member {Date} registrationDate
+    */
+    registrationDate = undefined;
 
 
 

@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**v10AuthSignupConfirmPost**](AuthApi.md#v10AuthSignupConfirmPost) | **POST** /v1.0/auth/signup/confirm | Confirm email after registration
 [**v10AuthSignupInvestorPost**](AuthApi.md#v10AuthSignupInvestorPost) | **POST** /v1.0/auth/signup/investor | New investor registration
 [**v10AuthSignupManagerPost**](AuthApi.md#v10AuthSignupManagerPost) | **POST** /v1.0/auth/signup/manager | New manager registration
+[**v10AuthTokenDevicesLogoutPost**](AuthApi.md#v10AuthTokenDevicesLogoutPost) | **POST** /v1.0/auth/token/devices/logout | Logout from another devices
 [**v10AuthTokenUpdatePost**](AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
 
 
@@ -796,6 +797,47 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10AuthTokenDevicesLogoutPost"></a>
+# **v10AuthTokenDevicesLogoutPost**
+> &#39;String&#39; v10AuthTokenDevicesLogoutPost(authorization)
+
+Logout from another devices
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.AuthApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10AuthTokenDevicesLogoutPost(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+**&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10AuthTokenUpdatePost"></a>

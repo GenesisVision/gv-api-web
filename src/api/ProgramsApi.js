@@ -41,67 +41,6 @@ export default class ProgramsApi {
 
 
     /**
-     * Program chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
-     */
-    v10ProgramsByIdChartGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdChartGet");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramChart;
-
-      return this.apiClient.callApi(
-        '/v1.0/programs/{id}/chart', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Program chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
-     */
-    v10ProgramsByIdChartGet(id, opts) {
-      return this.v10ProgramsByIdChartGetWithHttpInfo(id, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Add to favorites
      * @param {String} id 
      * @param {String} authorization JWT access token
@@ -267,6 +206,70 @@ export default class ProgramsApi {
      */
     v10ProgramsByIdGet(id, opts) {
       return this.v10ProgramsByIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Program profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.currency 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
+     */
+    v10ProgramsByIdProfitchartGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdProfitchartGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'currency': opts['currency'],
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramChart;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/profitchart', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Program profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.currency 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
+     */
+    v10ProgramsByIdProfitchartGet(id, opts) {
+      return this.v10ProgramsByIdProfitchartGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -55,6 +55,7 @@ var ProgramChart = function () {
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
         this.calmarRatio = undefined;
+        this.rate = undefined;
     }
 
     /**
@@ -93,6 +94,9 @@ var ProgramChart = function () {
                 if (data.hasOwnProperty('calmarRatio')) {
                     obj['calmarRatio'] = _ApiClient2.default.convertToType(data['calmarRatio'], 'Number');
                 }
+                if (data.hasOwnProperty('rate')) {
+                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                }
             }
             return obj;
         }
@@ -123,6 +127,10 @@ var ProgramChart = function () {
 
         /**
         * @member {Number} calmarRatio
+        */
+
+        /**
+        * @member {Number} rate
         */
 
     }]);

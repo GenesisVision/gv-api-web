@@ -194,12 +194,6 @@ export default class ProgramStatistic {
     static StartCurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -216,6 +210,12 @@ export default class ProgramStatistic {
          * @const
          */
         "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"
@@ -244,12 +244,6 @@ export default class ProgramStatistic {
     static InvestedCurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -266,6 +260,12 @@ export default class ProgramStatistic {
          * @const
          */
         "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"

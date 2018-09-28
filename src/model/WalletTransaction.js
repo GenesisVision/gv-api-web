@@ -202,12 +202,6 @@ export default class WalletTransaction {
     static SourceCurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -224,6 +218,12 @@ export default class WalletTransaction {
          * @const
          */
         "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"
@@ -364,12 +364,6 @@ export default class WalletTransaction {
     static DestinationCurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -386,6 +380,12 @@ export default class WalletTransaction {
          * @const
          */
         "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"
