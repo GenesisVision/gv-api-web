@@ -1178,7 +1178,7 @@ export default class InvestorApi {
 
 
     /**
-     * Programs list
+     * Dashboard program list
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.sorting 
@@ -1230,7 +1230,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Programs list
+     * Dashboard program list
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.sorting 

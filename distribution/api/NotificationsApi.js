@@ -58,6 +58,7 @@ var NotificationsApi = function () {
   }
 
   /**
+   * User notifications
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
    * @param {Number} opts.skip 
@@ -96,6 +97,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * User notifications
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip 
@@ -112,6 +114,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * Unread notifications count
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
@@ -142,6 +145,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * Unread notifications count
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
@@ -155,6 +159,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
@@ -163,7 +168,7 @@ var NotificationsApi = function () {
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 
      * @param {Number} opts.conditionAmount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
   }, {
@@ -194,12 +199,13 @@ var NotificationsApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
+      var returnType = 'String';
 
       return this.apiClient.callApi('/v1.0/notifications/settings/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
+     * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
@@ -208,7 +214,7 @@ var NotificationsApi = function () {
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 
      * @param {Number} opts.conditionAmount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
   }, {
@@ -220,6 +226,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * User settings
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NotificationSettingList} and HTTP response
      */
@@ -250,6 +257,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * User settings
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/NotificationSettingList}
      */
@@ -263,6 +271,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * Remove setting
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -301,6 +310,7 @@ var NotificationsApi = function () {
     }
 
     /**
+     * Remove setting
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

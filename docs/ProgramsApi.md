@@ -4,14 +4,65 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10ProgramsByIdChartsProfitGet**](ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
 [**v10ProgramsByIdFavoriteAddPost**](ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 [**v10ProgramsByIdFavoriteRemovePost**](ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 [**v10ProgramsByIdGet**](ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
-[**v10ProgramsByIdProfitchartGet**](ProgramsApi.md#v10ProgramsByIdProfitchartGet) | **GET** /v1.0/programs/{id}/profitchart | Program profit chart
 [**v10ProgramsByIdTradesGet**](ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 [**v10ProgramsGet**](ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 [**v10ProgramsSetsGet**](ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 
+
+<a name="v10ProgramsByIdChartsProfitGet"></a>
+# **v10ProgramsByIdChartsProfitGet**
+> ProgramChart v10ProgramsByIdChartsProfitGet(id, opts)
+
+Program profit chart
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'currency': "currency_example", // String | 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'maxPointCount': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdChartsProfitGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | [optional] 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **maxPointCount** | **Number**|  | [optional] 
+
+### Return type
+
+[**ProgramChart**](ProgramChart.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ProgramsByIdFavoriteAddPost"></a>
 # **v10ProgramsByIdFavoriteAddPost**
@@ -138,57 +189,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramDetailsFull**](ProgramDetailsFull.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProgramsByIdProfitchartGet"></a>
-# **v10ProgramsByIdProfitchartGet**
-> ProgramChart v10ProgramsByIdProfitchartGet(id, opts)
-
-Program profit chart
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProgramsApi();
-
-let id = "id_example"; // String | 
-
-let opts = { 
-  'currency': "currency_example", // String | 
-  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'maxPointCount': 56 // Number | 
-};
-apiInstance.v10ProgramsByIdProfitchartGet(id, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | [optional] 
- **dateFrom** | **Date**|  | [optional] 
- **dateTo** | **Date**|  | [optional] 
- **maxPointCount** | **Number**|  | [optional] 
-
-### Return type
-
-[**ProgramChart**](ProgramChart.md)
 
 ### Authorization
 

@@ -144,7 +144,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal from investment program/fund
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Programs list
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
@@ -162,19 +162,19 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsCreatePost**](docs/ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | 
-*CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | 
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | 
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | 
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | 
+*CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
+*CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsProfitGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdProfitchartGet**](docs/ProgramsApi.md#v10ProgramsByIdProfitchartGet) | **GET** /v1.0/programs/{id}/profitchart | Program profit chart
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 *CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets

@@ -4,18 +4,18 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10NotificationsGet**](NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | 
-[**v10NotificationsNewGet**](NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | 
-[**v10NotificationsSettingsAddPost**](NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | 
-[**v10NotificationsSettingsGet**](NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | 
-[**v10NotificationsSettingsRemoveByIdPost**](NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | 
+[**v10NotificationsGet**](NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
+[**v10NotificationsNewGet**](NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
+[**v10NotificationsSettingsAddPost**](NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
+[**v10NotificationsSettingsGet**](NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
+[**v10NotificationsSettingsRemoveByIdPost**](NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 
 
 <a name="v10NotificationsGet"></a>
 # **v10NotificationsGet**
 > NotificationList v10NotificationsGet(authorization, opts)
 
-
+User notifications
 
 ### Example
 ```javascript
@@ -62,7 +62,7 @@ No authorization required
 # **v10NotificationsNewGet**
 > &#39;Number&#39; v10NotificationsNewGet(authorization)
 
-
+Unread notifications count
 
 ### Example
 ```javascript
@@ -101,9 +101,9 @@ No authorization required
 
 <a name="v10NotificationsSettingsAddPost"></a>
 # **v10NotificationsSettingsAddPost**
-> v10NotificationsSettingsAddPost(authorization, opts)
+> &#39;String&#39; v10NotificationsSettingsAddPost(authorization, opts)
 
-
+Add new setting
 
 ### Example
 ```javascript
@@ -121,8 +121,8 @@ let opts = {
   'conditionType': "conditionType_example", // String | 
   'conditionAmount': 1.2 // Number | 
 };
-apiInstance.v10NotificationsSettingsAddPost(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10NotificationsSettingsAddPost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**&#39;String&#39;**
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 # **v10NotificationsSettingsGet**
 > NotificationSettingList v10NotificationsSettingsGet(authorization)
 
-
+User settings
 
 ### Example
 ```javascript
@@ -199,7 +199,7 @@ No authorization required
 # **v10NotificationsSettingsRemoveByIdPost**
 > v10NotificationsSettingsRemoveByIdPost(id, authorization)
 
-
+Remove setting
 
 ### Example
 ```javascript

@@ -38,6 +38,7 @@ export default class NotificationsApi {
 
 
     /**
+     * User notifications
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip 
@@ -79,6 +80,7 @@ export default class NotificationsApi {
     }
 
     /**
+     * User notifications
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip 
@@ -94,6 +96,7 @@ export default class NotificationsApi {
 
 
     /**
+     * Unread notifications count
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
@@ -129,6 +132,7 @@ export default class NotificationsApi {
     }
 
     /**
+     * Unread notifications count
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
@@ -141,6 +145,7 @@ export default class NotificationsApi {
 
 
     /**
+     * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
@@ -149,7 +154,7 @@ export default class NotificationsApi {
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 
      * @param {Number} opts.conditionAmount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     v10NotificationsSettingsAddPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -180,7 +185,7 @@ export default class NotificationsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = 'String';
 
       return this.apiClient.callApi(
         '/v1.0/notifications/settings/add', 'POST',
@@ -190,6 +195,7 @@ export default class NotificationsApi {
     }
 
     /**
+     * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
@@ -198,7 +204,7 @@ export default class NotificationsApi {
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 
      * @param {Number} opts.conditionAmount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     v10NotificationsSettingsAddPost(authorization, opts) {
       return this.v10NotificationsSettingsAddPostWithHttpInfo(authorization, opts)
@@ -209,6 +215,7 @@ export default class NotificationsApi {
 
 
     /**
+     * User settings
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NotificationSettingList} and HTTP response
      */
@@ -244,6 +251,7 @@ export default class NotificationsApi {
     }
 
     /**
+     * User settings
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/NotificationSettingList}
      */
@@ -256,6 +264,7 @@ export default class NotificationsApi {
 
 
     /**
+     * Remove setting
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -298,6 +307,7 @@ export default class NotificationsApi {
     }
 
     /**
+     * Remove setting
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

@@ -70,14 +70,75 @@ var ProgramsApi = function () {
   }
 
   /**
-   * Add to favorites
+   * Program profit chart
    * @param {String} id 
-   * @param {String} authorization JWT access token
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+   * @param {Object} opts Optional parameters
+   * @param {module:model/String} opts.currency 
+   * @param {Date} opts.dateFrom 
+   * @param {Date} opts.dateTo 
+   * @param {Number} opts.maxPointCount 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
    */
 
 
   _createClass(ProgramsApi, [{
+    key: 'v10ProgramsByIdChartsProfitGetWithHttpInfo',
+    value: function v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdChartsProfitGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'currency': opts['currency'],
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramChart2.default;
+
+      return this.apiClient.callApi('/v1.0/programs/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Program profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.currency 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
+     */
+
+  }, {
+    key: 'v10ProgramsByIdChartsProfitGet',
+    value: function v10ProgramsByIdChartsProfitGet(id, opts) {
+      return this.v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Add to favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
     key: 'v10ProgramsByIdFavoriteAddPostWithHttpInfo',
     value: function v10ProgramsByIdFavoriteAddPostWithHttpInfo(id, authorization) {
       var postBody = null;
@@ -230,67 +291,6 @@ var ProgramsApi = function () {
     key: 'v10ProgramsByIdGet',
     value: function v10ProgramsByIdGet(id, opts) {
       return this.v10ProgramsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Program profit chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProgramsByIdProfitchartGetWithHttpInfo',
-    value: function v10ProgramsByIdProfitchartGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdProfitchartGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'currency': opts['currency'],
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramChart2.default;
-
-      return this.apiClient.callApi('/v1.0/programs/{id}/profitchart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Program profit chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
-     */
-
-  }, {
-    key: 'v10ProgramsByIdProfitchartGet',
-    value: function v10ProgramsByIdProfitchartGet(id, opts) {
-      return this.v10ProgramsByIdProfitchartGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
