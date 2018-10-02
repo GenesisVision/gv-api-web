@@ -37,11 +37,11 @@ import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
-import FundChart from './model/FundChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundInvestInfo from './model/FundInvestInfo';
+import FundProfitChart from './model/FundProfitChart';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
@@ -67,12 +67,12 @@ import PlatformInfo from './model/PlatformInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
-import ProgramChart from './model/ProgramChart';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
+import ProgramProfitChart from './model/ProgramProfitChart';
 import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
@@ -304,12 +304,6 @@ export {
     FundAssetPercent,
 
     /**
-     * The FundChart model constructor.
-     * @property {module:model/FundChart}
-     */
-    FundChart,
-
-    /**
      * The FundDetails model constructor.
      * @property {module:model/FundDetails}
      */
@@ -332,6 +326,12 @@ export {
      * @property {module:model/FundInvestInfo}
      */
     FundInvestInfo,
+
+    /**
+     * The FundProfitChart model constructor.
+     * @property {module:model/FundProfitChart}
+     */
+    FundProfitChart,
 
     /**
      * The FundStatistic model constructor.
@@ -484,12 +484,6 @@ export {
     ProfilePublic,
 
     /**
-     * The ProgramChart model constructor.
-     * @property {module:model/ProgramChart}
-     */
-    ProgramChart,
-
-    /**
      * The ProgramDetails model constructor.
      * @property {module:model/ProgramDetails}
      */
@@ -518,6 +512,12 @@ export {
      * @property {module:model/ProgramNotificationSettingList}
      */
     ProgramNotificationSettingList,
+
+    /**
+     * The ProgramProfitChart model constructor.
+     * @property {module:model/ProgramProfitChart}
+     */
+    ProgramProfitChart,
 
     /**
      * The ProgramRequest model constructor.

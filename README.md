@@ -121,10 +121,10 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
 *CoreApiV10.FundsApi* | [**v10FundsAssetsGet**](docs/FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+*CoreApiV10.FundsApi* | [**v10FundsByIdChartsProfitGet**](docs/FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteAddPost**](docs/FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteRemovePost**](docs/FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
-*CoreApiV10.FundsApi* | [**v10FundsByIdProfitchartGet**](docs/FundsApi.md#v10FundsByIdProfitchartGet) | **GET** /v1.0/funds/{id}/profitchart | Fund profit chart
 *CoreApiV10.FundsApi* | [**v10FundsByIdRebalancingGet**](docs/FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
@@ -216,11 +216,11 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundAssetPartDetails](docs/FundAssetPartDetails.md)
  - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
  - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
- - [CoreApiV10.FundChart](docs/FundChart.md)
  - [CoreApiV10.FundDetails](docs/FundDetails.md)
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
  - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
  - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
+ - [CoreApiV10.FundProfitChart](docs/FundProfitChart.md)
  - [CoreApiV10.FundStatistic](docs/FundStatistic.md)
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
@@ -246,12 +246,12 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
  - [CoreApiV10.ProfilePublic](docs/ProfilePublic.md)
- - [CoreApiV10.ProgramChart](docs/ProgramChart.md)
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
+ - [CoreApiV10.ProgramProfitChart](docs/ProgramProfitChart.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)
  - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)

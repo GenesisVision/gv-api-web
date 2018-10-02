@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **personalFundDetails** | [**PersonalFundDetailsFull**](PersonalFundDetailsFull.md) | Fields for authorized user | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

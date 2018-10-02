@@ -69,6 +69,7 @@ var ProgramDetails = function () {
         this.statistic = undefined;
         this.id = undefined;
         this.logo = undefined;
+        this.url = undefined;
         this.title = undefined;
         this.description = undefined;
         this.status = undefined;
@@ -119,6 +120,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
@@ -179,6 +183,10 @@ var ProgramDetails = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} url
         */
 
         /**

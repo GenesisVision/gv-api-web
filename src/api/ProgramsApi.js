@@ -14,8 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import ProgramChart from '../model/ProgramChart';
 import ProgramDetailsFull from '../model/ProgramDetailsFull';
+import ProgramProfitChart from '../model/ProgramProfitChart';
 import ProgramSets from '../model/ProgramSets';
 import ProgramsList from '../model/ProgramsList';
 import TradesViewModel from '../model/TradesViewModel';
@@ -44,11 +44,10 @@ export default class ProgramsApi {
      * Program profit chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
      * @param {Date} opts.dateFrom 
      * @param {Date} opts.dateTo 
      * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramProfitChart} and HTTP response
      */
     v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts) {
       opts = opts || {};
@@ -64,7 +63,6 @@ export default class ProgramsApi {
         'id': id
       };
       let queryParams = {
-        'currency': opts['currency'],
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
         'MaxPointCount': opts['maxPointCount']
@@ -77,7 +75,7 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramChart;
+      let returnType = ProgramProfitChart;
 
       return this.apiClient.callApi(
         '/v1.0/programs/{id}/charts/profit', 'GET',
@@ -90,11 +88,10 @@ export default class ProgramsApi {
      * Program profit chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
      * @param {Date} opts.dateFrom 
      * @param {Date} opts.dateTo 
      * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramProfitChart}
      */
     v10ProgramsByIdChartsProfitGet(id, opts) {
       return this.v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts)

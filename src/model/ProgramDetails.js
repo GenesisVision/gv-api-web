@@ -88,6 +88,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -149,6 +152,10 @@ export default class ProgramDetails {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
     /**
     * @member {String} title
     */

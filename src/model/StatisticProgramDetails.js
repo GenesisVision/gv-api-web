@@ -62,15 +62,6 @@ export default class StatisticProgramDetails {
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
-            if (data.hasOwnProperty('trades')) {
-                obj['trades'] = ApiClient.convertToType(data['trades'], 'Number');
-            }
-            if (data.hasOwnProperty('successTradesPercent')) {
-                obj['successTradesPercent'] = ApiClient.convertToType(data['successTradesPercent'], 'Number');
-            }
-            if (data.hasOwnProperty('profitFactor')) {
-                obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
-            }
             if (data.hasOwnProperty('maxDrawdown')) {
                 obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
             }
@@ -92,18 +83,6 @@ export default class StatisticProgramDetails {
     * @member {Number} investors
     */
     investors = undefined;
-    /**
-    * @member {Number} trades
-    */
-    trades = undefined;
-    /**
-    * @member {Number} successTradesPercent
-    */
-    successTradesPercent = undefined;
-    /**
-    * @member {Number} profitFactor
-    */
-    profitFactor = undefined;
     /**
     * @member {Number} maxDrawdown
     */

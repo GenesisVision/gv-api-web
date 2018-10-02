@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="v10ProgramsByIdChartsProfitGet"></a>
 # **v10ProgramsByIdChartsProfitGet**
-> ProgramChart v10ProgramsByIdChartsProfitGet(id, opts)
+> ProgramProfitChart v10ProgramsByIdChartsProfitGet(id, opts)
 
 Program profit chart
 
@@ -28,7 +28,6 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 let id = "id_example"; // String | 
 
 let opts = { 
-  'currency': "currency_example", // String | 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56 // Number | 
@@ -46,14 +45,13 @@ apiInstance.v10ProgramsByIdChartsProfitGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
- **currency** | **String**|  | [optional] 
  **dateFrom** | **Date**|  | [optional] 
  **dateTo** | **Date**|  | [optional] 
  **maxPointCount** | **Number**|  | [optional] 
 
 ### Return type
 
-[**ProgramChart**](ProgramChart.md)
+[**ProgramProfitChart**](ProgramProfitChart.md)
 
 ### Authorization
 
@@ -182,7 +180,7 @@ apiInstance.v10ProgramsByIdGet(id, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **authorization** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
 

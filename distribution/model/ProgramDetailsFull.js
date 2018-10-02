@@ -65,6 +65,7 @@ var ProgramDetailsFull = function () {
         this.personalProgramDetails = undefined;
         this.id = undefined;
         this.logo = undefined;
+        this.url = undefined;
         this.description = undefined;
         this.title = undefined;
         this.status = undefined;
@@ -124,6 +125,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
@@ -192,6 +196,10 @@ var ProgramDetailsFull = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} url
         */
 
         /**

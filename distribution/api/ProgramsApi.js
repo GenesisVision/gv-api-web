@@ -25,13 +25,13 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _ProgramChart = require('../model/ProgramChart');
-
-var _ProgramChart2 = _interopRequireDefault(_ProgramChart);
-
 var _ProgramDetailsFull = require('../model/ProgramDetailsFull');
 
 var _ProgramDetailsFull2 = _interopRequireDefault(_ProgramDetailsFull);
+
+var _ProgramProfitChart = require('../model/ProgramProfitChart');
+
+var _ProgramProfitChart2 = _interopRequireDefault(_ProgramProfitChart);
 
 var _ProgramSets = require('../model/ProgramSets');
 
@@ -73,11 +73,10 @@ var ProgramsApi = function () {
    * Program profit chart
    * @param {String} id 
    * @param {Object} opts Optional parameters
-   * @param {module:model/String} opts.currency 
    * @param {Date} opts.dateFrom 
    * @param {Date} opts.dateTo 
    * @param {Number} opts.maxPointCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramChart} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramProfitChart} and HTTP response
    */
 
 
@@ -96,7 +95,6 @@ var ProgramsApi = function () {
         'id': id
       };
       var queryParams = {
-        'currency': opts['currency'],
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
         'MaxPointCount': opts['maxPointCount']
@@ -107,7 +105,7 @@ var ProgramsApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramChart2.default;
+      var returnType = _ProgramProfitChart2.default;
 
       return this.apiClient.callApi('/v1.0/programs/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -116,11 +114,10 @@ var ProgramsApi = function () {
      * Program profit chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
      * @param {Date} opts.dateFrom 
      * @param {Date} opts.dateTo 
      * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramChart}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramProfitChart}
      */
 
   }, {

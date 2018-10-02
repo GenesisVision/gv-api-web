@@ -21,72 +21,128 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ChartProgramDetails = require('./ChartProgramDetails');
+
+var _ChartProgramDetails2 = _interopRequireDefault(_ChartProgramDetails);
+
+var _ChartSimple = require('./ChartSimple');
+
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The StatisticProgramDetails model module.
-* @module model/StatisticProgramDetails
+* The ProgramProfitChart model module.
+* @module model/ProgramProfitChart
 * @version v1.0
 */
-var StatisticProgramDetails = function () {
+var ProgramProfitChart = function () {
     /**
-    * Constructs a new <code>StatisticProgramDetails</code>.
-    * @alias module:model/StatisticProgramDetails
+    * Constructs a new <code>ProgramProfitChart</code>.
+    * @alias module:model/ProgramProfitChart
     * @class
     */
 
-    function StatisticProgramDetails() {
-        _classCallCheck(this, StatisticProgramDetails);
+    function ProgramProfitChart() {
+        _classCallCheck(this, ProgramProfitChart);
 
-        this.pnL = undefined;
-        this.investors = undefined;
+        this.totalProgramCurrencyProfit = undefined;
+        this.timeframeProgramCurrencyProfit = undefined;
+        this.trades = undefined;
+        this.successTradesPercent = undefined;
+        this.profitFactor = undefined;
         this.maxDrawdown = undefined;
-        this.periodStarts = undefined;
-        this.periodEnds = undefined;
+        this.chart = undefined;
+        this.pnLChart = undefined;
+        this.equity = undefined;
+        this.sharpeRatio = undefined;
+        this.sortinoRatio = undefined;
+        this.calmarRatio = undefined;
+        this.totalGvtProfit = undefined;
+        this.timeframeGvtProfit = undefined;
     }
 
     /**
-    * Constructs a <code>StatisticProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ProgramProfitChart</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/StatisticProgramDetails} obj Optional instance to populate.
-    * @return {module:model/StatisticProgramDetails} The populated <code>StatisticProgramDetails</code> instance.
+    * @param {module:model/ProgramProfitChart} obj Optional instance to populate.
+    * @return {module:model/ProgramProfitChart} The populated <code>ProgramProfitChart</code> instance.
     */
 
 
-    _createClass(StatisticProgramDetails, null, [{
+    _createClass(ProgramProfitChart, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new StatisticProgramDetails();
+                obj = obj || new ProgramProfitChart();
 
-                if (data.hasOwnProperty('pnL')) {
-                    obj['pnL'] = _ApiClient2.default.convertToType(data['pnL'], 'Number');
+                if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
+                    obj['totalProgramCurrencyProfit'] = _ApiClient2.default.convertToType(data['totalProgramCurrencyProfit'], 'Number');
                 }
-                if (data.hasOwnProperty('investors')) {
-                    obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
+                if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
+                    obj['timeframeProgramCurrencyProfit'] = _ApiClient2.default.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('trades')) {
+                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], 'Number');
+                }
+                if (data.hasOwnProperty('successTradesPercent')) {
+                    obj['successTradesPercent'] = _ApiClient2.default.convertToType(data['successTradesPercent'], 'Number');
+                }
+                if (data.hasOwnProperty('profitFactor')) {
+                    obj['profitFactor'] = _ApiClient2.default.convertToType(data['profitFactor'], 'Number');
                 }
                 if (data.hasOwnProperty('maxDrawdown')) {
                     obj['maxDrawdown'] = _ApiClient2.default.convertToType(data['maxDrawdown'], 'Number');
                 }
-                if (data.hasOwnProperty('periodStarts')) {
-                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartProgramDetails2.default]);
                 }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                if (data.hasOwnProperty('pnLChart')) {
+                    obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
+                }
+                if (data.hasOwnProperty('equity')) {
+                    obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
+                }
+                if (data.hasOwnProperty('sharpeRatio')) {
+                    obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
+                }
+                if (data.hasOwnProperty('sortinoRatio')) {
+                    obj['sortinoRatio'] = _ApiClient2.default.convertToType(data['sortinoRatio'], 'Number');
+                }
+                if (data.hasOwnProperty('calmarRatio')) {
+                    obj['calmarRatio'] = _ApiClient2.default.convertToType(data['calmarRatio'], 'Number');
+                }
+                if (data.hasOwnProperty('totalGvtProfit')) {
+                    obj['totalGvtProfit'] = _ApiClient2.default.convertToType(data['totalGvtProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('timeframeGvtProfit')) {
+                    obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} pnL
+        * @member {Number} totalProgramCurrencyProfit
         */
 
         /**
-        * @member {Number} investors
+        * @member {Number} timeframeProgramCurrencyProfit
+        */
+
+        /**
+        * @member {Number} trades
+        */
+
+        /**
+        * @member {Number} successTradesPercent
+        */
+
+        /**
+        * @member {Number} profitFactor
         */
 
         /**
@@ -94,16 +150,40 @@ var StatisticProgramDetails = function () {
         */
 
         /**
-        * @member {Date} periodStarts
+        * @member {Array.<module:model/ChartProgramDetails>} chart
         */
 
         /**
-        * @member {Date} periodEnds
+        * @member {Array.<module:model/ChartSimple>} pnLChart
+        */
+
+        /**
+        * @member {Number} equity
+        */
+
+        /**
+        * @member {Number} sharpeRatio
+        */
+
+        /**
+        * @member {Number} sortinoRatio
+        */
+
+        /**
+        * @member {Number} calmarRatio
+        */
+
+        /**
+        * @member {Number} totalGvtProfit
+        */
+
+        /**
+        * @member {Number} timeframeGvtProfit
         */
 
     }]);
 
-    return StatisticProgramDetails;
+    return ProgramProfitChart;
 }();
 
-exports.default = StatisticProgramDetails;
+exports.default = ProgramProfitChart;

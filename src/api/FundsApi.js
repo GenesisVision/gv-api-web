@@ -14,8 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import FundChart from '../model/FundChart';
 import FundDetailsFull from '../model/FundDetailsFull';
+import FundProfitChart from '../model/FundProfitChart';
 import FundsList from '../model/FundsList';
 import PlatformAssets from '../model/PlatformAssets';
 import RebalancesViewModel from '../model/RebalancesViewModel';
@@ -83,6 +83,67 @@ export default class FundsApi {
      */
     v10FundsAssetsGet(authorization) {
       return this.v10FundsAssetsGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Fund profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundProfitChart} and HTTP response
+     */
+    v10FundsByIdChartsProfitGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartsProfitGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundProfitChart;
+
+      return this.apiClient.callApi(
+        '/v1.0/funds/{id}/charts/profit', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Fund profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundProfitChart}
+     */
+    v10FundsByIdChartsProfitGet(id, opts) {
+      return this.v10FundsByIdChartsProfitGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -255,70 +316,6 @@ export default class FundsApi {
      */
     v10FundsByIdGet(id, opts) {
       return this.v10FundsByIdGetWithHttpInfo(id, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Fund profit chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundChart} and HTTP response
-     */
-    v10FundsByIdProfitchartGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdProfitchartGet");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-        'currency': opts['currency'],
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundChart;
-
-      return this.apiClient.callApi(
-        '/v1.0/funds/{id}/profitchart', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Fund profit chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundChart}
-     */
-    v10FundsByIdProfitchartGet(id, opts) {
-      return this.v10FundsByIdProfitchartGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
