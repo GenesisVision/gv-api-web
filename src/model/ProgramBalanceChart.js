@@ -103,10 +103,10 @@ export default class ProgramBalanceChart {
     static ProgramCurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -115,10 +115,10 @@ export default class ProgramBalanceChart {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"

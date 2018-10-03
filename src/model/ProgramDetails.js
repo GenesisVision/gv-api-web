@@ -200,10 +200,10 @@ export default class ProgramDetails {
     static CurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -212,10 +212,10 @@ export default class ProgramDetails {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"

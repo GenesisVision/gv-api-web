@@ -116,10 +116,10 @@ var WalletInfo = function () {
 WalletInfo.CurrencyEnum = {
 
     /**
-     * value: "ETH"
+     * value: "Undefined"
      * @const
      */
-    "ETH": "ETH",
+    "Undefined": "Undefined",
 
     /**
      * value: "GVT"
@@ -128,10 +128,10 @@ WalletInfo.CurrencyEnum = {
     "GVT": "GVT",
 
     /**
-     * value: "Undefined"
+     * value: "ETH"
      * @const
      */
-    "Undefined": "Undefined",
+    "ETH": "ETH",
 
     /**
      * value: "BTC"

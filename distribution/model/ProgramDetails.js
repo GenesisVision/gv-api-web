@@ -241,10 +241,10 @@ var ProgramDetails = function () {
 ProgramDetails.CurrencyEnum = {
 
     /**
-     * value: "ETH"
+     * value: "Undefined"
      * @const
      */
-    "ETH": "ETH",
+    "Undefined": "Undefined",
 
     /**
      * value: "GVT"
@@ -253,10 +253,10 @@ ProgramDetails.CurrencyEnum = {
     "GVT": "GVT",
 
     /**
-     * value: "Undefined"
+     * value: "ETH"
      * @const
      */
-    "Undefined": "Undefined",
+    "ETH": "ETH",
 
     /**
      * value: "BTC"

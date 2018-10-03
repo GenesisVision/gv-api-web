@@ -14,11 +14,11 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 

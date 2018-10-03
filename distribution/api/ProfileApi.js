@@ -62,13 +62,112 @@ var ProfileApi = function () {
   }
 
   /**
-   * Get full profile
+   * Remove avatar
    * @param {String} authorization JWT access token
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
 
 
   _createClass(ProfileApi, [{
+    key: 'v10ProfileAvatarRemovePostWithHttpInfo',
+    value: function v10ProfileAvatarRemovePostWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarRemovePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/profile/avatar/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Remove avatar
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ProfileAvatarRemovePost',
+    value: function v10ProfileAvatarRemovePost(authorization) {
+      return this.v10ProfileAvatarRemovePostWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Update avatar
+     * @param {String} fileId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProfileAvatarUpdateByFileIdPostWithHttpInfo',
+    value: function v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'fileId' is set
+      if (fileId === undefined || fileId === null) {
+        throw new Error("Missing the required parameter 'fileId' when calling v10ProfileAvatarUpdateByFileIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarUpdateByFileIdPost");
+      }
+
+      var pathParams = {
+        'fileId': fileId
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/profile/avatar/update/{fileId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Update avatar
+     * @param {String} fileId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ProfileAvatarUpdateByFileIdPost',
+    value: function v10ProfileAvatarUpdateByFileIdPost(fileId, authorization) {
+      return this.v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get full profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
+     */
+
+  }, {
     key: 'v10ProfileGetWithHttpInfo',
     value: function v10ProfileGetWithHttpInfo(authorization) {
       var postBody = null;
@@ -148,60 +247,6 @@ var ProfileApi = function () {
     key: 'v10ProfileHeaderGet',
     value: function v10ProfileHeaderGet(authorization) {
       return this.v10ProfileHeaderGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Update avatar
-     * @param {String} fileId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'v10ProfileUpdateAvatarByFileIdPostWithHttpInfo',
-    value: function v10ProfileUpdateAvatarByFileIdPostWithHttpInfo(fileId, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'fileId' is set
-      if (fileId === undefined || fileId === null) {
-        throw new Error("Missing the required parameter 'fileId' when calling v10ProfileUpdateAvatarByFileIdPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileUpdateAvatarByFileIdPost");
-      }
-
-      var pathParams = {
-        'fileId': fileId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/profile/update/avatar/{fileId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Update avatar
-     * @param {String} fileId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'v10ProfileUpdateAvatarByFileIdPost',
-    value: function v10ProfileUpdateAvatarByFileIdPost(fileId, authorization) {
-      return this.v10ProfileUpdateAvatarByFileIdPostWithHttpInfo(fileId, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

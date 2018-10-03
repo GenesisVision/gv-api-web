@@ -21,10 +21,6 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartProgramDetails = require('./ChartProgramDetails');
-
-var _ChartProgramDetails2 = _interopRequireDefault(_ChartProgramDetails);
-
 var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
@@ -54,16 +50,19 @@ var ProgramProfitChart = function () {
         this.trades = undefined;
         this.successTradesPercent = undefined;
         this.profitFactor = undefined;
-        this.maxDrawdown = undefined;
-        this.chart = undefined;
         this.pnLChart = undefined;
+        this.equityChart = undefined;
         this.equity = undefined;
+        this.investors = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
         this.calmarRatio = undefined;
+        this.maxDrawdown = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
         this.profitChangePercent = undefined;
+        this.lastPeriodStarts = undefined;
+        this.lastPeriodEnds = undefined;
     }
 
     /**
@@ -99,17 +98,17 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('profitFactor')) {
                     obj['profitFactor'] = _ApiClient2.default.convertToType(data['profitFactor'], 'Number');
                 }
-                if (data.hasOwnProperty('maxDrawdown')) {
-                    obj['maxDrawdown'] = _ApiClient2.default.convertToType(data['maxDrawdown'], 'Number');
-                }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartProgramDetails2.default]);
-                }
                 if (data.hasOwnProperty('pnLChart')) {
                     obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
                 }
+                if (data.hasOwnProperty('equityChart')) {
+                    obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
+                }
                 if (data.hasOwnProperty('equity')) {
                     obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
+                }
+                if (data.hasOwnProperty('investors')) {
+                    obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
                 }
                 if (data.hasOwnProperty('sharpeRatio')) {
                     obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
@@ -120,6 +119,9 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('calmarRatio')) {
                     obj['calmarRatio'] = _ApiClient2.default.convertToType(data['calmarRatio'], 'Number');
                 }
+                if (data.hasOwnProperty('maxDrawdown')) {
+                    obj['maxDrawdown'] = _ApiClient2.default.convertToType(data['maxDrawdown'], 'Number');
+                }
                 if (data.hasOwnProperty('totalGvtProfit')) {
                     obj['totalGvtProfit'] = _ApiClient2.default.convertToType(data['totalGvtProfit'], 'Number');
                 }
@@ -128,6 +130,12 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('profitChangePercent')) {
                     obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
+                }
+                if (data.hasOwnProperty('lastPeriodStarts')) {
+                    obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
+                }
+                if (data.hasOwnProperty('lastPeriodEnds')) {
+                    obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
                 }
             }
             return obj;
@@ -158,19 +166,19 @@ var ProgramProfitChart = function () {
         */
 
         /**
-        * @member {Number} maxDrawdown
-        */
-
-        /**
-        * @member {Array.<module:model/ChartProgramDetails>} chart
-        */
-
-        /**
         * @member {Array.<module:model/ChartSimple>} pnLChart
         */
 
         /**
+        * @member {Array.<module:model/ChartSimple>} equityChart
+        */
+
+        /**
         * @member {Number} equity
+        */
+
+        /**
+        * @member {Number} investors
         */
 
         /**
@@ -186,6 +194,10 @@ var ProgramProfitChart = function () {
         */
 
         /**
+        * @member {Number} maxDrawdown
+        */
+
+        /**
         * @member {Number} totalGvtProfit
         */
 
@@ -195,6 +207,14 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} profitChangePercent
+        */
+
+        /**
+        * @member {Date} lastPeriodStarts
+        */
+
+        /**
+        * @member {Date} lastPeriodEnds
         */
 
 
@@ -212,10 +232,10 @@ var ProgramProfitChart = function () {
 ProgramProfitChart.ProgramCurrencyEnum = {
 
     /**
-     * value: "ETH"
+     * value: "Undefined"
      * @const
      */
-    "ETH": "ETH",
+    "Undefined": "Undefined",
 
     /**
      * value: "GVT"
@@ -224,10 +244,10 @@ ProgramProfitChart.ProgramCurrencyEnum = {
     "GVT": "GVT",
 
     /**
-     * value: "Undefined"
+     * value: "ETH"
      * @const
      */
-    "Undefined": "Undefined",
+    "ETH": "ETH",
 
     /**
      * value: "BTC"

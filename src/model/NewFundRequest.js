@@ -138,10 +138,10 @@ export default class NewFundRequest {
     static CurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -150,10 +150,10 @@ export default class NewFundRequest {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"

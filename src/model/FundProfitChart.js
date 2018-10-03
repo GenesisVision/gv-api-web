@@ -66,23 +66,14 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('rebalances')) {
                 obj['rebalances'] = ApiClient.convertToType(data['rebalances'], 'Number');
             }
-            if (data.hasOwnProperty('startInvestors')) {
-                obj['startInvestors'] = ApiClient.convertToType(data['startInvestors'], 'Number');
-            }
-            if (data.hasOwnProperty('endInvestors')) {
-                obj['endInvestors'] = ApiClient.convertToType(data['endInvestors'], 'Number');
-            }
-            if (data.hasOwnProperty('lastPeriodStarts')) {
-                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('lastPeriodEnds')) {
-                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
-            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
             if (data.hasOwnProperty('equity')) {
                 obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
+            }
+            if (data.hasOwnProperty('investors')) {
+                obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
             if (data.hasOwnProperty('sharpeRatio')) {
                 obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
@@ -93,6 +84,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('calmarRatio')) {
                 obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
             }
+            if (data.hasOwnProperty('maxDrawdown')) {
+                obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
+            }
             if (data.hasOwnProperty('totalGvtProfit')) {
                 obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
             }
@@ -101,6 +95,12 @@ export default class FundProfitChart {
             }
             if (data.hasOwnProperty('profitChangePercent')) {
                 obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
+            if (data.hasOwnProperty('lastPeriodStarts')) {
+                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('lastPeriodEnds')) {
+                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
         }
         return obj;
@@ -119,22 +119,6 @@ export default class FundProfitChart {
     */
     rebalances = undefined;
     /**
-    * @member {Number} startInvestors
-    */
-    startInvestors = undefined;
-    /**
-    * @member {Number} endInvestors
-    */
-    endInvestors = undefined;
-    /**
-    * @member {Date} lastPeriodStarts
-    */
-    lastPeriodStarts = undefined;
-    /**
-    * @member {Date} lastPeriodEnds
-    */
-    lastPeriodEnds = undefined;
-    /**
     * @member {Array.<module:model/ChartSimple>} equityChart
     */
     equityChart = undefined;
@@ -142,6 +126,10 @@ export default class FundProfitChart {
     * @member {Number} equity
     */
     equity = undefined;
+    /**
+    * @member {Number} investors
+    */
+    investors = undefined;
     /**
     * @member {Number} sharpeRatio
     */
@@ -155,6 +143,10 @@ export default class FundProfitChart {
     */
     calmarRatio = undefined;
     /**
+    * @member {Number} maxDrawdown
+    */
+    maxDrawdown = undefined;
+    /**
     * @member {Number} totalGvtProfit
     */
     totalGvtProfit = undefined;
@@ -166,6 +158,14 @@ export default class FundProfitChart {
     * @member {Number} profitChangePercent
     */
     profitChangePercent = undefined;
+    /**
+    * @member {Date} lastPeriodStarts
+    */
+    lastPeriodStarts = undefined;
+    /**
+    * @member {Date} lastPeriodEnds
+    */
+    lastPeriodEnds = undefined;
 
 
 

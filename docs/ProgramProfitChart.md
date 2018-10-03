@@ -9,27 +9,30 @@ Name | Type | Description | Notes
 **trades** | **Number** |  | [optional] 
 **successTradesPercent** | **Number** |  | [optional] 
 **profitFactor** | **Number** |  | [optional] 
-**maxDrawdown** | **Number** |  | [optional] 
-**chart** | [**[ChartProgramDetails]**](ChartProgramDetails.md) |  | [optional] 
 **pnLChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
+**equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **equity** | **Number** |  | [optional] 
+**investors** | **Number** |  | [optional] 
 **sharpeRatio** | **Number** |  | [optional] 
 **sortinoRatio** | **Number** |  | [optional] 
 **calmarRatio** | **Number** |  | [optional] 
+**maxDrawdown** | **Number** |  | [optional] 
 **totalGvtProfit** | **Number** |  | [optional] 
 **timeframeGvtProfit** | **Number** |  | [optional] 
 **profitChangePercent** | **Number** |  | [optional] 
+**lastPeriodStarts** | **Date** |  | [optional] 
+**lastPeriodEnds** | **Date** |  | [optional] 
 
 
 <a name="ProgramCurrencyEnum"></a>
 ## Enum: ProgramCurrencyEnum
 
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 

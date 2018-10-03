@@ -13,7 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import ChartProgramDetails from './ChartProgramDetails';
 import ChartSimple from './ChartSimple';
 
 
@@ -76,17 +75,17 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('profitFactor')) {
                 obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
             }
-            if (data.hasOwnProperty('maxDrawdown')) {
-                obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
-            }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartProgramDetails]);
-            }
             if (data.hasOwnProperty('pnLChart')) {
                 obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
+            if (data.hasOwnProperty('equityChart')) {
+                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
+            }
             if (data.hasOwnProperty('equity')) {
                 obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
+            }
+            if (data.hasOwnProperty('investors')) {
+                obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
             if (data.hasOwnProperty('sharpeRatio')) {
                 obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
@@ -97,6 +96,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('calmarRatio')) {
                 obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'Number');
             }
+            if (data.hasOwnProperty('maxDrawdown')) {
+                obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
+            }
             if (data.hasOwnProperty('totalGvtProfit')) {
                 obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
             }
@@ -105,6 +107,12 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('profitChangePercent')) {
                 obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
+            if (data.hasOwnProperty('lastPeriodStarts')) {
+                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('lastPeriodEnds')) {
+                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
         }
         return obj;
@@ -135,21 +143,21 @@ export default class ProgramProfitChart {
     */
     profitFactor = undefined;
     /**
-    * @member {Number} maxDrawdown
-    */
-    maxDrawdown = undefined;
-    /**
-    * @member {Array.<module:model/ChartProgramDetails>} chart
-    */
-    chart = undefined;
-    /**
     * @member {Array.<module:model/ChartSimple>} pnLChart
     */
     pnLChart = undefined;
     /**
+    * @member {Array.<module:model/ChartSimple>} equityChart
+    */
+    equityChart = undefined;
+    /**
     * @member {Number} equity
     */
     equity = undefined;
+    /**
+    * @member {Number} investors
+    */
+    investors = undefined;
     /**
     * @member {Number} sharpeRatio
     */
@@ -163,6 +171,10 @@ export default class ProgramProfitChart {
     */
     calmarRatio = undefined;
     /**
+    * @member {Number} maxDrawdown
+    */
+    maxDrawdown = undefined;
+    /**
     * @member {Number} totalGvtProfit
     */
     totalGvtProfit = undefined;
@@ -174,6 +186,14 @@ export default class ProgramProfitChart {
     * @member {Number} profitChangePercent
     */
     profitChangePercent = undefined;
+    /**
+    * @member {Date} lastPeriodStarts
+    */
+    lastPeriodStarts = undefined;
+    /**
+    * @member {Date} lastPeriodEnds
+    */
+    lastPeriodEnds = undefined;
 
 
 
@@ -188,10 +208,10 @@ export default class ProgramProfitChart {
     static ProgramCurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -200,10 +220,10 @@ export default class ProgramProfitChart {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"

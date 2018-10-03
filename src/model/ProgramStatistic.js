@@ -194,10 +194,10 @@ export default class ProgramStatistic {
     static StartCurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -206,10 +206,10 @@ export default class ProgramStatistic {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"
@@ -244,10 +244,10 @@ export default class ProgramStatistic {
     static InvestedCurrencyEnum = {
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "GVT"
@@ -256,10 +256,10 @@ export default class ProgramStatistic {
         "GVT": "GVT",
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "BTC"

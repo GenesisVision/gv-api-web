@@ -26,11 +26,11 @@ Name | Type | Description | Notes
 ## Enum: StartCurrencyEnum
 
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 
@@ -47,11 +47,11 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 

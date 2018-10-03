@@ -171,9 +171,10 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
+*CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
+*CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
-*CoreApiV10.ProfileApi* | [**v10ProfileUpdateAvatarByFileIdPost**](docs/ProfileApi.md#v10ProfileUpdateAvatarByFileIdPost) | **POST** /v1.0/profile/update/avatar/{fileId} | Update avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsBalanceGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsBalanceGet) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsProfitGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
@@ -207,7 +208,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
- - [CoreApiV10.ChartProgramDetails](docs/ChartProgramDetails.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.CreateWithdrawalRequestModel](docs/CreateWithdrawalRequestModel.md)
  - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
@@ -279,7 +279,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
- - [CoreApiV10.StatisticProgramDetails](docs/StatisticProgramDetails.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)
  - [CoreApiV10.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)
