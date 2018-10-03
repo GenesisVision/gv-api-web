@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _FundBalanceChart = require('../model/FundBalanceChart');
+
+var _FundBalanceChart2 = _interopRequireDefault(_FundBalanceChart);
+
 var _FundDetailsFull = require('../model/FundDetailsFull');
 
 var _FundDetailsFull2 = _interopRequireDefault(_FundDetailsFull);
@@ -111,6 +115,64 @@ var FundsApi = function () {
     key: 'v10FundsAssetsGet',
     value: function v10FundsAssetsGet(authorization) {
       return this.v10FundsAssetsGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Fund balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundBalanceChart} and HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdChartsBalanceGetWithHttpInfo',
+    value: function v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartsBalanceGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _FundBalanceChart2.default;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Fund balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundBalanceChart}
+     */
+
+  }, {
+    key: 'v10FundsByIdChartsBalanceGet',
+    value: function v10FundsByIdChartsBalanceGet(id, opts) {
+      return this.v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

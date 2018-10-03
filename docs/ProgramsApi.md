@@ -4,6 +4,7 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10ProgramsByIdChartsBalanceGet**](ProgramsApi.md#v10ProgramsByIdChartsBalanceGet) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
 [**v10ProgramsByIdChartsProfitGet**](ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
 [**v10ProgramsByIdFavoriteAddPost**](ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 [**v10ProgramsByIdFavoriteRemovePost**](ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
@@ -12,6 +13,55 @@ Method | HTTP request | Description
 [**v10ProgramsGet**](ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 [**v10ProgramsSetsGet**](ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 
+
+<a name="v10ProgramsByIdChartsBalanceGet"></a>
+# **v10ProgramsByIdChartsBalanceGet**
+> ProgramBalanceChart v10ProgramsByIdChartsBalanceGet(id, opts)
+
+Program balance chart
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'maxPointCount': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdChartsBalanceGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **maxPointCount** | **Number**|  | [optional] 
+
+### Return type
+
+[**ProgramBalanceChart**](ProgramBalanceChart.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ProgramsByIdChartsProfitGet"></a>
 # **v10ProgramsByIdChartsProfitGet**
@@ -307,7 +357,7 @@ Name | Type | Description  | Notes
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
  **mask** | **String**|  | [optional] 
- **facetId** | [**String**](.md)|  | [optional] 
+ **facetId** | **String**|  | [optional] 
  **isFavorite** | **Boolean**|  | [optional] 
  **ids** | [**[String]**](String.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 

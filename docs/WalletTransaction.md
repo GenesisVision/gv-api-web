@@ -40,11 +40,11 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `BTC` (value: `"BTC"`)
 
@@ -107,11 +107,11 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `BTC` (value: `"BTC"`)
 

@@ -92,9 +92,6 @@ export default class UpdateProfileViewModel {
             if (data.hasOwnProperty('gender')) {
                 obj['gender'] = ApiClient.convertToType(data['gender'], 'Boolean');
             }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
-            }
         }
         return obj;
     }
@@ -147,10 +144,6 @@ export default class UpdateProfileViewModel {
     * @member {Boolean} gender
     */
     gender = undefined;
-    /**
-    * @member {String} avatar
-    */
-    avatar = undefined;
 
 
 

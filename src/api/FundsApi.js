@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import FundBalanceChart from '../model/FundBalanceChart';
 import FundDetailsFull from '../model/FundDetailsFull';
 import FundProfitChart from '../model/FundProfitChart';
 import FundsList from '../model/FundsList';
@@ -83,6 +84,67 @@ export default class FundsApi {
      */
     v10FundsAssetsGet(authorization) {
       return this.v10FundsAssetsGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Fund balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundBalanceChart} and HTTP response
+     */
+    v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartsBalanceGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundBalanceChart;
+
+      return this.apiClient.callApi(
+        '/v1.0/funds/{id}/charts/balance', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Fund balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundBalanceChart}
+     */
+    v10FundsByIdChartsBalanceGet(id, opts) {
+      return this.v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

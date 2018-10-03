@@ -58,6 +58,7 @@ var FundProfitChart = function () {
         this.calmarRatio = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
+        this.profitChangePercent = undefined;
     }
 
     /**
@@ -117,6 +118,9 @@ var FundProfitChart = function () {
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
                 }
+                if (data.hasOwnProperty('profitChangePercent')) {
+                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
+                }
             }
             return obj;
         }
@@ -175,6 +179,10 @@ var FundProfitChart = function () {
 
         /**
         * @member {Number} timeframeGvtProfit
+        */
+
+        /**
+        * @member {Number} profitChangePercent
         */
 
     }]);

@@ -18,6 +18,7 @@ import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetsPartsChangeRequest from './model/AssetsPartsChangeRequest';
 import AssetsValue from './model/AssetsValue';
+import BalanceChartElement from './model/BalanceChartElement';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
@@ -37,6 +38,7 @@ import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
+import FundBalanceChart from './model/FundBalanceChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
@@ -67,6 +69,8 @@ import PlatformInfo from './model/PlatformInfo';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
+import ProgramBalanceChart from './model/ProgramBalanceChart';
+import ProgramBalanceChartElement from './model/ProgramBalanceChartElement';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
@@ -190,6 +194,12 @@ export {
     AssetsValue,
 
     /**
+     * The BalanceChartElement model constructor.
+     * @property {module:model/BalanceChartElement}
+     */
+    BalanceChartElement,
+
+    /**
      * The Broker model constructor.
      * @property {module:model/Broker}
      */
@@ -302,6 +312,12 @@ export {
      * @property {module:model/FundAssetPercent}
      */
     FundAssetPercent,
+
+    /**
+     * The FundBalanceChart model constructor.
+     * @property {module:model/FundBalanceChart}
+     */
+    FundBalanceChart,
 
     /**
      * The FundDetails model constructor.
@@ -482,6 +498,18 @@ export {
      * @property {module:model/ProfilePublic}
      */
     ProfilePublic,
+
+    /**
+     * The ProgramBalanceChart model constructor.
+     * @property {module:model/ProgramBalanceChart}
+     */
+    ProgramBalanceChart,
+
+    /**
+     * The ProgramBalanceChartElement model constructor.
+     * @property {module:model/ProgramBalanceChartElement}
+     */
+    ProgramBalanceChartElement,
 
     /**
      * The ProgramDetails model constructor.

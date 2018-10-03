@@ -92,10 +92,10 @@ var RateItem = function () {
 RateItem.CurrencyEnum = {
 
     /**
-     * value: "Undefined"
+     * value: "ETH"
      * @const
      */
-    "Undefined": "Undefined",
+    "ETH": "ETH",
 
     /**
      * value: "GVT"
@@ -104,10 +104,10 @@ RateItem.CurrencyEnum = {
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "Undefined"
      * @const
      */
-    "ETH": "ETH",
+    "Undefined": "Undefined",
 
     /**
      * value: "BTC"

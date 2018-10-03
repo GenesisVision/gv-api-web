@@ -56,6 +56,9 @@ export default class NotificationViewModel {
             
             
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('text')) {
                 obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
@@ -78,6 +81,10 @@ export default class NotificationViewModel {
         return obj;
     }
 
+    /**
+    * @member {String} id
+    */
+    id = undefined;
     /**
     * @member {String} text
     */

@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _ProgramBalanceChart = require('../model/ProgramBalanceChart');
+
+var _ProgramBalanceChart2 = _interopRequireDefault(_ProgramBalanceChart);
+
 var _ProgramDetailsFull = require('../model/ProgramDetailsFull');
 
 var _ProgramDetailsFull2 = _interopRequireDefault(_ProgramDetailsFull);
@@ -70,17 +74,75 @@ var ProgramsApi = function () {
   }
 
   /**
-   * Program profit chart
+   * Program balance chart
    * @param {String} id 
    * @param {Object} opts Optional parameters
    * @param {Date} opts.dateFrom 
    * @param {Date} opts.dateTo 
    * @param {Number} opts.maxPointCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramProfitChart} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramBalanceChart} and HTTP response
    */
 
 
   _createClass(ProgramsApi, [{
+    key: 'v10ProgramsByIdChartsBalanceGetWithHttpInfo',
+    value: function v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdChartsBalanceGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramBalanceChart2.default;
+
+      return this.apiClient.callApi('/v1.0/programs/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Program balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramBalanceChart}
+     */
+
+  }, {
+    key: 'v10ProgramsByIdChartsBalanceGet',
+    value: function v10ProgramsByIdChartsBalanceGet(id, opts) {
+      return this.v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Program profit chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramProfitChart} and HTTP response
+     */
+
+  }, {
     key: 'v10ProgramsByIdChartsProfitGetWithHttpInfo',
     value: function v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts) {
       opts = opts || {};

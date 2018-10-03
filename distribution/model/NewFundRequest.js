@@ -152,10 +152,10 @@ var NewFundRequest = function () {
 NewFundRequest.CurrencyEnum = {
 
     /**
-     * value: "Undefined"
+     * value: "ETH"
      * @const
      */
-    "Undefined": "Undefined",
+    "ETH": "ETH",
 
     /**
      * value: "GVT"
@@ -164,10 +164,10 @@ NewFundRequest.CurrencyEnum = {
     "GVT": "GVT",
 
     /**
-     * value: "ETH"
+     * value: "Undefined"
      * @const
      */
-    "ETH": "ETH",
+    "Undefined": "Undefined",
 
     /**
      * value: "BTC"

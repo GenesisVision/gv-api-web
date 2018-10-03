@@ -50,6 +50,7 @@ var ProgramProfitChart = function () {
 
         this.totalProgramCurrencyProfit = undefined;
         this.timeframeProgramCurrencyProfit = undefined;
+        this.programCurrency = undefined;
         this.trades = undefined;
         this.successTradesPercent = undefined;
         this.profitFactor = undefined;
@@ -62,6 +63,7 @@ var ProgramProfitChart = function () {
         this.calmarRatio = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
+        this.profitChangePercent = undefined;
     }
 
     /**
@@ -84,6 +86,9 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
                     obj['timeframeProgramCurrencyProfit'] = _ApiClient2.default.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
+                }
+                if (data.hasOwnProperty('programCurrency')) {
+                    obj['programCurrency'] = _ApiClient2.default.convertToType(data['programCurrency'], 'String');
                 }
                 if (data.hasOwnProperty('trades')) {
                     obj['trades'] = _ApiClient2.default.convertToType(data['trades'], 'Number');
@@ -121,6 +126,9 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
                 }
+                if (data.hasOwnProperty('profitChangePercent')) {
+                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
+                }
             }
             return obj;
         }
@@ -131,6 +139,10 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} timeframeProgramCurrencyProfit
+        */
+
+        /**
+        * @member {module:model/ProgramProfitChart.ProgramCurrencyEnum} programCurrency
         */
 
         /**
@@ -181,9 +193,64 @@ var ProgramProfitChart = function () {
         * @member {Number} timeframeGvtProfit
         */
 
+        /**
+        * @member {Number} profitChangePercent
+        */
+
+
+        /**
+        * Allowed values for the <code>programCurrency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
     }]);
 
     return ProgramProfitChart;
 }();
 
+ProgramProfitChart.ProgramCurrencyEnum = {
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 exports.default = ProgramProfitChart;

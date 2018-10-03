@@ -153,6 +153,60 @@ var ProfileApi = function () {
     }
 
     /**
+     * Update avatar
+     * @param {String} fileId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProfileUpdateAvatarByFileIdPostWithHttpInfo',
+    value: function v10ProfileUpdateAvatarByFileIdPostWithHttpInfo(fileId, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'fileId' is set
+      if (fileId === undefined || fileId === null) {
+        throw new Error("Missing the required parameter 'fileId' when calling v10ProfileUpdateAvatarByFileIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileUpdateAvatarByFileIdPost");
+      }
+
+      var pathParams = {
+        'fileId': fileId
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/profile/update/avatar/{fileId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Update avatar
+     * @param {String} fileId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ProfileUpdateAvatarByFileIdPost',
+    value: function v10ProfileUpdateAvatarByFileIdPost(fileId, authorization) {
+      return this.v10ProfileUpdateAvatarByFileIdPostWithHttpInfo(fileId, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Update profile
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters

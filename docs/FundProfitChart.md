@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **calmarRatio** | **Number** |  | [optional] 
 **totalGvtProfit** | **Number** |  | [optional] 
 **timeframeGvtProfit** | **Number** |  | [optional] 
+**profitChangePercent** | **Number** |  | [optional] 
 
 

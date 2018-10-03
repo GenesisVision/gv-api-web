@@ -99,6 +99,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('timeframeGvtProfit')) {
                 obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
             }
+            if (data.hasOwnProperty('profitChangePercent')) {
+                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
         }
         return obj;
     }
@@ -159,6 +162,10 @@ export default class FundProfitChart {
     * @member {Number} timeframeGvtProfit
     */
     timeframeGvtProfit = undefined;
+    /**
+    * @member {Number} profitChangePercent
+    */
+    profitChangePercent = undefined;
 
 
 

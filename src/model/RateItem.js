@@ -88,10 +88,10 @@ export default class RateItem {
     static CurrencyEnum = {
     
         /**
-         * value: "Undefined"
+         * value: "ETH"
          * @const
          */
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         /**
          * value: "GVT"
@@ -100,10 +100,10 @@ export default class RateItem {
         "GVT": "GVT",
     
         /**
-         * value: "ETH"
+         * value: "Undefined"
          * @const
          */
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
         /**
          * value: "BTC"

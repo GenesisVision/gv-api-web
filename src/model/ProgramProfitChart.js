@@ -64,6 +64,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
                 obj['timeframeProgramCurrencyProfit'] = ApiClient.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
             }
+            if (data.hasOwnProperty('programCurrency')) {
+                obj['programCurrency'] = ApiClient.convertToType(data['programCurrency'], 'String');
+            }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], 'Number');
             }
@@ -100,6 +103,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('timeframeGvtProfit')) {
                 obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
             }
+            if (data.hasOwnProperty('profitChangePercent')) {
+                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
         }
         return obj;
     }
@@ -112,6 +118,10 @@ export default class ProgramProfitChart {
     * @member {Number} timeframeProgramCurrencyProfit
     */
     timeframeProgramCurrencyProfit = undefined;
+    /**
+    * @member {module:model/ProgramProfitChart.ProgramCurrencyEnum} programCurrency
+    */
+    programCurrency = undefined;
     /**
     * @member {Number} trades
     */
@@ -160,11 +170,65 @@ export default class ProgramProfitChart {
     * @member {Number} timeframeGvtProfit
     */
     timeframeGvtProfit = undefined;
+    /**
+    * @member {Number} profitChangePercent
+    */
+    profitChangePercent = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>programCurrency</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static ProgramCurrencyEnum = {
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "ADA"
+         * @const
+         */
+        "ADA": "ADA",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        "EUR": "EUR"    
+    };
 
 
 

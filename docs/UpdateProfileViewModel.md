@@ -15,6 +15,5 @@ Name | Type | Description | Notes
 **phone** | **String** |  | [optional] 
 **birthday** | **Date** |  | [optional] 
 **gender** | **Boolean** |  | [optional] 
-**avatar** | **String** |  | [optional] 
 
 

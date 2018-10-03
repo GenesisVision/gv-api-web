@@ -40,6 +40,7 @@ var NotificationViewModel = function () {
     function NotificationViewModel() {
         _classCallCheck(this, NotificationViewModel);
 
+        this.id = undefined;
         this.text = undefined;
         this.date = undefined;
         this.type = undefined;
@@ -63,6 +64,9 @@ var NotificationViewModel = function () {
             if (data) {
                 obj = obj || new NotificationViewModel();
 
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
                 if (data.hasOwnProperty('text')) {
                     obj['text'] = _ApiClient2.default.convertToType(data['text'], 'String');
                 }
@@ -84,6 +88,10 @@ var NotificationViewModel = function () {
             }
             return obj;
         }
+
+        /**
+        * @member {String} id
+        */
 
         /**
         * @member {String} text

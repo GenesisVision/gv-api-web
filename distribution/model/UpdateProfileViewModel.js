@@ -52,7 +52,6 @@ var UpdateProfileViewModel = function () {
         this.phone = undefined;
         this.birthday = undefined;
         this.gender = undefined;
-        this.avatar = undefined;
     }
 
     /**
@@ -106,9 +105,6 @@ var UpdateProfileViewModel = function () {
                 if (data.hasOwnProperty('gender')) {
                     obj['gender'] = _ApiClient2.default.convertToType(data['gender'], 'Boolean');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
             }
             return obj;
         }
@@ -159,10 +155,6 @@ var UpdateProfileViewModel = function () {
 
         /**
         * @member {Boolean} gender
-        */
-
-        /**
-        * @member {String} avatar
         */
 
     }]);
