@@ -63,6 +63,9 @@ export default class ProgramNotificationSettingList {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
@@ -87,6 +90,10 @@ export default class ProgramNotificationSettingList {
     * @member {String} title
     */
     title = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
     /**
     * @member {String} logo
     */

@@ -67,6 +67,8 @@ var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
@@ -544,8 +546,10 @@ var InvestorApi = function () {
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
+     * @param {Date} opts.from2 
+     * @param {Date} opts.to2 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
@@ -554,6 +558,8 @@ var InvestorApi = function () {
   }, {
     key: 'v10InvestorGetWithHttpInfo',
     value: function v10InvestorGetWithHttpInfo(authorization, opts) {
+      var _queryParams;
+
       opts = opts || {};
       var postBody = null;
 
@@ -563,7 +569,7 @@ var InvestorApi = function () {
       }
 
       var pathParams = {};
-      var queryParams = {
+      var queryParams = (_queryParams = {
         'AssetId': opts['assetId'],
         'From': opts['from'],
         'To': opts['to'],
@@ -571,12 +577,8 @@ var InvestorApi = function () {
         'AssetType': opts['assetType'],
         'Skip': opts['skip'],
         'Take': opts['take'],
-        'chartCurrency': opts['chartCurrency'],
-        'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo'],
-        'requestsSkip': opts['requestsSkip'],
-        'requestsTake': opts['requestsTake']
-      };
+        'chartCurrency': opts['chartCurrency']
+      }, _defineProperty(_queryParams, 'From', opts['from2']), _defineProperty(_queryParams, 'To', opts['to2']), _defineProperty(_queryParams, 'BalancePoints', opts['balancePoints']), _defineProperty(_queryParams, 'ProgramsPoints', opts['programsPoints']), _defineProperty(_queryParams, 'requestsSkip', opts['requestsSkip']), _defineProperty(_queryParams, 'requestsTake', opts['requestsTake']), _queryParams);
       var headerParams = {
         'Authorization': authorization
       };
@@ -602,8 +604,10 @@ var InvestorApi = function () {
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
+     * @param {Date} opts.from2 
+     * @param {Date} opts.to2 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
@@ -624,6 +628,8 @@ var InvestorApi = function () {
      * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
      */
 
@@ -641,8 +647,10 @@ var InvestorApi = function () {
       var pathParams = {};
       var queryParams = {
         'currency': opts['currency'],
-        'from': opts['from'],
-        'to': opts['to']
+        'From': opts['from'],
+        'To': opts['to'],
+        'BalancePoints': opts['balancePoints'],
+        'ProgramsPoints': opts['programsPoints']
       };
       var headerParams = {
         'Authorization': authorization
@@ -664,6 +672,8 @@ var InvestorApi = function () {
      * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
      */
 

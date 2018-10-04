@@ -520,8 +520,10 @@ export default class InvestorApi {
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
+     * @param {Date} opts.from2 
+     * @param {Date} opts.to2 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
@@ -547,8 +549,10 @@ export default class InvestorApi {
         'Skip': opts['skip'],
         'Take': opts['take'],
         'chartCurrency': opts['chartCurrency'],
-        'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo'],
+        'From': opts['from2'],
+        'To': opts['to2'],
+        'BalancePoints': opts['balancePoints'],
+        'ProgramsPoints': opts['programsPoints'],
         'requestsSkip': opts['requestsSkip'],
         'requestsTake': opts['requestsTake']
       };
@@ -582,8 +586,10 @@ export default class InvestorApi {
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
+     * @param {Date} opts.from2 
+     * @param {Date} opts.to2 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
@@ -603,6 +609,8 @@ export default class InvestorApi {
      * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
      */
     v10InvestorPortfolioChartGetWithHttpInfo(authorization, opts) {
@@ -619,8 +627,10 @@ export default class InvestorApi {
       };
       let queryParams = {
         'currency': opts['currency'],
-        'from': opts['from'],
-        'to': opts['to']
+        'From': opts['from'],
+        'To': opts['to'],
+        'BalancePoints': opts['balancePoints'],
+        'ProgramsPoints': opts['programsPoints']
       };
       let headerParams = {
         'Authorization': authorization
@@ -647,6 +657,8 @@ export default class InvestorApi {
      * @param {module:model/String} opts.currency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
+     * @param {Number} opts.balancePoints 
+     * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
      */
     v10InvestorPortfolioChartGet(authorization, opts) {

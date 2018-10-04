@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import AssetsValue from './AssetsValue';
+import OtherAssetsValue from './OtherAssetsValue';
 
 
 
@@ -63,8 +64,11 @@ export default class ValueChartBar {
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
-            if (data.hasOwnProperty('assets')) {
-                obj['assets'] = ApiClient.convertToType(data['assets'], [AssetsValue]);
+            if (data.hasOwnProperty('topAssets')) {
+                obj['topAssets'] = ApiClient.convertToType(data['topAssets'], [AssetsValue]);
+            }
+            if (data.hasOwnProperty('otherAssetsValue')) {
+                obj['otherAssetsValue'] = OtherAssetsValue.constructFromObject(data['otherAssetsValue']);
             }
         }
         return obj;
@@ -79,9 +83,13 @@ export default class ValueChartBar {
     */
     date = undefined;
     /**
-    * @member {Array.<module:model/AssetsValue>} assets
+    * @member {Array.<module:model/AssetsValue>} topAssets
     */
-    assets = undefined;
+    topAssets = undefined;
+    /**
+    * @member {module:model/OtherAssetsValue} otherAssetsValue
+    */
+    otherAssetsValue = undefined;
 
 
 

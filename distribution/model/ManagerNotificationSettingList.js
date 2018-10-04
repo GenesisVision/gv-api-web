@@ -45,6 +45,7 @@ var ManagerNotificationSettingList = function () {
         _classCallCheck(this, ManagerNotificationSettingList);
 
         this.managerId = undefined;
+        this.url = undefined;
         this.username = undefined;
         this.avatar = undefined;
         this.about = undefined;
@@ -69,6 +70,9 @@ var ManagerNotificationSettingList = function () {
                 if (data.hasOwnProperty('managerId')) {
                     obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
                 }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                }
                 if (data.hasOwnProperty('username')) {
                     obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
                 }
@@ -87,6 +91,10 @@ var ManagerNotificationSettingList = function () {
 
         /**
         * @member {String} managerId
+        */
+
+        /**
+        * @member {String} url
         */
 
         /**

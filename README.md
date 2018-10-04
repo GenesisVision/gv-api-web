@@ -169,6 +169,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsManagersByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsManagersByIdGet) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsProgramsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
@@ -243,6 +245,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
  - [CoreApiV10.OefAssetPart](docs/OefAssetPart.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
+ - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
  - [CoreApiV10.PersonalFundDetailsFull](docs/PersonalFundDetailsFull.md)

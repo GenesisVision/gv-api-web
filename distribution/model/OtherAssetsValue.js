@@ -21,109 +21,81 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _NotificationSettingViewModel = require('./NotificationSettingViewModel');
-
-var _NotificationSettingViewModel2 = _interopRequireDefault(_NotificationSettingViewModel);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramNotificationSettingList model module.
-* @module model/ProgramNotificationSettingList
+* The OtherAssetsValue model module.
+* @module model/OtherAssetsValue
 * @version v1.0
 */
-var ProgramNotificationSettingList = function () {
+var OtherAssetsValue = function () {
     /**
-    * Constructs a new <code>ProgramNotificationSettingList</code>.
-    * @alias module:model/ProgramNotificationSettingList
+    * Constructs a new <code>OtherAssetsValue</code>.
+    * @alias module:model/OtherAssetsValue
     * @class
     */
 
-    function ProgramNotificationSettingList() {
-        _classCallCheck(this, ProgramNotificationSettingList);
+    function OtherAssetsValue() {
+        _classCallCheck(this, OtherAssetsValue);
 
-        this.programId = undefined;
-        this.title = undefined;
-        this.url = undefined;
-        this.logo = undefined;
-        this.level = undefined;
-        this.settingsGeneral = undefined;
-        this.settingsCustom = undefined;
+        this.amount = undefined;
+        this.value = undefined;
+        this.changePercent = undefined;
+        this.changeValue = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramNotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>OtherAssetsValue</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramNotificationSettingList} obj Optional instance to populate.
-    * @return {module:model/ProgramNotificationSettingList} The populated <code>ProgramNotificationSettingList</code> instance.
+    * @param {module:model/OtherAssetsValue} obj Optional instance to populate.
+    * @return {module:model/OtherAssetsValue} The populated <code>OtherAssetsValue</code> instance.
     */
 
 
-    _createClass(ProgramNotificationSettingList, null, [{
+    _createClass(OtherAssetsValue, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramNotificationSettingList();
+                obj = obj || new OtherAssetsValue();
 
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('value')) {
+                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                if (data.hasOwnProperty('changePercent')) {
+                    obj['changePercent'] = _ApiClient2.default.convertToType(data['changePercent'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
-                if (data.hasOwnProperty('settingsGeneral')) {
-                    obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
-                }
-                if (data.hasOwnProperty('settingsCustom')) {
-                    obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);
+                if (data.hasOwnProperty('changeValue')) {
+                    obj['changeValue'] = _ApiClient2.default.convertToType(data['changeValue'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} programId
+        * @member {Number} amount
         */
 
         /**
-        * @member {String} title
+        * @member {Number} value
         */
 
         /**
-        * @member {String} url
+        * @member {Number} changePercent
         */
 
         /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {Number} level
-        */
-
-        /**
-        * @member {Array.<module:model/NotificationSettingViewModel>} settingsGeneral
-        */
-
-        /**
-        * @member {Array.<module:model/NotificationSettingViewModel>} settingsCustom
+        * @member {Number} changeValue
         */
 
     }]);
 
-    return ProgramNotificationSettingList;
+    return OtherAssetsValue;
 }();
 
-exports.default = ProgramNotificationSettingList;
+exports.default = OtherAssetsValue;

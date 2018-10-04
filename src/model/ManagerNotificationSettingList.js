@@ -60,6 +60,9 @@ export default class ManagerNotificationSettingList {
             if (data.hasOwnProperty('managerId')) {
                 obj['managerId'] = ApiClient.convertToType(data['managerId'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
             }
@@ -80,6 +83,10 @@ export default class ManagerNotificationSettingList {
     * @member {String} managerId
     */
     managerId = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
     /**
     * @member {String} username
     */

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **managerId** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 **username** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
 **about** | **String** |  | [optional] 

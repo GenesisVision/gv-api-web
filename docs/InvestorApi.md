@@ -388,8 +388,10 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56, // Number | 
   'chartCurrency': "chartCurrency_example", // String | 
-  'chartFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'from2': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to2': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'balancePoints': 56, // Number | 
+  'programsPoints': 56, // Number | 
   'requestsSkip': 56, // Number | 
   'requestsTake': 56 // Number | 
 };
@@ -414,8 +416,10 @@ Name | Type | Description  | Notes
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
  **chartCurrency** | **String**|  | [optional] 
- **chartFrom** | **Date**|  | [optional] 
- **chartTo** | **Date**|  | [optional] 
+ **from2** | **Date**|  | [optional] 
+ **to2** | **Date**|  | [optional] 
+ **balancePoints** | **Number**|  | [optional] 
+ **programsPoints** | **Number**|  | [optional] 
  **requestsSkip** | **Number**|  | [optional] 
  **requestsTake** | **Number**|  | [optional] 
 
@@ -449,7 +453,9 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "currency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00") // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'balancePoints': 56, // Number | 
+  'programsPoints': 56 // Number | 
 };
 apiInstance.v10InvestorPortfolioChartGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -467,6 +473,8 @@ Name | Type | Description  | Notes
  **currency** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
+ **balancePoints** | **Number**|  | [optional] 
+ **programsPoints** | **Number**|  | [optional] 
 
 ### Return type
 

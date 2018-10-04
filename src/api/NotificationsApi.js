@@ -14,8 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import ManagerNotificationSettingList from '../model/ManagerNotificationSettingList';
 import NotificationList from '../model/NotificationList';
 import NotificationSettingList from '../model/NotificationSettingList';
+import ProgramNotificationSettingList from '../model/ProgramNotificationSettingList';
 
 /**
 * Notifications service.
@@ -257,6 +259,120 @@ export default class NotificationsApi {
      */
     v10NotificationsSettingsGet(authorization) {
       return this.v10NotificationsSettingsGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * User settings for manager
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerNotificationSettingList} and HTTP response
+     */
+    v10NotificationsSettingsManagersByIdGetWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsManagersByIdGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsManagersByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerNotificationSettingList;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings/managers/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * User settings for manager
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerNotificationSettingList}
+     */
+    v10NotificationsSettingsManagersByIdGet(id, authorization) {
+      return this.v10NotificationsSettingsManagersByIdGetWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * User settings for program
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramNotificationSettingList} and HTTP response
+     */
+    v10NotificationsSettingsProgramsByIdGetWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsProgramsByIdGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsProgramsByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramNotificationSettingList;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings/programs/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * User settings for program
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramNotificationSettingList}
+     */
+    v10NotificationsSettingsProgramsByIdGet(id, authorization) {
+      return this.v10NotificationsSettingsProgramsByIdGetWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

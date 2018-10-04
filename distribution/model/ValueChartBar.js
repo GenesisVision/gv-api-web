@@ -25,6 +25,10 @@ var _AssetsValue = require('./AssetsValue');
 
 var _AssetsValue2 = _interopRequireDefault(_AssetsValue);
 
+var _OtherAssetsValue = require('./OtherAssetsValue');
+
+var _OtherAssetsValue2 = _interopRequireDefault(_OtherAssetsValue);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46,7 +50,8 @@ var ValueChartBar = function () {
 
         this.value = undefined;
         this.date = undefined;
-        this.assets = undefined;
+        this.topAssets = undefined;
+        this.otherAssetsValue = undefined;
     }
 
     /**
@@ -70,8 +75,11 @@ var ValueChartBar = function () {
                 if (data.hasOwnProperty('date')) {
                     obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
-                if (data.hasOwnProperty('assets')) {
-                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], [_AssetsValue2.default]);
+                if (data.hasOwnProperty('topAssets')) {
+                    obj['topAssets'] = _ApiClient2.default.convertToType(data['topAssets'], [_AssetsValue2.default]);
+                }
+                if (data.hasOwnProperty('otherAssetsValue')) {
+                    obj['otherAssetsValue'] = _OtherAssetsValue2.default.constructFromObject(data['otherAssetsValue']);
                 }
             }
             return obj;
@@ -86,7 +94,11 @@ var ValueChartBar = function () {
         */
 
         /**
-        * @member {Array.<module:model/AssetsValue>} assets
+        * @member {Array.<module:model/AssetsValue>} topAssets
+        */
+
+        /**
+        * @member {module:model/OtherAssetsValue} otherAssetsValue
         */
 
     }]);

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | **Number** |  | [optional] 
 **_date** | **Date** |  | [optional] 
-**assets** | [**[AssetsValue]**](AssetsValue.md) |  | [optional] 
+**topAssets** | [**[AssetsValue]**](AssetsValue.md) |  | [optional] 
+**otherAssetsValue** | [**OtherAssetsValue**](OtherAssetsValue.md) |  | [optional] 
 
 

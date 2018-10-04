@@ -58,6 +58,7 @@ import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
 import OefAssetPart from './model/OefAssetPart';
 import OrderModel from './model/OrderModel';
+import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
@@ -431,6 +432,12 @@ export {
      * @property {module:model/OrderModel}
      */
     OrderModel,
+
+    /**
+     * The OtherAssetsValue model constructor.
+     * @property {module:model/OtherAssetsValue}
+     */
+    OtherAssetsValue,
 
     /**
      * The PasswordModel model constructor.
