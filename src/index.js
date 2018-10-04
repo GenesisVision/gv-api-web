@@ -59,6 +59,7 @@ import NotificationViewModel from './model/NotificationViewModel';
 import OefAssetPart from './model/OefAssetPart';
 import OrderModel from './model/OrderModel';
 import PasswordModel from './model/PasswordModel';
+import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
@@ -436,6 +437,12 @@ export {
      * @property {module:model/PasswordModel}
      */
     PasswordModel,
+
+    /**
+     * The PeriodDate model constructor.
+     * @property {module:model/PeriodDate}
+     */
+    PeriodDate,
 
     /**
      * The PersonalFundDetailsFull model constructor.

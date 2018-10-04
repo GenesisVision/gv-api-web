@@ -47,6 +47,7 @@ var NotificationViewModel = function () {
         this.programId = undefined;
         this.managerId = undefined;
         this.logo = undefined;
+        this.isUnread = undefined;
     }
 
     /**
@@ -85,6 +86,9 @@ var NotificationViewModel = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('isUnread')) {
+                    obj['isUnread'] = _ApiClient2.default.convertToType(data['isUnread'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -115,6 +119,10 @@ var NotificationViewModel = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {Boolean} isUnread
         */
 
 

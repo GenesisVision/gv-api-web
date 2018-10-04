@@ -69,8 +69,8 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('equity')) {
-                obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
@@ -123,9 +123,9 @@ export default class FundProfitChart {
     */
     equityChart = undefined;
     /**
-    * @member {Number} equity
+    * @member {Number} balance
     */
-    equity = undefined;
+    balance = undefined;
     /**
     * @member {Number} investors
     */

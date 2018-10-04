@@ -26,172 +26,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProfileFullViewModel model module.
-* @module model/ProfileFullViewModel
+* The PeriodDate model module.
+* @module model/PeriodDate
 * @version v1.0
 */
-var ProfileFullViewModel = function () {
+var PeriodDate = function () {
     /**
-    * Constructs a new <code>ProfileFullViewModel</code>.
-    * @alias module:model/ProfileFullViewModel
+    * Constructs a new <code>PeriodDate</code>.
+    * @alias module:model/PeriodDate
     * @class
     */
 
-    function ProfileFullViewModel() {
-        _classCallCheck(this, ProfileFullViewModel);
+    function PeriodDate() {
+        _classCallCheck(this, PeriodDate);
 
-        this.id = undefined;
-        this.email = undefined;
-        this.firstName = undefined;
-        this.middleName = undefined;
-        this.lastName = undefined;
-        this.documentType = undefined;
-        this.documentNumber = undefined;
-        this.country = undefined;
-        this.city = undefined;
-        this.address = undefined;
-        this.phone = undefined;
-        this.phoneNumberConfirmed = undefined;
-        this.birthday = undefined;
-        this.gender = undefined;
-        this.avatar = undefined;
-        this.userName = undefined;
+        this.dateFrom = undefined;
+        this.dateTo = undefined;
     }
 
     /**
-    * Constructs a <code>ProfileFullViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PeriodDate</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProfileFullViewModel} obj Optional instance to populate.
-    * @return {module:model/ProfileFullViewModel} The populated <code>ProfileFullViewModel</code> instance.
+    * @param {module:model/PeriodDate} obj Optional instance to populate.
+    * @return {module:model/PeriodDate} The populated <code>PeriodDate</code> instance.
     */
 
 
-    _createClass(ProfileFullViewModel, null, [{
+    _createClass(PeriodDate, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileFullViewModel();
+                obj = obj || new PeriodDate();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('dateFrom')) {
+                    obj['dateFrom'] = _ApiClient2.default.convertToType(data['dateFrom'], 'Date');
                 }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
-                }
-                if (data.hasOwnProperty('firstName')) {
-                    obj['firstName'] = _ApiClient2.default.convertToType(data['firstName'], 'String');
-                }
-                if (data.hasOwnProperty('middleName')) {
-                    obj['middleName'] = _ApiClient2.default.convertToType(data['middleName'], 'String');
-                }
-                if (data.hasOwnProperty('lastName')) {
-                    obj['lastName'] = _ApiClient2.default.convertToType(data['lastName'], 'String');
-                }
-                if (data.hasOwnProperty('documentType')) {
-                    obj['documentType'] = _ApiClient2.default.convertToType(data['documentType'], 'String');
-                }
-                if (data.hasOwnProperty('documentNumber')) {
-                    obj['documentNumber'] = _ApiClient2.default.convertToType(data['documentNumber'], 'String');
-                }
-                if (data.hasOwnProperty('country')) {
-                    obj['country'] = _ApiClient2.default.convertToType(data['country'], 'String');
-                }
-                if (data.hasOwnProperty('city')) {
-                    obj['city'] = _ApiClient2.default.convertToType(data['city'], 'String');
-                }
-                if (data.hasOwnProperty('address')) {
-                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
-                }
-                if (data.hasOwnProperty('phone')) {
-                    obj['phone'] = _ApiClient2.default.convertToType(data['phone'], 'String');
-                }
-                if (data.hasOwnProperty('phoneNumberConfirmed')) {
-                    obj['phoneNumberConfirmed'] = _ApiClient2.default.convertToType(data['phoneNumberConfirmed'], 'Boolean');
-                }
-                if (data.hasOwnProperty('birthday')) {
-                    obj['birthday'] = _ApiClient2.default.convertToType(data['birthday'], 'Date');
-                }
-                if (data.hasOwnProperty('gender')) {
-                    obj['gender'] = _ApiClient2.default.convertToType(data['gender'], 'Boolean');
-                }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('userName')) {
-                    obj['userName'] = _ApiClient2.default.convertToType(data['userName'], 'String');
+                if (data.hasOwnProperty('dateTo')) {
+                    obj['dateTo'] = _ApiClient2.default.convertToType(data['dateTo'], 'Date');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
+        * @member {Date} dateFrom
         */
 
         /**
-        * @member {String} email
-        */
-
-        /**
-        * @member {String} firstName
-        */
-
-        /**
-        * @member {String} middleName
-        */
-
-        /**
-        * @member {String} lastName
-        */
-
-        /**
-        * @member {String} documentType
-        */
-
-        /**
-        * @member {String} documentNumber
-        */
-
-        /**
-        * @member {String} country
-        */
-
-        /**
-        * @member {String} city
-        */
-
-        /**
-        * @member {String} address
-        */
-
-        /**
-        * @member {String} phone
-        */
-
-        /**
-        * @member {Boolean} phoneNumberConfirmed
-        */
-
-        /**
-        * @member {Date} birthday
-        */
-
-        /**
-        * @member {Boolean} gender
-        */
-
-        /**
-        * @member {String} avatar
-        */
-
-        /**
-        * @member {String} userName
+        * @member {Date} dateTo
         */
 
     }]);
 
-    return ProfileFullViewModel;
+    return PeriodDate;
 }();
 
-exports.default = ProfileFullViewModel;
+exports.default = PeriodDate;

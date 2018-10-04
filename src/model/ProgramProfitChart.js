@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import PeriodDate from './PeriodDate';
 
 
 
@@ -78,11 +79,14 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('pnLChart')) {
                 obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
+            if (data.hasOwnProperty('periods')) {
+                obj['periods'] = ApiClient.convertToType(data['periods'], [PeriodDate]);
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('equity')) {
-                obj['equity'] = ApiClient.convertToType(data['equity'], 'Number');
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
@@ -147,13 +151,17 @@ export default class ProgramProfitChart {
     */
     pnLChart = undefined;
     /**
+    * @member {Array.<module:model/PeriodDate>} periods
+    */
+    periods = undefined;
+    /**
     * @member {Array.<module:model/ChartSimple>} equityChart
     */
     equityChart = undefined;
     /**
-    * @member {Number} equity
+    * @member {Number} balance
     */
-    equity = undefined;
+    balance = undefined;
     /**
     * @member {Number} investors
     */

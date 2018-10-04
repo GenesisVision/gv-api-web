@@ -56,6 +56,9 @@ export default class NewProgramRequest {
             
             
 
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('periodLength')) {
                 obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'Number');
             }
@@ -83,13 +86,14 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
-            }
         }
         return obj;
     }
 
+    /**
+    * @member {module:model/NewProgramRequest.CurrencyEnum} currency
+    */
+    currency = undefined;
     /**
     * @member {Number} periodLength
     */
@@ -126,10 +130,6 @@ export default class NewProgramRequest {
     * @member {Number} entryFee
     */
     entryFee = undefined;
-    /**
-    * @member {module:model/NewProgramRequest.CurrencyEnum} currency
-    */
-    currency = undefined;
 
 
 

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**currency** | **String** |  | [optional] 
 **periodLength** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
@@ -12,7 +13,6 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **brokerAccountTypeId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
-**currency** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

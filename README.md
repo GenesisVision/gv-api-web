@@ -244,6 +244,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.OefAssetPart](docs/OefAssetPart.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
+ - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
  - [CoreApiV10.PersonalFundDetailsFull](docs/PersonalFundDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsList](docs/PersonalProgramDetailsList.md)

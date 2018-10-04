@@ -48,7 +48,7 @@ var FundProfitChart = function () {
         this.timeframeUsdProfit = undefined;
         this.rebalances = undefined;
         this.equityChart = undefined;
-        this.equity = undefined;
+        this.balance = undefined;
         this.investors = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
@@ -88,8 +88,8 @@ var FundProfitChart = function () {
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('equity')) {
-                    obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
+                if (data.hasOwnProperty('balance')) {
+                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
                 }
                 if (data.hasOwnProperty('investors')) {
                     obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
@@ -142,7 +142,7 @@ var FundProfitChart = function () {
         */
 
         /**
-        * @member {Number} equity
+        * @member {Number} balance
         */
 
         /**

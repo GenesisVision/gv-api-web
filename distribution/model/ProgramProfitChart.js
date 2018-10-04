@@ -25,6 +25,10 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
+var _PeriodDate = require('./PeriodDate');
+
+var _PeriodDate2 = _interopRequireDefault(_PeriodDate);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51,8 +55,9 @@ var ProgramProfitChart = function () {
         this.successTradesPercent = undefined;
         this.profitFactor = undefined;
         this.pnLChart = undefined;
+        this.periods = undefined;
         this.equityChart = undefined;
-        this.equity = undefined;
+        this.balance = undefined;
         this.investors = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
@@ -101,11 +106,14 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('pnLChart')) {
                     obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
                 }
+                if (data.hasOwnProperty('periods')) {
+                    obj['periods'] = _ApiClient2.default.convertToType(data['periods'], [_PeriodDate2.default]);
+                }
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('equity')) {
-                    obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
+                if (data.hasOwnProperty('balance')) {
+                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
                 }
                 if (data.hasOwnProperty('investors')) {
                     obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
@@ -170,11 +178,15 @@ var ProgramProfitChart = function () {
         */
 
         /**
+        * @member {Array.<module:model/PeriodDate>} periods
+        */
+
+        /**
         * @member {Array.<module:model/ChartSimple>} equityChart
         */
 
         /**
-        * @member {Number} equity
+        * @member {Number} balance
         */
 
         /**

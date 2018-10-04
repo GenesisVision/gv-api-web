@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **timeframeUsdProfit** | **Number** |  | [optional] 
 **rebalances** | **Number** |  | [optional] 
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**equity** | **Number** |  | [optional] 
+**balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
 **sharpeRatio** | **Number** |  | [optional] 
 **sortinoRatio** | **Number** |  | [optional] 

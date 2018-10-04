@@ -89,6 +89,9 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
             }
+            if (data.hasOwnProperty('phoneNumberConfirmed')) {
+                obj['phoneNumberConfirmed'] = ApiClient.convertToType(data['phoneNumberConfirmed'], 'Boolean');
+            }
             if (data.hasOwnProperty('birthday')) {
                 obj['birthday'] = ApiClient.convertToType(data['birthday'], 'Date');
             }
@@ -149,6 +152,10 @@ export default class ProfileFullViewModel {
     * @member {String} phone
     */
     phone = undefined;
+    /**
+    * @member {Boolean} phoneNumberConfirmed
+    */
+    phoneNumberConfirmed = undefined;
     /**
     * @member {Date} birthday
     */

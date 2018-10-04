@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **city** | **String** |  | [optional] 
 **address** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
+**phoneNumberConfirmed** | **Boolean** |  | [optional] 
 **birthday** | **Date** |  | [optional] 
 **gender** | **Boolean** |  | [optional] 
 **avatar** | **String** |  | [optional] 

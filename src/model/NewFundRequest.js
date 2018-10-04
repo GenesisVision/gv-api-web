@@ -81,9 +81,6 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
-            }
         }
         return obj;
     }
@@ -120,65 +117,11 @@ export default class NewFundRequest {
     * @member {Number} entryFee
     */
     entryFee = undefined;
-    /**
-    * @member {module:model/NewFundRequest.CurrencyEnum} currency
-    */
-    currency = undefined;
 
 
 
 
 
-
-    /**
-    * Allowed values for the <code>currency</code> property.
-    * @enum {String}
-    * @readonly
-    */
-    static CurrencyEnum = {
-    
-        /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
-         * value: "GVT"
-         * @const
-         */
-        "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ADA"
-         * @const
-         */
-        "ADA": "ADA",
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        "USD": "USD",
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        "EUR": "EUR"    
-    };
 
 
 

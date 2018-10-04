@@ -52,7 +52,6 @@ var NewFundRequest = function () {
         this.logo = undefined;
         this.brokerAccountTypeId = undefined;
         this.entryFee = undefined;
-        this.currency = undefined;
     }
 
     /**
@@ -94,9 +93,6 @@ var NewFundRequest = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
             }
             return obj;
         }
@@ -133,64 +129,9 @@ var NewFundRequest = function () {
         * @member {Number} entryFee
         */
 
-        /**
-        * @member {module:model/NewFundRequest.CurrencyEnum} currency
-        */
-
-
-        /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
     return NewFundRequest;
 }();
 
-NewFundRequest.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
 exports.default = NewFundRequest;

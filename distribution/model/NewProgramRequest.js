@@ -40,6 +40,7 @@ var NewProgramRequest = function () {
     function NewProgramRequest() {
         _classCallCheck(this, NewProgramRequest);
 
+        this.currency = undefined;
         this.periodLength = undefined;
         this.successFee = undefined;
         this.stopOutLevel = undefined;
@@ -49,7 +50,6 @@ var NewProgramRequest = function () {
         this.logo = undefined;
         this.brokerAccountTypeId = undefined;
         this.entryFee = undefined;
-        this.currency = undefined;
     }
 
     /**
@@ -67,6 +67,9 @@ var NewProgramRequest = function () {
             if (data) {
                 obj = obj || new NewProgramRequest();
 
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
                 if (data.hasOwnProperty('periodLength')) {
                     obj['periodLength'] = _ApiClient2.default.convertToType(data['periodLength'], 'Number');
                 }
@@ -94,12 +97,13 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
             }
             return obj;
         }
+
+        /**
+        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
+        */
 
         /**
         * @member {Number} periodLength
@@ -135,10 +139,6 @@ var NewProgramRequest = function () {
 
         /**
         * @member {Number} entryFee
-        */
-
-        /**
-        * @member {module:model/NewProgramRequest.CurrencyEnum} currency
         */
 
 
