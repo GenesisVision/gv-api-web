@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **avatar** | **String** |  | [optional] 
 **regDate** | **Date** |  | [optional] 
 **assets** | **[String]** |  | [optional] 
+**url** | **String** |  | [optional] 
 
 

@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **gender** | **Boolean** |  | [optional] 
 **avatar** | **String** |  | [optional] 
 **userName** | **String** |  | [optional] 
+**documentsConfirmed** | **Boolean** |  | [optional] 
 
 

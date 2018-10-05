@@ -77,6 +77,9 @@ export default class NotificationViewModel {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('isUnread')) {
                 obj['isUnread'] = ApiClient.convertToType(data['isUnread'], 'Boolean');
             }
@@ -112,6 +115,10 @@ export default class NotificationViewModel {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
     /**
     * @member {Boolean} isUnread
     */

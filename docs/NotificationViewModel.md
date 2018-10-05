@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **programId** | **String** |  | [optional] 
 **managerId** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 **isUnread** | **Boolean** |  | [optional] 
 
 

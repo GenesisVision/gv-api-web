@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **totalBalanceGvt** | **Number** |  | [optional] 
 **investedGvt** | **Number** |  | [optional] 
 **availableGvt** | **Number** |  | [optional] 
+**kycConfirmed** | **Boolean** |  | [optional] 
 
 

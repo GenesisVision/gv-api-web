@@ -59,6 +59,9 @@ export default class NotificationSettingViewModel {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('isEnabled')) {
+                obj['isEnabled'] = ApiClient.convertToType(data['isEnabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('programId')) {
                 obj['programId'] = ApiClient.convertToType(data['programId'], 'String');
             }
@@ -82,6 +85,10 @@ export default class NotificationSettingViewModel {
     * @member {String} id
     */
     id = undefined;
+    /**
+    * @member {Boolean} isEnabled
+    */
+    isEnabled = undefined;
     /**
     * @member {String} programId
     */

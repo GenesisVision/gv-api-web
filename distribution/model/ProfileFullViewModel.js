@@ -56,6 +56,7 @@ var ProfileFullViewModel = function () {
         this.gender = undefined;
         this.avatar = undefined;
         this.userName = undefined;
+        this.documentsConfirmed = undefined;
     }
 
     /**
@@ -120,6 +121,9 @@ var ProfileFullViewModel = function () {
                 }
                 if (data.hasOwnProperty('userName')) {
                     obj['userName'] = _ApiClient2.default.convertToType(data['userName'], 'String');
+                }
+                if (data.hasOwnProperty('documentsConfirmed')) {
+                    obj['documentsConfirmed'] = _ApiClient2.default.convertToType(data['documentsConfirmed'], 'Boolean');
                 }
             }
             return obj;
@@ -187,6 +191,10 @@ var ProfileFullViewModel = function () {
 
         /**
         * @member {String} userName
+        */
+
+        /**
+        * @member {Boolean} documentsConfirmed
         */
 
     }]);

@@ -68,6 +68,9 @@ export default class ProfilePublic {
             if (data.hasOwnProperty('registrationDate')) {
                 obj['registrationDate'] = ApiClient.convertToType(data['registrationDate'], 'Date');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
         }
         return obj;
     }
@@ -88,6 +91,10 @@ export default class ProfilePublic {
     * @member {Date} registrationDate
     */
     registrationDate = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
 
 
 

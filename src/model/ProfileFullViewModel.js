@@ -104,6 +104,9 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
+            if (data.hasOwnProperty('documentsConfirmed')) {
+                obj['documentsConfirmed'] = ApiClient.convertToType(data['documentsConfirmed'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -172,6 +175,10 @@ export default class ProfileFullViewModel {
     * @member {String} userName
     */
     userName = undefined;
+    /**
+    * @member {Boolean} documentsConfirmed
+    */
+    documentsConfirmed = undefined;
 
 
 

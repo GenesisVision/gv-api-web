@@ -83,6 +83,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('availableGvt')) {
                 obj['availableGvt'] = ApiClient.convertToType(data['availableGvt'], 'Number');
             }
+            if (data.hasOwnProperty('kycConfirmed')) {
+                obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -123,6 +126,10 @@ export default class ProfileHeaderViewModel {
     * @member {Number} availableGvt
     */
     availableGvt = undefined;
+    /**
+    * @member {Boolean} kycConfirmed
+    */
+    kycConfirmed = undefined;
 
 
 

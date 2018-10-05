@@ -150,7 +150,6 @@ export default class NotificationsApi {
      * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
      * @param {String} opts.programId 
      * @param {String} opts.managerId 
      * @param {module:model/String} opts.type 
@@ -171,7 +170,6 @@ export default class NotificationsApi {
       let pathParams = {
       };
       let queryParams = {
-        'Id': opts['id'],
         'ProgramId': opts['programId'],
         'ManagerId': opts['managerId'],
         'Type': opts['type'],
@@ -200,7 +198,6 @@ export default class NotificationsApi {
      * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.id 
      * @param {String} opts.programId 
      * @param {String} opts.managerId 
      * @param {module:model/String} opts.type 
@@ -210,6 +207,71 @@ export default class NotificationsApi {
      */
     v10NotificationsSettingsAddPost(authorization, opts) {
       return this.v10NotificationsSettingsAddPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Enable/disable setting
+     * @param {String} id 
+     * @param {Boolean} enable 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
+     */
+    v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsByIdByEnablePost");
+      }
+
+      // verify the required parameter 'enable' is set
+      if (enable === undefined || enable === null) {
+        throw new Error("Missing the required parameter 'enable' when calling v10NotificationsSettingsByIdByEnablePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsByIdByEnablePost");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'enable': enable
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings/{id}/{enable}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Enable/disable setting
+     * @param {String} id 
+     * @param {Boolean} enable 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
+     */
+    v10NotificationsSettingsByIdByEnablePost(id, enable, authorization) {
+      return this.v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

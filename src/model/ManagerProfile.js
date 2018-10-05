@@ -74,6 +74,9 @@ export default class ManagerProfile {
             if (data.hasOwnProperty('assets')) {
                 obj['assets'] = ApiClient.convertToType(data['assets'], ['String']);
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
         }
         return obj;
     }
@@ -102,6 +105,10 @@ export default class ManagerProfile {
     * @member {Array.<String>} assets
     */
     assets = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
 
 
 

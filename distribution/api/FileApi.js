@@ -100,6 +100,64 @@ var FileApi = function () {
     }
 
     /**
+     * Upload document
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.contentType 
+     * @param {String} opts.contentDisposition 
+     * @param {Object.<String, {String: String}>} opts.headers 
+     * @param {Number} opts.length 
+     * @param {String} opts.name 
+     * @param {String} opts.fileName 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadResult} and HTTP response
+     */
+
+  }, {
+    key: 'v10FileDocumentUploadPostWithHttpInfo',
+    value: function v10FileDocumentUploadPostWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {
+        'ContentType': opts['contentType'],
+        'ContentDisposition': opts['contentDisposition'],
+        'Headers': opts['headers'],
+        'Length': opts['length'],
+        'Name': opts['name'],
+        'FileName': opts['fileName']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _UploadResult2.default;
+
+      return this.apiClient.callApi('/v1.0/file/document/upload', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Upload document
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.contentType 
+     * @param {String} opts.contentDisposition 
+     * @param {Object.<String, {String: String}>} opts.headers 
+     * @param {Number} opts.length 
+     * @param {String} opts.name 
+     * @param {String} opts.fileName 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadResult}
+     */
+
+  }, {
+    key: 'v10FileDocumentUploadPost',
+    value: function v10FileDocumentUploadPost(opts) {
+      return this.v10FileDocumentUploadPostWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Upload file
      * @param {File} uploadedFile Upload File
      * @param {Object} opts Optional parameters

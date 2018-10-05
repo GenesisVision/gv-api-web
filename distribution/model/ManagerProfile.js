@@ -46,6 +46,7 @@ var ManagerProfile = function () {
         this.avatar = undefined;
         this.regDate = undefined;
         this.assets = undefined;
+        this.url = undefined;
     }
 
     /**
@@ -81,6 +82,9 @@ var ManagerProfile = function () {
                 if (data.hasOwnProperty('assets')) {
                     obj['assets'] = _ApiClient2.default.convertToType(data['assets'], ['String']);
                 }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                }
             }
             return obj;
         }
@@ -107,6 +111,10 @@ var ManagerProfile = function () {
 
         /**
         * @member {Array.<String>} assets
+        */
+
+        /**
+        * @member {String} url
         */
 
     }]);

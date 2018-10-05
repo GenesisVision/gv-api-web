@@ -41,6 +41,7 @@ var NotificationSettingViewModel = function () {
         _classCallCheck(this, NotificationSettingViewModel);
 
         this.id = undefined;
+        this.isEnabled = undefined;
         this.programId = undefined;
         this.managerId = undefined;
         this.type = undefined;
@@ -66,6 +67,9 @@ var NotificationSettingViewModel = function () {
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
+                if (data.hasOwnProperty('isEnabled')) {
+                    obj['isEnabled'] = _ApiClient2.default.convertToType(data['isEnabled'], 'Boolean');
+                }
                 if (data.hasOwnProperty('programId')) {
                     obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
@@ -87,6 +91,10 @@ var NotificationSettingViewModel = function () {
 
         /**
         * @member {String} id
+        */
+
+        /**
+        * @member {Boolean} isEnabled
         */
 
         /**

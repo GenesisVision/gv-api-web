@@ -49,6 +49,7 @@ var ProfileHeaderViewModel = function () {
         this.totalBalanceGvt = undefined;
         this.investedGvt = undefined;
         this.availableGvt = undefined;
+        this.kycConfirmed = undefined;
     }
 
     /**
@@ -93,6 +94,9 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('availableGvt')) {
                     obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
                 }
+                if (data.hasOwnProperty('kycConfirmed')) {
+                    obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -131,6 +135,10 @@ var ProfileHeaderViewModel = function () {
 
         /**
         * @member {Number} availableGvt
+        */
+
+        /**
+        * @member {Boolean} kycConfirmed
         */
 
     }]);

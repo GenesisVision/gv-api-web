@@ -44,6 +44,7 @@ var ProfilePublic = function () {
         this.username = undefined;
         this.avatar = undefined;
         this.registrationDate = undefined;
+        this.url = undefined;
     }
 
     /**
@@ -73,6 +74,9 @@ var ProfilePublic = function () {
                 if (data.hasOwnProperty('registrationDate')) {
                     obj['registrationDate'] = _ApiClient2.default.convertToType(data['registrationDate'], 'Date');
                 }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                }
             }
             return obj;
         }
@@ -91,6 +95,10 @@ var ProfilePublic = function () {
 
         /**
         * @member {Date} registrationDate
+        */
+
+        /**
+        * @member {String} url
         */
 
     }]);
