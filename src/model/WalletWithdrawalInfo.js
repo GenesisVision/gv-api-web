@@ -139,6 +139,12 @@ export default class WalletWithdrawalInfo {
         "ADA": "ADA",
     
         /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
          * value: "USD"
          * @const
          */

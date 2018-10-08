@@ -118,6 +118,12 @@ export default class RateItem {
         "ADA": "ADA",
     
         /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
          * value: "USD"
          * @const
          */

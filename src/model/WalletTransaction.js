@@ -232,6 +232,12 @@ export default class WalletTransaction {
         "ADA": "ADA",
     
         /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
          * value: "USD"
          * @const
          */
@@ -392,6 +398,12 @@ export default class WalletTransaction {
          * @const
          */
         "ADA": "ADA",
+    
+        /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
     
         /**
          * value: "USD"

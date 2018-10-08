@@ -72,6 +72,9 @@ export default class RatesModelRates {
             if (data.hasOwnProperty('ADA')) {
                 obj['ADA'] = ApiClient.convertToType(data['ADA'], [RateItem]);
             }
+            if (data.hasOwnProperty('USDT')) {
+                obj['USDT'] = ApiClient.convertToType(data['USDT'], [RateItem]);
+            }
             if (data.hasOwnProperty('USD')) {
                 obj['USD'] = ApiClient.convertToType(data['USD'], [RateItem]);
             }
@@ -102,6 +105,10 @@ export default class RatesModelRates {
     * @member {Array.<module:model/RateItem>} ADA
     */
     ADA = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} USDT
+    */
+    USDT = undefined;
     /**
     * @member {Array.<module:model/RateItem>} USD
     */

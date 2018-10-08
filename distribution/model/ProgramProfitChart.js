@@ -274,6 +274,12 @@ ProgramProfitChart.ProgramCurrencyEnum = {
     "ADA": "ADA",
 
     /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
      * value: "USD"
      * @const
      */

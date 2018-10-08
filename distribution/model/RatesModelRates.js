@@ -49,6 +49,7 @@ var RatesModelRates = function () {
         this.ETH = undefined;
         this.BTC = undefined;
         this.ADA = undefined;
+        this.USDT = undefined;
         this.USD = undefined;
         this.EUR = undefined;
     }
@@ -83,6 +84,9 @@ var RatesModelRates = function () {
                 if (data.hasOwnProperty('ADA')) {
                     obj['ADA'] = _ApiClient2.default.convertToType(data['ADA'], [_RateItem2.default]);
                 }
+                if (data.hasOwnProperty('USDT')) {
+                    obj['USDT'] = _ApiClient2.default.convertToType(data['USDT'], [_RateItem2.default]);
+                }
                 if (data.hasOwnProperty('USD')) {
                     obj['USD'] = _ApiClient2.default.convertToType(data['USD'], [_RateItem2.default]);
                 }
@@ -111,6 +115,10 @@ var RatesModelRates = function () {
 
         /**
         * @member {Array.<module:model/RateItem>} ADA
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} USDT
         */
 
         /**

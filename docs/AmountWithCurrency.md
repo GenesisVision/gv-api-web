@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 
 * `ADA` (value: `"ADA"`)
 
+* `USDT` (value: `"USDT"`)
+
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)

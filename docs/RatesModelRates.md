@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ETH** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **BTC** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **ADA** | [**[RateItem]**](RateItem.md) |  | [optional] 
+**USDT** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **USD** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **EUR** | [**[RateItem]**](RateItem.md) |  | [optional] 
 

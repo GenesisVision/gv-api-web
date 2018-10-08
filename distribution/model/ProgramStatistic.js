@@ -253,6 +253,12 @@ ProgramStatistic.StartCurrencyEnum = {
     "ADA": "ADA",
 
     /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
      * value: "USD"
      * @const
      */
@@ -295,6 +301,12 @@ ProgramStatistic.InvestedCurrencyEnum = {
      * @const
      */
     "ADA": "ADA",
+
+    /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
 
     /**
      * value: "USD"

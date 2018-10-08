@@ -138,6 +138,12 @@ CreateWithdrawalRequestModel.CurrencyEnum = {
     "ADA": "ADA",
 
     /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
      * value: "USD"
      * @const
      */

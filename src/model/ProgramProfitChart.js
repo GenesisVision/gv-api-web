@@ -246,6 +246,12 @@ export default class ProgramProfitChart {
         "ADA": "ADA",
     
         /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
          * value: "USD"
          * @const
          */

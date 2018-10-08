@@ -224,6 +224,12 @@ export default class ProgramStatistic {
         "ADA": "ADA",
     
         /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
          * value: "USD"
          * @const
          */
@@ -272,6 +278,12 @@ export default class ProgramStatistic {
          * @const
          */
         "ADA": "ADA",
+    
+        /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
     
         /**
          * value: "USD"

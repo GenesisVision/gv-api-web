@@ -268,6 +268,12 @@ WalletTransaction.SourceCurrencyEnum = {
     "ADA": "ADA",
 
     /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
      * value: "USD"
      * @const
      */
@@ -410,6 +416,12 @@ WalletTransaction.DestinationCurrencyEnum = {
      * @const
      */
     "ADA": "ADA",
+
+    /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
 
     /**
      * value: "USD"

@@ -48,8 +48,8 @@ var DashboardChartValue = function () {
     function DashboardChartValue() {
         _classCallCheck(this, DashboardChartValue);
 
-        this.bars = undefined;
-        this.chart = undefined;
+        this.investedProgramsInfo = undefined;
+        this.balanceChart = undefined;
         this.value = undefined;
         this.valueCurrency = undefined;
         this.changePercent = undefined;
@@ -73,11 +73,11 @@ var DashboardChartValue = function () {
             if (data) {
                 obj = obj || new DashboardChartValue();
 
-                if (data.hasOwnProperty('bars')) {
-                    obj['bars'] = _ApiClient2.default.convertToType(data['bars'], [_ValueChartBar2.default]);
+                if (data.hasOwnProperty('investedProgramsInfo')) {
+                    obj['investedProgramsInfo'] = _ApiClient2.default.convertToType(data['investedProgramsInfo'], [_ValueChartBar2.default]);
                 }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                if (data.hasOwnProperty('balanceChart')) {
+                    obj['balanceChart'] = _ApiClient2.default.convertToType(data['balanceChart'], [_ChartSimple2.default]);
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
@@ -102,11 +102,11 @@ var DashboardChartValue = function () {
         }
 
         /**
-        * @member {Array.<module:model/ValueChartBar>} bars
+        * @member {Array.<module:model/ValueChartBar>} investedProgramsInfo
         */
 
         /**
-        * @member {Array.<module:model/ChartSimple>} chart
+        * @member {Array.<module:model/ChartSimple>} balanceChart
         */
 
         /**

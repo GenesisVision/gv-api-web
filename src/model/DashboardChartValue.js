@@ -58,11 +58,11 @@ export default class DashboardChartValue {
             
             
 
-            if (data.hasOwnProperty('bars')) {
-                obj['bars'] = ApiClient.convertToType(data['bars'], [ValueChartBar]);
+            if (data.hasOwnProperty('investedProgramsInfo')) {
+                obj['investedProgramsInfo'] = ApiClient.convertToType(data['investedProgramsInfo'], [ValueChartBar]);
             }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
+            if (data.hasOwnProperty('balanceChart')) {
+                obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [ChartSimple]);
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
@@ -87,13 +87,13 @@ export default class DashboardChartValue {
     }
 
     /**
-    * @member {Array.<module:model/ValueChartBar>} bars
+    * @member {Array.<module:model/ValueChartBar>} investedProgramsInfo
     */
-    bars = undefined;
+    investedProgramsInfo = undefined;
     /**
-    * @member {Array.<module:model/ChartSimple>} chart
+    * @member {Array.<module:model/ChartSimple>} balanceChart
     */
-    chart = undefined;
+    balanceChart = undefined;
     /**
     * @member {Number} value
     */
