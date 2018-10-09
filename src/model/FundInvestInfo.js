@@ -62,6 +62,9 @@ export default class FundInvestInfo {
             if (data.hasOwnProperty('availableInWallet')) {
                 obj['availableInWallet'] = ApiClient.convertToType(data['availableInWallet'], 'Number');
             }
+            if (data.hasOwnProperty('minInvestmentAmount')) {
+                obj['minInvestmentAmount'] = ApiClient.convertToType(data['minInvestmentAmount'], 'Number');
+            }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
@@ -83,6 +86,10 @@ export default class FundInvestInfo {
     * @member {Number} availableInWallet
     */
     availableInWallet = undefined;
+    /**
+    * @member {Number} minInvestmentAmount
+    */
+    minInvestmentAmount = undefined;
     /**
     * @member {Number} entryFee
     */

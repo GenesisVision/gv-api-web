@@ -156,6 +156,18 @@ var NewProgramRequest = function () {
 NewProgramRequest.CurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -166,18 +178,6 @@ NewProgramRequest.CurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"

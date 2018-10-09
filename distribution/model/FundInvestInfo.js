@@ -42,6 +42,7 @@ var FundInvestInfo = function () {
 
         this.title = undefined;
         this.availableInWallet = undefined;
+        this.minInvestmentAmount = undefined;
         this.entryFee = undefined;
         this.periodEnds = undefined;
         this.rate = undefined;
@@ -68,6 +69,9 @@ var FundInvestInfo = function () {
                 if (data.hasOwnProperty('availableInWallet')) {
                     obj['availableInWallet'] = _ApiClient2.default.convertToType(data['availableInWallet'], 'Number');
                 }
+                if (data.hasOwnProperty('minInvestmentAmount')) {
+                    obj['minInvestmentAmount'] = _ApiClient2.default.convertToType(data['minInvestmentAmount'], 'Number');
+                }
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
@@ -87,6 +91,10 @@ var FundInvestInfo = function () {
 
         /**
         * @member {Number} availableInWallet
+        */
+
+        /**
+        * @member {Number} minInvestmentAmount
         */
 
         /**

@@ -204,6 +204,18 @@ export default class ProgramDetailsFull {
     static CurrencyEnum = {
     
         /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
          * value: "Undefined"
          * @const
          */
@@ -214,18 +226,6 @@ export default class ProgramDetailsFull {
          * @const
          */
         "GVT": "GVT",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
     
         /**
          * value: "ADA"

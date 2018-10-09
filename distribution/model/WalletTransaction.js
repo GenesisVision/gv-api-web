@@ -238,6 +238,18 @@ WalletTransaction.SourceTypeEnum = {
 WalletTransaction.SourceCurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -248,18 +260,6 @@ WalletTransaction.SourceCurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"
@@ -388,6 +388,18 @@ WalletTransaction.DestinationTypeEnum = {
 WalletTransaction.DestinationCurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -398,18 +410,6 @@ WalletTransaction.DestinationCurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"

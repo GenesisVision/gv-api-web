@@ -244,6 +244,18 @@ var ProgramProfitChart = function () {
 ProgramProfitChart.ProgramCurrencyEnum = {
 
     /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -254,18 +266,6 @@ ProgramProfitChart.ProgramCurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
 
     /**
      * value: "ADA"
