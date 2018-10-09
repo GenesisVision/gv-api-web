@@ -512,18 +512,12 @@ export default class InvestorApi {
      * Summary dashboard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
+     * @param {module:model/String} opts.chartCurrency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {module:model/String} opts.type 
-     * @param {module:model/String} opts.assetType 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.from2 
-     * @param {Date} opts.to2 
      * @param {Number} opts.balancePoints 
      * @param {Number} opts.programsPoints 
+     * @param {Number} opts.eventsTake 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
@@ -541,18 +535,12 @@ export default class InvestorApi {
       let pathParams = {
       };
       let queryParams = {
-        'AssetId': opts['assetId'],
+        'chartCurrency': opts['chartCurrency'],
         'From': opts['from'],
         'To': opts['to'],
-        'Type': opts['type'],
-        'AssetType': opts['assetType'],
-        'Skip': opts['skip'],
-        'Take': opts['take'],
-        'chartCurrency': opts['chartCurrency'],
-        'From': opts['from2'],
-        'To': opts['to2'],
         'BalancePoints': opts['balancePoints'],
         'ProgramsPoints': opts['programsPoints'],
+        'eventsTake': opts['eventsTake'],
         'requestsSkip': opts['requestsSkip'],
         'requestsTake': opts['requestsTake']
       };
@@ -578,18 +566,12 @@ export default class InvestorApi {
      * Summary dashboard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
+     * @param {module:model/String} opts.chartCurrency 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {module:model/String} opts.type 
-     * @param {module:model/String} opts.assetType 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @param {module:model/String} opts.chartCurrency 
-     * @param {Date} opts.from2 
-     * @param {Date} opts.to2 
      * @param {Number} opts.balancePoints 
      * @param {Number} opts.programsPoints 
+     * @param {Number} opts.eventsTake 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}

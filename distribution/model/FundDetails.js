@@ -37,9 +37,9 @@ var _FundDetailsListStatistic = require('./FundDetailsListStatistic');
 
 var _FundDetailsListStatistic2 = _interopRequireDefault(_FundDetailsListStatistic);
 
-var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
+var _PersonalFundDetailsList = require('./PersonalFundDetailsList');
 
-var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
+var _PersonalFundDetailsList2 = _interopRequireDefault(_PersonalFundDetailsList);
 
 var _ProfilePublic = require('./ProfilePublic');
 
@@ -67,6 +67,7 @@ var FundDetails = function () {
         this.totalAssetsCount = undefined;
         this.topFundAssets = undefined;
         this.statistic = undefined;
+        this.personalDetails = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -75,8 +76,7 @@ var FundDetails = function () {
         this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
-        this.personalProgramDetails = undefined;
-        this.dashboardProgramDetails = undefined;
+        this.dashboardAssetsDetails = undefined;
     }
 
     /**
@@ -103,6 +103,9 @@ var FundDetails = function () {
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _FundDetailsListStatistic2.default.constructFromObject(data['statistic']);
                 }
+                if (data.hasOwnProperty('personalDetails')) {
+                    obj['personalDetails'] = _PersonalFundDetailsList2.default.constructFromObject(data['personalDetails']);
+                }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
@@ -127,11 +130,8 @@ var FundDetails = function () {
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('personalProgramDetails')) {
-                    obj['personalProgramDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalProgramDetails']);
-                }
-                if (data.hasOwnProperty('dashboardProgramDetails')) {
-                    obj['dashboardProgramDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardProgramDetails']);
+                if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
                 }
             }
             return obj;
@@ -147,6 +147,11 @@ var FundDetails = function () {
 
         /**
         * @member {module:model/FundDetailsListStatistic} statistic
+        */
+
+        /**
+        * Fields for authorized user
+        * @member {module:model/PersonalFundDetailsList} personalDetails
         */
 
         /**
@@ -182,13 +187,8 @@ var FundDetails = function () {
         */
 
         /**
-        * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
-        */
-
-        /**
         * Fields for dashboard
-        * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
+        * @member {module:model/DashboardProgramDetails} dashboardAssetsDetails
         */
 
 

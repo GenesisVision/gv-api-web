@@ -56,19 +56,26 @@ export default class PersonalProgramDetailsList {
             
             
 
+            if (data.hasOwnProperty('isReinvest')) {
+                obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
             if (data.hasOwnProperty('isInvested')) {
                 obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
             }
-            if (data.hasOwnProperty('hasNotifications')) {
-                obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
         }
         return obj;
     }
 
+    /**
+    * @member {Boolean} isReinvest
+    */
+    isReinvest = undefined;
     /**
     * @member {Boolean} isFavorite
     */
@@ -78,14 +85,46 @@ export default class PersonalProgramDetailsList {
     */
     isInvested = undefined;
     /**
-    * @member {Boolean} hasNotifications
+    * @member {module:model/PersonalProgramDetailsList.StatusEnum} status
     */
-    hasNotifications = undefined;
+    status = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>status</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static StatusEnum = {
+    
+        /**
+         * value: "Active"
+         * @const
+         */
+        "Active": "Active",
+    
+        /**
+         * value: "Investing"
+         * @const
+         */
+        "Investing": "Investing",
+    
+        /**
+         * value: "Withdrawing"
+         * @const
+         */
+        "Withdrawing": "Withdrawing",
+    
+        /**
+         * value: "Ended"
+         * @const
+         */
+        "Ended": "Ended"    
+    };
 
 
 

@@ -9,5 +9,17 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **count** | **Number** |  | [optional] 
+**type** | **String** |  | [optional] 
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `Program` (value: `"Program"`)
+
+* `Oef` (value: `"Oef"`)
+
+
 
 

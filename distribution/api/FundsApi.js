@@ -45,6 +45,10 @@ var _PlatformAssets = require('../model/PlatformAssets');
 
 var _PlatformAssets2 = _interopRequireDefault(_PlatformAssets);
 
+var _ProgramSets = require('../model/ProgramSets');
+
+var _ProgramSets2 = _interopRequireDefault(_ProgramSets);
+
 var _RebalancesViewModel = require('../model/RebalancesViewModel');
 
 var _RebalancesViewModel2 = _interopRequireDefault(_RebalancesViewModel);
@@ -533,6 +537,51 @@ var FundsApi = function () {
     key: 'v10FundsGet',
     value: function v10FundsGet(opts) {
       return this.v10FundsGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Fund sets
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
+     */
+
+  }, {
+    key: 'v10FundsSetsGetWithHttpInfo',
+    value: function v10FundsSetsGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10FundsSetsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramSets2.default;
+
+      return this.apiClient.callApi('/v1.0/funds/sets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Fund sets
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
+     */
+
+  }, {
+    key: 'v10FundsSetsGet',
+    value: function v10FundsSetsGet(authorization) {
+      return this.v10FundsSetsGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -19,6 +19,7 @@ import FundDetailsFull from '../model/FundDetailsFull';
 import FundProfitChart from '../model/FundProfitChart';
 import FundsList from '../model/FundsList';
 import PlatformAssets from '../model/PlatformAssets';
+import ProgramSets from '../model/ProgramSets';
 import RebalancesViewModel from '../model/RebalancesViewModel';
 
 /**
@@ -522,6 +523,55 @@ export default class FundsApi {
      */
     v10FundsGet(opts) {
       return this.v10FundsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Fund sets
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
+     */
+    v10FundsSetsGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10FundsSetsGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramSets;
+
+      return this.apiClient.callApi(
+        '/v1.0/funds/sets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Fund sets
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
+     */
+    v10FundsSetsGet(authorization) {
+      return this.v10FundsSetsGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

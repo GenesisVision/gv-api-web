@@ -65,17 +65,14 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
-            if (data.hasOwnProperty('hasNotifications')) {
-                obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
-            }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
             if (data.hasOwnProperty('profit')) {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
-            if (data.hasOwnProperty('investmentProgramStatus')) {
-                obj['investmentProgramStatus'] = ApiClient.convertToType(data['investmentProgramStatus'], 'String');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
         }
         return obj;
@@ -94,10 +91,6 @@ export default class PersonalFundDetailsFull {
     */
     isOwnProgram = undefined;
     /**
-    * @member {Boolean} hasNotifications
-    */
-    hasNotifications = undefined;
-    /**
     * @member {Number} value
     */
     value = undefined;
@@ -106,9 +99,9 @@ export default class PersonalFundDetailsFull {
     */
     profit = undefined;
     /**
-    * @member {module:model/PersonalFundDetailsFull.InvestmentProgramStatusEnum} investmentProgramStatus
+    * @member {module:model/PersonalFundDetailsFull.StatusEnum} status
     */
-    investmentProgramStatus = undefined;
+    status = undefined;
 
 
 
@@ -116,11 +109,11 @@ export default class PersonalFundDetailsFull {
 
 
     /**
-    * Allowed values for the <code>investmentProgramStatus</code> property.
+    * Allowed values for the <code>status</code> property.
     * @enum {String}
     * @readonly
     */
-    static InvestmentProgramStatusEnum = {
+    static StatusEnum = {
     
         /**
          * value: "Active"

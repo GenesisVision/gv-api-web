@@ -7,14 +7,13 @@ Name | Type | Description | Notes
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
-**hasNotifications** | **Boolean** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
-**investmentProgramStatus** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
 
 
-<a name="InvestmentProgramStatusEnum"></a>
-## Enum: InvestmentProgramStatusEnum
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
 
 
 * `Active` (value: `"Active"`)

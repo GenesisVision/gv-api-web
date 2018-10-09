@@ -50,6 +50,7 @@ import IOsAppVersion from './model/IOsAppVersion';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerProfile from './model/ManagerProfile';
+import ManagersList from './model/ManagersList';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
@@ -62,6 +63,7 @@ import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
+import PersonalFundDetailsList from './model/PersonalFundDetailsList';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
@@ -96,6 +98,7 @@ import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
+import SearchViewModel from './model/SearchViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
@@ -122,6 +125,7 @@ import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
 import ProgramsApi from './api/ProgramsApi';
 import RateApi from './api/RateApi';
+import SearchApi from './api/SearchApi';
 import WalletApi from './api/WalletApi';
 
 
@@ -386,6 +390,12 @@ export {
     ManagerProfile,
 
     /**
+     * The ManagersList model constructor.
+     * @property {module:model/ManagersList}
+     */
+    ManagersList,
+
+    /**
      * The NewFundRequest model constructor.
      * @property {module:model/NewFundRequest}
      */
@@ -456,6 +466,12 @@ export {
      * @property {module:model/PersonalFundDetailsFull}
      */
     PersonalFundDetailsFull,
+
+    /**
+     * The PersonalFundDetailsList model constructor.
+     * @property {module:model/PersonalFundDetailsList}
+     */
+    PersonalFundDetailsList,
 
     /**
      * The PersonalProgramDetailsFull model constructor.
@@ -662,6 +678,12 @@ export {
     ResetPasswordViewModel,
 
     /**
+     * The SearchViewModel model constructor.
+     * @property {module:model/SearchViewModel}
+     */
+    SearchViewModel,
+
+    /**
      * The TradesViewModel model constructor.
      * @property {module:model/TradesViewModel}
      */
@@ -816,6 +838,12 @@ export {
     * @property {module:api/RateApi}
     */
     RateApi,
+
+    /**
+    * The SearchApi service constructor.
+    * @property {module:api/SearchApi}
+    */
+    SearchApi,
 
     /**
     * The WalletApi service constructor.

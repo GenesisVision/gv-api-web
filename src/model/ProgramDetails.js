@@ -82,6 +82,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
             }
+            if (data.hasOwnProperty('personalDetails')) {
+                obj['personalDetails'] = PersonalProgramDetailsList.constructFromObject(data['personalDetails']);
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -106,11 +109,8 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('personalProgramDetails')) {
-                obj['personalProgramDetails'] = PersonalProgramDetailsList.constructFromObject(data['personalProgramDetails']);
-            }
-            if (data.hasOwnProperty('dashboardProgramDetails')) {
-                obj['dashboardProgramDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardProgramDetails']);
+            if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
             }
         }
         return obj;
@@ -145,6 +145,11 @@ export default class ProgramDetails {
     */
     statistic = undefined;
     /**
+    * Fields for authorized user
+    * @member {module:model/PersonalProgramDetailsList} personalDetails
+    */
+    personalDetails = undefined;
+    /**
     * @member {String} id
     */
     id = undefined;
@@ -177,15 +182,10 @@ export default class ProgramDetails {
     */
     chart = undefined;
     /**
-    * Fields for authorized user
-    * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
-    */
-    personalProgramDetails = undefined;
-    /**
     * Fields for dashboard
-    * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
+    * @member {module:model/DashboardProgramDetails} dashboardAssetsDetails
     */
-    dashboardProgramDetails = undefined;
+    dashboardAssetsDetails = undefined;
 
 
 

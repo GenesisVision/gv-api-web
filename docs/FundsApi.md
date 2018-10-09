@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**v10FundsByIdGet**](FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
 [**v10FundsByIdRebalancingGet**](FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 [**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
+[**v10FundsSetsGet**](FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 
 
 <a name="v10FundsAssetsGet"></a>
@@ -271,7 +272,7 @@ apiInstance.v10FundsByIdGet(id, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **id** | **String**|  | 
  **authorization** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
 
@@ -393,6 +394,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FundsList**](FundsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsSetsGet"></a>
+# **v10FundsSetsGet**
+> ProgramSets v10FundsSetsGet(authorization)
+
+Fund sets
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10FundsSetsGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramSets**](ProgramSets.md)
 
 ### Authorization
 

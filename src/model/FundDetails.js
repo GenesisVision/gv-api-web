@@ -17,7 +17,7 @@ import ChartSimple from './ChartSimple';
 import DashboardProgramDetails from './DashboardProgramDetails';
 import FundAssetPercent from './FundAssetPercent';
 import FundDetailsListStatistic from './FundDetailsListStatistic';
-import PersonalProgramDetailsList from './PersonalProgramDetailsList';
+import PersonalFundDetailsList from './PersonalFundDetailsList';
 import ProfilePublic from './ProfilePublic';
 
 
@@ -71,6 +71,9 @@ export default class FundDetails {
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = FundDetailsListStatistic.constructFromObject(data['statistic']);
             }
+            if (data.hasOwnProperty('personalDetails')) {
+                obj['personalDetails'] = PersonalFundDetailsList.constructFromObject(data['personalDetails']);
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -95,11 +98,8 @@ export default class FundDetails {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('personalProgramDetails')) {
-                obj['personalProgramDetails'] = PersonalProgramDetailsList.constructFromObject(data['personalProgramDetails']);
-            }
-            if (data.hasOwnProperty('dashboardProgramDetails')) {
-                obj['dashboardProgramDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardProgramDetails']);
+            if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
             }
         }
         return obj;
@@ -117,6 +117,11 @@ export default class FundDetails {
     * @member {module:model/FundDetailsListStatistic} statistic
     */
     statistic = undefined;
+    /**
+    * Fields for authorized user
+    * @member {module:model/PersonalFundDetailsList} personalDetails
+    */
+    personalDetails = undefined;
     /**
     * @member {String} id
     */
@@ -150,15 +155,10 @@ export default class FundDetails {
     */
     chart = undefined;
     /**
-    * Fields for authorized user
-    * @member {module:model/PersonalProgramDetailsList} personalProgramDetails
-    */
-    personalProgramDetails = undefined;
-    /**
     * Fields for dashboard
-    * @member {module:model/DashboardProgramDetails} dashboardProgramDetails
+    * @member {module:model/DashboardProgramDetails} dashboardAssetsDetails
     */
-    dashboardProgramDetails = undefined;
+    dashboardAssetsDetails = undefined;
 
 
 

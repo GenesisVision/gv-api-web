@@ -43,10 +43,9 @@ var PersonalFundDetailsFull = function () {
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
-        this.hasNotifications = undefined;
         this.value = undefined;
         this.profit = undefined;
-        this.investmentProgramStatus = undefined;
+        this.status = undefined;
     }
 
     /**
@@ -73,17 +72,14 @@ var PersonalFundDetailsFull = function () {
                 if (data.hasOwnProperty('isOwnProgram')) {
                     obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
                 }
-                if (data.hasOwnProperty('hasNotifications')) {
-                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
-                }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
                 if (data.hasOwnProperty('profit')) {
                     obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
-                if (data.hasOwnProperty('investmentProgramStatus')) {
-                    obj['investmentProgramStatus'] = _ApiClient2.default.convertToType(data['investmentProgramStatus'], 'String');
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
             }
             return obj;
@@ -102,10 +98,6 @@ var PersonalFundDetailsFull = function () {
         */
 
         /**
-        * @member {Boolean} hasNotifications
-        */
-
-        /**
         * @member {Number} value
         */
 
@@ -114,12 +106,12 @@ var PersonalFundDetailsFull = function () {
         */
 
         /**
-        * @member {module:model/PersonalFundDetailsFull.InvestmentProgramStatusEnum} investmentProgramStatus
+        * @member {module:model/PersonalFundDetailsFull.StatusEnum} status
         */
 
 
         /**
-        * Allowed values for the <code>investmentProgramStatus</code> property.
+        * Allowed values for the <code>status</code> property.
         * @enum {String}
         * @readonly
         */
@@ -129,7 +121,7 @@ var PersonalFundDetailsFull = function () {
     return PersonalFundDetailsFull;
 }();
 
-PersonalFundDetailsFull.InvestmentProgramStatusEnum = {
+PersonalFundDetailsFull.StatusEnum = {
 
     /**
      * value: "Active"

@@ -380,18 +380,12 @@ let apiInstance = new CoreApiV10.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'assetId': "assetId_example", // String | 
+  'chartCurrency': "chartCurrency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'type': "type_example", // String | 
-  'assetType': "assetType_example", // String | 
-  'skip': 56, // Number | 
-  'take': 56, // Number | 
-  'chartCurrency': "chartCurrency_example", // String | 
-  'from2': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to2': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'balancePoints': 56, // Number | 
   'programsPoints': 56, // Number | 
+  'eventsTake': 56, // Number | 
   'requestsSkip': 56, // Number | 
   'requestsTake': 56 // Number | 
 };
@@ -408,18 +402,12 @@ apiInstance.v10InvestorGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **assetId** | [**String**](.md)|  | [optional] 
+ **chartCurrency** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
- **type** | **String**|  | [optional] 
- **assetType** | **String**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
- **chartCurrency** | **String**|  | [optional] 
- **from2** | **Date**|  | [optional] 
- **to2** | **Date**|  | [optional] 
  **balancePoints** | **Number**|  | [optional] 
  **programsPoints** | **Number**|  | [optional] 
+ **eventsTake** | **Number**|  | [optional] 
  **requestsSkip** | **Number**|  | [optional] 
  **requestsTake** | **Number**|  | [optional] 
 

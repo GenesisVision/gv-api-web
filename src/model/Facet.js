@@ -74,6 +74,9 @@ export default class Facet {
             if (data.hasOwnProperty('count')) {
                 obj['count'] = ApiClient.convertToType(data['count'], 'Number');
             }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
         }
         return obj;
     }
@@ -102,11 +105,35 @@ export default class Facet {
     * @member {Number} count
     */
     count = undefined;
+    /**
+    * @member {module:model/Facet.TypeEnum} type
+    */
+    type = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>type</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static TypeEnum = {
+    
+        /**
+         * value: "Program"
+         * @const
+         */
+        "Program": "Program",
+    
+        /**
+         * value: "Oef"
+         * @const
+         */
+        "Oef": "Oef"    
+    };
 
 
 

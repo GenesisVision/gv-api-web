@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
 *CoreApiV10.FundsApi* | [**v10FundsByIdRebalancingGet**](docs/FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
+*CoreApiV10.FundsApi* | [**v10FundsSetsGet**](docs/FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
@@ -190,6 +191,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 *CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
+*CoreApiV10.SearchApi* | [**v10SearchGet**](docs/SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
@@ -239,6 +241,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
+ - [CoreApiV10.ManagersList](docs/ManagersList.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.NotificationList](docs/NotificationList.md)
@@ -251,6 +254,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
  - [CoreApiV10.PersonalFundDetailsFull](docs/PersonalFundDetailsFull.md)
+ - [CoreApiV10.PersonalFundDetailsList](docs/PersonalFundDetailsList.md)
  - [CoreApiV10.PersonalProgramDetailsFull](docs/PersonalProgramDetailsFull.md)
  - [CoreApiV10.PersonalProgramDetailsList](docs/PersonalProgramDetailsList.md)
  - [CoreApiV10.PlatformAsset](docs/PlatformAsset.md)
@@ -285,6 +289,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
+ - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)
  - [CoreApiV10.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)

@@ -19,14 +19,14 @@ import ApiClient from '../ApiClient';
 
 
 /**
-* The PersonalProgramDetailsFull model module.
-* @module model/PersonalProgramDetailsFull
+* The PersonalFundDetailsList model module.
+* @module model/PersonalFundDetailsList
 * @version v1.0
 */
-export default class PersonalProgramDetailsFull {
+export default class PersonalFundDetailsList {
     /**
-    * Constructs a new <code>PersonalProgramDetailsFull</code>.
-    * @alias module:model/PersonalProgramDetailsFull
+    * Constructs a new <code>PersonalFundDetailsList</code>.
+    * @alias module:model/PersonalFundDetailsList
     * @class
     */
 
@@ -42,37 +42,25 @@ export default class PersonalProgramDetailsFull {
     }
 
     /**
-    * Constructs a <code>PersonalProgramDetailsFull</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PersonalFundDetailsList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/PersonalProgramDetailsFull} obj Optional instance to populate.
-    * @return {module:model/PersonalProgramDetailsFull} The populated <code>PersonalProgramDetailsFull</code> instance.
+    * @param {module:model/PersonalFundDetailsList} obj Optional instance to populate.
+    * @return {module:model/PersonalFundDetailsList} The populated <code>PersonalFundDetailsList</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PersonalProgramDetailsFull();
+            obj = obj || new PersonalFundDetailsList();
 
             
             
             
 
-            if (data.hasOwnProperty('isReinvest')) {
-                obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
-            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
             if (data.hasOwnProperty('isInvested')) {
                 obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isOwnProgram')) {
-                obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
-            }
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -82,10 +70,6 @@ export default class PersonalProgramDetailsFull {
     }
 
     /**
-    * @member {Boolean} isReinvest
-    */
-    isReinvest = undefined;
-    /**
     * @member {Boolean} isFavorite
     */
     isFavorite = undefined;
@@ -94,19 +78,7 @@ export default class PersonalProgramDetailsFull {
     */
     isInvested = undefined;
     /**
-    * @member {Boolean} isOwnProgram
-    */
-    isOwnProgram = undefined;
-    /**
-    * @member {Number} value
-    */
-    value = undefined;
-    /**
-    * @member {Number} profit
-    */
-    profit = undefined;
-    /**
-    * @member {module:model/PersonalProgramDetailsFull.StatusEnum} status
+    * @member {module:model/PersonalFundDetailsList.StatusEnum} status
     */
     status = undefined;
 

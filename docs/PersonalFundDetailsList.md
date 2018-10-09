@@ -1,9 +1,8 @@
-# CoreApiV10.PersonalProgramDetailsList
+# CoreApiV10.PersonalFundDetailsList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isReinvest** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **status** | **String** |  | [optional] 

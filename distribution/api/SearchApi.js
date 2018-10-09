@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,114 +21,87 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ErrorViewModel = require('../model/ErrorViewModel');
+
+var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+
+var _SearchViewModel = require('../model/SearchViewModel');
+
+var _SearchViewModel2 = _interopRequireDefault(_SearchViewModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The PersonalProgramDetailsList model module.
-* @module model/PersonalProgramDetailsList
+* Search service.
+* @module api/SearchApi
 * @version v1.0
 */
-var PersonalProgramDetailsList = function () {
-    /**
-    * Constructs a new <code>PersonalProgramDetailsList</code>.
-    * @alias module:model/PersonalProgramDetailsList
-    * @class
-    */
+var SearchApi = function () {
 
-    function PersonalProgramDetailsList() {
-        _classCallCheck(this, PersonalProgramDetailsList);
+  /**
+  * Constructs a new SearchApi. 
+  * @alias module:api/SearchApi
+  * @class
+  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+  * default to {@link module:ApiClient#instance} if unspecified.
+  */
+  function SearchApi(apiClient) {
+    _classCallCheck(this, SearchApi);
 
-        this.isReinvest = undefined;
-        this.isFavorite = undefined;
-        this.isInvested = undefined;
-        this.status = undefined;
+    this.apiClient = apiClient || _ApiClient2.default.instance;
+  }
+
+  /**
+   * Program / fund / manager search
+   * @param {Object} opts Optional parameters
+   * @param {String} opts.mask 
+   * @param {Number} opts.take 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchViewModel} and HTTP response
+   */
+
+
+  _createClass(SearchApi, [{
+    key: 'v10SearchGetWithHttpInfo',
+    value: function v10SearchGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {
+        'mask': opts['mask'],
+        'take': opts['take']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SearchViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/search', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-    * Constructs a <code>PersonalProgramDetailsList</code> from a plain JavaScript object, optionally creating a new instance.
-    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-    * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/PersonalProgramDetailsList} obj Optional instance to populate.
-    * @return {module:model/PersonalProgramDetailsList} The populated <code>PersonalProgramDetailsList</code> instance.
-    */
+     * Program / fund / manager search
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.mask 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchViewModel}
+     */
 
+  }, {
+    key: 'v10SearchGet',
+    value: function v10SearchGet(opts) {
+      return this.v10SearchGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }]);
 
-    _createClass(PersonalProgramDetailsList, null, [{
-        key: 'constructFromObject',
-        value: function constructFromObject(data, obj) {
-            if (data) {
-                obj = obj || new PersonalProgramDetailsList();
-
-                if (data.hasOwnProperty('isReinvest')) {
-                    obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isFavorite')) {
-                    obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isInvested')) {
-                    obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-            }
-            return obj;
-        }
-
-        /**
-        * @member {Boolean} isReinvest
-        */
-
-        /**
-        * @member {Boolean} isFavorite
-        */
-
-        /**
-        * @member {Boolean} isInvested
-        */
-
-        /**
-        * @member {module:model/PersonalProgramDetailsList.StatusEnum} status
-        */
-
-
-        /**
-        * Allowed values for the <code>status</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-    }]);
-
-    return PersonalProgramDetailsList;
+  return SearchApi;
 }();
 
-PersonalProgramDetailsList.StatusEnum = {
-
-    /**
-     * value: "Active"
-     * @const
-     */
-    "Active": "Active",
-
-    /**
-     * value: "Investing"
-     * @const
-     */
-    "Investing": "Investing",
-
-    /**
-     * value: "Withdrawing"
-     * @const
-     */
-    "Withdrawing": "Withdrawing",
-
-    /**
-     * value: "Ended"
-     * @const
-     */
-    "Ended": "Ended"
-};
-exports.default = PersonalProgramDetailsList;
+exports.default = SearchApi;
