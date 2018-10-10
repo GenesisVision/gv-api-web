@@ -330,6 +330,8 @@ let opts = {
   'facetId': "facetId_example", // String | 
   'isFavorite': true, // Boolean | 
   'ids': ["ids_example"], // [String] | 
+  'managerId': "managerId_example", // String | 
+  'programManagerId': "programManagerId_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -360,6 +362,8 @@ Name | Type | Description  | Notes
  **facetId** | **String**|  | [optional] 
  **isFavorite** | **Boolean**|  | [optional] 
  **ids** | [**[String]**](String.md)|  | [optional] 
+ **managerId** | **String**|  | [optional] 
+ **programManagerId** | [**String**](.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

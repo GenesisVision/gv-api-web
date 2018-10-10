@@ -102,18 +102,6 @@ export default class CreateWithdrawalRequestModel {
     static CurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -124,6 +112,18 @@ export default class CreateWithdrawalRequestModel {
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"

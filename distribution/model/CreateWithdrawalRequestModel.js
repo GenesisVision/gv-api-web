@@ -108,18 +108,6 @@ var CreateWithdrawalRequestModel = function () {
 CreateWithdrawalRequestModel.CurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -130,6 +118,18 @@ CreateWithdrawalRequestModel.CurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

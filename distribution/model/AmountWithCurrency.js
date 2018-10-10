@@ -92,18 +92,6 @@ var AmountWithCurrency = function () {
 AmountWithCurrency.CurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -114,6 +102,18 @@ AmountWithCurrency.CurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

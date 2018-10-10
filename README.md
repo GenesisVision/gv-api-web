@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+*CoreApiV10.ManagersApi* | [**v10ManagersByIdDetailsGet**](docs/ManagersApi.md#v10ManagersByIdDetailsGet) | **GET** /v1.0/managers/{id}/details | Manager details
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdAssetsUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdAssetsUpdatePost) | **POST** /v1.0/managers/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdClosePost**](docs/ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
@@ -240,7 +241,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
+ - [CoreApiV10.ManagerOverview](docs/ManagerOverview.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
+ - [CoreApiV10.ManagerProfileDetails](docs/ManagerProfileDetails.md)
  - [CoreApiV10.ManagersList](docs/ManagersList.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)

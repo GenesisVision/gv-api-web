@@ -21,109 +21,89 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OefAssetPart = require('./OefAssetPart');
+var _ManagerOverview = require('./ManagerOverview');
 
-var _OefAssetPart2 = _interopRequireDefault(_OefAssetPart);
+var _ManagerOverview2 = _interopRequireDefault(_ManagerOverview);
+
+var _ManagerProfile = require('./ManagerProfile');
+
+var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The NewFundRequest model module.
-* @module model/NewFundRequest
+* The ManagerProfileDetails model module.
+* @module model/ManagerProfileDetails
 * @version v1.0
 */
-var NewFundRequest = function () {
+var ManagerProfileDetails = function () {
     /**
-    * Constructs a new <code>NewFundRequest</code>.
-    * @alias module:model/NewFundRequest
+    * Constructs a new <code>ManagerProfileDetails</code>.
+    * @alias module:model/ManagerProfileDetails
     * @class
     */
 
-    function NewFundRequest() {
-        _classCallCheck(this, NewFundRequest);
+    function ManagerProfileDetails() {
+        _classCallCheck(this, ManagerProfileDetails);
 
-        this.exitFee = undefined;
-        this.managementFee = undefined;
-        this.assetsParts = undefined;
-        this.title = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.entryFee = undefined;
+        this.managerProfile = undefined;
+        this.overview = undefined;
+        this.programsCount = undefined;
+        this.fundsCount = undefined;
     }
 
     /**
-    * Constructs a <code>NewFundRequest</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ManagerProfileDetails</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/NewFundRequest} obj Optional instance to populate.
-    * @return {module:model/NewFundRequest} The populated <code>NewFundRequest</code> instance.
+    * @param {module:model/ManagerProfileDetails} obj Optional instance to populate.
+    * @return {module:model/ManagerProfileDetails} The populated <code>ManagerProfileDetails</code> instance.
     */
 
 
-    _createClass(NewFundRequest, null, [{
+    _createClass(ManagerProfileDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new NewFundRequest();
+                obj = obj || new ManagerProfileDetails();
 
-                if (data.hasOwnProperty('exitFee')) {
-                    obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');
+                if (data.hasOwnProperty('managerProfile')) {
+                    obj['managerProfile'] = _ManagerProfile2.default.constructFromObject(data['managerProfile']);
                 }
-                if (data.hasOwnProperty('managementFee')) {
-                    obj['managementFee'] = _ApiClient2.default.convertToType(data['managementFee'], 'Number');
+                if (data.hasOwnProperty('overview')) {
+                    obj['overview'] = _ManagerOverview2.default.constructFromObject(data['overview']);
                 }
-                if (data.hasOwnProperty('assetsParts')) {
-                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_OefAssetPart2.default]);
+                if (data.hasOwnProperty('programsCount')) {
+                    obj['programsCount'] = _ApiClient2.default.convertToType(data['programsCount'], 'Number');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('entryFee')) {
-                    obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
+                if (data.hasOwnProperty('fundsCount')) {
+                    obj['fundsCount'] = _ApiClient2.default.convertToType(data['fundsCount'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} exitFee
+        * @member {module:model/ManagerProfile} managerProfile
         */
 
         /**
-        * @member {Number} managementFee
+        * @member {module:model/ManagerOverview} overview
         */
 
         /**
-        * @member {Array.<module:model/OefAssetPart>} assetsParts
+        * @member {Number} programsCount
         */
 
         /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {Number} entryFee
+        * @member {Number} fundsCount
         */
 
     }]);
 
-    return NewFundRequest;
+    return ManagerProfileDetails;
 }();
 
-exports.default = NewFundRequest;
+exports.default = ManagerProfileDetails;

@@ -240,18 +240,6 @@ var ProgramDetailsFull = function () {
 ProgramDetailsFull.CurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -262,6 +250,18 @@ ProgramDetailsFull.CurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

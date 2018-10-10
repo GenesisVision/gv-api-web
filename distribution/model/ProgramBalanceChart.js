@@ -112,18 +112,6 @@ var ProgramBalanceChart = function () {
 ProgramBalanceChart.ProgramCurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -134,6 +122,18 @@ ProgramBalanceChart.ProgramCurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

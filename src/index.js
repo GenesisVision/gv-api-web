@@ -49,7 +49,9 @@ import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
+import ManagerOverview from './model/ManagerOverview';
 import ManagerProfile from './model/ManagerProfile';
+import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagersList from './model/ManagersList';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
@@ -384,10 +386,22 @@ export {
     ManagerNotificationSettingList,
 
     /**
+     * The ManagerOverview model constructor.
+     * @property {module:model/ManagerOverview}
+     */
+    ManagerOverview,
+
+    /**
      * The ManagerProfile model constructor.
      * @property {module:model/ManagerProfile}
      */
     ManagerProfile,
+
+    /**
+     * The ManagerProfileDetails model constructor.
+     * @property {module:model/ManagerProfileDetails}
+     */
+    ManagerProfileDetails,
 
     /**
      * The ManagersList model constructor.

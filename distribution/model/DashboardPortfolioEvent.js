@@ -160,10 +160,10 @@ DashboardPortfolioEvent.TypeEnum = {
     "Reinvest": "Reinvest",
 
     /**
-     * value: "Canceled"
+     * value: "Cancelled"
      * @const
      */
-    "Canceled": "Canceled",
+    "Cancelled": "Cancelled",
 
     /**
      * value: "Ended"

@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 
 * `Reinvest` (value: `"Reinvest"`)
 
-* `Canceled` (value: `"Canceled"`)
+* `Cancelled` (value: `"Cancelled"`)
 
 * `Ended` (value: `"Ended"`)
 

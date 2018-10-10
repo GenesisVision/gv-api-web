@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **successFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
 **leverage** | **Number** |  | [optional] 
+**brokerAccountTypeId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**brokerAccountTypeId** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 
 
@@ -19,13 +19,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
 

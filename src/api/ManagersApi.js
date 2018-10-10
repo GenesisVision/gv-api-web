@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import AssetsPartsChangeRequest from '../model/AssetsPartsChangeRequest';
 import ErrorViewModel from '../model/ErrorViewModel';
 import ManagerProfile from '../model/ManagerProfile';
+import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramRequests from '../model/ProgramRequests';
@@ -39,6 +40,55 @@ export default class ManagersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Manager details
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfileDetails} and HTTP response
+     */
+    v10ManagersByIdDetailsGetWithHttpInfo(id) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersByIdDetailsGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProfileDetails;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/{id}/details', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager details
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProfileDetails}
+     */
+    v10ManagersByIdDetailsGet(id) {
+      return this.v10ManagersByIdDetailsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

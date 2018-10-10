@@ -71,6 +71,9 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('leverage')) {
                 obj['leverage'] = ApiClient.convertToType(data['leverage'], 'Number');
             }
+            if (data.hasOwnProperty('brokerAccountTypeId')) {
+                obj['brokerAccountTypeId'] = ApiClient.convertToType(data['brokerAccountTypeId'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -79,9 +82,6 @@ export default class NewProgramRequest {
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
-            }
-            if (data.hasOwnProperty('brokerAccountTypeId')) {
-                obj['brokerAccountTypeId'] = ApiClient.convertToType(data['brokerAccountTypeId'], 'String');
             }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
@@ -111,6 +111,10 @@ export default class NewProgramRequest {
     */
     leverage = undefined;
     /**
+    * @member {String} brokerAccountTypeId
+    */
+    brokerAccountTypeId = undefined;
+    /**
     * @member {String} title
     */
     title = undefined;
@@ -122,10 +126,6 @@ export default class NewProgramRequest {
     * @member {String} logo
     */
     logo = undefined;
-    /**
-    * @member {String} brokerAccountTypeId
-    */
-    brokerAccountTypeId = undefined;
     /**
     * @member {Number} entryFee
     */
@@ -144,18 +144,6 @@ export default class NewProgramRequest {
     static CurrencyEnum = {
     
         /**
-         * value: "BTC"
-         * @const
-         */
-        "BTC": "BTC",
-    
-        /**
-         * value: "ETH"
-         * @const
-         */
-        "ETH": "ETH",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -166,6 +154,18 @@ export default class NewProgramRequest {
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
     
         /**
          * value: "ADA"

@@ -462,6 +462,8 @@ export default class FundsApi {
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
      * @param {Array.<String>} opts.ids 
+     * @param {String} opts.managerId 
+     * @param {String} opts.programManagerId 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
@@ -483,6 +485,8 @@ export default class FundsApi {
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'ManagerId': opts['managerId'],
+        'ProgramManagerId': opts['programManagerId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -517,6 +521,8 @@ export default class FundsApi {
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
      * @param {Array.<String>} opts.ids 
+     * @param {String} opts.managerId 
+     * @param {String} opts.programManagerId 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}

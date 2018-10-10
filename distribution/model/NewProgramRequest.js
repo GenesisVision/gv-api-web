@@ -45,10 +45,10 @@ var NewProgramRequest = function () {
         this.successFee = undefined;
         this.stopOutLevel = undefined;
         this.leverage = undefined;
+        this.brokerAccountTypeId = undefined;
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
-        this.brokerAccountTypeId = undefined;
         this.entryFee = undefined;
     }
 
@@ -82,6 +82,9 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('leverage')) {
                     obj['leverage'] = _ApiClient2.default.convertToType(data['leverage'], 'Number');
                 }
+                if (data.hasOwnProperty('brokerAccountTypeId')) {
+                    obj['brokerAccountTypeId'] = _ApiClient2.default.convertToType(data['brokerAccountTypeId'], 'String');
+                }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
@@ -90,9 +93,6 @@ var NewProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('brokerAccountTypeId')) {
-                    obj['brokerAccountTypeId'] = _ApiClient2.default.convertToType(data['brokerAccountTypeId'], 'String');
                 }
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
@@ -122,6 +122,10 @@ var NewProgramRequest = function () {
         */
 
         /**
+        * @member {String} brokerAccountTypeId
+        */
+
+        /**
         * @member {String} title
         */
 
@@ -131,10 +135,6 @@ var NewProgramRequest = function () {
 
         /**
         * @member {String} logo
-        */
-
-        /**
-        * @member {String} brokerAccountTypeId
         */
 
         /**
@@ -156,18 +156,6 @@ var NewProgramRequest = function () {
 NewProgramRequest.CurrencyEnum = {
 
     /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
      * value: "Undefined"
      * @const
      */
@@ -178,6 +166,18 @@ NewProgramRequest.CurrencyEnum = {
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
 
     /**
      * value: "ADA"

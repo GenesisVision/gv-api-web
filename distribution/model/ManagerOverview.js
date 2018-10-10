@@ -21,109 +21,46 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OefAssetPart = require('./OefAssetPart');
-
-var _OefAssetPart2 = _interopRequireDefault(_OefAssetPart);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The NewFundRequest model module.
-* @module model/NewFundRequest
+* The ManagerOverview model module.
+* @module model/ManagerOverview
 * @version v1.0
 */
-var NewFundRequest = function () {
+var ManagerOverview = function () {
     /**
-    * Constructs a new <code>NewFundRequest</code>.
-    * @alias module:model/NewFundRequest
+    * Constructs a new <code>ManagerOverview</code>.
+    * @alias module:model/ManagerOverview
     * @class
     */
 
-    function NewFundRequest() {
-        _classCallCheck(this, NewFundRequest);
-
-        this.exitFee = undefined;
-        this.managementFee = undefined;
-        this.assetsParts = undefined;
-        this.title = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.entryFee = undefined;
+    function ManagerOverview() {
+        _classCallCheck(this, ManagerOverview);
     }
 
     /**
-    * Constructs a <code>NewFundRequest</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ManagerOverview</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/NewFundRequest} obj Optional instance to populate.
-    * @return {module:model/NewFundRequest} The populated <code>NewFundRequest</code> instance.
+    * @param {module:model/ManagerOverview} obj Optional instance to populate.
+    * @return {module:model/ManagerOverview} The populated <code>ManagerOverview</code> instance.
     */
 
 
-    _createClass(NewFundRequest, null, [{
+    _createClass(ManagerOverview, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new NewFundRequest();
-
-                if (data.hasOwnProperty('exitFee')) {
-                    obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');
-                }
-                if (data.hasOwnProperty('managementFee')) {
-                    obj['managementFee'] = _ApiClient2.default.convertToType(data['managementFee'], 'Number');
-                }
-                if (data.hasOwnProperty('assetsParts')) {
-                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_OefAssetPart2.default]);
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('entryFee')) {
-                    obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
-                }
+                obj = obj || new ManagerOverview();
             }
             return obj;
         }
-
-        /**
-        * @member {Number} exitFee
-        */
-
-        /**
-        * @member {Number} managementFee
-        */
-
-        /**
-        * @member {Array.<module:model/OefAssetPart>} assetsParts
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {Number} entryFee
-        */
-
     }]);
 
-    return NewFundRequest;
+    return ManagerOverview;
 }();
 
-exports.default = NewFundRequest;
+exports.default = ManagerOverview;

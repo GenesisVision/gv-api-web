@@ -33,6 +33,10 @@ var _ManagerProfile = require('../model/ManagerProfile');
 
 var _ManagerProfile2 = _interopRequireDefault(_ManagerProfile);
 
+var _ManagerProfileDetails = require('../model/ManagerProfileDetails');
+
+var _ManagerProfileDetails2 = _interopRequireDefault(_ManagerProfileDetails);
+
 var _NewFundRequest = require('../model/NewFundRequest');
 
 var _NewFundRequest2 = _interopRequireDefault(_NewFundRequest);
@@ -74,13 +78,58 @@ var ManagersApi = function () {
   }
 
   /**
-   * Manager profile
+   * Manager details
    * @param {String} id 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfile} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfileDetails} and HTTP response
    */
 
 
   _createClass(ManagersApi, [{
+    key: 'v10ManagersByIdDetailsGetWithHttpInfo',
+    value: function v10ManagersByIdDetailsGetWithHttpInfo(id) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersByIdDetailsGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerProfileDetails2.default;
+
+      return this.apiClient.callApi('/v1.0/managers/{id}/details', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Manager details
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProfileDetails}
+     */
+
+  }, {
+    key: 'v10ManagersByIdDetailsGet',
+    value: function v10ManagersByIdDetailsGet(id) {
+      return this.v10ManagersByIdDetailsGetWithHttpInfo(id).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Manager profile
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfile} and HTTP response
+     */
+
+  }, {
     key: 'v10ManagersByIdGetWithHttpInfo',
     value: function v10ManagersByIdGetWithHttpInfo(id) {
       var postBody = null;
