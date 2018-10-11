@@ -290,7 +290,7 @@ No authorization required
 
 <a name="v10AuthPasswordChangePost"></a>
 # **v10AuthPasswordChangePost**
-> v10AuthPasswordChangePost(authorization, opts)
+> &#39;String&#39; v10AuthPasswordChangePost(authorization, opts)
 
 Change password
 
@@ -305,8 +305,8 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApiV10.ChangePasswordViewModel() // ChangePasswordViewModel | 
 };
-apiInstance.v10AuthPasswordChangePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10AuthPasswordChangePost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**&#39;String&#39;**
 
 ### Authorization
 

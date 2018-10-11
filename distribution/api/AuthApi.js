@@ -397,7 +397,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
 
   }, {
@@ -421,7 +421,7 @@ var AuthApi = function () {
       var authNames = [];
       var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
+      var returnType = 'String';
 
       return this.apiClient.callApi('/v1.0/auth/password/change', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -431,7 +431,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
 
   }, {

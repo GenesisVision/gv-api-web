@@ -62,8 +62,8 @@ export default class FundAssetPartDetails {
             if (data.hasOwnProperty('symbol')) {
                 obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
             }
-            if (data.hasOwnProperty('assetPart')) {
-                obj['assetPart'] = ApiClient.convertToType(data['assetPart'], 'Number');
+            if (data.hasOwnProperty('percent')) {
+                obj['percent'] = ApiClient.convertToType(data['percent'], 'Number');
             }
         }
         return obj;
@@ -78,9 +78,9 @@ export default class FundAssetPartDetails {
     */
     symbol = undefined;
     /**
-    * @member {Number} assetPart
+    * @member {Number} percent
     */
-    assetPart = undefined;
+    percent = undefined;
 
 
 

@@ -367,7 +367,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     v10AuthPasswordChangePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -392,7 +392,7 @@ export default class AuthApi {
       let authNames = [];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = 'String';
 
       return this.apiClient.callApi(
         '/v1.0/auth/password/change', 'POST',
@@ -406,7 +406,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
      * @param {module:model/ChangePasswordViewModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     v10AuthPasswordChangePost(authorization, opts) {
       return this.v10AuthPasswordChangePostWithHttpInfo(authorization, opts)

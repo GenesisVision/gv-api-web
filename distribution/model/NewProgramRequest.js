@@ -156,16 +156,16 @@ var NewProgramRequest = function () {
 NewProgramRequest.CurrencyEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
 
     /**
      * value: "ETH"

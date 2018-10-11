@@ -80,6 +80,9 @@ export default class WalletTransaction {
             if (data.hasOwnProperty('sourceCurrency')) {
                 obj['sourceCurrency'] = ApiClient.convertToType(data['sourceCurrency'], 'String');
             }
+            if (data.hasOwnProperty('sourceTitle')) {
+                obj['sourceTitle'] = ApiClient.convertToType(data['sourceTitle'], 'String');
+            }
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
             }
@@ -91,6 +94,9 @@ export default class WalletTransaction {
             }
             if (data.hasOwnProperty('destinationCurrency')) {
                 obj['destinationCurrency'] = ApiClient.convertToType(data['destinationCurrency'], 'String');
+            }
+            if (data.hasOwnProperty('destinationTitle')) {
+                obj['destinationTitle'] = ApiClient.convertToType(data['destinationTitle'], 'String');
             }
         }
         return obj;
@@ -129,6 +135,10 @@ export default class WalletTransaction {
     */
     sourceCurrency = undefined;
     /**
+    * @member {String} sourceTitle
+    */
+    sourceTitle = undefined;
+    /**
     * @member {module:model/WalletTransaction.ActionEnum} action
     */
     action = undefined;
@@ -144,6 +154,10 @@ export default class WalletTransaction {
     * @member {module:model/WalletTransaction.DestinationCurrencyEnum} destinationCurrency
     */
     destinationCurrency = undefined;
+    /**
+    * @member {String} destinationTitle
+    */
+    destinationTitle = undefined;
 
 
 
@@ -202,16 +216,16 @@ export default class WalletTransaction {
     static SourceCurrencyEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
     
         /**
          * value: "ETH"
@@ -370,16 +384,16 @@ export default class WalletTransaction {
     static DestinationCurrencyEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
     
         /**
          * value: "ETH"

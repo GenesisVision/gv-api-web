@@ -11,10 +11,12 @@ Name | Type | Description | Notes
 **sourceId** | **String** |  | [optional] 
 **sourceType** | **String** |  | [optional] 
 **sourceCurrency** | **String** |  | [optional] 
+**sourceTitle** | **String** |  | [optional] 
 **action** | **String** |  | [optional] 
 **destinationId** | **String** |  | [optional] 
 **destinationType** | **String** |  | [optional] 
 **destinationCurrency** | **String** |  | [optional] 
+**destinationTitle** | **String** |  | [optional] 
 
 
 <a name="SourceTypeEnum"></a>
@@ -40,9 +42,9 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 
@@ -109,9 +111,9 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 

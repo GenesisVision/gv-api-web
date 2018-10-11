@@ -42,7 +42,7 @@ var FundAssetPartDetails = function () {
 
         this.name = undefined;
         this.symbol = undefined;
-        this.assetPart = undefined;
+        this.percent = undefined;
     }
 
     /**
@@ -66,8 +66,8 @@ var FundAssetPartDetails = function () {
                 if (data.hasOwnProperty('symbol')) {
                     obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
                 }
-                if (data.hasOwnProperty('assetPart')) {
-                    obj['assetPart'] = _ApiClient2.default.convertToType(data['assetPart'], 'Number');
+                if (data.hasOwnProperty('percent')) {
+                    obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
                 }
             }
             return obj;
@@ -82,7 +82,7 @@ var FundAssetPartDetails = function () {
         */
 
         /**
-        * @member {Number} assetPart
+        * @member {Number} percent
         */
 
     }]);

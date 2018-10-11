@@ -48,10 +48,12 @@ var WalletTransaction = function () {
         this.sourceId = undefined;
         this.sourceType = undefined;
         this.sourceCurrency = undefined;
+        this.sourceTitle = undefined;
         this.action = undefined;
         this.destinationId = undefined;
         this.destinationType = undefined;
         this.destinationCurrency = undefined;
+        this.destinationTitle = undefined;
     }
 
     /**
@@ -93,6 +95,9 @@ var WalletTransaction = function () {
                 if (data.hasOwnProperty('sourceCurrency')) {
                     obj['sourceCurrency'] = _ApiClient2.default.convertToType(data['sourceCurrency'], 'String');
                 }
+                if (data.hasOwnProperty('sourceTitle')) {
+                    obj['sourceTitle'] = _ApiClient2.default.convertToType(data['sourceTitle'], 'String');
+                }
                 if (data.hasOwnProperty('action')) {
                     obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
                 }
@@ -104,6 +109,9 @@ var WalletTransaction = function () {
                 }
                 if (data.hasOwnProperty('destinationCurrency')) {
                     obj['destinationCurrency'] = _ApiClient2.default.convertToType(data['destinationCurrency'], 'String');
+                }
+                if (data.hasOwnProperty('destinationTitle')) {
+                    obj['destinationTitle'] = _ApiClient2.default.convertToType(data['destinationTitle'], 'String');
                 }
             }
             return obj;
@@ -142,6 +150,10 @@ var WalletTransaction = function () {
         */
 
         /**
+        * @member {String} sourceTitle
+        */
+
+        /**
         * @member {module:model/WalletTransaction.ActionEnum} action
         */
 
@@ -155,6 +167,10 @@ var WalletTransaction = function () {
 
         /**
         * @member {module:model/WalletTransaction.DestinationCurrencyEnum} destinationCurrency
+        */
+
+        /**
+        * @member {String} destinationTitle
         */
 
 
@@ -238,16 +254,16 @@ WalletTransaction.SourceTypeEnum = {
 WalletTransaction.SourceCurrencyEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
 
     /**
      * value: "ETH"
@@ -388,16 +404,16 @@ WalletTransaction.DestinationTypeEnum = {
 WalletTransaction.DestinationCurrencyEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
 
     /**
      * value: "ETH"
