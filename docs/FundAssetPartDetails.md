@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
-**symbol** | **String** |  | [optional] 
+**asset** | **String** |  | [optional] 
 **percent** | **Number** |  | [optional] 
 
 

@@ -109,16 +109,16 @@ export default class WalletInfo {
     static CurrencyEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
     
         /**
          * value: "ETH"
