@@ -20,14 +20,14 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
 
 
 /**
-* The ProgramNotificationSettingList model module.
-* @module model/ProgramNotificationSettingList
+* The FundNotificationSettingList model module.
+* @module model/FundNotificationSettingList
 * @version v1.0
 */
-export default class ProgramNotificationSettingList {
+export default class FundNotificationSettingList {
     /**
-    * Constructs a new <code>ProgramNotificationSettingList</code>.
-    * @alias module:model/ProgramNotificationSettingList
+    * Constructs a new <code>FundNotificationSettingList</code>.
+    * @alias module:model/FundNotificationSettingList
     * @class
     */
 
@@ -43,26 +43,20 @@ export default class ProgramNotificationSettingList {
     }
 
     /**
-    * Constructs a <code>ProgramNotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>FundNotificationSettingList</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramNotificationSettingList} obj Optional instance to populate.
-    * @return {module:model/ProgramNotificationSettingList} The populated <code>ProgramNotificationSettingList</code> instance.
+    * @param {module:model/FundNotificationSettingList} obj Optional instance to populate.
+    * @return {module:model/FundNotificationSettingList} The populated <code>FundNotificationSettingList</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProgramNotificationSettingList();
+            obj = obj || new FundNotificationSettingList();
 
             
             
             
 
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
-            }
-            if (data.hasOwnProperty('settingsCustom')) {
-                obj['settingsCustom'] = ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]);
-            }
             if (data.hasOwnProperty('programId')) {
                 obj['programId'] = ApiClient.convertToType(data['programId'], 'String');
             }
@@ -82,14 +76,6 @@ export default class ProgramNotificationSettingList {
         return obj;
     }
 
-    /**
-    * @member {Number} level
-    */
-    level = undefined;
-    /**
-    * @member {Array.<module:model/NotificationSettingViewModel>} settingsCustom
-    */
-    settingsCustom = undefined;
     /**
     * @member {String} programId
     */

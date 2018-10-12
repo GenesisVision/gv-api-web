@@ -44,13 +44,13 @@ var ProgramNotificationSettingList = function () {
     function ProgramNotificationSettingList() {
         _classCallCheck(this, ProgramNotificationSettingList);
 
+        this.level = undefined;
+        this.settingsCustom = undefined;
         this.programId = undefined;
         this.title = undefined;
         this.url = undefined;
         this.logo = undefined;
-        this.level = undefined;
         this.settingsGeneral = undefined;
-        this.settingsCustom = undefined;
     }
 
     /**
@@ -68,6 +68,12 @@ var ProgramNotificationSettingList = function () {
             if (data) {
                 obj = obj || new ProgramNotificationSettingList();
 
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('settingsCustom')) {
+                    obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);
+                }
                 if (data.hasOwnProperty('programId')) {
                     obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
@@ -80,18 +86,20 @@ var ProgramNotificationSettingList = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
                 if (data.hasOwnProperty('settingsGeneral')) {
                     obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
-                }
-                if (data.hasOwnProperty('settingsCustom')) {
-                    obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);
                 }
             }
             return obj;
         }
+
+        /**
+        * @member {Number} level
+        */
+
+        /**
+        * @member {Array.<module:model/NotificationSettingViewModel>} settingsCustom
+        */
 
         /**
         * @member {String} programId
@@ -110,15 +118,7 @@ var ProgramNotificationSettingList = function () {
         */
 
         /**
-        * @member {Number} level
-        */
-
-        /**
         * @member {Array.<module:model/NotificationSettingViewModel>} settingsGeneral
-        */
-
-        /**
-        * @member {Array.<module:model/NotificationSettingViewModel>} settingsCustom
         */
 
     }]);

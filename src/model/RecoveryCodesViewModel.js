@@ -60,6 +60,9 @@ export default class RecoveryCodesViewModel {
             if (data.hasOwnProperty('codes')) {
                 obj['codes'] = ApiClient.convertToType(data['codes'], [RecoveryCode]);
             }
+            if (data.hasOwnProperty('authToken')) {
+                obj['authToken'] = ApiClient.convertToType(data['authToken'], 'String');
+            }
         }
         return obj;
     }
@@ -68,6 +71,10 @@ export default class RecoveryCodesViewModel {
     * @member {Array.<module:model/RecoveryCode>} codes
     */
     codes = undefined;
+    /**
+    * @member {String} authToken
+    */
+    authToken = undefined;
 
 
 

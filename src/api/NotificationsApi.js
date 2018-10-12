@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import FundNotificationSettingList from '../model/FundNotificationSettingList';
 import ManagerNotificationSettingList from '../model/ManagerNotificationSettingList';
 import NotificationList from '../model/NotificationList';
 import NotificationSettingList from '../model/NotificationSettingList';
@@ -272,6 +273,63 @@ export default class NotificationsApi {
      */
     v10NotificationsSettingsByIdByEnablePost(id, enable, authorization) {
       return this.v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * User settings for fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundNotificationSettingList} and HTTP response
+     */
+    v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsFundsByIdGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsFundsByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundNotificationSettingList;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings/funds/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * User settings for fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundNotificationSettingList}
+     */
+    v10NotificationsSettingsFundsByIdGet(id, authorization) {
+      return this.v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OefAssetPart = require('./OefAssetPart');
+var _FundAssetPart = require('./FundAssetPart');
 
-var _OefAssetPart2 = _interopRequireDefault(_OefAssetPart);
+var _FundAssetPart2 = _interopRequireDefault(_FundAssetPart);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63,14 +63,14 @@ var AssetsPartsChangeRequest = function () {
                 obj = obj || new AssetsPartsChangeRequest();
 
                 if (data.hasOwnProperty('assetsParts')) {
-                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_OefAssetPart2.default]);
+                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_FundAssetPart2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Array.<module:model/OefAssetPart>} assetsParts
+        * @member {Array.<module:model/FundAssetPart>} assetsParts
         */
 
     }]);

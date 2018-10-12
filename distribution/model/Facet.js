@@ -46,7 +46,6 @@ var Facet = function () {
         this.logo = undefined;
         this.url = undefined;
         this.count = undefined;
-        this.type = undefined;
     }
 
     /**
@@ -82,9 +81,6 @@ var Facet = function () {
                 if (data.hasOwnProperty('count')) {
                     obj['count'] = _ApiClient2.default.convertToType(data['count'], 'Number');
                 }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
             }
             return obj;
         }
@@ -113,34 +109,9 @@ var Facet = function () {
         * @member {Number} count
         */
 
-        /**
-        * @member {module:model/Facet.TypeEnum} type
-        */
-
-
-        /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
     return Facet;
 }();
 
-Facet.TypeEnum = {
-
-    /**
-     * value: "Program"
-     * @const
-     */
-    "Program": "Program",
-
-    /**
-     * value: "Oef"
-     * @const
-     */
-    "Oef": "Oef"
-};
 exports.default = Facet;

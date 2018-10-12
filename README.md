@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsByIdByEnablePost**](docs/NotificationsApi.md#v10NotificationsSettingsByIdByEnablePost) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
+*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsFundsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsFundsByIdGet) | **GET** /v1.0/notifications/settings/funds/{id} | User settings for fund
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsManagersByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsManagersByIdGet) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsProgramsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
@@ -226,6 +227,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
+ - [CoreApiV10.FundAssetPart](docs/FundAssetPart.md)
  - [CoreApiV10.FundAssetPartDetails](docs/FundAssetPartDetails.md)
  - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
  - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
@@ -234,6 +236,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
  - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
  - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
+ - [CoreApiV10.FundNotificationSettingList](docs/FundNotificationSettingList.md)
  - [CoreApiV10.FundProfitChart](docs/FundProfitChart.md)
  - [CoreApiV10.FundStatistic](docs/FundStatistic.md)
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
@@ -251,7 +254,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
- - [CoreApiV10.OefAssetPart](docs/OefAssetPart.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)

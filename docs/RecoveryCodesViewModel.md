@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **codes** | [**[RecoveryCode]**](RecoveryCode.md) |  | [optional] 
+**authToken** | **String** |  | [optional] 
 
 

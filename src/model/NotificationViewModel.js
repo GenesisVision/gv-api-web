@@ -203,6 +203,24 @@ export default class NotificationViewModel {
         "ProgramCondition": "ProgramCondition",
     
         /**
+         * value: "FundNewsAndUpdates"
+         * @const
+         */
+        "FundNewsAndUpdates": "FundNewsAndUpdates",
+    
+        /**
+         * value: "FundEndOfPeriod"
+         * @const
+         */
+        "FundEndOfPeriod": "FundEndOfPeriod",
+    
+        /**
+         * value: "FundRebalancing"
+         * @const
+         */
+        "FundRebalancing": "FundRebalancing",
+    
+        /**
          * value: "ManagerNewProgram"
          * @const
          */

@@ -34,6 +34,7 @@ import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
+import FundAssetPart from './model/FundAssetPart';
 import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
@@ -42,6 +43,7 @@ import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundInvestInfo from './model/FundInvestInfo';
+import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChart from './model/FundProfitChart';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
@@ -59,7 +61,6 @@ import NotificationList from './model/NotificationList';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
-import OefAssetPart from './model/OefAssetPart';
 import OrderModel from './model/OrderModel';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
@@ -296,6 +297,12 @@ export {
     ForgotPasswordViewModel,
 
     /**
+     * The FundAssetPart model constructor.
+     * @property {module:model/FundAssetPart}
+     */
+    FundAssetPart,
+
+    /**
      * The FundAssetPartDetails model constructor.
      * @property {module:model/FundAssetPartDetails}
      */
@@ -342,6 +349,12 @@ export {
      * @property {module:model/FundInvestInfo}
      */
     FundInvestInfo,
+
+    /**
+     * The FundNotificationSettingList model constructor.
+     * @property {module:model/FundNotificationSettingList}
+     */
+    FundNotificationSettingList,
 
     /**
      * The FundProfitChart model constructor.
@@ -444,12 +457,6 @@ export {
      * @property {module:model/NotificationViewModel}
      */
     NotificationViewModel,
-
-    /**
-     * The OefAssetPart model constructor.
-     * @property {module:model/OefAssetPart}
-     */
-    OefAssetPart,
 
     /**
      * The OrderModel model constructor.

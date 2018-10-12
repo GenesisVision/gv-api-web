@@ -38,6 +38,12 @@ Name | Type | Description | Notes
 
 * `ProgramCondition` (value: `"ProgramCondition"`)
 
+* `FundNewsAndUpdates` (value: `"FundNewsAndUpdates"`)
+
+* `FundEndOfPeriod` (value: `"FundEndOfPeriod"`)
+
+* `FundRebalancing` (value: `"FundRebalancing"`)
+
 * `ManagerNewProgram` (value: `"ManagerNewProgram"`)
 
 

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**v10NotificationsNewGet**](NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
 [**v10NotificationsSettingsAddPost**](NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
 [**v10NotificationsSettingsByIdByEnablePost**](NotificationsApi.md#v10NotificationsSettingsByIdByEnablePost) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
+[**v10NotificationsSettingsFundsByIdGet**](NotificationsApi.md#v10NotificationsSettingsFundsByIdGet) | **GET** /v1.0/notifications/settings/funds/{id} | User settings for fund
 [**v10NotificationsSettingsGet**](NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
 [**v10NotificationsSettingsManagersByIdGet**](NotificationsApi.md#v10NotificationsSettingsManagersByIdGet) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
 [**v10NotificationsSettingsProgramsByIdGet**](NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
@@ -192,6 +193,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10NotificationsSettingsFundsByIdGet"></a>
+# **v10NotificationsSettingsFundsByIdGet**
+> FundNotificationSettingList v10NotificationsSettingsFundsByIdGet(id, authorization)
+
+User settings for fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.NotificationsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10NotificationsSettingsFundsByIdGet(id, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**FundNotificationSettingList**](FundNotificationSettingList.md)
 
 ### Authorization
 

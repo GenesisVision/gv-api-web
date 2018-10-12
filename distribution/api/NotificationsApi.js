@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _FundNotificationSettingList = require('../model/FundNotificationSettingList');
+
+var _FundNotificationSettingList2 = _interopRequireDefault(_FundNotificationSettingList);
+
 var _ManagerNotificationSettingList = require('../model/ManagerNotificationSettingList');
 
 var _ManagerNotificationSettingList2 = _interopRequireDefault(_ManagerNotificationSettingList);
@@ -288,6 +292,60 @@ var NotificationsApi = function () {
     key: 'v10NotificationsSettingsByIdByEnablePost',
     value: function v10NotificationsSettingsByIdByEnablePost(id, enable, authorization) {
       return this.v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * User settings for fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundNotificationSettingList} and HTTP response
+     */
+
+  }, {
+    key: 'v10NotificationsSettingsFundsByIdGetWithHttpInfo',
+    value: function v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsFundsByIdGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsFundsByIdGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _FundNotificationSettingList2.default;
+
+      return this.apiClient.callApi('/v1.0/notifications/settings/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * User settings for fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundNotificationSettingList}
+     */
+
+  }, {
+    key: 'v10NotificationsSettingsFundsByIdGet',
+    value: function v10NotificationsSettingsFundsByIdGet(id, authorization) {
+      return this.v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

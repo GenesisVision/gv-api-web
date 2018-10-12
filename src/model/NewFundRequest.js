@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import OefAssetPart from './OefAssetPart';
+import FundAssetPart from './FundAssetPart';
 
 
 
@@ -64,7 +64,7 @@ export default class NewFundRequest {
                 obj['managementFee'] = ApiClient.convertToType(data['managementFee'], 'Number');
             }
             if (data.hasOwnProperty('assetsParts')) {
-                obj['assetsParts'] = ApiClient.convertToType(data['assetsParts'], [OefAssetPart]);
+                obj['assetsParts'] = ApiClient.convertToType(data['assetsParts'], [FundAssetPart]);
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -91,7 +91,7 @@ export default class NewFundRequest {
     */
     managementFee = undefined;
     /**
-    * @member {Array.<module:model/OefAssetPart>} assetsParts
+    * @member {Array.<module:model/FundAssetPart>} assetsParts
     */
     assetsParts = undefined;
     /**

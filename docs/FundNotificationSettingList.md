@@ -1,10 +1,8 @@
-# CoreApiV10.ProgramNotificationSettingList
+# CoreApiV10.FundNotificationSettingList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**level** | **Number** |  | [optional] 
-**settingsCustom** | [**[NotificationSettingViewModel]**](NotificationSettingViewModel.md) |  | [optional] 
 **programId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 

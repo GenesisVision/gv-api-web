@@ -65,8 +65,11 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('androidVersion')) {
                 obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
             }
-            if (data.hasOwnProperty('facets')) {
-                obj['facets'] = ApiClient.convertToType(data['facets'], [Facet]);
+            if (data.hasOwnProperty('programsFacets')) {
+                obj['programsFacets'] = ApiClient.convertToType(data['programsFacets'], [Facet]);
+            }
+            if (data.hasOwnProperty('fundsFacets')) {
+                obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [Facet]);
             }
         }
         return obj;
@@ -81,9 +84,13 @@ export default class PlatformInfo {
     */
     androidVersion = undefined;
     /**
-    * @member {Array.<module:model/Facet>} facets
+    * @member {Array.<module:model/Facet>} programsFacets
     */
-    facets = undefined;
+    programsFacets = undefined;
+    /**
+    * @member {Array.<module:model/Facet>} fundsFacets
+    */
+    fundsFacets = undefined;
 
 
 

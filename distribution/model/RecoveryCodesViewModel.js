@@ -45,6 +45,7 @@ var RecoveryCodesViewModel = function () {
         _classCallCheck(this, RecoveryCodesViewModel);
 
         this.codes = undefined;
+        this.authToken = undefined;
     }
 
     /**
@@ -65,12 +66,19 @@ var RecoveryCodesViewModel = function () {
                 if (data.hasOwnProperty('codes')) {
                     obj['codes'] = _ApiClient2.default.convertToType(data['codes'], [_RecoveryCode2.default]);
                 }
+                if (data.hasOwnProperty('authToken')) {
+                    obj['authToken'] = _ApiClient2.default.convertToType(data['authToken'], 'String');
+                }
             }
             return obj;
         }
 
         /**
         * @member {Array.<module:model/RecoveryCode>} codes
+        */
+
+        /**
+        * @member {String} authToken
         */
 
     }]);

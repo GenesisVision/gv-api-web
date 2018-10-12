@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import OefAssetPart from './OefAssetPart';
+import FundAssetPart from './FundAssetPart';
 
 
 
@@ -58,14 +58,14 @@ export default class AssetsPartsChangeRequest {
             
 
             if (data.hasOwnProperty('assetsParts')) {
-                obj['assetsParts'] = ApiClient.convertToType(data['assetsParts'], [OefAssetPart]);
+                obj['assetsParts'] = ApiClient.convertToType(data['assetsParts'], [FundAssetPart]);
             }
         }
         return obj;
     }
 
     /**
-    * @member {Array.<module:model/OefAssetPart>} assetsParts
+    * @member {Array.<module:model/FundAssetPart>} assetsParts
     */
     assetsParts = undefined;
 

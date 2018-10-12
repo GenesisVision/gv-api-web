@@ -54,6 +54,7 @@ var NotificationSettingList = function () {
 
         this.settingsGeneral = undefined;
         this.settingsProgram = undefined;
+        this.settingsFund = undefined;
         this.settingsManager = undefined;
     }
 
@@ -78,6 +79,9 @@ var NotificationSettingList = function () {
                 if (data.hasOwnProperty('settingsProgram')) {
                     obj['settingsProgram'] = _ApiClient2.default.convertToType(data['settingsProgram'], [_ProgramNotificationSettingList2.default]);
                 }
+                if (data.hasOwnProperty('settingsFund')) {
+                    obj['settingsFund'] = _ApiClient2.default.convertToType(data['settingsFund'], [_ProgramNotificationSettingList2.default]);
+                }
                 if (data.hasOwnProperty('settingsManager')) {
                     obj['settingsManager'] = _ApiClient2.default.convertToType(data['settingsManager'], [_ManagerNotificationSettingList2.default]);
                 }
@@ -91,6 +95,10 @@ var NotificationSettingList = function () {
 
         /**
         * @member {Array.<module:model/ProgramNotificationSettingList>} settingsProgram
+        */
+
+        /**
+        * @member {Array.<module:model/ProgramNotificationSettingList>} settingsFund
         */
 
         /**

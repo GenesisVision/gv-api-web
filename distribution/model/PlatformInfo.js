@@ -54,7 +54,8 @@ var PlatformInfo = function () {
 
         this.iOSVersion = undefined;
         this.androidVersion = undefined;
-        this.facets = undefined;
+        this.programsFacets = undefined;
+        this.fundsFacets = undefined;
     }
 
     /**
@@ -78,8 +79,11 @@ var PlatformInfo = function () {
                 if (data.hasOwnProperty('androidVersion')) {
                     obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
                 }
-                if (data.hasOwnProperty('facets')) {
-                    obj['facets'] = _ApiClient2.default.convertToType(data['facets'], [_Facet2.default]);
+                if (data.hasOwnProperty('programsFacets')) {
+                    obj['programsFacets'] = _ApiClient2.default.convertToType(data['programsFacets'], [_Facet2.default]);
+                }
+                if (data.hasOwnProperty('fundsFacets')) {
+                    obj['fundsFacets'] = _ApiClient2.default.convertToType(data['fundsFacets'], [_Facet2.default]);
                 }
             }
             return obj;
@@ -94,7 +98,11 @@ var PlatformInfo = function () {
         */
 
         /**
-        * @member {Array.<module:model/Facet>} facets
+        * @member {Array.<module:model/Facet>} programsFacets
+        */
+
+        /**
+        * @member {Array.<module:model/Facet>} fundsFacets
         */
 
     }]);

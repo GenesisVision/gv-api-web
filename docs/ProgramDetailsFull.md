@@ -27,9 +27,9 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 

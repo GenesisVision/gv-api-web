@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assetsParts** | [**[OefAssetPart]**](OefAssetPart.md) |  | [optional] 
+**assetsParts** | [**[FundAssetPart]**](FundAssetPart.md) |  | [optional] 
 
 
