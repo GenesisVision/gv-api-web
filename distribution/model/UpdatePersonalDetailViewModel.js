@@ -21,315 +21,137 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartSimple = require('./ChartSimple');
-
-var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
-
-var _DashboardProgramDetails = require('./DashboardProgramDetails');
-
-var _DashboardProgramDetails2 = _interopRequireDefault(_DashboardProgramDetails);
-
-var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
-
-var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
-
-var _ProfilePublic = require('./ProfilePublic');
-
-var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
-
-var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
-
-var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramDetails model module.
-* @module model/ProgramDetails
+* The UpdatePersonalDetailViewModel model module.
+* @module model/UpdatePersonalDetailViewModel
 * @version v1.0
 */
-var ProgramDetails = function () {
+var UpdatePersonalDetailViewModel = function () {
     /**
-    * Constructs a new <code>ProgramDetails</code>.
-    * @alias module:model/ProgramDetails
+    * Constructs a new <code>UpdatePersonalDetailViewModel</code>.
+    * @alias module:model/UpdatePersonalDetailViewModel
     * @class
     */
 
-    function ProgramDetails() {
-        _classCallCheck(this, ProgramDetails);
+    function UpdatePersonalDetailViewModel() {
+        _classCallCheck(this, UpdatePersonalDetailViewModel);
 
-        this.currency = undefined;
-        this.level = undefined;
-        this.periodDuration = undefined;
-        this.periodStarts = undefined;
-        this.periodEnds = undefined;
-        this.availableInvestment = undefined;
-        this.statistic = undefined;
-        this.personalDetails = undefined;
-        this.id = undefined;
-        this.logo = undefined;
-        this.url = undefined;
-        this.title = undefined;
-        this.description = undefined;
-        this.status = undefined;
-        this.manager = undefined;
-        this.chart = undefined;
-        this.dashboardAssetsDetails = undefined;
+        this.firstName = undefined;
+        this.middleName = undefined;
+        this.lastName = undefined;
+        this.birthday = undefined;
+        this.citizenship = undefined;
+        this.gender = undefined;
+        this.documentId = undefined;
+        this.country = undefined;
+        this.city = undefined;
+        this.address = undefined;
+        this.index = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramDetails</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdatePersonalDetailViewModel</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramDetails} obj Optional instance to populate.
-    * @return {module:model/ProgramDetails} The populated <code>ProgramDetails</code> instance.
+    * @param {module:model/UpdatePersonalDetailViewModel} obj Optional instance to populate.
+    * @return {module:model/UpdatePersonalDetailViewModel} The populated <code>UpdatePersonalDetailViewModel</code> instance.
     */
 
 
-    _createClass(ProgramDetails, null, [{
+    _createClass(UpdatePersonalDetailViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramDetails();
+                obj = obj || new UpdatePersonalDetailViewModel();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('firstName')) {
+                    obj['firstName'] = _ApiClient2.default.convertToType(data['firstName'], 'String');
                 }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                if (data.hasOwnProperty('middleName')) {
+                    obj['middleName'] = _ApiClient2.default.convertToType(data['middleName'], 'String');
                 }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
+                if (data.hasOwnProperty('lastName')) {
+                    obj['lastName'] = _ApiClient2.default.convertToType(data['lastName'], 'String');
                 }
-                if (data.hasOwnProperty('periodStarts')) {
-                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
+                if (data.hasOwnProperty('birthday')) {
+                    obj['birthday'] = _ApiClient2.default.convertToType(data['birthday'], 'Date');
                 }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                if (data.hasOwnProperty('citizenship')) {
+                    obj['citizenship'] = _ApiClient2.default.convertToType(data['citizenship'], 'String');
                 }
-                if (data.hasOwnProperty('availableInvestment')) {
-                    obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
+                if (data.hasOwnProperty('gender')) {
+                    obj['gender'] = _ApiClient2.default.convertToType(data['gender'], 'Boolean');
                 }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
+                if (data.hasOwnProperty('documentId')) {
+                    obj['documentId'] = _ApiClient2.default.convertToType(data['documentId'], 'String');
                 }
-                if (data.hasOwnProperty('personalDetails')) {
-                    obj['personalDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalDetails']);
+                if (data.hasOwnProperty('country')) {
+                    obj['country'] = _ApiClient2.default.convertToType(data['country'], 'String');
                 }
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('city')) {
+                    obj['city'] = _ApiClient2.default.convertToType(data['city'], 'String');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('address')) {
+                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
                 }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
-                }
-                if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
+                if (data.hasOwnProperty('index')) {
+                    obj['index'] = _ApiClient2.default.convertToType(data['index'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/ProgramDetails.CurrencyEnum} currency
+        * @member {String} firstName
         */
 
         /**
-        * @member {Number} level
+        * @member {String} middleName
         */
 
         /**
-        * @member {Number} periodDuration
+        * @member {String} lastName
         */
 
         /**
-        * @member {Date} periodStarts
+        * @member {Date} birthday
         */
 
         /**
-        * @member {Date} periodEnds
+        * @member {String} citizenship
         */
 
         /**
-        * @member {Number} availableInvestment
+        * @member {Boolean} gender
         */
 
         /**
-        * @member {module:model/ProgramDetailsListStatistic} statistic
+        * @member {String} documentId
         */
 
         /**
-        * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsList} personalDetails
+        * @member {String} country
         */
 
         /**
-        * @member {String} id
+        * @member {String} city
         */
 
         /**
-        * @member {String} logo
+        * @member {String} address
         */
 
         /**
-        * @member {String} url
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {String} description
-        */
-
-        /**
-        * @member {module:model/ProgramDetails.StatusEnum} status
-        */
-
-        /**
-        * @member {module:model/ProfilePublic} manager
-        */
-
-        /**
-        * @member {Array.<module:model/ChartSimple>} chart
-        */
-
-        /**
-        * Fields for dashboard
-        * @member {module:model/DashboardProgramDetails} dashboardAssetsDetails
-        */
-
-
-        /**
-        * Allowed values for the <code>currency</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-
-        /**
-        * Allowed values for the <code>status</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {String} index
         */
 
     }]);
 
-    return ProgramDetails;
+    return UpdatePersonalDetailViewModel;
 }();
 
-ProgramDetails.CurrencyEnum = {
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USDT"
-     * @const
-     */
-    "USDT": "USDT",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-ProgramDetails.StatusEnum = {
-
-    /**
-     * value: "None"
-     * @const
-     */
-    "None": "None",
-
-    /**
-     * value: "Pending"
-     * @const
-     */
-    "Pending": "Pending",
-
-    /**
-     * value: "ErrorCreating"
-     * @const
-     */
-    "ErrorCreating": "ErrorCreating",
-
-    /**
-     * value: "Active"
-     * @const
-     */
-    "Active": "Active",
-
-    /**
-     * value: "Closed"
-     * @const
-     */
-    "Closed": "Closed",
-
-    /**
-     * value: "Archived"
-     * @const
-     */
-    "Archived": "Archived",
-
-    /**
-     * value: "ClosedDueToInactivity"
-     * @const
-     */
-    "ClosedDueToInactivity": "ClosedDueToInactivity"
-};
-exports.default = ProgramDetails;
+exports.default = UpdatePersonalDetailViewModel;

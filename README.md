@@ -107,7 +107,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotInvestorPost**](docs/AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 *CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 *CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
-*CoreApiV10.AuthApi* | [**v10AuthPhoneCodePost**](docs/AuthApi.md#v10AuthPhoneCodePost) | **POST** /v1.0/auth/phone/code | Request phone number verification code
+*CoreApiV10.AuthApi* | [**v10AuthPhoneAddPost**](docs/AuthApi.md#v10AuthPhoneAddPost) | **POST** /v1.0/auth/phone/add | Add phone number
 *CoreApiV10.AuthApi* | [**v10AuthPhoneVerifyPost**](docs/AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
 *CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 *CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
@@ -182,6 +182,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
+*CoreApiV10.ProfileApi* | [**v10ProfilePersonalUpdatePost**](docs/ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsBalanceGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsBalanceGet) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsProfitGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
@@ -300,6 +301,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)
  - [CoreApiV10.TwoFactorCodeModel](docs/TwoFactorCodeModel.md)
  - [CoreApiV10.TwoFactorStatus](docs/TwoFactorStatus.md)
+ - [CoreApiV10.UpdatePersonalDetailViewModel](docs/UpdatePersonalDetailViewModel.md)
  - [CoreApiV10.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)

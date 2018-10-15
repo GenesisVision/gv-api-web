@@ -45,8 +45,6 @@ var ProfileFullViewModel = function () {
         this.firstName = undefined;
         this.middleName = undefined;
         this.lastName = undefined;
-        this.documentType = undefined;
-        this.documentNumber = undefined;
         this.country = undefined;
         this.city = undefined;
         this.address = undefined;
@@ -55,8 +53,11 @@ var ProfileFullViewModel = function () {
         this.birthday = undefined;
         this.gender = undefined;
         this.avatar = undefined;
+        this.about = undefined;
         this.userName = undefined;
-        this.documentsConfirmed = undefined;
+        this.index = undefined;
+        this.citizenship = undefined;
+        this.verificationStatus = undefined;
     }
 
     /**
@@ -89,12 +90,6 @@ var ProfileFullViewModel = function () {
                 if (data.hasOwnProperty('lastName')) {
                     obj['lastName'] = _ApiClient2.default.convertToType(data['lastName'], 'String');
                 }
-                if (data.hasOwnProperty('documentType')) {
-                    obj['documentType'] = _ApiClient2.default.convertToType(data['documentType'], 'String');
-                }
-                if (data.hasOwnProperty('documentNumber')) {
-                    obj['documentNumber'] = _ApiClient2.default.convertToType(data['documentNumber'], 'String');
-                }
                 if (data.hasOwnProperty('country')) {
                     obj['country'] = _ApiClient2.default.convertToType(data['country'], 'String');
                 }
@@ -119,11 +114,20 @@ var ProfileFullViewModel = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
+                if (data.hasOwnProperty('about')) {
+                    obj['about'] = _ApiClient2.default.convertToType(data['about'], 'String');
+                }
                 if (data.hasOwnProperty('userName')) {
                     obj['userName'] = _ApiClient2.default.convertToType(data['userName'], 'String');
                 }
-                if (data.hasOwnProperty('documentsConfirmed')) {
-                    obj['documentsConfirmed'] = _ApiClient2.default.convertToType(data['documentsConfirmed'], 'Boolean');
+                if (data.hasOwnProperty('index')) {
+                    obj['index'] = _ApiClient2.default.convertToType(data['index'], 'String');
+                }
+                if (data.hasOwnProperty('citizenship')) {
+                    obj['citizenship'] = _ApiClient2.default.convertToType(data['citizenship'], 'String');
+                }
+                if (data.hasOwnProperty('verificationStatus')) {
+                    obj['verificationStatus'] = _ApiClient2.default.convertToType(data['verificationStatus'], 'String');
                 }
             }
             return obj;
@@ -147,14 +151,6 @@ var ProfileFullViewModel = function () {
 
         /**
         * @member {String} lastName
-        */
-
-        /**
-        * @member {String} documentType
-        */
-
-        /**
-        * @member {String} documentNumber
         */
 
         /**
@@ -190,11 +186,30 @@ var ProfileFullViewModel = function () {
         */
 
         /**
+        * @member {String} about
+        */
+
+        /**
         * @member {String} userName
         */
 
         /**
-        * @member {Boolean} documentsConfirmed
+        * @member {String} index
+        */
+
+        /**
+        * @member {String} citizenship
+        */
+
+        /**
+        * @member {module:model/ProfileFullViewModel.VerificationStatusEnum} verificationStatus
+        */
+
+
+        /**
+        * Allowed values for the <code>verificationStatus</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
@@ -202,4 +217,30 @@ var ProfileFullViewModel = function () {
     return ProfileFullViewModel;
 }();
 
+ProfileFullViewModel.VerificationStatusEnum = {
+
+    /**
+     * value: "NotVerified"
+     * @const
+     */
+    "NotVerified": "NotVerified",
+
+    /**
+     * value: "Verified"
+     * @const
+     */
+    "Verified": "Verified",
+
+    /**
+     * value: "UnderReview"
+     * @const
+     */
+    "UnderReview": "UnderReview",
+
+    /**
+     * value: "Rejected"
+     * @const
+     */
+    "Rejected": "Rejected"
+};
 exports.default = ProfileFullViewModel;

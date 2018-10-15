@@ -33,6 +33,10 @@ var _ProfileHeaderViewModel = require('../model/ProfileHeaderViewModel');
 
 var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
 
+var _UpdatePersonalDetailViewModel = require('../model/UpdatePersonalDetailViewModel');
+
+var _UpdatePersonalDetailViewModel2 = _interopRequireDefault(_UpdatePersonalDetailViewModel);
+
 var _UpdateProfileViewModel = require('../model/UpdateProfileViewModel');
 
 var _UpdateProfileViewModel2 = _interopRequireDefault(_UpdateProfileViewModel);
@@ -247,6 +251,56 @@ var ProfileApi = function () {
     key: 'v10ProfileHeaderGet',
     value: function v10ProfileHeaderGet(authorization) {
       return this.v10ProfileHeaderGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Update user personal details
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProfilePersonalUpdatePostWithHttpInfo',
+    value: function v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfilePersonalUpdatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/profile/personal/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Update user personal details
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ProfilePersonalUpdatePost',
+    value: function v10ProfilePersonalUpdatePost(authorization, opts) {
+      return this.v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

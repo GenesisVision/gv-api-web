@@ -59,38 +59,8 @@ export default class UpdateProfileViewModel {
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('firstName')) {
-                obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
-            }
-            if (data.hasOwnProperty('middleName')) {
-                obj['middleName'] = ApiClient.convertToType(data['middleName'], 'String');
-            }
-            if (data.hasOwnProperty('lastName')) {
-                obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-            }
-            if (data.hasOwnProperty('documentType')) {
-                obj['documentType'] = ApiClient.convertToType(data['documentType'], 'String');
-            }
-            if (data.hasOwnProperty('documentNumber')) {
-                obj['documentNumber'] = ApiClient.convertToType(data['documentNumber'], 'String');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'String');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'String');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('phone')) {
-                obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
-            }
-            if (data.hasOwnProperty('birthday')) {
-                obj['birthday'] = ApiClient.convertToType(data['birthday'], 'Date');
-            }
-            if (data.hasOwnProperty('gender')) {
-                obj['gender'] = ApiClient.convertToType(data['gender'], 'Boolean');
+            if (data.hasOwnProperty('about')) {
+                obj['about'] = ApiClient.convertToType(data['about'], 'String');
             }
         }
         return obj;
@@ -101,49 +71,9 @@ export default class UpdateProfileViewModel {
     */
     userName = undefined;
     /**
-    * @member {String} firstName
+    * @member {String} about
     */
-    firstName = undefined;
-    /**
-    * @member {String} middleName
-    */
-    middleName = undefined;
-    /**
-    * @member {String} lastName
-    */
-    lastName = undefined;
-    /**
-    * @member {String} documentType
-    */
-    documentType = undefined;
-    /**
-    * @member {String} documentNumber
-    */
-    documentNumber = undefined;
-    /**
-    * @member {String} country
-    */
-    country = undefined;
-    /**
-    * @member {String} city
-    */
-    city = undefined;
-    /**
-    * @member {String} address
-    */
-    address = undefined;
-    /**
-    * @member {String} phone
-    */
-    phone = undefined;
-    /**
-    * @member {Date} birthday
-    */
-    birthday = undefined;
-    /**
-    * @member {Boolean} gender
-    */
-    gender = undefined;
+    about = undefined;
 
 
 

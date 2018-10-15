@@ -41,17 +41,7 @@ var UpdateProfileViewModel = function () {
         _classCallCheck(this, UpdateProfileViewModel);
 
         this.userName = undefined;
-        this.firstName = undefined;
-        this.middleName = undefined;
-        this.lastName = undefined;
-        this.documentType = undefined;
-        this.documentNumber = undefined;
-        this.country = undefined;
-        this.city = undefined;
-        this.address = undefined;
-        this.phone = undefined;
-        this.birthday = undefined;
-        this.gender = undefined;
+        this.about = undefined;
     }
 
     /**
@@ -72,38 +62,8 @@ var UpdateProfileViewModel = function () {
                 if (data.hasOwnProperty('userName')) {
                     obj['userName'] = _ApiClient2.default.convertToType(data['userName'], 'String');
                 }
-                if (data.hasOwnProperty('firstName')) {
-                    obj['firstName'] = _ApiClient2.default.convertToType(data['firstName'], 'String');
-                }
-                if (data.hasOwnProperty('middleName')) {
-                    obj['middleName'] = _ApiClient2.default.convertToType(data['middleName'], 'String');
-                }
-                if (data.hasOwnProperty('lastName')) {
-                    obj['lastName'] = _ApiClient2.default.convertToType(data['lastName'], 'String');
-                }
-                if (data.hasOwnProperty('documentType')) {
-                    obj['documentType'] = _ApiClient2.default.convertToType(data['documentType'], 'String');
-                }
-                if (data.hasOwnProperty('documentNumber')) {
-                    obj['documentNumber'] = _ApiClient2.default.convertToType(data['documentNumber'], 'String');
-                }
-                if (data.hasOwnProperty('country')) {
-                    obj['country'] = _ApiClient2.default.convertToType(data['country'], 'String');
-                }
-                if (data.hasOwnProperty('city')) {
-                    obj['city'] = _ApiClient2.default.convertToType(data['city'], 'String');
-                }
-                if (data.hasOwnProperty('address')) {
-                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
-                }
-                if (data.hasOwnProperty('phone')) {
-                    obj['phone'] = _ApiClient2.default.convertToType(data['phone'], 'String');
-                }
-                if (data.hasOwnProperty('birthday')) {
-                    obj['birthday'] = _ApiClient2.default.convertToType(data['birthday'], 'Date');
-                }
-                if (data.hasOwnProperty('gender')) {
-                    obj['gender'] = _ApiClient2.default.convertToType(data['gender'], 'Boolean');
+                if (data.hasOwnProperty('about')) {
+                    obj['about'] = _ApiClient2.default.convertToType(data['about'], 'String');
                 }
             }
             return obj;
@@ -114,47 +74,7 @@ var UpdateProfileViewModel = function () {
         */
 
         /**
-        * @member {String} firstName
-        */
-
-        /**
-        * @member {String} middleName
-        */
-
-        /**
-        * @member {String} lastName
-        */
-
-        /**
-        * @member {String} documentType
-        */
-
-        /**
-        * @member {String} documentNumber
-        */
-
-        /**
-        * @member {String} country
-        */
-
-        /**
-        * @member {String} city
-        */
-
-        /**
-        * @member {String} address
-        */
-
-        /**
-        * @member {String} phone
-        */
-
-        /**
-        * @member {Date} birthday
-        */
-
-        /**
-        * @member {Boolean} gender
+        * @member {String} about
         */
 
     }]);

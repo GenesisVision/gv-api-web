@@ -107,6 +107,7 @@ import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
 import TwoFactorCodeModel from './model/TwoFactorCodeModel';
 import TwoFactorStatus from './model/TwoFactorStatus';
+import UpdatePersonalDetailViewModel from './model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
@@ -733,6 +734,12 @@ export {
      * @property {module:model/TwoFactorStatus}
      */
     TwoFactorStatus,
+
+    /**
+     * The UpdatePersonalDetailViewModel model constructor.
+     * @property {module:model/UpdatePersonalDetailViewModel}
+     */
+    UpdatePersonalDetailViewModel,
 
     /**
      * The UpdateProfileViewModel model constructor.

@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **firstName** | **String** |  | [optional] 
 **middleName** | **String** |  | [optional] 
 **lastName** | **String** |  | [optional] 
-**documentType** | **String** |  | [optional] 
-**documentNumber** | **String** |  | [optional] 
 **country** | **String** |  | [optional] 
 **city** | **String** |  | [optional] 
 **address** | **String** |  | [optional] 
@@ -18,7 +16,25 @@ Name | Type | Description | Notes
 **birthday** | **Date** |  | [optional] 
 **gender** | **Boolean** |  | [optional] 
 **avatar** | **String** |  | [optional] 
+**about** | **String** |  | [optional] 
 **userName** | **String** |  | [optional] 
-**documentsConfirmed** | **Boolean** |  | [optional] 
+**index** | **String** |  | [optional] 
+**citizenship** | **String** |  | [optional] 
+**verificationStatus** | **String** |  | [optional] 
+
+
+<a name="VerificationStatusEnum"></a>
+## Enum: VerificationStatusEnum
+
+
+* `NotVerified` (value: `"NotVerified"`)
+
+* `Verified` (value: `"Verified"`)
+
+* `UnderReview` (value: `"UnderReview"`)
+
+* `Rejected` (value: `"Rejected"`)
+
+
 
 

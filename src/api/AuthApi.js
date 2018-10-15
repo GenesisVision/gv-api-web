@@ -555,22 +555,26 @@ export default class AuthApi {
 
 
     /**
-     * Request phone number verification code
+     * Add phone number
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
-    v10AuthPhoneCodePostWithHttpInfo(authorization) {
+    v10AuthPhoneAddPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneAddPost");
       }
 
 
       let pathParams = {
       };
       let queryParams = {
+        'phoneNumber': opts['phoneNumber']
       };
       let headerParams = {
         'Authorization': authorization
@@ -584,19 +588,21 @@ export default class AuthApi {
       let returnType = 'Number';
 
       return this.apiClient.callApi(
-        '/v1.0/auth/phone/code', 'POST',
+        '/v1.0/auth/phone/add', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Request phone number verification code
+     * Add phone number
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
-    v10AuthPhoneCodePost(authorization) {
-      return this.v10AuthPhoneCodePostWithHttpInfo(authorization)
+    v10AuthPhoneAddPost(authorization, opts) {
+      return this.v10AuthPhoneAddPostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

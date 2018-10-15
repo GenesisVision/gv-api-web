@@ -71,12 +71,6 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('lastName')) {
                 obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
             }
-            if (data.hasOwnProperty('documentType')) {
-                obj['documentType'] = ApiClient.convertToType(data['documentType'], 'String');
-            }
-            if (data.hasOwnProperty('documentNumber')) {
-                obj['documentNumber'] = ApiClient.convertToType(data['documentNumber'], 'String');
-            }
             if (data.hasOwnProperty('country')) {
                 obj['country'] = ApiClient.convertToType(data['country'], 'String');
             }
@@ -101,11 +95,20 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('about')) {
+                obj['about'] = ApiClient.convertToType(data['about'], 'String');
+            }
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('documentsConfirmed')) {
-                obj['documentsConfirmed'] = ApiClient.convertToType(data['documentsConfirmed'], 'Boolean');
+            if (data.hasOwnProperty('index')) {
+                obj['index'] = ApiClient.convertToType(data['index'], 'String');
+            }
+            if (data.hasOwnProperty('citizenship')) {
+                obj['citizenship'] = ApiClient.convertToType(data['citizenship'], 'String');
+            }
+            if (data.hasOwnProperty('verificationStatus')) {
+                obj['verificationStatus'] = ApiClient.convertToType(data['verificationStatus'], 'String');
             }
         }
         return obj;
@@ -131,14 +134,6 @@ export default class ProfileFullViewModel {
     * @member {String} lastName
     */
     lastName = undefined;
-    /**
-    * @member {String} documentType
-    */
-    documentType = undefined;
-    /**
-    * @member {String} documentNumber
-    */
-    documentNumber = undefined;
     /**
     * @member {String} country
     */
@@ -172,18 +167,62 @@ export default class ProfileFullViewModel {
     */
     avatar = undefined;
     /**
+    * @member {String} about
+    */
+    about = undefined;
+    /**
     * @member {String} userName
     */
     userName = undefined;
     /**
-    * @member {Boolean} documentsConfirmed
+    * @member {String} index
     */
-    documentsConfirmed = undefined;
+    index = undefined;
+    /**
+    * @member {String} citizenship
+    */
+    citizenship = undefined;
+    /**
+    * @member {module:model/ProfileFullViewModel.VerificationStatusEnum} verificationStatus
+    */
+    verificationStatus = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>verificationStatus</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static VerificationStatusEnum = {
+    
+        /**
+         * value: "NotVerified"
+         * @const
+         */
+        "NotVerified": "NotVerified",
+    
+        /**
+         * value: "Verified"
+         * @const
+         */
+        "Verified": "Verified",
+    
+        /**
+         * value: "UnderReview"
+         * @const
+         */
+        "UnderReview": "UnderReview",
+    
+        /**
+         * value: "Rejected"
+         * @const
+         */
+        "Rejected": "Rejected"    
+    };
 
 
 

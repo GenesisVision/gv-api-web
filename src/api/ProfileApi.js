@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
+import UpdatePersonalDetailViewModel from '../model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from '../model/UpdateProfileViewModel';
 
 /**
@@ -236,6 +237,60 @@ export default class ProfileApi {
      */
     v10ProfileHeaderGet(authorization) {
       return this.v10ProfileHeaderGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update user personal details
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfilePersonalUpdatePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/personal/update', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Update user personal details
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ProfilePersonalUpdatePost(authorization, opts) {
+      return this.v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
