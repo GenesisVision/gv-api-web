@@ -47,6 +47,7 @@ var UpdatePersonalDetailViewModel = function () {
         this.citizenship = undefined;
         this.gender = undefined;
         this.documentId = undefined;
+        this.phoneNumber = undefined;
         this.country = undefined;
         this.city = undefined;
         this.address = undefined;
@@ -88,6 +89,9 @@ var UpdatePersonalDetailViewModel = function () {
                 }
                 if (data.hasOwnProperty('documentId')) {
                     obj['documentId'] = _ApiClient2.default.convertToType(data['documentId'], 'String');
+                }
+                if (data.hasOwnProperty('phoneNumber')) {
+                    obj['phoneNumber'] = _ApiClient2.default.convertToType(data['phoneNumber'], 'String');
                 }
                 if (data.hasOwnProperty('country')) {
                     obj['country'] = _ApiClient2.default.convertToType(data['country'], 'String');
@@ -131,6 +135,10 @@ var UpdatePersonalDetailViewModel = function () {
 
         /**
         * @member {String} documentId
+        */
+
+        /**
+        * @member {String} phoneNumber
         */
 
         /**

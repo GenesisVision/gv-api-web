@@ -77,6 +77,9 @@ export default class UpdatePersonalDetailViewModel {
             if (data.hasOwnProperty('documentId')) {
                 obj['documentId'] = ApiClient.convertToType(data['documentId'], 'String');
             }
+            if (data.hasOwnProperty('phoneNumber')) {
+                obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
+            }
             if (data.hasOwnProperty('country')) {
                 obj['country'] = ApiClient.convertToType(data['country'], 'String');
             }
@@ -121,6 +124,10 @@ export default class UpdatePersonalDetailViewModel {
     * @member {String} documentId
     */
     documentId = undefined;
+    /**
+    * @member {String} phoneNumber
+    */
+    phoneNumber = undefined;
     /**
     * @member {String} country
     */

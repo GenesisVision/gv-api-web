@@ -566,28 +566,23 @@ var AuthApi = function () {
     }
 
     /**
-     * Add phone number
+     * Get phone number verification code
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
 
   }, {
-    key: 'v10AuthPhoneAddPostWithHttpInfo',
-    value: function v10AuthPhoneAddPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
+    key: 'v10AuthPhoneCodePostWithHttpInfo',
+    value: function v10AuthPhoneCodePostWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneAddPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
       }
 
       var pathParams = {};
-      var queryParams = {
-        'phoneNumber': opts['phoneNumber']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': authorization
       };
@@ -598,21 +593,19 @@ var AuthApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = 'Number';
 
-      return this.apiClient.callApi('/v1.0/auth/phone/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/auth/phone/code', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Add phone number
+     * Get phone number verification code
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
 
   }, {
-    key: 'v10AuthPhoneAddPost',
-    value: function v10AuthPhoneAddPost(authorization, opts) {
-      return this.v10AuthPhoneAddPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    key: 'v10AuthPhoneCodePost',
+    value: function v10AuthPhoneCodePost(authorization) {
+      return this.v10AuthPhoneCodePostWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -621,7 +614,7 @@ var AuthApi = function () {
      * Verify phone number
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
+     * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -638,7 +631,7 @@ var AuthApi = function () {
 
       var pathParams = {};
       var queryParams = {
-        'token': opts['token']
+        'code': opts['code']
       };
       var headerParams = {
         'Authorization': authorization
@@ -657,7 +650,7 @@ var AuthApi = function () {
      * Verify phone number
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
+     * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 

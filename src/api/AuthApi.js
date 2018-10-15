@@ -555,26 +555,22 @@ export default class AuthApi {
 
 
     /**
-     * Add phone number
+     * Get phone number verification code
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
-    v10AuthPhoneAddPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
+    v10AuthPhoneCodePostWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneAddPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
       }
 
 
       let pathParams = {
       };
       let queryParams = {
-        'phoneNumber': opts['phoneNumber']
       };
       let headerParams = {
         'Authorization': authorization
@@ -588,21 +584,19 @@ export default class AuthApi {
       let returnType = 'Number';
 
       return this.apiClient.callApi(
-        '/v1.0/auth/phone/add', 'POST',
+        '/v1.0/auth/phone/code', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Add phone number
+     * Get phone number verification code
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phoneNumber 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
-    v10AuthPhoneAddPost(authorization, opts) {
-      return this.v10AuthPhoneAddPostWithHttpInfo(authorization, opts)
+    v10AuthPhoneCodePost(authorization) {
+      return this.v10AuthPhoneCodePostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -613,7 +607,7 @@ export default class AuthApi {
      * Verify phone number
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
+     * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     v10AuthPhoneVerifyPostWithHttpInfo(authorization, opts) {
@@ -629,7 +623,7 @@ export default class AuthApi {
       let pathParams = {
       };
       let queryParams = {
-        'token': opts['token']
+        'code': opts['code']
       };
       let headerParams = {
         'Authorization': authorization
@@ -653,7 +647,7 @@ export default class AuthApi {
      * Verify phone number
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
+     * @param {String} opts.code 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     v10AuthPhoneVerifyPost(authorization, opts) {

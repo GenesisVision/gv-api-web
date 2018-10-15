@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**v10AuthPasswordForgotInvestorPost**](AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
 [**v10AuthPasswordForgotManagerPost**](AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
 [**v10AuthPasswordResetPost**](AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
-[**v10AuthPhoneAddPost**](AuthApi.md#v10AuthPhoneAddPost) | **POST** /v1.0/auth/phone/add | Add phone number
+[**v10AuthPhoneCodePost**](AuthApi.md#v10AuthPhoneCodePost) | **POST** /v1.0/auth/phone/code | Get phone number verification code
 [**v10AuthPhoneVerifyPost**](AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
 [**v10AuthResendconfirmationlinkPost**](AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
 [**v10AuthSigninInvestorPost**](AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
@@ -459,11 +459,11 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10AuthPhoneAddPost"></a>
-# **v10AuthPhoneAddPost**
-> &#39;Number&#39; v10AuthPhoneAddPost(authorization, opts)
+<a name="v10AuthPhoneCodePost"></a>
+# **v10AuthPhoneCodePost**
+> &#39;Number&#39; v10AuthPhoneCodePost(authorization)
 
-Add phone number
+Get phone number verification code
 
 ### Example
 ```javascript
@@ -473,10 +473,7 @@ let apiInstance = new CoreApiV10.AuthApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'phoneNumber': "phoneNumber_example" // String | 
-};
-apiInstance.v10AuthPhoneAddPost(authorization, opts).then((data) => {
+apiInstance.v10AuthPhoneCodePost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -489,7 +486,6 @@ apiInstance.v10AuthPhoneAddPost(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **phoneNumber** | **String**|  | [optional] 
 
 ### Return type
 
@@ -519,7 +515,7 @@ let apiInstance = new CoreApiV10.AuthApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'token': "token_example" // String | 
+  'code': "code_example" // String | 
 };
 apiInstance.v10AuthPhoneVerifyPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -534,7 +530,7 @@ apiInstance.v10AuthPhoneVerifyPost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **token** | **String**|  | [optional] 
+ **code** | **String**|  | [optional] 
 
 ### Return type
 
