@@ -223,16 +223,16 @@ var ProgramStatistic = function () {
 ProgramStatistic.StartCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
@@ -273,16 +273,16 @@ ProgramStatistic.StartCurrencyEnum = {
 ProgramStatistic.InvestedCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
