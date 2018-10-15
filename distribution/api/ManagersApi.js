@@ -231,12 +231,15 @@ var ManagersApi = function () {
      * Close existing investment program/fund
      * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: 'v10ManagersFundsByIdClosePostWithHttpInfo',
-    value: function v10ManagersFundsByIdClosePostWithHttpInfo(id, authorization) {
+    value: function v10ManagersFundsByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -252,7 +255,9 @@ var ManagersApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'twoFactorCode': opts['twoFactorCode']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -270,13 +275,15 @@ var ManagersApi = function () {
      * Close existing investment program/fund
      * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: 'v10ManagersFundsByIdClosePost',
-    value: function v10ManagersFundsByIdClosePost(id, authorization) {
-      return this.v10ManagersFundsByIdClosePostWithHttpInfo(id, authorization).then(function (response_and_data) {
+    value: function v10ManagersFundsByIdClosePost(id, authorization, opts) {
+      return this.v10ManagersFundsByIdClosePostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -563,12 +570,15 @@ var ManagersApi = function () {
      * Close existing investment program/fund
      * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: 'v10ManagersProgramsByIdClosePostWithHttpInfo',
-    value: function v10ManagersProgramsByIdClosePostWithHttpInfo(id, authorization) {
+    value: function v10ManagersProgramsByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -584,7 +594,9 @@ var ManagersApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'twoFactorCode': opts['twoFactorCode']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -602,13 +614,15 @@ var ManagersApi = function () {
      * Close existing investment program/fund
      * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: 'v10ManagersProgramsByIdClosePost',
-    value: function v10ManagersProgramsByIdClosePost(id, authorization) {
-      return this.v10ManagersProgramsByIdClosePostWithHttpInfo(id, authorization).then(function (response_and_data) {
+    value: function v10ManagersProgramsByIdClosePost(id, authorization, opts) {
+      return this.v10ManagersProgramsByIdClosePostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

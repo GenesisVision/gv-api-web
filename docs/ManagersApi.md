@@ -156,7 +156,7 @@ No authorization required
 
 <a name="v10ManagersFundsByIdClosePost"></a>
 # **v10ManagersFundsByIdClosePost**
-> v10ManagersFundsByIdClosePost(id, authorization)
+> v10ManagersFundsByIdClosePost(id, authorization, opts)
 
 Close existing investment program/fund
 
@@ -170,7 +170,10 @@ let id = "id_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagersFundsByIdClosePost(id, authorization).then(() => {
+let opts = { 
+  'twoFactorCode': "twoFactorCode_example" // String | 
+};
+apiInstance.v10ManagersFundsByIdClosePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -184,6 +187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
+ **twoFactorCode** | **String**|  | [optional] 
 
 ### Return type
 
@@ -428,7 +432,7 @@ No authorization required
 
 <a name="v10ManagersProgramsByIdClosePost"></a>
 # **v10ManagersProgramsByIdClosePost**
-> v10ManagersProgramsByIdClosePost(id, authorization)
+> v10ManagersProgramsByIdClosePost(id, authorization, opts)
 
 Close existing investment program/fund
 
@@ -442,7 +446,10 @@ let id = "id_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagersProgramsByIdClosePost(id, authorization).then(() => {
+let opts = { 
+  'twoFactorCode': "twoFactorCode_example" // String | 
+};
+apiInstance.v10ManagersProgramsByIdClosePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -456,6 +463,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
+ **twoFactorCode** | **String**|  | [optional] 
 
 ### Return type
 
