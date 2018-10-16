@@ -42,7 +42,7 @@ var PlatformAsset = function () {
 
         this.id = undefined;
         this.name = undefined;
-        this.symbol = undefined;
+        this.asset = undefined;
         this.description = undefined;
         this.icon = undefined;
     }
@@ -68,8 +68,8 @@ var PlatformAsset = function () {
                 if (data.hasOwnProperty('name')) {
                     obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('symbol')) {
-                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
+                if (data.hasOwnProperty('asset')) {
+                    obj['asset'] = _ApiClient2.default.convertToType(data['asset'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
@@ -90,7 +90,7 @@ var PlatformAsset = function () {
         */
 
         /**
-        * @member {String} symbol
+        * @member {String} asset
         */
 
         /**

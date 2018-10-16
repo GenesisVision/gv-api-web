@@ -62,8 +62,8 @@ export default class PlatformAsset {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('symbol')) {
-                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
+            if (data.hasOwnProperty('asset')) {
+                obj['asset'] = ApiClient.convertToType(data['asset'], 'String');
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -84,9 +84,9 @@ export default class PlatformAsset {
     */
     name = undefined;
     /**
-    * @member {String} symbol
+    * @member {String} asset
     */
-    symbol = undefined;
+    asset = undefined;
     /**
     * @member {String} description
     */
