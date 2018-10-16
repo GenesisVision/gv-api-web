@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="v10FundsAssetsGet"></a>
 # **v10FundsAssetsGet**
-> PlatformAssets v10FundsAssetsGet(authorization)
+> PlatformAssets v10FundsAssetsGet()
 
 Get all supported assets for funds
 
@@ -26,10 +26,7 @@ Get all supported assets for funds
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.FundsApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10FundsAssetsGet(authorization).then((data) => {
+apiInstance.v10FundsAssetsGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -38,10 +35,7 @@ apiInstance.v10FundsAssetsGet(authorization).then((data) => {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
+This endpoint does not need any parameter.
 
 ### Return type
 

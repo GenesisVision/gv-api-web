@@ -79,26 +79,18 @@ var FundsApi = function () {
 
   /**
    * Get all supported assets for funds
-   * @param {String} authorization JWT access token
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformAssets} and HTTP response
    */
 
 
   _createClass(FundsApi, [{
     key: 'v10FundsAssetsGetWithHttpInfo',
-    value: function v10FundsAssetsGetWithHttpInfo(authorization) {
+    value: function v10FundsAssetsGetWithHttpInfo() {
       var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10FundsAssetsGet");
-      }
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
@@ -111,14 +103,13 @@ var FundsApi = function () {
 
     /**
      * Get all supported assets for funds
-     * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformAssets}
      */
 
   }, {
     key: 'v10FundsAssetsGet',
-    value: function v10FundsAssetsGet(authorization) {
-      return this.v10FundsAssetsGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function v10FundsAssetsGet() {
+      return this.v10FundsAssetsGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
