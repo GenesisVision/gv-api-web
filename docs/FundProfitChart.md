@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **profitChangePercent** | **Number** |  | [optional] 
 **lastPeriodStarts** | **Date** |  | [optional] 
 **lastPeriodEnds** | **Date** |  | [optional] 
+**rate** | **Number** |  | [optional] 
 
 

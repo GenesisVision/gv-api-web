@@ -68,6 +68,7 @@ var ProgramProfitChart = function () {
         this.profitChangePercent = undefined;
         this.lastPeriodStarts = undefined;
         this.lastPeriodEnds = undefined;
+        this.rate = undefined;
     }
 
     /**
@@ -144,6 +145,9 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('lastPeriodEnds')) {
                     obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
+                }
+                if (data.hasOwnProperty('rate')) {
+                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
             }
             return obj;
@@ -227,6 +231,10 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Date} lastPeriodEnds
+        */
+
+        /**
+        * @member {Number} rate
         */
 
 

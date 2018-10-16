@@ -102,6 +102,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('lastPeriodEnds')) {
                 obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
+            if (data.hasOwnProperty('rate')) {
+                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
+            }
         }
         return obj;
     }
@@ -166,6 +169,10 @@ export default class FundProfitChart {
     * @member {Date} lastPeriodEnds
     */
     lastPeriodEnds = undefined;
+    /**
+    * @member {Number} rate
+    */
+    rate = undefined;
 
 
 

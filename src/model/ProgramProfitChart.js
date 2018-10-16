@@ -118,6 +118,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('lastPeriodEnds')) {
                 obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
+            if (data.hasOwnProperty('rate')) {
+                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
+            }
         }
         return obj;
     }
@@ -202,6 +205,10 @@ export default class ProgramProfitChart {
     * @member {Date} lastPeriodEnds
     */
     lastPeriodEnds = undefined;
+    /**
+    * @member {Number} rate
+    */
+    rate = undefined;
 
 
 
