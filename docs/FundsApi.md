@@ -5,12 +5,12 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10FundsAssetsGet**](FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+[**v10FundsByIdAssetsGet**](FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
 [**v10FundsByIdChartsBalanceGet**](FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
 [**v10FundsByIdChartsProfitGet**](FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
 [**v10FundsByIdFavoriteAddPost**](FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
 [**v10FundsByIdFavoriteRemovePost**](FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 [**v10FundsByIdGet**](FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
-[**v10FundsByIdRebalancingGet**](FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 [**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 [**v10FundsSetsGet**](FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 
@@ -40,6 +40,47 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**PlatformAssets**](PlatformAssets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdAssetsGet"></a>
+# **v10FundsByIdAssetsGet**
+> FundAssetsListInfo v10FundsByIdAssetsGet(id)
+
+Fund assets info
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+apiInstance.v10FundsByIdAssetsGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+
+### Return type
+
+[**FundAssetsListInfo**](FundAssetsListInfo.md)
 
 ### Authorization
 
@@ -273,57 +314,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FundDetailsFull**](FundDetailsFull.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10FundsByIdRebalancingGet"></a>
-# **v10FundsByIdRebalancingGet**
-> RebalancesViewModel v10FundsByIdRebalancingGet(id, opts)
-
-Rebalancing history
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.FundsApi();
-
-let id = "id_example"; // String | 
-
-let opts = { 
-  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10FundsByIdRebalancingGet(id, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **dateFrom** | **Date**|  | [optional] 
- **dateTo** | **Date**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
-
-### Return type
-
-[**RebalancesViewModel**](RebalancesViewModel.md)
 
 ### Authorization
 

@@ -34,10 +34,11 @@ import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
+import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
-import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
+import FundAssetsListInfo from './model/FundAssetsListInfo';
 import FundBalanceChart from './model/FundBalanceChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
@@ -93,8 +94,6 @@ import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
 import RatesModelRates from './model/RatesModelRates';
-import RebalancesViewModel from './model/RebalancesViewModel';
-import RebalancingModel from './model/RebalancingModel';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
@@ -298,16 +297,16 @@ export {
     ForgotPasswordViewModel,
 
     /**
+     * The FundAssetInfo model constructor.
+     * @property {module:model/FundAssetInfo}
+     */
+    FundAssetInfo,
+
+    /**
      * The FundAssetPart model constructor.
      * @property {module:model/FundAssetPart}
      */
     FundAssetPart,
-
-    /**
-     * The FundAssetPartDetails model constructor.
-     * @property {module:model/FundAssetPartDetails}
-     */
-    FundAssetPartDetails,
 
     /**
      * The FundAssetPartWithIcon model constructor.
@@ -320,6 +319,12 @@ export {
      * @property {module:model/FundAssetPercent}
      */
     FundAssetPercent,
+
+    /**
+     * The FundAssetsListInfo model constructor.
+     * @property {module:model/FundAssetsListInfo}
+     */
+    FundAssetsListInfo,
 
     /**
      * The FundBalanceChart model constructor.
@@ -650,18 +655,6 @@ export {
      * @property {module:model/RatesModelRates}
      */
     RatesModelRates,
-
-    /**
-     * The RebalancesViewModel model constructor.
-     * @property {module:model/RebalancesViewModel}
-     */
-    RebalancesViewModel,
-
-    /**
-     * The RebalancingModel model constructor.
-     * @property {module:model/RebalancingModel}
-     */
-    RebalancingModel,
 
     /**
      * The RecoveryCode model constructor.

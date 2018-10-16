@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _FundAssetsListInfo = require('../model/FundAssetsListInfo');
+
+var _FundAssetsListInfo2 = _interopRequireDefault(_FundAssetsListInfo);
+
 var _FundBalanceChart = require('../model/FundBalanceChart');
 
 var _FundBalanceChart2 = _interopRequireDefault(_FundBalanceChart);
@@ -48,10 +52,6 @@ var _PlatformAssets2 = _interopRequireDefault(_PlatformAssets);
 var _ProgramSets = require('../model/ProgramSets');
 
 var _ProgramSets2 = _interopRequireDefault(_ProgramSets);
-
-var _RebalancesViewModel = require('../model/RebalancesViewModel');
-
-var _RebalancesViewModel2 = _interopRequireDefault(_RebalancesViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -110,6 +110,51 @@ var FundsApi = function () {
     key: 'v10FundsAssetsGet',
     value: function v10FundsAssetsGet() {
       return this.v10FundsAssetsGetWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Fund assets info
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundAssetsListInfo} and HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdAssetsGetWithHttpInfo',
+    value: function v10FundsByIdAssetsGetWithHttpInfo(id) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdAssetsGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _FundAssetsListInfo2.default;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Fund assets info
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundAssetsListInfo}
+     */
+
+  }, {
+    key: 'v10FundsByIdAssetsGet',
+    value: function v10FundsByIdAssetsGet(id) {
+      return this.v10FundsByIdAssetsGetWithHttpInfo(id).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -390,67 +435,6 @@ var FundsApi = function () {
     key: 'v10FundsByIdGet',
     value: function v10FundsByIdGet(id, opts) {
       return this.v10FundsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Rebalancing history
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RebalancesViewModel} and HTTP response
-     */
-
-  }, {
-    key: 'v10FundsByIdRebalancingGetWithHttpInfo',
-    value: function v10FundsByIdRebalancingGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdRebalancingGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RebalancesViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/funds/{id}/rebalancing', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Rebalancing history
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RebalancesViewModel}
-     */
-
-  }, {
-    key: 'v10FundsByIdRebalancingGet',
-    value: function v10FundsByIdRebalancingGet(id, opts) {
-      return this.v10FundsByIdRebalancingGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -122,12 +122,12 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FileApi* | [**v10FileDocumentUploadPost**](docs/FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
 *CoreApiV10.FundsApi* | [**v10FundsAssetsGet**](docs/FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+*CoreApiV10.FundsApi* | [**v10FundsByIdAssetsGet**](docs/FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
 *CoreApiV10.FundsApi* | [**v10FundsByIdChartsBalanceGet**](docs/FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
 *CoreApiV10.FundsApi* | [**v10FundsByIdChartsProfitGet**](docs/FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteAddPost**](docs/FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteRemovePost**](docs/FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
-*CoreApiV10.FundsApi* | [**v10FundsByIdRebalancingGet**](docs/FundsApi.md#v10FundsByIdRebalancingGet) | **GET** /v1.0/funds/{id}/rebalancing | Rebalancing history
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 *CoreApiV10.FundsApi* | [**v10FundsSetsGet**](docs/FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
@@ -228,10 +228,11 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
+ - [CoreApiV10.FundAssetInfo](docs/FundAssetInfo.md)
  - [CoreApiV10.FundAssetPart](docs/FundAssetPart.md)
- - [CoreApiV10.FundAssetPartDetails](docs/FundAssetPartDetails.md)
  - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
  - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
+ - [CoreApiV10.FundAssetsListInfo](docs/FundAssetsListInfo.md)
  - [CoreApiV10.FundBalanceChart](docs/FundBalanceChart.md)
  - [CoreApiV10.FundDetails](docs/FundDetails.md)
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
@@ -287,8 +288,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RateItem](docs/RateItem.md)
  - [CoreApiV10.RatesModel](docs/RatesModel.md)
  - [CoreApiV10.RatesModelRates](docs/RatesModelRates.md)
- - [CoreApiV10.RebalancesViewModel](docs/RebalancesViewModel.md)
- - [CoreApiV10.RebalancingModel](docs/RebalancingModel.md)
  - [CoreApiV10.RecoveryCode](docs/RecoveryCode.md)
  - [CoreApiV10.RecoveryCodesViewModel](docs/RecoveryCodesViewModel.md)
  - [CoreApiV10.RegisterInvestorViewModel](docs/RegisterInvestorViewModel.md)
