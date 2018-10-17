@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **asset** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **icon** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 
 

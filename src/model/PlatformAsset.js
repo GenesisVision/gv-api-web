@@ -71,6 +71,9 @@ export default class PlatformAsset {
             if (data.hasOwnProperty('icon')) {
                 obj['icon'] = ApiClient.convertToType(data['icon'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
         }
         return obj;
     }
@@ -95,6 +98,10 @@ export default class PlatformAsset {
     * @member {String} icon
     */
     icon = undefined;
+    /**
+    * @member {String} color
+    */
+    color = undefined;
 
 
 

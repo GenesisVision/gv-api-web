@@ -45,6 +45,7 @@ var PlatformAsset = function () {
         this.asset = undefined;
         this.description = undefined;
         this.icon = undefined;
+        this.color = undefined;
     }
 
     /**
@@ -77,6 +78,9 @@ var PlatformAsset = function () {
                 if (data.hasOwnProperty('icon')) {
                     obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
                 }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                }
             }
             return obj;
         }
@@ -99,6 +103,10 @@ var PlatformAsset = function () {
 
         /**
         * @member {String} icon
+        */
+
+        /**
+        * @member {String} color
         */
 
     }]);
