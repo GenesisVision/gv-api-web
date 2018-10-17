@@ -38,6 +38,71 @@ export default class RateApi {
 
     /**
      * Get rate
+     * @param {String} exchange 
+     * @param {String} from 
+     * @param {String} to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
+     */
+    v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to) {
+      let postBody = null;
+
+      // verify the required parameter 'exchange' is set
+      if (exchange === undefined || exchange === null) {
+        throw new Error("Missing the required parameter 'exchange' when calling v10RateByExchangeByFromByToGet");
+      }
+
+      // verify the required parameter 'from' is set
+      if (from === undefined || from === null) {
+        throw new Error("Missing the required parameter 'from' when calling v10RateByExchangeByFromByToGet");
+      }
+
+      // verify the required parameter 'to' is set
+      if (to === undefined || to === null) {
+        throw new Error("Missing the required parameter 'to' when calling v10RateByExchangeByFromByToGet");
+      }
+
+
+      let pathParams = {
+        'exchange': exchange,
+        'from': from,
+        'to': to
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Number';
+
+      return this.apiClient.callApi(
+        '/v1.0/rate/{exchange}/{from}/{to}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get rate
+     * @param {String} exchange 
+     * @param {String} from 
+     * @param {String} to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
+     */
+    v10RateByExchangeByFromByToGet(exchange, from, to) {
+      return this.v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get rate
      * @param {String} from 
      * @param {String} to 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
