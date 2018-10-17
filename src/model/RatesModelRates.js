@@ -75,6 +75,18 @@ export default class RatesModelRates {
             if (data.hasOwnProperty('USDT')) {
                 obj['USDT'] = ApiClient.convertToType(data['USDT'], [RateItem]);
             }
+            if (data.hasOwnProperty('XRP')) {
+                obj['XRP'] = ApiClient.convertToType(data['XRP'], [RateItem]);
+            }
+            if (data.hasOwnProperty('BCH')) {
+                obj['BCH'] = ApiClient.convertToType(data['BCH'], [RateItem]);
+            }
+            if (data.hasOwnProperty('LTC')) {
+                obj['LTC'] = ApiClient.convertToType(data['LTC'], [RateItem]);
+            }
+            if (data.hasOwnProperty('DOGE')) {
+                obj['DOGE'] = ApiClient.convertToType(data['DOGE'], [RateItem]);
+            }
             if (data.hasOwnProperty('USD')) {
                 obj['USD'] = ApiClient.convertToType(data['USD'], [RateItem]);
             }
@@ -109,6 +121,22 @@ export default class RatesModelRates {
     * @member {Array.<module:model/RateItem>} USDT
     */
     USDT = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} XRP
+    */
+    XRP = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} BCH
+    */
+    BCH = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} LTC
+    */
+    LTC = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} DOGE
+    */
+    DOGE = undefined;
     /**
     * @member {Array.<module:model/RateItem>} USD
     */

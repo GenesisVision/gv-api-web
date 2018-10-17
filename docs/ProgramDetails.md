@@ -39,6 +39,14 @@ Name | Type | Description | Notes
 
 * `USDT` (value: `"USDT"`)
 
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)

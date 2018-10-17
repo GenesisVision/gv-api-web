@@ -50,6 +50,10 @@ var RatesModelRates = function () {
         this.BTC = undefined;
         this.ADA = undefined;
         this.USDT = undefined;
+        this.XRP = undefined;
+        this.BCH = undefined;
+        this.LTC = undefined;
+        this.DOGE = undefined;
         this.USD = undefined;
         this.EUR = undefined;
     }
@@ -87,6 +91,18 @@ var RatesModelRates = function () {
                 if (data.hasOwnProperty('USDT')) {
                     obj['USDT'] = _ApiClient2.default.convertToType(data['USDT'], [_RateItem2.default]);
                 }
+                if (data.hasOwnProperty('XRP')) {
+                    obj['XRP'] = _ApiClient2.default.convertToType(data['XRP'], [_RateItem2.default]);
+                }
+                if (data.hasOwnProperty('BCH')) {
+                    obj['BCH'] = _ApiClient2.default.convertToType(data['BCH'], [_RateItem2.default]);
+                }
+                if (data.hasOwnProperty('LTC')) {
+                    obj['LTC'] = _ApiClient2.default.convertToType(data['LTC'], [_RateItem2.default]);
+                }
+                if (data.hasOwnProperty('DOGE')) {
+                    obj['DOGE'] = _ApiClient2.default.convertToType(data['DOGE'], [_RateItem2.default]);
+                }
                 if (data.hasOwnProperty('USD')) {
                     obj['USD'] = _ApiClient2.default.convertToType(data['USD'], [_RateItem2.default]);
                 }
@@ -119,6 +135,22 @@ var RatesModelRates = function () {
 
         /**
         * @member {Array.<module:model/RateItem>} USDT
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} XRP
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} BCH
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} LTC
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} DOGE
         */
 
         /**

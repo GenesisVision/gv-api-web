@@ -247,6 +247,30 @@ export default class ProgramDetailsFull {
         "USDT": "USDT",
     
         /**
+         * value: "XRP"
+         * @const
+         */
+        "XRP": "XRP",
+    
+        /**
+         * value: "BCH"
+         * @const
+         */
+        "BCH": "BCH",
+    
+        /**
+         * value: "LTC"
+         * @const
+         */
+        "LTC": "LTC",
+    
+        /**
+         * value: "DOGE"
+         * @const
+         */
+        "DOGE": "DOGE",
+    
+        /**
          * value: "USD"
          * @const
          */
