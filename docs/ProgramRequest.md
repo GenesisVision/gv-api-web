@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
 **canCancelRequest** | **Boolean** |  | [optional] 
+**programType** | **String** |  | [optional] 
 
 
 <a name="TypeEnum"></a>
@@ -35,6 +36,17 @@ Name | Type | Description | Notes
 * `Executed` (value: `"Executed"`)
 
 * `Cancelled` (value: `"Cancelled"`)
+
+
+
+
+<a name="ProgramTypeEnum"></a>
+## Enum: ProgramTypeEnum
+
+
+* `Program` (value: `"Program"`)
+
+* `Fund` (value: `"Fund"`)
 
 
 

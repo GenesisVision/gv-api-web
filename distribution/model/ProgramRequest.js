@@ -50,6 +50,7 @@ var ProgramRequest = function () {
         this.title = undefined;
         this.color = undefined;
         this.canCancelRequest = undefined;
+        this.programType = undefined;
     }
 
     /**
@@ -97,6 +98,9 @@ var ProgramRequest = function () {
                 if (data.hasOwnProperty('canCancelRequest')) {
                     obj['canCancelRequest'] = _ApiClient2.default.convertToType(data['canCancelRequest'], 'Boolean');
                 }
+                if (data.hasOwnProperty('programType')) {
+                    obj['programType'] = _ApiClient2.default.convertToType(data['programType'], 'String');
+                }
             }
             return obj;
         }
@@ -141,6 +145,10 @@ var ProgramRequest = function () {
         * @member {Boolean} canCancelRequest
         */
 
+        /**
+        * @member {module:model/ProgramRequest.ProgramTypeEnum} programType
+        */
+
 
         /**
         * Allowed values for the <code>type</code> property.
@@ -151,6 +159,13 @@ var ProgramRequest = function () {
 
         /**
         * Allowed values for the <code>status</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>programType</code> property.
         * @enum {String}
         * @readonly
         */
@@ -193,5 +208,19 @@ ProgramRequest.StatusEnum = {
      * @const
      */
     "Cancelled": "Cancelled"
+};
+ProgramRequest.ProgramTypeEnum = {
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund"
 };
 exports.default = ProgramRequest;

@@ -86,6 +86,9 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('canCancelRequest')) {
                 obj['canCancelRequest'] = ApiClient.convertToType(data['canCancelRequest'], 'Boolean');
             }
+            if (data.hasOwnProperty('programType')) {
+                obj['programType'] = ApiClient.convertToType(data['programType'], 'String');
+            }
         }
         return obj;
     }
@@ -130,6 +133,10 @@ export default class ProgramRequest {
     * @member {Boolean} canCancelRequest
     */
     canCancelRequest = undefined;
+    /**
+    * @member {module:model/ProgramRequest.ProgramTypeEnum} programType
+    */
+    programType = undefined;
 
 
 
@@ -180,6 +187,26 @@ export default class ProgramRequest {
          * @const
          */
         "Cancelled": "Cancelled"    
+    };
+
+    /**
+    * Allowed values for the <code>programType</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static ProgramTypeEnum = {
+    
+        /**
+         * value: "Program"
+         * @const
+         */
+        "Program": "Program",
+    
+        /**
+         * value: "Fund"
+         * @const
+         */
+        "Fund": "Fund"    
     };
 
 
