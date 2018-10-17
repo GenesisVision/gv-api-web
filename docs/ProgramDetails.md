@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

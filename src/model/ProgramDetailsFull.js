@@ -101,6 +101,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -174,6 +177,10 @@ export default class ProgramDetailsFull {
     * @member {String} url
     */
     url = undefined;
+    /**
+    * @member {String} color
+    */
+    color = undefined;
     /**
     * @member {String} description
     */
