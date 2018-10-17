@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **canCancelRequest** | **Boolean** |  | [optional] 
 
 
