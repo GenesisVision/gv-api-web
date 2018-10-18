@@ -110,6 +110,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('ipfsHash')) {
+                obj['ipfsHash'] = ApiClient.convertToType(data['ipfsHash'], 'String');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -189,6 +192,10 @@ export default class ProgramDetailsFull {
     * @member {String} title
     */
     title = undefined;
+    /**
+    * @member {String} ipfsHash
+    */
+    ipfsHash = undefined;
     /**
     * @member {module:model/ProgramDetailsFull.StatusEnum} status
     */

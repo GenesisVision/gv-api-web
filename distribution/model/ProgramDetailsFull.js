@@ -69,6 +69,7 @@ var ProgramDetailsFull = function () {
         this.color = undefined;
         this.description = undefined;
         this.title = undefined;
+        this.ipfsHash = undefined;
         this.status = undefined;
         this.manager = undefined;
     }
@@ -138,6 +139,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('ipfsHash')) {
+                    obj['ipfsHash'] = _ApiClient2.default.convertToType(data['ipfsHash'], 'String');
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
@@ -216,6 +220,10 @@ var ProgramDetailsFull = function () {
 
         /**
         * @member {String} title
+        */
+
+        /**
+        * @member {String} ipfsHash
         */
 
         /**

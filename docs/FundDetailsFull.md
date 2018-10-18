@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
+**ipfsHash** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 
