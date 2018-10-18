@@ -152,7 +152,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdDetailsGet**](docs/ManagersApi.md#v10ManagersByIdDetailsGet) | **GET** /v1.0/managers/{id}/details | Manager details
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
-*CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdAssetsUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdAssetsUpdatePost) | **POST** /v1.0/managers/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdClosePost**](docs/ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
@@ -211,7 +210,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AmountWithCurrency](docs/AmountWithCurrency.md)
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
- - [CoreApiV10.AssetsPartsChangeRequest](docs/AssetsPartsChangeRequest.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
  - [CoreApiV10.Broker](docs/Broker.md)

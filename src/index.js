@@ -16,7 +16,6 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
-import AssetsPartsChangeRequest from './model/AssetsPartsChangeRequest';
 import AssetsValue from './model/AssetsValue';
 import BalanceChartElement from './model/BalanceChartElement';
 import Broker from './model/Broker';
@@ -187,12 +186,6 @@ export {
      * @property {module:model/AndroidVersion}
      */
     AndroidVersion,
-
-    /**
-     * The AssetsPartsChangeRequest model constructor.
-     * @property {module:model/AssetsPartsChangeRequest}
-     */
-    AssetsPartsChangeRequest,
 
     /**
      * The AssetsValue model constructor.
