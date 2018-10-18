@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
+**canInvest** | **Boolean** |  | [optional] 
+**canWithdraw** | **Boolean** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 

@@ -68,6 +68,12 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
+            if (data.hasOwnProperty('canInvest')) {
+                obj['canInvest'] = ApiClient.convertToType(data['canInvest'], 'Boolean');
+            }
+            if (data.hasOwnProperty('canWithdraw')) {
+                obj['canWithdraw'] = ApiClient.convertToType(data['canWithdraw'], 'Boolean');
+            }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
@@ -97,6 +103,14 @@ export default class PersonalProgramDetailsFull {
     * @member {Boolean} isOwnProgram
     */
     isOwnProgram = undefined;
+    /**
+    * @member {Boolean} canInvest
+    */
+    canInvest = undefined;
+    /**
+    * @member {Boolean} canWithdraw
+    */
+    canWithdraw = undefined;
     /**
     * @member {Number} value
     */
