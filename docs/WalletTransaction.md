@@ -42,9 +42,9 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
@@ -119,9 +119,9 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 

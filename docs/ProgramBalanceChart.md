@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 ## Enum: ProgramCurrencyEnum
 
 
-* `GVT` (value: `"GVT"`)
-
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
 
