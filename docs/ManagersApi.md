@@ -7,13 +7,14 @@ Method | HTTP request | Description
 [**v10ManagersByIdDetailsGet**](ManagersApi.md#v10ManagersByIdDetailsGet) | **GET** /v1.0/managers/{id}/details | Manager details
 [**v10ManagersByIdGet**](ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
 [**v10ManagersFundsByIdClosePost**](ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
+[**v10ManagersFundsByIdInvestByAmountPost**](ManagersApi.md#v10ManagersFundsByIdInvestByAmountPost) | **POST** /v1.0/managers/funds/{id}/invest/{amount} | Deposit
 [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersFundsByIdUpdatePost**](ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
 [**v10ManagersFundsCreatePost**](ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
 [**v10ManagersFundsInvestmentAmountGet**](ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 [**v10ManagersFundsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagersProgramsByIdClosePost**](ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program/fund
-[**v10ManagersProgramsByIdDepositByAmountPost**](ManagersApi.md#v10ManagersProgramsByIdDepositByAmountPost) | **POST** /v1.0/managers/programs/{id}/deposit/{amount} | Deposit
+[**v10ManagersProgramsByIdInvestByAmountPost**](ManagersApi.md#v10ManagersProgramsByIdInvestByAmountPost) | **POST** /v1.0/managers/programs/{id}/invest/{amount} | Deposit
 [**v10ManagersProgramsByIdPeriodClosePost**](ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersProgramsByIdUpdatePost**](ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
@@ -139,6 +140,53 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
  **twoFactorCode** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersFundsByIdInvestByAmountPost"></a>
+# **v10ManagersFundsByIdInvestByAmountPost**
+> v10ManagersFundsByIdInvestByAmountPost(id, amount, authorization)
+
+Deposit
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let amount = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersFundsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
 
 ### Return type
 
@@ -429,9 +477,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagersProgramsByIdDepositByAmountPost"></a>
-# **v10ManagersProgramsByIdDepositByAmountPost**
-> v10ManagersProgramsByIdDepositByAmountPost(id, amount, authorization)
+<a name="v10ManagersProgramsByIdInvestByAmountPost"></a>
+# **v10ManagersProgramsByIdInvestByAmountPost**
+> v10ManagersProgramsByIdInvestByAmountPost(id, amount, authorization)
 
 Deposit
 
@@ -447,7 +495,7 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagersProgramsByIdDepositByAmountPost(id, amount, authorization).then(() => {
+apiInstance.v10ManagersProgramsByIdInvestByAmountPost(id, amount, authorization).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

@@ -153,13 +153,14 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdDetailsGet**](docs/ManagersApi.md#v10ManagersByIdDetailsGet) | **GET** /v1.0/managers/{id}/details | Manager details
 *CoreApiV10.ManagersApi* | [**v10ManagersByIdGet**](docs/ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdClosePost**](docs/ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdInvestByAmountPost**](docs/ManagersApi.md#v10ManagersFundsByIdInvestByAmountPost) | **POST** /v1.0/managers/funds/{id}/invest/{amount} | Deposit
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsCreatePost**](docs/ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program/fund
-*CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdDepositByAmountPost**](docs/ManagersApi.md#v10ManagersProgramsByIdDepositByAmountPost) | **POST** /v1.0/managers/programs/{id}/deposit/{amount} | Deposit
+*CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdInvestByAmountPost**](docs/ManagersApi.md#v10ManagersProgramsByIdInvestByAmountPost) | **POST** /v1.0/managers/programs/{id}/invest/{amount} | Deposit
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdPeriodClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details

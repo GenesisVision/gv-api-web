@@ -203,6 +203,71 @@ export default class ManagersApi {
 
 
     /**
+     * Deposit
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ManagersFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/funds/{id}/invest/{amount}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Deposit
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ManagersFundsByIdInvestByAmountPost(id, amount, authorization) {
+      return this.v10ManagersFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Get investment program/fund requests
      * @param {String} id 
      * @param {Number} skip 
@@ -567,22 +632,22 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10ManagersProgramsByIdDepositByAmountPostWithHttpInfo(id, amount, authorization) {
+    v10ManagersProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
       // verify the required parameter 'amount' is set
       if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'amount' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
 
@@ -604,7 +669,7 @@ export default class ManagersApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/managers/programs/{id}/deposit/{amount}', 'POST',
+        '/v1.0/managers/programs/{id}/invest/{amount}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -617,8 +682,8 @@ export default class ManagersApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10ManagersProgramsByIdDepositByAmountPost(id, amount, authorization) {
-      return this.v10ManagersProgramsByIdDepositByAmountPostWithHttpInfo(id, amount, authorization)
+    v10ManagersProgramsByIdInvestByAmountPost(id, amount, authorization) {
+      return this.v10ManagersProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

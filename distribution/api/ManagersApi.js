@@ -226,6 +226,68 @@ var ManagersApi = function () {
     }
 
     /**
+     * Deposit
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagersFundsByIdInvestByAmountPostWithHttpInfo',
+    value: function v10ManagersFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsByIdInvestByAmountPost");
+      }
+
+      var pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/managers/funds/{id}/invest/{amount}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Deposit
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ManagersFundsByIdInvestByAmountPost',
+    value: function v10ManagersFundsByIdInvestByAmountPost(id, amount, authorization) {
+      return this.v10ManagersFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Get investment program/fund requests
      * @param {String} id 
      * @param {Number} skip 
@@ -573,23 +635,23 @@ var ManagersApi = function () {
      */
 
   }, {
-    key: 'v10ManagersProgramsByIdDepositByAmountPostWithHttpInfo',
-    value: function v10ManagersProgramsByIdDepositByAmountPostWithHttpInfo(id, amount, authorization) {
+    key: 'v10ManagersProgramsByIdInvestByAmountPostWithHttpInfo',
+    value: function v10ManagersProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
       // verify the required parameter 'amount' is set
       if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'amount' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsByIdDepositByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsByIdInvestByAmountPost");
       }
 
       var pathParams = {
@@ -607,7 +669,7 @@ var ManagersApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/v1.0/managers/programs/{id}/deposit/{amount}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/managers/programs/{id}/invest/{amount}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
@@ -619,9 +681,9 @@ var ManagersApi = function () {
      */
 
   }, {
-    key: 'v10ManagersProgramsByIdDepositByAmountPost',
-    value: function v10ManagersProgramsByIdDepositByAmountPost(id, amount, authorization) {
-      return this.v10ManagersProgramsByIdDepositByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+    key: 'v10ManagersProgramsByIdInvestByAmountPost',
+    value: function v10ManagersProgramsByIdInvestByAmountPost(id, amount, authorization) {
+      return this.v10ManagersProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
