@@ -240,6 +240,12 @@ WalletTransaction.SourceTypeEnum = {
     "ProgramRequest": "ProgramRequest",
 
     /**
+     * value: "FundRequest"
+     * @const
+     */
+    "FundRequest": "FundRequest",
+
+    /**
      * value: "WithdrawalRequest"
      * @const
      */
@@ -412,6 +418,12 @@ WalletTransaction.DestinationTypeEnum = {
      * @const
      */
     "ProgramRequest": "ProgramRequest",
+
+    /**
+     * value: "FundRequest"
+     * @const
+     */
+    "FundRequest": "FundRequest",
 
     /**
      * value: "WithdrawalRequest"

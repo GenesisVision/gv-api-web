@@ -196,6 +196,12 @@ export default class WalletTransaction {
         "ProgramRequest": "ProgramRequest",
     
         /**
+         * value: "FundRequest"
+         * @const
+         */
+        "FundRequest": "FundRequest",
+    
+        /**
          * value: "WithdrawalRequest"
          * @const
          */
@@ -386,6 +392,12 @@ export default class WalletTransaction {
          * @const
          */
         "ProgramRequest": "ProgramRequest",
+    
+        /**
+         * value: "FundRequest"
+         * @const
+         */
+        "FundRequest": "FundRequest",
     
         /**
          * value: "WithdrawalRequest"

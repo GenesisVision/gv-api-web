@@ -14,8 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import FundWithdrawInfo from '../model/FundWithdrawInfo';
 import ManagerProfile from '../model/ManagerProfile';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
+import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramRequests from '../model/ProgramRequests';
@@ -396,6 +398,136 @@ export default class ManagersApi {
      */
     v10ManagersFundsByIdUpdatePost(id, authorization, opts) {
       return this.v10ManagersFundsByIdUpdatePostWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Withdraw from fund. Percent is % of investor total money.
+     * @param {String} id 
+     * @param {Number} percent 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ManagersFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersFundsByIdWithdrawByPercentPost");
+      }
+
+      // verify the required parameter 'percent' is set
+      if (percent === undefined || percent === null) {
+        throw new Error("Missing the required parameter 'percent' when calling v10ManagersFundsByIdWithdrawByPercentPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsByIdWithdrawByPercentPost");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'percent': percent
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/funds/{id}/withdraw/{percent}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Withdraw from fund. Percent is % of investor total money.
+     * @param {String} id 
+     * @param {Number} percent 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ManagersFundsByIdWithdrawByPercentPost(id, percent, authorization) {
+      return this.v10ManagersFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Data for withdrawal from fund
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundWithdrawInfo} and HTTP response
+     */
+    v10ManagersFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersFundsByIdWithdrawInfoByCurrencyGet");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10ManagersFundsByIdWithdrawInfoByCurrencyGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersFundsByIdWithdrawInfoByCurrencyGet");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundWithdrawInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/funds/{id}/withdraw/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for withdrawal from fund
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundWithdrawInfo}
+     */
+    v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
+      return this.v10ManagersFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -883,7 +1015,7 @@ export default class ManagersApi {
 
 
     /**
-     * Withdraw
+     * Withdraw from program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -933,7 +1065,7 @@ export default class ManagersApi {
     }
 
     /**
-     * Withdraw
+     * Withdraw from program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -941,6 +1073,71 @@ export default class ManagersApi {
      */
     v10ManagersProgramsByIdWithdrawByAmountPost(id, amount, authorization) {
       return this.v10ManagersProgramsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Data for withdrawal from investment program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProgramWithdrawInfo} and HTTP response
+     */
+    v10ManagersProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagersProgramsByIdWithdrawInfoByCurrencyGet");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10ManagersProgramsByIdWithdrawInfoByCurrencyGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagersProgramsByIdWithdrawInfoByCurrencyGet");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProgramWithdrawInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/managers/programs/{id}/withdraw/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for withdrawal from investment program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerProgramWithdrawInfo}
+     */
+    v10ManagersProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
+      return this.v10ManagersProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

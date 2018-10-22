@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 
 * `ProgramRequest` (value: `"ProgramRequest"`)
 
+* `FundRequest` (value: `"FundRequest"`)
+
 * `WithdrawalRequest` (value: `"WithdrawalRequest"`)
 
 * `PaymentTransaction` (value: `"PaymentTransaction"`)
@@ -107,6 +109,8 @@ Name | Type | Description | Notes
 * `Fund` (value: `"Fund"`)
 
 * `ProgramRequest` (value: `"ProgramRequest"`)
+
+* `FundRequest` (value: `"FundRequest"`)
 
 * `WithdrawalRequest` (value: `"WithdrawalRequest"`)
 

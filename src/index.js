@@ -54,6 +54,7 @@ import ManagerNotificationSettingList from './model/ManagerNotificationSettingLi
 import ManagerOverview from './model/ManagerOverview';
 import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
+import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagersList from './model/ManagersList';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
@@ -412,6 +413,12 @@ export {
      * @property {module:model/ManagerProfileDetails}
      */
     ManagerProfileDetails,
+
+    /**
+     * The ManagerProgramWithdrawInfo model constructor.
+     * @property {module:model/ManagerProgramWithdrawInfo}
+     */
+    ManagerProgramWithdrawInfo,
 
     /**
      * The ManagersList model constructor.

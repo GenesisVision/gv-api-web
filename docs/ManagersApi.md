@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**v10ManagersFundsByIdInvestByAmountPost**](ManagersApi.md#v10ManagersFundsByIdInvestByAmountPost) | **POST** /v1.0/managers/funds/{id}/invest/{amount} | Deposit
 [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersFundsByIdUpdatePost**](ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
+[**v10ManagersFundsByIdWithdrawByPercentPost**](ManagersApi.md#v10ManagersFundsByIdWithdrawByPercentPost) | **POST** /v1.0/managers/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+[**v10ManagersFundsByIdWithdrawInfoByCurrencyGet**](ManagersApi.md#v10ManagersFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/managers/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10ManagersFundsCreatePost**](ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
 [**v10ManagersFundsInvestmentAmountGet**](ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 [**v10ManagersFundsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
@@ -18,7 +20,8 @@ Method | HTTP request | Description
 [**v10ManagersProgramsByIdPeriodClosePost**](ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersProgramsByIdUpdatePost**](ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
-[**v10ManagersProgramsByIdWithdrawByAmountPost**](ManagersApi.md#v10ManagersProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/managers/programs/{id}/withdraw/{amount} | Withdraw
+[**v10ManagersProgramsByIdWithdrawByAmountPost**](ManagersApi.md#v10ManagersProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/managers/programs/{id}/withdraw/{amount} | Withdraw from program
+[**v10ManagersProgramsByIdWithdrawInfoByCurrencyGet**](ManagersApi.md#v10ManagersProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/managers/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**v10ManagersProgramsCreatePost**](ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
 [**v10ManagersProgramsInvestmentAmountGet**](ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 [**v10ManagersProgramsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
@@ -297,6 +300,100 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersFundsByIdWithdrawByPercentPost"></a>
+# **v10ManagersFundsByIdWithdrawByPercentPost**
+> v10ManagersFundsByIdWithdrawByPercentPost(id, percent, authorization)
+
+Withdraw from fund. Percent is % of investor total money.
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let percent = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersFundsByIdWithdrawByPercentPost(id, percent, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **percent** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersFundsByIdWithdrawInfoByCurrencyGet"></a>
+# **v10ManagersFundsByIdWithdrawInfoByCurrencyGet**
+> FundWithdrawInfo v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+
+Data for withdrawal from fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**FundWithdrawInfo**](FundWithdrawInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagersFundsCreatePost"></a>
@@ -670,7 +767,7 @@ No authorization required
 # **v10ManagersProgramsByIdWithdrawByAmountPost**
 > v10ManagersProgramsByIdWithdrawByAmountPost(id, amount, authorization)
 
-Withdraw
+Withdraw from program
 
 ### Example
 ```javascript
@@ -703,6 +800,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersProgramsByIdWithdrawInfoByCurrencyGet"></a>
+# **v10ManagersProgramsByIdWithdrawInfoByCurrencyGet**
+> ManagerProgramWithdrawInfo v10ManagersProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+
+Data for withdrawal from investment program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ManagerProgramWithdrawInfo**](ManagerProgramWithdrawInfo.md)
 
 ### Authorization
 

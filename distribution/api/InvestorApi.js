@@ -285,36 +285,36 @@ var InvestorApi = function () {
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from fund. Percent is % of investor total money.
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} percent 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: 'v10InvestorFundsByIdWithdrawByAmountPostWithHttpInfo',
-    value: function v10InvestorFundsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization) {
+    key: 'v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo',
+    value: function v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
-      // verify the required parameter 'amount' is set
-      if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+      // verify the required parameter 'percent' is set
+      if (percent === undefined || percent === null) {
+        throw new Error("Missing the required parameter 'percent' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
       var pathParams = {
         'id': id,
-        'amount': amount
+        'percent': percent
       };
       var queryParams = {};
       var headerParams = {
@@ -327,21 +327,21 @@ var InvestorApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
-      return this.apiClient.callApi('/v1.0/investor/funds/{id}/withdraw/{amount}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/investor/funds/{id}/withdraw/{percent}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from fund. Percent is % of investor total money.
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} percent 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: 'v10InvestorFundsByIdWithdrawByAmountPost',
-    value: function v10InvestorFundsByIdWithdrawByAmountPost(id, amount, authorization) {
-      return this.v10InvestorFundsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+    key: 'v10InvestorFundsByIdWithdrawByPercentPost',
+    value: function v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization) {
+      return this.v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1042,7 +1042,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from investment program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -1088,7 +1088,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from investment program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token

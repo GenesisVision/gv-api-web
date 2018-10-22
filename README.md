@@ -133,7 +133,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{amount} | Withdrawal from investment program/fund
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByPercentPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
@@ -145,7 +145,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOffPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOnPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdrawal from investment program/fund
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
@@ -156,6 +156,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdInvestByAmountPost**](docs/ManagersApi.md#v10ManagersFundsByIdInvestByAmountPost) | **POST** /v1.0/managers/funds/{id}/invest/{amount} | Deposit
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdWithdrawByPercentPost**](docs/ManagersApi.md#v10ManagersFundsByIdWithdrawByPercentPost) | **POST** /v1.0/managers/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+*CoreApiV10.ManagersApi* | [**v10ManagersFundsByIdWithdrawInfoByCurrencyGet**](docs/ManagersApi.md#v10ManagersFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/managers/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsCreatePost**](docs/ManagersApi.md#v10ManagersFundsCreatePost) | **POST** /v1.0/managers/funds/create | Create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersFundsInvestmentAmountGet) | **GET** /v1.0/managers/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagersApi* | [**v10ManagersFundsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
@@ -164,7 +166,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdPeriodClosePost**](docs/ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](docs/ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdUpdatePost**](docs/ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
-*CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdWithdrawByAmountPost**](docs/ManagersApi.md#v10ManagersProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/managers/programs/{id}/withdraw/{amount} | Withdraw
+*CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdWithdrawByAmountPost**](docs/ManagersApi.md#v10ManagersProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/managers/programs/{id}/withdraw/{amount} | Withdraw from program
+*CoreApiV10.ManagersApi* | [**v10ManagersProgramsByIdWithdrawInfoByCurrencyGet**](docs/ManagersApi.md#v10ManagersProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/managers/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsCreatePost**](docs/ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsInvestmentAmountGet**](docs/ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 *CoreApiV10.ManagersApi* | [**v10ManagersProgramsRequestsByIdCancelPost**](docs/ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
@@ -249,6 +252,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagerOverview](docs/ManagerOverview.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.ManagerProfileDetails](docs/ManagerProfileDetails.md)
+ - [CoreApiV10.ManagerProgramWithdrawInfo](docs/ManagerProgramWithdrawInfo.md)
  - [CoreApiV10.ManagersList](docs/ManagersList.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)

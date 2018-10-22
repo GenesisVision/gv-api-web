@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **programId** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **value** | **Number** |  | [optional] 
+**fundWithdrawPercent** | **Number** | Used only in fund withdraw request | [optional] 
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

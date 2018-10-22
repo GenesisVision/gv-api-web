@@ -68,6 +68,9 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('fundWithdrawPercent')) {
+                obj['fundWithdrawPercent'] = ApiClient.convertToType(data['fundWithdrawPercent'], 'Number');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -109,6 +112,11 @@ export default class ProgramRequest {
     * @member {Number} value
     */
     value = undefined;
+    /**
+    * Used only in fund withdraw request
+    * @member {Number} fundWithdrawPercent
+    */
+    fundWithdrawPercent = undefined;
     /**
     * @member {module:model/ProgramRequest.TypeEnum} type
     */

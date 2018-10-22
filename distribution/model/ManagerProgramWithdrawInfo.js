@@ -26,120 +26,63 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramRequest model module.
-* @module model/ProgramRequest
+* The ManagerProgramWithdrawInfo model module.
+* @module model/ManagerProgramWithdrawInfo
 * @version v1.0
 */
-var ProgramRequest = function () {
+var ManagerProgramWithdrawInfo = function () {
     /**
-    * Constructs a new <code>ProgramRequest</code>.
-    * @alias module:model/ProgramRequest
+    * Constructs a new <code>ManagerProgramWithdrawInfo</code>.
+    * @alias module:model/ManagerProgramWithdrawInfo
     * @class
     */
 
-    function ProgramRequest() {
-        _classCallCheck(this, ProgramRequest);
+    function ManagerProgramWithdrawInfo() {
+        _classCallCheck(this, ManagerProgramWithdrawInfo);
 
-        this.id = undefined;
-        this.programId = undefined;
-        this.date = undefined;
-        this.value = undefined;
-        this.fundWithdrawPercent = undefined;
-        this.type = undefined;
-        this.status = undefined;
-        this.logo = undefined;
+        this.withheldInvestment = undefined;
         this.title = undefined;
-        this.color = undefined;
-        this.canCancelRequest = undefined;
-        this.programType = undefined;
+        this.availableToWithdraw = undefined;
+        this.periodEnds = undefined;
+        this.rate = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramRequest</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ManagerProgramWithdrawInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramRequest} obj Optional instance to populate.
-    * @return {module:model/ProgramRequest} The populated <code>ProgramRequest</code> instance.
+    * @param {module:model/ManagerProgramWithdrawInfo} obj Optional instance to populate.
+    * @return {module:model/ManagerProgramWithdrawInfo} The populated <code>ManagerProgramWithdrawInfo</code> instance.
     */
 
 
-    _createClass(ProgramRequest, null, [{
+    _createClass(ManagerProgramWithdrawInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramRequest();
+                obj = obj || new ManagerProgramWithdrawInfo();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
-                }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
-                }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
-                }
-                if (data.hasOwnProperty('fundWithdrawPercent')) {
-                    obj['fundWithdrawPercent'] = _ApiClient2.default.convertToType(data['fundWithdrawPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('withheldInvestment')) {
+                    obj['withheldInvestment'] = _ApiClient2.default.convertToType(data['withheldInvestment'], 'Number');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                if (data.hasOwnProperty('availableToWithdraw')) {
+                    obj['availableToWithdraw'] = _ApiClient2.default.convertToType(data['availableToWithdraw'], 'Number');
                 }
-                if (data.hasOwnProperty('canCancelRequest')) {
-                    obj['canCancelRequest'] = _ApiClient2.default.convertToType(data['canCancelRequest'], 'Boolean');
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
-                if (data.hasOwnProperty('programType')) {
-                    obj['programType'] = _ApiClient2.default.convertToType(data['programType'], 'String');
+                if (data.hasOwnProperty('rate')) {
+                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} id
-        */
-
-        /**
-        * @member {String} programId
-        */
-
-        /**
-        * @member {Date} date
-        */
-
-        /**
-        * @member {Number} value
-        */
-
-        /**
-        * Used only in fund withdraw request
-        * @member {Number} fundWithdrawPercent
-        */
-
-        /**
-        * @member {module:model/ProgramRequest.TypeEnum} type
-        */
-
-        /**
-        * @member {module:model/ProgramRequest.StatusEnum} status
-        */
-
-        /**
-        * @member {String} logo
+        * @member {Number} withheldInvestment
         */
 
         /**
@@ -147,89 +90,20 @@ var ProgramRequest = function () {
         */
 
         /**
-        * @member {String} color
+        * @member {Number} availableToWithdraw
         */
 
         /**
-        * @member {Boolean} canCancelRequest
+        * @member {Date} periodEnds
         */
 
         /**
-        * @member {module:model/ProgramRequest.ProgramTypeEnum} programType
-        */
-
-
-        /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-
-        /**
-        * Allowed values for the <code>status</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-
-        /**
-        * Allowed values for the <code>programType</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Number} rate
         */
 
     }]);
 
-    return ProgramRequest;
+    return ManagerProgramWithdrawInfo;
 }();
 
-ProgramRequest.TypeEnum = {
-
-    /**
-     * value: "Invest"
-     * @const
-     */
-    "Invest": "Invest",
-
-    /**
-     * value: "Withdrawal"
-     * @const
-     */
-    "Withdrawal": "Withdrawal"
-};
-ProgramRequest.StatusEnum = {
-
-    /**
-     * value: "New"
-     * @const
-     */
-    "New": "New",
-
-    /**
-     * value: "Executed"
-     * @const
-     */
-    "Executed": "Executed",
-
-    /**
-     * value: "Cancelled"
-     * @const
-     */
-    "Cancelled": "Cancelled"
-};
-ProgramRequest.ProgramTypeEnum = {
-
-    /**
-     * value: "Program"
-     * @const
-     */
-    "Program": "Program",
-
-    /**
-     * value: "Fund"
-     * @const
-     */
-    "Fund": "Fund"
-};
-exports.default = ProgramRequest;
+exports.default = ManagerProgramWithdrawInfo;

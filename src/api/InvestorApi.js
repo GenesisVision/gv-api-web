@@ -249,34 +249,34 @@ export default class InvestorApi {
 
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from fund. Percent is % of investor total money.
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} percent 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10InvestorFundsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization) {
+    v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
-      // verify the required parameter 'amount' is set
-      if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+      // verify the required parameter 'percent' is set
+      if (percent === undefined || percent === null) {
+        throw new Error("Missing the required parameter 'percent' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawByPercentPost");
       }
 
 
       let pathParams = {
         'id': id,
-        'amount': amount
+        'percent': percent
       };
       let queryParams = {
       };
@@ -292,21 +292,21 @@ export default class InvestorApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/investor/funds/{id}/withdraw/{amount}', 'POST',
+        '/v1.0/investor/funds/{id}/withdraw/{percent}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from fund. Percent is % of investor total money.
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} percent 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10InvestorFundsByIdWithdrawByAmountPost(id, amount, authorization) {
-      return this.v10InvestorFundsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization)
+    v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization) {
+      return this.v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1042,7 +1042,7 @@ export default class InvestorApi {
 
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from investment program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -1092,7 +1092,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Withdrawal from investment program/fund
+     * Withdraw from investment program
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
