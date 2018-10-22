@@ -68,6 +68,9 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -95,6 +98,10 @@ export default class DashboardPortfolioEvent {
     */
     value = undefined;
     /**
+    * @member {module:model/DashboardPortfolioEvent.CurrencyEnum} currency
+    */
+    currency = undefined;
+    /**
     * @member {module:model/DashboardPortfolioEvent.TypeEnum} type
     */
     type = undefined;
@@ -107,6 +114,86 @@ export default class DashboardPortfolioEvent {
 
 
 
+
+    /**
+    * Allowed values for the <code>currency</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static CurrencyEnum = {
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "ADA"
+         * @const
+         */
+        "ADA": "ADA",
+    
+        /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
+         * value: "XRP"
+         * @const
+         */
+        "XRP": "XRP",
+    
+        /**
+         * value: "BCH"
+         * @const
+         */
+        "BCH": "BCH",
+    
+        /**
+         * value: "LTC"
+         * @const
+         */
+        "LTC": "LTC",
+    
+        /**
+         * value: "DOGE"
+         * @const
+         */
+        "DOGE": "DOGE",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        "EUR": "EUR"    
+    };
 
     /**
     * Allowed values for the <code>type</code> property.

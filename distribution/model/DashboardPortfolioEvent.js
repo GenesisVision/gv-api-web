@@ -44,6 +44,7 @@ var DashboardPortfolioEvent = function () {
         this.date = undefined;
         this.title = undefined;
         this.value = undefined;
+        this.currency = undefined;
         this.type = undefined;
         this.logo = undefined;
     }
@@ -75,6 +76,9 @@ var DashboardPortfolioEvent = function () {
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
@@ -102,11 +106,22 @@ var DashboardPortfolioEvent = function () {
         */
 
         /**
+        * @member {module:model/DashboardPortfolioEvent.CurrencyEnum} currency
+        */
+
+        /**
         * @member {module:model/DashboardPortfolioEvent.TypeEnum} type
         */
 
         /**
         * @member {String} logo
+        */
+
+
+        /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
         */
 
 
@@ -121,6 +136,80 @@ var DashboardPortfolioEvent = function () {
     return DashboardPortfolioEvent;
 }();
 
+DashboardPortfolioEvent.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
+     * value: "XRP"
+     * @const
+     */
+    "XRP": "XRP",
+
+    /**
+     * value: "BCH"
+     * @const
+     */
+    "BCH": "BCH",
+
+    /**
+     * value: "LTC"
+     * @const
+     */
+    "LTC": "LTC",
+
+    /**
+     * value: "DOGE"
+     * @const
+     */
+    "DOGE": "DOGE",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 DashboardPortfolioEvent.TypeEnum = {
 
     /**

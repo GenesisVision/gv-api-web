@@ -7,8 +7,40 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | [optional] 
 **title** | **String** |  | [optional] 
 **value** | **Number** |  | [optional] 
+**currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+
+
+<a name="CurrencyEnum"></a>
+## Enum: CurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="TypeEnum"></a>
