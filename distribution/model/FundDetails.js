@@ -37,9 +37,9 @@ var _FundDetailsListStatistic = require('./FundDetailsListStatistic');
 
 var _FundDetailsListStatistic2 = _interopRequireDefault(_FundDetailsListStatistic);
 
-var _PersonalFundDetailsList = require('./PersonalFundDetailsList');
+var _PersonalFundDetailsFull = require('./PersonalFundDetailsFull');
 
-var _PersonalFundDetailsList2 = _interopRequireDefault(_PersonalFundDetailsList);
+var _PersonalFundDetailsFull2 = _interopRequireDefault(_PersonalFundDetailsFull);
 
 var _ProfilePublic = require('./ProfilePublic');
 
@@ -105,7 +105,7 @@ var FundDetails = function () {
                     obj['statistic'] = _FundDetailsListStatistic2.default.constructFromObject(data['statistic']);
                 }
                 if (data.hasOwnProperty('personalDetails')) {
-                    obj['personalDetails'] = _PersonalFundDetailsList2.default.constructFromObject(data['personalDetails']);
+                    obj['personalDetails'] = _PersonalFundDetailsFull2.default.constructFromObject(data['personalDetails']);
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
@@ -155,7 +155,7 @@ var FundDetails = function () {
 
         /**
         * Fields for authorized user
-        * @member {module:model/PersonalFundDetailsList} personalDetails
+        * @member {module:model/PersonalFundDetailsFull} personalDetails
         */
 
         /**

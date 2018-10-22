@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **totalAssetsCount** | **Number** |  | [optional] 
 **topFundAssets** | [**[FundAssetPercent]**](FundAssetPercent.md) |  | [optional] 
 **statistic** | [**FundDetailsListStatistic**](FundDetailsListStatistic.md) |  | [optional] 
-**personalDetails** | [**PersonalFundDetailsList**](PersonalFundDetailsList.md) | Fields for authorized user | [optional] 
+**personalDetails** | [**PersonalFundDetailsFull**](PersonalFundDetailsFull.md) | Fields for authorized user | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 

@@ -66,9 +66,7 @@ import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
-import PersonalFundDetailsList from './model/PersonalFundDetailsList';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
-import PersonalProgramDetailsList from './model/PersonalProgramDetailsList';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
@@ -488,22 +486,10 @@ export {
     PersonalFundDetailsFull,
 
     /**
-     * The PersonalFundDetailsList model constructor.
-     * @property {module:model/PersonalFundDetailsList}
-     */
-    PersonalFundDetailsList,
-
-    /**
      * The PersonalProgramDetailsFull model constructor.
      * @property {module:model/PersonalProgramDetailsFull}
      */
     PersonalProgramDetailsFull,
-
-    /**
-     * The PersonalProgramDetailsList model constructor.
-     * @property {module:model/PersonalProgramDetailsList}
-     */
-    PersonalProgramDetailsList,
 
     /**
      * The PlatformAsset model constructor.

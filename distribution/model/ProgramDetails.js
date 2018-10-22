@@ -29,9 +29,9 @@ var _DashboardProgramDetails = require('./DashboardProgramDetails');
 
 var _DashboardProgramDetails2 = _interopRequireDefault(_DashboardProgramDetails);
 
-var _PersonalProgramDetailsList = require('./PersonalProgramDetailsList');
+var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
 
-var _PersonalProgramDetailsList2 = _interopRequireDefault(_PersonalProgramDetailsList);
+var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
 
 var _ProfilePublic = require('./ProfilePublic');
 
@@ -117,7 +117,7 @@ var ProgramDetails = function () {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
                 }
                 if (data.hasOwnProperty('personalDetails')) {
-                    obj['personalDetails'] = _PersonalProgramDetailsList2.default.constructFromObject(data['personalDetails']);
+                    obj['personalDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalDetails']);
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
@@ -183,7 +183,7 @@ var ProgramDetails = function () {
 
         /**
         * Fields for authorized user
-        * @member {module:model/PersonalProgramDetailsList} personalDetails
+        * @member {module:model/PersonalProgramDetailsFull} personalDetails
         */
 
         /**

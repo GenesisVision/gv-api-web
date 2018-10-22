@@ -17,7 +17,7 @@ import ChartSimple from './ChartSimple';
 import DashboardProgramDetails from './DashboardProgramDetails';
 import FundAssetPercent from './FundAssetPercent';
 import FundDetailsListStatistic from './FundDetailsListStatistic';
-import PersonalFundDetailsList from './PersonalFundDetailsList';
+import PersonalFundDetailsFull from './PersonalFundDetailsFull';
 import ProfilePublic from './ProfilePublic';
 
 
@@ -72,7 +72,7 @@ export default class FundDetails {
                 obj['statistic'] = FundDetailsListStatistic.constructFromObject(data['statistic']);
             }
             if (data.hasOwnProperty('personalDetails')) {
-                obj['personalDetails'] = PersonalFundDetailsList.constructFromObject(data['personalDetails']);
+                obj['personalDetails'] = PersonalFundDetailsFull.constructFromObject(data['personalDetails']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -122,7 +122,7 @@ export default class FundDetails {
     statistic = undefined;
     /**
     * Fields for authorized user
-    * @member {module:model/PersonalFundDetailsList} personalDetails
+    * @member {module:model/PersonalFundDetailsFull} personalDetails
     */
     personalDetails = undefined;
     /**
