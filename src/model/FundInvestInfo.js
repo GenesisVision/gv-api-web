@@ -68,6 +68,9 @@ export default class FundInvestInfo {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('gvCommission')) {
+                obj['gvCommission'] = ApiClient.convertToType(data['gvCommission'], 'Number');
+            }
             if (data.hasOwnProperty('periodEnds')) {
                 obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
@@ -94,6 +97,10 @@ export default class FundInvestInfo {
     * @member {Number} entryFee
     */
     entryFee = undefined;
+    /**
+    * @member {Number} gvCommission
+    */
+    gvCommission = undefined;
     /**
     * @member {Date} periodEnds
     */

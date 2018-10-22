@@ -45,6 +45,7 @@ var ProgramInvestInfo = function () {
         this.availableInWallet = undefined;
         this.minInvestmentAmount = undefined;
         this.entryFee = undefined;
+        this.gvCommission = undefined;
         this.periodEnds = undefined;
         this.rate = undefined;
     }
@@ -79,6 +80,9 @@ var ProgramInvestInfo = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
+                if (data.hasOwnProperty('gvCommission')) {
+                    obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
+                }
                 if (data.hasOwnProperty('periodEnds')) {
                     obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
@@ -107,6 +111,10 @@ var ProgramInvestInfo = function () {
 
         /**
         * @member {Number} entryFee
+        */
+
+        /**
+        * @member {Number} gvCommission
         */
 
         /**
