@@ -50,6 +50,7 @@ import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import LoginViewModel from './model/LoginViewModel';
+import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
 import ManagerProfile from './model/ManagerProfile';
@@ -389,6 +390,12 @@ export {
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
+
+    /**
+     * The ManagerFundWithdrawInfo model constructor.
+     * @property {module:model/ManagerFundWithdrawInfo}
+     */
+    ManagerFundWithdrawInfo,
 
     /**
      * The ManagerNotificationSettingList model constructor.

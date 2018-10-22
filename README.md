@@ -248,6 +248,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
+ - [CoreApiV10.ManagerFundWithdrawInfo](docs/ManagerFundWithdrawInfo.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerOverview](docs/ManagerOverview.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)

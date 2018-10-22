@@ -351,7 +351,7 @@ No authorization required
 
 <a name="v10ManagersFundsByIdWithdrawInfoByCurrencyGet"></a>
 # **v10ManagersFundsByIdWithdrawInfoByCurrencyGet**
-> FundWithdrawInfo v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+> ManagerFundWithdrawInfo v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
 
 Data for withdrawal from fund
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FundWithdrawInfo**](FundWithdrawInfo.md)
+[**ManagerFundWithdrawInfo**](ManagerFundWithdrawInfo.md)
 
 ### Authorization
 

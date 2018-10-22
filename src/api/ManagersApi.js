@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import FundWithdrawInfo from '../model/FundWithdrawInfo';
+import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
 import ManagerProfile from '../model/ManagerProfile';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
@@ -474,7 +474,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundWithdrawInfo} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFundWithdrawInfo} and HTTP response
      */
     v10ManagersFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
       let postBody = null;
@@ -510,7 +510,7 @@ export default class ManagersApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundWithdrawInfo;
+      let returnType = ManagerFundWithdrawInfo;
 
       return this.apiClient.callApi(
         '/v1.0/managers/funds/{id}/withdraw/info/{currency}', 'GET',
@@ -524,7 +524,7 @@ export default class ManagersApi {
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundWithdrawInfo}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFundWithdrawInfo}
      */
     v10ManagersFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagersFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)

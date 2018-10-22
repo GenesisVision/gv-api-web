@@ -25,9 +25,9 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _FundWithdrawInfo = require('../model/FundWithdrawInfo');
+var _ManagerFundWithdrawInfo = require('../model/ManagerFundWithdrawInfo');
 
-var _FundWithdrawInfo2 = _interopRequireDefault(_FundWithdrawInfo);
+var _ManagerFundWithdrawInfo2 = _interopRequireDefault(_ManagerFundWithdrawInfo);
 
 var _ManagerProfile = require('../model/ManagerProfile');
 
@@ -491,7 +491,7 @@ var ManagersApi = function () {
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundWithdrawInfo} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFundWithdrawInfo} and HTTP response
      */
 
   }, {
@@ -527,7 +527,7 @@ var ManagersApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _FundWithdrawInfo2.default;
+      var returnType = _ManagerFundWithdrawInfo2.default;
 
       return this.apiClient.callApi('/v1.0/managers/funds/{id}/withdraw/info/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -537,7 +537,7 @@ var ManagersApi = function () {
      * @param {String} id 
      * @param {module:model/String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundWithdrawInfo}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFundWithdrawInfo}
      */
 
   }, {
