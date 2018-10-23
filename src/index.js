@@ -50,6 +50,9 @@ import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import LoginViewModel from './model/LoginViewModel';
+import ManagerDashboard from './model/ManagerDashboard';
+import ManagerDashboardFund from './model/ManagerDashboardFund';
+import ManagerDashboardProgram from './model/ManagerDashboardProgram';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
@@ -121,6 +124,7 @@ import BrokersApi from './api/BrokersApi';
 import FileApi from './api/FileApi';
 import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
+import ManagerApi from './api/ManagerApi';
 import ManagersApi from './api/ManagersApi';
 import NotificationsApi from './api/NotificationsApi';
 import PlatformApi from './api/PlatformApi';
@@ -390,6 +394,24 @@ export {
      * @property {module:model/LoginViewModel}
      */
     LoginViewModel,
+
+    /**
+     * The ManagerDashboard model constructor.
+     * @property {module:model/ManagerDashboard}
+     */
+    ManagerDashboard,
+
+    /**
+     * The ManagerDashboardFund model constructor.
+     * @property {module:model/ManagerDashboardFund}
+     */
+    ManagerDashboardFund,
+
+    /**
+     * The ManagerDashboardProgram model constructor.
+     * @property {module:model/ManagerDashboardProgram}
+     */
+    ManagerDashboardProgram,
 
     /**
      * The ManagerFundWithdrawInfo model constructor.
@@ -816,6 +838,12 @@ export {
     * @property {module:api/InvestorApi}
     */
     InvestorApi,
+
+    /**
+    * The ManagerApi service constructor.
+    * @property {module:api/ManagerApi}
+    */
+    ManagerApi,
 
     /**
     * The ManagersApi service constructor.

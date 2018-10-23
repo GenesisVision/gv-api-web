@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,108 +21,133 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
+var _ChartSimple = require('./ChartSimple');
 
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _ManagerDashboard = require('../model/ManagerDashboard');
-
-var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
+var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Manager service.
-* @module api/ManagerApi
+* The ManagerDashboardProgram model module.
+* @module model/ManagerDashboardProgram
 * @version v1.0
 */
-var ManagerApi = function () {
+var ManagerDashboardProgram = function () {
+    /**
+    * Constructs a new <code>ManagerDashboardProgram</code>.
+    * @alias module:model/ManagerDashboardProgram
+    * @class
+    */
 
-  /**
-  * Constructs a new ManagerApi. 
-  * @alias module:api/ManagerApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function ManagerApi(apiClient) {
-    _classCallCheck(this, ManagerApi);
+    function ManagerDashboardProgram() {
+        _classCallCheck(this, ManagerDashboardProgram);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Manager dashboard
-   * @param {String} authorization JWT access token
-   * @param {Object} opts Optional parameters
-   * @param {Number} opts.eventsTake 
-   * @param {Number} opts.requestsSkip 
-   * @param {Number} opts.requestsTake 
-   * @param {Date} opts.chartFrom 
-   * @param {Date} opts.chartTo 
-   * @param {Number} opts.pointsCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
-   */
-
-
-  _createClass(ManagerApi, [{
-    key: 'v10ManagerGetWithHttpInfo',
-    value: function v10ManagerGetWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerGet");
-      }
-
-      var pathParams = {};
-      var queryParams = {
-        'eventsTake': opts['eventsTake'],
-        'requestsSkip': opts['requestsSkip'],
-        'requestsTake': opts['requestsTake'],
-        'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo'],
-        'pointsCount': opts['pointsCount']
-      };
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ManagerDashboard2.default;
-
-      return this.apiClient.callApi('/v1.0/manager', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.daysLeft = undefined;
+        this.share = undefined;
+        this.investments = undefined;
+        this.investmentsCount = undefined;
+        this.withdrawals = undefined;
+        this.withdrawalsCount = undefined;
+        this.balance = undefined;
+        this.investorsCount = undefined;
+        this.profit = undefined;
+        this.chart = undefined;
     }
 
     /**
-     * Manager dashboard
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.eventsTake 
-     * @param {Number} opts.requestsSkip 
-     * @param {Number} opts.requestsTake 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
-     * @param {Number} opts.pointsCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboard}
-     */
+    * Constructs a <code>ManagerDashboardProgram</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/ManagerDashboardProgram} obj Optional instance to populate.
+    * @return {module:model/ManagerDashboardProgram} The populated <code>ManagerDashboardProgram</code> instance.
+    */
 
-  }, {
-    key: 'v10ManagerGet',
-    value: function v10ManagerGet(authorization, opts) {
-      return this.v10ManagerGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return ManagerApi;
+    _createClass(ManagerDashboardProgram, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new ManagerDashboardProgram();
+
+                if (data.hasOwnProperty('daysLeft')) {
+                    obj['daysLeft'] = _ApiClient2.default.convertToType(data['daysLeft'], 'Number');
+                }
+                if (data.hasOwnProperty('share')) {
+                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
+                }
+                if (data.hasOwnProperty('investments')) {
+                    obj['investments'] = _ApiClient2.default.convertToType(data['investments'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentsCount')) {
+                    obj['investmentsCount'] = _ApiClient2.default.convertToType(data['investmentsCount'], 'Number');
+                }
+                if (data.hasOwnProperty('withdrawals')) {
+                    obj['withdrawals'] = _ApiClient2.default.convertToType(data['withdrawals'], 'Number');
+                }
+                if (data.hasOwnProperty('withdrawalsCount')) {
+                    obj['withdrawalsCount'] = _ApiClient2.default.convertToType(data['withdrawalsCount'], 'Number');
+                }
+                if (data.hasOwnProperty('balance')) {
+                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
+                }
+                if (data.hasOwnProperty('investorsCount')) {
+                    obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('chart')) {
+                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {Number} daysLeft
+        */
+
+        /**
+        * @member {Number} share
+        */
+
+        /**
+        * @member {Number} investments
+        */
+
+        /**
+        * @member {Number} investmentsCount
+        */
+
+        /**
+        * @member {Number} withdrawals
+        */
+
+        /**
+        * @member {Number} withdrawalsCount
+        */
+
+        /**
+        * @member {Number} balance
+        */
+
+        /**
+        * @member {Number} investorsCount
+        */
+
+        /**
+        * @member {Number} profit
+        */
+
+        /**
+        * @member {Array.<module:model/ChartSimple>} chart
+        */
+
+    }]);
+
+    return ManagerDashboardProgram;
 }();
 
-exports.default = ManagerApi;
+exports.default = ManagerDashboardProgram;

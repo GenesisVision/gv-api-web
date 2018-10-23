@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import NewProgramRequest from '../model/NewProgramRequest';
+import ManagerDashboard from '../model/ManagerDashboard';
 
 /**
 * Manager service.
@@ -37,25 +37,36 @@ export default class ManagerApi {
 
 
     /**
-     * Create an investment program
+     * Manager dashboard
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/NewProgramRequest} opts.request 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {Number} opts.eventsTake 
+     * @param {Number} opts.requestsSkip 
+     * @param {Number} opts.requestsTake 
+     * @param {Date} opts.chartFrom 
+     * @param {Date} opts.chartTo 
+     * @param {Number} opts.pointsCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
      */
-    v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts) {
+    v10ManagerGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
-      let postBody = opts['request'];
+      let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsCreatePost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerGet");
       }
 
 
       let pathParams = {
       };
       let queryParams = {
+        'eventsTake': opts['eventsTake'],
+        'requestsSkip': opts['requestsSkip'],
+        'requestsTake': opts['requestsTake'],
+        'chartFrom': opts['chartFrom'],
+        'chartTo': opts['chartTo'],
+        'pointsCount': opts['pointsCount']
       };
       let headerParams = {
         'Authorization': authorization
@@ -64,26 +75,31 @@ export default class ManagerApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = ManagerDashboard;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/programs/create', 'POST',
+        '/v1.0/manager', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Create an investment program
+     * Manager dashboard
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/NewProgramRequest} opts.request 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @param {Number} opts.eventsTake 
+     * @param {Number} opts.requestsSkip 
+     * @param {Number} opts.requestsTake 
+     * @param {Date} opts.chartFrom 
+     * @param {Date} opts.chartTo 
+     * @param {Number} opts.pointsCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboard}
      */
-    v10ManagerProgramsCreatePost(authorization, opts) {
-      return this.v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts)
+    v10ManagerGet(authorization, opts) {
+      return this.v10ManagerGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -47,6 +47,7 @@ var DashboardPortfolioEvent = function () {
         this.currency = undefined;
         this.type = undefined;
         this.logo = undefined;
+        this.description = undefined;
     }
 
     /**
@@ -85,6 +86,9 @@ var DashboardPortfolioEvent = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
             }
             return obj;
         }
@@ -115,6 +119,10 @@ var DashboardPortfolioEvent = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} description
         */
 
 

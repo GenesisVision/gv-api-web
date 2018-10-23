@@ -77,6 +77,9 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
         }
         return obj;
     }
@@ -109,6 +112,10 @@ export default class DashboardPortfolioEvent {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {String} description
+    */
+    description = undefined;
 
 
 

@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10ManagerProgramsCreatePost**](ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
+[**v10ManagerGet**](ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
 
 
-<a name="v10ManagerProgramsCreatePost"></a>
-# **v10ManagerProgramsCreatePost**
-> v10ManagerProgramsCreatePost(authorization, opts)
+<a name="v10ManagerGet"></a>
+# **v10ManagerGet**
+> ManagerDashboard v10ManagerGet(authorization, opts)
 
-Create an investment program
+Manager dashboard
 
 ### Example
 ```javascript
@@ -22,10 +22,15 @@ let apiInstance = new CoreApiV10.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'request': new CoreApiV10.NewProgramRequest() // NewProgramRequest | 
+  'eventsTake': 56, // Number | 
+  'requestsSkip': 56, // Number | 
+  'requestsTake': 56, // Number | 
+  'chartFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'pointsCount': 56 // Number | 
 };
-apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10ManagerGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -37,11 +42,16 @@ apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **request** | [**NewProgramRequest**](NewProgramRequest.md)|  | [optional] 
+ **eventsTake** | **Number**|  | [optional] 
+ **requestsSkip** | **Number**|  | [optional] 
+ **requestsTake** | **Number**|  | [optional] 
+ **chartFrom** | **Date**|  | [optional] 
+ **chartTo** | **Date**|  | [optional] 
+ **pointsCount** | **Number**|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**ManagerDashboard**](ManagerDashboard.md)
 
 ### Authorization
 
@@ -49,6 +59,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 

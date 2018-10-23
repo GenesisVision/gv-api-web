@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,108 +21,97 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
+var _DashboardPortfolioEvents = require('./DashboardPortfolioEvents');
 
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+var _DashboardPortfolioEvents2 = _interopRequireDefault(_DashboardPortfolioEvents);
 
-var _ManagerDashboard = require('../model/ManagerDashboard');
+var _ManagerDashboardFund = require('./ManagerDashboardFund');
 
-var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
+var _ManagerDashboardFund2 = _interopRequireDefault(_ManagerDashboardFund);
+
+var _ManagerDashboardProgram = require('./ManagerDashboardProgram');
+
+var _ManagerDashboardProgram2 = _interopRequireDefault(_ManagerDashboardProgram);
+
+var _ProgramRequest = require('./ProgramRequest');
+
+var _ProgramRequest2 = _interopRequireDefault(_ProgramRequest);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Manager service.
-* @module api/ManagerApi
+* The ManagerDashboard model module.
+* @module model/ManagerDashboard
 * @version v1.0
 */
-var ManagerApi = function () {
+var ManagerDashboard = function () {
+    /**
+    * Constructs a new <code>ManagerDashboard</code>.
+    * @alias module:model/ManagerDashboard
+    * @class
+    */
 
-  /**
-  * Constructs a new ManagerApi. 
-  * @alias module:api/ManagerApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function ManagerApi(apiClient) {
-    _classCallCheck(this, ManagerApi);
+    function ManagerDashboard() {
+        _classCallCheck(this, ManagerDashboard);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Manager dashboard
-   * @param {String} authorization JWT access token
-   * @param {Object} opts Optional parameters
-   * @param {Number} opts.eventsTake 
-   * @param {Number} opts.requestsSkip 
-   * @param {Number} opts.requestsTake 
-   * @param {Date} opts.chartFrom 
-   * @param {Date} opts.chartTo 
-   * @param {Number} opts.pointsCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
-   */
-
-
-  _createClass(ManagerApi, [{
-    key: 'v10ManagerGetWithHttpInfo',
-    value: function v10ManagerGetWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerGet");
-      }
-
-      var pathParams = {};
-      var queryParams = {
-        'eventsTake': opts['eventsTake'],
-        'requestsSkip': opts['requestsSkip'],
-        'requestsTake': opts['requestsTake'],
-        'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo'],
-        'pointsCount': opts['pointsCount']
-      };
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ManagerDashboard2.default;
-
-      return this.apiClient.callApi('/v1.0/manager', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.programs = undefined;
+        this.funds = undefined;
+        this.requests = undefined;
+        this.events = undefined;
     }
 
     /**
-     * Manager dashboard
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.eventsTake 
-     * @param {Number} opts.requestsSkip 
-     * @param {Number} opts.requestsTake 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
-     * @param {Number} opts.pointsCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboard}
-     */
+    * Constructs a <code>ManagerDashboard</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/ManagerDashboard} obj Optional instance to populate.
+    * @return {module:model/ManagerDashboard} The populated <code>ManagerDashboard</code> instance.
+    */
 
-  }, {
-    key: 'v10ManagerGet',
-    value: function v10ManagerGet(authorization, opts) {
-      return this.v10ManagerGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
 
-  return ManagerApi;
+    _createClass(ManagerDashboard, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new ManagerDashboard();
+
+                if (data.hasOwnProperty('programs')) {
+                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], [_ManagerDashboardProgram2.default]);
+                }
+                if (data.hasOwnProperty('funds')) {
+                    obj['funds'] = _ApiClient2.default.convertToType(data['funds'], [_ManagerDashboardFund2.default]);
+                }
+                if (data.hasOwnProperty('requests')) {
+                    obj['requests'] = _ProgramRequest2.default.constructFromObject(data['requests']);
+                }
+                if (data.hasOwnProperty('events')) {
+                    obj['events'] = _DashboardPortfolioEvents2.default.constructFromObject(data['events']);
+                }
+            }
+            return obj;
+        }
+
+        /**
+        * @member {Array.<module:model/ManagerDashboardProgram>} programs
+        */
+
+        /**
+        * @member {Array.<module:model/ManagerDashboardFund>} funds
+        */
+
+        /**
+        * @member {module:model/ProgramRequest} requests
+        */
+
+        /**
+        * @member {module:model/DashboardPortfolioEvents} events
+        */
+
+    }]);
+
+    return ManagerDashboard;
 }();
 
-exports.default = ManagerApi;
+exports.default = ManagerDashboard;

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
