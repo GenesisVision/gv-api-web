@@ -46,7 +46,7 @@ var NewFundRequest = function () {
 
         this.exitFee = undefined;
         this.managementFee = undefined;
-        this.assetsParts = undefined;
+        this.assets = undefined;
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
@@ -74,8 +74,8 @@ var NewFundRequest = function () {
                 if (data.hasOwnProperty('managementFee')) {
                     obj['managementFee'] = _ApiClient2.default.convertToType(data['managementFee'], 'Number');
                 }
-                if (data.hasOwnProperty('assetsParts')) {
-                    obj['assetsParts'] = _ApiClient2.default.convertToType(data['assetsParts'], [_FundAssetPart2.default]);
+                if (data.hasOwnProperty('assets')) {
+                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], [_FundAssetPart2.default]);
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
@@ -102,7 +102,7 @@ var NewFundRequest = function () {
         */
 
         /**
-        * @member {Array.<module:model/FundAssetPart>} assetsParts
+        * @member {Array.<module:model/FundAssetPart>} assets
         */
 
         /**

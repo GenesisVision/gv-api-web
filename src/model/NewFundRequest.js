@@ -63,8 +63,8 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('managementFee')) {
                 obj['managementFee'] = ApiClient.convertToType(data['managementFee'], 'Number');
             }
-            if (data.hasOwnProperty('assetsParts')) {
-                obj['assetsParts'] = ApiClient.convertToType(data['assetsParts'], [FundAssetPart]);
+            if (data.hasOwnProperty('assets')) {
+                obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPart]);
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -91,9 +91,9 @@ export default class NewFundRequest {
     */
     managementFee = undefined;
     /**
-    * @member {Array.<module:model/FundAssetPart>} assetsParts
+    * @member {Array.<module:model/FundAssetPart>} assets
     */
-    assetsParts = undefined;
+    assets = undefined;
     /**
     * @member {String} title
     */
