@@ -21,17 +21,25 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _DashboardPortfolioEvents = require('./DashboardPortfolioEvents');
+var _AssetSelection = require('./AssetSelection');
 
-var _DashboardPortfolioEvents2 = _interopRequireDefault(_DashboardPortfolioEvents);
+var _AssetSelection2 = _interopRequireDefault(_AssetSelection);
 
-var _ManagerDashboardFund = require('./ManagerDashboardFund');
+var _FundProfitChart = require('./FundProfitChart');
 
-var _ManagerDashboardFund2 = _interopRequireDefault(_ManagerDashboardFund);
+var _FundProfitChart2 = _interopRequireDefault(_FundProfitChart);
 
-var _ManagerDashboardProgram = require('./ManagerDashboardProgram');
+var _ManagerPortfolioEvents = require('./ManagerPortfolioEvents');
 
-var _ManagerDashboardProgram2 = _interopRequireDefault(_ManagerDashboardProgram);
+var _ManagerPortfolioEvents2 = _interopRequireDefault(_ManagerPortfolioEvents);
+
+var _ManagerProfileDetails = require('./ManagerProfileDetails');
+
+var _ManagerProfileDetails2 = _interopRequireDefault(_ManagerProfileDetails);
+
+var _ProgramProfitChart = require('./ProgramProfitChart');
+
+var _ProgramProfitChart2 = _interopRequireDefault(_ProgramProfitChart);
 
 var _ProgramRequest = require('./ProgramRequest');
 
@@ -56,10 +64,12 @@ var ManagerDashboard = function () {
     function ManagerDashboard() {
         _classCallCheck(this, ManagerDashboard);
 
-        this.programs = undefined;
-        this.funds = undefined;
+        this.profile = undefined;
         this.requests = undefined;
         this.events = undefined;
+        this.allAssets = undefined;
+        this.programChart = undefined;
+        this.fundChart = undefined;
     }
 
     /**
@@ -77,28 +87,30 @@ var ManagerDashboard = function () {
             if (data) {
                 obj = obj || new ManagerDashboard();
 
-                if (data.hasOwnProperty('programs')) {
-                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], [_ManagerDashboardProgram2.default]);
-                }
-                if (data.hasOwnProperty('funds')) {
-                    obj['funds'] = _ApiClient2.default.convertToType(data['funds'], [_ManagerDashboardFund2.default]);
+                if (data.hasOwnProperty('profile')) {
+                    obj['profile'] = _ManagerProfileDetails2.default.constructFromObject(data['profile']);
                 }
                 if (data.hasOwnProperty('requests')) {
                     obj['requests'] = _ProgramRequest2.default.constructFromObject(data['requests']);
                 }
                 if (data.hasOwnProperty('events')) {
-                    obj['events'] = _DashboardPortfolioEvents2.default.constructFromObject(data['events']);
+                    obj['events'] = _ManagerPortfolioEvents2.default.constructFromObject(data['events']);
+                }
+                if (data.hasOwnProperty('allAssets')) {
+                    obj['allAssets'] = _ApiClient2.default.convertToType(data['allAssets'], [_AssetSelection2.default]);
+                }
+                if (data.hasOwnProperty('programChart')) {
+                    obj['programChart'] = _ProgramProfitChart2.default.constructFromObject(data['programChart']);
+                }
+                if (data.hasOwnProperty('fundChart')) {
+                    obj['fundChart'] = _FundProfitChart2.default.constructFromObject(data['fundChart']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Array.<module:model/ManagerDashboardProgram>} programs
-        */
-
-        /**
-        * @member {Array.<module:model/ManagerDashboardFund>} funds
+        * @member {module:model/ManagerProfileDetails} profile
         */
 
         /**
@@ -106,7 +118,20 @@ var ManagerDashboard = function () {
         */
 
         /**
-        * @member {module:model/DashboardPortfolioEvents} events
+        * @member {module:model/ManagerPortfolioEvents} events
+        */
+
+        /**
+        * @member {Array.<module:model/AssetSelection>} allAssets
+        */
+
+        /**
+        * One of the charts will be null
+        * @member {module:model/ProgramProfitChart} programChart
+        */
+
+        /**
+        * @member {module:model/FundProfitChart} fundChart
         */
 
     }]);

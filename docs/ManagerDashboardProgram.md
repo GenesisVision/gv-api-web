@@ -3,7 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**daysLeft** | **Number** |  | [optional] 
+**level** | **Number** |  | [optional] 
+**periodStarts** | **Date** |  | [optional] 
+**periodEnds** | **Date** |  | [optional] 
+**id** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **share** | **Number** |  | [optional] 
 **investments** | **Number** |  | [optional] 
 **investmentsCount** | **Number** |  | [optional] 

@@ -29,6 +29,18 @@ var _ManagerDashboard = require('../model/ManagerDashboard');
 
 var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
 
+var _ManagerFunds = require('../model/ManagerFunds');
+
+var _ManagerFunds2 = _interopRequireDefault(_ManagerFunds);
+
+var _ManagerPortfolioEvents = require('../model/ManagerPortfolioEvents');
+
+var _ManagerPortfolioEvents2 = _interopRequireDefault(_ManagerPortfolioEvents);
+
+var _ManagerPrograms = require('../model/ManagerPrograms');
+
+var _ManagerPrograms2 = _interopRequireDefault(_ManagerPrograms);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -54,20 +66,148 @@ var ManagerApi = function () {
   }
 
   /**
-   * Manager dashboard
+   * Manager events
    * @param {String} authorization JWT access token
    * @param {Object} opts Optional parameters
-   * @param {Number} opts.eventsTake 
-   * @param {Number} opts.requestsSkip 
-   * @param {Number} opts.requestsTake 
-   * @param {Date} opts.chartFrom 
-   * @param {Date} opts.chartTo 
-   * @param {Number} opts.pointsCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
+   * @param {String} opts.assetId 
+   * @param {Date} opts.from 
+   * @param {Date} opts.to 
+   * @param {module:model/String} opts.type 
+   * @param {module:model/String} opts.assetType 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPortfolioEvents} and HTTP response
    */
 
 
   _createClass(ManagerApi, [{
+    key: 'v10ManagerEventsGetWithHttpInfo',
+    value: function v10ManagerEventsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerEventsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'AssetId': opts['assetId'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'Type': opts['type'],
+        'AssetType': opts['assetType']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerPortfolioEvents2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/events', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Manager events
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.assetId 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPortfolioEvents}
+     */
+
+  }, {
+    key: 'v10ManagerEventsGet',
+    value: function v10ManagerEventsGet(authorization, opts) {
+      return this.v10ManagerEventsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Manager funds
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFunds} and HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerFundsGetWithHttpInfo',
+    value: function v10ManagerFundsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerFundsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'PointsCount': opts['pointsCount'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerFunds2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/funds', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Manager funds
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFunds}
+     */
+
+  }, {
+    key: 'v10ManagerFundsGet',
+    value: function v10ManagerFundsGet(authorization, opts) {
+      return this.v10ManagerFundsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Manager dashboard
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.eventsTake 
+     * @param {Number} opts.requestsSkip 
+     * @param {Number} opts.requestsTake 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
+     */
+
+  }, {
     key: 'v10ManagerGetWithHttpInfo',
     value: function v10ManagerGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -82,10 +222,7 @@ var ManagerApi = function () {
       var queryParams = {
         'eventsTake': opts['eventsTake'],
         'requestsSkip': opts['requestsSkip'],
-        'requestsTake': opts['requestsTake'],
-        'chartFrom': opts['chartFrom'],
-        'chartTo': opts['chartTo'],
-        'pointsCount': opts['pointsCount']
+        'requestsTake': opts['requestsTake']
       };
       var headerParams = {
         'Authorization': authorization
@@ -107,9 +244,6 @@ var ManagerApi = function () {
      * @param {Number} opts.eventsTake 
      * @param {Number} opts.requestsSkip 
      * @param {Number} opts.requestsTake 
-     * @param {Date} opts.chartFrom 
-     * @param {Date} opts.chartTo 
-     * @param {Number} opts.pointsCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboard}
      */
 
@@ -117,6 +251,73 @@ var ManagerApi = function () {
     key: 'v10ManagerGet',
     value: function v10ManagerGet(authorization, opts) {
       return this.v10ManagerGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Manager programs
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPrograms} and HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerProgramsGetWithHttpInfo',
+    value: function v10ManagerProgramsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'PointsCount': opts['pointsCount'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerPrograms2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Manager programs
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPrograms}
+     */
+
+  }, {
+    key: 'v10ManagerProgramsGet',
+    value: function v10ManagerProgramsGet(authorization, opts) {
+      return this.v10ManagerProgramsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

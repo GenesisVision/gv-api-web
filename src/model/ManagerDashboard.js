@@ -13,9 +13,11 @@
 
 
 import ApiClient from '../ApiClient';
-import DashboardPortfolioEvents from './DashboardPortfolioEvents';
-import ManagerDashboardFund from './ManagerDashboardFund';
-import ManagerDashboardProgram from './ManagerDashboardProgram';
+import AssetSelection from './AssetSelection';
+import FundProfitChart from './FundProfitChart';
+import ManagerPortfolioEvents from './ManagerPortfolioEvents';
+import ManagerProfileDetails from './ManagerProfileDetails';
+import ProgramProfitChart from './ProgramProfitChart';
 import ProgramRequest from './ProgramRequest';
 
 
@@ -60,38 +62,53 @@ export default class ManagerDashboard {
             
             
 
-            if (data.hasOwnProperty('programs')) {
-                obj['programs'] = ApiClient.convertToType(data['programs'], [ManagerDashboardProgram]);
-            }
-            if (data.hasOwnProperty('funds')) {
-                obj['funds'] = ApiClient.convertToType(data['funds'], [ManagerDashboardFund]);
+            if (data.hasOwnProperty('profile')) {
+                obj['profile'] = ManagerProfileDetails.constructFromObject(data['profile']);
             }
             if (data.hasOwnProperty('requests')) {
                 obj['requests'] = ProgramRequest.constructFromObject(data['requests']);
             }
             if (data.hasOwnProperty('events')) {
-                obj['events'] = DashboardPortfolioEvents.constructFromObject(data['events']);
+                obj['events'] = ManagerPortfolioEvents.constructFromObject(data['events']);
+            }
+            if (data.hasOwnProperty('allAssets')) {
+                obj['allAssets'] = ApiClient.convertToType(data['allAssets'], [AssetSelection]);
+            }
+            if (data.hasOwnProperty('programChart')) {
+                obj['programChart'] = ProgramProfitChart.constructFromObject(data['programChart']);
+            }
+            if (data.hasOwnProperty('fundChart')) {
+                obj['fundChart'] = FundProfitChart.constructFromObject(data['fundChart']);
             }
         }
         return obj;
     }
 
     /**
-    * @member {Array.<module:model/ManagerDashboardProgram>} programs
+    * @member {module:model/ManagerProfileDetails} profile
     */
-    programs = undefined;
-    /**
-    * @member {Array.<module:model/ManagerDashboardFund>} funds
-    */
-    funds = undefined;
+    profile = undefined;
     /**
     * @member {module:model/ProgramRequest} requests
     */
     requests = undefined;
     /**
-    * @member {module:model/DashboardPortfolioEvents} events
+    * @member {module:model/ManagerPortfolioEvents} events
     */
     events = undefined;
+    /**
+    * @member {Array.<module:model/AssetSelection>} allAssets
+    */
+    allAssets = undefined;
+    /**
+    * One of the charts will be null
+    * @member {module:model/ProgramProfitChart} programChart
+    */
+    programChart = undefined;
+    /**
+    * @member {module:model/FundProfitChart} fundChart
+    */
+    fundChart = undefined;
 
 
 

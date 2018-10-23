@@ -21,136 +21,64 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartSimple = require('./ChartSimple');
-
-var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ManagerDashboardProgram model module.
-* @module model/ManagerDashboardProgram
+* The AssetSelection model module.
+* @module model/AssetSelection
 * @version v1.0
 */
-var ManagerDashboardProgram = function () {
+var AssetSelection = function () {
     /**
-    * Constructs a new <code>ManagerDashboardProgram</code>.
-    * @alias module:model/ManagerDashboardProgram
+    * Constructs a new <code>AssetSelection</code>.
+    * @alias module:model/AssetSelection
     * @class
     */
 
-    function ManagerDashboardProgram() {
-        _classCallCheck(this, ManagerDashboardProgram);
+    function AssetSelection() {
+        _classCallCheck(this, AssetSelection);
 
-        this.level = undefined;
-        this.periodStarts = undefined;
-        this.periodEnds = undefined;
         this.id = undefined;
-        this.logo = undefined;
-        this.url = undefined;
         this.title = undefined;
-        this.share = undefined;
-        this.investments = undefined;
-        this.investmentsCount = undefined;
-        this.withdrawals = undefined;
-        this.withdrawalsCount = undefined;
-        this.balance = undefined;
-        this.investorsCount = undefined;
-        this.profit = undefined;
-        this.chart = undefined;
+        this.logo = undefined;
+        this.type = undefined;
     }
 
     /**
-    * Constructs a <code>ManagerDashboardProgram</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AssetSelection</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ManagerDashboardProgram} obj Optional instance to populate.
-    * @return {module:model/ManagerDashboardProgram} The populated <code>ManagerDashboardProgram</code> instance.
+    * @param {module:model/AssetSelection} obj Optional instance to populate.
+    * @return {module:model/AssetSelection} The populated <code>AssetSelection</code> instance.
     */
 
 
-    _createClass(ManagerDashboardProgram, null, [{
+    _createClass(AssetSelection, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ManagerDashboardProgram();
+                obj = obj || new AssetSelection();
 
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
-                }
-                if (data.hasOwnProperty('periodStarts')) {
-                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
-                }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
-                }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('share')) {
-                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('investments')) {
-                    obj['investments'] = _ApiClient2.default.convertToType(data['investments'], 'Number');
-                }
-                if (data.hasOwnProperty('investmentsCount')) {
-                    obj['investmentsCount'] = _ApiClient2.default.convertToType(data['investmentsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('withdrawals')) {
-                    obj['withdrawals'] = _ApiClient2.default.convertToType(data['withdrawals'], 'Number');
-                }
-                if (data.hasOwnProperty('withdrawalsCount')) {
-                    obj['withdrawalsCount'] = _ApiClient2.default.convertToType(data['withdrawalsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('balance')) {
-                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
-                }
-                if (data.hasOwnProperty('investorsCount')) {
-                    obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('profit')) {
-                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
-                }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} level
-        */
-
-        /**
-        * @member {Date} periodStarts
-        */
-
-        /**
-        * @member {Date} periodEnds
-        */
-
-        /**
         * @member {String} id
-        */
-
-        /**
-        * @member {String} logo
-        */
-
-        /**
-        * @member {String} url
         */
 
         /**
@@ -158,44 +86,37 @@ var ManagerDashboardProgram = function () {
         */
 
         /**
-        * @member {Number} share
+        * @member {String} logo
         */
 
         /**
-        * @member {Number} investments
+        * @member {module:model/AssetSelection.TypeEnum} type
         */
 
-        /**
-        * @member {Number} investmentsCount
-        */
 
         /**
-        * @member {Number} withdrawals
-        */
-
-        /**
-        * @member {Number} withdrawalsCount
-        */
-
-        /**
-        * @member {Number} balance
-        */
-
-        /**
-        * @member {Number} investorsCount
-        */
-
-        /**
-        * @member {Number} profit
-        */
-
-        /**
-        * @member {Array.<module:model/ChartSimple>} chart
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return ManagerDashboardProgram;
+    return AssetSelection;
 }();
 
-exports.default = ManagerDashboardProgram;
+AssetSelection.TypeEnum = {
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund"
+};
+exports.default = AssetSelection;

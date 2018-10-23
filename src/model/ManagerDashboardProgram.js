@@ -57,8 +57,26 @@ export default class ManagerDashboardProgram {
             
             
 
-            if (data.hasOwnProperty('daysLeft')) {
-                obj['daysLeft'] = ApiClient.convertToType(data['daysLeft'], 'Number');
+            if (data.hasOwnProperty('level')) {
+                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
+            }
+            if (data.hasOwnProperty('periodStarts')) {
+                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('share')) {
                 obj['share'] = ApiClient.convertToType(data['share'], 'Number');
@@ -92,9 +110,33 @@ export default class ManagerDashboardProgram {
     }
 
     /**
-    * @member {Number} daysLeft
+    * @member {Number} level
     */
-    daysLeft = undefined;
+    level = undefined;
+    /**
+    * @member {Date} periodStarts
+    */
+    periodStarts = undefined;
+    /**
+    * @member {Date} periodEnds
+    */
+    periodEnds = undefined;
+    /**
+    * @member {String} id
+    */
+    id = undefined;
+    /**
+    * @member {String} logo
+    */
+    logo = undefined;
+    /**
+    * @member {String} url
+    */
+    url = undefined;
+    /**
+    * @member {String} title
+    */
+    title = undefined;
     /**
     * @member {Number} share
     */

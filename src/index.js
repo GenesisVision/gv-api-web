@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
+import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
 import BalanceChartElement from './model/BalanceChartElement';
 import BlockchainInfo from './model/BlockchainInfo';
@@ -52,14 +53,17 @@ import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerDashboard from './model/ManagerDashboard';
-import ManagerDashboardFund from './model/ManagerDashboardFund';
 import ManagerDashboardProgram from './model/ManagerDashboardProgram';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
+import ManagerFunds from './model/ManagerFunds';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
+import ManagerPortfolioEvent from './model/ManagerPortfolioEvent';
+import ManagerPortfolioEvents from './model/ManagerPortfolioEvents';
 import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
+import ManagerPrograms from './model/ManagerPrograms';
 import ManagersList from './model/ManagersList';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
@@ -193,6 +197,12 @@ export {
      * @property {module:model/AndroidVersion}
      */
     AndroidVersion,
+
+    /**
+     * The AssetSelection model constructor.
+     * @property {module:model/AssetSelection}
+     */
+    AssetSelection,
 
     /**
      * The AssetsValue model constructor.
@@ -411,12 +421,6 @@ export {
     ManagerDashboard,
 
     /**
-     * The ManagerDashboardFund model constructor.
-     * @property {module:model/ManagerDashboardFund}
-     */
-    ManagerDashboardFund,
-
-    /**
      * The ManagerDashboardProgram model constructor.
      * @property {module:model/ManagerDashboardProgram}
      */
@@ -429,6 +433,12 @@ export {
     ManagerFundWithdrawInfo,
 
     /**
+     * The ManagerFunds model constructor.
+     * @property {module:model/ManagerFunds}
+     */
+    ManagerFunds,
+
+    /**
      * The ManagerNotificationSettingList model constructor.
      * @property {module:model/ManagerNotificationSettingList}
      */
@@ -439,6 +449,18 @@ export {
      * @property {module:model/ManagerOverview}
      */
     ManagerOverview,
+
+    /**
+     * The ManagerPortfolioEvent model constructor.
+     * @property {module:model/ManagerPortfolioEvent}
+     */
+    ManagerPortfolioEvent,
+
+    /**
+     * The ManagerPortfolioEvents model constructor.
+     * @property {module:model/ManagerPortfolioEvents}
+     */
+    ManagerPortfolioEvents,
 
     /**
      * The ManagerProfile model constructor.
@@ -457,6 +479,12 @@ export {
      * @property {module:model/ManagerProgramWithdrawInfo}
      */
     ManagerProgramWithdrawInfo,
+
+    /**
+     * The ManagerPrograms model constructor.
+     * @property {module:model/ManagerPrograms}
+     */
+    ManagerPrograms,
 
     /**
      * The ManagersList model constructor.
