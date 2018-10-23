@@ -13,6 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
+import BlockchainInfo from './BlockchainInfo';
+import ProgramInfo from './ProgramInfo';
+import WithdrawalInfo from './WithdrawalInfo';
 
 
 
@@ -80,8 +83,14 @@ export default class WalletTransaction {
             if (data.hasOwnProperty('sourceCurrency')) {
                 obj['sourceCurrency'] = ApiClient.convertToType(data['sourceCurrency'], 'String');
             }
-            if (data.hasOwnProperty('sourceTitle')) {
-                obj['sourceTitle'] = ApiClient.convertToType(data['sourceTitle'], 'String');
+            if (data.hasOwnProperty('sourceProgramInfo')) {
+                obj['sourceProgramInfo'] = ProgramInfo.constructFromObject(data['sourceProgramInfo']);
+            }
+            if (data.hasOwnProperty('sourceBlockchainInfo')) {
+                obj['sourceBlockchainInfo'] = BlockchainInfo.constructFromObject(data['sourceBlockchainInfo']);
+            }
+            if (data.hasOwnProperty('sourceWithdrawalInfo')) {
+                obj['sourceWithdrawalInfo'] = WithdrawalInfo.constructFromObject(data['sourceWithdrawalInfo']);
             }
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
@@ -95,8 +104,14 @@ export default class WalletTransaction {
             if (data.hasOwnProperty('destinationCurrency')) {
                 obj['destinationCurrency'] = ApiClient.convertToType(data['destinationCurrency'], 'String');
             }
-            if (data.hasOwnProperty('destinationTitle')) {
-                obj['destinationTitle'] = ApiClient.convertToType(data['destinationTitle'], 'String');
+            if (data.hasOwnProperty('destinationProgramInfo')) {
+                obj['destinationProgramInfo'] = ProgramInfo.constructFromObject(data['destinationProgramInfo']);
+            }
+            if (data.hasOwnProperty('destinationBlockchainInfo')) {
+                obj['destinationBlockchainInfo'] = BlockchainInfo.constructFromObject(data['destinationBlockchainInfo']);
+            }
+            if (data.hasOwnProperty('destinationWithdrawalInfo')) {
+                obj['destinationWithdrawalInfo'] = WithdrawalInfo.constructFromObject(data['destinationWithdrawalInfo']);
             }
         }
         return obj;
@@ -135,9 +150,17 @@ export default class WalletTransaction {
     */
     sourceCurrency = undefined;
     /**
-    * @member {String} sourceTitle
+    * @member {module:model/ProgramInfo} sourceProgramInfo
     */
-    sourceTitle = undefined;
+    sourceProgramInfo = undefined;
+    /**
+    * @member {module:model/BlockchainInfo} sourceBlockchainInfo
+    */
+    sourceBlockchainInfo = undefined;
+    /**
+    * @member {module:model/WithdrawalInfo} sourceWithdrawalInfo
+    */
+    sourceWithdrawalInfo = undefined;
     /**
     * @member {module:model/WalletTransaction.ActionEnum} action
     */
@@ -155,9 +178,17 @@ export default class WalletTransaction {
     */
     destinationCurrency = undefined;
     /**
-    * @member {String} destinationTitle
+    * @member {module:model/ProgramInfo} destinationProgramInfo
     */
-    destinationTitle = undefined;
+    destinationProgramInfo = undefined;
+    /**
+    * @member {module:model/BlockchainInfo} destinationBlockchainInfo
+    */
+    destinationBlockchainInfo = undefined;
+    /**
+    * @member {module:model/WithdrawalInfo} destinationWithdrawalInfo
+    */
+    destinationWithdrawalInfo = undefined;
 
 
 

@@ -217,6 +217,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
+ - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)
  - [CoreApiV10.Broker](docs/Broker.md)
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
@@ -282,6 +283,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
+ - [CoreApiV10.ProgramInfo](docs/ProgramInfo.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramProfitChart](docs/ProgramProfitChart.md)
@@ -317,6 +319,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.WalletTransactionsViewModel](docs/WalletTransactionsViewModel.md)
  - [CoreApiV10.WalletWithdrawalInfo](docs/WalletWithdrawalInfo.md)
  - [CoreApiV10.WalletsInfo](docs/WalletsInfo.md)
+ - [CoreApiV10.WithdrawalInfo](docs/WithdrawalInfo.md)
  - [CoreApiV10.WithdrawalSummary](docs/WithdrawalSummary.md)
 
 

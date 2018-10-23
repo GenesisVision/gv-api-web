@@ -11,12 +11,16 @@ Name | Type | Description | Notes
 **sourceId** | **String** |  | [optional] 
 **sourceType** | **String** |  | [optional] 
 **sourceCurrency** | **String** |  | [optional] 
-**sourceTitle** | **String** |  | [optional] 
+**sourceProgramInfo** | [**ProgramInfo**](ProgramInfo.md) |  | [optional] 
+**sourceBlockchainInfo** | [**BlockchainInfo**](BlockchainInfo.md) |  | [optional] 
+**sourceWithdrawalInfo** | [**WithdrawalInfo**](WithdrawalInfo.md) |  | [optional] 
 **action** | **String** |  | [optional] 
 **destinationId** | **String** |  | [optional] 
 **destinationType** | **String** |  | [optional] 
 **destinationCurrency** | **String** |  | [optional] 
-**destinationTitle** | **String** |  | [optional] 
+**destinationProgramInfo** | [**ProgramInfo**](ProgramInfo.md) |  | [optional] 
+**destinationBlockchainInfo** | [**BlockchainInfo**](BlockchainInfo.md) |  | [optional] 
+**destinationWithdrawalInfo** | [**WithdrawalInfo**](WithdrawalInfo.md) |  | [optional] 
 
 
 <a name="SourceTypeEnum"></a>

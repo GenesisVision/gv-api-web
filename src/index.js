@@ -18,6 +18,7 @@ import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetsValue from './model/AssetsValue';
 import BalanceChartElement from './model/BalanceChartElement';
+import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
@@ -83,6 +84,7 @@ import ProgramBalanceChartElement from './model/ProgramBalanceChartElement';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
+import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramProfitChart from './model/ProgramProfitChart';
@@ -118,6 +120,7 @@ import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WalletWithdrawalInfo from './model/WalletWithdrawalInfo';
 import WalletsInfo from './model/WalletsInfo';
+import WithdrawalInfo from './model/WithdrawalInfo';
 import WithdrawalSummary from './model/WithdrawalSummary';
 import AuthApi from './api/AuthApi';
 import BrokersApi from './api/BrokersApi';
@@ -202,6 +205,12 @@ export {
      * @property {module:model/BalanceChartElement}
      */
     BalanceChartElement,
+
+    /**
+     * The BlockchainInfo model constructor.
+     * @property {module:model/BlockchainInfo}
+     */
+    BlockchainInfo,
 
     /**
      * The Broker model constructor.
@@ -594,6 +603,12 @@ export {
     ProgramDetailsListStatistic,
 
     /**
+     * The ProgramInfo model constructor.
+     * @property {module:model/ProgramInfo}
+     */
+    ProgramInfo,
+
+    /**
      * The ProgramInvestInfo model constructor.
      * @property {module:model/ProgramInvestInfo}
      */
@@ -802,6 +817,12 @@ export {
      * @property {module:model/WalletsInfo}
      */
     WalletsInfo,
+
+    /**
+     * The WithdrawalInfo model constructor.
+     * @property {module:model/WithdrawalInfo}
+     */
+    WithdrawalInfo,
 
     /**
      * The WithdrawalSummary model constructor.

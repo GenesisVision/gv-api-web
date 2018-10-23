@@ -21,6 +21,18 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _BlockchainInfo = require('./BlockchainInfo');
+
+var _BlockchainInfo2 = _interopRequireDefault(_BlockchainInfo);
+
+var _ProgramInfo = require('./ProgramInfo');
+
+var _ProgramInfo2 = _interopRequireDefault(_ProgramInfo);
+
+var _WithdrawalInfo = require('./WithdrawalInfo');
+
+var _WithdrawalInfo2 = _interopRequireDefault(_WithdrawalInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,12 +60,16 @@ var WalletTransaction = function () {
         this.sourceId = undefined;
         this.sourceType = undefined;
         this.sourceCurrency = undefined;
-        this.sourceTitle = undefined;
+        this.sourceProgramInfo = undefined;
+        this.sourceBlockchainInfo = undefined;
+        this.sourceWithdrawalInfo = undefined;
         this.action = undefined;
         this.destinationId = undefined;
         this.destinationType = undefined;
         this.destinationCurrency = undefined;
-        this.destinationTitle = undefined;
+        this.destinationProgramInfo = undefined;
+        this.destinationBlockchainInfo = undefined;
+        this.destinationWithdrawalInfo = undefined;
     }
 
     /**
@@ -95,8 +111,14 @@ var WalletTransaction = function () {
                 if (data.hasOwnProperty('sourceCurrency')) {
                     obj['sourceCurrency'] = _ApiClient2.default.convertToType(data['sourceCurrency'], 'String');
                 }
-                if (data.hasOwnProperty('sourceTitle')) {
-                    obj['sourceTitle'] = _ApiClient2.default.convertToType(data['sourceTitle'], 'String');
+                if (data.hasOwnProperty('sourceProgramInfo')) {
+                    obj['sourceProgramInfo'] = _ProgramInfo2.default.constructFromObject(data['sourceProgramInfo']);
+                }
+                if (data.hasOwnProperty('sourceBlockchainInfo')) {
+                    obj['sourceBlockchainInfo'] = _BlockchainInfo2.default.constructFromObject(data['sourceBlockchainInfo']);
+                }
+                if (data.hasOwnProperty('sourceWithdrawalInfo')) {
+                    obj['sourceWithdrawalInfo'] = _WithdrawalInfo2.default.constructFromObject(data['sourceWithdrawalInfo']);
                 }
                 if (data.hasOwnProperty('action')) {
                     obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
@@ -110,8 +132,14 @@ var WalletTransaction = function () {
                 if (data.hasOwnProperty('destinationCurrency')) {
                     obj['destinationCurrency'] = _ApiClient2.default.convertToType(data['destinationCurrency'], 'String');
                 }
-                if (data.hasOwnProperty('destinationTitle')) {
-                    obj['destinationTitle'] = _ApiClient2.default.convertToType(data['destinationTitle'], 'String');
+                if (data.hasOwnProperty('destinationProgramInfo')) {
+                    obj['destinationProgramInfo'] = _ProgramInfo2.default.constructFromObject(data['destinationProgramInfo']);
+                }
+                if (data.hasOwnProperty('destinationBlockchainInfo')) {
+                    obj['destinationBlockchainInfo'] = _BlockchainInfo2.default.constructFromObject(data['destinationBlockchainInfo']);
+                }
+                if (data.hasOwnProperty('destinationWithdrawalInfo')) {
+                    obj['destinationWithdrawalInfo'] = _WithdrawalInfo2.default.constructFromObject(data['destinationWithdrawalInfo']);
                 }
             }
             return obj;
@@ -150,7 +178,15 @@ var WalletTransaction = function () {
         */
 
         /**
-        * @member {String} sourceTitle
+        * @member {module:model/ProgramInfo} sourceProgramInfo
+        */
+
+        /**
+        * @member {module:model/BlockchainInfo} sourceBlockchainInfo
+        */
+
+        /**
+        * @member {module:model/WithdrawalInfo} sourceWithdrawalInfo
         */
 
         /**
@@ -170,7 +206,15 @@ var WalletTransaction = function () {
         */
 
         /**
-        * @member {String} destinationTitle
+        * @member {module:model/ProgramInfo} destinationProgramInfo
+        */
+
+        /**
+        * @member {module:model/BlockchainInfo} destinationBlockchainInfo
+        */
+
+        /**
+        * @member {module:model/WithdrawalInfo} destinationWithdrawalInfo
         */
 
 
