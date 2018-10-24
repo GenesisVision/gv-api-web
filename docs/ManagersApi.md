@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**v10ManagersByIdGet**](ManagersApi.md#v10ManagersByIdGet) | **GET** /v1.0/managers/{id} | Manager profile
 [**v10ManagersFundsByIdClosePost**](ManagersApi.md#v10ManagersFundsByIdClosePost) | **POST** /v1.0/managers/funds/{id}/close | Close existing investment program/fund
 [**v10ManagersFundsByIdInvestByAmountPost**](ManagersApi.md#v10ManagersFundsByIdInvestByAmountPost) | **POST** /v1.0/managers/funds/{id}/invest/{amount} | Deposit
+[**v10ManagersFundsByIdInvestInfoByCurrencyGet**](ManagersApi.md#v10ManagersFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/managers/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**v10ManagersFundsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersFundsByIdUpdatePost**](ManagersApi.md#v10ManagersFundsByIdUpdatePost) | **POST** /v1.0/managers/funds/{id}/update | Update investment program/fund details
 [**v10ManagersFundsByIdWithdrawByPercentPost**](ManagersApi.md#v10ManagersFundsByIdWithdrawByPercentPost) | **POST** /v1.0/managers/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
@@ -17,6 +18,7 @@ Method | HTTP request | Description
 [**v10ManagersFundsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersFundsRequestsByIdCancelPost) | **POST** /v1.0/managers/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagersProgramsByIdClosePost**](ManagersApi.md#v10ManagersProgramsByIdClosePost) | **POST** /v1.0/managers/programs/{id}/close | Close existing investment program/fund
 [**v10ManagersProgramsByIdInvestByAmountPost**](ManagersApi.md#v10ManagersProgramsByIdInvestByAmountPost) | **POST** /v1.0/managers/programs/{id}/invest/{amount} | Deposit
+[**v10ManagersProgramsByIdInvestInfoByCurrencyGet**](ManagersApi.md#v10ManagersProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/managers/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**v10ManagersProgramsByIdPeriodClosePost**](ManagersApi.md#v10ManagersProgramsByIdPeriodClosePost) | **POST** /v1.0/managers/programs/{id}/period/close | Close current period
 [**v10ManagersProgramsByIdRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/managers/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagersProgramsByIdUpdatePost**](ManagersApi.md#v10ManagersProgramsByIdUpdatePost) | **POST** /v1.0/managers/programs/{id}/update | Update investment program/fund details
@@ -25,6 +27,7 @@ Method | HTTP request | Description
 [**v10ManagersProgramsCreatePost**](ManagersApi.md#v10ManagersProgramsCreatePost) | **POST** /v1.0/managers/programs/create | Create an investment program
 [**v10ManagersProgramsInvestmentAmountGet**](ManagersApi.md#v10ManagersProgramsInvestmentAmountGet) | **GET** /v1.0/managers/programs/investment/amount | Get GVT investment to create program
 [**v10ManagersProgramsRequestsByIdCancelPost**](ManagersApi.md#v10ManagersProgramsRequestsByIdCancelPost) | **POST** /v1.0/managers/programs/requests/{id}/cancel | Cancel investment program/fund request
+[**v10ManagersRequestsBySkipByTakeGet**](ManagersApi.md#v10ManagersRequestsBySkipByTakeGet) | **GET** /v1.0/managers/requests/{skip}/{take} | Get all requests
 
 
 <a name="v10ManagersByIdDetailsGet"></a>
@@ -194,6 +197,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersFundsByIdInvestInfoByCurrencyGet"></a>
+# **v10ManagersFundsByIdInvestInfoByCurrencyGet**
+> FundInvestInfo v10ManagersFundsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+
+Data for investing into the fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**FundInvestInfo**](FundInvestInfo.md)
 
 ### Authorization
 
@@ -621,6 +671,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
+<a name="v10ManagersProgramsByIdInvestInfoByCurrencyGet"></a>
+# **v10ManagersProgramsByIdInvestInfoByCurrencyGet**
+> ProgramInvestInfo v10ManagersProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+
+Data for investing into the program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramInvestInfo**](ProgramInvestInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
 <a name="v10ManagersProgramsByIdPeriodClosePost"></a>
 # **v10ManagersProgramsByIdPeriodClosePost**
 > v10ManagersProgramsByIdPeriodClosePost(id, authorization)
@@ -977,6 +1074,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagersRequestsBySkipByTakeGet"></a>
+# **v10ManagersRequestsBySkipByTakeGet**
+> ProgramRequests v10ManagersRequestsBySkipByTakeGet(skip, take, authorization)
+
+Get all requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagersApi();
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagersRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequests**](ProgramRequests.md)
 
 ### Authorization
 
