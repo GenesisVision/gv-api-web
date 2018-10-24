@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **isOwnProgram** | **Boolean** |  | [optional] 
 **canInvest** | **Boolean** |  | [optional] 
 **canWithdraw** | **Boolean** |  | [optional] 
+**hasNotifications** | **Boolean** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 

@@ -52,6 +52,7 @@ var ProgramStatistic = function () {
         this.profitValue = undefined;
         this.drawdownPercent = undefined;
         this.investorsCount = undefined;
+        this.hasNotifications = undefined;
         this.startDate = undefined;
         this.startBalance = undefined;
         this.startCurrency = undefined;
@@ -101,6 +102,9 @@ var ProgramStatistic = function () {
                 }
                 if (data.hasOwnProperty('investorsCount')) {
                     obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
+                }
+                if (data.hasOwnProperty('hasNotifications')) {
+                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
                 }
                 if (data.hasOwnProperty('startDate')) {
                     obj['startDate'] = _ApiClient2.default.convertToType(data['startDate'], 'Date');
@@ -163,6 +167,10 @@ var ProgramStatistic = function () {
 
         /**
         * @member {Number} investorsCount
+        */
+
+        /**
+        * @member {Boolean} hasNotifications
         */
 
         /**

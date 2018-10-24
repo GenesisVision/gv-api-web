@@ -45,6 +45,7 @@ var PersonalFundDetailsFull = function () {
         this.isOwnProgram = undefined;
         this.canInvest = undefined;
         this.canWithdraw = undefined;
+        this.hasNotifications = undefined;
         this.value = undefined;
         this.profit = undefined;
         this.invested = undefined;
@@ -81,6 +82,9 @@ var PersonalFundDetailsFull = function () {
                 if (data.hasOwnProperty('canWithdraw')) {
                     obj['canWithdraw'] = _ApiClient2.default.convertToType(data['canWithdraw'], 'Boolean');
                 }
+                if (data.hasOwnProperty('hasNotifications')) {
+                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
+                }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
@@ -115,6 +119,10 @@ var PersonalFundDetailsFull = function () {
 
         /**
         * @member {Boolean} canWithdraw
+        */
+
+        /**
+        * @member {Boolean} hasNotifications
         */
 
         /**

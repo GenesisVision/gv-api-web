@@ -74,6 +74,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('canWithdraw')) {
                 obj['canWithdraw'] = ApiClient.convertToType(data['canWithdraw'], 'Boolean');
             }
+            if (data.hasOwnProperty('hasNotifications')) {
+                obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
+            }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
@@ -114,6 +117,10 @@ export default class PersonalProgramDetailsFull {
     * @member {Boolean} canWithdraw
     */
     canWithdraw = undefined;
+    /**
+    * @member {Boolean} hasNotifications
+    */
+    hasNotifications = undefined;
     /**
     * @member {Number} value
     */

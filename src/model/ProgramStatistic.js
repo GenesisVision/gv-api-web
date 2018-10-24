@@ -81,6 +81,9 @@ export default class ProgramStatistic {
             if (data.hasOwnProperty('investorsCount')) {
                 obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'Number');
             }
+            if (data.hasOwnProperty('hasNotifications')) {
+                obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
+            }
             if (data.hasOwnProperty('startDate')) {
                 obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
             }
@@ -144,6 +147,10 @@ export default class ProgramStatistic {
     * @member {Number} investorsCount
     */
     investorsCount = undefined;
+    /**
+    * @member {Boolean} hasNotifications
+    */
+    hasNotifications = undefined;
     /**
     * @member {Date} startDate
     */

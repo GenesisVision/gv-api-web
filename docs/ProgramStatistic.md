@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **profitValue** | **Number** |  | [optional] 
 **drawdownPercent** | **Number** |  | [optional] 
 **investorsCount** | **Number** |  | [optional] 
+**hasNotifications** | **Boolean** |  | [optional] 
 **startDate** | **Date** |  | [optional] 
 **startBalance** | **Number** |  | [optional] 
 **startCurrency** | **String** |  | [optional] 
