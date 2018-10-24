@@ -761,7 +761,8 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFunds} and HTTP response
@@ -783,7 +784,8 @@ var ManagerApi = function () {
         'Sorting': opts['sorting'],
         'From': opts['from'],
         'To': opts['to'],
-        'PointsCount': opts['pointsCount'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -807,7 +809,8 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFunds}
@@ -1527,7 +1530,8 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPrograms} and HTTP response
@@ -1549,7 +1553,8 @@ var ManagerApi = function () {
         'Sorting': opts['sorting'],
         'From': opts['from'],
         'To': opts['to'],
-        'PointsCount': opts['pointsCount'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1573,7 +1578,8 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {Date} opts.from 
      * @param {Date} opts.to 
-     * @param {Number} opts.pointsCount 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPrograms}

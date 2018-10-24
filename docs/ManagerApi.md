@@ -570,7 +570,8 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'pointsCount': 56, // Number | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -590,7 +591,8 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
- **pointsCount** | **Number**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -1182,7 +1184,8 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'pointsCount': 56, // Number | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -1202,7 +1205,8 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
- **pointsCount** | **Number**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
