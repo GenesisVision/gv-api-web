@@ -132,7 +132,6 @@ import FileApi from './api/FileApi';
 import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
 import ManagerApi from './api/ManagerApi';
-import ManagersApi from './api/ManagersApi';
 import NotificationsApi from './api/NotificationsApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
@@ -893,12 +892,6 @@ export {
     * @property {module:api/ManagerApi}
     */
     ManagerApi,
-
-    /**
-    * The ManagersApi service constructor.
-    * @property {module:api/ManagersApi}
-    */
-    ManagersApi,
 
     /**
     * The NotificationsApi service constructor.
