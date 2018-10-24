@@ -554,7 +554,7 @@ No authorization required
 
 <a name="v10ManagerFundsGet"></a>
 # **v10ManagerFundsGet**
-> ManagerFunds v10ManagerFundsGet(authorization, opts)
+> FundsList v10ManagerFundsGet(authorization, opts)
 
 Manager funds
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerFunds**](ManagerFunds.md)
+[**FundsList**](FundsList.md)
 
 ### Authorization
 
@@ -1168,7 +1168,7 @@ No authorization required
 
 <a name="v10ManagerProgramsGet"></a>
 # **v10ManagerProgramsGet**
-> ManagerPrograms v10ManagerProgramsGet(authorization, opts)
+> ProgramsList v10ManagerProgramsGet(authorization, opts)
 
 Manager programs
 
@@ -1212,7 +1212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerPrograms**](ManagerPrograms.md)
+[**ProgramsList**](ProgramsList.md)
 
 ### Authorization
 

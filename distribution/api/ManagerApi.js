@@ -29,6 +29,10 @@ var _FundInvestInfo = require('../model/FundInvestInfo');
 
 var _FundInvestInfo2 = _interopRequireDefault(_FundInvestInfo);
 
+var _FundsList = require('../model/FundsList');
+
+var _FundsList2 = _interopRequireDefault(_FundsList);
+
 var _ManagerDashboard = require('../model/ManagerDashboard');
 
 var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
@@ -36,10 +40,6 @@ var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
 var _ManagerFundWithdrawInfo = require('../model/ManagerFundWithdrawInfo');
 
 var _ManagerFundWithdrawInfo2 = _interopRequireDefault(_ManagerFundWithdrawInfo);
-
-var _ManagerFunds = require('../model/ManagerFunds');
-
-var _ManagerFunds2 = _interopRequireDefault(_ManagerFunds);
 
 var _ManagerPortfolioEvents = require('../model/ManagerPortfolioEvents');
 
@@ -56,10 +56,6 @@ var _ManagerProfileDetails2 = _interopRequireDefault(_ManagerProfileDetails);
 var _ManagerProgramWithdrawInfo = require('../model/ManagerProgramWithdrawInfo');
 
 var _ManagerProgramWithdrawInfo2 = _interopRequireDefault(_ManagerProgramWithdrawInfo);
-
-var _ManagerPrograms = require('../model/ManagerPrograms');
-
-var _ManagerPrograms2 = _interopRequireDefault(_ManagerPrograms);
 
 var _NewFundRequest = require('../model/NewFundRequest');
 
@@ -80,6 +76,10 @@ var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
 var _ProgramUpdate = require('../model/ProgramUpdate');
 
 var _ProgramUpdate2 = _interopRequireDefault(_ProgramUpdate);
+
+var _ProgramsList = require('../model/ProgramsList');
+
+var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -765,7 +765,7 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFunds} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
      */
 
   }, {
@@ -797,7 +797,7 @@ var ManagerApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ManagerFunds2.default;
+      var returnType = _FundsList2.default;
 
       return this.apiClient.callApi('/v1.0/manager/funds', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -813,7 +813,7 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFunds}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}
      */
 
   }, {
@@ -1534,7 +1534,7 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPrograms} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
 
   }, {
@@ -1566,7 +1566,7 @@ var ManagerApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ManagerPrograms2.default;
+      var returnType = _ProgramsList2.default;
 
       return this.apiClient.callApi('/v1.0/manager/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -1582,7 +1582,7 @@ var ManagerApi = function () {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPrograms}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
 
   }, {

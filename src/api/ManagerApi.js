@@ -15,19 +15,19 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundInvestInfo from '../model/FundInvestInfo';
+import FundsList from '../model/FundsList';
 import ManagerDashboard from '../model/ManagerDashboard';
 import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
-import ManagerFunds from '../model/ManagerFunds';
 import ManagerPortfolioEvents from '../model/ManagerPortfolioEvents';
 import ManagerProfile from '../model/ManagerProfile';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
-import ManagerPrograms from '../model/ManagerPrograms';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramInvestInfo from '../model/ProgramInvestInfo';
 import ProgramRequests from '../model/ProgramRequests';
 import ProgramUpdate from '../model/ProgramUpdate';
+import ProgramsList from '../model/ProgramsList';
 
 /**
 * Manager service.
@@ -743,7 +743,7 @@ export default class ManagerApi {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerFunds} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
      */
     v10ManagerFundsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -775,7 +775,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerFunds;
+      let returnType = FundsList;
 
       return this.apiClient.callApi(
         '/v1.0/manager/funds', 'GET',
@@ -795,7 +795,7 @@ export default class ManagerApi {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerFunds}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}
      */
     v10ManagerFundsGet(authorization, opts) {
       return this.v10ManagerFundsGetWithHttpInfo(authorization, opts)
@@ -1552,7 +1552,7 @@ export default class ManagerApi {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPrograms} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
     v10ManagerProgramsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -1584,7 +1584,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerPrograms;
+      let returnType = ProgramsList;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs', 'GET',
@@ -1604,7 +1604,7 @@ export default class ManagerApi {
      * @param {module:model/String} opts.currencySecondary 
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPrograms}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
     v10ManagerProgramsGet(authorization, opts) {
       return this.v10ManagerProgramsGetWithHttpInfo(authorization, opts)
