@@ -80,6 +80,7 @@ import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformInfo from './model/PlatformInfo';
+import PlatformStatistic from './model/PlatformStatistic';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
@@ -580,6 +581,12 @@ export {
      * @property {module:model/PlatformInfo}
      */
     PlatformInfo,
+
+    /**
+     * The PlatformStatistic model constructor.
+     * @property {module:model/PlatformStatistic}
+     */
+    PlatformStatistic,
 
     /**
      * The ProfileFullViewModel model constructor.
