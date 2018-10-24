@@ -231,6 +231,12 @@ export default class ManagerPortfolioEvent {
     static TypeEnum = {
     
         /**
+         * value: "All"
+         * @const
+         */
+        "All": "All",
+    
+        /**
          * value: "AssetStarted"
          * @const
          */

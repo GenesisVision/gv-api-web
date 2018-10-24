@@ -156,6 +156,8 @@ export default class ManagerApi {
      * @param {Date} opts.to 
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.assetType 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerPortfolioEvents} and HTTP response
      */
     v10ManagerEventsGetWithHttpInfo(authorization, opts) {
@@ -175,7 +177,9 @@ export default class ManagerApi {
         'From': opts['from'],
         'To': opts['to'],
         'Type': opts['type'],
-        'AssetType': opts['assetType']
+        'AssetType': opts['assetType'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       let headerParams = {
         'Authorization': authorization
@@ -204,6 +208,8 @@ export default class ManagerApi {
      * @param {Date} opts.to 
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.assetType 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerPortfolioEvents}
      */
     v10ManagerEventsGet(authorization, opts) {

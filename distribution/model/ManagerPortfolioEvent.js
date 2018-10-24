@@ -252,6 +252,12 @@ ManagerPortfolioEvent.CurrencyEnum = {
 ManagerPortfolioEvent.TypeEnum = {
 
     /**
+     * value: "All"
+     * @const
+     */
+    "All": "All",
+
+    /**
      * value: "AssetStarted"
      * @const
      */

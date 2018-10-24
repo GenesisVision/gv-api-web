@@ -135,7 +135,9 @@ let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'type': "type_example", // String | 
-  'assetType': "assetType_example" // String | 
+  'assetType': "assetType_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
 };
 apiInstance.v10ManagerEventsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -155,6 +157,8 @@ Name | Type | Description  | Notes
  **to** | **Date**|  | [optional] 
  **type** | **String**|  | [optional] 
  **assetType** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 

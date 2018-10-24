@@ -51,6 +51,8 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
+* `All` (value: `"All"`)
+
 * `AssetStarted` (value: `"AssetStarted"`)
 
 * `ProgramPeriodStats` (value: `"ProgramPeriodStats"`)
