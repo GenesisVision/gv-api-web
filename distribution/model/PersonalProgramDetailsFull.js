@@ -48,6 +48,7 @@ var PersonalProgramDetailsFull = function () {
         this.canWithdraw = undefined;
         this.value = undefined;
         this.profit = undefined;
+        this.invested = undefined;
         this.status = undefined;
     }
 
@@ -90,6 +91,9 @@ var PersonalProgramDetailsFull = function () {
                 if (data.hasOwnProperty('profit')) {
                     obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
+                if (data.hasOwnProperty('invested')) {
+                    obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
+                }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
@@ -127,6 +131,10 @@ var PersonalProgramDetailsFull = function () {
 
         /**
         * @member {Number} profit
+        */
+
+        /**
+        * @member {Number} invested
         */
 
         /**

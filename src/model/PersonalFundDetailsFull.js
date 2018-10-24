@@ -77,6 +77,9 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('profit')) {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
+            if (data.hasOwnProperty('invested')) {
+                obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -112,6 +115,10 @@ export default class PersonalFundDetailsFull {
     * @member {Number} profit
     */
     profit = undefined;
+    /**
+    * @member {Number} invested
+    */
+    invested = undefined;
     /**
     * @member {module:model/PersonalFundDetailsFull.StatusEnum} status
     */

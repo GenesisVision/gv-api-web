@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **canWithdraw** | **Boolean** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
+**invested** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 
 
