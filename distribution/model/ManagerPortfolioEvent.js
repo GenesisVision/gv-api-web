@@ -51,6 +51,7 @@ var ManagerPortfolioEvent = function () {
         this.programType = undefined;
         this.logo = undefined;
         this.description = undefined;
+        this.periodNumber = undefined;
     }
 
     /**
@@ -101,6 +102,9 @@ var ManagerPortfolioEvent = function () {
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
+                if (data.hasOwnProperty('periodNumber')) {
+                    obj['periodNumber'] = _ApiClient2.default.convertToType(data['periodNumber'], 'Number');
+                }
             }
             return obj;
         }
@@ -147,6 +151,10 @@ var ManagerPortfolioEvent = function () {
 
         /**
         * @member {String} description
+        */
+
+        /**
+        * @member {Number} periodNumber
         */
 
 

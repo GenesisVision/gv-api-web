@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **programType** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**periodNumber** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

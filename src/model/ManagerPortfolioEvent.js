@@ -89,6 +89,9 @@ export default class ManagerPortfolioEvent {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('periodNumber')) {
+                obj['periodNumber'] = ApiClient.convertToType(data['periodNumber'], 'Number');
+            }
         }
         return obj;
     }
@@ -137,6 +140,10 @@ export default class ManagerPortfolioEvent {
     * @member {String} description
     */
     description = undefined;
+    /**
+    * @member {Number} periodNumber
+    */
+    periodNumber = undefined;
 
 
 
