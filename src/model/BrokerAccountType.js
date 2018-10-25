@@ -116,12 +116,6 @@ export default class BrokerAccountType {
     static TypeEnum = {
     
         /**
-         * value: "MetaTrader5"
-         * @const
-         */
-        "MetaTrader5": "MetaTrader5",
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -132,6 +126,12 @@ export default class BrokerAccountType {
          * @const
          */
         "MetaTrader4": "MetaTrader4",
+    
+        /**
+         * value: "MetaTrader5"
+         * @const
+         */
+        "MetaTrader5": "MetaTrader5",
     
         /**
          * value: "NinjaTrader"
