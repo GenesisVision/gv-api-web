@@ -312,16 +312,16 @@ WalletTransaction.SourceTypeEnum = {
 WalletTransaction.SourceCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
@@ -492,16 +492,16 @@ WalletTransaction.DestinationTypeEnum = {
 WalletTransaction.DestinationCurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
