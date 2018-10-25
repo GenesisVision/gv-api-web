@@ -16,6 +16,7 @@ import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
 import Facet from './Facet';
 import IOsAppVersion from './IOsAppVersion';
+import ProgramsInfo from './ProgramsInfo';
 
 
 
@@ -71,6 +72,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('fundsFacets')) {
                 obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [Facet]);
             }
+            if (data.hasOwnProperty('programsInfo')) {
+                obj['programsInfo'] = ProgramsInfo.constructFromObject(data['programsInfo']);
+            }
         }
         return obj;
     }
@@ -91,6 +95,10 @@ export default class PlatformInfo {
     * @member {Array.<module:model/Facet>} fundsFacets
     */
     fundsFacets = undefined;
+    /**
+    * @member {module:model/ProgramsInfo} programsInfo
+    */
+    programsInfo = undefined;
 
 
 

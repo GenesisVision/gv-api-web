@@ -303,6 +303,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramStatistic](docs/ProgramStatistic.md)
  - [CoreApiV10.ProgramUpdate](docs/ProgramUpdate.md)
  - [CoreApiV10.ProgramWithdrawInfo](docs/ProgramWithdrawInfo.md)
+ - [CoreApiV10.ProgramsInfo](docs/ProgramsInfo.md)
  - [CoreApiV10.ProgramsList](docs/ProgramsList.md)
  - [CoreApiV10.RateItem](docs/RateItem.md)
  - [CoreApiV10.RatesModel](docs/RatesModel.md)

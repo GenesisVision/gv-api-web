@@ -96,6 +96,7 @@ import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
+import ProgramsInfo from './model/ProgramsInfo';
 import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
@@ -676,6 +677,12 @@ export {
      * @property {module:model/ProgramWithdrawInfo}
      */
     ProgramWithdrawInfo,
+
+    /**
+     * The ProgramsInfo model constructor.
+     * @property {module:model/ProgramsInfo}
+     */
+    ProgramsInfo,
 
     /**
      * The ProgramsList model constructor.

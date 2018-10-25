@@ -21,105 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AndroidAppVersion = require('./AndroidAppVersion');
-
-var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
-
-var _Facet = require('./Facet');
-
-var _Facet2 = _interopRequireDefault(_Facet);
-
-var _IOsAppVersion = require('./IOsAppVersion');
-
-var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
-
-var _ProgramsInfo = require('./ProgramsInfo');
-
-var _ProgramsInfo2 = _interopRequireDefault(_ProgramsInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The PlatformInfo model module.
-* @module model/PlatformInfo
+* The ProgramsInfo model module.
+* @module model/ProgramsInfo
 * @version v1.0
 */
-var PlatformInfo = function () {
+var ProgramsInfo = function () {
     /**
-    * Constructs a new <code>PlatformInfo</code>.
-    * @alias module:model/PlatformInfo
+    * Constructs a new <code>ProgramsInfo</code>.
+    * @alias module:model/ProgramsInfo
     * @class
     */
 
-    function PlatformInfo() {
-        _classCallCheck(this, PlatformInfo);
+    function ProgramsInfo() {
+        _classCallCheck(this, ProgramsInfo);
 
-        this.iOSVersion = undefined;
-        this.androidVersion = undefined;
-        this.programsFacets = undefined;
-        this.fundsFacets = undefined;
-        this.programsInfo = undefined;
+        this.managerProgramInvestment = undefined;
+        this.managerFundInvestment = undefined;
+        this.periods = undefined;
     }
 
     /**
-    * Constructs a <code>PlatformInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ProgramsInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/PlatformInfo} obj Optional instance to populate.
-    * @return {module:model/PlatformInfo} The populated <code>PlatformInfo</code> instance.
+    * @param {module:model/ProgramsInfo} obj Optional instance to populate.
+    * @return {module:model/ProgramsInfo} The populated <code>ProgramsInfo</code> instance.
     */
 
 
-    _createClass(PlatformInfo, null, [{
+    _createClass(ProgramsInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PlatformInfo();
+                obj = obj || new ProgramsInfo();
 
-                if (data.hasOwnProperty('iOSVersion')) {
-                    obj['iOSVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOSVersion']);
+                if (data.hasOwnProperty('managerProgramInvestment')) {
+                    obj['managerProgramInvestment'] = _ApiClient2.default.convertToType(data['managerProgramInvestment'], 'Number');
                 }
-                if (data.hasOwnProperty('androidVersion')) {
-                    obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
+                if (data.hasOwnProperty('managerFundInvestment')) {
+                    obj['managerFundInvestment'] = _ApiClient2.default.convertToType(data['managerFundInvestment'], 'Number');
                 }
-                if (data.hasOwnProperty('programsFacets')) {
-                    obj['programsFacets'] = _ApiClient2.default.convertToType(data['programsFacets'], [_Facet2.default]);
-                }
-                if (data.hasOwnProperty('fundsFacets')) {
-                    obj['fundsFacets'] = _ApiClient2.default.convertToType(data['fundsFacets'], [_Facet2.default]);
-                }
-                if (data.hasOwnProperty('programsInfo')) {
-                    obj['programsInfo'] = _ProgramsInfo2.default.constructFromObject(data['programsInfo']);
+                if (data.hasOwnProperty('periods')) {
+                    obj['periods'] = _ApiClient2.default.convertToType(data['periods'], ['Number']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/IOsAppVersion} iOSVersion
+        * @member {Number} managerProgramInvestment
         */
 
         /**
-        * @member {module:model/AndroidAppVersion} androidVersion
+        * @member {Number} managerFundInvestment
         */
 
         /**
-        * @member {Array.<module:model/Facet>} programsFacets
-        */
-
-        /**
-        * @member {Array.<module:model/Facet>} fundsFacets
-        */
-
-        /**
-        * @member {module:model/ProgramsInfo} programsInfo
+        * @member {Array.<Number>} periods
         */
 
     }]);
 
-    return PlatformInfo;
+    return ProgramsInfo;
 }();
 
-exports.default = PlatformInfo;
+exports.default = ProgramsInfo;

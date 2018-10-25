@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **androidVersion** | [**AndroidAppVersion**](AndroidAppVersion.md) |  | [optional] 
 **programsFacets** | [**[Facet]**](Facet.md) |  | [optional] 
 **fundsFacets** | [**[Facet]**](Facet.md) |  | [optional] 
+**programsInfo** | [**ProgramsInfo**](ProgramsInfo.md) |  | [optional] 
 
 
