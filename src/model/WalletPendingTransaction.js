@@ -71,9 +71,6 @@ export default class WalletPendingTransaction {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('isConfirmed')) {
-                obj['isConfirmed'] = ApiClient.convertToType(data['isConfirmed'], 'Boolean');
-            }
             if (data.hasOwnProperty('dateCreated')) {
                 obj['dateCreated'] = ApiClient.convertToType(data['dateCreated'], 'Date');
             }
@@ -107,10 +104,6 @@ export default class WalletPendingTransaction {
     * @member {module:model/WalletPendingTransaction.TypeEnum} type
     */
     type = undefined;
-    /**
-    * @member {Boolean} isConfirmed
-    */
-    isConfirmed = undefined;
     /**
     * @member {Date} dateCreated
     */

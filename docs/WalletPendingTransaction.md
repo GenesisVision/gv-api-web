@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**isConfirmed** | **Boolean** |  | [optional] 
 **dateCreated** | **Date** |  | [optional] 
 **lastUpdated** | **Date** |  | [optional] 
 **address** | **String** |  | [optional] 

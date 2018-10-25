@@ -45,7 +45,6 @@ var WalletPendingTransaction = function () {
         this.amount = undefined;
         this.currency = undefined;
         this.type = undefined;
-        this.isConfirmed = undefined;
         this.dateCreated = undefined;
         this.lastUpdated = undefined;
         this.address = undefined;
@@ -81,9 +80,6 @@ var WalletPendingTransaction = function () {
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('isConfirmed')) {
-                    obj['isConfirmed'] = _ApiClient2.default.convertToType(data['isConfirmed'], 'Boolean');
-                }
                 if (data.hasOwnProperty('dateCreated')) {
                     obj['dateCreated'] = _ApiClient2.default.convertToType(data['dateCreated'], 'Date');
                 }
@@ -115,10 +111,6 @@ var WalletPendingTransaction = function () {
 
         /**
         * @member {module:model/WalletPendingTransaction.TypeEnum} type
-        */
-
-        /**
-        * @member {Boolean} isConfirmed
         */
 
         /**
