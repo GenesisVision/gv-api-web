@@ -124,6 +124,12 @@ var BrokerAccountType = function () {
 BrokerAccountType.TypeEnum = {
 
     /**
+     * value: "MetaTrader5"
+     * @const
+     */
+    "MetaTrader5": "MetaTrader5",
+
+    /**
      * value: "Undefined"
      * @const
      */
@@ -134,12 +140,6 @@ BrokerAccountType.TypeEnum = {
      * @const
      */
     "MetaTrader4": "MetaTrader4",
-
-    /**
-     * value: "MetaTrader5"
-     * @const
-     */
-    "MetaTrader5": "MetaTrader5",
 
     /**
      * value: "NinjaTrader"

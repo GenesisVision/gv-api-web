@@ -15,11 +15,11 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
+* `MetaTrader5` (value: `"MetaTrader5"`)
+
 * `Undefined` (value: `"Undefined"`)
 
 * `MetaTrader4` (value: `"MetaTrader4"`)
-
-* `MetaTrader5` (value: `"MetaTrader5"`)
 
 * `NinjaTrader` (value: `"NinjaTrader"`)
 
