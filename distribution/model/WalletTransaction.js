@@ -64,6 +64,7 @@ var WalletTransaction = function () {
         this.sourceBlockchainInfo = undefined;
         this.sourceWithdrawalInfo = undefined;
         this.action = undefined;
+        this.information = undefined;
         this.destinationId = undefined;
         this.destinationType = undefined;
         this.destinationCurrency = undefined;
@@ -122,6 +123,9 @@ var WalletTransaction = function () {
                 }
                 if (data.hasOwnProperty('action')) {
                     obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
+                }
+                if (data.hasOwnProperty('information')) {
+                    obj['information'] = _ApiClient2.default.convertToType(data['information'], 'String');
                 }
                 if (data.hasOwnProperty('destinationId')) {
                     obj['destinationId'] = _ApiClient2.default.convertToType(data['destinationId'], 'String');
@@ -191,6 +195,10 @@ var WalletTransaction = function () {
 
         /**
         * @member {module:model/WalletTransaction.ActionEnum} action
+        */
+
+        /**
+        * @member {String} information
         */
 
         /**

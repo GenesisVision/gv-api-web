@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **sourceBlockchainInfo** | [**BlockchainInfo**](BlockchainInfo.md) |  | [optional] 
 **sourceWithdrawalInfo** | [**WithdrawalInfo**](WithdrawalInfo.md) |  | [optional] 
 **action** | **String** |  | [optional] 
+**information** | **String** |  | [optional] 
 **destinationId** | **String** |  | [optional] 
 **destinationType** | **String** |  | [optional] 
 **destinationCurrency** | **String** |  | [optional] 

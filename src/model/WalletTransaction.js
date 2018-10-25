@@ -95,6 +95,9 @@ export default class WalletTransaction {
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
             }
+            if (data.hasOwnProperty('information')) {
+                obj['information'] = ApiClient.convertToType(data['information'], 'String');
+            }
             if (data.hasOwnProperty('destinationId')) {
                 obj['destinationId'] = ApiClient.convertToType(data['destinationId'], 'String');
             }
@@ -165,6 +168,10 @@ export default class WalletTransaction {
     * @member {module:model/WalletTransaction.ActionEnum} action
     */
     action = undefined;
+    /**
+    * @member {String} information
+    */
+    information = undefined;
     /**
     * @member {String} destinationId
     */
