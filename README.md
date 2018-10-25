@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
+*CoreApiV10.WalletApi* | [**v10WalletTransactionsPendingGet**](docs/WalletApi.md#v10WalletTransactionsPendingGet) | **GET** /v1.0/wallet/transactions/pending | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawInfoGet**](docs/WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestCancelByTxIdPost**](docs/WalletApi.md#v10WalletWithdrawRequestCancelByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestConfirmPost**](docs/WalletApi.md#v10WalletWithdrawRequestConfirmPost) | **POST** /v1.0/wallet/withdraw/request/confirm | 
@@ -323,6 +324,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
  - [CoreApiV10.WalletInfo](docs/WalletInfo.md)
+ - [CoreApiV10.WalletPendingTransaction](docs/WalletPendingTransaction.md)
+ - [CoreApiV10.WalletPendingTransactionsViewModel](docs/WalletPendingTransactionsViewModel.md)
  - [CoreApiV10.WalletSummary](docs/WalletSummary.md)
  - [CoreApiV10.WalletTransaction](docs/WalletTransaction.md)
  - [CoreApiV10.WalletTransactionsViewModel](docs/WalletTransactionsViewModel.md)

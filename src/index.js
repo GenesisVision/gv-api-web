@@ -117,6 +117,8 @@ import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
 import WalletInfo from './model/WalletInfo';
+import WalletPendingTransaction from './model/WalletPendingTransaction';
+import WalletPendingTransactionsViewModel from './model/WalletPendingTransactionsViewModel';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
@@ -800,6 +802,18 @@ export {
      * @property {module:model/WalletInfo}
      */
     WalletInfo,
+
+    /**
+     * The WalletPendingTransaction model constructor.
+     * @property {module:model/WalletPendingTransaction}
+     */
+    WalletPendingTransaction,
+
+    /**
+     * The WalletPendingTransactionsViewModel model constructor.
+     * @property {module:model/WalletPendingTransactionsViewModel}
+     */
+    WalletPendingTransactionsViewModel,
 
     /**
      * The WalletSummary model constructor.

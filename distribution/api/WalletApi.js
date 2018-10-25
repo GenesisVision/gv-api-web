@@ -29,6 +29,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _WalletPendingTransactionsViewModel = require('../model/WalletPendingTransactionsViewModel');
+
+var _WalletPendingTransactionsViewModel2 = _interopRequireDefault(_WalletPendingTransactionsViewModel);
+
 var _WalletSummary = require('../model/WalletSummary');
 
 var _WalletSummary2 = _interopRequireDefault(_WalletSummary);
@@ -233,6 +237,51 @@ var WalletApi = function () {
     key: 'v10WalletTransactionsGet',
     value: function v10WalletTransactionsGet(authorization, opts) {
       return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Wallet pending transactions
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletPendingTransactionsViewModel} and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletTransactionsPendingGetWithHttpInfo',
+    value: function v10WalletTransactionsPendingGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransactionsPendingGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _WalletPendingTransactionsViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/transactions/pending', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Wallet pending transactions
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletPendingTransactionsViewModel}
+     */
+
+  }, {
+    key: 'v10WalletTransactionsPendingGet',
+    value: function v10WalletTransactionsPendingGet(authorization) {
+      return this.v10WalletTransactionsPendingGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
