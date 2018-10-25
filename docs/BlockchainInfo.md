@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 * `Error` (value: `"Error"`)
 
-* `Canceled` (value: `"Canceled"`)
+* `Cancelled` (value: `"Cancelled"`)
 
 
 

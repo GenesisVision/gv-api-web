@@ -49,6 +49,8 @@ var PersonalFundDetailsFull = function () {
         this.value = undefined;
         this.profit = undefined;
         this.invested = undefined;
+        this.pendingInput = undefined;
+        this.pendingOutput = undefined;
         this.status = undefined;
     }
 
@@ -94,6 +96,12 @@ var PersonalFundDetailsFull = function () {
                 if (data.hasOwnProperty('invested')) {
                     obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
                 }
+                if (data.hasOwnProperty('pendingInput')) {
+                    obj['pendingInput'] = _ApiClient2.default.convertToType(data['pendingInput'], 'Number');
+                }
+                if (data.hasOwnProperty('pendingOutput')) {
+                    obj['pendingOutput'] = _ApiClient2.default.convertToType(data['pendingOutput'], 'Number');
+                }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
@@ -135,6 +143,14 @@ var PersonalFundDetailsFull = function () {
 
         /**
         * @member {Number} invested
+        */
+
+        /**
+        * @member {Number} pendingInput
+        */
+
+        /**
+        * @member {Number} pendingOutput
         */
 
         /**

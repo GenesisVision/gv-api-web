@@ -86,6 +86,12 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('invested')) {
                 obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
             }
+            if (data.hasOwnProperty('pendingInput')) {
+                obj['pendingInput'] = ApiClient.convertToType(data['pendingInput'], 'Number');
+            }
+            if (data.hasOwnProperty('pendingOutput')) {
+                obj['pendingOutput'] = ApiClient.convertToType(data['pendingOutput'], 'Number');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -133,6 +139,14 @@ export default class PersonalProgramDetailsFull {
     * @member {Number} invested
     */
     invested = undefined;
+    /**
+    * @member {Number} pendingInput
+    */
+    pendingInput = undefined;
+    /**
+    * @member {Number} pendingOutput
+    */
+    pendingOutput = undefined;
     /**
     * @member {module:model/PersonalProgramDetailsFull.StatusEnum} status
     */

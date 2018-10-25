@@ -134,9 +134,9 @@ BlockchainInfo.StatusEnum = {
     "Error": "Error",
 
     /**
-     * value: "Canceled"
+     * value: "Cancelled"
      * @const
      */
-    "Canceled": "Canceled"
+    "Cancelled": "Cancelled"
 };
 exports.default = BlockchainInfo;

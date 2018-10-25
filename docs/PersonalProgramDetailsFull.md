@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 
+**pendingInput** | **Number** |  | [optional] 
+**pendingOutput** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 
 
