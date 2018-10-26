@@ -927,9 +927,13 @@ var ManagerApi = function () {
      * Manager dashboard
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.eventsTake 
-     * @param {Number} opts.requestsSkip 
-     * @param {Number} opts.requestsTake 
+     * @param {String} opts.assetId 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerDashboard} and HTTP response
      */
 
@@ -946,9 +950,13 @@ var ManagerApi = function () {
 
       var pathParams = {};
       var queryParams = {
-        'eventsTake': opts['eventsTake'],
-        'requestsSkip': opts['requestsSkip'],
-        'requestsTake': opts['requestsTake']
+        'AssetId': opts['assetId'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'Type': opts['type'],
+        'AssetType': opts['assetType'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       var headerParams = {
         'Authorization': authorization
@@ -967,9 +975,13 @@ var ManagerApi = function () {
      * Manager dashboard
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.eventsTake 
-     * @param {Number} opts.requestsSkip 
-     * @param {Number} opts.requestsTake 
+     * @param {String} opts.assetId 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {module:model/String} opts.type 
+     * @param {module:model/String} opts.assetType 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerDashboard}
      */
 

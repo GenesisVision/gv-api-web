@@ -709,9 +709,13 @@ let apiInstance = new CoreApiV10.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'eventsTake': 56, // Number | 
-  'requestsSkip': 56, // Number | 
-  'requestsTake': 56 // Number | 
+  'assetId': "assetId_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'type': "type_example", // String | 
+  'assetType': "assetType_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
 };
 apiInstance.v10ManagerGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -726,9 +730,13 @@ apiInstance.v10ManagerGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **eventsTake** | **Number**|  | [optional] 
- **requestsSkip** | **Number**|  | [optional] 
- **requestsTake** | **Number**|  | [optional] 
+ **assetId** | [**String**](.md)|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **type** | **String**|  | [optional] 
+ **assetType** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 
