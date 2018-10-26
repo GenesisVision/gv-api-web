@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import FundNotificationSettingList from './FundNotificationSettingList';
 import ManagerNotificationSettingList from './ManagerNotificationSettingList';
 import NotificationSettingViewModel from './NotificationSettingViewModel';
 import ProgramNotificationSettingList from './ProgramNotificationSettingList';
@@ -66,7 +67,7 @@ export default class NotificationSettingList {
                 obj['settingsProgram'] = ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]);
             }
             if (data.hasOwnProperty('settingsFund')) {
-                obj['settingsFund'] = ApiClient.convertToType(data['settingsFund'], [ProgramNotificationSettingList]);
+                obj['settingsFund'] = ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]);
             }
             if (data.hasOwnProperty('settingsManager')) {
                 obj['settingsManager'] = ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]);
@@ -84,7 +85,7 @@ export default class NotificationSettingList {
     */
     settingsProgram = undefined;
     /**
-    * @member {Array.<module:model/ProgramNotificationSettingList>} settingsFund
+    * @member {Array.<module:model/FundNotificationSettingList>} settingsFund
     */
     settingsFund = undefined;
     /**

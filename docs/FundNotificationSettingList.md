@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**programId** | **String** |  | [optional] 
+**assetId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

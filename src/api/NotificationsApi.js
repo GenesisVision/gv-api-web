@@ -151,7 +151,7 @@ export default class NotificationsApi {
      * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.programId 
+     * @param {String} opts.assetId 
      * @param {String} opts.managerId 
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 
@@ -171,7 +171,7 @@ export default class NotificationsApi {
       let pathParams = {
       };
       let queryParams = {
-        'ProgramId': opts['programId'],
+        'AssetId': opts['assetId'],
         'ManagerId': opts['managerId'],
         'Type': opts['type'],
         'ConditionType': opts['conditionType'],
@@ -199,7 +199,7 @@ export default class NotificationsApi {
      * Add new setting
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {String} opts.programId 
+     * @param {String} opts.assetId 
      * @param {String} opts.managerId 
      * @param {module:model/String} opts.type 
      * @param {module:model/String} opts.conditionType 

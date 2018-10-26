@@ -57,8 +57,8 @@ export default class FundNotificationSettingList {
             
             
 
-            if (data.hasOwnProperty('programId')) {
-                obj['programId'] = ApiClient.convertToType(data['programId'], 'String');
+            if (data.hasOwnProperty('assetId')) {
+                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -77,9 +77,9 @@ export default class FundNotificationSettingList {
     }
 
     /**
-    * @member {String} programId
+    * @member {String} assetId
     */
-    programId = undefined;
+    assetId = undefined;
     /**
     * @member {String} title
     */

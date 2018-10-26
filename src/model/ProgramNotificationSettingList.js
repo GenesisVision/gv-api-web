@@ -63,8 +63,8 @@ export default class ProgramNotificationSettingList {
             if (data.hasOwnProperty('settingsCustom')) {
                 obj['settingsCustom'] = ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]);
             }
-            if (data.hasOwnProperty('programId')) {
-                obj['programId'] = ApiClient.convertToType(data['programId'], 'String');
+            if (data.hasOwnProperty('assetId')) {
+                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -91,9 +91,9 @@ export default class ProgramNotificationSettingList {
     */
     settingsCustom = undefined;
     /**
-    * @member {String} programId
+    * @member {String} assetId
     */
-    programId = undefined;
+    assetId = undefined;
     /**
     * @member {String} title
     */

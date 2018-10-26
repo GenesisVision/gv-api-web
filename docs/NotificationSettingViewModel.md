@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **isEnabled** | **Boolean** |  | [optional] 
-**programId** | **String** |  | [optional] 
+**assetId** | **String** |  | [optional] 
 **managerId** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **conditionType** | **String** |  | [optional] 

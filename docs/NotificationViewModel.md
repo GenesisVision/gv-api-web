@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **text** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **type** | **String** |  | [optional] 
-**programId** | **String** |  | [optional] 
+**assetId** | **String** |  | [optional] 
 **managerId** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 

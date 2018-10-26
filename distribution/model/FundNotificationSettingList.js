@@ -44,7 +44,7 @@ var FundNotificationSettingList = function () {
     function FundNotificationSettingList() {
         _classCallCheck(this, FundNotificationSettingList);
 
-        this.programId = undefined;
+        this.assetId = undefined;
         this.title = undefined;
         this.url = undefined;
         this.logo = undefined;
@@ -66,8 +66,8 @@ var FundNotificationSettingList = function () {
             if (data) {
                 obj = obj || new FundNotificationSettingList();
 
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('assetId')) {
+                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
@@ -86,7 +86,7 @@ var FundNotificationSettingList = function () {
         }
 
         /**
-        * @member {String} programId
+        * @member {String} assetId
         */
 
         /**

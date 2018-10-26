@@ -46,7 +46,7 @@ var ProgramNotificationSettingList = function () {
 
         this.level = undefined;
         this.settingsCustom = undefined;
-        this.programId = undefined;
+        this.assetId = undefined;
         this.title = undefined;
         this.url = undefined;
         this.logo = undefined;
@@ -74,8 +74,8 @@ var ProgramNotificationSettingList = function () {
                 if (data.hasOwnProperty('settingsCustom')) {
                     obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);
                 }
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('assetId')) {
+                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
@@ -102,7 +102,7 @@ var ProgramNotificationSettingList = function () {
         */
 
         /**
-        * @member {String} programId
+        * @member {String} assetId
         */
 
         /**

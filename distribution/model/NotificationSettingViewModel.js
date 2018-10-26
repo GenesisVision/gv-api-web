@@ -42,7 +42,7 @@ var NotificationSettingViewModel = function () {
 
         this.id = undefined;
         this.isEnabled = undefined;
-        this.programId = undefined;
+        this.assetId = undefined;
         this.managerId = undefined;
         this.type = undefined;
         this.conditionType = undefined;
@@ -70,8 +70,8 @@ var NotificationSettingViewModel = function () {
                 if (data.hasOwnProperty('isEnabled')) {
                     obj['isEnabled'] = _ApiClient2.default.convertToType(data['isEnabled'], 'Boolean');
                 }
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('assetId')) {
+                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
                 }
                 if (data.hasOwnProperty('managerId')) {
                     obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
@@ -98,7 +98,7 @@ var NotificationSettingViewModel = function () {
         */
 
         /**
-        * @member {String} programId
+        * @member {String} assetId
         */
 
         /**

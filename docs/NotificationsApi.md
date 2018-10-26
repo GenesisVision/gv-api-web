@@ -118,7 +118,7 @@ let apiInstance = new CoreApiV10.NotificationsApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'programId': "programId_example", // String | 
+  'assetId': "assetId_example", // String | 
   'managerId': "managerId_example", // String | 
   'type': "type_example", // String | 
   'conditionType': "conditionType_example", // String | 
@@ -137,7 +137,7 @@ apiInstance.v10NotificationsSettingsAddPost(authorization, opts).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **programId** | [**String**](.md)|  | [optional] 
+ **assetId** | [**String**](.md)|  | [optional] 
  **managerId** | [**String**](.md)|  | [optional] 
  **type** | **String**|  | [optional] 
  **conditionType** | **String**|  | [optional] 

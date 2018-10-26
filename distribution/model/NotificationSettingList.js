@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _FundNotificationSettingList = require('./FundNotificationSettingList');
+
+var _FundNotificationSettingList2 = _interopRequireDefault(_FundNotificationSettingList);
+
 var _ManagerNotificationSettingList = require('./ManagerNotificationSettingList');
 
 var _ManagerNotificationSettingList2 = _interopRequireDefault(_ManagerNotificationSettingList);
@@ -80,7 +84,7 @@ var NotificationSettingList = function () {
                     obj['settingsProgram'] = _ApiClient2.default.convertToType(data['settingsProgram'], [_ProgramNotificationSettingList2.default]);
                 }
                 if (data.hasOwnProperty('settingsFund')) {
-                    obj['settingsFund'] = _ApiClient2.default.convertToType(data['settingsFund'], [_ProgramNotificationSettingList2.default]);
+                    obj['settingsFund'] = _ApiClient2.default.convertToType(data['settingsFund'], [_FundNotificationSettingList2.default]);
                 }
                 if (data.hasOwnProperty('settingsManager')) {
                     obj['settingsManager'] = _ApiClient2.default.convertToType(data['settingsManager'], [_ManagerNotificationSettingList2.default]);
@@ -98,7 +102,7 @@ var NotificationSettingList = function () {
         */
 
         /**
-        * @member {Array.<module:model/ProgramNotificationSettingList>} settingsFund
+        * @member {Array.<module:model/FundNotificationSettingList>} settingsFund
         */
 
         /**

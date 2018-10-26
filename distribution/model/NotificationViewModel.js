@@ -44,7 +44,7 @@ var NotificationViewModel = function () {
         this.text = undefined;
         this.date = undefined;
         this.type = undefined;
-        this.programId = undefined;
+        this.assetId = undefined;
         this.managerId = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -78,8 +78,8 @@ var NotificationViewModel = function () {
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('assetId')) {
+                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
                 }
                 if (data.hasOwnProperty('managerId')) {
                     obj['managerId'] = _ApiClient2.default.convertToType(data['managerId'], 'String');
@@ -114,7 +114,7 @@ var NotificationViewModel = function () {
         */
 
         /**
-        * @member {String} programId
+        * @member {String} assetId
         */
 
         /**
