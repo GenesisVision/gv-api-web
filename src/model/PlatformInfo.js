@@ -75,6 +75,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('programsInfo')) {
                 obj['programsInfo'] = ProgramsInfo.constructFromObject(data['programsInfo']);
             }
+            if (data.hasOwnProperty('currencies')) {
+                obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
+            }
         }
         return obj;
     }
@@ -99,6 +102,10 @@ export default class PlatformInfo {
     * @member {module:model/ProgramsInfo} programsInfo
     */
     programsInfo = undefined;
+    /**
+    * @member {Array.<String>} currencies
+    */
+    currencies = undefined;
 
 
 

@@ -61,6 +61,7 @@ var PlatformInfo = function () {
         this.programsFacets = undefined;
         this.fundsFacets = undefined;
         this.programsInfo = undefined;
+        this.currencies = undefined;
     }
 
     /**
@@ -93,6 +94,9 @@ var PlatformInfo = function () {
                 if (data.hasOwnProperty('programsInfo')) {
                     obj['programsInfo'] = _ProgramsInfo2.default.constructFromObject(data['programsInfo']);
                 }
+                if (data.hasOwnProperty('currencies')) {
+                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                }
             }
             return obj;
         }
@@ -115,6 +119,10 @@ var PlatformInfo = function () {
 
         /**
         * @member {module:model/ProgramsInfo} programsInfo
+        */
+
+        /**
+        * @member {Array.<String>} currencies
         */
 
     }]);

@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **programsFacets** | [**[Facet]**](Facet.md) |  | [optional] 
 **fundsFacets** | [**[Facet]**](Facet.md) |  | [optional] 
 **programsInfo** | [**ProgramsInfo**](ProgramsInfo.md) |  | [optional] 
+**currencies** | **[String]** |  | [optional] 
 
 
