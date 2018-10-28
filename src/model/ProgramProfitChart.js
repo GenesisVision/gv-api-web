@@ -76,6 +76,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('profitFactor')) {
                 obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
             }
+            if (data.hasOwnProperty('profitChangePercent')) {
+                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
             if (data.hasOwnProperty('pnLChart')) {
                 obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
@@ -108,9 +111,6 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('timeframeGvtProfit')) {
                 obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('profitChangePercent')) {
-                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
             }
             if (data.hasOwnProperty('lastPeriodStarts')) {
                 obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
@@ -149,6 +149,10 @@ export default class ProgramProfitChart {
     * @member {Number} profitFactor
     */
     profitFactor = undefined;
+    /**
+    * @member {Number} profitChangePercent
+    */
+    profitChangePercent = undefined;
     /**
     * @member {Array.<module:model/ChartSimple>} pnLChart
     */
@@ -193,10 +197,6 @@ export default class ProgramProfitChart {
     * @member {Number} timeframeGvtProfit
     */
     timeframeGvtProfit = undefined;
-    /**
-    * @member {Number} profitChangePercent
-    */
-    profitChangePercent = undefined;
     /**
     * @member {Date} lastPeriodStarts
     */

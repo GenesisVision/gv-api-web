@@ -56,7 +56,6 @@ var FundProfitChart = function () {
         this.maxDrawdown = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
-        this.profitChangePercent = undefined;
         this.lastPeriodStarts = undefined;
         this.lastPeriodEnds = undefined;
         this.rate = undefined;
@@ -112,9 +111,6 @@ var FundProfitChart = function () {
                 }
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
-                }
-                if (data.hasOwnProperty('profitChangePercent')) {
-                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('lastPeriodStarts')) {
                     obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
@@ -175,10 +171,6 @@ var FundProfitChart = function () {
 
         /**
         * @member {Number} timeframeGvtProfit
-        */
-
-        /**
-        * @member {Number} profitChangePercent
         */
 
         /**

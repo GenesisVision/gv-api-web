@@ -54,6 +54,7 @@ var ProgramProfitChart = function () {
         this.trades = undefined;
         this.successTradesPercent = undefined;
         this.profitFactor = undefined;
+        this.profitChangePercent = undefined;
         this.pnLChart = undefined;
         this.periods = undefined;
         this.equityChart = undefined;
@@ -65,7 +66,6 @@ var ProgramProfitChart = function () {
         this.maxDrawdown = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
-        this.profitChangePercent = undefined;
         this.lastPeriodStarts = undefined;
         this.lastPeriodEnds = undefined;
         this.rate = undefined;
@@ -104,6 +104,9 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('profitFactor')) {
                     obj['profitFactor'] = _ApiClient2.default.convertToType(data['profitFactor'], 'Number');
                 }
+                if (data.hasOwnProperty('profitChangePercent')) {
+                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
+                }
                 if (data.hasOwnProperty('pnLChart')) {
                     obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
                 }
@@ -136,9 +139,6 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
-                }
-                if (data.hasOwnProperty('profitChangePercent')) {
-                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('lastPeriodStarts')) {
                     obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
@@ -175,6 +175,10 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} profitFactor
+        */
+
+        /**
+        * @member {Number} profitChangePercent
         */
 
         /**
@@ -219,10 +223,6 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} timeframeGvtProfit
-        */
-
-        /**
-        * @member {Number} profitChangePercent
         */
 
         /**
