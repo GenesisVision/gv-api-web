@@ -272,7 +272,7 @@ No authorization required
 
 <a name="v10ProfileVerificationTokenPost"></a>
 # **v10ProfileVerificationTokenPost**
-> &#39;Number&#39; v10ProfileVerificationTokenPost(authorization)
+> &#39;String&#39; v10ProfileVerificationTokenPost(authorization)
 
 
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;Number&#39;**
+**&#39;String&#39;**
 
 ### Authorization
 

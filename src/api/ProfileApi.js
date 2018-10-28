@@ -353,7 +353,7 @@ export default class ProfileApi {
 
     /**
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     v10ProfileVerificationTokenPostWithHttpInfo(authorization) {
       let postBody = null;
@@ -377,7 +377,7 @@ export default class ProfileApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'Number';
+      let returnType = 'String';
 
       return this.apiClient.callApi(
         '/v1.0/profile/verification/token', 'POST',
@@ -388,7 +388,7 @@ export default class ProfileApi {
 
     /**
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     v10ProfileVerificationTokenPost(authorization) {
       return this.v10ProfileVerificationTokenPostWithHttpInfo(authorization)
