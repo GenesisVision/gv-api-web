@@ -296,7 +296,13 @@ export default class ManagerPortfolioEvent {
          * value: "AssetFinished"
          * @const
          */
-        "AssetFinished": "AssetFinished"    
+        "AssetFinished": "AssetFinished",
+    
+        /**
+         * value: "EntranceFee"
+         * @const
+         */
+        "EntranceFee": "EntranceFee"    
     };
 
     /**

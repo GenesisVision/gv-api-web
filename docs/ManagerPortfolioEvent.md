@@ -71,6 +71,8 @@ Name | Type | Description | Notes
 
 * `AssetFinished` (value: `"AssetFinished"`)
 
+* `EntranceFee` (value: `"EntranceFee"`)
+
 
 
 

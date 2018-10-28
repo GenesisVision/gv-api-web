@@ -319,7 +319,13 @@ ManagerPortfolioEvent.TypeEnum = {
      * value: "AssetFinished"
      * @const
      */
-    "AssetFinished": "AssetFinished"
+    "AssetFinished": "AssetFinished",
+
+    /**
+     * value: "EntranceFee"
+     * @const
+     */
+    "EntranceFee": "EntranceFee"
 };
 ManagerPortfolioEvent.ProgramTypeEnum = {
 
