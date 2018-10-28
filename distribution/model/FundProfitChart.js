@@ -47,6 +47,7 @@ var FundProfitChart = function () {
         this.totalUsdProfit = undefined;
         this.timeframeUsdProfit = undefined;
         this.rebalances = undefined;
+        this.creationDate = undefined;
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
@@ -56,8 +57,6 @@ var FundProfitChart = function () {
         this.maxDrawdown = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
-        this.lastPeriodStarts = undefined;
-        this.lastPeriodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -84,6 +83,9 @@ var FundProfitChart = function () {
                 }
                 if (data.hasOwnProperty('rebalances')) {
                     obj['rebalances'] = _ApiClient2.default.convertToType(data['rebalances'], 'Number');
+                }
+                if (data.hasOwnProperty('creationDate')) {
+                    obj['creationDate'] = _ApiClient2.default.convertToType(data['creationDate'], 'Date');
                 }
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
@@ -112,12 +114,6 @@ var FundProfitChart = function () {
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
                 }
-                if (data.hasOwnProperty('lastPeriodStarts')) {
-                    obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
-                }
-                if (data.hasOwnProperty('lastPeriodEnds')) {
-                    obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
-                }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
@@ -135,6 +131,10 @@ var FundProfitChart = function () {
 
         /**
         * @member {Number} rebalances
+        */
+
+        /**
+        * @member {Date} creationDate
         */
 
         /**
@@ -171,14 +171,6 @@ var FundProfitChart = function () {
 
         /**
         * @member {Number} timeframeGvtProfit
-        */
-
-        /**
-        * @member {Date} lastPeriodStarts
-        */
-
-        /**
-        * @member {Date} lastPeriodEnds
         */
 
         /**

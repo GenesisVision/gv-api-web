@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **profitChangePercent** | **Number** |  | [optional] 
 **pnLChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **periods** | [**[PeriodDate]**](PeriodDate.md) |  | [optional] 
+**lastPeriodStarts** | **Date** |  | [optional] 
+**lastPeriodEnds** | **Date** |  | [optional] 
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
@@ -21,8 +23,6 @@ Name | Type | Description | Notes
 **maxDrawdown** | **Number** |  | [optional] 
 **totalGvtProfit** | **Number** |  | [optional] 
 **timeframeGvtProfit** | **Number** |  | [optional] 
-**lastPeriodStarts** | **Date** |  | [optional] 
-**lastPeriodEnds** | **Date** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

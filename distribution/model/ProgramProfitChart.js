@@ -57,6 +57,8 @@ var ProgramProfitChart = function () {
         this.profitChangePercent = undefined;
         this.pnLChart = undefined;
         this.periods = undefined;
+        this.lastPeriodStarts = undefined;
+        this.lastPeriodEnds = undefined;
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
@@ -66,8 +68,6 @@ var ProgramProfitChart = function () {
         this.maxDrawdown = undefined;
         this.totalGvtProfit = undefined;
         this.timeframeGvtProfit = undefined;
-        this.lastPeriodStarts = undefined;
-        this.lastPeriodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -113,6 +113,12 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('periods')) {
                     obj['periods'] = _ApiClient2.default.convertToType(data['periods'], [_PeriodDate2.default]);
                 }
+                if (data.hasOwnProperty('lastPeriodStarts')) {
+                    obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
+                }
+                if (data.hasOwnProperty('lastPeriodEnds')) {
+                    obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
+                }
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
                 }
@@ -139,12 +145,6 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('timeframeGvtProfit')) {
                     obj['timeframeGvtProfit'] = _ApiClient2.default.convertToType(data['timeframeGvtProfit'], 'Number');
-                }
-                if (data.hasOwnProperty('lastPeriodStarts')) {
-                    obj['lastPeriodStarts'] = _ApiClient2.default.convertToType(data['lastPeriodStarts'], 'Date');
-                }
-                if (data.hasOwnProperty('lastPeriodEnds')) {
-                    obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
                 }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
@@ -190,6 +190,14 @@ var ProgramProfitChart = function () {
         */
 
         /**
+        * @member {Date} lastPeriodStarts
+        */
+
+        /**
+        * @member {Date} lastPeriodEnds
+        */
+
+        /**
         * @member {Array.<module:model/ChartSimple>} equityChart
         */
 
@@ -223,14 +231,6 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} timeframeGvtProfit
-        */
-
-        /**
-        * @member {Date} lastPeriodStarts
-        */
-
-        /**
-        * @member {Date} lastPeriodEnds
         */
 
         /**

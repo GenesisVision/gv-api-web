@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **totalUsdProfit** | **Number** |  | [optional] 
 **timeframeUsdProfit** | **Number** |  | [optional] 
 **rebalances** | **Number** |  | [optional] 
+**creationDate** | **Date** |  | [optional] 
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
@@ -15,8 +16,6 @@ Name | Type | Description | Notes
 **maxDrawdown** | **Number** |  | [optional] 
 **totalGvtProfit** | **Number** |  | [optional] 
 **timeframeGvtProfit** | **Number** |  | [optional] 
-**lastPeriodStarts** | **Date** |  | [optional] 
-**lastPeriodEnds** | **Date** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

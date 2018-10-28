@@ -85,6 +85,12 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('periods')) {
                 obj['periods'] = ApiClient.convertToType(data['periods'], [PeriodDate]);
             }
+            if (data.hasOwnProperty('lastPeriodStarts')) {
+                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
+            }
+            if (data.hasOwnProperty('lastPeriodEnds')) {
+                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
@@ -111,12 +117,6 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('timeframeGvtProfit')) {
                 obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('lastPeriodStarts')) {
-                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('lastPeriodEnds')) {
-                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
@@ -162,6 +162,14 @@ export default class ProgramProfitChart {
     */
     periods = undefined;
     /**
+    * @member {Date} lastPeriodStarts
+    */
+    lastPeriodStarts = undefined;
+    /**
+    * @member {Date} lastPeriodEnds
+    */
+    lastPeriodEnds = undefined;
+    /**
     * @member {Array.<module:model/ChartSimple>} equityChart
     */
     equityChart = undefined;
@@ -197,14 +205,6 @@ export default class ProgramProfitChart {
     * @member {Number} timeframeGvtProfit
     */
     timeframeGvtProfit = undefined;
-    /**
-    * @member {Date} lastPeriodStarts
-    */
-    lastPeriodStarts = undefined;
-    /**
-    * @member {Date} lastPeriodEnds
-    */
-    lastPeriodEnds = undefined;
     /**
     * @member {Number} rate
     */

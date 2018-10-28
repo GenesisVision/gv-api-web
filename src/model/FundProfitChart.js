@@ -66,6 +66,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('rebalances')) {
                 obj['rebalances'] = ApiClient.convertToType(data['rebalances'], 'Number');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
@@ -93,12 +96,6 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('timeframeGvtProfit')) {
                 obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
             }
-            if (data.hasOwnProperty('lastPeriodStarts')) {
-                obj['lastPeriodStarts'] = ApiClient.convertToType(data['lastPeriodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('lastPeriodEnds')) {
-                obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
-            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -118,6 +115,10 @@ export default class FundProfitChart {
     * @member {Number} rebalances
     */
     rebalances = undefined;
+    /**
+    * @member {Date} creationDate
+    */
+    creationDate = undefined;
     /**
     * @member {Array.<module:model/ChartSimple>} equityChart
     */
@@ -154,14 +155,6 @@ export default class FundProfitChart {
     * @member {Number} timeframeGvtProfit
     */
     timeframeGvtProfit = undefined;
-    /**
-    * @member {Date} lastPeriodStarts
-    */
-    lastPeriodStarts = undefined;
-    /**
-    * @member {Date} lastPeriodEnds
-    */
-    lastPeriodEnds = undefined;
     /**
     * @member {Number} rate
     */
