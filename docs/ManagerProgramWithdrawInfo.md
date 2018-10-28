@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **withheldInvestment** | **Number** |  | [optional] 
+**periodEnds** | **Date** |  | [optional] 
 **title** | **String** |  | [optional] 
 **availableToWithdraw** | **Number** |  | [optional] 
-**periodEnds** | **Date** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

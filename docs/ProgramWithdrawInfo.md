@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**periodEnds** | **Date** |  | [optional] 
 **title** | **String** |  | [optional] 
 **availableToWithdraw** | **Number** |  | [optional] 
-**periodEnds** | **Date** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **investedGvt** | **Number** |  | [optional] 
 **availableGvt** | **Number** |  | [optional] 
 **kycConfirmed** | **Boolean** |  | [optional] 
+**isTwoFactorEnabled** | **Boolean** |  | [optional] 
 
 

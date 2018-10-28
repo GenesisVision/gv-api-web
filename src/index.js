@@ -76,6 +76,7 @@ import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
+import PlatformCurrency from './model/PlatformCurrency';
 import PlatformInfo from './model/PlatformInfo';
 import PlatformStatistic from './model/PlatformStatistic';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
@@ -557,6 +558,12 @@ export {
      * @property {module:model/PlatformAssets}
      */
     PlatformAssets,
+
+    /**
+     * The PlatformCurrency model constructor.
+     * @property {module:model/PlatformCurrency}
+     */
+    PlatformCurrency,
 
     /**
      * The PlatformInfo model constructor.

@@ -68,9 +68,6 @@ export default class ManagerFundWithdrawInfo {
             if (data.hasOwnProperty('availableToWithdraw')) {
                 obj['availableToWithdraw'] = ApiClient.convertToType(data['availableToWithdraw'], 'Number');
             }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -94,10 +91,6 @@ export default class ManagerFundWithdrawInfo {
     * @member {Number} availableToWithdraw
     */
     availableToWithdraw = undefined;
-    /**
-    * @member {Date} periodEnds
-    */
-    periodEnds = undefined;
     /**
     * @member {Number} rate
     */

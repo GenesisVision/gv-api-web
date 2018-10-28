@@ -43,7 +43,6 @@ var FundWithdrawInfo = function () {
         this.exitFee = undefined;
         this.title = undefined;
         this.availableToWithdraw = undefined;
-        this.periodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -71,9 +70,6 @@ var FundWithdrawInfo = function () {
                 if (data.hasOwnProperty('availableToWithdraw')) {
                     obj['availableToWithdraw'] = _ApiClient2.default.convertToType(data['availableToWithdraw'], 'Number');
                 }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
-                }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
@@ -91,10 +87,6 @@ var FundWithdrawInfo = function () {
 
         /**
         * @member {Number} availableToWithdraw
-        */
-
-        /**
-        * @member {Date} periodEnds
         */
 
         /**

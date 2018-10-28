@@ -56,6 +56,9 @@ export default class ProgramInvestInfo {
             
             
 
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
+            }
             if (data.hasOwnProperty('availableToInvest')) {
                 obj['availableToInvest'] = ApiClient.convertToType(data['availableToInvest'], 'Number');
             }
@@ -74,9 +77,6 @@ export default class ProgramInvestInfo {
             if (data.hasOwnProperty('gvCommission')) {
                 obj['gvCommission'] = ApiClient.convertToType(data['gvCommission'], 'Number');
             }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -84,6 +84,10 @@ export default class ProgramInvestInfo {
         return obj;
     }
 
+    /**
+    * @member {Date} periodEnds
+    */
+    periodEnds = undefined;
     /**
     * @member {Number} availableToInvest
     */
@@ -108,10 +112,6 @@ export default class ProgramInvestInfo {
     * @member {Number} gvCommission
     */
     gvCommission = undefined;
-    /**
-    * @member {Date} periodEnds
-    */
-    periodEnds = undefined;
     /**
     * @member {Number} rate
     */

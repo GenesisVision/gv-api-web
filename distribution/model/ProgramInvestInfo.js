@@ -40,13 +40,13 @@ var ProgramInvestInfo = function () {
     function ProgramInvestInfo() {
         _classCallCheck(this, ProgramInvestInfo);
 
+        this.periodEnds = undefined;
         this.availableToInvest = undefined;
         this.title = undefined;
         this.availableInWallet = undefined;
         this.minInvestmentAmount = undefined;
         this.entryFee = undefined;
         this.gvCommission = undefined;
-        this.periodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -65,6 +65,9 @@ var ProgramInvestInfo = function () {
             if (data) {
                 obj = obj || new ProgramInvestInfo();
 
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                }
                 if (data.hasOwnProperty('availableToInvest')) {
                     obj['availableToInvest'] = _ApiClient2.default.convertToType(data['availableToInvest'], 'Number');
                 }
@@ -83,15 +86,16 @@ var ProgramInvestInfo = function () {
                 if (data.hasOwnProperty('gvCommission')) {
                     obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
                 }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
-                }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
             }
             return obj;
         }
+
+        /**
+        * @member {Date} periodEnds
+        */
 
         /**
         * @member {Number} availableToInvest
@@ -115,10 +119,6 @@ var ProgramInvestInfo = function () {
 
         /**
         * @member {Number} gvCommission
-        */
-
-        /**
-        * @member {Date} periodEnds
         */
 
         /**

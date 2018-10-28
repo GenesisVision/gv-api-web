@@ -16,6 +16,7 @@ import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
 import Facet from './Facet';
 import IOsAppVersion from './IOsAppVersion';
+import PlatformCurrency from './PlatformCurrency';
 import ProgramsInfo from './ProgramsInfo';
 
 
@@ -78,6 +79,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('currencies')) {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
             }
+            if (data.hasOwnProperty('platformCurrencies')) {
+                obj['platformCurrencies'] = ApiClient.convertToType(data['platformCurrencies'], [PlatformCurrency]);
+            }
         }
         return obj;
     }
@@ -106,6 +110,10 @@ export default class PlatformInfo {
     * @member {Array.<String>} currencies
     */
     currencies = undefined;
+    /**
+    * @member {Array.<module:model/PlatformCurrency>} platformCurrencies
+    */
+    platformCurrencies = undefined;
 
 
 

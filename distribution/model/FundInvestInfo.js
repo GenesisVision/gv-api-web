@@ -45,7 +45,6 @@ var FundInvestInfo = function () {
         this.minInvestmentAmount = undefined;
         this.entryFee = undefined;
         this.gvCommission = undefined;
-        this.periodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -79,9 +78,6 @@ var FundInvestInfo = function () {
                 if (data.hasOwnProperty('gvCommission')) {
                     obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
                 }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
-                }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
@@ -107,10 +103,6 @@ var FundInvestInfo = function () {
 
         /**
         * @member {Number} gvCommission
-        */
-
-        /**
-        * @member {Date} periodEnds
         */
 
         /**

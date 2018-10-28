@@ -56,14 +56,14 @@ export default class ProgramWithdrawInfo {
             
             
 
+            if (data.hasOwnProperty('periodEnds')) {
+                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('availableToWithdraw')) {
                 obj['availableToWithdraw'] = ApiClient.convertToType(data['availableToWithdraw'], 'Number');
-            }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
@@ -73,6 +73,10 @@ export default class ProgramWithdrawInfo {
     }
 
     /**
+    * @member {Date} periodEnds
+    */
+    periodEnds = undefined;
+    /**
     * @member {String} title
     */
     title = undefined;
@@ -80,10 +84,6 @@ export default class ProgramWithdrawInfo {
     * @member {Number} availableToWithdraw
     */
     availableToWithdraw = undefined;
-    /**
-    * @member {Date} periodEnds
-    */
-    periodEnds = undefined;
     /**
     * @member {Number} rate
     */

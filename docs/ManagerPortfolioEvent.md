@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **programType** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **periodNumber** | **Number** |  | [optional] 
 

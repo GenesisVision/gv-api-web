@@ -33,6 +33,10 @@ var _IOsAppVersion = require('./IOsAppVersion');
 
 var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
 
+var _PlatformCurrency = require('./PlatformCurrency');
+
+var _PlatformCurrency2 = _interopRequireDefault(_PlatformCurrency);
+
 var _ProgramsInfo = require('./ProgramsInfo');
 
 var _ProgramsInfo2 = _interopRequireDefault(_ProgramsInfo);
@@ -62,6 +66,7 @@ var PlatformInfo = function () {
         this.fundsFacets = undefined;
         this.programsInfo = undefined;
         this.currencies = undefined;
+        this.platformCurrencies = undefined;
     }
 
     /**
@@ -97,6 +102,9 @@ var PlatformInfo = function () {
                 if (data.hasOwnProperty('currencies')) {
                     obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
                 }
+                if (data.hasOwnProperty('platformCurrencies')) {
+                    obj['platformCurrencies'] = _ApiClient2.default.convertToType(data['platformCurrencies'], [_PlatformCurrency2.default]);
+                }
             }
             return obj;
         }
@@ -123,6 +131,10 @@ var PlatformInfo = function () {
 
         /**
         * @member {Array.<String>} currencies
+        */
+
+        /**
+        * @member {Array.<module:model/PlatformCurrency>} platformCurrencies
         */
 
     }]);

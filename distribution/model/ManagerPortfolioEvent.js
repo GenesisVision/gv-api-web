@@ -50,6 +50,7 @@ var ManagerPortfolioEvent = function () {
         this.type = undefined;
         this.programType = undefined;
         this.logo = undefined;
+        this.color = undefined;
         this.description = undefined;
         this.periodNumber = undefined;
     }
@@ -99,6 +100,9 @@ var ManagerPortfolioEvent = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
@@ -147,6 +151,10 @@ var ManagerPortfolioEvent = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} color
         */
 
         /**

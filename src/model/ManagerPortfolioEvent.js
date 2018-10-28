@@ -86,6 +86,9 @@ export default class ManagerPortfolioEvent {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -136,6 +139,10 @@ export default class ManagerPortfolioEvent {
     * @member {String} logo
     */
     logo = undefined;
+    /**
+    * @member {String} color
+    */
+    color = undefined;
     /**
     * @member {String} description
     */

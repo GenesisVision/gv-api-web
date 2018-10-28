@@ -50,6 +50,7 @@ var ProfileHeaderViewModel = function () {
         this.investedGvt = undefined;
         this.availableGvt = undefined;
         this.kycConfirmed = undefined;
+        this.isTwoFactorEnabled = undefined;
     }
 
     /**
@@ -97,6 +98,9 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('kycConfirmed')) {
                     obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
                 }
+                if (data.hasOwnProperty('isTwoFactorEnabled')) {
+                    obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -139,6 +143,10 @@ var ProfileHeaderViewModel = function () {
 
         /**
         * @member {Boolean} kycConfirmed
+        */
+
+        /**
+        * @member {Boolean} isTwoFactorEnabled
         */
 
     }]);

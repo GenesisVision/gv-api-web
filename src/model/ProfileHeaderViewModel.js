@@ -86,6 +86,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('kycConfirmed')) {
                 obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
             }
+            if (data.hasOwnProperty('isTwoFactorEnabled')) {
+                obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -130,6 +133,10 @@ export default class ProfileHeaderViewModel {
     * @member {Boolean} kycConfirmed
     */
     kycConfirmed = undefined;
+    /**
+    * @member {Boolean} isTwoFactorEnabled
+    */
+    isTwoFactorEnabled = undefined;
 
 
 

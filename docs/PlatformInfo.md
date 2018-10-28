@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **fundsFacets** | [**[Facet]**](Facet.md) |  | [optional] 
 **programsInfo** | [**ProgramsInfo**](ProgramsInfo.md) |  | [optional] 
 **currencies** | **[String]** |  | [optional] 
+**platformCurrencies** | [**[PlatformCurrency]**](PlatformCurrency.md) |  | [optional] 
 
 

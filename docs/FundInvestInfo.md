@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **minInvestmentAmount** | **Number** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 
-**periodEnds** | **Date** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

@@ -40,9 +40,9 @@ var ProgramWithdrawInfo = function () {
     function ProgramWithdrawInfo() {
         _classCallCheck(this, ProgramWithdrawInfo);
 
+        this.periodEnds = undefined;
         this.title = undefined;
         this.availableToWithdraw = undefined;
-        this.periodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -61,14 +61,14 @@ var ProgramWithdrawInfo = function () {
             if (data) {
                 obj = obj || new ProgramWithdrawInfo();
 
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('availableToWithdraw')) {
                     obj['availableToWithdraw'] = _ApiClient2.default.convertToType(data['availableToWithdraw'], 'Number');
-                }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
@@ -78,15 +78,15 @@ var ProgramWithdrawInfo = function () {
         }
 
         /**
+        * @member {Date} periodEnds
+        */
+
+        /**
         * @member {String} title
         */
 
         /**
         * @member {Number} availableToWithdraw
-        */
-
-        /**
-        * @member {Date} periodEnds
         */
 
         /**

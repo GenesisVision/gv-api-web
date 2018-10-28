@@ -41,9 +41,9 @@ var ManagerProgramWithdrawInfo = function () {
         _classCallCheck(this, ManagerProgramWithdrawInfo);
 
         this.withheldInvestment = undefined;
+        this.periodEnds = undefined;
         this.title = undefined;
         this.availableToWithdraw = undefined;
-        this.periodEnds = undefined;
         this.rate = undefined;
     }
 
@@ -65,14 +65,14 @@ var ManagerProgramWithdrawInfo = function () {
                 if (data.hasOwnProperty('withheldInvestment')) {
                     obj['withheldInvestment'] = _ApiClient2.default.convertToType(data['withheldInvestment'], 'Number');
                 }
+                if (data.hasOwnProperty('periodEnds')) {
+                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
+                }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('availableToWithdraw')) {
                     obj['availableToWithdraw'] = _ApiClient2.default.convertToType(data['availableToWithdraw'], 'Number');
-                }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
                 }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
@@ -86,15 +86,15 @@ var ManagerProgramWithdrawInfo = function () {
         */
 
         /**
+        * @member {Date} periodEnds
+        */
+
+        /**
         * @member {String} title
         */
 
         /**
         * @member {Number} availableToWithdraw
-        */
-
-        /**
-        * @member {Date} periodEnds
         */
 
         /**

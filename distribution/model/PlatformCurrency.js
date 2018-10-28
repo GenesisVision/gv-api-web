@@ -26,84 +26,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ManagerFundWithdrawInfo model module.
-* @module model/ManagerFundWithdrawInfo
+* The PlatformCurrency model module.
+* @module model/PlatformCurrency
 * @version v1.0
 */
-var ManagerFundWithdrawInfo = function () {
+var PlatformCurrency = function () {
     /**
-    * Constructs a new <code>ManagerFundWithdrawInfo</code>.
-    * @alias module:model/ManagerFundWithdrawInfo
+    * Constructs a new <code>PlatformCurrency</code>.
+    * @alias module:model/PlatformCurrency
     * @class
     */
 
-    function ManagerFundWithdrawInfo() {
-        _classCallCheck(this, ManagerFundWithdrawInfo);
+    function PlatformCurrency() {
+        _classCallCheck(this, PlatformCurrency);
 
-        this.withheldInvestment = undefined;
-        this.exitFee = undefined;
-        this.title = undefined;
-        this.availableToWithdraw = undefined;
-        this.rate = undefined;
+        this.name = undefined;
+        this.rateToGvt = undefined;
     }
 
     /**
-    * Constructs a <code>ManagerFundWithdrawInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PlatformCurrency</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ManagerFundWithdrawInfo} obj Optional instance to populate.
-    * @return {module:model/ManagerFundWithdrawInfo} The populated <code>ManagerFundWithdrawInfo</code> instance.
+    * @param {module:model/PlatformCurrency} obj Optional instance to populate.
+    * @return {module:model/PlatformCurrency} The populated <code>PlatformCurrency</code> instance.
     */
 
 
-    _createClass(ManagerFundWithdrawInfo, null, [{
+    _createClass(PlatformCurrency, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ManagerFundWithdrawInfo();
+                obj = obj || new PlatformCurrency();
 
-                if (data.hasOwnProperty('withheldInvestment')) {
-                    obj['withheldInvestment'] = _ApiClient2.default.convertToType(data['withheldInvestment'], 'Number');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('exitFee')) {
-                    obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('availableToWithdraw')) {
-                    obj['availableToWithdraw'] = _ApiClient2.default.convertToType(data['availableToWithdraw'], 'Number');
-                }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('rateToGvt')) {
+                    obj['rateToGvt'] = _ApiClient2.default.convertToType(data['rateToGvt'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} withheldInvestment
+        * @member {String} name
         */
 
         /**
-        * @member {Number} exitFee
-        */
-
-        /**
-        * @member {String} title
-        */
-
-        /**
-        * @member {Number} availableToWithdraw
-        */
-
-        /**
-        * @member {Number} rate
+        * @member {Number} rateToGvt
         */
 
     }]);
 
-    return ManagerFundWithdrawInfo;
+    return PlatformCurrency;
 }();
 
-exports.default = ManagerFundWithdrawInfo;
+exports.default = PlatformCurrency;
