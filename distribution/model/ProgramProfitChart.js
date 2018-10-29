@@ -54,7 +54,6 @@ var ProgramProfitChart = function () {
         this.trades = undefined;
         this.successTradesPercent = undefined;
         this.profitFactor = undefined;
-        this.profitChangePercent = undefined;
         this.pnLChart = undefined;
         this.periods = undefined;
         this.lastPeriodStarts = undefined;
@@ -62,6 +61,7 @@ var ProgramProfitChart = function () {
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
+        this.profitChangePercent = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
         this.calmarRatio = undefined;
@@ -104,9 +104,6 @@ var ProgramProfitChart = function () {
                 if (data.hasOwnProperty('profitFactor')) {
                     obj['profitFactor'] = _ApiClient2.default.convertToType(data['profitFactor'], 'Number');
                 }
-                if (data.hasOwnProperty('profitChangePercent')) {
-                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
-                }
                 if (data.hasOwnProperty('pnLChart')) {
                     obj['pnLChart'] = _ApiClient2.default.convertToType(data['pnLChart'], [_ChartSimple2.default]);
                 }
@@ -127,6 +124,9 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('investors')) {
                     obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
+                }
+                if (data.hasOwnProperty('profitChangePercent')) {
+                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('sharpeRatio')) {
                     obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
@@ -178,10 +178,6 @@ var ProgramProfitChart = function () {
         */
 
         /**
-        * @member {Number} profitChangePercent
-        */
-
-        /**
         * @member {Array.<module:model/ChartSimple>} pnLChart
         */
 
@@ -207,6 +203,10 @@ var ProgramProfitChart = function () {
 
         /**
         * @member {Number} investors
+        */
+
+        /**
+        * @member {Number} profitChangePercent
         */
 
         /**

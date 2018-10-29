@@ -51,6 +51,7 @@ var FundProfitChart = function () {
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
+        this.profitChangePercent = undefined;
         this.sharpeRatio = undefined;
         this.sortinoRatio = undefined;
         this.calmarRatio = undefined;
@@ -95,6 +96,9 @@ var FundProfitChart = function () {
                 }
                 if (data.hasOwnProperty('investors')) {
                     obj['investors'] = _ApiClient2.default.convertToType(data['investors'], 'Number');
+                }
+                if (data.hasOwnProperty('profitChangePercent')) {
+                    obj['profitChangePercent'] = _ApiClient2.default.convertToType(data['profitChangePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('sharpeRatio')) {
                     obj['sharpeRatio'] = _ApiClient2.default.convertToType(data['sharpeRatio'], 'Number');
@@ -147,6 +151,10 @@ var FundProfitChart = function () {
 
         /**
         * @member {Number} investors
+        */
+
+        /**
+        * @member {Number} profitChangePercent
         */
 
         /**

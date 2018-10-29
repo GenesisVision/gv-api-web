@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
+**profitChangePercent** | **Number** |  | [optional] 
 **sharpeRatio** | **Number** |  | [optional] 
 **sortinoRatio** | **Number** |  | [optional] 
 **calmarRatio** | **Number** |  | [optional] 

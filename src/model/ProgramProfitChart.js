@@ -76,9 +76,6 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('profitFactor')) {
                 obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
             }
-            if (data.hasOwnProperty('profitChangePercent')) {
-                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
-            }
             if (data.hasOwnProperty('pnLChart')) {
                 obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
@@ -99,6 +96,9 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
+            }
+            if (data.hasOwnProperty('profitChangePercent')) {
+                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
             }
             if (data.hasOwnProperty('sharpeRatio')) {
                 obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
@@ -150,10 +150,6 @@ export default class ProgramProfitChart {
     */
     profitFactor = undefined;
     /**
-    * @member {Number} profitChangePercent
-    */
-    profitChangePercent = undefined;
-    /**
     * @member {Array.<module:model/ChartSimple>} pnLChart
     */
     pnLChart = undefined;
@@ -181,6 +177,10 @@ export default class ProgramProfitChart {
     * @member {Number} investors
     */
     investors = undefined;
+    /**
+    * @member {Number} profitChangePercent
+    */
+    profitChangePercent = undefined;
     /**
     * @member {Number} sharpeRatio
     */

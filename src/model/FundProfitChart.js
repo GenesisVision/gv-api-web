@@ -78,6 +78,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
+            if (data.hasOwnProperty('profitChangePercent')) {
+                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'Number');
+            }
             if (data.hasOwnProperty('sharpeRatio')) {
                 obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'Number');
             }
@@ -131,6 +134,10 @@ export default class FundProfitChart {
     * @member {Number} investors
     */
     investors = undefined;
+    /**
+    * @member {Number} profitChangePercent
+    */
+    profitChangePercent = undefined;
     /**
     * @member {Number} sharpeRatio
     */
