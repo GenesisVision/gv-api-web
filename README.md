@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+*CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdGet**](docs/ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
 *CoreApiV10.ManagerApi* | [**v10ManagerEventsGet**](docs/ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
@@ -259,6 +260,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
+ - [CoreApiV10.KycCallback](docs/KycCallback.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)
  - [CoreApiV10.ManagerFundWithdrawInfo](docs/ManagerFundWithdrawInfo.md)
@@ -316,6 +318,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
+ - [CoreApiV10.Review](docs/Review.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)

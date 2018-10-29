@@ -51,6 +51,7 @@ import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
+import KycCallback from './model/KycCallback';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerDashboard from './model/ManagerDashboard';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
@@ -108,6 +109,7 @@ import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
+import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -133,6 +135,7 @@ import BrokersApi from './api/BrokersApi';
 import FileApi from './api/FileApi';
 import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
+import KycApi from './api/KycApi';
 import ManagerApi from './api/ManagerApi';
 import NotificationsApi from './api/NotificationsApi';
 import PlatformApi from './api/PlatformApi';
@@ -408,6 +411,12 @@ export {
      * @property {module:model/IOsAppVersion}
      */
     IOsAppVersion,
+
+    /**
+     * The KycCallback model constructor.
+     * @property {module:model/KycCallback}
+     */
+    KycCallback,
 
     /**
      * The LoginViewModel model constructor.
@@ -752,6 +761,12 @@ export {
     ResetPasswordViewModel,
 
     /**
+     * The Review model constructor.
+     * @property {module:model/Review}
+     */
+    Review,
+
+    /**
      * The SearchViewModel model constructor.
      * @property {module:model/SearchViewModel}
      */
@@ -900,6 +915,12 @@ export {
     * @property {module:api/InvestorApi}
     */
     InvestorApi,
+
+    /**
+    * The KycApi service constructor.
+    * @property {module:api/KycApi}
+    */
+    KycApi,
 
     /**
     * The ManagerApi service constructor.
