@@ -53,10 +53,6 @@ var _ProgramSets = require('../model/ProgramSets');
 
 var _ProgramSets2 = _interopRequireDefault(_ProgramSets);
 
-var _ProgramsList = require('../model/ProgramsList');
-
-var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -82,98 +78,12 @@ var FundsApi = function () {
   }
 
   /**
-   * @param {String} id 
-   * @param {Object} opts Optional parameters
-   * @param {module:model/String} opts.sorting 
-   * @param {module:model/String} opts.currencySecondary 
-   * @param {Date} opts.statisticDateFrom 
-   * @param {Date} opts.statisticDateTo 
-   * @param {Number} opts.chartPointsCount 
-   * @param {String} opts.mask 
-   * @param {String} opts.facetId 
-   * @param {Boolean} opts.isFavorite 
-   * @param {Array.<String>} opts.ids 
-   * @param {String} opts.managerId 
-   * @param {String} opts.programManagerId 
-   * @param {Number} opts.skip 
-   * @param {Number} opts.take 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
+   * Get all supported assets for funds
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformAssets} and HTTP response
    */
 
 
   _createClass(FundsApi, [{
-    key: 'facetsFundsByIdGetWithHttpInfo',
-    value: function facetsFundsByIdGetWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling facetsFundsByIdGet");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'Sorting': opts['sorting'],
-        'CurrencySecondary': opts['currencySecondary'],
-        'StatisticDateFrom': opts['statisticDateFrom'],
-        'StatisticDateTo': opts['statisticDateTo'],
-        'ChartPointsCount': opts['chartPointsCount'],
-        'Mask': opts['mask'],
-        'FacetId': opts['facetId'],
-        'IsFavorite': opts['isFavorite'],
-        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
-        'ManagerId': opts['managerId'],
-        'ProgramManagerId': opts['programManagerId'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramsList2.default;
-
-      return this.apiClient.callApi('/facets/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
-     * @param {module:model/String} opts.currencySecondary 
-     * @param {Date} opts.statisticDateFrom 
-     * @param {Date} opts.statisticDateTo 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.mask 
-     * @param {String} opts.facetId 
-     * @param {Boolean} opts.isFavorite 
-     * @param {Array.<String>} opts.ids 
-     * @param {String} opts.managerId 
-     * @param {String} opts.programManagerId 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
-     */
-
-  }, {
-    key: 'facetsFundsByIdGet',
-    value: function facetsFundsByIdGet(id, opts) {
-      return this.facetsFundsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get all supported assets for funds
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformAssets} and HTTP response
-     */
-
-  }, {
     key: 'v10FundsAssetsGetWithHttpInfo',
     value: function v10FundsAssetsGetWithHttpInfo() {
       var postBody = null;

@@ -130,6 +130,7 @@ import WithdrawalInfo from './model/WithdrawalInfo';
 import WithdrawalSummary from './model/WithdrawalSummary';
 import AuthApi from './api/AuthApi';
 import BrokersApi from './api/BrokersApi';
+import FacetsApi from './api/FacetsApi';
 import FileApi from './api/FileApi';
 import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
@@ -882,6 +883,12 @@ export {
     * @property {module:api/BrokersApi}
     */
     BrokersApi,
+
+    /**
+    * The FacetsApi service constructor.
+    * @property {module:api/FacetsApi}
+    */
+    FacetsApi,
 
     /**
     * The FileApi service constructor.
