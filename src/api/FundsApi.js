@@ -21,6 +21,7 @@ import FundProfitChart from '../model/FundProfitChart';
 import FundsList from '../model/FundsList';
 import PlatformAssets from '../model/PlatformAssets';
 import ProgramSets from '../model/ProgramSets';
+import ProgramsList from '../model/ProgramsList';
 
 /**
 * Funds service.
@@ -40,6 +41,95 @@ export default class FundsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currencySecondary 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {Number} opts.chartPointsCount 
+     * @param {String} opts.mask 
+     * @param {String} opts.facetId 
+     * @param {Boolean} opts.isFavorite 
+     * @param {Array.<String>} opts.ids 
+     * @param {String} opts.managerId 
+     * @param {String} opts.programManagerId 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
+     */
+    facetsFundsByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling facetsFundsByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'Sorting': opts['sorting'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'Mask': opts['mask'],
+        'FacetId': opts['facetId'],
+        'IsFavorite': opts['isFavorite'],
+        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'ManagerId': opts['managerId'],
+        'ProgramManagerId': opts['programManagerId'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramsList;
+
+      return this.apiClient.callApi(
+        '/facets/funds/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.currencySecondary 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {Number} opts.chartPointsCount 
+     * @param {String} opts.mask 
+     * @param {String} opts.facetId 
+     * @param {Boolean} opts.isFavorite 
+     * @param {Array.<String>} opts.ids 
+     * @param {String} opts.managerId 
+     * @param {String} opts.programManagerId 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
+     */
+    facetsFundsByIdGet(id, opts) {
+      return this.facetsFundsByIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

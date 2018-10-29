@@ -4,6 +4,7 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**facetsFundsByIdGet**](FundsApi.md#facetsFundsByIdGet) | **GET** /facets/funds/{id} | 
 [**v10FundsAssetsGet**](FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
 [**v10FundsByIdAssetsGet**](FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
 [**v10FundsByIdChartsBalanceGet**](FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
@@ -14,6 +15,75 @@ Method | HTTP request | Description
 [**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 [**v10FundsSetsGet**](FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 
+
+<a name="facetsFundsByIdGet"></a>
+# **facetsFundsByIdGet**
+> ProgramsList facetsFundsByIdGet(id, opts)
+
+
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'mask': "mask_example", // String | 
+  'facetId': "facetId_example", // String | 
+  'isFavorite': true, // Boolean | 
+  'ids': ["ids_example"], // [String] | 
+  'managerId': "managerId_example", // String | 
+  'programManagerId': "programManagerId_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.facetsFundsByIdGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **sorting** | **String**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **statisticDateFrom** | **Date**|  | [optional] 
+ **statisticDateTo** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **mask** | **String**|  | [optional] 
+ **facetId** | **String**|  | [optional] 
+ **isFavorite** | **Boolean**|  | [optional] 
+ **ids** | [**[String]**](String.md)|  | [optional] 
+ **managerId** | **String**|  | [optional] 
+ **programManagerId** | [**String**](.md)|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**ProgramsList**](ProgramsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10FundsAssetsGet"></a>
 # **v10FundsAssetsGet**

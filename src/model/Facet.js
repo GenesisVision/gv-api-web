@@ -71,8 +71,8 @@ export default class Facet {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('count')) {
-                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
+            if (data.hasOwnProperty('sortType')) {
+                obj['sortType'] = ApiClient.convertToType(data['sortType'], 'String');
             }
         }
         return obj;
@@ -99,14 +99,46 @@ export default class Facet {
     */
     url = undefined;
     /**
-    * @member {Number} count
+    * @member {module:model/Facet.SortTypeEnum} sortType
     */
-    count = undefined;
+    sortType = undefined;
 
 
 
 
 
+
+    /**
+    * Allowed values for the <code>sortType</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static SortTypeEnum = {
+    
+        /**
+         * value: "New"
+         * @const
+         */
+        "New": "New",
+    
+        /**
+         * value: "Top"
+         * @const
+         */
+        "Top": "Top",
+    
+        /**
+         * value: "WeeklyTop"
+         * @const
+         */
+        "WeeklyTop": "WeeklyTop",
+    
+        /**
+         * value: "Popular"
+         * @const
+         */
+        "Popular": "Popular"    
+    };
 
 
 

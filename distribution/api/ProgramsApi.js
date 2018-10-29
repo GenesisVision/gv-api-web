@@ -74,17 +74,118 @@ var ProgramsApi = function () {
   }
 
   /**
-   * Program balance chart
    * @param {String} id 
    * @param {Object} opts Optional parameters
-   * @param {Date} opts.dateFrom 
-   * @param {Date} opts.dateTo 
-   * @param {Number} opts.maxPointCount 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramBalanceChart} and HTTP response
+   * @param {Number} opts.levelMin 
+   * @param {Number} opts.levelMax 
+   * @param {Number} opts.profitAvgMin 
+   * @param {Number} opts.profitAvgMax 
+   * @param {module:model/String} opts.sorting 
+   * @param {module:model/String} opts.programCurrency 
+   * @param {module:model/String} opts.currencySecondary 
+   * @param {Date} opts.statisticDateFrom 
+   * @param {Date} opts.statisticDateTo 
+   * @param {Number} opts.chartPointsCount 
+   * @param {String} opts.mask 
+   * @param {String} opts.facetId 
+   * @param {Boolean} opts.isFavorite 
+   * @param {Array.<String>} opts.ids 
+   * @param {String} opts.managerId 
+   * @param {String} opts.programManagerId 
+   * @param {Number} opts.skip 
+   * @param {Number} opts.take 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
    */
 
 
   _createClass(ProgramsApi, [{
+    key: 'facetsProgramsByIdGetWithHttpInfo',
+    value: function facetsProgramsByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling facetsProgramsByIdGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'LevelMin': opts['levelMin'],
+        'LevelMax': opts['levelMax'],
+        'ProfitAvgMin': opts['profitAvgMin'],
+        'ProfitAvgMax': opts['profitAvgMax'],
+        'Sorting': opts['sorting'],
+        'ProgramCurrency': opts['programCurrency'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'Mask': opts['mask'],
+        'FacetId': opts['facetId'],
+        'IsFavorite': opts['isFavorite'],
+        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'ManagerId': opts['managerId'],
+        'ProgramManagerId': opts['programManagerId'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramsList2.default;
+
+      return this.apiClient.callApi('/facets/programs/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.levelMin 
+     * @param {Number} opts.levelMax 
+     * @param {Number} opts.profitAvgMin 
+     * @param {Number} opts.profitAvgMax 
+     * @param {module:model/String} opts.sorting 
+     * @param {module:model/String} opts.programCurrency 
+     * @param {module:model/String} opts.currencySecondary 
+     * @param {Date} opts.statisticDateFrom 
+     * @param {Date} opts.statisticDateTo 
+     * @param {Number} opts.chartPointsCount 
+     * @param {String} opts.mask 
+     * @param {String} opts.facetId 
+     * @param {Boolean} opts.isFavorite 
+     * @param {Array.<String>} opts.ids 
+     * @param {String} opts.managerId 
+     * @param {String} opts.programManagerId 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
+     */
+
+  }, {
+    key: 'facetsProgramsByIdGet',
+    value: function facetsProgramsByIdGet(id, opts) {
+      return this.facetsProgramsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Program balance chart
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramBalanceChart} and HTTP response
+     */
+
+  }, {
     key: 'v10ProgramsByIdChartsBalanceGetWithHttpInfo',
     value: function v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts) {
       opts = opts || {};

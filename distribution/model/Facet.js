@@ -45,7 +45,7 @@ var Facet = function () {
         this.description = undefined;
         this.logo = undefined;
         this.url = undefined;
-        this.count = undefined;
+        this.sortType = undefined;
     }
 
     /**
@@ -78,8 +78,8 @@ var Facet = function () {
                 if (data.hasOwnProperty('url')) {
                     obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
-                if (data.hasOwnProperty('count')) {
-                    obj['count'] = _ApiClient2.default.convertToType(data['count'], 'Number');
+                if (data.hasOwnProperty('sortType')) {
+                    obj['sortType'] = _ApiClient2.default.convertToType(data['sortType'], 'String');
                 }
             }
             return obj;
@@ -106,7 +106,14 @@ var Facet = function () {
         */
 
         /**
-        * @member {Number} count
+        * @member {module:model/Facet.SortTypeEnum} sortType
+        */
+
+
+        /**
+        * Allowed values for the <code>sortType</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
@@ -114,4 +121,30 @@ var Facet = function () {
     return Facet;
 }();
 
+Facet.SortTypeEnum = {
+
+    /**
+     * value: "New"
+     * @const
+     */
+    "New": "New",
+
+    /**
+     * value: "Top"
+     * @const
+     */
+    "Top": "Top",
+
+    /**
+     * value: "WeeklyTop"
+     * @const
+     */
+    "WeeklyTop": "WeeklyTop",
+
+    /**
+     * value: "Popular"
+     * @const
+     */
+    "Popular": "Popular"
+};
 exports.default = Facet;

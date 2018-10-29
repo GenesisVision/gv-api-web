@@ -8,6 +8,21 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
-**count** | **Number** |  | [optional] 
+**sortType** | **String** |  | [optional] 
+
+
+<a name="SortTypeEnum"></a>
+## Enum: SortTypeEnum
+
+
+* `New` (value: `"New"`)
+
+* `Top` (value: `"Top"`)
+
+* `WeeklyTop` (value: `"WeeklyTop"`)
+
+* `Popular` (value: `"Popular"`)
+
+
 
 
