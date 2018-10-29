@@ -118,8 +118,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthTokenDevicesLogoutPost**](docs/AuthApi.md#v10AuthTokenDevicesLogoutPost) | **POST** /v1.0/auth/token/devices/logout | Logout from another devices
 *CoreApiV10.AuthApi* | [**v10AuthTokenUpdatePost**](docs/AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
 *CoreApiV10.BrokersApi* | [**v10BrokersGet**](docs/BrokersApi.md#v10BrokersGet) | **GET** /v1.0/brokers | Get all trade servers
-*CoreApiV10.FacetsApi* | [**v10FacetsFundsByIdGet**](docs/FacetsApi.md#v10FacetsFundsByIdGet) | **GET** /v1.0/facets/funds/{id} | 
-*CoreApiV10.FacetsApi* | [**v10FacetsProgramsByIdGet**](docs/FacetsApi.md#v10FacetsProgramsByIdGet) | **GET** /v1.0/facets/programs/{id} | 
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileDocumentUploadPost**](docs/FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
