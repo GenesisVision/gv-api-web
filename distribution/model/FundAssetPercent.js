@@ -41,6 +41,7 @@ var FundAssetPercent = function () {
         _classCallCheck(this, FundAssetPercent);
 
         this.asset = undefined;
+        this.name = undefined;
         this.percent = undefined;
         this.icon = undefined;
     }
@@ -63,6 +64,9 @@ var FundAssetPercent = function () {
                 if (data.hasOwnProperty('asset')) {
                     obj['asset'] = _ApiClient2.default.convertToType(data['asset'], 'String');
                 }
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                }
                 if (data.hasOwnProperty('percent')) {
                     obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
                 }
@@ -75,6 +79,10 @@ var FundAssetPercent = function () {
 
         /**
         * @member {String} asset
+        */
+
+        /**
+        * @member {String} name
         */
 
         /**
