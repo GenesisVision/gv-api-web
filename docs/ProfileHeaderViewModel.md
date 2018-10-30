@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **availableGvt** | **Number** |  | [optional] 
 **kycConfirmed** | **Boolean** |  | [optional] 
 **isTwoFactorEnabled** | **Boolean** |  | [optional] 
+**isNewUser** | **Boolean** |  | [optional] 
 
 

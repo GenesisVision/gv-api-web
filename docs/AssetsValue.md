@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **changePercent** | **Number** |  | [optional] 
 **changeValue** | **Number** |  | [optional] 

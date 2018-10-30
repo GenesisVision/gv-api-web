@@ -44,6 +44,7 @@ var AssetsValue = function () {
         this.id = undefined;
         this.title = undefined;
         this.avatar = undefined;
+        this.color = undefined;
         this.value = undefined;
         this.changePercent = undefined;
         this.changeValue = undefined;
@@ -76,6 +77,9 @@ var AssetsValue = function () {
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
                 }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
                 }
@@ -103,6 +107,10 @@ var AssetsValue = function () {
 
         /**
         * @member {String} avatar
+        */
+
+        /**
+        * @member {String} color
         */
 
         /**

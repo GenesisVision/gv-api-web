@@ -68,6 +68,9 @@ export default class AssetsValue {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
@@ -97,6 +100,10 @@ export default class AssetsValue {
     * @member {String} avatar
     */
     avatar = undefined;
+    /**
+    * @member {String} color
+    */
+    color = undefined;
     /**
     * @member {Number} value
     */

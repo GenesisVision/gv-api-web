@@ -51,6 +51,7 @@ var ProfileHeaderViewModel = function () {
         this.availableGvt = undefined;
         this.kycConfirmed = undefined;
         this.isTwoFactorEnabled = undefined;
+        this.isNewUser = undefined;
     }
 
     /**
@@ -101,6 +102,9 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('isTwoFactorEnabled')) {
                     obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
                 }
+                if (data.hasOwnProperty('isNewUser')) {
+                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -147,6 +151,10 @@ var ProfileHeaderViewModel = function () {
 
         /**
         * @member {Boolean} isTwoFactorEnabled
+        */
+
+        /**
+        * @member {Boolean} isNewUser
         */
 
     }]);

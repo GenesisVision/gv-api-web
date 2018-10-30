@@ -89,6 +89,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('isTwoFactorEnabled')) {
                 obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('isNewUser')) {
+                obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -137,6 +140,10 @@ export default class ProfileHeaderViewModel {
     * @member {Boolean} isTwoFactorEnabled
     */
     isTwoFactorEnabled = undefined;
+    /**
+    * @member {Boolean} isNewUser
+    */
+    isNewUser = undefined;
 
 
 

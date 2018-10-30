@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **changePercent** | **Number** |  | [optional] 
 **changeValue** | **Number** |  | [optional] 
 **changeValueCurrency** | **Number** |  | [optional] 
-**isNewUser** | **Boolean** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 
