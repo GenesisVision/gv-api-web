@@ -50,15 +50,15 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `All` (value: `"All"`)
-
 * `Invest` (value: `"Invest"`)
+
+* `Loss` (value: `"Loss"`)
 
 * `Withdraw` (value: `"Withdraw"`)
 
-* `Profit` (value: `"Profit"`)
+* `All` (value: `"All"`)
 
-* `Loss` (value: `"Loss"`)
+* `Profit` (value: `"Profit"`)
 
 * `Reinvest` (value: `"Reinvest"`)
 
