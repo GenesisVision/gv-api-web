@@ -83,6 +83,9 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('assetType')) {
+                obj['assetType'] = ApiClient.convertToType(data['assetType'], 'String');
+            }
         }
         return obj;
     }
@@ -123,6 +126,10 @@ export default class DashboardPortfolioEvent {
     * @member {String} description
     */
     description = undefined;
+    /**
+    * @member {module:model/DashboardPortfolioEvent.AssetTypeEnum} assetType
+    */
+    assetType = undefined;
 
 
 
@@ -263,6 +270,26 @@ export default class DashboardPortfolioEvent {
          * @const
          */
         "Ended": "Ended"    
+    };
+
+    /**
+    * Allowed values for the <code>assetType</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static AssetTypeEnum = {
+    
+        /**
+         * value: "Program"
+         * @const
+         */
+        "Program": "Program",
+    
+        /**
+         * value: "Fund"
+         * @const
+         */
+        "Fund": "Fund"    
     };
 
 

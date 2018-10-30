@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**assetType** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
@@ -64,6 +65,17 @@ Name | Type | Description | Notes
 * `Cancelled` (value: `"Cancelled"`)
 
 * `Ended` (value: `"Ended"`)
+
+
+
+
+<a name="AssetTypeEnum"></a>
+## Enum: AssetTypeEnum
+
+
+* `Program` (value: `"Program"`)
+
+* `Fund` (value: `"Fund"`)
 
 
 

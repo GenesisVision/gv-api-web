@@ -49,6 +49,7 @@ var DashboardPortfolioEvent = function () {
         this.logo = undefined;
         this.color = undefined;
         this.description = undefined;
+        this.assetType = undefined;
     }
 
     /**
@@ -93,6 +94,9 @@ var DashboardPortfolioEvent = function () {
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
+                if (data.hasOwnProperty('assetType')) {
+                    obj['assetType'] = _ApiClient2.default.convertToType(data['assetType'], 'String');
+                }
             }
             return obj;
         }
@@ -133,6 +137,10 @@ var DashboardPortfolioEvent = function () {
         * @member {String} description
         */
 
+        /**
+        * @member {module:model/DashboardPortfolioEvent.AssetTypeEnum} assetType
+        */
+
 
         /**
         * Allowed values for the <code>currency</code> property.
@@ -143,6 +151,13 @@ var DashboardPortfolioEvent = function () {
 
         /**
         * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>assetType</code> property.
         * @enum {String}
         * @readonly
         */
@@ -275,5 +290,19 @@ DashboardPortfolioEvent.TypeEnum = {
      * @const
      */
     "Ended": "Ended"
+};
+DashboardPortfolioEvent.AssetTypeEnum = {
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund"
 };
 exports.default = DashboardPortfolioEvent;
