@@ -50,9 +50,9 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Invest` (value: `"Invest"`)
-
 * `All` (value: `"All"`)
+
+* `Invest` (value: `"Invest"`)
 
 * `Withdraw` (value: `"Withdraw"`)
 
