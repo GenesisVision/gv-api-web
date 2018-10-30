@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
+* `Pending` (value: `"Pending"`)
+
 * `Active` (value: `"Active"`)
 
 * `Investing` (value: `"Investing"`)

@@ -172,6 +172,12 @@ var PersonalFundDetailsFull = function () {
 PersonalFundDetailsFull.StatusEnum = {
 
     /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
      * value: "Active"
      * @const
      */

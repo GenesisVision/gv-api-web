@@ -68,6 +68,12 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('valueGvt')) {
+                obj['valueGvt'] = ApiClient.convertToType(data['valueGvt'], 'Number');
+            }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('fundWithdrawPercent')) {
                 obj['fundWithdrawPercent'] = ApiClient.convertToType(data['fundWithdrawPercent'], 'Number');
             }
@@ -113,6 +119,14 @@ export default class ProgramRequest {
     */
     value = undefined;
     /**
+    * @member {Number} valueGvt
+    */
+    valueGvt = undefined;
+    /**
+    * @member {module:model/ProgramRequest.CurrencyEnum} currency
+    */
+    currency = undefined;
+    /**
     * Used only in fund withdraw request
     * @member {Number} fundWithdrawPercent
     */
@@ -150,6 +164,86 @@ export default class ProgramRequest {
 
 
 
+
+    /**
+    * Allowed values for the <code>currency</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static CurrencyEnum = {
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
+    
+        /**
+         * value: "GVT"
+         * @const
+         */
+        "GVT": "GVT",
+    
+        /**
+         * value: "ETH"
+         * @const
+         */
+        "ETH": "ETH",
+    
+        /**
+         * value: "BTC"
+         * @const
+         */
+        "BTC": "BTC",
+    
+        /**
+         * value: "ADA"
+         * @const
+         */
+        "ADA": "ADA",
+    
+        /**
+         * value: "USDT"
+         * @const
+         */
+        "USDT": "USDT",
+    
+        /**
+         * value: "XRP"
+         * @const
+         */
+        "XRP": "XRP",
+    
+        /**
+         * value: "BCH"
+         * @const
+         */
+        "BCH": "BCH",
+    
+        /**
+         * value: "LTC"
+         * @const
+         */
+        "LTC": "LTC",
+    
+        /**
+         * value: "DOGE"
+         * @const
+         */
+        "DOGE": "DOGE",
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        "USD": "USD",
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        "EUR": "EUR"    
+    };
 
     /**
     * Allowed values for the <code>type</code> property.

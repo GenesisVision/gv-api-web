@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **programId** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **value** | **Number** |  | [optional] 
+**valueGvt** | **Number** |  | [optional] 
+**currency** | **String** |  | [optional] 
 **fundWithdrawPercent** | **Number** | Used only in fund withdraw request | [optional] 
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
@@ -15,6 +17,37 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 **canCancelRequest** | **Boolean** |  | [optional] 
 **programType** | **String** |  | [optional] 
+
+
+<a name="CurrencyEnum"></a>
+## Enum: CurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="TypeEnum"></a>

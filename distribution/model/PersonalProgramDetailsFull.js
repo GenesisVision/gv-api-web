@@ -180,6 +180,12 @@ var PersonalProgramDetailsFull = function () {
 PersonalProgramDetailsFull.StatusEnum = {
 
     /**
+     * value: "Pending"
+     * @const
+     */
+    "Pending": "Pending",
+
+    /**
      * value: "Active"
      * @const
      */

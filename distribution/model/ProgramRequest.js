@@ -44,6 +44,8 @@ var ProgramRequest = function () {
         this.programId = undefined;
         this.date = undefined;
         this.value = undefined;
+        this.valueGvt = undefined;
+        this.currency = undefined;
         this.fundWithdrawPercent = undefined;
         this.type = undefined;
         this.status = undefined;
@@ -80,6 +82,12 @@ var ProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+                if (data.hasOwnProperty('valueGvt')) {
+                    obj['valueGvt'] = _ApiClient2.default.convertToType(data['valueGvt'], 'Number');
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
                 if (data.hasOwnProperty('fundWithdrawPercent')) {
                     obj['fundWithdrawPercent'] = _ApiClient2.default.convertToType(data['fundWithdrawPercent'], 'Number');
@@ -126,6 +134,14 @@ var ProgramRequest = function () {
         */
 
         /**
+        * @member {Number} valueGvt
+        */
+
+        /**
+        * @member {module:model/ProgramRequest.CurrencyEnum} currency
+        */
+
+        /**
         * Used only in fund withdraw request
         * @member {Number} fundWithdrawPercent
         */
@@ -160,6 +176,13 @@ var ProgramRequest = function () {
 
 
         /**
+        * Allowed values for the <code>currency</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
         * Allowed values for the <code>type</code> property.
         * @enum {String}
         * @readonly
@@ -184,6 +207,80 @@ var ProgramRequest = function () {
     return ProgramRequest;
 }();
 
+ProgramRequest.CurrencyEnum = {
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
+
+    /**
+     * value: "ETH"
+     * @const
+     */
+    "ETH": "ETH",
+
+    /**
+     * value: "BTC"
+     * @const
+     */
+    "BTC": "BTC",
+
+    /**
+     * value: "ADA"
+     * @const
+     */
+    "ADA": "ADA",
+
+    /**
+     * value: "USDT"
+     * @const
+     */
+    "USDT": "USDT",
+
+    /**
+     * value: "XRP"
+     * @const
+     */
+    "XRP": "XRP",
+
+    /**
+     * value: "BCH"
+     * @const
+     */
+    "BCH": "BCH",
+
+    /**
+     * value: "LTC"
+     * @const
+     */
+    "LTC": "LTC",
+
+    /**
+     * value: "DOGE"
+     * @const
+     */
+    "DOGE": "DOGE",
+
+    /**
+     * value: "USD"
+     * @const
+     */
+    "USD": "USD",
+
+    /**
+     * value: "EUR"
+     * @const
+     */
+    "EUR": "EUR"
+};
 ProgramRequest.TypeEnum = {
 
     /**

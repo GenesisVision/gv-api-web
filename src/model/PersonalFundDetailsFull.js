@@ -158,6 +158,12 @@ export default class PersonalFundDetailsFull {
     static StatusEnum = {
     
         /**
+         * value: "Pending"
+         * @const
+         */
+        "Pending": "Pending",
+    
+        /**
          * value: "Active"
          * @const
          */

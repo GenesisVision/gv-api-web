@@ -165,6 +165,12 @@ export default class PersonalProgramDetailsFull {
     static StatusEnum = {
     
         /**
+         * value: "Pending"
+         * @const
+         */
+        "Pending": "Pending",
+    
+        /**
          * value: "Active"
          * @const
          */
