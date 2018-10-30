@@ -79,6 +79,9 @@ export default class DashboardChartValue {
             if (data.hasOwnProperty('changeValueCurrency')) {
                 obj['changeValueCurrency'] = ApiClient.convertToType(data['changeValueCurrency'], 'Number');
             }
+            if (data.hasOwnProperty('isNewUser')) {
+                obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'Boolean');
+            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -114,6 +117,10 @@ export default class DashboardChartValue {
     * @member {Number} changeValueCurrency
     */
     changeValueCurrency = undefined;
+    /**
+    * @member {Boolean} isNewUser
+    */
+    isNewUser = undefined;
     /**
     * @member {Number} rate
     */

@@ -55,6 +55,7 @@ var DashboardChartValue = function () {
         this.changePercent = undefined;
         this.changeValue = undefined;
         this.changeValueCurrency = undefined;
+        this.isNewUser = undefined;
         this.rate = undefined;
     }
 
@@ -94,6 +95,9 @@ var DashboardChartValue = function () {
                 if (data.hasOwnProperty('changeValueCurrency')) {
                     obj['changeValueCurrency'] = _ApiClient2.default.convertToType(data['changeValueCurrency'], 'Number');
                 }
+                if (data.hasOwnProperty('isNewUser')) {
+                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
+                }
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
@@ -127,6 +131,10 @@ var DashboardChartValue = function () {
 
         /**
         * @member {Number} changeValueCurrency
+        */
+
+        /**
+        * @member {Boolean} isNewUser
         */
 
         /**
