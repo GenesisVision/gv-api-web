@@ -41,10 +41,10 @@ var FundAssetInfo = function () {
         _classCallCheck(this, FundAssetInfo);
 
         this.asset = undefined;
-        this.name = undefined;
+        this.symbol = undefined;
         this.icon = undefined;
-        this.targetPercent = undefined;
-        this.currentPercent = undefined;
+        this.target = undefined;
+        this.current = undefined;
     }
 
     /**
@@ -65,17 +65,17 @@ var FundAssetInfo = function () {
                 if (data.hasOwnProperty('asset')) {
                     obj['asset'] = _ApiClient2.default.convertToType(data['asset'], 'String');
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('symbol')) {
+                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
                 }
                 if (data.hasOwnProperty('icon')) {
                     obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
                 }
-                if (data.hasOwnProperty('targetPercent')) {
-                    obj['targetPercent'] = _ApiClient2.default.convertToType(data['targetPercent'], 'Number');
+                if (data.hasOwnProperty('target')) {
+                    obj['target'] = _ApiClient2.default.convertToType(data['target'], 'Number');
                 }
-                if (data.hasOwnProperty('currentPercent')) {
-                    obj['currentPercent'] = _ApiClient2.default.convertToType(data['currentPercent'], 'Number');
+                if (data.hasOwnProperty('current')) {
+                    obj['current'] = _ApiClient2.default.convertToType(data['current'], 'Number');
                 }
             }
             return obj;
@@ -86,7 +86,7 @@ var FundAssetInfo = function () {
         */
 
         /**
-        * @member {String} name
+        * @member {String} symbol
         */
 
         /**
@@ -94,11 +94,11 @@ var FundAssetInfo = function () {
         */
 
         /**
-        * @member {Number} targetPercent
+        * @member {Number} target
         */
 
         /**
-        * @member {Number} currentPercent
+        * @member {Number} current
         */
 
     }]);

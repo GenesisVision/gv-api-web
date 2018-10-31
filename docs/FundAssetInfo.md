@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**symbol** | **String** |  | [optional] 
 **icon** | **String** |  | [optional] 
-**targetPercent** | **Number** |  | [optional] 
-**currentPercent** | **Number** |  | [optional] 
+**target** | **Number** |  | [optional] 
+**current** | **Number** |  | [optional] 
 
 

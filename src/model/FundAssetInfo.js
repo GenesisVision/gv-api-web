@@ -59,17 +59,17 @@ export default class FundAssetInfo {
             if (data.hasOwnProperty('asset')) {
                 obj['asset'] = ApiClient.convertToType(data['asset'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('symbol')) {
+                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
             }
             if (data.hasOwnProperty('icon')) {
                 obj['icon'] = ApiClient.convertToType(data['icon'], 'String');
             }
-            if (data.hasOwnProperty('targetPercent')) {
-                obj['targetPercent'] = ApiClient.convertToType(data['targetPercent'], 'Number');
+            if (data.hasOwnProperty('target')) {
+                obj['target'] = ApiClient.convertToType(data['target'], 'Number');
             }
-            if (data.hasOwnProperty('currentPercent')) {
-                obj['currentPercent'] = ApiClient.convertToType(data['currentPercent'], 'Number');
+            if (data.hasOwnProperty('current')) {
+                obj['current'] = ApiClient.convertToType(data['current'], 'Number');
             }
         }
         return obj;
@@ -80,21 +80,21 @@ export default class FundAssetInfo {
     */
     asset = undefined;
     /**
-    * @member {String} name
+    * @member {String} symbol
     */
-    name = undefined;
+    symbol = undefined;
     /**
     * @member {String} icon
     */
     icon = undefined;
     /**
-    * @member {Number} targetPercent
+    * @member {Number} target
     */
-    targetPercent = undefined;
+    target = undefined;
     /**
-    * @member {Number} currentPercent
+    * @member {Number} current
     */
-    currentPercent = undefined;
+    current = undefined;
 
 
 
