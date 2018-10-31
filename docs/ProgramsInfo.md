@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **managerMaxEntryFee** | **Number** |  | [optional] 
 **managerMaxSuccessFee** | **Number** |  | [optional] 
 **managerFundInvestment** | **Number** |  | [optional] 
+**managerMaxExitFee** | **Number** |  | [optional] 
 **periods** | **[Number]** |  | [optional] 
 
 

@@ -68,6 +68,9 @@ export default class ProgramsInfo {
             if (data.hasOwnProperty('managerFundInvestment')) {
                 obj['managerFundInvestment'] = ApiClient.convertToType(data['managerFundInvestment'], 'Number');
             }
+            if (data.hasOwnProperty('managerMaxExitFee')) {
+                obj['managerMaxExitFee'] = ApiClient.convertToType(data['managerMaxExitFee'], 'Number');
+            }
             if (data.hasOwnProperty('periods')) {
                 obj['periods'] = ApiClient.convertToType(data['periods'], ['Number']);
             }
@@ -91,6 +94,10 @@ export default class ProgramsInfo {
     * @member {Number} managerFundInvestment
     */
     managerFundInvestment = undefined;
+    /**
+    * @member {Number} managerMaxExitFee
+    */
+    managerMaxExitFee = undefined;
     /**
     * @member {Array.<Number>} periods
     */

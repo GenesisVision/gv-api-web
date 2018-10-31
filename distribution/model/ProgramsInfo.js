@@ -44,6 +44,7 @@ var ProgramsInfo = function () {
         this.managerMaxEntryFee = undefined;
         this.managerMaxSuccessFee = undefined;
         this.managerFundInvestment = undefined;
+        this.managerMaxExitFee = undefined;
         this.periods = undefined;
     }
 
@@ -74,6 +75,9 @@ var ProgramsInfo = function () {
                 if (data.hasOwnProperty('managerFundInvestment')) {
                     obj['managerFundInvestment'] = _ApiClient2.default.convertToType(data['managerFundInvestment'], 'Number');
                 }
+                if (data.hasOwnProperty('managerMaxExitFee')) {
+                    obj['managerMaxExitFee'] = _ApiClient2.default.convertToType(data['managerMaxExitFee'], 'Number');
+                }
                 if (data.hasOwnProperty('periods')) {
                     obj['periods'] = _ApiClient2.default.convertToType(data['periods'], ['Number']);
                 }
@@ -95,6 +99,10 @@ var ProgramsInfo = function () {
 
         /**
         * @member {Number} managerFundInvestment
+        */
+
+        /**
+        * @member {Number} managerMaxExitFee
         */
 
         /**
