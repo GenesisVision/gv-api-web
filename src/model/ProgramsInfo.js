@@ -59,6 +59,12 @@ export default class ProgramsInfo {
             if (data.hasOwnProperty('managerProgramInvestment')) {
                 obj['managerProgramInvestment'] = ApiClient.convertToType(data['managerProgramInvestment'], 'Number');
             }
+            if (data.hasOwnProperty('managerMaxEntryFee')) {
+                obj['managerMaxEntryFee'] = ApiClient.convertToType(data['managerMaxEntryFee'], 'Number');
+            }
+            if (data.hasOwnProperty('managerMaxSuccessFee')) {
+                obj['managerMaxSuccessFee'] = ApiClient.convertToType(data['managerMaxSuccessFee'], 'Number');
+            }
             if (data.hasOwnProperty('managerFundInvestment')) {
                 obj['managerFundInvestment'] = ApiClient.convertToType(data['managerFundInvestment'], 'Number');
             }
@@ -73,6 +79,14 @@ export default class ProgramsInfo {
     * @member {Number} managerProgramInvestment
     */
     managerProgramInvestment = undefined;
+    /**
+    * @member {Number} managerMaxEntryFee
+    */
+    managerMaxEntryFee = undefined;
+    /**
+    * @member {Number} managerMaxSuccessFee
+    */
+    managerMaxSuccessFee = undefined;
     /**
     * @member {Number} managerFundInvestment
     */

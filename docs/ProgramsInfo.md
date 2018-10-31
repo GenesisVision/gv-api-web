@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **managerProgramInvestment** | **Number** |  | [optional] 
+**managerMaxEntryFee** | **Number** |  | [optional] 
+**managerMaxSuccessFee** | **Number** |  | [optional] 
 **managerFundInvestment** | **Number** |  | [optional] 
 **periods** | **[Number]** |  | [optional] 
 

@@ -41,6 +41,8 @@ var ProgramsInfo = function () {
         _classCallCheck(this, ProgramsInfo);
 
         this.managerProgramInvestment = undefined;
+        this.managerMaxEntryFee = undefined;
+        this.managerMaxSuccessFee = undefined;
         this.managerFundInvestment = undefined;
         this.periods = undefined;
     }
@@ -63,6 +65,12 @@ var ProgramsInfo = function () {
                 if (data.hasOwnProperty('managerProgramInvestment')) {
                     obj['managerProgramInvestment'] = _ApiClient2.default.convertToType(data['managerProgramInvestment'], 'Number');
                 }
+                if (data.hasOwnProperty('managerMaxEntryFee')) {
+                    obj['managerMaxEntryFee'] = _ApiClient2.default.convertToType(data['managerMaxEntryFee'], 'Number');
+                }
+                if (data.hasOwnProperty('managerMaxSuccessFee')) {
+                    obj['managerMaxSuccessFee'] = _ApiClient2.default.convertToType(data['managerMaxSuccessFee'], 'Number');
+                }
                 if (data.hasOwnProperty('managerFundInvestment')) {
                     obj['managerFundInvestment'] = _ApiClient2.default.convertToType(data['managerFundInvestment'], 'Number');
                 }
@@ -75,6 +83,14 @@ var ProgramsInfo = function () {
 
         /**
         * @member {Number} managerProgramInvestment
+        */
+
+        /**
+        * @member {Number} managerMaxEntryFee
+        */
+
+        /**
+        * @member {Number} managerMaxSuccessFee
         */
 
         /**
