@@ -68,6 +68,12 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
+            if (data.hasOwnProperty('canCloseProgram')) {
+                obj['canCloseProgram'] = ApiClient.convertToType(data['canCloseProgram'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isFinishing')) {
+                obj['isFinishing'] = ApiClient.convertToType(data['isFinishing'], 'Boolean');
+            }
             if (data.hasOwnProperty('canInvest')) {
                 obj['canInvest'] = ApiClient.convertToType(data['canInvest'], 'Boolean');
             }
@@ -115,6 +121,14 @@ export default class PersonalProgramDetailsFull {
     * @member {Boolean} isOwnProgram
     */
     isOwnProgram = undefined;
+    /**
+    * @member {Boolean} canCloseProgram
+    */
+    canCloseProgram = undefined;
+    /**
+    * @member {Boolean} isFinishing
+    */
+    isFinishing = undefined;
     /**
     * @member {Boolean} canInvest
     */

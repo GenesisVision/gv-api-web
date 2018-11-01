@@ -43,6 +43,8 @@ var PersonalFundDetailsFull = function () {
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
+        this.canCloseProgram = undefined;
+        this.isFinishing = undefined;
         this.canInvest = undefined;
         this.canWithdraw = undefined;
         this.hasNotifications = undefined;
@@ -77,6 +79,12 @@ var PersonalFundDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('isOwnProgram')) {
                     obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
+                }
+                if (data.hasOwnProperty('canCloseProgram')) {
+                    obj['canCloseProgram'] = _ApiClient2.default.convertToType(data['canCloseProgram'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isFinishing')) {
+                    obj['isFinishing'] = _ApiClient2.default.convertToType(data['isFinishing'], 'Boolean');
                 }
                 if (data.hasOwnProperty('canInvest')) {
                     obj['canInvest'] = _ApiClient2.default.convertToType(data['canInvest'], 'Boolean');
@@ -119,6 +127,14 @@ var PersonalFundDetailsFull = function () {
 
         /**
         * @member {Boolean} isOwnProgram
+        */
+
+        /**
+        * @member {Boolean} canCloseProgram
+        */
+
+        /**
+        * @member {Boolean} isFinishing
         */
 
         /**
