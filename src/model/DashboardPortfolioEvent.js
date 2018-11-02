@@ -224,10 +224,22 @@ export default class DashboardPortfolioEvent {
     static TypeEnum = {
     
         /**
+         * value: "All"
+         * @const
+         */
+        "All": "All",
+    
+        /**
          * value: "Invest"
          * @const
          */
         "Invest": "Invest",
+    
+        /**
+         * value: "Withdraw"
+         * @const
+         */
+        "Withdraw": "Withdraw",
     
         /**
          * value: "Profit"
@@ -240,18 +252,6 @@ export default class DashboardPortfolioEvent {
          * @const
          */
         "Loss": "Loss",
-    
-        /**
-         * value: "All"
-         * @const
-         */
-        "All": "All",
-    
-        /**
-         * value: "Withdraw"
-         * @const
-         */
-        "Withdraw": "Withdraw",
     
         /**
          * value: "Reinvest"
