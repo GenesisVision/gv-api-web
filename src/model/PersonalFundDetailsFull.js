@@ -77,6 +77,9 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('canWithdraw')) {
                 obj['canWithdraw'] = ApiClient.convertToType(data['canWithdraw'], 'Boolean');
             }
+            if (data.hasOwnProperty('canClosePeriod')) {
+                obj['canClosePeriod'] = ApiClient.convertToType(data['canClosePeriod'], 'Boolean');
+            }
             if (data.hasOwnProperty('hasNotifications')) {
                 obj['hasNotifications'] = ApiClient.convertToType(data['hasNotifications'], 'Boolean');
             }
@@ -130,6 +133,10 @@ export default class PersonalFundDetailsFull {
     * @member {Boolean} canWithdraw
     */
     canWithdraw = undefined;
+    /**
+    * @member {Boolean} canClosePeriod
+    */
+    canClosePeriod = undefined;
     /**
     * @member {Boolean} hasNotifications
     */

@@ -48,6 +48,7 @@ var PersonalProgramDetailsFull = function () {
         this.isFinishing = undefined;
         this.canInvest = undefined;
         this.canWithdraw = undefined;
+        this.canClosePeriod = undefined;
         this.hasNotifications = undefined;
         this.value = undefined;
         this.profit = undefined;
@@ -95,6 +96,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('canWithdraw')) {
                     obj['canWithdraw'] = _ApiClient2.default.convertToType(data['canWithdraw'], 'Boolean');
+                }
+                if (data.hasOwnProperty('canClosePeriod')) {
+                    obj['canClosePeriod'] = _ApiClient2.default.convertToType(data['canClosePeriod'], 'Boolean');
                 }
                 if (data.hasOwnProperty('hasNotifications')) {
                     obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
@@ -151,6 +155,10 @@ var PersonalProgramDetailsFull = function () {
 
         /**
         * @member {Boolean} canWithdraw
+        */
+
+        /**
+        * @member {Boolean} canClosePeriod
         */
 
         /**

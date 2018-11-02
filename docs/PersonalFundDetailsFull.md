@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **isFinishing** | **Boolean** |  | [optional] 
 **canInvest** | **Boolean** |  | [optional] 
 **canWithdraw** | **Boolean** |  | [optional] 
+**canClosePeriod** | **Boolean** |  | [optional] 
 **hasNotifications** | **Boolean** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
