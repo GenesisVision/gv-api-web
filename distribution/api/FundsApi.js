@@ -451,6 +451,7 @@ var FundsApi = function () {
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
+     * @param {Boolean} opts.isEnabled 
      * @param {Array.<String>} opts.ids 
      * @param {String} opts.managerId 
      * @param {String} opts.programManagerId 
@@ -475,6 +476,7 @@ var FundsApi = function () {
         'Mask': opts['mask'],
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
+        'IsEnabled': opts['isEnabled'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
@@ -506,6 +508,7 @@ var FundsApi = function () {
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
+     * @param {Boolean} opts.isEnabled 
      * @param {Array.<String>} opts.ids 
      * @param {String} opts.managerId 
      * @param {String} opts.programManagerId 

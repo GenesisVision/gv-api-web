@@ -422,6 +422,7 @@ export default class ProgramsApi {
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
+     * @param {Boolean} opts.isEnabled 
      * @param {Array.<String>} opts.ids 
      * @param {String} opts.managerId 
      * @param {String} opts.programManagerId 
@@ -450,6 +451,7 @@ export default class ProgramsApi {
         'Mask': opts['mask'],
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
+        'IsEnabled': opts['isEnabled'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
@@ -491,6 +493,7 @@ export default class ProgramsApi {
      * @param {String} opts.mask 
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
+     * @param {Boolean} opts.isEnabled 
      * @param {Array.<String>} opts.ids 
      * @param {String} opts.managerId 
      * @param {String} opts.programManagerId 
