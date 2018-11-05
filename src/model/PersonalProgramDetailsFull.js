@@ -59,6 +59,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isReinvest')) {
                 obj['isReinvest'] = ApiClient.convertToType(data['isReinvest'], 'Boolean');
             }
+            if (data.hasOwnProperty('gvtValue')) {
+                obj['gvtValue'] = ApiClient.convertToType(data['gvtValue'], 'Number');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -112,6 +115,10 @@ export default class PersonalProgramDetailsFull {
     * @member {Boolean} isReinvest
     */
     isReinvest = undefined;
+    /**
+    * @member {Number} gvtValue
+    */
+    gvtValue = undefined;
     /**
     * @member {Boolean} isFavorite
     */

@@ -41,6 +41,7 @@ var PersonalProgramDetailsFull = function () {
         _classCallCheck(this, PersonalProgramDetailsFull);
 
         this.isReinvest = undefined;
+        this.gvtValue = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -75,6 +76,9 @@ var PersonalProgramDetailsFull = function () {
 
                 if (data.hasOwnProperty('isReinvest')) {
                     obj['isReinvest'] = _ApiClient2.default.convertToType(data['isReinvest'], 'Boolean');
+                }
+                if (data.hasOwnProperty('gvtValue')) {
+                    obj['gvtValue'] = _ApiClient2.default.convertToType(data['gvtValue'], 'Number');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
@@ -127,6 +131,10 @@ var PersonalProgramDetailsFull = function () {
 
         /**
         * @member {Boolean} isReinvest
+        */
+
+        /**
+        * @member {Number} gvtValue
         */
 
         /**
