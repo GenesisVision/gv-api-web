@@ -80,6 +80,9 @@ export default class ProgramInvestInfo {
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
+            if (data.hasOwnProperty('isOwnProgram')) {
+                obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -116,6 +119,10 @@ export default class ProgramInvestInfo {
     * @member {Number} rate
     */
     rate = undefined;
+    /**
+    * @member {Boolean} isOwnProgram
+    */
+    isOwnProgram = undefined;
 
 
 

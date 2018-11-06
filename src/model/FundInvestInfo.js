@@ -74,6 +74,9 @@ export default class FundInvestInfo {
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
+            if (data.hasOwnProperty('isOwnProgram')) {
+                obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -102,6 +105,10 @@ export default class FundInvestInfo {
     * @member {Number} rate
     */
     rate = undefined;
+    /**
+    * @member {Boolean} isOwnProgram
+    */
+    isOwnProgram = undefined;
 
 
 

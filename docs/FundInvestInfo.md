@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **entryFee** | **Number** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 
 **rate** | **Number** |  | [optional] 
+**isOwnProgram** | **Boolean** |  | [optional] 
 
 

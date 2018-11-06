@@ -46,6 +46,7 @@ var FundInvestInfo = function () {
         this.entryFee = undefined;
         this.gvCommission = undefined;
         this.rate = undefined;
+        this.isOwnProgram = undefined;
     }
 
     /**
@@ -81,6 +82,9 @@ var FundInvestInfo = function () {
                 if (data.hasOwnProperty('rate')) {
                     obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
                 }
+                if (data.hasOwnProperty('isOwnProgram')) {
+                    obj['isOwnProgram'] = _ApiClient2.default.convertToType(data['isOwnProgram'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -107,6 +111,10 @@ var FundInvestInfo = function () {
 
         /**
         * @member {Number} rate
+        */
+
+        /**
+        * @member {Boolean} isOwnProgram
         */
 
     }]);
