@@ -58,50 +58,14 @@ var PlatformApi = function () {
   }
 
   /**
-   * Platform info
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformInfo} and HTTP response
+   * Platform statistic
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatistic} and HTTP response
    */
 
 
   _createClass(PlatformApi, [{
-    key: 'v10PlatformInfoGetWithHttpInfo',
-    value: function v10PlatformInfoGetWithHttpInfo() {
-      var postBody = null;
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _PlatformInfo2.default;
-
-      return this.apiClient.callApi('/v1.0/platform/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Platform info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformInfo}
-     */
-
-  }, {
-    key: 'v10PlatformInfoGet',
-    value: function v10PlatformInfoGet() {
-      return this.v10PlatformInfoGetWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Platform statistic
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatistic} and HTTP response
-     */
-
-  }, {
-    key: 'v10PlatformStatisticGetWithHttpInfo',
-    value: function v10PlatformStatisticGetWithHttpInfo() {
+    key: 'getPlatformStatisticWithHttpInfo',
+    value: function getPlatformStatisticWithHttpInfo() {
       var postBody = null;
 
       var pathParams = {};
@@ -123,9 +87,45 @@ var PlatformApi = function () {
      */
 
   }, {
-    key: 'v10PlatformStatisticGet',
-    value: function v10PlatformStatisticGet() {
-      return this.v10PlatformStatisticGetWithHttpInfo().then(function (response_and_data) {
+    key: 'getPlatformStatistic',
+    value: function getPlatformStatistic() {
+      return this.getPlatformStatisticWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Platform info
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformInfo} and HTTP response
+     */
+
+  }, {
+    key: 'getPlatformStatusWithHttpInfo',
+    value: function getPlatformStatusWithHttpInfo() {
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _PlatformInfo2.default;
+
+      return this.apiClient.callApi('/v1.0/platform/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Platform info
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformInfo}
+     */
+
+  }, {
+    key: 'getPlatformStatus',
+    value: function getPlatformStatus() {
+      return this.getPlatformStatusWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

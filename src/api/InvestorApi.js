@@ -46,28 +46,142 @@ export default class InvestorApi {
 
 
     /**
+     * Cancel investment program/fund request
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    cancelRequestWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling cancelRequest");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling cancelRequest");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/requests/{id}/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Cancel investment program/fund request
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    cancelRequest(id, authorization) {
+      return this.cancelRequestWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Cancel investment program/fund request
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    cancelRequest_0WithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling cancelRequest_0");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling cancelRequest_0");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/funds/requests/{id}/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Cancel investment program/fund request
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    cancelRequest_0(id, authorization) {
+      return this.cancelRequest_0WithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Investing into the fund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10InvestorFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+    fundInvestWithHttpInfo(id, amount, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdInvestByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling fundInvest");
       }
 
       // verify the required parameter 'amount' is set
       if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10InvestorFundsByIdInvestByAmountPost");
+        throw new Error("Missing the required parameter 'amount' when calling fundInvest");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdInvestByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling fundInvest");
       }
 
 
@@ -102,8 +216,8 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization) {
-      return this.v10InvestorFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization)
+    fundInvest(id, amount, authorization) {
+      return this.fundInvestWithHttpInfo(id, amount, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -117,22 +231,22 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundInvestInfo} and HTTP response
      */
-    v10InvestorFundsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
+    fundInvestInfoWithHttpInfo(id, currency, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdInvestInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'id' when calling fundInvestInfo");
       }
 
       // verify the required parameter 'currency' is set
       if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling v10InvestorFundsByIdInvestInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'currency' when calling fundInvestInfo");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdInvestInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'authorization' when calling fundInvestInfo");
       }
 
 
@@ -167,81 +281,8 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundInvestInfo}
      */
-    v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
-      return this.v10InvestorFundsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get program/fund requests
-     * @param {String} id 
-     * @param {Number} skip 
-     * @param {Number} take 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
-     */
-    v10InvestorFundsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdRequestsBySkipByTakeGet");
-      }
-
-      // verify the required parameter 'skip' is set
-      if (skip === undefined || skip === null) {
-        throw new Error("Missing the required parameter 'skip' when calling v10InvestorFundsByIdRequestsBySkipByTakeGet");
-      }
-
-      // verify the required parameter 'take' is set
-      if (take === undefined || take === null) {
-        throw new Error("Missing the required parameter 'take' when calling v10InvestorFundsByIdRequestsBySkipByTakeGet");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdRequestsBySkipByTakeGet");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'skip': skip,
-        'take': take
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramRequests;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/funds/{id}/requests/{skip}/{take}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get program/fund requests
-     * @param {String} id 
-     * @param {Number} skip 
-     * @param {Number} take 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
-     */
-    v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
-      return this.v10InvestorFundsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
+    fundInvestInfo(id, currency, authorization) {
+      return this.fundInvestInfoWithHttpInfo(id, currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -255,22 +296,22 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
+    fundWithdrawWithHttpInfo(id, percent, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawByPercentPost");
+        throw new Error("Missing the required parameter 'id' when calling fundWithdraw");
       }
 
       // verify the required parameter 'percent' is set
       if (percent === undefined || percent === null) {
-        throw new Error("Missing the required parameter 'percent' when calling v10InvestorFundsByIdWithdrawByPercentPost");
+        throw new Error("Missing the required parameter 'percent' when calling fundWithdraw");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawByPercentPost");
+        throw new Error("Missing the required parameter 'authorization' when calling fundWithdraw");
       }
 
 
@@ -305,8 +346,8 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization) {
-      return this.v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization)
+    fundWithdraw(id, percent, authorization) {
+      return this.fundWithdrawWithHttpInfo(id, percent, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -320,22 +361,22 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundWithdrawInfo} and HTTP response
      */
-    v10InvestorFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
+    fundWithdrawInfoWithHttpInfo(id, currency, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsByIdWithdrawInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'id' when calling fundWithdrawInfo");
       }
 
       // verify the required parameter 'currency' is set
       if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling v10InvestorFundsByIdWithdrawInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'currency' when calling fundWithdrawInfo");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsByIdWithdrawInfoByCurrencyGet");
+        throw new Error("Missing the required parameter 'authorization' when calling fundWithdrawInfo");
       }
 
 
@@ -370,138 +411,8 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundWithdrawInfo}
      */
-    v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
-      return this.v10InvestorFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Funds list
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {module:model/String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
-     */
-    v10InvestorFundsGetWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'Sorting': opts['sorting'],
-        'From': opts['from'],
-        'To': opts['to'],
-        'ChartPointsCount': opts['chartPointsCount'],
-        'CurrencySecondary': opts['currencySecondary'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundsList;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/funds', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Funds list
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {module:model/String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}
-     */
-    v10InvestorFundsGet(authorization, opts) {
-      return this.v10InvestorFundsGetWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    v10InvestorFundsRequestsByIdCancelPostWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsRequestsByIdCancelPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsRequestsByIdCancelPost");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/funds/requests/{id}/cancel', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    v10InvestorFundsRequestsByIdCancelPost(id, authorization) {
-      return this.v10InvestorFundsRequestsByIdCancelPostWithHttpInfo(id, authorization)
+    fundWithdrawInfo(id, currency, authorization) {
+      return this.fundWithdrawInfoWithHttpInfo(id, currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -522,13 +433,13 @@ export default class InvestorApi {
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardSummary} and HTTP response
      */
-    v10InvestorGetWithHttpInfo(authorization, opts) {
+    getDashboardWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getDashboard");
       }
 
 
@@ -576,8 +487,81 @@ export default class InvestorApi {
      * @param {Number} opts.requestsTake 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardSummary}
      */
-    v10InvestorGet(authorization, opts) {
-      return this.v10InvestorGetWithHttpInfo(authorization, opts)
+    getDashboard(authorization, opts) {
+      return this.getDashboardWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Funds list
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundsList} and HTTP response
+     */
+    getFundsWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getFunds");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Sorting': opts['sorting'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundsList;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/funds', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Funds list
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.sorting 
+     * @param {Date} opts.from 
+     * @param {Date} opts.to 
+     * @param {Number} opts.chartPointsCount 
+     * @param {module:model/String} opts.currencySecondary 
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundsList}
+     */
+    getFunds(authorization, opts) {
+      return this.getFundsWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -595,13 +579,13 @@ export default class InvestorApi {
      * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardChartValue} and HTTP response
      */
-    v10InvestorPortfolioChartGetWithHttpInfo(authorization, opts) {
+    getPortfolioChartWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorPortfolioChartGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getPortfolioChart");
       }
 
 
@@ -643,8 +627,8 @@ export default class InvestorApi {
      * @param {Number} opts.programsPoints 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardChartValue}
      */
-    v10InvestorPortfolioChartGet(authorization, opts) {
-      return this.v10InvestorPortfolioChartGetWithHttpInfo(authorization, opts)
+    getPortfolioChart(authorization, opts) {
+      return this.getPortfolioChartWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -664,13 +648,13 @@ export default class InvestorApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardPortfolioEvents} and HTTP response
      */
-    v10InvestorPortfolioEventsGetWithHttpInfo(authorization, opts) {
+    getPortfolioEventsWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorPortfolioEventsGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getPortfolioEvents");
       }
 
 
@@ -716,252 +700,8 @@ export default class InvestorApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardPortfolioEvents}
      */
-    v10InvestorPortfolioEventsGet(authorization, opts) {
-      return this.v10InvestorPortfolioEventsGetWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Investing into the program
-     * @param {String} id 
-     * @param {Number} amount 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    v10InvestorProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdInvestByAmountPost");
-      }
-
-      // verify the required parameter 'amount' is set
-      if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10InvestorProgramsByIdInvestByAmountPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdInvestByAmountPost");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'amount': amount
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/invest/{amount}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Investing into the program
-     * @param {String} id 
-     * @param {Number} amount 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization) {
-      return this.v10InvestorProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Data for investing into the program
-     * @param {String} id 
-     * @param {module:model/String} currency 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramInvestInfo} and HTTP response
-     */
-    v10InvestorProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdInvestInfoByCurrencyGet");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling v10InvestorProgramsByIdInvestInfoByCurrencyGet");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdInvestInfoByCurrencyGet");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramInvestInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/invest/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for investing into the program
-     * @param {String} id 
-     * @param {module:model/String} currency 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramInvestInfo}
-     */
-    v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
-      return this.v10InvestorProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Disable reinvesting
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    v10InvestorProgramsByIdReinvestOffPostWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdReinvestOffPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdReinvestOffPost");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/reinvest/off', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Disable reinvesting
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    v10InvestorProgramsByIdReinvestOffPost(id, authorization) {
-      return this.v10InvestorProgramsByIdReinvestOffPostWithHttpInfo(id, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Enable reinvesting
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    v10InvestorProgramsByIdReinvestOnPostWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdReinvestOnPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdReinvestOnPost");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/reinvest/on', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Enable reinvesting
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    v10InvestorProgramsByIdReinvestOnPost(id, authorization) {
-      return this.v10InvestorProgramsByIdReinvestOnPostWithHttpInfo(id, authorization)
+    getPortfolioEvents(authorization, opts) {
+      return this.getPortfolioEventsWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -976,27 +716,27 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
      */
-    v10InvestorProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization) {
+    getProgramRequestsWithHttpInfo(id, skip, take, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'id' when calling getProgramRequests");
       }
 
       // verify the required parameter 'skip' is set
       if (skip === undefined || skip === null) {
-        throw new Error("Missing the required parameter 'skip' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'skip' when calling getProgramRequests");
       }
 
       // verify the required parameter 'take' is set
       if (take === undefined || take === null) {
-        throw new Error("Missing the required parameter 'take' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'take' when calling getProgramRequests");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getProgramRequests");
       }
 
 
@@ -1033,8 +773,8 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
      */
-    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
-      return this.v10InvestorProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
+    getProgramRequests(id, skip, take, authorization) {
+      return this.getProgramRequestsWithHttpInfo(id, skip, take, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1042,34 +782,41 @@ export default class InvestorApi {
 
 
     /**
-     * Withdraw from investment program
+     * Get program/fund requests
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} skip 
+     * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
      */
-    v10InvestorProgramsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization) {
+    getProgramRequests_0WithHttpInfo(id, skip, take, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'id' when calling getProgramRequests_0");
       }
 
-      // verify the required parameter 'amount' is set
-      if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling v10InvestorProgramsByIdWithdrawByAmountPost");
+      // verify the required parameter 'skip' is set
+      if (skip === undefined || skip === null) {
+        throw new Error("Missing the required parameter 'skip' when calling getProgramRequests_0");
+      }
+
+      // verify the required parameter 'take' is set
+      if (take === undefined || take === null) {
+        throw new Error("Missing the required parameter 'take' when calling getProgramRequests_0");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdWithdrawByAmountPost");
+        throw new Error("Missing the required parameter 'authorization' when calling getProgramRequests_0");
       }
 
 
       let pathParams = {
         'id': id,
-        'amount': amount
+        'skip': skip,
+        'take': take
       };
       let queryParams = {
       };
@@ -1082,89 +829,25 @@ export default class InvestorApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = ProgramRequests;
 
       return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/withdraw/{amount}', 'POST',
+        '/v1.0/investor/funds/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Withdraw from investment program
+     * Get program/fund requests
      * @param {String} id 
-     * @param {Number} amount 
+     * @param {Number} skip 
+     * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
      */
-    v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization) {
-      return this.v10InvestorProgramsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Data for withdrawal from investment program
-     * @param {String} id 
-     * @param {module:model/String} currency 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramWithdrawInfo} and HTTP response
-     */
-    v10InvestorProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdWithdrawInfoByCurrencyGet");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling v10InvestorProgramsByIdWithdrawInfoByCurrencyGet");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdWithdrawInfoByCurrencyGet");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramWithdrawInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/withdraw/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for withdrawal from investment program
-     * @param {String} id 
-     * @param {module:model/String} currency 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramWithdrawInfo}
-     */
-    v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
-      return this.v10InvestorProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
+    getProgramRequests_0(id, skip, take, authorization) {
+      return this.getProgramRequests_0WithHttpInfo(id, skip, take, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1184,13 +867,13 @@ export default class InvestorApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
-    v10InvestorProgramsGetWithHttpInfo(authorization, opts) {
+    getProgramsWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getPrograms");
       }
 
 
@@ -1236,65 +919,8 @@ export default class InvestorApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
-    v10InvestorProgramsGet(authorization, opts) {
-      return this.v10InvestorProgramsGetWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    v10InvestorProgramsRequestsByIdCancelPostWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsRequestsByIdCancelPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsRequestsByIdCancelPost");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/investor/programs/requests/{id}/cancel', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    v10InvestorProgramsRequestsByIdCancelPost(id, authorization) {
-      return this.v10InvestorProgramsRequestsByIdCancelPostWithHttpInfo(id, authorization)
+    getPrograms(authorization, opts) {
+      return this.getProgramsWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1308,22 +934,22 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramRequests} and HTTP response
      */
-    v10InvestorRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization) {
+    getRequestsWithHttpInfo(skip, take, authorization) {
       let postBody = null;
 
       // verify the required parameter 'skip' is set
       if (skip === undefined || skip === null) {
-        throw new Error("Missing the required parameter 'skip' when calling v10InvestorRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'skip' when calling getRequests");
       }
 
       // verify the required parameter 'take' is set
       if (take === undefined || take === null) {
-        throw new Error("Missing the required parameter 'take' when calling v10InvestorRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'take' when calling getRequests");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorRequestsBySkipByTakeGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getRequests");
       }
 
 
@@ -1358,8 +984,382 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramRequests}
      */
-    v10InvestorRequestsBySkipByTakeGet(skip, take, authorization) {
-      return this.v10InvestorRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization)
+    getRequests(skip, take, authorization) {
+      return this.getRequestsWithHttpInfo(skip, take, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Data for investing into the program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramInvestInfo} and HTTP response
+     */
+    investInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling investInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling investInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling investInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramInvestInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/invest/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for investing into the program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramInvestInfo}
+     */
+    investInfo(id, currency, authorization) {
+      return this.investInfoWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Investing into the program
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    programInvestWithHttpInfo(id, amount, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling programInvest");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling programInvest");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling programInvest");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/invest/{amount}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Investing into the program
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    programInvest(id, amount, authorization) {
+      return this.programInvestWithHttpInfo(id, amount, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Withdraw from investment program
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    programWithdrawWithHttpInfo(id, amount, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling programWithdraw");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling programWithdraw");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling programWithdraw");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/withdraw/{amount}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Withdraw from investment program
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    programWithdraw(id, amount, authorization) {
+      return this.programWithdrawWithHttpInfo(id, amount, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Data for withdrawal from investment program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramWithdrawInfo} and HTTP response
+     */
+    programWithdrawInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling programWithdrawInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling programWithdrawInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling programWithdrawInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramWithdrawInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/withdraw/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for withdrawal from investment program
+     * @param {String} id 
+     * @param {module:model/String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramWithdrawInfo}
+     */
+    programWithdrawInfo(id, currency, authorization) {
+      return this.programWithdrawInfoWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Disable reinvesting
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    reinvestOffWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling reinvestOff");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling reinvestOff");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/reinvest/off', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Disable reinvesting
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    reinvestOff(id, authorization) {
+      return this.reinvestOffWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Enable reinvesting
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    reinvestOnWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling reinvestOn");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling reinvestOn");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/programs/{id}/reinvest/on', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Enable reinvesting
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    reinvestOn(id, authorization) {
+      return this.reinvestOnWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

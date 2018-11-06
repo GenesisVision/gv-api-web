@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10KycCallbackPost**](KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
+[**kycCallback**](KycApi.md#kycCallback) | **POST** /v1.0/kyc/callback | 
 
 
-<a name="v10KycCallbackPost"></a>
-# **v10KycCallbackPost**
-> &#39;String&#39; v10KycCallbackPost(opts)
+<a name="kycCallback"></a>
+# **kycCallback**
+> &#39;String&#39; kycCallback(opts)
 
 
 
@@ -22,7 +22,7 @@ let apiInstance = new CoreApiV10.KycApi();
 let opts = { 
   'model': new CoreApiV10.KycCallback() // KycCallback | 
 };
-apiInstance.v10KycCallbackPost(opts).then((data) => {
+apiInstance.kycCallback(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

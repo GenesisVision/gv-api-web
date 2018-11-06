@@ -77,12 +77,10 @@ var CoreApiV10 = require('core_api_v10');
 
 var api = new CoreApiV10.AuthApi()
 
-var authorization = "authorization_example"; // {String} JWT access token
-
 var opts = { 
-  'model': new CoreApiV10.TwoFactorAuthenticatorConfirm() // {TwoFactorAuthenticatorConfirm} 
+  'model': new CoreApiV10.LoginViewModel() // {LoginViewModel} 
 };
-api.v10Auth2faConfirmPost(authorization, opts).then(function(data) {
+api.authorizeInvestor(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -97,127 +95,127 @@ All URIs are relative to *https://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CoreApiV10.AuthApi* | [**v10Auth2faConfirmPost**](docs/AuthApi.md#v10Auth2faConfirmPost) | **POST** /v1.0/auth/2fa/confirm | 2FA confirm
-*CoreApiV10.AuthApi* | [**v10Auth2faCreatePost**](docs/AuthApi.md#v10Auth2faCreatePost) | **POST** /v1.0/auth/2fa/create | 2FA create
-*CoreApiV10.AuthApi* | [**v10Auth2faDisablePost**](docs/AuthApi.md#v10Auth2faDisablePost) | **POST** /v1.0/auth/2fa/disable | 2FA disable
-*CoreApiV10.AuthApi* | [**v10Auth2faGet**](docs/AuthApi.md#v10Auth2faGet) | **GET** /v1.0/auth/2fa | 2FA status
-*CoreApiV10.AuthApi* | [**v10Auth2faRecoverycodesNewPost**](docs/AuthApi.md#v10Auth2faRecoverycodesNewPost) | **POST** /v1.0/auth/2fa/recoverycodes/new | 2FA generate new recovery codes
-*CoreApiV10.AuthApi* | [**v10Auth2faRecoverycodesPost**](docs/AuthApi.md#v10Auth2faRecoverycodesPost) | **POST** /v1.0/auth/2fa/recoverycodes | 2FA recovery codes
-*CoreApiV10.AuthApi* | [**v10AuthPasswordChangePost**](docs/AuthApi.md#v10AuthPasswordChangePost) | **POST** /v1.0/auth/password/change | Change password
-*CoreApiV10.AuthApi* | [**v10AuthPasswordForgotInvestorPost**](docs/AuthApi.md#v10AuthPasswordForgotInvestorPost) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
-*CoreApiV10.AuthApi* | [**v10AuthPasswordForgotManagerPost**](docs/AuthApi.md#v10AuthPasswordForgotManagerPost) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
-*CoreApiV10.AuthApi* | [**v10AuthPasswordResetPost**](docs/AuthApi.md#v10AuthPasswordResetPost) | **POST** /v1.0/auth/password/reset | Reset password
-*CoreApiV10.AuthApi* | [**v10AuthPhoneCodePost**](docs/AuthApi.md#v10AuthPhoneCodePost) | **POST** /v1.0/auth/phone/code | Get phone number verification code
-*CoreApiV10.AuthApi* | [**v10AuthPhoneVerifyPost**](docs/AuthApi.md#v10AuthPhoneVerifyPost) | **POST** /v1.0/auth/phone/verify | Verify phone number
-*CoreApiV10.AuthApi* | [**v10AuthResendconfirmationlinkPost**](docs/AuthApi.md#v10AuthResendconfirmationlinkPost) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
-*CoreApiV10.AuthApi* | [**v10AuthSigninInvestorPost**](docs/AuthApi.md#v10AuthSigninInvestorPost) | **POST** /v1.0/auth/signin/investor | Authorize
-*CoreApiV10.AuthApi* | [**v10AuthSigninManagerPost**](docs/AuthApi.md#v10AuthSigninManagerPost) | **POST** /v1.0/auth/signin/manager | Authorize
-*CoreApiV10.AuthApi* | [**v10AuthSignupConfirmPost**](docs/AuthApi.md#v10AuthSignupConfirmPost) | **POST** /v1.0/auth/signup/confirm | Confirm email after registration
-*CoreApiV10.AuthApi* | [**v10AuthSignupInvestorPost**](docs/AuthApi.md#v10AuthSignupInvestorPost) | **POST** /v1.0/auth/signup/investor | New investor registration
-*CoreApiV10.AuthApi* | [**v10AuthSignupManagerPost**](docs/AuthApi.md#v10AuthSignupManagerPost) | **POST** /v1.0/auth/signup/manager | New manager registration
-*CoreApiV10.AuthApi* | [**v10AuthTokenDevicesLogoutPost**](docs/AuthApi.md#v10AuthTokenDevicesLogoutPost) | **POST** /v1.0/auth/token/devices/logout | Logout from another devices
-*CoreApiV10.AuthApi* | [**v10AuthTokenUpdatePost**](docs/AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
-*CoreApiV10.BrokersApi* | [**v10BrokersGet**](docs/BrokersApi.md#v10BrokersGet) | **GET** /v1.0/brokers | Get all trade servers
-*CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
-*CoreApiV10.FileApi* | [**v10FileDocumentUploadPost**](docs/FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
-*CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
-*CoreApiV10.FundsApi* | [**v10FundsAssetsGet**](docs/FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
-*CoreApiV10.FundsApi* | [**v10FundsByIdAssetsGet**](docs/FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
-*CoreApiV10.FundsApi* | [**v10FundsByIdChartsBalanceGet**](docs/FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
-*CoreApiV10.FundsApi* | [**v10FundsByIdChartsProfitGet**](docs/FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
-*CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteAddPost**](docs/FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
-*CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteRemovePost**](docs/FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
-*CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
-*CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
-*CoreApiV10.FundsApi* | [**v10FundsSetsGet**](docs/FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByPercentPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
-*CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
-*CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOffPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdReinvestOnPost**](docs/InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
-*CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
-*CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
-*CoreApiV10.ManagerApi* | [**v10ManagerByIdGet**](docs/ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
-*CoreApiV10.ManagerApi* | [**v10ManagerEventsGet**](docs/ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdClosePost**](docs/ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdUpdatePost**](docs/ManagerApi.md#v10ManagerFundsByIdUpdatePost) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdWithdrawByPercentPost**](docs/ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdWithdrawInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsCreatePost**](docs/ManagerApi.md#v10ManagerFundsCreatePost) | **POST** /v1.0/manager/funds/create | Create fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsGet**](docs/ManagerApi.md#v10ManagerFundsGet) | **GET** /v1.0/manager/funds | Manager funds
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerFundsInvestmentAmountGet) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerFundsRequestsByIdCancelPost) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.ManagerApi* | [**v10ManagerGet**](docs/ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program/fund
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdPeriodClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdUpdatePost**](docs/ManagerApi.md#v10ManagerProgramsByIdUpdatePost) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from program
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreatePost**](docs/ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsGet**](docs/ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.ManagerApi* | [**v10ManagerRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
-*CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
-*CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsByIdByEnablePost**](docs/NotificationsApi.md#v10NotificationsSettingsByIdByEnablePost) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsFundsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsFundsByIdGet) | **GET** /v1.0/notifications/settings/funds/{id} | User settings for fund
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsGet**](docs/NotificationsApi.md#v10NotificationsSettingsGet) | **GET** /v1.0/notifications/settings | User settings
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsManagersByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsManagersByIdGet) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsProgramsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
-*CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
-*CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
-*CoreApiV10.PlatformApi* | [**v10PlatformStatisticGet**](docs/PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
-*CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
-*CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
-*CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
-*CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
-*CoreApiV10.ProfileApi* | [**v10ProfilePersonalUpdatePost**](docs/ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
-*CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
-*CoreApiV10.ProfileApi* | [**v10ProfileVerificationTokenPost**](docs/ProfileApi.md#v10ProfileVerificationTokenPost) | **POST** /v1.0/profile/verification/token | 
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsBalanceGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsBalanceGet) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsProfitGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsProfitGet) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
-*CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
-*CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
-*CoreApiV10.RateApi* | [**v10RateByExchangeByFromByToGet**](docs/RateApi.md#v10RateByExchangeByFromByToGet) | **GET** /v1.0/rate/{exchange}/{from}/{to} | Get rate
-*CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
-*CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
-*CoreApiV10.SearchApi* | [**v10SearchGet**](docs/SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
-*CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
-*CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
-*CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
-*CoreApiV10.WalletApi* | [**v10WalletTransactionsPendingGet**](docs/WalletApi.md#v10WalletTransactionsPendingGet) | **GET** /v1.0/wallet/transactions/pending | Wallet pending transactions
-*CoreApiV10.WalletApi* | [**v10WalletWithdrawInfoGet**](docs/WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
-*CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestCancelByTxIdPost**](docs/WalletApi.md#v10WalletWithdrawRequestCancelByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
-*CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestConfirmPost**](docs/WalletApi.md#v10WalletWithdrawRequestConfirmPost) | **POST** /v1.0/wallet/withdraw/request/confirm | 
-*CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestNewPost**](docs/WalletApi.md#v10WalletWithdrawRequestNewPost) | **POST** /v1.0/wallet/withdraw/request/new | 
-*CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestResendByTxIdPost**](docs/WalletApi.md#v10WalletWithdrawRequestResendByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/resend/{txId} | 
+*CoreApiV10.AuthApi* | [**authorizeInvestor**](docs/AuthApi.md#authorizeInvestor) | **POST** /v1.0/auth/signin/investor | Authorize
+*CoreApiV10.AuthApi* | [**authorizeManager**](docs/AuthApi.md#authorizeManager) | **POST** /v1.0/auth/signin/manager | Authorize
+*CoreApiV10.AuthApi* | [**changePassword**](docs/AuthApi.md#changePassword) | **POST** /v1.0/auth/password/change | Change password
+*CoreApiV10.AuthApi* | [**confirmEmail**](docs/AuthApi.md#confirmEmail) | **POST** /v1.0/auth/signup/confirm | Confirm email after registration
+*CoreApiV10.AuthApi* | [**forgotPasswordInvestor**](docs/AuthApi.md#forgotPasswordInvestor) | **POST** /v1.0/auth/password/forgot/investor | Forgot password for investor
+*CoreApiV10.AuthApi* | [**forgotPasswordManager**](docs/AuthApi.md#forgotPasswordManager) | **POST** /v1.0/auth/password/forgot/manager | Forgot password for manager
+*CoreApiV10.AuthApi* | [**logoutFromAnotherDevices**](docs/AuthApi.md#logoutFromAnotherDevices) | **POST** /v1.0/auth/token/devices/logout | Logout from another devices
+*CoreApiV10.AuthApi* | [**registerInvestor**](docs/AuthApi.md#registerInvestor) | **POST** /v1.0/auth/signup/investor | New investor registration
+*CoreApiV10.AuthApi* | [**registerManager**](docs/AuthApi.md#registerManager) | **POST** /v1.0/auth/signup/manager | New manager registration
+*CoreApiV10.AuthApi* | [**requestPhoneNumberVerificationCode**](docs/AuthApi.md#requestPhoneNumberVerificationCode) | **POST** /v1.0/auth/phone/code | Get phone number verification code
+*CoreApiV10.AuthApi* | [**resendConfirmationLink**](docs/AuthApi.md#resendConfirmationLink) | **POST** /v1.0/auth/resendconfirmationlink | Resend Confirmation Link
+*CoreApiV10.AuthApi* | [**resetPassword**](docs/AuthApi.md#resetPassword) | **POST** /v1.0/auth/password/reset | Reset password
+*CoreApiV10.AuthApi* | [**twoStepAuthConfirm**](docs/AuthApi.md#twoStepAuthConfirm) | **POST** /v1.0/auth/2fa/confirm | 2FA confirm
+*CoreApiV10.AuthApi* | [**twoStepAuthCreate**](docs/AuthApi.md#twoStepAuthCreate) | **POST** /v1.0/auth/2fa/create | 2FA create
+*CoreApiV10.AuthApi* | [**twoStepAuthDisable**](docs/AuthApi.md#twoStepAuthDisable) | **POST** /v1.0/auth/2fa/disable | 2FA disable
+*CoreApiV10.AuthApi* | [**twoStepAuthRecoveryCodes**](docs/AuthApi.md#twoStepAuthRecoveryCodes) | **POST** /v1.0/auth/2fa/recoverycodes | 2FA recovery codes
+*CoreApiV10.AuthApi* | [**twoStepAuthRecoveryCodesNew**](docs/AuthApi.md#twoStepAuthRecoveryCodesNew) | **POST** /v1.0/auth/2fa/recoverycodes/new | 2FA generate new recovery codes
+*CoreApiV10.AuthApi* | [**twoStepAuthStatus**](docs/AuthApi.md#twoStepAuthStatus) | **GET** /v1.0/auth/2fa | 2FA status
+*CoreApiV10.AuthApi* | [**updateAuthToken**](docs/AuthApi.md#updateAuthToken) | **POST** /v1.0/auth/token/update | Update auth token
+*CoreApiV10.AuthApi* | [**validatePhoneNumber**](docs/AuthApi.md#validatePhoneNumber) | **POST** /v1.0/auth/phone/verify | Verify phone number
+*CoreApiV10.BrokersApi* | [**getBrokers**](docs/BrokersApi.md#getBrokers) | **GET** /v1.0/brokers | Get all trade servers
+*CoreApiV10.FileApi* | [**get**](docs/FileApi.md#get) | **GET** /v1.0/file/{id} | Download file
+*CoreApiV10.FileApi* | [**uploadDocument**](docs/FileApi.md#uploadDocument) | **POST** /v1.0/file/document/upload | Upload document
+*CoreApiV10.FileApi* | [**uploadFile**](docs/FileApi.md#uploadFile) | **POST** /v1.0/file/upload | Upload file
+*CoreApiV10.FundsApi* | [**addToFavorites**](docs/FundsApi.md#addToFavorites) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
+*CoreApiV10.FundsApi* | [**getAllAssets**](docs/FundsApi.md#getAllAssets) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+*CoreApiV10.FundsApi* | [**getFundAssets**](docs/FundsApi.md#getFundAssets) | **GET** /v1.0/funds/{id}/assets | Fund assets info
+*CoreApiV10.FundsApi* | [**getFundDetails**](docs/FundsApi.md#getFundDetails) | **GET** /v1.0/funds/{id} | Funds details
+*CoreApiV10.FundsApi* | [**getFundProfitChart**](docs/FundsApi.md#getFundProfitChart) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
+*CoreApiV10.FundsApi* | [**getFunds**](docs/FundsApi.md#getFunds) | **GET** /v1.0/funds | Funds list
+*CoreApiV10.FundsApi* | [**getProgramBalanceChart**](docs/FundsApi.md#getProgramBalanceChart) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
+*CoreApiV10.FundsApi* | [**getProgramSets**](docs/FundsApi.md#getProgramSets) | **GET** /v1.0/funds/sets | Fund sets
+*CoreApiV10.FundsApi* | [**removeFromFavorites**](docs/FundsApi.md#removeFromFavorites) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
+*CoreApiV10.InvestorApi* | [**cancelRequest**](docs/InvestorApi.md#cancelRequest) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.InvestorApi* | [**cancelRequest_0**](docs/InvestorApi.md#cancelRequest_0) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.InvestorApi* | [**fundInvest**](docs/InvestorApi.md#fundInvest) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
+*CoreApiV10.InvestorApi* | [**fundInvestInfo**](docs/InvestorApi.md#fundInvestInfo) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
+*CoreApiV10.InvestorApi* | [**fundWithdraw**](docs/InvestorApi.md#fundWithdraw) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+*CoreApiV10.InvestorApi* | [**fundWithdrawInfo**](docs/InvestorApi.md#fundWithdrawInfo) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
+*CoreApiV10.InvestorApi* | [**getDashboard**](docs/InvestorApi.md#getDashboard) | **GET** /v1.0/investor | Summary dashboard info
+*CoreApiV10.InvestorApi* | [**getFunds**](docs/InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Funds list
+*CoreApiV10.InvestorApi* | [**getPortfolioChart**](docs/InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
+*CoreApiV10.InvestorApi* | [**getPortfolioEvents**](docs/InvestorApi.md#getPortfolioEvents) | **GET** /v1.0/investor/portfolio/events | Portfolio events
+*CoreApiV10.InvestorApi* | [**getProgramRequests**](docs/InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
+*CoreApiV10.InvestorApi* | [**getProgramRequests_0**](docs/InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+*CoreApiV10.InvestorApi* | [**getPrograms**](docs/InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
+*CoreApiV10.InvestorApi* | [**getRequests**](docs/InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+*CoreApiV10.InvestorApi* | [**investInfo**](docs/InvestorApi.md#investInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
+*CoreApiV10.InvestorApi* | [**programInvest**](docs/InvestorApi.md#programInvest) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program
+*CoreApiV10.InvestorApi* | [**programWithdraw**](docs/InvestorApi.md#programWithdraw) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
+*CoreApiV10.InvestorApi* | [**programWithdrawInfo**](docs/InvestorApi.md#programWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
+*CoreApiV10.InvestorApi* | [**reinvestOff**](docs/InvestorApi.md#reinvestOff) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
+*CoreApiV10.InvestorApi* | [**reinvestOn**](docs/InvestorApi.md#reinvestOn) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
+*CoreApiV10.KycApi* | [**kycCallback**](docs/KycApi.md#kycCallback) | **POST** /v1.0/kyc/callback | 
+*CoreApiV10.ManagerApi* | [**cancelRequest**](docs/ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.ManagerApi* | [**cancelRequest_0**](docs/ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.ManagerApi* | [**closeCurrentPeriod**](docs/ManagerApi.md#closeCurrentPeriod) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
+*CoreApiV10.ManagerApi* | [**closeInvestmentProgram**](docs/ManagerApi.md#closeInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program/fund
+*CoreApiV10.ManagerApi* | [**closeInvestmentProgram_0**](docs/ManagerApi.md#closeInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
+*CoreApiV10.ManagerApi* | [**createFund**](docs/ManagerApi.md#createFund) | **POST** /v1.0/manager/funds/create | Create fund
+*CoreApiV10.ManagerApi* | [**createProgram**](docs/ManagerApi.md#createProgram) | **POST** /v1.0/manager/programs/create | Create an investment program
+*CoreApiV10.ManagerApi* | [**fundInvest**](docs/ManagerApi.md#fundInvest) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
+*CoreApiV10.ManagerApi* | [**fundInvestInfo**](docs/ManagerApi.md#fundInvestInfo) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
+*CoreApiV10.ManagerApi* | [**fundWithdraw**](docs/ManagerApi.md#fundWithdraw) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+*CoreApiV10.ManagerApi* | [**fundWithdrawInfo**](docs/ManagerApi.md#fundWithdrawInfo) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
+*CoreApiV10.ManagerApi* | [**getFundInvestment**](docs/ManagerApi.md#getFundInvestment) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
+*CoreApiV10.ManagerApi* | [**getProgramInvestment**](docs/ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
+*CoreApiV10.ManagerApi* | [**getProgramRequests**](docs/ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
+*CoreApiV10.ManagerApi* | [**getProgramRequests_0**](docs/ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+*CoreApiV10.ManagerApi* | [**getRequests**](docs/ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
+*CoreApiV10.ManagerApi* | [**investInfo**](docs/ManagerApi.md#investInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+*CoreApiV10.ManagerApi* | [**manager**](docs/ManagerApi.md#manager) | **GET** /v1.0/manager | Manager dashboard
+*CoreApiV10.ManagerApi* | [**managerDetails**](docs/ManagerApi.md#managerDetails) | **GET** /v1.0/manager/{id}/details | Manager details
+*CoreApiV10.ManagerApi* | [**managerEvents**](docs/ManagerApi.md#managerEvents) | **GET** /v1.0/manager/events | Manager events
+*CoreApiV10.ManagerApi* | [**managerFunds**](docs/ManagerApi.md#managerFunds) | **GET** /v1.0/manager/funds | Manager funds
+*CoreApiV10.ManagerApi* | [**managerProfile**](docs/ManagerApi.md#managerProfile) | **GET** /v1.0/manager/{id} | Manager profile
+*CoreApiV10.ManagerApi* | [**managerPrograms**](docs/ManagerApi.md#managerPrograms) | **GET** /v1.0/manager/programs | Manager programs
+*CoreApiV10.ManagerApi* | [**programInvest**](docs/ManagerApi.md#programInvest) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit
+*CoreApiV10.ManagerApi* | [**programWithdraw**](docs/ManagerApi.md#programWithdraw) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from program
+*CoreApiV10.ManagerApi* | [**programWithdrawInfo**](docs/ManagerApi.md#programWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
+*CoreApiV10.ManagerApi* | [**updateInvestmentProgram**](docs/ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
+*CoreApiV10.ManagerApi* | [**updateInvestmentProgram_0**](docs/ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
+*CoreApiV10.NotificationsApi* | [**addNotificationsSettings**](docs/NotificationsApi.md#addNotificationsSettings) | **POST** /v1.0/notifications/settings/add | Add new setting
+*CoreApiV10.NotificationsApi* | [**enableDisableSettings**](docs/NotificationsApi.md#enableDisableSettings) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
+*CoreApiV10.NotificationsApi* | [**getNewNotificationsCount**](docs/NotificationsApi.md#getNewNotificationsCount) | **GET** /v1.0/notifications/new | Unread notifications count
+*CoreApiV10.NotificationsApi* | [**getNotifications**](docs/NotificationsApi.md#getNotifications) | **GET** /v1.0/notifications | User notifications
+*CoreApiV10.NotificationsApi* | [**getNotificationsFundSettings**](docs/NotificationsApi.md#getNotificationsFundSettings) | **GET** /v1.0/notifications/settings/funds/{id} | User settings for fund
+*CoreApiV10.NotificationsApi* | [**getNotificationsManagerSettings**](docs/NotificationsApi.md#getNotificationsManagerSettings) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
+*CoreApiV10.NotificationsApi* | [**getNotificationsProgramSettings**](docs/NotificationsApi.md#getNotificationsProgramSettings) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
+*CoreApiV10.NotificationsApi* | [**getNotificationsSettings**](docs/NotificationsApi.md#getNotificationsSettings) | **GET** /v1.0/notifications/settings | User settings
+*CoreApiV10.NotificationsApi* | [**removeNotificationsSettings**](docs/NotificationsApi.md#removeNotificationsSettings) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
+*CoreApiV10.PlatformApi* | [**getPlatformStatistic**](docs/PlatformApi.md#getPlatformStatistic) | **GET** /v1.0/platform/statistic | Platform statistic
+*CoreApiV10.PlatformApi* | [**getPlatformStatus**](docs/PlatformApi.md#getPlatformStatus) | **GET** /v1.0/platform/info | Platform info
+*CoreApiV10.ProfileApi* | [**profileFull**](docs/ProfileApi.md#profileFull) | **GET** /v1.0/profile | Get full profile
+*CoreApiV10.ProfileApi* | [**profileHeader**](docs/ProfileApi.md#profileHeader) | **GET** /v1.0/profile/header | Get header profile
+*CoreApiV10.ProfileApi* | [**removeAvatar**](docs/ProfileApi.md#removeAvatar) | **POST** /v1.0/profile/avatar/remove | Remove avatar
+*CoreApiV10.ProfileApi* | [**updateAvatar**](docs/ProfileApi.md#updateAvatar) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
+*CoreApiV10.ProfileApi* | [**updatePersonalDetails**](docs/ProfileApi.md#updatePersonalDetails) | **POST** /v1.0/profile/personal/update | Update user personal details
+*CoreApiV10.ProfileApi* | [**updateProfile**](docs/ProfileApi.md#updateProfile) | **POST** /v1.0/profile/update | Update profile
+*CoreApiV10.ProfileApi* | [**verificationToken**](docs/ProfileApi.md#verificationToken) | **POST** /v1.0/profile/verification/token | 
+*CoreApiV10.ProgramsApi* | [**addToFavorites**](docs/ProgramsApi.md#addToFavorites) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
+*CoreApiV10.ProgramsApi* | [**getProgramBalanceChart**](docs/ProgramsApi.md#getProgramBalanceChart) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
+*CoreApiV10.ProgramsApi* | [**getProgramDetails**](docs/ProgramsApi.md#getProgramDetails) | **GET** /v1.0/programs/{id} | Program details
+*CoreApiV10.ProgramsApi* | [**getProgramProfitChart**](docs/ProgramsApi.md#getProgramProfitChart) | **GET** /v1.0/programs/{id}/charts/profit | Program profit chart
+*CoreApiV10.ProgramsApi* | [**getProgramSets**](docs/ProgramsApi.md#getProgramSets) | **GET** /v1.0/programs/sets | Programs sets
+*CoreApiV10.ProgramsApi* | [**getProgramTrades**](docs/ProgramsApi.md#getProgramTrades) | **GET** /v1.0/programs/{id}/trades | Trade history
+*CoreApiV10.ProgramsApi* | [**getPrograms**](docs/ProgramsApi.md#getPrograms) | **GET** /v1.0/programs | Programs list
+*CoreApiV10.ProgramsApi* | [**removeFromFavorites**](docs/ProgramsApi.md#removeFromFavorites) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
+*CoreApiV10.RateApi* | [**getRate**](docs/RateApi.md#getRate) | **GET** /v1.0/rate/{from}/{to} | Get rate
+*CoreApiV10.RateApi* | [**getRateExchange**](docs/RateApi.md#getRateExchange) | **GET** /v1.0/rate/{exchange}/{from}/{to} | Get rate
+*CoreApiV10.RateApi* | [**getRates**](docs/RateApi.md#getRates) | **GET** /v1.0/rate | Get rates
+*CoreApiV10.SearchApi* | [**getPrograms**](docs/SearchApi.md#getPrograms) | **GET** /v1.0/search | Program / fund / manager search
+*CoreApiV10.WalletApi* | [**cancelWithdrawalRequest**](docs/WalletApi.md#cancelWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
+*CoreApiV10.WalletApi* | [**confirmWithdrawalRequestByCode**](docs/WalletApi.md#confirmWithdrawalRequestByCode) | **POST** /v1.0/wallet/withdraw/request/confirm | 
+*CoreApiV10.WalletApi* | [**createWithdrawalRequest**](docs/WalletApi.md#createWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/new | 
+*CoreApiV10.WalletApi* | [**getUserAddress**](docs/WalletApi.md#getUserAddress) | **GET** /v1.0/wallet/addresses | 
+*CoreApiV10.WalletApi* | [**getUserWithdrawalSummary**](docs/WalletApi.md#getUserWithdrawalSummary) | **GET** /v1.0/wallet/withdraw/info | 
+*CoreApiV10.WalletApi* | [**getWalletPendingTransactions**](docs/WalletApi.md#getWalletPendingTransactions) | **GET** /v1.0/wallet/transactions/pending | Wallet pending transactions
+*CoreApiV10.WalletApi* | [**getWalletSummary**](docs/WalletApi.md#getWalletSummary) | **GET** /v1.0/wallet/{currency} | Wallet summary
+*CoreApiV10.WalletApi* | [**getWalletTransactions**](docs/WalletApi.md#getWalletTransactions) | **GET** /v1.0/wallet/transactions | Wallet transactions
+*CoreApiV10.WalletApi* | [**resendWithdrawalRequestEmail**](docs/WalletApi.md#resendWithdrawalRequestEmail) | **POST** /v1.0/wallet/withdraw/request/resend/{txId} | 
 
 
 ## Documentation for Models

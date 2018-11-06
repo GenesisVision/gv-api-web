@@ -43,7 +43,7 @@ export default class SearchApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchViewModel} and HTTP response
      */
-    v10SearchGetWithHttpInfo(opts) {
+    getProgramsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -78,8 +78,8 @@ export default class SearchApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchViewModel}
      */
-    v10SearchGet(opts) {
-      return this.v10SearchGetWithHttpInfo(opts)
+    getPrograms(opts) {
+      return this.getProgramsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

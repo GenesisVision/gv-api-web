@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10SearchGet**](SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
+[**getPrograms**](SearchApi.md#getPrograms) | **GET** /v1.0/search | Program / fund / manager search
 
 
-<a name="v10SearchGet"></a>
-# **v10SearchGet**
-> SearchViewModel v10SearchGet(opts)
+<a name="getPrograms"></a>
+# **getPrograms**
+> SearchViewModel getPrograms(opts)
 
 Program / fund / manager search
 
@@ -23,7 +23,7 @@ let opts = {
   'mask': "mask_example", // String | 
   'take': 56 // Number | 
 };
-apiInstance.v10SearchGet(opts).then((data) => {
+apiInstance.getPrograms(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -4,82 +4,41 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10ManagerByIdDetailsGet**](ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
-[**v10ManagerByIdGet**](ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
-[**v10ManagerEventsGet**](ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
-[**v10ManagerFundsByIdClosePost**](ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
-[**v10ManagerFundsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
-[**v10ManagerFundsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
-[**v10ManagerFundsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
-[**v10ManagerFundsByIdUpdatePost**](ManagerApi.md#v10ManagerFundsByIdUpdatePost) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
-[**v10ManagerFundsByIdWithdrawByPercentPost**](ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
-[**v10ManagerFundsByIdWithdrawInfoByCurrencyGet**](ManagerApi.md#v10ManagerFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-[**v10ManagerFundsCreatePost**](ManagerApi.md#v10ManagerFundsCreatePost) | **POST** /v1.0/manager/funds/create | Create fund
-[**v10ManagerFundsGet**](ManagerApi.md#v10ManagerFundsGet) | **GET** /v1.0/manager/funds | Manager funds
-[**v10ManagerFundsInvestmentAmountGet**](ManagerApi.md#v10ManagerFundsInvestmentAmountGet) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
-[**v10ManagerFundsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerFundsRequestsByIdCancelPost) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
-[**v10ManagerGet**](ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
-[**v10ManagerProgramsByIdClosePost**](ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program/fund
-[**v10ManagerProgramsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit
-[**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
-[**v10ManagerProgramsByIdPeriodClosePost**](ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
-[**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
-[**v10ManagerProgramsByIdUpdatePost**](ManagerApi.md#v10ManagerProgramsByIdUpdatePost) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
-[**v10ManagerProgramsByIdWithdrawByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from program
-[**v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
-[**v10ManagerProgramsCreatePost**](ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
-[**v10ManagerProgramsGet**](ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
-[**v10ManagerProgramsInvestmentAmountGet**](ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
-[**v10ManagerProgramsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
-[**v10ManagerRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
+[**cancelRequest**](ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
+[**cancelRequest_0**](ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+[**closeCurrentPeriod**](ManagerApi.md#closeCurrentPeriod) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
+[**closeInvestmentProgram**](ManagerApi.md#closeInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program/fund
+[**closeInvestmentProgram_0**](ManagerApi.md#closeInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
+[**createFund**](ManagerApi.md#createFund) | **POST** /v1.0/manager/funds/create | Create fund
+[**createProgram**](ManagerApi.md#createProgram) | **POST** /v1.0/manager/programs/create | Create an investment program
+[**fundInvest**](ManagerApi.md#fundInvest) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
+[**fundInvestInfo**](ManagerApi.md#fundInvestInfo) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
+[**fundWithdraw**](ManagerApi.md#fundWithdraw) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+[**fundWithdrawInfo**](ManagerApi.md#fundWithdrawInfo) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
+[**getFundInvestment**](ManagerApi.md#getFundInvestment) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
+[**getProgramInvestment**](ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
+[**getProgramRequests**](ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
+[**getProgramRequests_0**](ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+[**getRequests**](ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
+[**investInfo**](ManagerApi.md#investInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+[**manager**](ManagerApi.md#manager) | **GET** /v1.0/manager | Manager dashboard
+[**managerDetails**](ManagerApi.md#managerDetails) | **GET** /v1.0/manager/{id}/details | Manager details
+[**managerEvents**](ManagerApi.md#managerEvents) | **GET** /v1.0/manager/events | Manager events
+[**managerFunds**](ManagerApi.md#managerFunds) | **GET** /v1.0/manager/funds | Manager funds
+[**managerProfile**](ManagerApi.md#managerProfile) | **GET** /v1.0/manager/{id} | Manager profile
+[**managerPrograms**](ManagerApi.md#managerPrograms) | **GET** /v1.0/manager/programs | Manager programs
+[**programInvest**](ManagerApi.md#programInvest) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit
+[**programWithdraw**](ManagerApi.md#programWithdraw) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from program
+[**programWithdrawInfo**](ManagerApi.md#programWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
+[**updateInvestmentProgram**](ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
+[**updateInvestmentProgram_0**](ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
 
 
-<a name="v10ManagerByIdDetailsGet"></a>
-# **v10ManagerByIdDetailsGet**
-> ManagerProfileDetails v10ManagerByIdDetailsGet(id)
+<a name="cancelRequest"></a>
+# **cancelRequest**
+> cancelRequest(id, authorization)
 
-Manager details
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-apiInstance.v10ManagerByIdDetailsGet(id).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
-
-### Return type
-
-[**ManagerProfileDetails**](ManagerProfileDetails.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerByIdGet"></a>
-# **v10ManagerByIdGet**
-> ManagerProfile v10ManagerByIdGet(id)
-
-Manager profile
+Cancel investment program/fund request
 
 ### Example
 ```javascript
@@ -88,59 +47,11 @@ import CoreApiV10 from 'core_api_v10';
 let apiInstance = new CoreApiV10.ManagerApi();
 
 let id = "id_example"; // String | 
-
-apiInstance.v10ManagerByIdGet(id).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
-
-### Return type
-
-[**ManagerProfile**](ManagerProfile.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerEventsGet"></a>
-# **v10ManagerEventsGet**
-> ManagerPortfolioEvents v10ManagerEventsGet(authorization, opts)
-
-Manager events
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'assetId': "assetId_example", // String | 
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'type': "type_example", // String | 
-  'assetType': "assetType_example", // String | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10ManagerEventsGet(authorization, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.cancelRequest(id, authorization).then(() => {
+  console.log('API called successfully.');
 }, (error) => {
   console.error(error);
 });
@@ -151,18 +62,12 @@ apiInstance.v10ManagerEventsGet(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **assetId** | [**String**](.md)|  | [optional] 
- **from** | **Date**|  | [optional] 
- **to** | **Date**|  | [optional] 
- **type** | **String**|  | [optional] 
- **assetType** | **String**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**ManagerPortfolioEvents**](ManagerPortfolioEvents.md)
+null (empty response body)
 
 ### Authorization
 
@@ -173,9 +78,97 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdClosePost"></a>
-# **v10ManagerFundsByIdClosePost**
-> v10ManagerFundsByIdClosePost(id, authorization, opts)
+<a name="cancelRequest_0"></a>
+# **cancelRequest_0**
+> cancelRequest_0(id, authorization)
+
+Cancel investment program/fund request
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.cancelRequest_0(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="closeCurrentPeriod"></a>
+# **closeCurrentPeriod**
+> closeCurrentPeriod(id, authorization)
+
+Close current period
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.closeCurrentPeriod(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="closeInvestmentProgram"></a>
+# **closeInvestmentProgram**
+> closeInvestmentProgram(id, authorization, opts)
 
 Close existing investment program/fund
 
@@ -192,7 +185,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'twoFactorCode': "twoFactorCode_example" // String | 
 };
-apiInstance.v10ManagerFundsByIdClosePost(id, authorization, opts).then(() => {
+apiInstance.closeInvestmentProgram(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -221,9 +214,147 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdInvestByAmountPost"></a>
-# **v10ManagerFundsByIdInvestByAmountPost**
-> v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization)
+<a name="closeInvestmentProgram_0"></a>
+# **closeInvestmentProgram_0**
+> closeInvestmentProgram_0(id, authorization, opts)
+
+Close existing investment program/fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'twoFactorCode': "twoFactorCode_example" // String | 
+};
+apiInstance.closeInvestmentProgram_0(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **twoFactorCode** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="createFund"></a>
+# **createFund**
+> createFund(authorization, opts)
+
+Create fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'request': new CoreApiV10.NewFundRequest() // NewFundRequest | 
+};
+apiInstance.createFund(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **request** | [**NewFundRequest**](NewFundRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="createProgram"></a>
+# **createProgram**
+> createProgram(authorization, opts)
+
+Create an investment program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'request': new CoreApiV10.NewProgramRequest() // NewProgramRequest | 
+};
+apiInstance.createProgram(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **request** | [**NewProgramRequest**](NewProgramRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="fundInvest"></a>
+# **fundInvest**
+> fundInvest(id, amount, authorization)
 
 Deposit
 
@@ -239,7 +370,7 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+apiInstance.fundInvest(id, amount, authorization).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -268,9 +399,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdInvestInfoByCurrencyGet"></a>
-# **v10ManagerFundsByIdInvestInfoByCurrencyGet**
-> FundInvestInfo v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+<a name="fundInvestInfo"></a>
+# **fundInvestInfo**
+> FundInvestInfo fundInvestInfo(id, currency, authorization)
 
 Data for investing into the fund
 
@@ -286,7 +417,7 @@ let currency = "currency_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.fundInvestInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -315,9 +446,185 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdRequestsBySkipByTakeGet"></a>
-# **v10ManagerFundsByIdRequestsBySkipByTakeGet**
-> ProgramRequests v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
+<a name="fundWithdraw"></a>
+# **fundWithdraw**
+> fundWithdraw(id, percent, authorization)
+
+Withdraw from fund. Percent is % of investor total money.
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let percent = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.fundWithdraw(id, percent, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **percent** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="fundWithdrawInfo"></a>
+# **fundWithdrawInfo**
+> ManagerFundWithdrawInfo fundWithdrawInfo(id, currency, authorization)
+
+Data for withdrawal from fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.fundWithdrawInfo(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ManagerFundWithdrawInfo**](ManagerFundWithdrawInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getFundInvestment"></a>
+# **getFundInvestment**
+> &#39;Number&#39; getFundInvestment(authorization)
+
+Get GVT investment to create fund
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getFundInvestment(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+**&#39;Number&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getProgramInvestment"></a>
+# **getProgramInvestment**
+> &#39;Number&#39; getProgramInvestment(authorization)
+
+Get GVT investment to create program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getProgramInvestment(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+**&#39;Number&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getProgramRequests"></a>
+# **getProgramRequests**
+> ProgramRequests getProgramRequests(id, skip, take, authorization)
 
 Get investment program/fund requests
 
@@ -335,7 +642,7 @@ let take = 56; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
+apiInstance.getProgramRequests(id, skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -365,11 +672,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdUpdatePost"></a>
-# **v10ManagerFundsByIdUpdatePost**
-> v10ManagerFundsByIdUpdatePost(id, authorization, opts)
+<a name="getProgramRequests_0"></a>
+# **getProgramRequests_0**
+> ProgramRequests getProgramRequests_0(id, skip, take, authorization)
 
-Update investment program/fund details
+Get investment program/fund requests
 
 ### Example
 ```javascript
@@ -379,13 +686,14 @@ let apiInstance = new CoreApiV10.ManagerApi();
 
 let id = "id_example"; // String | 
 
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
-};
-apiInstance.v10ManagerFundsByIdUpdatePost(id, authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.getProgramRequests_0(id, skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -397,59 +705,13 @@ apiInstance.v10ManagerFundsByIdUpdatePost(id, authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
- **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerFundsByIdWithdrawByPercentPost"></a>
-# **v10ManagerFundsByIdWithdrawByPercentPost**
-> v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization)
-
-Withdraw from fund. Percent is % of investor total money.
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let percent = 1.2; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **percent** | **Number**|  | 
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
 
 ### Return type
 
-null (empty response body)
+[**ProgramRequests**](ProgramRequests.md)
 
 ### Authorization
 
@@ -460,11 +722,58 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsByIdWithdrawInfoByCurrencyGet"></a>
-# **v10ManagerFundsByIdWithdrawInfoByCurrencyGet**
-> ManagerFundWithdrawInfo v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+<a name="getRequests"></a>
+# **getRequests**
+> ProgramRequests getRequests(skip, take, authorization)
 
-Data for withdrawal from fund
+Get all requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getRequests(skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequests**](ProgramRequests.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="investInfo"></a>
+# **investInfo**
+> ProgramInvestInfo investInfo(id, currency, authorization)
+
+Data for investing into the program
 
 ### Example
 ```javascript
@@ -478,7 +787,7 @@ let currency = "currency_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.investInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -496,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerFundWithdrawInfo**](ManagerFundWithdrawInfo.md)
+[**ProgramInvestInfo**](ProgramInvestInfo.md)
 
 ### Authorization
 
@@ -507,196 +816,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerFundsCreatePost"></a>
-# **v10ManagerFundsCreatePost**
-> v10ManagerFundsCreatePost(authorization, opts)
-
-Create fund
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'request': new CoreApiV10.NewFundRequest() // NewFundRequest | 
-};
-apiInstance.v10ManagerFundsCreatePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **request** | [**NewFundRequest**](NewFundRequest.md)|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerFundsGet"></a>
-# **v10ManagerFundsGet**
-> FundsList v10ManagerFundsGet(authorization, opts)
-
-Manager funds
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'sorting': "sorting_example", // String | 
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartPointsCount': 56, // Number | 
-  'currencySecondary': "currencySecondary_example", // String | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10ManagerFundsGet(authorization, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **sorting** | **String**|  | [optional] 
- **from** | **Date**|  | [optional] 
- **to** | **Date**|  | [optional] 
- **chartPointsCount** | **Number**|  | [optional] 
- **currencySecondary** | **String**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
-
-### Return type
-
-[**FundsList**](FundsList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerFundsInvestmentAmountGet"></a>
-# **v10ManagerFundsInvestmentAmountGet**
-> &#39;Number&#39; v10ManagerFundsInvestmentAmountGet(authorization)
-
-Get GVT investment to create fund
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerFundsInvestmentAmountGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-**&#39;Number&#39;**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerFundsRequestsByIdCancelPost"></a>
-# **v10ManagerFundsRequestsByIdCancelPost**
-> v10ManagerFundsRequestsByIdCancelPost(id, authorization)
-
-Cancel investment program/fund request
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerFundsRequestsByIdCancelPost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerGet"></a>
-# **v10ManagerGet**
-> ManagerDashboard v10ManagerGet(authorization, opts)
+<a name="manager"></a>
+# **manager**
+> ManagerDashboard manager(authorization, opts)
 
 Manager dashboard
 
@@ -717,7 +839,7 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ManagerGet(authorization, opts).then((data) => {
+apiInstance.manager(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -751,59 +873,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsByIdClosePost"></a>
-# **v10ManagerProgramsByIdClosePost**
-> v10ManagerProgramsByIdClosePost(id, authorization, opts)
+<a name="managerDetails"></a>
+# **managerDetails**
+> ManagerProfileDetails managerDetails(id)
 
-Close existing investment program/fund
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'twoFactorCode': "twoFactorCode_example" // String | 
-};
-apiInstance.v10ManagerProgramsByIdClosePost(id, authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
- **twoFactorCode** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsByIdInvestByAmountPost"></a>
-# **v10ManagerProgramsByIdInvestByAmountPost**
-> v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization)
-
-Deposit
+Manager details
 
 ### Example
 ```javascript
@@ -813,58 +887,7 @@ let apiInstance = new CoreApiV10.ManagerApi();
 
 let id = "id_example"; // String | 
 
-let amount = 1.2; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **amount** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsByIdInvestInfoByCurrencyGet"></a>
-# **v10ManagerProgramsByIdInvestInfoByCurrencyGet**
-> ProgramInvestInfo v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization)
-
-Data for investing into the program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.managerDetails(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -876,13 +899,11 @@ apiInstance.v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authoriz
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
- **authorization** | **String**| JWT access token | 
+ **id** | **String**|  | 
 
 ### Return type
 
-[**ProgramInvestInfo**](ProgramInvestInfo.md)
+[**ManagerProfileDetails**](ManagerProfileDetails.md)
 
 ### Authorization
 
@@ -893,55 +914,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsByIdPeriodClosePost"></a>
-# **v10ManagerProgramsByIdPeriodClosePost**
-> v10ManagerProgramsByIdPeriodClosePost(id, authorization)
+<a name="managerEvents"></a>
+# **managerEvents**
+> ManagerPortfolioEvents managerEvents(authorization, opts)
 
-Close current period
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsByIdPeriodClosePost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsByIdRequestsBySkipByTakeGet"></a>
-# **v10ManagerProgramsByIdRequestsBySkipByTakeGet**
-> ProgramRequests v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
-
-Get investment program/fund requests
+Manager events
 
 ### Example
 ```javascript
@@ -949,15 +926,18 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ManagerApi();
 
-let id = "id_example"; // String | 
-
-let skip = 56; // Number | 
-
-let take = 56; // Number | 
-
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
+let opts = { 
+  'assetId': "assetId_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'type': "type_example", // String | 
+  'assetType': "assetType_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.managerEvents(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -969,14 +949,18 @@ apiInstance.v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, author
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **skip** | **Number**|  | 
- **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **assetId** | [**String**](.md)|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **type** | **String**|  | [optional] 
+ **assetType** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**ProgramRequests**](ProgramRequests.md)
+[**ManagerPortfolioEvents**](ManagerPortfolioEvents.md)
 
 ### Authorization
 
@@ -987,120 +971,30 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsByIdUpdatePost"></a>
-# **v10ManagerProgramsByIdUpdatePost**
-> v10ManagerProgramsByIdUpdatePost(id, authorization, opts)
+<a name="managerFunds"></a>
+# **managerFunds**
+> FundsList managerFunds(authorization, opts)
 
-Update investment program/fund details
+Manager funds
 
 ### Example
 ```javascript
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
 
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
+  'sorting': "sorting_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
 };
-apiInstance.v10ManagerProgramsByIdUpdatePost(id, authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
- **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsByIdWithdrawByAmountPost"></a>
-# **v10ManagerProgramsByIdWithdrawByAmountPost**
-> v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization)
-
-Withdraw from program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let amount = 1.2; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **amount** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsByIdWithdrawInfoByCurrencyGet"></a>
-# **v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**
-> ManagerProgramWithdrawInfo v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
-
-Data for withdrawal from investment program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.managerFunds(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1112,13 +1006,18 @@ apiInstance.v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, author
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
  **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**ManagerProgramWithdrawInfo**](ManagerProgramWithdrawInfo.md)
+[**FundsList**](FundsList.md)
 
 ### Authorization
 
@@ -1129,11 +1028,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsCreatePost"></a>
-# **v10ManagerProgramsCreatePost**
-> v10ManagerProgramsCreatePost(authorization, opts)
+<a name="managerProfile"></a>
+# **managerProfile**
+> ManagerProfile managerProfile(id)
 
-Create an investment program
+Manager profile
 
 ### Example
 ```javascript
@@ -1141,13 +1040,10 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ManagerApi();
 
-let authorization = "authorization_example"; // String | JWT access token
+let id = "id_example"; // String | 
 
-let opts = { 
-  'request': new CoreApiV10.NewProgramRequest() // NewProgramRequest | 
-};
-apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.managerProfile(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1158,12 +1054,11 @@ apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **request** | [**NewProgramRequest**](NewProgramRequest.md)|  | [optional] 
+ **id** | **String**|  | 
 
 ### Return type
 
-null (empty response body)
+[**ManagerProfile**](ManagerProfile.md)
 
 ### Authorization
 
@@ -1171,12 +1066,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsGet"></a>
-# **v10ManagerProgramsGet**
-> ProgramsList v10ManagerProgramsGet(authorization, opts)
+<a name="managerPrograms"></a>
+# **managerPrograms**
+> ProgramsList managerPrograms(authorization, opts)
 
 Manager programs
 
@@ -1197,7 +1092,7 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ManagerProgramsGet(authorization, opts).then((data) => {
+apiInstance.managerPrograms(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1231,52 +1126,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerProgramsInvestmentAmountGet"></a>
-# **v10ManagerProgramsInvestmentAmountGet**
-> &#39;Number&#39; v10ManagerProgramsInvestmentAmountGet(authorization)
+<a name="programInvest"></a>
+# **programInvest**
+> programInvest(id, amount, authorization)
 
-Get GVT investment to create program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ManagerProgramsInvestmentAmountGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-**&#39;Number&#39;**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerProgramsRequestsByIdCancelPost"></a>
-# **v10ManagerProgramsRequestsByIdCancelPost**
-> v10ManagerProgramsRequestsByIdCancelPost(id, authorization)
-
-Cancel investment program/fund request
+Deposit
 
 ### Example
 ```javascript
@@ -1286,9 +1140,11 @@ let apiInstance = new CoreApiV10.ManagerApi();
 
 let id = "id_example"; // String | 
 
+let amount = 1.2; // Number | 
+
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerProgramsRequestsByIdCancelPost(id, authorization).then(() => {
+apiInstance.programInvest(id, amount, authorization).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1301,6 +1157,7 @@ apiInstance.v10ManagerProgramsRequestsByIdCancelPost(id, authorization).then(() 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
 
 ### Return type
@@ -1316,11 +1173,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ManagerRequestsBySkipByTakeGet"></a>
-# **v10ManagerRequestsBySkipByTakeGet**
-> ProgramRequests v10ManagerRequestsBySkipByTakeGet(skip, take, authorization)
+<a name="programWithdraw"></a>
+# **programWithdraw**
+> programWithdraw(id, amount, authorization)
 
-Get all requests
+Withdraw from program
 
 ### Example
 ```javascript
@@ -1328,13 +1185,60 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ManagerApi();
 
-let skip = 56; // Number | 
+let id = "id_example"; // String | 
 
-let take = 56; // Number | 
+let amount = 1.2; // Number | 
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
+apiInstance.programWithdraw(id, amount, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="programWithdrawInfo"></a>
+# **programWithdrawInfo**
+> ManagerProgramWithdrawInfo programWithdrawInfo(id, currency, authorization)
+
+Data for withdrawal from investment program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.programWithdrawInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1346,13 +1250,13 @@ apiInstance.v10ManagerRequestsBySkipByTakeGet(skip, take, authorization).then((d
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **Number**|  | 
- **take** | **Number**|  | 
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
  **authorization** | **String**| JWT access token | 
 
 ### Return type
 
-[**ProgramRequests**](ProgramRequests.md)
+[**ManagerProgramWithdrawInfo**](ManagerProgramWithdrawInfo.md)
 
 ### Authorization
 
@@ -1361,5 +1265,101 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="updateInvestmentProgram"></a>
+# **updateInvestmentProgram**
+> updateInvestmentProgram(id, authorization, opts)
+
+Update investment program/fund details
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
+};
+apiInstance.updateInvestmentProgram(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="updateInvestmentProgram_0"></a>
+# **updateInvestmentProgram_0**
+> updateInvestmentProgram_0(id, authorization, opts)
+
+Update investment program/fund details
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.ProgramUpdate() // ProgramUpdate | 
+};
+apiInstance.updateInvestmentProgram_0(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **model** | [**ProgramUpdate**](ProgramUpdate.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 

@@ -41,7 +41,7 @@ export default class KycApi {
      * @param {module:model/KycCallback} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    v10KycCallbackPostWithHttpInfo(opts) {
+    kycCallbackWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -72,8 +72,8 @@ export default class KycApi {
      * @param {module:model/KycCallback} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    v10KycCallbackPost(opts) {
-      return this.v10KycCallbackPostWithHttpInfo(opts)
+    kycCallback(opts) {
+      return this.kycCallbackWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

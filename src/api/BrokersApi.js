@@ -40,7 +40,7 @@ export default class BrokersApi {
      * Get all trade servers
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BrokersInfo} and HTTP response
      */
-    v10BrokersGetWithHttpInfo() {
+    getBrokersWithHttpInfo() {
       let postBody = null;
 
 
@@ -69,8 +69,8 @@ export default class BrokersApi {
      * Get all trade servers
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BrokersInfo}
      */
-    v10BrokersGet() {
-      return this.v10BrokersGetWithHttpInfo()
+    getBrokers() {
+      return this.getBrokersWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

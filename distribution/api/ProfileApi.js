@@ -66,20 +66,110 @@ var ProfileApi = function () {
   }
 
   /**
-   * Remove avatar
+   * Get full profile
    * @param {String} authorization JWT access token
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
    */
 
 
   _createClass(ProfileApi, [{
-    key: 'v10ProfileAvatarRemovePostWithHttpInfo',
-    value: function v10ProfileAvatarRemovePostWithHttpInfo(authorization) {
+    key: 'profileFullWithHttpInfo',
+    value: function profileFullWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarRemovePost");
+        throw new Error("Missing the required parameter 'authorization' when calling profileFull");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProfileFullViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get full profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
+     */
+
+  }, {
+    key: 'profileFull',
+    value: function profileFull(authorization) {
+      return this.profileFullWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
+     */
+
+  }, {
+    key: 'profileHeaderWithHttpInfo',
+    value: function profileHeaderWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling profileHeader");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProfileHeaderViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/profile/header', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
+     */
+
+  }, {
+    key: 'profileHeader',
+    value: function profileHeader(authorization) {
+      return this.profileHeaderWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Remove avatar
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'removeAvatarWithHttpInfo',
+    value: function removeAvatarWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling removeAvatar");
       }
 
       var pathParams = {};
@@ -104,9 +194,9 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileAvatarRemovePost',
-    value: function v10ProfileAvatarRemovePost(authorization) {
-      return this.v10ProfileAvatarRemovePostWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'removeAvatar',
+    value: function removeAvatar(authorization) {
+      return this.removeAvatarWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -119,18 +209,18 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileAvatarUpdateByFileIdPostWithHttpInfo',
-    value: function v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization) {
+    key: 'updateAvatarWithHttpInfo',
+    value: function updateAvatarWithHttpInfo(fileId, authorization) {
       var postBody = null;
 
       // verify the required parameter 'fileId' is set
       if (fileId === undefined || fileId === null) {
-        throw new Error("Missing the required parameter 'fileId' when calling v10ProfileAvatarUpdateByFileIdPost");
+        throw new Error("Missing the required parameter 'fileId' when calling updateAvatar");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarUpdateByFileIdPost");
+        throw new Error("Missing the required parameter 'authorization' when calling updateAvatar");
       }
 
       var pathParams = {
@@ -158,99 +248,9 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileAvatarUpdateByFileIdPost',
-    value: function v10ProfileAvatarUpdateByFileIdPost(fileId, authorization) {
-      return this.v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProfileGetWithHttpInfo',
-    value: function v10ProfileGetWithHttpInfo(authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileGet");
-      }
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProfileFullViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
-     */
-
-  }, {
-    key: 'v10ProfileGet',
-    value: function v10ProfileGet(authorization) {
-      return this.v10ProfileGetWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get header profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
-     */
-
-  }, {
-    key: 'v10ProfileHeaderGetWithHttpInfo',
-    value: function v10ProfileHeaderGetWithHttpInfo(authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileHeaderGet");
-      }
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProfileHeaderViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/profile/header', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get header profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
-     */
-
-  }, {
-    key: 'v10ProfileHeaderGet',
-    value: function v10ProfileHeaderGet(authorization) {
-      return this.v10ProfileHeaderGetWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'updateAvatar',
+    value: function updateAvatar(fileId, authorization) {
+      return this.updateAvatarWithHttpInfo(fileId, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -264,14 +264,14 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfilePersonalUpdatePostWithHttpInfo',
-    value: function v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts) {
+    key: 'updatePersonalDetailsWithHttpInfo',
+    value: function updatePersonalDetailsWithHttpInfo(authorization, opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfilePersonalUpdatePost");
+        throw new Error("Missing the required parameter 'authorization' when calling updatePersonalDetails");
       }
 
       var pathParams = {};
@@ -298,9 +298,9 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfilePersonalUpdatePost',
-    value: function v10ProfilePersonalUpdatePost(authorization, opts) {
-      return this.v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    key: 'updatePersonalDetails',
+    value: function updatePersonalDetails(authorization, opts) {
+      return this.updatePersonalDetailsWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -314,14 +314,14 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileUpdatePostWithHttpInfo',
-    value: function v10ProfileUpdatePostWithHttpInfo(authorization, opts) {
+    key: 'updateProfileWithHttpInfo',
+    value: function updateProfileWithHttpInfo(authorization, opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileUpdatePost");
+        throw new Error("Missing the required parameter 'authorization' when calling updateProfile");
       }
 
       var pathParams = {};
@@ -348,9 +348,9 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileUpdatePost',
-    value: function v10ProfileUpdatePost(authorization, opts) {
-      return this.v10ProfileUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    key: 'updateProfile',
+    value: function updateProfile(authorization, opts) {
+      return this.updateProfileWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -361,13 +361,13 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileVerificationTokenPostWithHttpInfo',
-    value: function v10ProfileVerificationTokenPostWithHttpInfo(authorization) {
+    key: 'verificationTokenWithHttpInfo',
+    value: function verificationTokenWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileVerificationTokenPost");
+        throw new Error("Missing the required parameter 'authorization' when calling verificationToken");
       }
 
       var pathParams = {};
@@ -391,9 +391,9 @@ var ProfileApi = function () {
      */
 
   }, {
-    key: 'v10ProfileVerificationTokenPost',
-    value: function v10ProfileVerificationTokenPost(authorization) {
-      return this.v10ProfileVerificationTokenPostWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'verificationToken',
+    value: function verificationToken(authorization) {
+      return this.verificationTokenWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
