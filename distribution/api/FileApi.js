@@ -61,13 +61,13 @@ var FileApi = function () {
 
 
   _createClass(FileApi, [{
-    key: 'getWithHttpInfo',
-    value: function getWithHttpInfo(id) {
+    key: 'v10FileByIdGetWithHttpInfo',
+    value: function v10FileByIdGetWithHttpInfo(id) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling get");
+        throw new Error("Missing the required parameter 'id' when calling v10FileByIdGet");
       }
 
       var pathParams = {
@@ -92,9 +92,9 @@ var FileApi = function () {
      */
 
   }, {
-    key: 'get',
-    value: function get(id) {
-      return this.getWithHttpInfo(id).then(function (response_and_data) {
+    key: 'v10FileByIdGet',
+    value: function v10FileByIdGet(id) {
+      return this.v10FileByIdGetWithHttpInfo(id).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -102,43 +102,36 @@ var FileApi = function () {
     /**
      * Upload document
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
+     * @param {File} uploadedFile Upload File
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadResult} and HTTP response
      */
 
   }, {
-    key: 'uploadDocumentWithHttpInfo',
-    value: function uploadDocumentWithHttpInfo(authorization, opts) {
-      opts = opts || {};
+    key: 'v10FileDocumentUploadPostWithHttpInfo',
+    value: function v10FileDocumentUploadPostWithHttpInfo(authorization, uploadedFile) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling uploadDocument");
+        throw new Error("Missing the required parameter 'authorization' when calling v10FileDocumentUploadPost");
+      }
+
+      // verify the required parameter 'uploadedFile' is set
+      if (uploadedFile === undefined || uploadedFile === null) {
+        throw new Error("Missing the required parameter 'uploadedFile' when calling v10FileDocumentUploadPost");
       }
 
       var pathParams = {};
-      var queryParams = {
-        'ContentType': opts['contentType'],
-        'ContentDisposition': opts['contentDisposition'],
-        'Headers': opts['headers'],
-        'Length': opts['length'],
-        'Name': opts['name'],
-        'FileName': opts['fileName']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': authorization
       };
-      var formParams = {};
+      var formParams = {
+        'uploadedFile': uploadedFile
+      };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _UploadResult2.default;
 
@@ -148,59 +141,48 @@ var FileApi = function () {
     /**
      * Upload document
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
+     * @param {File} uploadedFile Upload File
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadResult}
      */
 
   }, {
-    key: 'uploadDocument',
-    value: function uploadDocument(authorization, opts) {
-      return this.uploadDocumentWithHttpInfo(authorization, opts).then(function (response_and_data) {
+    key: 'v10FileDocumentUploadPost',
+    value: function v10FileDocumentUploadPost(authorization, uploadedFile) {
+      return this.v10FileDocumentUploadPostWithHttpInfo(authorization, uploadedFile).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Upload file
+     * @param {File} uploadedFile Upload File
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadResult} and HTTP response
      */
 
   }, {
-    key: 'uploadFileWithHttpInfo',
-    value: function uploadFileWithHttpInfo(opts) {
+    key: 'v10FileUploadPostWithHttpInfo',
+    value: function v10FileUploadPostWithHttpInfo(uploadedFile, opts) {
       opts = opts || {};
       var postBody = null;
 
+      // verify the required parameter 'uploadedFile' is set
+      if (uploadedFile === undefined || uploadedFile === null) {
+        throw new Error("Missing the required parameter 'uploadedFile' when calling v10FileUploadPost");
+      }
+
       var pathParams = {};
-      var queryParams = {
-        'ContentType': opts['contentType'],
-        'ContentDisposition': opts['contentDisposition'],
-        'Headers': opts['headers'],
-        'Length': opts['length'],
-        'Name': opts['name'],
-        'FileName': opts['fileName']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': opts['authorization']
       };
-      var formParams = {};
+      var formParams = {
+        'uploadedFile': uploadedFile
+      };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _UploadResult2.default;
 
@@ -209,21 +191,16 @@ var FileApi = function () {
 
     /**
      * Upload file
+     * @param {File} uploadedFile Upload File
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {String} opts.contentType 
-     * @param {String} opts.contentDisposition 
-     * @param {Object.<String, {String: String}>} opts.headers 
-     * @param {Number} opts.length 
-     * @param {String} opts.name 
-     * @param {String} opts.fileName 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadResult}
      */
 
   }, {
-    key: 'uploadFile',
-    value: function uploadFile(opts) {
-      return this.uploadFileWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10FileUploadPost',
+    value: function v10FileUploadPost(uploadedFile, opts) {
+      return this.v10FileUploadPostWithHttpInfo(uploadedFile, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

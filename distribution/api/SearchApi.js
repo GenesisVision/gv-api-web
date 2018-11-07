@@ -63,8 +63,8 @@ var SearchApi = function () {
 
 
   _createClass(SearchApi, [{
-    key: 'getProgramsWithHttpInfo',
-    value: function getProgramsWithHttpInfo(opts) {
+    key: 'v10SearchGetWithHttpInfo',
+    value: function v10SearchGetWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -93,9 +93,9 @@ var SearchApi = function () {
      */
 
   }, {
-    key: 'getPrograms',
-    value: function getPrograms(opts) {
-      return this.getProgramsWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10SearchGet',
+    value: function v10SearchGet(opts) {
+      return this.v10SearchGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -78,68 +78,14 @@ var FundsApi = function () {
   }
 
   /**
-   * Add to favorites
-   * @param {String} id 
-   * @param {String} authorization JWT access token
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+   * Get all supported assets for funds
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformAssets} and HTTP response
    */
 
 
   _createClass(FundsApi, [{
-    key: 'addToFavoritesWithHttpInfo',
-    value: function addToFavoritesWithHttpInfo(id, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling addToFavorites");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling addToFavorites");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/funds/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Add to favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'addToFavorites',
-    value: function addToFavorites(id, authorization) {
-      return this.addToFavoritesWithHttpInfo(id, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get all supported assets for funds
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformAssets} and HTTP response
-     */
-
-  }, {
-    key: 'getAllAssetsWithHttpInfo',
-    value: function getAllAssetsWithHttpInfo() {
+    key: 'v10FundsAssetsGetWithHttpInfo',
+    value: function v10FundsAssetsGetWithHttpInfo() {
       var postBody = null;
 
       var pathParams = {};
@@ -161,9 +107,9 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getAllAssets',
-    value: function getAllAssets() {
-      return this.getAllAssetsWithHttpInfo().then(function (response_and_data) {
+    key: 'v10FundsAssetsGet',
+    value: function v10FundsAssetsGet() {
+      return this.v10FundsAssetsGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -175,13 +121,13 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFundAssetsWithHttpInfo',
-    value: function getFundAssetsWithHttpInfo(id) {
+    key: 'v10FundsByIdAssetsGetWithHttpInfo',
+    value: function v10FundsByIdAssetsGetWithHttpInfo(id) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getFundAssets");
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdAssetsGet");
       }
 
       var pathParams = {
@@ -206,65 +152,67 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFundAssets',
-    value: function getFundAssets(id) {
-      return this.getFundAssetsWithHttpInfo(id).then(function (response_and_data) {
+    key: 'v10FundsByIdAssetsGet',
+    value: function v10FundsByIdAssetsGet(id) {
+      return this.v10FundsByIdAssetsGetWithHttpInfo(id).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
-     * Funds details
+     * Fund balance chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:model/String} opts.currencySecondary 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundDetailsFull} and HTTP response
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundBalanceChart} and HTTP response
      */
 
   }, {
-    key: 'getFundDetailsWithHttpInfo',
-    value: function getFundDetailsWithHttpInfo(id, opts) {
+    key: 'v10FundsByIdChartsBalanceGetWithHttpInfo',
+    value: function v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getFundDetails");
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartsBalanceGet");
       }
 
       var pathParams = {
         'id': id
       };
       var queryParams = {
-        'currencySecondary': opts['currencySecondary']
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'MaxPointCount': opts['maxPointCount']
       };
-      var headerParams = {
-        'Authorization': opts['authorization']
-      };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _FundDetailsFull2.default;
+      var returnType = _FundBalanceChart2.default;
 
-      return this.apiClient.callApi('/v1.0/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/funds/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Funds details
+     * Fund balance chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:model/String} opts.currencySecondary 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundDetailsFull}
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Number} opts.maxPointCount 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundBalanceChart}
      */
 
   }, {
-    key: 'getFundDetails',
-    value: function getFundDetails(id, opts) {
-      return this.getFundDetailsWithHttpInfo(id, opts).then(function (response_and_data) {
+    key: 'v10FundsByIdChartsBalanceGet',
+    value: function v10FundsByIdChartsBalanceGet(id, opts) {
+      return this.v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -280,14 +228,14 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFundProfitChartWithHttpInfo',
-    value: function getFundProfitChartWithHttpInfo(id, opts) {
+    key: 'v10FundsByIdChartsProfitGetWithHttpInfo',
+    value: function v10FundsByIdChartsProfitGetWithHttpInfo(id, opts) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getFundProfitChart");
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdChartsProfitGet");
       }
 
       var pathParams = {
@@ -320,9 +268,173 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFundProfitChart',
-    value: function getFundProfitChart(id, opts) {
-      return this.getFundProfitChartWithHttpInfo(id, opts).then(function (response_and_data) {
+    key: 'v10FundsByIdChartsProfitGet',
+    value: function v10FundsByIdChartsProfitGet(id, opts) {
+      return this.v10FundsByIdChartsProfitGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Add to favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdFavoriteAddPostWithHttpInfo',
+    value: function v10FundsByIdFavoriteAddPostWithHttpInfo(id, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdFavoriteAddPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10FundsByIdFavoriteAddPost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Add to favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10FundsByIdFavoriteAddPost',
+    value: function v10FundsByIdFavoriteAddPost(id, authorization) {
+      return this.v10FundsByIdFavoriteAddPostWithHttpInfo(id, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Remove from favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdFavoriteRemovePostWithHttpInfo',
+    value: function v10FundsByIdFavoriteRemovePostWithHttpInfo(id, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdFavoriteRemovePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10FundsByIdFavoriteRemovePost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Remove from favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10FundsByIdFavoriteRemovePost',
+    value: function v10FundsByIdFavoriteRemovePost(id, authorization) {
+      return this.v10FundsByIdFavoriteRemovePostWithHttpInfo(id, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Funds details
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundDetailsFull} and HTTP response
+     */
+
+  }, {
+    key: 'v10FundsByIdGetWithHttpInfo',
+    value: function v10FundsByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'currencySecondary': opts['currencySecondary']
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _FundDetailsFull2.default;
+
+      return this.apiClient.callApi('/v1.0/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Funds details
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundDetailsFull}
+     */
+
+  }, {
+    key: 'v10FundsByIdGet',
+    value: function v10FundsByIdGet(id, opts) {
+      return this.v10FundsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -349,8 +461,8 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFundsWithHttpInfo',
-    value: function getFundsWithHttpInfo(opts) {
+    key: 'v10FundsGetWithHttpInfo',
+    value: function v10FundsGetWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -406,67 +518,9 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getFunds',
-    value: function getFunds(opts) {
-      return this.getFundsWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Fund balance chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FundBalanceChart} and HTTP response
-     */
-
-  }, {
-    key: 'getProgramBalanceChartWithHttpInfo',
-    value: function getProgramBalanceChartWithHttpInfo(id, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getProgramBalanceChart");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'DateFrom': opts['dateFrom'],
-        'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _FundBalanceChart2.default;
-
-      return this.apiClient.callApi('/v1.0/funds/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Fund balance chart
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FundBalanceChart}
-     */
-
-  }, {
-    key: 'getProgramBalanceChart',
-    value: function getProgramBalanceChart(id, opts) {
-      return this.getProgramBalanceChartWithHttpInfo(id, opts).then(function (response_and_data) {
+    key: 'v10FundsGet',
+    value: function v10FundsGet(opts) {
+      return this.v10FundsGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -478,13 +532,13 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getProgramSetsWithHttpInfo',
-    value: function getProgramSetsWithHttpInfo(authorization) {
+    key: 'v10FundsSetsGetWithHttpInfo',
+    value: function v10FundsSetsGetWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getProgramSets");
+        throw new Error("Missing the required parameter 'authorization' when calling v10FundsSetsGet");
       }
 
       var pathParams = {};
@@ -509,63 +563,9 @@ var FundsApi = function () {
      */
 
   }, {
-    key: 'getProgramSets',
-    value: function getProgramSets(authorization) {
-      return this.getProgramSetsWithHttpInfo(authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Remove from favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'removeFromFavoritesWithHttpInfo',
-    value: function removeFromFavoritesWithHttpInfo(id, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling removeFromFavorites");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling removeFromFavorites");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/funds/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Remove from favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'removeFromFavorites',
-    value: function removeFromFavorites(id, authorization) {
-      return this.removeFromFavoritesWithHttpInfo(id, authorization).then(function (response_and_data) {
+    key: 'v10FundsSetsGet',
+    value: function v10FundsSetsGet(authorization) {
+      return this.v10FundsSetsGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

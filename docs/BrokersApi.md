@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getBrokers**](BrokersApi.md#getBrokers) | **GET** /v1.0/brokers | Get all trade servers
+[**v10BrokersGet**](BrokersApi.md#v10BrokersGet) | **GET** /v1.0/brokers | Get all trade servers
 
 
-<a name="getBrokers"></a>
-# **getBrokers**
-> BrokersInfo getBrokers()
+<a name="v10BrokersGet"></a>
+# **v10BrokersGet**
+> BrokersInfo v10BrokersGet()
 
 Get all trade servers
 
@@ -18,7 +18,7 @@ Get all trade servers
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.BrokersApi();
-apiInstance.getBrokers().then((data) => {
+apiInstance.v10BrokersGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

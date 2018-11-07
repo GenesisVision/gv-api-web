@@ -42,170 +42,15 @@ export default class WalletApi {
 
 
     /**
-     * @param {String} txId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    cancelWithdrawalRequestWithHttpInfo(txId, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'txId' is set
-      if (txId === undefined || txId === null) {
-        throw new Error("Missing the required parameter 'txId' when calling cancelWithdrawalRequest");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling cancelWithdrawalRequest");
-      }
-
-
-      let pathParams = {
-        'txId': txId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/withdraw/request/cancel/{txId}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * @param {String} txId 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    cancelWithdrawalRequest(txId, authorization) {
-      return this.cancelWithdrawalRequestWithHttpInfo(txId, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.requestId 
-     * @param {String} opts.code 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    confirmWithdrawalRequestByCodeWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'requestId': opts['requestId'],
-        'code': opts['code']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/withdraw/request/confirm', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.requestId 
-     * @param {String} opts.code 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    confirmWithdrawalRequestByCode(opts) {
-      return this.confirmWithdrawalRequestByCodeWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/CreateWithdrawalRequestModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    createWithdrawalRequestWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling createWithdrawalRequest");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/withdraw/request/new', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {module:model/CreateWithdrawalRequestModel} opts.model 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    createWithdrawalRequest(authorization, opts) {
-      return this.createWithdrawalRequestWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletsInfo} and HTTP response
      */
-    getUserAddressWithHttpInfo(authorization) {
+    v10WalletAddressesGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getUserAddress");
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletAddressesGet");
       }
 
 
@@ -235,104 +80,8 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletsInfo}
      */
-    getUserAddress(authorization) {
-      return this.getUserAddressWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WithdrawalSummary} and HTTP response
-     */
-    getUserWithdrawalSummaryWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getUserWithdrawalSummary");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = WithdrawalSummary;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/withdraw/info', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WithdrawalSummary}
-     */
-    getUserWithdrawalSummary(authorization) {
-      return this.getUserWithdrawalSummaryWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Wallet pending transactions
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletPendingTransactionsViewModel} and HTTP response
-     */
-    getWalletPendingTransactionsWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getWalletPendingTransactions");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = WalletPendingTransactionsViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/transactions/pending', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Wallet pending transactions
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletPendingTransactionsViewModel}
-     */
-    getWalletPendingTransactions(authorization) {
-      return this.getWalletPendingTransactionsWithHttpInfo(authorization)
+    v10WalletAddressesGet(authorization) {
+      return this.v10WalletAddressesGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -345,17 +94,17 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletSummary} and HTTP response
      */
-    getWalletSummaryWithHttpInfo(currency, authorization) {
+    v10WalletByCurrencyGetWithHttpInfo(currency, authorization) {
       let postBody = null;
 
       // verify the required parameter 'currency' is set
       if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling getWalletSummary");
+        throw new Error("Missing the required parameter 'currency' when calling v10WalletByCurrencyGet");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getWalletSummary");
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletByCurrencyGet");
       }
 
 
@@ -388,8 +137,8 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletSummary}
      */
-    getWalletSummary(currency, authorization) {
-      return this.getWalletSummaryWithHttpInfo(currency, authorization)
+    v10WalletByCurrencyGet(currency, authorization) {
+      return this.v10WalletByCurrencyGetWithHttpInfo(currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -409,13 +158,13 @@ export default class WalletApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletTransactionsViewModel} and HTTP response
      */
-    getWalletTransactionsWithHttpInfo(authorization, opts) {
+    v10WalletTransactionsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getWalletTransactions");
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransactionsGet");
       }
 
 
@@ -461,8 +210,104 @@ export default class WalletApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletTransactionsViewModel}
      */
-    getWalletTransactions(authorization, opts) {
-      return this.getWalletTransactionsWithHttpInfo(authorization, opts)
+    v10WalletTransactionsGet(authorization, opts) {
+      return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Wallet pending transactions
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WalletPendingTransactionsViewModel} and HTTP response
+     */
+    v10WalletTransactionsPendingGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransactionsPendingGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = WalletPendingTransactionsViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/transactions/pending', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Wallet pending transactions
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WalletPendingTransactionsViewModel}
+     */
+    v10WalletTransactionsPendingGet(authorization) {
+      return this.v10WalletTransactionsPendingGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WithdrawalSummary} and HTTP response
+     */
+    v10WalletWithdrawInfoGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletWithdrawInfoGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = WithdrawalSummary;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/withdraw/info', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WithdrawalSummary}
+     */
+    v10WalletWithdrawInfoGet(authorization) {
+      return this.v10WalletWithdrawInfoGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -474,17 +319,172 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    resendWithdrawalRequestEmailWithHttpInfo(txId, authorization) {
+    v10WalletWithdrawRequestCancelByTxIdPostWithHttpInfo(txId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'txId' is set
       if (txId === undefined || txId === null) {
-        throw new Error("Missing the required parameter 'txId' when calling resendWithdrawalRequestEmail");
+        throw new Error("Missing the required parameter 'txId' when calling v10WalletWithdrawRequestCancelByTxIdPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling resendWithdrawalRequestEmail");
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletWithdrawRequestCancelByTxIdPost");
+      }
+
+
+      let pathParams = {
+        'txId': txId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/withdraw/request/cancel/{txId}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {String} txId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization) {
+      return this.v10WalletWithdrawRequestCancelByTxIdPostWithHttpInfo(txId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.requestId 
+     * @param {String} opts.code 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10WalletWithdrawRequestConfirmPostWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'requestId': opts['requestId'],
+        'code': opts['code']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/withdraw/request/confirm', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.requestId 
+     * @param {String} opts.code 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10WalletWithdrawRequestConfirmPost(opts) {
+      return this.v10WalletWithdrawRequestConfirmPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateWithdrawalRequestModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10WalletWithdrawRequestNewPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletWithdrawRequestNewPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/withdraw/request/new', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateWithdrawalRequestModel} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10WalletWithdrawRequestNewPost(authorization, opts) {
+      return this.v10WalletWithdrawRequestNewPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} txId 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10WalletWithdrawRequestResendByTxIdPostWithHttpInfo(txId, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'txId' is set
+      if (txId === undefined || txId === null) {
+        throw new Error("Missing the required parameter 'txId' when calling v10WalletWithdrawRequestResendByTxIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletWithdrawRequestResendByTxIdPost");
       }
 
 
@@ -516,8 +516,8 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    resendWithdrawalRequestEmail(txId, authorization) {
-      return this.resendWithdrawalRequestEmailWithHttpInfo(txId, authorization)
+    v10WalletWithdrawRequestResendByTxIdPost(txId, authorization) {
+      return this.v10WalletWithdrawRequestResendByTxIdPostWithHttpInfo(txId, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -60,8 +60,8 @@ var BrokersApi = function () {
 
 
   _createClass(BrokersApi, [{
-    key: 'getBrokersWithHttpInfo',
-    value: function getBrokersWithHttpInfo() {
+    key: 'v10BrokersGetWithHttpInfo',
+    value: function v10BrokersGetWithHttpInfo() {
       var postBody = null;
 
       var pathParams = {};
@@ -83,9 +83,9 @@ var BrokersApi = function () {
      */
 
   }, {
-    key: 'getBrokers',
-    value: function getBrokers() {
-      return this.getBrokersWithHttpInfo().then(function (response_and_data) {
+    key: 'v10BrokersGet',
+    value: function v10BrokersGet() {
+      return this.v10BrokersGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

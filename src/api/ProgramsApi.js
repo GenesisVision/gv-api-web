@@ -42,63 +42,6 @@ export default class ProgramsApi {
 
 
     /**
-     * Add to favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    addToFavoritesWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling addToFavorites");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling addToFavorites");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/programs/{id}/favorite/add', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Add to favorites
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    addToFavorites(id, authorization) {
-      return this.addToFavoritesWithHttpInfo(id, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Program balance chart
      * @param {String} id 
      * @param {Object} opts Optional parameters
@@ -107,13 +50,13 @@ export default class ProgramsApi {
      * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramBalanceChart} and HTTP response
      */
-    getProgramBalanceChartWithHttpInfo(id, opts) {
+    v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getProgramBalanceChart");
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdChartsBalanceGet");
       }
 
 
@@ -151,66 +94,8 @@ export default class ProgramsApi {
      * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramBalanceChart}
      */
-    getProgramBalanceChart(id, opts) {
-      return this.getProgramBalanceChartWithHttpInfo(id, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Program details
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:model/String} opts.currencySecondary 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
-     */
-    getProgramDetailsWithHttpInfo(id, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getProgramDetails");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-        'currencySecondary': opts['currencySecondary']
-      };
-      let headerParams = {
-        'Authorization': opts['authorization']
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramDetailsFull;
-
-      return this.apiClient.callApi(
-        '/v1.0/programs/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Program details
-     * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:model/String} opts.currencySecondary 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
-     */
-    getProgramDetails(id, opts) {
-      return this.getProgramDetailsWithHttpInfo(id, opts)
+    v10ProgramsByIdChartsBalanceGet(id, opts) {
+      return this.v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -226,13 +111,13 @@ export default class ProgramsApi {
      * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramProfitChart} and HTTP response
      */
-    getProgramProfitChartWithHttpInfo(id, opts) {
+    v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getProgramProfitChart");
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdChartsProfitGet");
       }
 
 
@@ -270,8 +155,8 @@ export default class ProgramsApi {
      * @param {Number} opts.maxPointCount 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramProfitChart}
      */
-    getProgramProfitChart(id, opts) {
-      return this.getProgramProfitChartWithHttpInfo(id, opts)
+    v10ProgramsByIdChartsProfitGet(id, opts) {
+      return this.v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -279,20 +164,27 @@ export default class ProgramsApi {
 
 
     /**
-     * Programs sets
+     * Add to favorites
+     * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    getProgramSetsWithHttpInfo(authorization) {
+    v10ProgramsByIdFavoriteAddPostWithHttpInfo(id, authorization) {
       let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdFavoriteAddPost");
+      }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling getProgramSets");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByIdFavoriteAddPost");
       }
 
 
       let pathParams = {
+        'id': id
       };
       let queryParams = {
       };
@@ -305,22 +197,138 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramSets;
+      let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/programs/sets', 'GET',
+        '/v1.0/programs/{id}/favorite/add', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Programs sets
+     * Add to favorites
+     * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    getProgramSets(authorization) {
-      return this.getProgramSetsWithHttpInfo(authorization)
+    v10ProgramsByIdFavoriteAddPost(id, authorization) {
+      return this.v10ProgramsByIdFavoriteAddPostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Remove from favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ProgramsByIdFavoriteRemovePostWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdFavoriteRemovePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByIdFavoriteRemovePost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/favorite/remove', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Remove from favorites
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ProgramsByIdFavoriteRemovePost(id, authorization) {
+      return this.v10ProgramsByIdFavoriteRemovePostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Program details
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramDetailsFull} and HTTP response
+     */
+    v10ProgramsByIdGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'currencySecondary': opts['currencySecondary']
+      };
+      let headerParams = {
+        'Authorization': opts['authorization']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramDetailsFull;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Program details
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/String} opts.currencySecondary 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramDetailsFull}
+     */
+    v10ProgramsByIdGet(id, opts) {
+      return this.v10ProgramsByIdGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -339,13 +347,13 @@ export default class ProgramsApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TradesViewModel} and HTTP response
      */
-    getProgramTradesWithHttpInfo(id, opts) {
+    v10ProgramsByIdTradesGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getProgramTrades");
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdTradesGet");
       }
 
 
@@ -389,8 +397,8 @@ export default class ProgramsApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TradesViewModel}
      */
-    getProgramTrades(id, opts) {
-      return this.getProgramTradesWithHttpInfo(id, opts)
+    v10ProgramsByIdTradesGet(id, opts) {
+      return this.v10ProgramsByIdTradesGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -422,7 +430,7 @@ export default class ProgramsApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsList} and HTTP response
      */
-    getProgramsWithHttpInfo(opts) {
+    v10ProgramsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -493,8 +501,8 @@ export default class ProgramsApi {
      * @param {Number} opts.take 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsList}
      */
-    getPrograms(opts) {
-      return this.getProgramsWithHttpInfo(opts)
+    v10ProgramsGet(opts) {
+      return this.v10ProgramsGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -502,27 +510,20 @@ export default class ProgramsApi {
 
 
     /**
-     * Remove from favorites
-     * @param {String} id 
+     * Programs sets
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramSets} and HTTP response
      */
-    removeFromFavoritesWithHttpInfo(id, authorization) {
+    v10ProgramsSetsGetWithHttpInfo(authorization) {
       let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling removeFromFavorites");
-      }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling removeFromFavorites");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsSetsGet");
       }
 
 
       let pathParams = {
-        'id': id
       };
       let queryParams = {
       };
@@ -535,23 +536,22 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = ProgramSets;
 
       return this.apiClient.callApi(
-        '/v1.0/programs/{id}/favorite/remove', 'POST',
+        '/v1.0/programs/sets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Remove from favorites
-     * @param {String} id 
+     * Programs sets
      * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramSets}
      */
-    removeFromFavorites(id, authorization) {
-      return this.removeFromFavoritesWithHttpInfo(id, authorization)
+    v10ProgramsSetsGet(authorization) {
+      return this.v10ProgramsSetsGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -55,6 +55,7 @@ var RateApi = function () {
 
   /**
    * Get rate
+   * @param {String} exchange 
    * @param {String} from 
    * @param {String} to 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
@@ -62,77 +63,23 @@ var RateApi = function () {
 
 
   _createClass(RateApi, [{
-    key: 'getRateWithHttpInfo',
-    value: function getRateWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling getRate");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling getRate");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get rate
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
-     */
-
-  }, {
-    key: 'getRate',
-    value: function getRate(from, to) {
-      return this.getRateWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get rate
-     * @param {String} exchange 
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
-     */
-
-  }, {
-    key: 'getRateExchangeWithHttpInfo',
-    value: function getRateExchangeWithHttpInfo(exchange, from, to) {
+    key: 'v10RateByExchangeByFromByToGetWithHttpInfo',
+    value: function v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to) {
       var postBody = null;
 
       // verify the required parameter 'exchange' is set
       if (exchange === undefined || exchange === null) {
-        throw new Error("Missing the required parameter 'exchange' when calling getRateExchange");
+        throw new Error("Missing the required parameter 'exchange' when calling v10RateByExchangeByFromByToGet");
       }
 
       // verify the required parameter 'from' is set
       if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling getRateExchange");
+        throw new Error("Missing the required parameter 'from' when calling v10RateByExchangeByFromByToGet");
       }
 
       // verify the required parameter 'to' is set
       if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling getRateExchange");
+        throw new Error("Missing the required parameter 'to' when calling v10RateByExchangeByFromByToGet");
       }
 
       var pathParams = {
@@ -161,9 +108,62 @@ var RateApi = function () {
      */
 
   }, {
-    key: 'getRateExchange',
-    value: function getRateExchange(exchange, from, to) {
-      return this.getRateExchangeWithHttpInfo(exchange, from, to).then(function (response_and_data) {
+    key: 'v10RateByExchangeByFromByToGet',
+    value: function v10RateByExchangeByFromByToGet(exchange, from, to) {
+      return this.v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get rate
+     * @param {String} from 
+     * @param {String} to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
+     */
+
+  }, {
+    key: 'v10RateByFromByToGetWithHttpInfo',
+    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
+      var postBody = null;
+
+      // verify the required parameter 'from' is set
+      if (from === undefined || from === null) {
+        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
+      }
+
+      // verify the required parameter 'to' is set
+      if (to === undefined || to === null) {
+        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
+      }
+
+      var pathParams = {
+        'from': from,
+        'to': to
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = 'Number';
+
+      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get rate
+     * @param {String} from 
+     * @param {String} to 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
+     */
+
+  }, {
+    key: 'v10RateByFromByToGet',
+    value: function v10RateByFromByToGet(from, to) {
+      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -177,8 +177,8 @@ var RateApi = function () {
      */
 
   }, {
-    key: 'getRatesWithHttpInfo',
-    value: function getRatesWithHttpInfo(opts) {
+    key: 'v10RateGetWithHttpInfo',
+    value: function v10RateGetWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -207,9 +207,9 @@ var RateApi = function () {
      */
 
   }, {
-    key: 'getRates',
-    value: function getRates(opts) {
-      return this.getRatesWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10RateGet',
+    value: function v10RateGet(opts) {
+      return this.v10RateGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -40,114 +40,16 @@ export default class ProfileApi {
 
 
     /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
-     */
-    profileFullWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling profileFull");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfileFullViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/profile', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get full profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
-     */
-    profileFull(authorization) {
-      return this.profileFullWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get header profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
-     */
-    profileHeaderWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling profileHeader");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfileHeaderViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/profile/header', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get header profile
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
-     */
-    profileHeader(authorization) {
-      return this.profileHeaderWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Remove avatar
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    removeAvatarWithHttpInfo(authorization) {
+    v10ProfileAvatarRemovePostWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling removeAvatar");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarRemovePost");
       }
 
 
@@ -178,8 +80,8 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    removeAvatar(authorization) {
-      return this.removeAvatarWithHttpInfo(authorization)
+    v10ProfileAvatarRemovePost(authorization) {
+      return this.v10ProfileAvatarRemovePostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -192,17 +94,17 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateAvatarWithHttpInfo(fileId, authorization) {
+    v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization) {
       let postBody = null;
 
       // verify the required parameter 'fileId' is set
       if (fileId === undefined || fileId === null) {
-        throw new Error("Missing the required parameter 'fileId' when calling updateAvatar");
+        throw new Error("Missing the required parameter 'fileId' when calling v10ProfileAvatarUpdateByFileIdPost");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling updateAvatar");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileAvatarUpdateByFileIdPost");
       }
 
 
@@ -235,8 +137,106 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    updateAvatar(fileId, authorization) {
-      return this.updateAvatarWithHttpInfo(fileId, authorization)
+    v10ProfileAvatarUpdateByFileIdPost(fileId, authorization) {
+      return this.v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get full profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileFullViewModel} and HTTP response
+     */
+    v10ProfileGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileFullViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get full profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileFullViewModel}
+     */
+    v10ProfileGet(authorization) {
+      return this.v10ProfileGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProfileHeaderViewModel} and HTTP response
+     */
+    v10ProfileHeaderGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileHeaderGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileHeaderViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/header', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get header profile
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProfileHeaderViewModel}
+     */
+    v10ProfileHeaderGet(authorization) {
+      return this.v10ProfileHeaderGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -250,13 +250,13 @@ export default class ProfileApi {
      * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updatePersonalDetailsWithHttpInfo(authorization, opts) {
+    v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling updatePersonalDetails");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfilePersonalUpdatePost");
       }
 
 
@@ -289,8 +289,8 @@ export default class ProfileApi {
      * @param {module:model/UpdatePersonalDetailViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    updatePersonalDetails(authorization, opts) {
-      return this.updatePersonalDetailsWithHttpInfo(authorization, opts)
+    v10ProfilePersonalUpdatePost(authorization, opts) {
+      return this.v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -304,13 +304,13 @@ export default class ProfileApi {
      * @param {module:model/UpdateProfileViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateProfileWithHttpInfo(authorization, opts) {
+    v10ProfileUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling updateProfile");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileUpdatePost");
       }
 
 
@@ -343,8 +343,8 @@ export default class ProfileApi {
      * @param {module:model/UpdateProfileViewModel} opts.model 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    updateProfile(authorization, opts) {
-      return this.updateProfileWithHttpInfo(authorization, opts)
+    v10ProfileUpdatePost(authorization, opts) {
+      return this.v10ProfileUpdatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -355,12 +355,12 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
-    verificationTokenWithHttpInfo(authorization) {
+    v10ProfileVerificationTokenPostWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling verificationToken");
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileVerificationTokenPost");
       }
 
 
@@ -390,8 +390,8 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
-    verificationToken(authorization) {
-      return this.verificationTokenWithHttpInfo(authorization)
+    v10ProfileVerificationTokenPost(authorization) {
+      return this.v10ProfileVerificationTokenPostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

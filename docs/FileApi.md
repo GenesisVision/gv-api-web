@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get**](FileApi.md#get) | **GET** /v1.0/file/{id} | Download file
-[**uploadDocument**](FileApi.md#uploadDocument) | **POST** /v1.0/file/document/upload | Upload document
-[**uploadFile**](FileApi.md#uploadFile) | **POST** /v1.0/file/upload | Upload file
+[**v10FileByIdGet**](FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
+[**v10FileDocumentUploadPost**](FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
+[**v10FileUploadPost**](FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
 
 
-<a name="get"></a>
-# **get**
-> get(id)
+<a name="v10FileByIdGet"></a>
+# **v10FileByIdGet**
+> v10FileByIdGet(id)
 
 Download file
 
@@ -23,7 +23,7 @@ let apiInstance = new CoreApiV10.FileApi();
 
 let id = "id_example"; // String | 
 
-apiInstance.get(id).then(() => {
+apiInstance.v10FileByIdGet(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -50,9 +50,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="uploadDocument"></a>
-# **uploadDocument**
-> UploadResult uploadDocument(authorization, opts)
+<a name="v10FileDocumentUploadPost"></a>
+# **v10FileDocumentUploadPost**
+> UploadResult v10FileDocumentUploadPost(authorization, uploadedFile)
 
 Upload document
 
@@ -64,15 +64,9 @@ let apiInstance = new CoreApiV10.FileApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'contentType': "contentType_example", // String | 
-  'contentDisposition': "contentDisposition_example", // String | 
-  'headers': {key: "headers_example"}, // {String: String} | 
-  'length': 789, // Number | 
-  'name': "name_example", // String | 
-  'fileName': "fileName_example" // String | 
-};
-apiInstance.uploadDocument(authorization, opts).then((data) => {
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
+
+apiInstance.v10FileDocumentUploadPost(authorization, uploadedFile).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -85,12 +79,7 @@ apiInstance.uploadDocument(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **contentType** | **String**|  | [optional] 
- **contentDisposition** | **String**|  | [optional] 
- **headers** | [**{String: String}**](String.md)|  | [optional] 
- **length** | **Number**|  | [optional] 
- **name** | **String**|  | [optional] 
- **fileName** | **String**|  | [optional] 
+ **uploadedFile** | **File**| Upload File | 
 
 ### Return type
 
@@ -102,12 +91,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: text/plain, application/json, text/json
 
-<a name="uploadFile"></a>
-# **uploadFile**
-> UploadResult uploadFile(opts)
+<a name="v10FileUploadPost"></a>
+# **v10FileUploadPost**
+> UploadResult v10FileUploadPost(uploadedFile, opts)
 
 Upload file
 
@@ -117,16 +106,12 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.FileApi();
 
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
+
 let opts = { 
-  'authorization': "authorization_example", // String | 
-  'contentType': "contentType_example", // String | 
-  'contentDisposition': "contentDisposition_example", // String | 
-  'headers': {key: "headers_example"}, // {String: String} | 
-  'length': 789, // Number | 
-  'name': "name_example", // String | 
-  'fileName': "fileName_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
-apiInstance.uploadFile(opts).then((data) => {
+apiInstance.v10FileUploadPost(uploadedFile, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -138,13 +123,8 @@ apiInstance.uploadFile(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **uploadedFile** | **File**| Upload File | 
  **authorization** | **String**|  | [optional] 
- **contentType** | **String**|  | [optional] 
- **contentDisposition** | **String**|  | [optional] 
- **headers** | [**{String: String}**](String.md)|  | [optional] 
- **length** | **Number**|  | [optional] 
- **name** | **String**|  | [optional] 
- **fileName** | **String**|  | [optional] 
 
 ### Return type
 
@@ -156,6 +136,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: text/plain, application/json, text/json
 

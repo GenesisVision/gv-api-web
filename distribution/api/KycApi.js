@@ -61,8 +61,8 @@ var KycApi = function () {
 
 
   _createClass(KycApi, [{
-    key: 'kycCallbackWithHttpInfo',
-    value: function kycCallbackWithHttpInfo(opts) {
+    key: 'v10KycCallbackPostWithHttpInfo',
+    value: function v10KycCallbackPostWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['model'];
 
@@ -86,9 +86,9 @@ var KycApi = function () {
      */
 
   }, {
-    key: 'kycCallback',
-    value: function kycCallback(opts) {
-      return this.kycCallbackWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10KycCallbackPost',
+    value: function v10KycCallbackPost(opts) {
+      return this.v10KycCallbackPostWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
