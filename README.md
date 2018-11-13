@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdGet**](docs/ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
 *CoreApiV10.ManagerApi* | [**v10ManagerEventsGet**](docs/ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
+*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdAssetsUpdatePost**](docs/ManagerApi.md#v10ManagerFundsByIdAssetsUpdatePost) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdClosePost**](docs/ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
@@ -226,6 +227,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApiV10.AssetSelection](docs/AssetSelection.md)
+ - [CoreApiV10.AssetsPartsChangeRequest](docs/AssetsPartsChangeRequest.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
  - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)

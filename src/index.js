@@ -17,6 +17,7 @@ import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetSelection from './model/AssetSelection';
+import AssetsPartsChangeRequest from './model/AssetsPartsChangeRequest';
 import AssetsValue from './model/AssetsValue';
 import BalanceChartElement from './model/BalanceChartElement';
 import BlockchainInfo from './model/BlockchainInfo';
@@ -207,6 +208,12 @@ export {
      * @property {module:model/AssetSelection}
      */
     AssetSelection,
+
+    /**
+     * The AssetsPartsChangeRequest model constructor.
+     * @property {module:model/AssetsPartsChangeRequest}
+     */
+    AssetsPartsChangeRequest,
 
     /**
      * The AssetsValue model constructor.

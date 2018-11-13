@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AssetsPartsChangeRequest = require('../model/AssetsPartsChangeRequest');
+
+var _AssetsPartsChangeRequest2 = _interopRequireDefault(_AssetsPartsChangeRequest);
+
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
@@ -262,6 +266,65 @@ var ManagerApi = function () {
     key: 'v10ManagerEventsGet',
     value: function v10ManagerEventsGet(authorization, opts) {
       return this.v10ManagerEventsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Update fund assets parts
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo',
+    value: function v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerFundsByIdAssetsUpdatePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerFundsByIdAssetsUpdatePost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/funds/{id}/assets/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Update fund assets parts
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ManagerFundsByIdAssetsUpdatePost',
+    value: function v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts) {
+      return this.v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
