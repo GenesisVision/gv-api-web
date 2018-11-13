@@ -59,6 +59,9 @@ export default class FundAssetPartWithIcon {
             if (data.hasOwnProperty('icon')) {
                 obj['icon'] = ApiClient.convertToType(data['icon'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -76,6 +79,10 @@ export default class FundAssetPartWithIcon {
     * @member {String} icon
     */
     icon = undefined;
+    /**
+    * @member {String} color
+    */
+    color = undefined;
     /**
     * @member {String} name
     */

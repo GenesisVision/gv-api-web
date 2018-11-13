@@ -41,6 +41,7 @@ var FundAssetPartWithIcon = function () {
         _classCallCheck(this, FundAssetPartWithIcon);
 
         this.icon = undefined;
+        this.color = undefined;
         this.name = undefined;
         this.asset = undefined;
         this.percent = undefined;
@@ -64,6 +65,9 @@ var FundAssetPartWithIcon = function () {
                 if (data.hasOwnProperty('icon')) {
                     obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
                 }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                }
                 if (data.hasOwnProperty('name')) {
                     obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
@@ -79,6 +83,10 @@ var FundAssetPartWithIcon = function () {
 
         /**
         * @member {String} icon
+        */
+
+        /**
+        * @member {String} color
         */
 
         /**
