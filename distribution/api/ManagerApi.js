@@ -275,7 +275,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @param {module:model/AssetsPartsChangeRequest} opts.request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -283,7 +283,7 @@ var ManagerApi = function () {
     key: 'v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo',
     value: function v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      var postBody = opts['model'];
+      var postBody = opts['request'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -317,7 +317,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.model 
+     * @param {module:model/AssetsPartsChangeRequest} opts.request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
