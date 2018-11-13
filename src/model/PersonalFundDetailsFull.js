@@ -56,6 +56,9 @@ export default class PersonalFundDetailsFull {
             
             
 
+            if (data.hasOwnProperty('withdrawPercent')) {
+                obj['withdrawPercent'] = ApiClient.convertToType(data['withdrawPercent'], 'Number');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -105,6 +108,10 @@ export default class PersonalFundDetailsFull {
         return obj;
     }
 
+    /**
+    * @member {Number} withdrawPercent
+    */
+    withdrawPercent = undefined;
     /**
     * @member {Boolean} isFavorite
     */

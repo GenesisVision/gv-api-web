@@ -40,6 +40,7 @@ var PersonalFundDetailsFull = function () {
     function PersonalFundDetailsFull() {
         _classCallCheck(this, PersonalFundDetailsFull);
 
+        this.withdrawPercent = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -72,6 +73,9 @@ var PersonalFundDetailsFull = function () {
             if (data) {
                 obj = obj || new PersonalFundDetailsFull();
 
+                if (data.hasOwnProperty('withdrawPercent')) {
+                    obj['withdrawPercent'] = _ApiClient2.default.convertToType(data['withdrawPercent'], 'Number');
+                }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
                 }
@@ -120,6 +124,10 @@ var PersonalFundDetailsFull = function () {
             }
             return obj;
         }
+
+        /**
+        * @member {Number} withdrawPercent
+        */
 
         /**
         * @member {Boolean} isFavorite
