@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import AssetsPartsChangeRequest from '../model/AssetsPartsChangeRequest';
 import ErrorViewModel from '../model/ErrorViewModel';
+import FundAssetPart from '../model/FundAssetPart';
 import FundInvestInfo from '../model/FundInvestInfo';
 import FundsList from '../model/FundsList';
 import ManagerDashboard from '../model/ManagerDashboard';
@@ -226,12 +226,12 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.request 
+     * @param {Array.<module:model/FundAssetPart>} opts.assets 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      let postBody = opts['request'];
+      let postBody = opts['assets'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -272,7 +272,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.request 
+     * @param {Array.<module:model/FundAssetPart>} opts.assets 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts) {

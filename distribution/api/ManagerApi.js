@@ -21,13 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AssetsPartsChangeRequest = require('../model/AssetsPartsChangeRequest');
-
-var _AssetsPartsChangeRequest2 = _interopRequireDefault(_AssetsPartsChangeRequest);
-
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+
+var _FundAssetPart = require('../model/FundAssetPart');
+
+var _FundAssetPart2 = _interopRequireDefault(_FundAssetPart);
 
 var _FundInvestInfo = require('../model/FundInvestInfo');
 
@@ -275,7 +275,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.request 
+     * @param {Array.<module:model/FundAssetPart>} opts.assets 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
@@ -283,7 +283,7 @@ var ManagerApi = function () {
     key: 'v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo',
     value: function v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      var postBody = opts['request'];
+      var postBody = opts['assets'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -317,7 +317,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {module:model/AssetsPartsChangeRequest} opts.request 
+     * @param {Array.<module:model/FundAssetPart>} opts.assets 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 

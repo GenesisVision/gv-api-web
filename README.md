@@ -227,7 +227,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApiV10.AssetSelection](docs/AssetSelection.md)
- - [CoreApiV10.AssetsPartsChangeRequest](docs/AssetsPartsChangeRequest.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
  - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)

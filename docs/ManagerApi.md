@@ -191,7 +191,7 @@ let id = "id_example"; // String |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'request': new CoreApiV10.AssetsPartsChangeRequest() // AssetsPartsChangeRequest | 
+  'assets': [new CoreApiV10.FundAssetPart()] // [FundAssetPart] | 
 };
 apiInstance.v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **request** | [**AssetsPartsChangeRequest**](AssetsPartsChangeRequest.md)|  | [optional] 
+ **assets** | [**[FundAssetPart]**](FundAssetPart.md)|  | [optional] 
 
 ### Return type
 
