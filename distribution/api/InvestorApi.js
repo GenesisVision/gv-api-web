@@ -479,60 +479,6 @@ var InvestorApi = function () {
     }
 
     /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'v10InvestorFundsRequestsByIdCancelPostWithHttpInfo',
-    value: function v10InvestorFundsRequestsByIdCancelPostWithHttpInfo(id, authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10InvestorFundsRequestsByIdCancelPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorFundsRequestsByIdCancelPost");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/investor/funds/requests/{id}/cancel', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Cancel investment program/fund request
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: 'v10InvestorFundsRequestsByIdCancelPost',
-    value: function v10InvestorFundsRequestsByIdCancelPost(id, authorization) {
-      return this.v10InvestorFundsRequestsByIdCancelPostWithHttpInfo(id, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
      * Summary dashboard info
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
@@ -1236,7 +1182,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Cancel investment program/fund request
+     * Cancel investment program request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1275,7 +1221,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Cancel investment program/fund request
+     * Cancel investment program request
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

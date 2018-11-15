@@ -136,7 +136,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByPercentPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -148,7 +147,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
-*CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details

@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**v10InvestorFundsByIdWithdrawByPercentPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
 [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
-[**v10InvestorFundsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorFundsRequestsByIdCancelPost) | **POST** /v1.0/investor/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -22,7 +21,7 @@ Method | HTTP request | Description
 [**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
 [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
-[**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program/fund request
+[**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 
 
@@ -311,50 +310,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FundsList**](FundsList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorFundsRequestsByIdCancelPost"></a>
-# **v10InvestorFundsRequestsByIdCancelPost**
-> v10InvestorFundsRequestsByIdCancelPost(id, authorization)
-
-Cancel investment program/fund request
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorFundsRequestsByIdCancelPost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
 
 ### Authorization
 
@@ -921,7 +876,7 @@ No authorization required
 # **v10InvestorProgramsRequestsByIdCancelPost**
 > v10InvestorProgramsRequestsByIdCancelPost(id, authorization)
 
-Cancel investment program/fund request
+Cancel investment program request
 
 ### Example
 ```javascript
