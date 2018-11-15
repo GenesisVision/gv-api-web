@@ -49,6 +49,7 @@ var NotificationViewModel = function () {
         this.logo = undefined;
         this.url = undefined;
         this.isUnread = undefined;
+        this.assetType = undefined;
     }
 
     /**
@@ -93,6 +94,9 @@ var NotificationViewModel = function () {
                 if (data.hasOwnProperty('isUnread')) {
                     obj['isUnread'] = _ApiClient2.default.convertToType(data['isUnread'], 'Boolean');
                 }
+                if (data.hasOwnProperty('assetType')) {
+                    obj['assetType'] = _ApiClient2.default.convertToType(data['assetType'], 'String');
+                }
             }
             return obj;
         }
@@ -133,9 +137,20 @@ var NotificationViewModel = function () {
         * @member {Boolean} isUnread
         */
 
+        /**
+        * @member {module:model/NotificationViewModel.AssetTypeEnum} assetType
+        */
+
 
         /**
         * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+
+        /**
+        * Allowed values for the <code>assetType</code> property.
         * @enum {String}
         * @readonly
         */
@@ -236,5 +251,19 @@ NotificationViewModel.TypeEnum = {
      * @const
      */
     "ManagerNewProgram": "ManagerNewProgram"
+};
+NotificationViewModel.AssetTypeEnum = {
+
+    /**
+     * value: "Program"
+     * @const
+     */
+    "Program": "Program",
+
+    /**
+     * value: "Fund"
+     * @const
+     */
+    "Fund": "Fund"
 };
 exports.default = NotificationViewModel;

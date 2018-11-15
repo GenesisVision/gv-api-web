@@ -83,6 +83,9 @@ export default class NotificationViewModel {
             if (data.hasOwnProperty('isUnread')) {
                 obj['isUnread'] = ApiClient.convertToType(data['isUnread'], 'Boolean');
             }
+            if (data.hasOwnProperty('assetType')) {
+                obj['assetType'] = ApiClient.convertToType(data['assetType'], 'String');
+            }
         }
         return obj;
     }
@@ -123,6 +126,10 @@ export default class NotificationViewModel {
     * @member {Boolean} isUnread
     */
     isUnread = undefined;
+    /**
+    * @member {module:model/NotificationViewModel.AssetTypeEnum} assetType
+    */
+    assetType = undefined;
 
 
 
@@ -225,6 +232,26 @@ export default class NotificationViewModel {
          * @const
          */
         "ManagerNewProgram": "ManagerNewProgram"    
+    };
+
+    /**
+    * Allowed values for the <code>assetType</code> property.
+    * @enum {String}
+    * @readonly
+    */
+    static AssetTypeEnum = {
+    
+        /**
+         * value: "Program"
+         * @const
+         */
+        "Program": "Program",
+    
+        /**
+         * value: "Fund"
+         * @const
+         */
+        "Fund": "Fund"    
     };
 
 

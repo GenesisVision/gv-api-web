@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **isUnread** | **Boolean** |  | [optional] 
+**assetType** | **String** |  | [optional] 
 
 
 <a name="TypeEnum"></a>
@@ -47,6 +48,17 @@ Name | Type | Description | Notes
 * `FundRebalancing` (value: `"FundRebalancing"`)
 
 * `ManagerNewProgram` (value: `"ManagerNewProgram"`)
+
+
+
+
+<a name="AssetTypeEnum"></a>
+## Enum: AssetTypeEnum
+
+
+* `Program` (value: `"Program"`)
+
+* `Fund` (value: `"Fund"`)
 
 
 
