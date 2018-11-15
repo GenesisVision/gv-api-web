@@ -45,6 +45,8 @@ var ProgramRequest = function () {
         this.date = undefined;
         this.value = undefined;
         this.valueGvt = undefined;
+        this.feeEntry = undefined;
+        this.feeExit = undefined;
         this.currency = undefined;
         this.fundWithdrawPercent = undefined;
         this.type = undefined;
@@ -85,6 +87,12 @@ var ProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('valueGvt')) {
                     obj['valueGvt'] = _ApiClient2.default.convertToType(data['valueGvt'], 'Number');
+                }
+                if (data.hasOwnProperty('feeEntry')) {
+                    obj['feeEntry'] = _ApiClient2.default.convertToType(data['feeEntry'], 'Number');
+                }
+                if (data.hasOwnProperty('feeExit')) {
+                    obj['feeExit'] = _ApiClient2.default.convertToType(data['feeExit'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
@@ -135,6 +143,14 @@ var ProgramRequest = function () {
 
         /**
         * @member {Number} valueGvt
+        */
+
+        /**
+        * @member {Number} feeEntry
+        */
+
+        /**
+        * @member {Number} feeExit
         */
 
         /**
@@ -210,16 +226,16 @@ var ProgramRequest = function () {
 ProgramRequest.CurrencyEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
 
     /**
      * value: "ETH"

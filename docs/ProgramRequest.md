@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **valueGvt** | **Number** |  | [optional] 
+**feeEntry** | **Number** |  | [optional] 
+**feeExit** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **fundWithdrawPercent** | **Number** | Used only in fund withdraw request | [optional] 
 **type** | **String** |  | [optional] 
@@ -23,9 +25,9 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 

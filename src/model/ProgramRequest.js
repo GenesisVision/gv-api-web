@@ -71,6 +71,12 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('valueGvt')) {
                 obj['valueGvt'] = ApiClient.convertToType(data['valueGvt'], 'Number');
             }
+            if (data.hasOwnProperty('feeEntry')) {
+                obj['feeEntry'] = ApiClient.convertToType(data['feeEntry'], 'Number');
+            }
+            if (data.hasOwnProperty('feeExit')) {
+                obj['feeExit'] = ApiClient.convertToType(data['feeExit'], 'Number');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -123,6 +129,14 @@ export default class ProgramRequest {
     */
     valueGvt = undefined;
     /**
+    * @member {Number} feeEntry
+    */
+    feeEntry = undefined;
+    /**
+    * @member {Number} feeExit
+    */
+    feeExit = undefined;
+    /**
     * @member {module:model/ProgramRequest.CurrencyEnum} currency
     */
     currency = undefined;
@@ -173,16 +187,16 @@ export default class ProgramRequest {
     static CurrencyEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
     
         /**
          * value: "ETH"
