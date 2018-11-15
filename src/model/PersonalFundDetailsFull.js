@@ -62,6 +62,9 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('canReallocate')) {
                 obj['canReallocate'] = ApiClient.convertToType(data['canReallocate'], 'Boolean');
             }
+            if (data.hasOwnProperty('possibleReallocationTime')) {
+                obj['possibleReallocationTime'] = ApiClient.convertToType(data['possibleReallocationTime'], 'Date');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -119,6 +122,10 @@ export default class PersonalFundDetailsFull {
     * @member {Boolean} canReallocate
     */
     canReallocate = undefined;
+    /**
+    * @member {Date} possibleReallocationTime
+    */
+    possibleReallocationTime = undefined;
     /**
     * @member {Boolean} isFavorite
     */

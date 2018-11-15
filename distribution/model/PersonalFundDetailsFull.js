@@ -42,6 +42,7 @@ var PersonalFundDetailsFull = function () {
 
         this.withdrawPercent = undefined;
         this.canReallocate = undefined;
+        this.possibleReallocationTime = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -79,6 +80,9 @@ var PersonalFundDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('canReallocate')) {
                     obj['canReallocate'] = _ApiClient2.default.convertToType(data['canReallocate'], 'Boolean');
+                }
+                if (data.hasOwnProperty('possibleReallocationTime')) {
+                    obj['possibleReallocationTime'] = _ApiClient2.default.convertToType(data['possibleReallocationTime'], 'Date');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
@@ -135,6 +139,10 @@ var PersonalFundDetailsFull = function () {
 
         /**
         * @member {Boolean} canReallocate
+        */
+
+        /**
+        * @member {Date} possibleReallocationTime
         */
 
         /**
