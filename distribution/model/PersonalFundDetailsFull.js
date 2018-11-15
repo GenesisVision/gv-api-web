@@ -41,6 +41,7 @@ var PersonalFundDetailsFull = function () {
         _classCallCheck(this, PersonalFundDetailsFull);
 
         this.withdrawPercent = undefined;
+        this.canReallocate = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -75,6 +76,9 @@ var PersonalFundDetailsFull = function () {
 
                 if (data.hasOwnProperty('withdrawPercent')) {
                     obj['withdrawPercent'] = _ApiClient2.default.convertToType(data['withdrawPercent'], 'Number');
+                }
+                if (data.hasOwnProperty('canReallocate')) {
+                    obj['canReallocate'] = _ApiClient2.default.convertToType(data['canReallocate'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
@@ -127,6 +131,10 @@ var PersonalFundDetailsFull = function () {
 
         /**
         * @member {Number} withdrawPercent
+        */
+
+        /**
+        * @member {Boolean} canReallocate
         */
 
         /**

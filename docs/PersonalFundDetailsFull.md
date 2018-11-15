@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **withdrawPercent** | **Number** |  | [optional] 
+**canReallocate** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
