@@ -73,6 +73,8 @@ Name | Type | Description | Notes
 
 * `EntranceFee` (value: `"EntranceFee"`)
 
+* `ExitFee` (value: `"ExitFee"`)
+
 
 
 

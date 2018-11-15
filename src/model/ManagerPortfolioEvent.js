@@ -302,7 +302,13 @@ export default class ManagerPortfolioEvent {
          * value: "EntranceFee"
          * @const
          */
-        "EntranceFee": "EntranceFee"    
+        "EntranceFee": "EntranceFee",
+    
+        /**
+         * value: "ExitFee"
+         * @const
+         */
+        "ExitFee": "ExitFee"    
     };
 
     /**

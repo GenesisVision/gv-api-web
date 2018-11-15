@@ -325,7 +325,13 @@ ManagerPortfolioEvent.TypeEnum = {
      * value: "EntranceFee"
      * @const
      */
-    "EntranceFee": "EntranceFee"
+    "EntranceFee": "EntranceFee",
+
+    /**
+     * value: "ExitFee"
+     * @const
+     */
+    "ExitFee": "ExitFee"
 };
 ManagerPortfolioEvent.ProgramTypeEnum = {
 
