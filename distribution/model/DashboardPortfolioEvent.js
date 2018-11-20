@@ -244,12 +244,6 @@ DashboardPortfolioEvent.CurrencyEnum = {
 DashboardPortfolioEvent.TypeEnum = {
 
     /**
-     * value: "All"
-     * @const
-     */
-    "All": "All",
-
-    /**
      * value: "Invest"
      * @const
      */
@@ -262,6 +256,18 @@ DashboardPortfolioEvent.TypeEnum = {
     "Withdraw": "Withdraw",
 
     /**
+     * value: "Reinvest"
+     * @const
+     */
+    "Reinvest": "Reinvest",
+
+    /**
+     * value: "All"
+     * @const
+     */
+    "All": "All",
+
+    /**
      * value: "Profit"
      * @const
      */
@@ -272,12 +278,6 @@ DashboardPortfolioEvent.TypeEnum = {
      * @const
      */
     "Loss": "Loss",
-
-    /**
-     * value: "Reinvest"
-     * @const
-     */
-    "Reinvest": "Reinvest",
 
     /**
      * value: "Cancelled"
