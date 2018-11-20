@@ -19,9 +19,9 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 
@@ -50,21 +50,21 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Ended` (value: `"Ended"`)
+* `All` (value: `"All"`)
 
 * `Invest` (value: `"Invest"`)
 
 * `Withdraw` (value: `"Withdraw"`)
 
-* `Reinvest` (value: `"Reinvest"`)
-
-* `All` (value: `"All"`)
-
 * `Profit` (value: `"Profit"`)
 
 * `Loss` (value: `"Loss"`)
 
+* `Reinvest` (value: `"Reinvest"`)
+
 * `Cancelled` (value: `"Cancelled"`)
+
+* `Ended` (value: `"Ended"`)
 
 
 

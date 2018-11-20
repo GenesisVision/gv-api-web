@@ -170,16 +170,16 @@ var DashboardPortfolioEvent = function () {
 DashboardPortfolioEvent.CurrencyEnum = {
 
     /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
      * value: "GVT"
      * @const
      */
     "GVT": "GVT",
+
+    /**
+     * value: "Undefined"
+     * @const
+     */
+    "Undefined": "Undefined",
 
     /**
      * value: "ETH"
@@ -244,10 +244,10 @@ DashboardPortfolioEvent.CurrencyEnum = {
 DashboardPortfolioEvent.TypeEnum = {
 
     /**
-     * value: "Ended"
+     * value: "All"
      * @const
      */
-    "Ended": "Ended",
+    "All": "All",
 
     /**
      * value: "Invest"
@@ -262,18 +262,6 @@ DashboardPortfolioEvent.TypeEnum = {
     "Withdraw": "Withdraw",
 
     /**
-     * value: "Reinvest"
-     * @const
-     */
-    "Reinvest": "Reinvest",
-
-    /**
-     * value: "All"
-     * @const
-     */
-    "All": "All",
-
-    /**
      * value: "Profit"
      * @const
      */
@@ -286,10 +274,22 @@ DashboardPortfolioEvent.TypeEnum = {
     "Loss": "Loss",
 
     /**
+     * value: "Reinvest"
+     * @const
+     */
+    "Reinvest": "Reinvest",
+
+    /**
      * value: "Cancelled"
      * @const
      */
-    "Cancelled": "Cancelled"
+    "Cancelled": "Cancelled",
+
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended"
 };
 DashboardPortfolioEvent.AssetTypeEnum = {
 

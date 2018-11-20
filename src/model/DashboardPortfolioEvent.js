@@ -144,16 +144,16 @@ export default class DashboardPortfolioEvent {
     static CurrencyEnum = {
     
         /**
-         * value: "Undefined"
-         * @const
-         */
-        "Undefined": "Undefined",
-    
-        /**
          * value: "GVT"
          * @const
          */
         "GVT": "GVT",
+    
+        /**
+         * value: "Undefined"
+         * @const
+         */
+        "Undefined": "Undefined",
     
         /**
          * value: "ETH"
@@ -224,10 +224,10 @@ export default class DashboardPortfolioEvent {
     static TypeEnum = {
     
         /**
-         * value: "Ended"
+         * value: "All"
          * @const
          */
-        "Ended": "Ended",
+        "All": "All",
     
         /**
          * value: "Invest"
@@ -242,18 +242,6 @@ export default class DashboardPortfolioEvent {
         "Withdraw": "Withdraw",
     
         /**
-         * value: "Reinvest"
-         * @const
-         */
-        "Reinvest": "Reinvest",
-    
-        /**
-         * value: "All"
-         * @const
-         */
-        "All": "All",
-    
-        /**
          * value: "Profit"
          * @const
          */
@@ -266,10 +254,22 @@ export default class DashboardPortfolioEvent {
         "Loss": "Loss",
     
         /**
+         * value: "Reinvest"
+         * @const
+         */
+        "Reinvest": "Reinvest",
+    
+        /**
          * value: "Cancelled"
          * @const
          */
-        "Cancelled": "Cancelled"    
+        "Cancelled": "Cancelled",
+    
+        /**
+         * value: "Ended"
+         * @const
+         */
+        "Ended": "Ended"    
     };
 
     /**
