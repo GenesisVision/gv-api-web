@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**v10ManagerByIdGet**](ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
 [**v10ManagerEventsGet**](ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
 [**v10ManagerFundsByIdAssetsUpdatePost**](ManagerApi.md#v10ManagerFundsByIdAssetsUpdatePost) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
-[**v10ManagerFundsByIdClosePost**](ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing investment program/fund
 [**v10ManagerFundsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
 [**v10ManagerFundsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**v10ManagerFundsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
@@ -220,54 +219,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ManagerFundsByIdClosePost"></a>
-# **v10ManagerFundsByIdClosePost**
-> v10ManagerFundsByIdClosePost(id, authorization, opts)
-
-Close existing investment program/fund
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'twoFactorCode': "twoFactorCode_example" // String | 
-};
-apiInstance.v10ManagerFundsByIdClosePost(id, authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
- **twoFactorCode** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagerFundsByIdInvestByAmountPost"></a>
