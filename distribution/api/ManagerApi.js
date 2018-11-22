@@ -330,6 +330,67 @@ var ManagerApi = function () {
     }
 
     /**
+     * Close existing fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerFundsByIdClosePostWithHttpInfo',
+    value: function v10ManagerFundsByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerFundsByIdClosePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerFundsByIdClosePost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'twoFactorCode': opts['twoFactorCode']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/funds/{id}/close', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Close existing fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: 'v10ManagerFundsByIdClosePost',
+    value: function v10ManagerFundsByIdClosePost(id, authorization, opts) {
+      return this.v10ManagerFundsByIdClosePostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Deposit
      * @param {String} id 
      * @param {Number} amount 
@@ -996,7 +1057,7 @@ var ManagerApi = function () {
     }
 
     /**
-     * Close existing investment program/fund
+     * Close existing investment program
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
@@ -1040,7 +1101,7 @@ var ManagerApi = function () {
     }
 
     /**
-     * Close existing investment program/fund
+     * Close existing investment program
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters

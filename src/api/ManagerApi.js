@@ -284,6 +284,69 @@ export default class ManagerApi {
 
 
     /**
+     * Close existing fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    v10ManagerFundsByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerFundsByIdClosePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerFundsByIdClosePost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'twoFactorCode': opts['twoFactorCode']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/funds/{id}/close', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Close existing fund
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.twoFactorCode 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v10ManagerFundsByIdClosePost(id, authorization, opts) {
+      return this.v10ManagerFundsByIdClosePostWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Deposit
      * @param {String} id 
      * @param {Number} amount 
@@ -985,7 +1048,7 @@ export default class ManagerApi {
 
 
     /**
-     * Close existing investment program/fund
+     * Close existing investment program
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
@@ -1032,7 +1095,7 @@ export default class ManagerApi {
     }
 
     /**
-     * Close existing investment program/fund
+     * Close existing investment program
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
