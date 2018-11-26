@@ -69,6 +69,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
             }
+            if (data.hasOwnProperty('profitPercent')) {
+                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
@@ -122,6 +125,10 @@ export default class FundProfitChart {
     * @member {Date} creationDate
     */
     creationDate = undefined;
+    /**
+    * @member {Number} profitPercent
+    */
+    profitPercent = undefined;
     /**
     * @member {Array.<module:model/ChartSimple>} equityChart
     */

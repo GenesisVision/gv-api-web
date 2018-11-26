@@ -48,6 +48,7 @@ var FundProfitChart = function () {
         this.timeframeUsdProfit = undefined;
         this.rebalances = undefined;
         this.creationDate = undefined;
+        this.profitPercent = undefined;
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
@@ -87,6 +88,9 @@ var FundProfitChart = function () {
                 }
                 if (data.hasOwnProperty('creationDate')) {
                     obj['creationDate'] = _ApiClient2.default.convertToType(data['creationDate'], 'Date');
+                }
+                if (data.hasOwnProperty('profitPercent')) {
+                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
                 }
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);
@@ -139,6 +143,10 @@ var FundProfitChart = function () {
 
         /**
         * @member {Date} creationDate
+        */
+
+        /**
+        * @member {Number} profitPercent
         */
 
         /**
