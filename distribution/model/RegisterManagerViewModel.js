@@ -47,6 +47,7 @@ var RegisterManagerViewModel = function () {
         this.email = undefined;
         this.password = undefined;
         this.confirmPassword = undefined;
+        this.refCode = undefined;
 
 
         this['userName'] = userName;this['email'] = email;this['password'] = password;
@@ -79,6 +80,9 @@ var RegisterManagerViewModel = function () {
                 if (data.hasOwnProperty('confirmPassword')) {
                     obj['confirmPassword'] = _ApiClient2.default.convertToType(data['confirmPassword'], 'String');
                 }
+                if (data.hasOwnProperty('refCode')) {
+                    obj['refCode'] = _ApiClient2.default.convertToType(data['refCode'], 'String');
+                }
             }
             return obj;
         }
@@ -97,6 +101,10 @@ var RegisterManagerViewModel = function () {
 
         /**
         * @member {String} confirmPassword
+        */
+
+        /**
+        * @member {String} refCode
         */
 
     }]);

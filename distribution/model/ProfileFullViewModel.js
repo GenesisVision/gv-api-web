@@ -57,6 +57,7 @@ var ProfileFullViewModel = function () {
         this.userName = undefined;
         this.index = undefined;
         this.citizenship = undefined;
+        this.refUrl = undefined;
         this.verificationStatus = undefined;
     }
 
@@ -125,6 +126,9 @@ var ProfileFullViewModel = function () {
                 }
                 if (data.hasOwnProperty('citizenship')) {
                     obj['citizenship'] = _ApiClient2.default.convertToType(data['citizenship'], 'String');
+                }
+                if (data.hasOwnProperty('refUrl')) {
+                    obj['refUrl'] = _ApiClient2.default.convertToType(data['refUrl'], 'String');
                 }
                 if (data.hasOwnProperty('verificationStatus')) {
                     obj['verificationStatus'] = _ApiClient2.default.convertToType(data['verificationStatus'], 'String');
@@ -199,6 +203,10 @@ var ProfileFullViewModel = function () {
 
         /**
         * @member {String} citizenship
+        */
+
+        /**
+        * @member {String} refUrl
         */
 
         /**

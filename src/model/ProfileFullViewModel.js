@@ -107,6 +107,9 @@ export default class ProfileFullViewModel {
             if (data.hasOwnProperty('citizenship')) {
                 obj['citizenship'] = ApiClient.convertToType(data['citizenship'], 'String');
             }
+            if (data.hasOwnProperty('refUrl')) {
+                obj['refUrl'] = ApiClient.convertToType(data['refUrl'], 'String');
+            }
             if (data.hasOwnProperty('verificationStatus')) {
                 obj['verificationStatus'] = ApiClient.convertToType(data['verificationStatus'], 'String');
             }
@@ -182,6 +185,10 @@ export default class ProfileFullViewModel {
     * @member {String} citizenship
     */
     citizenship = undefined;
+    /**
+    * @member {String} refUrl
+    */
+    refUrl = undefined;
     /**
     * @member {module:model/ProfileFullViewModel.VerificationStatusEnum} verificationStatus
     */

@@ -67,6 +67,9 @@ export default class RegisterInvestorViewModel {
             if (data.hasOwnProperty('confirmPassword')) {
                 obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'String');
             }
+            if (data.hasOwnProperty('refCode')) {
+                obj['refCode'] = ApiClient.convertToType(data['refCode'], 'String');
+            }
         }
         return obj;
     }
@@ -83,6 +86,10 @@ export default class RegisterInvestorViewModel {
     * @member {String} confirmPassword
     */
     confirmPassword = undefined;
+    /**
+    * @member {String} refCode
+    */
+    refCode = undefined;
 
 
 

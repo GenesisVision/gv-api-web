@@ -45,6 +45,7 @@ var RegisterInvestorViewModel = function () {
         this.email = undefined;
         this.password = undefined;
         this.confirmPassword = undefined;
+        this.refCode = undefined;
 
 
         this['email'] = email;this['password'] = password;
@@ -74,6 +75,9 @@ var RegisterInvestorViewModel = function () {
                 if (data.hasOwnProperty('confirmPassword')) {
                     obj['confirmPassword'] = _ApiClient2.default.convertToType(data['confirmPassword'], 'String');
                 }
+                if (data.hasOwnProperty('refCode')) {
+                    obj['refCode'] = _ApiClient2.default.convertToType(data['refCode'], 'String');
+                }
             }
             return obj;
         }
@@ -88,6 +92,10 @@ var RegisterInvestorViewModel = function () {
 
         /**
         * @member {String} confirmPassword
+        */
+
+        /**
+        * @member {String} refCode
         */
 
     }]);
