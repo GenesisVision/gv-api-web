@@ -37,6 +37,10 @@ var _FundsList = require('../model/FundsList');
 
 var _FundsList2 = _interopRequireDefault(_FundsList);
 
+var _ManagerAssets = require('../model/ManagerAssets');
+
+var _ManagerAssets2 = _interopRequireDefault(_ManagerAssets);
+
 var _ManagerDashboard = require('../model/ManagerDashboard');
 
 var _ManagerDashboard2 = _interopRequireDefault(_ManagerDashboard);
@@ -110,13 +114,58 @@ var ManagerApi = function () {
   }
 
   /**
-   * Manager details
-   * @param {String} id 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfileDetails} and HTTP response
+   * Manager assets list
+   * @param {String} authorization JWT access token
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerAssets} and HTTP response
    */
 
 
   _createClass(ManagerApi, [{
+    key: 'v10ManagerAssetsGetWithHttpInfo',
+    value: function v10ManagerAssetsGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerAssetsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ManagerAssets2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Manager assets list
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerAssets}
+     */
+
+  }, {
+    key: 'v10ManagerAssetsGet',
+    value: function v10ManagerAssetsGet(authorization) {
+      return this.v10ManagerAssetsGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Manager details
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerProfileDetails} and HTTP response
+     */
+
+  }, {
     key: 'v10ManagerByIdDetailsGetWithHttpInfo',
     value: function v10ManagerByIdDetailsGetWithHttpInfo(id) {
       var postBody = null;

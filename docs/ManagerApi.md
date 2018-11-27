@@ -4,6 +4,7 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10ManagerAssetsGet**](ManagerApi.md#v10ManagerAssetsGet) | **GET** /v1.0/manager/assets | Manager assets list
 [**v10ManagerByIdDetailsGet**](ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
 [**v10ManagerByIdGet**](ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
 [**v10ManagerEventsGet**](ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
@@ -34,6 +35,47 @@ Method | HTTP request | Description
 [**v10ManagerProgramsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagerRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 
+
+<a name="v10ManagerAssetsGet"></a>
+# **v10ManagerAssetsGet**
+> ManagerAssets v10ManagerAssetsGet(authorization)
+
+Manager assets list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagerAssetsGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ManagerAssets**](ManagerAssets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagerByIdDetailsGet"></a>
 # **v10ManagerByIdDetailsGet**

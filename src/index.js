@@ -53,6 +53,7 @@ import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import KycCallback from './model/KycCallback';
 import LoginViewModel from './model/LoginViewModel';
+import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
@@ -62,6 +63,8 @@ import ManagerPortfolioEvents from './model/ManagerPortfolioEvents';
 import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
+import ManagerSimpleFund from './model/ManagerSimpleFund';
+import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersList from './model/ManagersList';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
@@ -425,6 +428,12 @@ export {
     LoginViewModel,
 
     /**
+     * The ManagerAssets model constructor.
+     * @property {module:model/ManagerAssets}
+     */
+    ManagerAssets,
+
+    /**
      * The ManagerDashboard model constructor.
      * @property {module:model/ManagerDashboard}
      */
@@ -477,6 +486,18 @@ export {
      * @property {module:model/ManagerProgramWithdrawInfo}
      */
     ManagerProgramWithdrawInfo,
+
+    /**
+     * The ManagerSimpleFund model constructor.
+     * @property {module:model/ManagerSimpleFund}
+     */
+    ManagerSimpleFund,
+
+    /**
+     * The ManagerSimpleProgram model constructor.
+     * @property {module:model/ManagerSimpleProgram}
+     */
+    ManagerSimpleProgram,
 
     /**
      * The ManagersList model constructor.

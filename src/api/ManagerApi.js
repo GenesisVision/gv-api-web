@@ -17,6 +17,7 @@ import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetPart from '../model/FundAssetPart';
 import FundInvestInfo from '../model/FundInvestInfo';
 import FundsList from '../model/FundsList';
+import ManagerAssets from '../model/ManagerAssets';
 import ManagerDashboard from '../model/ManagerDashboard';
 import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
 import ManagerPortfolioEvents from '../model/ManagerPortfolioEvents';
@@ -48,6 +49,55 @@ export default class ManagerApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Manager assets list
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManagerAssets} and HTTP response
+     */
+    v10ManagerAssetsGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerAssetsGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerAssets;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/assets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager assets list
+     * @param {String} authorization JWT access token
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManagerAssets}
+     */
+    v10ManagerAssetsGet(authorization) {
+      return this.v10ManagerAssetsGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

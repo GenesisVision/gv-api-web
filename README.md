@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
+*CoreApiV10.ManagerApi* | [**v10ManagerAssetsGet**](docs/ManagerApi.md#v10ManagerAssetsGet) | **GET** /v1.0/manager/assets | Manager assets list
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdGet**](docs/ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
 *CoreApiV10.ManagerApi* | [**v10ManagerEventsGet**](docs/ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
@@ -262,6 +263,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.KycCallback](docs/KycCallback.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
+ - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)
  - [CoreApiV10.ManagerFundWithdrawInfo](docs/ManagerFundWithdrawInfo.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
@@ -271,6 +273,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.ManagerProfileDetails](docs/ManagerProfileDetails.md)
  - [CoreApiV10.ManagerProgramWithdrawInfo](docs/ManagerProgramWithdrawInfo.md)
+ - [CoreApiV10.ManagerSimpleFund](docs/ManagerSimpleFund.md)
+ - [CoreApiV10.ManagerSimpleProgram](docs/ManagerSimpleProgram.md)
  - [CoreApiV10.ManagersList](docs/ManagersList.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
