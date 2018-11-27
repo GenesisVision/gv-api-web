@@ -432,6 +432,7 @@ var ProgramsApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {module:model/String} opts.programCurrency 
      * @param {module:model/String} opts.currencySecondary 
+     * @param {Number} opts.pretendToLevelUpFromLevel 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
@@ -462,6 +463,7 @@ var ProgramsApi = function () {
         'Sorting': opts['sorting'],
         'ProgramCurrency': opts['programCurrency'],
         'CurrencySecondary': opts['currencySecondary'],
+        'PretendToLevelUpFromLevel': opts['pretendToLevelUpFromLevel'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -499,6 +501,7 @@ var ProgramsApi = function () {
      * @param {module:model/String} opts.sorting 
      * @param {module:model/String} opts.programCurrency 
      * @param {module:model/String} opts.currencySecondary 
+     * @param {Number} opts.pretendToLevelUpFromLevel 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
