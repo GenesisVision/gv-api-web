@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **periodEnds** | **Date** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
+**rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

@@ -91,6 +91,7 @@ import ProgramBalanceChartElement from './model/ProgramBalanceChartElement';
 import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
+import ProgramDetailsRating from './model/ProgramDetailsRating';
 import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
@@ -654,6 +655,12 @@ export {
      * @property {module:model/ProgramDetailsListStatistic}
      */
     ProgramDetailsListStatistic,
+
+    /**
+     * The ProgramDetailsRating model constructor.
+     * @property {module:model/ProgramDetailsRating}
+     */
+    ProgramDetailsRating,
 
     /**
      * The ProgramInfo model constructor.

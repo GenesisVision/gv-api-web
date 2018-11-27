@@ -29,6 +29,10 @@ var _ProfilePublic = require('./ProfilePublic');
 
 var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
 
+var _ProgramDetailsRating = require('./ProgramDetailsRating');
+
+var _ProgramDetailsRating2 = _interopRequireDefault(_ProgramDetailsRating);
+
 var _ProgramStatistic = require('./ProgramStatistic');
 
 var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
@@ -62,6 +66,7 @@ var ProgramDetailsFull = function () {
         this.isReinvesting = undefined;
         this.availableInvestment = undefined;
         this.statistic = undefined;
+        this.rating = undefined;
         this.personalProgramDetails = undefined;
         this.id = undefined;
         this.logo = undefined;
@@ -118,6 +123,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);
+                }
+                if (data.hasOwnProperty('rating')) {
+                    obj['rating'] = _ProgramDetailsRating2.default.constructFromObject(data['rating']);
                 }
                 if (data.hasOwnProperty('personalProgramDetails')) {
                     obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
@@ -191,6 +199,10 @@ var ProgramDetailsFull = function () {
 
         /**
         * @member {module:model/ProgramStatistic} statistic
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsRating} rating
         */
 
         /**

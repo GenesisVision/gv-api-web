@@ -323,7 +323,7 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'programCurrency': "programCurrency_example", // String | 
   'currencySecondary': "currencySecondary_example", // String | 
-  'pretendToLevelUpFromLevel': 56, // Number | 
+  'levelUpFrom': 56, // Number | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **programCurrency** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
- **pretendToLevelUpFromLevel** | **Number**|  | [optional] 
+ **levelUpFrom** | **Number**|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 

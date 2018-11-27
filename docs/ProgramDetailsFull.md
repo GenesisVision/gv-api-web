@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **isReinvesting** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
+**rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

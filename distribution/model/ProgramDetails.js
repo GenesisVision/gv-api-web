@@ -41,6 +41,10 @@ var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
 
 var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
 
+var _ProgramDetailsRating = require('./ProgramDetailsRating');
+
+var _ProgramDetailsRating2 = _interopRequireDefault(_ProgramDetailsRating);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67,6 +71,7 @@ var ProgramDetails = function () {
         this.periodEnds = undefined;
         this.availableInvestment = undefined;
         this.statistic = undefined;
+        this.rating = undefined;
         this.personalDetails = undefined;
         this.id = undefined;
         this.logo = undefined;
@@ -115,6 +120,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
+                }
+                if (data.hasOwnProperty('rating')) {
+                    obj['rating'] = _ProgramDetailsRating2.default.constructFromObject(data['rating']);
                 }
                 if (data.hasOwnProperty('personalDetails')) {
                     obj['personalDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalDetails']);
@@ -179,6 +187,10 @@ var ProgramDetails = function () {
 
         /**
         * @member {module:model/ProgramDetailsListStatistic} statistic
+        */
+
+        /**
+        * @member {module:model/ProgramDetailsRating} rating
         */
 
         /**

@@ -301,6 +301,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramDetails](docs/ProgramDetails.md)
  - [CoreApiV10.ProgramDetailsFull](docs/ProgramDetailsFull.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
+ - [CoreApiV10.ProgramDetailsRating](docs/ProgramDetailsRating.md)
  - [CoreApiV10.ProgramInfo](docs/ProgramInfo.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)

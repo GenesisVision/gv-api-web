@@ -15,6 +15,7 @@
 import ApiClient from '../ApiClient';
 import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublic from './ProfilePublic';
+import ProgramDetailsRating from './ProgramDetailsRating';
 import ProgramStatistic from './ProgramStatistic';
 
 
@@ -88,6 +89,9 @@ export default class ProgramDetailsFull {
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
+            }
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ProgramDetailsRating.constructFromObject(data['rating']);
             }
             if (data.hasOwnProperty('personalProgramDetails')) {
                 obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
@@ -163,6 +167,10 @@ export default class ProgramDetailsFull {
     * @member {module:model/ProgramStatistic} statistic
     */
     statistic = undefined;
+    /**
+    * @member {module:model/ProgramDetailsRating} rating
+    */
+    rating = undefined;
     /**
     * Fields for authorized user
     * @member {module:model/PersonalProgramDetailsFull} personalProgramDetails

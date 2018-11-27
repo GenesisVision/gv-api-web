@@ -18,6 +18,7 @@ import DashboardProgramDetails from './DashboardProgramDetails';
 import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
+import ProgramDetailsRating from './ProgramDetailsRating';
 
 
 
@@ -81,6 +82,9 @@ export default class ProgramDetails {
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
+            }
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ProgramDetailsRating.constructFromObject(data['rating']);
             }
             if (data.hasOwnProperty('personalDetails')) {
                 obj['personalDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalDetails']);
@@ -147,6 +151,10 @@ export default class ProgramDetails {
     * @member {module:model/ProgramDetailsListStatistic} statistic
     */
     statistic = undefined;
+    /**
+    * @member {module:model/ProgramDetailsRating} rating
+    */
+    rating = undefined;
     /**
     * Fields for authorized user
     * @member {module:model/PersonalProgramDetailsFull} personalDetails

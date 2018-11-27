@@ -416,7 +416,7 @@ export default class ProgramsApi {
      * @param {module:model/String} opts.sorting 
      * @param {module:model/String} opts.programCurrency 
      * @param {module:model/String} opts.currencySecondary 
-     * @param {Number} opts.pretendToLevelUpFromLevel 
+     * @param {Number} opts.levelUpFrom 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
@@ -446,7 +446,7 @@ export default class ProgramsApi {
         'Sorting': opts['sorting'],
         'ProgramCurrency': opts['programCurrency'],
         'CurrencySecondary': opts['currencySecondary'],
-        'PretendToLevelUpFromLevel': opts['pretendToLevelUpFromLevel'],
+        'LevelUpFrom': opts['levelUpFrom'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -489,7 +489,7 @@ export default class ProgramsApi {
      * @param {module:model/String} opts.sorting 
      * @param {module:model/String} opts.programCurrency 
      * @param {module:model/String} opts.currencySecondary 
-     * @param {Number} opts.pretendToLevelUpFromLevel 
+     * @param {Number} opts.levelUpFrom 
      * @param {Date} opts.statisticDateFrom 
      * @param {Date} opts.statisticDateTo 
      * @param {Number} opts.chartPointsCount 
