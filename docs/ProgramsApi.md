@@ -387,7 +387,7 @@ No authorization required
 
 <a name="v10ProgramsLevelupSummaryGet"></a>
 # **v10ProgramsLevelupSummaryGet**
-> LevelUpSummary v10ProgramsLevelupSummaryGet()
+> LevelUpSummary v10ProgramsLevelupSummaryGet(opts)
 
 Level up summary
 
@@ -396,7 +396,11 @@ Level up summary
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.ProgramsApi();
-apiInstance.v10ProgramsLevelupSummaryGet().then((data) => {
+
+let opts = { 
+  'authorization': "authorization_example" // String | 
+};
+apiInstance.v10ProgramsLevelupSummaryGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -405,7 +409,10 @@ apiInstance.v10ProgramsLevelupSummaryGet().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
 
 ### Return type
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **total** | **Number** |  | [optional] 
+**totalOwn** | **Number** |  | [optional] 
 **quota** | **Number** |  | [optional] 
 **targetProfit** | **Number** |  | [optional] 
 

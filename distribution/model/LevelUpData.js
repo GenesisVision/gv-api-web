@@ -41,6 +41,7 @@ var LevelUpData = function () {
         _classCallCheck(this, LevelUpData);
 
         this.total = undefined;
+        this.totalOwn = undefined;
         this.quota = undefined;
         this.targetProfit = undefined;
     }
@@ -63,6 +64,9 @@ var LevelUpData = function () {
                 if (data.hasOwnProperty('total')) {
                     obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
+                if (data.hasOwnProperty('totalOwn')) {
+                    obj['totalOwn'] = _ApiClient2.default.convertToType(data['totalOwn'], 'Number');
+                }
                 if (data.hasOwnProperty('quota')) {
                     obj['quota'] = _ApiClient2.default.convertToType(data['quota'], 'Number');
                 }
@@ -75,6 +79,10 @@ var LevelUpData = function () {
 
         /**
         * @member {Number} total
+        */
+
+        /**
+        * @member {Number} totalOwn
         */
 
         /**

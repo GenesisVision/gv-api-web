@@ -531,17 +531,22 @@ var ProgramsApi = function () {
 
     /**
      * Level up summary
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LevelUpSummary} and HTTP response
      */
 
   }, {
     key: 'v10ProgramsLevelupSummaryGetWithHttpInfo',
-    value: function v10ProgramsLevelupSummaryGetWithHttpInfo() {
+    value: function v10ProgramsLevelupSummaryGetWithHttpInfo(opts) {
+      opts = opts || {};
       var postBody = null;
 
       var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -554,13 +559,15 @@ var ProgramsApi = function () {
 
     /**
      * Level up summary
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LevelUpSummary}
      */
 
   }, {
     key: 'v10ProgramsLevelupSummaryGet',
-    value: function v10ProgramsLevelupSummaryGet() {
-      return this.v10ProgramsLevelupSummaryGetWithHttpInfo().then(function (response_and_data) {
+    value: function v10ProgramsLevelupSummaryGet(opts) {
+      return this.v10ProgramsLevelupSummaryGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

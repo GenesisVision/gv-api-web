@@ -515,9 +515,12 @@ export default class ProgramsApi {
 
     /**
      * Level up summary
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LevelUpSummary} and HTTP response
      */
-    v10ProgramsLevelupSummaryGetWithHttpInfo() {
+    v10ProgramsLevelupSummaryGetWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
 
@@ -526,6 +529,7 @@ export default class ProgramsApi {
       let queryParams = {
       };
       let headerParams = {
+        'Authorization': opts['authorization']
       };
       let formParams = {
       };
@@ -544,10 +548,12 @@ export default class ProgramsApi {
 
     /**
      * Level up summary
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LevelUpSummary}
      */
-    v10ProgramsLevelupSummaryGet() {
-      return this.v10ProgramsLevelupSummaryGetWithHttpInfo()
+    v10ProgramsLevelupSummaryGet(opts) {
+      return this.v10ProgramsLevelupSummaryGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
