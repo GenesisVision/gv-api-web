@@ -52,6 +52,8 @@ import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
 import KycCallback from './model/KycCallback';
+import LevelUpData from './model/LevelUpData';
+import LevelUpSummary from './model/LevelUpSummary';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
@@ -421,6 +423,18 @@ export {
      * @property {module:model/KycCallback}
      */
     KycCallback,
+
+    /**
+     * The LevelUpData model constructor.
+     * @property {module:model/LevelUpData}
+     */
+    LevelUpData,
+
+    /**
+     * The LevelUpSummary model constructor.
+     * @property {module:model/LevelUpSummary}
+     */
+    LevelUpSummary,
 
     /**
      * The LoginViewModel model constructor.

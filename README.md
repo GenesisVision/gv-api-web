@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 *CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
+*CoreApiV10.ProgramsApi* | [**v10ProgramsLevelupSummaryGet**](docs/ProgramsApi.md#v10ProgramsLevelupSummaryGet) | **GET** /v1.0/programs/levelup/summary | Level up summary
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
 *CoreApiV10.RateApi* | [**v10RateByExchangeByFromByToGet**](docs/RateApi.md#v10RateByExchangeByFromByToGet) | **GET** /v1.0/rate/{exchange}/{from}/{to} | Get rate
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
@@ -262,6 +263,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.KycCallback](docs/KycCallback.md)
+ - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
+ - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)

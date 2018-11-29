@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import LevelUpSummary from '../model/LevelUpSummary';
 import ProgramBalanceChart from '../model/ProgramBalanceChart';
 import ProgramDetailsFull from '../model/ProgramDetailsFull';
 import ProgramProfitChart from '../model/ProgramProfitChart';
@@ -506,6 +507,47 @@ export default class ProgramsApi {
      */
     v10ProgramsGet(opts) {
       return this.v10ProgramsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Level up summary
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LevelUpSummary} and HTTP response
+     */
+    v10ProgramsLevelupSummaryGetWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = LevelUpSummary;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/levelup/summary', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Level up summary
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LevelUpSummary}
+     */
+    v10ProgramsLevelupSummaryGet() {
+      return this.v10ProgramsLevelupSummaryGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

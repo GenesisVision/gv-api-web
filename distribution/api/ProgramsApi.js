@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _LevelUpSummary = require('../model/LevelUpSummary');
+
+var _LevelUpSummary2 = _interopRequireDefault(_LevelUpSummary);
+
 var _ProgramBalanceChart = require('../model/ProgramBalanceChart');
 
 var _ProgramBalanceChart2 = _interopRequireDefault(_ProgramBalanceChart);
@@ -521,6 +525,42 @@ var ProgramsApi = function () {
     key: 'v10ProgramsGet',
     value: function v10ProgramsGet(opts) {
       return this.v10ProgramsGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Level up summary
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LevelUpSummary} and HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramsLevelupSummaryGetWithHttpInfo',
+    value: function v10ProgramsLevelupSummaryGetWithHttpInfo() {
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _LevelUpSummary2.default;
+
+      return this.apiClient.callApi('/v1.0/programs/levelup/summary', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Level up summary
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LevelUpSummary}
+     */
+
+  }, {
+    key: 'v10ProgramsLevelupSummaryGet',
+    value: function v10ProgramsLevelupSummaryGet() {
+      return this.v10ProgramsLevelupSummaryGetWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -21,166 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ProgramBalanceChartElement = require('./ProgramBalanceChartElement');
+var _LevelUpData = require('./LevelUpData');
 
-var _ProgramBalanceChartElement2 = _interopRequireDefault(_ProgramBalanceChartElement);
+var _LevelUpData2 = _interopRequireDefault(_LevelUpData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ProgramBalanceChart model module.
-* @module model/ProgramBalanceChart
+* The LevelUpSummary model module.
+* @module model/LevelUpSummary
 * @version v1.0
 */
-var ProgramBalanceChart = function () {
+var LevelUpSummary = function () {
     /**
-    * Constructs a new <code>ProgramBalanceChart</code>.
-    * @alias module:model/ProgramBalanceChart
+    * Constructs a new <code>LevelUpSummary</code>.
+    * @alias module:model/LevelUpSummary
     * @class
     */
 
-    function ProgramBalanceChart() {
-        _classCallCheck(this, ProgramBalanceChart);
+    function LevelUpSummary() {
+        _classCallCheck(this, LevelUpSummary);
 
-        this.programCurrencyBalance = undefined;
-        this.programCurrency = undefined;
-        this.balanceChart = undefined;
-        this.gvtBalance = undefined;
+        this.levelData = undefined;
     }
 
     /**
-    * Constructs a <code>ProgramBalanceChart</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>LevelUpSummary</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ProgramBalanceChart} obj Optional instance to populate.
-    * @return {module:model/ProgramBalanceChart} The populated <code>ProgramBalanceChart</code> instance.
+    * @param {module:model/LevelUpSummary} obj Optional instance to populate.
+    * @return {module:model/LevelUpSummary} The populated <code>LevelUpSummary</code> instance.
     */
 
 
-    _createClass(ProgramBalanceChart, null, [{
+    _createClass(LevelUpSummary, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramBalanceChart();
+                obj = obj || new LevelUpSummary();
 
-                if (data.hasOwnProperty('programCurrencyBalance')) {
-                    obj['programCurrencyBalance'] = _ApiClient2.default.convertToType(data['programCurrencyBalance'], 'Number');
-                }
-                if (data.hasOwnProperty('programCurrency')) {
-                    obj['programCurrency'] = _ApiClient2.default.convertToType(data['programCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('balanceChart')) {
-                    obj['balanceChart'] = _ApiClient2.default.convertToType(data['balanceChart'], [_ProgramBalanceChartElement2.default]);
-                }
-                if (data.hasOwnProperty('gvtBalance')) {
-                    obj['gvtBalance'] = _ApiClient2.default.convertToType(data['gvtBalance'], 'Number');
+                if (data.hasOwnProperty('levelData')) {
+                    obj['levelData'] = _ApiClient2.default.convertToType(data['levelData'], { 'String': _LevelUpData2.default });
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} programCurrencyBalance
-        */
-
-        /**
-        * @member {module:model/ProgramBalanceChart.ProgramCurrencyEnum} programCurrency
-        */
-
-        /**
-        * @member {Array.<module:model/ProgramBalanceChartElement>} balanceChart
-        */
-
-        /**
-        * @member {Number} gvtBalance
-        */
-
-
-        /**
-        * Allowed values for the <code>programCurrency</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Object.<String, module:model/LevelUpData>} levelData
         */
 
     }]);
 
-    return ProgramBalanceChart;
+    return LevelUpSummary;
 }();
 
-ProgramBalanceChart.ProgramCurrencyEnum = {
-
-    /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
-     * value: "Undefined"
-     * @const
-     */
-    "Undefined": "Undefined",
-
-    /**
-     * value: "ETH"
-     * @const
-     */
-    "ETH": "ETH",
-
-    /**
-     * value: "BTC"
-     * @const
-     */
-    "BTC": "BTC",
-
-    /**
-     * value: "ADA"
-     * @const
-     */
-    "ADA": "ADA",
-
-    /**
-     * value: "USDT"
-     * @const
-     */
-    "USDT": "USDT",
-
-    /**
-     * value: "XRP"
-     * @const
-     */
-    "XRP": "XRP",
-
-    /**
-     * value: "BCH"
-     * @const
-     */
-    "BCH": "BCH",
-
-    /**
-     * value: "LTC"
-     * @const
-     */
-    "LTC": "LTC",
-
-    /**
-     * value: "DOGE"
-     * @const
-     */
-    "DOGE": "DOGE",
-
-    /**
-     * value: "USD"
-     * @const
-     */
-    "USD": "USD",
-
-    /**
-     * value: "EUR"
-     * @const
-     */
-    "EUR": "EUR"
-};
-exports.default = ProgramBalanceChart;
+exports.default = LevelUpSummary;
