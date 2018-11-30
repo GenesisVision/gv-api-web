@@ -145,6 +145,12 @@ Facet.SortTypeEnum = {
      * value: "Popular"
      * @const
      */
-    "Popular": "Popular"
+    "Popular": "Popular",
+
+    /**
+     * value: "ToLevelUp"
+     * @const
+     */
+    "ToLevelUp": "ToLevelUp"
 };
 exports.default = Facet;
