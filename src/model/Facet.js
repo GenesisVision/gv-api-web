@@ -140,10 +140,10 @@ export default class Facet {
         "Popular": "Popular",
     
         /**
-         * value: "ToLevelUp1"
+         * value: "ToLevelUp"
          * @const
          */
-        "ToLevelUp1": "ToLevelUp1"    
+        "ToLevelUp": "ToLevelUp"    
     };
 
 

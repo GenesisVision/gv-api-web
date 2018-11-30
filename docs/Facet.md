@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 * `Popular` (value: `"Popular"`)
 
-* `ToLevelUp1` (value: `"ToLevelUp1"`)
+* `ToLevelUp` (value: `"ToLevelUp"`)
 
 
 
