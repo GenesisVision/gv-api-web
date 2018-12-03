@@ -226,16 +226,16 @@ var ProgramRequest = function () {
 ProgramRequest.CurrencyEnum = {
 
     /**
-     * value: "GVT"
-     * @const
-     */
-    "GVT": "GVT",
-
-    /**
      * value: "Undefined"
      * @const
      */
     "Undefined": "Undefined",
+
+    /**
+     * value: "GVT"
+     * @const
+     */
+    "GVT": "GVT",
 
     /**
      * value: "ETH"
