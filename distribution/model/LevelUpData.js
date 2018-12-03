@@ -40,6 +40,7 @@ var LevelUpData = function () {
     function LevelUpData() {
         _classCallCheck(this, LevelUpData);
 
+        this.level = undefined;
         this.total = undefined;
         this.totalOwn = undefined;
         this.quota = undefined;
@@ -61,6 +62,9 @@ var LevelUpData = function () {
             if (data) {
                 obj = obj || new LevelUpData();
 
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
                 if (data.hasOwnProperty('total')) {
                     obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
@@ -76,6 +80,10 @@ var LevelUpData = function () {
             }
             return obj;
         }
+
+        /**
+        * @member {Number} level
+        */
 
         /**
         * @member {Number} total

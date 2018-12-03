@@ -56,6 +56,9 @@ export default class LevelUpData {
             
             
 
+            if (data.hasOwnProperty('level')) {
+                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
+            }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
@@ -72,6 +75,10 @@ export default class LevelUpData {
         return obj;
     }
 
+    /**
+    * @member {Number} level
+    */
+    level = undefined;
     /**
     * @member {Number} total
     */

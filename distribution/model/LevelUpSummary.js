@@ -63,14 +63,14 @@ var LevelUpSummary = function () {
                 obj = obj || new LevelUpSummary();
 
                 if (data.hasOwnProperty('levelData')) {
-                    obj['levelData'] = _ApiClient2.default.convertToType(data['levelData'], { 'String': _LevelUpData2.default });
+                    obj['levelData'] = _ApiClient2.default.convertToType(data['levelData'], [_LevelUpData2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Object.<String, module:model/LevelUpData>} levelData
+        * @member {Array.<module:model/LevelUpData>} levelData
         */
 
     }]);

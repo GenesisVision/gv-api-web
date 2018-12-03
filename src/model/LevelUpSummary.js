@@ -58,14 +58,14 @@ export default class LevelUpSummary {
             
 
             if (data.hasOwnProperty('levelData')) {
-                obj['levelData'] = ApiClient.convertToType(data['levelData'], {'String': LevelUpData});
+                obj['levelData'] = ApiClient.convertToType(data['levelData'], [LevelUpData]);
             }
         }
         return obj;
     }
 
     /**
-    * @member {Object.<String, module:model/LevelUpData>} levelData
+    * @member {Array.<module:model/LevelUpData>} levelData
     */
     levelData = undefined;
 
