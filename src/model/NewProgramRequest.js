@@ -204,6 +204,12 @@ export default class NewProgramRequest {
         "DOGE": "DOGE",
     
         /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
+    
+        /**
          * value: "USD"
          * @const
          */

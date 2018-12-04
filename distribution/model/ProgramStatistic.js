@@ -291,6 +291,12 @@ ProgramStatistic.StartCurrencyEnum = {
     "DOGE": "DOGE",
 
     /**
+     * value: "BNB"
+     * @const
+     */
+    "BNB": "BNB",
+
+    /**
      * value: "USD"
      * @const
      */
@@ -363,6 +369,12 @@ ProgramStatistic.InvestedCurrencyEnum = {
      * @const
      */
     "DOGE": "DOGE",
+
+    /**
+     * value: "BNB"
+     * @const
+     */
+    "BNB": "BNB",
 
     /**
      * value: "USD"

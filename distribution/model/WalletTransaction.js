@@ -372,6 +372,12 @@ WalletTransaction.SourceCurrencyEnum = {
     "DOGE": "DOGE",
 
     /**
+     * value: "BNB"
+     * @const
+     */
+    "BNB": "BNB",
+
+    /**
      * value: "USD"
      * @const
      */
@@ -550,6 +556,12 @@ WalletTransaction.DestinationCurrencyEnum = {
      * @const
      */
     "DOGE": "DOGE",
+
+    /**
+     * value: "BNB"
+     * @const
+     */
+    "BNB": "BNB",
 
     /**
      * value: "USD"

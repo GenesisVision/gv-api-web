@@ -320,6 +320,12 @@ export default class WalletTransaction {
         "DOGE": "DOGE",
     
         /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
+    
+        /**
          * value: "USD"
          * @const
          */
@@ -516,6 +522,12 @@ export default class WalletTransaction {
          * @const
          */
         "DOGE": "DOGE",
+    
+        /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
     
         /**
          * value: "USD"

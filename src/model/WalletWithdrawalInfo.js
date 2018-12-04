@@ -169,6 +169,12 @@ export default class WalletWithdrawalInfo {
         "DOGE": "DOGE",
     
         /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
+    
+        /**
          * value: "USD"
          * @const
          */

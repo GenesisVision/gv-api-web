@@ -261,6 +261,12 @@ export default class ProgramStatistic {
         "DOGE": "DOGE",
     
         /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
+    
+        /**
          * value: "USD"
          * @const
          */
@@ -339,6 +345,12 @@ export default class ProgramStatistic {
          * @const
          */
         "DOGE": "DOGE",
+    
+        /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
     
         /**
          * value: "USD"

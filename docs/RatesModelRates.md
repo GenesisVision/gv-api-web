@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **BCH** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **LTC** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **DOGE** | [**[RateItem]**](RateItem.md) |  | [optional] 
+**BNB** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **USD** | [**[RateItem]**](RateItem.md) |  | [optional] 
 **EUR** | [**[RateItem]**](RateItem.md) |  | [optional] 
 

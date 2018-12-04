@@ -87,6 +87,9 @@ export default class RatesModelRates {
             if (data.hasOwnProperty('DOGE')) {
                 obj['DOGE'] = ApiClient.convertToType(data['DOGE'], [RateItem]);
             }
+            if (data.hasOwnProperty('BNB')) {
+                obj['BNB'] = ApiClient.convertToType(data['BNB'], [RateItem]);
+            }
             if (data.hasOwnProperty('USD')) {
                 obj['USD'] = ApiClient.convertToType(data['USD'], [RateItem]);
             }
@@ -137,6 +140,10 @@ export default class RatesModelRates {
     * @member {Array.<module:model/RateItem>} DOGE
     */
     DOGE = undefined;
+    /**
+    * @member {Array.<module:model/RateItem>} BNB
+    */
+    BNB = undefined;
     /**
     * @member {Array.<module:model/RateItem>} USD
     */

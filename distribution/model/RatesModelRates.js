@@ -54,6 +54,7 @@ var RatesModelRates = function () {
         this.BCH = undefined;
         this.LTC = undefined;
         this.DOGE = undefined;
+        this.BNB = undefined;
         this.USD = undefined;
         this.EUR = undefined;
     }
@@ -103,6 +104,9 @@ var RatesModelRates = function () {
                 if (data.hasOwnProperty('DOGE')) {
                     obj['DOGE'] = _ApiClient2.default.convertToType(data['DOGE'], [_RateItem2.default]);
                 }
+                if (data.hasOwnProperty('BNB')) {
+                    obj['BNB'] = _ApiClient2.default.convertToType(data['BNB'], [_RateItem2.default]);
+                }
                 if (data.hasOwnProperty('USD')) {
                     obj['USD'] = _ApiClient2.default.convertToType(data['USD'], [_RateItem2.default]);
                 }
@@ -151,6 +155,10 @@ var RatesModelRates = function () {
 
         /**
         * @member {Array.<module:model/RateItem>} DOGE
+        */
+
+        /**
+        * @member {Array.<module:model/RateItem>} BNB
         */
 
         /**

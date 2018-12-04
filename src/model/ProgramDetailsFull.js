@@ -286,6 +286,12 @@ export default class ProgramDetailsFull {
         "DOGE": "DOGE",
     
         /**
+         * value: "BNB"
+         * @const
+         */
+        "BNB": "BNB",
+    
+        /**
          * value: "USD"
          * @const
          */

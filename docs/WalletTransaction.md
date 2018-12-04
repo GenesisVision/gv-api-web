@@ -69,6 +69,8 @@ Name | Type | Description | Notes
 
 * `DOGE` (value: `"DOGE"`)
 
+* `BNB` (value: `"BNB"`)
+
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
@@ -147,6 +149,8 @@ Name | Type | Description | Notes
 * `LTC` (value: `"LTC"`)
 
 * `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
 
 * `USD` (value: `"USD"`)
 
