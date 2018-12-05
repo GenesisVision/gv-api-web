@@ -43,6 +43,7 @@ var ProgramDetailsRating = function () {
         this.rating = undefined;
         this.profit = undefined;
         this.canLevelUp = undefined;
+        this.topPercent = undefined;
     }
 
     /**
@@ -69,6 +70,9 @@ var ProgramDetailsRating = function () {
                 if (data.hasOwnProperty('canLevelUp')) {
                     obj['canLevelUp'] = _ApiClient2.default.convertToType(data['canLevelUp'], 'Boolean');
                 }
+                if (data.hasOwnProperty('topPercent')) {
+                    obj['topPercent'] = _ApiClient2.default.convertToType(data['topPercent'], 'Number');
+                }
             }
             return obj;
         }
@@ -83,6 +87,10 @@ var ProgramDetailsRating = function () {
 
         /**
         * @member {Boolean} canLevelUp
+        */
+
+        /**
+        * @member {Number} topPercent
         */
 
     }]);

@@ -65,6 +65,9 @@ export default class ProgramDetailsRating {
             if (data.hasOwnProperty('canLevelUp')) {
                 obj['canLevelUp'] = ApiClient.convertToType(data['canLevelUp'], 'Boolean');
             }
+            if (data.hasOwnProperty('topPercent')) {
+                obj['topPercent'] = ApiClient.convertToType(data['topPercent'], 'Number');
+            }
         }
         return obj;
     }
@@ -81,6 +84,10 @@ export default class ProgramDetailsRating {
     * @member {Boolean} canLevelUp
     */
     canLevelUp = undefined;
+    /**
+    * @member {Number} topPercent
+    */
+    topPercent = undefined;
 
 
 
