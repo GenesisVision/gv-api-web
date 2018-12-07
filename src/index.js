@@ -51,8 +51,8 @@ import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
-import InvestmentProgramLevel from './model/InvestmentProgramLevel';
 import KycCallback from './model/KycCallback';
+import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
 import LoginViewModel from './model/LoginViewModel';
@@ -106,6 +106,7 @@ import ProgramStatistic from './model/ProgramStatistic';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsInfo from './model/ProgramsInfo';
+import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
 import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
@@ -420,16 +421,16 @@ export {
     IOsAppVersion,
 
     /**
-     * The InvestmentProgramLevel model constructor.
-     * @property {module:model/InvestmentProgramLevel}
-     */
-    InvestmentProgramLevel,
-
-    /**
      * The KycCallback model constructor.
      * @property {module:model/KycCallback}
      */
     KycCallback,
+
+    /**
+     * The LevelInfo model constructor.
+     * @property {module:model/LevelInfo}
+     */
+    LevelInfo,
 
     /**
      * The LevelUpData model constructor.
@@ -748,6 +749,12 @@ export {
      * @property {module:model/ProgramsInfo}
      */
     ProgramsInfo,
+
+    /**
+     * The ProgramsLevelsInfo model constructor.
+     * @property {module:model/ProgramsLevelsInfo}
+     */
+    ProgramsLevelsInfo,
 
     /**
      * The ProgramsList model constructor.

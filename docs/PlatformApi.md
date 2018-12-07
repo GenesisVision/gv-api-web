@@ -46,7 +46,7 @@ No authorization required
 
 <a name="v10PlatformLevelsGet"></a>
 # **v10PlatformLevelsGet**
-> InvestmentProgramLevel v10PlatformLevelsGet(opts)
+> ProgramsLevelsInfo v10PlatformLevelsGet(opts)
 
 Investment programs levels
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvestmentProgramLevel**](InvestmentProgramLevel.md)
+[**ProgramsLevelsInfo**](ProgramsLevelsInfo.md)
 
 ### Authorization
 

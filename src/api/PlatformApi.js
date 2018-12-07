@@ -14,9 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import InvestmentProgramLevel from '../model/InvestmentProgramLevel';
 import PlatformInfo from '../model/PlatformInfo';
 import PlatformStatistic from '../model/PlatformStatistic';
+import ProgramsLevelsInfo from '../model/ProgramsLevelsInfo';
 
 /**
 * Platform service.
@@ -83,7 +83,7 @@ export default class PlatformApi {
      * Investment programs levels
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.currency 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvestmentProgramLevel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsLevelsInfo} and HTTP response
      */
     v10PlatformLevelsGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -103,7 +103,7 @@ export default class PlatformApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = InvestmentProgramLevel;
+      let returnType = ProgramsLevelsInfo;
 
       return this.apiClient.callApi(
         '/v1.0/platform/levels', 'GET',
@@ -116,7 +116,7 @@ export default class PlatformApi {
      * Investment programs levels
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.currency 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvestmentProgramLevel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsLevelsInfo}
      */
     v10PlatformLevelsGet(opts) {
       return this.v10PlatformLevelsGetWithHttpInfo(opts)

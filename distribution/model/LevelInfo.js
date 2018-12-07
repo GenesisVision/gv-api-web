@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,164 +21,65 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
-
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _PlatformInfo = require('../model/PlatformInfo');
-
-var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
-
-var _PlatformStatistic = require('../model/PlatformStatistic');
-
-var _PlatformStatistic2 = _interopRequireDefault(_PlatformStatistic);
-
-var _ProgramsLevelsInfo = require('../model/ProgramsLevelsInfo');
-
-var _ProgramsLevelsInfo2 = _interopRequireDefault(_ProgramsLevelsInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Platform service.
-* @module api/PlatformApi
+* The LevelInfo model module.
+* @module model/LevelInfo
 * @version v1.0
 */
-var PlatformApi = function () {
+var LevelInfo = function () {
+    /**
+    * Constructs a new <code>LevelInfo</code>.
+    * @alias module:model/LevelInfo
+    * @class
+    */
 
-  /**
-  * Constructs a new PlatformApi. 
-  * @alias module:api/PlatformApi
-  * @class
-  * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-  * default to {@link module:ApiClient#instance} if unspecified.
-  */
-  function PlatformApi(apiClient) {
-    _classCallCheck(this, PlatformApi);
+    function LevelInfo() {
+        _classCallCheck(this, LevelInfo);
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
-
-  /**
-   * Platform info
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformInfo} and HTTP response
-   */
-
-
-  _createClass(PlatformApi, [{
-    key: 'v10PlatformInfoGetWithHttpInfo',
-    value: function v10PlatformInfoGetWithHttpInfo() {
-      var postBody = null;
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _PlatformInfo2.default;
-
-      return this.apiClient.callApi('/v1.0/platform/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.level = undefined;
+        this.investmentLimit = undefined;
     }
 
     /**
-     * Platform info
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformInfo}
-     */
+    * Constructs a <code>LevelInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+    * @param {Object} data The plain JavaScript object bearing properties of interest.
+    * @param {module:model/LevelInfo} obj Optional instance to populate.
+    * @return {module:model/LevelInfo} The populated <code>LevelInfo</code> instance.
+    */
 
-  }, {
-    key: 'v10PlatformInfoGet',
-    value: function v10PlatformInfoGet() {
-      return this.v10PlatformInfoGetWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
 
-    /**
-     * Investment programs levels
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProgramsLevelsInfo} and HTTP response
-     */
+    _createClass(LevelInfo, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new LevelInfo();
 
-  }, {
-    key: 'v10PlatformLevelsGetWithHttpInfo',
-    value: function v10PlatformLevelsGetWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentLimit')) {
+                    obj['investmentLimit'] = _ApiClient2.default.convertToType(data['investmentLimit'], 'Number');
+                }
+            }
+            return obj;
+        }
 
-      var pathParams = {};
-      var queryParams = {
-        'currency': opts['currency']
-      };
-      var headerParams = {};
-      var formParams = {};
+        /**
+        * @member {Number} level
+        */
 
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramsLevelsInfo2.default;
+        /**
+        * @member {Number} investmentLimit
+        */
 
-      return this.apiClient.callApi('/v1.0/platform/levels', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
+    }]);
 
-    /**
-     * Investment programs levels
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.currency 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProgramsLevelsInfo}
-     */
-
-  }, {
-    key: 'v10PlatformLevelsGet',
-    value: function v10PlatformLevelsGet(opts) {
-      return this.v10PlatformLevelsGetWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Platform statistic
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlatformStatistic} and HTTP response
-     */
-
-  }, {
-    key: 'v10PlatformStatisticGetWithHttpInfo',
-    value: function v10PlatformStatisticGetWithHttpInfo() {
-      var postBody = null;
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _PlatformStatistic2.default;
-
-      return this.apiClient.callApi('/v1.0/platform/statistic', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Platform statistic
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PlatformStatistic}
-     */
-
-  }, {
-    key: 'v10PlatformStatisticGet',
-    value: function v10PlatformStatisticGet() {
-      return this.v10PlatformStatisticGetWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
-
-  return PlatformApi;
+    return LevelInfo;
 }();
 
-exports.default = PlatformApi;
+exports.default = LevelInfo;
