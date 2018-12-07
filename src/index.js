@@ -51,6 +51,7 @@ import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
+import InvestmentProgramLevel from './model/InvestmentProgramLevel';
 import KycCallback from './model/KycCallback';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
@@ -417,6 +418,12 @@ export {
      * @property {module:model/IOsAppVersion}
      */
     IOsAppVersion,
+
+    /**
+     * The InvestmentProgramLevel model constructor.
+     * @property {module:model/InvestmentProgramLevel}
+     */
+    InvestmentProgramLevel,
 
     /**
      * The KycCallback model constructor.

@@ -190,6 +190,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsProgramsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
+*CoreApiV10.PlatformApi* | [**v10PlatformLevelsGet**](docs/PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
 *CoreApiV10.PlatformApi* | [**v10PlatformStatisticGet**](docs/PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
@@ -262,6 +263,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
+ - [CoreApiV10.InvestmentProgramLevel](docs/InvestmentProgramLevel.md)
  - [CoreApiV10.KycCallback](docs/KycCallback.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
