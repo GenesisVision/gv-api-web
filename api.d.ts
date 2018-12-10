@@ -46,7 +46,7 @@ export interface FetchArgs {
 export declare class BaseAPI {
     protected basePath: string;
     protected fetch: FetchAPI;
-    protected configuration: Configuration;
+    protected configuration?: Configuration;
     constructor(configuration?: Configuration, basePath?: string, fetch?: FetchAPI);
 }
 /**

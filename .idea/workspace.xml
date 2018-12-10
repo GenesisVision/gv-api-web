@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="add declaration">
+      <change beforePath="$PROJECT_DIR$/template/typescript/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/api.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="264" column="21" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
+            <state relative-caret-position="336">
+              <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -94,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
@@ -138,10 +138,10 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/index.ts" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/template/typescript/api.mustache" />
         <option value="$PROJECT_DIR$/api.ts" />
         <option value="$PROJECT_DIR$/template/typescript/modelEnum.mustache" />
         <option value="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" />
+        <option value="$PROJECT_DIR$/template/typescript/api.mustache" />
       </list>
     </option>
   </component>
@@ -248,7 +248,7 @@
       <workItem from="1533220043273" duration="4543000" />
       <workItem from="1544436321248" duration="754000" />
       <workItem from="1544438024324" duration="707000" />
-      <workItem from="1544455154049" duration="2368000" />
+      <workItem from="1544455154049" duration="2690000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -264,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544458282922</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add declaration">
+      <created>1544458494463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544458494463</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -277,7 +284,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20151000" />
+    <option name="totallyTimeSpent" value="20473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -313,6 +320,12 @@
         <option value="$PROJECT_DIR$/api.d.ts" />
         <option value="$PROJECT_DIR$/configuration.d.ts" />
         <option value="$PROJECT_DIR$/index.d.ts" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/index.d.ts" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/index.js" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/api.js" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/configuration.js" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/configuration.d.ts" />
+        <option value="$PROJECT_DIR$/../api-test/node_modules/gv-api-web/api.d.ts" />
       </list>
     </option>
   </component>
@@ -444,13 +457,6 @@
     <entry file="file://$PROJECT_DIR$/src/model/Broker.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/typescript/README.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -513,13 +519,6 @@
         <state relative-caret-position="-4768" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="264" column="21" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/typescript/modelGeneric.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -531,6 +530,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/typescript/README.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
         </state>
       </provider>
     </entry>
