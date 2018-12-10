@@ -57,7 +57,7 @@ export declare class BaseAPI {
  */
 export declare class RequiredError extends Error {
     field: string;
-    name: "RequiredError";
+    name: string;
     constructor(field: string, msg?: string);
 }
 /**

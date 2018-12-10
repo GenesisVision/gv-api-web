@@ -70,6 +70,7 @@ var RequiredError = /** @class */ (function (_super) {
     function RequiredError(field, msg) {
         var _this = _super.call(this, msg) || this;
         _this.field = field;
+        _this.name = "RequiredError";
         return _this;
     }
     return RequiredError;
