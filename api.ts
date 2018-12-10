@@ -102,7 +102,7 @@ export interface AmountWithCurrency {
  * @export
  * @namespace AmountWithCurrency
  */
-export namespace AmountWithCurrency {
+export declare namespace AmountWithCurrency {
     /**
      * @export
      * @enum {string}
@@ -200,7 +200,7 @@ export interface AssetSelection {
  * @export
  * @namespace AssetSelection
  */
-export namespace AssetSelection {
+export declare namespace AssetSelection {
     /**
      * @export
      * @enum {string}
@@ -271,7 +271,7 @@ export interface AssetsValue {
  * @export
  * @namespace AssetsValue
  */
-export namespace AssetsValue {
+export declare namespace AssetsValue {
     /**
      * @export
      * @enum {string}
@@ -333,7 +333,7 @@ export interface BlockchainInfo {
  * @export
  * @namespace BlockchainInfo
  */
-export namespace BlockchainInfo {
+export declare namespace BlockchainInfo {
     /**
      * @export
      * @enum {string}
@@ -406,7 +406,7 @@ export interface Broker {
     leverageMax?: number;
     /**
      * 
-     * @type {Array&lt;BrokerAccountType&gt;}
+     * @type {Array<BrokerAccountType>}
      * @memberof Broker
      */
     accountTypes?: Array<BrokerAccountType>;
@@ -444,13 +444,13 @@ export interface BrokerAccountType {
     type?: BrokerAccountType.TypeEnum;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof BrokerAccountType
      */
     leverages?: Array<number>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof BrokerAccountType
      */
     currencies?: Array<string>;
@@ -460,7 +460,7 @@ export interface BrokerAccountType {
  * @export
  * @namespace BrokerAccountType
  */
-export namespace BrokerAccountType {
+export declare namespace BrokerAccountType {
     /**
      * @export
      * @enum {string}
@@ -485,7 +485,7 @@ export namespace BrokerAccountType {
 export interface BrokersInfo {
     /**
      * 
-     * @type {Array&lt;Broker&gt;}
+     * @type {Array<Broker>}
      * @memberof BrokersInfo
      */
     brokers?: Array<Broker>;
@@ -573,7 +573,7 @@ export interface CreateWithdrawalRequestModel {
  * @export
  * @namespace CreateWithdrawalRequestModel
  */
-export namespace CreateWithdrawalRequestModel {
+export declare namespace CreateWithdrawalRequestModel {
     /**
      * @export
      * @enum {string}
@@ -603,13 +603,13 @@ export namespace CreateWithdrawalRequestModel {
 export interface DashboardChartValue {
     /**
      * 
-     * @type {Array&lt;ValueChartBar&gt;}
+     * @type {Array<ValueChartBar>}
      * @memberof DashboardChartValue
      */
     investedProgramsInfo?: Array<ValueChartBar>;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof DashboardChartValue
      */
     balanceChart?: Array<ChartSimple>;
@@ -723,7 +723,7 @@ export interface DashboardPortfolioEvent {
  * @export
  * @namespace DashboardPortfolioEvent
  */
-export namespace DashboardPortfolioEvent {
+export declare namespace DashboardPortfolioEvent {
     /**
      * @export
      * @enum {string}
@@ -775,7 +775,7 @@ export namespace DashboardPortfolioEvent {
 export interface DashboardPortfolioEvents {
     /**
      * 
-     * @type {Array&lt;DashboardPortfolioEvent&gt;}
+     * @type {Array<DashboardPortfolioEvent>}
      * @memberof DashboardPortfolioEvents
      */
     events?: Array<DashboardPortfolioEvent>;
@@ -873,7 +873,7 @@ export interface ErrorMessage {
 export interface ErrorViewModel {
     /**
      * 
-     * @type {Array&lt;ErrorMessage&gt;}
+     * @type {Array<ErrorMessage>}
      * @memberof ErrorViewModel
      */
     errors?: Array<ErrorMessage>;
@@ -889,7 +889,7 @@ export interface ErrorViewModel {
  * @export
  * @namespace ErrorViewModel
  */
-export namespace ErrorViewModel {
+export declare namespace ErrorViewModel {
     /**
      * @export
      * @enum {string}
@@ -949,7 +949,7 @@ export interface Facet {
  * @export
  * @namespace Facet
  */
-export namespace Facet {
+export declare namespace Facet {
     /**
      * @export
      * @enum {string}
@@ -1113,7 +1113,7 @@ export interface FundAssetPercent {
 export interface FundAssetsListInfo {
     /**
      * 
-     * @type {Array&lt;FundAssetInfo&gt;}
+     * @type {Array<FundAssetInfo>}
      * @memberof FundAssetsListInfo
      */
     assets?: Array<FundAssetInfo>;
@@ -1133,7 +1133,7 @@ export interface FundBalanceChart {
     usdBalance?: number;
     /**
      * 
-     * @type {Array&lt;BalanceChartElement&gt;}
+     * @type {Array<BalanceChartElement>}
      * @memberof FundBalanceChart
      */
     balanceChart?: Array<BalanceChartElement>;
@@ -1159,7 +1159,7 @@ export interface FundDetails {
     totalAssetsCount?: number;
     /**
      * 
-     * @type {Array&lt;FundAssetPercent&gt;}
+     * @type {Array<FundAssetPercent>}
      * @memberof FundDetails
      */
     topFundAssets?: Array<FundAssetPercent>;
@@ -1225,7 +1225,7 @@ export interface FundDetails {
     manager?: ProfilePublic;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof FundDetails
      */
     chart?: Array<ChartSimple>;
@@ -1241,7 +1241,7 @@ export interface FundDetails {
  * @export
  * @namespace FundDetails
  */
-export namespace FundDetails {
+export declare namespace FundDetails {
     /**
      * @export
      * @enum {string}
@@ -1283,7 +1283,7 @@ export interface FundDetailsFull {
     managementFee?: number;
     /**
      * 
-     * @type {Array&lt;FundAssetPartWithIcon&gt;}
+     * @type {Array<FundAssetPartWithIcon>}
      * @memberof FundDetailsFull
      */
     currentAssets?: Array<FundAssetPartWithIcon>;
@@ -1359,7 +1359,7 @@ export interface FundDetailsFull {
  * @export
  * @namespace FundDetailsFull
  */
-export namespace FundDetailsFull {
+export declare namespace FundDetailsFull {
     /**
      * @export
      * @enum {string}
@@ -1495,7 +1495,7 @@ export interface FundNotificationSettingList {
     logo?: string;
     /**
      * 
-     * @type {Array&lt;NotificationSettingViewModel&gt;}
+     * @type {Array<NotificationSettingViewModel>}
      * @memberof FundNotificationSettingList
      */
     settingsGeneral?: Array<NotificationSettingViewModel>;
@@ -1539,7 +1539,7 @@ export interface FundProfitChart {
     profitPercent?: number;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof FundProfitChart
      */
     equityChart?: Array<ChartSimple>;
@@ -1707,7 +1707,7 @@ export interface FundWithdrawInfo {
 export interface FundsList {
     /**
      * 
-     * @type {Array&lt;FundDetails&gt;}
+     * @type {Array<FundDetails>}
      * @memberof FundsList
      */
     funds?: Array<FundDetails>;
@@ -1861,7 +1861,7 @@ export interface LevelUpData {
 export interface LevelUpSummary {
     /**
      * 
-     * @type {Array&lt;LevelUpData&gt;}
+     * @type {Array<LevelUpData>}
      * @memberof LevelUpSummary
      */
     levelData?: Array<LevelUpData>;
@@ -1919,13 +1919,13 @@ export interface LoginViewModel {
 export interface ManagerAssets {
     /**
      * 
-     * @type {Array&lt;ManagerSimpleProgram&gt;}
+     * @type {Array<ManagerSimpleProgram>}
      * @memberof ManagerAssets
      */
     programs?: Array<ManagerSimpleProgram>;
     /**
      * 
-     * @type {Array&lt;ManagerSimpleFund&gt;}
+     * @type {Array<ManagerSimpleFund>}
      * @memberof ManagerAssets
      */
     funds?: Array<ManagerSimpleFund>;
@@ -1957,7 +1957,7 @@ export interface ManagerDashboard {
     events?: ManagerPortfolioEvents;
     /**
      * 
-     * @type {Array&lt;AssetSelection&gt;}
+     * @type {Array<AssetSelection>}
      * @memberof ManagerDashboard
      */
     allAssets?: Array<AssetSelection>;
@@ -2051,7 +2051,7 @@ export interface ManagerNotificationSettingList {
     about?: string;
     /**
      * 
-     * @type {Array&lt;NotificationSettingViewModel&gt;}
+     * @type {Array<NotificationSettingViewModel>}
      * @memberof ManagerNotificationSettingList
      */
     settingsGeneral?: Array<NotificationSettingViewModel>;
@@ -2155,7 +2155,7 @@ export interface ManagerPortfolioEvent {
  * @export
  * @namespace ManagerPortfolioEvent
  */
-export namespace ManagerPortfolioEvent {
+export declare namespace ManagerPortfolioEvent {
     /**
      * @export
      * @enum {string}
@@ -2210,7 +2210,7 @@ export namespace ManagerPortfolioEvent {
 export interface ManagerPortfolioEvents {
     /**
      * 
-     * @type {Array&lt;ManagerPortfolioEvent&gt;}
+     * @type {Array<ManagerPortfolioEvent>}
      * @memberof ManagerPortfolioEvents
      */
     events?: Array<ManagerPortfolioEvent>;
@@ -2260,7 +2260,7 @@ export interface ManagerProfile {
     regDate?: Date;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof ManagerProfile
      */
     assets?: Array<string>;
@@ -2432,7 +2432,7 @@ export interface ManagerSimpleProgram {
 export interface ManagersList {
     /**
      * 
-     * @type {Array&lt;ManagerProfile&gt;}
+     * @type {Array<ManagerProfile>}
      * @memberof ManagersList
      */
     managers?: Array<ManagerProfile>;
@@ -2464,7 +2464,7 @@ export interface NewFundRequest {
     managementFee?: number;
     /**
      * 
-     * @type {Array&lt;FundAssetPart&gt;}
+     * @type {Array<FundAssetPart>}
      * @memberof NewFundRequest
      */
     assets?: Array<FundAssetPart>;
@@ -2566,7 +2566,7 @@ export interface NewProgramRequest {
  * @export
  * @namespace NewProgramRequest
  */
-export namespace NewProgramRequest {
+export declare namespace NewProgramRequest {
     /**
      * @export
      * @enum {string}
@@ -2596,7 +2596,7 @@ export namespace NewProgramRequest {
 export interface NotificationList {
     /**
      * 
-     * @type {Array&lt;NotificationViewModel&gt;}
+     * @type {Array<NotificationViewModel>}
      * @memberof NotificationList
      */
     notifications?: Array<NotificationViewModel>;
@@ -2616,25 +2616,25 @@ export interface NotificationList {
 export interface NotificationSettingList {
     /**
      * 
-     * @type {Array&lt;NotificationSettingViewModel&gt;}
+     * @type {Array<NotificationSettingViewModel>}
      * @memberof NotificationSettingList
      */
     settingsGeneral?: Array<NotificationSettingViewModel>;
     /**
      * 
-     * @type {Array&lt;ProgramNotificationSettingList&gt;}
+     * @type {Array<ProgramNotificationSettingList>}
      * @memberof NotificationSettingList
      */
     settingsProgram?: Array<ProgramNotificationSettingList>;
     /**
      * 
-     * @type {Array&lt;FundNotificationSettingList&gt;}
+     * @type {Array<FundNotificationSettingList>}
      * @memberof NotificationSettingList
      */
     settingsFund?: Array<FundNotificationSettingList>;
     /**
      * 
-     * @type {Array&lt;ManagerNotificationSettingList&gt;}
+     * @type {Array<ManagerNotificationSettingList>}
      * @memberof NotificationSettingList
      */
     settingsManager?: Array<ManagerNotificationSettingList>;
@@ -2694,7 +2694,7 @@ export interface NotificationSettingViewModel {
  * @export
  * @namespace NotificationSettingViewModel
  */
-export namespace NotificationSettingViewModel {
+export declare namespace NotificationSettingViewModel {
     /**
      * @export
      * @enum {string}
@@ -2799,7 +2799,7 @@ export interface NotificationViewModel {
  * @export
  * @namespace NotificationViewModel
  */
-export namespace NotificationViewModel {
+export declare namespace NotificationViewModel {
     /**
      * @export
      * @enum {string}
@@ -2903,7 +2903,7 @@ export interface OrderModel {
  * @export
  * @namespace OrderModel
  */
-export namespace OrderModel {
+export declare namespace OrderModel {
     /**
      * @export
      * @enum {string}
@@ -3113,7 +3113,7 @@ export interface PersonalFundDetailsFull {
  * @export
  * @namespace PersonalFundDetailsFull
  */
-export namespace PersonalFundDetailsFull {
+export declare namespace PersonalFundDetailsFull {
     /**
      * @export
      * @enum {string}
@@ -3241,7 +3241,7 @@ export interface PersonalProgramDetailsFull {
  * @export
  * @namespace PersonalProgramDetailsFull
  */
-export namespace PersonalProgramDetailsFull {
+export declare namespace PersonalProgramDetailsFull {
     /**
      * @export
      * @enum {string}
@@ -3307,7 +3307,7 @@ export interface PlatformAsset {
 export interface PlatformAssets {
     /**
      * 
-     * @type {Array&lt;PlatformAsset&gt;}
+     * @type {Array<PlatformAsset>}
      * @memberof PlatformAssets
      */
     assets?: Array<PlatformAsset>;
@@ -3353,13 +3353,13 @@ export interface PlatformInfo {
     androidVersion?: AndroidAppVersion;
     /**
      * 
-     * @type {Array&lt;Facet&gt;}
+     * @type {Array<Facet>}
      * @memberof PlatformInfo
      */
     programsFacets?: Array<Facet>;
     /**
      * 
-     * @type {Array&lt;Facet&gt;}
+     * @type {Array<Facet>}
      * @memberof PlatformInfo
      */
     fundsFacets?: Array<Facet>;
@@ -3371,13 +3371,13 @@ export interface PlatformInfo {
     programsInfo?: ProgramsInfo;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof PlatformInfo
      */
     currencies?: Array<string>;
     /**
      * 
-     * @type {Array&lt;PlatformCurrency&gt;}
+     * @type {Array<PlatformCurrency>}
      * @memberof PlatformInfo
      */
     platformCurrencies?: Array<PlatformCurrency>;
@@ -3553,7 +3553,7 @@ export interface ProfileFullViewModel {
  * @export
  * @namespace ProfileFullViewModel
  */
-export namespace ProfileFullViewModel {
+export declare namespace ProfileFullViewModel {
     /**
      * @export
      * @enum {string}
@@ -3704,7 +3704,7 @@ export interface ProgramBalanceChart {
     programCurrency?: ProgramBalanceChart.ProgramCurrencyEnum;
     /**
      * 
-     * @type {Array&lt;ProgramBalanceChartElement&gt;}
+     * @type {Array<ProgramBalanceChartElement>}
      * @memberof ProgramBalanceChart
      */
     balanceChart?: Array<ProgramBalanceChartElement>;
@@ -3720,7 +3720,7 @@ export interface ProgramBalanceChart {
  * @export
  * @namespace ProgramBalanceChart
  */
-export namespace ProgramBalanceChart {
+export declare namespace ProgramBalanceChart {
     /**
      * @export
      * @enum {string}
@@ -3884,7 +3884,7 @@ export interface ProgramDetails {
     manager?: ProfilePublic;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof ProgramDetails
      */
     chart?: Array<ChartSimple>;
@@ -3900,7 +3900,7 @@ export interface ProgramDetails {
  * @export
  * @namespace ProgramDetails
  */
-export namespace ProgramDetails {
+export declare namespace ProgramDetails {
     /**
      * @export
      * @enum {string}
@@ -4073,7 +4073,7 @@ export interface ProgramDetailsFull {
  * @export
  * @namespace ProgramDetailsFull
  */
-export namespace ProgramDetailsFull {
+export declare namespace ProgramDetailsFull {
     /**
      * @export
      * @enum {string}
@@ -4292,7 +4292,7 @@ export interface ProgramNotificationSettingList {
     level?: number;
     /**
      * 
-     * @type {Array&lt;NotificationSettingViewModel&gt;}
+     * @type {Array<NotificationSettingViewModel>}
      * @memberof ProgramNotificationSettingList
      */
     settingsCustom?: Array<NotificationSettingViewModel>;
@@ -4322,7 +4322,7 @@ export interface ProgramNotificationSettingList {
     logo?: string;
     /**
      * 
-     * @type {Array&lt;NotificationSettingViewModel&gt;}
+     * @type {Array<NotificationSettingViewModel>}
      * @memberof ProgramNotificationSettingList
      */
     settingsGeneral?: Array<NotificationSettingViewModel>;
@@ -4372,13 +4372,13 @@ export interface ProgramProfitChart {
     profitFactor?: number;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof ProgramProfitChart
      */
     pnLChart?: Array<ChartSimple>;
     /**
      * 
-     * @type {Array&lt;PeriodDate&gt;}
+     * @type {Array<PeriodDate>}
      * @memberof ProgramProfitChart
      */
     periods?: Array<PeriodDate>;
@@ -4396,7 +4396,7 @@ export interface ProgramProfitChart {
     lastPeriodEnds?: Date;
     /**
      * 
-     * @type {Array&lt;ChartSimple&gt;}
+     * @type {Array<ChartSimple>}
      * @memberof ProgramProfitChart
      */
     equityChart?: Array<ChartSimple>;
@@ -4466,7 +4466,7 @@ export interface ProgramProfitChart {
  * @export
  * @namespace ProgramProfitChart
  */
-export namespace ProgramProfitChart {
+export declare namespace ProgramProfitChart {
     /**
      * @export
      * @enum {string}
@@ -4596,7 +4596,7 @@ export interface ProgramRequest {
  * @export
  * @namespace ProgramRequest
  */
-export namespace ProgramRequest {
+export declare namespace ProgramRequest {
     /**
      * @export
      * @enum {string}
@@ -4651,7 +4651,7 @@ export namespace ProgramRequest {
 export interface ProgramRequests {
     /**
      * 
-     * @type {Array&lt;ProgramRequest&gt;}
+     * @type {Array<ProgramRequest>}
      * @memberof ProgramRequests
      */
     requests?: Array<ProgramRequest>;
@@ -4677,7 +4677,7 @@ export interface ProgramRequests {
 export interface ProgramSets {
     /**
      * 
-     * @type {Array&lt;Facet&gt;}
+     * @type {Array<Facet>}
      * @memberof ProgramSets
      */
     sets?: Array<Facet>;
@@ -4809,7 +4809,7 @@ export interface ProgramStatistic {
  * @export
  * @namespace ProgramStatistic
  */
-export namespace ProgramStatistic {
+export declare namespace ProgramStatistic {
     /**
      * @export
      * @enum {string}
@@ -4946,7 +4946,7 @@ export interface ProgramsInfo {
     managerMaxExitFee?: number;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof ProgramsInfo
      */
     periods?: Array<number>;
@@ -4960,7 +4960,7 @@ export interface ProgramsInfo {
 export interface ProgramsLevelsInfo {
     /**
      * 
-     * @type {Array&lt;LevelInfo&gt;}
+     * @type {Array<LevelInfo>}
      * @memberof ProgramsLevelsInfo
      */
     levels?: Array<LevelInfo>;
@@ -4974,7 +4974,7 @@ export interface ProgramsLevelsInfo {
 export interface ProgramsList {
     /**
      * 
-     * @type {Array&lt;ProgramDetails&gt;}
+     * @type {Array<ProgramDetails>}
      * @memberof ProgramsList
      */
     programs?: Array<ProgramDetails>;
@@ -5010,7 +5010,7 @@ export interface RateItem {
  * @export
  * @namespace RateItem
  */
-export namespace RateItem {
+export declare namespace RateItem {
     /**
      * @export
      * @enum {string}
@@ -5054,79 +5054,79 @@ export interface RatesModel {
 export interface RatesModelRates {
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     undefined?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     GVT?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     ETH?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     BTC?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     ADA?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     USDT?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     XRP?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     BCH?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     LTC?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     DOGE?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     BNB?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     USD?: Array<RateItem>;
     /**
      * 
-     * @type {Array&lt;RateItem&gt;}
+     * @type {Array<RateItem>}
      * @memberof RatesModelRates
      */
     EUR?: Array<RateItem>;
@@ -5160,7 +5160,7 @@ export interface RecoveryCode {
 export interface RecoveryCodesViewModel {
     /**
      * 
-     * @type {Array&lt;RecoveryCode&gt;}
+     * @type {Array<RecoveryCode>}
      * @memberof RecoveryCodesViewModel
      */
     codes?: Array<RecoveryCode>;
@@ -5314,7 +5314,7 @@ export interface Review {
     reviewAnswer?: string;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof Review
      */
     rejectLabels?: Array<string>;
@@ -5360,7 +5360,7 @@ export interface SearchViewModel {
 export interface TradesViewModel {
     /**
      * 
-     * @type {Array&lt;OrderModel&gt;}
+     * @type {Array<OrderModel>}
      * @memberof TradesViewModel
      */
     trades?: Array<OrderModel>;
@@ -5586,7 +5586,7 @@ export interface ValueChartBar {
     date?: Date;
     /**
      * 
-     * @type {Array&lt;AssetsValue&gt;}
+     * @type {Array<AssetsValue>}
      * @memberof ValueChartBar
      */
     topAssets?: Array<AssetsValue>;
@@ -5640,7 +5640,7 @@ export interface WalletInfo {
  * @export
  * @namespace WalletInfo
  */
-export namespace WalletInfo {
+export declare namespace WalletInfo {
     /**
      * @export
      * @enum {string}
@@ -5722,7 +5722,7 @@ export interface WalletPendingTransaction {
  * @export
  * @namespace WalletPendingTransaction
  */
-export namespace WalletPendingTransaction {
+export declare namespace WalletPendingTransaction {
     /**
      * @export
      * @enum {string}
@@ -5760,7 +5760,7 @@ export namespace WalletPendingTransaction {
 export interface WalletPendingTransactionsViewModel {
     /**
      * 
-     * @type {Array&lt;WalletPendingTransaction&gt;}
+     * @type {Array<WalletPendingTransaction>}
      * @memberof WalletPendingTransactionsViewModel
      */
     transactions?: Array<WalletPendingTransaction>;
@@ -5942,7 +5942,7 @@ export interface WalletTransaction {
  * @export
  * @namespace WalletTransaction
  */
-export namespace WalletTransaction {
+export declare namespace WalletTransaction {
     /**
      * @export
      * @enum {string}
@@ -6033,7 +6033,7 @@ export namespace WalletTransaction {
 export interface WalletTransactionsViewModel {
     /**
      * 
-     * @type {Array&lt;WalletTransaction&gt;}
+     * @type {Array<WalletTransaction>}
      * @memberof WalletTransactionsViewModel
      */
     transactions?: Array<WalletTransaction>;
@@ -6087,7 +6087,7 @@ export interface WalletWithdrawalInfo {
  * @export
  * @namespace WalletWithdrawalInfo
  */
-export namespace WalletWithdrawalInfo {
+export declare namespace WalletWithdrawalInfo {
     /**
      * @export
      * @enum {string}
@@ -6117,7 +6117,7 @@ export namespace WalletWithdrawalInfo {
 export interface WalletsInfo {
     /**
      * 
-     * @type {Array&lt;WalletInfo&gt;}
+     * @type {Array<WalletInfo>}
      * @memberof WalletsInfo
      */
     wallets?: Array<WalletInfo>;
@@ -6159,7 +6159,7 @@ export interface WithdrawalInfo {
  * @export
  * @namespace WithdrawalInfo
  */
-export namespace WithdrawalInfo {
+export declare namespace WithdrawalInfo {
     /**
      * @export
      * @enum {string}
@@ -6188,7 +6188,7 @@ export interface WithdrawalSummary {
     availableToWithdrawal?: number;
     /**
      * 
-     * @type {Array&lt;WalletWithdrawalInfo&gt;}
+     * @type {Array<WalletWithdrawalInfo>}
      * @memberof WithdrawalSummary
      */
     wallets?: Array<WalletWithdrawalInfo>;
@@ -7465,8 +7465,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA confirm
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {TwoFactorAuthenticatorConfirm} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7478,7 +7478,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA create
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7490,8 +7490,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA disable
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {TwoFactorCodeModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7503,7 +7503,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA status
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7515,8 +7515,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA generate new recovery codes
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {PasswordModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7528,8 +7528,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary 2FA recovery codes
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {PasswordModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7541,8 +7541,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Change password
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {ChangePasswordViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7554,7 +7554,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Forgot password for investor
-     * @param {} [model] 
+     * @param {ForgotPasswordViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7566,7 +7566,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Forgot password for manager
-     * @param {} [model] 
+     * @param {ForgotPasswordViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7578,7 +7578,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Reset password
-     * @param {} [model] 
+     * @param {ResetPasswordViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7590,7 +7590,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Get phone number verification code
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7602,8 +7602,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Verify phone number
-     * @param {} authorization JWT access token
-     * @param {} [code] 
+     * @param {string} authorization JWT access token
+     * @param {string} [code] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7615,7 +7615,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Resend Confirmation Link
-     * @param {} [model] 
+     * @param {ResendConfirmationViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7627,7 +7627,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Authorize
-     * @param {} [model] 
+     * @param {LoginViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7639,7 +7639,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Authorize
-     * @param {} [model] 
+     * @param {LoginViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7651,8 +7651,8 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Confirm email after registration
-     * @param {} [userId] 
-     * @param {} [code] 
+     * @param {string} [userId] 
+     * @param {string} [code] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7664,7 +7664,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary New investor registration
-     * @param {} [model] 
+     * @param {RegisterInvestorViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7676,7 +7676,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary New manager registration
-     * @param {} [model] 
+     * @param {RegisterManagerViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7688,7 +7688,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Logout from another devices
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -7700,7 +7700,7 @@ export class AuthApi extends BaseAPI {
     /**
      * 
      * @summary Update auth token
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
@@ -8051,7 +8051,7 @@ export class FileApi extends BaseAPI {
     /**
      * 
      * @summary Download file
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
@@ -8063,8 +8063,8 @@ export class FileApi extends BaseAPI {
     /**
      * 
      * @summary Upload document
-     * @param {} authorization JWT access token
-     * @param {} uploadedFile Upload File
+     * @param {string} authorization JWT access token
+     * @param {any} uploadedFile Upload File
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
@@ -8076,8 +8076,8 @@ export class FileApi extends BaseAPI {
     /**
      * 
      * @summary Upload file
-     * @param {} uploadedFile Upload File
-     * @param {} [authorization] 
+     * @param {any} uploadedFile Upload File
+     * @param {string} [authorization] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
@@ -8362,7 +8362,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -8643,7 +8643,7 @@ export const FundsApiFp = function(configuration?: Configuration) {
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -8783,7 +8783,7 @@ export const FundsApiFactory = function (configuration?: Configuration, fetch?: 
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -8828,7 +8828,7 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Fund assets info
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8840,10 +8840,10 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Fund balance chart
-     * @param {} id 
-     * @param {} [dateFrom] 
-     * @param {} [dateTo] 
-     * @param {} [maxPointCount] 
+     * @param {string} id 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {number} [maxPointCount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8855,10 +8855,10 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Fund profit chart
-     * @param {} id 
-     * @param {} [dateFrom] 
-     * @param {} [dateTo] 
-     * @param {} [maxPointCount] 
+     * @param {string} id 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {number} [maxPointCount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8870,8 +8870,8 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Add to favorites
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8883,8 +8883,8 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Remove from favorites
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8896,9 +8896,9 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Funds details
-     * @param {} id 
-     * @param {} [authorization] 
-     * @param {} [currencySecondary] 
+     * @param {string} id 
+     * @param {string} [authorization] 
+     * @param {string} [currencySecondary] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8910,21 +8910,21 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Funds list
-     * @param {} [authorization] 
-     * @param {} [sorting] 
-     * @param {} [currencySecondary] 
-     * @param {} [statisticDateFrom] 
-     * @param {} [statisticDateTo] 
-     * @param {} [chartPointsCount] 
-     * @param {} [mask] 
-     * @param {} [facetId] 
-     * @param {} [isFavorite] 
-     * @param {} [isEnabled] 
-     * @param {} [ids] 
-     * @param {} [managerId] 
-     * @param {} [programManagerId] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} [authorization] 
+     * @param {string} [sorting] 
+     * @param {string} [currencySecondary] 
+     * @param {Date} [statisticDateFrom] 
+     * @param {Date} [statisticDateTo] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [mask] 
+     * @param {string} [facetId] 
+     * @param {boolean} [isFavorite] 
+     * @param {boolean} [isEnabled] 
+     * @param {Array<string>} [ids] 
+     * @param {string} [managerId] 
+     * @param {string} [programManagerId] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -8936,7 +8936,7 @@ export class FundsApi extends BaseAPI {
     /**
      * 
      * @summary Fund sets
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
@@ -10597,9 +10597,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Investing into the fund
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10611,9 +10611,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Data for investing into the fund
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10625,10 +10625,10 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Get program/fund requests
-     * @param {} id 
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10640,9 +10640,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Withdraw from fund. Percent is % of investor total money.
-     * @param {} id 
-     * @param {} percent 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} percent 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10654,9 +10654,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Data for withdrawal from fund
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10668,14 +10668,14 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Funds list
-     * @param {} authorization JWT access token
-     * @param {} [sorting] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [chartPointsCount] 
-     * @param {} [currencySecondary] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [sorting] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [currencySecondary] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10687,15 +10687,15 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Summary dashboard info
-     * @param {} authorization JWT access token
-     * @param {} [chartCurrency] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [balancePoints] 
-     * @param {} [programsPoints] 
-     * @param {} [eventsTake] 
-     * @param {} [requestsSkip] 
-     * @param {} [requestsTake] 
+     * @param {string} authorization JWT access token
+     * @param {string} [chartCurrency] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [balancePoints] 
+     * @param {number} [programsPoints] 
+     * @param {number} [eventsTake] 
+     * @param {number} [requestsSkip] 
+     * @param {number} [requestsTake] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10707,12 +10707,12 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Portfolio charts
-     * @param {} authorization JWT access token
-     * @param {} [currency] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [balancePoints] 
-     * @param {} [programsPoints] 
+     * @param {string} authorization JWT access token
+     * @param {string} [currency] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [balancePoints] 
+     * @param {number} [programsPoints] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10724,14 +10724,14 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Portfolio events
-     * @param {} authorization JWT access token
-     * @param {} [assetId] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [type] 
-     * @param {} [assetType] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [assetId] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {string} [type] 
+     * @param {string} [assetType] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10743,9 +10743,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Investing into the program
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10757,9 +10757,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Data for investing into the program
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10771,8 +10771,8 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Disable reinvesting
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10784,8 +10784,8 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Enable reinvesting
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10797,10 +10797,10 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Get program/fund requests
-     * @param {} id 
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10812,9 +10812,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Withdraw from investment program
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10826,9 +10826,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Data for withdrawal from investment program
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10840,14 +10840,14 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Dashboard program list
-     * @param {} authorization JWT access token
-     * @param {} [sorting] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [chartPointsCount] 
-     * @param {} [currencySecondary] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [sorting] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [currencySecondary] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10859,8 +10859,8 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Cancel investment program request
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10872,9 +10872,9 @@ export class InvestorApi extends BaseAPI {
     /**
      * 
      * @summary Get all requests
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
@@ -10975,7 +10975,7 @@ export const KycApiFactory = function (configuration?: Configuration, fetch?: Fe
 export class KycApi extends BaseAPI {
     /**
      * 
-     * @param {} [model] 
+     * @param {KycCallback} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KycApi
@@ -11154,7 +11154,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
          * @summary Update fund assets parts
          * @param {string} id 
          * @param {string} authorization JWT access token
-         * @param {Array&lt;FundAssetPart&gt;} [assets] 
+         * @param {Array<FundAssetPart>} [assets] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -12410,7 +12410,7 @@ export const ManagerApiFp = function(configuration?: Configuration) {
          * @summary Update fund assets parts
          * @param {string} id 
          * @param {string} authorization JWT access token
-         * @param {Array&lt;FundAssetPart&gt;} [assets] 
+         * @param {Array<FundAssetPart>} [assets] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13020,7 +13020,7 @@ export const ManagerApiFactory = function (configuration?: Configuration, fetch?
          * @summary Update fund assets parts
          * @param {string} id 
          * @param {string} authorization JWT access token
-         * @param {Array&lt;FundAssetPart&gt;} [assets] 
+         * @param {Array<FundAssetPart>} [assets] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13348,7 +13348,7 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager assets list
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13360,7 +13360,7 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager details
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13372,7 +13372,7 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager profile
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13384,14 +13384,14 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager events
-     * @param {} authorization JWT access token
-     * @param {} [assetId] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [type] 
-     * @param {} [assetType] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [assetId] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {string} [type] 
+     * @param {string} [assetType] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13403,9 +13403,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Update fund assets parts
-     * @param {} id 
-     * @param {} authorization JWT access token
-     * @param {} [assets] 
+     * @param {string} id 
+     * @param {string} authorization JWT access token
+     * @param {Array<FundAssetPart>} [assets] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13417,9 +13417,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Close existing fund
-     * @param {} id 
-     * @param {} authorization JWT access token
-     * @param {} [twoFactorCode] 
+     * @param {string} id 
+     * @param {string} authorization JWT access token
+     * @param {string} [twoFactorCode] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13431,9 +13431,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Deposit
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13445,9 +13445,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Data for investing into the fund
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13459,10 +13459,10 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Get investment program/fund requests
-     * @param {} id 
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13474,9 +13474,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Update investment program/fund details
-     * @param {} id 
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} id 
+     * @param {string} authorization JWT access token
+     * @param {ProgramUpdate} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13488,9 +13488,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Withdraw from fund. Percent is % of investor total money.
-     * @param {} id 
-     * @param {} percent 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} percent 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13502,9 +13502,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Data for withdrawal from fund
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13516,8 +13516,8 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Create fund
-     * @param {} authorization JWT access token
-     * @param {} [request] 
+     * @param {string} authorization JWT access token
+     * @param {NewFundRequest} [request] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13529,14 +13529,14 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager funds
-     * @param {} authorization JWT access token
-     * @param {} [sorting] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [chartPointsCount] 
-     * @param {} [currencySecondary] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [sorting] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [currencySecondary] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13548,7 +13548,7 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Get GVT investment to create fund
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13560,8 +13560,8 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Cancel investment program/fund request
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13573,14 +13573,14 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager dashboard
-     * @param {} authorization JWT access token
-     * @param {} [assetId] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [type] 
-     * @param {} [assetType] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [assetId] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {string} [type] 
+     * @param {string} [assetType] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13592,9 +13592,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Close existing investment program
-     * @param {} id 
-     * @param {} authorization JWT access token
-     * @param {} [twoFactorCode] 
+     * @param {string} id 
+     * @param {string} authorization JWT access token
+     * @param {string} [twoFactorCode] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13606,9 +13606,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Deposit
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13620,9 +13620,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Data for investing into the program
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13634,8 +13634,8 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Close current period
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13647,10 +13647,10 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Get investment program/fund requests
-     * @param {} id 
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13662,9 +13662,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Update investment program/fund details
-     * @param {} id 
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} id 
+     * @param {string} authorization JWT access token
+     * @param {ProgramUpdate} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13676,9 +13676,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Withdraw from program
-     * @param {} id 
-     * @param {} amount 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {number} amount 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13690,9 +13690,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Data for withdrawal from investment program
-     * @param {} id 
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13704,8 +13704,8 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Create an investment program
-     * @param {} authorization JWT access token
-     * @param {} [request] 
+     * @param {string} authorization JWT access token
+     * @param {NewProgramRequest} [request] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13717,14 +13717,14 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Manager programs
-     * @param {} authorization JWT access token
-     * @param {} [sorting] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [chartPointsCount] 
-     * @param {} [currencySecondary] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [sorting] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [currencySecondary] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13736,7 +13736,7 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Get GVT investment to create program
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13748,8 +13748,8 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Cancel investment program/fund request
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -13761,9 +13761,9 @@ export class ManagerApi extends BaseAPI {
     /**
      * 
      * @summary Get all requests
-     * @param {} skip 
-     * @param {} take 
-     * @param {} authorization JWT access token
+     * @param {number} skip 
+     * @param {number} take 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
@@ -14457,9 +14457,9 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary User notifications
-     * @param {} authorization JWT access token
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14471,7 +14471,7 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary Unread notifications count
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14483,12 +14483,12 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary Add new setting
-     * @param {} authorization JWT access token
-     * @param {} [assetId] 
-     * @param {} [managerId] 
-     * @param {} [type] 
-     * @param {} [conditionType] 
-     * @param {} [conditionAmount] 
+     * @param {string} authorization JWT access token
+     * @param {string} [assetId] 
+     * @param {string} [managerId] 
+     * @param {string} [type] 
+     * @param {string} [conditionType] 
+     * @param {number} [conditionAmount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14500,9 +14500,9 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary Enable/disable setting
-     * @param {} id 
-     * @param {} enable 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {boolean} enable 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14514,8 +14514,8 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary User settings for fund
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14527,7 +14527,7 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary User settings
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14539,8 +14539,8 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary User settings for manager
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14552,8 +14552,8 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary User settings for program
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14565,8 +14565,8 @@ export class NotificationsApi extends BaseAPI {
     /**
      * 
      * @summary Remove setting
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14782,7 +14782,7 @@ export class PlatformApi extends BaseAPI {
     /**
      * 
      * @summary Investment programs levels
-     * @param {} [currency] 
+     * @param {string} [currency] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PlatformApi
@@ -15287,7 +15287,7 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Remove avatar
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15299,8 +15299,8 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Update avatar
-     * @param {} fileId 
-     * @param {} authorization JWT access token
+     * @param {string} fileId 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15312,7 +15312,7 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Get full profile
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15324,7 +15324,7 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Get header profile
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15336,8 +15336,8 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Update user personal details
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {UpdatePersonalDetailViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15349,8 +15349,8 @@ export class ProfileApi extends BaseAPI {
     /**
      * 
      * @summary Update profile
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {UpdateProfileViewModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15361,7 +15361,7 @@ export class ProfileApi extends BaseAPI {
 
     /**
      * 
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -15659,7 +15659,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -15986,7 +15986,7 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -16148,7 +16148,7 @@ export const ProgramsApiFactory = function (configuration?: Configuration, fetch
          * @param {string} [facetId] 
          * @param {boolean} [isFavorite] 
          * @param {boolean} [isEnabled] 
-         * @param {Array&lt;string&gt;} [ids] 
+         * @param {Array<string>} [ids] 
          * @param {string} [managerId] 
          * @param {string} [programManagerId] 
          * @param {number} [skip] 
@@ -16192,10 +16192,10 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Program balance chart
-     * @param {} id 
-     * @param {} [dateFrom] 
-     * @param {} [dateTo] 
-     * @param {} [maxPointCount] 
+     * @param {string} id 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {number} [maxPointCount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16207,10 +16207,10 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Program profit chart
-     * @param {} id 
-     * @param {} [dateFrom] 
-     * @param {} [dateTo] 
-     * @param {} [maxPointCount] 
+     * @param {string} id 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {number} [maxPointCount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16222,8 +16222,8 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Add to favorites
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16235,8 +16235,8 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Remove from favorites
-     * @param {} id 
-     * @param {} authorization JWT access token
+     * @param {string} id 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16248,9 +16248,9 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Program details
-     * @param {} id 
-     * @param {} [authorization] 
-     * @param {} [currencySecondary] 
+     * @param {string} id 
+     * @param {string} [authorization] 
+     * @param {string} [currencySecondary] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16262,13 +16262,13 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Trade history
-     * @param {} id 
-     * @param {} [dateFrom] 
-     * @param {} [dateTo] 
-     * @param {} [symbol] 
-     * @param {} [sorting] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} id 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {string} [symbol] 
+     * @param {string} [sorting] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16280,27 +16280,27 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Programs list
-     * @param {} [authorization] 
-     * @param {} [levelMin] 
-     * @param {} [levelMax] 
-     * @param {} [profitAvgMin] 
-     * @param {} [profitAvgMax] 
-     * @param {} [sorting] 
-     * @param {} [programCurrency] 
-     * @param {} [currencySecondary] 
-     * @param {} [levelUpFrom] 
-     * @param {} [statisticDateFrom] 
-     * @param {} [statisticDateTo] 
-     * @param {} [chartPointsCount] 
-     * @param {} [mask] 
-     * @param {} [facetId] 
-     * @param {} [isFavorite] 
-     * @param {} [isEnabled] 
-     * @param {} [ids] 
-     * @param {} [managerId] 
-     * @param {} [programManagerId] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} [authorization] 
+     * @param {number} [levelMin] 
+     * @param {number} [levelMax] 
+     * @param {number} [profitAvgMin] 
+     * @param {number} [profitAvgMax] 
+     * @param {string} [sorting] 
+     * @param {string} [programCurrency] 
+     * @param {string} [currencySecondary] 
+     * @param {number} [levelUpFrom] 
+     * @param {Date} [statisticDateFrom] 
+     * @param {Date} [statisticDateTo] 
+     * @param {number} [chartPointsCount] 
+     * @param {string} [mask] 
+     * @param {string} [facetId] 
+     * @param {boolean} [isFavorite] 
+     * @param {boolean} [isEnabled] 
+     * @param {Array<string>} [ids] 
+     * @param {string} [managerId] 
+     * @param {string} [programManagerId] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16312,7 +16312,7 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Level up summary
-     * @param {} [authorization] 
+     * @param {string} [authorization] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16324,7 +16324,7 @@ export class ProgramsApi extends BaseAPI {
     /**
      * 
      * @summary Programs sets
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -16420,8 +16420,8 @@ export const RateApiFetchParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary Get rates
-         * @param {Array&lt;string&gt;} [from] 
-         * @param {Array&lt;string&gt;} [to] 
+         * @param {Array<string>} [from] 
+         * @param {Array<string>} [to] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16503,8 +16503,8 @@ export const RateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get rates
-         * @param {Array&lt;string&gt;} [from] 
-         * @param {Array&lt;string&gt;} [to] 
+         * @param {Array<string>} [from] 
+         * @param {Array<string>} [to] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16555,8 +16555,8 @@ export const RateApiFactory = function (configuration?: Configuration, fetch?: F
         /**
          * 
          * @summary Get rates
-         * @param {Array&lt;string&gt;} [from] 
-         * @param {Array&lt;string&gt;} [to] 
+         * @param {Array<string>} [from] 
+         * @param {Array<string>} [to] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16576,9 +16576,9 @@ export class RateApi extends BaseAPI {
     /**
      * 
      * @summary Get rate
-     * @param {} exchange 
-     * @param {} from 
-     * @param {} to 
+     * @param {string} exchange 
+     * @param {string} from 
+     * @param {string} to 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
@@ -16590,8 +16590,8 @@ export class RateApi extends BaseAPI {
     /**
      * 
      * @summary Get rate
-     * @param {} from 
-     * @param {} to 
+     * @param {string} from 
+     * @param {string} to 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
@@ -16603,8 +16603,8 @@ export class RateApi extends BaseAPI {
     /**
      * 
      * @summary Get rates
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {Array<string>} [from] 
+     * @param {Array<string>} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
@@ -16716,8 +16716,8 @@ export class SearchApi extends BaseAPI {
     /**
      * 
      * @summary Program / fund / manager search
-     * @param {} [mask] 
-     * @param {} [take] 
+     * @param {string} [mask] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SearchApi
@@ -17378,7 +17378,7 @@ export const WalletApiFactory = function (configuration?: Configuration, fetch?:
 export class WalletApi extends BaseAPI {
     /**
      * 
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17390,8 +17390,8 @@ export class WalletApi extends BaseAPI {
     /**
      * 
      * @summary Wallet summary
-     * @param {} currency 
-     * @param {} authorization JWT access token
+     * @param {string} currency 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17403,14 +17403,14 @@ export class WalletApi extends BaseAPI {
     /**
      * 
      * @summary Wallet transactions
-     * @param {} authorization JWT access token
-     * @param {} [assetId] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [assetType] 
-     * @param {} [txAction] 
-     * @param {} [skip] 
-     * @param {} [take] 
+     * @param {string} authorization JWT access token
+     * @param {string} [assetId] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {string} [assetType] 
+     * @param {string} [txAction] 
+     * @param {number} [skip] 
+     * @param {number} [take] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17422,7 +17422,7 @@ export class WalletApi extends BaseAPI {
     /**
      * 
      * @summary Wallet pending transactions
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17433,7 +17433,7 @@ export class WalletApi extends BaseAPI {
 
     /**
      * 
-     * @param {} authorization JWT access token
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17444,8 +17444,8 @@ export class WalletApi extends BaseAPI {
 
     /**
      * 
-     * @param {} txId 
-     * @param {} authorization JWT access token
+     * @param {string} txId 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17456,8 +17456,8 @@ export class WalletApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [requestId] 
-     * @param {} [code] 
+     * @param {string} [requestId] 
+     * @param {string} [code] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17468,8 +17468,8 @@ export class WalletApi extends BaseAPI {
 
     /**
      * 
-     * @param {} authorization JWT access token
-     * @param {} [model] 
+     * @param {string} authorization JWT access token
+     * @param {CreateWithdrawalRequestModel} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
@@ -17480,8 +17480,8 @@ export class WalletApi extends BaseAPI {
 
     /**
      * 
-     * @param {} txId 
-     * @param {} authorization JWT access token
+     * @param {string} txId 
+     * @param {string} authorization JWT access token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
