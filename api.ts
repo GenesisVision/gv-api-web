@@ -8227,11 +8227,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as any).toISOString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as any);
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as any).toISOString();
+                localVarQueryParameter['DateTo'] = (dateTo as any);
             }
 
             if (maxPointCount !== undefined) {
@@ -8271,11 +8271,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as any).toISOString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as any);
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as any).toISOString();
+                localVarQueryParameter['DateTo'] = (dateTo as any);
             }
 
             if (maxPointCount !== undefined) {
@@ -8444,11 +8444,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as any).toISOString();
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as any);
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as any).toISOString();
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -9320,11 +9320,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -9388,11 +9388,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (balancePoints !== undefined) {
@@ -9457,11 +9457,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (balancePoints !== undefined) {
@@ -9516,11 +9516,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (type !== undefined) {
@@ -9885,11 +9885,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -11304,11 +11304,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (type !== undefined) {
@@ -11763,11 +11763,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -11900,11 +11900,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (type !== undefined) {
@@ -12354,11 +12354,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -15719,11 +15719,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as any).toISOString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as any);
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as any).toISOString();
+                localVarQueryParameter['DateTo'] = (dateTo as any);
             }
 
             if (maxPointCount !== undefined) {
@@ -15763,11 +15763,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as any).toISOString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as any);
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as any).toISOString();
+                localVarQueryParameter['DateTo'] = (dateTo as any);
             }
 
             if (maxPointCount !== undefined) {
@@ -15925,11 +15925,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as any).toISOString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as any);
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as any).toISOString();
+                localVarQueryParameter['DateTo'] = (dateTo as any);
             }
 
             if (symbol !== undefined) {
@@ -16025,11 +16025,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as any).toISOString();
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as any);
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as any).toISOString();
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as any);
             }
 
             if (chartPointsCount !== undefined) {
@@ -17243,11 +17243,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as any).toISOString();
+                localVarQueryParameter['From'] = (from as any);
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as any).toISOString();
+                localVarQueryParameter['To'] = (to as any);
             }
 
             if (assetType !== undefined) {

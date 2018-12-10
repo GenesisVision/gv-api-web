@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="fix config">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api.ts" afterDir="false" />
+    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/template/typescript/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/api.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="8529" column="81" lean-forward="true" selection-start-line="8529" selection-start-column="81" selection-end-line="8529" selection-end-column="81" />
+            <state relative-caret-position="166">
+              <caret line="8509" column="29" lean-forward="true" selection-start-line="8509" selection-start-column="29" selection-end-line="8509" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#395#422#0" expanded="true" />
@@ -60,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="271" column="21" lean-forward="true" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
+            <state relative-caret-position="227">
+              <caret line="264" column="88" selection-start-line="264" selection-start-column="88" selection-end-line="264" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -102,11 +100,12 @@
       <find>{{=&lt; &gt;=}}</find>
       <find>last</find>
       <find>v10FundsByIdGet</find>
+      <find>toISOString</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
-      <dir>$PROJECT_DIR$/template/typescript</dir>
       <dir>$PROJECT_DIR$/template/es6</dir>
+      <dir>$PROJECT_DIR$/template/typescript</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -243,7 +242,7 @@
       <workItem from="1533220043273" duration="4543000" />
       <workItem from="1544436321248" duration="754000" />
       <workItem from="1544438024324" duration="707000" />
-      <workItem from="1544455154049" duration="10221000" />
+      <workItem from="1544455154049" duration="10703000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544459199642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix template">
+      <created>1544466611699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544466611699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -293,13 +299,13 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28004000" />
+    <option name="totallyTimeSpent" value="28486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -311,7 +317,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961586" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4106583" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4106583" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -405,7 +411,8 @@
     <MESSAGE value="add declare for namespace" />
     <MESSAGE value="add declaration" />
     <MESSAGE value="fix config" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix config" />
+    <MESSAGE value="fix template" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix template" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/distribution/ApiClient.js" />
@@ -570,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="8529" column="81" lean-forward="true" selection-start-line="8529" selection-start-column="81" selection-end-line="8529" selection-end-column="81" />
+        <state relative-caret-position="166">
+          <caret line="8509" column="29" lean-forward="true" selection-start-line="8509" selection-start-column="29" selection-end-line="8509" selection-end-column="29" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#395#422#0" expanded="true" />
@@ -581,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="271" column="21" lean-forward="true" selection-start-line="271" selection-start-column="21" selection-end-line="271" selection-end-column="21" />
+        <state relative-caret-position="227">
+          <caret line="264" column="88" selection-start-line="264" selection-start-column="88" selection-end-line="264" selection-end-column="88" />
         </state>
       </provider>
     </entry>
