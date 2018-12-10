@@ -102,25 +102,25 @@ export interface AmountWithCurrency {
  * @export
  * @namespace AmountWithCurrency
  */
-export declare namespace AmountWithCurrency {
+export namespace AmountWithCurrency {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -200,14 +200,14 @@ export interface AssetSelection {
  * @export
  * @namespace AssetSelection
  */
-export declare namespace AssetSelection {
+export namespace AssetSelection {
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        Program,
+        Fund
     }
 }
 
@@ -271,15 +271,15 @@ export interface AssetsValue {
  * @export
  * @namespace AssetsValue
  */
-export declare namespace AssetsValue {
+export namespace AssetsValue {
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        All = <any> 'All',
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        All,
+        Program,
+        Fund
     }
 }
 
@@ -333,20 +333,20 @@ export interface BlockchainInfo {
  * @export
  * @namespace BlockchainInfo
  */
-export declare namespace BlockchainInfo {
+export namespace BlockchainInfo {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        Undefined = <any> 'Undefined',
-        New = <any> 'New',
-        Pending = <any> 'Pending',
-        ConfirmedByGate = <any> 'ConfirmedByGate',
-        ConfirmedAndValidated = <any> 'ConfirmedAndValidated',
-        PendingAddInWallet = <any> 'PendingAddInWallet',
-        Error = <any> 'Error',
-        Cancelled = <any> 'Cancelled'
+        Undefined,
+        New,
+        Pending,
+        ConfirmedByGate,
+        ConfirmedAndValidated,
+        PendingAddInWallet,
+        Error,
+        Cancelled
     }
 }
 
@@ -460,20 +460,20 @@ export interface BrokerAccountType {
  * @export
  * @namespace BrokerAccountType
  */
-export declare namespace BrokerAccountType {
+export namespace BrokerAccountType {
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        Undefined = <any> 'Undefined',
-        MetaTrader4 = <any> 'MetaTrader4',
-        MetaTrader5 = <any> 'MetaTrader5',
-        NinjaTrader = <any> 'NinjaTrader',
-        CTrader = <any> 'cTrader',
-        Rumus = <any> 'Rumus',
-        Metastock = <any> 'Metastock',
-        IDEX = <any> 'IDEX'
+        Undefined,
+        MetaTrader4,
+        MetaTrader5,
+        NinjaTrader,
+        CTrader,
+        Rumus,
+        Metastock,
+        IDEX
     }
 }
 
@@ -573,25 +573,25 @@ export interface CreateWithdrawalRequestModel {
  * @export
  * @namespace CreateWithdrawalRequestModel
  */
-export declare namespace CreateWithdrawalRequestModel {
+export namespace CreateWithdrawalRequestModel {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -723,47 +723,47 @@ export interface DashboardPortfolioEvent {
  * @export
  * @namespace DashboardPortfolioEvent
  */
-export declare namespace DashboardPortfolioEvent {
+export namespace DashboardPortfolioEvent {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        All = <any> 'All',
-        Invest = <any> 'Invest',
-        Withdraw = <any> 'Withdraw',
-        Profit = <any> 'Profit',
-        Loss = <any> 'Loss',
-        Reinvest = <any> 'Reinvest',
-        Cancelled = <any> 'Cancelled',
-        Ended = <any> 'Ended'
+        All,
+        Invest,
+        Withdraw,
+        Profit,
+        Loss,
+        Reinvest,
+        Cancelled,
+        Ended
     }
     /**
      * @export
      * @enum {string}
      */
     export enum AssetTypeEnum {
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        Program,
+        Fund
     }
 }
 
@@ -889,15 +889,15 @@ export interface ErrorViewModel {
  * @export
  * @namespace ErrorViewModel
  */
-export declare namespace ErrorViewModel {
+export namespace ErrorViewModel {
     /**
      * @export
      * @enum {string}
      */
     export enum CodeEnum {
-        InternalServerError = <any> 'InternalServerError',
-        ValidationError = <any> 'ValidationError',
-        RequiresTwoFactor = <any> 'RequiresTwoFactor'
+        InternalServerError,
+        ValidationError,
+        RequiresTwoFactor
     }
 }
 
@@ -949,17 +949,17 @@ export interface Facet {
  * @export
  * @namespace Facet
  */
-export declare namespace Facet {
+export namespace Facet {
     /**
      * @export
      * @enum {string}
      */
     export enum SortTypeEnum {
-        New = <any> 'New',
-        Top = <any> 'Top',
-        WeeklyTop = <any> 'WeeklyTop',
-        Popular = <any> 'Popular',
-        ToLevelUp = <any> 'ToLevelUp'
+        New,
+        Top,
+        WeeklyTop,
+        Popular,
+        ToLevelUp
     }
 }
 
@@ -1241,19 +1241,19 @@ export interface FundDetails {
  * @export
  * @namespace FundDetails
  */
-export declare namespace FundDetails {
+export namespace FundDetails {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        None = <any> 'None',
-        Pending = <any> 'Pending',
-        ErrorCreating = <any> 'ErrorCreating',
-        Active = <any> 'Active',
-        Closed = <any> 'Closed',
-        Archived = <any> 'Archived',
-        ClosedDueToInactivity = <any> 'ClosedDueToInactivity'
+        None,
+        Pending,
+        ErrorCreating,
+        Active,
+        Closed,
+        Archived,
+        ClosedDueToInactivity
     }
 }
 
@@ -1359,19 +1359,19 @@ export interface FundDetailsFull {
  * @export
  * @namespace FundDetailsFull
  */
-export declare namespace FundDetailsFull {
+export namespace FundDetailsFull {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        None = <any> 'None',
-        Pending = <any> 'Pending',
-        ErrorCreating = <any> 'ErrorCreating',
-        Active = <any> 'Active',
-        Closed = <any> 'Closed',
-        Archived = <any> 'Archived',
-        ClosedDueToInactivity = <any> 'ClosedDueToInactivity'
+        None,
+        Pending,
+        ErrorCreating,
+        Active,
+        Closed,
+        Archived,
+        ClosedDueToInactivity
     }
 }
 
@@ -2155,50 +2155,50 @@ export interface ManagerPortfolioEvent {
  * @export
  * @namespace ManagerPortfolioEvent
  */
-export declare namespace ManagerPortfolioEvent {
+export namespace ManagerPortfolioEvent {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        All = <any> 'All',
-        AssetStarted = <any> 'AssetStarted',
-        ProgramPeriodStats = <any> 'ProgramPeriodStats',
-        ProgramPeriodEnds = <any> 'ProgramPeriodEnds',
-        InvestorInvest = <any> 'InvestorInvest',
-        InvestorWithdraw = <any> 'InvestorWithdraw',
-        ManagerInvest = <any> 'ManagerInvest',
-        ManagerWithdraw = <any> 'ManagerWithdraw',
-        AssetFinished = <any> 'AssetFinished',
-        EntranceFee = <any> 'EntranceFee',
-        ExitFee = <any> 'ExitFee'
+        All,
+        AssetStarted,
+        ProgramPeriodStats,
+        ProgramPeriodEnds,
+        InvestorInvest,
+        InvestorWithdraw,
+        ManagerInvest,
+        ManagerWithdraw,
+        AssetFinished,
+        EntranceFee,
+        ExitFee
     }
     /**
      * @export
      * @enum {string}
      */
     export enum ProgramTypeEnum {
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        Program,
+        Fund
     }
 }
 
@@ -2566,25 +2566,25 @@ export interface NewProgramRequest {
  * @export
  * @namespace NewProgramRequest
  */
-export declare namespace NewProgramRequest {
+export namespace NewProgramRequest {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -2694,36 +2694,36 @@ export interface NotificationSettingViewModel {
  * @export
  * @namespace NotificationSettingViewModel
  */
-export declare namespace NotificationSettingViewModel {
+export namespace NotificationSettingViewModel {
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        PlatformNewsAndUpdates = <any> 'PlatformNewsAndUpdates',
-        PlatformEmergency = <any> 'PlatformEmergency',
-        PlatformOther = <any> 'PlatformOther',
-        ProfileUpdated = <any> 'ProfileUpdated',
-        ProfilePwdUpdated = <any> 'ProfilePwdUpdated',
-        ProfileVerification = <any> 'ProfileVerification',
-        Profile2FA = <any> 'Profile2FA',
-        ProfileSecurity = <any> 'ProfileSecurity',
-        ProgramNewsAndUpdates = <any> 'ProgramNewsAndUpdates',
-        ProgramEndOfPeriod = <any> 'ProgramEndOfPeriod',
-        ProgramCondition = <any> 'ProgramCondition',
-        FundNewsAndUpdates = <any> 'FundNewsAndUpdates',
-        FundEndOfPeriod = <any> 'FundEndOfPeriod',
-        FundRebalancing = <any> 'FundRebalancing',
-        ManagerNewProgram = <any> 'ManagerNewProgram'
+        PlatformNewsAndUpdates,
+        PlatformEmergency,
+        PlatformOther,
+        ProfileUpdated,
+        ProfilePwdUpdated,
+        ProfileVerification,
+        Profile2FA,
+        ProfileSecurity,
+        ProgramNewsAndUpdates,
+        ProgramEndOfPeriod,
+        ProgramCondition,
+        FundNewsAndUpdates,
+        FundEndOfPeriod,
+        FundRebalancing,
+        ManagerNewProgram
     }
     /**
      * @export
      * @enum {string}
      */
     export enum ConditionTypeEnum {
-        Empty = <any> 'Empty',
-        Profit = <any> 'Profit',
-        Level = <any> 'Level'
+        Empty,
+        Profit,
+        Level
     }
 }
 
@@ -2799,35 +2799,35 @@ export interface NotificationViewModel {
  * @export
  * @namespace NotificationViewModel
  */
-export declare namespace NotificationViewModel {
+export namespace NotificationViewModel {
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        PlatformNewsAndUpdates = <any> 'PlatformNewsAndUpdates',
-        PlatformEmergency = <any> 'PlatformEmergency',
-        PlatformOther = <any> 'PlatformOther',
-        ProfileUpdated = <any> 'ProfileUpdated',
-        ProfilePwdUpdated = <any> 'ProfilePwdUpdated',
-        ProfileVerification = <any> 'ProfileVerification',
-        Profile2FA = <any> 'Profile2FA',
-        ProfileSecurity = <any> 'ProfileSecurity',
-        ProgramNewsAndUpdates = <any> 'ProgramNewsAndUpdates',
-        ProgramEndOfPeriod = <any> 'ProgramEndOfPeriod',
-        ProgramCondition = <any> 'ProgramCondition',
-        FundNewsAndUpdates = <any> 'FundNewsAndUpdates',
-        FundEndOfPeriod = <any> 'FundEndOfPeriod',
-        FundRebalancing = <any> 'FundRebalancing',
-        ManagerNewProgram = <any> 'ManagerNewProgram'
+        PlatformNewsAndUpdates,
+        PlatformEmergency,
+        PlatformOther,
+        ProfileUpdated,
+        ProfilePwdUpdated,
+        ProfileVerification,
+        Profile2FA,
+        ProfileSecurity,
+        ProgramNewsAndUpdates,
+        ProgramEndOfPeriod,
+        ProgramCondition,
+        FundNewsAndUpdates,
+        FundEndOfPeriod,
+        FundRebalancing,
+        ManagerNewProgram
     }
     /**
      * @export
      * @enum {string}
      */
     export enum AssetTypeEnum {
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        Program,
+        Fund
     }
 }
 
@@ -2903,27 +2903,27 @@ export interface OrderModel {
  * @export
  * @namespace OrderModel
  */
-export declare namespace OrderModel {
+export namespace OrderModel {
     /**
      * @export
      * @enum {string}
      */
     export enum DirectionEnum {
-        Buy = <any> 'Buy',
-        Sell = <any> 'Sell',
-        Balance = <any> 'Balance',
-        Credit = <any> 'Credit',
-        Undefined = <any> 'Undefined'
+        Buy,
+        Sell,
+        Balance,
+        Credit,
+        Undefined
     }
     /**
      * @export
      * @enum {string}
      */
     export enum EntryEnum {
-        In = <any> 'In',
-        Out = <any> 'Out',
-        InOut = <any> 'InOut',
-        OutBy = <any> 'OutBy'
+        In,
+        Out,
+        InOut,
+        OutBy
     }
 }
 
@@ -3113,17 +3113,17 @@ export interface PersonalFundDetailsFull {
  * @export
  * @namespace PersonalFundDetailsFull
  */
-export declare namespace PersonalFundDetailsFull {
+export namespace PersonalFundDetailsFull {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        Pending = <any> 'Pending',
-        Active = <any> 'Active',
-        Investing = <any> 'Investing',
-        Withdrawing = <any> 'Withdrawing',
-        Ended = <any> 'Ended'
+        Pending,
+        Active,
+        Investing,
+        Withdrawing,
+        Ended
     }
 }
 
@@ -3241,17 +3241,17 @@ export interface PersonalProgramDetailsFull {
  * @export
  * @namespace PersonalProgramDetailsFull
  */
-export declare namespace PersonalProgramDetailsFull {
+export namespace PersonalProgramDetailsFull {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        Pending = <any> 'Pending',
-        Active = <any> 'Active',
-        Investing = <any> 'Investing',
-        Withdrawing = <any> 'Withdrawing',
-        Ended = <any> 'Ended'
+        Pending,
+        Active,
+        Investing,
+        Withdrawing,
+        Ended
     }
 }
 
@@ -3553,16 +3553,16 @@ export interface ProfileFullViewModel {
  * @export
  * @namespace ProfileFullViewModel
  */
-export declare namespace ProfileFullViewModel {
+export namespace ProfileFullViewModel {
     /**
      * @export
      * @enum {string}
      */
     export enum VerificationStatusEnum {
-        NotVerified = <any> 'NotVerified',
-        Verified = <any> 'Verified',
-        UnderReview = <any> 'UnderReview',
-        Rejected = <any> 'Rejected'
+        NotVerified,
+        Verified,
+        UnderReview,
+        Rejected
     }
 }
 
@@ -3720,25 +3720,25 @@ export interface ProgramBalanceChart {
  * @export
  * @namespace ProgramBalanceChart
  */
-export declare namespace ProgramBalanceChart {
+export namespace ProgramBalanceChart {
     /**
      * @export
      * @enum {string}
      */
     export enum ProgramCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -3900,38 +3900,38 @@ export interface ProgramDetails {
  * @export
  * @namespace ProgramDetails
  */
-export declare namespace ProgramDetails {
+export namespace ProgramDetails {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        None = <any> 'None',
-        Pending = <any> 'Pending',
-        ErrorCreating = <any> 'ErrorCreating',
-        Active = <any> 'Active',
-        Closed = <any> 'Closed',
-        Archived = <any> 'Archived',
-        ClosedDueToInactivity = <any> 'ClosedDueToInactivity'
+        None,
+        Pending,
+        ErrorCreating,
+        Active,
+        Closed,
+        Archived,
+        ClosedDueToInactivity
     }
 }
 
@@ -4073,38 +4073,38 @@ export interface ProgramDetailsFull {
  * @export
  * @namespace ProgramDetailsFull
  */
-export declare namespace ProgramDetailsFull {
+export namespace ProgramDetailsFull {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        None = <any> 'None',
-        Pending = <any> 'Pending',
-        ErrorCreating = <any> 'ErrorCreating',
-        Active = <any> 'Active',
-        Closed = <any> 'Closed',
-        Archived = <any> 'Archived',
-        ClosedDueToInactivity = <any> 'ClosedDueToInactivity'
+        None,
+        Pending,
+        ErrorCreating,
+        Active,
+        Closed,
+        Archived,
+        ClosedDueToInactivity
     }
 }
 
@@ -4466,25 +4466,25 @@ export interface ProgramProfitChart {
  * @export
  * @namespace ProgramProfitChart
  */
-export declare namespace ProgramProfitChart {
+export namespace ProgramProfitChart {
     /**
      * @export
      * @enum {string}
      */
     export enum ProgramCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -4596,50 +4596,50 @@ export interface ProgramRequest {
  * @export
  * @namespace ProgramRequest
  */
-export declare namespace ProgramRequest {
+export namespace ProgramRequest {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        Invest = <any> 'Invest',
-        Withdrawal = <any> 'Withdrawal'
+        Invest,
+        Withdrawal
     }
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        New = <any> 'New',
-        Executed = <any> 'Executed',
-        Cancelled = <any> 'Cancelled'
+        New,
+        Executed,
+        Cancelled
     }
     /**
      * @export
      * @enum {string}
      */
     export enum ProgramTypeEnum {
-        Program = <any> 'Program',
-        Fund = <any> 'Fund'
+        Program,
+        Fund
     }
 }
 
@@ -4809,44 +4809,44 @@ export interface ProgramStatistic {
  * @export
  * @namespace ProgramStatistic
  */
-export declare namespace ProgramStatistic {
+export namespace ProgramStatistic {
     /**
      * @export
      * @enum {string}
      */
     export enum StartCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum InvestedCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -5010,25 +5010,25 @@ export interface RateItem {
  * @export
  * @namespace RateItem
  */
-export declare namespace RateItem {
+export namespace RateItem {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -5640,25 +5640,25 @@ export interface WalletInfo {
  * @export
  * @namespace WalletInfo
  */
-export declare namespace WalletInfo {
+export namespace WalletInfo {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -5722,33 +5722,33 @@ export interface WalletPendingTransaction {
  * @export
  * @namespace WalletPendingTransaction
  */
-export declare namespace WalletPendingTransaction {
+export namespace WalletPendingTransaction {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum TypeEnum {
-        Deposit = <any> 'Deposit',
-        Withdrawn = <any> 'Withdrawn'
+        Deposit,
+        Withdrawn
     }
 }
 
@@ -5942,86 +5942,86 @@ export interface WalletTransaction {
  * @export
  * @namespace WalletTransaction
  */
-export declare namespace WalletTransaction {
+export namespace WalletTransaction {
     /**
      * @export
      * @enum {string}
      */
     export enum SourceTypeEnum {
-        Wallet = <any> 'Wallet',
-        Program = <any> 'Program',
-        Fund = <any> 'Fund',
-        ProgramRequest = <any> 'ProgramRequest',
-        FundRequest = <any> 'FundRequest',
-        WithdrawalRequest = <any> 'WithdrawalRequest',
-        PaymentTransaction = <any> 'PaymentTransaction'
+        Wallet,
+        Program,
+        Fund,
+        ProgramRequest,
+        FundRequest,
+        WithdrawalRequest,
+        PaymentTransaction
     }
     /**
      * @export
      * @enum {string}
      */
     export enum SourceCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
     /**
      * @export
      * @enum {string}
      */
     export enum ActionEnum {
-        Transfer = <any> 'Transfer',
-        ProgramOpen = <any> 'ProgramOpen',
-        ProgramProfit = <any> 'ProgramProfit',
-        ProgramInvest = <any> 'ProgramInvest',
-        ProgramWithdrawal = <any> 'ProgramWithdrawal',
-        ProgramRefundPartialExecution = <any> 'ProgramRefundPartialExecution',
-        ProgramRefundClose = <any> 'ProgramRefundClose',
-        ProgramRequestInvest = <any> 'ProgramRequestInvest',
-        ProgramRequestWithdrawal = <any> 'ProgramRequestWithdrawal',
-        ProgramRequestCancel = <any> 'ProgramRequestCancel'
+        Transfer,
+        ProgramOpen,
+        ProgramProfit,
+        ProgramInvest,
+        ProgramWithdrawal,
+        ProgramRefundPartialExecution,
+        ProgramRefundClose,
+        ProgramRequestInvest,
+        ProgramRequestWithdrawal,
+        ProgramRequestCancel
     }
     /**
      * @export
      * @enum {string}
      */
     export enum DestinationTypeEnum {
-        Wallet = <any> 'Wallet',
-        Program = <any> 'Program',
-        Fund = <any> 'Fund',
-        ProgramRequest = <any> 'ProgramRequest',
-        FundRequest = <any> 'FundRequest',
-        WithdrawalRequest = <any> 'WithdrawalRequest',
-        PaymentTransaction = <any> 'PaymentTransaction'
+        Wallet,
+        Program,
+        Fund,
+        ProgramRequest,
+        FundRequest,
+        WithdrawalRequest,
+        PaymentTransaction
     }
     /**
      * @export
      * @enum {string}
      */
     export enum DestinationCurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -6087,25 +6087,25 @@ export interface WalletWithdrawalInfo {
  * @export
  * @namespace WalletWithdrawalInfo
  */
-export declare namespace WalletWithdrawalInfo {
+export namespace WalletWithdrawalInfo {
     /**
      * @export
      * @enum {string}
      */
     export enum CurrencyEnum {
-        Undefined = <any> 'Undefined',
-        GVT = <any> 'GVT',
-        ETH = <any> 'ETH',
-        BTC = <any> 'BTC',
-        ADA = <any> 'ADA',
-        USDT = <any> 'USDT',
-        XRP = <any> 'XRP',
-        BCH = <any> 'BCH',
-        LTC = <any> 'LTC',
-        DOGE = <any> 'DOGE',
-        BNB = <any> 'BNB',
-        USD = <any> 'USD',
-        EUR = <any> 'EUR'
+        Undefined,
+        GVT,
+        ETH,
+        BTC,
+        ADA,
+        USDT,
+        XRP,
+        BCH,
+        LTC,
+        DOGE,
+        BNB,
+        USD,
+        EUR
     }
 }
 
@@ -6159,18 +6159,18 @@ export interface WithdrawalInfo {
  * @export
  * @namespace WithdrawalInfo
  */
-export declare namespace WithdrawalInfo {
+export namespace WithdrawalInfo {
     /**
      * @export
      * @enum {string}
      */
     export enum StatusEnum {
-        New = <any> 'New',
-        InProcess = <any> 'InProcess',
-        Done = <any> 'Done',
-        Error = <any> 'Error',
-        Rejected = <any> 'Rejected',
-        Cancelled = <any> 'Cancelled'
+        New,
+        InProcess,
+        Done,
+        Error,
+        Rejected,
+        Cancelled
     }
 }
 
@@ -6216,7 +6216,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa/confirm`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6226,10 +6226,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"TwoFactorAuthenticatorConfirm" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6252,7 +6252,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa/create`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6260,10 +6260,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6285,7 +6285,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa/disable`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6295,10 +6295,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"TwoFactorCodeModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6321,7 +6321,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6329,10 +6329,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6354,7 +6354,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa/recoverycodes/new`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6364,10 +6364,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"PasswordModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6391,7 +6391,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/2fa/recoverycodes`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6401,10 +6401,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"PasswordModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6428,7 +6428,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/password/change`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6438,10 +6438,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ChangePasswordViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6460,16 +6460,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthPasswordForgotInvestorPost(model?: ForgotPasswordViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/password/forgot/investor`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ForgotPasswordViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6488,16 +6488,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthPasswordForgotManagerPost(model?: ForgotPasswordViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/password/forgot/manager`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ForgotPasswordViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6516,16 +6516,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthPasswordResetPost(model?: ResetPasswordViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/password/reset`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ResetPasswordViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6548,7 +6548,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/phone/code`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6556,10 +6556,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6581,7 +6581,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/phone/verify`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6593,10 +6593,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6613,16 +6613,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthResendconfirmationlinkPost(model?: ResendConfirmationViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/resendconfirmationlink`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ResendConfirmationViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6641,16 +6641,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthSigninInvestorPost(model?: LoginViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/signin/investor`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"LoginViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6669,16 +6669,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthSigninManagerPost(model?: LoginViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/signin/manager`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"LoginViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6698,7 +6698,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthSignupConfirmPost(userId?: string, code?: string, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/signup/confirm`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6710,10 +6710,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['code'] = code;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6730,16 +6730,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthSignupInvestorPost(model?: RegisterInvestorViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/signup/investor`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"RegisterInvestorViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6758,16 +6758,16 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
         v10AuthSignupManagerPost(model?: RegisterManagerViewModel, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/auth/signup/manager`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"RegisterManagerViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -6790,7 +6790,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/token/devices/logout`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6798,10 +6798,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -6822,7 +6822,7 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/auth/token/update`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6830,10 +6830,10 @@ export const AuthApiFetchParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -7726,14 +7726,14 @@ export const BrokersApiFetchParamCreator = function (configuration?: Configurati
         v10BrokersGet(options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/brokers`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -7829,14 +7829,14 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
             const localVarPath = `/v1.0/file/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -7862,7 +7862,7 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/file/document/upload`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new url.URLSearchParams();
@@ -7877,10 +7877,10 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             localVarRequestOptions.body = localVarFormParams.toString();
 
             return {
@@ -7903,7 +7903,7 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
             }
             const localVarPath = `/v1.0/file/upload`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new url.URLSearchParams();
@@ -7918,10 +7918,10 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
 
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             localVarRequestOptions.body = localVarFormParams.toString();
 
             return {
@@ -8103,14 +8103,14 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
         v10FundsAssetsGet(options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/funds/assets`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8132,14 +8132,14 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}/assets`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8164,7 +8164,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}/charts/balance`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8180,10 +8180,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8208,7 +8208,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}/charts/profit`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8224,10 +8224,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8254,7 +8254,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}/favorite/add`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8262,10 +8262,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8292,7 +8292,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}/favorite/remove`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8300,10 +8300,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8327,7 +8327,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarPath = `/v1.0/funds/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8339,10 +8339,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8373,7 +8373,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
         v10FundsGet(authorization?: string, sorting?: string, currencySecondary?: string, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/funds`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8437,10 +8437,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8461,7 +8461,7 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             }
             const localVarPath = `/v1.0/funds/sets`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8469,10 +8469,10 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -8979,7 +8979,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8987,10 +8987,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9023,7 +9023,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9031,10 +9031,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9073,7 +9073,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9081,10 +9081,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9117,7 +9117,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"percent"}}`, encodeURIComponent(String(percent)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9125,10 +9125,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9161,7 +9161,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9169,10 +9169,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9200,7 +9200,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/investor/funds`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9236,10 +9236,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9268,7 +9268,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/investor`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9308,10 +9308,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9337,7 +9337,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/investor/portfolio/chart`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9365,10 +9365,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9396,7 +9396,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/investor/portfolio/events`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9432,10 +9432,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9468,7 +9468,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9476,10 +9476,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9512,7 +9512,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9520,10 +9520,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9550,7 +9550,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/investor/programs/{id}/reinvest/off`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9558,10 +9558,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9588,7 +9588,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/investor/programs/{id}/reinvest/on`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9596,10 +9596,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9638,7 +9638,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9646,10 +9646,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9682,7 +9682,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9690,10 +9690,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9726,7 +9726,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9734,10 +9734,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9765,7 +9765,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/investor/programs`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9801,10 +9801,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9831,7 +9831,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/investor/programs/requests/{id}/cancel`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9839,10 +9839,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -9875,7 +9875,7 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -9883,10 +9883,10 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -10900,16 +10900,16 @@ export const KycApiFetchParamCreator = function (configuration?: Configuration) 
         v10KycCallbackPost(model?: KycCallback, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/kyc/callback`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"KycCallback" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -11006,7 +11006,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/assets`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11014,10 +11014,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11039,14 +11039,14 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/{id}/details`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11068,14 +11068,14 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11103,7 +11103,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/events`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11139,10 +11139,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11170,7 +11170,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/funds/{id}/assets/update`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11180,10 +11180,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"Array&lt;FundAssetPart&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(assets || {}) : (assets || "");
 
@@ -11213,7 +11213,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/funds/{id}/close`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11225,10 +11225,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11261,7 +11261,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11269,10 +11269,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11305,7 +11305,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11313,10 +11313,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11355,7 +11355,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11363,10 +11363,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11394,7 +11394,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/funds/{id}/update`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11404,10 +11404,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ProgramUpdate" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -11442,7 +11442,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"percent"}}`, encodeURIComponent(String(percent)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11450,10 +11450,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11486,7 +11486,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11494,10 +11494,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11519,7 +11519,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/funds/create`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11529,10 +11529,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"NewFundRequest" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(request || {}) : (request || "");
 
@@ -11562,7 +11562,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/funds`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11598,10 +11598,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11622,7 +11622,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/funds/investment/amount`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11630,10 +11630,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11660,7 +11660,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/funds/requests/{id}/cancel`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11668,10 +11668,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11699,7 +11699,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11735,10 +11735,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11766,7 +11766,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/programs/{id}/close`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11778,10 +11778,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11814,7 +11814,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11822,10 +11822,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11858,7 +11858,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11866,10 +11866,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11896,7 +11896,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/programs/{id}/period/close`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11904,10 +11904,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11946,7 +11946,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11954,10 +11954,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -11985,7 +11985,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/programs/{id}/update`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -11995,10 +11995,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"ProgramUpdate" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -12033,7 +12033,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12041,10 +12041,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -12077,7 +12077,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12085,10 +12085,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -12110,7 +12110,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/programs/create`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12120,10 +12120,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"NewProgramRequest" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(request || {}) : (request || "");
 
@@ -12153,7 +12153,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/programs`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12189,10 +12189,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -12213,7 +12213,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/manager/programs/investment/amount`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12221,10 +12221,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -12251,7 +12251,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/manager/programs/requests/{id}/cancel`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12259,10 +12259,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -12295,7 +12295,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 .replace(`{${"skip"}}`, encodeURIComponent(String(skip)))
                 .replace(`{${"take"}}`, encodeURIComponent(String(take)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -12303,10 +12303,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -13796,7 +13796,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v1.0/notifications`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -13812,10 +13812,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -13836,7 +13836,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v1.0/notifications/new`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -13844,10 +13844,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -13873,7 +13873,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v1.0/notifications/settings/add`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -13901,10 +13901,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -13937,7 +13937,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)))
                 .replace(`{${"enable"}}`, encodeURIComponent(String(enable)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -13945,10 +13945,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -13975,7 +13975,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             const localVarPath = `/v1.0/notifications/settings/funds/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -13983,10 +13983,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14007,7 +14007,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v1.0/notifications/settings`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14015,10 +14015,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14045,7 +14045,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             const localVarPath = `/v1.0/notifications/settings/managers/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14053,10 +14053,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14083,7 +14083,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             const localVarPath = `/v1.0/notifications/settings/programs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14091,10 +14091,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14121,7 +14121,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
             const localVarPath = `/v1.0/notifications/settings/remove/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14129,10 +14129,10 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14592,14 +14592,14 @@ export const PlatformApiFetchParamCreator = function (configuration?: Configurat
         v10PlatformInfoGet(options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/platform/info`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14616,7 +14616,7 @@ export const PlatformApiFetchParamCreator = function (configuration?: Configurat
         v10PlatformLevelsGet(currency?: string, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/platform/levels`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14624,10 +14624,10 @@ export const PlatformApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['currency'] = currency;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14643,14 +14643,14 @@ export const PlatformApiFetchParamCreator = function (configuration?: Configurat
         v10PlatformStatisticGet(options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/platform/statistic`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14824,7 +14824,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile/avatar/remove`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14832,10 +14832,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14862,7 +14862,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             const localVarPath = `/v1.0/profile/avatar/update/{fileId}`
                 .replace(`{${"fileId"}}`, encodeURIComponent(String(fileId)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14870,10 +14870,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14894,7 +14894,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14902,10 +14902,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14926,7 +14926,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile/header`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14934,10 +14934,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -14959,7 +14959,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile/personal/update`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -14969,10 +14969,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"UpdatePersonalDetailViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -14996,7 +14996,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile/update`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15006,10 +15006,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"UpdateProfileViewModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -15031,7 +15031,7 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v1.0/profile/verification/token`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15039,10 +15039,10 @@ export const ProfileApiFetchParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15396,7 +15396,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}/charts/balance`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15412,10 +15412,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15440,7 +15440,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}/charts/profit`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15456,10 +15456,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15486,7 +15486,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}/favorite/add`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15494,10 +15494,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15524,7 +15524,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}/favorite/remove`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15532,10 +15532,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15559,7 +15559,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15571,10 +15571,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15602,7 +15602,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarPath = `/v1.0/programs/{id}/trades`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15630,10 +15630,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['Take'] = take;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15670,7 +15670,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
         v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/programs`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15758,10 +15758,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15778,7 +15778,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
         v10ProgramsLevelupSummaryGet(authorization?: string, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/programs/levelup/summary`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15786,10 +15786,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -15810,7 +15810,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v1.0/programs/sets`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -15818,10 +15818,10 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16368,14 +16368,14 @@ export const RateApiFetchParamCreator = function (configuration?: Configuration)
                 .replace(`{${"from"}}`, encodeURIComponent(String(from)))
                 .replace(`{${"to"}}`, encodeURIComponent(String(to)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16403,14 +16403,14 @@ export const RateApiFetchParamCreator = function (configuration?: Configuration)
                 .replace(`{${"from"}}`, encodeURIComponent(String(from)))
                 .replace(`{${"to"}}`, encodeURIComponent(String(to)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16428,7 +16428,7 @@ export const RateApiFetchParamCreator = function (configuration?: Configuration)
         v10RateGet(from?: Array<string>, to?: Array<string>, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/rate`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16440,10 +16440,10 @@ export const RateApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['to'] = to;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16632,7 +16632,7 @@ export const SearchApiFetchParamCreator = function (configuration?: Configuratio
         v10SearchGet(mask?: string, take?: number, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/search`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16644,10 +16644,10 @@ export const SearchApiFetchParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['take'] = take;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16747,7 +16747,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v1.0/wallet/addresses`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16755,10 +16755,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16785,7 +16785,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v1.0/wallet/{currency}`
                 .replace(`{${"currency"}}`, encodeURIComponent(String(currency)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16793,10 +16793,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16824,7 +16824,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v1.0/wallet/transactions`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16860,10 +16860,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16884,7 +16884,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v1.0/wallet/transactions/pending`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16892,10 +16892,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16915,7 +16915,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v1.0/wallet/withdraw/info`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16923,10 +16923,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16952,7 +16952,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v1.0/wallet/withdraw/request/cancel/{txId}`
                 .replace(`{${"txId"}}`, encodeURIComponent(String(txId)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16960,10 +16960,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -16980,7 +16980,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
         v10WalletWithdrawRequestConfirmPost(requestId?: string, code?: string, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/wallet/withdraw/request/confirm`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -16992,10 +16992,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['code'] = code;
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),
@@ -17016,7 +17016,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v1.0/wallet/withdraw/request/new`;
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -17026,10 +17026,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarHeaderParameter['Content-Type'] = 'application/json-patch+json';
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (<any>"CreateWithdrawalRequestModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(model || {}) : (model || "");
 
@@ -17057,7 +17057,7 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v1.0/wallet/withdraw/request/resend/{txId}`
                 .replace(`{${"txId"}}`, encodeURIComponent(String(txId)));
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -17065,10 +17065,10 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter['Authorization'] = String(authorization);
             }
 
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
 
             return {
                 url: url.format(localVarUrlObj),

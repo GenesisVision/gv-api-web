@@ -102,7 +102,7 @@ export const {{classname}}FetchParamCreator = function (configuration?: Configur
             const localVarPath = `{{{path}}}`{{#pathParams}}
                 .replace(`{${"{{baseName}}"}}`, encodeURIComponent(String({{paramName}}))){{/pathParams}};
             const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: '{{httpMethod}}' }, options);
+            const localVarRequestOptions = (<any>Object).assign({ method: '{{httpMethod}}' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
     {{#hasFormParams}}
@@ -220,10 +220,10 @@ export const {{classname}}FetchParamCreator = function (configuration?: Configur
             {{/consumes.0}}
 
     {{/bodyParam}}
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            localVarUrlObj.query = (<any>Object).assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.headers = (<any>Object).assign({}, localVarHeaderParameter, options.headers);
     {{#hasFormParams}}
             localVarRequestOptions.body = localVarFormParams.toString();
     {{/hasFormParams}}

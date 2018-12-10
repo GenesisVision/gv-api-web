@@ -22,7 +22,7 @@ export interface {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
  * @export
  * @namespace {{classname}}
  */
-export declare namespace {{classname}} {
+export namespace {{classname}} {
 {{#vars}}
     {{#isEnum}}
     /**
@@ -32,7 +32,7 @@ export declare namespace {{classname}} {
     export enum {{enumName}} {
     {{#allowableValues}}
         {{#enumVars}}
-        {{{name}}} = <any> {{{value}}}{{^-last}},{{/-last}}
+        {{{name}}}{{^-last}},{{/-last}}
         {{/enumVars}}
     {{/allowableValues}}
     }
