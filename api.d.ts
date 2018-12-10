@@ -6550,12 +6550,16 @@ export declare class AuthApi extends BaseAPI {
      *
      * @summary 2FA confirm
      * @param {string} authorization JWT access token
-     * @param {TwoFactorAuthenticatorConfirm} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorAuthenticatorConfirm} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faConfirmPost(authorization: string, model?: TwoFactorAuthenticatorConfirm, options?: any): Promise<RecoveryCodesViewModel>;
+    v10Auth2faConfirmPost(authorization: string, options?: {
+        model?: TwoFactorAuthenticatorConfirm;
+    }, requestOptions?: any): Promise<RecoveryCodesViewModel>;
     /**
      *
      * @summary 2FA create
@@ -6564,17 +6568,21 @@ export declare class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faCreatePost(authorization: string, options?: any): Promise<TwoFactorAuthenticator>;
+    v10Auth2faCreatePost(authorization: string, requestOptions?: any): Promise<TwoFactorAuthenticator>;
     /**
      *
      * @summary 2FA disable
      * @param {string} authorization JWT access token
-     * @param {TwoFactorCodeModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorCodeModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faDisablePost(authorization: string, model?: TwoFactorCodeModel, options?: any): Promise<Response>;
+    v10Auth2faDisablePost(authorization: string, options?: {
+        model?: TwoFactorCodeModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary 2FA status
@@ -6583,64 +6591,85 @@ export declare class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faGet(authorization: string, options?: any): Promise<TwoFactorStatus>;
+    v10Auth2faGet(authorization: string, requestOptions?: any): Promise<TwoFactorStatus>;
     /**
      *
      * @summary 2FA generate new recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faRecoverycodesNewPost(authorization: string, model?: PasswordModel, options?: any): Promise<RecoveryCodesViewModel>;
+    v10Auth2faRecoverycodesNewPost(authorization: string, options?: {
+        model?: PasswordModel;
+    }, requestOptions?: any): Promise<RecoveryCodesViewModel>;
     /**
      *
      * @summary 2FA recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10Auth2faRecoverycodesPost(authorization: string, model?: PasswordModel, options?: any): Promise<RecoveryCodesViewModel>;
+    v10Auth2faRecoverycodesPost(authorization: string, options?: {
+        model?: PasswordModel;
+    }, requestOptions?: any): Promise<RecoveryCodesViewModel>;
     /**
      *
      * @summary Change password
      * @param {string} authorization JWT access token
-     * @param {ChangePasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {ChangePasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPasswordChangePost(authorization: string, model?: ChangePasswordViewModel, options?: any): Promise<string>;
+    v10AuthPasswordChangePost(authorization: string, options?: {
+        model?: ChangePasswordViewModel;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Forgot password for investor
-     * @param {ForgotPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPasswordForgotInvestorPost(model?: ForgotPasswordViewModel, options?: any): Promise<Response>;
+    v10AuthPasswordForgotInvestorPost(options?: {
+        model?: ForgotPasswordViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Forgot password for manager
-     * @param {ForgotPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPasswordForgotManagerPost(model?: ForgotPasswordViewModel, options?: any): Promise<Response>;
+    v10AuthPasswordForgotManagerPost(options?: {
+        model?: ForgotPasswordViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Reset password
-     * @param {ResetPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ResetPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPasswordResetPost(model?: ResetPasswordViewModel, options?: any): Promise<string>;
+    v10AuthPasswordResetPost(options?: {
+        model?: ResetPasswordViewModel;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Get phone number verification code
@@ -6649,72 +6678,96 @@ export declare class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPhoneCodePost(authorization: string, options?: any): Promise<number>;
+    v10AuthPhoneCodePost(authorization: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Verify phone number
      * @param {string} authorization JWT access token
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthPhoneVerifyPost(authorization: string, code?: string, options?: any): Promise<Response>;
+    v10AuthPhoneVerifyPost(authorization: string, options?: {
+        code?: string;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Resend Confirmation Link
-     * @param {ResendConfirmationViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ResendConfirmationViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthResendconfirmationlinkPost(model?: ResendConfirmationViewModel, options?: any): Promise<Response>;
+    v10AuthResendconfirmationlinkPost(options?: {
+        model?: ResendConfirmationViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Authorize
-     * @param {LoginViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthSigninInvestorPost(model?: LoginViewModel, options?: any): Promise<string>;
+    v10AuthSigninInvestorPost(options?: {
+        model?: LoginViewModel;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Authorize
-     * @param {LoginViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthSigninManagerPost(model?: LoginViewModel, options?: any): Promise<string>;
+    v10AuthSigninManagerPost(options?: {
+        model?: LoginViewModel;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Confirm email after registration
-     * @param {string} [userId]
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.userId
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthSignupConfirmPost(userId?: string, code?: string, options?: any): Promise<string>;
+    v10AuthSignupConfirmPost(options?: {
+        userId?: string;
+        code?: string;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary New investor registration
-     * @param {RegisterInvestorViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {RegisterInvestorViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthSignupInvestorPost(model?: RegisterInvestorViewModel, options?: any): Promise<Response>;
+    v10AuthSignupInvestorPost(options?: {
+        model?: RegisterInvestorViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary New manager registration
-     * @param {RegisterManagerViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {RegisterManagerViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthSignupManagerPost(model?: RegisterManagerViewModel, options?: any): Promise<Response>;
+    v10AuthSignupManagerPost(options?: {
+        model?: RegisterManagerViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Logout from another devices
@@ -6723,7 +6776,7 @@ export declare class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthTokenDevicesLogoutPost(authorization: string, options?: any): Promise<string>;
+    v10AuthTokenDevicesLogoutPost(authorization: string, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Update auth token
@@ -6732,7 +6785,7 @@ export declare class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    v10AuthTokenUpdatePost(authorization: string, options?: any): Promise<string>;
+    v10AuthTokenUpdatePost(authorization: string, requestOptions?: any): Promise<string>;
 }
 /**
  * BrokersApi - fetch parameter creator
@@ -6787,7 +6840,7 @@ export declare class BrokersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BrokersApi
      */
-    v10BrokersGet(options?: any): Promise<BrokersInfo>;
+    v10BrokersGet(requestOptions?: any): Promise<BrokersInfo>;
 }
 /**
  * FileApi - fetch parameter creator
@@ -6900,7 +6953,7 @@ export declare class FileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    v10FileByIdGet(id: string, options?: any): Promise<Response>;
+    v10FileByIdGet(id: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Upload document
@@ -6910,17 +6963,21 @@ export declare class FileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    v10FileDocumentUploadPost(authorization: string, uploadedFile: any, options?: any): Promise<UploadResult>;
+    v10FileDocumentUploadPost(authorization: string, uploadedFile: any, requestOptions?: any): Promise<UploadResult>;
     /**
      *
      * @summary Upload file
      * @param {any} uploadedFile Upload File
-     * @param {string} [authorization]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    v10FileUploadPost(uploadedFile: any, authorization?: string, options?: any): Promise<UploadResult>;
+    v10FileUploadPost(uploadedFile: any, options?: {
+        authorization?: string;
+    }, requestOptions?: any): Promise<UploadResult>;
 }
 /**
  * FundsApi - fetch parameter creator
@@ -7239,7 +7296,7 @@ export declare class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsAssetsGet(options?: any): Promise<PlatformAssets>;
+    v10FundsAssetsGet(requestOptions?: any): Promise<PlatformAssets>;
     /**
      *
      * @summary Fund assets info
@@ -7248,31 +7305,47 @@ export declare class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdAssetsGet(id: string, options?: any): Promise<FundAssetsListInfo>;
+    v10FundsByIdAssetsGet(id: string, requestOptions?: any): Promise<FundAssetsListInfo>;
     /**
      *
      * @summary Fund balance chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): Promise<FundBalanceChart>;
+    v10FundsByIdChartsBalanceGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+    }, requestOptions?: any): Promise<FundBalanceChart>;
     /**
      *
      * @summary Fund profit chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): Promise<FundProfitChart>;
+    v10FundsByIdChartsProfitGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+    }, requestOptions?: any): Promise<FundProfitChart>;
     /**
      *
      * @summary Add to favorites
@@ -7282,7 +7355,7 @@ export declare class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdFavoriteAddPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10FundsByIdFavoriteAddPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Remove from favorites
@@ -7292,41 +7365,78 @@ export declare class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Funds details
      * @param {string} id
-     * @param {string} [authorization]
-     * @param {string} [currencySecondary]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
+
+    * @param {string} opts.currencySecondary
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): Promise<FundDetailsFull>;
+    v10FundsByIdGet(id: string, options?: {
+        authorization?: string;
+        currencySecondary?: string;
+    }, requestOptions?: any): Promise<FundDetailsFull>;
     /**
      *
      * @summary Funds list
-     * @param {string} [authorization]
-     * @param {string} [sorting]
-     * @param {string} [currencySecondary]
-     * @param {Date} [statisticDateFrom]
-     * @param {Date} [statisticDateTo]
-     * @param {number} [chartPointsCount]
-     * @param {string} [mask]
-     * @param {string} [facetId]
-     * @param {boolean} [isFavorite]
-     * @param {boolean} [isEnabled]
-     * @param {Array<string>} [ids]
-     * @param {string} [managerId]
-     * @param {string} [programManagerId]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
+
+    * @param {string} opts.sorting
+
+    * @param {string} opts.currencySecondary
+
+    * @param {Date} opts.statisticDateFrom
+
+    * @param {Date} opts.statisticDateTo
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.mask
+
+    * @param {string} opts.facetId
+
+    * @param {boolean} opts.isFavorite
+
+    * @param {boolean} opts.isEnabled
+
+    * @param {Array<string>} opts.ids
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.programManagerId
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsGet(authorization?: string, sorting?: string, currencySecondary?: string, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options?: any): Promise<FundsList>;
+    v10FundsGet(options?: {
+        authorization?: string;
+        sorting?: string;
+        currencySecondary?: string;
+        statisticDateFrom?: Date;
+        statisticDateTo?: Date;
+        chartPointsCount?: number;
+        mask?: string;
+        facetId?: string;
+        isFavorite?: boolean;
+        isEnabled?: boolean;
+        ids?: Array<string>;
+        managerId?: string;
+        programManagerId?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<FundsList>;
     /**
      *
      * @summary Fund sets
@@ -7335,7 +7445,7 @@ export declare class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    v10FundsSetsGet(authorization: string, options?: any): Promise<ProgramSets>;
+    v10FundsSetsGet(authorization: string, requestOptions?: any): Promise<ProgramSets>;
 }
 /**
  * InvestorApi - fetch parameter creator
@@ -8011,7 +8121,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for investing into the fund
@@ -8022,7 +8132,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<FundInvestInfo>;
+    v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<FundInvestInfo>;
     /**
      *
      * @summary Get program/fund requests
@@ -8034,7 +8144,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
     /**
      *
      * @summary Withdraw from fund. Percent is % of investor total money.
@@ -8045,7 +8155,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: any): Promise<Response>;
+    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for withdrawal from fund
@@ -8056,70 +8166,132 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<FundWithdrawInfo>;
+    v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<FundWithdrawInfo>;
     /**
      *
      * @summary Funds list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any): Promise<FundsList>;
+    v10InvestorFundsGet(authorization: string, options?: {
+        sorting?: string;
+        from?: Date;
+        to?: Date;
+        chartPointsCount?: number;
+        currencySecondary?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<FundsList>;
     /**
      *
      * @summary Summary dashboard info
      * @param {string} authorization JWT access token
-     * @param {string} [chartCurrency]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [balancePoints]
-     * @param {number} [programsPoints]
-     * @param {number} [eventsTake]
-     * @param {number} [requestsSkip]
-     * @param {number} [requestsTake]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.chartCurrency
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.balancePoints
+
+    * @param {number} opts.programsPoints
+
+    * @param {number} opts.eventsTake
+
+    * @param {number} opts.requestsSkip
+
+    * @param {number} opts.requestsTake
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorGet(authorization: string, chartCurrency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, eventsTake?: number, requestsSkip?: number, requestsTake?: number, options?: any): Promise<DashboardSummary>;
+    v10InvestorGet(authorization: string, options?: {
+        chartCurrency?: string;
+        from?: Date;
+        to?: Date;
+        balancePoints?: number;
+        programsPoints?: number;
+        eventsTake?: number;
+        requestsSkip?: number;
+        requestsTake?: number;
+    }, requestOptions?: any): Promise<DashboardSummary>;
     /**
      *
      * @summary Portfolio charts
      * @param {string} authorization JWT access token
-     * @param {string} [currency]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [balancePoints]
-     * @param {number} [programsPoints]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.currency
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.balancePoints
+
+    * @param {number} opts.programsPoints
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorPortfolioChartGet(authorization: string, currency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, options?: any): Promise<DashboardChartValue>;
+    v10InvestorPortfolioChartGet(authorization: string, options?: {
+        currency?: string;
+        from?: Date;
+        to?: Date;
+        balancePoints?: number;
+        programsPoints?: number;
+    }, requestOptions?: any): Promise<DashboardChartValue>;
     /**
      *
      * @summary Portfolio events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorPortfolioEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): Promise<DashboardPortfolioEvents>;
+    v10InvestorPortfolioEventsGet(authorization: string, options?: {
+        assetId?: string;
+        from?: Date;
+        to?: Date;
+        type?: string;
+        assetType?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<DashboardPortfolioEvents>;
     /**
      *
      * @summary Investing into the program
@@ -8130,7 +8302,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for investing into the program
@@ -8141,7 +8313,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<ProgramInvestInfo>;
+    v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<ProgramInvestInfo>;
     /**
      *
      * @summary Disable reinvesting
@@ -8151,7 +8323,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Enable reinvesting
@@ -8161,7 +8333,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Get program/fund requests
@@ -8173,7 +8345,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
     /**
      *
      * @summary Withdraw from investment program
@@ -8184,7 +8356,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for withdrawal from investment program
@@ -8195,23 +8367,39 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<ProgramWithdrawInfo>;
+    v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<ProgramWithdrawInfo>;
     /**
      *
      * @summary Dashboard program list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any): Promise<ProgramsList>;
+    v10InvestorProgramsGet(authorization: string, options?: {
+        sorting?: string;
+        from?: Date;
+        to?: Date;
+        chartPointsCount?: number;
+        currencySecondary?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<ProgramsList>;
     /**
      *
      * @summary Cancel investment program request
@@ -8221,7 +8409,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Get all requests
@@ -8232,7 +8420,7 @@ export declare class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
 }
 /**
  * KycApi - fetch parameter creator
@@ -8282,12 +8470,15 @@ export declare const KycApiFactory: (configuration?: Configuration, fetch?: Fetc
 export declare class KycApi extends BaseAPI {
     /**
      *
-     * @param {KycCallback} [model]
+    * @param {Object} opts Optional parameters
+    * @param {KycCallback} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KycApi
      */
-    v10KycCallbackPost(model?: KycCallback, options?: any): Promise<string>;
+    v10KycCallbackPost(options?: {
+        model?: KycCallback;
+    }, requestOptions?: any): Promise<string>;
 }
 /**
  * ManagerApi - fetch parameter creator
@@ -9243,7 +9434,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerAssetsGet(authorization: string, options?: any): Promise<ManagerAssets>;
+    v10ManagerAssetsGet(authorization: string, requestOptions?: any): Promise<ManagerAssets>;
     /**
      *
      * @summary Manager details
@@ -9252,7 +9443,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerByIdDetailsGet(id: string, options?: any): Promise<ManagerProfileDetails>;
+    v10ManagerByIdDetailsGet(id: string, requestOptions?: any): Promise<ManagerProfileDetails>;
     /**
      *
      * @summary Manager profile
@@ -9261,45 +9452,71 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerByIdGet(id: string, options?: any): Promise<ManagerProfile>;
+    v10ManagerByIdGet(id: string, requestOptions?: any): Promise<ManagerProfile>;
     /**
      *
      * @summary Manager events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): Promise<ManagerPortfolioEvents>;
+    v10ManagerEventsGet(authorization: string, options?: {
+        assetId?: string;
+        from?: Date;
+        to?: Date;
+        type?: string;
+        assetType?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<ManagerPortfolioEvents>;
     /**
      *
      * @summary Update fund assets parts
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {Array<FundAssetPart>} [assets]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {Array<FundAssetPart>} opts.assets
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, assets?: Array<FundAssetPart>, options?: any): Promise<Response>;
+    v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, options?: {
+        assets?: Array<FundAssetPart>;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Close existing fund
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): Promise<Response>;
+    v10ManagerFundsByIdClosePost(id: string, authorization: string, options?: {
+        twoFactorCode?: string;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Deposit
@@ -9310,7 +9527,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for investing into the fund
@@ -9321,7 +9538,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<FundInvestInfo>;
+    v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<FundInvestInfo>;
     /**
      *
      * @summary Get investment program/fund requests
@@ -9333,18 +9550,23 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
     /**
      *
      * @summary Update investment program/fund details
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): Promise<Response>;
+    v10ManagerFundsByIdUpdatePost(id: string, authorization: string, options?: {
+        model?: ProgramUpdate;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Withdraw from fund. Percent is % of investor total money.
@@ -9355,7 +9577,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: any): Promise<Response>;
+    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for withdrawal from fund
@@ -9366,33 +9588,53 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<ManagerFundWithdrawInfo>;
+    v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<ManagerFundWithdrawInfo>;
     /**
      *
      * @summary Create fund
      * @param {string} authorization JWT access token
-     * @param {NewFundRequest} [request]
+    * @param {Object} opts Optional parameters
+
+    * @param {NewFundRequest} opts.request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsCreatePost(authorization: string, request?: NewFundRequest, options?: any): Promise<Response>;
+    v10ManagerFundsCreatePost(authorization: string, options?: {
+        request?: NewFundRequest;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Manager funds
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any): Promise<FundsList>;
+    v10ManagerFundsGet(authorization: string, options?: {
+        sorting?: string;
+        from?: Date;
+        to?: Date;
+        chartPointsCount?: number;
+        currencySecondary?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<FundsList>;
     /**
      *
      * @summary Get GVT investment to create fund
@@ -9401,7 +9643,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsInvestmentAmountGet(authorization: string, options?: any): Promise<number>;
+    v10ManagerFundsInvestmentAmountGet(authorization: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Cancel investment program/fund request
@@ -9411,34 +9653,55 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Manager dashboard
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): Promise<ManagerDashboard>;
+    v10ManagerGet(authorization: string, options?: {
+        assetId?: string;
+        from?: Date;
+        to?: Date;
+        type?: string;
+        assetType?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<ManagerDashboard>;
     /**
      *
      * @summary Close existing investment program
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): Promise<Response>;
+    v10ManagerProgramsByIdClosePost(id: string, authorization: string, options?: {
+        twoFactorCode?: string;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Deposit
@@ -9449,7 +9712,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for investing into the program
@@ -9460,7 +9723,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<ProgramInvestInfo>;
+    v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<ProgramInvestInfo>;
     /**
      *
      * @summary Close current period
@@ -9470,7 +9733,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Get investment program/fund requests
@@ -9482,18 +9745,23 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
     /**
      *
      * @summary Update investment program/fund details
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): Promise<Response>;
+    v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, options?: {
+        model?: ProgramUpdate;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Withdraw from program
@@ -9504,7 +9772,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): Promise<Response>;
+    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Data for withdrawal from investment program
@@ -9515,33 +9783,53 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): Promise<ManagerProgramWithdrawInfo>;
+    v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any): Promise<ManagerProgramWithdrawInfo>;
     /**
      *
      * @summary Create an investment program
      * @param {string} authorization JWT access token
-     * @param {NewProgramRequest} [request]
+    * @param {Object} opts Optional parameters
+
+    * @param {NewProgramRequest} opts.request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsCreatePost(authorization: string, request?: NewProgramRequest, options?: any): Promise<Response>;
+    v10ManagerProgramsCreatePost(authorization: string, options?: {
+        request?: NewProgramRequest;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Manager programs
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any): Promise<ProgramsList>;
+    v10ManagerProgramsGet(authorization: string, options?: {
+        sorting?: string;
+        from?: Date;
+        to?: Date;
+        chartPointsCount?: number;
+        currencySecondary?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<ProgramsList>;
     /**
      *
      * @summary Get GVT investment to create program
@@ -9550,7 +9838,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsInvestmentAmountGet(authorization: string, options?: any): Promise<number>;
+    v10ManagerProgramsInvestmentAmountGet(authorization: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Cancel investment program/fund request
@@ -9560,7 +9848,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Get all requests
@@ -9571,7 +9859,7 @@ export declare class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): Promise<ProgramRequests>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, requestOptions?: any): Promise<ProgramRequests>;
 }
 /**
  * NotificationsApi - fetch parameter creator
@@ -9857,13 +10145,19 @@ export declare class NotificationsApi extends BaseAPI {
      *
      * @summary User notifications
      * @param {string} authorization JWT access token
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsGet(authorization: string, skip?: number, take?: number, options?: any): Promise<NotificationList>;
+    v10NotificationsGet(authorization: string, options?: {
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<NotificationList>;
     /**
      *
      * @summary Unread notifications count
@@ -9872,21 +10166,33 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsNewGet(authorization: string, options?: any): Promise<number>;
+    v10NotificationsNewGet(authorization: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Add new setting
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {string} [managerId]
-     * @param {string} [type]
-     * @param {string} [conditionType]
-     * @param {number} [conditionAmount]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.type
+
+    * @param {string} opts.conditionType
+
+    * @param {number} opts.conditionAmount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsAddPost(authorization: string, assetId?: string, managerId?: string, type?: string, conditionType?: string, conditionAmount?: number, options?: any): Promise<string>;
+    v10NotificationsSettingsAddPost(authorization: string, options?: {
+        assetId?: string;
+        managerId?: string;
+        type?: string;
+        conditionType?: string;
+        conditionAmount?: number;
+    }, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary Enable/disable setting
@@ -9897,7 +10203,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string, options?: any): Promise<string>;
+    v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string, requestOptions?: any): Promise<string>;
     /**
      *
      * @summary User settings for fund
@@ -9907,7 +10213,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsFundsByIdGet(id: string, authorization: string, options?: any): Promise<FundNotificationSettingList>;
+    v10NotificationsSettingsFundsByIdGet(id: string, authorization: string, requestOptions?: any): Promise<FundNotificationSettingList>;
     /**
      *
      * @summary User settings
@@ -9916,7 +10222,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsGet(authorization: string, options?: any): Promise<NotificationSettingList>;
+    v10NotificationsSettingsGet(authorization: string, requestOptions?: any): Promise<NotificationSettingList>;
     /**
      *
      * @summary User settings for manager
@@ -9926,7 +10232,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, options?: any): Promise<ManagerNotificationSettingList>;
+    v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, requestOptions?: any): Promise<ManagerNotificationSettingList>;
     /**
      *
      * @summary User settings for program
@@ -9936,7 +10242,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, options?: any): Promise<ProgramNotificationSettingList>;
+    v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, requestOptions?: any): Promise<ProgramNotificationSettingList>;
     /**
      *
      * @summary Remove setting
@@ -9946,7 +10252,7 @@ export declare class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
 }
 /**
  * PlatformApi - fetch parameter creator
@@ -10046,16 +10352,19 @@ export declare class PlatformApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    v10PlatformInfoGet(options?: any): Promise<PlatformInfo>;
+    v10PlatformInfoGet(requestOptions?: any): Promise<PlatformInfo>;
     /**
      *
      * @summary Investment programs levels
-     * @param {string} [currency]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.currency
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    v10PlatformLevelsGet(currency?: string, options?: any): Promise<ProgramsLevelsInfo>;
+    v10PlatformLevelsGet(options?: {
+        currency?: string;
+    }, requestOptions?: any): Promise<ProgramsLevelsInfo>;
     /**
      *
      * @summary Platform statistic
@@ -10063,7 +10372,7 @@ export declare class PlatformApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    v10PlatformStatisticGet(options?: any): Promise<PlatformStatistic>;
+    v10PlatformStatisticGet(requestOptions?: any): Promise<PlatformStatistic>;
 }
 /**
  * ProfileApi - fetch parameter creator
@@ -10272,7 +10581,7 @@ export declare class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileAvatarRemovePost(authorization: string, options?: any): Promise<Response>;
+    v10ProfileAvatarRemovePost(authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Update avatar
@@ -10282,7 +10591,7 @@ export declare class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, options?: any): Promise<Response>;
+    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Get full profile
@@ -10291,7 +10600,7 @@ export declare class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileGet(authorization: string, options?: any): Promise<ProfileFullViewModel>;
+    v10ProfileGet(authorization: string, requestOptions?: any): Promise<ProfileFullViewModel>;
     /**
      *
      * @summary Get header profile
@@ -10300,27 +10609,35 @@ export declare class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileHeaderGet(authorization: string, options?: any): Promise<ProfileHeaderViewModel>;
+    v10ProfileHeaderGet(authorization: string, requestOptions?: any): Promise<ProfileHeaderViewModel>;
     /**
      *
      * @summary Update user personal details
      * @param {string} authorization JWT access token
-     * @param {UpdatePersonalDetailViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdatePersonalDetailViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfilePersonalUpdatePost(authorization: string, model?: UpdatePersonalDetailViewModel, options?: any): Promise<Response>;
+    v10ProfilePersonalUpdatePost(authorization: string, options?: {
+        model?: UpdatePersonalDetailViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Update profile
      * @param {string} authorization JWT access token
-     * @param {UpdateProfileViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdateProfileViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileUpdatePost(authorization: string, model?: UpdateProfileViewModel, options?: any): Promise<Response>;
+    v10ProfileUpdatePost(authorization: string, options?: {
+        model?: UpdateProfileViewModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @param {string} authorization JWT access token
@@ -10328,7 +10645,7 @@ export declare class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    v10ProfileVerificationTokenPost(authorization: string, options?: any): Promise<string>;
+    v10ProfileVerificationTokenPost(authorization: string, requestOptions?: any): Promise<string>;
 }
 /**
  * ProgramsApi - fetch parameter creator
@@ -10683,26 +11000,42 @@ export declare class ProgramsApi extends BaseAPI {
      *
      * @summary Program balance chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): Promise<ProgramBalanceChart>;
+    v10ProgramsByIdChartsBalanceGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+    }, requestOptions?: any): Promise<ProgramBalanceChart>;
     /**
      *
      * @summary Program profit chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): Promise<ProgramProfitChart>;
+    v10ProgramsByIdChartsProfitGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+    }, requestOptions?: any): Promise<ProgramProfitChart>;
     /**
      *
      * @summary Add to favorites
@@ -10712,7 +11045,7 @@ export declare class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Remove from favorites
@@ -10722,71 +11055,137 @@ export declare class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): Promise<Response>;
+    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
      * @summary Program details
      * @param {string} id
-     * @param {string} [authorization]
-     * @param {string} [currencySecondary]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
+
+    * @param {string} opts.currencySecondary
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): Promise<ProgramDetailsFull>;
+    v10ProgramsByIdGet(id: string, options?: {
+        authorization?: string;
+        currencySecondary?: string;
+    }, requestOptions?: any): Promise<ProgramDetailsFull>;
     /**
      *
      * @summary Trade history
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {string} [symbol]
-     * @param {string} [sorting]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {string} opts.symbol
+
+    * @param {string} opts.sorting
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, skip?: number, take?: number, options?: any): Promise<TradesViewModel>;
+    v10ProgramsByIdTradesGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        symbol?: string;
+        sorting?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<TradesViewModel>;
     /**
      *
      * @summary Programs list
-     * @param {string} [authorization]
-     * @param {number} [levelMin]
-     * @param {number} [levelMax]
-     * @param {number} [profitAvgMin]
-     * @param {number} [profitAvgMax]
-     * @param {string} [sorting]
-     * @param {string} [programCurrency]
-     * @param {string} [currencySecondary]
-     * @param {number} [levelUpFrom]
-     * @param {Date} [statisticDateFrom]
-     * @param {Date} [statisticDateTo]
-     * @param {number} [chartPointsCount]
-     * @param {string} [mask]
-     * @param {string} [facetId]
-     * @param {boolean} [isFavorite]
-     * @param {boolean} [isEnabled]
-     * @param {Array<string>} [ids]
-     * @param {string} [managerId]
-     * @param {string} [programManagerId]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
+
+    * @param {number} opts.levelMin
+
+    * @param {number} opts.levelMax
+
+    * @param {number} opts.profitAvgMin
+
+    * @param {number} opts.profitAvgMax
+
+    * @param {string} opts.sorting
+
+    * @param {string} opts.programCurrency
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.levelUpFrom
+
+    * @param {Date} opts.statisticDateFrom
+
+    * @param {Date} opts.statisticDateTo
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.mask
+
+    * @param {string} opts.facetId
+
+    * @param {boolean} opts.isFavorite
+
+    * @param {boolean} opts.isEnabled
+
+    * @param {Array<string>} opts.ids
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.programManagerId
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options?: any): Promise<ProgramsList>;
+    v10ProgramsGet(options?: {
+        authorization?: string;
+        levelMin?: number;
+        levelMax?: number;
+        profitAvgMin?: number;
+        profitAvgMax?: number;
+        sorting?: string;
+        programCurrency?: string;
+        currencySecondary?: string;
+        levelUpFrom?: number;
+        statisticDateFrom?: Date;
+        statisticDateTo?: Date;
+        chartPointsCount?: number;
+        mask?: string;
+        facetId?: string;
+        isFavorite?: boolean;
+        isEnabled?: boolean;
+        ids?: Array<string>;
+        managerId?: string;
+        programManagerId?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<ProgramsList>;
     /**
      *
      * @summary Level up summary
-     * @param {string} [authorization]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsLevelupSummaryGet(authorization?: string, options?: any): Promise<LevelUpSummary>;
+    v10ProgramsLevelupSummaryGet(options?: {
+        authorization?: string;
+    }, requestOptions?: any): Promise<LevelUpSummary>;
     /**
      *
      * @summary Programs sets
@@ -10795,7 +11194,7 @@ export declare class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    v10ProgramsSetsGet(authorization: string, options?: any): Promise<ProgramSets>;
+    v10ProgramsSetsGet(authorization: string, requestOptions?: any): Promise<ProgramSets>;
 }
 /**
  * RateApi - fetch parameter creator
@@ -10916,7 +11315,7 @@ export declare class RateApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string, options?: any): Promise<number>;
+    v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Get rate
@@ -10926,17 +11325,22 @@ export declare class RateApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    v10RateByFromByToGet(from: string, to: string, options?: any): Promise<number>;
+    v10RateByFromByToGet(from: string, to: string, requestOptions?: any): Promise<number>;
     /**
      *
      * @summary Get rates
-     * @param {Array<string>} [from]
-     * @param {Array<string>} [to]
+    * @param {Object} opts Optional parameters
+    * @param {Array<string>} opts.from
+
+    * @param {Array<string>} opts.to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    v10RateGet(from?: Array<string>, to?: Array<string>, options?: any): Promise<RatesModel>;
+    v10RateGet(options?: {
+        from?: Array<string>;
+        to?: Array<string>;
+    }, requestOptions?: any): Promise<RatesModel>;
 }
 /**
  * SearchApi - fetch parameter creator
@@ -10993,13 +11397,18 @@ export declare class SearchApi extends BaseAPI {
     /**
      *
      * @summary Program / fund / manager search
-     * @param {string} [mask]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.mask
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SearchApi
      */
-    v10SearchGet(mask?: string, take?: number, options?: any): Promise<SearchViewModel>;
+    v10SearchGet(options?: {
+        mask?: string;
+        take?: number;
+    }, requestOptions?: any): Promise<SearchViewModel>;
 }
 /**
  * WalletApi - fetch parameter creator
@@ -11267,7 +11676,7 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletAddressesGet(authorization: string, options?: any): Promise<WalletsInfo>;
+    v10WalletAddressesGet(authorization: string, requestOptions?: any): Promise<WalletsInfo>;
     /**
      *
      * @summary Wallet summary
@@ -11277,23 +11686,39 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletByCurrencyGet(currency: string, authorization: string, options?: any): Promise<WalletSummary>;
+    v10WalletByCurrencyGet(currency: string, authorization: string, requestOptions?: any): Promise<WalletSummary>;
     /**
      *
      * @summary Wallet transactions
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [assetType]
-     * @param {string} [txAction]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.assetType
+
+    * @param {string} opts.txAction
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletTransactionsGet(authorization: string, assetId?: string, from?: Date, to?: Date, assetType?: string, txAction?: string, skip?: number, take?: number, options?: any): Promise<WalletTransactionsViewModel>;
+    v10WalletTransactionsGet(authorization: string, options?: {
+        assetId?: string;
+        from?: Date;
+        to?: Date;
+        assetType?: string;
+        txAction?: string;
+        skip?: number;
+        take?: number;
+    }, requestOptions?: any): Promise<WalletTransactionsViewModel>;
     /**
      *
      * @summary Wallet pending transactions
@@ -11302,7 +11727,7 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletTransactionsPendingGet(authorization: string, options?: any): Promise<WalletPendingTransactionsViewModel>;
+    v10WalletTransactionsPendingGet(authorization: string, requestOptions?: any): Promise<WalletPendingTransactionsViewModel>;
     /**
      *
      * @param {string} authorization JWT access token
@@ -11310,7 +11735,7 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletWithdrawInfoGet(authorization: string, options?: any): Promise<WithdrawalSummary>;
+    v10WalletWithdrawInfoGet(authorization: string, requestOptions?: any): Promise<WithdrawalSummary>;
     /**
      *
      * @param {string} txId
@@ -11319,25 +11744,34 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, options?: any): Promise<Response>;
+    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, requestOptions?: any): Promise<Response>;
     /**
      *
-     * @param {string} [requestId]
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.requestId
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletWithdrawRequestConfirmPost(requestId?: string, code?: string, options?: any): Promise<Response>;
+    v10WalletWithdrawRequestConfirmPost(options?: {
+        requestId?: string;
+        code?: string;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @param {string} authorization JWT access token
-     * @param {CreateWithdrawalRequestModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {CreateWithdrawalRequestModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletWithdrawRequestNewPost(authorization: string, model?: CreateWithdrawalRequestModel, options?: any): Promise<Response>;
+    v10WalletWithdrawRequestNewPost(authorization: string, options?: {
+        model?: CreateWithdrawalRequestModel;
+    }, requestOptions?: any): Promise<Response>;
     /**
      *
      * @param {string} txId
@@ -11346,5 +11780,5 @@ export declare class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, options?: any): Promise<Response>;
+    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, requestOptions?: any): Promise<Response>;
 }

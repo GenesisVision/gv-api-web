@@ -350,14 +350,29 @@ export class {{classname}} extends BaseAPI {
      * @summary {{&summary}}
      {{/summary}}
      {{#allParams}}
-     * @param {{=<% %>=}}{<%&dataType%>}<%={{ }}=%> {{^required}}[{{/required}}{{paramName}}{{^required}}]{{/required}} {{description}}
+    {{#required}}
+     * @param {{=<% %>=}}{<%&dataType%>}<%={{ }}=%> {{paramName}} {{description}}
+    {{/required}}
      {{/allParams}}
+    {{#hasOptionalParams}}
+    * @param {Object} opts Optional parameters{{#allParams}}
+    {{^required}}
+    * @param {{=<% %>=}}{<%&dataType%>}<%={{ }}=%> opts.{{paramName}} {{description}}
+    {{/required}}
+    {{/allParams}}
+    {{/hasOptionalParams}}
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof {{classname}}
      */
-    public {{nickname}}({{#allParams}}{{paramName}}{{^required}}?{{/required}}: {{{dataType}}}, {{/allParams}}options?: any) {
-        return {{classname}}Fp(this.configuration).{{nickname}}({{#allParams}}{{paramName}}, {{/allParams}}options)(this.fetch, this.basePath);
+    public {{nickname}}({{#allParams}}{{#required}}{{paramName}}: {{{dataType}}}, {{/required}}{{/allParams}}{{#hasOptionalParams}}options: {
+        {{#allParams}}
+        {{^required}}
+            {{paramName}}?: {{{dataType}}}{{^-last}}, {{/-last}}
+        {{/required}}
+        {{/allParams}}
+        } = {}, {{/hasOptionalParams}}requestOptions?: any) {
+        return {{classname}}Fp(this.configuration).{{nickname}}({{#allParams}}{{#required}}{{paramName}}, {{/required}}{{/allParams}}{{#hasOptionalParams}}{{#allParams}}{{^required}}options.{{paramName}}{{^-last}}, {{/-last}}{{/required}}{{/allParams}}, {{/hasOptionalParams}}requestOptions)(this.fetch, this.basePath);
     }
 
     {{/operation}}

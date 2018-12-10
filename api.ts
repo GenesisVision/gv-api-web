@@ -7467,13 +7467,17 @@ export class AuthApi extends BaseAPI {
      * 
      * @summary 2FA confirm
      * @param {string} authorization JWT access token
-     * @param {TwoFactorAuthenticatorConfirm} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorAuthenticatorConfirm} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faConfirmPost(authorization: string, model?: TwoFactorAuthenticatorConfirm, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faConfirmPost(authorization, model, options)(this.fetch, this.basePath);
+    public v10Auth2faConfirmPost(authorization: string, options: {
+            model?: TwoFactorAuthenticatorConfirm
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faConfirmPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -7484,21 +7488,25 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faCreatePost(authorization: string, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faCreatePost(authorization, options)(this.fetch, this.basePath);
+    public v10Auth2faCreatePost(authorization: string, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faCreatePost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary 2FA disable
      * @param {string} authorization JWT access token
-     * @param {TwoFactorCodeModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorCodeModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faDisablePost(authorization: string, model?: TwoFactorCodeModel, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faDisablePost(authorization, model, options)(this.fetch, this.basePath);
+    public v10Auth2faDisablePost(authorization: string, options: {
+            model?: TwoFactorCodeModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faDisablePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -7509,83 +7517,104 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faGet(authorization: string, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faGet(authorization, options)(this.fetch, this.basePath);
+    public v10Auth2faGet(authorization: string, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary 2FA generate new recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faRecoverycodesNewPost(authorization: string, model?: PasswordModel, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faRecoverycodesNewPost(authorization, model, options)(this.fetch, this.basePath);
+    public v10Auth2faRecoverycodesNewPost(authorization: string, options: {
+            model?: PasswordModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faRecoverycodesNewPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary 2FA recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10Auth2faRecoverycodesPost(authorization: string, model?: PasswordModel, options?: any) {
-        return AuthApiFp(this.configuration).v10Auth2faRecoverycodesPost(authorization, model, options)(this.fetch, this.basePath);
+    public v10Auth2faRecoverycodesPost(authorization: string, options: {
+            model?: PasswordModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10Auth2faRecoverycodesPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Change password
      * @param {string} authorization JWT access token
-     * @param {ChangePasswordViewModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {ChangePasswordViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPasswordChangePost(authorization: string, model?: ChangePasswordViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPasswordChangePost(authorization, model, options)(this.fetch, this.basePath);
+    public v10AuthPasswordChangePost(authorization: string, options: {
+            model?: ChangePasswordViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPasswordChangePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Forgot password for investor
-     * @param {ForgotPasswordViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPasswordForgotInvestorPost(model?: ForgotPasswordViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPasswordForgotInvestorPost(model, options)(this.fetch, this.basePath);
+    public v10AuthPasswordForgotInvestorPost(options: {
+            model?: ForgotPasswordViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPasswordForgotInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Forgot password for manager
-     * @param {ForgotPasswordViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPasswordForgotManagerPost(model?: ForgotPasswordViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPasswordForgotManagerPost(model, options)(this.fetch, this.basePath);
+    public v10AuthPasswordForgotManagerPost(options: {
+            model?: ForgotPasswordViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPasswordForgotManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Reset password
-     * @param {ResetPasswordViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {ResetPasswordViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPasswordResetPost(model?: ResetPasswordViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPasswordResetPost(model, options)(this.fetch, this.basePath);
+    public v10AuthPasswordResetPost(options: {
+            model?: ResetPasswordViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPasswordResetPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -7596,94 +7625,118 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPhoneCodePost(authorization: string, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPhoneCodePost(authorization, options)(this.fetch, this.basePath);
+    public v10AuthPhoneCodePost(authorization: string, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPhoneCodePost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Verify phone number
      * @param {string} authorization JWT access token
-     * @param {string} [code] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.code 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthPhoneVerifyPost(authorization: string, code?: string, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthPhoneVerifyPost(authorization, code, options)(this.fetch, this.basePath);
+    public v10AuthPhoneVerifyPost(authorization: string, options: {
+            code?: string
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthPhoneVerifyPost(authorization, options.code, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Resend Confirmation Link
-     * @param {ResendConfirmationViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {ResendConfirmationViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthResendconfirmationlinkPost(model?: ResendConfirmationViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthResendconfirmationlinkPost(model, options)(this.fetch, this.basePath);
+    public v10AuthResendconfirmationlinkPost(options: {
+            model?: ResendConfirmationViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthResendconfirmationlinkPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Authorize
-     * @param {LoginViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthSigninInvestorPost(model?: LoginViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthSigninInvestorPost(model, options)(this.fetch, this.basePath);
+    public v10AuthSigninInvestorPost(options: {
+            model?: LoginViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthSigninInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Authorize
-     * @param {LoginViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthSigninManagerPost(model?: LoginViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthSigninManagerPost(model, options)(this.fetch, this.basePath);
+    public v10AuthSigninManagerPost(options: {
+            model?: LoginViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthSigninManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Confirm email after registration
-     * @param {string} [userId] 
-     * @param {string} [code] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.userId 
+
+    * @param {string} opts.code 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthSignupConfirmPost(userId?: string, code?: string, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthSignupConfirmPost(userId, code, options)(this.fetch, this.basePath);
+    public v10AuthSignupConfirmPost(options: {
+            userId?: string, 
+            code?: string
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthSignupConfirmPost(options.userId, options.code, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary New investor registration
-     * @param {RegisterInvestorViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {RegisterInvestorViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthSignupInvestorPost(model?: RegisterInvestorViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthSignupInvestorPost(model, options)(this.fetch, this.basePath);
+    public v10AuthSignupInvestorPost(options: {
+            model?: RegisterInvestorViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthSignupInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary New manager registration
-     * @param {RegisterManagerViewModel} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {RegisterManagerViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthSignupManagerPost(model?: RegisterManagerViewModel, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthSignupManagerPost(model, options)(this.fetch, this.basePath);
+    public v10AuthSignupManagerPost(options: {
+            model?: RegisterManagerViewModel
+        } = {}, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthSignupManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -7694,8 +7747,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthTokenDevicesLogoutPost(authorization: string, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthTokenDevicesLogoutPost(authorization, options)(this.fetch, this.basePath);
+    public v10AuthTokenDevicesLogoutPost(authorization: string, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthTokenDevicesLogoutPost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -7706,8 +7759,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public v10AuthTokenUpdatePost(authorization: string, options?: any) {
-        return AuthApiFp(this.configuration).v10AuthTokenUpdatePost(authorization, options)(this.fetch, this.basePath);
+    public v10AuthTokenUpdatePost(authorization: string, requestOptions?: any) {
+        return AuthApiFp(this.configuration).v10AuthTokenUpdatePost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -7803,8 +7856,8 @@ export class BrokersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof BrokersApi
      */
-    public v10BrokersGet(options?: any) {
-        return BrokersApiFp(this.configuration).v10BrokersGet(options)(this.fetch, this.basePath);
+    public v10BrokersGet(requestOptions?: any) {
+        return BrokersApiFp(this.configuration).v10BrokersGet(requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -8057,8 +8110,8 @@ export class FileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    public v10FileByIdGet(id: string, options?: any) {
-        return FileApiFp(this.configuration).v10FileByIdGet(id, options)(this.fetch, this.basePath);
+    public v10FileByIdGet(id: string, requestOptions?: any) {
+        return FileApiFp(this.configuration).v10FileByIdGet(id, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -8070,21 +8123,25 @@ export class FileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    public v10FileDocumentUploadPost(authorization: string, uploadedFile: any, options?: any) {
-        return FileApiFp(this.configuration).v10FileDocumentUploadPost(authorization, uploadedFile, options)(this.fetch, this.basePath);
+    public v10FileDocumentUploadPost(authorization: string, uploadedFile: any, requestOptions?: any) {
+        return FileApiFp(this.configuration).v10FileDocumentUploadPost(authorization, uploadedFile, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Upload file
      * @param {any} uploadedFile Upload File
-     * @param {string} [authorization] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    public v10FileUploadPost(uploadedFile: any, authorization?: string, options?: any) {
-        return FileApiFp(this.configuration).v10FileUploadPost(uploadedFile, authorization, options)(this.fetch, this.basePath);
+    public v10FileUploadPost(uploadedFile: any, options: {
+            authorization?: string
+        } = {}, requestOptions?: any) {
+        return FileApiFp(this.configuration).v10FileUploadPost(uploadedFile, options.authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -8822,8 +8879,8 @@ export class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsAssetsGet(options?: any) {
-        return FundsApiFp(this.configuration).v10FundsAssetsGet(options)(this.fetch, this.basePath);
+    public v10FundsAssetsGet(requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsAssetsGet(requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -8834,38 +8891,54 @@ export class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdAssetsGet(id: string, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdAssetsGet(id, options)(this.fetch, this.basePath);
+    public v10FundsByIdAssetsGet(id: string, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdAssetsGet(id, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Fund balance chart
      * @param {string} id 
-     * @param {Date} [dateFrom] 
-     * @param {Date} [dateTo] 
-     * @param {number} [maxPointCount] 
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom 
+
+    * @param {Date} opts.dateTo 
+
+    * @param {number} opts.maxPointCount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    public v10FundsByIdChartsBalanceGet(id: string, options: {
+            dateFrom?: Date, 
+            dateTo?: Date, 
+            maxPointCount?: number
+        } = {}, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdChartsBalanceGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Fund profit chart
      * @param {string} id 
-     * @param {Date} [dateFrom] 
-     * @param {Date} [dateTo] 
-     * @param {number} [maxPointCount] 
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom 
+
+    * @param {Date} opts.dateTo 
+
+    * @param {number} opts.maxPointCount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    public v10FundsByIdChartsProfitGet(id: string, options: {
+            dateFrom?: Date, 
+            dateTo?: Date, 
+            maxPointCount?: number
+        } = {}, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdChartsProfitGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -8877,8 +8950,8 @@ export class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdFavoriteAddPost(id: string, authorization: string, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdFavoriteAddPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10FundsByIdFavoriteAddPost(id: string, authorization: string, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdFavoriteAddPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -8890,48 +8963,85 @@ export class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdFavoriteRemovePost(id: string, authorization: string, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdFavoriteRemovePost(id, authorization, options)(this.fetch, this.basePath);
+    public v10FundsByIdFavoriteRemovePost(id: string, authorization: string, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdFavoriteRemovePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Funds details
      * @param {string} id 
-     * @param {string} [authorization] 
-     * @param {string} [currencySecondary] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization 
+
+    * @param {string} opts.currencySecondary 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsByIdGet(id, authorization, currencySecondary, options)(this.fetch, this.basePath);
+    public v10FundsByIdGet(id: string, options: {
+            authorization?: string, 
+            currencySecondary?: string
+        } = {}, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsByIdGet(id, options.authorization, options.currencySecondary, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Funds list
-     * @param {string} [authorization] 
-     * @param {string} [sorting] 
-     * @param {string} [currencySecondary] 
-     * @param {Date} [statisticDateFrom] 
-     * @param {Date} [statisticDateTo] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [mask] 
-     * @param {string} [facetId] 
-     * @param {boolean} [isFavorite] 
-     * @param {boolean} [isEnabled] 
-     * @param {Array<string>} [ids] 
-     * @param {string} [managerId] 
-     * @param {string} [programManagerId] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization 
+
+    * @param {string} opts.sorting 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {Date} opts.statisticDateFrom 
+
+    * @param {Date} opts.statisticDateTo 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.mask 
+
+    * @param {string} opts.facetId 
+
+    * @param {boolean} opts.isFavorite 
+
+    * @param {boolean} opts.isEnabled 
+
+    * @param {Array<string>} opts.ids 
+
+    * @param {string} opts.managerId 
+
+    * @param {string} opts.programManagerId 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsGet(authorization?: string, sorting?: string, currencySecondary?: string, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsGet(authorization, sorting, currencySecondary, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options)(this.fetch, this.basePath);
+    public v10FundsGet(options: {
+            authorization?: string, 
+            sorting?: string, 
+            currencySecondary?: string, 
+            statisticDateFrom?: Date, 
+            statisticDateTo?: Date, 
+            chartPointsCount?: number, 
+            mask?: string, 
+            facetId?: string, 
+            isFavorite?: boolean, 
+            isEnabled?: boolean, 
+            ids?: Array<string>, 
+            managerId?: string, 
+            programManagerId?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsGet(options.authorization, options.sorting, options.currencySecondary, options.statisticDateFrom, options.statisticDateTo, options.chartPointsCount, options.mask, options.facetId, options.isFavorite, options.isEnabled, options.ids, options.managerId, options.programManagerId, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -8942,8 +9052,8 @@ export class FundsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    public v10FundsSetsGet(authorization: string, options?: any) {
-        return FundsApiFp(this.configuration).v10FundsSetsGet(authorization, options)(this.fetch, this.basePath);
+    public v10FundsSetsGet(authorization: string, requestOptions?: any) {
+        return FundsApiFp(this.configuration).v10FundsSetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -10605,8 +10715,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10619,8 +10729,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10634,8 +10744,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10648,8 +10758,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10662,83 +10772,145 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Funds list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [currencySecondary] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    public v10InvestorFundsGet(authorization: string, options: {
+            sorting?: string, 
+            from?: Date, 
+            to?: Date, 
+            chartPointsCount?: number, 
+            currencySecondary?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorFundsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Summary dashboard info
      * @param {string} authorization JWT access token
-     * @param {string} [chartCurrency] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [balancePoints] 
-     * @param {number} [programsPoints] 
-     * @param {number} [eventsTake] 
-     * @param {number} [requestsSkip] 
-     * @param {number} [requestsTake] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.chartCurrency 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.balancePoints 
+
+    * @param {number} opts.programsPoints 
+
+    * @param {number} opts.eventsTake 
+
+    * @param {number} opts.requestsSkip 
+
+    * @param {number} opts.requestsTake 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorGet(authorization: string, chartCurrency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, eventsTake?: number, requestsSkip?: number, requestsTake?: number, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorGet(authorization, chartCurrency, from, to, balancePoints, programsPoints, eventsTake, requestsSkip, requestsTake, options)(this.fetch, this.basePath);
+    public v10InvestorGet(authorization: string, options: {
+            chartCurrency?: string, 
+            from?: Date, 
+            to?: Date, 
+            balancePoints?: number, 
+            programsPoints?: number, 
+            eventsTake?: number, 
+            requestsSkip?: number, 
+            requestsTake?: number
+        } = {}, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorGet(authorization, options.chartCurrency, options.from, options.to, options.balancePoints, options.programsPoints, options.eventsTake, options.requestsSkip, options.requestsTake, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Portfolio charts
      * @param {string} authorization JWT access token
-     * @param {string} [currency] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [balancePoints] 
-     * @param {number} [programsPoints] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.currency 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.balancePoints 
+
+    * @param {number} opts.programsPoints 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorPortfolioChartGet(authorization: string, currency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorPortfolioChartGet(authorization, currency, from, to, balancePoints, programsPoints, options)(this.fetch, this.basePath);
+    public v10InvestorPortfolioChartGet(authorization: string, options: {
+            currency?: string, 
+            from?: Date, 
+            to?: Date, 
+            balancePoints?: number, 
+            programsPoints?: number
+        } = {}, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorPortfolioChartGet(authorization, options.currency, options.from, options.to, options.balancePoints, options.programsPoints, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Portfolio events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {string} [type] 
-     * @param {string} [assetType] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {string} opts.type 
+
+    * @param {string} opts.assetType 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorPortfolioEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorPortfolioEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    public v10InvestorPortfolioEventsGet(authorization: string, options: {
+            assetId?: string, 
+            from?: Date, 
+            to?: Date, 
+            type?: string, 
+            assetType?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorPortfolioEventsGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10751,8 +10923,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10765,8 +10937,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10778,8 +10950,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOffPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOffPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10791,8 +10963,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOnPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOnPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10806,8 +10978,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10820,8 +10992,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10834,27 +11006,43 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Dashboard program list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [currencySecondary] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsGet(authorization: string, options: {
+            sorting?: string, 
+            from?: Date, 
+            to?: Date, 
+            chartPointsCount?: number, 
+            currencySecondary?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10866,8 +11054,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorProgramsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorProgramsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -10880,8 +11068,8 @@ export class InvestorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    public v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any) {
-        return InvestorApiFp(this.configuration).v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, requestOptions?: any) {
+        return InvestorApiFp(this.configuration).v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -10976,13 +11164,16 @@ export const KycApiFactory = function (configuration?: Configuration, fetch?: Fe
 export class KycApi extends BaseAPI {
     /**
      * 
-     * @param {KycCallback} [model] 
+    * @param {Object} opts Optional parameters
+    * @param {KycCallback} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KycApi
      */
-    public v10KycCallbackPost(model?: KycCallback, options?: any) {
-        return KycApiFp(this.configuration).v10KycCallbackPost(model, options)(this.fetch, this.basePath);
+    public v10KycCallbackPost(options: {
+            model?: KycCallback
+        } = {}, requestOptions?: any) {
+        return KycApiFp(this.configuration).v10KycCallbackPost(options.model, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -13354,8 +13545,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerAssetsGet(authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerAssetsGet(authorization, options)(this.fetch, this.basePath);
+    public v10ManagerAssetsGet(authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerAssetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13366,8 +13557,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerByIdDetailsGet(id: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerByIdDetailsGet(id, options)(this.fetch, this.basePath);
+    public v10ManagerByIdDetailsGet(id: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerByIdDetailsGet(id, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13378,27 +13569,43 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerByIdGet(id: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerByIdGet(id, options)(this.fetch, this.basePath);
+    public v10ManagerByIdGet(id: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerByIdGet(id, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Manager events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {string} [type] 
-     * @param {string} [assetType] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {string} opts.type 
+
+    * @param {string} opts.assetType 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    public v10ManagerEventsGet(authorization: string, options: {
+            assetId?: string, 
+            from?: Date, 
+            to?: Date, 
+            type?: string, 
+            assetType?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerEventsGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13406,13 +13613,18 @@ export class ManagerApi extends BaseAPI {
      * @summary Update fund assets parts
      * @param {string} id 
      * @param {string} authorization JWT access token
-     * @param {Array<FundAssetPart>} [assets] 
+    * @param {Object} opts Optional parameters
+
+
+    * @param {Array<FundAssetPart>} opts.assets 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, assets?: Array<FundAssetPart>, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdAssetsUpdatePost(id, authorization, assets, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, options: {
+            assets?: Array<FundAssetPart>
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdAssetsUpdatePost(id, authorization, options.assets, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13420,13 +13632,18 @@ export class ManagerApi extends BaseAPI {
      * @summary Close existing fund
      * @param {string} id 
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode] 
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdClosePost(id, authorization, twoFactorCode, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdClosePost(id: string, authorization: string, options: {
+            twoFactorCode?: string
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdClosePost(id, authorization, options.twoFactorCode, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13439,8 +13656,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13453,8 +13670,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13468,8 +13685,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13477,13 +13694,18 @@ export class ManagerApi extends BaseAPI {
      * @summary Update investment program/fund details
      * @param {string} id 
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model] 
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdUpdatePost(id, authorization, model, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdUpdatePost(id: string, authorization: string, options: {
+            model?: ProgramUpdate
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdUpdatePost(id, authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13496,8 +13718,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13510,40 +13732,60 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Create fund
      * @param {string} authorization JWT access token
-     * @param {NewFundRequest} [request] 
+    * @param {Object} opts Optional parameters
+
+    * @param {NewFundRequest} opts.request 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsCreatePost(authorization: string, request?: NewFundRequest, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsCreatePost(authorization, request, options)(this.fetch, this.basePath);
+    public v10ManagerFundsCreatePost(authorization: string, options: {
+            request?: NewFundRequest
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsCreatePost(authorization, options.request, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Manager funds
      * @param {string} authorization JWT access token
-     * @param {string} [sorting] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [currencySecondary] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    public v10ManagerFundsGet(authorization: string, options: {
+            sorting?: string, 
+            from?: Date, 
+            to?: Date, 
+            chartPointsCount?: number, 
+            currencySecondary?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13554,8 +13796,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsInvestmentAmountGet(authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsInvestmentAmountGet(authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsInvestmentAmountGet(authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsInvestmentAmountGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13567,27 +13809,43 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerFundsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerFundsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Manager dashboard
      * @param {string} authorization JWT access token
-     * @param {string} [assetId] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {string} [type] 
-     * @param {string} [assetType] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {string} opts.type 
+
+    * @param {string} opts.assetType 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    public v10ManagerGet(authorization: string, options: {
+            assetId?: string, 
+            from?: Date, 
+            to?: Date, 
+            type?: string, 
+            assetType?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13595,13 +13853,18 @@ export class ManagerApi extends BaseAPI {
      * @summary Close existing investment program
      * @param {string} id 
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode] 
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdClosePost(id, authorization, twoFactorCode, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdClosePost(id: string, authorization: string, options: {
+            twoFactorCode?: string
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdClosePost(id, authorization, options.twoFactorCode, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13614,8 +13877,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13628,8 +13891,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13641,8 +13904,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdPeriodClosePost(id, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdPeriodClosePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13656,8 +13919,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13665,13 +13928,18 @@ export class ManagerApi extends BaseAPI {
      * @summary Update investment program/fund details
      * @param {string} id 
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model] 
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdUpdatePost(id, authorization, model, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, options: {
+            model?: ProgramUpdate
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdUpdatePost(id, authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13684,8 +13952,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13698,40 +13966,60 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Create an investment program
      * @param {string} authorization JWT access token
-     * @param {NewProgramRequest} [request] 
+    * @param {Object} opts Optional parameters
+
+    * @param {NewProgramRequest} opts.request 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsCreatePost(authorization: string, request?: NewProgramRequest, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsCreatePost(authorization, request, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsCreatePost(authorization: string, options: {
+            request?: NewProgramRequest
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsCreatePost(authorization, options.request, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Manager programs
      * @param {string} authorization JWT access token
-     * @param {string} [sorting] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [currencySecondary] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, skip?: number, take?: number, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsGet(authorization: string, options: {
+            sorting?: string, 
+            from?: Date, 
+            to?: Date, 
+            chartPointsCount?: number, 
+            currencySecondary?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13742,8 +14030,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsInvestmentAmountGet(authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsInvestmentAmountGet(authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsInvestmentAmountGet(authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsInvestmentAmountGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13755,8 +14043,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerProgramsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerProgramsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -13769,8 +14057,8 @@ export class ManagerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    public v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any) {
-        return ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, options)(this.fetch, this.basePath);
+    public v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, requestOptions?: any) {
+        return ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -14459,14 +14747,20 @@ export class NotificationsApi extends BaseAPI {
      * 
      * @summary User notifications
      * @param {string} authorization JWT access token
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsGet(authorization: string, skip?: number, take?: number, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsGet(authorization, skip, take, options)(this.fetch, this.basePath);
+    public v10NotificationsGet(authorization: string, options: {
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsGet(authorization, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14477,25 +14771,37 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsNewGet(authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsNewGet(authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsNewGet(authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsNewGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Add new setting
      * @param {string} authorization JWT access token
-     * @param {string} [assetId] 
-     * @param {string} [managerId] 
-     * @param {string} [type] 
-     * @param {string} [conditionType] 
-     * @param {number} [conditionAmount] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId 
+
+    * @param {string} opts.managerId 
+
+    * @param {string} opts.type 
+
+    * @param {string} opts.conditionType 
+
+    * @param {number} opts.conditionAmount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsAddPost(authorization: string, assetId?: string, managerId?: string, type?: string, conditionType?: string, conditionAmount?: number, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsAddPost(authorization, assetId, managerId, type, conditionType, conditionAmount, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsAddPost(authorization: string, options: {
+            assetId?: string, 
+            managerId?: string, 
+            type?: string, 
+            conditionType?: string, 
+            conditionAmount?: number
+        } = {}, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsAddPost(authorization, options.assetId, options.managerId, options.type, options.conditionType, options.conditionAmount, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14508,8 +14814,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14521,8 +14827,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsFundsByIdGet(id: string, authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsFundsByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsFundsByIdGet(id: string, authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsFundsByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14533,8 +14839,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsGet(authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsGet(authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsGet(authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14546,8 +14852,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsManagersByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsManagersByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14559,8 +14865,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsProgramsByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsProgramsByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14572,8 +14878,8 @@ export class NotificationsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    public v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, options?: any) {
-        return NotificationsApiFp(this.configuration).v10NotificationsSettingsRemoveByIdPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, requestOptions?: any) {
+        return NotificationsApiFp(this.configuration).v10NotificationsSettingsRemoveByIdPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -14776,20 +15082,23 @@ export class PlatformApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    public v10PlatformInfoGet(options?: any) {
-        return PlatformApiFp(this.configuration).v10PlatformInfoGet(options)(this.fetch, this.basePath);
+    public v10PlatformInfoGet(requestOptions?: any) {
+        return PlatformApiFp(this.configuration).v10PlatformInfoGet(requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Investment programs levels
-     * @param {string} [currency] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.currency 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    public v10PlatformLevelsGet(currency?: string, options?: any) {
-        return PlatformApiFp(this.configuration).v10PlatformLevelsGet(currency, options)(this.fetch, this.basePath);
+    public v10PlatformLevelsGet(options: {
+            currency?: string
+        } = {}, requestOptions?: any) {
+        return PlatformApiFp(this.configuration).v10PlatformLevelsGet(options.currency, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -14799,8 +15108,8 @@ export class PlatformApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    public v10PlatformStatisticGet(options?: any) {
-        return PlatformApiFp(this.configuration).v10PlatformStatisticGet(options)(this.fetch, this.basePath);
+    public v10PlatformStatisticGet(requestOptions?: any) {
+        return PlatformApiFp(this.configuration).v10PlatformStatisticGet(requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -15293,8 +15602,8 @@ export class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileAvatarRemovePost(authorization: string, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileAvatarRemovePost(authorization, options)(this.fetch, this.basePath);
+    public v10ProfileAvatarRemovePost(authorization: string, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileAvatarRemovePost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -15306,8 +15615,8 @@ export class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, options)(this.fetch, this.basePath);
+    public v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -15318,8 +15627,8 @@ export class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileGet(authorization: string, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileGet(authorization, options)(this.fetch, this.basePath);
+    public v10ProfileGet(authorization: string, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -15330,34 +15639,42 @@ export class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileHeaderGet(authorization: string, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileHeaderGet(authorization, options)(this.fetch, this.basePath);
+    public v10ProfileHeaderGet(authorization: string, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileHeaderGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Update user personal details
      * @param {string} authorization JWT access token
-     * @param {UpdatePersonalDetailViewModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdatePersonalDetailViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfilePersonalUpdatePost(authorization: string, model?: UpdatePersonalDetailViewModel, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfilePersonalUpdatePost(authorization, model, options)(this.fetch, this.basePath);
+    public v10ProfilePersonalUpdatePost(authorization: string, options: {
+            model?: UpdatePersonalDetailViewModel
+        } = {}, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfilePersonalUpdatePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Update profile
      * @param {string} authorization JWT access token
-     * @param {UpdateProfileViewModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdateProfileViewModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileUpdatePost(authorization: string, model?: UpdateProfileViewModel, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileUpdatePost(authorization, model, options)(this.fetch, this.basePath);
+    public v10ProfileUpdatePost(authorization: string, options: {
+            model?: UpdateProfileViewModel
+        } = {}, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileUpdatePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -15367,8 +15684,8 @@ export class ProfileApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public v10ProfileVerificationTokenPost(authorization: string, options?: any) {
-        return ProfileApiFp(this.configuration).v10ProfileVerificationTokenPost(authorization, options)(this.fetch, this.basePath);
+    public v10ProfileVerificationTokenPost(authorization: string, requestOptions?: any) {
+        return ProfileApiFp(this.configuration).v10ProfileVerificationTokenPost(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -16194,30 +16511,46 @@ export class ProgramsApi extends BaseAPI {
      * 
      * @summary Program balance chart
      * @param {string} id 
-     * @param {Date} [dateFrom] 
-     * @param {Date} [dateTo] 
-     * @param {number} [maxPointCount] 
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom 
+
+    * @param {Date} opts.dateTo 
+
+    * @param {number} opts.maxPointCount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdChartsBalanceGet(id: string, options: {
+            dateFrom?: Date, 
+            dateTo?: Date, 
+            maxPointCount?: number
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdChartsBalanceGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Program profit chart
      * @param {string} id 
-     * @param {Date} [dateFrom] 
-     * @param {Date} [dateTo] 
-     * @param {number} [maxPointCount] 
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom 
+
+    * @param {Date} opts.dateTo 
+
+    * @param {number} opts.maxPointCount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdChartsProfitGet(id: string, options: {
+            dateFrom?: Date, 
+            dateTo?: Date, 
+            maxPointCount?: number
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdChartsProfitGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -16229,8 +16562,8 @@ export class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteAddPost(id, authorization, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteAddPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -16242,84 +16575,150 @@ export class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteRemovePost(id, authorization, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteRemovePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Program details
      * @param {string} id 
-     * @param {string} [authorization] 
-     * @param {string} [currencySecondary] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization 
+
+    * @param {string} opts.currencySecondary 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdGet(id, authorization, currencySecondary, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdGet(id: string, options: {
+            authorization?: string, 
+            currencySecondary?: string
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdGet(id, options.authorization, options.currencySecondary, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Trade history
      * @param {string} id 
-     * @param {Date} [dateFrom] 
-     * @param {Date} [dateTo] 
-     * @param {string} [symbol] 
-     * @param {string} [sorting] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom 
+
+    * @param {Date} opts.dateTo 
+
+    * @param {string} opts.symbol 
+
+    * @param {string} opts.sorting 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, skip?: number, take?: number, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsByIdTradesGet(id, dateFrom, dateTo, symbol, sorting, skip, take, options)(this.fetch, this.basePath);
+    public v10ProgramsByIdTradesGet(id: string, options: {
+            dateFrom?: Date, 
+            dateTo?: Date, 
+            symbol?: string, 
+            sorting?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdTradesGet(id, options.dateFrom, options.dateTo, options.symbol, options.sorting, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Programs list
-     * @param {string} [authorization] 
-     * @param {number} [levelMin] 
-     * @param {number} [levelMax] 
-     * @param {number} [profitAvgMin] 
-     * @param {number} [profitAvgMax] 
-     * @param {string} [sorting] 
-     * @param {string} [programCurrency] 
-     * @param {string} [currencySecondary] 
-     * @param {number} [levelUpFrom] 
-     * @param {Date} [statisticDateFrom] 
-     * @param {Date} [statisticDateTo] 
-     * @param {number} [chartPointsCount] 
-     * @param {string} [mask] 
-     * @param {string} [facetId] 
-     * @param {boolean} [isFavorite] 
-     * @param {boolean} [isEnabled] 
-     * @param {Array<string>} [ids] 
-     * @param {string} [managerId] 
-     * @param {string} [programManagerId] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization 
+
+    * @param {number} opts.levelMin 
+
+    * @param {number} opts.levelMax 
+
+    * @param {number} opts.profitAvgMin 
+
+    * @param {number} opts.profitAvgMax 
+
+    * @param {string} opts.sorting 
+
+    * @param {string} opts.programCurrency 
+
+    * @param {string} opts.currencySecondary 
+
+    * @param {number} opts.levelUpFrom 
+
+    * @param {Date} opts.statisticDateFrom 
+
+    * @param {Date} opts.statisticDateTo 
+
+    * @param {number} opts.chartPointsCount 
+
+    * @param {string} opts.mask 
+
+    * @param {string} opts.facetId 
+
+    * @param {boolean} opts.isFavorite 
+
+    * @param {boolean} opts.isEnabled 
+
+    * @param {Array<string>} opts.ids 
+
+    * @param {string} opts.managerId 
+
+    * @param {string} opts.programManagerId 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, skip?: number, take?: number, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsGet(authorization, levelMin, levelMax, profitAvgMin, profitAvgMax, sorting, programCurrency, currencySecondary, levelUpFrom, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options)(this.fetch, this.basePath);
+    public v10ProgramsGet(options: {
+            authorization?: string, 
+            levelMin?: number, 
+            levelMax?: number, 
+            profitAvgMin?: number, 
+            profitAvgMax?: number, 
+            sorting?: string, 
+            programCurrency?: string, 
+            currencySecondary?: string, 
+            levelUpFrom?: number, 
+            statisticDateFrom?: Date, 
+            statisticDateTo?: Date, 
+            chartPointsCount?: number, 
+            mask?: string, 
+            facetId?: string, 
+            isFavorite?: boolean, 
+            isEnabled?: boolean, 
+            ids?: Array<string>, 
+            managerId?: string, 
+            programManagerId?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsGet(options.authorization, options.levelMin, options.levelMax, options.profitAvgMin, options.profitAvgMax, options.sorting, options.programCurrency, options.currencySecondary, options.levelUpFrom, options.statisticDateFrom, options.statisticDateTo, options.chartPointsCount, options.mask, options.facetId, options.isFavorite, options.isEnabled, options.ids, options.managerId, options.programManagerId, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Level up summary
-     * @param {string} [authorization] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsLevelupSummaryGet(authorization?: string, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsLevelupSummaryGet(authorization, options)(this.fetch, this.basePath);
+    public v10ProgramsLevelupSummaryGet(options: {
+            authorization?: string
+        } = {}, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsLevelupSummaryGet(options.authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -16330,8 +16729,8 @@ export class ProgramsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public v10ProgramsSetsGet(authorization: string, options?: any) {
-        return ProgramsApiFp(this.configuration).v10ProgramsSetsGet(authorization, options)(this.fetch, this.basePath);
+    public v10ProgramsSetsGet(authorization: string, requestOptions?: any) {
+        return ProgramsApiFp(this.configuration).v10ProgramsSetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -16584,8 +16983,8 @@ export class RateApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    public v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string, options?: any) {
-        return RateApiFp(this.configuration).v10RateByExchangeByFromByToGet(exchange, from, to, options)(this.fetch, this.basePath);
+    public v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string, requestOptions?: any) {
+        return RateApiFp(this.configuration).v10RateByExchangeByFromByToGet(exchange, from, to, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -16597,21 +16996,26 @@ export class RateApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    public v10RateByFromByToGet(from: string, to: string, options?: any) {
-        return RateApiFp(this.configuration).v10RateByFromByToGet(from, to, options)(this.fetch, this.basePath);
+    public v10RateByFromByToGet(from: string, to: string, requestOptions?: any) {
+        return RateApiFp(this.configuration).v10RateByFromByToGet(from, to, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Get rates
-     * @param {Array<string>} [from] 
-     * @param {Array<string>} [to] 
+    * @param {Object} opts Optional parameters
+    * @param {Array<string>} opts.from 
+
+    * @param {Array<string>} opts.to 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    public v10RateGet(from?: Array<string>, to?: Array<string>, options?: any) {
-        return RateApiFp(this.configuration).v10RateGet(from, to, options)(this.fetch, this.basePath);
+    public v10RateGet(options: {
+            from?: Array<string>, 
+            to?: Array<string>
+        } = {}, requestOptions?: any) {
+        return RateApiFp(this.configuration).v10RateGet(options.from, options.to, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -16717,14 +17121,19 @@ export class SearchApi extends BaseAPI {
     /**
      * 
      * @summary Program / fund / manager search
-     * @param {string} [mask] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.mask 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SearchApi
      */
-    public v10SearchGet(mask?: string, take?: number, options?: any) {
-        return SearchApiFp(this.configuration).v10SearchGet(mask, take, options)(this.fetch, this.basePath);
+    public v10SearchGet(options: {
+            mask?: string, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return SearchApiFp(this.configuration).v10SearchGet(options.mask, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
 }
@@ -17384,8 +17793,8 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletAddressesGet(authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletAddressesGet(authorization, options)(this.fetch, this.basePath);
+    public v10WalletAddressesGet(authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletAddressesGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -17397,27 +17806,43 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletByCurrencyGet(currency: string, authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletByCurrencyGet(currency, authorization, options)(this.fetch, this.basePath);
+    public v10WalletByCurrencyGet(currency: string, authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletByCurrencyGet(currency, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @summary Wallet transactions
      * @param {string} authorization JWT access token
-     * @param {string} [assetId] 
-     * @param {Date} [from] 
-     * @param {Date} [to] 
-     * @param {string} [assetType] 
-     * @param {string} [txAction] 
-     * @param {number} [skip] 
-     * @param {number} [take] 
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId 
+
+    * @param {Date} opts.from 
+
+    * @param {Date} opts.to 
+
+    * @param {string} opts.assetType 
+
+    * @param {string} opts.txAction 
+
+    * @param {number} opts.skip 
+
+    * @param {number} opts.take 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletTransactionsGet(authorization: string, assetId?: string, from?: Date, to?: Date, assetType?: string, txAction?: string, skip?: number, take?: number, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletTransactionsGet(authorization, assetId, from, to, assetType, txAction, skip, take, options)(this.fetch, this.basePath);
+    public v10WalletTransactionsGet(authorization: string, options: {
+            assetId?: string, 
+            from?: Date, 
+            to?: Date, 
+            assetType?: string, 
+            txAction?: string, 
+            skip?: number, 
+            take?: number
+        } = {}, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletTransactionsGet(authorization, options.assetId, options.from, options.to, options.assetType, options.txAction, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -17428,8 +17853,8 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletTransactionsPendingGet(authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletTransactionsPendingGet(authorization, options)(this.fetch, this.basePath);
+    public v10WalletTransactionsPendingGet(authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletTransactionsPendingGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -17439,8 +17864,8 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletWithdrawInfoGet(authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletWithdrawInfoGet(authorization, options)(this.fetch, this.basePath);
+    public v10WalletWithdrawInfoGet(authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletWithdrawInfoGet(authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -17451,32 +17876,41 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, options)(this.fetch, this.basePath);
+    public v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {string} [requestId] 
-     * @param {string} [code] 
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.requestId 
+
+    * @param {string} opts.code 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletWithdrawRequestConfirmPost(requestId?: string, code?: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletWithdrawRequestConfirmPost(requestId, code, options)(this.fetch, this.basePath);
+    public v10WalletWithdrawRequestConfirmPost(options: {
+            requestId?: string, 
+            code?: string
+        } = {}, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletWithdrawRequestConfirmPost(options.requestId, options.code, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
      * 
      * @param {string} authorization JWT access token
-     * @param {CreateWithdrawalRequestModel} [model] 
+    * @param {Object} opts Optional parameters
+
+    * @param {CreateWithdrawalRequestModel} opts.model 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletWithdrawRequestNewPost(authorization: string, model?: CreateWithdrawalRequestModel, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletWithdrawRequestNewPost(authorization, model, options)(this.fetch, this.basePath);
+    public v10WalletWithdrawRequestNewPost(authorization: string, options: {
+            model?: CreateWithdrawalRequestModel
+        } = {}, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletWithdrawRequestNewPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     }
 
     /**
@@ -17487,8 +17921,8 @@ export class WalletApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    public v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, options?: any) {
-        return WalletApiFp(this.configuration).v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, options)(this.fetch, this.basePath);
+    public v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, requestOptions?: any) {
+        return WalletApiFp(this.configuration).v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, requestOptions)(this.fetch, this.basePath);
     }
 
 }

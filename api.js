@@ -2332,13 +2332,16 @@ var AuthApi = /** @class */ (function (_super) {
      *
      * @summary 2FA confirm
      * @param {string} authorization JWT access token
-     * @param {TwoFactorAuthenticatorConfirm} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorAuthenticatorConfirm} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faConfirmPost = function (authorization, model, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faConfirmPost(authorization, model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faConfirmPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10Auth2faConfirmPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2348,20 +2351,23 @@ var AuthApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faCreatePost = function (authorization, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faCreatePost(authorization, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faCreatePost = function (authorization, requestOptions) {
+        return exports.AuthApiFp(this.configuration).v10Auth2faCreatePost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary 2FA disable
      * @param {string} authorization JWT access token
-     * @param {TwoFactorCodeModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {TwoFactorCodeModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faDisablePost = function (authorization, model, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faDisablePost(authorization, model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faDisablePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10Auth2faDisablePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2371,77 +2377,92 @@ var AuthApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faGet = function (authorization, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faGet(authorization, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faGet = function (authorization, requestOptions) {
+        return exports.AuthApiFp(this.configuration).v10Auth2faGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary 2FA generate new recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faRecoverycodesNewPost = function (authorization, model, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faRecoverycodesNewPost(authorization, model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faRecoverycodesNewPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10Auth2faRecoverycodesNewPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary 2FA recovery codes
      * @param {string} authorization JWT access token
-     * @param {PasswordModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {PasswordModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10Auth2faRecoverycodesPost = function (authorization, model, options) {
-        return exports.AuthApiFp(this.configuration).v10Auth2faRecoverycodesPost(authorization, model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10Auth2faRecoverycodesPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10Auth2faRecoverycodesPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Change password
      * @param {string} authorization JWT access token
-     * @param {ChangePasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {ChangePasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPasswordChangePost = function (authorization, model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPasswordChangePost(authorization, model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPasswordChangePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthPasswordChangePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Forgot password for investor
-     * @param {ForgotPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPasswordForgotInvestorPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPasswordForgotInvestorPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPasswordForgotInvestorPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthPasswordForgotInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Forgot password for manager
-     * @param {ForgotPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ForgotPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPasswordForgotManagerPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPasswordForgotManagerPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPasswordForgotManagerPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthPasswordForgotManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Reset password
-     * @param {ResetPasswordViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ResetPasswordViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPasswordResetPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPasswordResetPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPasswordResetPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthPasswordResetPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2451,87 +2472,103 @@ var AuthApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPhoneCodePost = function (authorization, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPhoneCodePost(authorization, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPhoneCodePost = function (authorization, requestOptions) {
+        return exports.AuthApiFp(this.configuration).v10AuthPhoneCodePost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Verify phone number
      * @param {string} authorization JWT access token
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthPhoneVerifyPost = function (authorization, code, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthPhoneVerifyPost(authorization, code, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthPhoneVerifyPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthPhoneVerifyPost(authorization, options.code, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Resend Confirmation Link
-     * @param {ResendConfirmationViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {ResendConfirmationViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthResendconfirmationlinkPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthResendconfirmationlinkPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthResendconfirmationlinkPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthResendconfirmationlinkPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Authorize
-     * @param {LoginViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthSigninInvestorPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthSigninInvestorPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthSigninInvestorPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthSigninInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Authorize
-     * @param {LoginViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {LoginViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthSigninManagerPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthSigninManagerPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthSigninManagerPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthSigninManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Confirm email after registration
-     * @param {string} [userId]
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.userId
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthSignupConfirmPost = function (userId, code, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthSignupConfirmPost(userId, code, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthSignupConfirmPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthSignupConfirmPost(options.userId, options.code, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary New investor registration
-     * @param {RegisterInvestorViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {RegisterInvestorViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthSignupInvestorPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthSignupInvestorPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthSignupInvestorPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthSignupInvestorPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary New manager registration
-     * @param {RegisterManagerViewModel} [model]
+    * @param {Object} opts Optional parameters
+    * @param {RegisterManagerViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthSignupManagerPost = function (model, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthSignupManagerPost(model, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthSignupManagerPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.AuthApiFp(this.configuration).v10AuthSignupManagerPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2541,8 +2578,8 @@ var AuthApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthTokenDevicesLogoutPost = function (authorization, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthTokenDevicesLogoutPost(authorization, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthTokenDevicesLogoutPost = function (authorization, requestOptions) {
+        return exports.AuthApiFp(this.configuration).v10AuthTokenDevicesLogoutPost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2552,8 +2589,8 @@ var AuthApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    AuthApi.prototype.v10AuthTokenUpdatePost = function (authorization, options) {
-        return exports.AuthApiFp(this.configuration).v10AuthTokenUpdatePost(authorization, options)(this.fetch, this.basePath);
+    AuthApi.prototype.v10AuthTokenUpdatePost = function (authorization, requestOptions) {
+        return exports.AuthApiFp(this.configuration).v10AuthTokenUpdatePost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     return AuthApi;
 }(BaseAPI));
@@ -2652,8 +2689,8 @@ var BrokersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof BrokersApi
      */
-    BrokersApi.prototype.v10BrokersGet = function (options) {
-        return exports.BrokersApiFp(this.configuration).v10BrokersGet(options)(this.fetch, this.basePath);
+    BrokersApi.prototype.v10BrokersGet = function (requestOptions) {
+        return exports.BrokersApiFp(this.configuration).v10BrokersGet(requestOptions)(this.fetch, this.basePath);
     };
     return BrokersApi;
 }(BaseAPI));
@@ -2907,8 +2944,8 @@ var FileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    FileApi.prototype.v10FileByIdGet = function (id, options) {
-        return exports.FileApiFp(this.configuration).v10FileByIdGet(id, options)(this.fetch, this.basePath);
+    FileApi.prototype.v10FileByIdGet = function (id, requestOptions) {
+        return exports.FileApiFp(this.configuration).v10FileByIdGet(id, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -2919,20 +2956,23 @@ var FileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    FileApi.prototype.v10FileDocumentUploadPost = function (authorization, uploadedFile, options) {
-        return exports.FileApiFp(this.configuration).v10FileDocumentUploadPost(authorization, uploadedFile, options)(this.fetch, this.basePath);
+    FileApi.prototype.v10FileDocumentUploadPost = function (authorization, uploadedFile, requestOptions) {
+        return exports.FileApiFp(this.configuration).v10FileDocumentUploadPost(authorization, uploadedFile, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Upload file
      * @param {any} uploadedFile Upload File
-     * @param {string} [authorization]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
      */
-    FileApi.prototype.v10FileUploadPost = function (uploadedFile, authorization, options) {
-        return exports.FileApiFp(this.configuration).v10FileUploadPost(uploadedFile, authorization, options)(this.fetch, this.basePath);
+    FileApi.prototype.v10FileUploadPost = function (uploadedFile, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.FileApiFp(this.configuration).v10FileUploadPost(uploadedFile, options.authorization, requestOptions)(this.fetch, this.basePath);
     };
     return FileApi;
 }(BaseAPI));
@@ -3663,8 +3703,8 @@ var FundsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsAssetsGet = function (options) {
-        return exports.FundsApiFp(this.configuration).v10FundsAssetsGet(options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsAssetsGet = function (requestOptions) {
+        return exports.FundsApiFp(this.configuration).v10FundsAssetsGet(requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -3674,36 +3714,46 @@ var FundsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdAssetsGet = function (id, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdAssetsGet(id, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdAssetsGet = function (id, requestOptions) {
+        return exports.FundsApiFp(this.configuration).v10FundsByIdAssetsGet(id, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Fund balance chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdChartsBalanceGet = function (id, dateFrom, dateTo, maxPointCount, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdChartsBalanceGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.FundsApiFp(this.configuration).v10FundsByIdChartsBalanceGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Fund profit chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdChartsProfitGet = function (id, dateFrom, dateTo, maxPointCount, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdChartsProfitGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.FundsApiFp(this.configuration).v10FundsByIdChartsProfitGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -3714,8 +3764,8 @@ var FundsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdFavoriteAddPost = function (id, authorization, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdFavoriteAddPost(id, authorization, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdFavoriteAddPost = function (id, authorization, requestOptions) {
+        return exports.FundsApiFp(this.configuration).v10FundsByIdFavoriteAddPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -3726,46 +3776,66 @@ var FundsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdFavoriteRemovePost = function (id, authorization, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdFavoriteRemovePost(id, authorization, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdFavoriteRemovePost = function (id, authorization, requestOptions) {
+        return exports.FundsApiFp(this.configuration).v10FundsByIdFavoriteRemovePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Funds details
      * @param {string} id
-     * @param {string} [authorization]
-     * @param {string} [currencySecondary]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
+
+    * @param {string} opts.currencySecondary
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsByIdGet = function (id, authorization, currencySecondary, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsByIdGet(id, authorization, currencySecondary, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsByIdGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.FundsApiFp(this.configuration).v10FundsByIdGet(id, options.authorization, options.currencySecondary, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Funds list
-     * @param {string} [authorization]
-     * @param {string} [sorting]
-     * @param {string} [currencySecondary]
-     * @param {Date} [statisticDateFrom]
-     * @param {Date} [statisticDateTo]
-     * @param {number} [chartPointsCount]
-     * @param {string} [mask]
-     * @param {string} [facetId]
-     * @param {boolean} [isFavorite]
-     * @param {boolean} [isEnabled]
-     * @param {Array<string>} [ids]
-     * @param {string} [managerId]
-     * @param {string} [programManagerId]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
+
+    * @param {string} opts.sorting
+
+    * @param {string} opts.currencySecondary
+
+    * @param {Date} opts.statisticDateFrom
+
+    * @param {Date} opts.statisticDateTo
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.mask
+
+    * @param {string} opts.facetId
+
+    * @param {boolean} opts.isFavorite
+
+    * @param {boolean} opts.isEnabled
+
+    * @param {Array<string>} opts.ids
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.programManagerId
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsGet = function (authorization, sorting, currencySecondary, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsGet(authorization, sorting, currencySecondary, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.FundsApiFp(this.configuration).v10FundsGet(options.authorization, options.sorting, options.currencySecondary, options.statisticDateFrom, options.statisticDateTo, options.chartPointsCount, options.mask, options.facetId, options.isFavorite, options.isEnabled, options.ids, options.managerId, options.programManagerId, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -3775,8 +3845,8 @@ var FundsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FundsApi
      */
-    FundsApi.prototype.v10FundsSetsGet = function (authorization, options) {
-        return exports.FundsApiFp(this.configuration).v10FundsSetsGet(authorization, options)(this.fetch, this.basePath);
+    FundsApi.prototype.v10FundsSetsGet = function (authorization, requestOptions) {
+        return exports.FundsApiFp(this.configuration).v10FundsSetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     return FundsApi;
 }(BaseAPI));
@@ -5424,8 +5494,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsByIdInvestByAmountPost = function (id, amount, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsByIdInvestByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5437,8 +5507,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5451,8 +5521,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5464,8 +5534,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsByIdWithdrawByPercentPost = function (id, percent, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsByIdWithdrawByPercentPost = function (id, percent, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5477,79 +5547,114 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Funds list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorFundsGet = function (authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorFundsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.InvestorApiFp(this.configuration).v10InvestorFundsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Summary dashboard info
      * @param {string} authorization JWT access token
-     * @param {string} [chartCurrency]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [balancePoints]
-     * @param {number} [programsPoints]
-     * @param {number} [eventsTake]
-     * @param {number} [requestsSkip]
-     * @param {number} [requestsTake]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.chartCurrency
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.balancePoints
+
+    * @param {number} opts.programsPoints
+
+    * @param {number} opts.eventsTake
+
+    * @param {number} opts.requestsSkip
+
+    * @param {number} opts.requestsTake
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorGet = function (authorization, chartCurrency, from, to, balancePoints, programsPoints, eventsTake, requestsSkip, requestsTake, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorGet(authorization, chartCurrency, from, to, balancePoints, programsPoints, eventsTake, requestsSkip, requestsTake, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.InvestorApiFp(this.configuration).v10InvestorGet(authorization, options.chartCurrency, options.from, options.to, options.balancePoints, options.programsPoints, options.eventsTake, options.requestsSkip, options.requestsTake, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Portfolio charts
      * @param {string} authorization JWT access token
-     * @param {string} [currency]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [balancePoints]
-     * @param {number} [programsPoints]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.currency
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.balancePoints
+
+    * @param {number} opts.programsPoints
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorPortfolioChartGet = function (authorization, currency, from, to, balancePoints, programsPoints, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorPortfolioChartGet(authorization, currency, from, to, balancePoints, programsPoints, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorPortfolioChartGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.InvestorApiFp(this.configuration).v10InvestorPortfolioChartGet(authorization, options.currency, options.from, options.to, options.balancePoints, options.programsPoints, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Portfolio events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorPortfolioEventsGet = function (authorization, assetId, from, to, type, assetType, skip, take, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorPortfolioEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorPortfolioEventsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.InvestorApiFp(this.configuration).v10InvestorPortfolioEventsGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5561,8 +5666,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdInvestByAmountPost = function (id, amount, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdInvestByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5574,8 +5679,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5586,8 +5691,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdReinvestOffPost = function (id, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOffPost(id, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdReinvestOffPost = function (id, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOffPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5598,8 +5703,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdReinvestOnPost = function (id, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOnPost(id, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdReinvestOnPost = function (id, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdReinvestOnPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5612,8 +5717,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5625,8 +5730,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdWithdrawByAmountPost = function (id, amount, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdWithdrawByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5638,26 +5743,35 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Dashboard program list
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsGet = function (authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5668,8 +5782,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorProgramsRequestsByIdCancelPost = function (id, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorProgramsRequestsByIdCancelPost = function (id, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorProgramsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -5681,8 +5795,8 @@ var InvestorApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof InvestorApi
      */
-    InvestorApi.prototype.v10InvestorRequestsBySkipByTakeGet = function (skip, take, authorization, options) {
-        return exports.InvestorApiFp(this.configuration).v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, options)(this.fetch, this.basePath);
+    InvestorApi.prototype.v10InvestorRequestsBySkipByTakeGet = function (skip, take, authorization, requestOptions) {
+        return exports.InvestorApiFp(this.configuration).v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     return InvestorApi;
 }(BaseAPI));
@@ -5779,13 +5893,15 @@ var KycApi = /** @class */ (function (_super) {
     }
     /**
      *
-     * @param {KycCallback} [model]
+    * @param {Object} opts Optional parameters
+    * @param {KycCallback} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KycApi
      */
-    KycApi.prototype.v10KycCallbackPost = function (model, options) {
-        return exports.KycApiFp(this.configuration).v10KycCallbackPost(model, options)(this.fetch, this.basePath);
+    KycApi.prototype.v10KycCallbackPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.KycApiFp(this.configuration).v10KycCallbackPost(options.model, requestOptions)(this.fetch, this.basePath);
     };
     return KycApi;
 }(BaseAPI));
@@ -8155,8 +8271,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerAssetsGet = function (authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerAssetsGet(authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerAssetsGet = function (authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerAssetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8166,8 +8282,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerByIdDetailsGet = function (id, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerByIdDetailsGet(id, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerByIdDetailsGet = function (id, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerByIdDetailsGet(id, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8177,52 +8293,69 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerByIdGet = function (id, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerByIdGet(id, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerByIdGet = function (id, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerByIdGet(id, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Manager events
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerEventsGet = function (authorization, assetId, from, to, type, assetType, skip, take, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerEventsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerEventsGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Update fund assets parts
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {Array<FundAssetPart>} [assets]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {Array<FundAssetPart>} opts.assets
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdAssetsUpdatePost = function (id, authorization, assets, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdAssetsUpdatePost(id, authorization, assets, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdAssetsUpdatePost = function (id, authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdAssetsUpdatePost(id, authorization, options.assets, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Close existing fund
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdClosePost = function (id, authorization, twoFactorCode, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdClosePost(id, authorization, twoFactorCode, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdClosePost = function (id, authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdClosePost(id, authorization, options.twoFactorCode, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8234,8 +8367,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdInvestByAmountPost = function (id, amount, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdInvestByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8247,8 +8380,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8261,21 +8394,25 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Update investment program/fund details
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdUpdatePost = function (id, authorization, model, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdUpdatePost(id, authorization, model, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdUpdatePost = function (id, authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdUpdatePost(id, authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8287,8 +8424,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdWithdrawByPercentPost = function (id, percent, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdWithdrawByPercentPost = function (id, percent, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8300,38 +8437,50 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Create fund
      * @param {string} authorization JWT access token
-     * @param {NewFundRequest} [request]
+    * @param {Object} opts Optional parameters
+
+    * @param {NewFundRequest} opts.request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsCreatePost = function (authorization, request, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsCreatePost(authorization, request, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsCreatePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsCreatePost(authorization, options.request, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Manager funds
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsGet = function (authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8341,8 +8490,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsInvestmentAmountGet = function (authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsInvestmentAmountGet(authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsInvestmentAmountGet = function (authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsInvestmentAmountGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8353,39 +8502,52 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerFundsRequestsByIdCancelPost = function (id, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerFundsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerFundsRequestsByIdCancelPost = function (id, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerFundsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Manager dashboard
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [type]
-     * @param {string} [assetType]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.type
+
+    * @param {string} opts.assetType
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerGet = function (authorization, assetId, from, to, type, assetType, skip, take, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerGet(authorization, assetId, from, to, type, assetType, skip, take, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerGet(authorization, options.assetId, options.from, options.to, options.type, options.assetType, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Close existing investment program
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {string} [twoFactorCode]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {string} opts.twoFactorCode
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdClosePost = function (id, authorization, twoFactorCode, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdClosePost(id, authorization, twoFactorCode, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdClosePost = function (id, authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdClosePost(id, authorization, options.twoFactorCode, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8397,8 +8559,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdInvestByAmountPost = function (id, amount, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdInvestByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8410,8 +8572,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdInvestInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8422,8 +8584,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdPeriodClosePost = function (id, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdPeriodClosePost(id, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdPeriodClosePost = function (id, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdPeriodClosePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8436,21 +8598,25 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdRequestsBySkipByTakeGet = function (id, skip, take, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Update investment program/fund details
      * @param {string} id
      * @param {string} authorization JWT access token
-     * @param {ProgramUpdate} [model]
+    * @param {Object} opts Optional parameters
+
+
+    * @param {ProgramUpdate} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdUpdatePost = function (id, authorization, model, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdUpdatePost(id, authorization, model, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdUpdatePost = function (id, authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdUpdatePost(id, authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8462,8 +8628,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdWithdrawByAmountPost = function (id, amount, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdWithdrawByAmountPost = function (id, amount, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8475,38 +8641,50 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsByIdWithdrawInfoByCurrencyGet = function (id, currency, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Create an investment program
      * @param {string} authorization JWT access token
-     * @param {NewProgramRequest} [request]
+    * @param {Object} opts Optional parameters
+
+    * @param {NewProgramRequest} opts.request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsCreatePost = function (authorization, request, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsCreatePost(authorization, request, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsCreatePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsCreatePost(authorization, options.request, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Manager programs
      * @param {string} authorization JWT access token
-     * @param {string} [sorting]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {number} [chartPointsCount]
-     * @param {string} [currencySecondary]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.sorting
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsGet = function (authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, skip, take, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsGet(authorization, options.sorting, options.from, options.to, options.chartPointsCount, options.currencySecondary, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8516,8 +8694,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsInvestmentAmountGet = function (authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsInvestmentAmountGet(authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsInvestmentAmountGet = function (authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsInvestmentAmountGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8528,8 +8706,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerProgramsRequestsByIdCancelPost = function (id, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsRequestsByIdCancelPost(id, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerProgramsRequestsByIdCancelPost = function (id, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerProgramsRequestsByIdCancelPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -8541,8 +8719,8 @@ var ManagerApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ManagerApi
      */
-    ManagerApi.prototype.v10ManagerRequestsBySkipByTakeGet = function (skip, take, authorization, options) {
-        return exports.ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, options)(this.fetch, this.basePath);
+    ManagerApi.prototype.v10ManagerRequestsBySkipByTakeGet = function (skip, take, authorization, requestOptions) {
+        return exports.ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, requestOptions)(this.fetch, this.basePath);
     };
     return ManagerApi;
 }(BaseAPI));
@@ -9234,14 +9412,18 @@ var NotificationsApi = /** @class */ (function (_super) {
      *
      * @summary User notifications
      * @param {string} authorization JWT access token
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsGet = function (authorization, skip, take, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsGet(authorization, skip, take, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsGet(authorization, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9251,24 +9433,31 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsNewGet = function (authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsNewGet(authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsNewGet = function (authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsNewGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Add new setting
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {string} [managerId]
-     * @param {string} [type]
-     * @param {string} [conditionType]
-     * @param {number} [conditionAmount]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.type
+
+    * @param {string} opts.conditionType
+
+    * @param {number} opts.conditionAmount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsAddPost = function (authorization, assetId, managerId, type, conditionType, conditionAmount, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsAddPost(authorization, assetId, managerId, type, conditionType, conditionAmount, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsAddPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsAddPost(authorization, options.assetId, options.managerId, options.type, options.conditionType, options.conditionAmount, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9280,8 +9469,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsByIdByEnablePost = function (id, enable, authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsByIdByEnablePost = function (id, enable, authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9292,8 +9481,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsFundsByIdGet = function (id, authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsFundsByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsFundsByIdGet = function (id, authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsFundsByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9303,8 +9492,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsGet = function (authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsGet(authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsGet = function (authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9315,8 +9504,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsManagersByIdGet = function (id, authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsManagersByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsManagersByIdGet = function (id, authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsManagersByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9327,8 +9516,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsProgramsByIdGet = function (id, authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsProgramsByIdGet(id, authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsProgramsByIdGet = function (id, authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsProgramsByIdGet(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9339,8 +9528,8 @@ var NotificationsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotificationsApi
      */
-    NotificationsApi.prototype.v10NotificationsSettingsRemoveByIdPost = function (id, authorization, options) {
-        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsRemoveByIdPost(id, authorization, options)(this.fetch, this.basePath);
+    NotificationsApi.prototype.v10NotificationsSettingsRemoveByIdPost = function (id, authorization, requestOptions) {
+        return exports.NotificationsApiFp(this.configuration).v10NotificationsSettingsRemoveByIdPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     return NotificationsApi;
 }(BaseAPI));
@@ -9549,19 +9738,21 @@ var PlatformApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    PlatformApi.prototype.v10PlatformInfoGet = function (options) {
-        return exports.PlatformApiFp(this.configuration).v10PlatformInfoGet(options)(this.fetch, this.basePath);
+    PlatformApi.prototype.v10PlatformInfoGet = function (requestOptions) {
+        return exports.PlatformApiFp(this.configuration).v10PlatformInfoGet(requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Investment programs levels
-     * @param {string} [currency]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.currency
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    PlatformApi.prototype.v10PlatformLevelsGet = function (currency, options) {
-        return exports.PlatformApiFp(this.configuration).v10PlatformLevelsGet(currency, options)(this.fetch, this.basePath);
+    PlatformApi.prototype.v10PlatformLevelsGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.PlatformApiFp(this.configuration).v10PlatformLevelsGet(options.currency, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -9570,8 +9761,8 @@ var PlatformApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PlatformApi
      */
-    PlatformApi.prototype.v10PlatformStatisticGet = function (options) {
-        return exports.PlatformApiFp(this.configuration).v10PlatformStatisticGet(options)(this.fetch, this.basePath);
+    PlatformApi.prototype.v10PlatformStatisticGet = function (requestOptions) {
+        return exports.PlatformApiFp(this.configuration).v10PlatformStatisticGet(requestOptions)(this.fetch, this.basePath);
     };
     return PlatformApi;
 }(BaseAPI));
@@ -10070,8 +10261,8 @@ var ProfileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileAvatarRemovePost = function (authorization, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileAvatarRemovePost(authorization, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileAvatarRemovePost = function (authorization, requestOptions) {
+        return exports.ProfileApiFp(this.configuration).v10ProfileAvatarRemovePost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10082,8 +10273,8 @@ var ProfileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileAvatarUpdateByFileIdPost = function (fileId, authorization, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileAvatarUpdateByFileIdPost = function (fileId, authorization, requestOptions) {
+        return exports.ProfileApiFp(this.configuration).v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10093,8 +10284,8 @@ var ProfileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileGet = function (authorization, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileGet(authorization, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileGet = function (authorization, requestOptions) {
+        return exports.ProfileApiFp(this.configuration).v10ProfileGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10104,32 +10295,38 @@ var ProfileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileHeaderGet = function (authorization, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileHeaderGet(authorization, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileHeaderGet = function (authorization, requestOptions) {
+        return exports.ProfileApiFp(this.configuration).v10ProfileHeaderGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Update user personal details
      * @param {string} authorization JWT access token
-     * @param {UpdatePersonalDetailViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdatePersonalDetailViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfilePersonalUpdatePost = function (authorization, model, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfilePersonalUpdatePost(authorization, model, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfilePersonalUpdatePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProfileApiFp(this.configuration).v10ProfilePersonalUpdatePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Update profile
      * @param {string} authorization JWT access token
-     * @param {UpdateProfileViewModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {UpdateProfileViewModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileUpdatePost = function (authorization, model, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileUpdatePost(authorization, model, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileUpdatePost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProfileApiFp(this.configuration).v10ProfileUpdatePost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10138,8 +10335,8 @@ var ProfileApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    ProfileApi.prototype.v10ProfileVerificationTokenPost = function (authorization, options) {
-        return exports.ProfileApiFp(this.configuration).v10ProfileVerificationTokenPost(authorization, options)(this.fetch, this.basePath);
+    ProfileApi.prototype.v10ProfileVerificationTokenPost = function (authorization, requestOptions) {
+        return exports.ProfileApiFp(this.configuration).v10ProfileVerificationTokenPost(authorization, requestOptions)(this.fetch, this.basePath);
     };
     return ProfileApi;
 }(BaseAPI));
@@ -10945,29 +11142,39 @@ var ProgramsApi = /** @class */ (function (_super) {
      *
      * @summary Program balance chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdChartsBalanceGet = function (id, dateFrom, dateTo, maxPointCount, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdChartsBalanceGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdChartsBalanceGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Program profit chart
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {number} [maxPointCount]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {number} opts.maxPointCount
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdChartsProfitGet = function (id, dateFrom, dateTo, maxPointCount, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdChartsProfitGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdChartsProfitGet(id, options.dateFrom, options.dateTo, options.maxPointCount, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10978,8 +11185,8 @@ var ProgramsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdFavoriteAddPost = function (id, authorization, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteAddPost(id, authorization, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdFavoriteAddPost = function (id, authorization, requestOptions) {
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteAddPost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -10990,80 +11197,116 @@ var ProgramsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdFavoriteRemovePost = function (id, authorization, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteRemovePost(id, authorization, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdFavoriteRemovePost = function (id, authorization, requestOptions) {
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdFavoriteRemovePost(id, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Program details
      * @param {string} id
-     * @param {string} [authorization]
-     * @param {string} [currencySecondary]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.authorization
+
+    * @param {string} opts.currencySecondary
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdGet = function (id, authorization, currencySecondary, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdGet(id, authorization, currencySecondary, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdGet(id, options.authorization, options.currencySecondary, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Trade history
      * @param {string} id
-     * @param {Date} [dateFrom]
-     * @param {Date} [dateTo]
-     * @param {string} [symbol]
-     * @param {string} [sorting]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {Date} opts.dateFrom
+
+    * @param {Date} opts.dateTo
+
+    * @param {string} opts.symbol
+
+    * @param {string} opts.sorting
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsByIdTradesGet = function (id, dateFrom, dateTo, symbol, sorting, skip, take, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdTradesGet(id, dateFrom, dateTo, symbol, sorting, skip, take, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsByIdTradesGet = function (id, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsByIdTradesGet(id, options.dateFrom, options.dateTo, options.symbol, options.sorting, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Programs list
-     * @param {string} [authorization]
-     * @param {number} [levelMin]
-     * @param {number} [levelMax]
-     * @param {number} [profitAvgMin]
-     * @param {number} [profitAvgMax]
-     * @param {string} [sorting]
-     * @param {string} [programCurrency]
-     * @param {string} [currencySecondary]
-     * @param {number} [levelUpFrom]
-     * @param {Date} [statisticDateFrom]
-     * @param {Date} [statisticDateTo]
-     * @param {number} [chartPointsCount]
-     * @param {string} [mask]
-     * @param {string} [facetId]
-     * @param {boolean} [isFavorite]
-     * @param {boolean} [isEnabled]
-     * @param {Array<string>} [ids]
-     * @param {string} [managerId]
-     * @param {string} [programManagerId]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
+
+    * @param {number} opts.levelMin
+
+    * @param {number} opts.levelMax
+
+    * @param {number} opts.profitAvgMin
+
+    * @param {number} opts.profitAvgMax
+
+    * @param {string} opts.sorting
+
+    * @param {string} opts.programCurrency
+
+    * @param {string} opts.currencySecondary
+
+    * @param {number} opts.levelUpFrom
+
+    * @param {Date} opts.statisticDateFrom
+
+    * @param {Date} opts.statisticDateTo
+
+    * @param {number} opts.chartPointsCount
+
+    * @param {string} opts.mask
+
+    * @param {string} opts.facetId
+
+    * @param {boolean} opts.isFavorite
+
+    * @param {boolean} opts.isEnabled
+
+    * @param {Array<string>} opts.ids
+
+    * @param {string} opts.managerId
+
+    * @param {string} opts.programManagerId
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsGet = function (authorization, levelMin, levelMax, profitAvgMin, profitAvgMax, sorting, programCurrency, currencySecondary, levelUpFrom, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsGet(authorization, levelMin, levelMax, profitAvgMin, profitAvgMax, sorting, programCurrency, currencySecondary, levelUpFrom, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, ids, managerId, programManagerId, skip, take, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsGet(options.authorization, options.levelMin, options.levelMax, options.profitAvgMin, options.profitAvgMax, options.sorting, options.programCurrency, options.currencySecondary, options.levelUpFrom, options.statisticDateFrom, options.statisticDateTo, options.chartPointsCount, options.mask, options.facetId, options.isFavorite, options.isEnabled, options.ids, options.managerId, options.programManagerId, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Level up summary
-     * @param {string} [authorization]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.authorization
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsLevelupSummaryGet = function (authorization, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsLevelupSummaryGet(authorization, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsLevelupSummaryGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsLevelupSummaryGet(options.authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -11073,8 +11316,8 @@ var ProgramsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    ProgramsApi.prototype.v10ProgramsSetsGet = function (authorization, options) {
-        return exports.ProgramsApiFp(this.configuration).v10ProgramsSetsGet(authorization, options)(this.fetch, this.basePath);
+    ProgramsApi.prototype.v10ProgramsSetsGet = function (authorization, requestOptions) {
+        return exports.ProgramsApiFp(this.configuration).v10ProgramsSetsGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     return ProgramsApi;
 }(BaseAPI));
@@ -11332,8 +11575,8 @@ var RateApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    RateApi.prototype.v10RateByExchangeByFromByToGet = function (exchange, from, to, options) {
-        return exports.RateApiFp(this.configuration).v10RateByExchangeByFromByToGet(exchange, from, to, options)(this.fetch, this.basePath);
+    RateApi.prototype.v10RateByExchangeByFromByToGet = function (exchange, from, to, requestOptions) {
+        return exports.RateApiFp(this.configuration).v10RateByExchangeByFromByToGet(exchange, from, to, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -11344,20 +11587,23 @@ var RateApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    RateApi.prototype.v10RateByFromByToGet = function (from, to, options) {
-        return exports.RateApiFp(this.configuration).v10RateByFromByToGet(from, to, options)(this.fetch, this.basePath);
+    RateApi.prototype.v10RateByFromByToGet = function (from, to, requestOptions) {
+        return exports.RateApiFp(this.configuration).v10RateByFromByToGet(from, to, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Get rates
-     * @param {Array<string>} [from]
-     * @param {Array<string>} [to]
+    * @param {Object} opts Optional parameters
+    * @param {Array<string>} opts.from
+
+    * @param {Array<string>} opts.to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RateApi
      */
-    RateApi.prototype.v10RateGet = function (from, to, options) {
-        return exports.RateApiFp(this.configuration).v10RateGet(from, to, options)(this.fetch, this.basePath);
+    RateApi.prototype.v10RateGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.RateApiFp(this.configuration).v10RateGet(options.from, options.to, requestOptions)(this.fetch, this.basePath);
     };
     return RateApi;
 }(BaseAPI));
@@ -11464,14 +11710,17 @@ var SearchApi = /** @class */ (function (_super) {
     /**
      *
      * @summary Program / fund / manager search
-     * @param {string} [mask]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.mask
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SearchApi
      */
-    SearchApi.prototype.v10SearchGet = function (mask, take, options) {
-        return exports.SearchApiFp(this.configuration).v10SearchGet(mask, take, options)(this.fetch, this.basePath);
+    SearchApi.prototype.v10SearchGet = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.SearchApiFp(this.configuration).v10SearchGet(options.mask, options.take, requestOptions)(this.fetch, this.basePath);
     };
     return SearchApi;
 }(BaseAPI));
@@ -12132,8 +12381,8 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletAddressesGet = function (authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletAddressesGet(authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletAddressesGet = function (authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletAddressesGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -12144,26 +12393,35 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletByCurrencyGet = function (currency, authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletByCurrencyGet(currency, authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletByCurrencyGet = function (currency, authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletByCurrencyGet(currency, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @summary Wallet transactions
      * @param {string} authorization JWT access token
-     * @param {string} [assetId]
-     * @param {Date} [from]
-     * @param {Date} [to]
-     * @param {string} [assetType]
-     * @param {string} [txAction]
-     * @param {number} [skip]
-     * @param {number} [take]
+    * @param {Object} opts Optional parameters
+
+    * @param {string} opts.assetId
+
+    * @param {Date} opts.from
+
+    * @param {Date} opts.to
+
+    * @param {string} opts.assetType
+
+    * @param {string} opts.txAction
+
+    * @param {number} opts.skip
+
+    * @param {number} opts.take
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletTransactionsGet = function (authorization, assetId, from, to, assetType, txAction, skip, take, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletTransactionsGet(authorization, assetId, from, to, assetType, txAction, skip, take, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletTransactionsGet = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.WalletApiFp(this.configuration).v10WalletTransactionsGet(authorization, options.assetId, options.from, options.to, options.assetType, options.txAction, options.skip, options.take, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -12173,8 +12431,8 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletTransactionsPendingGet = function (authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletTransactionsPendingGet(authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletTransactionsPendingGet = function (authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletTransactionsPendingGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -12183,8 +12441,8 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletWithdrawInfoGet = function (authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletWithdrawInfoGet(authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletWithdrawInfoGet = function (authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletWithdrawInfoGet(authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -12194,30 +12452,36 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletWithdrawRequestCancelByTxIdPost = function (txId, authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletWithdrawRequestCancelByTxIdPost = function (txId, authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
-     * @param {string} [requestId]
-     * @param {string} [code]
+    * @param {Object} opts Optional parameters
+    * @param {string} opts.requestId
+
+    * @param {string} opts.code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletWithdrawRequestConfirmPost = function (requestId, code, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestConfirmPost(requestId, code, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletWithdrawRequestConfirmPost = function (options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestConfirmPost(options.requestId, options.code, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
      * @param {string} authorization JWT access token
-     * @param {CreateWithdrawalRequestModel} [model]
+    * @param {Object} opts Optional parameters
+
+    * @param {CreateWithdrawalRequestModel} opts.model
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletWithdrawRequestNewPost = function (authorization, model, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestNewPost(authorization, model, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletWithdrawRequestNewPost = function (authorization, options, requestOptions) {
+        if (options === void 0) { options = {}; }
+        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestNewPost(authorization, options.model, requestOptions)(this.fetch, this.basePath);
     };
     /**
      *
@@ -12227,8 +12491,8 @@ var WalletApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof WalletApi
      */
-    WalletApi.prototype.v10WalletWithdrawRequestResendByTxIdPost = function (txId, authorization, options) {
-        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, options)(this.fetch, this.basePath);
+    WalletApi.prototype.v10WalletWithdrawRequestResendByTxIdPost = function (txId, authorization, requestOptions) {
+        return exports.WalletApiFp(this.configuration).v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, requestOptions)(this.fetch, this.basePath);
     };
     return WalletApi;
 }(BaseAPI));
