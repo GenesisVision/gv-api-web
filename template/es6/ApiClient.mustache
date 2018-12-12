@@ -3,17 +3,12 @@
 import superagent from "superagent";
 import querystring from "querystring";
 
-{{#emitJSDoc}}/**
-* @module {{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient
-* @version {{projectVersion}}
-*/
-
+{{#emitJSDoc}}
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
 * application to use this class directly - the *Api and model classes provide the public API for the service. The
 * contents of this file should be regarded as internal but are documented for completeness.
-* @alias module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient
-* @class
+* @class ApiClient
 */{{/emitJSDoc}}
 export default class ApiClient {
     constructor() {
@@ -88,6 +83,7 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Returns a string representation for an actual parameter.
+    * @name ApiClient#paramToString
     * @param param The actual parameter.
     * @returns {String} The string representation of <code>param</code>.
     */{{/emitJSDoc}}
@@ -105,6 +101,7 @@ export default class ApiClient {
     {{#emitJSDoc}}/**
     * Builds full URL by appending the given path to the base URL and replacing path parameter place-holders with parameter values.
     * NOTE: query parameters are not handled here.
+    * @name ApiClient#buildUrl
     * @param {String} path The path to append to the base URL.
     * @param {Object} pathParams The parameter values to append.
     * @returns {String} The encoded path with parameter values substituted.
@@ -137,6 +134,7 @@ export default class ApiClient {
     * <li>application/json; charset=UTF8</li>
     * <li>APPLICATION/JSON</li>
     * </ul>
+    * @name ApiClient#isJsonMime
     * @param {String} contentType The MIME content type to check.
     * @returns {Boolean} <code>true</code> if <code>contentType</code> represents JSON, otherwise <code>false</code>.
     */{{/emitJSDoc}}
@@ -146,7 +144,8 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Chooses a content type from the given array, with JSON preferred; i.e. return JSON if included, otherwise return the first.
-    * @param {Array.<String>} contentTypes
+    * @name ApiClient#jsonPreferredMime
+    * @param {Array<String>} contentTypes
     * @returns {String} The chosen content type, preferring JSON.
     */{{/emitJSDoc}}
     jsonPreferredMime(contentTypes) {
@@ -161,6 +160,7 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Checks whether the given parameter value represents file-like content.
+    * @name isFileParam#jsonPreferredMime
     * @param param The parameter to check.
     * @returns {Boolean} <code>true</code> if <code>param</code> represents a file.
     */
@@ -202,8 +202,9 @@ export default class ApiClient {
     * <li>keep files and arrays</li>
     * <li>format to string with `paramToString` for other cases</li>
     * </ul>
-    * @param {Object.<String, Object>} params The parameters as object properties.
-    * @returns {Object.<String, Object>} normalized parameters.
+    * @name isFileParam#normalizeParams
+    * @param {Object<String, Object>} params The parameters as object properties.
+    * @returns {Object<String, Object>} normalized parameters.
     */{{/emitJSDoc}}
     normalizeParams(params) {
         var newParams = {};
@@ -223,45 +224,23 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Enumeration of collection format separator strategies.
-    * @enum {String}
+    * @name ApiClient.CollectionFormatEnum
+    * @type {("CSV"|"SSV"|"TSV"|"PIPES"|"MULTI")}
     * @readonly
     */{{/emitJSDoc}}
     static CollectionFormatEnum = {
-        {{#emitJSDoc}}/**
-         * Comma-separated values. Value: <code>csv</code>
-         * @const
-         */{{/emitJSDoc}}
         CSV: ',',
-
-        {{#emitJSDoc}}/**
-         * Space-separated values. Value: <code>ssv</code>
-         * @const
-         */{{/emitJSDoc}}
         SSV: ' ',
-
-        {{#emitJSDoc}}/**
-         * Tab-separated values. Value: <code>tsv</code>
-         * @const
-         */{{/emitJSDoc}}
         TSV: '\t',
-
-        {{#emitJSDoc}}/**
-         * Pipe(|)-separated values. Value: <code>pipes</code>
-         * @const
-         */{{/emitJSDoc}}
         PIPES: '|',
-
-        {{#emitJSDoc}}/**
-         * Native array. Value: <code>multi</code>
-         * @const
-         */{{/emitJSDoc}}
         MULTI: 'multi'
     };
 
     {{#emitJSDoc}}/**
     * Builds a string representation of an array-type actual parameter, according to the given collection format.
+    * @name isFileParam#buildCollectionParam
     * @param {Array} param An array parameter.
-    * @param {module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
+    * @param {ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
     * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
     * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
     */{{/emitJSDoc}}
@@ -288,8 +267,9 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Applies authentication headers to the request.
+    * @name ApiClient#applyAuthToRequest
     * @param {Object} request The request object created by a <code>superagent()</code> call.
-    * @param {Array.<String>} authNames An array of authentication method names.
+    * @param {Array<String>} authNames An array of authentication method names.
     */{{/emitJSDoc}}
     applyAuthToRequest(request, authNames) {
         authNames.forEach((authName) => {
@@ -332,8 +312,9 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Deserializes an HTTP response body into a value of the specified type.
+    * @name ApiClient#deserialize
     * @param {Object} response A SuperAgent response object.
-    * @param {(String|Array.<String>|Object.<String, Object>|Function)} returnType The type to return. Pass a string for simple types
+    * @param {(String|Array<String>|Object<String, Object>|Function)} returnType The type to return. Pass a string for simple types
     * or the constructor function for a complex type. Pass an array containing the type name to return an array of that type. To
     * return an object, pass an object with one property whose name is the key type and whose value is the corresponding value type:
     * all properties on <code>data<code> will be converted to this type.
@@ -358,7 +339,7 @@ export default class ApiClient {
 
     {{#emitJSDoc}}{{^usePromises}}/**
     * Callback function to receive the result of the operation.
-    * @callback module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient~callApiCallback
+    * @callback ApiClient~callApiCallback
     * @param {String} error Error message, if any.
     * @param data The data returned by the service call.
     * @param {String} response The complete HTTP response.
@@ -366,19 +347,20 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Invokes the REST service using the supplied settings and parameters.
+    * @name ApiClient#callApi
     * @param {String} path The base URL to invoke.
     * @param {String} httpMethod The HTTP method to use.
-    * @param {Object.<String, String>} pathParams A map of path parameters and their values.
-    * @param {Object.<String, Object>} queryParams A map of query parameters and their values.
-    * @param {Object.<String, Object>} headerParams A map of header parameters and their values.
-    * @param {Object.<String, Object>} formParams A map of form parameters and their values.
+    * @param {Object} pathParams A map of path parameters and their values.
+    * @param {Object} queryParams A map of query parameters and their values.
+    * @param {Object} headerParams A map of header parameters and their values.
+    * @param {Object} formParams A map of form parameters and their values.
     * @param {Object} bodyParam The value to pass as the request body.
-    * @param {Array.<String>} authNames An array of authentication type names.
-    * @param {Array.<String>} contentTypes An array of request MIME types.
-    * @param {Array.<String>} accepts An array of acceptable response MIME types.
-    * @param {(String|Array|ObjectFunction)} returnType The required type to return; can be a string for simple types or the
+    * @param {Array<String>} authNames An array of authentication type names.
+    * @param {Array<String>} contentTypes An array of request MIME types.
+    * @param {Array<String>} accepts An array of acceptable response MIME types.
+    * @param {(String|Array|Object|Function)} returnType The required type to return; can be a string for simple types or the
     * constructor for a complex type.{{^usePromises}}
-    * @param {module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient~callApiCallback} callback The callback function.{{/usePromises}}
+    * @param {ApiClient~callApiCallback} callback The callback function.{{/usePromises}}
     * @returns {{#usePromises}}{Promise} A {@link https://www.promisejs.org/|Promise} object{{/usePromises}}{{^usePromises}}{Object} The SuperAgent request object{{/usePromises}}.
     */
     {{/emitJSDoc}}
@@ -501,6 +483,7 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Parses an ISO-8601 string representation of a date value.
+    * @name ApiClient.parseDate
     * @param {String} str The date value as a string.
     * @returns {Date} The parsed date object.
     */{{/emitJSDoc}}
@@ -510,8 +493,9 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Converts a value to the specified type.
+    * @name ApiClient.convertToType
     * @param {(String|Object)} data The data to convert, as a string or object.
-    * @param {(String|Array.<String>|Object.<String, Object>|Function)} type The type to return. Pass a string for simple types
+    * @param {(String|Array<String>|Object|Function)} type The type to return. Pass a string for simple types
     * or the constructor function for a complex type. Pass an array containing the type name to return an array of that type. To
     * return an object, pass an object with one property whose name is the key type and whose value is the corresponding value type:
     * all properties on <code>data<code> will be converted to this type.
@@ -579,6 +563,7 @@ export default class ApiClient {
 
     {{#emitJSDoc}}/**
     * Constructs a new map or array model from REST data.
+    * @name ApiClient.constructFromObject
     * @param data {Object|Array} The REST data.
     * @param obj {Object|Array} The target object or array.
     */{{/emitJSDoc}}
@@ -599,6 +584,6 @@ export default class ApiClient {
 
 {{#emitJSDoc}}/**
 * The default API client implementation.
-* @type {module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}ApiClient}
+* @type {ApiClient}
 */{{/emitJSDoc}}
 ApiClient.instance = new ApiClient();

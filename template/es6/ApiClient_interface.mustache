@@ -1,0 +1,15 @@
+{{#models}}{{#model}}
+
+    {{#emitJSDoc}}
+        /**
+        *
+        * @interface {{classname}}
+        */{{/emitJSDoc}}
+    {{#vars}}{{#emitJSDoc}}
+        /**
+        *
+        * @name {{classname}}#{{baseName}}
+        * @type {{#isEnum}}{{#allowableValues}}{({{#enumVars}}"{{name}}"{{^-last}}|{{/-last}}{{/enumVars}})}{{/allowableValues}}{{/isEnum}}{{^isEnum}}{{=<% %>=}}{<%datatype%>}<%={{ }}=%>{{/isEnum}}
+        */{{/emitJSDoc}}{{/vars}}
+
+{{/model}}{{/models}}
