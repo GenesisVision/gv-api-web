@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **periodStarts** | **Date** |  | [optional] 
 **periodEnds** | **Date** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
+**entryFeeSelected** | **Number** |  | [optional] 
+**entryFeeCurrent** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
 **isReinvesting** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 

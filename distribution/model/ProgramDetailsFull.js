@@ -62,6 +62,8 @@ var ProgramDetailsFull = function () {
         this.periodStarts = undefined;
         this.periodEnds = undefined;
         this.entryFee = undefined;
+        this.entryFeeSelected = undefined;
+        this.entryFeeCurrent = undefined;
         this.successFee = undefined;
         this.isReinvesting = undefined;
         this.availableInvestment = undefined;
@@ -111,6 +113,12 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
+                }
+                if (data.hasOwnProperty('entryFeeSelected')) {
+                    obj['entryFeeSelected'] = _ApiClient2.default.convertToType(data['entryFeeSelected'], 'Number');
+                }
+                if (data.hasOwnProperty('entryFeeCurrent')) {
+                    obj['entryFeeCurrent'] = _ApiClient2.default.convertToType(data['entryFeeCurrent'], 'Number');
                 }
                 if (data.hasOwnProperty('successFee')) {
                     obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
@@ -183,6 +191,14 @@ var ProgramDetailsFull = function () {
 
         /**
         * @member {Number} entryFee
+        */
+
+        /**
+        * @member {Number} entryFeeSelected
+        */
+
+        /**
+        * @member {Number} entryFeeCurrent
         */
 
         /**

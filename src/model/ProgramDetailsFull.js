@@ -78,6 +78,12 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('entryFeeSelected')) {
+                obj['entryFeeSelected'] = ApiClient.convertToType(data['entryFeeSelected'], 'Number');
+            }
+            if (data.hasOwnProperty('entryFeeCurrent')) {
+                obj['entryFeeCurrent'] = ApiClient.convertToType(data['entryFeeCurrent'], 'Number');
+            }
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
@@ -151,6 +157,14 @@ export default class ProgramDetailsFull {
     * @member {Number} entryFee
     */
     entryFee = undefined;
+    /**
+    * @member {Number} entryFeeSelected
+    */
+    entryFeeSelected = undefined;
+    /**
+    * @member {Number} entryFeeCurrent
+    */
+    entryFeeCurrent = undefined;
     /**
     * @member {Number} successFee
     */
