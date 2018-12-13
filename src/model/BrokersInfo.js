@@ -27,7 +27,7 @@ import Broker from './Broker';
     /**
      *
      * @name BrokersInfo#brokers
-     * @type {[Broker]}
+     * @type {Array<Broker>}
      */
 
 

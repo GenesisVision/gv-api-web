@@ -32,7 +32,7 @@ import WalletWithdrawalInfo from './WalletWithdrawalInfo';
     /**
      *
      * @name WithdrawalSummary#wallets
-     * @type {[WalletWithdrawalInfo]}
+     * @type {Array<WalletWithdrawalInfo>}
      */
 
 

@@ -67,7 +67,7 @@ import BrokerAccountType from './BrokerAccountType';
     /**
      *
      * @name Broker#accountTypes
-     * @type {[BrokerAccountType]}
+     * @type {Array<BrokerAccountType>}
      */
 
 

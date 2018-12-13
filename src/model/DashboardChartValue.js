@@ -28,12 +28,12 @@ import ValueChartBar from './ValueChartBar';
     /**
      *
      * @name DashboardChartValue#investedProgramsInfo
-     * @type {[ValueChartBar]}
+     * @type {Array<ValueChartBar>}
      */
     /**
      *
      * @name DashboardChartValue#balanceChart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *

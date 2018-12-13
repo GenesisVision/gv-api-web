@@ -27,7 +27,7 @@ import Facet from './Facet';
     /**
      *
      * @name ProgramSets#sets
-     * @type {[Facet]}
+     * @type {Array<Facet>}
      */
     /**
      *

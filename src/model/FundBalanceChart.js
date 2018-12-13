@@ -32,7 +32,7 @@ import BalanceChartElement from './BalanceChartElement';
     /**
      *
      * @name FundBalanceChart#balanceChart
-     * @type {[BalanceChartElement]}
+     * @type {Array<BalanceChartElement>}
      */
     /**
      *

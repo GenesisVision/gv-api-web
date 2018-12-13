@@ -4,8 +4,10 @@
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
   "main": "distribution/index.js",
+  "types": "distribution/types.d.ts",
   "scripts": {
-    "build": "babel src --out-dir distribution",
+    "generate-tsd": "./replace jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution",
+    "build": "babel src --out-dir distribution && npm run generate-tsd",
     "precommit": "npm install && npm run build && npm run addfiles",
     "addfiles": "git add .",
     "test": "mocha --compilers js:babel-core/register --recursive"
@@ -26,7 +28,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "expect.js": "~0.3.1",
     "husky": "^0.14.3",
+    "jsdoc": "^3.5.5",
     "mocha": "~2.3.4",
-    "sinon": "1.17.3"
+    "sinon": "1.17.3",
+    "tsd-jsdoc": "^2.0.4"
   }
 }

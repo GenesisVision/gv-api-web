@@ -27,7 +27,7 @@ import WalletPendingTransaction from './WalletPendingTransaction';
     /**
      *
      * @name WalletPendingTransactionsViewModel#transactions
-     * @type {[WalletPendingTransaction]}
+     * @type {Array<WalletPendingTransaction>}
      */
     /**
      *

@@ -41,12 +41,12 @@ import ProgramsInfo from './ProgramsInfo';
     /**
      *
      * @name PlatformInfo#programsFacets
-     * @type {[Facet]}
+     * @type {Array<Facet>}
      */
     /**
      *
      * @name PlatformInfo#fundsFacets
-     * @type {[Facet]}
+     * @type {Array<Facet>}
      */
     /**
      *
@@ -56,12 +56,12 @@ import ProgramsInfo from './ProgramsInfo';
     /**
      *
      * @name PlatformInfo#currencies
-     * @type {[String]}
+     * @type {Array<String>}
      */
     /**
      *
      * @name PlatformInfo#platformCurrencies
-     * @type {[PlatformCurrency]}
+     * @type {Array<PlatformCurrency>}
      */
 
 

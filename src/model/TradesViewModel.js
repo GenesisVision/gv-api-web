@@ -27,7 +27,7 @@ import OrderModel from './OrderModel';
     /**
      *
      * @name TradesViewModel#trades
-     * @type {[OrderModel]}
+     * @type {Array<OrderModel>}
      */
     /**
      *

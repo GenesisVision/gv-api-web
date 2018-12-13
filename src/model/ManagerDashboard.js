@@ -47,7 +47,7 @@ import ProgramRequest from './ProgramRequest';
     /**
      *
      * @name ManagerDashboard#allAssets
-     * @type {[AssetSelection]}
+     * @type {Array<AssetSelection>}
      */
     /**
      *

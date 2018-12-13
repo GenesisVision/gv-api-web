@@ -27,7 +27,7 @@ import ProgramRequest from './ProgramRequest';
     /**
      *
      * @name ProgramRequests#requests
-     * @type {[ProgramRequest]}
+     * @type {Array<ProgramRequest>}
      */
     /**
      *

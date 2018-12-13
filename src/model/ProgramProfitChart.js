@@ -58,12 +58,12 @@ import PeriodDate from './PeriodDate';
     /**
      *
      * @name ProgramProfitChart#pnLChart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *
      * @name ProgramProfitChart#periods
-     * @type {[PeriodDate]}
+     * @type {Array<PeriodDate>}
      */
     /**
      *
@@ -78,7 +78,7 @@ import PeriodDate from './PeriodDate';
     /**
      *
      * @name ProgramProfitChart#equityChart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *

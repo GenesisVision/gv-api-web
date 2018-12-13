@@ -37,7 +37,7 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
     /**
      *
      * @name ProgramBalanceChart#balanceChart
-     * @type {[ProgramBalanceChartElement]}
+     * @type {Array<ProgramBalanceChartElement>}
      */
     /**
      *

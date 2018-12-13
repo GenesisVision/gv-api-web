@@ -37,7 +37,7 @@ import FundAssetPart from './FundAssetPart';
     /**
      *
      * @name NewFundRequest#assets
-     * @type {[FundAssetPart]}
+     * @type {Array<FundAssetPart>}
      */
     /**
      *

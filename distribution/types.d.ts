@@ -3,7 +3,7 @@ declare class ApiClient {
     buildUrl: any;
     isJsonMime: any;
     jsonPreferredMime: any;
-    static CollectionFormatEnum: "CSV" | "SSV" | "TSV" | "PIPES" | "MULTI";
+    readonly static CollectionFormatEnum: "CSV" | "SSV" | "TSV" | "PIPES" | "MULTI";
     applyAuthToRequest: any;
     deserialize: any;
     callApi: any;
@@ -1243,6 +1243,8 @@ declare interface ProgramDetailsFull {
     periodStarts: Date;
     periodEnds: Date;
     entryFee: number;
+    entryFeeSelected: number;
+    entryFeeCurrent: number;
     successFee: number;
     isReinvesting: boolean;
     availableInvestment: number;

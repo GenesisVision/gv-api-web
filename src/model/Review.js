@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name Review#rejectLabels
-     * @type {[String]}
+     * @type {Array<String>}
      */
     /**
      *

@@ -38,7 +38,7 @@ import OtherAssetsValue from './OtherAssetsValue';
     /**
      *
      * @name ValueChartBar#topAssets
-     * @type {[AssetsValue]}
+     * @type {Array<AssetsValue>}
      */
     /**
      *

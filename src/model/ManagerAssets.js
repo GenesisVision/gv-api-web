@@ -28,12 +28,12 @@ import ManagerSimpleProgram from './ManagerSimpleProgram';
     /**
      *
      * @name ManagerAssets#programs
-     * @type {[ManagerSimpleProgram]}
+     * @type {Array<ManagerSimpleProgram>}
      */
     /**
      *
      * @name ManagerAssets#funds
-     * @type {[ManagerSimpleFund]}
+     * @type {Array<ManagerSimpleFund>}
      */
 
 

@@ -45,7 +45,7 @@ import ProfilePublic from './ProfilePublic';
     /**
      *
      * @name FundDetailsFull#currentAssets
-     * @type {[FundAssetPartWithIcon]}
+     * @type {Array<FundAssetPartWithIcon>}
      */
     /**
      *

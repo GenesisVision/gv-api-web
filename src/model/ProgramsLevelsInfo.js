@@ -27,7 +27,7 @@ import LevelInfo from './LevelInfo';
     /**
      *
      * @name ProgramsLevelsInfo#levels
-     * @type {[LevelInfo]}
+     * @type {Array<LevelInfo>}
      */
 
 

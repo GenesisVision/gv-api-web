@@ -27,7 +27,7 @@ import NotificationViewModel from './NotificationViewModel';
     /**
      *
      * @name NotificationList#notifications
-     * @type {[NotificationViewModel]}
+     * @type {Array<NotificationViewModel>}
      */
     /**
      *

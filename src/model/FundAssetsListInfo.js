@@ -27,7 +27,7 @@ import FundAssetInfo from './FundAssetInfo';
     /**
      *
      * @name FundAssetsListInfo#assets
-     * @type {[FundAssetInfo]}
+     * @type {Array<FundAssetInfo>}
      */
 
 

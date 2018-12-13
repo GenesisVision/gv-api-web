@@ -27,7 +27,7 @@ import RecoveryCode from './RecoveryCode';
     /**
      *
      * @name RecoveryCodesViewModel#codes
-     * @type {[RecoveryCode]}
+     * @type {Array<RecoveryCode>}
      */
     /**
      *

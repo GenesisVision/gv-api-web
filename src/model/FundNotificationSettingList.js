@@ -47,7 +47,7 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
     /**
      *
      * @name FundNotificationSettingList#settingsGeneral
-     * @type {[NotificationSettingViewModel]}
+     * @type {Array<NotificationSettingViewModel>}
      */
 
 

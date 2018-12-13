@@ -432,7 +432,7 @@ export default class FundsApi {
      * @param {String} opts.facetId 
      * @param {Boolean} opts.isFavorite 
      * @param {Boolean} opts.isEnabled 
-     * @param {[String]} opts.ids 
+     * @param {Array<String>} opts.ids 
      * @param {String} opts.managerId 
      * @param {String} opts.programManagerId 
      * @param {Number} opts.skip 

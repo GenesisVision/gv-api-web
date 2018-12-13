@@ -27,7 +27,7 @@ import ProgramDetails from './ProgramDetails';
     /**
      *
      * @name ProgramsList#programs
-     * @type {[ProgramDetails]}
+     * @type {Array<ProgramDetails>}
      */
     /**
      *

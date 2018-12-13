@@ -27,7 +27,7 @@ import PlatformAsset from './PlatformAsset';
     /**
      *
      * @name PlatformAssets#assets
-     * @type {[PlatformAsset]}
+     * @type {Array<PlatformAsset>}
      */
 
 

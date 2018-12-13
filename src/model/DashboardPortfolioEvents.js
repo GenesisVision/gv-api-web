@@ -27,7 +27,7 @@ import DashboardPortfolioEvent from './DashboardPortfolioEvent';
     /**
      *
      * @name DashboardPortfolioEvents#events
-     * @type {[DashboardPortfolioEvent]}
+     * @type {Array<DashboardPortfolioEvent>}
      */
     /**
      *

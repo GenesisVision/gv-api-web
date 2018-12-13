@@ -27,7 +27,7 @@ import WalletInfo from './WalletInfo';
     /**
      *
      * @name WalletsInfo#wallets
-     * @type {[WalletInfo]}
+     * @type {Array<WalletInfo>}
      */
 
 

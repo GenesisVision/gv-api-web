@@ -59,6 +59,16 @@ import ProgramStatistic from './ProgramStatistic';
      */
     /**
      *
+     * @name ProgramDetailsFull#entryFeeSelected
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramDetailsFull#entryFeeCurrent
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramDetailsFull#successFee
      * @type {Number}
      */
@@ -176,6 +186,12 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('entryFeeSelected')) {
+                obj['entryFeeSelected'] = ApiClient.convertToType(data['entryFeeSelected'], 'Number');
+            }
+            if (data.hasOwnProperty('entryFeeCurrent')) {
+                obj['entryFeeCurrent'] = ApiClient.convertToType(data['entryFeeCurrent'], 'Number');
+            }
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
@@ -231,6 +247,8 @@ export default class ProgramDetailsFull {
     periodStarts = undefined;
     periodEnds = undefined;
     entryFee = undefined;
+    entryFeeSelected = undefined;
+    entryFeeCurrent = undefined;
     successFee = undefined;
     isReinvesting = undefined;
     availableInvestment = undefined;

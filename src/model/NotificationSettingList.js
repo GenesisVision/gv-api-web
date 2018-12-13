@@ -30,22 +30,22 @@ import ProgramNotificationSettingList from './ProgramNotificationSettingList';
     /**
      *
      * @name NotificationSettingList#settingsGeneral
-     * @type {[NotificationSettingViewModel]}
+     * @type {Array<NotificationSettingViewModel>}
      */
     /**
      *
      * @name NotificationSettingList#settingsProgram
-     * @type {[ProgramNotificationSettingList]}
+     * @type {Array<ProgramNotificationSettingList>}
      */
     /**
      *
      * @name NotificationSettingList#settingsFund
-     * @type {[FundNotificationSettingList]}
+     * @type {Array<FundNotificationSettingList>}
      */
     /**
      *
      * @name NotificationSettingList#settingsManager
-     * @type {[ManagerNotificationSettingList]}
+     * @type {Array<ManagerNotificationSettingList>}
      */
 
 

@@ -285,7 +285,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} opts Optional parameters
-     * @param {[FundAssetPart]} opts.assets 
+     * @param {Array<FundAssetPart>} opts.assets 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts) {

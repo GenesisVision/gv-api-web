@@ -37,7 +37,7 @@ import ProfilePublic from './ProfilePublic';
     /**
      *
      * @name FundDetails#topFundAssets
-     * @type {[FundAssetPercent]}
+     * @type {Array<FundAssetPercent>}
      */
     /**
      *
@@ -92,7 +92,7 @@ import ProfilePublic from './ProfilePublic';
     /**
      *
      * @name FundDetails#chart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *

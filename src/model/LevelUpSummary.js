@@ -27,7 +27,7 @@ import LevelUpData from './LevelUpData';
     /**
      *
      * @name LevelUpSummary#levelData
-     * @type {[LevelUpData]}
+     * @type {Array<LevelUpData>}
      */
 
 

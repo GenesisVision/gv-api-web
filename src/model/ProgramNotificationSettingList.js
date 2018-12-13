@@ -32,7 +32,7 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
     /**
      *
      * @name ProgramNotificationSettingList#settingsCustom
-     * @type {[NotificationSettingViewModel]}
+     * @type {Array<NotificationSettingViewModel>}
      */
     /**
      *
@@ -57,7 +57,7 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
     /**
      *
      * @name ProgramNotificationSettingList#settingsGeneral
-     * @type {[NotificationSettingViewModel]}
+     * @type {Array<NotificationSettingViewModel>}
      */
 
 

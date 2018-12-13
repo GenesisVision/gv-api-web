@@ -52,7 +52,7 @@ import ChartSimple from './ChartSimple';
     /**
      *
      * @name FundProfitChart#equityChart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *

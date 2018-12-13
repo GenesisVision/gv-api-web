@@ -52,7 +52,7 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
     /**
      *
      * @name ManagerNotificationSettingList#settingsGeneral
-     * @type {[NotificationSettingViewModel]}
+     * @type {Array<NotificationSettingViewModel>}
      */
 
 

@@ -27,7 +27,7 @@ import ManagerPortfolioEvent from './ManagerPortfolioEvent';
     /**
      *
      * @name ManagerPortfolioEvents#events
-     * @type {[ManagerPortfolioEvent]}
+     * @type {Array<ManagerPortfolioEvent>}
      */
     /**
      *

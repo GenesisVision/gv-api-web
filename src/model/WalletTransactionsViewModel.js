@@ -27,7 +27,7 @@ import WalletTransaction from './WalletTransaction';
     /**
      *
      * @name WalletTransactionsViewModel#transactions
-     * @type {[WalletTransaction]}
+     * @type {Array<WalletTransaction>}
      */
     /**
      *

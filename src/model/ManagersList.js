@@ -27,7 +27,7 @@ import ManagerProfile from './ManagerProfile';
     /**
      *
      * @name ManagersList#managers
-     * @type {[ManagerProfile]}
+     * @type {Array<ManagerProfile>}
      */
     /**
      *

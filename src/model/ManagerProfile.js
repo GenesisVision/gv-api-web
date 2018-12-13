@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ManagerProfile#assets
-     * @type {[String]}
+     * @type {Array<String>}
      */
     /**
      *

@@ -117,7 +117,7 @@ import ProgramDetailsRating from './ProgramDetailsRating';
     /**
      *
      * @name ProgramDetails#chart
-     * @type {[ChartSimple]}
+     * @type {Array<ChartSimple>}
      */
     /**
      *

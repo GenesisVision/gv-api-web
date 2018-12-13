@@ -27,7 +27,7 @@ import ErrorMessage from './ErrorMessage';
     /**
      *
      * @name ErrorViewModel#errors
-     * @type {[ErrorMessage]}
+     * @type {Array<ErrorMessage>}
      */
     /**
      *

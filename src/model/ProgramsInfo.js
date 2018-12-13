@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ProgramsInfo#periods
-     * @type {[Number]}
+     * @type {Array<Number>}
      */
 
 
