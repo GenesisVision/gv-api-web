@@ -1,4 +1,4 @@
-export export declare class ApiClient {
+export declare class ApiClient {
     paramToString: any;
     buildUrl: any;
     isJsonMime: any;
@@ -13,7 +13,7 @@ export export declare class ApiClient {
     static instance: ApiClient;
 }
 
-export export declare class AuthApi {
+export declare class AuthApi {
     constructor(apiClient: ApiClient): AuthApi;
     v10Auth2faConfirmPost(authorization: string, opts: {
         model: TwoFactorAuthenticatorConfirm;
@@ -68,12 +68,12 @@ export export declare class AuthApi {
     v10AuthTokenUpdatePost(authorization: string): Promise<'String'>;
 }
 
-export export declare class BrokersApi {
+export declare class BrokersApi {
     constructor(apiClient: ApiClient): BrokersApi;
     v10BrokersGet(): Promise<BrokersInfo>;
 }
 
-export export declare class FileApi {
+export declare class FileApi {
     constructor(apiClient: ApiClient): FileApi;
     v10FileByIdGet(id: string): Promise<any>;
     v10FileDocumentUploadPost(authorization: string, uploadedFile: File): Promise<UploadResult>;
@@ -82,7 +82,7 @@ export export declare class FileApi {
     }): Promise<UploadResult>;
 }
 
-export export declare class FundsApi {
+export declare class FundsApi {
     constructor(apiClient: ApiClient): FundsApi;
     v10FundsAssetsGet(): Promise<PlatformAssets>;
     v10FundsByIdAssetsGet(id: string): Promise<FundAssetsListInfo>;
@@ -122,7 +122,7 @@ export export declare class FundsApi {
     v10FundsSetsGet(authorization: string): Promise<ProgramSets>;
 }
 
-export export declare class InvestorApi {
+export declare class InvestorApi {
     constructor(apiClient: ApiClient): InvestorApi;
     v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
     v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundInvestInfo>;
@@ -184,14 +184,14 @@ export export declare class InvestorApi {
     v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
 }
 
-export export declare class KycApi {
+export declare class KycApi {
     constructor(apiClient: ApiClient): KycApi;
     v10KycCallbackPost(opts: {
         model: KycCallback;
     }): Promise<'String'>;
 }
 
-export export declare class ManagerApi {
+export declare class ManagerApi {
     constructor(apiClient: ApiClient): ManagerApi;
     v10ManagerAssetsGet(authorization: string): Promise<ManagerAssets>;
     v10ManagerByIdDetailsGet(id: string): Promise<ManagerProfileDetails>;
@@ -271,7 +271,7 @@ export export declare class ManagerApi {
     v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
 }
 
-export export declare class NotificationsApi {
+export declare class NotificationsApi {
     constructor(apiClient: ApiClient): NotificationsApi;
     v10NotificationsGet(authorization: string, opts: {
         skip: number;
@@ -293,7 +293,7 @@ export export declare class NotificationsApi {
     v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string): Promise<any>;
 }
 
-export export declare class PlatformApi {
+export declare class PlatformApi {
     constructor(apiClient: ApiClient): PlatformApi;
     v10PlatformInfoGet(): Promise<PlatformInfo>;
     v10PlatformLevelsGet(opts: {
@@ -302,7 +302,7 @@ export export declare class PlatformApi {
     v10PlatformStatisticGet(): Promise<PlatformStatistic>;
 }
 
-export export declare class ProfileApi {
+export declare class ProfileApi {
     constructor(apiClient: ApiClient): ProfileApi;
     v10ProfileAvatarRemovePost(authorization: string): Promise<any>;
     v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string): Promise<any>;
@@ -317,7 +317,7 @@ export export declare class ProfileApi {
     v10ProfileVerificationTokenPost(authorization: string): Promise<'String'>;
 }
 
-export export declare class ProgramsApi {
+export declare class ProgramsApi {
     constructor(apiClient: ApiClient): ProgramsApi;
     v10ProgramsByIdChartsBalanceGet(id: string, opts: {
         dateFrom: Date;
@@ -372,7 +372,7 @@ export export declare class ProgramsApi {
     v10ProgramsSetsGet(authorization: string): Promise<ProgramSets>;
 }
 
-export export declare class RateApi {
+export declare class RateApi {
     constructor(apiClient: ApiClient): RateApi;
     v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string): Promise<'Number'>;
     v10RateByFromByToGet(from: string, to: string): Promise<'Number'>;
@@ -382,7 +382,7 @@ export export declare class RateApi {
     }): Promise<RatesModel>;
 }
 
-export export declare class SearchApi {
+export declare class SearchApi {
     constructor(apiClient: ApiClient): SearchApi;
     v10SearchGet(opts: {
         mask: string;
@@ -390,7 +390,7 @@ export export declare class SearchApi {
     }): Promise<SearchViewModel>;
 }
 
-export export declare class WalletApi {
+export declare class WalletApi {
     constructor(apiClient: ApiClient): WalletApi;
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
@@ -416,7 +416,7 @@ export export declare class WalletApi {
     v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string): Promise<any>;
 }
 
-export export declare interface index {
+export declare interface index {
     ApiClient: ApiClient;
     AmountWithCurrency: AmountWithCurrency;
     AndroidAppVersion: AndroidAppVersion;
@@ -559,29 +559,29 @@ export export declare interface index {
     WalletApi: WalletApi;
 }
 
-export export declare interface AmountWithCurrency {
+export declare interface AmountWithCurrency {
     amount: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 }
 
-export export declare interface AndroidAppVersion {
+export declare interface AndroidAppVersion {
     minVersion: AndroidVersion;
     lastVersion: AndroidVersion;
 }
 
-export export declare interface AndroidVersion {
+export declare interface AndroidVersion {
     versionCode: string;
     versionName: string;
 }
 
-export export declare interface AssetSelection {
+export declare interface AssetSelection {
     id: string;
     title: string;
     logo: string;
     type: "Program" | "Fund";
 }
 
-export export declare interface AssetsValue {
+export declare interface AssetsValue {
     type: "All" | "Program" | "Fund";
     id: string;
     title: string;
@@ -592,18 +592,18 @@ export export declare interface AssetsValue {
     changeValue: number;
 }
 
-export export declare interface BalanceChartElement {
+export declare interface BalanceChartElement {
     date: Date;
     managerFunds: number;
     investorsFunds: number;
 }
 
-export export declare interface BlockchainInfo {
+export declare interface BlockchainInfo {
     hash: string;
     status: "Undefined" | "New" | "Pending" | "ConfirmedByGate" | "ConfirmedAndValidated" | "PendingAddInWallet" | "Error" | "Cancelled";
 }
 
-export export declare interface Broker {
+export declare interface Broker {
     name: string;
     description: string;
     logo: string;
@@ -615,7 +615,7 @@ export export declare interface Broker {
     accountTypes: BrokerAccountType[];
 }
 
-export export declare interface BrokerAccountType {
+export declare interface BrokerAccountType {
     id: string;
     name: string;
     description: string;
@@ -624,29 +624,29 @@ export export declare interface BrokerAccountType {
     currencies: string[];
 }
 
-export export declare interface BrokersInfo {
+export declare interface BrokersInfo {
     brokers: Broker[];
 }
 
-export export declare interface ChangePasswordViewModel {
+export declare interface ChangePasswordViewModel {
     oldPassword: string;
     password: string;
     confirmPassword: string;
 }
 
-export export declare interface ChartSimple {
+export declare interface ChartSimple {
     value: number;
     date: Date;
 }
 
-export export declare interface CreateWithdrawalRequestModel {
+export declare interface CreateWithdrawalRequestModel {
     amount: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     address: string;
     twoFactorCode: string;
 }
 
-export export declare interface DashboardChartValue {
+export declare interface DashboardChartValue {
     investedProgramsInfo: ValueChartBar[];
     balanceChart: ChartSimple[];
     value: number;
@@ -657,7 +657,7 @@ export export declare interface DashboardChartValue {
     rate: number;
 }
 
-export export declare interface DashboardPortfolioEvent {
+export declare interface DashboardPortfolioEvent {
     assetId: string;
     date: Date;
     title: string;
@@ -670,16 +670,16 @@ export export declare interface DashboardPortfolioEvent {
     assetType: "Program" | "Fund";
 }
 
-export export declare interface DashboardPortfolioEvents {
+export declare interface DashboardPortfolioEvents {
     events: DashboardPortfolioEvent[];
     total: number;
 }
 
-export export declare interface DashboardProgramDetails {
+export declare interface DashboardProgramDetails {
     share: number;
 }
 
-export export declare interface DashboardSummary {
+export declare interface DashboardSummary {
     chart: DashboardChartValue;
     events: DashboardPortfolioEvents;
     profileHeader: ProfileHeaderViewModel;
@@ -688,17 +688,17 @@ export export declare interface DashboardSummary {
     requests: ProgramRequests;
 }
 
-export export declare interface ErrorMessage {
+export declare interface ErrorMessage {
     message: string;
     property: string;
 }
 
-export export declare interface ErrorViewModel {
+export declare interface ErrorViewModel {
     errors: ErrorMessage[];
     code: "InternalServerError" | "ValidationError" | "RequiresTwoFactor";
 }
 
-export export declare interface Facet {
+export declare interface Facet {
     id: string;
     title: string;
     description: string;
@@ -707,11 +707,11 @@ export export declare interface Facet {
     sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
 }
 
-export export declare interface ForgotPasswordViewModel {
+export declare interface ForgotPasswordViewModel {
     email: string;
 }
 
-export export declare interface FundAssetInfo {
+export declare interface FundAssetInfo {
     asset: string;
     symbol: string;
     icon: string;
@@ -719,12 +719,12 @@ export export declare interface FundAssetInfo {
     current: number;
 }
 
-export export declare interface FundAssetPart {
+export declare interface FundAssetPart {
     id: string;
     percent: number;
 }
 
-export export declare interface FundAssetPartWithIcon {
+export declare interface FundAssetPartWithIcon {
     icon: string;
     color: string;
     name: string;
@@ -732,24 +732,24 @@ export export declare interface FundAssetPartWithIcon {
     percent: number;
 }
 
-export export declare interface FundAssetPercent {
+export declare interface FundAssetPercent {
     asset: string;
     name: string;
     percent: number;
     icon: string;
 }
 
-export export declare interface FundAssetsListInfo {
+export declare interface FundAssetsListInfo {
     assets: FundAssetInfo[];
 }
 
-export export declare interface FundBalanceChart {
+export declare interface FundBalanceChart {
     usdBalance: number;
     balanceChart: BalanceChartElement[];
     gvtBalance: number;
 }
 
-export export declare interface FundDetails {
+export declare interface FundDetails {
     totalAssetsCount: number;
     topFundAssets: FundAssetPercent[];
     statistic: FundDetailsListStatistic;
@@ -766,7 +766,7 @@ export export declare interface FundDetails {
     dashboardAssetsDetails: DashboardProgramDetails;
 }
 
-export export declare interface FundDetailsFull {
+export declare interface FundDetailsFull {
     entryFee: number;
     exitFee: number;
     managementFee: number;
@@ -784,7 +784,7 @@ export export declare interface FundDetailsFull {
     manager: ProfilePublic;
 }
 
-export export declare interface FundDetailsListStatistic {
+export declare interface FundDetailsListStatistic {
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
     profitPercent: number;
@@ -792,7 +792,7 @@ export export declare interface FundDetailsListStatistic {
     investorsCount: number;
 }
 
-export export declare interface FundInvestInfo {
+export declare interface FundInvestInfo {
     title: string;
     availableInWallet: number;
     minInvestmentAmount: number;
@@ -802,7 +802,7 @@ export export declare interface FundInvestInfo {
     isOwnProgram: boolean;
 }
 
-export export declare interface FundNotificationSettingList {
+export declare interface FundNotificationSettingList {
     assetId: string;
     title: string;
     url: string;
@@ -810,7 +810,7 @@ export export declare interface FundNotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
 }
 
-export export declare interface FundProfitChart {
+export declare interface FundProfitChart {
     totalUsdProfit: number;
     timeframeUsdProfit: number;
     rebalances: number;
@@ -829,7 +829,7 @@ export export declare interface FundProfitChart {
     rate: number;
 }
 
-export export declare interface FundStatistic {
+export declare interface FundStatistic {
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
     profitPercent: number;
@@ -841,24 +841,24 @@ export export declare interface FundStatistic {
     rebalancingCount: number;
 }
 
-export export declare interface FundWithdrawInfo {
+export declare interface FundWithdrawInfo {
     exitFee: number;
     title: string;
     availableToWithdraw: number;
     rate: number;
 }
 
-export export declare interface FundsList {
+export declare interface FundsList {
     funds: FundDetails[];
     total: number;
 }
 
-export export declare interface IOsAppVersion {
+export declare interface IOsAppVersion {
     minVersion: string;
     lastVersion: string;
 }
 
-export export declare interface KycCallback {
+export declare interface KycCallback {
     applicantId: string;
     inspectionId: string;
     correlationId: string;
@@ -869,12 +869,12 @@ export export declare interface KycCallback {
     review: Review;
 }
 
-export export declare interface LevelInfo {
+export declare interface LevelInfo {
     level: number;
     investmentLimit: number;
 }
 
-export export declare interface LevelUpData {
+export declare interface LevelUpData {
     level: number;
     total: number;
     totalOwn: number;
@@ -882,11 +882,11 @@ export export declare interface LevelUpData {
     targetProfit: number;
 }
 
-export export declare interface LevelUpSummary {
+export declare interface LevelUpSummary {
     levelData: LevelUpData[];
 }
 
-export export declare interface LoginViewModel {
+export declare interface LoginViewModel {
     email: string;
     password: string;
     rememberMe: boolean;
@@ -895,12 +895,12 @@ export export declare interface LoginViewModel {
     client: string;
 }
 
-export export declare interface ManagerAssets {
+export declare interface ManagerAssets {
     programs: ManagerSimpleProgram[];
     funds: ManagerSimpleFund[];
 }
 
-export export declare interface ManagerDashboard {
+export declare interface ManagerDashboard {
     profile: ManagerProfileDetails;
     requests: ProgramRequest;
     events: ManagerPortfolioEvents;
@@ -909,7 +909,7 @@ export export declare interface ManagerDashboard {
     fundChart: FundProfitChart;
 }
 
-export export declare interface ManagerFundWithdrawInfo {
+export declare interface ManagerFundWithdrawInfo {
     withheldInvestment: number;
     exitFee: number;
     title: string;
@@ -917,7 +917,7 @@ export export declare interface ManagerFundWithdrawInfo {
     rate: number;
 }
 
-export export declare interface ManagerNotificationSettingList {
+export declare interface ManagerNotificationSettingList {
     managerId: string;
     url: string;
     username: string;
@@ -926,10 +926,10 @@ export export declare interface ManagerNotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
 }
 
-export export declare interface ManagerOverview {
+export declare interface ManagerOverview {
 }
 
-export export declare interface ManagerPortfolioEvent {
+export declare interface ManagerPortfolioEvent {
     assetId: string;
     date: Date;
     title: string;
@@ -945,12 +945,12 @@ export export declare interface ManagerPortfolioEvent {
     periodNumber: number;
 }
 
-export export declare interface ManagerPortfolioEvents {
+export declare interface ManagerPortfolioEvents {
     events: ManagerPortfolioEvent[];
     total: number;
 }
 
-export export declare interface ManagerProfile {
+export declare interface ManagerProfile {
     id: string;
     username: string;
     about: string;
@@ -960,14 +960,14 @@ export export declare interface ManagerProfile {
     url: string;
 }
 
-export export declare interface ManagerProfileDetails {
+export declare interface ManagerProfileDetails {
     managerProfile: ManagerProfile;
     overview: ManagerOverview;
     programsCount: number;
     fundsCount: number;
 }
 
-export export declare interface ManagerProgramWithdrawInfo {
+export declare interface ManagerProgramWithdrawInfo {
     withheldInvestment: number;
     periodEnds: Date;
     title: string;
@@ -975,7 +975,7 @@ export export declare interface ManagerProgramWithdrawInfo {
     rate: number;
 }
 
-export export declare interface ManagerSimpleFund {
+export declare interface ManagerSimpleFund {
     id: string;
     title: string;
     color: string;
@@ -983,7 +983,7 @@ export export declare interface ManagerSimpleFund {
     url: string;
 }
 
-export export declare interface ManagerSimpleProgram {
+export declare interface ManagerSimpleProgram {
     level: number;
     id: string;
     title: string;
@@ -992,12 +992,12 @@ export export declare interface ManagerSimpleProgram {
     url: string;
 }
 
-export export declare interface ManagersList {
+export declare interface ManagersList {
     managers: ManagerProfile[];
     total: number;
 }
 
-export export declare interface NewFundRequest {
+export declare interface NewFundRequest {
     exitFee: number;
     managementFee: number;
     assets: FundAssetPart[];
@@ -1007,7 +1007,7 @@ export export declare interface NewFundRequest {
     entryFee: number;
 }
 
-export export declare interface NewProgramRequest {
+export declare interface NewProgramRequest {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     periodLength: number;
     successFee: number;
@@ -1020,19 +1020,19 @@ export export declare interface NewProgramRequest {
     entryFee: number;
 }
 
-export export declare interface NotificationList {
+export declare interface NotificationList {
     notifications: NotificationViewModel[];
     total: number;
 }
 
-export export declare interface NotificationSettingList {
+export declare interface NotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
     settingsProgram: ProgramNotificationSettingList[];
     settingsFund: FundNotificationSettingList[];
     settingsManager: ManagerNotificationSettingList[];
 }
 
-export export declare interface NotificationSettingViewModel {
+export declare interface NotificationSettingViewModel {
     id: string;
     isEnabled: boolean;
     assetId: string;
@@ -1042,7 +1042,7 @@ export export declare interface NotificationSettingViewModel {
     conditionAmount: number;
 }
 
-export export declare interface NotificationViewModel {
+export declare interface NotificationViewModel {
     id: string;
     text: string;
     date: Date;
@@ -1055,7 +1055,7 @@ export export declare interface NotificationViewModel {
     assetType: "Program" | "Fund";
 }
 
-export export declare interface OrderModel {
+export declare interface OrderModel {
     id: string;
     login: string;
     ticket: string;
@@ -1068,23 +1068,23 @@ export export declare interface OrderModel {
     entry: "In" | "Out" | "InOut" | "OutBy";
 }
 
-export export declare interface OtherAssetsValue {
+export declare interface OtherAssetsValue {
     amount: number;
     value: number;
     changePercent: number;
     changeValue: number;
 }
 
-export export declare interface PasswordModel {
+export declare interface PasswordModel {
     password: string;
 }
 
-export export declare interface PeriodDate {
+export declare interface PeriodDate {
     dateFrom: Date;
     dateTo: Date;
 }
 
-export export declare interface PersonalFundDetailsFull {
+export declare interface PersonalFundDetailsFull {
     withdrawPercent: number;
     canReallocate: boolean;
     possibleReallocationTime: Date;
@@ -1105,7 +1105,7 @@ export export declare interface PersonalFundDetailsFull {
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
 }
 
-export export declare interface PersonalProgramDetailsFull {
+export declare interface PersonalProgramDetailsFull {
     isReinvest: boolean;
     gvtValue: number;
     isFavorite: boolean;
@@ -1125,7 +1125,7 @@ export export declare interface PersonalProgramDetailsFull {
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
 }
 
-export export declare interface PlatformAsset {
+export declare interface PlatformAsset {
     id: string;
     name: string;
     asset: string;
@@ -1134,16 +1134,16 @@ export export declare interface PlatformAsset {
     color: string;
 }
 
-export export declare interface PlatformAssets {
+export declare interface PlatformAssets {
     assets: PlatformAsset[];
 }
 
-export export declare interface PlatformCurrency {
+export declare interface PlatformCurrency {
     name: string;
     rateToGvt: number;
 }
 
-export export declare interface PlatformInfo {
+export declare interface PlatformInfo {
     iOSVersion: IOsAppVersion;
     androidVersion: AndroidAppVersion;
     programsFacets: Facet[];
@@ -1153,7 +1153,7 @@ export export declare interface PlatformInfo {
     platformCurrencies: PlatformCurrency[];
 }
 
-export export declare interface PlatformStatistic {
+export declare interface PlatformStatistic {
     managers: number;
     investors: number;
     profitWeek: number;
@@ -1162,7 +1162,7 @@ export export declare interface PlatformStatistic {
     totalProfit: number;
 }
 
-export export declare interface ProfileFullViewModel {
+export declare interface ProfileFullViewModel {
     id: string;
     email: string;
     firstName: string;
@@ -1184,7 +1184,7 @@ export export declare interface ProfileFullViewModel {
     verificationStatus: "NotVerified" | "Verified" | "UnderReview" | "Rejected";
 }
 
-export export declare interface ProfileHeaderViewModel {
+export declare interface ProfileHeaderViewModel {
     id: string;
     name: string;
     email: string;
@@ -1199,7 +1199,7 @@ export export declare interface ProfileHeaderViewModel {
     isNewUser: boolean;
 }
 
-export export declare interface ProfilePublic {
+export declare interface ProfilePublic {
     id: string;
     username: string;
     avatar: string;
@@ -1207,21 +1207,21 @@ export export declare interface ProfilePublic {
     url: string;
 }
 
-export export declare interface ProgramBalanceChart {
+export declare interface ProgramBalanceChart {
     programCurrencyBalance: number;
     programCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     balanceChart: ProgramBalanceChartElement[];
     gvtBalance: number;
 }
 
-export export declare interface ProgramBalanceChartElement {
+export declare interface ProgramBalanceChartElement {
     profit: number;
     date: Date;
     managerFunds: number;
     investorsFunds: number;
 }
 
-export export declare interface ProgramDetails {
+export declare interface ProgramDetails {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     periodDuration: number;
@@ -1243,7 +1243,7 @@ export export declare interface ProgramDetails {
     dashboardAssetsDetails: DashboardProgramDetails;
 }
 
-export export declare interface ProgramDetailsFull {
+export declare interface ProgramDetailsFull {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     periodDuration: number;
@@ -1269,7 +1269,7 @@ export export declare interface ProgramDetailsFull {
     manager: ProfilePublic;
 }
 
-export export declare interface ProgramDetailsListStatistic {
+export declare interface ProgramDetailsListStatistic {
     balanceBase: AmountWithCurrency;
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
@@ -1281,18 +1281,18 @@ export export declare interface ProgramDetailsListStatistic {
     tradesCount: number;
 }
 
-export export declare interface ProgramDetailsRating {
+export declare interface ProgramDetailsRating {
     rating: number;
     profit: number;
     canLevelUp: boolean;
     topPercent: number;
 }
 
-export export declare interface ProgramInfo {
+export declare interface ProgramInfo {
     title: string;
 }
 
-export export declare interface ProgramInvestInfo {
+export declare interface ProgramInvestInfo {
     periodEnds: Date;
     availableToInvest: number;
     title: string;
@@ -1304,7 +1304,7 @@ export export declare interface ProgramInvestInfo {
     isOwnProgram: boolean;
 }
 
-export export declare interface ProgramNotificationSettingList {
+export declare interface ProgramNotificationSettingList {
     level: number;
     settingsCustom: NotificationSettingViewModel[];
     assetId: string;
@@ -1314,7 +1314,7 @@ export export declare interface ProgramNotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
 }
 
-export export declare interface ProgramProfitChart {
+export declare interface ProgramProfitChart {
     totalProgramCurrencyProfit: number;
     timeframeProgramCurrencyProfit: number;
     programCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -1338,7 +1338,7 @@ export export declare interface ProgramProfitChart {
     rate: number;
 }
 
-export export declare interface ProgramRequest {
+export declare interface ProgramRequest {
     id: string;
     programId: string;
     date: Date;
@@ -1357,18 +1357,18 @@ export export declare interface ProgramRequest {
     programType: "Program" | "Fund";
 }
 
-export export declare interface ProgramRequests {
+export declare interface ProgramRequests {
     requests: ProgramRequest[];
     total: number;
     totalValue: number;
 }
 
-export export declare interface ProgramSets {
+export declare interface ProgramSets {
     sets: Facet[];
     favoritesCount: number;
 }
 
-export export declare interface ProgramStatistic {
+export declare interface ProgramStatistic {
     balanceBase: AmountWithCurrency;
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
@@ -1389,20 +1389,20 @@ export export declare interface ProgramStatistic {
     sharpeRatioPercent: number;
 }
 
-export export declare interface ProgramUpdate {
+export declare interface ProgramUpdate {
     title: string;
     description: string;
     logo: string;
 }
 
-export export declare interface ProgramWithdrawInfo {
+export declare interface ProgramWithdrawInfo {
     periodEnds: Date;
     title: string;
     availableToWithdraw: number;
     rate: number;
 }
 
-export export declare interface ProgramsInfo {
+export declare interface ProgramsInfo {
     managerProgramInvestment: number;
     managerMaxEntryFee: number;
     managerMaxSuccessFee: number;
@@ -1411,25 +1411,25 @@ export export declare interface ProgramsInfo {
     periods: number[];
 }
 
-export export declare interface ProgramsLevelsInfo {
+export declare interface ProgramsLevelsInfo {
     levels: LevelInfo[];
 }
 
-export export declare interface ProgramsList {
+export declare interface ProgramsList {
     programs: ProgramDetails[];
     total: number;
 }
 
-export export declare interface RateItem {
+export declare interface RateItem {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     rate: number;
 }
 
-export export declare interface RatesModel {
+export declare interface RatesModel {
     rates: RatesModelRates;
 }
 
-export export declare interface RatesModelRates {
+export declare interface RatesModelRates {
     Undefined: RateItem[];
     GVT: RateItem[];
     ETH: RateItem[];
@@ -1445,24 +1445,24 @@ export export declare interface RatesModelRates {
     EUR: RateItem[];
 }
 
-export export declare interface RecoveryCode {
+export declare interface RecoveryCode {
     code: string;
     isActive: boolean;
 }
 
-export export declare interface RecoveryCodesViewModel {
+export declare interface RecoveryCodesViewModel {
     codes: RecoveryCode[];
     authToken: string;
 }
 
-export export declare interface RegisterInvestorViewModel {
+export declare interface RegisterInvestorViewModel {
     email: string;
     password: string;
     confirmPassword: string;
     refCode: string;
 }
 
-export export declare interface RegisterManagerViewModel {
+export declare interface RegisterManagerViewModel {
     userName: string;
     email: string;
     password: string;
@@ -1470,18 +1470,18 @@ export export declare interface RegisterManagerViewModel {
     refCode: string;
 }
 
-export export declare interface ResendConfirmationViewModel {
+export declare interface ResendConfirmationViewModel {
     email: string;
 }
 
-export export declare interface ResetPasswordViewModel {
+export declare interface ResetPasswordViewModel {
     userId: string;
     code: string;
     password: string;
     confirmPassword: string;
 }
 
-export export declare interface Review {
+export declare interface Review {
     moderationComment: string;
     clientComment: string;
     reviewAnswer: string;
@@ -1489,38 +1489,38 @@ export export declare interface Review {
     reviewRejectType: string;
 }
 
-export export declare interface SearchViewModel {
+export declare interface SearchViewModel {
     programs: ProgramsList;
     funds: FundsList;
     managers: ManagersList;
 }
 
-export export declare interface TradesViewModel {
+export declare interface TradesViewModel {
     trades: OrderModel[];
     total: number;
 }
 
-export export declare interface TwoFactorAuthenticator {
+export declare interface TwoFactorAuthenticator {
     sharedKey: string;
     authenticatorUri: string;
 }
 
-export export declare interface TwoFactorAuthenticatorConfirm {
+export declare interface TwoFactorAuthenticatorConfirm {
     code: string;
     sharedKey: string;
     password: string;
 }
 
-export export declare interface TwoFactorCodeModel {
+export declare interface TwoFactorCodeModel {
     twoFactorCode: string;
     password: string;
 }
 
-export export declare interface TwoFactorStatus {
+export declare interface TwoFactorStatus {
     twoFactorEnabled: boolean;
 }
 
-export export declare interface UpdatePersonalDetailViewModel {
+export declare interface UpdatePersonalDetailViewModel {
     firstName: string;
     middleName: string;
     lastName: string;
@@ -1535,23 +1535,23 @@ export export declare interface UpdatePersonalDetailViewModel {
     index: string;
 }
 
-export export declare interface UpdateProfileViewModel {
+export declare interface UpdateProfileViewModel {
     userName: string;
     about: string;
 }
 
-export export declare interface UploadResult {
+export declare interface UploadResult {
     id: string;
 }
 
-export export declare interface ValueChartBar {
+export declare interface ValueChartBar {
     value: number;
     date: Date;
     topAssets: AssetsValue[];
     otherAssetsValue: OtherAssetsValue;
 }
 
-export export declare interface WalletInfo {
+export declare interface WalletInfo {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     address: string;
     rateToGVT: number;
@@ -1559,7 +1559,7 @@ export export declare interface WalletInfo {
     logo: string;
 }
 
-export export declare interface WalletPendingTransaction {
+export declare interface WalletPendingTransaction {
     id: string;
     hash: string;
     amount: number;
@@ -1570,12 +1570,12 @@ export export declare interface WalletPendingTransaction {
     address: string;
 }
 
-export export declare interface WalletPendingTransactionsViewModel {
+export declare interface WalletPendingTransactionsViewModel {
     transactions: WalletPendingTransaction[];
     total: number;
 }
 
-export export declare interface WalletSummary {
+export declare interface WalletSummary {
     totalBalanceGVT: number;
     totalBalanceCurrency: number;
     investedGVT: number;
@@ -1584,7 +1584,7 @@ export export declare interface WalletSummary {
     availableCurrency: number;
 }
 
-export export declare interface WalletTransaction {
+export declare interface WalletTransaction {
     id: string;
     amount: number;
     amountConverted: number;
@@ -1606,12 +1606,12 @@ export export declare interface WalletTransaction {
     destinationWithdrawalInfo: WithdrawalInfo;
 }
 
-export export declare interface WalletTransactionsViewModel {
+export declare interface WalletTransactionsViewModel {
     transactions: WalletTransaction[];
     total: number;
 }
 
-export export declare interface WalletWithdrawalInfo {
+export declare interface WalletWithdrawalInfo {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     description: string;
     logo: string;
@@ -1619,18 +1619,18 @@ export export declare interface WalletWithdrawalInfo {
     rateToGvt: number;
 }
 
-export export declare interface WalletsInfo {
+export declare interface WalletsInfo {
     wallets: WalletInfo[];
 }
 
-export export declare interface WithdrawalInfo {
+export declare interface WithdrawalInfo {
     wallet: string;
     status: "New" | "InProcess" | "Done" | "Error" | "Rejected" | "Cancelled";
     canResendEmail: boolean;
     canCancelRequest: boolean;
 }
 
-export export declare interface WithdrawalSummary {
+export declare interface WithdrawalSummary {
     availableToWithdrawal: number;
     wallets: WalletWithdrawalInfo[];
 }

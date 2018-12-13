@@ -7,7 +7,7 @@
   "types": "distribution/types.d.ts",
   "scripts": {
     "generate-tsd": "./bash/replace && jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution && ./bash/add_exports",
-    "build": "babel src --out-dir distribution && npm run generate-tsd && ./bash/add_exports",
+    "build": "babel src --out-dir distribution && npm run generate-tsd",
     "precommit": "npm install && npm run build && npm run addfiles",
     "addfiles": "git add .",
     "test": "mocha --compilers js:babel-core/register --recursive"
