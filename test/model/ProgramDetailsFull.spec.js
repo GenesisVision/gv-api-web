@@ -90,6 +90,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property entryFeeSelected (base name: "entryFeeSelected")', function() {
+      // uncomment below and update the code to test the property entryFeeSelected
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property entryFeeCurrent (base name: "entryFeeCurrent")', function() {
+      // uncomment below and update the code to test the property entryFeeCurrent
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property successFee (base name: "successFee")', function() {
       // uncomment below and update the code to test the property successFee
       //var instane = new CoreApiV10.ProgramDetailsFull();

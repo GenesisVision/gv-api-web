@@ -6,8 +6,8 @@
   "main": "distribution/index.js",
   "types": "distribution/types.d.ts",
   "scripts": {
-    "generate-tsd": "./replace jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution",
-    "build": "babel src --out-dir distribution && npm run generate-tsd",
+    "generate-tsd": "./bash/replace && jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution && ./bash/add_exports",
+    "build": "babel src --out-dir distribution && npm run generate-tsd && ./bash/add_exports",
     "precommit": "npm install && npm run build && npm run addfiles",
     "addfiles": "git add .",
     "test": "mocha --compilers js:babel-core/register --recursive"
@@ -16,7 +16,7 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "3.5.2"
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "babel": "^6.23.0",
