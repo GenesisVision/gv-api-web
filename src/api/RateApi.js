@@ -174,9 +174,9 @@ export default class RateApi {
     /**
      * Get rates
      * @function RateApi#v10RateGet
-     * @param {Object} opts Optional parameters
-     * @param {Array<String>} opts.from 
-     * @param {Array<String>} opts.to 
+     * @param {Object} [opts] Optional parameters
+     * @param {Array<String>} [opts.from] 
+     * @param {Array<String>} [opts.to] 
      * @return {Promise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
      */
       v10RateGet(opts) {

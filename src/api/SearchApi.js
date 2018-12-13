@@ -65,9 +65,9 @@ export default class SearchApi {
     /**
      * Program / fund / manager search
      * @function SearchApi#v10SearchGet
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.mask 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.mask] 
+     * @param {Number} [opts.take] 
      * @return {Promise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
      */
       v10SearchGet(opts) {

@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
+    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="fix double export">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/AuthApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/AuthApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/FileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/FileApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/FundsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/FundsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/InvestorApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/InvestorApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/KycApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/KycApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/ManagerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ManagerApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/PlatformApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/PlatformApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/ProfileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ProfileApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/ProgramsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ProgramsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/RateApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/RateApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/SearchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/SearchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/api/WalletApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/WalletApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/Broker.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/Broker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardChartValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/DashboardChartValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetsListInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundAssetsListInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundBalanceChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetailsFull.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundDetailsFull.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundProfitChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/FundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/NewFundRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NewFundRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NotificationList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/PlatformAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/PlatformInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramBalanceChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramProfitChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramRequests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramSets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramSets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsLevelsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsLevelsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/RatesModelRates.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/RatesModelRates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/RecoveryCodesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/RecoveryCodesViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/Review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/WalletPendingTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletPendingTransactionsViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/WalletTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletTransactionsViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/WalletsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/WithdrawalSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WithdrawalSummary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/types.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/es6/package.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/es6/package.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/FileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FileApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/FundsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FundsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/InvestorApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/InvestorApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/KycApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/KycApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ManagerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ManagerApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/NotificationsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/NotificationsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/PlatformApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/PlatformApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ProfileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ProfileApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ProgramsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ProgramsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/RateApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/RateApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/SearchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SearchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/WalletApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/WalletApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/es6/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/es6/api.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,30 +87,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/ApiClient.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2224">
-              <caret line="136" column="32" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/gitignore.mustache">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/es6/index.mustache">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="96">
+              <caret line="8" column="102" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -80,8 +126,44 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="910" lean-forward="true" selection-start-line="910" selection-end-line="910" />
+            <state relative-caret-position="374">
+              <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/InvestorApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="386" column="37" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/AndroidVersion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/ProgramsApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="430" column="20" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -99,8 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FundAssetPart</find>
-      <find>{[FundAssetPart</find>
       <find>\{\[(.*)\]\}</find>
       <find>{Arra</find>
       <find>{[</find>
@@ -129,6 +209,8 @@
       <find>eclare</find>
       <find>index</find>
       <find>declare</find>
+      <find>v10ProgramsGet</find>
+      <find>v10InvestorFundsGet</find>
     </findStrings>
     <replaceStrings>
       <replace>\{Array\&lt;$1\&gt;\}</replace>
@@ -167,7 +249,6 @@
         <option value="$PROJECT_DIR$/template/es6/api_interface.mustache" />
         <option value="$PROJECT_DIR$/src/api/AuthApi.js" />
         <option value="$PROJECT_DIR$/src/api/BrokersApi.js" />
-        <option value="$PROJECT_DIR$/template/es6/api.mustache" />
         <option value="$PROJECT_DIR$/src/model/TwoFactorAuthenticatorConfirm.js" />
         <option value="$PROJECT_DIR$/distribution/model/AndroidAppVersion.js" />
         <option value="$PROJECT_DIR$/template/es6/partial_model_inner_enum.mustache" />
@@ -189,6 +270,10 @@
         <option value="$PROJECT_DIR$/template/es6/index.mustache" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/template/es6/package.mustache" />
+        <option value="$PROJECT_DIR$/distribution/types.d.ts" />
+        <option value="$PROJECT_DIR$/src/model/AndroidVersion.js" />
+        <option value="$PROJECT_DIR$/src/api/InvestorApi.js" />
+        <option value="$PROJECT_DIR$/template/es6/api.mustache" />
       </list>
     </option>
   </component>
@@ -216,6 +301,23 @@
               <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
               <item name="distribution" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +392,7 @@
       <workItem from="1544436321248" duration="754000" />
       <workItem from="1544438024324" duration="707000" />
       <workItem from="1544455154049" duration="10703000" />
-      <workItem from="1544625888343" duration="4848000" />
+      <workItem from="1544625888343" duration="6661000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -355,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544706894627</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix double export">
+      <created>1544707264054</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1544707264054</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -368,13 +477,13 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61173000" />
+    <option name="totallyTimeSpent" value="62986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -386,7 +495,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4106583" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4106583" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -471,12 +580,10 @@
     <MESSAGE value="fix config" />
     <MESSAGE value="fix template" />
     <MESSAGE value="add scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add scripts" />
+    <MESSAGE value="fix double export" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix double export" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template/es6/partial_model_enum_class.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/typescript/modelEnum.mustache">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -530,11 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/ProgramsApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1168" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/BrokersApi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -542,13 +644,6 @@
           <folding>
             <element signature="e#341#378#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/InvestorApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2832">
-          <caret line="150" column="15" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -628,13 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -758,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/package.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -772,10 +853,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/AndroidVersion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/ProgramsApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="430" column="20" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/InvestorApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="386" column="37" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="910" lean-forward="true" selection-start-line="910" selection-end-line="910" />
+        <state relative-caret-position="374">
+          <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
         </state>
       </provider>
     </entry>

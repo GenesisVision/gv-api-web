@@ -195,14 +195,14 @@ var WalletApi = function () {
      * Wallet transactions
      * @function WalletApi#v10WalletTransactionsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {String} opts.assetType 
-     * @param {String} opts.txAction 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.assetType] 
+     * @param {String} [opts.txAction] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
      */
 
@@ -360,9 +360,9 @@ var WalletApi = function () {
 
     /**
      * @function WalletApi#v10WalletWithdrawRequestConfirmPost
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.requestId 
-     * @param {String} opts.code 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.requestId] 
+     * @param {String} [opts.code] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
@@ -402,8 +402,8 @@ var WalletApi = function () {
     /**
      * @function WalletApi#v10WalletWithdrawRequestNewPost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {CreateWithdrawalRequestModel} opts.model 
+     * @param {Object} [opts] Optional parameters
+     * @param {CreateWithdrawalRequestModel} [opts.model] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 

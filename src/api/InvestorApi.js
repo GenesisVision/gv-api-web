@@ -383,14 +383,14 @@ export default class InvestorApi {
      * Funds list
      * @function InvestorApi#v10InvestorFundsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
       v10InvestorFundsGet(authorization, opts) {
@@ -444,15 +444,15 @@ export default class InvestorApi {
      * Summary dashboard info
      * @function InvestorApi#v10InvestorGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.chartCurrency 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.balancePoints 
-     * @param {Number} opts.programsPoints 
-     * @param {Number} opts.eventsTake 
-     * @param {Number} opts.requestsSkip 
-     * @param {Number} opts.requestsTake 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.chartCurrency] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.balancePoints] 
+     * @param {Number} [opts.programsPoints] 
+     * @param {Number} [opts.eventsTake] 
+     * @param {Number} [opts.requestsSkip] 
+     * @param {Number} [opts.requestsTake] 
      * @return {Promise<DashboardSummary>} a Promise, with an object containing data of type DashboardSummary and HTTP response
      */
       v10InvestorGet(authorization, opts) {
@@ -503,12 +503,12 @@ export default class InvestorApi {
      * Portfolio charts
      * @function InvestorApi#v10InvestorPortfolioChartGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.currency 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.balancePoints 
-     * @param {Number} opts.programsPoints 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.balancePoints] 
+     * @param {Number} [opts.programsPoints] 
      * @return {Promise<DashboardChartValue>} a Promise, with an object containing data of type DashboardChartValue and HTTP response
      */
       v10InvestorPortfolioChartGet(authorization, opts) {
@@ -561,14 +561,14 @@ export default class InvestorApi {
      * Portfolio events
      * @function InvestorApi#v10InvestorPortfolioEventsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {String} opts.type 
-     * @param {String} opts.assetType 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.assetType] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<DashboardPortfolioEvents>} a Promise, with an object containing data of type DashboardPortfolioEvents and HTTP response
      */
       v10InvestorPortfolioEventsGet(authorization, opts) {
@@ -1020,14 +1020,14 @@ export default class InvestorApi {
      * Dashboard program list
      * @function InvestorApi#v10InvestorProgramsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
       v10InvestorProgramsGet(authorization, opts) {

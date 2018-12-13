@@ -110,10 +110,10 @@ var ProgramsApi = function () {
      * Program balance chart
      * @function ProgramsApi#v10ProgramsByIdChartsBalanceGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.maxPointCount] 
      * @return {Promise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
      */
 
@@ -158,10 +158,10 @@ var ProgramsApi = function () {
      * Program profit chart
      * @function ProgramsApi#v10ProgramsByIdChartsProfitGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.maxPointCount] 
      * @return {Promise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
      */
 
@@ -300,9 +300,9 @@ var ProgramsApi = function () {
      * Program details
      * @function ProgramsApi#v10ProgramsByIdGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {String} opts.currencySecondary 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {String} [opts.currencySecondary] 
      * @return {Promise<ProgramDetailsFull>} a Promise, with an object containing data of type ProgramDetailsFull and HTTP response
      */
 
@@ -350,13 +350,13 @@ var ProgramsApi = function () {
      * Trade history
      * @function ProgramsApi#v10ProgramsByIdTradesGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {String} opts.symbol 
-     * @param {String} opts.sorting 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {String} [opts.symbol] 
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
 
@@ -412,28 +412,28 @@ var ProgramsApi = function () {
     /**
      * Programs list
      * @function ProgramsApi#v10ProgramsGet
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {Number} opts.levelMin 
-     * @param {Number} opts.levelMax 
-     * @param {Number} opts.profitAvgMin 
-     * @param {Number} opts.profitAvgMax 
-     * @param {String} opts.sorting 
-     * @param {String} opts.programCurrency 
-     * @param {String} opts.currencySecondary 
-     * @param {Number} opts.levelUpFrom 
-     * @param {Date} opts.statisticDateFrom 
-     * @param {Date} opts.statisticDateTo 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.mask 
-     * @param {String} opts.facetId 
-     * @param {Boolean} opts.isFavorite 
-     * @param {Boolean} opts.isEnabled 
-     * @param {Array<String>} opts.ids 
-     * @param {String} opts.managerId 
-     * @param {String} opts.programManagerId 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {Number} [opts.levelMin] 
+     * @param {Number} [opts.levelMax] 
+     * @param {Number} [opts.profitAvgMin] 
+     * @param {Number} [opts.profitAvgMax] 
+     * @param {String} [opts.sorting] 
+     * @param {String} [opts.programCurrency] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.levelUpFrom] 
+     * @param {Date} [opts.statisticDateFrom] 
+     * @param {Date} [opts.statisticDateTo] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.mask] 
+     * @param {String} [opts.facetId] 
+     * @param {Boolean} [opts.isFavorite] 
+     * @param {Boolean} [opts.isEnabled] 
+     * @param {Array<String>} [opts.ids] 
+     * @param {String} [opts.managerId] 
+     * @param {String} [opts.programManagerId] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
 
@@ -468,8 +468,8 @@ var ProgramsApi = function () {
     /**
      * Level up summary
      * @function ProgramsApi#v10ProgramsLevelupSummaryGet
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
      * @return {Promise<LevelUpSummary>} a Promise, with an object containing data of type LevelUpSummary and HTTP response
      */
 

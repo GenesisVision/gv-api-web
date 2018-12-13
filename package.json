@@ -16,7 +16,7 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "^3.5.2"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
     "babel": "^6.23.0",

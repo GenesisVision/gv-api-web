@@ -256,8 +256,8 @@ export default class ProfileApi {
      * Update user personal details
      * @function ProfileApi#v10ProfilePersonalUpdatePost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {UpdatePersonalDetailViewModel} opts.model 
+     * @param {Object} [opts] Optional parameters
+     * @param {UpdatePersonalDetailViewModel} [opts.model] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfilePersonalUpdatePost(authorization, opts) {
@@ -303,8 +303,8 @@ export default class ProfileApi {
      * Update profile
      * @function ProfileApi#v10ProfileUpdatePost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {UpdateProfileViewModel} opts.model 
+     * @param {Object} [opts] Optional parameters
+     * @param {UpdateProfileViewModel} [opts.model] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfileUpdatePost(authorization, opts) {

@@ -180,10 +180,10 @@ var FundsApi = function () {
      * Fund balance chart
      * @function FundsApi#v10FundsByIdChartsBalanceGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.maxPointCount] 
      * @return {Promise<FundBalanceChart>} a Promise, with an object containing data of type FundBalanceChart and HTTP response
      */
 
@@ -228,10 +228,10 @@ var FundsApi = function () {
      * Fund profit chart
      * @function FundsApi#v10FundsByIdChartsProfitGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateFrom 
-     * @param {Date} opts.dateTo 
-     * @param {Number} opts.maxPointCount 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.maxPointCount] 
      * @return {Promise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
      */
 
@@ -370,9 +370,9 @@ var FundsApi = function () {
      * Funds details
      * @function FundsApi#v10FundsByIdGet
      * @param {String} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {String} opts.currencySecondary 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {String} [opts.currencySecondary] 
      * @return {Promise<FundDetailsFull>} a Promise, with an object containing data of type FundDetailsFull and HTTP response
      */
 
@@ -422,22 +422,22 @@ var FundsApi = function () {
     /**
      * Funds list
      * @function FundsApi#v10FundsGet
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {String} opts.sorting 
-     * @param {String} opts.currencySecondary 
-     * @param {Date} opts.statisticDateFrom 
-     * @param {Date} opts.statisticDateTo 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.mask 
-     * @param {String} opts.facetId 
-     * @param {Boolean} opts.isFavorite 
-     * @param {Boolean} opts.isEnabled 
-     * @param {Array<String>} opts.ids 
-     * @param {String} opts.managerId 
-     * @param {String} opts.programManagerId 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {String} [opts.sorting] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Date} [opts.statisticDateFrom] 
+     * @param {Date} [opts.statisticDateTo] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.mask] 
+     * @param {String} [opts.facetId] 
+     * @param {Boolean} [opts.isFavorite] 
+     * @param {Boolean} [opts.isEnabled] 
+     * @param {Array<String>} [opts.ids] 
+     * @param {String} [opts.managerId] 
+     * @param {String} [opts.programManagerId] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
 

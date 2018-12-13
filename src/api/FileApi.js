@@ -166,8 +166,8 @@ export default class FileApi {
      * Upload file
      * @function FileApi#v10FileUploadPost
      * @param {File} uploadedFile Upload File
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
      * @return {Promise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
      */
       v10FileUploadPost(uploadedFile, opts) {

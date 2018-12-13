@@ -76,9 +76,9 @@ export default class NotificationsApi {
      * User notifications
      * @function NotificationsApi#v10NotificationsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<NotificationList>} a Promise, with an object containing data of type NotificationList and HTTP response
      */
       v10NotificationsGet(authorization, opts) {
@@ -173,12 +173,12 @@ export default class NotificationsApi {
      * Add new setting
      * @function NotificationsApi#v10NotificationsSettingsAddPost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
-     * @param {String} opts.managerId 
-     * @param {String} opts.type 
-     * @param {String} opts.conditionType 
-     * @param {Number} opts.conditionAmount 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {String} [opts.managerId] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.conditionType] 
+     * @param {Number} [opts.conditionAmount] 
      * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10NotificationsSettingsAddPost(authorization, opts) {

@@ -224,14 +224,14 @@ export default class ManagerApi {
      * Manager events
      * @function ManagerApi#v10ManagerEventsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {String} opts.type 
-     * @param {String} opts.assetType 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.assetType] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<ManagerPortfolioEvents>} a Promise, with an object containing data of type ManagerPortfolioEvents and HTTP response
      */
       v10ManagerEventsGet(authorization, opts) {
@@ -284,8 +284,8 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerFundsByIdAssetsUpdatePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {Array<FundAssetPart>} opts.assets 
+     * @param {Object} [opts] Optional parameters
+     * @param {Array<FundAssetPart>} [opts.assets] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts) {
@@ -339,8 +339,8 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerFundsByIdClosePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.twoFactorCode 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.twoFactorCode] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdClosePost(id, authorization, opts) {
@@ -574,8 +574,8 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerFundsByIdUpdatePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {ProgramUpdate} opts.model 
+     * @param {Object} [opts] Optional parameters
+     * @param {ProgramUpdate} [opts.model] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdUpdatePost(id, authorization, opts) {
@@ -737,8 +737,8 @@ export default class ManagerApi {
      * Create fund
      * @function ManagerApi#v10ManagerFundsCreatePost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {NewFundRequest} opts.request 
+     * @param {Object} [opts] Optional parameters
+     * @param {NewFundRequest} [opts.request] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsCreatePost(authorization, opts) {
@@ -791,14 +791,14 @@ export default class ManagerApi {
      * Manager funds
      * @function ManagerApi#v10ManagerFundsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
       v10ManagerFundsGet(authorization, opts) {
@@ -946,14 +946,14 @@ export default class ManagerApi {
      * Manager dashboard
      * @function ManagerApi#v10ManagerGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.assetId 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {String} opts.type 
-     * @param {String} opts.assetType 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.assetType] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<ManagerDashboard>} a Promise, with an object containing data of type ManagerDashboard and HTTP response
      */
       v10ManagerGet(authorization, opts) {
@@ -1007,8 +1007,8 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerProgramsByIdClosePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.twoFactorCode 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.twoFactorCode] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdClosePost(id, authorization, opts) {
@@ -1293,8 +1293,8 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerProgramsByIdUpdatePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {ProgramUpdate} opts.model 
+     * @param {Object} [opts] Optional parameters
+     * @param {ProgramUpdate} [opts.model] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdUpdatePost(id, authorization, opts) {
@@ -1456,8 +1456,8 @@ export default class ManagerApi {
      * Create an investment program
      * @function ManagerApi#v10ManagerProgramsCreatePost
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {NewProgramRequest} opts.request 
+     * @param {Object} [opts] Optional parameters
+     * @param {NewProgramRequest} [opts.request] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsCreatePost(authorization, opts) {
@@ -1510,14 +1510,14 @@ export default class ManagerApi {
      * Manager programs
      * @function ManagerApi#v10ManagerProgramsGet
      * @param {String} authorization JWT access token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.sorting 
-     * @param {Date} opts.from 
-     * @param {Date} opts.to 
-     * @param {Number} opts.chartPointsCount 
-     * @param {String} opts.currencySecondary 
-     * @param {Number} opts.skip 
-     * @param {Number} opts.take 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
       v10ManagerProgramsGet(authorization, opts) {
