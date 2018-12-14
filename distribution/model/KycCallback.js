@@ -49,7 +49,6 @@ var KycCallback = function () {
         this.correlationId = undefined;
         this.externalUserId = undefined;
         this.success = undefined;
-        this.details = undefined;
         this.type = undefined;
         this.review = undefined;
     }
@@ -84,9 +83,6 @@ var KycCallback = function () {
                 if (data.hasOwnProperty('success')) {
                     obj['success'] = _ApiClient2.default.convertToType(data['success'], 'Boolean');
                 }
-                if (data.hasOwnProperty('details')) {
-                    obj['details'] = _ApiClient2.default.convertToType(data['details'], Object);
-                }
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
@@ -115,10 +111,6 @@ var KycCallback = function () {
 
         /**
         * @member {Boolean} success
-        */
-
-        /**
-        * @member {Object} details
         */
 
         /**

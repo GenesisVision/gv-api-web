@@ -72,9 +72,6 @@ export default class KycCallback {
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('details')) {
-                obj['details'] = ApiClient.convertToType(data['details'], Object);
-            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -105,10 +102,6 @@ export default class KycCallback {
     * @member {Boolean} success
     */
     success = undefined;
-    /**
-    * @member {Object} details
-    */
-    details = undefined;
     /**
     * @member {String} type
     */
