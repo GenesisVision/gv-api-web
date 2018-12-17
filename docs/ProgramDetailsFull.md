@@ -32,9 +32,9 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 
