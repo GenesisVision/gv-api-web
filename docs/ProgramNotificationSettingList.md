@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **settingsGeneral** | [**[NotificationSettingViewModel]**](NotificationSettingViewModel.md) |  | [optional] 
 
 

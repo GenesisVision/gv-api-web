@@ -50,6 +50,7 @@ var ProgramNotificationSettingList = function () {
         this.title = undefined;
         this.url = undefined;
         this.logo = undefined;
+        this.color = undefined;
         this.settingsGeneral = undefined;
     }
 
@@ -86,6 +87,9 @@ var ProgramNotificationSettingList = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
+                }
                 if (data.hasOwnProperty('settingsGeneral')) {
                     obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);
                 }
@@ -115,6 +119,10 @@ var ProgramNotificationSettingList = function () {
 
         /**
         * @member {String} logo
+        */
+
+        /**
+        * @member {String} color
         */
 
         /**
