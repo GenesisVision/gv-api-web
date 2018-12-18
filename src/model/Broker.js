@@ -84,6 +84,9 @@ export default class Broker {
             if (data.hasOwnProperty('accountTypes')) {
                 obj['accountTypes'] = ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]);
             }
+            if (data.hasOwnProperty('isForex')) {
+                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -124,6 +127,10 @@ export default class Broker {
     * @member {Array.<module:model/BrokerAccountType>} accountTypes
     */
     accountTypes = undefined;
+    /**
+    * @member {Boolean} isForex
+    */
+    isForex = undefined;
 
 
 

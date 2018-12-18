@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **investedGvt** | **Number** |  | [optional] 
 **availableGvt** | **Number** |  | [optional] 
 **kycConfirmed** | **Boolean** |  | [optional] 
+**allowForex** | **Boolean** |  | [optional] 
 **isTwoFactorEnabled** | **Boolean** |  | [optional] 
 **isNewUser** | **Boolean** |  | [optional] 
 

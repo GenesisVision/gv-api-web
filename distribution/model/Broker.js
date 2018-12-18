@@ -53,6 +53,7 @@ var Broker = function () {
         this.leverageMin = undefined;
         this.leverageMax = undefined;
         this.accountTypes = undefined;
+        this.isForex = undefined;
     }
 
     /**
@@ -97,6 +98,9 @@ var Broker = function () {
                 if (data.hasOwnProperty('accountTypes')) {
                     obj['accountTypes'] = _ApiClient2.default.convertToType(data['accountTypes'], [_BrokerAccountType2.default]);
                 }
+                if (data.hasOwnProperty('isForex')) {
+                    obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -135,6 +139,10 @@ var Broker = function () {
 
         /**
         * @member {Array.<module:model/BrokerAccountType>} accountTypes
+        */
+
+        /**
+        * @member {Boolean} isForex
         */
 
     }]);
