@@ -75,6 +75,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProfileHeaderViewModel#allowForex
+     * @type {Boolean}
+     */
+    /**
+     *
      * @name ProfileHeaderViewModel#isTwoFactorEnabled
      * @type {Boolean}
      */
@@ -139,6 +144,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('kycConfirmed')) {
                 obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
             }
+            if (data.hasOwnProperty('allowForex')) {
+                obj['allowForex'] = ApiClient.convertToType(data['allowForex'], 'Boolean');
+            }
             if (data.hasOwnProperty('isTwoFactorEnabled')) {
                 obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'Boolean');
             }
@@ -159,6 +167,7 @@ export default class ProfileHeaderViewModel {
     investedGvt = undefined;
     availableGvt = undefined;
     kycConfirmed = undefined;
+    allowForex = undefined;
     isTwoFactorEnabled = undefined;
     isNewUser = undefined;
 

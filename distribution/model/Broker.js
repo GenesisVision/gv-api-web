@@ -77,7 +77,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name Broker#accountTypes
- * @type {Array<BrokerAccountType>}
+ * @type {[BrokerAccountType]}
+ */
+/**
+ *
+ * @name Broker#isForex
+ * @type {Boolean}
  */
 
 var Broker = function () {
@@ -93,6 +98,7 @@ var Broker = function () {
         this.leverageMin = undefined;
         this.leverageMax = undefined;
         this.accountTypes = undefined;
+        this.isForex = undefined;
     }
 
     _createClass(Broker, null, [{
@@ -127,6 +133,9 @@ var Broker = function () {
                 }
                 if (data.hasOwnProperty('accountTypes')) {
                     obj['accountTypes'] = _ApiClient2.default.convertToType(data['accountTypes'], [_BrokerAccountType2.default]);
+                }
+                if (data.hasOwnProperty('isForex')) {
+                    obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');
                 }
             }
             return obj;

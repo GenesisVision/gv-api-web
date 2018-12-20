@@ -56,8 +56,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name FundNotificationSettingList#color
+ * @type {String}
+ */
+/**
+ *
  * @name FundNotificationSettingList#settingsGeneral
- * @type {Array<NotificationSettingViewModel>}
+ * @type {[NotificationSettingViewModel]}
  */
 
 var FundNotificationSettingList = function () {
@@ -68,6 +73,7 @@ var FundNotificationSettingList = function () {
         this.title = undefined;
         this.url = undefined;
         this.logo = undefined;
+        this.color = undefined;
         this.settingsGeneral = undefined;
     }
 
@@ -88,6 +94,9 @@ var FundNotificationSettingList = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
                 }
                 if (data.hasOwnProperty('settingsGeneral')) {
                     obj['settingsGeneral'] = _ApiClient2.default.convertToType(data['settingsGeneral'], [_NotificationSettingViewModel2.default]);

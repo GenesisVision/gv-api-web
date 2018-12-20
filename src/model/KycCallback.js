@@ -51,11 +51,6 @@ import Review from './Review';
      */
     /**
      *
-     * @name KycCallback#details
-     * @type {Object}
-     */
-    /**
-     *
      * @name KycCallback#type
      * @type {String}
      */
@@ -105,9 +100,6 @@ export default class KycCallback {
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('details')) {
-                obj['details'] = ApiClient.convertToType(data['details'], Object);
-            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -123,7 +115,6 @@ export default class KycCallback {
     correlationId = undefined;
     externalUserId = undefined;
     success = undefined;
-    details = undefined;
     type = undefined;
     review = undefined;
 

@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name Review#rejectLabels
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *

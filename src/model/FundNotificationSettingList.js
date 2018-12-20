@@ -46,6 +46,11 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
      */
     /**
      *
+     * @name FundNotificationSettingList#color
+     * @type {String}
+     */
+    /**
+     *
      * @name FundNotificationSettingList#settingsGeneral
      * @type {Array<NotificationSettingViewModel>}
      */
@@ -87,6 +92,9 @@ export default class FundNotificationSettingList {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('settingsGeneral')) {
                 obj['settingsGeneral'] = ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]);
             }
@@ -98,6 +106,7 @@ export default class FundNotificationSettingList {
     title = undefined;
     url = undefined;
     logo = undefined;
+    color = undefined;
     settingsGeneral = undefined;
 
 

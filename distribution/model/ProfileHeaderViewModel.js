@@ -82,6 +82,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProfileHeaderViewModel#allowForex
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProfileHeaderViewModel#isTwoFactorEnabled
  * @type {Boolean}
  */
@@ -105,6 +110,7 @@ var ProfileHeaderViewModel = function () {
         this.investedGvt = undefined;
         this.availableGvt = undefined;
         this.kycConfirmed = undefined;
+        this.allowForex = undefined;
         this.isTwoFactorEnabled = undefined;
         this.isNewUser = undefined;
     }
@@ -144,6 +150,9 @@ var ProfileHeaderViewModel = function () {
                 }
                 if (data.hasOwnProperty('kycConfirmed')) {
                     obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
+                }
+                if (data.hasOwnProperty('allowForex')) {
+                    obj['allowForex'] = _ApiClient2.default.convertToType(data['allowForex'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isTwoFactorEnabled')) {
                     obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');

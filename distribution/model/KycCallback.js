@@ -61,11 +61,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name KycCallback#details
- * @type {Object}
- */
-/**
- *
  * @name KycCallback#type
  * @type {String}
  */
@@ -84,7 +79,6 @@ var KycCallback = function () {
         this.correlationId = undefined;
         this.externalUserId = undefined;
         this.success = undefined;
-        this.details = undefined;
         this.type = undefined;
         this.review = undefined;
     }
@@ -109,9 +103,6 @@ var KycCallback = function () {
                 }
                 if (data.hasOwnProperty('success')) {
                     obj['success'] = _ApiClient2.default.convertToType(data['success'], 'Boolean');
-                }
-                if (data.hasOwnProperty('details')) {
-                    obj['details'] = _ApiClient2.default.convertToType(data['details'], Object);
                 }
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');

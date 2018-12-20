@@ -69,6 +69,11 @@ import BrokerAccountType from './BrokerAccountType';
      * @name Broker#accountTypes
      * @type {Array<BrokerAccountType>}
      */
+    /**
+     *
+     * @name Broker#isForex
+     * @type {Boolean}
+     */
 
 
 
@@ -122,6 +127,9 @@ export default class Broker {
             if (data.hasOwnProperty('accountTypes')) {
                 obj['accountTypes'] = ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]);
             }
+            if (data.hasOwnProperty('isForex')) {
+                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -135,6 +143,7 @@ export default class Broker {
     leverageMin = undefined;
     leverageMax = undefined;
     accountTypes = undefined;
+    isForex = undefined;
 
 
 
