@@ -613,6 +613,7 @@ export declare interface Broker {
     leverageMin: number;
     leverageMax: number;
     accountTypes: BrokerAccountType[];
+    isForex: boolean;
 }
 
 export declare interface BrokerAccountType {
@@ -807,6 +808,7 @@ export declare interface FundNotificationSettingList {
     title: string;
     url: string;
     logo: string;
+    color: string;
     settingsGeneral: NotificationSettingViewModel[];
 }
 
@@ -864,7 +866,6 @@ export declare interface KycCallback {
     correlationId: string;
     externalUserId: string;
     success: boolean;
-    details: any;
     type: string;
     review: Review;
 }
@@ -1195,6 +1196,7 @@ export declare interface ProfileHeaderViewModel {
     investedGvt: number;
     availableGvt: number;
     kycConfirmed: boolean;
+    allowForex: boolean;
     isTwoFactorEnabled: boolean;
     isNewUser: boolean;
 }
@@ -1311,6 +1313,7 @@ export declare interface ProgramNotificationSettingList {
     title: string;
     url: string;
     logo: string;
+    color: string;
     settingsGeneral: NotificationSettingViewModel[];
 }
 
