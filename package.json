@@ -6,7 +6,7 @@
   "main": "distribution/index.js",
   "types": "distribution/types.d.ts",
   "scripts": {
-    "generate-tsd": "./bash/replace && jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution && ./bash/add_exports",
+    "generate-tsd": "./bash/replace.sh && jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution && ./bash/add_exports.sh",
     "build": "babel src --out-dir distribution && npm run generate-tsd",
     "precommit": "npm install && npm run build && npm run addfiles",
     "addfiles": "git add .",
