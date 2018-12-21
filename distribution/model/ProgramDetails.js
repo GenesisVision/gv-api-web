@@ -142,7 +142,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramDetails#chart
- * @type {[ChartSimple]}
+ * @type {Array<ChartSimple>}
  */
 /**
  *
