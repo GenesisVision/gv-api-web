@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerProfile#assets
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *
