@@ -46,7 +46,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name DashboardPortfolioEvent#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -151,11 +151,13 @@ export default class DashboardPortfolioEvent {
 
     static CurrencyEnum = {
     
+        "USD": "USD",
+    
+        "ETH": "ETH",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
-    
-        "ETH": "ETH",
     
         "BTC": "BTC",
     
@@ -172,8 +174,6 @@ export default class DashboardPortfolioEvent {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };

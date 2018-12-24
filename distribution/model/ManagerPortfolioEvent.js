@@ -63,7 +63,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerPortfolioEvent#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USD"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
  */
 /**
  *
@@ -170,11 +170,13 @@ var ManagerPortfolioEvent = function () {
 
 ManagerPortfolioEvent.CurrencyEnum = {
 
+    "USD": "USD",
+
+    "ETH": "ETH",
+
     "Undefined": "Undefined",
 
     "GVT": "GVT",
-
-    "ETH": "ETH",
 
     "BTC": "BTC",
 
@@ -191,8 +193,6 @@ ManagerPortfolioEvent.CurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
-
-    "USD": "USD",
 
     "EUR": "EUR"
 };

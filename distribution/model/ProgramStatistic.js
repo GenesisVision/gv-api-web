@@ -92,7 +92,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramStatistic#startCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USD"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
  */
 /**
  *
@@ -102,7 +102,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramStatistic#investedCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USD"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
  */
 /**
  *
@@ -219,11 +219,13 @@ var ProgramStatistic = function () {
 
 ProgramStatistic.StartCurrencyEnum = {
 
+    "USD": "USD",
+
+    "ETH": "ETH",
+
     "Undefined": "Undefined",
 
     "GVT": "GVT",
-
-    "ETH": "ETH",
 
     "BTC": "BTC",
 
@@ -240,18 +242,18 @@ ProgramStatistic.StartCurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
-
-    "USD": "USD",
 
     "EUR": "EUR"
 };
 ProgramStatistic.InvestedCurrencyEnum = {
 
+    "USD": "USD",
+
+    "ETH": "ETH",
+
     "Undefined": "Undefined",
 
     "GVT": "GVT",
-
-    "ETH": "ETH",
 
     "BTC": "BTC",
 
@@ -268,8 +270,6 @@ ProgramStatistic.InvestedCurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
-
-    "USD": "USD",
 
     "EUR": "EUR"
 };
