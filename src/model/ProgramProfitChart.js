@@ -38,7 +38,7 @@ import PeriodDate from './PeriodDate';
     /**
      *
      * @name ProgramProfitChart#programCurrency
-     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"USDT"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -252,17 +252,19 @@ export default class ProgramProfitChart {
 
     static ProgramCurrencyEnum = {
     
-        "GVT": "GVT",
+        "USD": "USD",
+    
+        "USDT": "USDT",
+    
+        "ETH": "ETH",
     
         "Undefined": "Undefined",
     
-        "ETH": "ETH",
+        "GVT": "GVT",
     
         "BTC": "BTC",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -273,8 +275,6 @@ export default class ProgramProfitChart {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };

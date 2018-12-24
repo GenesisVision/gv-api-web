@@ -64,7 +64,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#sourceCurrency
-     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"USDT"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -104,7 +104,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#destinationCurrency
-     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"USDT"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -252,17 +252,19 @@ export default class WalletTransaction {
 
     static SourceCurrencyEnum = {
     
-        "GVT": "GVT",
+        "USD": "USD",
+    
+        "USDT": "USDT",
+    
+        "ETH": "ETH",
     
         "Undefined": "Undefined",
     
-        "ETH": "ETH",
+        "GVT": "GVT",
     
         "BTC": "BTC",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -273,8 +275,6 @@ export default class WalletTransaction {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };
@@ -321,17 +321,19 @@ export default class WalletTransaction {
 
     static DestinationCurrencyEnum = {
     
-        "GVT": "GVT",
+        "USD": "USD",
+    
+        "USDT": "USDT",
+    
+        "ETH": "ETH",
     
         "Undefined": "Undefined",
     
-        "ETH": "ETH",
+        "GVT": "GVT",
     
         "BTC": "BTC",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -342,8 +344,6 @@ export default class WalletTransaction {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };
