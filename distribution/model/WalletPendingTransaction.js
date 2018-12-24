@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletPendingTransaction#currency
- * @type {("USD"|"USDT"|"ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -125,19 +125,17 @@ var WalletPendingTransaction = function () {
 
 WalletPendingTransaction.CurrencyEnum = {
 
-    "USD": "USD",
-
-    "USDT": "USDT",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
 
+    "ETH": "ETH",
+
     "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -148,6 +146,8 @@ WalletPendingTransaction.CurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
+
+    "USD": "USD",
 
     "EUR": "EUR"
 };

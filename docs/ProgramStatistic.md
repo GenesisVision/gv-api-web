@@ -27,19 +27,17 @@ Name | Type | Description | Notes
 ## Enum: StartCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
+* `ETH` (value: `"ETH"`)
+
 * `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -50,6 +48,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -60,19 +60,17 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
+* `ETH` (value: `"ETH"`)
+
 * `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -83,6 +81,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
