@@ -30,13 +30,13 @@ Name | Type | Description | Notes
 ## Enum: ProgramCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 

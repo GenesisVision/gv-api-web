@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#programCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"BTC"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -250,13 +250,13 @@ var ProgramProfitChart = function () {
 
 ProgramProfitChart.ProgramCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
     "ETH": "ETH",
 
     "BTC": "BTC",
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
 
     "ADA": "ADA",
 

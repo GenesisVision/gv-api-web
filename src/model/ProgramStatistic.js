@@ -82,7 +82,7 @@ import AmountWithCurrency from './AmountWithCurrency';
     /**
      *
      * @name ProgramStatistic#startCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("ETH"|"BTC"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -92,7 +92,7 @@ import AmountWithCurrency from './AmountWithCurrency';
     /**
      *
      * @name ProgramStatistic#investedCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("ETH"|"BTC"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -224,13 +224,13 @@ export default class ProgramStatistic {
 
     static StartCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
         "ETH": "ETH",
     
         "BTC": "BTC",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
@@ -253,13 +253,13 @@ export default class ProgramStatistic {
 
     static InvestedCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
         "ETH": "ETH",
     
         "BTC": "BTC",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
