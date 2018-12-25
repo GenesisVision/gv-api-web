@@ -49,13 +49,11 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 
@@ -72,6 +70,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -130,13 +130,11 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 
@@ -153,6 +151,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
