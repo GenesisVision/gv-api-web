@@ -30,7 +30,7 @@ import ProgramStatistic from './ProgramStatistic';
     /**
      *
      * @name ProgramDetailsFull#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -272,9 +272,9 @@ export default class ProgramDetailsFull {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
