@@ -68,7 +68,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramRequest#currency
- * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -197,9 +197,9 @@ var ProgramRequest = function () {
 
 ProgramRequest.CurrencyEnum = {
 
-    "GVT": "GVT",
-
     "Undefined": "Undefined",
+
+    "GVT": "GVT",
 
     "ETH": "ETH",
 
