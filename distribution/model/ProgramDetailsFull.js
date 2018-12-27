@@ -53,7 +53,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramDetailsFull#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -122,7 +122,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name ProgramDetailsFull#programTags
+ * @name ProgramDetailsFull#tags
  * @type {[ProgramTag]}
  */
 /**
@@ -189,7 +189,7 @@ var ProgramDetailsFull = function () {
         this.statistic = undefined;
         this.rating = undefined;
         this.personalProgramDetails = undefined;
-        this.programTags = undefined;
+        this.tags = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -249,8 +249,8 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('personalProgramDetails')) {
                     obj['personalProgramDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalProgramDetails']);
                 }
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('tags')) {
+                    obj['tags'] = _ApiClient2.default.convertToType(data['tags'], [_ProgramTag2.default]);
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
@@ -289,9 +289,9 @@ var ProgramDetailsFull = function () {
 
 ProgramDetailsFull.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
     "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ETH": "ETH",
 

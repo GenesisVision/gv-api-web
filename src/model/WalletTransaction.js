@@ -64,7 +64,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#sourceCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -104,7 +104,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#destinationCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -252,9 +252,9 @@ export default class WalletTransaction {
 
     static SourceCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
@@ -321,9 +321,9 @@ export default class WalletTransaction {
 
     static DestinationCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     

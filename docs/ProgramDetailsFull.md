@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
-**programTags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
+**tags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
@@ -33,9 +33,9 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 

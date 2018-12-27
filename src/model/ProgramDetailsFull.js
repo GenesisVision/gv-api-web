@@ -31,7 +31,7 @@ import ProgramTag from './ProgramTag';
     /**
      *
      * @name ProgramDetailsFull#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -100,7 +100,7 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
-     * @name ProgramDetailsFull#programTags
+     * @name ProgramDetailsFull#tags
      * @type {Array<ProgramTag>}
      */
     /**
@@ -216,8 +216,8 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('personalProgramDetails')) {
                 obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
             }
-            if (data.hasOwnProperty('programTags')) {
-                obj['programTags'] = ApiClient.convertToType(data['programTags'], [ProgramTag]);
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -264,7 +264,7 @@ export default class ProgramDetailsFull {
     statistic = undefined;
     rating = undefined;
     personalProgramDetails = undefined;
-    programTags = undefined;
+    tags = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;
@@ -282,9 +282,9 @@ export default class ProgramDetailsFull {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
