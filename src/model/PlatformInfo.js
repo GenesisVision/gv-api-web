@@ -17,6 +17,7 @@ import AndroidAppVersion from './AndroidAppVersion';
 import Facet from './Facet';
 import IOsAppVersion from './IOsAppVersion';
 import PlatformCurrency from './PlatformCurrency';
+import ProgramTag from './ProgramTag';
 import ProgramsInfo from './ProgramsInfo';
 
 
@@ -62,6 +63,11 @@ import ProgramsInfo from './ProgramsInfo';
      *
      * @name PlatformInfo#platformCurrencies
      * @type {Array<PlatformCurrency>}
+     */
+    /**
+     *
+     * @name PlatformInfo#programTags
+     * @type {Array<ProgramTag>}
      */
 
 
@@ -110,6 +116,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('platformCurrencies')) {
                 obj['platformCurrencies'] = ApiClient.convertToType(data['platformCurrencies'], [PlatformCurrency]);
             }
+            if (data.hasOwnProperty('programTags')) {
+                obj['programTags'] = ApiClient.convertToType(data['programTags'], [ProgramTag]);
+            }
         }
         return obj;
     }
@@ -121,6 +130,7 @@ export default class PlatformInfo {
     programsInfo = undefined;
     currencies = undefined;
     platformCurrencies = undefined;
+    programTags = undefined;
 
 
 

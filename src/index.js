@@ -103,6 +103,7 @@ import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
+import ProgramTag from './model/ProgramTag';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsInfo from './model/ProgramsInfo';
@@ -706,6 +707,12 @@ export {
      * @type {ProgramStatistic}
      */
     ProgramStatistic,
+
+    /**
+     * @name index#ProgramTag
+     * @type {ProgramTag}
+     */
+    ProgramTag,
 
     /**
      * @name index#ProgramUpdate

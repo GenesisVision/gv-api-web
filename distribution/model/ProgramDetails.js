@@ -45,6 +45,10 @@ var _ProgramDetailsRating = require('./ProgramDetailsRating');
 
 var _ProgramDetailsRating2 = _interopRequireDefault(_ProgramDetailsRating);
 
+var _ProgramTag = require('./ProgramTag');
+
+var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -98,6 +102,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * @name ProgramDetails#personalDetails
  * @type {PersonalProgramDetailsFull}
+ */
+/**
+ *
+ * @name ProgramDetails#programTags
+ * @type {[ProgramTag]}
  */
 /**
  *
@@ -163,6 +172,7 @@ var ProgramDetails = function () {
         this.statistic = undefined;
         this.rating = undefined;
         this.personalDetails = undefined;
+        this.programTags = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -207,6 +217,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('personalDetails')) {
                     obj['personalDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalDetails']);
+                }
+                if (data.hasOwnProperty('programTags')) {
+                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');

@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WalletApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.KycApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletPendingTransactionsViewModel = exports.WalletPendingTransaction = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.SearchViewModel = exports.Review = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = undefined;
-exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramProfitChart = exports.ProgramNotificationSettingList = exports.ProgramInvestInfo = exports.ProgramInfo = exports.ProgramDetailsRating = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramBalanceChartElement = exports.ProgramBalanceChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformStatistic = exports.PlatformInfo = exports.PlatformCurrency = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PeriodDate = exports.PasswordModel = exports.OtherAssetsValue = exports.OrderModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.ManagersList = exports.ManagerSimpleProgram = exports.ManagerSimpleFund = exports.ManagerProgramWithdrawInfo = exports.ManagerProfileDetails = exports.ManagerProfile = exports.ManagerPortfolioEvents = exports.ManagerPortfolioEvent = exports.ManagerOverview = exports.ManagerNotificationSettingList = exports.ManagerFundWithdrawInfo = exports.ManagerDashboard = exports.ManagerAssets = exports.LoginViewModel = exports.LevelUpSummary = exports.LevelUpData = exports.LevelInfo = exports.KycCallback = exports.IOsAppVersion = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundProfitChart = exports.FundNotificationSettingList = exports.FundInvestInfo = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundBalanceChart = exports.FundAssetsListInfo = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPart = exports.FundAssetInfo = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerAccountType = exports.Broker = exports.BlockchainInfo = exports.BalanceChartElement = exports.AssetsValue = exports.AssetSelection = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
+exports.WalletApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.KycApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletPendingTransactionsViewModel = exports.WalletPendingTransaction = exports.WalletInfo = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TradesViewModel = exports.SearchViewModel = exports.Review = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = undefined;
+exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramTag = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramProfitChart = exports.ProgramNotificationSettingList = exports.ProgramInvestInfo = exports.ProgramInfo = exports.ProgramDetailsRating = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramBalanceChartElement = exports.ProgramBalanceChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformStatistic = exports.PlatformInfo = exports.PlatformCurrency = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PeriodDate = exports.PasswordModel = exports.OtherAssetsValue = exports.OrderModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.ManagersList = exports.ManagerSimpleProgram = exports.ManagerSimpleFund = exports.ManagerProgramWithdrawInfo = exports.ManagerProfileDetails = exports.ManagerProfile = exports.ManagerPortfolioEvents = exports.ManagerPortfolioEvent = exports.ManagerOverview = exports.ManagerNotificationSettingList = exports.ManagerFundWithdrawInfo = exports.ManagerDashboard = exports.ManagerAssets = exports.LoginViewModel = exports.LevelUpSummary = exports.LevelUpData = exports.LevelInfo = exports.KycCallback = exports.IOsAppVersion = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundProfitChart = exports.FundNotificationSettingList = exports.FundInvestInfo = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundBalanceChart = exports.FundAssetsListInfo = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPart = exports.FundAssetInfo = exports.ForgotPasswordViewModel = exports.Facet = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.ChartSimple = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerAccountType = exports.Broker = exports.BlockchainInfo = exports.BalanceChartElement = exports.AssetsValue = exports.AssetSelection = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -370,6 +370,10 @@ var _ProgramStatistic = require('./model/ProgramStatistic');
 
 var _ProgramStatistic2 = _interopRequireDefault(_ProgramStatistic);
 
+var _ProgramTag = require('./model/ProgramTag');
+
+var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
+
 var _ProgramUpdate = require('./model/ProgramUpdate');
 
 var _ProgramUpdate2 = _interopRequireDefault(_ProgramUpdate);
@@ -573,19 +577,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @interface index
 * @version v1.0
 */
-/**
- * Core API v1.0
- * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
- *
- * OpenAPI spec version: v1.0
- * 
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- *
- */
-
 exports.ApiClient = _ApiClient2.default;
 exports.AmountWithCurrency = _AmountWithCurrency2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
@@ -677,6 +668,7 @@ exports.ProgramRequest = _ProgramRequest2.default;
 exports.ProgramRequests = _ProgramRequests2.default;
 exports.ProgramSets = _ProgramSets2.default;
 exports.ProgramStatistic = _ProgramStatistic2.default;
+exports.ProgramTag = _ProgramTag2.default;
 exports.ProgramUpdate = _ProgramUpdate2.default;
 exports.ProgramWithdrawInfo = _ProgramWithdrawInfo2.default;
 exports.ProgramsInfo = _ProgramsInfo2.default;
@@ -725,4 +717,15 @@ exports.ProfileApi = _ProfileApi2.default;
 exports.ProgramsApi = _ProgramsApi2.default;
 exports.RateApi = _RateApi2.default;
 exports.SearchApi = _SearchApi2.default;
-exports.WalletApi = _WalletApi2.default;
+exports.WalletApi = _WalletApi2.default; /**
+                                          * Core API v1.0
+                                          * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+                                          *
+                                          * OpenAPI spec version: v1.0
+                                          * 
+                                          *
+                                          * NOTE: This class is auto generated by the swagger code generator program.
+                                          * https://github.com/swagger-api/swagger-codegen.git
+                                          * Do not edit the class manually.
+                                          *
+                                          */

@@ -508,6 +508,7 @@ export declare interface index {
     ProgramRequests: ProgramRequests;
     ProgramSets: ProgramSets;
     ProgramStatistic: ProgramStatistic;
+    ProgramTag: ProgramTag;
     ProgramUpdate: ProgramUpdate;
     ProgramWithdrawInfo: ProgramWithdrawInfo;
     ProgramsInfo: ProgramsInfo;
@@ -1152,6 +1153,7 @@ export declare interface PlatformInfo {
     programsInfo: ProgramsInfo;
     currencies: string[];
     platformCurrencies: PlatformCurrency[];
+    programTags: ProgramTag[];
 }
 
 export declare interface PlatformStatistic {
@@ -1233,6 +1235,7 @@ export declare interface ProgramDetails {
     statistic: ProgramDetailsListStatistic;
     rating: ProgramDetailsRating;
     personalDetails: PersonalProgramDetailsFull;
+    programTags: ProgramTag[];
     id: string;
     logo: string;
     url: string;
@@ -1390,6 +1393,11 @@ export declare interface ProgramStatistic {
     tradesSuccessCount: number;
     profitFactorPercent: number;
     sharpeRatioPercent: number;
+}
+
+export declare interface ProgramTag {
+    tag: "Crypto" | "Forex";
+    color: string;
 }
 
 export declare interface ProgramUpdate {

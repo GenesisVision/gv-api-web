@@ -21,130 +21,58 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AndroidAppVersion = require('./AndroidAppVersion');
-
-var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
-
-var _Facet = require('./Facet');
-
-var _Facet2 = _interopRequireDefault(_Facet);
-
-var _IOsAppVersion = require('./IOsAppVersion');
-
-var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
-
-var _PlatformCurrency = require('./PlatformCurrency');
-
-var _PlatformCurrency2 = _interopRequireDefault(_PlatformCurrency);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
-
-var _ProgramsInfo = require('./ProgramsInfo');
-
-var _ProgramsInfo2 = _interopRequireDefault(_ProgramsInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface PlatformInfo
+ * @interface ProgramTag
  */
 
 /**
  *
- * @name PlatformInfo#iOSVersion
- * @type {IOsAppVersion}
+ * @name ProgramTag#tag
+ * @type {("Crypto"|"Forex")}
  */
 /**
  *
- * @name PlatformInfo#androidVersion
- * @type {AndroidAppVersion}
- */
-/**
- *
- * @name PlatformInfo#programsFacets
- * @type {[Facet]}
- */
-/**
- *
- * @name PlatformInfo#fundsFacets
- * @type {[Facet]}
- */
-/**
- *
- * @name PlatformInfo#programsInfo
- * @type {ProgramsInfo}
- */
-/**
- *
- * @name PlatformInfo#currencies
- * @type {[String]}
- */
-/**
- *
- * @name PlatformInfo#platformCurrencies
- * @type {[PlatformCurrency]}
- */
-/**
- *
- * @name PlatformInfo#programTags
- * @type {[ProgramTag]}
+ * @name ProgramTag#color
+ * @type {String}
  */
 
-var PlatformInfo = function () {
-    function PlatformInfo() {
-        _classCallCheck(this, PlatformInfo);
+var ProgramTag = function () {
+    function ProgramTag() {
+        _classCallCheck(this, ProgramTag);
 
-        this.iOSVersion = undefined;
-        this.androidVersion = undefined;
-        this.programsFacets = undefined;
-        this.fundsFacets = undefined;
-        this.programsInfo = undefined;
-        this.currencies = undefined;
-        this.platformCurrencies = undefined;
-        this.programTags = undefined;
+        this.tag = undefined;
+        this.color = undefined;
     }
 
-    _createClass(PlatformInfo, null, [{
+    _createClass(ProgramTag, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PlatformInfo();
+                obj = obj || new ProgramTag();
 
-                if (data.hasOwnProperty('iOSVersion')) {
-                    obj['iOSVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOSVersion']);
+                if (data.hasOwnProperty('tag')) {
+                    obj['tag'] = _ApiClient2.default.convertToType(data['tag'], 'String');
                 }
-                if (data.hasOwnProperty('androidVersion')) {
-                    obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
-                }
-                if (data.hasOwnProperty('programsFacets')) {
-                    obj['programsFacets'] = _ApiClient2.default.convertToType(data['programsFacets'], [_Facet2.default]);
-                }
-                if (data.hasOwnProperty('fundsFacets')) {
-                    obj['fundsFacets'] = _ApiClient2.default.convertToType(data['fundsFacets'], [_Facet2.default]);
-                }
-                if (data.hasOwnProperty('programsInfo')) {
-                    obj['programsInfo'] = _ProgramsInfo2.default.constructFromObject(data['programsInfo']);
-                }
-                if (data.hasOwnProperty('currencies')) {
-                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
-                }
-                if (data.hasOwnProperty('platformCurrencies')) {
-                    obj['platformCurrencies'] = _ApiClient2.default.convertToType(data['platformCurrencies'], [_PlatformCurrency2.default]);
-                }
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return PlatformInfo;
+    return ProgramTag;
 }();
 
-exports.default = PlatformInfo;
+ProgramTag.TagEnum = {
+
+    "Crypto": "Crypto",
+
+    "Forex": "Forex"
+};
+exports.default = ProgramTag;

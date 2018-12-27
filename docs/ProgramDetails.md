@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
+**programTags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
