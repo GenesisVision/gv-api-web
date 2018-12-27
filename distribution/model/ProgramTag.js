@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name ProgramTag#tag
+ * @name ProgramTag#name
  * @type {("Crypto"|"Forex")}
  */
 /**
@@ -45,7 +45,7 @@ var ProgramTag = function () {
     function ProgramTag() {
         _classCallCheck(this, ProgramTag);
 
-        this.tag = undefined;
+        this.name = undefined;
         this.color = undefined;
     }
 
@@ -55,8 +55,8 @@ var ProgramTag = function () {
             if (data) {
                 obj = obj || new ProgramTag();
 
-                if (data.hasOwnProperty('tag')) {
-                    obj['tag'] = _ApiClient2.default.convertToType(data['tag'], 'String');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
                 if (data.hasOwnProperty('color')) {
                     obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
@@ -69,7 +69,7 @@ var ProgramTag = function () {
     return ProgramTag;
 }();
 
-ProgramTag.TagEnum = {
+ProgramTag.NameEnum = {
 
     "Crypto": "Crypto",
 

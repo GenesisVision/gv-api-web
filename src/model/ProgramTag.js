@@ -25,7 +25,7 @@ import ApiClient from '../ApiClient';
     
     /**
      *
-     * @name ProgramTag#tag
+     * @name ProgramTag#name
      * @type {("Crypto"|"Forex")}
      */
     /**
@@ -59,8 +59,8 @@ export default class ProgramTag {
             
             
 
-            if (data.hasOwnProperty('tag')) {
-                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('color')) {
                 obj['color'] = ApiClient.convertToType(data['color'], 'String');
@@ -69,7 +69,7 @@ export default class ProgramTag {
         return obj;
     }
 
-    tag = undefined;
+    name = undefined;
     color = undefined;
 
 
@@ -77,7 +77,7 @@ export default class ProgramTag {
 
 
 
-    static TagEnum = {
+    static NameEnum = {
     
         "Crypto": "Crypto",
     

@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
 
 
-<a name="TagEnum"></a>
-## Enum: TagEnum
+<a name="NameEnum"></a>
+## Enum: NameEnum
 
 
 * `Crypto` (value: `"Crypto"`)

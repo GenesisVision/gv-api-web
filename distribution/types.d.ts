@@ -1398,7 +1398,7 @@ export declare interface ProgramStatistic {
 }
 
 export declare interface ProgramTag {
-    tag: "Crypto" | "Forex";
+    name: "Crypto" | "Forex";
     color: string;
 }
 
