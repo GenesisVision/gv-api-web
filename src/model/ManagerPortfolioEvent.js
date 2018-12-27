@@ -56,7 +56,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ManagerPortfolioEvent#currency
-     * @type {("GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -178,9 +178,9 @@ export default class ManagerPortfolioEvent {
 
     static CurrencyEnum = {
     
-        "GVT": "GVT",
-    
         "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ETH": "ETH",
     
