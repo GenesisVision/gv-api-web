@@ -1263,6 +1263,7 @@ export declare interface ProgramDetailsFull {
     statistic: ProgramStatistic;
     rating: ProgramDetailsRating;
     personalProgramDetails: PersonalProgramDetailsFull;
+    programTags: ProgramTag[];
     id: string;
     logo: string;
     url: string;

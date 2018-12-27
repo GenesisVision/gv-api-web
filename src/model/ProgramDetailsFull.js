@@ -17,6 +17,7 @@ import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsRating from './ProgramDetailsRating';
 import ProgramStatistic from './ProgramStatistic';
+import ProgramTag from './ProgramTag';
 
 
 
@@ -96,6 +97,11 @@ import ProgramStatistic from './ProgramStatistic';
      *
      * @name ProgramDetailsFull#personalProgramDetails
      * @type {PersonalProgramDetailsFull}
+     */
+    /**
+     *
+     * @name ProgramDetailsFull#programTags
+     * @type {Array<ProgramTag>}
      */
     /**
      *
@@ -210,6 +216,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('personalProgramDetails')) {
                 obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
             }
+            if (data.hasOwnProperty('programTags')) {
+                obj['programTags'] = ApiClient.convertToType(data['programTags'], [ProgramTag]);
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -255,6 +264,7 @@ export default class ProgramDetailsFull {
     statistic = undefined;
     rating = undefined;
     personalProgramDetails = undefined;
+    programTags = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;
