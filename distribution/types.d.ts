@@ -353,6 +353,7 @@ export declare class ProgramsApi {
         programCurrency?: string;
         currencySecondary?: string;
         levelUpFrom?: number;
+        tags?: string[];
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;

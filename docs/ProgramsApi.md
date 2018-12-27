@@ -325,6 +325,7 @@ let opts = {
   'programCurrency': "programCurrency_example", // String | 
   'currencySecondary': "currencySecondary_example", // String | 
   'levelUpFrom': 56, // Number | 
+  'tags': ["tags_example"], // [String] | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
@@ -359,6 +360,7 @@ Name | Type | Description  | Notes
  **programCurrency** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
  **levelUpFrom** | **Number**|  | [optional] 
+ **tags** | [**[String]**](String.md)|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
