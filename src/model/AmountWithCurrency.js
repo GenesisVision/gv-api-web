@@ -31,7 +31,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name AmountWithCurrency#currency
-     * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
 
 
@@ -79,13 +79,13 @@ export default class AmountWithCurrency {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
     
         "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
