@@ -324,7 +324,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {Array<FundAssetPart>} [opts.assets] 
+     * @param {[FundAssetPart]} [opts.assets] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
