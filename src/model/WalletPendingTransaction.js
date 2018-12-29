@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name WalletPendingTransaction#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -133,6 +133,8 @@ export default class WalletPendingTransaction {
 
     static CurrencyEnum = {
     
+        "USDT": "USDT",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -142,8 +144,6 @@ export default class WalletPendingTransaction {
         "BTC": "BTC",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
