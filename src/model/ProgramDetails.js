@@ -33,7 +33,7 @@ import ProgramTag from './ProgramTag';
     /**
      *
      * @name ProgramDetails#currency
-     * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -248,8 +248,6 @@ export default class ProgramDetails {
 
     static CurrencyEnum = {
     
-        "USDT": "USDT",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -259,6 +257,8 @@ export default class ProgramDetails {
         "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     

@@ -53,7 +53,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramDetailsFull#currency
- * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -289,8 +289,6 @@ var ProgramDetailsFull = function () {
 
 ProgramDetailsFull.CurrencyEnum = {
 
-    "USDT": "USDT",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
@@ -300,6 +298,8 @@ ProgramDetailsFull.CurrencyEnum = {
     "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

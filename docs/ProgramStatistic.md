@@ -27,8 +27,6 @@ Name | Type | Description | Notes
 ## Enum: StartCurrencyEnum
 
 
-* `USDT` (value: `"USDT"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -38,6 +36,8 @@ Name | Type | Description | Notes
 * `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -60,8 +60,6 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `USDT` (value: `"USDT"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -71,6 +69,8 @@ Name | Type | Description | Notes
 * `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

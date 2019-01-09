@@ -33,8 +33,6 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `USDT` (value: `"USDT"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -44,6 +42,8 @@ Name | Type | Description | Notes
 * `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
