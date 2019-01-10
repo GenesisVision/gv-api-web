@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramBalanceChart#programCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -93,13 +93,13 @@ var ProgramBalanceChart = function () {
 
 ProgramBalanceChart.ProgramCurrencyEnum = {
 
+    "BTC": "BTC",
+
     "Undefined": "Undefined",
 
     "GVT": "GVT",
 
     "ETH": "ETH",
-
-    "BTC": "BTC",
 
     "ADA": "ADA",
 
