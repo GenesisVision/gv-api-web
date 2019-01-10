@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name BrokerAccountType#type
-     * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX")}
+     * @type {("MetaTrader5"|"Undefined"|"MetaTrader4"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX")}
      */
     /**
      *
@@ -115,11 +115,11 @@ export default class BrokerAccountType {
 
     static TypeEnum = {
     
+        "MetaTrader5": "MetaTrader5",
+    
         "Undefined": "Undefined",
     
         "MetaTrader4": "MetaTrader4",
-    
-        "MetaTrader5": "MetaTrader5",
     
         "NinjaTrader": "NinjaTrader",
     

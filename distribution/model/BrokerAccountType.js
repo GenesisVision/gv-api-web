@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name BrokerAccountType#type
- * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX")}
+ * @type {("MetaTrader5"|"Undefined"|"MetaTrader4"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX")}
  */
 /**
  *
@@ -107,11 +107,11 @@ var BrokerAccountType = function () {
 
 BrokerAccountType.TypeEnum = {
 
+    "MetaTrader5": "MetaTrader5",
+
     "Undefined": "Undefined",
 
     "MetaTrader4": "MetaTrader4",
-
-    "MetaTrader5": "MetaTrader5",
 
     "NinjaTrader": "NinjaTrader",
 
