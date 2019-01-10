@@ -622,7 +622,7 @@ export declare interface BrokerAccountType {
     id: string;
     name: string;
     description: string;
-    type: "MetaTrader5" | "Undefined" | "MetaTrader4" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX";
+    type: "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX";
     leverages: number[];
     currencies: string[];
 }
