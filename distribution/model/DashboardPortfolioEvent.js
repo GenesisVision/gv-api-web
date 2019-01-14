@@ -52,6 +52,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name DashboardPortfolioEvent#valueTotal
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessManager
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessPlatform
+ * @type {Number}
+ */
+/**
+ *
  * @name DashboardPortfolioEvent#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
@@ -89,6 +104,9 @@ var DashboardPortfolioEvent = function () {
         this.date = undefined;
         this.title = undefined;
         this.value = undefined;
+        this.valueTotal = undefined;
+        this.feeSuccessManager = undefined;
+        this.feeSuccessPlatform = undefined;
         this.currency = undefined;
         this.type = undefined;
         this.logo = undefined;
@@ -114,6 +132,15 @@ var DashboardPortfolioEvent = function () {
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                }
+                if (data.hasOwnProperty('valueTotal')) {
+                    obj['valueTotal'] = _ApiClient2.default.convertToType(data['valueTotal'], 'Number');
+                }
+                if (data.hasOwnProperty('feeSuccessManager')) {
+                    obj['feeSuccessManager'] = _ApiClient2.default.convertToType(data['feeSuccessManager'], 'Number');
+                }
+                if (data.hasOwnProperty('feeSuccessPlatform')) {
+                    obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');

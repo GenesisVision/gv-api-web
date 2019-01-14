@@ -45,6 +45,21 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name DashboardPortfolioEvent#valueTotal
+     * @type {Number}
+     */
+    /**
+     *
+     * @name DashboardPortfolioEvent#feeSuccessManager
+     * @type {Number}
+     */
+    /**
+     *
+     * @name DashboardPortfolioEvent#feeSuccessPlatform
+     * @type {Number}
+     */
+    /**
+     *
      * @name DashboardPortfolioEvent#currency
      * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
@@ -111,6 +126,15 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('valueTotal')) {
+                obj['valueTotal'] = ApiClient.convertToType(data['valueTotal'], 'Number');
+            }
+            if (data.hasOwnProperty('feeSuccessManager')) {
+                obj['feeSuccessManager'] = ApiClient.convertToType(data['feeSuccessManager'], 'Number');
+            }
+            if (data.hasOwnProperty('feeSuccessPlatform')) {
+                obj['feeSuccessPlatform'] = ApiClient.convertToType(data['feeSuccessPlatform'], 'Number');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -137,6 +161,9 @@ export default class DashboardPortfolioEvent {
     date = undefined;
     title = undefined;
     value = undefined;
+    valueTotal = undefined;
+    feeSuccessManager = undefined;
+    feeSuccessPlatform = undefined;
     currency = undefined;
     type = undefined;
     logo = undefined;
