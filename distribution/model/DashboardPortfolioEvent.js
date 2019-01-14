@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Cancelled"|"Ended")}
+ * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended")}
  */
 /**
  *
@@ -183,7 +183,7 @@ DashboardPortfolioEvent.TypeEnum = {
 
     "Reinvest": "Reinvest",
 
-    "Cancelled": "Cancelled",
+    "Canceled": "Canceled",
 
     "Ended": "Ended"
 };

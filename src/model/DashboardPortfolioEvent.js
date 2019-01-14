@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name DashboardPortfolioEvent#type
-     * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Cancelled"|"Ended")}
+     * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended")}
      */
     /**
      *
@@ -192,7 +192,7 @@ export default class DashboardPortfolioEvent {
     
         "Reinvest": "Reinvest",
     
-        "Cancelled": "Cancelled",
+        "Canceled": "Canceled",
     
         "Ended": "Ended"    
     };

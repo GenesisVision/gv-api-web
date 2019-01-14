@@ -666,7 +666,7 @@ export declare interface DashboardPortfolioEvent {
     title: string;
     value: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    type: "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Cancelled" | "Ended";
+    type: "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended";
     logo: string;
     color: string;
     description: string;
