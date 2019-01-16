@@ -267,6 +267,52 @@ export default class ProfileApi {
         });
     }
 
+      v10ProfilePushTokenPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['token'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfilePushTokenPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/push/token', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @function ProfileApi#v10ProfilePushTokenPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.token] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ProfilePushTokenPost(authorization, opts) {
+      return this.v10ProfilePushTokenPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10ProfileUpdatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];

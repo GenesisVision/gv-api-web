@@ -311,6 +311,9 @@ export declare class ProfileApi {
     v10ProfilePersonalUpdatePost(authorization: string, opts?: {
         model?: UpdatePersonalDetailViewModel;
     }): Promise<any>;
+    v10ProfilePushTokenPost(authorization: string, opts?: {
+        token?: string;
+    }): Promise<any>;
     v10ProfileUpdatePost(authorization: string, opts?: {
         model?: UpdateProfileViewModel;
     }): Promise<any>;
