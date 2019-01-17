@@ -80,7 +80,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#sourceCurrency
- * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -120,7 +120,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#destinationCurrency
- * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -252,11 +252,9 @@ WalletTransaction.SourceTypeEnum = {
 };
 WalletTransaction.SourceCurrencyEnum = {
 
-    "USD": "USD",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
-
-    "Undefined": "Undefined",
 
     "ETH": "ETH",
 
@@ -275,6 +273,8 @@ WalletTransaction.SourceCurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
+
+    "USD": "USD",
 
     "EUR": "EUR"
 };
@@ -318,11 +318,9 @@ WalletTransaction.DestinationTypeEnum = {
 };
 WalletTransaction.DestinationCurrencyEnum = {
 
-    "USD": "USD",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
-
-    "Undefined": "Undefined",
 
     "ETH": "ETH",
 
@@ -341,6 +339,8 @@ WalletTransaction.DestinationCurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
+
+    "USD": "USD",
 
     "EUR": "EUR"
 };

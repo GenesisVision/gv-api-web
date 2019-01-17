@@ -31,7 +31,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name CreateWithdrawalRequestModel#currency
-     * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -97,11 +97,9 @@ export default class CreateWithdrawalRequestModel {
 
     static CurrencyEnum = {
     
-        "USD": "USD",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
-    
-        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
@@ -120,6 +118,8 @@ export default class CreateWithdrawalRequestModel {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
+    
+        "USD": "USD",
     
         "EUR": "EUR"    
     };

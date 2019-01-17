@@ -27,11 +27,9 @@ Name | Type | Description | Notes
 ## Enum: StartCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
-
-* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 
@@ -50,6 +48,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
@@ -60,11 +60,9 @@ Name | Type | Description | Notes
 ## Enum: InvestedCurrencyEnum
 
 
-* `USD` (value: `"USD"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
-
-* `Undefined` (value: `"Undefined"`)
 
 * `ETH` (value: `"ETH"`)
 
@@ -83,6 +81,8 @@ Name | Type | Description | Notes
 * `DOGE` (value: `"DOGE"`)
 
 * `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
 
