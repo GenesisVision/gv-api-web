@@ -26,7 +26,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name NewProgramRequest#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -151,9 +151,11 @@ export default class NewProgramRequest {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "USD": "USD",
     
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
@@ -172,8 +174,6 @@ export default class NewProgramRequest {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };

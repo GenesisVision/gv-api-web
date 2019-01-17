@@ -32,7 +32,7 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
     /**
      *
      * @name ProgramBalanceChart#programCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
      */
     /**
      *
@@ -98,9 +98,11 @@ export default class ProgramBalanceChart {
 
     static ProgramCurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "USD": "USD",
     
         "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ETH": "ETH",
     
@@ -119,8 +121,6 @@ export default class ProgramBalanceChart {
         "DOGE": "DOGE",
     
         "BNB": "BNB",
-    
-        "USD": "USD",
     
         "EUR": "EUR"    
     };

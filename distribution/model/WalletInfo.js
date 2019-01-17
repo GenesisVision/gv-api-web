@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
  */
 /**
  *
@@ -98,9 +98,11 @@ var WalletInfo = function () {
 
 WalletInfo.CurrencyEnum = {
 
-    "Undefined": "Undefined",
+    "USD": "USD",
 
     "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ETH": "ETH",
 
@@ -119,8 +121,6 @@ WalletInfo.CurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
-
-    "USD": "USD",
 
     "EUR": "EUR"
 };

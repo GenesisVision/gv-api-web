@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name RateItem#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USD"|"GVT"|"Undefined"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"EUR")}
  */
 /**
  *
@@ -71,9 +71,11 @@ var RateItem = function () {
 
 RateItem.CurrencyEnum = {
 
-    "Undefined": "Undefined",
+    "USD": "USD",
 
     "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ETH": "ETH",
 
@@ -92,8 +94,6 @@ RateItem.CurrencyEnum = {
     "DOGE": "DOGE",
 
     "BNB": "BNB",
-
-    "USD": "USD",
 
     "EUR": "EUR"
 };
