@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import FcmTokenViewModel from '../model/FcmTokenViewModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
 import UpdatePersonalDetailViewModel from '../model/UpdatePersonalDetailViewModel';
@@ -289,7 +290,7 @@ export default class ProfileApi {
 
       let authNames = [];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
 
       return this.apiClient.callApi(
@@ -303,7 +304,7 @@ export default class ProfileApi {
      * @function ProfileApi#v10ProfilePushTokenPost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.token] 
+     * @param {FcmTokenViewModel} [opts.token] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfilePushTokenPost(authorization, opts) {

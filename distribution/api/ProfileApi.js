@@ -25,6 +25,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _FcmTokenViewModel = require('../model/FcmTokenViewModel');
+
+var _FcmTokenViewModel2 = _interopRequireDefault(_FcmTokenViewModel);
+
 var _ProfileFullViewModel = require('../model/ProfileFullViewModel');
 
 var _ProfileFullViewModel2 = _interopRequireDefault(_ProfileFullViewModel);
@@ -290,7 +294,7 @@ var ProfileApi = function () {
 
       var authNames = [];
       var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      var accepts = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
       return this.apiClient.callApi('/v1.0/profile/push/token', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
@@ -300,7 +304,7 @@ var ProfileApi = function () {
      * @function ProfileApi#v10ProfilePushTokenPost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.token] 
+     * @param {FcmTokenViewModel} [opts.token] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 

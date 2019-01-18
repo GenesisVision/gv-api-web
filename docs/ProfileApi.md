@@ -241,7 +241,7 @@ let apiInstance = new CoreApiV10.ProfileApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'token': "token_example" // String | 
+  'token': new CoreApiV10.FcmTokenViewModel() // FcmTokenViewModel | 
 };
 apiInstance.v10ProfilePushTokenPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -256,7 +256,7 @@ apiInstance.v10ProfilePushTokenPost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **token** | **String**|  | [optional] 
+ **token** | [**FcmTokenViewModel**](FcmTokenViewModel.md)|  | [optional] 
 
 ### Return type
 
@@ -269,7 +269,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ProfileUpdatePost"></a>
 # **v10ProfileUpdatePost**

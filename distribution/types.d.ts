@@ -312,7 +312,7 @@ export declare class ProfileApi {
         model?: UpdatePersonalDetailViewModel;
     }): Promise<any>;
     v10ProfilePushTokenPost(authorization: string, opts?: {
-        token?: string;
+        token?: FcmTokenViewModel;
     }): Promise<any>;
     v10ProfileUpdatePost(authorization: string, opts?: {
         model?: UpdateProfileViewModel;
@@ -443,6 +443,7 @@ export declare interface index {
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
     Facet: Facet;
+    FcmTokenViewModel: FcmTokenViewModel;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
     FundAssetPart: FundAssetPart;
@@ -714,6 +715,10 @@ export declare interface Facet {
     logo: string;
     url: string;
     sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
+}
+
+export declare interface FcmTokenViewModel {
+    token: string;
 }
 
 export declare interface ForgotPasswordViewModel {

@@ -247,6 +247,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.Facet](docs/Facet.md)
+ - [CoreApiV10.FcmTokenViewModel](docs/FcmTokenViewModel.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.FundAssetInfo](docs/FundAssetInfo.md)
  - [CoreApiV10.FundAssetPart](docs/FundAssetPart.md)

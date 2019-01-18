@@ -34,6 +34,7 @@ import DashboardSummary from './model/DashboardSummary';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import Facet from './model/Facet';
+import FcmTokenViewModel from './model/FcmTokenViewModel';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
@@ -293,6 +294,12 @@ export {
      * @type {Facet}
      */
     Facet,
+
+    /**
+     * @name index#FcmTokenViewModel
+     * @type {FcmTokenViewModel}
+     */
+    FcmTokenViewModel,
 
     /**
      * @name index#ForgotPasswordViewModel
