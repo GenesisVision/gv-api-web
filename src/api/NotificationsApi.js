@@ -38,6 +38,57 @@ export default class NotificationsApi {
     }
 
 
+      v10NotificationsByIdReadPostWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10NotificationsByIdReadPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsByIdReadPost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/{id}/read', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Read notification
+     * @function NotificationsApi#v10NotificationsByIdReadPost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+      v10NotificationsByIdReadPost(id, authorization) {
+      return this.v10NotificationsByIdReadPostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10NotificationsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;

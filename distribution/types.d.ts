@@ -273,6 +273,7 @@ export declare class ManagerApi {
 
 export declare class NotificationsApi {
     constructor(apiClient: ApiClient): NotificationsApi;
+    v10NotificationsByIdReadPost(id: string, authorization: string): Promise<any>;
     v10NotificationsGet(authorization: string, opts?: {
         skip?: number;
         take?: number;

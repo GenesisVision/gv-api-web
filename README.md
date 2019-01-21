@@ -180,6 +180,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**v10ManagerRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
+*CoreApiV10.NotificationsApi* | [**v10NotificationsByIdReadPost**](docs/NotificationsApi.md#v10NotificationsByIdReadPost) | **POST** /v1.0/notifications/{id}/read | Read notification
 *CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
 *CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsAddPost**](docs/NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting

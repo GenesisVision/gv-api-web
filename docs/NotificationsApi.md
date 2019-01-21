@@ -4,6 +4,7 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10NotificationsByIdReadPost**](NotificationsApi.md#v10NotificationsByIdReadPost) | **POST** /v1.0/notifications/{id}/read | Read notification
 [**v10NotificationsGet**](NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
 [**v10NotificationsNewGet**](NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
 [**v10NotificationsSettingsAddPost**](NotificationsApi.md#v10NotificationsSettingsAddPost) | **POST** /v1.0/notifications/settings/add | Add new setting
@@ -14,6 +15,50 @@ Method | HTTP request | Description
 [**v10NotificationsSettingsProgramsByIdGet**](NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
 [**v10NotificationsSettingsRemoveByIdPost**](NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 
+
+<a name="v10NotificationsByIdReadPost"></a>
+# **v10NotificationsByIdReadPost**
+> v10NotificationsByIdReadPost(id, authorization)
+
+Read notification
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.NotificationsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10NotificationsByIdReadPost(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10NotificationsGet"></a>
 # **v10NotificationsGet**
