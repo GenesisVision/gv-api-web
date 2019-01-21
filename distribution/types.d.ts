@@ -673,6 +673,7 @@ export declare interface DashboardPortfolioEvent {
     valueTotal: number;
     feeSuccessManager: number;
     feeSuccessPlatform: number;
+    profitPercent: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     type: "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended";
     logo: string;

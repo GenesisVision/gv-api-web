@@ -67,6 +67,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name DashboardPortfolioEvent#profitPercent
+ * @type {Number}
+ */
+/**
+ *
  * @name DashboardPortfolioEvent#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
@@ -107,6 +112,7 @@ var DashboardPortfolioEvent = function () {
         this.valueTotal = undefined;
         this.feeSuccessManager = undefined;
         this.feeSuccessPlatform = undefined;
+        this.profitPercent = undefined;
         this.currency = undefined;
         this.type = undefined;
         this.logo = undefined;
@@ -141,6 +147,9 @@ var DashboardPortfolioEvent = function () {
                 }
                 if (data.hasOwnProperty('feeSuccessPlatform')) {
                     obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
+                }
+                if (data.hasOwnProperty('profitPercent')) {
+                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');

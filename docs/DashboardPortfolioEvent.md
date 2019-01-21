@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **valueTotal** | **Number** |  | [optional] 
 **feeSuccessManager** | **Number** |  | [optional] 
 **feeSuccessPlatform** | **Number** |  | [optional] 
+**profitPercent** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
