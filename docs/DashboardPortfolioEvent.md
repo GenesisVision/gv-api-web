@@ -9,7 +9,9 @@ Name | Type | Description | Notes
 **value** | **Number** |  | [optional] 
 **valueTotal** | **Number** |  | [optional] 
 **feeSuccessManager** | **Number** |  | [optional] 
+**feeSuccessManagerCurrency** | **String** |  | [optional] 
 **feeSuccessPlatform** | **Number** |  | [optional] 
+**feeSuccessPlatformCurrency** | **String** |  | [optional] 
 **profitPercent** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
@@ -17,6 +19,72 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **assetType** | **String** |  | [optional] 
+
+
+<a name="FeeSuccessManagerCurrencyEnum"></a>
+## Enum: FeeSuccessManagerCurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="FeeSuccessPlatformCurrencyEnum"></a>
+## Enum: FeeSuccessPlatformCurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="CurrencyEnum"></a>

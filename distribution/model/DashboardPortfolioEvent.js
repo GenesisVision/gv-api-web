@@ -62,8 +62,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+/**
+ *
  * @name DashboardPortfolioEvent#feeSuccessPlatform
  * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -111,7 +121,9 @@ var DashboardPortfolioEvent = function () {
         this.value = undefined;
         this.valueTotal = undefined;
         this.feeSuccessManager = undefined;
+        this.feeSuccessManagerCurrency = undefined;
         this.feeSuccessPlatform = undefined;
+        this.feeSuccessPlatformCurrency = undefined;
         this.profitPercent = undefined;
         this.currency = undefined;
         this.type = undefined;
@@ -145,8 +157,14 @@ var DashboardPortfolioEvent = function () {
                 if (data.hasOwnProperty('feeSuccessManager')) {
                     obj['feeSuccessManager'] = _ApiClient2.default.convertToType(data['feeSuccessManager'], 'Number');
                 }
+                if (data.hasOwnProperty('feeSuccessManagerCurrency')) {
+                    obj['feeSuccessManagerCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessManagerCurrency'], 'String');
+                }
                 if (data.hasOwnProperty('feeSuccessPlatform')) {
                     obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
+                }
+                if (data.hasOwnProperty('feeSuccessPlatformCurrency')) {
+                    obj['feeSuccessPlatformCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessPlatformCurrency'], 'String');
                 }
                 if (data.hasOwnProperty('profitPercent')) {
                     obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
@@ -177,6 +195,62 @@ var DashboardPortfolioEvent = function () {
     return DashboardPortfolioEvent;
 }();
 
+DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
+DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
 DashboardPortfolioEvent.CurrencyEnum = {
 
     "Undefined": "Undefined",

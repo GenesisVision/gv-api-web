@@ -55,8 +55,18 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     */
+    /**
+     *
      * @name DashboardPortfolioEvent#feeSuccessPlatform
      * @type {Number}
+     */
+    /**
+     *
+     * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -137,8 +147,14 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('feeSuccessManager')) {
                 obj['feeSuccessManager'] = ApiClient.convertToType(data['feeSuccessManager'], 'Number');
             }
+            if (data.hasOwnProperty('feeSuccessManagerCurrency')) {
+                obj['feeSuccessManagerCurrency'] = ApiClient.convertToType(data['feeSuccessManagerCurrency'], 'String');
+            }
             if (data.hasOwnProperty('feeSuccessPlatform')) {
                 obj['feeSuccessPlatform'] = ApiClient.convertToType(data['feeSuccessPlatform'], 'Number');
+            }
+            if (data.hasOwnProperty('feeSuccessPlatformCurrency')) {
+                obj['feeSuccessPlatformCurrency'] = ApiClient.convertToType(data['feeSuccessPlatformCurrency'], 'String');
             }
             if (data.hasOwnProperty('profitPercent')) {
                 obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
@@ -171,7 +187,9 @@ export default class DashboardPortfolioEvent {
     value = undefined;
     valueTotal = undefined;
     feeSuccessManager = undefined;
+    feeSuccessManagerCurrency = undefined;
     feeSuccessPlatform = undefined;
+    feeSuccessPlatformCurrency = undefined;
     profitPercent = undefined;
     currency = undefined;
     type = undefined;
@@ -184,6 +202,64 @@ export default class DashboardPortfolioEvent {
 
 
 
+
+    static FeeSuccessManagerCurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
+    static FeeSuccessPlatformCurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
 
     static CurrencyEnum = {
     
