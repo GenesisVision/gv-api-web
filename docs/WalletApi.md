@@ -4,17 +4,63 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10WalletAddressesByCurrencyGet**](WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
 [**v10WalletAddressesGet**](WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 [**v10WalletByCurrencyGet**](WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 [**v10WalletMultiByCurrencyGet**](WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
 [**v10WalletTransactionsGet**](WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
 [**v10WalletTransactionsPendingGet**](WalletApi.md#v10WalletTransactionsPendingGet) | **GET** /v1.0/wallet/transactions/pending | Wallet pending transactions
+[**v10WalletTransferPost**](WalletApi.md#v10WalletTransferPost) | **POST** /v1.0/wallet/transfer | Transfer money
 [**v10WalletWithdrawInfoGet**](WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
 [**v10WalletWithdrawRequestCancelByTxIdPost**](WalletApi.md#v10WalletWithdrawRequestCancelByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 [**v10WalletWithdrawRequestConfirmPost**](WalletApi.md#v10WalletWithdrawRequestConfirmPost) | **POST** /v1.0/wallet/withdraw/request/confirm | 
 [**v10WalletWithdrawRequestNewPost**](WalletApi.md#v10WalletWithdrawRequestNewPost) | **POST** /v1.0/wallet/withdraw/request/new | 
 [**v10WalletWithdrawRequestResendByTxIdPost**](WalletApi.md#v10WalletWithdrawRequestResendByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/resend/{txId} | 
 
+
+<a name="v10WalletAddressesByCurrencyGet"></a>
+# **v10WalletAddressesByCurrencyGet**
+> WalletInfo v10WalletAddressesByCurrencyGet(currency, authorization)
+
+
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10WalletAddressesByCurrencyGet(currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**WalletInfo**](WalletInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10WalletAddressesGet"></a>
 # **v10WalletAddressesGet**
@@ -235,6 +281,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WalletPendingTransactionsViewModel**](WalletPendingTransactionsViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10WalletTransferPost"></a>
+# **v10WalletTransferPost**
+> v10WalletTransferPost(authorization, opts)
+
+Transfer money
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'from': "from_example", // String | 
+  'to': "to_example", // String | 
+  'amount': 1.2 // Number | 
+};
+apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **from** | **String**|  | [optional] 
+ **to** | **String**|  | [optional] 
+ **amount** | **Number**|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

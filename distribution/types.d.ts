@@ -397,6 +397,7 @@ export declare class SearchApi {
 
 export declare class WalletApi {
     constructor(apiClient: ApiClient): WalletApi;
+    v10WalletAddressesByCurrencyGet(currency: string, authorization: string): Promise<WalletInfo>;
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
@@ -411,6 +412,11 @@ export declare class WalletApi {
         take?: number;
     }): Promise<WalletTransactionsViewModel>;
     v10WalletTransactionsPendingGet(authorization: string): Promise<WalletPendingTransactionsViewModel>;
+    v10WalletTransferPost(authorization: string, opts?: {
+        from?: string;
+        to?: string;
+        amount?: number;
+    }): Promise<any>;
     v10WalletWithdrawInfoGet(authorization: string): Promise<WithdrawalSummary>;
     v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string): Promise<any>;
     v10WalletWithdrawRequestConfirmPost(opts?: {

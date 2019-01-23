@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import CreateWithdrawalRequestModel from '../model/CreateWithdrawalRequestModel';
 import ErrorViewModel from '../model/ErrorViewModel';
+import WalletInfo from '../model/WalletInfo';
 import WalletMultiSummary from '../model/WalletMultiSummary';
 import WalletPendingTransactionsViewModel from '../model/WalletPendingTransactionsViewModel';
 import WalletSummary from '../model/WalletSummary';
@@ -39,6 +40,56 @@ export default class WalletApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+      v10WalletAddressesByCurrencyGetWithHttpInfo(currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10WalletAddressesByCurrencyGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletAddressesByCurrencyGet");
+      }
+
+
+      let pathParams = {
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = WalletInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/addresses/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @function WalletApi#v10WalletAddressesByCurrencyGet
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise<WalletInfo>} a Promise, with an object containing data of type WalletInfo and HTTP response
+     */
+      v10WalletAddressesByCurrencyGet(currency, authorization) {
+      return this.v10WalletAddressesByCurrencyGetWithHttpInfo(currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
       v10WalletAddressesGetWithHttpInfo(authorization) {
       let postBody = null;
@@ -286,6 +337,58 @@ export default class WalletApi {
      */
       v10WalletTransactionsPendingGet(authorization) {
       return this.v10WalletTransactionsPendingGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10WalletTransferPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransferPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'From': opts['from'],
+        'To': opts['to'],
+        'Amount': opts['amount']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/transfer', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Transfer money
+     * @function WalletApi#v10WalletTransferPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.from] 
+     * @param {String} [opts.to] 
+     * @param {Number} [opts.amount] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+      v10WalletTransferPost(authorization, opts) {
+      return this.v10WalletTransferPostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

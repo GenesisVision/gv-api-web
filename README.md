@@ -214,11 +214,13 @@ Class | Method | HTTP request | Description
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 *CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
 *CoreApiV10.SearchApi* | [**v10SearchGet**](docs/SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
+*CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyGet**](docs/WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsPendingGet**](docs/WalletApi.md#v10WalletTransactionsPendingGet) | **GET** /v1.0/wallet/transactions/pending | Wallet pending transactions
+*CoreApiV10.WalletApi* | [**v10WalletTransferPost**](docs/WalletApi.md#v10WalletTransferPost) | **POST** /v1.0/wallet/transfer | Transfer money
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawInfoGet**](docs/WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestCancelByTxIdPost**](docs/WalletApi.md#v10WalletWithdrawRequestCancelByTxIdPost) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawRequestConfirmPost**](docs/WalletApi.md#v10WalletWithdrawRequestConfirmPost) | **POST** /v1.0/wallet/withdraw/request/confirm | 
