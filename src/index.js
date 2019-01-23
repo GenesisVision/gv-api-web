@@ -130,13 +130,16 @@ import UpdatePersonalDetailViewModel from './model/UpdatePersonalDetailViewModel
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import ValueChartBar from './model/ValueChartBar';
+import WalletData from './model/WalletData';
 import WalletInfo from './model/WalletInfo';
+import WalletMultiSummary from './model/WalletMultiSummary';
 import WalletPendingTransaction from './model/WalletPendingTransaction';
 import WalletPendingTransactionsViewModel from './model/WalletPendingTransactionsViewModel';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WalletWithdrawalInfo from './model/WalletWithdrawalInfo';
+import WalletsGrandTotal from './model/WalletsGrandTotal';
 import WalletsInfo from './model/WalletsInfo';
 import WithdrawalInfo from './model/WithdrawalInfo';
 import WithdrawalSummary from './model/WithdrawalSummary';
@@ -872,10 +875,22 @@ export {
     ValueChartBar,
 
     /**
+     * @name index#WalletData
+     * @type {WalletData}
+     */
+    WalletData,
+
+    /**
      * @name index#WalletInfo
      * @type {WalletInfo}
      */
     WalletInfo,
+
+    /**
+     * @name index#WalletMultiSummary
+     * @type {WalletMultiSummary}
+     */
+    WalletMultiSummary,
 
     /**
      * @name index#WalletPendingTransaction
@@ -912,6 +927,12 @@ export {
      * @type {WalletWithdrawalInfo}
      */
     WalletWithdrawalInfo,
+
+    /**
+     * @name index#WalletsGrandTotal
+     * @type {WalletsGrandTotal}
+     */
+    WalletsGrandTotal,
 
     /**
      * @name index#WalletsInfo

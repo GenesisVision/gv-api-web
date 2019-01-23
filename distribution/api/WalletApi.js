@@ -29,6 +29,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _WalletMultiSummary = require('../model/WalletMultiSummary');
+
+var _WalletMultiSummary2 = _interopRequireDefault(_WalletMultiSummary);
+
 var _WalletPendingTransactionsViewModel = require('../model/WalletPendingTransactionsViewModel');
 
 var _WalletPendingTransactionsViewModel2 = _interopRequireDefault(_WalletPendingTransactionsViewModel);
@@ -158,6 +162,53 @@ var WalletApi = function () {
       });
     }
   }, {
+    key: 'v10WalletMultiByCurrencyGetWithHttpInfo',
+    value: function v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10WalletMultiByCurrencyGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiByCurrencyGet");
+      }
+
+      var pathParams = {
+        'currency': currency
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _WalletMultiSummary2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Multi wallet summary
+     * @function WalletApi#v10WalletMultiByCurrencyGet
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiByCurrencyGet',
+    value: function v10WalletMultiByCurrencyGet(currency, authorization) {
+      return this.v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10WalletTransactionsGetWithHttpInfo',
     value: function v10WalletTransactionsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -175,6 +226,7 @@ var WalletApi = function () {
         'To': opts['to'],
         'AssetType': opts['assetType'],
         'TxAction': opts['txAction'],
+        'Wallet': opts['wallet'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -201,6 +253,7 @@ var WalletApi = function () {
      * @param {Date} [opts.to] 
      * @param {String} [opts.assetType] 
      * @param {String} [opts.txAction] 
+     * @param {String} [opts.wallet] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response

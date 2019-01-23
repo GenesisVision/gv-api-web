@@ -399,12 +399,14 @@ export declare class WalletApi {
     constructor(apiClient: ApiClient): WalletApi;
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
+    v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
     v10WalletTransactionsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
         to?: Date;
         assetType?: string;
         txAction?: string;
+        wallet?: string;
         skip?: number;
         take?: number;
     }): Promise<WalletTransactionsViewModel>;
@@ -540,13 +542,16 @@ export declare interface index {
     UpdateProfileViewModel: UpdateProfileViewModel;
     UploadResult: UploadResult;
     ValueChartBar: ValueChartBar;
+    WalletData: WalletData;
     WalletInfo: WalletInfo;
+    WalletMultiSummary: WalletMultiSummary;
     WalletPendingTransaction: WalletPendingTransaction;
     WalletPendingTransactionsViewModel: WalletPendingTransactionsViewModel;
     WalletSummary: WalletSummary;
     WalletTransaction: WalletTransaction;
     WalletTransactionsViewModel: WalletTransactionsViewModel;
     WalletWithdrawalInfo: WalletWithdrawalInfo;
+    WalletsGrandTotal: WalletsGrandTotal;
     WalletsInfo: WalletsInfo;
     WithdrawalInfo: WithdrawalInfo;
     WithdrawalSummary: WithdrawalSummary;
@@ -1579,12 +1584,31 @@ export declare interface ValueChartBar {
     otherAssetsValue: OtherAssetsValue;
 }
 
+export declare interface WalletData {
+    id: string;
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    available: number;
+    invested: number;
+    pending: number;
+    total: number;
+    currencyCcy: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    availableCcy: number;
+    investedCcy: number;
+    pendingCcy: number;
+    totalCcy: number;
+}
+
 export declare interface WalletInfo {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     address: string;
     rateToGVT: number;
     description: string;
     logo: string;
+}
+
+export declare interface WalletMultiSummary {
+    grandTotal: WalletsGrandTotal;
+    wallets: WalletData[];
 }
 
 export declare interface WalletPendingTransaction {
@@ -1645,6 +1669,19 @@ export declare interface WalletWithdrawalInfo {
     logo: string;
     commission: number;
     rateToGvt: number;
+}
+
+export declare interface WalletsGrandTotal {
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    available: number;
+    invested: number;
+    pending: number;
+    total: number;
+    currencyCcy: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    availableCcy: number;
+    investedCcy: number;
+    pendingCcy: number;
+    totalCcy: number;
 }
 
 export declare interface WalletsInfo {

@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import CreateWithdrawalRequestModel from '../model/CreateWithdrawalRequestModel';
 import ErrorViewModel from '../model/ErrorViewModel';
+import WalletMultiSummary from '../model/WalletMultiSummary';
 import WalletPendingTransactionsViewModel from '../model/WalletPendingTransactionsViewModel';
 import WalletSummary from '../model/WalletSummary';
 import WalletTransactionsViewModel from '../model/WalletTransactionsViewModel';
@@ -133,6 +134,57 @@ export default class WalletApi {
         });
     }
 
+      v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10WalletMultiByCurrencyGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiByCurrencyGet");
+      }
+
+
+      let pathParams = {
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = WalletMultiSummary;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/multi/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Multi wallet summary
+     * @function WalletApi#v10WalletMultiByCurrencyGet
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
+     */
+      v10WalletMultiByCurrencyGet(currency, authorization) {
+      return this.v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10WalletTransactionsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
@@ -151,6 +203,7 @@ export default class WalletApi {
         'To': opts['to'],
         'AssetType': opts['assetType'],
         'TxAction': opts['txAction'],
+        'Wallet': opts['wallet'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -182,6 +235,7 @@ export default class WalletApi {
      * @param {Date} [opts.to] 
      * @param {String} [opts.assetType] 
      * @param {String} [opts.txAction] 
+     * @param {String} [opts.wallet] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
