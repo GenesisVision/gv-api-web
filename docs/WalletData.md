@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 

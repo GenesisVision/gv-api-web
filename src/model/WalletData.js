@@ -30,6 +30,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name WalletData#title
+     * @type {String}
+     */
+    /**
+     *
      * @name WalletData#currency
      * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
@@ -107,6 +112,9 @@ export default class WalletData {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -142,6 +150,7 @@ export default class WalletData {
     }
 
     id = undefined;
+    title = undefined;
     currency = undefined;
     available = undefined;
     invested = undefined;

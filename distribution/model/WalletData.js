@@ -37,6 +37,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name WalletData#title
+ * @type {String}
+ */
+/**
+ *
  * @name WalletData#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
@@ -91,6 +96,7 @@ var WalletData = function () {
         _classCallCheck(this, WalletData);
 
         this.id = undefined;
+        this.title = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -111,6 +117,9 @@ var WalletData = function () {
 
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
