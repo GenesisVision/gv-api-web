@@ -354,6 +354,50 @@ export default class ProgramsApi {
         });
     }
 
+      v10ProgramsByIdTradesOpenGetWithHttpInfo(id) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdTradesOpenGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TradesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/trades/open', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Open positions
+     * @function ProgramsApi#v10ProgramsByIdTradesOpenGet
+     * @param {String} id 
+     * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
+     */
+      v10ProgramsByIdTradesOpenGet(id) {
+      return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10ProgramsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;

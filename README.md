@@ -207,6 +207,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesOpenGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesOpenGet) | **GET** /v1.0/programs/{id}/trades/open | Open positions
 *CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 *CoreApiV10.ProgramsApi* | [**v10ProgramsLevelupSummaryGet**](docs/ProgramsApi.md#v10ProgramsLevelupSummaryGet) | **GET** /v1.0/programs/levelup/summary | Level up summary
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets

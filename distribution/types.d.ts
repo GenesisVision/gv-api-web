@@ -347,6 +347,7 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): Promise<TradesViewModel>;
+    v10ProgramsByIdTradesOpenGet(id: string): Promise<TradesViewModel>;
     v10ProgramsGet(opts?: {
         authorization?: string;
         levelMin?: number;
