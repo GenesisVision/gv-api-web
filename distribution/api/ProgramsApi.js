@@ -369,7 +369,8 @@ var ProgramsApi = function () {
     }
   }, {
     key: 'v10ProgramsByIdTradesOpenGetWithHttpInfo',
-    value: function v10ProgramsByIdTradesOpenGetWithHttpInfo(id) {
+    value: function v10ProgramsByIdTradesOpenGetWithHttpInfo(id, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -380,7 +381,11 @@ var ProgramsApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
       var headerParams = {};
       var formParams = {};
 
@@ -396,13 +401,17 @@ var ProgramsApi = function () {
      * Open positions
      * @function ProgramsApi#v10ProgramsByIdTradesOpenGet
      * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
 
   }, {
     key: 'v10ProgramsByIdTradesOpenGet',
-    value: function v10ProgramsByIdTradesOpenGet(id) {
-      return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id).then(function (response_and_data) {
+    value: function v10ProgramsByIdTradesOpenGet(id, opts) {
+      return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -354,7 +354,8 @@ export default class ProgramsApi {
         });
     }
 
-      v10ProgramsByIdTradesOpenGetWithHttpInfo(id) {
+      v10ProgramsByIdTradesOpenGetWithHttpInfo(id, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -367,6 +368,9 @@ export default class ProgramsApi {
         'id': id
       };
       let queryParams = {
+        'Sorting': opts['sorting'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       let headerParams = {
       };
@@ -389,10 +393,14 @@ export default class ProgramsApi {
      * Open positions
      * @function ProgramsApi#v10ProgramsByIdTradesOpenGet
      * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
-      v10ProgramsByIdTradesOpenGet(id) {
-      return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id)
+      v10ProgramsByIdTradesOpenGet(id, opts) {
+      return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

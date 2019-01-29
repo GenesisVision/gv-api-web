@@ -347,7 +347,11 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): Promise<TradesViewModel>;
-    v10ProgramsByIdTradesOpenGet(id: string): Promise<TradesViewModel>;
+    v10ProgramsByIdTradesOpenGet(id: string, opts?: {
+        sorting?: string;
+        skip?: number;
+        take?: number;
+    }): Promise<TradesViewModel>;
     v10ProgramsGet(opts?: {
         authorization?: string;
         levelMin?: number;
@@ -1095,6 +1099,8 @@ export declare interface OrderModel {
     direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
     date: Date;
     price: number;
+    priceCurrent: number;
+    profitPercentCurrent: number;
     entry: "In" | "Out" | "InOut" | "OutBy";
 }
 

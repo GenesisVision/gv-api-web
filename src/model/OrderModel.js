@@ -70,6 +70,16 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name OrderModel#priceCurrent
+     * @type {Number}
+     */
+    /**
+     *
+     * @name OrderModel#profitPercentCurrent
+     * @type {Number}
+     */
+    /**
+     *
      * @name OrderModel#entry
      * @type {("In"|"Out"|"InOut"|"OutBy")}
      */
@@ -126,6 +136,12 @@ export default class OrderModel {
             if (data.hasOwnProperty('price')) {
                 obj['price'] = ApiClient.convertToType(data['price'], 'Number');
             }
+            if (data.hasOwnProperty('priceCurrent')) {
+                obj['priceCurrent'] = ApiClient.convertToType(data['priceCurrent'], 'Number');
+            }
+            if (data.hasOwnProperty('profitPercentCurrent')) {
+                obj['profitPercentCurrent'] = ApiClient.convertToType(data['profitPercentCurrent'], 'Number');
+            }
             if (data.hasOwnProperty('entry')) {
                 obj['entry'] = ApiClient.convertToType(data['entry'], 'String');
             }
@@ -142,6 +158,8 @@ export default class OrderModel {
     direction = undefined;
     date = undefined;
     price = undefined;
+    priceCurrent = undefined;
+    profitPercentCurrent = undefined;
     entry = undefined;
 
 

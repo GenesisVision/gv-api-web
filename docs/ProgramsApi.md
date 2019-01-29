@@ -306,7 +306,7 @@ No authorization required
 
 <a name="v10ProgramsByIdTradesOpenGet"></a>
 # **v10ProgramsByIdTradesOpenGet**
-> TradesViewModel v10ProgramsByIdTradesOpenGet(id)
+> TradesViewModel v10ProgramsByIdTradesOpenGet(id, opts)
 
 Open positions
 
@@ -318,7 +318,12 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 
 let id = "id_example"; // String | 
 
-apiInstance.v10ProgramsByIdTradesOpenGet(id).then((data) => {
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdTradesOpenGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -331,6 +336,9 @@ apiInstance.v10ProgramsByIdTradesOpenGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
+ **sorting** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 

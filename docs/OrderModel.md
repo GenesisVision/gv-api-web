@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **direction** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **price** | **Number** |  | [optional] 
+**priceCurrent** | **Number** |  | [optional] 
+**profitPercentCurrent** | **Number** |  | [optional] 
 **entry** | **String** |  | [optional] 
 
 
