@@ -1100,7 +1100,6 @@ export declare interface OrderModel {
     date: Date;
     price: number;
     priceCurrent: number;
-    profitPercentCurrent: number;
     entry: "In" | "Out" | "InOut" | "OutBy";
 }
 

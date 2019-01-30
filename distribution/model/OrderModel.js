@@ -82,11 +82,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name OrderModel#profitPercentCurrent
- * @type {Number}
- */
-/**
- *
  * @name OrderModel#entry
  * @type {("In"|"Out"|"InOut"|"OutBy")}
  */
@@ -105,7 +100,6 @@ var OrderModel = function () {
         this.date = undefined;
         this.price = undefined;
         this.priceCurrent = undefined;
-        this.profitPercentCurrent = undefined;
         this.entry = undefined;
     }
 
@@ -144,9 +138,6 @@ var OrderModel = function () {
                 }
                 if (data.hasOwnProperty('priceCurrent')) {
                     obj['priceCurrent'] = _ApiClient2.default.convertToType(data['priceCurrent'], 'Number');
-                }
-                if (data.hasOwnProperty('profitPercentCurrent')) {
-                    obj['profitPercentCurrent'] = _ApiClient2.default.convertToType(data['profitPercentCurrent'], 'Number');
                 }
                 if (data.hasOwnProperty('entry')) {
                     obj['entry'] = _ApiClient2.default.convertToType(data['entry'], 'String');

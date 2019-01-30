@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | [optional] 
 **price** | **Number** |  | [optional] 
 **priceCurrent** | **Number** |  | [optional] 
-**profitPercentCurrent** | **Number** |  | [optional] 
 **entry** | **String** |  | [optional] 
 
 
