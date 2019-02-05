@@ -123,7 +123,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramDetailsFull#tags
- * @type {[ProgramTag]}
+ * @type {Array<ProgramTag>}
  */
 /**
  *

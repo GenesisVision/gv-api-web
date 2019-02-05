@@ -62,7 +62,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundDetails#topFundAssets
- * @type {[FundAssetPercent]}
+ * @type {Array<FundAssetPercent>}
  */
 /**
  *
@@ -117,7 +117,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundDetails#chart
- * @type {[ChartSimple]}
+ * @type {Array<ChartSimple>}
  */
 /**
  *

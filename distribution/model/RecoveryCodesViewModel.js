@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name RecoveryCodesViewModel#codes
- * @type {[RecoveryCode]}
+ * @type {Array<RecoveryCode>}
  */
 /**
  *
