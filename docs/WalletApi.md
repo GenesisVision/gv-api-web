@@ -196,7 +196,7 @@ No authorization required
 
 <a name="v10WalletMultiExternalTransactionsGet"></a>
 # **v10WalletMultiExternalTransactionsGet**
-> MultiWalletExternalTransactionsViewModel v10WalletMultiExternalTransactionsGet(authorization)
+> MultiWalletExternalTransactionsViewModel v10WalletMultiExternalTransactionsGet(authorization, opts)
 
 Wallet pending transactions
 
@@ -208,7 +208,15 @@ let apiInstance = new CoreApiV10.WalletApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletMultiExternalTransactionsGet(authorization).then((data) => {
+let opts = { 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'type': "type_example", // String | 
+  'currency': "currency_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10WalletMultiExternalTransactionsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -221,6 +229,12 @@ apiInstance.v10WalletMultiExternalTransactionsGet(authorization).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **type** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -335,7 +349,7 @@ let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'type': "type_example", // String | 
-  'wallet': "wallet_example", // String | 
+  'currency': "currency_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -355,7 +369,7 @@ Name | Type | Description  | Notes
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
  **type** | **String**|  | [optional] 
- **wallet** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

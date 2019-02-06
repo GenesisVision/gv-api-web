@@ -264,7 +264,8 @@ var WalletApi = function () {
     }
   }, {
     key: 'v10WalletMultiExternalTransactionsGetWithHttpInfo',
-    value: function v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization) {
+    value: function v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -273,7 +274,14 @@ var WalletApi = function () {
       }
 
       var pathParams = {};
-      var queryParams = {};
+      var queryParams = {
+        'From': opts['from'],
+        'To': opts['to'],
+        'Type': opts['type'],
+        'Currency': opts['currency'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -291,13 +299,20 @@ var WalletApi = function () {
      * Wallet pending transactions
      * @function WalletApi#v10WalletMultiExternalTransactionsGet
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.currency] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
      */
 
   }, {
     key: 'v10WalletMultiExternalTransactionsGet',
-    value: function v10WalletMultiExternalTransactionsGet(authorization) {
-      return this.v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function v10WalletMultiExternalTransactionsGet(authorization, opts) {
+      return this.v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -395,7 +410,7 @@ var WalletApi = function () {
         'From': opts['from'],
         'To': opts['to'],
         'Type': opts['type'],
-        'Wallet': opts['wallet'],
+        'Currency': opts['currency'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -420,7 +435,7 @@ var WalletApi = function () {
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 
      * @param {String} [opts.type] 
-     * @param {String} [opts.wallet] 
+     * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response

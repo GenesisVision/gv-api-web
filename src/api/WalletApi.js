@@ -237,7 +237,8 @@ export default class WalletApi {
         });
     }
 
-      v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization) {
+      v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -249,6 +250,12 @@ export default class WalletApi {
       let pathParams = {
       };
       let queryParams = {
+        'From': opts['from'],
+        'To': opts['to'],
+        'Type': opts['type'],
+        'Currency': opts['currency'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       let headerParams = {
         'Authorization': authorization
@@ -272,10 +279,17 @@ export default class WalletApi {
      * Wallet pending transactions
      * @function WalletApi#v10WalletMultiExternalTransactionsGet
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.currency] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
      * @return {Promise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
      */
-      v10WalletMultiExternalTransactionsGet(authorization) {
-      return this.v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization)
+      v10WalletMultiExternalTransactionsGet(authorization, opts) {
+      return this.v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -385,7 +399,7 @@ export default class WalletApi {
         'From': opts['from'],
         'To': opts['to'],
         'Type': opts['type'],
-        'Wallet': opts['wallet'],
+        'Currency': opts['currency'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -415,7 +429,7 @@ export default class WalletApi {
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 
      * @param {String} [opts.type] 
-     * @param {String} [opts.wallet] 
+     * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
