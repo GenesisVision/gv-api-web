@@ -29,6 +29,14 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _MultiWalletExternalTransactionsViewModel = require('../model/MultiWalletExternalTransactionsViewModel');
+
+var _MultiWalletExternalTransactionsViewModel2 = _interopRequireDefault(_MultiWalletExternalTransactionsViewModel);
+
+var _MultiWalletTransactionsViewModel = require('../model/MultiWalletTransactionsViewModel');
+
+var _MultiWalletTransactionsViewModel2 = _interopRequireDefault(_MultiWalletTransactionsViewModel);
+
 var _WalletInfo = require('../model/WalletInfo');
 
 var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
@@ -36,10 +44,6 @@ var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
 var _WalletMultiSummary = require('../model/WalletMultiSummary');
 
 var _WalletMultiSummary2 = _interopRequireDefault(_WalletMultiSummary);
-
-var _WalletPendingTransactionsViewModel = require('../model/WalletPendingTransactionsViewModel');
-
-var _WalletPendingTransactionsViewModel2 = _interopRequireDefault(_WalletPendingTransactionsViewModel);
 
 var _WalletSummary = require('../model/WalletSummary');
 
@@ -259,6 +263,177 @@ var WalletApi = function () {
       });
     }
   }, {
+    key: 'v10WalletMultiExternalTransactionsGetWithHttpInfo',
+    value: function v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiExternalTransactionsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _MultiWalletExternalTransactionsViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/external/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Wallet pending transactions
+     * @function WalletApi#v10WalletMultiExternalTransactionsGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiExternalTransactionsGet',
+    value: function v10WalletMultiExternalTransactionsGet(authorization) {
+      return this.v10WalletMultiExternalTransactionsGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletMultiFilterTransactionExternalGetWithHttpInfo',
+    value: function v10WalletMultiFilterTransactionExternalGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiFilterTransactionExternalGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = ['String'];
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/filter/transaction/external', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get external transaction
+     * @function WalletApi#v10WalletMultiFilterTransactionExternalGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<['String']>} a Promise, with an object containing data of type ['String'] and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiFilterTransactionExternalGet',
+    value: function v10WalletMultiFilterTransactionExternalGet(authorization) {
+      return this.v10WalletMultiFilterTransactionExternalGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletMultiFilterTransactionGetWithHttpInfo',
+    value: function v10WalletMultiFilterTransactionGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiFilterTransactionGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = ['String'];
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/filter/transaction', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get type transaction
+     * @function WalletApi#v10WalletMultiFilterTransactionGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<['String']>} a Promise, with an object containing data of type ['String'] and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiFilterTransactionGet',
+    value: function v10WalletMultiFilterTransactionGet(authorization) {
+      return this.v10WalletMultiFilterTransactionGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletMultiTransactionsGetWithHttpInfo',
+    value: function v10WalletMultiTransactionsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiTransactionsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'From': opts['from'],
+        'To': opts['to'],
+        'Type': opts['type'],
+        'Wallet': opts['wallet'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _MultiWalletTransactionsViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Multi wallet transactions
+     * @function WalletApi#v10WalletMultiTransactionsGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.type] 
+     * @param {String} [opts.wallet] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {Promise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiTransactionsGet',
+    value: function v10WalletMultiTransactionsGet(authorization, opts) {
+      return this.v10WalletMultiTransactionsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10WalletTransactionsGetWithHttpInfo',
     value: function v10WalletTransactionsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -313,45 +488,6 @@ var WalletApi = function () {
     key: 'v10WalletTransactionsGet',
     value: function v10WalletTransactionsGet(authorization, opts) {
       return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }, {
-    key: 'v10WalletTransactionsPendingGetWithHttpInfo',
-    value: function v10WalletTransactionsPendingGetWithHttpInfo(authorization) {
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransactionsPendingGet");
-      }
-
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _WalletPendingTransactionsViewModel2.default;
-
-      return this.apiClient.callApi('/v1.0/wallet/transactions/pending', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Wallet pending transactions
-     * @function WalletApi#v10WalletTransactionsPendingGet
-     * @param {String} authorization JWT access token
-     * @return {Promise<WalletPendingTransactionsViewModel>} a Promise, with an object containing data of type WalletPendingTransactionsViewModel and HTTP response
-     */
-
-  }, {
-    key: 'v10WalletTransactionsPendingGet',
-    value: function v10WalletTransactionsPendingGet(authorization) {
-      return this.v10WalletTransactionsPendingGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

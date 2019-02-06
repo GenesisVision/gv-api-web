@@ -70,6 +70,10 @@ import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersList from './model/ManagersList';
+import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
+import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
+import MultiWalletTransaction from './model/MultiWalletTransaction';
+import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
@@ -133,8 +137,6 @@ import ValueChartBar from './model/ValueChartBar';
 import WalletData from './model/WalletData';
 import WalletInfo from './model/WalletInfo';
 import WalletMultiSummary from './model/WalletMultiSummary';
-import WalletPendingTransaction from './model/WalletPendingTransaction';
-import WalletPendingTransactionsViewModel from './model/WalletPendingTransactionsViewModel';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
 import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
@@ -515,6 +517,30 @@ export {
     ManagersList,
 
     /**
+     * @name index#MultiWalletExternalTransaction
+     * @type {MultiWalletExternalTransaction}
+     */
+    MultiWalletExternalTransaction,
+
+    /**
+     * @name index#MultiWalletExternalTransactionsViewModel
+     * @type {MultiWalletExternalTransactionsViewModel}
+     */
+    MultiWalletExternalTransactionsViewModel,
+
+    /**
+     * @name index#MultiWalletTransaction
+     * @type {MultiWalletTransaction}
+     */
+    MultiWalletTransaction,
+
+    /**
+     * @name index#MultiWalletTransactionsViewModel
+     * @type {MultiWalletTransactionsViewModel}
+     */
+    MultiWalletTransactionsViewModel,
+
+    /**
      * @name index#NewFundRequest
      * @type {NewFundRequest}
      */
@@ -891,18 +917,6 @@ export {
      * @type {WalletMultiSummary}
      */
     WalletMultiSummary,
-
-    /**
-     * @name index#WalletPendingTransaction
-     * @type {WalletPendingTransaction}
-     */
-    WalletPendingTransaction,
-
-    /**
-     * @name index#WalletPendingTransactionsViewModel
-     * @type {WalletPendingTransactionsViewModel}
-     */
-    WalletPendingTransactionsViewModel,
 
     /**
      * @name index#WalletSummary

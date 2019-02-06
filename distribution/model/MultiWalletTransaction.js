@@ -27,181 +27,182 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface ProfileHeaderViewModel
+ * @interface MultiWalletTransaction
  */
 
 /**
  *
- * @name ProfileHeaderViewModel#id
+ * @name MultiWalletTransaction#id
  * @type {String}
  */
 /**
  *
- * @name ProfileHeaderViewModel#name
+ * @name MultiWalletTransaction#currencyFrom
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#currencyTo
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#type
+ * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Deposit"|"Fee"|"Profits")}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#status
+ * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#description
  * @type {String}
  */
 /**
  *
- * @name ProfileHeaderViewModel#email
- * @type {String}
- */
-/**
- *
- * @name ProfileHeaderViewModel#avatar
- * @type {String}
- */
-/**
- *
- * @name ProfileHeaderViewModel#notificationsCount
+ * @name MultiWalletTransaction#amount
  * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#favoritesCount
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalanceGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#investedGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#availableGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalance
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#invested
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#available
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#pending
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#kycConfirmed
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#allowForex
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isTwoFactorEnabled
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isNewUser
- * @type {Boolean}
  */
 
-var ProfileHeaderViewModel = function () {
-    function ProfileHeaderViewModel() {
-        _classCallCheck(this, ProfileHeaderViewModel);
+var MultiWalletTransaction = function () {
+    function MultiWalletTransaction() {
+        _classCallCheck(this, MultiWalletTransaction);
 
         this.id = undefined;
-        this.name = undefined;
-        this.email = undefined;
-        this.avatar = undefined;
-        this.notificationsCount = undefined;
-        this.favoritesCount = undefined;
-        this.totalBalanceGvt = undefined;
-        this.investedGvt = undefined;
-        this.availableGvt = undefined;
-        this.totalBalance = undefined;
-        this.invested = undefined;
-        this.available = undefined;
-        this.pending = undefined;
-        this.kycConfirmed = undefined;
-        this.allowForex = undefined;
-        this.isTwoFactorEnabled = undefined;
-        this.isNewUser = undefined;
+        this.currencyFrom = undefined;
+        this.currencyTo = undefined;
+        this.type = undefined;
+        this.date = undefined;
+        this.status = undefined;
+        this.description = undefined;
+        this.amount = undefined;
     }
 
-    _createClass(ProfileHeaderViewModel, null, [{
+    _createClass(MultiWalletTransaction, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileHeaderViewModel();
+                obj = obj || new MultiWalletTransaction();
 
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('currencyFrom')) {
+                    obj['currencyFrom'] = _ApiClient2.default.convertToType(data['currencyFrom'], 'String');
                 }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('currencyTo')) {
+                    obj['currencyTo'] = _ApiClient2.default.convertToType(data['currencyTo'], 'String');
                 }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('notificationsCount')) {
-                    obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
+                if (data.hasOwnProperty('date')) {
+                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
-                if (data.hasOwnProperty('favoritesCount')) {
-                    obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
-                if (data.hasOwnProperty('totalBalanceGvt')) {
-                    obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
-                if (data.hasOwnProperty('investedGvt')) {
-                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableGvt')) {
-                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalance')) {
-                    obj['totalBalance'] = _ApiClient2.default.convertToType(data['totalBalance'], 'Number');
-                }
-                if (data.hasOwnProperty('invested')) {
-                    obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
-                }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
-                }
-                if (data.hasOwnProperty('pending')) {
-                    obj['pending'] = _ApiClient2.default.convertToType(data['pending'], 'Number');
-                }
-                if (data.hasOwnProperty('kycConfirmed')) {
-                    obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
-                }
-                if (data.hasOwnProperty('allowForex')) {
-                    obj['allowForex'] = _ApiClient2.default.convertToType(data['allowForex'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isTwoFactorEnabled')) {
-                    obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isNewUser')) {
-                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return ProfileHeaderViewModel;
+    return MultiWalletTransaction;
 }();
 
-exports.default = ProfileHeaderViewModel;
+MultiWalletTransaction.CurrencyFromEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
+MultiWalletTransaction.CurrencyToEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
+MultiWalletTransaction.TypeEnum = {
+
+    "All": "All",
+
+    "Investment": "Investment",
+
+    "Converting": "Converting",
+
+    "Withdrawal": "Withdrawal",
+
+    "Deposit": "Deposit",
+
+    "Fee": "Fee",
+
+    "Profits": "Profits"
+};
+MultiWalletTransaction.StatusEnum = {
+
+    "Confirm": "Confirm",
+
+    "Pending": "Pending",
+
+    "Canceled": "Canceled",
+
+    "Error": "Error"
+};
+exports.default = MultiWalletTransaction;

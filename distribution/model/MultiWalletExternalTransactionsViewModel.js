@@ -21,187 +21,56 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _MultiWalletExternalTransaction = require('./MultiWalletExternalTransaction');
+
+var _MultiWalletExternalTransaction2 = _interopRequireDefault(_MultiWalletExternalTransaction);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface ProfileHeaderViewModel
+ * @interface MultiWalletExternalTransactionsViewModel
  */
 
 /**
  *
- * @name ProfileHeaderViewModel#id
- * @type {String}
+ * @name MultiWalletExternalTransactionsViewModel#transactions
+ * @type {[MultiWalletExternalTransaction]}
  */
 /**
  *
- * @name ProfileHeaderViewModel#name
- * @type {String}
- */
-/**
- *
- * @name ProfileHeaderViewModel#email
- * @type {String}
- */
-/**
- *
- * @name ProfileHeaderViewModel#avatar
- * @type {String}
- */
-/**
- *
- * @name ProfileHeaderViewModel#notificationsCount
+ * @name MultiWalletExternalTransactionsViewModel#total
  * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#favoritesCount
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalanceGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#investedGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#availableGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalance
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#invested
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#available
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#pending
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#kycConfirmed
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#allowForex
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isTwoFactorEnabled
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isNewUser
- * @type {Boolean}
  */
 
-var ProfileHeaderViewModel = function () {
-    function ProfileHeaderViewModel() {
-        _classCallCheck(this, ProfileHeaderViewModel);
+var MultiWalletExternalTransactionsViewModel = function () {
+    function MultiWalletExternalTransactionsViewModel() {
+        _classCallCheck(this, MultiWalletExternalTransactionsViewModel);
 
-        this.id = undefined;
-        this.name = undefined;
-        this.email = undefined;
-        this.avatar = undefined;
-        this.notificationsCount = undefined;
-        this.favoritesCount = undefined;
-        this.totalBalanceGvt = undefined;
-        this.investedGvt = undefined;
-        this.availableGvt = undefined;
-        this.totalBalance = undefined;
-        this.invested = undefined;
-        this.available = undefined;
-        this.pending = undefined;
-        this.kycConfirmed = undefined;
-        this.allowForex = undefined;
-        this.isTwoFactorEnabled = undefined;
-        this.isNewUser = undefined;
+        this.transactions = undefined;
+        this.total = undefined;
     }
 
-    _createClass(ProfileHeaderViewModel, null, [{
+    _createClass(MultiWalletExternalTransactionsViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProfileHeaderViewModel();
+                obj = obj || new MultiWalletExternalTransactionsViewModel();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('transactions')) {
+                    obj['transactions'] = _ApiClient2.default.convertToType(data['transactions'], [_MultiWalletExternalTransaction2.default]);
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
-                }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
-                }
-                if (data.hasOwnProperty('avatar')) {
-                    obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
-                }
-                if (data.hasOwnProperty('notificationsCount')) {
-                    obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('favoritesCount')) {
-                    obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalanceGvt')) {
-                    obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('investedGvt')) {
-                    obj['investedGvt'] = _ApiClient2.default.convertToType(data['investedGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableGvt')) {
-                    obj['availableGvt'] = _ApiClient2.default.convertToType(data['availableGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('totalBalance')) {
-                    obj['totalBalance'] = _ApiClient2.default.convertToType(data['totalBalance'], 'Number');
-                }
-                if (data.hasOwnProperty('invested')) {
-                    obj['invested'] = _ApiClient2.default.convertToType(data['invested'], 'Number');
-                }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
-                }
-                if (data.hasOwnProperty('pending')) {
-                    obj['pending'] = _ApiClient2.default.convertToType(data['pending'], 'Number');
-                }
-                if (data.hasOwnProperty('kycConfirmed')) {
-                    obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
-                }
-                if (data.hasOwnProperty('allowForex')) {
-                    obj['allowForex'] = _ApiClient2.default.convertToType(data['allowForex'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isTwoFactorEnabled')) {
-                    obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isNewUser')) {
-                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return ProfileHeaderViewModel;
+    return MultiWalletExternalTransactionsViewModel;
 }();
 
-exports.default = ProfileHeaderViewModel;
+exports.default = MultiWalletExternalTransactionsViewModel;

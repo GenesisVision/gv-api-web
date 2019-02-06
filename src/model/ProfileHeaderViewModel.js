@@ -70,6 +70,26 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProfileHeaderViewModel#totalBalance
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#invested
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#available
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#pending
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProfileHeaderViewModel#kycConfirmed
      * @type {Boolean}
      */
@@ -141,6 +161,18 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('availableGvt')) {
                 obj['availableGvt'] = ApiClient.convertToType(data['availableGvt'], 'Number');
             }
+            if (data.hasOwnProperty('totalBalance')) {
+                obj['totalBalance'] = ApiClient.convertToType(data['totalBalance'], 'Number');
+            }
+            if (data.hasOwnProperty('invested')) {
+                obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
+            }
+            if (data.hasOwnProperty('available')) {
+                obj['available'] = ApiClient.convertToType(data['available'], 'Number');
+            }
+            if (data.hasOwnProperty('pending')) {
+                obj['pending'] = ApiClient.convertToType(data['pending'], 'Number');
+            }
             if (data.hasOwnProperty('kycConfirmed')) {
                 obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
             }
@@ -166,6 +198,10 @@ export default class ProfileHeaderViewModel {
     totalBalanceGvt = undefined;
     investedGvt = undefined;
     availableGvt = undefined;
+    totalBalance = undefined;
+    invested = undefined;
+    available = undefined;
+    pending = undefined;
     kycConfirmed = undefined;
     allowForex = undefined;
     isTwoFactorEnabled = undefined;
