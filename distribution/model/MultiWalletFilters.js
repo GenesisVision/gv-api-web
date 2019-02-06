@@ -27,184 +27,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface MultiWalletTransaction
+ * @interface MultiWalletFilters
  */
 
 /**
  *
- * @name MultiWalletTransaction#id
- * @type {String}
+ * @name MultiWalletFilters#multiWalletTransactionType
+ * @type {[String]}
  */
 /**
  *
- * @name MultiWalletTransaction#currencyFrom
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name MultiWalletTransaction#currencyTo
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name MultiWalletTransaction#type
- * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits")}
- */
-/**
- *
- * @name MultiWalletTransaction#date
- * @type {Date}
- */
-/**
- *
- * @name MultiWalletTransaction#status
- * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
- */
-/**
- *
- * @name MultiWalletTransaction#description
- * @type {String}
- */
-/**
- *
- * @name MultiWalletTransaction#amount
- * @type {Number}
+ * @name MultiWalletFilters#multiWalletExternalTransactionType
+ * @type {[String]}
  */
 
-var MultiWalletTransaction = function () {
-    function MultiWalletTransaction() {
-        _classCallCheck(this, MultiWalletTransaction);
+var MultiWalletFilters = function () {
+    function MultiWalletFilters() {
+        _classCallCheck(this, MultiWalletFilters);
 
-        this.id = undefined;
-        this.currencyFrom = undefined;
-        this.currencyTo = undefined;
-        this.type = undefined;
-        this.date = undefined;
-        this.status = undefined;
-        this.description = undefined;
-        this.amount = undefined;
+        this.multiWalletTransactionType = undefined;
+        this.multiWalletExternalTransactionType = undefined;
     }
 
-    _createClass(MultiWalletTransaction, null, [{
+    _createClass(MultiWalletFilters, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new MultiWalletTransaction();
+                obj = obj || new MultiWalletFilters();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('multiWalletTransactionType')) {
+                    obj['multiWalletTransactionType'] = _ApiClient2.default.convertToType(data['multiWalletTransactionType'], ['String']);
                 }
-                if (data.hasOwnProperty('currencyFrom')) {
-                    obj['currencyFrom'] = _ApiClient2.default.convertToType(data['currencyFrom'], 'String');
-                }
-                if (data.hasOwnProperty('currencyTo')) {
-                    obj['currencyTo'] = _ApiClient2.default.convertToType(data['currencyTo'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('amount')) {
-                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
+                if (data.hasOwnProperty('multiWalletExternalTransactionType')) {
+                    obj['multiWalletExternalTransactionType'] = _ApiClient2.default.convertToType(data['multiWalletExternalTransactionType'], ['String']);
                 }
             }
             return obj;
         }
     }]);
 
-    return MultiWalletTransaction;
+    return MultiWalletFilters;
 }();
 
-MultiWalletTransaction.CurrencyFromEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-MultiWalletTransaction.CurrencyToEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-MultiWalletTransaction.TypeEnum = {
-
-    "All": "All",
-
-    "Investment": "Investment",
-
-    "Converting": "Converting",
-
-    "Withdrawal": "Withdrawal",
-
-    "Close": "Close",
-
-    "Open": "Open",
-
-    "Fee": "Fee",
-
-    "Profits": "Profits"
-};
-MultiWalletTransaction.StatusEnum = {
-
-    "Confirm": "Confirm",
-
-    "Pending": "Pending",
-
-    "Canceled": "Canceled",
-
-    "Error": "Error"
-};
-exports.default = MultiWalletTransaction;
+exports.default = MultiWalletFilters;

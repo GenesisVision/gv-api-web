@@ -72,6 +72,7 @@ import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersList from './model/ManagersList';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
+import MultiWalletFilters from './model/MultiWalletFilters';
 import MultiWalletTransaction from './model/MultiWalletTransaction';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
 import NewFundRequest from './model/NewFundRequest';
@@ -126,6 +127,7 @@ import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
 import TradesViewModel from './model/TradesViewModel';
+import TransactionDetatils from './model/TransactionDetatils';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
 import TwoFactorCodeModel from './model/TwoFactorCodeModel';
@@ -529,6 +531,12 @@ export {
     MultiWalletExternalTransactionsViewModel,
 
     /**
+     * @name index#MultiWalletFilters
+     * @type {MultiWalletFilters}
+     */
+    MultiWalletFilters,
+
+    /**
      * @name index#MultiWalletTransaction
      * @type {MultiWalletTransaction}
      */
@@ -851,6 +859,12 @@ export {
      * @type {TradesViewModel}
      */
     TradesViewModel,
+
+    /**
+     * @name index#TransactionDetatils
+     * @type {TransactionDetatils}
+     */
+    TransactionDetatils,
 
     /**
      * @name index#TwoFactorAuthenticator

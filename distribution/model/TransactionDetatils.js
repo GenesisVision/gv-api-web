@@ -27,73 +27,118 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface MultiWalletTransaction
+ * @interface TransactionDetatils
  */
 
 /**
  *
- * @name MultiWalletTransaction#id
- * @type {String}
- */
-/**
- *
- * @name MultiWalletTransaction#currencyFrom
+ * @name TransactionDetatils#currencyFrom
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
- * @name MultiWalletTransaction#currencyTo
+ * @name TransactionDetatils#currencyTo
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
- * @name MultiWalletTransaction#type
- * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits")}
+ * @name TransactionDetatils#type
+ * @type {("InvestingProgram"|"InvestingFund"|"WithdrawalProgram"|"WithdrawalFund"|"ExternalWithdrawal"|"ExternalDeposit")}
  */
 /**
  *
- * @name MultiWalletTransaction#date
- * @type {Date}
- */
-/**
- *
- * @name MultiWalletTransaction#status
- * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
- */
-/**
- *
- * @name MultiWalletTransaction#description
+ * @name TransactionDetatils#programId
  * @type {String}
  */
 /**
  *
- * @name MultiWalletTransaction#amount
+ * @name TransactionDetatils#foundId
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#name
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetatils#gvCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetatils#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetatils#description
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#descriptionUrl
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#fromAddress
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetatils#amountFrom
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetatils#amountTo
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetatils#rateValue
  * @type {Number}
  */
 
-var MultiWalletTransaction = function () {
-    function MultiWalletTransaction() {
-        _classCallCheck(this, MultiWalletTransaction);
+var TransactionDetatils = function () {
+    function TransactionDetatils() {
+        _classCallCheck(this, TransactionDetatils);
 
-        this.id = undefined;
         this.currencyFrom = undefined;
         this.currencyTo = undefined;
         this.type = undefined;
-        this.date = undefined;
-        this.status = undefined;
+        this.programId = undefined;
+        this.foundId = undefined;
+        this.name = undefined;
+        this.logo = undefined;
+        this.entryFee = undefined;
+        this.gvCommission = undefined;
+        this.exitFee = undefined;
         this.description = undefined;
-        this.amount = undefined;
+        this.descriptionUrl = undefined;
+        this.fromAddress = undefined;
+        this.amountFrom = undefined;
+        this.amountTo = undefined;
+        this.rateValue = undefined;
     }
 
-    _createClass(MultiWalletTransaction, null, [{
+    _createClass(TransactionDetatils, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new MultiWalletTransaction();
+                obj = obj || new TransactionDetatils();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
                 if (data.hasOwnProperty('currencyFrom')) {
                     obj['currencyFrom'] = _ApiClient2.default.convertToType(data['currencyFrom'], 'String');
                 }
@@ -103,27 +148,54 @@ var MultiWalletTransaction = function () {
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                if (data.hasOwnProperty('programId')) {
+                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                if (data.hasOwnProperty('foundId')) {
+                    obj['foundId'] = _ApiClient2.default.convertToType(data['foundId'], 'String');
+                }
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('entryFee')) {
+                    obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
+                }
+                if (data.hasOwnProperty('gvCommission')) {
+                    obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
+                }
+                if (data.hasOwnProperty('exitFee')) {
+                    obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
-                if (data.hasOwnProperty('amount')) {
-                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
+                if (data.hasOwnProperty('descriptionUrl')) {
+                    obj['descriptionUrl'] = _ApiClient2.default.convertToType(data['descriptionUrl'], 'String');
+                }
+                if (data.hasOwnProperty('fromAddress')) {
+                    obj['fromAddress'] = _ApiClient2.default.convertToType(data['fromAddress'], 'String');
+                }
+                if (data.hasOwnProperty('amountFrom')) {
+                    obj['amountFrom'] = _ApiClient2.default.convertToType(data['amountFrom'], 'Number');
+                }
+                if (data.hasOwnProperty('amountTo')) {
+                    obj['amountTo'] = _ApiClient2.default.convertToType(data['amountTo'], 'Number');
+                }
+                if (data.hasOwnProperty('rateValue')) {
+                    obj['rateValue'] = _ApiClient2.default.convertToType(data['rateValue'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return MultiWalletTransaction;
+    return TransactionDetatils;
 }();
 
-MultiWalletTransaction.CurrencyFromEnum = {
+TransactionDetatils.CurrencyFromEnum = {
 
     "Undefined": "Undefined",
 
@@ -151,7 +223,7 @@ MultiWalletTransaction.CurrencyFromEnum = {
 
     "EUR": "EUR"
 };
-MultiWalletTransaction.CurrencyToEnum = {
+TransactionDetatils.CurrencyToEnum = {
 
     "Undefined": "Undefined",
 
@@ -179,32 +251,18 @@ MultiWalletTransaction.CurrencyToEnum = {
 
     "EUR": "EUR"
 };
-MultiWalletTransaction.TypeEnum = {
+TransactionDetatils.TypeEnum = {
 
-    "All": "All",
+    "InvestingProgram": "InvestingProgram",
 
-    "Investment": "Investment",
+    "InvestingFund": "InvestingFund",
 
-    "Converting": "Converting",
+    "WithdrawalProgram": "WithdrawalProgram",
 
-    "Withdrawal": "Withdrawal",
+    "WithdrawalFund": "WithdrawalFund",
 
-    "Close": "Close",
+    "ExternalWithdrawal": "ExternalWithdrawal",
 
-    "Open": "Open",
-
-    "Fee": "Fee",
-
-    "Profits": "Profits"
+    "ExternalDeposit": "ExternalDeposit"
 };
-MultiWalletTransaction.StatusEnum = {
-
-    "Confirm": "Confirm",
-
-    "Pending": "Pending",
-
-    "Canceled": "Canceled",
-
-    "Error": "Error"
-};
-exports.default = MultiWalletTransaction;
+exports.default = TransactionDetatils;

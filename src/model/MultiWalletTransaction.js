@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletTransaction#type
-     * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Deposit"|"Fee"|"Profits")}
+     * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits")}
      */
     /**
      *
@@ -199,7 +199,9 @@ export default class MultiWalletTransaction {
     
         "Withdrawal": "Withdrawal",
     
-        "Deposit": "Deposit",
+        "Close": "Close",
+    
+        "Open": "Open",
     
         "Fee": "Fee",
     

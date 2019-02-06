@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **amount** | **Number** |  | [optional] 
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
+**fromAddress** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **isEnableActions** | **Boolean** |  | [optional] 
 **url** | **String** |  | [optional] 

@@ -219,8 +219,10 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyGet**](docs/WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
+*CoreApiV10.WalletApi* | [**v10WalletMultiFiltersGet**](docs/WalletApi.md#v10WalletMultiFiltersGet) | **GET** /v1.0/wallet/multi/filters | Get filters
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsExternalGet**](docs/WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsGet**](docs/WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
+*CoreApiV10.WalletApi* | [**v10WalletTransactionByIdGet**](docs/WalletApi.md#v10WalletTransactionByIdGet) | **GET** /v1.0/wallet/transaction/{id} | Get transaction details
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
 *CoreApiV10.WalletApi* | [**v10WalletTransferPost**](docs/WalletApi.md#v10WalletTransferPost) | **POST** /v1.0/wallet/transfer | Transfer money
 *CoreApiV10.WalletApi* | [**v10WalletWithdrawInfoGet**](docs/WalletApi.md#v10WalletWithdrawInfoGet) | **GET** /v1.0/wallet/withdraw/info | 
@@ -291,6 +293,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagersList](docs/ManagersList.md)
  - [CoreApiV10.MultiWalletExternalTransaction](docs/MultiWalletExternalTransaction.md)
  - [CoreApiV10.MultiWalletExternalTransactionsViewModel](docs/MultiWalletExternalTransactionsViewModel.md)
+ - [CoreApiV10.MultiWalletFilters](docs/MultiWalletFilters.md)
  - [CoreApiV10.MultiWalletTransaction](docs/MultiWalletTransaction.md)
  - [CoreApiV10.MultiWalletTransactionsViewModel](docs/MultiWalletTransactionsViewModel.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
@@ -345,6 +348,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.Review](docs/Review.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
+ - [CoreApiV10.TransactionDetatils](docs/TransactionDetatils.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)
  - [CoreApiV10.TwoFactorAuthenticatorConfirm](docs/TwoFactorAuthenticatorConfirm.md)
  - [CoreApiV10.TwoFactorCodeModel](docs/TwoFactorCodeModel.md)

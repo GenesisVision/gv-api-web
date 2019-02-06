@@ -16,7 +16,9 @@ import ApiClient from "../ApiClient";
 import CreateWithdrawalRequestModel from '../model/CreateWithdrawalRequestModel';
 import ErrorViewModel from '../model/ErrorViewModel';
 import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExternalTransactionsViewModel';
+import MultiWalletFilters from '../model/MultiWalletFilters';
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
+import TransactionDetatils from '../model/TransactionDetatils';
 import WalletInfo from '../model/WalletInfo';
 import WalletMultiSummary from '../model/WalletMultiSummary';
 import WalletSummary from '../model/WalletSummary';
@@ -237,6 +239,50 @@ export default class WalletApi {
         });
     }
 
+      v10WalletMultiFiltersGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiFiltersGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = MultiWalletFilters;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/multi/filters', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get filters
+     * @function WalletApi#v10WalletMultiFiltersGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<MultiWalletFilters>} a Promise, with an object containing data of type MultiWalletFilters and HTTP response
+     */
+      v10WalletMultiFiltersGet(authorization) {
+      return this.v10WalletMultiFiltersGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10WalletMultiTransactionsExternalGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
@@ -348,6 +394,57 @@ export default class WalletApi {
      */
       v10WalletMultiTransactionsGet(authorization, opts) {
       return this.v10WalletMultiTransactionsGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10WalletTransactionByIdGetWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10WalletTransactionByIdGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletTransactionByIdGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TransactionDetatils;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/transaction/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get transaction details
+     * @function WalletApi#v10WalletTransactionByIdGet
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise<TransactionDetatils>} a Promise, with an object containing data of type TransactionDetatils and HTTP response
+     */
+      v10WalletTransactionByIdGet(id, authorization) {
+      return this.v10WalletTransactionByIdGetWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

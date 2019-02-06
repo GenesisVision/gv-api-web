@@ -55,6 +55,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name MultiWalletExternalTransaction#fromAddress
+     * @type {String}
+     */
+    /**
+     *
      * @name MultiWalletExternalTransaction#description
      * @type {String}
      */
@@ -112,6 +117,9 @@ export default class MultiWalletExternalTransaction {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('fromAddress')) {
+                obj['fromAddress'] = ApiClient.convertToType(data['fromAddress'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -131,6 +139,7 @@ export default class MultiWalletExternalTransaction {
     amount = undefined;
     type = undefined;
     status = undefined;
+    fromAddress = undefined;
     description = undefined;
     isEnableActions = undefined;
     url = undefined;

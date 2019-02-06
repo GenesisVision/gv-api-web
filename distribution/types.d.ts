@@ -406,6 +406,7 @@ export declare class WalletApi {
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
+    v10WalletMultiFiltersGet(authorization: string): Promise<MultiWalletFilters>;
     v10WalletMultiTransactionsExternalGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
@@ -422,6 +423,7 @@ export declare class WalletApi {
         skip?: number;
         take?: number;
     }): Promise<MultiWalletTransactionsViewModel>;
+    v10WalletTransactionByIdGet(id: string, authorization: string): Promise<TransactionDetatils>;
     v10WalletTransactionsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -510,6 +512,7 @@ export declare interface index {
     ManagersList: ManagersList;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
+    MultiWalletFilters: MultiWalletFilters;
     MultiWalletTransaction: MultiWalletTransaction;
     MultiWalletTransactionsViewModel: MultiWalletTransactionsViewModel;
     NewFundRequest: NewFundRequest;
@@ -564,6 +567,7 @@ export declare interface index {
     Review: Review;
     SearchViewModel: SearchViewModel;
     TradesViewModel: TradesViewModel;
+    TransactionDetatils: TransactionDetatils;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
     TwoFactorAuthenticatorConfirm: TwoFactorAuthenticatorConfirm;
     TwoFactorCodeModel: TwoFactorCodeModel;
@@ -1055,6 +1059,7 @@ export declare interface MultiWalletExternalTransaction {
     amount: number;
     type: "Deposit" | "Withdrawn";
     status: "Confirm" | "Pending" | "Canceled" | "Error";
+    fromAddress: string;
     description: string;
     isEnableActions: boolean;
     url: string;
@@ -1065,11 +1070,16 @@ export declare interface MultiWalletExternalTransactionsViewModel {
     total: number;
 }
 
+export declare interface MultiWalletFilters {
+    multiWalletTransactionType: string[];
+    multiWalletExternalTransactionType: string[];
+}
+
 export declare interface MultiWalletTransaction {
     id: string;
     currencyFrom: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    type: "All" | "Investment" | "Converting" | "Withdrawal" | "Deposit" | "Fee" | "Profits";
+    type: "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits";
     date: Date;
     status: "Confirm" | "Pending" | "Canceled" | "Error";
     description: string;
@@ -1597,6 +1607,25 @@ export declare interface SearchViewModel {
 export declare interface TradesViewModel {
     trades: OrderModel[];
     total: number;
+}
+
+export declare interface TransactionDetatils {
+    currencyFrom: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    type: "InvestingProgram" | "InvestingFund" | "WithdrawalProgram" | "WithdrawalFund" | "ExternalWithdrawal" | "ExternalDeposit";
+    programId: string;
+    foundId: string;
+    name: string;
+    logo: string;
+    entryFee: number;
+    gvCommission: number;
+    exitFee: number;
+    description: string;
+    descriptionUrl: string;
+    fromAddress: string;
+    amountFrom: number;
+    amountTo: number;
+    rateValue: number;
 }
 
 export declare interface TwoFactorAuthenticator {

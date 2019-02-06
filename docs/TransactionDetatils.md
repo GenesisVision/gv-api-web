@@ -1,16 +1,24 @@
-# CoreApiV10.MultiWalletTransaction
+# CoreApiV10.TransactionDetatils
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
 **currencyFrom** | **String** |  | [optional] 
 **currencyTo** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**_date** | **Date** |  | [optional] 
-**status** | **String** |  | [optional] 
+**programId** | **String** |  | [optional] 
+**foundId** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
+**entryFee** | **Number** |  | [optional] 
+**gvCommission** | **Number** |  | [optional] 
+**exitFee** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
-**amount** | **Number** |  | [optional] 
+**descriptionUrl** | **String** |  | [optional] 
+**fromAddress** | **String** |  | [optional] 
+**amountFrom** | **Number** |  | [optional] 
+**amountTo** | **Number** |  | [optional] 
+**rateValue** | **Number** |  | [optional] 
 
 
 <a name="CurrencyFromEnum"></a>
@@ -83,36 +91,17 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `All` (value: `"All"`)
+* `InvestingProgram` (value: `"InvestingProgram"`)
 
-* `Investment` (value: `"Investment"`)
+* `InvestingFund` (value: `"InvestingFund"`)
 
-* `Converting` (value: `"Converting"`)
+* `WithdrawalProgram` (value: `"WithdrawalProgram"`)
 
-* `Withdrawal` (value: `"Withdrawal"`)
+* `WithdrawalFund` (value: `"WithdrawalFund"`)
 
-* `Close` (value: `"Close"`)
+* `ExternalWithdrawal` (value: `"ExternalWithdrawal"`)
 
-* `Open` (value: `"Open"`)
-
-* `Fee` (value: `"Fee"`)
-
-* `Profits` (value: `"Profits"`)
-
-
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Confirm` (value: `"Confirm"`)
-
-* `Pending` (value: `"Pending"`)
-
-* `Canceled` (value: `"Canceled"`)
-
-* `Error` (value: `"Error"`)
+* `ExternalDeposit` (value: `"ExternalDeposit"`)
 
 
 
