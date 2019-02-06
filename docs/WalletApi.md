@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**v10WalletAddressesGet**](WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 [**v10WalletByCurrencyGet**](WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 [**v10WalletMultiByCurrencyGet**](WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
-[**v10WalletMultiFilterTransactionExternalGet**](WalletApi.md#v10WalletMultiFilterTransactionExternalGet) | **GET** /v1.0/wallet/multi/filter/transaction/external | Get external transaction
-[**v10WalletMultiFilterTransactionGet**](WalletApi.md#v10WalletMultiFilterTransactionGet) | **GET** /v1.0/wallet/multi/filter/transaction | Get type transaction
 [**v10WalletMultiTransactionsExternalGet**](WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 [**v10WalletMultiTransactionsGet**](WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
 [**v10WalletTransactionsGet**](WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
@@ -184,88 +182,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WalletMultiSummary**](WalletMultiSummary.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10WalletMultiFilterTransactionExternalGet"></a>
-# **v10WalletMultiFilterTransactionExternalGet**
-> [&#39;String&#39;] v10WalletMultiFilterTransactionExternalGet(authorization)
-
-Get external transaction
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10WalletMultiFilterTransactionExternalGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-**[&#39;String&#39;]**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10WalletMultiFilterTransactionGet"></a>
-# **v10WalletMultiFilterTransactionGet**
-> [&#39;String&#39;] v10WalletMultiFilterTransactionGet(authorization)
-
-Get type transaction
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10WalletMultiFilterTransactionGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-**[&#39;String&#39;]**
 
 ### Authorization
 

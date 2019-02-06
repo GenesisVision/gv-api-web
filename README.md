@@ -219,8 +219,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyGet**](docs/WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
-*CoreApiV10.WalletApi* | [**v10WalletMultiFilterTransactionExternalGet**](docs/WalletApi.md#v10WalletMultiFilterTransactionExternalGet) | **GET** /v1.0/wallet/multi/filter/transaction/external | Get external transaction
-*CoreApiV10.WalletApi* | [**v10WalletMultiFilterTransactionGet**](docs/WalletApi.md#v10WalletMultiFilterTransactionGet) | **GET** /v1.0/wallet/multi/filter/transaction | Get type transaction
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsExternalGet**](docs/WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsGet**](docs/WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
