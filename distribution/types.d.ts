@@ -406,7 +406,9 @@ declare class WalletApi {
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
-    v10WalletMultiExternalTransactionsGet(authorization: string, opts?: {
+    v10WalletMultiFilterTransactionExternalGet(authorization: string): any;
+    v10WalletMultiFilterTransactionGet(authorization: string): any;
+    v10WalletMultiTransactionsExternalGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
         type?: string;
@@ -414,8 +416,6 @@ declare class WalletApi {
         skip?: number;
         take?: number;
     }): Promise<MultiWalletExternalTransactionsViewModel>;
-    v10WalletMultiFilterTransactionExternalGet(authorization: string): any;
-    v10WalletMultiFilterTransactionGet(authorization: string): any;
     v10WalletMultiTransactionsGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
