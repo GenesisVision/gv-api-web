@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
      * @name WalletWithdrawalInfo#rateToGvt
      * @type {Number}
      */
+    /**
+     *
+     * @name WalletWithdrawalInfo#availableToWithdrawal
+     * @type {Number}
+     */
 
 
 
@@ -89,6 +94,9 @@ export default class WalletWithdrawalInfo {
             if (data.hasOwnProperty('rateToGvt')) {
                 obj['rateToGvt'] = ApiClient.convertToType(data['rateToGvt'], 'Number');
             }
+            if (data.hasOwnProperty('availableToWithdrawal')) {
+                obj['availableToWithdrawal'] = ApiClient.convertToType(data['availableToWithdrawal'], 'Number');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class WalletWithdrawalInfo {
     logo = undefined;
     commission = undefined;
     rateToGvt = undefined;
+    availableToWithdrawal = undefined;
 
 
 

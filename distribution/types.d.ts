@@ -1739,6 +1739,7 @@ declare interface WalletWithdrawalInfo {
     logo: string;
     commission: number;
     rateToGvt: number;
+    availableToWithdrawal: number;
 }
 
 declare interface WalletsGrandTotal {

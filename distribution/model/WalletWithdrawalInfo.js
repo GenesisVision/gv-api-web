@@ -55,6 +55,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name WalletWithdrawalInfo#rateToGvt
  * @type {Number}
  */
+/**
+ *
+ * @name WalletWithdrawalInfo#availableToWithdrawal
+ * @type {Number}
+ */
 
 var WalletWithdrawalInfo = function () {
     function WalletWithdrawalInfo() {
@@ -65,6 +70,7 @@ var WalletWithdrawalInfo = function () {
         this.logo = undefined;
         this.commission = undefined;
         this.rateToGvt = undefined;
+        this.availableToWithdrawal = undefined;
     }
 
     _createClass(WalletWithdrawalInfo, null, [{
@@ -87,6 +93,9 @@ var WalletWithdrawalInfo = function () {
                 }
                 if (data.hasOwnProperty('rateToGvt')) {
                     obj['rateToGvt'] = _ApiClient2.default.convertToType(data['rateToGvt'], 'Number');
+                }
+                if (data.hasOwnProperty('availableToWithdrawal')) {
+                    obj['availableToWithdrawal'] = _ApiClient2.default.convertToType(data['availableToWithdrawal'], 'Number');
                 }
             }
             return obj;

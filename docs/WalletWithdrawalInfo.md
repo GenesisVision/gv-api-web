@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **commission** | **Number** |  | [optional] 
 **rateToGvt** | **Number** |  | [optional] 
+**availableToWithdrawal** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
