@@ -48,6 +48,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name WalletMultiSummary#wallets
  * @type {[WalletData]}
  */
+/**
+ *
+ * @name WalletMultiSummary#payFeesWithGvt
+ * @type {Boolean}
+ */
 
 var WalletMultiSummary = function () {
     function WalletMultiSummary() {
@@ -55,6 +60,7 @@ var WalletMultiSummary = function () {
 
         this.grandTotal = undefined;
         this.wallets = undefined;
+        this.payFeesWithGvt = undefined;
     }
 
     _createClass(WalletMultiSummary, null, [{
@@ -68,6 +74,9 @@ var WalletMultiSummary = function () {
                 }
                 if (data.hasOwnProperty('wallets')) {
                     obj['wallets'] = _ApiClient2.default.convertToType(data['wallets'], [_WalletData2.default]);
+                }
+                if (data.hasOwnProperty('payFeesWithGvt')) {
+                    obj['payFeesWithGvt'] = _ApiClient2.default.convertToType(data['payFeesWithGvt'], 'Boolean');
                 }
             }
             return obj;

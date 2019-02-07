@@ -423,6 +423,8 @@ export declare class WalletApi {
         skip?: number;
         take?: number;
     }): Promise<MultiWalletTransactionsViewModel>;
+    v10WalletPaygvtfeeOffPost(authorization: string): Promise<any>;
+    v10WalletPaygvtfeeOnPost(authorization: string): Promise<any>;
     v10WalletTransactionByIdGet(id: string, authorization: string): Promise<TransactionDetatils>;
     v10WalletTransactionsGet(authorization: string, opts?: {
         assetId?: string;
@@ -1705,6 +1707,7 @@ export declare interface WalletInfo {
 export declare interface WalletMultiSummary {
     grandTotal: WalletsGrandTotal;
     wallets: WalletData[];
+    payFeesWithGvt: boolean;
 }
 
 export declare interface WalletPendingTransaction {

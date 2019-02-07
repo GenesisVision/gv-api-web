@@ -418,6 +418,84 @@ var WalletApi = function () {
       });
     }
   }, {
+    key: 'v10WalletPaygvtfeeOffPostWithHttpInfo',
+    value: function v10WalletPaygvtfeeOffPostWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletPaygvtfeeOffPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/wallet/paygvtfee/off', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Disable paying platform fees with GVT
+     * @function WalletApi#v10WalletPaygvtfeeOffPost
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10WalletPaygvtfeeOffPost',
+    value: function v10WalletPaygvtfeeOffPost(authorization) {
+      return this.v10WalletPaygvtfeeOffPostWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletPaygvtfeeOnPostWithHttpInfo',
+    value: function v10WalletPaygvtfeeOnPostWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletPaygvtfeeOnPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/wallet/paygvtfee/on', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Enable paying platform fees with GVT
+     * @function WalletApi#v10WalletPaygvtfeeOnPost
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10WalletPaygvtfeeOnPost',
+    value: function v10WalletPaygvtfeeOnPost(authorization) {
+      return this.v10WalletPaygvtfeeOnPostWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10WalletTransactionByIdGetWithHttpInfo',
     value: function v10WalletTransactionByIdGetWithHttpInfo(id, authorization) {
       var postBody = null;

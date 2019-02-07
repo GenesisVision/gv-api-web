@@ -222,6 +222,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletMultiFiltersGet**](docs/WalletApi.md#v10WalletMultiFiltersGet) | **GET** /v1.0/wallet/multi/filters | Get filters
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsExternalGet**](docs/WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsGet**](docs/WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
+*CoreApiV10.WalletApi* | [**v10WalletPaygvtfeeOffPost**](docs/WalletApi.md#v10WalletPaygvtfeeOffPost) | **POST** /v1.0/wallet/paygvtfee/off | Disable paying platform fees with GVT
+*CoreApiV10.WalletApi* | [**v10WalletPaygvtfeeOnPost**](docs/WalletApi.md#v10WalletPaygvtfeeOnPost) | **POST** /v1.0/wallet/paygvtfee/on | Enable paying platform fees with GVT
 *CoreApiV10.WalletApi* | [**v10WalletTransactionByIdGet**](docs/WalletApi.md#v10WalletTransactionByIdGet) | **GET** /v1.0/wallet/transaction/{id} | Get transaction details
 *CoreApiV10.WalletApi* | [**v10WalletTransactionsGet**](docs/WalletApi.md#v10WalletTransactionsGet) | **GET** /v1.0/wallet/transactions | Wallet transactions
 *CoreApiV10.WalletApi* | [**v10WalletTransferPost**](docs/WalletApi.md#v10WalletTransferPost) | **POST** /v1.0/wallet/transfer | Transfer money

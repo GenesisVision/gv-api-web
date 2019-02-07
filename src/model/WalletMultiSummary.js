@@ -35,6 +35,11 @@ import WalletsGrandTotal from './WalletsGrandTotal';
      * @name WalletMultiSummary#wallets
      * @type {Array<WalletData>}
      */
+    /**
+     *
+     * @name WalletMultiSummary#payFeesWithGvt
+     * @type {Boolean}
+     */
 
 
 
@@ -67,12 +72,16 @@ export default class WalletMultiSummary {
             if (data.hasOwnProperty('wallets')) {
                 obj['wallets'] = ApiClient.convertToType(data['wallets'], [WalletData]);
             }
+            if (data.hasOwnProperty('payFeesWithGvt')) {
+                obj['payFeesWithGvt'] = ApiClient.convertToType(data['payFeesWithGvt'], 'Boolean');
+            }
         }
         return obj;
     }
 
     grandTotal = undefined;
     wallets = undefined;
+    payFeesWithGvt = undefined;
 
 
 
