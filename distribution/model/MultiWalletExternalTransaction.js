@@ -42,6 +42,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name MultiWalletExternalTransaction#logo
+ * @type {String}
+ */
+/**
+ *
  * @name MultiWalletExternalTransaction#date
  * @type {Date}
  */
@@ -58,16 +63,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletExternalTransaction#status
- * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
- */
-/**
- *
- * @name MultiWalletExternalTransaction#fromAddress
- * @type {String}
- */
-/**
- *
- * @name MultiWalletExternalTransaction#description
  * @type {String}
  */
 /**
@@ -77,7 +72,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name MultiWalletExternalTransaction#url
+ * @name MultiWalletExternalTransaction#statusUrl
  * @type {String}
  */
 
@@ -87,14 +82,13 @@ var MultiWalletExternalTransaction = function () {
 
         this.id = undefined;
         this.currency = undefined;
+        this.logo = undefined;
         this.date = undefined;
         this.amount = undefined;
         this.type = undefined;
         this.status = undefined;
-        this.fromAddress = undefined;
-        this.description = undefined;
         this.isEnableActions = undefined;
-        this.url = undefined;
+        this.statusUrl = undefined;
     }
 
     _createClass(MultiWalletExternalTransaction, null, [{
@@ -109,6 +103,9 @@ var MultiWalletExternalTransaction = function () {
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
                 if (data.hasOwnProperty('date')) {
                     obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
                 }
@@ -121,17 +118,11 @@ var MultiWalletExternalTransaction = function () {
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
-                if (data.hasOwnProperty('fromAddress')) {
-                    obj['fromAddress'] = _ApiClient2.default.convertToType(data['fromAddress'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
                 if (data.hasOwnProperty('isEnableActions')) {
                     obj['isEnableActions'] = _ApiClient2.default.convertToType(data['isEnableActions'], 'Boolean');
                 }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                if (data.hasOwnProperty('statusUrl')) {
+                    obj['statusUrl'] = _ApiClient2.default.convertToType(data['statusUrl'], 'String');
                 }
             }
             return obj;
@@ -174,15 +165,5 @@ MultiWalletExternalTransaction.TypeEnum = {
     "Deposit": "Deposit",
 
     "Withdrawn": "Withdrawn"
-};
-MultiWalletExternalTransaction.StatusEnum = {
-
-    "Confirm": "Confirm",
-
-    "Pending": "Pending",
-
-    "Canceled": "Canceled",
-
-    "Error": "Error"
 };
 exports.default = MultiWalletExternalTransaction;

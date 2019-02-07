@@ -5,14 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
-**fromAddress** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
 **isEnableActions** | **Boolean** |  | [optional] 
-**url** | **String** |  | [optional] 
+**statusUrl** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
@@ -55,21 +54,6 @@ Name | Type | Description | Notes
 * `Deposit` (value: `"Deposit"`)
 
 * `Withdrawn` (value: `"Withdrawn"`)
-
-
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Confirm` (value: `"Confirm"`)
-
-* `Pending` (value: `"Pending"`)
-
-* `Canceled` (value: `"Canceled"`)
-
-* `Error` (value: `"Error"`)
 
 
 

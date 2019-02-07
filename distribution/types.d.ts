@@ -1055,14 +1055,13 @@ export declare interface ManagersList {
 export declare interface MultiWalletExternalTransaction {
     id: string;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    logo: string;
     date: Date;
     amount: number;
     type: "Deposit" | "Withdrawn";
-    status: "Confirm" | "Pending" | "Canceled" | "Error";
-    fromAddress: string;
-    description: string;
+    status: string;
     isEnableActions: boolean;
-    url: string;
+    statusUrl: string;
 }
 
 export declare interface MultiWalletExternalTransactionsViewModel {

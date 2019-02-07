@@ -35,6 +35,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name MultiWalletExternalTransaction#logo
+     * @type {String}
+     */
+    /**
+     *
      * @name MultiWalletExternalTransaction#date
      * @type {Date}
      */
@@ -51,16 +56,6 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletExternalTransaction#status
-     * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#fromAddress
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#description
      * @type {String}
      */
     /**
@@ -70,7 +65,7 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name MultiWalletExternalTransaction#url
+     * @name MultiWalletExternalTransaction#statusUrl
      * @type {String}
      */
 
@@ -105,6 +100,9 @@ export default class MultiWalletExternalTransaction {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
@@ -117,17 +115,11 @@ export default class MultiWalletExternalTransaction {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('fromAddress')) {
-                obj['fromAddress'] = ApiClient.convertToType(data['fromAddress'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('isEnableActions')) {
                 obj['isEnableActions'] = ApiClient.convertToType(data['isEnableActions'], 'Boolean');
             }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            if (data.hasOwnProperty('statusUrl')) {
+                obj['statusUrl'] = ApiClient.convertToType(data['statusUrl'], 'String');
             }
         }
         return obj;
@@ -135,14 +127,13 @@ export default class MultiWalletExternalTransaction {
 
     id = undefined;
     currency = undefined;
+    logo = undefined;
     date = undefined;
     amount = undefined;
     type = undefined;
     status = undefined;
-    fromAddress = undefined;
-    description = undefined;
     isEnableActions = undefined;
-    url = undefined;
+    statusUrl = undefined;
 
 
 
@@ -183,17 +174,6 @@ export default class MultiWalletExternalTransaction {
         "Deposit": "Deposit",
     
         "Withdrawn": "Withdrawn"    
-    };
-
-    static StatusEnum = {
-    
-        "Confirm": "Confirm",
-    
-        "Pending": "Pending",
-    
-        "Canceled": "Canceled",
-    
-        "Error": "Error"    
     };
 
 
