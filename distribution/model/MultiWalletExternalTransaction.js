@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletExternalTransaction#type
- * @type {("Deposit"|"Withdrawn")}
+ * @type {("All"|"Deposit"|"Withdrawal")}
  */
 /**
  *
@@ -162,8 +162,10 @@ MultiWalletExternalTransaction.CurrencyEnum = {
 };
 MultiWalletExternalTransaction.TypeEnum = {
 
+    "All": "All",
+
     "Deposit": "Deposit",
 
-    "Withdrawn": "Withdrawn"
+    "Withdrawal": "Withdrawal"
 };
 exports.default = MultiWalletExternalTransaction;

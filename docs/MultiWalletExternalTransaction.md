@@ -51,9 +51,11 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
+* `All` (value: `"All"`)
+
 * `Deposit` (value: `"Deposit"`)
 
-* `Withdrawn` (value: `"Withdrawn"`)
+* `Withdrawal` (value: `"Withdrawal"`)
 
 
 

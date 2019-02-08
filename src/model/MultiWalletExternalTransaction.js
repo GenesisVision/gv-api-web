@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletExternalTransaction#type
-     * @type {("Deposit"|"Withdrawn")}
+     * @type {("All"|"Deposit"|"Withdrawal")}
      */
     /**
      *
@@ -171,9 +171,11 @@ export default class MultiWalletExternalTransaction {
 
     static TypeEnum = {
     
+        "All": "All",
+    
         "Deposit": "Deposit",
     
-        "Withdrawn": "Withdrawn"    
+        "Withdrawal": "Withdrawal"    
     };
 
 

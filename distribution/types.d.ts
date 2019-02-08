@@ -1060,7 +1060,7 @@ export declare interface MultiWalletExternalTransaction {
     logo: string;
     date: Date;
     amount: number;
-    type: "Deposit" | "Withdrawn";
+    type: "All" | "Deposit" | "Withdrawal";
     status: string;
     isEnableActions: boolean;
     statusUrl: string;
