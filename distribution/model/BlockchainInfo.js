@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name BlockchainInfo#status
- * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"PendingAddInWallet"|"Error"|"Cancelled")}
+ * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
  */
 
 var BlockchainInfo = function () {
@@ -80,8 +80,6 @@ BlockchainInfo.StatusEnum = {
     "ConfirmedByGate": "ConfirmedByGate",
 
     "ConfirmedAndValidated": "ConfirmedAndValidated",
-
-    "PendingAddInWallet": "PendingAddInWallet",
 
     "Error": "Error",
 

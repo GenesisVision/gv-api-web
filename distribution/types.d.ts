@@ -646,7 +646,7 @@ export declare interface BalanceChartElement {
 
 export declare interface BlockchainInfo {
     hash: string;
-    status: "Undefined" | "New" | "Pending" | "ConfirmedByGate" | "ConfirmedAndValidated" | "PendingAddInWallet" | "Error" | "Cancelled";
+    status: "Undefined" | "New" | "Pending" | "ConfirmedByGate" | "ConfirmedAndValidated" | "Error" | "Cancelled";
 }
 
 export declare interface Broker {

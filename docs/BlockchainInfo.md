@@ -21,8 +21,6 @@ Name | Type | Description | Notes
 
 * `ConfirmedAndValidated` (value: `"ConfirmedAndValidated"`)
 
-* `PendingAddInWallet` (value: `"PendingAddInWallet"`)
-
 * `Error` (value: `"Error"`)
 
 * `Cancelled` (value: `"Cancelled"`)
