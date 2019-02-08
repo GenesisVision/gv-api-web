@@ -1083,6 +1083,8 @@ export declare interface MultiWalletTransaction {
     type: "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits";
     date: Date;
     status: "Confirm" | "Pending" | "Canceled" | "Error";
+    logoFrom: string;
+    logoTo: string;
     description: string;
     amount: number;
 }

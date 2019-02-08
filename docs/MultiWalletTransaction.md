@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
+**logoFrom** | **String** |  | [optional] 
+**logoTo** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 

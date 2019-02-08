@@ -62,6 +62,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name MultiWalletTransaction#logoFrom
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#logoTo
+ * @type {String}
+ */
+/**
+ *
  * @name MultiWalletTransaction#description
  * @type {String}
  */
@@ -81,6 +91,8 @@ var MultiWalletTransaction = function () {
         this.type = undefined;
         this.date = undefined;
         this.status = undefined;
+        this.logoFrom = undefined;
+        this.logoTo = undefined;
         this.description = undefined;
         this.amount = undefined;
     }
@@ -108,6 +120,12 @@ var MultiWalletTransaction = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('logoFrom')) {
+                    obj['logoFrom'] = _ApiClient2.default.convertToType(data['logoFrom'], 'String');
+                }
+                if (data.hasOwnProperty('logoTo')) {
+                    obj['logoTo'] = _ApiClient2.default.convertToType(data['logoTo'], 'String');
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
