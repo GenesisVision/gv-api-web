@@ -164,13 +164,16 @@ export declare class InvestorApi {
         skip?: number;
         take?: number;
     }): Promise<DashboardPortfolioEvents>;
-    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramInvestInfo>;
     v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string): Promise<any>;
     v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string): Promise<any>;
     v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
     v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
     v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramWithdrawInfo>;
+    v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
     v10InvestorProgramsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -245,7 +248,9 @@ export declare class ManagerApi {
     v10ManagerProgramsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
     }): Promise<any>;
-    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramInvestInfo>;
     v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string): Promise<any>;
     v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
@@ -254,6 +259,7 @@ export declare class ManagerApi {
     }): Promise<any>;
     v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
     v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ManagerProgramWithdrawInfo>;
+    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
     v10ManagerProgramsCreatePost(authorization: string, opts?: {
         request?: NewProgramRequest;
     }): Promise<any>;

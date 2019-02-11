@@ -13,13 +13,14 @@ Method | HTTP request | Description
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
-[**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program
+[**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program  Invest in GVT if currency is empty
 [**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 [**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program
+[**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | [Obsolete] Withdraw from investment program in GVT
 [**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
+[**v10InvestorProgramsByIdWithdrawMultiByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 [**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
@@ -491,9 +492,9 @@ No authorization required
 
 <a name="v10InvestorProgramsByIdInvestByAmountPost"></a>
 # **v10InvestorProgramsByIdInvestByAmountPost**
-> v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization)
+> v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts)
 
-Investing into the program
+Investing into the program  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -507,7 +508,10 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+let opts = { 
+  'currency': "100" // String | 
+};
+apiInstance.v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -522,6 +526,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -725,7 +730,7 @@ No authorization required
 # **v10InvestorProgramsByIdWithdrawByAmountPost**
 > v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization)
 
-Withdraw from investment program
+[Obsolete] Withdraw from investment program in GVT
 
 ### Example
 ```javascript
@@ -805,6 +810,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramWithdrawInfo**](ProgramWithdrawInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorProgramsByIdWithdrawMultiByAmountPost"></a>
+# **v10InvestorProgramsByIdWithdrawMultiByAmountPost**
+> v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization)
+
+Withdraw from investment program in program currency
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let amount = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

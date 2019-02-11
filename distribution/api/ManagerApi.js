@@ -1008,7 +1008,8 @@ var ManagerApi = function () {
     }
   }, {
     key: 'v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo',
-    value: function v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+    value: function v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1030,7 +1031,9 @@ var ManagerApi = function () {
         'id': id,
         'amount': amount
       };
-      var queryParams = {};
+      var queryParams = {
+        'currency': opts['currency']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -1045,18 +1048,20 @@ var ManagerApi = function () {
     }
 
     /**
-     * Deposit
+     * Deposit  Invest in GVT if currency is empty
      * @function ManagerApi#v10ManagerProgramsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10ManagerProgramsByIdInvestByAmountPost',
-    value: function v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization) {
-      return this.v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+    value: function v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, opts) {
+      return this.v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1311,7 +1316,7 @@ var ManagerApi = function () {
     }
 
     /**
-     * Withdraw from program
+     * [Obsolete] Withdraw from investment program in GVT
      * @function ManagerApi#v10ManagerProgramsByIdWithdrawByAmountPost
      * @param {String} id 
      * @param {Number} amount 
@@ -1377,6 +1382,60 @@ var ManagerApi = function () {
     key: 'v10ManagerProgramsByIdWithdrawInfoByCurrencyGet',
     value: function v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ManagerProgramsByIdWithdrawMultiByAmountPostWithHttpInfo',
+    value: function v10ManagerProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerProgramsByIdWithdrawMultiByAmountPost");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling v10ManagerProgramsByIdWithdrawMultiByAmountPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsByIdWithdrawMultiByAmountPost");
+      }
+
+      var pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/{id}/withdraw/multi/{amount}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Withdraw from investment program in program currency
+     * @function ManagerApi#v10ManagerProgramsByIdWithdrawMultiByAmountPost
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerProgramsByIdWithdrawMultiByAmountPost',
+    value: function v10ManagerProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
+      return this.v10ManagerProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
