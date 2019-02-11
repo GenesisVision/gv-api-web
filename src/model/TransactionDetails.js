@@ -49,7 +49,7 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
     /**
      *
      * @name TransactionDetails#status
-     * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
+     * @type {("Done"|"Pending"|"Canceled"|"Error")}
      */
     /**
      *
@@ -64,6 +64,11 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
     /**
      *
      * @name TransactionDetails#gvCommission
+     * @type {Number}
+     */
+    /**
+     *
+     * @name TransactionDetails#gvCommissionPercent
      * @type {Number}
      */
     /**
@@ -121,6 +126,9 @@ export default class TransactionDetails {
             if (data.hasOwnProperty('gvCommission')) {
                 obj['gvCommission'] = ApiClient.convertToType(data['gvCommission'], 'Number');
             }
+            if (data.hasOwnProperty('gvCommissionPercent')) {
+                obj['gvCommissionPercent'] = ApiClient.convertToType(data['gvCommissionPercent'], 'Number');
+            }
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
@@ -136,6 +144,7 @@ export default class TransactionDetails {
     currency = undefined;
     currencyLogo = undefined;
     gvCommission = undefined;
+    gvCommissionPercent = undefined;
     amount = undefined;
 
 
@@ -164,7 +173,7 @@ export default class TransactionDetails {
 
     static StatusEnum = {
     
-        "Confirm": "Confirm",
+        "Done": "Done",
     
         "Pending": "Pending",
     

@@ -50,7 +50,17 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProgramTransactionDetails#entryFeePercent
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramTransactionDetails#successFee
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramTransactionDetails#successFeePercent
      * @type {Number}
      */
     /**
@@ -61,6 +71,11 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ProgramTransactionDetails#exitFee
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramTransactionDetails#exitFeePercent
      * @type {Number}
      */
     /**
@@ -109,14 +124,23 @@ export default class ProgramTransactionDetails {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('entryFeePercent')) {
+                obj['entryFeePercent'] = ApiClient.convertToType(data['entryFeePercent'], 'Number');
+            }
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
+            }
+            if (data.hasOwnProperty('successFeePercent')) {
+                obj['successFeePercent'] = ApiClient.convertToType(data['successFeePercent'], 'Number');
             }
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
             if (data.hasOwnProperty('exitFee')) {
                 obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
+            }
+            if (data.hasOwnProperty('exitFeePercent')) {
+                obj['exitFeePercent'] = ApiClient.convertToType(data['exitFeePercent'], 'Number');
             }
             if (data.hasOwnProperty('color')) {
                 obj['color'] = ApiClient.convertToType(data['color'], 'String');
@@ -130,9 +154,12 @@ export default class ProgramTransactionDetails {
     logo = undefined;
     title = undefined;
     entryFee = undefined;
+    entryFeePercent = undefined;
     successFee = undefined;
+    successFeePercent = undefined;
     level = undefined;
     exitFee = undefined;
+    exitFeePercent = undefined;
     color = undefined;
 
 

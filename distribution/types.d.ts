@@ -1104,7 +1104,7 @@ export declare interface MultiWalletTransaction {
     currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     type: "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits";
     date: Date;
-    status: "Confirm" | "Pending" | "Canceled" | "Error";
+    status: "Done" | "Pending" | "Canceled" | "Error";
     logoFrom: string;
     logoTo: string;
     description: string;
@@ -1530,9 +1530,12 @@ export declare interface ProgramTransactionDetails {
     logo: string;
     title: string;
     entryFee: number;
+    entryFeePercent: number;
     successFee: number;
+    successFeePercent: number;
     level: number;
     exitFee: number;
+    exitFeePercent: number;
     color: string;
 }
 
@@ -1652,10 +1655,11 @@ export declare interface TransactionDetails {
     programDetails: ProgramTransactionDetails;
     convertingDetails: ConvertingDetails;
     externalTransactionDetails: ExternalTransactionDetails;
-    status: "Confirm" | "Pending" | "Canceled" | "Error";
+    status: "Done" | "Pending" | "Canceled" | "Error";
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     currencyLogo: string;
     gvCommission: number;
+    gvCommissionPercent: number;
     amount: number;
 }
 

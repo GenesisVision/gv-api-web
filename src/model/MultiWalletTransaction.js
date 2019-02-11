@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletTransaction#status
-     * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
+     * @type {("Done"|"Pending"|"Canceled"|"Error")}
      */
     /**
      *
@@ -228,7 +228,7 @@ export default class MultiWalletTransaction {
 
     static StatusEnum = {
     
-        "Confirm": "Confirm",
+        "Done": "Done",
     
         "Pending": "Pending",
     

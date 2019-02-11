@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletTransaction#status
- * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
  */
 /**
  *
@@ -217,7 +217,7 @@ MultiWalletTransaction.TypeEnum = {
 };
 MultiWalletTransaction.StatusEnum = {
 
-    "Confirm": "Confirm",
+    "Done": "Done",
 
     "Pending": "Pending",
 

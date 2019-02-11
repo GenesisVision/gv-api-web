@@ -57,7 +57,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramTransactionDetails#entryFeePercent
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramTransactionDetails#successFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#successFeePercent
  * @type {Number}
  */
 /**
@@ -68,6 +78,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramTransactionDetails#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#exitFeePercent
  * @type {Number}
  */
 /**
@@ -85,9 +100,12 @@ var ProgramTransactionDetails = function () {
         this.logo = undefined;
         this.title = undefined;
         this.entryFee = undefined;
+        this.entryFeePercent = undefined;
         this.successFee = undefined;
+        this.successFeePercent = undefined;
         this.level = undefined;
         this.exitFee = undefined;
+        this.exitFeePercent = undefined;
         this.color = undefined;
     }
 
@@ -112,14 +130,23 @@ var ProgramTransactionDetails = function () {
                 if (data.hasOwnProperty('entryFee')) {
                     obj['entryFee'] = _ApiClient2.default.convertToType(data['entryFee'], 'Number');
                 }
+                if (data.hasOwnProperty('entryFeePercent')) {
+                    obj['entryFeePercent'] = _ApiClient2.default.convertToType(data['entryFeePercent'], 'Number');
+                }
                 if (data.hasOwnProperty('successFee')) {
                     obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
+                }
+                if (data.hasOwnProperty('successFeePercent')) {
+                    obj['successFeePercent'] = _ApiClient2.default.convertToType(data['successFeePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
                 }
                 if (data.hasOwnProperty('exitFee')) {
                     obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');
+                }
+                if (data.hasOwnProperty('exitFeePercent')) {
+                    obj['exitFeePercent'] = _ApiClient2.default.convertToType(data['exitFeePercent'], 'Number');
                 }
                 if (data.hasOwnProperty('color')) {
                     obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');

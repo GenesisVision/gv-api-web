@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **currency** | **String** |  | [optional] 
 **currencyLogo** | **String** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 
+**gvCommissionPercent** | **Number** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 
 
@@ -41,7 +42,7 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `Confirm` (value: `"Confirm"`)
+* `Done` (value: `"Done"`)
 
 * `Pending` (value: `"Pending"`)
 

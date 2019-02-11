@@ -108,7 +108,7 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `Confirm` (value: `"Confirm"`)
+* `Done` (value: `"Done"`)
 
 * `Pending` (value: `"Pending"`)
 

@@ -65,7 +65,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#status
- * @type {("Confirm"|"Pending"|"Canceled"|"Error")}
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
  */
 /**
  *
@@ -80,6 +80,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#gvCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetails#gvCommissionPercent
  * @type {Number}
  */
 /**
@@ -100,6 +105,7 @@ var TransactionDetails = function () {
         this.currency = undefined;
         this.currencyLogo = undefined;
         this.gvCommission = undefined;
+        this.gvCommissionPercent = undefined;
         this.amount = undefined;
     }
 
@@ -133,6 +139,9 @@ var TransactionDetails = function () {
                 if (data.hasOwnProperty('gvCommission')) {
                     obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
                 }
+                if (data.hasOwnProperty('gvCommissionPercent')) {
+                    obj['gvCommissionPercent'] = _ApiClient2.default.convertToType(data['gvCommissionPercent'], 'Number');
+                }
                 if (data.hasOwnProperty('amount')) {
                     obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
@@ -164,7 +173,7 @@ TransactionDetails.TypeEnum = {
 };
 TransactionDetails.StatusEnum = {
 
-    "Confirm": "Confirm",
+    "Done": "Done",
 
     "Pending": "Pending",
 

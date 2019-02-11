@@ -8,9 +8,12 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
+**entryFeePercent** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
+**successFeePercent** | **Number** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **exitFee** | **Number** |  | [optional] 
+**exitFeePercent** | **Number** |  | [optional] 
 **color** | **String** |  | [optional] 
 
 
