@@ -45,6 +45,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProfileHeaderViewModel#userType
+     * @type {("Investor"|"Manager")}
+     */
+    /**
+     *
      * @name ProfileHeaderViewModel#notificationsCount
      * @type {Number}
      */
@@ -146,6 +151,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
+            if (data.hasOwnProperty('userType')) {
+                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
+            }
             if (data.hasOwnProperty('notificationsCount')) {
                 obj['notificationsCount'] = ApiClient.convertToType(data['notificationsCount'], 'Number');
             }
@@ -193,6 +201,7 @@ export default class ProfileHeaderViewModel {
     name = undefined;
     email = undefined;
     avatar = undefined;
+    userType = undefined;
     notificationsCount = undefined;
     favoritesCount = undefined;
     totalBalanceGvt = undefined;
@@ -211,6 +220,13 @@ export default class ProfileHeaderViewModel {
 
 
 
+
+    static UserTypeEnum = {
+    
+        "Investor": "Investor",
+    
+        "Manager": "Manager"    
+    };
 
 
 

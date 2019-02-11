@@ -52,6 +52,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProfileHeaderViewModel#userType
+ * @type {("Investor"|"Manager")}
+ */
+/**
+ *
  * @name ProfileHeaderViewModel#notificationsCount
  * @type {Number}
  */
@@ -124,6 +129,7 @@ var ProfileHeaderViewModel = function () {
         this.name = undefined;
         this.email = undefined;
         this.avatar = undefined;
+        this.userType = undefined;
         this.notificationsCount = undefined;
         this.favoritesCount = undefined;
         this.totalBalanceGvt = undefined;
@@ -156,6 +162,9 @@ var ProfileHeaderViewModel = function () {
                 }
                 if (data.hasOwnProperty('avatar')) {
                     obj['avatar'] = _ApiClient2.default.convertToType(data['avatar'], 'String');
+                }
+                if (data.hasOwnProperty('userType')) {
+                    obj['userType'] = _ApiClient2.default.convertToType(data['userType'], 'String');
                 }
                 if (data.hasOwnProperty('notificationsCount')) {
                     obj['notificationsCount'] = _ApiClient2.default.convertToType(data['notificationsCount'], 'Number');
@@ -204,4 +213,10 @@ var ProfileHeaderViewModel = function () {
     return ProfileHeaderViewModel;
 }();
 
+ProfileHeaderViewModel.UserTypeEnum = {
+
+    "Investor": "Investor",
+
+    "Manager": "Manager"
+};
 exports.default = ProfileHeaderViewModel;

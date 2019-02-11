@@ -1304,6 +1304,7 @@ export declare interface ProfileHeaderViewModel {
     name: string;
     email: string;
     avatar: string;
+    userType: "Investor" | "Manager";
     notificationsCount: number;
     favoritesCount: number;
     totalBalanceGvt: number;

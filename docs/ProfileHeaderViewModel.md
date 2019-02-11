@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
+**userType** | **String** |  | [optional] 
 **notificationsCount** | **Number** |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 **totalBalanceGvt** | **Number** |  | [optional] 
@@ -20,5 +21,16 @@ Name | Type | Description | Notes
 **allowForex** | **Boolean** |  | [optional] 
 **isTwoFactorEnabled** | **Boolean** |  | [optional] 
 **isNewUser** | **Boolean** |  | [optional] 
+
+
+<a name="UserTypeEnum"></a>
+## Enum: UserTypeEnum
+
+
+* `Investor` (value: `"Investor"`)
+
+* `Manager` (value: `"Manager"`)
+
+
 
 
