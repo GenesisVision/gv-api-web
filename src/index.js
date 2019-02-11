@@ -25,6 +25,7 @@ import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
+import ConvertingDetails from './model/ConvertingDetails';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
@@ -33,6 +34,7 @@ import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardSummary from './model/DashboardSummary';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
+import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import Facet from './model/Facet';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
@@ -110,6 +112,7 @@ import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramTag from './model/ProgramTag';
+import ProgramTransactionDetails from './model/ProgramTransactionDetails';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsInfo from './model/ProgramsInfo';
@@ -127,7 +130,7 @@ import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
 import TradesViewModel from './model/TradesViewModel';
-import TransactionDetatils from './model/TransactionDetatils';
+import TransactionDetails from './model/TransactionDetails';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
 import TwoFactorCodeModel from './model/TwoFactorCodeModel';
@@ -249,6 +252,12 @@ export {
     ChartSimple,
 
     /**
+     * @name index#ConvertingDetails
+     * @type {ConvertingDetails}
+     */
+    ConvertingDetails,
+
+    /**
      * @name index#CreateWithdrawalRequestModel
      * @type {CreateWithdrawalRequestModel}
      */
@@ -295,6 +304,12 @@ export {
      * @type {ErrorViewModel}
      */
     ErrorViewModel,
+
+    /**
+     * @name index#ExternalTransactionDetails
+     * @type {ExternalTransactionDetails}
+     */
+    ExternalTransactionDetails,
 
     /**
      * @name index#Facet
@@ -759,6 +774,12 @@ export {
     ProgramTag,
 
     /**
+     * @name index#ProgramTransactionDetails
+     * @type {ProgramTransactionDetails}
+     */
+    ProgramTransactionDetails,
+
+    /**
      * @name index#ProgramUpdate
      * @type {ProgramUpdate}
      */
@@ -861,10 +882,10 @@ export {
     TradesViewModel,
 
     /**
-     * @name index#TransactionDetatils
-     * @type {TransactionDetatils}
+     * @name index#TransactionDetails
+     * @type {TransactionDetails}
      */
-    TransactionDetatils,
+    TransactionDetails,
 
     /**
      * @name index#TwoFactorAuthenticator

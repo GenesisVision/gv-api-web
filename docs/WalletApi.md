@@ -431,7 +431,7 @@ No authorization required
 
 <a name="v10WalletTransactionByIdGet"></a>
 # **v10WalletTransactionByIdGet**
-> TransactionDetatils v10WalletTransactionByIdGet(id, authorization)
+> TransactionDetails v10WalletTransactionByIdGet(id, authorization)
 
 Get transaction details
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionDetatils**](TransactionDetatils.md)
+[**TransactionDetails**](TransactionDetails.md)
 
 ### Authorization
 

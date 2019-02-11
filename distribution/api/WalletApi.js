@@ -41,9 +41,9 @@ var _MultiWalletTransactionsViewModel = require('../model/MultiWalletTransaction
 
 var _MultiWalletTransactionsViewModel2 = _interopRequireDefault(_MultiWalletTransactionsViewModel);
 
-var _TransactionDetatils = require('../model/TransactionDetatils');
+var _TransactionDetails = require('../model/TransactionDetails');
 
-var _TransactionDetatils2 = _interopRequireDefault(_TransactionDetatils);
+var _TransactionDetails2 = _interopRequireDefault(_TransactionDetails);
 
 var _WalletInfo = require('../model/WalletInfo');
 
@@ -522,7 +522,7 @@ var WalletApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _TransactionDetatils2.default;
+      var returnType = _TransactionDetails2.default;
 
       return this.apiClient.callApi('/v1.0/wallet/transaction/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -532,7 +532,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletTransactionByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<TransactionDetatils>} a Promise, with an object containing data of type TransactionDetatils and HTTP response
+     * @return {Promise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
      */
 
   }, {

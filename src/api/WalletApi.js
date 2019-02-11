@@ -18,7 +18,7 @@ import ErrorViewModel from '../model/ErrorViewModel';
 import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExternalTransactionsViewModel';
 import MultiWalletFilters from '../model/MultiWalletFilters';
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
-import TransactionDetatils from '../model/TransactionDetatils';
+import TransactionDetails from '../model/TransactionDetails';
 import WalletInfo from '../model/WalletInfo';
 import WalletMultiSummary from '../model/WalletMultiSummary';
 import WalletSummary from '../model/WalletSummary';
@@ -515,7 +515,7 @@ export default class WalletApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TransactionDetatils;
+      let returnType = TransactionDetails;
 
       return this.apiClient.callApi(
         '/v1.0/wallet/transaction/{id}', 'GET',
@@ -529,7 +529,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletTransactionByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<TransactionDetatils>} a Promise, with an object containing data of type TransactionDetatils and HTTP response
+     * @return {Promise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
      */
       v10WalletTransactionByIdGet(id, authorization) {
       return this.v10WalletTransactionByIdGetWithHttpInfo(id, authorization)

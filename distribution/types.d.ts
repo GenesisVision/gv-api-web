@@ -425,7 +425,7 @@ export declare class WalletApi {
     }): Promise<MultiWalletTransactionsViewModel>;
     v10WalletPaygvtfeeOffPost(authorization: string): Promise<any>;
     v10WalletPaygvtfeeOnPost(authorization: string): Promise<any>;
-    v10WalletTransactionByIdGet(id: string, authorization: string): Promise<TransactionDetatils>;
+    v10WalletTransactionByIdGet(id: string, authorization: string): Promise<TransactionDetails>;
     v10WalletTransactionsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -467,6 +467,7 @@ export declare interface index {
     BrokersInfo: BrokersInfo;
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChartSimple: ChartSimple;
+    ConvertingDetails: ConvertingDetails;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
     DashboardChartValue: DashboardChartValue;
     DashboardPortfolioEvent: DashboardPortfolioEvent;
@@ -475,6 +476,7 @@ export declare interface index {
     DashboardSummary: DashboardSummary;
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
+    ExternalTransactionDetails: ExternalTransactionDetails;
     Facet: Facet;
     FcmTokenViewModel: FcmTokenViewModel;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
@@ -552,6 +554,7 @@ export declare interface index {
     ProgramSets: ProgramSets;
     ProgramStatistic: ProgramStatistic;
     ProgramTag: ProgramTag;
+    ProgramTransactionDetails: ProgramTransactionDetails;
     ProgramUpdate: ProgramUpdate;
     ProgramWithdrawInfo: ProgramWithdrawInfo;
     ProgramsInfo: ProgramsInfo;
@@ -569,7 +572,7 @@ export declare interface index {
     Review: Review;
     SearchViewModel: SearchViewModel;
     TradesViewModel: TradesViewModel;
-    TransactionDetatils: TransactionDetatils;
+    TransactionDetails: TransactionDetails;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
     TwoFactorAuthenticatorConfirm: TwoFactorAuthenticatorConfirm;
     TwoFactorCodeModel: TwoFactorCodeModel;
@@ -686,6 +689,13 @@ export declare interface ChartSimple {
     date: Date;
 }
 
+export declare interface ConvertingDetails {
+    currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    amountTo: number;
+    rateValue: number;
+    currencyToLogo: string;
+}
+
 export declare interface CreateWithdrawalRequestModel {
     amount: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -749,6 +759,12 @@ export declare interface ErrorMessage {
 export declare interface ErrorViewModel {
     errors: ErrorMessage[];
     code: "InternalServerError" | "ValidationError" | "RequiresTwoFactor";
+}
+
+export declare interface ExternalTransactionDetails {
+    description: string;
+    descriptionUrl: string;
+    fromAddress: string;
 }
 
 export declare interface Facet {
@@ -1501,6 +1517,18 @@ export declare interface ProgramTag {
     color: string;
 }
 
+export declare interface ProgramTransactionDetails {
+    id: string;
+    programType: "Program" | "Fund";
+    logo: string;
+    title: string;
+    entryFee: number;
+    successFee: number;
+    level: number;
+    exitFee: number;
+    color: string;
+}
+
 export declare interface ProgramUpdate {
     title: string;
     description: string;
@@ -1610,6 +1638,18 @@ export declare interface SearchViewModel {
 export declare interface TradesViewModel {
     trades: OrderModel[];
     total: number;
+}
+
+export declare interface TransactionDetails {
+    type: "Investing" | "Withdrawal" | "ExternalWithdrawal" | "ExternalDeposit" | "Converting" | "Open" | "Close" | "Profit";
+    programDetails: ProgramTransactionDetails;
+    convertingDetails: ConvertingDetails;
+    externalTransactionDetails: ExternalTransactionDetails;
+    status: "Confirm" | "Pending" | "Canceled" | "Error";
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyLogo: string;
+    gvCommission: number;
+    amount: number;
 }
 
 export declare interface TransactionDetatils {
