@@ -130,10 +130,10 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 *CoreApiV10.FundsApi* | [**v10FundsSetsGet**](docs/FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund  Invest in GVT if currency is empty
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByPercentPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+*CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawByPercentPost**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
@@ -157,11 +157,11 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerEventsGet**](docs/ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdAssetsUpdatePost**](docs/ManagerApi.md#v10ManagerFundsByIdAssetsUpdatePost) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdClosePost**](docs/ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing fund
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
+*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdUpdatePost**](docs/ManagerApi.md#v10ManagerFundsByIdUpdatePost) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
-*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdWithdrawByPercentPost**](docs/ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+*CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdWithdrawByPercentPost**](docs/ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsByIdWithdrawInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsCreatePost**](docs/ManagerApi.md#v10ManagerFundsCreatePost) | **POST** /v1.0/manager/funds/create | Create fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsGet**](docs/ManagerApi.md#v10ManagerFundsGet) | **GET** /v1.0/manager/funds | Manager funds

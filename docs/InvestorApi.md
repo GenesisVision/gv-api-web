@@ -4,10 +4,10 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10InvestorFundsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund
+[**v10InvestorFundsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund  Invest in GVT if currency is empty
 [**v10InvestorFundsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorFundsByIdWithdrawByPercentPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+[**v10InvestorFundsByIdWithdrawByPercentPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
 [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
@@ -28,9 +28,9 @@ Method | HTTP request | Description
 
 <a name="v10InvestorFundsByIdInvestByAmountPost"></a>
 # **v10InvestorFundsByIdInvestByAmountPost**
-> v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization)
+> v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts)
 
-Investing into the fund
+Investing into the fund  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -44,7 +44,10 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+let opts = { 
+  'currency': "100" // String | 
+};
+apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -59,6 +62,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -172,9 +176,9 @@ No authorization required
 
 <a name="v10InvestorFundsByIdWithdrawByPercentPost"></a>
 # **v10InvestorFundsByIdWithdrawByPercentPost**
-> v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization)
+> v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts)
 
-Withdraw from fund. Percent is % of investor total money.
+Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -188,7 +192,10 @@ let percent = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization).then(() => {
+let opts = { 
+  'currency': "100" // String | 
+};
+apiInstance.v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -203,6 +210,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **percent** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 

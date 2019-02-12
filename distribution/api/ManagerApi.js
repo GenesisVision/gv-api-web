@@ -389,7 +389,8 @@ var ManagerApi = function () {
     }
   }, {
     key: 'v10ManagerFundsByIdInvestByAmountPostWithHttpInfo',
-    value: function v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+    value: function v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -411,7 +412,9 @@ var ManagerApi = function () {
         'id': id,
         'amount': amount
       };
-      var queryParams = {};
+      var queryParams = {
+        'currency': opts['currency']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -426,18 +429,20 @@ var ManagerApi = function () {
     }
 
     /**
-     * Deposit
+     * Deposit  Invest in GVT if currency is empty
      * @function ManagerApi#v10ManagerFundsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10ManagerFundsByIdInvestByAmountPost',
-    value: function v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization) {
-      return this.v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+    value: function v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, opts) {
+      return this.v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -608,7 +613,8 @@ var ManagerApi = function () {
     }
   }, {
     key: 'v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo',
-    value: function v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
+    value: function v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -630,7 +636,9 @@ var ManagerApi = function () {
         'id': id,
         'percent': percent
       };
-      var queryParams = {};
+      var queryParams = {
+        'currency': opts['currency']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -645,18 +653,20 @@ var ManagerApi = function () {
     }
 
     /**
-     * Withdraw from fund. Percent is % of investor total money.
+     * Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
      * @function ManagerApi#v10ManagerFundsByIdWithdrawByPercentPost
      * @param {String} id 
      * @param {Number} percent 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10ManagerFundsByIdWithdrawByPercentPost',
-    value: function v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization) {
-      return this.v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization).then(function (response_and_data) {
+    value: function v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, opts) {
+      return this.v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

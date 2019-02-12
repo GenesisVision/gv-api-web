@@ -10,11 +10,11 @@ Method | HTTP request | Description
 [**v10ManagerEventsGet**](ManagerApi.md#v10ManagerEventsGet) | **GET** /v1.0/manager/events | Manager events
 [**v10ManagerFundsByIdAssetsUpdatePost**](ManagerApi.md#v10ManagerFundsByIdAssetsUpdatePost) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
 [**v10ManagerFundsByIdClosePost**](ManagerApi.md#v10ManagerFundsByIdClosePost) | **POST** /v1.0/manager/funds/{id}/close | Close existing fund
-[**v10ManagerFundsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit
+[**v10ManagerFundsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerFundsByIdInvestByAmountPost) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**v10ManagerFundsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**v10ManagerFundsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagerFundsByIdUpdatePost**](ManagerApi.md#v10ManagerFundsByIdUpdatePost) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
-[**v10ManagerFundsByIdWithdrawByPercentPost**](ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.
+[**v10ManagerFundsByIdWithdrawByPercentPost**](ManagerApi.md#v10ManagerFundsByIdWithdrawByPercentPost) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
 [**v10ManagerFundsByIdWithdrawInfoByCurrencyGet**](ManagerApi.md#v10ManagerFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10ManagerFundsCreatePost**](ManagerApi.md#v10ManagerFundsCreatePost) | **POST** /v1.0/manager/funds/create | Create fund
 [**v10ManagerFundsGet**](ManagerApi.md#v10ManagerFundsGet) | **GET** /v1.0/manager/funds | Manager funds
@@ -315,9 +315,9 @@ No authorization required
 
 <a name="v10ManagerFundsByIdInvestByAmountPost"></a>
 # **v10ManagerFundsByIdInvestByAmountPost**
-> v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization)
+> v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, opts)
 
-Deposit
+Deposit  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -331,7 +331,10 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization).then(() => {
+let opts = { 
+  'currency': "100" // String | 
+};
+apiInstance.v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -346,6 +349,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -507,9 +511,9 @@ No authorization required
 
 <a name="v10ManagerFundsByIdWithdrawByPercentPost"></a>
 # **v10ManagerFundsByIdWithdrawByPercentPost**
-> v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization)
+> v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, opts)
 
-Withdraw from fund. Percent is % of investor total money.
+Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -523,7 +527,10 @@ let percent = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization).then(() => {
+let opts = { 
+  'currency': "100" // String | 
+};
+apiInstance.v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -538,6 +545,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **percent** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 

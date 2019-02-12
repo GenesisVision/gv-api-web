@@ -350,7 +350,8 @@ export default class ManagerApi {
         });
     }
 
-      v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization) {
+      v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -374,6 +375,7 @@ export default class ManagerApi {
         'amount': amount
       };
       let queryParams = {
+        'currency': opts['currency']
       };
       let headerParams = {
         'Authorization': authorization
@@ -394,15 +396,17 @@ export default class ManagerApi {
     }
 
     /**
-     * Deposit
+     * Deposit  Invest in GVT if currency is empty
      * @function ManagerApi#v10ManagerFundsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
-      v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization) {
-      return this.v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization)
+      v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, opts) {
+      return this.v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -585,7 +589,8 @@ export default class ManagerApi {
         });
     }
 
-      v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization) {
+      v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -609,6 +614,7 @@ export default class ManagerApi {
         'percent': percent
       };
       let queryParams = {
+        'currency': opts['currency']
       };
       let headerParams = {
         'Authorization': authorization
@@ -629,15 +635,17 @@ export default class ManagerApi {
     }
 
     /**
-     * Withdraw from fund. Percent is % of investor total money.
+     * Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
      * @function ManagerApi#v10ManagerFundsByIdWithdrawByPercentPost
      * @param {String} id 
      * @param {Number} percent 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
-      v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization) {
-      return this.v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization)
+      v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, opts) {
+      return this.v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

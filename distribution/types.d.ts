@@ -124,10 +124,14 @@ export declare class FundsApi {
 
 export declare class InvestorApi {
     constructor(apiClient: ApiClient): InvestorApi;
-    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundInvestInfo>;
     v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
-    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string): Promise<any>;
+    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundWithdrawInfo>;
     v10InvestorFundsGet(authorization: string, opts?: {
         sorting?: string;
@@ -214,13 +218,17 @@ export declare class ManagerApi {
     v10ManagerFundsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
     }): Promise<any>;
-    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundInvestInfo>;
     v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
     v10ManagerFundsByIdUpdatePost(id: string, authorization: string, opts?: {
         model?: ProgramUpdate;
     }): Promise<any>;
-    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string): Promise<any>;
+    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, opts?: {
+        currency?: string;
+    }): Promise<any>;
     v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ManagerFundWithdrawInfo>;
     v10ManagerFundsCreatePost(authorization: string, opts?: {
         request?: NewFundRequest;
