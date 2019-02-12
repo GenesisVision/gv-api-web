@@ -15,6 +15,10 @@ Name | Type | Description | Notes
 
 * `Forex` (value: `"Forex"`)
 
+* `HighRisk` (value: `"HighRisk"`)
+
+* `Signal` (value: `"Signal"`)
+
 
 
 

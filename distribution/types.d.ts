@@ -1520,7 +1520,7 @@ export declare interface ProgramStatistic {
 }
 
 export declare interface ProgramTag {
-    name: "Crypto" | "Forex";
+    name: "Crypto" | "Forex" | "HighRisk" | "Signal";
     color: string;
 }
 

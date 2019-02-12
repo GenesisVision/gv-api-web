@@ -26,7 +26,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ProgramTag#name
-     * @type {("Crypto"|"Forex")}
+     * @type {("Crypto"|"Forex"|"HighRisk"|"Signal")}
      */
     /**
      *
@@ -81,7 +81,11 @@ export default class ProgramTag {
     
         "Crypto": "Crypto",
     
-        "Forex": "Forex"    
+        "Forex": "Forex",
+    
+        "HighRisk": "HighRisk",
+    
+        "Signal": "Signal"    
     };
 
 
