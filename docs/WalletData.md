@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
-**icon** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 

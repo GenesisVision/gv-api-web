@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name WalletData#icon
+ * @name WalletData#logo
  * @type {String}
  */
 /**
@@ -102,7 +102,7 @@ var WalletData = function () {
 
         this.id = undefined;
         this.title = undefined;
-        this.icon = undefined;
+        this.logo = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -127,8 +127,8 @@ var WalletData = function () {
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('icon')) {
-                    obj['icon'] = _ApiClient2.default.convertToType(data['icon'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');

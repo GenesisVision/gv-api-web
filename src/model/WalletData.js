@@ -35,7 +35,7 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name WalletData#icon
+     * @name WalletData#logo
      * @type {String}
      */
     /**
@@ -120,8 +120,8 @@ export default class WalletData {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
-            if (data.hasOwnProperty('icon')) {
-                obj['icon'] = ApiClient.convertToType(data['icon'], 'String');
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
@@ -159,7 +159,7 @@ export default class WalletData {
 
     id = undefined;
     title = undefined;
-    icon = undefined;
+    logo = undefined;
     currency = undefined;
     available = undefined;
     invested = undefined;
