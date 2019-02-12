@@ -59,7 +59,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#sourceType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
      */
     /**
      *
@@ -99,7 +99,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#destinationType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
      */
     /**
      *
@@ -247,7 +247,9 @@ export default class WalletTransaction {
     
         "WithdrawalRequest": "WithdrawalRequest",
     
-        "PaymentTransaction": "PaymentTransaction"    
+        "PaymentTransaction": "PaymentTransaction",
+    
+        "Blockchain": "Blockchain"    
     };
 
     static SourceCurrencyEnum = {
@@ -316,7 +318,9 @@ export default class WalletTransaction {
     
         "WithdrawalRequest": "WithdrawalRequest",
     
-        "PaymentTransaction": "PaymentTransaction"    
+        "PaymentTransaction": "PaymentTransaction",
+    
+        "Blockchain": "Blockchain"    
     };
 
     static DestinationCurrencyEnum = {

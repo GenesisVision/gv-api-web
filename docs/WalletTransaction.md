@@ -42,6 +42,8 @@ Name | Type | Description | Notes
 
 * `PaymentTransaction` (value: `"PaymentTransaction"`)
 
+* `Blockchain` (value: `"Blockchain"`)
+
 
 
 
@@ -122,6 +124,8 @@ Name | Type | Description | Notes
 * `WithdrawalRequest` (value: `"WithdrawalRequest"`)
 
 * `PaymentTransaction` (value: `"PaymentTransaction"`)
+
+* `Blockchain` (value: `"Blockchain"`)
 
 
 

@@ -1803,7 +1803,7 @@ export declare interface WalletTransaction {
     date: Date;
     number: number;
     sourceId: string;
-    sourceType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction";
+    sourceType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain";
     sourceCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     sourceProgramInfo: ProgramInfo;
     sourceBlockchainInfo: BlockchainInfo;
@@ -1811,7 +1811,7 @@ export declare interface WalletTransaction {
     action: "Transfer" | "ProgramOpen" | "ProgramProfit" | "ProgramInvest" | "ProgramWithdrawal" | "ProgramRefundPartialExecution" | "ProgramRefundClose" | "ProgramRequestInvest" | "ProgramRequestWithdrawal" | "ProgramRequestCancel";
     information: string;
     destinationId: string;
-    destinationType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction";
+    destinationType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain";
     destinationCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     destinationProgramInfo: ProgramInfo;
     destinationBlockchainInfo: BlockchainInfo;
