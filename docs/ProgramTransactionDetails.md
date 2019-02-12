@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
+**managerName** | **String** |  | [optional] 
 **programType** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 

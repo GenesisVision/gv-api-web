@@ -30,6 +30,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProgramTransactionDetails#managerName
+     * @type {String}
+     */
+    /**
+     *
      * @name ProgramTransactionDetails#programType
      * @type {("Program"|"Fund")}
      */
@@ -112,6 +117,9 @@ export default class ProgramTransactionDetails {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('managerName')) {
+                obj['managerName'] = ApiClient.convertToType(data['managerName'], 'String');
+            }
             if (data.hasOwnProperty('programType')) {
                 obj['programType'] = ApiClient.convertToType(data['programType'], 'String');
             }
@@ -150,6 +158,7 @@ export default class ProgramTransactionDetails {
     }
 
     id = undefined;
+    managerName = undefined;
     programType = undefined;
     logo = undefined;
     title = undefined;

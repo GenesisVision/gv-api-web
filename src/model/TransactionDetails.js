@@ -58,6 +58,11 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
      */
     /**
      *
+     * @name TransactionDetails#currencyName
+     * @type {String}
+     */
+    /**
+     *
      * @name TransactionDetails#currencyLogo
      * @type {String}
      */
@@ -120,6 +125,9 @@ export default class TransactionDetails {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
+            if (data.hasOwnProperty('currencyName')) {
+                obj['currencyName'] = ApiClient.convertToType(data['currencyName'], 'String');
+            }
             if (data.hasOwnProperty('currencyLogo')) {
                 obj['currencyLogo'] = ApiClient.convertToType(data['currencyLogo'], 'String');
             }
@@ -142,6 +150,7 @@ export default class TransactionDetails {
     externalTransactionDetails = undefined;
     status = undefined;
     currency = undefined;
+    currencyName = undefined;
     currencyLogo = undefined;
     gvCommission = undefined;
     gvCommissionPercent = undefined;

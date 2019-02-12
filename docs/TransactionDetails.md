@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **externalTransactionDetails** | [**ExternalTransactionDetails**](ExternalTransactionDetails.md) |  | [optional] 
 **status** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
+**currencyName** | **String** |  | [optional] 
 **currencyLogo** | **String** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 
 **gvCommissionPercent** | **Number** |  | [optional] 

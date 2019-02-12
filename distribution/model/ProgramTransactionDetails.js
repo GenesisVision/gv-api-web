@@ -37,6 +37,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramTransactionDetails#managerName
+ * @type {String}
+ */
+/**
+ *
  * @name ProgramTransactionDetails#programType
  * @type {("Program"|"Fund")}
  */
@@ -96,6 +101,7 @@ var ProgramTransactionDetails = function () {
         _classCallCheck(this, ProgramTransactionDetails);
 
         this.id = undefined;
+        this.managerName = undefined;
         this.programType = undefined;
         this.logo = undefined;
         this.title = undefined;
@@ -117,6 +123,9 @@ var ProgramTransactionDetails = function () {
 
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('managerName')) {
+                    obj['managerName'] = _ApiClient2.default.convertToType(data['managerName'], 'String');
                 }
                 if (data.hasOwnProperty('programType')) {
                     obj['programType'] = _ApiClient2.default.convertToType(data['programType'], 'String');

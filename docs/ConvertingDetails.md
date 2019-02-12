@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currencyTo** | **String** |  | [optional] 
+**currencyToName** | **String** |  | [optional] 
 **amountTo** | **Number** |  | [optional] 
 **rateValue** | **Number** |  | [optional] 
 **currencyToLogo** | **String** |  | [optional] 

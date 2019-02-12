@@ -74,6 +74,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name TransactionDetails#currencyName
+ * @type {String}
+ */
+/**
+ *
  * @name TransactionDetails#currencyLogo
  * @type {String}
  */
@@ -103,6 +108,7 @@ var TransactionDetails = function () {
         this.externalTransactionDetails = undefined;
         this.status = undefined;
         this.currency = undefined;
+        this.currencyName = undefined;
         this.currencyLogo = undefined;
         this.gvCommission = undefined;
         this.gvCommissionPercent = undefined;
@@ -132,6 +138,9 @@ var TransactionDetails = function () {
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('currencyName')) {
+                    obj['currencyName'] = _ApiClient2.default.convertToType(data['currencyName'], 'String');
                 }
                 if (data.hasOwnProperty('currencyLogo')) {
                     obj['currencyLogo'] = _ApiClient2.default.convertToType(data['currencyLogo'], 'String');

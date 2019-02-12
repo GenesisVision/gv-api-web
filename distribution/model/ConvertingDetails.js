@@ -37,6 +37,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ConvertingDetails#currencyToName
+ * @type {String}
+ */
+/**
+ *
  * @name ConvertingDetails#amountTo
  * @type {Number}
  */
@@ -56,6 +61,7 @@ var ConvertingDetails = function () {
         _classCallCheck(this, ConvertingDetails);
 
         this.currencyTo = undefined;
+        this.currencyToName = undefined;
         this.amountTo = undefined;
         this.rateValue = undefined;
         this.currencyToLogo = undefined;
@@ -69,6 +75,9 @@ var ConvertingDetails = function () {
 
                 if (data.hasOwnProperty('currencyTo')) {
                     obj['currencyTo'] = _ApiClient2.default.convertToType(data['currencyTo'], 'String');
+                }
+                if (data.hasOwnProperty('currencyToName')) {
+                    obj['currencyToName'] = _ApiClient2.default.convertToType(data['currencyToName'], 'String');
                 }
                 if (data.hasOwnProperty('amountTo')) {
                     obj['amountTo'] = _ApiClient2.default.convertToType(data['amountTo'], 'Number');

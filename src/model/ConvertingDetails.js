@@ -30,6 +30,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ConvertingDetails#currencyToName
+     * @type {String}
+     */
+    /**
+     *
      * @name ConvertingDetails#amountTo
      * @type {Number}
      */
@@ -72,6 +77,9 @@ export default class ConvertingDetails {
             if (data.hasOwnProperty('currencyTo')) {
                 obj['currencyTo'] = ApiClient.convertToType(data['currencyTo'], 'String');
             }
+            if (data.hasOwnProperty('currencyToName')) {
+                obj['currencyToName'] = ApiClient.convertToType(data['currencyToName'], 'String');
+            }
             if (data.hasOwnProperty('amountTo')) {
                 obj['amountTo'] = ApiClient.convertToType(data['amountTo'], 'Number');
             }
@@ -86,6 +94,7 @@ export default class ConvertingDetails {
     }
 
     currencyTo = undefined;
+    currencyToName = undefined;
     amountTo = undefined;
     rateValue = undefined;
     currencyToLogo = undefined;

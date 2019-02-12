@@ -705,6 +705,7 @@ export declare interface ChartSimple {
 
 export declare interface ConvertingDetails {
     currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyToName: string;
     amountTo: number;
     rateValue: number;
     currencyToLogo: string;
@@ -1534,6 +1535,7 @@ export declare interface ProgramTag {
 
 export declare interface ProgramTransactionDetails {
     id: string;
+    managerName: string;
     programType: "Program" | "Fund";
     logo: string;
     title: string;
@@ -1665,6 +1667,7 @@ export declare interface TransactionDetails {
     externalTransactionDetails: ExternalTransactionDetails;
     status: "Done" | "Pending" | "Canceled" | "Error";
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyName: string;
     currencyLogo: string;
     gvCommission: number;
     gvCommissionPercent: number;
