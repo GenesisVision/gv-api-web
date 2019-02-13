@@ -35,7 +35,6 @@ import DashboardSummary from './model/DashboardSummary';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
-import Facet from './model/Facet';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
@@ -47,9 +46,11 @@ import FundBalanceChart from './model/FundBalanceChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
+import FundFacet from './model/FundFacet';
 import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChart from './model/FundProfitChart';
+import FundSets from './model/FundSets';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
@@ -103,6 +104,7 @@ import ProgramDetails from './model/ProgramDetails';
 import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsRating from './model/ProgramDetailsRating';
+import ProgramFacet from './model/ProgramFacet';
 import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
@@ -312,12 +314,6 @@ export {
     ExternalTransactionDetails,
 
     /**
-     * @name index#Facet
-     * @type {Facet}
-     */
-    Facet,
-
-    /**
      * @name index#FcmTokenViewModel
      * @type {FcmTokenViewModel}
      */
@@ -384,6 +380,12 @@ export {
     FundDetailsListStatistic,
 
     /**
+     * @name index#FundFacet
+     * @type {FundFacet}
+     */
+    FundFacet,
+
+    /**
      * @name index#FundInvestInfo
      * @type {FundInvestInfo}
      */
@@ -400,6 +402,12 @@ export {
      * @type {FundProfitChart}
      */
     FundProfitChart,
+
+    /**
+     * @name index#FundSets
+     * @type {FundSets}
+     */
+    FundSets,
 
     /**
      * @name index#FundStatistic
@@ -718,6 +726,12 @@ export {
      * @type {ProgramDetailsRating}
      */
     ProgramDetailsRating,
+
+    /**
+     * @name index#ProgramFacet
+     * @type {ProgramFacet}
+     */
+    ProgramFacet,
 
     /**
      * @name index#ProgramInfo

@@ -119,7 +119,7 @@ export declare class FundsApi {
         skip?: number;
         take?: number;
     }): Promise<FundsList>;
-    v10FundsSetsGet(authorization: string): Promise<ProgramSets>;
+    v10FundsSetsGet(authorization: string): Promise<FundSets>;
 }
 
 export declare class InvestorApi {
@@ -491,7 +491,6 @@ export declare interface index {
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
-    Facet: Facet;
     FcmTokenViewModel: FcmTokenViewModel;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
@@ -503,9 +502,11 @@ export declare interface index {
     FundDetails: FundDetails;
     FundDetailsFull: FundDetailsFull;
     FundDetailsListStatistic: FundDetailsListStatistic;
+    FundFacet: FundFacet;
     FundInvestInfo: FundInvestInfo;
     FundNotificationSettingList: FundNotificationSettingList;
     FundProfitChart: FundProfitChart;
+    FundSets: FundSets;
     FundStatistic: FundStatistic;
     FundWithdrawInfo: FundWithdrawInfo;
     FundsList: FundsList;
@@ -559,6 +560,7 @@ export declare interface index {
     ProgramDetailsFull: ProgramDetailsFull;
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsRating: ProgramDetailsRating;
+    ProgramFacet: ProgramFacet;
     ProgramInfo: ProgramInfo;
     ProgramInvestInfo: ProgramInvestInfo;
     ProgramNotificationSettingList: ProgramNotificationSettingList;
@@ -881,6 +883,17 @@ export declare interface FundDetailsListStatistic {
     investorsCount: number;
 }
 
+export declare interface FundFacet {
+    sorting: "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewAsc" | "ByNewDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc";
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
+    timeframe: "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
+}
+
 export declare interface FundInvestInfo {
     title: string;
     availableInWallet: number;
@@ -917,6 +930,11 @@ export declare interface FundProfitChart {
     totalGvtProfit: number;
     timeframeGvtProfit: number;
     rate: number;
+}
+
+export declare interface FundSets {
+    sets: FundFacet[];
+    favoritesCount: number;
 }
 
 export declare interface FundStatistic {
@@ -1276,8 +1294,8 @@ export declare interface PlatformCurrency {
 export declare interface PlatformInfo {
     iOSVersion: IOsAppVersion;
     androidVersion: AndroidAppVersion;
-    programsFacets: Facet[];
-    fundsFacets: Facet[];
+    programsFacets: ProgramFacet[];
+    fundsFacets: FundFacet[];
     programsInfo: ProgramsInfo;
     currencies: string[];
     platformCurrencies: PlatformCurrency[];
@@ -1427,6 +1445,17 @@ export declare interface ProgramDetailsRating {
     topPercent: number;
 }
 
+export declare interface ProgramFacet {
+    sorting: "ByLevelAsc" | "ByLevelDesc" | "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByTradesAsc" | "ByTradesDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewDesc" | "ByNewAsc" | "ByEndOfPeriodAsc" | "ByEndOfPeriodDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc" | "ByCurrDesc" | "ByCurrAsc";
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
+    timeframe: "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
+}
+
 export declare interface ProgramInfo {
     title: string;
 }
@@ -1504,7 +1533,7 @@ export declare interface ProgramRequests {
 }
 
 export declare interface ProgramSets {
-    sets: Facet[];
+    sets: ProgramFacet[];
     favoritesCount: number;
 }
 

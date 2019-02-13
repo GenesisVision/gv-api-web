@@ -1,9 +1,9 @@
-# CoreApiV10.ProgramSets
+# CoreApiV10.FundSets
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sets** | [**[ProgramFacet]**](ProgramFacet.md) |  | [optional] 
+**sets** | [**[FundFacet]**](FundFacet.md) |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 
 

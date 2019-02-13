@@ -21,134 +21,174 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AndroidAppVersion = require('./AndroidAppVersion');
-
-var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
-
-var _FundFacet = require('./FundFacet');
-
-var _FundFacet2 = _interopRequireDefault(_FundFacet);
-
-var _IOsAppVersion = require('./IOsAppVersion');
-
-var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
-
-var _PlatformCurrency = require('./PlatformCurrency');
-
-var _PlatformCurrency2 = _interopRequireDefault(_PlatformCurrency);
-
-var _ProgramFacet = require('./ProgramFacet');
-
-var _ProgramFacet2 = _interopRequireDefault(_ProgramFacet);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
-
-var _ProgramsInfo = require('./ProgramsInfo');
-
-var _ProgramsInfo2 = _interopRequireDefault(_ProgramsInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface PlatformInfo
+ * @interface ProgramFacet
  */
 
 /**
  *
- * @name PlatformInfo#iOSVersion
- * @type {IOsAppVersion}
+ * @name ProgramFacet#sorting
+ * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
  */
 /**
  *
- * @name PlatformInfo#androidVersion
- * @type {AndroidAppVersion}
+ * @name ProgramFacet#id
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#programsFacets
- * @type {[ProgramFacet]}
+ * @name ProgramFacet#title
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#fundsFacets
- * @type {[FundFacet]}
+ * @name ProgramFacet#description
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#programsInfo
- * @type {ProgramsInfo}
+ * @name ProgramFacet#logo
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#currencies
- * @type {[String]}
+ * @name ProgramFacet#url
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#platformCurrencies
- * @type {[PlatformCurrency]}
+ * @name ProgramFacet#sortType
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
  */
 /**
  *
- * @name PlatformInfo#programTags
- * @type {[ProgramTag]}
+ * @name ProgramFacet#timeframe
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
  */
 
-var PlatformInfo = function () {
-    function PlatformInfo() {
-        _classCallCheck(this, PlatformInfo);
+var ProgramFacet = function () {
+    function ProgramFacet() {
+        _classCallCheck(this, ProgramFacet);
 
-        this.iOSVersion = undefined;
-        this.androidVersion = undefined;
-        this.programsFacets = undefined;
-        this.fundsFacets = undefined;
-        this.programsInfo = undefined;
-        this.currencies = undefined;
-        this.platformCurrencies = undefined;
-        this.programTags = undefined;
+        this.sorting = undefined;
+        this.id = undefined;
+        this.title = undefined;
+        this.description = undefined;
+        this.logo = undefined;
+        this.url = undefined;
+        this.sortType = undefined;
+        this.timeframe = undefined;
     }
 
-    _createClass(PlatformInfo, null, [{
+    _createClass(ProgramFacet, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PlatformInfo();
+                obj = obj || new ProgramFacet();
 
-                if (data.hasOwnProperty('iOSVersion')) {
-                    obj['iOSVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOSVersion']);
+                if (data.hasOwnProperty('sorting')) {
+                    obj['sorting'] = _ApiClient2.default.convertToType(data['sorting'], 'String');
                 }
-                if (data.hasOwnProperty('androidVersion')) {
-                    obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('programsFacets')) {
-                    obj['programsFacets'] = _ApiClient2.default.convertToType(data['programsFacets'], [_ProgramFacet2.default]);
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('fundsFacets')) {
-                    obj['fundsFacets'] = _ApiClient2.default.convertToType(data['fundsFacets'], [_FundFacet2.default]);
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
-                if (data.hasOwnProperty('programsInfo')) {
-                    obj['programsInfo'] = _ProgramsInfo2.default.constructFromObject(data['programsInfo']);
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('currencies')) {
-                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
-                if (data.hasOwnProperty('platformCurrencies')) {
-                    obj['platformCurrencies'] = _ApiClient2.default.convertToType(data['platformCurrencies'], [_PlatformCurrency2.default]);
+                if (data.hasOwnProperty('sortType')) {
+                    obj['sortType'] = _ApiClient2.default.convertToType(data['sortType'], 'String');
                 }
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('timeframe')) {
+                    obj['timeframe'] = _ApiClient2.default.convertToType(data['timeframe'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return PlatformInfo;
+    return ProgramFacet;
 }();
 
-exports.default = PlatformInfo;
+ProgramFacet.SortingEnum = {
+
+    "ByLevelAsc": "ByLevelAsc",
+
+    "ByLevelDesc": "ByLevelDesc",
+
+    "ByProfitAsc": "ByProfitAsc",
+
+    "ByProfitDesc": "ByProfitDesc",
+
+    "ByDrawdownAsc": "ByDrawdownAsc",
+
+    "ByDrawdownDesc": "ByDrawdownDesc",
+
+    "ByTradesAsc": "ByTradesAsc",
+
+    "ByTradesDesc": "ByTradesDesc",
+
+    "ByInvestorsAsc": "ByInvestorsAsc",
+
+    "ByInvestorsDesc": "ByInvestorsDesc",
+
+    "ByNewDesc": "ByNewDesc",
+
+    "ByNewAsc": "ByNewAsc",
+
+    "ByEndOfPeriodAsc": "ByEndOfPeriodAsc",
+
+    "ByEndOfPeriodDesc": "ByEndOfPeriodDesc",
+
+    "ByTitleAsc": "ByTitleAsc",
+
+    "ByTitleDesc": "ByTitleDesc",
+
+    "ByBalanceAsc": "ByBalanceAsc",
+
+    "ByBalanceDesc": "ByBalanceDesc",
+
+    "ByCurrDesc": "ByCurrDesc",
+
+    "ByCurrAsc": "ByCurrAsc"
+};
+ProgramFacet.SortTypeEnum = {
+
+    "New": "New",
+
+    "Top": "Top",
+
+    "WeeklyTop": "WeeklyTop",
+
+    "Popular": "Popular",
+
+    "ToLevelUp": "ToLevelUp"
+};
+ProgramFacet.TimeframeEnum = {
+
+    "Day": "Day",
+
+    "Week": "Week",
+
+    "Month": "Month",
+
+    "ThreeMonths": "ThreeMonths",
+
+    "Year": "Year",
+
+    "AllTime": "AllTime"
+};
+exports.default = ProgramFacet;

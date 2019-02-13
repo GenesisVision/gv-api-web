@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Facet = require('./Facet');
+var _ProgramFacet = require('./ProgramFacet');
 
-var _Facet2 = _interopRequireDefault(_Facet);
+var _ProgramFacet2 = _interopRequireDefault(_ProgramFacet);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramSets#sets
- * @type {[Facet]}
+ * @type {[ProgramFacet]}
  */
 /**
  *
@@ -60,7 +60,7 @@ var ProgramSets = function () {
                 obj = obj || new ProgramSets();
 
                 if (data.hasOwnProperty('sets')) {
-                    obj['sets'] = _ApiClient2.default.convertToType(data['sets'], [_Facet2.default]);
+                    obj['sets'] = _ApiClient2.default.convertToType(data['sets'], [_ProgramFacet2.default]);
                 }
                 if (data.hasOwnProperty('favoritesCount')) {
                     obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');

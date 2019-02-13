@@ -14,9 +14,10 @@
 
 import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
-import Facet from './Facet';
+import FundFacet from './FundFacet';
 import IOsAppVersion from './IOsAppVersion';
 import PlatformCurrency from './PlatformCurrency';
+import ProgramFacet from './ProgramFacet';
 import ProgramTag from './ProgramTag';
 import ProgramsInfo from './ProgramsInfo';
 
@@ -42,12 +43,12 @@ import ProgramsInfo from './ProgramsInfo';
     /**
      *
      * @name PlatformInfo#programsFacets
-     * @type {Array<Facet>}
+     * @type {Array<ProgramFacet>}
      */
     /**
      *
      * @name PlatformInfo#fundsFacets
-     * @type {Array<Facet>}
+     * @type {Array<FundFacet>}
      */
     /**
      *
@@ -102,10 +103,10 @@ export default class PlatformInfo {
                 obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
             }
             if (data.hasOwnProperty('programsFacets')) {
-                obj['programsFacets'] = ApiClient.convertToType(data['programsFacets'], [Facet]);
+                obj['programsFacets'] = ApiClient.convertToType(data['programsFacets'], [ProgramFacet]);
             }
             if (data.hasOwnProperty('fundsFacets')) {
-                obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [Facet]);
+                obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [FundFacet]);
             }
             if (data.hasOwnProperty('programsInfo')) {
                 obj['programsInfo'] = ProgramsInfo.constructFromObject(data['programsInfo']);

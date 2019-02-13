@@ -18,9 +18,9 @@ import FundAssetsListInfo from '../model/FundAssetsListInfo';
 import FundBalanceChart from '../model/FundBalanceChart';
 import FundDetailsFull from '../model/FundDetailsFull';
 import FundProfitChart from '../model/FundProfitChart';
+import FundSets from '../model/FundSets';
 import FundsList from '../model/FundsList';
 import PlatformAssets from '../model/PlatformAssets';
-import ProgramSets from '../model/ProgramSets';
 
 /**
 * Funds service.
@@ -468,7 +468,7 @@ export default class FundsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramSets;
+      let returnType = FundSets;
 
       return this.apiClient.callApi(
         '/v1.0/funds/sets', 'GET',
@@ -481,7 +481,7 @@ export default class FundsApi {
      * Fund sets
      * @function FundsApi#v10FundsSetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
+     * @return {Promise<FundSets>} a Promise, with an object containing data of type FundSets and HTTP response
      */
       v10FundsSetsGet(authorization) {
       return this.v10FundsSetsGetWithHttpInfo(authorization)

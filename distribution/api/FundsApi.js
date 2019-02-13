@@ -41,6 +41,10 @@ var _FundProfitChart = require('../model/FundProfitChart');
 
 var _FundProfitChart2 = _interopRequireDefault(_FundProfitChart);
 
+var _FundSets = require('../model/FundSets');
+
+var _FundSets2 = _interopRequireDefault(_FundSets);
+
 var _FundsList = require('../model/FundsList');
 
 var _FundsList2 = _interopRequireDefault(_FundsList);
@@ -48,10 +52,6 @@ var _FundsList2 = _interopRequireDefault(_FundsList);
 var _PlatformAssets = require('../model/PlatformAssets');
 
 var _PlatformAssets2 = _interopRequireDefault(_PlatformAssets);
-
-var _ProgramSets = require('../model/ProgramSets');
-
-var _ProgramSets2 = _interopRequireDefault(_ProgramSets);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -468,7 +468,7 @@ var FundsApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramSets2.default;
+      var returnType = _FundSets2.default;
 
       return this.apiClient.callApi('/v1.0/funds/sets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -477,7 +477,7 @@ var FundsApi = function () {
      * Fund sets
      * @function FundsApi#v10FundsSetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
+     * @return {Promise<FundSets>} a Promise, with an object containing data of type FundSets and HTTP response
      */
 
   }, {

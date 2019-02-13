@@ -396,7 +396,7 @@ No authorization required
 
 <a name="v10FundsSetsGet"></a>
 # **v10FundsSetsGet**
-> ProgramSets v10FundsSetsGet(authorization)
+> FundSets v10FundsSetsGet(authorization)
 
 Fund sets
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProgramSets**](ProgramSets.md)
+[**FundSets**](FundSets.md)
 
 ### Authorization
 

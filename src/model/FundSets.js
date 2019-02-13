@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ProgramFacet from './ProgramFacet';
+import FundFacet from './FundFacet';
 
 
 
@@ -21,17 +21,17 @@ import ProgramFacet from './ProgramFacet';
 
     /**
      *
-     * @interface ProgramSets
+     * @interface FundSets
      */
     
     /**
      *
-     * @name ProgramSets#sets
-     * @type {Array<ProgramFacet>}
+     * @name FundSets#sets
+     * @type {Array<FundFacet>}
      */
     /**
      *
-     * @name ProgramSets#favoritesCount
+     * @name FundSets#favoritesCount
      * @type {Number}
      */
 
@@ -39,7 +39,7 @@ import ProgramFacet from './ProgramFacet';
 
 
 
-export default class ProgramSets {
+export default class FundSets {
 
     constructor() {
         
@@ -54,14 +54,14 @@ export default class ProgramSets {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProgramSets();
+            obj = obj || new FundSets();
 
             
             
             
 
             if (data.hasOwnProperty('sets')) {
-                obj['sets'] = ApiClient.convertToType(data['sets'], [ProgramFacet]);
+                obj['sets'] = ApiClient.convertToType(data['sets'], [FundFacet]);
             }
             if (data.hasOwnProperty('favoritesCount')) {
                 obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'Number');

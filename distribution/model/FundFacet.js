@@ -21,134 +21,158 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AndroidAppVersion = require('./AndroidAppVersion');
-
-var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
-
-var _FundFacet = require('./FundFacet');
-
-var _FundFacet2 = _interopRequireDefault(_FundFacet);
-
-var _IOsAppVersion = require('./IOsAppVersion');
-
-var _IOsAppVersion2 = _interopRequireDefault(_IOsAppVersion);
-
-var _PlatformCurrency = require('./PlatformCurrency');
-
-var _PlatformCurrency2 = _interopRequireDefault(_PlatformCurrency);
-
-var _ProgramFacet = require('./ProgramFacet');
-
-var _ProgramFacet2 = _interopRequireDefault(_ProgramFacet);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
-
-var _ProgramsInfo = require('./ProgramsInfo');
-
-var _ProgramsInfo2 = _interopRequireDefault(_ProgramsInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface PlatformInfo
+ * @interface FundFacet
  */
 
 /**
  *
- * @name PlatformInfo#iOSVersion
- * @type {IOsAppVersion}
+ * @name FundFacet#sorting
+ * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
  */
 /**
  *
- * @name PlatformInfo#androidVersion
- * @type {AndroidAppVersion}
+ * @name FundFacet#id
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#programsFacets
- * @type {[ProgramFacet]}
+ * @name FundFacet#title
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#fundsFacets
- * @type {[FundFacet]}
+ * @name FundFacet#description
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#programsInfo
- * @type {ProgramsInfo}
+ * @name FundFacet#logo
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#currencies
- * @type {[String]}
+ * @name FundFacet#url
+ * @type {String}
  */
 /**
  *
- * @name PlatformInfo#platformCurrencies
- * @type {[PlatformCurrency]}
+ * @name FundFacet#sortType
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
  */
 /**
  *
- * @name PlatformInfo#programTags
- * @type {[ProgramTag]}
+ * @name FundFacet#timeframe
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
  */
 
-var PlatformInfo = function () {
-    function PlatformInfo() {
-        _classCallCheck(this, PlatformInfo);
+var FundFacet = function () {
+    function FundFacet() {
+        _classCallCheck(this, FundFacet);
 
-        this.iOSVersion = undefined;
-        this.androidVersion = undefined;
-        this.programsFacets = undefined;
-        this.fundsFacets = undefined;
-        this.programsInfo = undefined;
-        this.currencies = undefined;
-        this.platformCurrencies = undefined;
-        this.programTags = undefined;
+        this.sorting = undefined;
+        this.id = undefined;
+        this.title = undefined;
+        this.description = undefined;
+        this.logo = undefined;
+        this.url = undefined;
+        this.sortType = undefined;
+        this.timeframe = undefined;
     }
 
-    _createClass(PlatformInfo, null, [{
+    _createClass(FundFacet, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PlatformInfo();
+                obj = obj || new FundFacet();
 
-                if (data.hasOwnProperty('iOSVersion')) {
-                    obj['iOSVersion'] = _IOsAppVersion2.default.constructFromObject(data['iOSVersion']);
+                if (data.hasOwnProperty('sorting')) {
+                    obj['sorting'] = _ApiClient2.default.convertToType(data['sorting'], 'String');
                 }
-                if (data.hasOwnProperty('androidVersion')) {
-                    obj['androidVersion'] = _AndroidAppVersion2.default.constructFromObject(data['androidVersion']);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('programsFacets')) {
-                    obj['programsFacets'] = _ApiClient2.default.convertToType(data['programsFacets'], [_ProgramFacet2.default]);
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('fundsFacets')) {
-                    obj['fundsFacets'] = _ApiClient2.default.convertToType(data['fundsFacets'], [_FundFacet2.default]);
+                if (data.hasOwnProperty('description')) {
+                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
                 }
-                if (data.hasOwnProperty('programsInfo')) {
-                    obj['programsInfo'] = _ProgramsInfo2.default.constructFromObject(data['programsInfo']);
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('currencies')) {
-                    obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
-                if (data.hasOwnProperty('platformCurrencies')) {
-                    obj['platformCurrencies'] = _ApiClient2.default.convertToType(data['platformCurrencies'], [_PlatformCurrency2.default]);
+                if (data.hasOwnProperty('sortType')) {
+                    obj['sortType'] = _ApiClient2.default.convertToType(data['sortType'], 'String');
                 }
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('timeframe')) {
+                    obj['timeframe'] = _ApiClient2.default.convertToType(data['timeframe'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return PlatformInfo;
+    return FundFacet;
 }();
 
-exports.default = PlatformInfo;
+FundFacet.SortingEnum = {
+
+    "ByProfitAsc": "ByProfitAsc",
+
+    "ByProfitDesc": "ByProfitDesc",
+
+    "ByDrawdownAsc": "ByDrawdownAsc",
+
+    "ByDrawdownDesc": "ByDrawdownDesc",
+
+    "ByInvestorsAsc": "ByInvestorsAsc",
+
+    "ByInvestorsDesc": "ByInvestorsDesc",
+
+    "ByNewAsc": "ByNewAsc",
+
+    "ByNewDesc": "ByNewDesc",
+
+    "ByTitleAsc": "ByTitleAsc",
+
+    "ByTitleDesc": "ByTitleDesc",
+
+    "ByBalanceAsc": "ByBalanceAsc",
+
+    "ByBalanceDesc": "ByBalanceDesc"
+};
+FundFacet.SortTypeEnum = {
+
+    "New": "New",
+
+    "Top": "Top",
+
+    "WeeklyTop": "WeeklyTop",
+
+    "Popular": "Popular",
+
+    "ToLevelUp": "ToLevelUp"
+};
+FundFacet.TimeframeEnum = {
+
+    "Day": "Day",
+
+    "Week": "Week",
+
+    "Month": "Month",
+
+    "ThreeMonths": "ThreeMonths",
+
+    "Year": "Year",
+
+    "AllTime": "AllTime"
+};
+exports.default = FundFacet;
