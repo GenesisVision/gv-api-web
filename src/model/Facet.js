@@ -53,6 +53,11 @@ import ApiClient from '../ApiClient';
      * @name Facet#sortType
      * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
      */
+    /**
+     *
+     * @name Facet#timeframe
+     * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+     */
 
 
 
@@ -97,6 +102,9 @@ export default class Facet {
             if (data.hasOwnProperty('sortType')) {
                 obj['sortType'] = ApiClient.convertToType(data['sortType'], 'String');
             }
+            if (data.hasOwnProperty('timeframe')) {
+                obj['timeframe'] = ApiClient.convertToType(data['timeframe'], 'String');
+            }
         }
         return obj;
     }
@@ -107,6 +115,7 @@ export default class Facet {
     logo = undefined;
     url = undefined;
     sortType = undefined;
+    timeframe = undefined;
 
 
 
@@ -124,6 +133,21 @@ export default class Facet {
         "Popular": "Popular",
     
         "ToLevelUp": "ToLevelUp"    
+    };
+
+    static TimeframeEnum = {
+    
+        "Day": "Day",
+    
+        "Week": "Week",
+    
+        "Month": "Month",
+    
+        "ThreeMonths": "ThreeMonths",
+    
+        "Year": "Year",
+    
+        "AllTime": "AllTime"    
     };
 
 

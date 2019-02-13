@@ -789,6 +789,7 @@ export declare interface Facet {
     logo: string;
     url: string;
     sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
+    timeframe: "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
 }
 
 export declare interface FcmTokenViewModel {

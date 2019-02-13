@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **sortType** | **String** |  | [optional] 
+**timeframe** | **String** |  | [optional] 
 
 
 <a name="SortTypeEnum"></a>
@@ -24,6 +25,25 @@ Name | Type | Description | Notes
 * `Popular` (value: `"Popular"`)
 
 * `ToLevelUp` (value: `"ToLevelUp"`)
+
+
+
+
+<a name="TimeframeEnum"></a>
+## Enum: TimeframeEnum
+
+
+* `Day` (value: `"Day"`)
+
+* `Week` (value: `"Week"`)
+
+* `Month` (value: `"Month"`)
+
+* `ThreeMonths` (value: `"ThreeMonths"`)
+
+* `Year` (value: `"Year"`)
+
+* `AllTime` (value: `"AllTime"`)
 
 
 

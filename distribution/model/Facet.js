@@ -60,6 +60,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name Facet#sortType
  * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
  */
+/**
+ *
+ * @name Facet#timeframe
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ */
 
 var Facet = function () {
     function Facet() {
@@ -71,6 +76,7 @@ var Facet = function () {
         this.logo = undefined;
         this.url = undefined;
         this.sortType = undefined;
+        this.timeframe = undefined;
     }
 
     _createClass(Facet, null, [{
@@ -97,6 +103,9 @@ var Facet = function () {
                 if (data.hasOwnProperty('sortType')) {
                     obj['sortType'] = _ApiClient2.default.convertToType(data['sortType'], 'String');
                 }
+                if (data.hasOwnProperty('timeframe')) {
+                    obj['timeframe'] = _ApiClient2.default.convertToType(data['timeframe'], 'String');
+                }
             }
             return obj;
         }
@@ -116,5 +125,19 @@ Facet.SortTypeEnum = {
     "Popular": "Popular",
 
     "ToLevelUp": "ToLevelUp"
+};
+Facet.TimeframeEnum = {
+
+    "Day": "Day",
+
+    "Week": "Week",
+
+    "Month": "Month",
+
+    "ThreeMonths": "ThreeMonths",
+
+    "Year": "Year",
+
+    "AllTime": "AllTime"
 };
 exports.default = Facet;
