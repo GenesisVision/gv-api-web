@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name BrokersInfo#brokers
- * @type {[Broker]}
+ * @type {Array<Broker>}
  */
 
 var BrokersInfo = function () {

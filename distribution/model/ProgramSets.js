@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramSets#sets
- * @type {[ProgramFacet]}
+ * @type {Array<ProgramFacet>}
  */
 /**
  *
