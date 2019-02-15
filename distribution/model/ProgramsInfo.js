@@ -37,6 +37,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramsInfo#managerProgramInvestmentUSD
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentUSDT
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentBTC
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentETH
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramsInfo#managerMaxEntryFee
  * @type {Number}
  */
@@ -66,6 +86,10 @@ var ProgramsInfo = function () {
         _classCallCheck(this, ProgramsInfo);
 
         this.managerProgramInvestment = undefined;
+        this.managerProgramInvestmentUSD = undefined;
+        this.managerProgramInvestmentUSDT = undefined;
+        this.managerProgramInvestmentBTC = undefined;
+        this.managerProgramInvestmentETH = undefined;
         this.managerMaxEntryFee = undefined;
         this.managerMaxSuccessFee = undefined;
         this.managerFundInvestment = undefined;
@@ -81,6 +105,18 @@ var ProgramsInfo = function () {
 
                 if (data.hasOwnProperty('managerProgramInvestment')) {
                     obj['managerProgramInvestment'] = _ApiClient2.default.convertToType(data['managerProgramInvestment'], 'Number');
+                }
+                if (data.hasOwnProperty('managerProgramInvestmentUSD')) {
+                    obj['managerProgramInvestmentUSD'] = _ApiClient2.default.convertToType(data['managerProgramInvestmentUSD'], 'Number');
+                }
+                if (data.hasOwnProperty('managerProgramInvestmentUSDT')) {
+                    obj['managerProgramInvestmentUSDT'] = _ApiClient2.default.convertToType(data['managerProgramInvestmentUSDT'], 'Number');
+                }
+                if (data.hasOwnProperty('managerProgramInvestmentBTC')) {
+                    obj['managerProgramInvestmentBTC'] = _ApiClient2.default.convertToType(data['managerProgramInvestmentBTC'], 'Number');
+                }
+                if (data.hasOwnProperty('managerProgramInvestmentETH')) {
+                    obj['managerProgramInvestmentETH'] = _ApiClient2.default.convertToType(data['managerProgramInvestmentETH'], 'Number');
                 }
                 if (data.hasOwnProperty('managerMaxEntryFee')) {
                     obj['managerMaxEntryFee'] = _ApiClient2.default.convertToType(data['managerMaxEntryFee'], 'Number');

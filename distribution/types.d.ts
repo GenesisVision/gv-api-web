@@ -1192,6 +1192,8 @@ export declare interface NewFundRequest {
     description: string;
     logo: string;
     entryFee: number;
+    depositAmount: number;
+    depositCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 }
 
 export declare interface NewProgramRequest {
@@ -1207,6 +1209,8 @@ export declare interface NewProgramRequest {
     description: string;
     logo: string;
     entryFee: number;
+    depositAmount: number;
+    depositCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 }
 
 export declare interface NotificationList {
@@ -1636,6 +1640,10 @@ export declare interface ProgramWithdrawInfo {
 
 export declare interface ProgramsInfo {
     managerProgramInvestment: number;
+    managerProgramInvestmentUSD: number;
+    managerProgramInvestmentUSDT: number;
+    managerProgramInvestmentBTC: number;
+    managerProgramInvestmentETH: number;
     managerMaxEntryFee: number;
     managerMaxSuccessFee: number;
     managerFundInvestment: number;

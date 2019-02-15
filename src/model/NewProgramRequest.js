@@ -83,6 +83,16 @@ import ApiClient from '../ApiClient';
      * @name NewProgramRequest#entryFee
      * @type {Number}
      */
+    /**
+     *
+     * @name NewProgramRequest#depositAmount
+     * @type {Number}
+     */
+    /**
+     *
+     * @name NewProgramRequest#depositCurrency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     */
 
 
 
@@ -145,6 +155,12 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('depositAmount')) {
+                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
+            }
+            if (data.hasOwnProperty('depositCurrency')) {
+                obj['depositCurrency'] = ApiClient.convertToType(data['depositCurrency'], 'String');
+            }
         }
         return obj;
     }
@@ -161,6 +177,8 @@ export default class NewProgramRequest {
     description = undefined;
     logo = undefined;
     entryFee = undefined;
+    depositAmount = undefined;
+    depositCurrency = undefined;
 
 
 
@@ -168,6 +186,35 @@ export default class NewProgramRequest {
 
 
     static CurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
+    static DepositCurrencyEnum = {
     
         "Undefined": "Undefined",
     

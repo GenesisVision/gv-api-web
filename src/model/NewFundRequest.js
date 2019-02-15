@@ -59,6 +59,16 @@ import FundAssetPart from './FundAssetPart';
      * @name NewFundRequest#entryFee
      * @type {Number}
      */
+    /**
+     *
+     * @name NewFundRequest#depositAmount
+     * @type {Number}
+     */
+    /**
+     *
+     * @name NewFundRequest#depositCurrency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     */
 
 
 
@@ -106,6 +116,12 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('depositAmount')) {
+                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
+            }
+            if (data.hasOwnProperty('depositCurrency')) {
+                obj['depositCurrency'] = ApiClient.convertToType(data['depositCurrency'], 'String');
+            }
         }
         return obj;
     }
@@ -117,11 +133,42 @@ export default class NewFundRequest {
     description = undefined;
     logo = undefined;
     entryFee = undefined;
+    depositAmount = undefined;
+    depositCurrency = undefined;
 
 
 
 
 
+
+    static DepositCurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
 
 
 

@@ -30,6 +30,26 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProgramsInfo#managerProgramInvestmentUSD
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramsInfo#managerProgramInvestmentUSDT
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramsInfo#managerProgramInvestmentBTC
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramsInfo#managerProgramInvestmentETH
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramsInfo#managerMaxEntryFee
      * @type {Number}
      */
@@ -82,6 +102,18 @@ export default class ProgramsInfo {
             if (data.hasOwnProperty('managerProgramInvestment')) {
                 obj['managerProgramInvestment'] = ApiClient.convertToType(data['managerProgramInvestment'], 'Number');
             }
+            if (data.hasOwnProperty('managerProgramInvestmentUSD')) {
+                obj['managerProgramInvestmentUSD'] = ApiClient.convertToType(data['managerProgramInvestmentUSD'], 'Number');
+            }
+            if (data.hasOwnProperty('managerProgramInvestmentUSDT')) {
+                obj['managerProgramInvestmentUSDT'] = ApiClient.convertToType(data['managerProgramInvestmentUSDT'], 'Number');
+            }
+            if (data.hasOwnProperty('managerProgramInvestmentBTC')) {
+                obj['managerProgramInvestmentBTC'] = ApiClient.convertToType(data['managerProgramInvestmentBTC'], 'Number');
+            }
+            if (data.hasOwnProperty('managerProgramInvestmentETH')) {
+                obj['managerProgramInvestmentETH'] = ApiClient.convertToType(data['managerProgramInvestmentETH'], 'Number');
+            }
             if (data.hasOwnProperty('managerMaxEntryFee')) {
                 obj['managerMaxEntryFee'] = ApiClient.convertToType(data['managerMaxEntryFee'], 'Number');
             }
@@ -102,6 +134,10 @@ export default class ProgramsInfo {
     }
 
     managerProgramInvestment = undefined;
+    managerProgramInvestmentUSD = undefined;
+    managerProgramInvestmentUSDT = undefined;
+    managerProgramInvestmentBTC = undefined;
+    managerProgramInvestmentETH = undefined;
     managerMaxEntryFee = undefined;
     managerMaxSuccessFee = undefined;
     managerFundInvestment = undefined;
