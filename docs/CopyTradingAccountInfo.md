@@ -1,20 +1,12 @@
-# CoreApiV10.NewProgramRequest
+# CoreApiV10.CopyTradingAccountInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **String** |  | [optional] 
-**periodLength** | **Number** |  | [optional] 
-**successFee** | **Number** |  | [optional] 
-**stopOutLevel** | **Number** |  | [optional] 
-**leverage** | **Number** |  | [optional] 
-**brokerAccountTypeId** | **String** |  | [optional] 
-**signalSuccessFee** | **Number** |  | [optional] 
-**signalSubscriptionFee** | **Number** |  | [optional] 
-**title** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**logo** | **String** |  | [optional] 
-**entryFee** | **Number** |  | [optional] 
+**balance** | **Number** |  | [optional] 
+**equity** | **Number** |  | [optional] 
+**freeMargin** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

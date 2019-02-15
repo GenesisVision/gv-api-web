@@ -21,245 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ChartSimple = require('./ChartSimple');
-
-var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
-
-var _DashboardProgramDetails = require('./DashboardProgramDetails');
-
-var _DashboardProgramDetails2 = _interopRequireDefault(_DashboardProgramDetails);
-
-var _PersonalProgramDetailsFull = require('./PersonalProgramDetailsFull');
-
-var _PersonalProgramDetailsFull2 = _interopRequireDefault(_PersonalProgramDetailsFull);
-
-var _ProfilePublic = require('./ProfilePublic');
-
-var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
-
-var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
-
-var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
-
-var _ProgramDetailsRating = require('./ProgramDetailsRating');
-
-var _ProgramDetailsRating2 = _interopRequireDefault(_ProgramDetailsRating);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface ProgramDetails
+ * @interface CopyTradingAccountInfo
  */
 
 /**
  *
- * @name ProgramDetails#currency
+ * @name CopyTradingAccountInfo#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
- * @name ProgramDetails#level
+ * @name CopyTradingAccountInfo#balance
  * @type {Number}
  */
 /**
  *
- * @name ProgramDetails#periodDuration
+ * @name CopyTradingAccountInfo#equity
  * @type {Number}
  */
 /**
  *
- * @name ProgramDetails#periodStarts
- * @type {Date}
- */
-/**
- *
- * @name ProgramDetails#periodEnds
- * @type {Date}
- */
-/**
- *
- * @name ProgramDetails#availableInvestment
+ * @name CopyTradingAccountInfo#freeMargin
  * @type {Number}
- */
-/**
- *
- * @name ProgramDetails#statistic
- * @type {ProgramDetailsListStatistic}
- */
-/**
- *
- * @name ProgramDetails#rating
- * @type {ProgramDetailsRating}
- */
-/**
- *
- * @name ProgramDetails#personalDetails
- * @type {PersonalProgramDetailsFull}
- */
-/**
- *
- * @name ProgramDetails#tags
- * @type {[ProgramTag]}
- */
-/**
- *
- * @name ProgramDetails#id
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#logo
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#url
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#color
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#title
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#description
- * @type {String}
- */
-/**
- *
- * @name ProgramDetails#status
- * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
- */
-/**
- *
- * @name ProgramDetails#manager
- * @type {ProfilePublic}
- */
-/**
- *
- * @name ProgramDetails#chart
- * @type {[ChartSimple]}
- */
-/**
- *
- * @name ProgramDetails#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
  */
 
-var ProgramDetails = function () {
-    function ProgramDetails() {
-        _classCallCheck(this, ProgramDetails);
+var CopyTradingAccountInfo = function () {
+    function CopyTradingAccountInfo() {
+        _classCallCheck(this, CopyTradingAccountInfo);
 
         this.currency = undefined;
-        this.level = undefined;
-        this.periodDuration = undefined;
-        this.periodStarts = undefined;
-        this.periodEnds = undefined;
-        this.availableInvestment = undefined;
-        this.statistic = undefined;
-        this.rating = undefined;
-        this.personalDetails = undefined;
-        this.tags = undefined;
-        this.id = undefined;
-        this.logo = undefined;
-        this.url = undefined;
-        this.color = undefined;
-        this.title = undefined;
-        this.description = undefined;
-        this.status = undefined;
-        this.manager = undefined;
-        this.chart = undefined;
-        this.dashboardAssetsDetails = undefined;
+        this.balance = undefined;
+        this.equity = undefined;
+        this.freeMargin = undefined;
     }
 
-    _createClass(ProgramDetails, null, [{
+    _createClass(CopyTradingAccountInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramDetails();
+                obj = obj || new CopyTradingAccountInfo();
 
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
-                if (data.hasOwnProperty('level')) {
-                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                if (data.hasOwnProperty('balance')) {
+                    obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
                 }
-                if (data.hasOwnProperty('periodDuration')) {
-                    obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
+                if (data.hasOwnProperty('equity')) {
+                    obj['equity'] = _ApiClient2.default.convertToType(data['equity'], 'Number');
                 }
-                if (data.hasOwnProperty('periodStarts')) {
-                    obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');
-                }
-                if (data.hasOwnProperty('periodEnds')) {
-                    obj['periodEnds'] = _ApiClient2.default.convertToType(data['periodEnds'], 'Date');
-                }
-                if (data.hasOwnProperty('availableInvestment')) {
-                    obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
-                }
-                if (data.hasOwnProperty('statistic')) {
-                    obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
-                }
-                if (data.hasOwnProperty('rating')) {
-                    obj['rating'] = _ProgramDetailsRating2.default.constructFromObject(data['rating']);
-                }
-                if (data.hasOwnProperty('personalDetails')) {
-                    obj['personalDetails'] = _PersonalProgramDetailsFull2.default.constructFromObject(data['personalDetails']);
-                }
-                if (data.hasOwnProperty('tags')) {
-                    obj['tags'] = _ApiClient2.default.convertToType(data['tags'], [_ProgramTag2.default]);
-                }
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
-                }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
-                }
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
-                }
-                if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
+                if (data.hasOwnProperty('freeMargin')) {
+                    obj['freeMargin'] = _ApiClient2.default.convertToType(data['freeMargin'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return ProgramDetails;
+    return CopyTradingAccountInfo;
 }();
 
-ProgramDetails.CurrencyEnum = {
+CopyTradingAccountInfo.CurrencyEnum = {
 
     "Undefined": "Undefined",
 
@@ -287,20 +115,4 @@ ProgramDetails.CurrencyEnum = {
 
     "EUR": "EUR"
 };
-ProgramDetails.StatusEnum = {
-
-    "None": "None",
-
-    "Pending": "Pending",
-
-    "ErrorCreating": "ErrorCreating",
-
-    "Active": "Active",
-
-    "Closed": "Closed",
-
-    "Archived": "Archived",
-
-    "ClosedDueToInactivity": "ClosedDueToInactivity"
-};
-exports.default = ProgramDetails;
+exports.default = CopyTradingAccountInfo;

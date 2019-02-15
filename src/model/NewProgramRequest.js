@@ -55,6 +55,16 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name NewProgramRequest#signalSuccessFee
+     * @type {Number}
+     */
+    /**
+     *
+     * @name NewProgramRequest#signalSubscriptionFee
+     * @type {Number}
+     */
+    /**
+     *
      * @name NewProgramRequest#title
      * @type {String}
      */
@@ -117,6 +127,12 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('brokerAccountTypeId')) {
                 obj['brokerAccountTypeId'] = ApiClient.convertToType(data['brokerAccountTypeId'], 'String');
             }
+            if (data.hasOwnProperty('signalSuccessFee')) {
+                obj['signalSuccessFee'] = ApiClient.convertToType(data['signalSuccessFee'], 'Number');
+            }
+            if (data.hasOwnProperty('signalSubscriptionFee')) {
+                obj['signalSubscriptionFee'] = ApiClient.convertToType(data['signalSubscriptionFee'], 'Number');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -139,6 +155,8 @@ export default class NewProgramRequest {
     stopOutLevel = undefined;
     leverage = undefined;
     brokerAccountTypeId = undefined;
+    signalSuccessFee = undefined;
+    signalSubscriptionFee = undefined;
     title = undefined;
     description = undefined;
     logo = undefined;

@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramsList#programs
- * @type {Array<ProgramDetails>}
+ * @type {[ProgramDetails]}
  */
 /**
  *

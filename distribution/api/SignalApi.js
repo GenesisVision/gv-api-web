@@ -21,177 +21,245 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _CopyTradingAccountInfo = require('../model/CopyTradingAccountInfo');
+
+var _CopyTradingAccountInfo2 = _interopRequireDefault(_CopyTradingAccountInfo);
+
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _RatesModel = require('../model/RatesModel');
-
-var _RatesModel2 = _interopRequireDefault(_RatesModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @class RateApi
+* Signal service.
+* @class SignalApi
 * @version v1.0
 */
-var RateApi = function () {
+var SignalApi = function () {
 
   /**
-  * Constructs a new RateApi. 
-  * @function RateApi#constructor
+  * Constructs a new SignalApi. 
+  * @function SignalApi#constructor
   * @param {ApiClient} apiClient Optional API client implementation to use,
-  * @return {RateApi}
+  * @return {SignalApi}
   */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+  function SignalApi(apiClient) {
+    _classCallCheck(this, SignalApi);
 
     this.apiClient = apiClient || _ApiClient2.default.instance;
   }
 
-  _createClass(RateApi, [{
-    key: 'v10RateByExchangeByFromByToGetWithHttpInfo',
-    value: function v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to) {
+  _createClass(SignalApi, [{
+    key: 'v10SignalAccountsPostWithHttpInfo',
+    value: function v10SignalAccountsPostWithHttpInfo(authorization) {
       var postBody = null;
 
-      // verify the required parameter 'exchange' is set
-      if (exchange === undefined || exchange === null) {
-        throw new Error("Missing the required parameter 'exchange' when calling v10RateByExchangeByFromByToGet");
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAccountsPost");
       }
 
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByExchangeByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByExchangeByFromByToGet");
-      }
-
-      var pathParams = {
-        'exchange': exchange,
-        'from': from,
-        'to': to
-      };
+      var pathParams = {};
       var queryParams = {};
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
+      var returnType = null;
 
-      return this.apiClient.callApi('/v1.0/rate/{exchange}/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/signal/accounts', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Get rate
-     * @function RateApi#v10RateByExchangeByFromByToGet
-     * @param {String} exchange 
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * Get copytrading accounts
+     * @function SignalApi#v10SignalAccountsPost
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
-    key: 'v10RateByExchangeByFromByToGet',
-    value: function v10RateByExchangeByFromByToGet(exchange, from, to) {
-      return this.v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to).then(function (response_and_data) {
+    key: 'v10SignalAccountsPost',
+    value: function v10SignalAccountsPost(authorization) {
+      return this.v10SignalAccountsPostWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
   }, {
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get rate
-     * @function RateApi#v10RateByFromByToGet
-     * @param {String} from 
-     * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
-     */
-
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }, {
-    key: 'v10RateGetWithHttpInfo',
-    value: function v10RateGetWithHttpInfo(opts) {
+    key: 'v10SignalAttachByIdPostWithHttpInfo',
+    value: function v10SignalAttachByIdPostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
       var postBody = null;
 
-      var pathParams = {};
-      var queryParams = {
-        'from': this.apiClient.buildCollectionParam(opts['from'], 'multi'),
-        'to': this.apiClient.buildCollectionParam(opts['to'], 'multi')
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10SignalAttachByIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAttachByIdPost");
+      }
+
+      var pathParams = {
+        'id': id
       };
-      var headerParams = {};
+      var queryParams = {
+        'Mode': opts['mode'],
+        'Percent': opts['percent'],
+        'OpenTolerancePercent': opts['openTolerancePercent'],
+        'FixedVolume': opts['fixedVolume'],
+        'FixedCurrency': opts['fixedCurrency'],
+        'InitialDepositCurrency': opts['initialDepositCurrency'],
+        'InitialDepositAmount': opts['initialDepositAmount']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RatesModel2.default;
+      var returnType = null;
 
-      return this.apiClient.callApi('/v1.0/rate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/signal/attach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Get rates
-     * @function RateApi#v10RateGet
+     * @function SignalApi#v10SignalAttachByIdPost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {[String]} [opts.from] 
-     * @param {[String]} [opts.to] 
-     * @return {Promise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
+     * @param {String} [opts.mode] 
+     * @param {Number} [opts.percent] 
+     * @param {Number} [opts.openTolerancePercent] 
+     * @param {Number} [opts.fixedVolume] 
+     * @param {String} [opts.fixedCurrency] 
+     * @param {String} [opts.initialDepositCurrency] 
+     * @param {Number} [opts.initialDepositAmount] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
-    key: 'v10RateGet',
-    value: function v10RateGet(opts) {
-      return this.v10RateGetWithHttpInfo(opts).then(function (response_and_data) {
+    key: 'v10SignalAttachByIdPost',
+    value: function v10SignalAttachByIdPost(id, authorization, opts) {
+      return this.v10SignalAttachByIdPostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10SignalDetachByIdPostWithHttpInfo',
+    value: function v10SignalDetachByIdPostWithHttpInfo(id, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10SignalDetachByIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalDetachByIdPost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/signal/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @function SignalApi#v10SignalDetachByIdPost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10SignalDetachByIdPost',
+    value: function v10SignalDetachByIdPost(id, authorization) {
+      return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10SignalUpdatePostWithHttpInfo',
+    value: function v10SignalUpdatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalUpdatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'id': opts['id'],
+        'Mode': opts['mode'],
+        'Percent': opts['percent'],
+        'OpenTolerancePercent': opts['openTolerancePercent'],
+        'FixedVolume': opts['fixedVolume'],
+        'FixedCurrency': opts['fixedCurrency'],
+        'InitialDepositCurrency': opts['initialDepositCurrency'],
+        'InitialDepositAmount': opts['initialDepositAmount']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/signal/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * @function SignalApi#v10SignalUpdatePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.id] 
+     * @param {String} [opts.mode] 
+     * @param {Number} [opts.percent] 
+     * @param {Number} [opts.openTolerancePercent] 
+     * @param {Number} [opts.fixedVolume] 
+     * @param {String} [opts.fixedCurrency] 
+     * @param {String} [opts.initialDepositCurrency] 
+     * @param {Number} [opts.initialDepositAmount] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10SignalUpdatePost',
+    value: function v10SignalUpdatePost(authorization, opts) {
+      return this.v10SignalUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
   }]);
 
-  return RateApi;
+  return SignalApi;
 }();
 
-exports.default = RateApi;
+exports.default = SignalApi;

@@ -423,6 +423,7 @@ export default class ProgramsApi {
         'CurrencySecondary': opts['currencySecondary'],
         'LevelUpFrom': opts['levelUpFrom'],
         'Tags': this.apiClient.buildCollectionParam(opts['tags'], 'multi'),
+        'ProgramsType': opts['programsType'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -468,6 +469,7 @@ export default class ProgramsApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.levelUpFrom] 
      * @param {Array<String>} [opts.tags] 
+     * @param {String} [opts.programsType] 
      * @param {Date} [opts.statisticDateFrom] 
      * @param {Date} [opts.statisticDateTo] 
      * @param {Number} [opts.chartPointsCount] 

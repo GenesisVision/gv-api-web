@@ -283,6 +283,11 @@ export declare class ManagerApi {
     v10ManagerProgramsInvestmentAmountGet(authorization: string): Promise<'Number'>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
     v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    v10ManagerSignalCreatePost(authorization: string, opts?: {
+        programId?: string;
+        subscriptionFee?: number;
+        successFee?: number;
+    }): Promise<any>;
 }
 
 export declare class NotificationsApi {
@@ -377,6 +382,7 @@ export declare class ProgramsApi {
         currencySecondary?: string;
         levelUpFrom?: number;
         tags?: string[];
+        programsType?: string;
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;
@@ -412,6 +418,31 @@ export declare class SearchApi {
         mask?: string;
         take?: number;
     }): Promise<SearchViewModel>;
+}
+
+export declare class SignalApi {
+    constructor(apiClient: ApiClient): SignalApi;
+    v10SignalAccountsPost(authorization: string): Promise<any>;
+    v10SignalAttachByIdPost(id: string, authorization: string, opts?: {
+        mode?: string;
+        percent?: number;
+        openTolerancePercent?: number;
+        fixedVolume?: number;
+        fixedCurrency?: string;
+        initialDepositCurrency?: string;
+        initialDepositAmount?: number;
+    }): Promise<any>;
+    v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
+    v10SignalUpdatePost(authorization: string, opts?: {
+        id?: string;
+        mode?: string;
+        percent?: number;
+        openTolerancePercent?: number;
+        fixedVolume?: number;
+        fixedCurrency?: string;
+        initialDepositCurrency?: string;
+        initialDepositAmount?: number;
+    }): Promise<any>;
 }
 
 export declare class WalletApi {
@@ -482,6 +513,7 @@ export declare interface index {
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
+    CopyTradingAccountInfo: CopyTradingAccountInfo;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
     DashboardChartValue: DashboardChartValue;
     DashboardPortfolioEvent: DashboardPortfolioEvent;
@@ -621,6 +653,7 @@ export declare interface index {
     ProgramsApi: ProgramsApi;
     RateApi: RateApi;
     SearchApi: SearchApi;
+    SignalApi: SignalApi;
     WalletApi: WalletApi;
 }
 
@@ -711,6 +744,13 @@ export declare interface ConvertingDetails {
     amountTo: number;
     rateValue: number;
     currencyToLogo: string;
+}
+
+export declare interface CopyTradingAccountInfo {
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    balance: number;
+    equity: number;
+    freeMargin: number;
 }
 
 export declare interface CreateWithdrawalRequestModel {
@@ -1161,6 +1201,8 @@ export declare interface NewProgramRequest {
     stopOutLevel: number;
     leverage: number;
     brokerAccountTypeId: string;
+    signalSuccessFee: number;
+    signalSubscriptionFee: number;
     title: string;
     description: string;
     logo: string;

@@ -324,7 +324,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {Array<FundAssetPart>} [opts.assets] 
+     * @param {[FundAssetPart]} [opts.assets] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 
@@ -1684,6 +1684,54 @@ var ManagerApi = function () {
     key: 'v10ManagerRequestsBySkipByTakeGet',
     value: function v10ManagerRequestsBySkipByTakeGet(skip, take, authorization) {
       return this.v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ManagerSignalCreatePostWithHttpInfo',
+    value: function v10ManagerSignalCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerSignalCreatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'ProgramId': opts['programId'],
+        'SubscriptionFee': opts['subscriptionFee'],
+        'SuccessFee': opts['successFee']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/signal/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Make manager&#39;s program signal provider
+     * @function ManagerApi#v10ManagerSignalCreatePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.successFee] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerSignalCreatePost',
+    value: function v10ManagerSignalCreatePost(authorization, opts) {
+      return this.v10ManagerSignalCreatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

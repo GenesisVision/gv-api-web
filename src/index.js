@@ -26,6 +26,7 @@ import BrokersInfo from './model/BrokersInfo';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
+import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
@@ -165,6 +166,7 @@ import ProfileApi from './api/ProfileApi';
 import ProgramsApi from './api/ProgramsApi';
 import RateApi from './api/RateApi';
 import SearchApi from './api/SearchApi';
+import SignalApi from './api/SignalApi';
 import WalletApi from './api/WalletApi';
 
 
@@ -258,6 +260,12 @@ export {
      * @type {ConvertingDetails}
      */
     ConvertingDetails,
+
+    /**
+     * @name index#CopyTradingAccountInfo
+     * @type {CopyTradingAccountInfo}
+     */
+    CopyTradingAccountInfo,
 
     /**
      * @name index#CreateWithdrawalRequestModel
@@ -1092,6 +1100,12 @@ export {
     * @type {SearchApi}
     */
     SearchApi,
+
+    /**
+    * @name index#SignalApi
+    * @type {SignalApi}
+    */
+    SignalApi,
 
     /**
     * @name index#WalletApi
