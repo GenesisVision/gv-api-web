@@ -54,6 +54,11 @@ import ProgramRequests from './ProgramRequests';
      */
     /**
      *
+     * @name DashboardSummary#signalsCount
+     * @type {Number}
+     */
+    /**
+     *
      * @name DashboardSummary#requests
      * @type {ProgramRequests}
      */
@@ -98,6 +103,9 @@ export default class DashboardSummary {
             if (data.hasOwnProperty('fundsCount')) {
                 obj['fundsCount'] = ApiClient.convertToType(data['fundsCount'], 'Number');
             }
+            if (data.hasOwnProperty('signalsCount')) {
+                obj['signalsCount'] = ApiClient.convertToType(data['signalsCount'], 'Number');
+            }
             if (data.hasOwnProperty('requests')) {
                 obj['requests'] = ProgramRequests.constructFromObject(data['requests']);
             }
@@ -110,6 +118,7 @@ export default class DashboardSummary {
     profileHeader = undefined;
     programsCount = undefined;
     fundsCount = undefined;
+    signalsCount = undefined;
     requests = undefined;
 
 

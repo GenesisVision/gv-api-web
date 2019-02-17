@@ -29,6 +29,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _OpenSignalTrade = require('../model/OpenSignalTrade');
+
+var _OpenSignalTrade2 = _interopRequireDefault(_OpenSignalTrade);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53,13 +57,13 @@ var SignalApi = function () {
   }
 
   _createClass(SignalApi, [{
-    key: 'v10SignalAccountsPostWithHttpInfo',
-    value: function v10SignalAccountsPostWithHttpInfo(authorization) {
+    key: 'v10SignalAccountsGetWithHttpInfo',
+    value: function v10SignalAccountsGetWithHttpInfo(authorization) {
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAccountsPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAccountsGet");
       }
 
       var pathParams = {};
@@ -74,20 +78,20 @@ var SignalApi = function () {
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = [_CopyTradingAccountInfo2.default];
 
-      return this.apiClient.callApi('/v1.0/signal/accounts', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/signal/accounts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
      * Get copytrading accounts
-     * @function SignalApi#v10SignalAccountsPost
+     * @function SignalApi#v10SignalAccountsGet
      * @param {String} authorization JWT access token
      * @return {Promise<[CopyTradingAccountInfo]>} a Promise, with an object containing data of type [CopyTradingAccountInfo] and HTTP response
      */
 
   }, {
-    key: 'v10SignalAccountsPost',
-    value: function v10SignalAccountsPost(authorization) {
-      return this.v10SignalAccountsPostWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'v10SignalAccountsGet',
+    value: function v10SignalAccountsGet(authorization) {
+      return this.v10SignalAccountsGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -133,8 +137,9 @@ var SignalApi = function () {
     }
 
     /**
+     * Subscribe to programs signals
      * @function SignalApi#v10SignalAttachByIdPost
-     * @param {String} id 
+     * @param {String} id Program Id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.mode] 
@@ -187,8 +192,9 @@ var SignalApi = function () {
     }
 
     /**
+     * Unsubscribe from program signals
      * @function SignalApi#v10SignalDetachByIdPost
-     * @param {String} id 
+     * @param {String} id Program id
      * @param {String} authorization JWT access token
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
@@ -197,6 +203,45 @@ var SignalApi = function () {
     key: 'v10SignalDetachByIdPost',
     value: function v10SignalDetachByIdPost(id, authorization) {
       return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10SignalOpensignaltradesGetWithHttpInfo',
+    value: function v10SignalOpensignaltradesGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalOpensignaltradesGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = [_OpenSignalTrade2.default];
+
+      return this.apiClient.callApi('/v1.0/signal/opensignaltrades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get investors signals open trades
+     * @function SignalApi#v10SignalOpensignaltradesGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<[OpenSignalTrade]>} a Promise, with an object containing data of type [OpenSignalTrade] and HTTP response
+     */
+
+  }, {
+    key: 'v10SignalOpensignaltradesGet',
+    value: function v10SignalOpensignaltradesGet(authorization) {
+      return this.v10SignalOpensignaltradesGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -236,10 +281,11 @@ var SignalApi = function () {
     }
 
     /**
+     * Update signal subscription settings
      * @function SignalApi#v10SignalUpdatePost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.id] 
+     * @param {String} [opts.id] Program id
      * @param {String} [opts.mode] 
      * @param {Number} [opts.percent] 
      * @param {Number} [opts.openTolerancePercent] 

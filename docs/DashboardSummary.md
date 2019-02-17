@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **profileHeader** | [**ProfileHeaderViewModel**](ProfileHeaderViewModel.md) |  | [optional] 
 **programsCount** | **Number** |  | [optional] 
 **fundsCount** | **Number** |  | [optional] 
+**signalsCount** | **Number** |  | [optional] 
 **requests** | [**ProgramRequests**](ProgramRequests.md) |  | [optional] 
 
 

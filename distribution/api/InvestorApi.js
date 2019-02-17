@@ -1184,6 +1184,62 @@ var InvestorApi = function () {
         return response_and_data.data;
       });
     }
+  }, {
+    key: 'v10InvestorSignalsGetWithHttpInfo',
+    value: function v10InvestorSignalsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorSignalsGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramsList2.default;
+
+      return this.apiClient.callApi('/v1.0/investor/signals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Dashboard program list
+     * @function InvestorApi#v10InvestorSignalsGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     */
+
+  }, {
+    key: 'v10InvestorSignalsGet',
+    value: function v10InvestorSignalsGet(authorization, opts) {
+      return this.v10InvestorSignalsGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
   }]);
 
   return InvestorApi;

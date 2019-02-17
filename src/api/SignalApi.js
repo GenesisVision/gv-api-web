@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import CopyTradingAccountInfo from '../model/CopyTradingAccountInfo';
 import ErrorViewModel from '../model/ErrorViewModel';
+import OpenSignalTrade from '../model/OpenSignalTrade';
 
 /**
 * Signal service.
@@ -34,12 +35,12 @@ export default class SignalApi {
     }
 
 
-      v10SignalAccountsPostWithHttpInfo(authorization) {
+      v10SignalAccountsGetWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAccountsPost");
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalAccountsGet");
       }
 
 
@@ -59,7 +60,7 @@ export default class SignalApi {
       let returnType = [CopyTradingAccountInfo];
 
       return this.apiClient.callApi(
-        '/v1.0/signal/accounts', 'POST',
+        '/v1.0/signal/accounts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -67,12 +68,12 @@ export default class SignalApi {
 
     /**
      * Get copytrading accounts
-     * @function SignalApi#v10SignalAccountsPost
+     * @function SignalApi#v10SignalAccountsGet
      * @param {String} authorization JWT access token
      * @return {Promise<[CopyTradingAccountInfo]>} a Promise, with an object containing data of type [CopyTradingAccountInfo] and HTTP response
      */
-      v10SignalAccountsPost(authorization) {
-      return this.v10SignalAccountsPostWithHttpInfo(authorization)
+      v10SignalAccountsGet(authorization) {
+      return this.v10SignalAccountsGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -124,8 +125,9 @@ export default class SignalApi {
     }
 
     /**
+     * Subscribe to programs signals
      * @function SignalApi#v10SignalAttachByIdPost
-     * @param {String} id 
+     * @param {String} id Program Id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.mode] 
@@ -182,13 +184,58 @@ export default class SignalApi {
     }
 
     /**
+     * Unsubscribe from program signals
      * @function SignalApi#v10SignalDetachByIdPost
-     * @param {String} id 
+     * @param {String} id Program id
      * @param {String} authorization JWT access token
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalDetachByIdPost(id, authorization) {
       return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10SignalOpensignaltradesGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalOpensignaltradesGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [OpenSignalTrade];
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/opensignaltrades', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get investors signals open trades
+     * @function SignalApi#v10SignalOpensignaltradesGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<[OpenSignalTrade]>} a Promise, with an object containing data of type [OpenSignalTrade] and HTTP response
+     */
+      v10SignalOpensignaltradesGet(authorization) {
+      return this.v10SignalOpensignaltradesGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -235,10 +282,11 @@ export default class SignalApi {
     }
 
     /**
+     * Update signal subscription settings
      * @function SignalApi#v10SignalUpdatePost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.id] 
+     * @param {String} [opts.id] Program id
      * @param {String} [opts.mode] 
      * @param {Number} [opts.percent] 
      * @param {Number} [opts.openTolerancePercent] 

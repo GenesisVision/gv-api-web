@@ -21,21 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _DashboardChartValue = require('./DashboardChartValue');
+var _ProfilePublic = require('./ProfilePublic');
 
-var _DashboardChartValue2 = _interopRequireDefault(_DashboardChartValue);
-
-var _DashboardPortfolioEvents = require('./DashboardPortfolioEvents');
-
-var _DashboardPortfolioEvents2 = _interopRequireDefault(_DashboardPortfolioEvents);
-
-var _ProfileHeaderViewModel = require('./ProfileHeaderViewModel');
-
-var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
-
-var _ProgramRequests = require('./ProgramRequests');
-
-var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
+var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43,91 +31,109 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface DashboardSummary
+ * @interface OpenSignalTrade
  */
 
 /**
  *
- * @name DashboardSummary#chart
- * @type {DashboardChartValue}
+ * @name OpenSignalTrade#id
+ * @type {String}
  */
 /**
  *
- * @name DashboardSummary#events
- * @type {DashboardPortfolioEvents}
+ * @name OpenSignalTrade#symbol
+ * @type {String}
  */
 /**
  *
- * @name DashboardSummary#profileHeader
- * @type {ProfileHeaderViewModel}
+ * @name OpenSignalTrade#manager
+ * @type {ProfilePublic}
  */
 /**
  *
- * @name DashboardSummary#programsCount
+ * @name OpenSignalTrade#orderId
  * @type {Number}
  */
 /**
  *
- * @name DashboardSummary#fundsCount
+ * @name OpenSignalTrade#openDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name OpenSignalTrade#openPrice
  * @type {Number}
  */
 /**
  *
- * @name DashboardSummary#signalsCount
+ * @name OpenSignalTrade#volume
  * @type {Number}
  */
 /**
  *
- * @name DashboardSummary#requests
- * @type {ProgramRequests}
+ * @name OpenSignalTrade#price
+ * @type {Number}
+ */
+/**
+ *
+ * @name OpenSignalTrade#profit
+ * @type {Number}
  */
 
-var DashboardSummary = function () {
-    function DashboardSummary() {
-        _classCallCheck(this, DashboardSummary);
+var OpenSignalTrade = function () {
+    function OpenSignalTrade() {
+        _classCallCheck(this, OpenSignalTrade);
 
-        this.chart = undefined;
-        this.events = undefined;
-        this.profileHeader = undefined;
-        this.programsCount = undefined;
-        this.fundsCount = undefined;
-        this.signalsCount = undefined;
-        this.requests = undefined;
+        this.id = undefined;
+        this.symbol = undefined;
+        this.manager = undefined;
+        this.orderId = undefined;
+        this.openDate = undefined;
+        this.openPrice = undefined;
+        this.volume = undefined;
+        this.price = undefined;
+        this.profit = undefined;
     }
 
-    _createClass(DashboardSummary, null, [{
+    _createClass(OpenSignalTrade, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new DashboardSummary();
+                obj = obj || new OpenSignalTrade();
 
-                if (data.hasOwnProperty('chart')) {
-                    obj['chart'] = _DashboardChartValue2.default.constructFromObject(data['chart']);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('events')) {
-                    obj['events'] = _DashboardPortfolioEvents2.default.constructFromObject(data['events']);
+                if (data.hasOwnProperty('symbol')) {
+                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
                 }
-                if (data.hasOwnProperty('profileHeader')) {
-                    obj['profileHeader'] = _ProfileHeaderViewModel2.default.constructFromObject(data['profileHeader']);
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
                 }
-                if (data.hasOwnProperty('programsCount')) {
-                    obj['programsCount'] = _ApiClient2.default.convertToType(data['programsCount'], 'Number');
+                if (data.hasOwnProperty('orderId')) {
+                    obj['orderId'] = _ApiClient2.default.convertToType(data['orderId'], 'Number');
                 }
-                if (data.hasOwnProperty('fundsCount')) {
-                    obj['fundsCount'] = _ApiClient2.default.convertToType(data['fundsCount'], 'Number');
+                if (data.hasOwnProperty('openDate')) {
+                    obj['openDate'] = _ApiClient2.default.convertToType(data['openDate'], 'Date');
                 }
-                if (data.hasOwnProperty('signalsCount')) {
-                    obj['signalsCount'] = _ApiClient2.default.convertToType(data['signalsCount'], 'Number');
+                if (data.hasOwnProperty('openPrice')) {
+                    obj['openPrice'] = _ApiClient2.default.convertToType(data['openPrice'], 'Number');
                 }
-                if (data.hasOwnProperty('requests')) {
-                    obj['requests'] = _ProgramRequests2.default.constructFromObject(data['requests']);
+                if (data.hasOwnProperty('volume')) {
+                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
+                }
+                if (data.hasOwnProperty('price')) {
+                    obj['price'] = _ApiClient2.default.convertToType(data['price'], 'Number');
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return DashboardSummary;
+    return OpenSignalTrade;
 }();
 
-exports.default = DashboardSummary;
+exports.default = OpenSignalTrade;

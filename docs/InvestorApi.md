@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 [**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+[**v10InvestorSignalsGet**](InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard program list
 
 
 <a name="v10InvestorFundsByIdInvestByAmountPost"></a>
@@ -1013,6 +1014,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramRequests**](ProgramRequests.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorSignalsGet"></a>
+# **v10InvestorSignalsGet**
+> ProgramsList v10InvestorSignalsGet(authorization, opts)
+
+Dashboard program list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10InvestorSignalsGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**ProgramsList**](ProgramsList.md)
 
 ### Authorization
 

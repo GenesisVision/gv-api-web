@@ -85,6 +85,7 @@ import NotificationList from './model/NotificationList';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
+import OpenSignalTrade from './model/OpenSignalTrade';
 import OrderModel from './model/OrderModel';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
@@ -614,6 +615,12 @@ export {
      * @type {NotificationViewModel}
      */
     NotificationViewModel,
+
+    /**
+     * @name index#OpenSignalTrade
+     * @type {OpenSignalTrade}
+     */
+    OpenSignalTrade,
 
     /**
      * @name index#OrderModel

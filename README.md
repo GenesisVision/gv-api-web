@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsGet**](docs/InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+*CoreApiV10.InvestorApi* | [**v10InvestorSignalsGet**](docs/InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard program list
 *CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
 *CoreApiV10.ManagerApi* | [**v10ManagerAssetsGet**](docs/ManagerApi.md#v10ManagerAssetsGet) | **GET** /v1.0/manager/assets | Manager assets list
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
@@ -218,10 +219,11 @@ Class | Method | HTTP request | Description
 *CoreApiV10.RateApi* | [**v10RateByFromByToGet**](docs/RateApi.md#v10RateByFromByToGet) | **GET** /v1.0/rate/{from}/{to} | Get rate
 *CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
 *CoreApiV10.SearchApi* | [**v10SearchGet**](docs/SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
-*CoreApiV10.SignalApi* | [**v10SignalAccountsPost**](docs/SignalApi.md#v10SignalAccountsPost) | **POST** /v1.0/signal/accounts | Get copytrading accounts
-*CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | 
-*CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | 
-*CoreApiV10.SignalApi* | [**v10SignalUpdatePost**](docs/SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | 
+*CoreApiV10.SignalApi* | [**v10SignalAccountsGet**](docs/SignalApi.md#v10SignalAccountsGet) | **GET** /v1.0/signal/accounts | Get copytrading accounts
+*CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
+*CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
+*CoreApiV10.SignalApi* | [**v10SignalOpensignaltradesGet**](docs/SignalApi.md#v10SignalOpensignaltradesGet) | **GET** /v1.0/signal/opensignaltrades | Get investors signals open trades
+*CoreApiV10.SignalApi* | [**v10SignalUpdatePost**](docs/SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
@@ -315,6 +317,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
+ - [CoreApiV10.OpenSignalTrade](docs/OpenSignalTrade.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)

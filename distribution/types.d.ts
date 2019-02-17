@@ -189,6 +189,15 @@ declare class InvestorApi {
     }): Promise<ProgramsList>;
     v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
     v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    v10InvestorSignalsGet(authorization: string, opts?: {
+        sorting?: string;
+        from?: Date;
+        to?: Date;
+        chartPointsCount?: number;
+        currencySecondary?: string;
+        skip?: number;
+        take?: number;
+    }): Promise<ProgramsList>;
 }
 
 declare class KycApi {
@@ -422,7 +431,7 @@ declare class SearchApi {
 
 declare class SignalApi {
     constructor(apiClient: ApiClient): SignalApi;
-    v10SignalAccountsPost(authorization: string): any;
+    v10SignalAccountsGet(authorization: string): any;
     v10SignalAttachByIdPost(id: string, authorization: string, opts?: {
         mode?: string;
         percent?: number;
@@ -433,6 +442,7 @@ declare class SignalApi {
         initialDepositAmount?: number;
     }): Promise<any>;
     v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
+    v10SignalOpensignaltradesGet(authorization: string): any;
     v10SignalUpdatePost(authorization: string, opts?: {
         id?: string;
         mode?: string;
@@ -572,6 +582,7 @@ declare interface index {
     NotificationSettingList: NotificationSettingList;
     NotificationSettingViewModel: NotificationSettingViewModel;
     NotificationViewModel: NotificationViewModel;
+    OpenSignalTrade: OpenSignalTrade;
     OrderModel: OrderModel;
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
@@ -805,6 +816,7 @@ declare interface DashboardSummary {
     profileHeader: ProfileHeaderViewModel;
     programsCount: number;
     fundsCount: number;
+    signalsCount: number;
     requests: ProgramRequests;
 }
 
@@ -1246,6 +1258,18 @@ declare interface NotificationViewModel {
     url: string;
     isUnread: boolean;
     assetType: "Program" | "Fund";
+}
+
+declare interface OpenSignalTrade {
+    id: string;
+    symbol: string;
+    manager: ProfilePublic;
+    orderId: number;
+    openDate: Date;
+    openPrice: number;
+    volume: number;
+    price: number;
+    profit: number;
 }
 
 declare interface OrderModel {
