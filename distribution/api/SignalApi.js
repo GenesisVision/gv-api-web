@@ -21,17 +21,17 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CopyTradingAccountInfo = require('../model/CopyTradingAccountInfo');
+var _CopyTradingAccountsList = require('../model/CopyTradingAccountsList');
 
-var _CopyTradingAccountInfo2 = _interopRequireDefault(_CopyTradingAccountInfo);
+var _CopyTradingAccountsList2 = _interopRequireDefault(_CopyTradingAccountsList);
 
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _OpenSignalTrade = require('../model/OpenSignalTrade');
+var _OpenSignalTradesList = require('../model/OpenSignalTradesList');
 
-var _OpenSignalTrade2 = _interopRequireDefault(_OpenSignalTrade);
+var _OpenSignalTradesList2 = _interopRequireDefault(_OpenSignalTradesList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -76,7 +76,7 @@ var SignalApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = [_CopyTradingAccountInfo2.default];
+      var returnType = _CopyTradingAccountsList2.default;
 
       return this.apiClient.callApi('/v1.0/signal/accounts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -85,7 +85,7 @@ var SignalApi = function () {
      * Get copytrading accounts
      * @function SignalApi#v10SignalAccountsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<[CopyTradingAccountInfo]>} a Promise, with an object containing data of type [CopyTradingAccountInfo] and HTTP response
+     * @return {Promise<CopyTradingAccountsList>} a Promise, with an object containing data of type CopyTradingAccountsList and HTTP response
      */
 
   }, {
@@ -226,7 +226,7 @@ var SignalApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = [_OpenSignalTrade2.default];
+      var returnType = _OpenSignalTradesList2.default;
 
       return this.apiClient.callApi('/v1.0/signal/opensignaltrades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -235,7 +235,7 @@ var SignalApi = function () {
      * Get investors signals open trades
      * @function SignalApi#v10SignalOpensignaltradesGet
      * @param {String} authorization JWT access token
-     * @return {Promise<[OpenSignalTrade]>} a Promise, with an object containing data of type [OpenSignalTrade] and HTTP response
+     * @return {Promise<OpenSignalTradesList>} a Promise, with an object containing data of type OpenSignalTradesList and HTTP response
      */
 
   }, {

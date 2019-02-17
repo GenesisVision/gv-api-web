@@ -27,6 +27,7 @@ import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
 import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
+import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
@@ -86,6 +87,7 @@ import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
 import OpenSignalTrade from './model/OpenSignalTrade';
+import OpenSignalTradesList from './model/OpenSignalTradesList';
 import OrderModel from './model/OrderModel';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
@@ -267,6 +269,12 @@ export {
      * @type {CopyTradingAccountInfo}
      */
     CopyTradingAccountInfo,
+
+    /**
+     * @name index#CopyTradingAccountsList
+     * @type {CopyTradingAccountsList}
+     */
+    CopyTradingAccountsList,
 
     /**
      * @name index#CreateWithdrawalRequestModel
@@ -621,6 +629,12 @@ export {
      * @type {OpenSignalTrade}
      */
     OpenSignalTrade,
+
+    /**
+     * @name index#OpenSignalTradesList
+     * @type {OpenSignalTradesList}
+     */
+    OpenSignalTradesList,
 
     /**
      * @name index#OrderModel

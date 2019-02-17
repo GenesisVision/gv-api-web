@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="v10SignalAccountsGet"></a>
 # **v10SignalAccountsGet**
-> [CopyTradingAccountInfo] v10SignalAccountsGet(authorization)
+> CopyTradingAccountsList v10SignalAccountsGet(authorization)
 
 Get copytrading accounts
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[CopyTradingAccountInfo]**](CopyTradingAccountInfo.md)
+[**CopyTradingAccountsList**](CopyTradingAccountsList.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 
 <a name="v10SignalOpensignaltradesGet"></a>
 # **v10SignalOpensignaltradesGet**
-> [OpenSignalTrade] v10SignalOpensignaltradesGet(authorization)
+> OpenSignalTradesList v10SignalOpensignaltradesGet(authorization)
 
 Get investors signals open trades
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[OpenSignalTrade]**](OpenSignalTrade.md)
+[**OpenSignalTradesList**](OpenSignalTradesList.md)
 
 ### Authorization
 
