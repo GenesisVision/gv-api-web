@@ -56,7 +56,7 @@ export default class SignalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = [CopyTradingAccountInfo];
 
       return this.apiClient.callApi(
         '/v1.0/signal/accounts', 'POST',
@@ -69,7 +69,7 @@ export default class SignalApi {
      * Get copytrading accounts
      * @function SignalApi#v10SignalAccountsPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {Promise<[CopyTradingAccountInfo]>} a Promise, with an object containing data of type [CopyTradingAccountInfo] and HTTP response
      */
       v10SignalAccountsPost(authorization) {
       return this.v10SignalAccountsPostWithHttpInfo(authorization)

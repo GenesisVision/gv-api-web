@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="v10SignalAccountsPost"></a>
 # **v10SignalAccountsPost**
-> v10SignalAccountsPost(authorization)
+> [CopyTradingAccountInfo] v10SignalAccountsPost(authorization)
 
 Get copytrading accounts
 
@@ -24,8 +24,8 @@ let apiInstance = new CoreApiV10.SignalApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10SignalAccountsPost(authorization).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10SignalAccountsPost(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CopyTradingAccountInfo]**](CopyTradingAccountInfo.md)
 
 ### Authorization
 

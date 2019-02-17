@@ -72,7 +72,7 @@ var SignalApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
+      var returnType = [_CopyTradingAccountInfo2.default];
 
       return this.apiClient.callApi('/v1.0/signal/accounts', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -81,7 +81,7 @@ var SignalApi = function () {
      * Get copytrading accounts
      * @function SignalApi#v10SignalAccountsPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {Promise<[CopyTradingAccountInfo]>} a Promise, with an object containing data of type [CopyTradingAccountInfo] and HTTP response
      */
 
   }, {
