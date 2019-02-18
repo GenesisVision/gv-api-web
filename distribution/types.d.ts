@@ -1211,7 +1211,7 @@ export declare interface NewFundRequest {
     logo: string;
     entryFee: number;
     depositAmount: number;
-    depositCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    depositWalletId: string;
 }
 
 export declare interface NewProgramRequest {
@@ -1228,7 +1228,7 @@ export declare interface NewProgramRequest {
     logo: string;
     entryFee: number;
     depositAmount: number;
-    depositCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    depositWalletId: string;
 }
 
 export declare interface NotificationList {

@@ -66,8 +66,8 @@ import FundAssetPart from './FundAssetPart';
      */
     /**
      *
-     * @name NewFundRequest#depositCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @name NewFundRequest#depositWalletId
+     * @type {String}
      */
 
 
@@ -119,8 +119,8 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('depositAmount')) {
                 obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
             }
-            if (data.hasOwnProperty('depositCurrency')) {
-                obj['depositCurrency'] = ApiClient.convertToType(data['depositCurrency'], 'String');
+            if (data.hasOwnProperty('depositWalletId')) {
+                obj['depositWalletId'] = ApiClient.convertToType(data['depositWalletId'], 'String');
             }
         }
         return obj;
@@ -134,41 +134,12 @@ export default class NewFundRequest {
     logo = undefined;
     entryFee = undefined;
     depositAmount = undefined;
-    depositCurrency = undefined;
+    depositWalletId = undefined;
 
 
 
 
 
-
-    static DepositCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
 
 
 

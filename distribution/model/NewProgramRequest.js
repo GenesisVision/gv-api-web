@@ -97,8 +97,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name NewProgramRequest#depositCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name NewProgramRequest#depositWalletId
+ * @type {String}
  */
 
 var NewProgramRequest = function () {
@@ -118,7 +118,7 @@ var NewProgramRequest = function () {
         this.logo = undefined;
         this.entryFee = undefined;
         this.depositAmount = undefined;
-        this.depositCurrency = undefined;
+        this.depositWalletId = undefined;
     }
 
     _createClass(NewProgramRequest, null, [{
@@ -166,8 +166,8 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('depositAmount')) {
                     obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
                 }
-                if (data.hasOwnProperty('depositCurrency')) {
-                    obj['depositCurrency'] = _ApiClient2.default.convertToType(data['depositCurrency'], 'String');
+                if (data.hasOwnProperty('depositWalletId')) {
+                    obj['depositWalletId'] = _ApiClient2.default.convertToType(data['depositWalletId'], 'String');
                 }
             }
             return obj;
@@ -178,34 +178,6 @@ var NewProgramRequest = function () {
 }();
 
 NewProgramRequest.CurrencyEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-NewProgramRequest.DepositCurrencyEnum = {
 
     "Undefined": "Undefined",
 

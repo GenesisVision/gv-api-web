@@ -76,8 +76,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name NewFundRequest#depositCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name NewFundRequest#depositWalletId
+ * @type {String}
  */
 
 var NewFundRequest = function () {
@@ -92,7 +92,7 @@ var NewFundRequest = function () {
         this.logo = undefined;
         this.entryFee = undefined;
         this.depositAmount = undefined;
-        this.depositCurrency = undefined;
+        this.depositWalletId = undefined;
     }
 
     _createClass(NewFundRequest, null, [{
@@ -125,8 +125,8 @@ var NewFundRequest = function () {
                 if (data.hasOwnProperty('depositAmount')) {
                     obj['depositAmount'] = _ApiClient2.default.convertToType(data['depositAmount'], 'Number');
                 }
-                if (data.hasOwnProperty('depositCurrency')) {
-                    obj['depositCurrency'] = _ApiClient2.default.convertToType(data['depositCurrency'], 'String');
+                if (data.hasOwnProperty('depositWalletId')) {
+                    obj['depositWalletId'] = _ApiClient2.default.convertToType(data['depositWalletId'], 'String');
                 }
             }
             return obj;
@@ -136,32 +136,4 @@ var NewFundRequest = function () {
     return NewFundRequest;
 }();
 
-NewFundRequest.DepositCurrencyEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
 exports.default = NewFundRequest;
