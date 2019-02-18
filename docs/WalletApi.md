@@ -547,8 +547,10 @@ let apiInstance = new CoreApiV10.WalletApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'from': "from_example", // String | 
-  'to': "to_example", // String | 
+  'sourceId': "sourceId_example", // String | 
+  'sourceType': "sourceType_example", // String | 
+  'destinationId': "destinationId_example", // String | 
+  'destinationType': "destinationType_example", // String | 
   'amount': 1.2 // Number | 
 };
 apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
@@ -564,8 +566,10 @@ apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **from** | **String**|  | [optional] 
- **to** | **String**|  | [optional] 
+ **sourceId** | [**String**](.md)|  | [optional] 
+ **sourceType** | **String**|  | [optional] 
+ **destinationId** | [**String**](.md)|  | [optional] 
+ **destinationType** | **String**|  | [optional] 
  **amount** | **Number**|  | [optional] 
 
 ### Return type

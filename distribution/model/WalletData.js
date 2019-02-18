@@ -47,6 +47,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name WalletData#address
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletData#rateToGVT
+ * @type {Number}
+ */
+/**
+ *
  * @name WalletData#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
@@ -103,6 +113,8 @@ var WalletData = function () {
         this.id = undefined;
         this.title = undefined;
         this.logo = undefined;
+        this.address = undefined;
+        this.rateToGVT = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -129,6 +141,12 @@ var WalletData = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('address')) {
+                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
+                }
+                if (data.hasOwnProperty('rateToGVT')) {
+                    obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');

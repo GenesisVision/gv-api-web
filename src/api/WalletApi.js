@@ -613,8 +613,10 @@ export default class WalletApi {
       let pathParams = {
       };
       let queryParams = {
-        'From': opts['from'],
-        'To': opts['to'],
+        'SourceId': opts['sourceId'],
+        'SourceType': opts['sourceType'],
+        'DestinationId': opts['destinationId'],
+        'DestinationType': opts['destinationType'],
         'Amount': opts['amount']
       };
       let headerParams = {
@@ -640,8 +642,10 @@ export default class WalletApi {
      * @function WalletApi#v10WalletTransferPost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.from] 
-     * @param {String} [opts.to] 
+     * @param {String} [opts.sourceId] 
+     * @param {String} [opts.sourceType] 
+     * @param {String} [opts.destinationId] 
+     * @param {String} [opts.destinationType] 
      * @param {Number} [opts.amount] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */

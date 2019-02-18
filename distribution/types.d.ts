@@ -492,8 +492,10 @@ export declare class WalletApi {
         take?: number;
     }): Promise<WalletTransactionsViewModel>;
     v10WalletTransferPost(authorization: string, opts?: {
-        from?: string;
-        to?: string;
+        sourceId?: string;
+        sourceType?: string;
+        destinationId?: string;
+        destinationType?: string;
         amount?: number;
     }): Promise<any>;
     v10WalletWithdrawInfoGet(authorization: string): Promise<WithdrawalSummary>;
@@ -1862,6 +1864,8 @@ export declare interface WalletData {
     id: string;
     title: string;
     logo: string;
+    address: string;
+    rateToGVT: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     invested: number;

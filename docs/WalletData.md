@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**address** | **String** |  | [optional] 
+**rateToGVT** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 
