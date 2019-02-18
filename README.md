@@ -222,7 +222,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**v10SignalAccountsGet**](docs/SignalApi.md#v10SignalAccountsGet) | **GET** /v1.0/signal/accounts | Get copytrading accounts
 *CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-*CoreApiV10.SignalApi* | [**v10SignalOpensignaltradesGet**](docs/SignalApi.md#v10SignalOpensignaltradesGet) | **GET** /v1.0/signal/opensignaltrades | Get investors signals open trades
+*CoreApiV10.SignalApi* | [**v10SignalTradesOpenGet**](docs/SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.SignalApi* | [**v10SignalUpdatePost**](docs/SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
@@ -318,9 +318,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
- - [CoreApiV10.OpenSignalTrade](docs/OpenSignalTrade.md)
- - [CoreApiV10.OpenSignalTradesList](docs/OpenSignalTradesList.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
+ - [CoreApiV10.OrderSignalSlaveModel](docs/OrderSignalSlaveModel.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
@@ -368,6 +367,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
  - [CoreApiV10.Review](docs/Review.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
+ - [CoreApiV10.TradesSignalSlaveViewModel](docs/TradesSignalSlaveViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TransactionDetails](docs/TransactionDetails.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)

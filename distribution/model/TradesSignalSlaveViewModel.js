@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OpenSignalTrade = require('./OpenSignalTrade');
+var _OrderSignalSlaveModel = require('./OrderSignalSlaveModel');
 
-var _OpenSignalTrade2 = _interopRequireDefault(_OpenSignalTrade);
+var _OrderSignalSlaveModel2 = _interopRequireDefault(_OrderSignalSlaveModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,37 +31,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface OpenSignalTradesList
+ * @interface TradesSignalSlaveViewModel
  */
 
 /**
  *
- * @name OpenSignalTradesList#signalTrades
- * @type {Array<OpenSignalTrade>}
+ * @name TradesSignalSlaveViewModel#trades
+ * @type {[OrderSignalSlaveModel]}
+ */
+/**
+ *
+ * @name TradesSignalSlaveViewModel#total
+ * @type {Number}
  */
 
-var OpenSignalTradesList = function () {
-    function OpenSignalTradesList() {
-        _classCallCheck(this, OpenSignalTradesList);
+var TradesSignalSlaveViewModel = function () {
+    function TradesSignalSlaveViewModel() {
+        _classCallCheck(this, TradesSignalSlaveViewModel);
 
-        this.signalTrades = undefined;
+        this.trades = undefined;
+        this.total = undefined;
     }
 
-    _createClass(OpenSignalTradesList, null, [{
+    _createClass(TradesSignalSlaveViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new OpenSignalTradesList();
+                obj = obj || new TradesSignalSlaveViewModel();
 
-                if (data.hasOwnProperty('signalTrades')) {
-                    obj['signalTrades'] = _ApiClient2.default.convertToType(data['signalTrades'], [_OpenSignalTrade2.default]);
+                if (data.hasOwnProperty('trades')) {
+                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderSignalSlaveModel2.default]);
+                }
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return OpenSignalTradesList;
+    return TradesSignalSlaveViewModel;
 }();
 
-exports.default = OpenSignalTradesList;
+exports.default = TradesSignalSlaveViewModel;

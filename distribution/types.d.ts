@@ -442,7 +442,11 @@ export declare class SignalApi {
         initialDepositAmount?: number;
     }): Promise<any>;
     v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
-    v10SignalOpensignaltradesGet(authorization: string): Promise<OpenSignalTradesList>;
+    v10SignalTradesOpenGet(opts?: {
+        sorting?: string;
+        skip?: number;
+        take?: number;
+    }): Promise<TradesSignalSlaveViewModel>;
     v10SignalUpdatePost(authorization: string, opts?: {
         id?: string;
         mode?: string;
@@ -585,9 +589,8 @@ export declare interface index {
     NotificationSettingList: NotificationSettingList;
     NotificationSettingViewModel: NotificationSettingViewModel;
     NotificationViewModel: NotificationViewModel;
-    OpenSignalTrade: OpenSignalTrade;
-    OpenSignalTradesList: OpenSignalTradesList;
     OrderModel: OrderModel;
+    OrderSignalSlaveModel: OrderSignalSlaveModel;
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
@@ -635,6 +638,7 @@ export declare interface index {
     ResetPasswordViewModel: ResetPasswordViewModel;
     Review: Review;
     SearchViewModel: SearchViewModel;
+    TradesSignalSlaveViewModel: TradesSignalSlaveViewModel;
     TradesViewModel: TradesViewModel;
     TransactionDetails: TransactionDetails;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
@@ -1299,6 +1303,23 @@ export declare interface OrderModel {
     entry: "In" | "Out" | "InOut" | "OutBy";
 }
 
+export declare interface OrderSignalSlaveModel {
+    manager: ProfilePublic;
+    programId: string;
+    programTitle: string;
+    id: string;
+    login: string;
+    ticket: string;
+    symbol: string;
+    volume: number;
+    profit: number;
+    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
+    date: Date;
+    price: number;
+    priceCurrent: number;
+    entry: "In" | "Out" | "InOut" | "OutBy";
+}
+
 export declare interface OtherAssetsValue {
     amount: number;
     value: number;
@@ -1779,6 +1800,11 @@ export declare interface SearchViewModel {
     programs: ProgramsList;
     funds: FundsList;
     managers: ManagersList;
+}
+
+export declare interface TradesSignalSlaveViewModel {
+    trades: OrderSignalSlaveModel[];
+    total: number;
 }
 
 export declare interface TradesViewModel {

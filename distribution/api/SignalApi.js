@@ -29,9 +29,9 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _OpenSignalTradesList = require('../model/OpenSignalTradesList');
+var _TradesSignalSlaveViewModel = require('../model/TradesSignalSlaveViewModel');
 
-var _OpenSignalTradesList2 = _interopRequireDefault(_OpenSignalTradesList);
+var _TradesSignalSlaveViewModel2 = _interopRequireDefault(_TradesSignalSlaveViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -207,41 +207,42 @@ var SignalApi = function () {
       });
     }
   }, {
-    key: 'v10SignalOpensignaltradesGetWithHttpInfo',
-    value: function v10SignalOpensignaltradesGetWithHttpInfo(authorization) {
+    key: 'v10SignalTradesOpenGetWithHttpInfo',
+    value: function v10SignalTradesOpenGetWithHttpInfo(opts) {
+      opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10SignalOpensignaltradesGet");
-      }
-
       var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Authorization': authorization
+      var queryParams = {
+        'Sorting': opts['sorting'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
+      var headerParams = {};
       var formParams = {};
 
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _OpenSignalTradesList2.default;
+      var returnType = _TradesSignalSlaveViewModel2.default;
 
-      return this.apiClient.callApi('/v1.0/signal/opensignaltrades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+      return this.apiClient.callApi('/v1.0/signal/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
      * Get investors signals open trades
-     * @function SignalApi#v10SignalOpensignaltradesGet
-     * @param {String} authorization JWT access token
-     * @return {Promise<OpenSignalTradesList>} a Promise, with an object containing data of type OpenSignalTradesList and HTTP response
+     * @function SignalApi#v10SignalTradesOpenGet
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
      */
 
   }, {
-    key: 'v10SignalOpensignaltradesGet',
-    value: function v10SignalOpensignaltradesGet(authorization) {
-      return this.v10SignalOpensignaltradesGetWithHttpInfo(authorization).then(function (response_and_data) {
+    key: 'v10SignalTradesOpenGet',
+    value: function v10SignalTradesOpenGet(opts) {
+      return this.v10SignalTradesOpenGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

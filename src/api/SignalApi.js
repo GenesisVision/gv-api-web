@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
 import ErrorViewModel from '../model/ErrorViewModel';
-import OpenSignalTradesList from '../model/OpenSignalTradesList';
+import TradesSignalSlaveViewModel from '../model/TradesSignalSlaveViewModel';
 
 /**
 * Signal service.
@@ -197,21 +197,19 @@ export default class SignalApi {
         });
     }
 
-      v10SignalOpensignaltradesGetWithHttpInfo(authorization) {
+      v10SignalTradesOpenGetWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10SignalOpensignaltradesGet");
-      }
 
 
       let pathParams = {
       };
       let queryParams = {
+        'Sorting': opts['sorting'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -219,10 +217,10 @@ export default class SignalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = OpenSignalTradesList;
+      let returnType = TradesSignalSlaveViewModel;
 
       return this.apiClient.callApi(
-        '/v1.0/signal/opensignaltrades', 'GET',
+        '/v1.0/signal/trades/open', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -230,12 +228,15 @@ export default class SignalApi {
 
     /**
      * Get investors signals open trades
-     * @function SignalApi#v10SignalOpensignaltradesGet
-     * @param {String} authorization JWT access token
-     * @return {Promise<OpenSignalTradesList>} a Promise, with an object containing data of type OpenSignalTradesList and HTTP response
+     * @function SignalApi#v10SignalTradesOpenGet
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
      */
-      v10SignalOpensignaltradesGet(authorization) {
-      return this.v10SignalOpensignaltradesGetWithHttpInfo(authorization)
+      v10SignalTradesOpenGet(opts) {
+      return this.v10SignalTradesOpenGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

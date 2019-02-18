@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**v10SignalAccountsGet**](SignalApi.md#v10SignalAccountsGet) | **GET** /v1.0/signal/accounts | Get copytrading accounts
 [**v10SignalAttachByIdPost**](SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-[**v10SignalOpensignaltradesGet**](SignalApi.md#v10SignalOpensignaltradesGet) | **GET** /v1.0/signal/opensignaltrades | Get investors signals open trades
+[**v10SignalTradesOpenGet**](SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 [**v10SignalUpdatePost**](SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 
 
@@ -156,9 +156,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10SignalOpensignaltradesGet"></a>
-# **v10SignalOpensignaltradesGet**
-> OpenSignalTradesList v10SignalOpensignaltradesGet(authorization)
+<a name="v10SignalTradesOpenGet"></a>
+# **v10SignalTradesOpenGet**
+> TradesSignalSlaveViewModel v10SignalTradesOpenGet(opts)
 
 Get investors signals open trades
 
@@ -168,9 +168,12 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.SignalApi();
 
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10SignalOpensignaltradesGet(authorization).then((data) => {
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10SignalTradesOpenGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -182,11 +185,13 @@ apiInstance.v10SignalOpensignaltradesGet(authorization).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**OpenSignalTradesList**](OpenSignalTradesList.md)
+[**TradesSignalSlaveViewModel**](TradesSignalSlaveViewModel.md)
 
 ### Authorization
 
