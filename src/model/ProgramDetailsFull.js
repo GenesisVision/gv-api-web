@@ -80,6 +80,21 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetailsFull#isSignalProgram
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name ProgramDetailsFull#signalSuccessFee
+     * @type {Number}
+     */
+    /**
+     *
+     * @name ProgramDetailsFull#signalSubscriptionFee
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramDetailsFull#availableInvestment
      * @type {Number}
      */
@@ -204,6 +219,15 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('isReinvesting')) {
                 obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
             }
+            if (data.hasOwnProperty('isSignalProgram')) {
+                obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'Boolean');
+            }
+            if (data.hasOwnProperty('signalSuccessFee')) {
+                obj['signalSuccessFee'] = ApiClient.convertToType(data['signalSuccessFee'], 'Number');
+            }
+            if (data.hasOwnProperty('signalSubscriptionFee')) {
+                obj['signalSubscriptionFee'] = ApiClient.convertToType(data['signalSubscriptionFee'], 'Number');
+            }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
@@ -260,6 +284,9 @@ export default class ProgramDetailsFull {
     entryFeeCurrent = undefined;
     successFee = undefined;
     isReinvesting = undefined;
+    isSignalProgram = undefined;
+    signalSuccessFee = undefined;
+    signalSubscriptionFee = undefined;
     availableInvestment = undefined;
     statistic = undefined;
     rating = undefined;

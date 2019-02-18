@@ -102,6 +102,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#isSignalProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#signalSuccessFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#signalSubscriptionFee
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#availableInvestment
  * @type {Number}
  */
@@ -185,6 +200,9 @@ var ProgramDetailsFull = function () {
         this.entryFeeCurrent = undefined;
         this.successFee = undefined;
         this.isReinvesting = undefined;
+        this.isSignalProgram = undefined;
+        this.signalSuccessFee = undefined;
+        this.signalSubscriptionFee = undefined;
         this.availableInvestment = undefined;
         this.statistic = undefined;
         this.rating = undefined;
@@ -236,6 +254,15 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('isReinvesting')) {
                     obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isSignalProgram')) {
+                    obj['isSignalProgram'] = _ApiClient2.default.convertToType(data['isSignalProgram'], 'Boolean');
+                }
+                if (data.hasOwnProperty('signalSuccessFee')) {
+                    obj['signalSuccessFee'] = _ApiClient2.default.convertToType(data['signalSuccessFee'], 'Number');
+                }
+                if (data.hasOwnProperty('signalSubscriptionFee')) {
+                    obj['signalSubscriptionFee'] = _ApiClient2.default.convertToType(data['signalSubscriptionFee'], 'Number');
                 }
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');

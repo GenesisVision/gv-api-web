@@ -113,6 +113,11 @@ import ApiClient from '../ApiClient';
      * @name PersonalFundDetailsFull#status
      * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
      */
+    /**
+     *
+     * @name PersonalFundDetailsFull#isFollowSignals
+     * @type {Boolean}
+     */
 
 
 
@@ -193,6 +198,9 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('isFollowSignals')) {
+                obj['isFollowSignals'] = ApiClient.convertToType(data['isFollowSignals'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -215,6 +223,7 @@ export default class PersonalFundDetailsFull {
     pendingInput = undefined;
     pendingOutput = undefined;
     status = undefined;
+    isFollowSignals = undefined;
 
 
 

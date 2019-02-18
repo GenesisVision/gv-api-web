@@ -120,6 +120,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalFundDetailsFull#status
  * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
  */
+/**
+ *
+ * @name PersonalFundDetailsFull#isFollowSignals
+ * @type {Boolean}
+ */
 
 var PersonalFundDetailsFull = function () {
     function PersonalFundDetailsFull() {
@@ -143,6 +148,7 @@ var PersonalFundDetailsFull = function () {
         this.pendingInput = undefined;
         this.pendingOutput = undefined;
         this.status = undefined;
+        this.isFollowSignals = undefined;
     }
 
     _createClass(PersonalFundDetailsFull, null, [{
@@ -204,6 +210,9 @@ var PersonalFundDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('isFollowSignals')) {
+                    obj['isFollowSignals'] = _ApiClient2.default.convertToType(data['isFollowSignals'], 'Boolean');
                 }
             }
             return obj;

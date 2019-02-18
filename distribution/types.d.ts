@@ -1333,6 +1333,7 @@ export declare interface PersonalFundDetailsFull {
     pendingInput: number;
     pendingOutput: number;
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
+    isFollowSignals: boolean;
 }
 
 export declare interface PersonalProgramDetailsFull {
@@ -1353,6 +1354,7 @@ export declare interface PersonalProgramDetailsFull {
     pendingInput: number;
     pendingOutput: number;
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
+    isFollowSignals: boolean;
 }
 
 export declare interface PlatformAsset {
@@ -1492,6 +1494,9 @@ export declare interface ProgramDetailsFull {
     entryFeeCurrent: number;
     successFee: number;
     isReinvesting: boolean;
+    isSignalProgram: boolean;
+    signalSuccessFee: number;
+    signalSubscriptionFee: number;
     availableInvestment: number;
     statistic: ProgramStatistic;
     rating: ProgramDetailsRating;
