@@ -27,6 +27,7 @@ import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramInvestInfo from '../model/ProgramInvestInfo';
+import ProgramMinimumDeposit from '../model/ProgramMinimumDeposit';
 import ProgramRequests from '../model/ProgramRequests';
 import ProgramUpdate from '../model/ProgramUpdate';
 import ProgramsList from '../model/ProgramsList';
@@ -1619,7 +1620,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'Number';
+      let returnType = ProgramMinimumDeposit;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs/investment/amount', 'GET',
@@ -1629,10 +1630,10 @@ export default class ManagerApi {
     }
 
     /**
-     * Get GVT investment to create program
+     * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {Promise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
       v10ManagerProgramsInvestmentAmountGet(authorization) {
       return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization)

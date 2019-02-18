@@ -77,6 +77,10 @@ var _ProgramInvestInfo = require('../model/ProgramInvestInfo');
 
 var _ProgramInvestInfo2 = _interopRequireDefault(_ProgramInvestInfo);
 
+var _ProgramMinimumDeposit = require('../model/ProgramMinimumDeposit');
+
+var _ProgramMinimumDeposit2 = _interopRequireDefault(_ProgramMinimumDeposit);
+
 var _ProgramRequests = require('../model/ProgramRequests');
 
 var _ProgramRequests2 = _interopRequireDefault(_ProgramRequests);
@@ -1567,16 +1571,16 @@ var ManagerApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
+      var returnType = _ProgramMinimumDeposit2.default;
 
       return this.apiClient.callApi('/v1.0/manager/programs/investment/amount', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 
     /**
-     * Get GVT investment to create program
+     * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {Promise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
 
   }, {

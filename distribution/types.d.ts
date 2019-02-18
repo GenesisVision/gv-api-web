@@ -289,7 +289,7 @@ export declare class ManagerApi {
         skip?: number;
         take?: number;
     }): Promise<ProgramsList>;
-    v10ManagerProgramsInvestmentAmountGet(authorization: string): Promise<'Number'>;
+    v10ManagerProgramsInvestmentAmountGet(authorization: string): Promise<ProgramMinimumDeposit>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
     v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, opts?: {
@@ -610,6 +610,7 @@ export declare interface index {
     ProgramFacet: ProgramFacet;
     ProgramInfo: ProgramInfo;
     ProgramInvestInfo: ProgramInvestInfo;
+    ProgramMinimumDeposit: ProgramMinimumDeposit;
     ProgramNotificationSettingList: ProgramNotificationSettingList;
     ProgramProfitChart: ProgramProfitChart;
     ProgramRequest: ProgramRequest;
@@ -1557,6 +1558,10 @@ export declare interface ProgramInvestInfo {
     gvCommission: number;
     rate: number;
     isOwnProgram: boolean;
+}
+
+export declare interface ProgramMinimumDeposit {
+    minimumDepositsAmount: any;
 }
 
 export declare interface ProgramNotificationSettingList {

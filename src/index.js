@@ -111,6 +111,7 @@ import ProgramDetailsRating from './model/ProgramDetailsRating';
 import ProgramFacet from './model/ProgramFacet';
 import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
+import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramProfitChart from './model/ProgramProfitChart';
 import ProgramRequest from './model/ProgramRequest';
@@ -773,6 +774,12 @@ export {
      * @type {ProgramInvestInfo}
      */
     ProgramInvestInfo,
+
+    /**
+     * @name index#ProgramMinimumDeposit
+     * @type {ProgramMinimumDeposit}
+     */
+    ProgramMinimumDeposit,
 
     /**
      * @name index#ProgramNotificationSettingList

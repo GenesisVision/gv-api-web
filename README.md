@@ -180,7 +180,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawMultiByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreatePost**](docs/ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsGet**](docs/ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**v10ManagerRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagerApi* | [**v10ManagerSignalCreatePost**](docs/ManagerApi.md#v10ManagerSignalCreatePost) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
@@ -343,6 +343,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramFacet](docs/ProgramFacet.md)
  - [CoreApiV10.ProgramInfo](docs/ProgramInfo.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
+ - [CoreApiV10.ProgramMinimumDeposit](docs/ProgramMinimumDeposit.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramProfitChart](docs/ProgramProfitChart.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)

@@ -32,7 +32,7 @@ Method | HTTP request | Description
 [**v10ManagerProgramsByIdWithdrawMultiByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
 [**v10ManagerProgramsCreatePost**](ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 [**v10ManagerProgramsGet**](ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
-[**v10ManagerProgramsInvestmentAmountGet**](ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get GVT investment to create program
+[**v10ManagerProgramsInvestmentAmountGet**](ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
 [**v10ManagerProgramsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagerRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 [**v10ManagerSignalCreatePost**](ManagerApi.md#v10ManagerSignalCreatePost) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
@@ -1385,9 +1385,9 @@ No authorization required
 
 <a name="v10ManagerProgramsInvestmentAmountGet"></a>
 # **v10ManagerProgramsInvestmentAmountGet**
-> &#39;Number&#39; v10ManagerProgramsInvestmentAmountGet(authorization)
+> ProgramMinimumDeposit v10ManagerProgramsInvestmentAmountGet(authorization)
 
-Get GVT investment to create program
+Get investment amount to create program
 
 ### Example
 ```javascript
@@ -1413,7 +1413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;Number&#39;**
+[**ProgramMinimumDeposit**](ProgramMinimumDeposit.md)
 
 ### Authorization
 
