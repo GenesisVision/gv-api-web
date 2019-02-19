@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
+**stopOutLevel** | **Number** |  | [optional] 
 **periodStarts** | **Date** |  | [optional] 
 **periodEnds** | **Date** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 

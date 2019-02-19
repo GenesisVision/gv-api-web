@@ -97,6 +97,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#isReinvesting
  * @type {Boolean}
  */
@@ -199,6 +204,7 @@ var ProgramDetailsFull = function () {
         this.entryFeeSelected = undefined;
         this.entryFeeCurrent = undefined;
         this.successFee = undefined;
+        this.stopOutLevel = undefined;
         this.isReinvesting = undefined;
         this.isSignalProgram = undefined;
         this.signalSuccessFee = undefined;
@@ -251,6 +257,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('successFee')) {
                     obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
+                }
+                if (data.hasOwnProperty('stopOutLevel')) {
+                    obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
                 }
                 if (data.hasOwnProperty('isReinvesting')) {
                     obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');

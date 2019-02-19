@@ -47,6 +47,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetails#stopOutLevel
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramDetails#periodStarts
      * @type {Date}
      */
@@ -165,6 +170,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('periodDuration')) {
                 obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'Number');
             }
+            if (data.hasOwnProperty('stopOutLevel')) {
+                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
+            }
             if (data.hasOwnProperty('periodStarts')) {
                 obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
             }
@@ -223,6 +231,7 @@ export default class ProgramDetails {
     currency = undefined;
     level = undefined;
     periodDuration = undefined;
+    stopOutLevel = undefined;
     periodStarts = undefined;
     periodEnds = undefined;
     availableInvestment = undefined;

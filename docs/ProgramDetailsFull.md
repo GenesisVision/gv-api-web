@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **entryFeeSelected** | **Number** |  | [optional] 
 **entryFeeCurrent** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
+**stopOutLevel** | **Number** |  | [optional] 
 **isReinvesting** | **Boolean** |  | [optional] 
 **isSignalProgram** | **Boolean** |  | [optional] 
 **signalSuccessFee** | **Number** |  | [optional] 

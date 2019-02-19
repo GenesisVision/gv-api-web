@@ -1487,6 +1487,7 @@ export declare interface ProgramDetails {
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     periodDuration: number;
+    stopOutLevel: number;
     periodStarts: Date;
     periodEnds: Date;
     availableInvestment: number;
@@ -1516,6 +1517,7 @@ export declare interface ProgramDetailsFull {
     entryFeeSelected: number;
     entryFeeCurrent: number;
     successFee: number;
+    stopOutLevel: number;
     isReinvesting: boolean;
     isSignalProgram: boolean;
     signalSuccessFee: number;

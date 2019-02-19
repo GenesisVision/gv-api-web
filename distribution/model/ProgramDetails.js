@@ -75,6 +75,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetails#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetails#periodStarts
  * @type {Date}
  */
@@ -166,6 +171,7 @@ var ProgramDetails = function () {
         this.currency = undefined;
         this.level = undefined;
         this.periodDuration = undefined;
+        this.stopOutLevel = undefined;
         this.periodStarts = undefined;
         this.periodEnds = undefined;
         this.availableInvestment = undefined;
@@ -199,6 +205,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('periodDuration')) {
                     obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');
+                }
+                if (data.hasOwnProperty('stopOutLevel')) {
+                    obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
                 }
                 if (data.hasOwnProperty('periodStarts')) {
                     obj['periodStarts'] = _ApiClient2.default.convertToType(data['periodStarts'], 'Date');

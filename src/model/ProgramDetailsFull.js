@@ -75,6 +75,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetailsFull#stopOutLevel
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramDetailsFull#isReinvesting
      * @type {Boolean}
      */
@@ -216,6 +221,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
+            if (data.hasOwnProperty('stopOutLevel')) {
+                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
+            }
             if (data.hasOwnProperty('isReinvesting')) {
                 obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
             }
@@ -283,6 +291,7 @@ export default class ProgramDetailsFull {
     entryFeeSelected = undefined;
     entryFeeCurrent = undefined;
     successFee = undefined;
+    stopOutLevel = undefined;
     isReinvesting = undefined;
     isSignalProgram = undefined;
     signalSuccessFee = undefined;
