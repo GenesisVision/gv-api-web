@@ -1386,7 +1386,7 @@ export declare interface PersonalProgramDetailsFull {
 export declare interface PersonalSignalDetailsFull {
     subscribeDate: Date;
     investorProfit: number;
-    investorTrade: number;
+    investorTrades: number;
 }
 
 export declare interface PlatformAsset {

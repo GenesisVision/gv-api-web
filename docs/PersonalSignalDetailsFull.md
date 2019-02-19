@@ -5,6 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **subscribeDate** | **Date** |  | [optional] 
 **investorProfit** | **Number** |  | [optional] 
-**investorTrade** | **Number** |  | [optional] 
+**investorTrades** | **Number** |  | [optional] 
 
 

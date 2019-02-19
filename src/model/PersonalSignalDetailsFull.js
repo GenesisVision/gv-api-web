@@ -35,7 +35,7 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name PersonalSignalDetailsFull#investorTrade
+     * @name PersonalSignalDetailsFull#investorTrades
      * @type {Number}
      */
 
@@ -70,8 +70,8 @@ export default class PersonalSignalDetailsFull {
             if (data.hasOwnProperty('investorProfit')) {
                 obj['investorProfit'] = ApiClient.convertToType(data['investorProfit'], 'Number');
             }
-            if (data.hasOwnProperty('investorTrade')) {
-                obj['investorTrade'] = ApiClient.convertToType(data['investorTrade'], 'Number');
+            if (data.hasOwnProperty('investorTrades')) {
+                obj['investorTrades'] = ApiClient.convertToType(data['investorTrades'], 'Number');
             }
         }
         return obj;
@@ -79,7 +79,7 @@ export default class PersonalSignalDetailsFull {
 
     subscribeDate = undefined;
     investorProfit = undefined;
-    investorTrade = undefined;
+    investorTrades = undefined;
 
 
 
