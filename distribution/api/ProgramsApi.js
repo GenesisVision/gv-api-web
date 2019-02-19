@@ -432,7 +432,7 @@ var ProgramsApi = function () {
         'CurrencySecondary': opts['currencySecondary'],
         'LevelUpFrom': opts['levelUpFrom'],
         'Tags': this.apiClient.buildCollectionParam(opts['tags'], 'multi'),
-        'ProgramsType': opts['programsType'],
+        'IsSignal': opts['isSignal'],
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -473,7 +473,7 @@ var ProgramsApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.levelUpFrom] 
      * @param {[String]} [opts.tags] 
-     * @param {String} [opts.programsType] 
+     * @param {Boolean} [opts.isSignal] 
      * @param {Date} [opts.statisticDateFrom] 
      * @param {Date} [opts.statisticDateTo] 
      * @param {Number} [opts.chartPointsCount] 

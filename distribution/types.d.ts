@@ -391,7 +391,7 @@ export declare class ProgramsApi {
         currencySecondary?: string;
         levelUpFrom?: number;
         tags?: string[];
-        programsType?: string;
+        isSignal?: boolean;
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;
