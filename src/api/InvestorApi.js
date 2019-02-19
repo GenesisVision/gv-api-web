@@ -24,6 +24,7 @@ import ProgramInvestInfo from '../model/ProgramInvestInfo';
 import ProgramRequests from '../model/ProgramRequests';
 import ProgramWithdrawInfo from '../model/ProgramWithdrawInfo';
 import ProgramsList from '../model/ProgramsList';
+import SignalsList from '../model/SignalsList';
 
 /**
 * Investor service.
@@ -1246,7 +1247,7 @@ export default class InvestorApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramsList;
+      let returnType = SignalsList;
 
       return this.apiClient.callApi(
         '/v1.0/investor/signals', 'GET',
@@ -1267,7 +1268,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {Promise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
      */
       v10InvestorSignalsGet(authorization, opts) {
       return this.v10InvestorSignalsGetWithHttpInfo(authorization, opts)

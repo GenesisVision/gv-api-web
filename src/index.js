@@ -93,6 +93,7 @@ import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
 import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
+import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
 import PlatformCurrency from './model/PlatformCurrency';
@@ -135,6 +136,8 @@ import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
+import SignalDetails from './model/SignalDetails';
+import SignalsList from './model/SignalsList';
 import TradesSignalSlaveViewModel from './model/TradesSignalSlaveViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
@@ -668,6 +671,12 @@ export {
     PersonalProgramDetailsFull,
 
     /**
+     * @name index#PersonalSignalDetailsFull
+     * @type {PersonalSignalDetailsFull}
+     */
+    PersonalSignalDetailsFull,
+
+    /**
      * @name index#PlatformAsset
      * @type {PlatformAsset}
      */
@@ -918,6 +927,18 @@ export {
      * @type {SearchViewModel}
      */
     SearchViewModel,
+
+    /**
+     * @name index#SignalDetails
+     * @type {SignalDetails}
+     */
+    SignalDetails,
+
+    /**
+     * @name index#SignalsList
+     * @type {SignalsList}
+     */
+    SignalsList,
 
     /**
      * @name index#TradesSignalSlaveViewModel

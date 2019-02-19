@@ -197,7 +197,7 @@ export declare class InvestorApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<ProgramsList>;
+    }): Promise<SignalsList>;
 }
 
 export declare class KycApi {
@@ -597,6 +597,7 @@ export declare interface index {
     PeriodDate: PeriodDate;
     PersonalFundDetailsFull: PersonalFundDetailsFull;
     PersonalProgramDetailsFull: PersonalProgramDetailsFull;
+    PersonalSignalDetailsFull: PersonalSignalDetailsFull;
     PlatformAsset: PlatformAsset;
     PlatformAssets: PlatformAssets;
     PlatformCurrency: PlatformCurrency;
@@ -639,6 +640,8 @@ export declare interface index {
     ResetPasswordViewModel: ResetPasswordViewModel;
     Review: Review;
     SearchViewModel: SearchViewModel;
+    SignalDetails: SignalDetails;
+    SignalsList: SignalsList;
     TradesSignalSlaveViewModel: TradesSignalSlaveViewModel;
     TradesViewModel: TradesViewModel;
     TransactionDetails: TransactionDetails;
@@ -1380,6 +1383,12 @@ export declare interface PersonalProgramDetailsFull {
     isFollowSignals: boolean;
 }
 
+export declare interface PersonalSignalDetailsFull {
+    subscribeDate: Date;
+    investorProfit: number;
+    investorTrade: number;
+}
+
 export declare interface PlatformAsset {
     id: string;
     name: string;
@@ -1803,6 +1812,27 @@ export declare interface SearchViewModel {
     programs: ProgramsList;
     funds: FundsList;
     managers: ManagersList;
+}
+
+export declare interface SignalDetails {
+    subscribers: number;
+    statistic: ProgramDetailsListStatistic;
+    personalSignalDetails: PersonalSignalDetailsFull;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    title: string;
+    description: string;
+    status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+    manager: ProfilePublic;
+    chart: ChartSimple[];
+    dashboardAssetsDetails: DashboardProgramDetails;
+}
+
+export declare interface SignalsList {
+    programs: SignalDetails[];
+    total: number;
 }
 
 export declare interface TradesSignalSlaveViewModel {

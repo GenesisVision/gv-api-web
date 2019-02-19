@@ -1026,7 +1026,7 @@ No authorization required
 
 <a name="v10InvestorSignalsGet"></a>
 # **v10InvestorSignalsGet**
-> ProgramsList v10InvestorSignalsGet(authorization, opts)
+> SignalsList v10InvestorSignalsGet(authorization, opts)
 
 Dashboard program list
 
@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProgramsList**](ProgramsList.md)
+[**SignalsList**](SignalsList.md)
 
 ### Authorization
 

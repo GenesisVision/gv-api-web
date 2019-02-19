@@ -65,6 +65,10 @@ var _ProgramsList = require('../model/ProgramsList');
 
 var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
+var _SignalsList = require('../model/SignalsList');
+
+var _SignalsList2 = _interopRequireDefault(_SignalsList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1213,7 +1217,7 @@ var InvestorApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProgramsList2.default;
+      var returnType = _SignalsList2.default;
 
       return this.apiClient.callApi('/v1.0/investor/signals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -1230,7 +1234,7 @@ var InvestorApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {Promise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
      */
 
   }, {
