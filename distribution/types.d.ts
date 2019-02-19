@@ -1234,6 +1234,7 @@ export declare interface NewProgramRequest {
     brokerAccountTypeId: string;
     signalSuccessFee: number;
     signalSubscriptionFee: number;
+    isSignalProgram: boolean;
     title: string;
     description: string;
     logo: string;

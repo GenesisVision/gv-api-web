@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **brokerAccountTypeId** | **String** |  | [optional] 
 **signalSuccessFee** | **Number** |  | [optional] 
 **signalSubscriptionFee** | **Number** |  | [optional] 
+**isSignalProgram** | **Boolean** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

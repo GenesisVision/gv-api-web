@@ -65,6 +65,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name NewProgramRequest#isSignalProgram
+     * @type {Boolean}
+     */
+    /**
+     *
      * @name NewProgramRequest#title
      * @type {String}
      */
@@ -143,6 +148,9 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('signalSubscriptionFee')) {
                 obj['signalSubscriptionFee'] = ApiClient.convertToType(data['signalSubscriptionFee'], 'Number');
             }
+            if (data.hasOwnProperty('isSignalProgram')) {
+                obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'Boolean');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -173,6 +181,7 @@ export default class NewProgramRequest {
     brokerAccountTypeId = undefined;
     signalSuccessFee = undefined;
     signalSubscriptionFee = undefined;
+    isSignalProgram = undefined;
     title = undefined;
     description = undefined;
     logo = undefined;
