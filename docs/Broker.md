@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **leverageMax** | **Number** |  | [optional] 
 **accountTypes** | [**[BrokerAccountType]**](BrokerAccountType.md) |  | [optional] 
 **isForex** | **Boolean** |  | [optional] 
+**signalsAvailable** | **Boolean** |  | [optional] 
 
 
