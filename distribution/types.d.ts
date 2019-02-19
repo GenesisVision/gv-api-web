@@ -443,6 +443,14 @@ export declare class SignalApi {
     }): Promise<any>;
     v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
     v10SignalTradesByIdClosePost(id: string, authorization: string): Promise<any>;
+    v10SignalTradesGet(authorization: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        symbol?: string;
+        sorting?: string;
+        skip?: number;
+        take?: number;
+    }): Promise<TradesSignalSlaveViewModel>;
     v10SignalTradesOpenGet(authorization: string, opts?: {
         sorting?: string;
         skip?: number;

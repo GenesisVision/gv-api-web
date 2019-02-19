@@ -248,6 +248,64 @@ export default class SignalApi {
         });
     }
 
+      v10SignalTradesGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalTradesGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'Symbol': opts['symbol'],
+        'Sorting': opts['sorting'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TradesSignalSlaveViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/trades', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get investors signals trades history
+     * @function SignalApi#v10SignalTradesGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {String} [opts.symbol] 
+     * @param {String} [opts.sorting] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
+     */
+      v10SignalTradesGet(authorization, opts) {
+      return this.v10SignalTradesGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10SignalTradesOpenGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;

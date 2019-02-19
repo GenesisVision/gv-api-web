@@ -223,6 +223,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 *CoreApiV10.SignalApi* | [**v10SignalTradesByIdClosePost**](docs/SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
+*CoreApiV10.SignalApi* | [**v10SignalTradesGet**](docs/SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**v10SignalTradesOpenGet**](docs/SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.SignalApi* | [**v10SignalUpdatePost**](docs/SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**v10SignalAttachByIdPost**](SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 [**v10SignalTradesByIdClosePost**](SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
+[**v10SignalTradesGet**](SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**v10SignalTradesOpenGet**](SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 [**v10SignalUpdatePost**](SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 
@@ -191,6 +192,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalTradesGet"></a>
+# **v10SignalTradesGet**
+> TradesSignalSlaveViewModel v10SignalTradesGet(authorization, opts)
+
+Get investors signals trades history
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'symbol': "symbol_example", // String | 
+  'sorting': "sorting_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10SignalTradesGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **symbol** | **String**|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**TradesSignalSlaveViewModel**](TradesSignalSlaveViewModel.md)
 
 ### Authorization
 
