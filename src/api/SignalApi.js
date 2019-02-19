@@ -248,9 +248,14 @@ export default class SignalApi {
         });
     }
 
-      v10SignalTradesOpenGetWithHttpInfo(opts) {
+      v10SignalTradesOpenGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalTradesOpenGet");
+      }
 
 
       let pathParams = {
@@ -261,6 +266,7 @@ export default class SignalApi {
         'Take': opts['take']
       };
       let headerParams = {
+        'Authorization': authorization
       };
       let formParams = {
       };
@@ -280,14 +286,15 @@ export default class SignalApi {
     /**
      * Get investors signals open trades
      * @function SignalApi#v10SignalTradesOpenGet
+     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
      */
-      v10SignalTradesOpenGet(opts) {
-      return this.v10SignalTradesOpenGetWithHttpInfo(opts)
+      v10SignalTradesOpenGet(authorization, opts) {
+      return this.v10SignalTradesOpenGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

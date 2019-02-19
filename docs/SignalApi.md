@@ -203,7 +203,7 @@ No authorization required
 
 <a name="v10SignalTradesOpenGet"></a>
 # **v10SignalTradesOpenGet**
-> TradesSignalSlaveViewModel v10SignalTradesOpenGet(opts)
+> TradesSignalSlaveViewModel v10SignalTradesOpenGet(authorization, opts)
 
 Get investors signals open trades
 
@@ -213,12 +213,14 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.SignalApi();
 
+let authorization = "authorization_example"; // String | JWT access token
+
 let opts = { 
   'sorting': "sorting_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10SignalTradesOpenGet(opts).then((data) => {
+apiInstance.v10SignalTradesOpenGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -230,6 +232,7 @@ apiInstance.v10SignalTradesOpenGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
  **sorting** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 

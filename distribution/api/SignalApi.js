@@ -255,9 +255,14 @@ var SignalApi = function () {
     }
   }, {
     key: 'v10SignalTradesOpenGetWithHttpInfo',
-    value: function v10SignalTradesOpenGetWithHttpInfo(opts) {
+    value: function v10SignalTradesOpenGetWithHttpInfo(authorization, opts) {
       opts = opts || {};
       var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalTradesOpenGet");
+      }
 
       var pathParams = {};
       var queryParams = {
@@ -265,7 +270,9 @@ var SignalApi = function () {
         'Skip': opts['skip'],
         'Take': opts['take']
       };
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
@@ -279,6 +286,7 @@ var SignalApi = function () {
     /**
      * Get investors signals open trades
      * @function SignalApi#v10SignalTradesOpenGet
+     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
@@ -288,8 +296,8 @@ var SignalApi = function () {
 
   }, {
     key: 'v10SignalTradesOpenGet',
-    value: function v10SignalTradesOpenGet(opts) {
-      return this.v10SignalTradesOpenGetWithHttpInfo(opts).then(function (response_and_data) {
+    value: function v10SignalTradesOpenGet(authorization, opts) {
+      return this.v10SignalTradesOpenGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
