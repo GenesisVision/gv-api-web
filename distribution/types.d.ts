@@ -442,6 +442,7 @@ export declare class SignalApi {
         initialDepositAmount?: number;
     }): Promise<any>;
     v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
+    v10SignalTradesByIdClosePost(id: string, authorization: string): Promise<any>;
     v10SignalTradesOpenGet(opts?: {
         sorting?: string;
         skip?: number;

@@ -197,6 +197,57 @@ export default class SignalApi {
         });
     }
 
+      v10SignalTradesByIdClosePostWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10SignalTradesByIdClosePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalTradesByIdClosePost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/trades/{id}/close', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Close signal trade
+     * @function SignalApi#v10SignalTradesByIdClosePost
+     * @param {String} id Trade id
+     * @param {String} authorization JWT access token
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+      v10SignalTradesByIdClosePost(id, authorization) {
+      return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10SignalTradesOpenGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
