@@ -14,10 +14,10 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import DashboardProgramDetails from './DashboardProgramDetails';
 import PersonalSignalDetailsFull from './PersonalSignalDetailsFull';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
+import ProgramTag from './ProgramTag';
 
 
 
@@ -30,18 +30,33 @@ import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
     
     /**
      *
-     * @name SignalDetails#subscribers
-     * @type {Number}
-     */
-    /**
-     *
      * @name SignalDetails#statistic
      * @type {ProgramDetailsListStatistic}
      */
     /**
      *
-     * @name SignalDetails#personalSignalDetails
+     * @name SignalDetails#personalDetails
      * @type {PersonalSignalDetailsFull}
+     */
+    /**
+     *
+     * @name SignalDetails#currency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     */
+    /**
+     *
+     * @name SignalDetails#level
+     * @type {Number}
+     */
+    /**
+     *
+     * @name SignalDetails#tags
+     * @type {Array<ProgramTag>}
+     */
+    /**
+     *
+     * @name SignalDetails#subscribers
+     * @type {Number}
      */
     /**
      *
@@ -88,11 +103,6 @@ import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
      * @name SignalDetails#chart
      * @type {Array<ChartSimple>}
      */
-    /**
-     *
-     * @name SignalDetails#dashboardAssetsDetails
-     * @type {DashboardProgramDetails}
-     */
 
 
 
@@ -119,14 +129,23 @@ export default class SignalDetails {
             
             
 
-            if (data.hasOwnProperty('subscribers')) {
-                obj['subscribers'] = ApiClient.convertToType(data['subscribers'], 'Number');
-            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
             }
-            if (data.hasOwnProperty('personalSignalDetails')) {
-                obj['personalSignalDetails'] = PersonalSignalDetailsFull.constructFromObject(data['personalSignalDetails']);
+            if (data.hasOwnProperty('personalDetails')) {
+                obj['personalDetails'] = PersonalSignalDetailsFull.constructFromObject(data['personalDetails']);
+            }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
+            if (data.hasOwnProperty('level')) {
+                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
+            }
+            if (data.hasOwnProperty('subscribers')) {
+                obj['subscribers'] = ApiClient.convertToType(data['subscribers'], 'Number');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -155,16 +174,16 @@ export default class SignalDetails {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
-            }
         }
         return obj;
     }
 
-    subscribers = undefined;
     statistic = undefined;
-    personalSignalDetails = undefined;
+    personalDetails = undefined;
+    currency = undefined;
+    level = undefined;
+    tags = undefined;
+    subscribers = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;
@@ -174,12 +193,40 @@ export default class SignalDetails {
     status = undefined;
     manager = undefined;
     chart = undefined;
-    dashboardAssetsDetails = undefined;
 
 
 
 
 
+
+    static CurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
 
     static StatusEnum = {
     

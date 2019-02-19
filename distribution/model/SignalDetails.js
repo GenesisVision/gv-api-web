@@ -25,10 +25,6 @@ var _ChartSimple = require('./ChartSimple');
 
 var _ChartSimple2 = _interopRequireDefault(_ChartSimple);
 
-var _DashboardProgramDetails = require('./DashboardProgramDetails');
-
-var _DashboardProgramDetails2 = _interopRequireDefault(_DashboardProgramDetails);
-
 var _PersonalSignalDetailsFull = require('./PersonalSignalDetailsFull');
 
 var _PersonalSignalDetailsFull2 = _interopRequireDefault(_PersonalSignalDetailsFull);
@@ -41,6 +37,10 @@ var _ProgramDetailsListStatistic = require('./ProgramDetailsListStatistic');
 
 var _ProgramDetailsListStatistic2 = _interopRequireDefault(_ProgramDetailsListStatistic);
 
+var _ProgramTag = require('./ProgramTag');
+
+var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52,18 +52,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name SignalDetails#subscribers
- * @type {Number}
- */
-/**
- *
  * @name SignalDetails#statistic
  * @type {ProgramDetailsListStatistic}
  */
 /**
  *
- * @name SignalDetails#personalSignalDetails
+ * @name SignalDetails#personalDetails
  * @type {PersonalSignalDetailsFull}
+ */
+/**
+ *
+ * @name SignalDetails#currency
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+/**
+ *
+ * @name SignalDetails#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalDetails#tags
+ * @type {[ProgramTag]}
+ */
+/**
+ *
+ * @name SignalDetails#subscribers
+ * @type {Number}
  */
 /**
  *
@@ -110,19 +125,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name SignalDetails#chart
  * @type {[ChartSimple]}
  */
-/**
- *
- * @name SignalDetails#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
- */
 
 var SignalDetails = function () {
     function SignalDetails() {
         _classCallCheck(this, SignalDetails);
 
-        this.subscribers = undefined;
         this.statistic = undefined;
-        this.personalSignalDetails = undefined;
+        this.personalDetails = undefined;
+        this.currency = undefined;
+        this.level = undefined;
+        this.tags = undefined;
+        this.subscribers = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -132,7 +145,6 @@ var SignalDetails = function () {
         this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
-        this.dashboardAssetsDetails = undefined;
     }
 
     _createClass(SignalDetails, null, [{
@@ -141,14 +153,23 @@ var SignalDetails = function () {
             if (data) {
                 obj = obj || new SignalDetails();
 
-                if (data.hasOwnProperty('subscribers')) {
-                    obj['subscribers'] = _ApiClient2.default.convertToType(data['subscribers'], 'Number');
-                }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
                 }
-                if (data.hasOwnProperty('personalSignalDetails')) {
-                    obj['personalSignalDetails'] = _PersonalSignalDetailsFull2.default.constructFromObject(data['personalSignalDetails']);
+                if (data.hasOwnProperty('personalDetails')) {
+                    obj['personalDetails'] = _PersonalSignalDetailsFull2.default.constructFromObject(data['personalDetails']);
+                }
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('tags')) {
+                    obj['tags'] = _ApiClient2.default.convertToType(data['tags'], [_ProgramTag2.default]);
+                }
+                if (data.hasOwnProperty('subscribers')) {
+                    obj['subscribers'] = _ApiClient2.default.convertToType(data['subscribers'], 'Number');
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
@@ -177,9 +198,6 @@ var SignalDetails = function () {
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
                 }
-                if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
-                }
             }
             return obj;
         }
@@ -188,6 +206,34 @@ var SignalDetails = function () {
     return SignalDetails;
 }();
 
+SignalDetails.CurrencyEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
 SignalDetails.StatusEnum = {
 
     "None": "None",

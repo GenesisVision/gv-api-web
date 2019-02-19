@@ -3,9 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**subscribers** | **Number** |  | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
-**personalSignalDetails** | [**PersonalSignalDetailsFull**](PersonalSignalDetailsFull.md) |  | [optional] 
+**personalDetails** | [**PersonalSignalDetailsFull**](PersonalSignalDetailsFull.md) |  | [optional] 
+**currency** | **String** |  | [optional] 
+**level** | **Number** |  | [optional] 
+**tags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
+**subscribers** | **Number** |  | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
@@ -15,7 +18,39 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
+
+
+<a name="CurrencyEnum"></a>
+## Enum: CurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="StatusEnum"></a>

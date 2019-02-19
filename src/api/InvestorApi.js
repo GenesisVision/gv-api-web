@@ -389,7 +389,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Funds list
+     * Dashboard funds list
      * @function InvestorApi#v10InvestorFundsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
@@ -1257,7 +1257,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Dashboard program list
+     * Dashboard signal providers list
      * @function InvestorApi#v10InvestorSignalsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters

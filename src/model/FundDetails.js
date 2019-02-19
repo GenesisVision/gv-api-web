@@ -51,6 +51,11 @@ import ProfilePublic from './ProfilePublic';
      */
     /**
      *
+     * @name FundDetails#dashboardAssetsDetails
+     * @type {DashboardProgramDetails}
+     */
+    /**
+     *
      * @name FundDetails#id
      * @type {String}
      */
@@ -94,11 +99,6 @@ import ProfilePublic from './ProfilePublic';
      * @name FundDetails#chart
      * @type {Array<ChartSimple>}
      */
-    /**
-     *
-     * @name FundDetails#dashboardAssetsDetails
-     * @type {DashboardProgramDetails}
-     */
 
 
 
@@ -137,6 +137,9 @@ export default class FundDetails {
             if (data.hasOwnProperty('personalDetails')) {
                 obj['personalDetails'] = PersonalFundDetailsFull.constructFromObject(data['personalDetails']);
             }
+            if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -164,9 +167,6 @@ export default class FundDetails {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
-            }
         }
         return obj;
     }
@@ -175,6 +175,7 @@ export default class FundDetails {
     topFundAssets = undefined;
     statistic = undefined;
     personalDetails = undefined;
+    dashboardAssetsDetails = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;
@@ -184,7 +185,6 @@ export default class FundDetails {
     status = undefined;
     manager = undefined;
     chart = undefined;
-    dashboardAssetsDetails = undefined;
 
 
 

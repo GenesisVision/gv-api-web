@@ -67,6 +67,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetails#dashboardAssetsDetails
+     * @type {DashboardProgramDetails}
+     */
+    /**
+     *
      * @name ProgramDetails#statistic
      * @type {ProgramDetailsListStatistic}
      */
@@ -130,11 +135,6 @@ import ProgramTag from './ProgramTag';
      * @name ProgramDetails#chart
      * @type {Array<ChartSimple>}
      */
-    /**
-     *
-     * @name ProgramDetails#dashboardAssetsDetails
-     * @type {DashboardProgramDetails}
-     */
 
 
 
@@ -182,6 +182,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
+            if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
+            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
             }
@@ -221,9 +224,6 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
-            }
         }
         return obj;
     }
@@ -235,6 +235,7 @@ export default class ProgramDetails {
     periodStarts = undefined;
     periodEnds = undefined;
     availableInvestment = undefined;
+    dashboardAssetsDetails = undefined;
     statistic = undefined;
     rating = undefined;
     personalDetails = undefined;
@@ -248,7 +249,6 @@ export default class ProgramDetails {
     status = undefined;
     manager = undefined;
     chart = undefined;
-    dashboardAssetsDetails = undefined;
 
 
 

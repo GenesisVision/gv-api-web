@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **periodStarts** | **Date** |  | [optional] 
 **periodEnds** | **Date** |  | [optional] 
 **availableInvestment** | **Number** |  | [optional] 
+**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 
@@ -23,7 +24,6 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
 
 
 <a name="CurrencyEnum"></a>

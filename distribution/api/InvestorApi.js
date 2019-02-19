@@ -414,7 +414,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Funds list
+     * Dashboard funds list
      * @function InvestorApi#v10InvestorFundsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
@@ -1223,7 +1223,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * Dashboard program list
+     * Dashboard signal providers list
      * @function InvestorApi#v10InvestorSignalsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters

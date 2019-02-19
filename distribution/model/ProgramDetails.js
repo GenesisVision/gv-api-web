@@ -95,6 +95,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetails#dashboardAssetsDetails
+ * @type {DashboardProgramDetails}
+ */
+/**
+ *
  * @name ProgramDetails#statistic
  * @type {ProgramDetailsListStatistic}
  */
@@ -158,11 +163,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProgramDetails#chart
  * @type {[ChartSimple]}
  */
-/**
- *
- * @name ProgramDetails#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
- */
 
 var ProgramDetails = function () {
     function ProgramDetails() {
@@ -175,6 +175,7 @@ var ProgramDetails = function () {
         this.periodStarts = undefined;
         this.periodEnds = undefined;
         this.availableInvestment = undefined;
+        this.dashboardAssetsDetails = undefined;
         this.statistic = undefined;
         this.rating = undefined;
         this.personalDetails = undefined;
@@ -188,7 +189,6 @@ var ProgramDetails = function () {
         this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
-        this.dashboardAssetsDetails = undefined;
     }
 
     _createClass(ProgramDetails, null, [{
@@ -217,6 +217,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
+                }
+                if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramDetailsListStatistic2.default.constructFromObject(data['statistic']);
@@ -256,9 +259,6 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
-                }
-                if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
                 }
             }
             return obj;

@@ -922,6 +922,7 @@ export declare interface FundDetails {
     topFundAssets: FundAssetPercent[];
     statistic: FundDetailsListStatistic;
     personalDetails: PersonalFundDetailsFull;
+    dashboardAssetsDetails: DashboardProgramDetails;
     id: string;
     logo: string;
     url: string;
@@ -931,7 +932,6 @@ export declare interface FundDetails {
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
     manager: ProfilePublic;
     chart: ChartSimple[];
-    dashboardAssetsDetails: DashboardProgramDetails;
 }
 
 export declare interface FundDetailsFull {
@@ -1509,6 +1509,7 @@ export declare interface ProgramDetails {
     periodStarts: Date;
     periodEnds: Date;
     availableInvestment: number;
+    dashboardAssetsDetails: DashboardProgramDetails;
     statistic: ProgramDetailsListStatistic;
     rating: ProgramDetailsRating;
     personalDetails: PersonalProgramDetailsFull;
@@ -1522,7 +1523,6 @@ export declare interface ProgramDetails {
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
     manager: ProfilePublic;
     chart: ChartSimple[];
-    dashboardAssetsDetails: DashboardProgramDetails;
 }
 
 export declare interface ProgramDetailsFull {
@@ -1824,9 +1824,12 @@ export declare interface SearchViewModel {
 }
 
 export declare interface SignalDetails {
-    subscribers: number;
     statistic: ProgramDetailsListStatistic;
-    personalSignalDetails: PersonalSignalDetailsFull;
+    personalDetails: PersonalSignalDetailsFull;
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    level: number;
+    tags: ProgramTag[];
+    subscribers: number;
     id: string;
     logo: string;
     url: string;
@@ -1836,7 +1839,6 @@ export declare interface SignalDetails {
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
     manager: ProfilePublic;
     chart: ChartSimple[];
-    dashboardAssetsDetails: DashboardProgramDetails;
 }
 
 export declare interface SignalsList {

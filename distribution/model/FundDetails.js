@@ -76,6 +76,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name FundDetails#dashboardAssetsDetails
+ * @type {DashboardProgramDetails}
+ */
+/**
+ *
  * @name FundDetails#id
  * @type {String}
  */
@@ -119,11 +124,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name FundDetails#chart
  * @type {[ChartSimple]}
  */
-/**
- *
- * @name FundDetails#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
- */
 
 var FundDetails = function () {
     function FundDetails() {
@@ -133,6 +133,7 @@ var FundDetails = function () {
         this.topFundAssets = undefined;
         this.statistic = undefined;
         this.personalDetails = undefined;
+        this.dashboardAssetsDetails = undefined;
         this.id = undefined;
         this.logo = undefined;
         this.url = undefined;
@@ -142,7 +143,6 @@ var FundDetails = function () {
         this.status = undefined;
         this.manager = undefined;
         this.chart = undefined;
-        this.dashboardAssetsDetails = undefined;
     }
 
     _createClass(FundDetails, null, [{
@@ -162,6 +162,9 @@ var FundDetails = function () {
                 }
                 if (data.hasOwnProperty('personalDetails')) {
                     obj['personalDetails'] = _PersonalFundDetailsFull2.default.constructFromObject(data['personalDetails']);
+                }
+                if (data.hasOwnProperty('dashboardAssetsDetails')) {
+                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
@@ -189,9 +192,6 @@ var FundDetails = function () {
                 }
                 if (data.hasOwnProperty('chart')) {
                     obj['chart'] = _ApiClient2.default.convertToType(data['chart'], [_ChartSimple2.default]);
-                }
-                if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                    obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);
                 }
             }
             return obj;

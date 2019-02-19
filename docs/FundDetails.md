@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **topFundAssets** | [**[FundAssetPercent]**](FundAssetPercent.md) |  | [optional] 
 **statistic** | [**FundDetailsListStatistic**](FundDetailsListStatistic.md) |  | [optional] 
 **personalDetails** | [**PersonalFundDetailsFull**](PersonalFundDetailsFull.md) | Fields for authorized user | [optional] 
+**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
@@ -16,7 +17,6 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
 
 
 <a name="StatusEnum"></a>

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
 [**v10InvestorFundsByIdWithdrawByPercentPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
 [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-[**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Funds list
+[**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Dashboard funds list
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
 [**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 [**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
-[**v10InvestorSignalsGet**](InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard program list
+[**v10InvestorSignalsGet**](InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard signal providers list
 
 
 <a name="v10InvestorFundsByIdInvestByAmountPost"></a>
@@ -277,7 +277,7 @@ No authorization required
 # **v10InvestorFundsGet**
 > FundsList v10InvestorFundsGet(authorization, opts)
 
-Funds list
+Dashboard funds list
 
 ### Example
 ```javascript
@@ -1028,7 +1028,7 @@ No authorization required
 # **v10InvestorSignalsGet**
 > SignalsList v10InvestorSignalsGet(authorization, opts)
 
-Dashboard program list
+Dashboard signal providers list
 
 ### Example
 ```javascript
