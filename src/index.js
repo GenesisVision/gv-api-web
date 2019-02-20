@@ -86,9 +86,10 @@ import NotificationList from './model/NotificationList';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
+import OrderClosedSignalSlaveModel from './model/OrderClosedSignalSlaveModel';
 import OrderModel from './model/OrderModel';
+import OrderOpenSignalSlaveModel from './model/OrderOpenSignalSlaveModel';
 import OrderProgramData from './model/OrderProgramData';
-import OrderSignalSlaveModel from './model/OrderSignalSlaveModel';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
@@ -139,7 +140,8 @@ import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDetails from './model/SignalDetails';
 import SignalsList from './model/SignalsList';
-import TradesSignalSlaveViewModel from './model/TradesSignalSlaveViewModel';
+import TradesHistorySignalSlaveViewModel from './model/TradesHistorySignalSlaveViewModel';
+import TradesOpenSignalSlaveViewModel from './model/TradesOpenSignalSlaveViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -630,22 +632,28 @@ export {
     NotificationViewModel,
 
     /**
+     * @name index#OrderClosedSignalSlaveModel
+     * @type {OrderClosedSignalSlaveModel}
+     */
+    OrderClosedSignalSlaveModel,
+
+    /**
      * @name index#OrderModel
      * @type {OrderModel}
      */
     OrderModel,
 
     /**
+     * @name index#OrderOpenSignalSlaveModel
+     * @type {OrderOpenSignalSlaveModel}
+     */
+    OrderOpenSignalSlaveModel,
+
+    /**
      * @name index#OrderProgramData
      * @type {OrderProgramData}
      */
     OrderProgramData,
-
-    /**
-     * @name index#OrderSignalSlaveModel
-     * @type {OrderSignalSlaveModel}
-     */
-    OrderSignalSlaveModel,
 
     /**
      * @name index#OtherAssetsValue
@@ -948,10 +956,16 @@ export {
     SignalsList,
 
     /**
-     * @name index#TradesSignalSlaveViewModel
-     * @type {TradesSignalSlaveViewModel}
+     * @name index#TradesHistorySignalSlaveViewModel
+     * @type {TradesHistorySignalSlaveViewModel}
      */
-    TradesSignalSlaveViewModel,
+    TradesHistorySignalSlaveViewModel,
+
+    /**
+     * @name index#TradesOpenSignalSlaveViewModel
+     * @type {TradesOpenSignalSlaveViewModel}
+     */
+    TradesOpenSignalSlaveViewModel,
 
     /**
      * @name index#TradesViewModel

@@ -29,9 +29,13 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
-var _TradesSignalSlaveViewModel = require('../model/TradesSignalSlaveViewModel');
+var _TradesHistorySignalSlaveViewModel = require('../model/TradesHistorySignalSlaveViewModel');
 
-var _TradesSignalSlaveViewModel2 = _interopRequireDefault(_TradesSignalSlaveViewModel);
+var _TradesHistorySignalSlaveViewModel2 = _interopRequireDefault(_TradesHistorySignalSlaveViewModel);
+
+var _TradesOpenSignalSlaveViewModel = require('../model/TradesOpenSignalSlaveViewModel');
+
+var _TradesOpenSignalSlaveViewModel2 = _interopRequireDefault(_TradesOpenSignalSlaveViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -281,7 +285,7 @@ var SignalApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _TradesSignalSlaveViewModel2.default;
+      var returnType = _TradesHistorySignalSlaveViewModel2.default;
 
       return this.apiClient.callApi('/v1.0/signal/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -297,7 +301,7 @@ var SignalApi = function () {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
+     * @return {Promise<TradesHistorySignalSlaveViewModel>} a Promise, with an object containing data of type TradesHistorySignalSlaveViewModel and HTTP response
      */
 
   }, {
@@ -332,7 +336,7 @@ var SignalApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _TradesSignalSlaveViewModel2.default;
+      var returnType = _TradesOpenSignalSlaveViewModel2.default;
 
       return this.apiClient.callApi('/v1.0/signal/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -345,7 +349,7 @@ var SignalApi = function () {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
+     * @return {Promise<TradesOpenSignalSlaveViewModel>} a Promise, with an object containing data of type TradesOpenSignalSlaveViewModel and HTTP response
      */
 
   }, {

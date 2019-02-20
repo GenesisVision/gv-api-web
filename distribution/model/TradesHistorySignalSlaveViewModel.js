@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OrderSignalSlaveModel = require('./OrderSignalSlaveModel');
+var _OrderClosedSignalSlaveModel = require('./OrderClosedSignalSlaveModel');
 
-var _OrderSignalSlaveModel2 = _interopRequireDefault(_OrderSignalSlaveModel);
+var _OrderClosedSignalSlaveModel2 = _interopRequireDefault(_OrderClosedSignalSlaveModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,36 +31,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface TradesSignalSlaveViewModel
+ * @interface TradesHistorySignalSlaveViewModel
  */
 
 /**
  *
- * @name TradesSignalSlaveViewModel#trades
- * @type {Array<OrderSignalSlaveModel>}
+ * @name TradesHistorySignalSlaveViewModel#trades
+ * @type {[OrderClosedSignalSlaveModel]}
  */
 /**
  *
- * @name TradesSignalSlaveViewModel#total
+ * @name TradesHistorySignalSlaveViewModel#total
  * @type {Number}
  */
 
-var TradesSignalSlaveViewModel = function () {
-    function TradesSignalSlaveViewModel() {
-        _classCallCheck(this, TradesSignalSlaveViewModel);
+var TradesHistorySignalSlaveViewModel = function () {
+    function TradesHistorySignalSlaveViewModel() {
+        _classCallCheck(this, TradesHistorySignalSlaveViewModel);
 
         this.trades = undefined;
         this.total = undefined;
     }
 
-    _createClass(TradesSignalSlaveViewModel, null, [{
+    _createClass(TradesHistorySignalSlaveViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new TradesSignalSlaveViewModel();
+                obj = obj || new TradesHistorySignalSlaveViewModel();
 
                 if (data.hasOwnProperty('trades')) {
-                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderSignalSlaveModel2.default]);
+                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderClosedSignalSlaveModel2.default]);
                 }
                 if (data.hasOwnProperty('total')) {
                     obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
@@ -70,7 +70,7 @@ var TradesSignalSlaveViewModel = function () {
         }
     }]);
 
-    return TradesSignalSlaveViewModel;
+    return TradesHistorySignalSlaveViewModel;
 }();
 
-exports.default = TradesSignalSlaveViewModel;
+exports.default = TradesHistorySignalSlaveViewModel;

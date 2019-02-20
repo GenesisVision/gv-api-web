@@ -450,12 +450,12 @@ export declare class SignalApi {
         sorting?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesSignalSlaveViewModel>;
+    }): Promise<TradesHistorySignalSlaveViewModel>;
     v10SignalTradesOpenGet(authorization: string, opts?: {
         sorting?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesSignalSlaveViewModel>;
+    }): Promise<TradesOpenSignalSlaveViewModel>;
     v10SignalUpdatePost(authorization: string, opts?: {
         id?: string;
         mode?: string;
@@ -598,9 +598,10 @@ export declare interface index {
     NotificationSettingList: NotificationSettingList;
     NotificationSettingViewModel: NotificationSettingViewModel;
     NotificationViewModel: NotificationViewModel;
+    OrderClosedSignalSlaveModel: OrderClosedSignalSlaveModel;
     OrderModel: OrderModel;
+    OrderOpenSignalSlaveModel: OrderOpenSignalSlaveModel;
     OrderProgramData: OrderProgramData;
-    OrderSignalSlaveModel: OrderSignalSlaveModel;
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
@@ -651,7 +652,8 @@ export declare interface index {
     SearchViewModel: SearchViewModel;
     SignalDetails: SignalDetails;
     SignalsList: SignalsList;
-    TradesSignalSlaveViewModel: TradesSignalSlaveViewModel;
+    TradesHistorySignalSlaveViewModel: TradesHistorySignalSlaveViewModel;
+    TradesOpenSignalSlaveViewModel: TradesOpenSignalSlaveViewModel;
     TradesViewModel: TradesViewModel;
     TransactionDetails: TransactionDetails;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
@@ -1305,7 +1307,43 @@ export declare interface OpenSignalTradesList {
     signalTrades: OpenSignalTrade[];
 }
 
+export declare interface OrderClosedSignalSlaveModel {
+    dateClose: Date;
+    priceClose: number;
+    manager: ProfilePublic;
+    program: OrderProgramData;
+    programId: string;
+    id: string;
+    login: string;
+    ticket: string;
+    symbol: string;
+    volume: number;
+    profit: number;
+    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
+    date: Date;
+    price: number;
+    priceCurrent: number;
+    entry: "In" | "Out" | "InOut" | "OutBy";
+}
+
 export declare interface OrderModel {
+    id: string;
+    login: string;
+    ticket: string;
+    symbol: string;
+    volume: number;
+    profit: number;
+    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
+    date: Date;
+    price: number;
+    priceCurrent: number;
+    entry: "In" | "Out" | "InOut" | "OutBy";
+}
+
+export declare interface OrderOpenSignalSlaveModel {
+    manager: ProfilePublic;
+    program: OrderProgramData;
+    programId: string;
     id: string;
     login: string;
     ticket: string;
@@ -1854,6 +1892,16 @@ export declare interface SignalDetails {
 
 export declare interface SignalsList {
     programs: SignalDetails[];
+    total: number;
+}
+
+export declare interface TradesHistorySignalSlaveViewModel {
+    trades: OrderClosedSignalSlaveModel[];
+    total: number;
+}
+
+export declare interface TradesOpenSignalSlaveViewModel {
+    trades: OrderOpenSignalSlaveModel[];
     total: number;
 }
 

@@ -21,9 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OrderSignalSlaveModel = require('./OrderSignalSlaveModel');
+var _OrderProgramData = require('./OrderProgramData');
 
-var _OrderSignalSlaveModel2 = _interopRequireDefault(_OrderSignalSlaveModel);
+var _OrderProgramData2 = _interopRequireDefault(_OrderProgramData);
+
+var _ProfilePublic = require('./ProfilePublic');
+
+var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,46 +35,194 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface TradesSignalSlaveViewModel
+ * @interface OrderClosedSignalSlaveModel
  */
 
 /**
  *
- * @name TradesSignalSlaveViewModel#trades
- * @type {Array<OrderSignalSlaveModel>}
+ * @name OrderClosedSignalSlaveModel#dateClose
+ * @type {Date}
  */
 /**
  *
- * @name TradesSignalSlaveViewModel#total
+ * @name OrderClosedSignalSlaveModel#priceClose
  * @type {Number}
  */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#manager
+ * @type {ProfilePublic}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#program
+ * @type {OrderProgramData}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#programId
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#login
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#ticket
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#symbol
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#volume
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#direction
+ * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#price
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#priceCurrent
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderClosedSignalSlaveModel#entry
+ * @type {("In"|"Out"|"InOut"|"OutBy")}
+ */
 
-var TradesSignalSlaveViewModel = function () {
-    function TradesSignalSlaveViewModel() {
-        _classCallCheck(this, TradesSignalSlaveViewModel);
+var OrderClosedSignalSlaveModel = function () {
+    function OrderClosedSignalSlaveModel() {
+        _classCallCheck(this, OrderClosedSignalSlaveModel);
 
-        this.trades = undefined;
-        this.total = undefined;
+        this.dateClose = undefined;
+        this.priceClose = undefined;
+        this.manager = undefined;
+        this.program = undefined;
+        this.programId = undefined;
+        this.id = undefined;
+        this.login = undefined;
+        this.ticket = undefined;
+        this.symbol = undefined;
+        this.volume = undefined;
+        this.profit = undefined;
+        this.direction = undefined;
+        this.date = undefined;
+        this.price = undefined;
+        this.priceCurrent = undefined;
+        this.entry = undefined;
     }
 
-    _createClass(TradesSignalSlaveViewModel, null, [{
+    _createClass(OrderClosedSignalSlaveModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new TradesSignalSlaveViewModel();
+                obj = obj || new OrderClosedSignalSlaveModel();
 
-                if (data.hasOwnProperty('trades')) {
-                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderSignalSlaveModel2.default]);
+                if (data.hasOwnProperty('dateClose')) {
+                    obj['dateClose'] = _ApiClient2.default.convertToType(data['dateClose'], 'Date');
                 }
-                if (data.hasOwnProperty('total')) {
-                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
+                if (data.hasOwnProperty('priceClose')) {
+                    obj['priceClose'] = _ApiClient2.default.convertToType(data['priceClose'], 'Number');
+                }
+                if (data.hasOwnProperty('manager')) {
+                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
+                }
+                if (data.hasOwnProperty('program')) {
+                    obj['program'] = _OrderProgramData2.default.constructFromObject(data['program']);
+                }
+                if (data.hasOwnProperty('programId')) {
+                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                }
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
+                if (data.hasOwnProperty('login')) {
+                    obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
+                }
+                if (data.hasOwnProperty('ticket')) {
+                    obj['ticket'] = _ApiClient2.default.convertToType(data['ticket'], 'String');
+                }
+                if (data.hasOwnProperty('symbol')) {
+                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
+                }
+                if (data.hasOwnProperty('volume')) {
+                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('direction')) {
+                    obj['direction'] = _ApiClient2.default.convertToType(data['direction'], 'String');
+                }
+                if (data.hasOwnProperty('date')) {
+                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                }
+                if (data.hasOwnProperty('price')) {
+                    obj['price'] = _ApiClient2.default.convertToType(data['price'], 'Number');
+                }
+                if (data.hasOwnProperty('priceCurrent')) {
+                    obj['priceCurrent'] = _ApiClient2.default.convertToType(data['priceCurrent'], 'Number');
+                }
+                if (data.hasOwnProperty('entry')) {
+                    obj['entry'] = _ApiClient2.default.convertToType(data['entry'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return TradesSignalSlaveViewModel;
+    return OrderClosedSignalSlaveModel;
 }();
 
-exports.default = TradesSignalSlaveViewModel;
+OrderClosedSignalSlaveModel.DirectionEnum = {
+
+    "Buy": "Buy",
+
+    "Sell": "Sell",
+
+    "Balance": "Balance",
+
+    "Credit": "Credit",
+
+    "Undefined": "Undefined"
+};
+OrderClosedSignalSlaveModel.EntryEnum = {
+
+    "In": "In",
+
+    "Out": "Out",
+
+    "InOut": "InOut",
+
+    "OutBy": "OutBy"
+};
+exports.default = OrderClosedSignalSlaveModel;

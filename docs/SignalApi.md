@@ -204,7 +204,7 @@ No authorization required
 
 <a name="v10SignalTradesGet"></a>
 # **v10SignalTradesGet**
-> TradesSignalSlaveViewModel v10SignalTradesGet(authorization, opts)
+> TradesHistorySignalSlaveViewModel v10SignalTradesGet(authorization, opts)
 
 Get investors signals trades history
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TradesSignalSlaveViewModel**](TradesSignalSlaveViewModel.md)
+[**TradesHistorySignalSlaveViewModel**](TradesHistorySignalSlaveViewModel.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ No authorization required
 
 <a name="v10SignalTradesOpenGet"></a>
 # **v10SignalTradesOpenGet**
-> TradesSignalSlaveViewModel v10SignalTradesOpenGet(authorization, opts)
+> TradesOpenSignalSlaveViewModel v10SignalTradesOpenGet(authorization, opts)
 
 Get investors signals open trades
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TradesSignalSlaveViewModel**](TradesSignalSlaveViewModel.md)
+[**TradesOpenSignalSlaveViewModel**](TradesOpenSignalSlaveViewModel.md)
 
 ### Authorization
 

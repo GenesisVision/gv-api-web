@@ -15,7 +15,8 @@
 import ApiClient from "../ApiClient";
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
 import ErrorViewModel from '../model/ErrorViewModel';
-import TradesSignalSlaveViewModel from '../model/TradesSignalSlaveViewModel';
+import TradesHistorySignalSlaveViewModel from '../model/TradesHistorySignalSlaveViewModel';
+import TradesOpenSignalSlaveViewModel from '../model/TradesOpenSignalSlaveViewModel';
 
 /**
 * Signal service.
@@ -277,7 +278,7 @@ export default class SignalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TradesSignalSlaveViewModel;
+      let returnType = TradesHistorySignalSlaveViewModel;
 
       return this.apiClient.callApi(
         '/v1.0/signal/trades', 'GET',
@@ -297,7 +298,7 @@ export default class SignalApi {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
+     * @return {Promise<TradesHistorySignalSlaveViewModel>} a Promise, with an object containing data of type TradesHistorySignalSlaveViewModel and HTTP response
      */
       v10SignalTradesGet(authorization, opts) {
       return this.v10SignalTradesGetWithHttpInfo(authorization, opts)
@@ -332,7 +333,7 @@ export default class SignalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TradesSignalSlaveViewModel;
+      let returnType = TradesOpenSignalSlaveViewModel;
 
       return this.apiClient.callApi(
         '/v1.0/signal/trades/open', 'GET',
@@ -349,7 +350,7 @@ export default class SignalApi {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesSignalSlaveViewModel>} a Promise, with an object containing data of type TradesSignalSlaveViewModel and HTTP response
+     * @return {Promise<TradesOpenSignalSlaveViewModel>} a Promise, with an object containing data of type TradesOpenSignalSlaveViewModel and HTTP response
      */
       v10SignalTradesOpenGet(authorization, opts) {
       return this.v10SignalTradesOpenGetWithHttpInfo(authorization, opts)
