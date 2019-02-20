@@ -73,6 +73,11 @@ import ApiClient from '../ApiClient';
      * @name MultiWalletTransaction#amount
      * @type {Number}
      */
+    /**
+     *
+     * @name MultiWalletTransaction#amountTo
+     * @type {Number}
+     */
 
 
 
@@ -129,6 +134,9 @@ export default class MultiWalletTransaction {
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
+            if (data.hasOwnProperty('amountTo')) {
+                obj['amountTo'] = ApiClient.convertToType(data['amountTo'], 'Number');
+            }
         }
         return obj;
     }
@@ -143,6 +151,7 @@ export default class MultiWalletTransaction {
     logoTo = undefined;
     description = undefined;
     amount = undefined;
+    amountTo = undefined;
 
 
 

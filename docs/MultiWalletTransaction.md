@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **logoTo** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
+**amountTo** | **Number** |  | [optional] 
 
 
 <a name="CurrencyFromEnum"></a>

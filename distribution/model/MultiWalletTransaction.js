@@ -80,6 +80,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name MultiWalletTransaction#amount
  * @type {Number}
  */
+/**
+ *
+ * @name MultiWalletTransaction#amountTo
+ * @type {Number}
+ */
 
 var MultiWalletTransaction = function () {
     function MultiWalletTransaction() {
@@ -95,6 +100,7 @@ var MultiWalletTransaction = function () {
         this.logoTo = undefined;
         this.description = undefined;
         this.amount = undefined;
+        this.amountTo = undefined;
     }
 
     _createClass(MultiWalletTransaction, null, [{
@@ -132,6 +138,9 @@ var MultiWalletTransaction = function () {
                 }
                 if (data.hasOwnProperty('amount')) {
                     obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
+                }
+                if (data.hasOwnProperty('amountTo')) {
+                    obj['amountTo'] = _ApiClient2.default.convertToType(data['amountTo'], 'Number');
                 }
             }
             return obj;

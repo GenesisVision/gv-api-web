@@ -1215,6 +1215,7 @@ export declare interface MultiWalletTransaction {
     logoTo: string;
     description: string;
     amount: number;
+    amountTo: number;
 }
 
 export declare interface MultiWalletTransactionsViewModel {
