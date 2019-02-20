@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import OrderProgramData from './OrderProgramData';
 import ProfilePublic from './ProfilePublic';
 
 
@@ -31,12 +32,12 @@ import ProfilePublic from './ProfilePublic';
      */
     /**
      *
-     * @name OrderSignalSlaveModel#programId
-     * @type {String}
+     * @name OrderSignalSlaveModel#program
+     * @type {OrderProgramData}
      */
     /**
      *
-     * @name OrderSignalSlaveModel#programTitle
+     * @name OrderSignalSlaveModel#programId
      * @type {String}
      */
     /**
@@ -123,11 +124,11 @@ export default class OrderSignalSlaveModel {
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
+            if (data.hasOwnProperty('program')) {
+                obj['program'] = OrderProgramData.constructFromObject(data['program']);
+            }
             if (data.hasOwnProperty('programId')) {
                 obj['programId'] = ApiClient.convertToType(data['programId'], 'String');
-            }
-            if (data.hasOwnProperty('programTitle')) {
-                obj['programTitle'] = ApiClient.convertToType(data['programTitle'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -167,8 +168,8 @@ export default class OrderSignalSlaveModel {
     }
 
     manager = undefined;
+    program = undefined;
     programId = undefined;
-    programTitle = undefined;
     id = undefined;
     login = undefined;
     ticket = undefined;

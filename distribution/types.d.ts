@@ -599,6 +599,7 @@ export declare interface index {
     NotificationSettingViewModel: NotificationSettingViewModel;
     NotificationViewModel: NotificationViewModel;
     OrderModel: OrderModel;
+    OrderProgramData: OrderProgramData;
     OrderSignalSlaveModel: OrderSignalSlaveModel;
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
@@ -1318,10 +1319,18 @@ export declare interface OrderModel {
     entry: "In" | "Out" | "InOut" | "OutBy";
 }
 
+export declare interface OrderProgramData {
+    title: string;
+    level: number;
+    color: string;
+    url: string;
+    logo: string;
+}
+
 export declare interface OrderSignalSlaveModel {
     manager: ProfilePublic;
+    program: OrderProgramData;
     programId: string;
-    programTitle: string;
     id: string;
     login: string;
     ticket: string;

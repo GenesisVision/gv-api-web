@@ -21,190 +21,79 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _OrderProgramData = require('./OrderProgramData');
-
-var _OrderProgramData2 = _interopRequireDefault(_OrderProgramData);
-
-var _ProfilePublic = require('./ProfilePublic');
-
-var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface OrderSignalSlaveModel
+ * @interface OrderProgramData
  */
 
 /**
  *
- * @name OrderSignalSlaveModel#manager
- * @type {ProfilePublic}
- */
-/**
- *
- * @name OrderSignalSlaveModel#program
- * @type {OrderProgramData}
- */
-/**
- *
- * @name OrderSignalSlaveModel#programId
+ * @name OrderProgramData#title
  * @type {String}
  */
 /**
  *
- * @name OrderSignalSlaveModel#id
- * @type {String}
- */
-/**
- *
- * @name OrderSignalSlaveModel#login
- * @type {String}
- */
-/**
- *
- * @name OrderSignalSlaveModel#ticket
- * @type {String}
- */
-/**
- *
- * @name OrderSignalSlaveModel#symbol
- * @type {String}
- */
-/**
- *
- * @name OrderSignalSlaveModel#volume
+ * @name OrderProgramData#level
  * @type {Number}
  */
 /**
  *
- * @name OrderSignalSlaveModel#profit
- * @type {Number}
+ * @name OrderProgramData#color
+ * @type {String}
  */
 /**
  *
- * @name OrderSignalSlaveModel#direction
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ * @name OrderProgramData#url
+ * @type {String}
  */
 /**
  *
- * @name OrderSignalSlaveModel#date
- * @type {Date}
- */
-/**
- *
- * @name OrderSignalSlaveModel#price
- * @type {Number}
- */
-/**
- *
- * @name OrderSignalSlaveModel#priceCurrent
- * @type {Number}
- */
-/**
- *
- * @name OrderSignalSlaveModel#entry
- * @type {("In"|"Out"|"InOut"|"OutBy")}
+ * @name OrderProgramData#logo
+ * @type {String}
  */
 
-var OrderSignalSlaveModel = function () {
-    function OrderSignalSlaveModel() {
-        _classCallCheck(this, OrderSignalSlaveModel);
+var OrderProgramData = function () {
+    function OrderProgramData() {
+        _classCallCheck(this, OrderProgramData);
 
-        this.manager = undefined;
-        this.program = undefined;
-        this.programId = undefined;
-        this.id = undefined;
-        this.login = undefined;
-        this.ticket = undefined;
-        this.symbol = undefined;
-        this.volume = undefined;
-        this.profit = undefined;
-        this.direction = undefined;
-        this.date = undefined;
-        this.price = undefined;
-        this.priceCurrent = undefined;
-        this.entry = undefined;
+        this.title = undefined;
+        this.level = undefined;
+        this.color = undefined;
+        this.url = undefined;
+        this.logo = undefined;
     }
 
-    _createClass(OrderSignalSlaveModel, null, [{
+    _createClass(OrderProgramData, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new OrderSignalSlaveModel();
+                obj = obj || new OrderProgramData();
 
-                if (data.hasOwnProperty('manager')) {
-                    obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
-                if (data.hasOwnProperty('program')) {
-                    obj['program'] = _OrderProgramData2.default.constructFromObject(data['program']);
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
                 }
-                if (data.hasOwnProperty('programId')) {
-                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
                 }
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
-                if (data.hasOwnProperty('login')) {
-                    obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
-                }
-                if (data.hasOwnProperty('ticket')) {
-                    obj['ticket'] = _ApiClient2.default.convertToType(data['ticket'], 'String');
-                }
-                if (data.hasOwnProperty('symbol')) {
-                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
-                }
-                if (data.hasOwnProperty('volume')) {
-                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
-                }
-                if (data.hasOwnProperty('profit')) {
-                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
-                }
-                if (data.hasOwnProperty('direction')) {
-                    obj['direction'] = _ApiClient2.default.convertToType(data['direction'], 'String');
-                }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
-                }
-                if (data.hasOwnProperty('price')) {
-                    obj['price'] = _ApiClient2.default.convertToType(data['price'], 'Number');
-                }
-                if (data.hasOwnProperty('priceCurrent')) {
-                    obj['priceCurrent'] = _ApiClient2.default.convertToType(data['priceCurrent'], 'Number');
-                }
-                if (data.hasOwnProperty('entry')) {
-                    obj['entry'] = _ApiClient2.default.convertToType(data['entry'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return OrderSignalSlaveModel;
+    return OrderProgramData;
 }();
 
-OrderSignalSlaveModel.DirectionEnum = {
-
-    "Buy": "Buy",
-
-    "Sell": "Sell",
-
-    "Balance": "Balance",
-
-    "Credit": "Credit",
-
-    "Undefined": "Undefined"
-};
-OrderSignalSlaveModel.EntryEnum = {
-
-    "In": "In",
-
-    "Out": "Out",
-
-    "InOut": "InOut",
-
-    "OutBy": "OutBy"
-};
-exports.default = OrderSignalSlaveModel;
+exports.default = OrderProgramData;

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
+**program** | [**OrderProgramData**](OrderProgramData.md) |  | [optional] 
 **programId** | **String** |  | [optional] 
-**programTitle** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **login** | **String** |  | [optional] 
 **ticket** | **String** |  | [optional] 

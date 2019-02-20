@@ -321,6 +321,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
+ - [CoreApiV10.OrderProgramData](docs/OrderProgramData.md)
  - [CoreApiV10.OrderSignalSlaveModel](docs/OrderSignalSlaveModel.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)

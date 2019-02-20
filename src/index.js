@@ -87,6 +87,7 @@ import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
 import OrderModel from './model/OrderModel';
+import OrderProgramData from './model/OrderProgramData';
 import OrderSignalSlaveModel from './model/OrderSignalSlaveModel';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
@@ -633,6 +634,12 @@ export {
      * @type {OrderModel}
      */
     OrderModel,
+
+    /**
+     * @name index#OrderProgramData
+     * @type {OrderProgramData}
+     */
+    OrderProgramData,
 
     /**
      * @name index#OrderSignalSlaveModel
