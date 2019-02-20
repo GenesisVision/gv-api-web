@@ -744,7 +744,7 @@ export declare interface Broker {
     leverageMax: number;
     accountTypes: BrokerAccountType[];
     isForex: boolean;
-    signalsAvailable: boolean;
+    isSignalsAvailable: boolean;
 }
 
 export declare interface BrokerAccountType {
