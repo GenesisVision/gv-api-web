@@ -1420,6 +1420,7 @@ export declare interface PersonalFundDetailsFull {
     pendingOutput: number;
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
     isFollowSignals: boolean;
+    canMakeSignalProvider: boolean;
 }
 
 export declare interface PersonalProgramDetailsFull {
@@ -1441,6 +1442,7 @@ export declare interface PersonalProgramDetailsFull {
     pendingOutput: number;
     status: "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
     isFollowSignals: boolean;
+    canMakeSignalProvider: boolean;
 }
 
 export declare interface PersonalSignalDetailsFull {

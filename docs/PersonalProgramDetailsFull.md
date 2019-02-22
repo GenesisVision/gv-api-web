@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **pendingOutput** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 **isFollowSignals** | **Boolean** |  | [optional] 
+**canMakeSignalProvider** | **Boolean** |  | [optional] 
 
 
 <a name="StatusEnum"></a>

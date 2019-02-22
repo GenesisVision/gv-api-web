@@ -113,6 +113,11 @@ import ApiClient from '../ApiClient';
      * @name PersonalProgramDetailsFull#isFollowSignals
      * @type {Boolean}
      */
+    /**
+     *
+     * @name PersonalProgramDetailsFull#canMakeSignalProvider
+     * @type {Boolean}
+     */
 
 
 
@@ -193,6 +198,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('isFollowSignals')) {
                 obj['isFollowSignals'] = ApiClient.convertToType(data['isFollowSignals'], 'Boolean');
             }
+            if (data.hasOwnProperty('canMakeSignalProvider')) {
+                obj['canMakeSignalProvider'] = ApiClient.convertToType(data['canMakeSignalProvider'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -215,6 +223,7 @@ export default class PersonalProgramDetailsFull {
     pendingOutput = undefined;
     status = undefined;
     isFollowSignals = undefined;
+    canMakeSignalProvider = undefined;
 
 
 

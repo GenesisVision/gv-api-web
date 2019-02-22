@@ -120,6 +120,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalProgramDetailsFull#isFollowSignals
  * @type {Boolean}
  */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canMakeSignalProvider
+ * @type {Boolean}
+ */
 
 var PersonalProgramDetailsFull = function () {
     function PersonalProgramDetailsFull() {
@@ -143,6 +148,7 @@ var PersonalProgramDetailsFull = function () {
         this.pendingOutput = undefined;
         this.status = undefined;
         this.isFollowSignals = undefined;
+        this.canMakeSignalProvider = undefined;
     }
 
     _createClass(PersonalProgramDetailsFull, null, [{
@@ -204,6 +210,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('isFollowSignals')) {
                     obj['isFollowSignals'] = _ApiClient2.default.convertToType(data['isFollowSignals'], 'Boolean');
+                }
+                if (data.hasOwnProperty('canMakeSignalProvider')) {
+                    obj['canMakeSignalProvider'] = _ApiClient2.default.convertToType(data['canMakeSignalProvider'], 'Boolean');
                 }
             }
             return obj;
