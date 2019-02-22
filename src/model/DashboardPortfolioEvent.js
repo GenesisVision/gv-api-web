@@ -56,7 +56,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -66,7 +66,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -76,7 +76,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name DashboardPortfolioEvent#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -205,13 +205,13 @@ export default class DashboardPortfolioEvent {
 
     static FeeSuccessManagerCurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "BTC": "BTC",
     
         "GVT": "GVT",
     
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
-        "BTC": "BTC",
+        "ETH": "ETH",
     
         "ADA": "ADA",
     
@@ -234,13 +234,13 @@ export default class DashboardPortfolioEvent {
 
     static FeeSuccessPlatformCurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "BTC": "BTC",
     
         "GVT": "GVT",
     
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
-        "BTC": "BTC",
+        "ETH": "ETH",
     
         "ADA": "ADA",
     
@@ -263,13 +263,13 @@ export default class DashboardPortfolioEvent {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "BTC": "BTC",
     
         "GVT": "GVT",
     
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
-        "BTC": "BTC",
+        "ETH": "ETH",
     
         "ADA": "ADA",
     

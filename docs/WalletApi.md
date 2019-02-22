@@ -547,11 +547,7 @@ let apiInstance = new CoreApiV10.WalletApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'sourceId': "sourceId_example", // String | 
-  'sourceType': "sourceType_example", // String | 
-  'destinationId': "destinationId_example", // String | 
-  'destinationType': "destinationType_example", // String | 
-  'amount': 1.2 // Number | 
+  'request': new CoreApiV10.InternalTransferRequest() // InternalTransferRequest | 
 };
 apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -566,11 +562,7 @@ apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **sourceId** | [**String**](.md)|  | [optional] 
- **sourceType** | **String**|  | [optional] 
- **destinationId** | [**String**](.md)|  | [optional] 
- **destinationType** | **String**|  | [optional] 
- **amount** | **Number**|  | [optional] 
+ **request** | [**InternalTransferRequest**](InternalTransferRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -582,7 +574,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10WalletWithdrawInfoGet"></a>

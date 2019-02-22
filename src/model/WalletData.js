@@ -51,7 +51,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name WalletData#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -76,7 +76,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name WalletData#currencyCcy
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -196,13 +196,13 @@ export default class WalletData {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
+        "BTC": "BTC",
     
         "GVT": "GVT",
     
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
-        "BTC": "BTC",
+        "ETH": "ETH",
     
         "ADA": "ADA",
     
@@ -225,13 +225,13 @@ export default class WalletData {
 
     static CurrencyCcyEnum = {
     
-        "Undefined": "Undefined",
+        "BTC": "BTC",
     
         "GVT": "GVT",
     
-        "ETH": "ETH",
+        "Undefined": "Undefined",
     
-        "BTC": "BTC",
+        "ETH": "ETH",
     
         "ADA": "ADA",
     

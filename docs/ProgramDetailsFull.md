@@ -37,13 +37,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
+* `BTC` (value: `"BTC"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `ETH` (value: `"ETH"`)
+* `Undefined` (value: `"Undefined"`)
 
-* `BTC` (value: `"BTC"`)
+* `ETH` (value: `"ETH"`)
 
 * `ADA` (value: `"ADA"`)
 

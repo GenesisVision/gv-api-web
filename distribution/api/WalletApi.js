@@ -29,6 +29,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _InternalTransferRequest = require('../model/InternalTransferRequest');
+
+var _InternalTransferRequest2 = _interopRequireDefault(_InternalTransferRequest);
+
 var _MultiWalletExternalTransactionsViewModel = require('../model/MultiWalletExternalTransactionsViewModel');
 
 var _MultiWalletExternalTransactionsViewModel2 = _interopRequireDefault(_MultiWalletExternalTransactionsViewModel);
@@ -604,7 +608,7 @@ var WalletApi = function () {
     key: 'v10WalletTransferPostWithHttpInfo',
     value: function v10WalletTransferPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = opts['request'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
@@ -612,20 +616,14 @@ var WalletApi = function () {
       }
 
       var pathParams = {};
-      var queryParams = {
-        'SourceId': opts['sourceId'],
-        'SourceType': opts['sourceType'],
-        'DestinationId': opts['destinationId'],
-        'DestinationType': opts['destinationType'],
-        'Amount': opts['amount']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': authorization
       };
       var formParams = {};
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
@@ -637,11 +635,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletTransferPost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.sourceId] 
-     * @param {String} [opts.sourceType] 
-     * @param {String} [opts.destinationId] 
-     * @param {String} [opts.destinationType] 
-     * @param {Number} [opts.amount] 
+     * @param {InternalTransferRequest} [opts.request] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
 

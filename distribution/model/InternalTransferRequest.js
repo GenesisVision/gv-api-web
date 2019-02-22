@@ -27,280 +27,85 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface DashboardPortfolioEvent
+ * @interface InternalTransferRequest
  */
 
 /**
  *
- * @name DashboardPortfolioEvent#assetId
+ * @name InternalTransferRequest#sourceId
  * @type {String}
  */
 /**
  *
- * @name DashboardPortfolioEvent#date
- * @type {Date}
+ * @name InternalTransferRequest#sourceType
+ * @type {("Undefined"|"Wallet")}
  */
 /**
  *
- * @name DashboardPortfolioEvent#title
+ * @name InternalTransferRequest#destinationId
  * @type {String}
  */
 /**
  *
- * @name DashboardPortfolioEvent#value
+ * @name InternalTransferRequest#destinationType
+ * @type {("Undefined"|"Wallet")}
+ */
+/**
+ *
+ * @name InternalTransferRequest#amount
  * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#valueTotal
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessManager
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
- * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatform
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
- * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#profitPercent
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#currency
- * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#logo
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#color
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#description
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#assetType
- * @type {("Program"|"Fund")}
  */
 
-var DashboardPortfolioEvent = function () {
-    function DashboardPortfolioEvent() {
-        _classCallCheck(this, DashboardPortfolioEvent);
+var InternalTransferRequest = function () {
+    function InternalTransferRequest() {
+        _classCallCheck(this, InternalTransferRequest);
 
-        this.assetId = undefined;
-        this.date = undefined;
-        this.title = undefined;
-        this.value = undefined;
-        this.valueTotal = undefined;
-        this.feeSuccessManager = undefined;
-        this.feeSuccessManagerCurrency = undefined;
-        this.feeSuccessPlatform = undefined;
-        this.feeSuccessPlatformCurrency = undefined;
-        this.profitPercent = undefined;
-        this.currency = undefined;
-        this.type = undefined;
-        this.logo = undefined;
-        this.color = undefined;
-        this.description = undefined;
-        this.assetType = undefined;
+        this.sourceId = undefined;
+        this.sourceType = undefined;
+        this.destinationId = undefined;
+        this.destinationType = undefined;
+        this.amount = undefined;
     }
 
-    _createClass(DashboardPortfolioEvent, null, [{
+    _createClass(InternalTransferRequest, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new DashboardPortfolioEvent();
+                obj = obj || new InternalTransferRequest();
 
-                if (data.hasOwnProperty('assetId')) {
-                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
+                if (data.hasOwnProperty('sourceId')) {
+                    obj['sourceId'] = _ApiClient2.default.convertToType(data['sourceId'], 'String');
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                if (data.hasOwnProperty('sourceType')) {
+                    obj['sourceType'] = _ApiClient2.default.convertToType(data['sourceType'], 'String');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('destinationId')) {
+                    obj['destinationId'] = _ApiClient2.default.convertToType(data['destinationId'], 'String');
                 }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                if (data.hasOwnProperty('destinationType')) {
+                    obj['destinationType'] = _ApiClient2.default.convertToType(data['destinationType'], 'String');
                 }
-                if (data.hasOwnProperty('valueTotal')) {
-                    obj['valueTotal'] = _ApiClient2.default.convertToType(data['valueTotal'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessManager')) {
-                    obj['feeSuccessManager'] = _ApiClient2.default.convertToType(data['feeSuccessManager'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessManagerCurrency')) {
-                    obj['feeSuccessManagerCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessManagerCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatform')) {
-                    obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatformCurrency')) {
-                    obj['feeSuccessPlatformCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessPlatformCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('assetType')) {
-                    obj['assetType'] = _ApiClient2.default.convertToType(data['assetType'], 'String');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return DashboardPortfolioEvent;
+    return InternalTransferRequest;
 }();
 
-DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "GVT": "GVT",
+InternalTransferRequest.SourceTypeEnum = {
 
     "Undefined": "Undefined",
 
-    "ETH": "ETH",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "Wallet": "Wallet"
 };
-DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "GVT": "GVT",
+InternalTransferRequest.DestinationTypeEnum = {
 
     "Undefined": "Undefined",
 
-    "ETH": "ETH",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "Wallet": "Wallet"
 };
-DashboardPortfolioEvent.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ETH": "ETH",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-DashboardPortfolioEvent.TypeEnum = {
-
-    "All": "All",
-
-    "Invest": "Invest",
-
-    "Withdraw": "Withdraw",
-
-    "Profit": "Profit",
-
-    "Loss": "Loss",
-
-    "Reinvest": "Reinvest",
-
-    "Canceled": "Canceled",
-
-    "Ended": "Ended"
-};
-DashboardPortfolioEvent.AssetTypeEnum = {
-
-    "Program": "Program",
-
-    "Fund": "Fund"
-};
-exports.default = DashboardPortfolioEvent;
+exports.default = InternalTransferRequest;

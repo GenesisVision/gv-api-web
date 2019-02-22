@@ -57,6 +57,7 @@ import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
 import IOsAppVersion from './model/IOsAppVersion';
+import InternalTransferRequest from './model/InternalTransferRequest';
 import KycCallback from './model/KycCallback';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
@@ -456,6 +457,12 @@ export {
      * @type {IOsAppVersion}
      */
     IOsAppVersion,
+
+    /**
+     * @name index#InternalTransferRequest
+     * @type {InternalTransferRequest}
+     */
+    InternalTransferRequest,
 
     /**
      * @name index#KycCallback

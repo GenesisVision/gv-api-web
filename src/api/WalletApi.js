@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import CreateWithdrawalRequestModel from '../model/CreateWithdrawalRequestModel';
 import ErrorViewModel from '../model/ErrorViewModel';
+import InternalTransferRequest from '../model/InternalTransferRequest';
 import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExternalTransactionsViewModel';
 import MultiWalletFilters from '../model/MultiWalletFilters';
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
@@ -602,7 +603,7 @@ export default class WalletApi {
 
       v10WalletTransferPostWithHttpInfo(authorization, opts) {
       opts = opts || {};
-      let postBody = null;
+      let postBody = opts['request'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
@@ -613,11 +614,6 @@ export default class WalletApi {
       let pathParams = {
       };
       let queryParams = {
-        'SourceId': opts['sourceId'],
-        'SourceType': opts['sourceType'],
-        'DestinationId': opts['destinationId'],
-        'DestinationType': opts['destinationType'],
-        'Amount': opts['amount']
       };
       let headerParams = {
         'Authorization': authorization
@@ -626,7 +622,7 @@ export default class WalletApi {
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
 
@@ -642,11 +638,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletTransferPost
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.sourceId] 
-     * @param {String} [opts.sourceType] 
-     * @param {String} [opts.destinationId] 
-     * @param {String} [opts.destinationType] 
-     * @param {Number} [opts.amount] 
+     * @param {InternalTransferRequest} [opts.request] 
      * @return {Promise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletTransferPost(authorization, opts) {

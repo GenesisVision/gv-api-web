@@ -291,6 +291,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundWithdrawInfo](docs/FundWithdrawInfo.md)
  - [CoreApiV10.FundsList](docs/FundsList.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
+ - [CoreApiV10.InternalTransferRequest](docs/InternalTransferRequest.md)
  - [CoreApiV10.KycCallback](docs/KycCallback.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
