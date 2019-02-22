@@ -26,7 +26,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name WalletWithdrawalInfo#currency
-     * @type {("BTC"|"GVT"|"Undefined"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -115,13 +115,13 @@ export default class WalletWithdrawalInfo {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
-    
         "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
