@@ -757,6 +757,8 @@ export declare interface BrokerAccountType {
     type: "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX";
     leverages: number[];
     currencies: string[];
+    isForex: boolean;
+    isSignalsAvailable: boolean;
 }
 
 export declare interface BrokersInfo {

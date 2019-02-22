@@ -53,6 +53,16 @@ import ApiClient from '../ApiClient';
      * @name BrokerAccountType#currencies
      * @type {Array<String>}
      */
+    /**
+     *
+     * @name BrokerAccountType#isForex
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name BrokerAccountType#isSignalsAvailable
+     * @type {Boolean}
+     */
 
 
 
@@ -97,6 +107,12 @@ export default class BrokerAccountType {
             if (data.hasOwnProperty('currencies')) {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
             }
+            if (data.hasOwnProperty('isForex')) {
+                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isSignalsAvailable')) {
+                obj['isSignalsAvailable'] = ApiClient.convertToType(data['isSignalsAvailable'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -107,6 +123,8 @@ export default class BrokerAccountType {
     type = undefined;
     leverages = undefined;
     currencies = undefined;
+    isForex = undefined;
+    isSignalsAvailable = undefined;
 
 
 

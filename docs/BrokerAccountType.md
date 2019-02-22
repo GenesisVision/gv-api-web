@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **leverages** | **[Number]** |  | [optional] 
 **currencies** | **[String]** |  | [optional] 
+**isForex** | **Boolean** |  | [optional] 
+**isSignalsAvailable** | **Boolean** |  | [optional] 
 
 
 <a name="TypeEnum"></a>

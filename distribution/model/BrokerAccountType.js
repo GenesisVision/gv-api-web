@@ -60,6 +60,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name BrokerAccountType#currencies
  * @type {[String]}
  */
+/**
+ *
+ * @name BrokerAccountType#isForex
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerAccountType#isSignalsAvailable
+ * @type {Boolean}
+ */
 
 var BrokerAccountType = function () {
     function BrokerAccountType() {
@@ -71,6 +81,8 @@ var BrokerAccountType = function () {
         this.type = undefined;
         this.leverages = undefined;
         this.currencies = undefined;
+        this.isForex = undefined;
+        this.isSignalsAvailable = undefined;
     }
 
     _createClass(BrokerAccountType, null, [{
@@ -96,6 +108,12 @@ var BrokerAccountType = function () {
                 }
                 if (data.hasOwnProperty('currencies')) {
                     obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                }
+                if (data.hasOwnProperty('isForex')) {
+                    obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isSignalsAvailable')) {
+                    obj['isSignalsAvailable'] = _ApiClient2.default.convertToType(data['isSignalsAvailable'], 'Boolean');
                 }
             }
             return obj;
