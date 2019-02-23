@@ -59,7 +59,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#sourceType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
      */
     /**
      *
@@ -84,7 +84,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#action
-     * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel")}
+     * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee")}
      */
     /**
      *
@@ -99,7 +99,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#destinationType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
      */
     /**
      *
@@ -249,7 +249,9 @@ export default class WalletTransaction {
     
         "PaymentTransaction": "PaymentTransaction",
     
-        "Blockchain": "Blockchain"    
+        "Blockchain": "Blockchain",
+    
+        "GenesisVisionPlatform": "GenesisVisionPlatform"    
     };
 
     static SourceCurrencyEnum = {
@@ -301,7 +303,9 @@ export default class WalletTransaction {
     
         "ProgramRequestWithdrawal": "ProgramRequestWithdrawal",
     
-        "ProgramRequestCancel": "ProgramRequestCancel"    
+        "ProgramRequestCancel": "ProgramRequestCancel",
+    
+        "PayingFee": "PayingFee"    
     };
 
     static DestinationTypeEnum = {
@@ -320,7 +324,9 @@ export default class WalletTransaction {
     
         "PaymentTransaction": "PaymentTransaction",
     
-        "Blockchain": "Blockchain"    
+        "Blockchain": "Blockchain",
+    
+        "GenesisVisionPlatform": "GenesisVisionPlatform"    
     };
 
     static DestinationCurrencyEnum = {

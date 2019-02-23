@@ -44,6 +44,8 @@ Name | Type | Description | Notes
 
 * `Blockchain` (value: `"Blockchain"`)
 
+* `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
+
 
 
 
@@ -104,6 +106,8 @@ Name | Type | Description | Notes
 
 * `ProgramRequestCancel` (value: `"ProgramRequestCancel"`)
 
+* `PayingFee` (value: `"PayingFee"`)
+
 
 
 
@@ -126,6 +130,8 @@ Name | Type | Description | Notes
 * `PaymentTransaction` (value: `"PaymentTransaction"`)
 
 * `Blockchain` (value: `"Blockchain"`)
+
+* `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
 
 

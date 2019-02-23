@@ -75,7 +75,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#sourceType
- * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
  */
 /**
  *
@@ -100,7 +100,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#action
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel")}
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee")}
  */
 /**
  *
@@ -115,7 +115,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#destinationType
- * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain")}
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
  */
 /**
  *
@@ -250,7 +250,9 @@ WalletTransaction.SourceTypeEnum = {
 
     "PaymentTransaction": "PaymentTransaction",
 
-    "Blockchain": "Blockchain"
+    "Blockchain": "Blockchain",
+
+    "GenesisVisionPlatform": "GenesisVisionPlatform"
 };
 WalletTransaction.SourceCurrencyEnum = {
 
@@ -300,7 +302,9 @@ WalletTransaction.ActionEnum = {
 
     "ProgramRequestWithdrawal": "ProgramRequestWithdrawal",
 
-    "ProgramRequestCancel": "ProgramRequestCancel"
+    "ProgramRequestCancel": "ProgramRequestCancel",
+
+    "PayingFee": "PayingFee"
 };
 WalletTransaction.DestinationTypeEnum = {
 
@@ -318,7 +322,9 @@ WalletTransaction.DestinationTypeEnum = {
 
     "PaymentTransaction": "PaymentTransaction",
 
-    "Blockchain": "Blockchain"
+    "Blockchain": "Blockchain",
+
+    "GenesisVisionPlatform": "GenesisVisionPlatform"
 };
 WalletTransaction.DestinationCurrencyEnum = {
 
