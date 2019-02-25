@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletData#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -83,7 +83,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletData#currencyCcy
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -188,17 +188,17 @@ var WalletData = function () {
 
 WalletData.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -216,17 +216,17 @@ WalletData.CurrencyEnum = {
 };
 WalletData.CurrencyCcyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

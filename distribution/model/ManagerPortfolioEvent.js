@@ -63,12 +63,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerPortfolioEvent#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
  * @name ManagerPortfolioEvent#type
- * @type {("All"|"AssetStarted"|"ProgramPeriodStats"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee")}
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStats"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
  */
 /**
  *
@@ -170,17 +170,17 @@ var ManagerPortfolioEvent = function () {
 
 ManagerPortfolioEvent.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -218,7 +218,9 @@ ManagerPortfolioEvent.TypeEnum = {
 
     "EntranceFee": "EntranceFee",
 
-    "ExitFee": "ExitFee"
+    "ExitFee": "ExitFee",
+
+    "ProgramStopOut": "ProgramStopOut"
 };
 ManagerPortfolioEvent.ProgramTypeEnum = {
 
