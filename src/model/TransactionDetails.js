@@ -29,7 +29,7 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
     /**
      *
      * @name TransactionDetails#type
-     * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit")}
+     * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee")}
      */
     /**
      *
@@ -54,7 +54,7 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
     /**
      *
      * @name TransactionDetails#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -177,7 +177,9 @@ export default class TransactionDetails {
     
         "Close": "Close",
     
-        "Profit": "Profit"    
+        "Profit": "Profit",
+    
+        "PlatformFee": "PlatformFee"    
     };
 
     static StatusEnum = {
@@ -193,17 +195,17 @@ export default class TransactionDetails {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
