@@ -50,6 +50,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name WalletData#isDepositEnabled
+     * @type {Boolean}
+     */
+    /**
+     *
      * @name WalletData#currency
      * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
@@ -139,6 +144,9 @@ export default class WalletData {
             if (data.hasOwnProperty('rateToGVT')) {
                 obj['rateToGVT'] = ApiClient.convertToType(data['rateToGVT'], 'Number');
             }
+            if (data.hasOwnProperty('isDepositEnabled')) {
+                obj['isDepositEnabled'] = ApiClient.convertToType(data['isDepositEnabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -178,6 +186,7 @@ export default class WalletData {
     logo = undefined;
     address = undefined;
     rateToGVT = undefined;
+    isDepositEnabled = undefined;
     currency = undefined;
     available = undefined;
     invested = undefined;

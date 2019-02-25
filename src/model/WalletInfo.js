@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
      * @name WalletInfo#logo
      * @type {String}
      */
+    /**
+     *
+     * @name WalletInfo#isDepositEnabled
+     * @type {Boolean}
+     */
 
 
 
@@ -89,6 +94,9 @@ export default class WalletInfo {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('isDepositEnabled')) {
+                obj['isDepositEnabled'] = ApiClient.convertToType(data['isDepositEnabled'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class WalletInfo {
     rateToGVT = undefined;
     description = undefined;
     logo = undefined;
+    isDepositEnabled = undefined;
 
 
 

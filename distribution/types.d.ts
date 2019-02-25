@@ -2014,6 +2014,7 @@ export declare interface WalletData {
     logo: string;
     address: string;
     rateToGVT: number;
+    isDepositEnabled: boolean;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     invested: number;
@@ -2032,6 +2033,7 @@ export declare interface WalletInfo {
     rateToGVT: number;
     description: string;
     logo: string;
+    isDepositEnabled: boolean;
 }
 
 export declare interface WalletMultiSummary {

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **address** | **String** |  | [optional] 
 **rateToGVT** | **Number** |  | [optional] 
+**isDepositEnabled** | **Boolean** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 

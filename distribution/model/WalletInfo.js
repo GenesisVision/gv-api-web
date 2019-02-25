@@ -55,6 +55,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name WalletInfo#logo
  * @type {String}
  */
+/**
+ *
+ * @name WalletInfo#isDepositEnabled
+ * @type {Boolean}
+ */
 
 var WalletInfo = function () {
     function WalletInfo() {
@@ -65,6 +70,7 @@ var WalletInfo = function () {
         this.rateToGVT = undefined;
         this.description = undefined;
         this.logo = undefined;
+        this.isDepositEnabled = undefined;
     }
 
     _createClass(WalletInfo, null, [{
@@ -87,6 +93,9 @@ var WalletInfo = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('isDepositEnabled')) {
+                    obj['isDepositEnabled'] = _ApiClient2.default.convertToType(data['isDepositEnabled'], 'Boolean');
                 }
             }
             return obj;

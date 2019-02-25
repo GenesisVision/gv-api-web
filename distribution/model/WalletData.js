@@ -57,6 +57,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name WalletData#isDepositEnabled
+ * @type {Boolean}
+ */
+/**
+ *
  * @name WalletData#currency
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
@@ -115,6 +120,7 @@ var WalletData = function () {
         this.logo = undefined;
         this.address = undefined;
         this.rateToGVT = undefined;
+        this.isDepositEnabled = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -147,6 +153,9 @@ var WalletData = function () {
                 }
                 if (data.hasOwnProperty('rateToGVT')) {
                     obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
+                }
+                if (data.hasOwnProperty('isDepositEnabled')) {
+                    obj['isDepositEnabled'] = _ApiClient2.default.convertToType(data['isDepositEnabled'], 'Boolean');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
