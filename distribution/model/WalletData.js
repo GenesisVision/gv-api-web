@@ -62,8 +62,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name WalletData#isWithdrawalEnabled
+ * @type {Boolean}
+ */
+/**
+ *
  * @name WalletData#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -88,7 +93,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletData#currencyCcy
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -121,6 +126,7 @@ var WalletData = function () {
         this.address = undefined;
         this.rateToGVT = undefined;
         this.isDepositEnabled = undefined;
+        this.isWithdrawalEnabled = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -156,6 +162,9 @@ var WalletData = function () {
                 }
                 if (data.hasOwnProperty('isDepositEnabled')) {
                     obj['isDepositEnabled'] = _ApiClient2.default.convertToType(data['isDepositEnabled'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isWithdrawalEnabled')) {
+                    obj['isWithdrawalEnabled'] = _ApiClient2.default.convertToType(data['isWithdrawalEnabled'], 'Boolean');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
@@ -197,17 +206,17 @@ var WalletData = function () {
 
 WalletData.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -225,17 +234,17 @@ WalletData.CurrencyEnum = {
 };
 WalletData.CurrencyCcyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
