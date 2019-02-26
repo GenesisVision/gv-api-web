@@ -47,11 +47,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name WalletData#withdrawalAddress
- * @type {String}
- */
-/**
- *
  * @name WalletData#rateToGVT
  * @type {Number}
  */
@@ -72,8 +67,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name WalletData#depositAddress
+ * @type {String}
+ */
+/**
+ *
  * @name WalletData#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -98,7 +98,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletData#currencyCcy
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -128,11 +128,11 @@ var WalletData = function () {
         this.id = undefined;
         this.title = undefined;
         this.logo = undefined;
-        this.withdrawalAddress = undefined;
         this.rateToGVT = undefined;
         this.isDepositEnabled = undefined;
         this.isWithdrawalEnabled = undefined;
         this.withdrawalCommission = undefined;
+        this.depositAddress = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -160,9 +160,6 @@ var WalletData = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('withdrawalAddress')) {
-                    obj['withdrawalAddress'] = _ApiClient2.default.convertToType(data['withdrawalAddress'], 'String');
-                }
                 if (data.hasOwnProperty('rateToGVT')) {
                     obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
                 }
@@ -174,6 +171,9 @@ var WalletData = function () {
                 }
                 if (data.hasOwnProperty('withdrawalCommission')) {
                     obj['withdrawalCommission'] = _ApiClient2.default.convertToType(data['withdrawalCommission'], 'Number');
+                }
+                if (data.hasOwnProperty('depositAddress')) {
+                    obj['depositAddress'] = _ApiClient2.default.convertToType(data['depositAddress'], 'String');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
@@ -215,17 +215,17 @@ var WalletData = function () {
 
 WalletData.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -243,17 +243,17 @@ WalletData.CurrencyEnum = {
 };
 WalletData.CurrencyCcyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

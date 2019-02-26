@@ -40,11 +40,6 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name WalletData#withdrawalAddress
-     * @type {String}
-     */
-    /**
-     *
      * @name WalletData#rateToGVT
      * @type {Number}
      */
@@ -65,8 +60,13 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name WalletData#depositAddress
+     * @type {String}
+     */
+    /**
+     *
      * @name WalletData#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -91,7 +91,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name WalletData#currencyCcy
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -148,9 +148,6 @@ export default class WalletData {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
-            if (data.hasOwnProperty('withdrawalAddress')) {
-                obj['withdrawalAddress'] = ApiClient.convertToType(data['withdrawalAddress'], 'String');
-            }
             if (data.hasOwnProperty('rateToGVT')) {
                 obj['rateToGVT'] = ApiClient.convertToType(data['rateToGVT'], 'Number');
             }
@@ -162,6 +159,9 @@ export default class WalletData {
             }
             if (data.hasOwnProperty('withdrawalCommission')) {
                 obj['withdrawalCommission'] = ApiClient.convertToType(data['withdrawalCommission'], 'Number');
+            }
+            if (data.hasOwnProperty('depositAddress')) {
+                obj['depositAddress'] = ApiClient.convertToType(data['depositAddress'], 'String');
             }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
@@ -200,11 +200,11 @@ export default class WalletData {
     id = undefined;
     title = undefined;
     logo = undefined;
-    withdrawalAddress = undefined;
     rateToGVT = undefined;
     isDepositEnabled = undefined;
     isWithdrawalEnabled = undefined;
     withdrawalCommission = undefined;
+    depositAddress = undefined;
     currency = undefined;
     available = undefined;
     invested = undefined;
@@ -223,17 +223,17 @@ export default class WalletData {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -252,17 +252,17 @@ export default class WalletData {
 
     static CurrencyCcyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     

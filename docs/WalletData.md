@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**withdrawalAddress** | **String** |  | [optional] 
 **rateToGVT** | **Number** |  | [optional] 
 **isDepositEnabled** | **Boolean** |  | [optional] 
 **isWithdrawalEnabled** | **Boolean** |  | [optional] 
 **withdrawalCommission** | **Number** |  | [optional] 
+**depositAddress** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **invested** | **Number** |  | [optional] 
@@ -27,17 +27,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -60,17 +60,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyCcyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
