@@ -7,18 +7,3 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 
 
-<a name="NameEnum"></a>
-## Enum: NameEnum
-
-
-* `Crypto` (value: `"Crypto"`)
-
-* `Forex` (value: `"Forex"`)
-
-* `HighRisk` (value: `"HighRisk"`)
-
-* `Signal` (value: `"Signal"`)
-
-
-
-

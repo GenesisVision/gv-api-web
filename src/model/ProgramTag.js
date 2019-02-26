@@ -26,7 +26,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ProgramTag#name
-     * @type {("Crypto"|"Forex"|"HighRisk"|"Signal")}
+     * @type {String}
      */
     /**
      *
@@ -76,17 +76,6 @@ export default class ProgramTag {
 
 
 
-
-    static NameEnum = {
-    
-        "Crypto": "Crypto",
-    
-        "Forex": "Forex",
-    
-        "HighRisk": "HighRisk",
-    
-        "Signal": "Signal"    
-    };
 
 
 

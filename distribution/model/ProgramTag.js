@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramTag#name
- * @type {("Crypto"|"Forex"|"HighRisk"|"Signal")}
+ * @type {String}
  */
 /**
  *
@@ -69,14 +69,4 @@ var ProgramTag = function () {
     return ProgramTag;
 }();
 
-ProgramTag.NameEnum = {
-
-    "Crypto": "Crypto",
-
-    "Forex": "Forex",
-
-    "HighRisk": "HighRisk",
-
-    "Signal": "Signal"
-};
 exports.default = ProgramTag;
