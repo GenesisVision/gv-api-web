@@ -152,6 +152,7 @@ import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdatePersonalDetailViewModel from './model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
+import UserCommissionData from './model/UserCommissionData';
 import ValueChartBar from './model/ValueChartBar';
 import WalletData from './model/WalletData';
 import WalletInfo from './model/WalletInfo';
@@ -1027,6 +1028,12 @@ export {
      * @type {UploadResult}
      */
     UploadResult,
+
+    /**
+     * @name index#UserCommissionData
+     * @type {UserCommissionData}
+     */
+    UserCommissionData,
 
     /**
      * @name index#ValueChartBar

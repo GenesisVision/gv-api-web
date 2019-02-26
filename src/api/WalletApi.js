@@ -20,6 +20,7 @@ import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExtern
 import MultiWalletFilters from '../model/MultiWalletFilters';
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
 import TransactionDetails from '../model/TransactionDetails';
+import UserCommissionData from '../model/UserCommissionData';
 import WalletInfo from '../model/WalletInfo';
 import WalletMultiSummary from '../model/WalletMultiSummary';
 import WalletSummary from '../model/WalletSummary';
@@ -184,6 +185,50 @@ export default class WalletApi {
      */
       v10WalletByCurrencyGet(currency, authorization) {
       return this.v10WalletByCurrencyGetWithHttpInfo(currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10WalletFeeGvtholdingGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletFeeGvtholdingGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = UserCommissionData;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/fee/gvtholding', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * GenesisMarkets commission data
+     * @function WalletApi#v10WalletFeeGvtholdingGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
+     */
+      v10WalletFeeGvtholdingGet(authorization) {
+      return this.v10WalletFeeGvtholdingGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

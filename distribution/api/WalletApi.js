@@ -49,6 +49,10 @@ var _TransactionDetails = require('../model/TransactionDetails');
 
 var _TransactionDetails2 = _interopRequireDefault(_TransactionDetails);
 
+var _UserCommissionData = require('../model/UserCommissionData');
+
+var _UserCommissionData2 = _interopRequireDefault(_UserCommissionData);
+
 var _WalletInfo = require('../model/WalletInfo');
 
 var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
@@ -224,6 +228,45 @@ var WalletApi = function () {
     key: 'v10WalletByCurrencyGet',
     value: function v10WalletByCurrencyGet(currency, authorization) {
       return this.v10WalletByCurrencyGetWithHttpInfo(currency, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletFeeGvtholdingGetWithHttpInfo',
+    value: function v10WalletFeeGvtholdingGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletFeeGvtholdingGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _UserCommissionData2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/fee/gvtholding', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * GenesisMarkets commission data
+     * @function WalletApi#v10WalletFeeGvtholdingGet
+     * @param {String} authorization JWT access token
+     * @return {Promise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletFeeGvtholdingGet',
+    value: function v10WalletFeeGvtholdingGet(authorization) {
+      return this.v10WalletFeeGvtholdingGetWithHttpInfo(authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

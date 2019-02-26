@@ -63,7 +63,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -73,7 +73,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -83,12 +83,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
  * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended")}
+ * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
  */
 /**
  *
@@ -197,17 +197,17 @@ var DashboardPortfolioEvent = function () {
 
 DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -225,17 +225,17 @@ DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 };
 DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -253,17 +253,17 @@ DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
 };
 DashboardPortfolioEvent.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -295,7 +295,9 @@ DashboardPortfolioEvent.TypeEnum = {
 
     "Canceled": "Canceled",
 
-    "Ended": "Ended"
+    "Ended": "Ended",
+
+    "WithdrawByStopOut": "WithdrawByStopOut"
 };
 DashboardPortfolioEvent.AssetTypeEnum = {
 

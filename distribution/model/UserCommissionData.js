@@ -21,102 +21,79 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ProgramBalanceChartElement = require('./ProgramBalanceChartElement');
-
-var _ProgramBalanceChartElement2 = _interopRequireDefault(_ProgramBalanceChartElement);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface ProgramBalanceChart
+ * @interface UserCommissionData
  */
 
 /**
  *
- * @name ProgramBalanceChart#programCurrencyBalance
+ * @name UserCommissionData#isPayingCommissionInGvt
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name UserCommissionData#gvtHolderTradingFee
  * @type {Number}
  */
 /**
  *
- * @name ProgramBalanceChart#programCurrency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name UserCommissionData#gvtHolderDiscount
+ * @type {Number}
  */
 /**
  *
- * @name ProgramBalanceChart#balanceChart
- * @type {[ProgramBalanceChartElement]}
+ * @name UserCommissionData#regularTradingFee
+ * @type {Number}
  */
 /**
  *
- * @name ProgramBalanceChart#gvtBalance
+ * @name UserCommissionData#regularDiscount
  * @type {Number}
  */
 
-var ProgramBalanceChart = function () {
-    function ProgramBalanceChart() {
-        _classCallCheck(this, ProgramBalanceChart);
+var UserCommissionData = function () {
+    function UserCommissionData() {
+        _classCallCheck(this, UserCommissionData);
 
-        this.programCurrencyBalance = undefined;
-        this.programCurrency = undefined;
-        this.balanceChart = undefined;
-        this.gvtBalance = undefined;
+        this.isPayingCommissionInGvt = undefined;
+        this.gvtHolderTradingFee = undefined;
+        this.gvtHolderDiscount = undefined;
+        this.regularTradingFee = undefined;
+        this.regularDiscount = undefined;
     }
 
-    _createClass(ProgramBalanceChart, null, [{
+    _createClass(UserCommissionData, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramBalanceChart();
+                obj = obj || new UserCommissionData();
 
-                if (data.hasOwnProperty('programCurrencyBalance')) {
-                    obj['programCurrencyBalance'] = _ApiClient2.default.convertToType(data['programCurrencyBalance'], 'Number');
+                if (data.hasOwnProperty('isPayingCommissionInGvt')) {
+                    obj['isPayingCommissionInGvt'] = _ApiClient2.default.convertToType(data['isPayingCommissionInGvt'], 'Boolean');
                 }
-                if (data.hasOwnProperty('programCurrency')) {
-                    obj['programCurrency'] = _ApiClient2.default.convertToType(data['programCurrency'], 'String');
+                if (data.hasOwnProperty('gvtHolderTradingFee')) {
+                    obj['gvtHolderTradingFee'] = _ApiClient2.default.convertToType(data['gvtHolderTradingFee'], 'Number');
                 }
-                if (data.hasOwnProperty('balanceChart')) {
-                    obj['balanceChart'] = _ApiClient2.default.convertToType(data['balanceChart'], [_ProgramBalanceChartElement2.default]);
+                if (data.hasOwnProperty('gvtHolderDiscount')) {
+                    obj['gvtHolderDiscount'] = _ApiClient2.default.convertToType(data['gvtHolderDiscount'], 'Number');
                 }
-                if (data.hasOwnProperty('gvtBalance')) {
-                    obj['gvtBalance'] = _ApiClient2.default.convertToType(data['gvtBalance'], 'Number');
+                if (data.hasOwnProperty('regularTradingFee')) {
+                    obj['regularTradingFee'] = _ApiClient2.default.convertToType(data['regularTradingFee'], 'Number');
+                }
+                if (data.hasOwnProperty('regularDiscount')) {
+                    obj['regularDiscount'] = _ApiClient2.default.convertToType(data['regularDiscount'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return ProgramBalanceChart;
+    return UserCommissionData;
 }();
 
-ProgramBalanceChart.ProgramCurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = ProgramBalanceChart;
+exports.default = UserCommissionData;

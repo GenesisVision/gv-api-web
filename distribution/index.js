@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WalletApi = exports.SignalApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.KycApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletsGrandTotal = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletMultiSummary = exports.WalletInfo = exports.WalletData = exports.ValueChartBar = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionDetails = exports.TradesViewModel = exports.TradesOpenSignalSlaveViewModel = exports.TradesHistorySignalSlaveViewModel = exports.SignalsList = exports.SignalDetails = exports.SearchViewModel = exports.Review = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramTransactionDetails = exports.ProgramTag = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramProfitChart = exports.ProgramNotificationSettingList = exports.ProgramMinimumDeposit = exports.ProgramInvestInfo = exports.ProgramInfo = undefined;
+exports.WalletApi = exports.SignalApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.KycApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletsGrandTotal = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletMultiSummary = exports.WalletInfo = exports.WalletData = exports.ValueChartBar = exports.UserCommissionData = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionDetails = exports.TradesViewModel = exports.TradesOpenSignalSlaveViewModel = exports.TradesHistorySignalSlaveViewModel = exports.SignalsList = exports.SignalDetails = exports.SearchViewModel = exports.Review = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramTransactionDetails = exports.ProgramTag = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramProfitChart = exports.ProgramNotificationSettingList = exports.ProgramMinimumDeposit = exports.ProgramInvestInfo = exports.ProgramInfo = undefined;
 exports.ProgramFacet = exports.ProgramDetailsRating = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramBalanceChartElement = exports.ProgramBalanceChart = exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PlatformStatistic = exports.PlatformInfo = exports.PlatformCurrency = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalSignalDetailsFull = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PeriodDate = exports.PasswordModel = exports.OtherAssetsValue = exports.OrderProgramData = exports.OrderOpenSignalSlaveModel = exports.OrderModel = exports.OrderClosedSignalSlaveModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.MultiWalletTransactionsViewModel = exports.MultiWalletTransaction = exports.MultiWalletFilters = exports.MultiWalletExternalTransactionsViewModel = exports.MultiWalletExternalTransaction = exports.ManagersList = exports.ManagerSimpleProgram = exports.ManagerSimpleFund = exports.ManagerProgramWithdrawInfo = exports.ManagerProfileDetails = exports.ManagerProfile = exports.ManagerPortfolioEvents = exports.ManagerPortfolioEvent = exports.ManagerOverview = exports.ManagerNotificationSettingList = exports.ManagerFundWithdrawInfo = exports.ManagerDashboard = exports.ManagerAssets = exports.LoginViewModel = exports.LevelUpSummary = exports.LevelUpData = exports.LevelInfo = exports.KycCallback = exports.InternalTransferRequest = exports.IOsAppVersion = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundSets = exports.FundProfitChart = exports.FundNotificationSettingList = exports.FundInvestInfo = exports.FundFacet = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundBalanceChart = exports.FundAssetsListInfo = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPart = exports.FundAssetInfo = exports.ForgotPasswordViewModel = exports.FcmTokenViewModel = exports.ExternalTransactionDetails = exports.ErrorViewModel = exports.ErrorMessage = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.CopyTradingAccountsList = exports.CopyTradingAccountInfo = exports.ConvertingDetails = exports.ChartSimple = exports.ChangePasswordViewModel = exports.BrokersInfo = exports.BrokerAccountType = exports.Broker = exports.BlockchainInfo = exports.BalanceChartElement = exports.AssetsValue = exports.AssetSelection = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
@@ -566,6 +566,10 @@ var _UploadResult = require('./model/UploadResult');
 
 var _UploadResult2 = _interopRequireDefault(_UploadResult);
 
+var _UserCommissionData = require('./model/UserCommissionData');
+
+var _UserCommissionData2 = _interopRequireDefault(_UserCommissionData);
+
 var _ValueChartBar = require('./model/ValueChartBar');
 
 var _ValueChartBar2 = _interopRequireDefault(_ValueChartBar);
@@ -681,6 +685,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @interface index
 * @version v1.0
 */
+/**
+ * Core API v1.0
+ * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
+ *
+ * OpenAPI spec version: v1.0
+ * 
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
 exports.AmountWithCurrency = _AmountWithCurrency2.default;
 exports.AndroidAppVersion = _AndroidAppVersion2.default;
@@ -821,6 +838,7 @@ exports.TwoFactorStatus = _TwoFactorStatus2.default;
 exports.UpdatePersonalDetailViewModel = _UpdatePersonalDetailViewModel2.default;
 exports.UpdateProfileViewModel = _UpdateProfileViewModel2.default;
 exports.UploadResult = _UploadResult2.default;
+exports.UserCommissionData = _UserCommissionData2.default;
 exports.ValueChartBar = _ValueChartBar2.default;
 exports.WalletData = _WalletData2.default;
 exports.WalletInfo = _WalletInfo2.default;
@@ -847,15 +865,4 @@ exports.ProgramsApi = _ProgramsApi2.default;
 exports.RateApi = _RateApi2.default;
 exports.SearchApi = _SearchApi2.default;
 exports.SignalApi = _SignalApi2.default;
-exports.WalletApi = _WalletApi2.default; /**
-                                          * Core API v1.0
-                                          * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
-                                          *
-                                          * OpenAPI spec version: v1.0
-                                          * 
-                                          *
-                                          * NOTE: This class is auto generated by the swagger code generator program.
-                                          * https://github.com/swagger-api/swagger-codegen.git
-                                          * Do not edit the class manually.
-                                          *
-                                          */
+exports.WalletApi = _WalletApi2.default;

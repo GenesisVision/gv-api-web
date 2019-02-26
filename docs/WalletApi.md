@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**v10WalletAddressesByCurrencyGet**](WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
 [**v10WalletAddressesGet**](WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
 [**v10WalletByCurrencyGet**](WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
+[**v10WalletFeeGvtholdingGet**](WalletApi.md#v10WalletFeeGvtholdingGet) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
 [**v10WalletMultiByCurrencyGet**](WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
 [**v10WalletMultiFiltersGet**](WalletApi.md#v10WalletMultiFiltersGet) | **GET** /v1.0/wallet/multi/filters | Get filters
 [**v10WalletMultiTransactionsExternalGet**](WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
@@ -142,6 +143,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WalletSummary**](WalletSummary.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10WalletFeeGvtholdingGet"></a>
+# **v10WalletFeeGvtholdingGet**
+> UserCommissionData v10WalletFeeGvtholdingGet(authorization)
+
+GenesisMarkets commission data
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10WalletFeeGvtholdingGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**UserCommissionData**](UserCommissionData.md)
 
 ### Authorization
 
