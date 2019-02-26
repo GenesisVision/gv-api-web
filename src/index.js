@@ -34,6 +34,7 @@ import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardSummary from './model/DashboardSummary';
+import Enums from './model/Enums';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
@@ -112,6 +113,7 @@ import ProgramDetailsFull from './model/ProgramDetailsFull';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsRating from './model/ProgramDetailsRating';
 import ProgramFacet from './model/ProgramFacet';
+import ProgramFilters from './model/ProgramFilters';
 import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
@@ -320,6 +322,12 @@ export {
      * @type {DashboardSummary}
      */
     DashboardSummary,
+
+    /**
+     * @name index#Enums
+     * @type {Enums}
+     */
+    Enums,
 
     /**
      * @name index#ErrorMessage
@@ -788,6 +796,12 @@ export {
      * @type {ProgramFacet}
      */
     ProgramFacet,
+
+    /**
+     * @name index#ProgramFilters
+     * @type {ProgramFilters}
+     */
+    ProgramFilters,
 
     /**
      * @name index#ProgramInfo

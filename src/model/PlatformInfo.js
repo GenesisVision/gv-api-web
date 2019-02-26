@@ -14,11 +14,11 @@
 
 import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
+import Enums from './Enums';
 import FundFacet from './FundFacet';
 import IOsAppVersion from './IOsAppVersion';
 import PlatformCurrency from './PlatformCurrency';
 import ProgramFacet from './ProgramFacet';
-import ProgramTag from './ProgramTag';
 import ProgramsInfo from './ProgramsInfo';
 
 
@@ -67,8 +67,8 @@ import ProgramsInfo from './ProgramsInfo';
      */
     /**
      *
-     * @name PlatformInfo#programTags
-     * @type {Array<ProgramTag>}
+     * @name PlatformInfo#enums
+     * @type {Enums}
      */
 
 
@@ -117,8 +117,8 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('platformCurrencies')) {
                 obj['platformCurrencies'] = ApiClient.convertToType(data['platformCurrencies'], [PlatformCurrency]);
             }
-            if (data.hasOwnProperty('programTags')) {
-                obj['programTags'] = ApiClient.convertToType(data['programTags'], [ProgramTag]);
+            if (data.hasOwnProperty('enums')) {
+                obj['enums'] = Enums.constructFromObject(data['enums']);
             }
         }
         return obj;
@@ -131,7 +131,7 @@ export default class PlatformInfo {
     programsInfo = undefined;
     currencies = undefined;
     platformCurrencies = undefined;
-    programTags = undefined;
+    enums = undefined;
 
 
 

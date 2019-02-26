@@ -21,52 +21,47 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ProgramTag = require('./ProgramTag');
+
+var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface MultiWalletFilters
+ * @interface ProgramFilters
  */
 
 /**
  *
- * @name MultiWalletFilters#transactionType
- * @type {[String]}
- */
-/**
- *
- * @name MultiWalletFilters#externalTransactionType
- * @type {[String]}
+ * @name ProgramFilters#programTags
+ * @type {[ProgramTag]}
  */
 
-var MultiWalletFilters = function () {
-    function MultiWalletFilters() {
-        _classCallCheck(this, MultiWalletFilters);
+var ProgramFilters = function () {
+    function ProgramFilters() {
+        _classCallCheck(this, ProgramFilters);
 
-        this.transactionType = undefined;
-        this.externalTransactionType = undefined;
+        this.programTags = undefined;
     }
 
-    _createClass(MultiWalletFilters, null, [{
+    _createClass(ProgramFilters, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new MultiWalletFilters();
+                obj = obj || new ProgramFilters();
 
-                if (data.hasOwnProperty('transactionType')) {
-                    obj['transactionType'] = _ApiClient2.default.convertToType(data['transactionType'], ['String']);
-                }
-                if (data.hasOwnProperty('externalTransactionType')) {
-                    obj['externalTransactionType'] = _ApiClient2.default.convertToType(data['externalTransactionType'], ['String']);
+                if (data.hasOwnProperty('programTags')) {
+                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
                 }
             }
             return obj;
         }
     }]);
 
-    return MultiWalletFilters;
+    return ProgramFilters;
 }();
 
-exports.default = MultiWalletFilters;
+exports.default = ProgramFilters;

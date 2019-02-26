@@ -21,52 +21,60 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _MultiWalletFilters = require('./MultiWalletFilters');
+
+var _MultiWalletFilters2 = _interopRequireDefault(_MultiWalletFilters);
+
+var _ProgramFilters = require('./ProgramFilters');
+
+var _ProgramFilters2 = _interopRequireDefault(_ProgramFilters);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface MultiWalletFilters
+ * @interface Enums
  */
 
 /**
  *
- * @name MultiWalletFilters#transactionType
- * @type {[String]}
+ * @name Enums#multiWallet
+ * @type {MultiWalletFilters}
  */
 /**
  *
- * @name MultiWalletFilters#externalTransactionType
- * @type {[String]}
+ * @name Enums#program
+ * @type {ProgramFilters}
  */
 
-var MultiWalletFilters = function () {
-    function MultiWalletFilters() {
-        _classCallCheck(this, MultiWalletFilters);
+var Enums = function () {
+    function Enums() {
+        _classCallCheck(this, Enums);
 
-        this.transactionType = undefined;
-        this.externalTransactionType = undefined;
+        this.multiWallet = undefined;
+        this.program = undefined;
     }
 
-    _createClass(MultiWalletFilters, null, [{
+    _createClass(Enums, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new MultiWalletFilters();
+                obj = obj || new Enums();
 
-                if (data.hasOwnProperty('transactionType')) {
-                    obj['transactionType'] = _ApiClient2.default.convertToType(data['transactionType'], ['String']);
+                if (data.hasOwnProperty('multiWallet')) {
+                    obj['multiWallet'] = _MultiWalletFilters2.default.constructFromObject(data['multiWallet']);
                 }
-                if (data.hasOwnProperty('externalTransactionType')) {
-                    obj['externalTransactionType'] = _ApiClient2.default.convertToType(data['externalTransactionType'], ['String']);
+                if (data.hasOwnProperty('program')) {
+                    obj['program'] = _ProgramFilters2.default.constructFromObject(data['program']);
                 }
             }
             return obj;
         }
     }]);
 
-    return MultiWalletFilters;
+    return Enums;
 }();
 
-exports.default = MultiWalletFilters;
+exports.default = Enums;

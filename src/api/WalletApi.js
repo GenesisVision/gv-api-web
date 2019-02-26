@@ -17,7 +17,6 @@ import CreateWithdrawalRequestModel from '../model/CreateWithdrawalRequestModel'
 import ErrorViewModel from '../model/ErrorViewModel';
 import InternalTransferRequest from '../model/InternalTransferRequest';
 import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExternalTransactionsViewModel';
-import MultiWalletFilters from '../model/MultiWalletFilters';
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
 import TransactionDetails from '../model/TransactionDetails';
 import UserCommissionData from '../model/UserCommissionData';
@@ -280,50 +279,6 @@ export default class WalletApi {
      */
       v10WalletMultiByCurrencyGet(currency, authorization) {
       return this.v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10WalletMultiFiltersGetWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiFiltersGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = MultiWalletFilters;
-
-      return this.apiClient.callApi(
-        '/v1.0/wallet/multi/filters', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get filters
-     * @function WalletApi#v10WalletMultiFiltersGet
-     * @param {String} authorization JWT access token
-     * @return {Promise<MultiWalletFilters>} a Promise, with an object containing data of type MultiWalletFilters and HTTP response
-     */
-      v10WalletMultiFiltersGet(authorization) {
-      return this.v10WalletMultiFiltersGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

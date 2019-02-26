@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**v10WalletByCurrencyGet**](WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 [**v10WalletFeeGvtholdingGet**](WalletApi.md#v10WalletFeeGvtholdingGet) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
 [**v10WalletMultiByCurrencyGet**](WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
-[**v10WalletMultiFiltersGet**](WalletApi.md#v10WalletMultiFiltersGet) | **GET** /v1.0/wallet/multi/filters | Get filters
 [**v10WalletMultiTransactionsExternalGet**](WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 [**v10WalletMultiTransactionsGet**](WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
 [**v10WalletPaygvtfeeOffPost**](WalletApi.md#v10WalletPaygvtfeeOffPost) | **POST** /v1.0/wallet/paygvtfee/off | Disable paying platform fees with GVT
@@ -228,47 +227,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WalletMultiSummary**](WalletMultiSummary.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10WalletMultiFiltersGet"></a>
-# **v10WalletMultiFiltersGet**
-> MultiWalletFilters v10WalletMultiFiltersGet(authorization)
-
-Get filters
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10WalletMultiFiltersGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**MultiWalletFilters**](MultiWalletFilters.md)
 
 ### Authorization
 

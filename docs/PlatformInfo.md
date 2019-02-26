@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **programsInfo** | [**ProgramsInfo**](ProgramsInfo.md) |  | [optional] 
 **currencies** | **[String]** |  | [optional] 
 **platformCurrencies** | [**[PlatformCurrency]**](PlatformCurrency.md) |  | [optional] 
-**programTags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
+**enums** | [**Enums**](Enums.md) |  | [optional] 
 
 

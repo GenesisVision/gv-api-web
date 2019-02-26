@@ -231,7 +231,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletFeeGvtholdingGet**](docs/WalletApi.md#v10WalletFeeGvtholdingGet) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
 *CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyGet**](docs/WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
-*CoreApiV10.WalletApi* | [**v10WalletMultiFiltersGet**](docs/WalletApi.md#v10WalletMultiFiltersGet) | **GET** /v1.0/wallet/multi/filters | Get filters
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsExternalGet**](docs/WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsGet**](docs/WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
 *CoreApiV10.WalletApi* | [**v10WalletPaygvtfeeOffPost**](docs/WalletApi.md#v10WalletPaygvtfeeOffPost) | **POST** /v1.0/wallet/paygvtfee/off | Disable paying platform fees with GVT
@@ -269,6 +268,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.DashboardPortfolioEvents](docs/DashboardPortfolioEvents.md)
  - [CoreApiV10.DashboardProgramDetails](docs/DashboardProgramDetails.md)
  - [CoreApiV10.DashboardSummary](docs/DashboardSummary.md)
+ - [CoreApiV10.Enums](docs/Enums.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.ExternalTransactionDetails](docs/ExternalTransactionDetails.md)
@@ -347,6 +347,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
  - [CoreApiV10.ProgramDetailsRating](docs/ProgramDetailsRating.md)
  - [CoreApiV10.ProgramFacet](docs/ProgramFacet.md)
+ - [CoreApiV10.ProgramFilters](docs/ProgramFilters.md)
  - [CoreApiV10.ProgramInfo](docs/ProgramInfo.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramMinimumDeposit](docs/ProgramMinimumDeposit.md)

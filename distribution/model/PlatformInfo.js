@@ -25,6 +25,10 @@ var _AndroidAppVersion = require('./AndroidAppVersion');
 
 var _AndroidAppVersion2 = _interopRequireDefault(_AndroidAppVersion);
 
+var _Enums = require('./Enums');
+
+var _Enums2 = _interopRequireDefault(_Enums);
+
 var _FundFacet = require('./FundFacet');
 
 var _FundFacet2 = _interopRequireDefault(_FundFacet);
@@ -40,10 +44,6 @@ var _PlatformCurrency2 = _interopRequireDefault(_PlatformCurrency);
 var _ProgramFacet = require('./ProgramFacet');
 
 var _ProgramFacet2 = _interopRequireDefault(_ProgramFacet);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
 
 var _ProgramsInfo = require('./ProgramsInfo');
 
@@ -95,8 +95,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name PlatformInfo#programTags
- * @type {[ProgramTag]}
+ * @name PlatformInfo#enums
+ * @type {Enums}
  */
 
 var PlatformInfo = function () {
@@ -110,7 +110,7 @@ var PlatformInfo = function () {
         this.programsInfo = undefined;
         this.currencies = undefined;
         this.platformCurrencies = undefined;
-        this.programTags = undefined;
+        this.enums = undefined;
     }
 
     _createClass(PlatformInfo, null, [{
@@ -140,8 +140,8 @@ var PlatformInfo = function () {
                 if (data.hasOwnProperty('platformCurrencies')) {
                     obj['platformCurrencies'] = _ApiClient2.default.convertToType(data['platformCurrencies'], [_PlatformCurrency2.default]);
                 }
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('enums')) {
+                    obj['enums'] = _Enums2.default.constructFromObject(data['enums']);
                 }
             }
             return obj;

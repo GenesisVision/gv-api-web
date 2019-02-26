@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import MultiWalletFilters from './MultiWalletFilters';
+import ProgramFilters from './ProgramFilters';
 
 
 
@@ -20,25 +22,25 @@ import ApiClient from '../ApiClient';
 
     /**
      *
-     * @interface MultiWalletFilters
+     * @interface Enums
      */
     
     /**
      *
-     * @name MultiWalletFilters#transactionType
-     * @type {Array<String>}
+     * @name Enums#multiWallet
+     * @type {MultiWalletFilters}
      */
     /**
      *
-     * @name MultiWalletFilters#externalTransactionType
-     * @type {Array<String>}
+     * @name Enums#program
+     * @type {ProgramFilters}
      */
 
 
 
 
 
-export default class MultiWalletFilters {
+export default class Enums {
 
     constructor() {
         
@@ -53,24 +55,24 @@ export default class MultiWalletFilters {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new MultiWalletFilters();
+            obj = obj || new Enums();
 
             
             
             
 
-            if (data.hasOwnProperty('transactionType')) {
-                obj['transactionType'] = ApiClient.convertToType(data['transactionType'], ['String']);
+            if (data.hasOwnProperty('multiWallet')) {
+                obj['multiWallet'] = MultiWalletFilters.constructFromObject(data['multiWallet']);
             }
-            if (data.hasOwnProperty('externalTransactionType')) {
-                obj['externalTransactionType'] = ApiClient.convertToType(data['externalTransactionType'], ['String']);
+            if (data.hasOwnProperty('program')) {
+                obj['program'] = ProgramFilters.constructFromObject(data['program']);
             }
         }
         return obj;
     }
 
-    transactionType = undefined;
-    externalTransactionType = undefined;
+    multiWallet = undefined;
+    program = undefined;
 
 
 

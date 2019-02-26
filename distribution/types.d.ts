@@ -475,7 +475,6 @@ export declare class WalletApi {
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
     v10WalletFeeGvtholdingGet(authorization: string): Promise<UserCommissionData>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
-    v10WalletMultiFiltersGet(authorization: string): Promise<MultiWalletFilters>;
     v10WalletMultiTransactionsExternalGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
@@ -543,6 +542,7 @@ export declare interface index {
     DashboardPortfolioEvents: DashboardPortfolioEvents;
     DashboardProgramDetails: DashboardProgramDetails;
     DashboardSummary: DashboardSummary;
+    Enums: Enums;
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
@@ -621,6 +621,7 @@ export declare interface index {
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsRating: ProgramDetailsRating;
     ProgramFacet: ProgramFacet;
+    ProgramFilters: ProgramFilters;
     ProgramInfo: ProgramInfo;
     ProgramInvestInfo: ProgramInvestInfo;
     ProgramMinimumDeposit: ProgramMinimumDeposit;
@@ -848,6 +849,11 @@ export declare interface DashboardSummary {
     fundsCount: number;
     signalsCount: number;
     requests: ProgramRequests;
+}
+
+export declare interface Enums {
+    multiWallet: MultiWalletFilters;
+    program: ProgramFilters;
 }
 
 export declare interface ErrorMessage {
@@ -1212,8 +1218,8 @@ export declare interface MultiWalletExternalTransactionsViewModel {
 }
 
 export declare interface MultiWalletFilters {
-    multiWalletTransactionType: string[];
-    multiWalletExternalTransactionType: string[];
+    transactionType: string[];
+    externalTransactionType: string[];
 }
 
 export declare interface MultiWalletTransaction {
@@ -1484,7 +1490,7 @@ export declare interface PlatformInfo {
     programsInfo: ProgramsInfo;
     currencies: string[];
     platformCurrencies: PlatformCurrency[];
-    programTags: ProgramTag[];
+    enums: Enums;
 }
 
 export declare interface PlatformStatistic {
@@ -1644,6 +1650,10 @@ export declare interface ProgramFacet {
     url: string;
     sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
     timeframe: "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
+}
+
+export declare interface ProgramFilters {
+    programTags: ProgramTag[];
 }
 
 export declare interface ProgramInfo {
