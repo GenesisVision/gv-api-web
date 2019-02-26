@@ -40,7 +40,7 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name WalletData#address
+     * @name WalletData#withdrawalAddress
      * @type {String}
      */
     /**
@@ -57,6 +57,11 @@ import ApiClient from '../ApiClient';
      *
      * @name WalletData#isWithdrawalEnabled
      * @type {Boolean}
+     */
+    /**
+     *
+     * @name WalletData#withdrawalCommission
+     * @type {Number}
      */
     /**
      *
@@ -143,8 +148,8 @@ export default class WalletData {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            if (data.hasOwnProperty('withdrawalAddress')) {
+                obj['withdrawalAddress'] = ApiClient.convertToType(data['withdrawalAddress'], 'String');
             }
             if (data.hasOwnProperty('rateToGVT')) {
                 obj['rateToGVT'] = ApiClient.convertToType(data['rateToGVT'], 'Number');
@@ -154,6 +159,9 @@ export default class WalletData {
             }
             if (data.hasOwnProperty('isWithdrawalEnabled')) {
                 obj['isWithdrawalEnabled'] = ApiClient.convertToType(data['isWithdrawalEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('withdrawalCommission')) {
+                obj['withdrawalCommission'] = ApiClient.convertToType(data['withdrawalCommission'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
@@ -192,10 +200,11 @@ export default class WalletData {
     id = undefined;
     title = undefined;
     logo = undefined;
-    address = undefined;
+    withdrawalAddress = undefined;
     rateToGVT = undefined;
     isDepositEnabled = undefined;
     isWithdrawalEnabled = undefined;
+    withdrawalCommission = undefined;
     currency = undefined;
     available = undefined;
     invested = undefined;

@@ -2032,10 +2032,11 @@ export declare interface WalletData {
     id: string;
     title: string;
     logo: string;
-    address: string;
+    withdrawalAddress: string;
     rateToGVT: number;
     isDepositEnabled: boolean;
     isWithdrawalEnabled: boolean;
+    withdrawalCommission: number;
     currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     invested: number;

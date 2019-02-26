@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name WalletData#address
+ * @name WalletData#withdrawalAddress
  * @type {String}
  */
 /**
@@ -64,6 +64,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * @name WalletData#isWithdrawalEnabled
  * @type {Boolean}
+ */
+/**
+ *
+ * @name WalletData#withdrawalCommission
+ * @type {Number}
  */
 /**
  *
@@ -123,10 +128,11 @@ var WalletData = function () {
         this.id = undefined;
         this.title = undefined;
         this.logo = undefined;
-        this.address = undefined;
+        this.withdrawalAddress = undefined;
         this.rateToGVT = undefined;
         this.isDepositEnabled = undefined;
         this.isWithdrawalEnabled = undefined;
+        this.withdrawalCommission = undefined;
         this.currency = undefined;
         this.available = undefined;
         this.invested = undefined;
@@ -154,8 +160,8 @@ var WalletData = function () {
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
-                if (data.hasOwnProperty('address')) {
-                    obj['address'] = _ApiClient2.default.convertToType(data['address'], 'String');
+                if (data.hasOwnProperty('withdrawalAddress')) {
+                    obj['withdrawalAddress'] = _ApiClient2.default.convertToType(data['withdrawalAddress'], 'String');
                 }
                 if (data.hasOwnProperty('rateToGVT')) {
                     obj['rateToGVT'] = _ApiClient2.default.convertToType(data['rateToGVT'], 'Number');
@@ -165,6 +171,9 @@ var WalletData = function () {
                 }
                 if (data.hasOwnProperty('isWithdrawalEnabled')) {
                     obj['isWithdrawalEnabled'] = _ApiClient2.default.convertToType(data['isWithdrawalEnabled'], 'Boolean');
+                }
+                if (data.hasOwnProperty('withdrawalCommission')) {
+                    obj['withdrawalCommission'] = _ApiClient2.default.convertToType(data['withdrawalCommission'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
