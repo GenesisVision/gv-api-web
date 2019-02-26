@@ -1060,6 +1060,7 @@ export declare interface InternalTransferRequest {
     destinationId: string;
     destinationType: "Undefined" | "Wallet";
     amount: number;
+    transferAll: boolean;
 }
 
 export declare interface KycCallback {

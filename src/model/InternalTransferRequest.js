@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
      * @name InternalTransferRequest#amount
      * @type {Number}
      */
+    /**
+     *
+     * @name InternalTransferRequest#transferAll
+     * @type {Boolean}
+     */
 
 
 
@@ -89,6 +94,9 @@ export default class InternalTransferRequest {
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
+            if (data.hasOwnProperty('transferAll')) {
+                obj['transferAll'] = ApiClient.convertToType(data['transferAll'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class InternalTransferRequest {
     destinationId = undefined;
     destinationType = undefined;
     amount = undefined;
+    transferAll = undefined;
 
 
 

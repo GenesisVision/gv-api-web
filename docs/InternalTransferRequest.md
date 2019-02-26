@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **destinationId** | **String** |  | [optional] 
 **destinationType** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
+**transferAll** | **Boolean** |  | [optional] 
 
 
 <a name="SourceTypeEnum"></a>

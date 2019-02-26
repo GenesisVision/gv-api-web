@@ -55,6 +55,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name InternalTransferRequest#amount
  * @type {Number}
  */
+/**
+ *
+ * @name InternalTransferRequest#transferAll
+ * @type {Boolean}
+ */
 
 var InternalTransferRequest = function () {
     function InternalTransferRequest() {
@@ -65,6 +70,7 @@ var InternalTransferRequest = function () {
         this.destinationId = undefined;
         this.destinationType = undefined;
         this.amount = undefined;
+        this.transferAll = undefined;
     }
 
     _createClass(InternalTransferRequest, null, [{
@@ -87,6 +93,9 @@ var InternalTransferRequest = function () {
                 }
                 if (data.hasOwnProperty('amount')) {
                     obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
+                }
+                if (data.hasOwnProperty('transferAll')) {
+                    obj['transferAll'] = _ApiClient2.default.convertToType(data['transferAll'], 'Boolean');
                 }
             }
             return obj;
