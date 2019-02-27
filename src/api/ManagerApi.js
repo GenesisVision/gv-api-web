@@ -397,7 +397,7 @@ export default class ManagerApi {
     }
 
     /**
-     * Deposit  Invest in GVT if currency is empty
+     * Deposit.  Invest in GVT if currency is empty
      * @function ManagerApi#v10ManagerFundsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 

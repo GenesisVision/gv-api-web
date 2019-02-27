@@ -90,7 +90,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Investing into the fund  Invest in GVT if currency is empty
+     * Investing into the fund.  Invest in GVT if currency is empty
      * @function InvestorApi#v10InvestorFundsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 
@@ -633,7 +633,7 @@ export default class InvestorApi {
     }
 
     /**
-     * Investing into the program  Invest in GVT if currency is empty
+     * Investing into the program.  Invest in GVT if currency is empty
      * @function InvestorApi#v10InvestorProgramsByIdInvestByAmountPost
      * @param {String} id 
      * @param {Number} amount 
