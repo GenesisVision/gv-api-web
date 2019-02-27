@@ -50,6 +50,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ExternalTransactionDetails#isEnableActions
  * @type {Boolean}
  */
+/**
+ *
+ * @name ExternalTransactionDetails#withdrawRequestId
+ * @type {String}
+ */
 
 var ExternalTransactionDetails = function () {
     function ExternalTransactionDetails() {
@@ -59,6 +64,7 @@ var ExternalTransactionDetails = function () {
         this.descriptionUrl = undefined;
         this.fromAddress = undefined;
         this.isEnableActions = undefined;
+        this.withdrawRequestId = undefined;
     }
 
     _createClass(ExternalTransactionDetails, null, [{
@@ -78,6 +84,9 @@ var ExternalTransactionDetails = function () {
                 }
                 if (data.hasOwnProperty('isEnableActions')) {
                     obj['isEnableActions'] = _ApiClient2.default.convertToType(data['isEnableActions'], 'Boolean');
+                }
+                if (data.hasOwnProperty('withdrawRequestId')) {
+                    obj['withdrawRequestId'] = _ApiClient2.default.convertToType(data['withdrawRequestId'], 'String');
                 }
             }
             return obj;

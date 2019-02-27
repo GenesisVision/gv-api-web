@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **descriptionUrl** | **String** |  | [optional] 
 **fromAddress** | **String** |  | [optional] 
 **isEnableActions** | **Boolean** |  | [optional] 
+**withdrawRequestId** | **String** |  | [optional] 
 
 

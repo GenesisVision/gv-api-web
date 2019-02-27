@@ -871,6 +871,7 @@ export declare interface ExternalTransactionDetails {
     descriptionUrl: string;
     fromAddress: string;
     isEnableActions: boolean;
+    withdrawRequestId: string;
 }
 
 export declare interface Facet {
