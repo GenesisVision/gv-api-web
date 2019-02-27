@@ -43,11 +43,6 @@ import ApiClient from '../ApiClient';
      * @name ExternalTransactionDetails#isEnableActions
      * @type {Boolean}
      */
-    /**
-     *
-     * @name ExternalTransactionDetails#withdrawRequestId
-     * @type {String}
-     */
 
 
 
@@ -86,9 +81,6 @@ export default class ExternalTransactionDetails {
             if (data.hasOwnProperty('isEnableActions')) {
                 obj['isEnableActions'] = ApiClient.convertToType(data['isEnableActions'], 'Boolean');
             }
-            if (data.hasOwnProperty('withdrawRequestId')) {
-                obj['withdrawRequestId'] = ApiClient.convertToType(data['withdrawRequestId'], 'String');
-            }
         }
         return obj;
     }
@@ -97,7 +89,6 @@ export default class ExternalTransactionDetails {
     descriptionUrl = undefined;
     fromAddress = undefined;
     isEnableActions = undefined;
-    withdrawRequestId = undefined;
 
 
 
