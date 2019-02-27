@@ -61,7 +61,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ManagerPortfolioEvent#type
-     * @type {("All"|"AssetStarted"|"ProgramPeriodStats"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
+     * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
      */
     /**
      *
@@ -211,7 +211,7 @@ export default class ManagerPortfolioEvent {
     
         "AssetStarted": "AssetStarted",
     
-        "ProgramPeriodStats": "ProgramPeriodStats",
+        "ProgramPeriodStarts": "ProgramPeriodStarts",
     
         "ProgramPeriodEnds": "ProgramPeriodEnds",
     

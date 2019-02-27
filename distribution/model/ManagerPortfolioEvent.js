@@ -68,7 +68,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerPortfolioEvent#type
- * @type {("All"|"AssetStarted"|"ProgramPeriodStats"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
  */
 /**
  *
@@ -202,7 +202,7 @@ ManagerPortfolioEvent.TypeEnum = {
 
     "AssetStarted": "AssetStarted",
 
-    "ProgramPeriodStats": "ProgramPeriodStats",
+    "ProgramPeriodStarts": "ProgramPeriodStarts",
 
     "ProgramPeriodEnds": "ProgramPeriodEnds",
 

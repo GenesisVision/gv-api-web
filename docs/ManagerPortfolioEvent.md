@@ -59,7 +59,7 @@ Name | Type | Description | Notes
 
 * `AssetStarted` (value: `"AssetStarted"`)
 
-* `ProgramPeriodStats` (value: `"ProgramPeriodStats"`)
+* `ProgramPeriodStarts` (value: `"ProgramPeriodStarts"`)
 
 * `ProgramPeriodEnds` (value: `"ProgramPeriodEnds"`)
 
