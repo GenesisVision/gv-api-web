@@ -45,6 +45,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProgramUpdate#logo
  * @type {String}
  */
+/**
+ *
+ * @name ProgramUpdate#stopOutLevel
+ * @type {Number}
+ */
 
 var ProgramUpdate = function () {
     function ProgramUpdate() {
@@ -53,6 +58,7 @@ var ProgramUpdate = function () {
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
+        this.stopOutLevel = undefined;
     }
 
     _createClass(ProgramUpdate, null, [{
@@ -69,6 +75,9 @@ var ProgramUpdate = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('stopOutLevel')) {
+                    obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
                 }
             }
             return obj;

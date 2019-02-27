@@ -38,6 +38,11 @@ import ApiClient from '../ApiClient';
      * @name ProgramUpdate#logo
      * @type {String}
      */
+    /**
+     *
+     * @name ProgramUpdate#stopOutLevel
+     * @type {Number}
+     */
 
 
 
@@ -73,6 +78,9 @@ export default class ProgramUpdate {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('stopOutLevel')) {
+                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
+            }
         }
         return obj;
     }
@@ -80,6 +88,7 @@ export default class ProgramUpdate {
     title = undefined;
     description = undefined;
     logo = undefined;
+    stopOutLevel = undefined;
 
 
 

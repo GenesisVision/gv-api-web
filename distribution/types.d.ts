@@ -1788,6 +1788,7 @@ export declare interface ProgramUpdate {
     title: string;
     description: string;
     logo: string;
+    stopOutLevel: number;
 }
 
 export declare interface ProgramWithdrawInfo {
