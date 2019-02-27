@@ -870,6 +870,7 @@ export declare interface ExternalTransactionDetails {
     description: string;
     descriptionUrl: string;
     fromAddress: string;
+    isEnableActions: boolean;
 }
 
 export declare interface Facet {

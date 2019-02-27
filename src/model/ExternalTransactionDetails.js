@@ -38,6 +38,11 @@ import ApiClient from '../ApiClient';
      * @name ExternalTransactionDetails#fromAddress
      * @type {String}
      */
+    /**
+     *
+     * @name ExternalTransactionDetails#isEnableActions
+     * @type {Boolean}
+     */
 
 
 
@@ -73,6 +78,9 @@ export default class ExternalTransactionDetails {
             if (data.hasOwnProperty('fromAddress')) {
                 obj['fromAddress'] = ApiClient.convertToType(data['fromAddress'], 'String');
             }
+            if (data.hasOwnProperty('isEnableActions')) {
+                obj['isEnableActions'] = ApiClient.convertToType(data['isEnableActions'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -80,6 +88,7 @@ export default class ExternalTransactionDetails {
     description = undefined;
     descriptionUrl = undefined;
     fromAddress = undefined;
+    isEnableActions = undefined;
 
 
 
