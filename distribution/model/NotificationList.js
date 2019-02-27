@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name NotificationList#notifications
- * @type {[NotificationViewModel]}
+ * @type {Array<NotificationViewModel>}
  */
 /**
  *

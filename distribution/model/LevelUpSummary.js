@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name LevelUpSummary#levelData
- * @type {[LevelUpData]}
+ * @type {Array<LevelUpData>}
  */
 
 var LevelUpSummary = function () {

@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramsLevelsInfo#levels
- * @type {[LevelInfo]}
+ * @type {Array<LevelInfo>}
  */
 
 var ProgramsLevelsInfo = function () {

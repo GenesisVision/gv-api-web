@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletMultiSummary#wallets
- * @type {[WalletData]}
+ * @type {Array<WalletData>}
  */
 /**
  *

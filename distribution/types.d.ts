@@ -1,18 +1,3 @@
-export declare class ApiClient {
-    paramToString: any;
-    buildUrl: any;
-    isJsonMime: any;
-    jsonPreferredMime: any;
-    readonly static CollectionFormatEnum: "CSV" | "SSV" | "TSV" | "PIPES" | "MULTI";
-    applyAuthToRequest: any;
-    deserialize: any;
-    callApi: any;
-    static parseDate: any;
-    static convertToType: any;
-    static constructFromObject: any;
-    static instance: ApiClient;
-}
-
 export declare class AuthApi {
     constructor(apiClient: ApiClient): AuthApi;
     v10Auth2faConfirmPost(authorization: string, opts?: {
@@ -517,6 +502,21 @@ export declare class WalletApi {
         model?: CreateWithdrawalRequestModel;
     }): Promise<any>;
     v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string): Promise<any>;
+}
+
+export declare class ApiClient {
+    paramToString: any;
+    buildUrl: any;
+    isJsonMime: any;
+    jsonPreferredMime: any;
+    readonly static CollectionFormatEnum: "CSV" | "SSV" | "TSV" | "PIPES" | "MULTI";
+    applyAuthToRequest: any;
+    deserialize: any;
+    callApi: any;
+    static parseDate: any;
+    static convertToType: any;
+    static constructFromObject: any;
+    static instance: ApiClient;
 }
 
 export declare interface index {
@@ -1025,6 +1025,11 @@ export declare interface FundSets {
     favoritesCount: number;
 }
 
+export declare interface FundsList {
+    funds: FundDetails[];
+    total: number;
+}
+
 export declare interface FundStatistic {
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
@@ -1044,16 +1049,6 @@ export declare interface FundWithdrawInfo {
     rate: number;
 }
 
-export declare interface FundsList {
-    funds: FundDetails[];
-    total: number;
-}
-
-export declare interface IOsAppVersion {
-    minVersion: string;
-    lastVersion: string;
-}
-
 export declare interface InternalTransferRequest {
     sourceId: string;
     sourceType: "Undefined" | "Wallet";
@@ -1061,6 +1056,11 @@ export declare interface InternalTransferRequest {
     destinationType: "Undefined" | "Wallet";
     amount: number;
     transferAll: boolean;
+}
+
+export declare interface IOsAppVersion {
+    minVersion: string;
+    lastVersion: string;
 }
 
 export declare interface KycCallback {
@@ -1742,6 +1742,28 @@ export declare interface ProgramSets {
     favoritesCount: number;
 }
 
+export declare interface ProgramsInfo {
+    managerProgramInvestment: number;
+    managerProgramInvestmentUSD: number;
+    managerProgramInvestmentUSDT: number;
+    managerProgramInvestmentBTC: number;
+    managerProgramInvestmentETH: number;
+    managerMaxEntryFee: number;
+    managerMaxSuccessFee: number;
+    managerFundInvestment: number;
+    managerMaxExitFee: number;
+    periods: number[];
+}
+
+export declare interface ProgramsLevelsInfo {
+    levels: LevelInfo[];
+}
+
+export declare interface ProgramsList {
+    programs: ProgramDetails[];
+    total: number;
+}
+
 export declare interface ProgramStatistic {
     balanceBase: AmountWithCurrency;
     balanceGVT: AmountWithCurrency;
@@ -1796,28 +1818,6 @@ export declare interface ProgramWithdrawInfo {
     title: string;
     availableToWithdraw: number;
     rate: number;
-}
-
-export declare interface ProgramsInfo {
-    managerProgramInvestment: number;
-    managerProgramInvestmentUSD: number;
-    managerProgramInvestmentUSDT: number;
-    managerProgramInvestmentBTC: number;
-    managerProgramInvestmentETH: number;
-    managerMaxEntryFee: number;
-    managerMaxSuccessFee: number;
-    managerFundInvestment: number;
-    managerMaxExitFee: number;
-    periods: number[];
-}
-
-export declare interface ProgramsLevelsInfo {
-    levels: LevelInfo[];
-}
-
-export declare interface ProgramsList {
-    programs: ProgramDetails[];
-    total: number;
 }
 
 export declare interface RateItem {
@@ -2082,6 +2082,23 @@ export declare interface WalletPendingTransactionsViewModel {
     total: number;
 }
 
+export declare interface WalletsGrandTotal {
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    available: number;
+    invested: number;
+    pending: number;
+    total: number;
+    currencyCcy: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    availableCcy: number;
+    investedCcy: number;
+    pendingCcy: number;
+    totalCcy: number;
+}
+
+export declare interface WalletsInfo {
+    wallets: WalletInfo[];
+}
+
 export declare interface WalletSummary {
     totalBalanceGVT: number;
     totalBalanceCurrency: number;
@@ -2125,23 +2142,6 @@ export declare interface WalletWithdrawalInfo {
     commission: number;
     rateToGvt: number;
     availableToWithdrawal: number;
-}
-
-export declare interface WalletsGrandTotal {
-    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    available: number;
-    invested: number;
-    pending: number;
-    total: number;
-    currencyCcy: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    availableCcy: number;
-    investedCcy: number;
-    pendingCcy: number;
-    totalCcy: number;
-}
-
-export declare interface WalletsInfo {
-    wallets: WalletInfo[];
 }
 
 export declare interface WithdrawalInfo {
