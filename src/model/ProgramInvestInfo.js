@@ -35,6 +35,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProgramInvestInfo#availableToInvestBase
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramInvestInfo#title
      * @type {String}
      */
@@ -100,6 +105,9 @@ export default class ProgramInvestInfo {
             if (data.hasOwnProperty('availableToInvest')) {
                 obj['availableToInvest'] = ApiClient.convertToType(data['availableToInvest'], 'Number');
             }
+            if (data.hasOwnProperty('availableToInvestBase')) {
+                obj['availableToInvestBase'] = ApiClient.convertToType(data['availableToInvestBase'], 'Number');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -127,6 +135,7 @@ export default class ProgramInvestInfo {
 
     periodEnds = undefined;
     availableToInvest = undefined;
+    availableToInvestBase = undefined;
     title = undefined;
     availableInWallet = undefined;
     minInvestmentAmount = undefined;

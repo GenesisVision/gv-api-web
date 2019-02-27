@@ -1576,6 +1576,7 @@ export declare interface ProgramDetails {
     periodStarts: Date;
     periodEnds: Date;
     availableInvestment: number;
+    availableInvestmentBase: number;
     dashboardAssetsDetails: DashboardProgramDetails;
     statistic: ProgramDetailsListStatistic;
     rating: ProgramDetailsRating;
@@ -1608,6 +1609,7 @@ export declare interface ProgramDetailsFull {
     signalSuccessFee: number;
     signalSubscriptionFee: number;
     availableInvestment: number;
+    availableInvestmentBase: number;
     statistic: ProgramStatistic;
     rating: ProgramDetailsRating;
     personalProgramDetails: PersonalProgramDetailsFull;
@@ -1664,6 +1666,7 @@ export declare interface ProgramInfo {
 export declare interface ProgramInvestInfo {
     periodEnds: Date;
     availableToInvest: number;
+    availableToInvestBase: number;
     title: string;
     availableInWallet: number;
     minInvestmentAmount: number;

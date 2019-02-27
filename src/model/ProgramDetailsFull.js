@@ -105,6 +105,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetailsFull#availableInvestmentBase
+     * @type {Number}
+     */
+    /**
+     *
      * @name ProgramDetailsFull#statistic
      * @type {ProgramStatistic}
      */
@@ -239,6 +244,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
+            if (data.hasOwnProperty('availableInvestmentBase')) {
+                obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
+            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
             }
@@ -297,6 +305,7 @@ export default class ProgramDetailsFull {
     signalSuccessFee = undefined;
     signalSubscriptionFee = undefined;
     availableInvestment = undefined;
+    availableInvestmentBase = undefined;
     statistic = undefined;
     rating = undefined;
     personalProgramDetails = undefined;

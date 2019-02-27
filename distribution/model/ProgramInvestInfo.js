@@ -42,6 +42,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramInvestInfo#availableToInvestBase
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramInvestInfo#title
  * @type {String}
  */
@@ -82,6 +87,7 @@ var ProgramInvestInfo = function () {
 
         this.periodEnds = undefined;
         this.availableToInvest = undefined;
+        this.availableToInvestBase = undefined;
         this.title = undefined;
         this.availableInWallet = undefined;
         this.minInvestmentAmount = undefined;
@@ -102,6 +108,9 @@ var ProgramInvestInfo = function () {
                 }
                 if (data.hasOwnProperty('availableToInvest')) {
                     obj['availableToInvest'] = _ApiClient2.default.convertToType(data['availableToInvest'], 'Number');
+                }
+                if (data.hasOwnProperty('availableToInvestBase')) {
+                    obj['availableToInvestBase'] = _ApiClient2.default.convertToType(data['availableToInvestBase'], 'Number');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');

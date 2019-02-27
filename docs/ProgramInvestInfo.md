@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **periodEnds** | **Date** |  | [optional] 
-**availableToInvest** | **Number** |  | [optional] 
+**availableToInvest** | **Number** | In GVT | [optional] 
+**availableToInvestBase** | **Number** | In account currency | [optional] 
 **title** | **String** |  | [optional] 
 **availableInWallet** | **Number** |  | [optional] 
 **minInvestmentAmount** | **Number** |  | [optional] 
