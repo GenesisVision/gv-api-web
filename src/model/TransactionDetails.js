@@ -54,7 +54,7 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
     /**
      *
      * @name TransactionDetails#currency
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -70,6 +70,11 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
      *
      * @name TransactionDetails#gvCommission
      * @type {Number}
+     */
+    /**
+     *
+     * @name TransactionDetails#gvCommissionCurrency
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -134,6 +139,9 @@ export default class TransactionDetails {
             if (data.hasOwnProperty('gvCommission')) {
                 obj['gvCommission'] = ApiClient.convertToType(data['gvCommission'], 'Number');
             }
+            if (data.hasOwnProperty('gvCommissionCurrency')) {
+                obj['gvCommissionCurrency'] = ApiClient.convertToType(data['gvCommissionCurrency'], 'String');
+            }
             if (data.hasOwnProperty('gvCommissionPercent')) {
                 obj['gvCommissionPercent'] = ApiClient.convertToType(data['gvCommissionPercent'], 'Number');
             }
@@ -153,6 +161,7 @@ export default class TransactionDetails {
     currencyName = undefined;
     currencyLogo = undefined;
     gvCommission = undefined;
+    gvCommissionCurrency = undefined;
     gvCommissionPercent = undefined;
     amount = undefined;
 
@@ -195,17 +204,46 @@ export default class TransactionDetails {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
+    static GvCommissionCurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     

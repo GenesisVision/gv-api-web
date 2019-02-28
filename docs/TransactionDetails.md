@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **currencyName** | **String** |  | [optional] 
 **currencyLogo** | **String** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 
+**gvCommissionCurrency** | **String** |  | [optional] 
 **gvCommissionPercent** | **Number** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 
@@ -60,17 +61,50 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="GvCommissionCurrencyEnum"></a>
+## Enum: GvCommissionCurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

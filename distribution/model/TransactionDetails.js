@@ -70,7 +70,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -86,6 +86,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * @name TransactionDetails#gvCommission
  * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetails#gvCommissionCurrency
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -111,6 +116,7 @@ var TransactionDetails = function () {
         this.currencyName = undefined;
         this.currencyLogo = undefined;
         this.gvCommission = undefined;
+        this.gvCommissionCurrency = undefined;
         this.gvCommissionPercent = undefined;
         this.amount = undefined;
     }
@@ -147,6 +153,9 @@ var TransactionDetails = function () {
                 }
                 if (data.hasOwnProperty('gvCommission')) {
                     obj['gvCommission'] = _ApiClient2.default.convertToType(data['gvCommission'], 'Number');
+                }
+                if (data.hasOwnProperty('gvCommissionCurrency')) {
+                    obj['gvCommissionCurrency'] = _ApiClient2.default.convertToType(data['gvCommissionCurrency'], 'String');
                 }
                 if (data.hasOwnProperty('gvCommissionPercent')) {
                     obj['gvCommissionPercent'] = _ApiClient2.default.convertToType(data['gvCommissionPercent'], 'Number');
@@ -194,17 +203,45 @@ TransactionDetails.StatusEnum = {
 };
 TransactionDetails.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
+TransactionDetails.GvCommissionCurrencyEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
