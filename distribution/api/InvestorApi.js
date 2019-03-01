@@ -908,7 +908,7 @@ var InvestorApi = function () {
     }
 
     /**
-     * [Obsolete] Withdraw from investment program in GVT
+     * Withdraw from investment program in GVT
      * @function InvestorApi#v10InvestorProgramsByIdWithdrawByAmountPost
      * @param {String} id 
      * @param {Number} amount 

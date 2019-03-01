@@ -1330,7 +1330,7 @@ var ManagerApi = function () {
     }
 
     /**
-     * [Obsolete] Withdraw from investment program in GVT
+     * Withdraw from investment program in GVT
      * @function ManagerApi#v10ManagerProgramsByIdWithdrawByAmountPost
      * @param {String} id 
      * @param {Number} amount 
