@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10WalletAddressesByCurrencyGet**](WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | 
-[**v10WalletAddressesGet**](WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | 
+[**v10WalletAddressesByCurrencyGet**](WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | Get user addresses
+[**v10WalletAddressesGet**](WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | Get user addresses
 [**v10WalletByCurrencyGet**](WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 [**v10WalletFeeGvtholdingGet**](WalletApi.md#v10WalletFeeGvtholdingGet) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
 [**v10WalletMultiByCurrencyGet**](WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 # **v10WalletAddressesByCurrencyGet**
 > WalletInfo v10WalletAddressesByCurrencyGet(currency, authorization)
 
-
+Get user addresses
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 # **v10WalletAddressesGet**
 > WalletsInfo v10WalletAddressesGet(authorization)
 
-
+Get user addresses
 
 ### Example
 ```javascript

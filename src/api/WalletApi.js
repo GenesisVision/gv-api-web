@@ -83,6 +83,7 @@ export default class WalletApi {
     }
 
     /**
+     * Get user addresses
      * @function WalletApi#v10WalletAddressesByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
@@ -127,6 +128,7 @@ export default class WalletApi {
     }
 
     /**
+     * Get user addresses
      * @function WalletApi#v10WalletAddressesGet
      * @param {String} authorization JWT access token
      * @return {Promise<WalletsInfo>} a Promise, with an object containing data of type WalletsInfo and HTTP response
