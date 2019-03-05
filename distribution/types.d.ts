@@ -474,6 +474,7 @@ export declare class WalletApi {
     v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
     v10WalletFeeGvtholdingGet(authorization: string): Promise<UserCommissionData>;
+    v10WalletMultiByCurrencyAvailableGet(currency: string, authorization: string): Promise<WalletMultiAvailable>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
     v10WalletMultiTransactionsExternalGet(authorization: string, opts?: {
         from?: Date;
@@ -664,8 +665,10 @@ export declare interface index {
     UploadResult: UploadResult;
     UserCommissionData: UserCommissionData;
     ValueChartBar: ValueChartBar;
+    WalletBaseData: WalletBaseData;
     WalletData: WalletData;
     WalletInfo: WalletInfo;
+    WalletMultiAvailable: WalletMultiAvailable;
     WalletMultiSummary: WalletMultiSummary;
     WalletSummary: WalletSummary;
     WalletTransaction: WalletTransaction;
@@ -2035,6 +2038,15 @@ export declare interface ValueChartBar {
     otherAssetsValue: OtherAssetsValue;
 }
 
+export declare interface WalletBaseData {
+    id: string;
+    title: string;
+    logo: string;
+    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    available: number;
+    rate: number;
+}
+
 export declare interface WalletData {
     id: string;
     title: string;
@@ -2063,6 +2075,10 @@ export declare interface WalletInfo {
     description: string;
     logo: string;
     isDepositEnabled: boolean;
+}
+
+export declare interface WalletMultiAvailable {
+    wallets: WalletBaseData[];
 }
 
 export declare interface WalletMultiSummary {

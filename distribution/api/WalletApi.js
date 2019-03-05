@@ -53,6 +53,10 @@ var _WalletInfo = require('../model/WalletInfo');
 
 var _WalletInfo2 = _interopRequireDefault(_WalletInfo);
 
+var _WalletMultiAvailable = require('../model/WalletMultiAvailable');
+
+var _WalletMultiAvailable2 = _interopRequireDefault(_WalletMultiAvailable);
+
 var _WalletMultiSummary = require('../model/WalletMultiSummary');
 
 var _WalletMultiSummary2 = _interopRequireDefault(_WalletMultiSummary);
@@ -265,6 +269,53 @@ var WalletApi = function () {
     key: 'v10WalletFeeGvtholdingGet',
     value: function v10WalletFeeGvtholdingGet(authorization) {
       return this.v10WalletFeeGvtholdingGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10WalletMultiByCurrencyAvailableGetWithHttpInfo',
+    value: function v10WalletMultiByCurrencyAvailableGetWithHttpInfo(currency, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling v10WalletMultiByCurrencyAvailableGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletMultiByCurrencyAvailableGet");
+      }
+
+      var pathParams = {
+        'currency': currency
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _WalletMultiAvailable2.default;
+
+      return this.apiClient.callApi('/v1.0/wallet/multi/{currency}/available', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Multi wallet available
+     * @function WalletApi#v10WalletMultiByCurrencyAvailableGet
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {Promise<WalletMultiAvailable>} a Promise, with an object containing data of type WalletMultiAvailable and HTTP response
+     */
+
+  }, {
+    key: 'v10WalletMultiByCurrencyAvailableGet',
+    value: function v10WalletMultiByCurrencyAvailableGet(currency, authorization) {
+      return this.v10WalletMultiByCurrencyAvailableGetWithHttpInfo(currency, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

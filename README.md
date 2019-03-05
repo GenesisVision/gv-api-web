@@ -230,6 +230,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | Get user addresses
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletFeeGvtholdingGet**](docs/WalletApi.md#v10WalletFeeGvtholdingGet) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
+*CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyAvailableGet**](docs/WalletApi.md#v10WalletMultiByCurrencyAvailableGet) | **GET** /v1.0/wallet/multi/{currency}/available | Multi wallet available
 *CoreApiV10.WalletApi* | [**v10WalletMultiByCurrencyGet**](docs/WalletApi.md#v10WalletMultiByCurrencyGet) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsExternalGet**](docs/WalletApi.md#v10WalletMultiTransactionsExternalGet) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 *CoreApiV10.WalletApi* | [**v10WalletMultiTransactionsGet**](docs/WalletApi.md#v10WalletMultiTransactionsGet) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
@@ -390,8 +391,10 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.UserCommissionData](docs/UserCommissionData.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
+ - [CoreApiV10.WalletBaseData](docs/WalletBaseData.md)
  - [CoreApiV10.WalletData](docs/WalletData.md)
  - [CoreApiV10.WalletInfo](docs/WalletInfo.md)
+ - [CoreApiV10.WalletMultiAvailable](docs/WalletMultiAvailable.md)
  - [CoreApiV10.WalletMultiSummary](docs/WalletMultiSummary.md)
  - [CoreApiV10.WalletSummary](docs/WalletSummary.md)
  - [CoreApiV10.WalletTransaction](docs/WalletTransaction.md)

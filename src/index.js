@@ -156,8 +156,10 @@ import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UploadResult from './model/UploadResult';
 import UserCommissionData from './model/UserCommissionData';
 import ValueChartBar from './model/ValueChartBar';
+import WalletBaseData from './model/WalletBaseData';
 import WalletData from './model/WalletData';
 import WalletInfo from './model/WalletInfo';
+import WalletMultiAvailable from './model/WalletMultiAvailable';
 import WalletMultiSummary from './model/WalletMultiSummary';
 import WalletSummary from './model/WalletSummary';
 import WalletTransaction from './model/WalletTransaction';
@@ -1056,6 +1058,12 @@ export {
     ValueChartBar,
 
     /**
+     * @name index#WalletBaseData
+     * @type {WalletBaseData}
+     */
+    WalletBaseData,
+
+    /**
      * @name index#WalletData
      * @type {WalletData}
      */
@@ -1066,6 +1074,12 @@ export {
      * @type {WalletInfo}
      */
     WalletInfo,
+
+    /**
+     * @name index#WalletMultiAvailable
+     * @type {WalletMultiAvailable}
+     */
+    WalletMultiAvailable,
 
     /**
      * @name index#WalletMultiSummary
