@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdPasswordChangePost**](docs/ManagerApi.md#v10ManagerProgramsByIdPasswordChangePost) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdPeriodClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdUpdatePost**](docs/ManagerApi.md#v10ManagerProgramsByIdUpdatePost) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
@@ -354,6 +355,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramMinimumDeposit](docs/ProgramMinimumDeposit.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramProfitChart](docs/ProgramProfitChart.md)
+ - [CoreApiV10.ProgramPwdUpdate](docs/ProgramPwdUpdate.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)
  - [CoreApiV10.ProgramRequests](docs/ProgramRequests.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)

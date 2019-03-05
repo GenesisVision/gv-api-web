@@ -119,6 +119,7 @@ import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramProfitChart from './model/ProgramProfitChart';
+import ProgramPwdUpdate from './model/ProgramPwdUpdate';
 import ProgramRequest from './model/ProgramRequest';
 import ProgramRequests from './model/ProgramRequests';
 import ProgramSets from './model/ProgramSets';
@@ -834,6 +835,12 @@ export {
      * @type {ProgramProfitChart}
      */
     ProgramProfitChart,
+
+    /**
+     * @name index#ProgramPwdUpdate
+     * @type {ProgramPwdUpdate}
+     */
+    ProgramPwdUpdate,
 
     /**
      * @name index#ProgramRequest

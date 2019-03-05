@@ -28,6 +28,7 @@ import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramInvestInfo from '../model/ProgramInvestInfo';
 import ProgramMinimumDeposit from '../model/ProgramMinimumDeposit';
+import ProgramPwdUpdate from '../model/ProgramPwdUpdate';
 import ProgramRequests from '../model/ProgramRequests';
 import ProgramUpdate from '../model/ProgramUpdate';
 import ProgramsList from '../model/ProgramsList';
@@ -1142,6 +1143,60 @@ export default class ManagerApi {
      */
       v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ManagerProgramsByIdPasswordChangePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerProgramsByIdPasswordChangePost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsByIdPasswordChangePost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/{id}/password/change', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Change program password
+     * @function ManagerApi#v10ManagerProgramsByIdPasswordChangePost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {ProgramPwdUpdate} [opts.model] 
+     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ManagerProgramsByIdPasswordChangePost(id, authorization, opts) {
+      return this.v10ManagerProgramsByIdPasswordChangePostWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

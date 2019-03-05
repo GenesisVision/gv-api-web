@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**v10ManagerProgramsByIdClosePost**](ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 [**v10ManagerProgramsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+[**v10ManagerProgramsByIdPasswordChangePost**](ManagerApi.md#v10ManagerProgramsByIdPasswordChangePost) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 [**v10ManagerProgramsByIdPeriodClosePost**](ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
 [**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**v10ManagerProgramsByIdUpdatePost**](ManagerApi.md#v10ManagerProgramsByIdUpdatePost) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
@@ -996,6 +997,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerProgramsByIdPasswordChangePost"></a>
+# **v10ManagerProgramsByIdPasswordChangePost**
+> v10ManagerProgramsByIdPasswordChangePost(id, authorization, opts)
+
+Change program password
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.ProgramPwdUpdate() // ProgramPwdUpdate | 
+};
+apiInstance.v10ManagerProgramsByIdPasswordChangePost(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **model** | [**ProgramPwdUpdate**](ProgramPwdUpdate.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagerProgramsByIdPeriodClosePost"></a>
