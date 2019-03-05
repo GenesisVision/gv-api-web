@@ -1537,6 +1537,10 @@ export declare interface ProfileHeaderViewModel {
     userType: "Investor" | "Manager";
     notificationsCount: number;
     favoritesCount: number;
+    kycConfirmed: boolean;
+    allowForex: boolean;
+    isTwoFactorEnabled: boolean;
+    isNewUser: boolean;
     totalBalanceGvt: number;
     investedGvt: number;
     availableGvt: number;
@@ -1544,10 +1548,6 @@ export declare interface ProfileHeaderViewModel {
     invested: number;
     available: number;
     pending: number;
-    kycConfirmed: boolean;
-    allowForex: boolean;
-    isTwoFactorEnabled: boolean;
-    isNewUser: boolean;
 }
 
 export declare interface ProfilePublic {

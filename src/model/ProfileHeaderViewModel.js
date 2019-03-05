@@ -60,6 +60,26 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ProfileHeaderViewModel#kycConfirmed
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#allowForex
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#isTwoFactorEnabled
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name ProfileHeaderViewModel#isNewUser
+     * @type {Boolean}
+     */
+    /**
+     *
      * @name ProfileHeaderViewModel#totalBalanceGvt
      * @type {Number}
      */
@@ -92,26 +112,6 @@ import ApiClient from '../ApiClient';
      *
      * @name ProfileHeaderViewModel#pending
      * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#kycConfirmed
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#allowForex
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#isTwoFactorEnabled
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#isNewUser
-     * @type {Boolean}
      */
 
 
@@ -160,6 +160,18 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('favoritesCount')) {
                 obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'Number');
             }
+            if (data.hasOwnProperty('kycConfirmed')) {
+                obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('allowForex')) {
+                obj['allowForex'] = ApiClient.convertToType(data['allowForex'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isTwoFactorEnabled')) {
+                obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isNewUser')) {
+                obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'Boolean');
+            }
             if (data.hasOwnProperty('totalBalanceGvt')) {
                 obj['totalBalanceGvt'] = ApiClient.convertToType(data['totalBalanceGvt'], 'Number');
             }
@@ -181,18 +193,6 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('pending')) {
                 obj['pending'] = ApiClient.convertToType(data['pending'], 'Number');
             }
-            if (data.hasOwnProperty('kycConfirmed')) {
-                obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'Boolean');
-            }
-            if (data.hasOwnProperty('allowForex')) {
-                obj['allowForex'] = ApiClient.convertToType(data['allowForex'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isTwoFactorEnabled')) {
-                obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isNewUser')) {
-                obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -204,6 +204,10 @@ export default class ProfileHeaderViewModel {
     userType = undefined;
     notificationsCount = undefined;
     favoritesCount = undefined;
+    kycConfirmed = undefined;
+    allowForex = undefined;
+    isTwoFactorEnabled = undefined;
+    isNewUser = undefined;
     totalBalanceGvt = undefined;
     investedGvt = undefined;
     availableGvt = undefined;
@@ -211,10 +215,6 @@ export default class ProfileHeaderViewModel {
     invested = undefined;
     available = undefined;
     pending = undefined;
-    kycConfirmed = undefined;
-    allowForex = undefined;
-    isTwoFactorEnabled = undefined;
-    isNewUser = undefined;
 
 
 

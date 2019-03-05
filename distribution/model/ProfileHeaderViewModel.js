@@ -67,6 +67,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProfileHeaderViewModel#kycConfirmed
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#allowForex
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#isTwoFactorEnabled
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#isNewUser
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProfileHeaderViewModel#totalBalanceGvt
  * @type {Number}
  */
@@ -100,26 +120,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProfileHeaderViewModel#pending
  * @type {Number}
  */
-/**
- *
- * @name ProfileHeaderViewModel#kycConfirmed
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#allowForex
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isTwoFactorEnabled
- * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#isNewUser
- * @type {Boolean}
- */
 
 var ProfileHeaderViewModel = function () {
     function ProfileHeaderViewModel() {
@@ -132,6 +132,10 @@ var ProfileHeaderViewModel = function () {
         this.userType = undefined;
         this.notificationsCount = undefined;
         this.favoritesCount = undefined;
+        this.kycConfirmed = undefined;
+        this.allowForex = undefined;
+        this.isTwoFactorEnabled = undefined;
+        this.isNewUser = undefined;
         this.totalBalanceGvt = undefined;
         this.investedGvt = undefined;
         this.availableGvt = undefined;
@@ -139,10 +143,6 @@ var ProfileHeaderViewModel = function () {
         this.invested = undefined;
         this.available = undefined;
         this.pending = undefined;
-        this.kycConfirmed = undefined;
-        this.allowForex = undefined;
-        this.isTwoFactorEnabled = undefined;
-        this.isNewUser = undefined;
     }
 
     _createClass(ProfileHeaderViewModel, null, [{
@@ -172,6 +172,18 @@ var ProfileHeaderViewModel = function () {
                 if (data.hasOwnProperty('favoritesCount')) {
                     obj['favoritesCount'] = _ApiClient2.default.convertToType(data['favoritesCount'], 'Number');
                 }
+                if (data.hasOwnProperty('kycConfirmed')) {
+                    obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
+                }
+                if (data.hasOwnProperty('allowForex')) {
+                    obj['allowForex'] = _ApiClient2.default.convertToType(data['allowForex'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isTwoFactorEnabled')) {
+                    obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isNewUser')) {
+                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
+                }
                 if (data.hasOwnProperty('totalBalanceGvt')) {
                     obj['totalBalanceGvt'] = _ApiClient2.default.convertToType(data['totalBalanceGvt'], 'Number');
                 }
@@ -192,18 +204,6 @@ var ProfileHeaderViewModel = function () {
                 }
                 if (data.hasOwnProperty('pending')) {
                     obj['pending'] = _ApiClient2.default.convertToType(data['pending'], 'Number');
-                }
-                if (data.hasOwnProperty('kycConfirmed')) {
-                    obj['kycConfirmed'] = _ApiClient2.default.convertToType(data['kycConfirmed'], 'Boolean');
-                }
-                if (data.hasOwnProperty('allowForex')) {
-                    obj['allowForex'] = _ApiClient2.default.convertToType(data['allowForex'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isTwoFactorEnabled')) {
-                    obj['isTwoFactorEnabled'] = _ApiClient2.default.convertToType(data['isTwoFactorEnabled'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isNewUser')) {
-                    obj['isNewUser'] = _ApiClient2.default.convertToType(data['isNewUser'], 'Boolean');
                 }
             }
             return obj;
