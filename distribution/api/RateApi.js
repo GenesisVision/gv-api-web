@@ -95,7 +95,7 @@ var RateApi = function () {
      * @param {String} exchange 
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
 
   }, {
@@ -141,7 +141,7 @@ var RateApi = function () {
      * @function RateApi#v10RateByFromByToGet
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
 
   }, {
@@ -179,7 +179,7 @@ var RateApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {[String]} [opts.from] 
      * @param {[String]} [opts.to] 
-     * @return {Promise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
+     * @return {CancelablePromise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
      */
 
   }, {

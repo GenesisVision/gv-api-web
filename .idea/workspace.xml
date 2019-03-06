@@ -1,67 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="fix double export">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/AuthApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/AuthApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/FileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/FileApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/FundsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/FundsApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/InvestorApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/InvestorApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/KycApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/KycApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ManagerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ManagerApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/PlatformApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/PlatformApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ProfileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ProfileApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ProgramsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/ProgramsApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/RateApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/RateApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/SearchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/SearchApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/WalletApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/api/WalletApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/Broker.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/Broker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardChartValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/DashboardChartValue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetsListInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundAssetsListInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundBalanceChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetailsFull.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundDetailsFull.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundNotificationSettingList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundProfitChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/FundsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagerProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ManagersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NewFundRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NewFundRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NotificationList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/NotificationSettingList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/PlatformAssets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/PlatformInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramBalanceChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramProfitChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramRequests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramSets.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramSets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsLevelsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsLevelsInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ProgramsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RatesModelRates.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/RatesModelRates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RecoveryCodesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/RecoveryCodesViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/Review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletPendingTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletPendingTransactionsViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletTransactionsViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WalletsInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WithdrawalSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/model/WithdrawalSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/distribution/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="dd182ead-ffef-4ef6-90d2-a7c1d51cd638" name="Default Changelist" comment="update api">
+      <change beforePath="$PROJECT_DIR$/docs/AmountWithCurrency.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AmountWithCurrency.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ConvertingDetails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ConvertingDetails.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CopyTradingAccountInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CopyTradingAccountInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CreateWithdrawalRequestModel.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CreateWithdrawalRequestModel.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DashboardPortfolioEvent.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DashboardPortfolioEvent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerPortfolioEvent.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ManagerPortfolioEvent.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransaction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MultiWalletExternalTransaction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletTransaction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MultiWalletTransaction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NewProgramRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NewProgramRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramBalanceChart.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramBalanceChart.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramDetails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramDetails.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsFull.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramDetailsFull.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramProfitChart.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramProfitChart.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramStatistic.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProgramStatistic.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RateItem.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RateItem.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalDetails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SignalDetails.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TransactionDetails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TransactionDetails.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletBaseData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletBaseData.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletData.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletTransaction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletTransaction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletWithdrawalInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletWithdrawalInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletsGrandTotal.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletsGrandTotal.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/AuthApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/BrokersApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/BrokersApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/FileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FileApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/FundsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FundsApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/InvestorApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/InvestorApi.js" afterDir="false" />
@@ -73,8 +41,82 @@
       <change beforePath="$PROJECT_DIR$/src/api/ProgramsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ProgramsApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/RateApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/RateApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/SearchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SearchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/SignalApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SignalApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/WalletApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/WalletApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/es6/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/es6/api.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AmountWithCurrency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AmountWithCurrency.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Broker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Broker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerAccountType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BrokerAccountType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokersInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BrokersInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ConvertingDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ConvertingDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CopyTradingAccountInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CopyTradingAccountInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CopyTradingAccountsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CopyTradingAccountsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CreateWithdrawalRequestModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CreateWithdrawalRequestModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DashboardChartValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DashboardChartValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DashboardPortfolioEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DashboardPortfolioEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DashboardPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DashboardPortfolioEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ErrorViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ErrorViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundAssetsListInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundAssetsListInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundBalanceChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundDetailsFull.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundDetailsFull.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundProfitChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundSets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundSets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FundsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LevelUpSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LevelUpSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerPortfolioEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerPortfolioEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerPortfolioEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerPortfolioEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultiWalletExternalTransaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultiWalletExternalTransactionsViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletFilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultiWalletFilters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultiWalletTransaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultiWalletTransactionsViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NewFundRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NewFundRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NewProgramRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NewProgramRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NotificationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NotificationList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlatformAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlatformAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlatformInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlatformInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramBalanceChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramBalanceChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsFull.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramDetailsFull.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramFilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramFilters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramNotificationSettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramNotificationSettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramProfitChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramProfitChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramRequests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramSets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramSets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramStatistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramStatistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsLevelsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramsLevelsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProgramsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RateItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RateItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RatesModelRates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RatesModelRates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RecoveryCodesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecoveryCodesViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SignalDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SignalsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradesHistorySignalSlaveViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TradesHistorySignalSlaveViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradesOpenSignalSlaveViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TradesOpenSignalSlaveViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradesViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TradesViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TransactionDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TransactionDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ValueChartBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ValueChartBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletBaseData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletBaseData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletMultiAvailable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletMultiAvailable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletMultiSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletMultiSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletTransaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletTransaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletTransactionsViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletTransactionsViewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletWithdrawalInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletWithdrawalInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletsGrandTotal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletsGrandTotal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletsInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WalletsInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WithdrawalSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WithdrawalSummary.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,28 +130,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/index.mustache">
+        <entry file="file://$PROJECT_DIR$/spec/CancelablePromise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/package.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="320">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -117,62 +141,67 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="102" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="102" />
+            <state relative-caret-position="560">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/InvestorApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="386" column="37" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/AndroidVersion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/ProgramsApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="430" column="20" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bash/replace">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="32">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/WalletApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="229" column="108" selection-start-line="229" selection-start-column="108" selection-end-line="229" selection-end-column="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/distribution/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/es6/ApiClient.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="471" column="50" selection-start-line="471" selection-start-column="50" selection-end-line="471" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bash/replace.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="108" selection-start-line="3" selection-start-column="108" selection-end-line="3" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -274,6 +303,7 @@
         <option value="$PROJECT_DIR$/src/model/AndroidVersion.js" />
         <option value="$PROJECT_DIR$/src/api/InvestorApi.js" />
         <option value="$PROJECT_DIR$/template/es6/api.mustache" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
       </list>
     </option>
   </component>
@@ -283,6 +313,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
@@ -300,6 +331,11 @@
             <path>
               <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="bash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
               <item name="distribution" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,12 +348,6 @@
               <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
@@ -470,20 +500,19 @@
     <option name="createBranch" value="false" />
     <servers>
       <YouTrack url="https://genesis-vision.myjetbrains.com/youtrack">
-        <password>dffddfdfdfc4dfcedfd3dfdfdfc4dfc1dfdfdfc4dfd9dfc3dfc0dfe3df98</password>
         <option name="shouldFormatCommitMessage" value="true" />
         <username>e.grebenshikov@genesis.vision</username>
       </YouTrack>
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62986000" />
+    <option name="totallyTimeSpent" value="63081000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -494,7 +523,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961586" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291536" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4106583" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
@@ -584,9 +613,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix double export" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template/typescript/modelEnum.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/typescript/README.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -678,9 +704,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api.ts" />
     <entry file="file://$PROJECT_DIR$/distribution/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9872" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
       <provider selected="true" editor-type-id="text-editor">
@@ -758,11 +782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/yarn.lock" />
     <entry file="file://$PROJECT_DIR$/src/model/AmountWithCurrency.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -794,44 +814,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/types.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="404" column="21" selection-start-line="404" selection-start-column="21" selection-end-line="404" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/types.d.ts" />
     <entry file="file://$PROJECT_DIR$/template/es6/ApiClient.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2224">
-          <caret line="136" column="32" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="32" />
+        <state relative-caret-position="471">
+          <caret line="471" column="50" selection-start-line="471" selection-start-column="50" selection-end-line="471" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/gitignore.mustache">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/replace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="20" lean-forward="true" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_exports">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bash/replace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/replace" />
+    <entry file="file://$PROJECT_DIR$/add_exports" />
+    <entry file="file://$PROJECT_DIR$/bash/replace" />
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -855,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="102" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="102" />
+        <state relative-caret-position="560">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -890,8 +886,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
+        <state relative-caret-position="16">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>

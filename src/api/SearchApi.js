@@ -68,7 +68,7 @@ export default class SearchApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.mask] 
      * @param {Number} [opts.take] 
-     * @return {Promise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
+     * @return {CancelablePromise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
      */
       v10SearchGet(opts) {
       return this.v10SearchGetWithHttpInfo(opts)

@@ -114,7 +114,7 @@ var ProgramsApi = function () {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
+     * @return {CancelablePromise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
      */
 
   }, {
@@ -162,7 +162,7 @@ var ProgramsApi = function () {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
+     * @return {CancelablePromise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
      */
 
   }, {
@@ -209,7 +209,7 @@ var ProgramsApi = function () {
      * @function ProgramsApi#v10ProgramsByIdFavoriteAddPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -256,7 +256,7 @@ var ProgramsApi = function () {
      * @function ProgramsApi#v10ProgramsByIdFavoriteRemovePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -303,7 +303,7 @@ var ProgramsApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
      * @param {String} [opts.currencySecondary] 
-     * @return {Promise<ProgramDetailsFull>} a Promise, with an object containing data of type ProgramDetailsFull and HTTP response
+     * @return {CancelablePromise<ProgramDetailsFull>} a Promise, with an object containing data of type ProgramDetailsFull and HTTP response
      */
 
   }, {
@@ -357,7 +357,7 @@ var ProgramsApi = function () {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
+     * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
 
   }, {
@@ -405,7 +405,7 @@ var ProgramsApi = function () {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
+     * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
 
   }, {
@@ -486,7 +486,7 @@ var ProgramsApi = function () {
      * @param {String} [opts.programManagerId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
 
   }, {
@@ -522,7 +522,7 @@ var ProgramsApi = function () {
      * @function ProgramsApi#v10ProgramsLevelupSummaryGet
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
-     * @return {Promise<LevelUpSummary>} a Promise, with an object containing data of type LevelUpSummary and HTTP response
+     * @return {CancelablePromise<LevelUpSummary>} a Promise, with an object containing data of type LevelUpSummary and HTTP response
      */
 
   }, {
@@ -561,7 +561,7 @@ var ProgramsApi = function () {
      * Programs sets
      * @function ProgramsApi#v10ProgramsSetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
+     * @return {CancelablePromise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
      */
 
   }, {

@@ -64,7 +64,7 @@ export default class PlatformApi {
     /**
      * Platform info
      * @function PlatformApi#v10PlatformInfoGet
-     * @return {Promise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
+     * @return {CancelablePromise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
      */
       v10PlatformInfoGet() {
       return this.v10PlatformInfoGetWithHttpInfo()
@@ -105,7 +105,7 @@ export default class PlatformApi {
      * @function PlatformApi#v10PlatformLevelsGet
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency] 
-     * @return {Promise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
+     * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
      */
       v10PlatformLevelsGet(opts) {
       return this.v10PlatformLevelsGetWithHttpInfo(opts)
@@ -142,7 +142,7 @@ export default class PlatformApi {
     /**
      * Platform statistic
      * @function PlatformApi#v10PlatformStatisticGet
-     * @return {Promise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
+     * @return {CancelablePromise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
      */
       v10PlatformStatisticGet() {
       return this.v10PlatformStatisticGetWithHttpInfo()

@@ -88,7 +88,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletAddressesByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletInfo>} a Promise, with an object containing data of type WalletInfo and HTTP response
+     * @return {CancelablePromise<WalletInfo>} a Promise, with an object containing data of type WalletInfo and HTTP response
      */
       v10WalletAddressesByCurrencyGet(currency, authorization) {
       return this.v10WalletAddressesByCurrencyGetWithHttpInfo(currency, authorization)
@@ -132,7 +132,7 @@ export default class WalletApi {
      * Get user addresses
      * @function WalletApi#v10WalletAddressesGet
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletsInfo>} a Promise, with an object containing data of type WalletsInfo and HTTP response
+     * @return {CancelablePromise<WalletsInfo>} a Promise, with an object containing data of type WalletsInfo and HTTP response
      */
       v10WalletAddressesGet(authorization) {
       return this.v10WalletAddressesGetWithHttpInfo(authorization)
@@ -183,7 +183,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletSummary>} a Promise, with an object containing data of type WalletSummary and HTTP response
+     * @return {CancelablePromise<WalletSummary>} a Promise, with an object containing data of type WalletSummary and HTTP response
      */
       v10WalletByCurrencyGet(currency, authorization) {
       return this.v10WalletByCurrencyGetWithHttpInfo(currency, authorization)
@@ -227,7 +227,7 @@ export default class WalletApi {
      * GenesisMarkets commission data
      * @function WalletApi#v10WalletFeeGvtholdingGet
      * @param {String} authorization JWT access token
-     * @return {Promise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
+     * @return {CancelablePromise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
      */
       v10WalletFeeGvtholdingGet(authorization) {
       return this.v10WalletFeeGvtholdingGetWithHttpInfo(authorization)
@@ -278,7 +278,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletMultiByCurrencyAvailableGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletMultiAvailable>} a Promise, with an object containing data of type WalletMultiAvailable and HTTP response
+     * @return {CancelablePromise<WalletMultiAvailable>} a Promise, with an object containing data of type WalletMultiAvailable and HTTP response
      */
       v10WalletMultiByCurrencyAvailableGet(currency, authorization) {
       return this.v10WalletMultiByCurrencyAvailableGetWithHttpInfo(currency, authorization)
@@ -329,7 +329,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletMultiByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
+     * @return {CancelablePromise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
      */
       v10WalletMultiByCurrencyGet(currency, authorization) {
       return this.v10WalletMultiByCurrencyGetWithHttpInfo(currency, authorization)
@@ -387,7 +387,7 @@ export default class WalletApi {
      * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
      */
       v10WalletMultiTransactionsExternalGet(authorization, opts) {
       return this.v10WalletMultiTransactionsExternalGetWithHttpInfo(authorization, opts)
@@ -445,7 +445,7 @@ export default class WalletApi {
      * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
      */
       v10WalletMultiTransactionsGet(authorization, opts) {
       return this.v10WalletMultiTransactionsGetWithHttpInfo(authorization, opts)
@@ -489,7 +489,7 @@ export default class WalletApi {
      * Disable paying platform fees with GVT
      * @function WalletApi#v10WalletPaygvtfeeOffPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletPaygvtfeeOffPost(authorization) {
       return this.v10WalletPaygvtfeeOffPostWithHttpInfo(authorization)
@@ -533,7 +533,7 @@ export default class WalletApi {
      * Enable paying platform fees with GVT
      * @function WalletApi#v10WalletPaygvtfeeOnPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletPaygvtfeeOnPost(authorization) {
       return this.v10WalletPaygvtfeeOnPostWithHttpInfo(authorization)
@@ -584,7 +584,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletTransactionByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
+     * @return {CancelablePromise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
      */
       v10WalletTransactionByIdGet(id, authorization) {
       return this.v10WalletTransactionByIdGetWithHttpInfo(id, authorization)
@@ -646,7 +646,7 @@ export default class WalletApi {
      * @param {String} [opts.wallet] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
      */
       v10WalletTransactionsGet(authorization, opts) {
       return this.v10WalletTransactionsGetWithHttpInfo(authorization, opts)
@@ -693,7 +693,7 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {InternalTransferRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletTransferPost(authorization, opts) {
       return this.v10WalletTransferPostWithHttpInfo(authorization, opts)
@@ -736,7 +736,7 @@ export default class WalletApi {
     /**
      * @function WalletApi#v10WalletWithdrawInfoGet
      * @param {String} authorization JWT access token
-     * @return {Promise<WithdrawalSummary>} a Promise, with an object containing data of type WithdrawalSummary and HTTP response
+     * @return {CancelablePromise<WithdrawalSummary>} a Promise, with an object containing data of type WithdrawalSummary and HTTP response
      */
       v10WalletWithdrawInfoGet(authorization) {
       return this.v10WalletWithdrawInfoGetWithHttpInfo(authorization)
@@ -786,7 +786,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletWithdrawRequestCancelByTxIdPost
      * @param {String} txId 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization) {
       return this.v10WalletWithdrawRequestCancelByTxIdPostWithHttpInfo(txId, authorization)
@@ -828,7 +828,7 @@ export default class WalletApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.requestId] 
      * @param {String} [opts.code] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletWithdrawRequestConfirmPost(opts) {
       return this.v10WalletWithdrawRequestConfirmPostWithHttpInfo(opts)
@@ -874,7 +874,7 @@ export default class WalletApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {CreateWithdrawalRequestModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletWithdrawRequestNewPost(authorization, opts) {
       return this.v10WalletWithdrawRequestNewPostWithHttpInfo(authorization, opts)
@@ -924,7 +924,7 @@ export default class WalletApi {
      * @function WalletApi#v10WalletWithdrawRequestResendByTxIdPost
      * @param {String} txId 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10WalletWithdrawRequestResendByTxIdPost(txId, authorization) {
       return this.v10WalletWithdrawRequestResendByTxIdPostWithHttpInfo(txId, authorization)

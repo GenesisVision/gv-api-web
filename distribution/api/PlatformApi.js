@@ -81,7 +81,7 @@ var PlatformApi = function () {
     /**
      * Platform info
      * @function PlatformApi#v10PlatformInfoGet
-     * @return {Promise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
+     * @return {CancelablePromise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
      */
 
   }, {
@@ -117,7 +117,7 @@ var PlatformApi = function () {
      * @function PlatformApi#v10PlatformLevelsGet
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency] 
-     * @return {Promise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
+     * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
      */
 
   }, {
@@ -148,7 +148,7 @@ var PlatformApi = function () {
     /**
      * Platform statistic
      * @function PlatformApi#v10PlatformStatisticGet
-     * @return {Promise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
+     * @return {CancelablePromise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
      */
 
   }, {
