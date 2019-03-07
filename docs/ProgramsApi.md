@@ -320,6 +320,7 @@ let id = "id_example"; // String |
 
 let opts = { 
   'sorting': "sorting_example", // String | 
+  'symbol': "symbol_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -337,6 +338,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **sorting** | **String**|  | [optional] 
+ **symbol** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

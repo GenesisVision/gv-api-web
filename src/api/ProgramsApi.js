@@ -369,6 +369,7 @@ export default class ProgramsApi {
       };
       let queryParams = {
         'Sorting': opts['sorting'],
+        'Symbol': opts['symbol'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -395,6 +396,7 @@ export default class ProgramsApi {
      * @param {String} id 
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.symbol] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response

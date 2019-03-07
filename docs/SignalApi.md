@@ -273,6 +273,7 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'sorting': "sorting_example", // String | 
+  'symbol': "symbol_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -290,6 +291,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **sorting** | **String**|  | [optional] 
+ **symbol** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

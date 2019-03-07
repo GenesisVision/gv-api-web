@@ -33,7 +33,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name CopyTradingAccountInfo#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#currencyLogo
+ * @type {String}
  */
 /**
  *
@@ -56,6 +61,7 @@ var CopyTradingAccountInfo = function () {
         _classCallCheck(this, CopyTradingAccountInfo);
 
         this.currency = undefined;
+        this.currencyLogo = undefined;
         this.balance = undefined;
         this.equity = undefined;
         this.freeMargin = undefined;
@@ -69,6 +75,9 @@ var CopyTradingAccountInfo = function () {
 
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                }
+                if (data.hasOwnProperty('currencyLogo')) {
+                    obj['currencyLogo'] = _ApiClient2.default.convertToType(data['currencyLogo'], 'String');
                 }
                 if (data.hasOwnProperty('balance')) {
                     obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
@@ -89,17 +98,17 @@ var CopyTradingAccountInfo = function () {
 
 CopyTradingAccountInfo.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

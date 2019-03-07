@@ -325,6 +325,7 @@ var SignalApi = function () {
       var pathParams = {};
       var queryParams = {
         'Sorting': opts['sorting'],
+        'Symbol': opts['symbol'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -347,6 +348,7 @@ var SignalApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.symbol] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {Promise<TradesOpenSignalSlaveViewModel>} a Promise, with an object containing data of type TradesOpenSignalSlaveViewModel and HTTP response
