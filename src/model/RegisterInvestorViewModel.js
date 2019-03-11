@@ -43,6 +43,11 @@ import ApiClient from '../ApiClient';
      * @name RegisterInvestorViewModel#refCode
      * @type {String}
      */
+    /**
+     *
+     * @name RegisterInvestorViewModel#isAuto
+     * @type {Boolean}
+     */
 
 
 
@@ -81,6 +86,9 @@ export default class RegisterInvestorViewModel {
             if (data.hasOwnProperty('refCode')) {
                 obj['refCode'] = ApiClient.convertToType(data['refCode'], 'String');
             }
+            if (data.hasOwnProperty('isAuto')) {
+                obj['isAuto'] = ApiClient.convertToType(data['isAuto'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -89,6 +97,7 @@ export default class RegisterInvestorViewModel {
     password = undefined;
     confirmPassword = undefined;
     refCode = undefined;
+    isAuto = undefined;
 
 
 

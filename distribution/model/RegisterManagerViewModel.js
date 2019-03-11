@@ -55,6 +55,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name RegisterManagerViewModel#refCode
  * @type {String}
  */
+/**
+ *
+ * @name RegisterManagerViewModel#isAuto
+ * @type {Boolean}
+ */
 
 var RegisterManagerViewModel = function () {
     function RegisterManagerViewModel(userName, email, password) {
@@ -65,6 +70,7 @@ var RegisterManagerViewModel = function () {
         this.password = undefined;
         this.confirmPassword = undefined;
         this.refCode = undefined;
+        this.isAuto = undefined;
 
 
         this['userName'] = userName;this['email'] = email;this['password'] = password;
@@ -90,6 +96,9 @@ var RegisterManagerViewModel = function () {
                 }
                 if (data.hasOwnProperty('refCode')) {
                     obj['refCode'] = _ApiClient2.default.convertToType(data['refCode'], 'String');
+                }
+                if (data.hasOwnProperty('isAuto')) {
+                    obj['isAuto'] = _ApiClient2.default.convertToType(data['isAuto'], 'Boolean');
                 }
             }
             return obj;
