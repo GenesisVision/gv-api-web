@@ -105,6 +105,11 @@ import ProfilePublic from './ProfilePublic';
      * @name OrderClosedSignalSlaveModel#entry
      * @type {("In"|"Out"|"InOut"|"OutBy")}
      */
+    /**
+     *
+     * @name OrderClosedSignalSlaveModel#baseVolume
+     * @type {Number}
+     */
 
 
 
@@ -179,6 +184,9 @@ export default class OrderClosedSignalSlaveModel {
             if (data.hasOwnProperty('entry')) {
                 obj['entry'] = ApiClient.convertToType(data['entry'], 'String');
             }
+            if (data.hasOwnProperty('baseVolume')) {
+                obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
+            }
         }
         return obj;
     }
@@ -199,6 +207,7 @@ export default class OrderClosedSignalSlaveModel {
     price = undefined;
     priceCurrent = undefined;
     entry = undefined;
+    baseVolume = undefined;
 
 
 

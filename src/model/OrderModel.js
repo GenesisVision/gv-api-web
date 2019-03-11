@@ -78,6 +78,11 @@ import ApiClient from '../ApiClient';
      * @name OrderModel#entry
      * @type {("In"|"Out"|"InOut"|"OutBy")}
      */
+    /**
+     *
+     * @name OrderModel#baseVolume
+     * @type {Number}
+     */
 
 
 
@@ -137,6 +142,9 @@ export default class OrderModel {
             if (data.hasOwnProperty('entry')) {
                 obj['entry'] = ApiClient.convertToType(data['entry'], 'String');
             }
+            if (data.hasOwnProperty('baseVolume')) {
+                obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
+            }
         }
         return obj;
     }
@@ -152,6 +160,7 @@ export default class OrderModel {
     price = undefined;
     priceCurrent = undefined;
     entry = undefined;
+    baseVolume = undefined;
 
 
 

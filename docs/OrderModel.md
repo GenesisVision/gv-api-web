@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **price** | **Number** |  | [optional] 
 **priceCurrent** | **Number** |  | [optional] 
 **entry** | **String** |  | [optional] 
+**baseVolume** | **Number** | Volume in account currency. Only filled when trade have zero commission (for paying fees with GVT) | [optional] 
 
 
 <a name="DirectionEnum"></a>

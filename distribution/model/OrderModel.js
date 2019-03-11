@@ -85,6 +85,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name OrderModel#entry
  * @type {("In"|"Out"|"InOut"|"OutBy")}
  */
+/**
+ *
+ * @name OrderModel#baseVolume
+ * @type {Number}
+ */
 
 var OrderModel = function () {
     function OrderModel() {
@@ -101,6 +106,7 @@ var OrderModel = function () {
         this.price = undefined;
         this.priceCurrent = undefined;
         this.entry = undefined;
+        this.baseVolume = undefined;
     }
 
     _createClass(OrderModel, null, [{
@@ -141,6 +147,9 @@ var OrderModel = function () {
                 }
                 if (data.hasOwnProperty('entry')) {
                     obj['entry'] = _ApiClient2.default.convertToType(data['entry'], 'String');
+                }
+                if (data.hasOwnProperty('baseVolume')) {
+                    obj['baseVolume'] = _ApiClient2.default.convertToType(data['baseVolume'], 'Number');
                 }
             }
             return obj;
