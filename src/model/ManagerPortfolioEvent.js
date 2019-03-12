@@ -61,7 +61,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name ManagerPortfolioEvent#type
-     * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut")}
+     * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
      */
     /**
      *
@@ -229,7 +229,9 @@ export default class ManagerPortfolioEvent {
     
         "ExitFee": "ExitFee",
     
-        "ProgramStopOut": "ProgramStopOut"    
+        "ProgramStopOut": "ProgramStopOut",
+    
+        "ProgramManagerTradingFeeAccrual": "ProgramManagerTradingFeeAccrual"    
     };
 
     static ProgramTypeEnum = {

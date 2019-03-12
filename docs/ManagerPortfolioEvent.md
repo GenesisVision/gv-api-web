@@ -79,6 +79,8 @@ Name | Type | Description | Notes
 
 * `ProgramStopOut` (value: `"ProgramStopOut"`)
 
+* `ProgramManagerTradingFeeAccrual` (value: `"ProgramManagerTradingFeeAccrual"`)
+
 
 
 
