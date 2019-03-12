@@ -703,7 +703,7 @@ export declare interface index {
 
 export declare interface AmountWithCurrency {
     amount: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 }
 
 export declare interface AndroidAppVersion {
@@ -786,7 +786,7 @@ export declare interface ChartSimple {
 }
 
 export declare interface ConvertingDetails {
-    currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyTo: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     currencyToName: string;
     amountTo: number;
     rateValue: number;
@@ -794,7 +794,7 @@ export declare interface ConvertingDetails {
 }
 
 export declare interface CopyTradingAccountInfo {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     currencyLogo: string;
     balance: number;
     equity: number;
@@ -807,7 +807,7 @@ export declare interface CopyTradingAccountsList {
 
 export declare interface CreateWithdrawalRequestModel {
     amount: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     address: string;
     twoFactorCode: string;
 }
@@ -830,11 +830,11 @@ export declare interface DashboardPortfolioEvent {
     value: number;
     valueTotal: number;
     feeSuccessManager: number;
-    feeSuccessManagerCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    feeSuccessManagerCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     feeSuccessPlatform: number;
-    feeSuccessPlatformCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    feeSuccessPlatformCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     profitPercent: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     type: "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended" | "WithdrawByStopOut";
     logo: string;
     color: string;
@@ -1151,7 +1151,7 @@ export declare interface ManagerPortfolioEvent {
     value: number;
     feeValue: number;
     profitPercent: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     type: "All" | "AssetStarted" | "ProgramPeriodStarts" | "ProgramPeriodEnds" | "InvestorInvest" | "InvestorWithdraw" | "ManagerInvest" | "ManagerWithdraw" | "AssetFinished" | "EntranceFee" | "ExitFee" | "ProgramStopOut";
     programType: "Program" | "Fund";
     logo: string;
@@ -1214,7 +1214,7 @@ export declare interface ManagersList {
 
 export declare interface MultiWalletExternalTransaction {
     id: string;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     logo: string;
     date: Date;
     amount: number;
@@ -1236,8 +1236,8 @@ export declare interface MultiWalletFilters {
 
 export declare interface MultiWalletTransaction {
     id: string;
-    currencyFrom: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyFrom: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyTo: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     type: "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits";
     date: Date;
     status: "Done" | "Pending" | "Canceled" | "Error";
@@ -1266,7 +1266,7 @@ export declare interface NewFundRequest {
 }
 
 export declare interface NewProgramRequest {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     periodLength: number;
     successFee: number;
     stopOutLevel: number;
@@ -1571,7 +1571,7 @@ export declare interface ProfilePublic {
 
 export declare interface ProgramBalanceChart {
     programCurrencyBalance: number;
-    programCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    programCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     balanceChart: ProgramBalanceChartElement[];
     gvtBalance: number;
 }
@@ -1584,7 +1584,7 @@ export declare interface ProgramBalanceChartElement {
 }
 
 export declare interface ProgramDetails {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     periodDuration: number;
     stopOutLevel: number;
@@ -1609,7 +1609,7 @@ export declare interface ProgramDetails {
 }
 
 export declare interface ProgramDetailsFull {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     periodDuration: number;
     periodStarts: Date;
@@ -1709,7 +1709,7 @@ export declare interface ProgramNotificationSettingList {
 export declare interface ProgramProfitChart {
     totalProgramCurrencyProfit: number;
     timeframeProgramCurrencyProfit: number;
-    programCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    programCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     trades: number;
     successTradesPercent: number;
     profitFactor: number;
@@ -1743,7 +1743,7 @@ export declare interface ProgramRequest {
     valueGvt: number;
     feeEntry: number;
     feeExit: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     fundWithdrawPercent: number;
     type: "Invest" | "Withdrawal";
     status: "New" | "Executed" | "Cancelled";
@@ -1777,9 +1777,9 @@ export declare interface ProgramStatistic {
     hasNotifications: boolean;
     startDate: Date;
     startBalance: number;
-    startCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    startCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     investedAmount: number;
-    investedCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    investedCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     tradesCount: number;
     tradesSuccessCount: number;
     profitFactorPercent: number;
@@ -1844,7 +1844,7 @@ export declare interface ProgramsList {
 }
 
 export declare interface RateItem {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     rate: number;
 }
 
@@ -1923,7 +1923,7 @@ export declare interface SearchViewModel {
 export declare interface SignalDetails {
     statistic: ProgramDetailsListStatistic;
     personalDetails: PersonalSignalDetailsFull;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     level: number;
     tags: ProgramTag[];
     subscribers: number;
@@ -1969,11 +1969,11 @@ export declare interface TransactionDetails {
     convertingDetails: ConvertingDetails;
     externalTransactionDetails: ExternalTransactionDetails;
     status: "Done" | "Pending" | "Canceled" | "Error";
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     currencyName: string;
     currencyLogo: string;
     gvCommission: number;
-    gvCommissionCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    gvCommissionCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     gvCommissionPercent: number;
     amount: number;
 }
@@ -2060,7 +2060,7 @@ export declare interface WalletBaseData {
     id: string;
     title: string;
     logo: string;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     rate: number;
 }
@@ -2074,12 +2074,12 @@ export declare interface WalletData {
     isWithdrawalEnabled: boolean;
     withdrawalCommission: number;
     depositAddress: string;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     invested: number;
     pending: number;
     total: number;
-    currencyCcy: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyCcy: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     availableCcy: number;
     investedCcy: number;
     pendingCcy: number;
@@ -2087,7 +2087,7 @@ export declare interface WalletData {
 }
 
 export declare interface WalletInfo {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     address: string;
     rateToGVT: number;
     description: string;
@@ -2138,15 +2138,15 @@ export declare interface WalletTransaction {
     number: number;
     sourceId: string;
     sourceType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain" | "GenesisVisionPlatform";
-    sourceCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    sourceCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     sourceProgramInfo: ProgramInfo;
     sourceBlockchainInfo: BlockchainInfo;
     sourceWithdrawalInfo: WithdrawalInfo;
-    action: "Transfer" | "ProgramOpen" | "ProgramProfit" | "ProgramInvest" | "ProgramWithdrawal" | "ProgramRefundPartialExecution" | "ProgramRefundClose" | "ProgramRequestInvest" | "ProgramRequestWithdrawal" | "ProgramRequestCancel" | "PayingFee";
+    action: "Transfer" | "ProgramOpen" | "ProgramProfit" | "ProgramInvest" | "ProgramWithdrawal" | "ProgramRefundPartialExecution" | "ProgramRefundClose" | "ProgramRefundStopOut" | "ProgramRequestInvest" | "ProgramRequestWithdrawal" | "ProgramRequestCancel" | "PayingFee";
     information: string;
     destinationId: string;
     destinationType: "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain" | "GenesisVisionPlatform";
-    destinationCurrency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    destinationCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     destinationProgramInfo: ProgramInfo;
     destinationBlockchainInfo: BlockchainInfo;
     destinationWithdrawalInfo: WithdrawalInfo;
@@ -2158,7 +2158,7 @@ export declare interface WalletTransactionsViewModel {
 }
 
 export declare interface WalletWithdrawalInfo {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     description: string;
     logo: string;
     commission: number;
@@ -2167,12 +2167,12 @@ export declare interface WalletWithdrawalInfo {
 }
 
 export declare interface WalletsGrandTotal {
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     available: number;
     invested: number;
     pending: number;
     total: number;
-    currencyCcy: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+    currencyCcy: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     availableCcy: number;
     investedCcy: number;
     pendingCcy: number;
