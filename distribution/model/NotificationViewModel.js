@@ -72,6 +72,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name NotificationViewModel#color
+ * @type {String}
+ */
+/**
+ *
  * @name NotificationViewModel#isUnread
  * @type {Boolean}
  */
@@ -93,6 +98,7 @@ var NotificationViewModel = function () {
         this.managerId = undefined;
         this.logo = undefined;
         this.url = undefined;
+        this.color = undefined;
         this.isUnread = undefined;
         this.assetType = undefined;
     }
@@ -126,6 +132,9 @@ var NotificationViewModel = function () {
                 }
                 if (data.hasOwnProperty('url')) {
                     obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                }
+                if (data.hasOwnProperty('color')) {
+                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
                 }
                 if (data.hasOwnProperty('isUnread')) {
                     obj['isUnread'] = _ApiClient2.default.convertToType(data['isUnread'], 'Boolean');

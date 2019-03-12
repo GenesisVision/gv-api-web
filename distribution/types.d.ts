@@ -1314,6 +1314,7 @@ export declare interface NotificationViewModel {
     managerId: string;
     logo: string;
     url: string;
+    color: string;
     isUnread: boolean;
     assetType: "Program" | "Fund";
 }

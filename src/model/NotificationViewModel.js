@@ -65,6 +65,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name NotificationViewModel#color
+     * @type {String}
+     */
+    /**
+     *
      * @name NotificationViewModel#isUnread
      * @type {Boolean}
      */
@@ -123,6 +128,9 @@ export default class NotificationViewModel {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
             if (data.hasOwnProperty('isUnread')) {
                 obj['isUnread'] = ApiClient.convertToType(data['isUnread'], 'Boolean');
             }
@@ -141,6 +149,7 @@ export default class NotificationViewModel {
     managerId = undefined;
     logo = undefined;
     url = undefined;
+    color = undefined;
     isUnread = undefined;
     assetType = undefined;
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **managerId** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **isUnread** | **Boolean** |  | [optional] 
 **assetType** | **String** |  | [optional] 
 
