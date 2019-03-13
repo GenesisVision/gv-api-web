@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **assetId** | **String** |  | [optional] 
 **_date** | **Date** |  | [optional] 
 **title** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **valueTotal** | **Number** |  | [optional] 
 **feeSuccessManager** | **Number** |  | [optional] 

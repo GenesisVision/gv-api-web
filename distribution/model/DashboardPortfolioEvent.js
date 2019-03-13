@@ -47,6 +47,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name DashboardPortfolioEvent#url
+ * @type {String}
+ */
+/**
+ *
  * @name DashboardPortfolioEvent#value
  * @type {Number}
  */
@@ -118,6 +123,7 @@ var DashboardPortfolioEvent = function () {
         this.assetId = undefined;
         this.date = undefined;
         this.title = undefined;
+        this.url = undefined;
         this.value = undefined;
         this.valueTotal = undefined;
         this.feeSuccessManager = undefined;
@@ -147,6 +153,9 @@ var DashboardPortfolioEvent = function () {
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');

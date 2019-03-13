@@ -831,6 +831,7 @@ export declare interface DashboardPortfolioEvent {
     assetId: string;
     date: Date;
     title: string;
+    url: string;
     value: number;
     valueTotal: number;
     feeSuccessManager: number;

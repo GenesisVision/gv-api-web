@@ -40,6 +40,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name DashboardPortfolioEvent#url
+     * @type {String}
+     */
+    /**
+     *
      * @name DashboardPortfolioEvent#value
      * @type {Number}
      */
@@ -138,6 +143,9 @@ export default class DashboardPortfolioEvent {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
@@ -184,6 +192,7 @@ export default class DashboardPortfolioEvent {
     assetId = undefined;
     date = undefined;
     title = undefined;
+    url = undefined;
     value = undefined;
     valueTotal = undefined;
     feeSuccessManager = undefined;
