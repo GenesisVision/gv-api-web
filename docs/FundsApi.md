@@ -347,7 +347,8 @@ let opts = {
   'facetId': "facetId_example", // String | 
   'isFavorite': true, // Boolean | 
   'isEnabled': true, // Boolean | 
-  'hasInvestors': true, // Boolean | 
+  'hasInvestorsForAll': true, // Boolean | 
+  'hasInvestorsForClosed': true, // Boolean | 
   'ids': ["ids_example"], // [String] | 
   'managerId': "managerId_example", // String | 
   'programManagerId': "programManagerId_example", // String | 
@@ -376,7 +377,8 @@ Name | Type | Description  | Notes
  **facetId** | **String**|  | [optional] 
  **isFavorite** | **Boolean**|  | [optional] 
  **isEnabled** | **Boolean**|  | [optional] 
- **hasInvestors** | **Boolean**|  | [optional] 
+ **hasInvestorsForAll** | **Boolean**|  | [optional] 
+ **hasInvestorsForClosed** | **Boolean**|  | [optional] 
  **ids** | [**[String]**](String.md)|  | [optional] 
  **managerId** | **String**|  | [optional] 
  **programManagerId** | [**String**](.md)|  | [optional] 
