@@ -394,6 +394,7 @@ export default class FundsApi {
         'FacetId': opts['facetId'],
         'IsFavorite': opts['isFavorite'],
         'IsEnabled': opts['isEnabled'],
+        'HasInvestors': opts['hasInvestors'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
@@ -432,6 +433,7 @@ export default class FundsApi {
      * @param {String} [opts.facetId] 
      * @param {Boolean} [opts.isFavorite] 
      * @param {Boolean} [opts.isEnabled] 
+     * @param {Boolean} [opts.hasInvestors] 
      * @param {Array<String>} [opts.ids] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
