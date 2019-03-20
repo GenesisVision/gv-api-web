@@ -26,6 +26,33 @@ describe('Promise', function () {
         })
     });
 
+    it('Promise all should be canceled', (done) => {
+        const message1 = "m1";
+        const message2 = "m2";
+        const promise1 = new CancelablePromise((resolve) => {
+            resolve(message1);
+        });
+        const promise2 = new CancelablePromise((resolve) => {
+            resolve(message2);
+        });
+
+        let hasError = false;
+
+        Promise.all([
+            promise1, promise2
+        ]).then(data => {
+            hasError = true;
+            done(new Error(`Promise has resolved with data: "${data}"`));
+        });
+
+        promise1.abort();
+
+        setTimeout(() => {
+            if (hasError) return;
+            done();
+        }, 0);
+    });
+
     it('Promise with resolve should be canceled', (done) => {
         const message = "hello world";
         const promise = new CancelablePromise((resolve) => {
@@ -79,21 +106,6 @@ describe('Promise', function () {
             if (hasError) return;
             done();
         }, 0);
-    });
-
-    it('Abort should resolve default value', () => {
-        const message = "message";
-        const otherMessage = "other message";
-        const promise = new CancelablePromise((resolve) => {
-            resolve(message);
-        });
-
-        promise.then(data => {
-            expect(data).to.be.equal(otherMessage);
-            done();
-        });
-
-        promise.abort(otherMessage);
     });
 
     it('Abort should execute callback', (done) => {
