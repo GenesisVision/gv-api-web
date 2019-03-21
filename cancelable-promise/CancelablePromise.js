@@ -61,7 +61,7 @@ export default class CancelablePromise {
         return this.then(undefined, error);
     }
 
-    abort() {
+    cancel() {
         if (this.state.canceled) return;
         this.state.canceled = true;
         if (this._onCancel) {

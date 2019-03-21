@@ -45,7 +45,7 @@ describe('Promise', function () {
             done(new Error(`Promise has resolved with data: "${data}"`));
         });
 
-        promise1.abort();
+        promise1.cancel();
 
         setTimeout(() => {
             if (hasError) return;
@@ -71,7 +71,7 @@ describe('Promise', function () {
             done(new Error("Next promise has resolved"));
         });
 
-        promise2.abort();
+        promise2.cancel();
 
         promise2.then(() => {
             hasError = true;
@@ -100,7 +100,7 @@ describe('Promise', function () {
             done(new Error("Next promise has rejected"));
         });
 
-        promise.abort();
+        promise.cancel();
 
         setTimeout(() => {
             if (hasError) return;
@@ -108,7 +108,7 @@ describe('Promise', function () {
         }, 0);
     });
 
-    it('Abort should execute callback', (done) => {
+    it('cancel should execute callback', (done) => {
         const message = "message";
         const promise = new CancelablePromise((resolve) => {
             setTimeout(() => resolve(message), 5000)
@@ -122,10 +122,10 @@ describe('Promise', function () {
             done(new Error("Promise has rejected"));
         });
 
-        promise2.abort();
+        promise2.cancel();
     });
 
-    it('Abort should execute callback once', (done) => {
+    it('cancel should execute callback once', (done) => {
         const message = "message";
         let counter = 0;
         const promise = new CancelablePromise((resolve) => {
@@ -136,7 +136,7 @@ describe('Promise', function () {
             counter++;
         });
 
-        promise.abort();
+        promise.cancel();
 
         const promise2 = promise.then(() => {
             done(new Error("Promise has resolved"));
@@ -144,7 +144,7 @@ describe('Promise', function () {
             done(new Error("Promise has rejected"));
         });
 
-        promise2.abort();
+        promise2.cancel();
 
         setTimeout(() => {
             expect(counter).to.be.equal(1);
