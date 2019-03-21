@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **logo** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 **periodNumber** | **Number** |  | [optional] 
 
 

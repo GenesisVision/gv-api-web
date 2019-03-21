@@ -1162,6 +1162,7 @@ export declare interface ManagerPortfolioEvent {
     logo: string;
     color: string;
     description: string;
+    url: string;
     periodNumber: number;
 }
 

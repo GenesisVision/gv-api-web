@@ -85,6 +85,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name ManagerPortfolioEvent#url
+     * @type {String}
+     */
+    /**
+     *
      * @name ManagerPortfolioEvent#periodNumber
      * @type {Number}
      */
@@ -150,6 +155,9 @@ export default class ManagerPortfolioEvent {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('periodNumber')) {
                 obj['periodNumber'] = ApiClient.convertToType(data['periodNumber'], 'Number');
             }
@@ -169,6 +177,7 @@ export default class ManagerPortfolioEvent {
     logo = undefined;
     color = undefined;
     description = undefined;
+    url = undefined;
     periodNumber = undefined;
 
 

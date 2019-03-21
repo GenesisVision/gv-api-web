@@ -92,6 +92,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ManagerPortfolioEvent#url
+ * @type {String}
+ */
+/**
+ *
  * @name ManagerPortfolioEvent#periodNumber
  * @type {Number}
  */
@@ -112,6 +117,7 @@ var ManagerPortfolioEvent = function () {
         this.logo = undefined;
         this.color = undefined;
         this.description = undefined;
+        this.url = undefined;
         this.periodNumber = undefined;
     }
 
@@ -156,6 +162,9 @@ var ManagerPortfolioEvent = function () {
                 }
                 if (data.hasOwnProperty('description')) {
                     obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                }
+                if (data.hasOwnProperty('url')) {
+                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
                 if (data.hasOwnProperty('periodNumber')) {
                     obj['periodNumber'] = _ApiClient2.default.convertToType(data['periodNumber'], 'Number');
