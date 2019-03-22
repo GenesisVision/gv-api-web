@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name NotificationViewModel#type
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram")}
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram")}
  */
 /**
  *
@@ -167,6 +167,8 @@ NotificationViewModel.TypeEnum = {
     "Profile2FA": "Profile2FA",
 
     "ProfileSecurity": "ProfileSecurity",
+
+    "TradingAccountPwdUpdated": "TradingAccountPwdUpdated",
 
     "ProgramNewsAndUpdates": "ProgramNewsAndUpdates",
 

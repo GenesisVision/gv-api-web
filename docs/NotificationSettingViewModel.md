@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 
 * `ProfileSecurity` (value: `"ProfileSecurity"`)
 
+* `TradingAccountPwdUpdated` (value: `"TradingAccountPwdUpdated"`)
+
 * `ProgramNewsAndUpdates` (value: `"ProgramNewsAndUpdates"`)
 
 * `ProgramEndOfPeriod` (value: `"ProgramEndOfPeriod"`)

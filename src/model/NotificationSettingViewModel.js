@@ -46,7 +46,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name NotificationSettingViewModel#type
-     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram")}
+     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram")}
      */
     /**
      *
@@ -139,6 +139,8 @@ export default class NotificationSettingViewModel {
         "Profile2FA": "Profile2FA",
     
         "ProfileSecurity": "ProfileSecurity",
+    
+        "TradingAccountPwdUpdated": "TradingAccountPwdUpdated",
     
         "ProgramNewsAndUpdates": "ProgramNewsAndUpdates",
     
