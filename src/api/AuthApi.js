@@ -84,7 +84,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
       v10Auth2faConfirmPost(authorization, opts) {
       return this.v10Auth2faConfirmPostWithHttpInfo(authorization, opts)
@@ -128,7 +128,7 @@ export default class AuthApi {
      * 2FA create
      * @function AuthApi#v10Auth2faCreatePost
      * @param {String} authorization JWT access token
-     * @return {Promise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
+     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
      */
       v10Auth2faCreatePost(authorization) {
       return this.v10Auth2faCreatePostWithHttpInfo(authorization)
@@ -175,7 +175,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {TwoFactorCodeModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10Auth2faDisablePost(authorization, opts) {
       return this.v10Auth2faDisablePostWithHttpInfo(authorization, opts)
@@ -219,7 +219,7 @@ export default class AuthApi {
      * 2FA status
      * @function AuthApi#v10Auth2faGet
      * @param {String} authorization JWT access token
-     * @return {Promise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
+     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
      */
       v10Auth2faGet(authorization) {
       return this.v10Auth2faGetWithHttpInfo(authorization)
@@ -266,7 +266,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {PasswordModel} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
       v10Auth2faRecoverycodesNewPost(authorization, opts) {
       return this.v10Auth2faRecoverycodesNewPostWithHttpInfo(authorization, opts)
@@ -313,7 +313,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {PasswordModel} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
       v10Auth2faRecoverycodesPost(authorization, opts) {
       return this.v10Auth2faRecoverycodesPostWithHttpInfo(authorization, opts)
@@ -360,7 +360,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ChangePasswordViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthPasswordChangePost(authorization, opts) {
       return this.v10AuthPasswordChangePostWithHttpInfo(authorization, opts)
@@ -400,7 +400,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthPasswordForgotInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthPasswordForgotInvestorPost(opts) {
       return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(opts)
@@ -440,7 +440,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthPasswordForgotManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthPasswordForgotManagerPost(opts) {
       return this.v10AuthPasswordForgotManagerPostWithHttpInfo(opts)
@@ -480,7 +480,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthPasswordResetPost
      * @param {Object} [opts] Optional parameters
      * @param {ResetPasswordViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthPasswordResetPost(opts) {
       return this.v10AuthPasswordResetPostWithHttpInfo(opts)
@@ -524,7 +524,7 @@ export default class AuthApi {
      * Get phone number verification code
      * @function AuthApi#v10AuthPhoneCodePost
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
       v10AuthPhoneCodePost(authorization) {
       return this.v10AuthPhoneCodePostWithHttpInfo(authorization)
@@ -572,7 +572,7 @@ export default class AuthApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.code] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthPhoneVerifyPost(authorization, opts) {
       return this.v10AuthPhoneVerifyPostWithHttpInfo(authorization, opts)
@@ -612,7 +612,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthResendconfirmationlinkPost
      * @param {Object} [opts] Optional parameters
      * @param {ResendConfirmationViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthResendconfirmationlinkPost(opts) {
       return this.v10AuthResendconfirmationlinkPostWithHttpInfo(opts)
@@ -652,7 +652,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthSigninInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {LoginViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthSigninInvestorPost(opts) {
       return this.v10AuthSigninInvestorPostWithHttpInfo(opts)
@@ -692,7 +692,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthSigninManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {LoginViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthSigninManagerPost(opts) {
       return this.v10AuthSigninManagerPostWithHttpInfo(opts)
@@ -735,7 +735,7 @@ export default class AuthApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.userId] 
      * @param {String} [opts.code] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthSignupConfirmPost(opts) {
       return this.v10AuthSignupConfirmPostWithHttpInfo(opts)
@@ -775,7 +775,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthSignupInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {RegisterInvestorViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthSignupInvestorPost(opts) {
       return this.v10AuthSignupInvestorPostWithHttpInfo(opts)
@@ -815,7 +815,7 @@ export default class AuthApi {
      * @function AuthApi#v10AuthSignupManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {RegisterManagerViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10AuthSignupManagerPost(opts) {
       return this.v10AuthSignupManagerPostWithHttpInfo(opts)
@@ -859,7 +859,7 @@ export default class AuthApi {
      * Logout from another devices
      * @function AuthApi#v10AuthTokenDevicesLogoutPost
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthTokenDevicesLogoutPost(authorization) {
       return this.v10AuthTokenDevicesLogoutPostWithHttpInfo(authorization)
@@ -903,7 +903,7 @@ export default class AuthApi {
      * Update auth token
      * @function AuthApi#v10AuthTokenUpdatePost
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10AuthTokenUpdatePost(authorization) {
       return this.v10AuthTokenUpdatePostWithHttpInfo(authorization)

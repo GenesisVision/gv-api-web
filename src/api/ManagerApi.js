@@ -86,7 +86,7 @@ export default class ManagerApi {
      * Manager assets list
      * @function ManagerApi#v10ManagerAssetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
+     * @return {CancelablePromise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
      */
       v10ManagerAssetsGet(authorization) {
       return this.v10ManagerAssetsGetWithHttpInfo(authorization)
@@ -130,7 +130,7 @@ export default class ManagerApi {
      * Manager details
      * @function ManagerApi#v10ManagerByIdDetailsGet
      * @param {String} id 
-     * @return {Promise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
+     * @return {CancelablePromise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
      */
       v10ManagerByIdDetailsGet(id) {
       return this.v10ManagerByIdDetailsGetWithHttpInfo(id)
@@ -174,7 +174,7 @@ export default class ManagerApi {
      * Manager profile
      * @function ManagerApi#v10ManagerByIdGet
      * @param {String} id 
-     * @return {Promise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
+     * @return {CancelablePromise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
      */
       v10ManagerByIdGet(id) {
       return this.v10ManagerByIdGetWithHttpInfo(id)
@@ -234,7 +234,7 @@ export default class ManagerApi {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ManagerPortfolioEvents>} a Promise, with an object containing data of type ManagerPortfolioEvents and HTTP response
+     * @return {CancelablePromise<ManagerPortfolioEvents>} a Promise, with an object containing data of type ManagerPortfolioEvents and HTTP response
      */
       v10ManagerEventsGet(authorization, opts) {
       return this.v10ManagerEventsGetWithHttpInfo(authorization, opts)
@@ -288,7 +288,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {Array<FundAssetPart>} [opts.assets] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdAssetsUpdatePost(id, authorization, opts) {
       return this.v10ManagerFundsByIdAssetsUpdatePostWithHttpInfo(id, authorization, opts)
@@ -343,7 +343,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.twoFactorCode] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdClosePost(id, authorization, opts) {
       return this.v10ManagerFundsByIdClosePostWithHttpInfo(id, authorization, opts)
@@ -405,7 +405,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, opts) {
       return this.v10ManagerFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts)
@@ -463,7 +463,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
+     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
      */
       v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerFundsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -528,7 +528,7 @@ export default class ManagerApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
       return this.v10ManagerFundsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
@@ -582,7 +582,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdUpdatePost(id, authorization, opts) {
       return this.v10ManagerFundsByIdUpdatePostWithHttpInfo(id, authorization, opts)
@@ -644,7 +644,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, opts) {
       return this.v10ManagerFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts)
@@ -702,7 +702,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
      */
       v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -749,7 +749,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewFundRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsCreatePost(authorization, opts) {
       return this.v10ManagerFundsCreatePostWithHttpInfo(authorization, opts)
@@ -809,7 +809,7 @@ export default class ManagerApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
+     * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
       v10ManagerFundsGet(authorization, opts) {
       return this.v10ManagerFundsGetWithHttpInfo(authorization, opts)
@@ -853,7 +853,7 @@ export default class ManagerApi {
      * Get GVT investment to create fund
      * @function ManagerApi#v10ManagerFundsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
       v10ManagerFundsInvestmentAmountGet(authorization) {
       return this.v10ManagerFundsInvestmentAmountGetWithHttpInfo(authorization)
@@ -904,7 +904,7 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerFundsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerFundsRequestsByIdCancelPost(id, authorization) {
       return this.v10ManagerFundsRequestsByIdCancelPostWithHttpInfo(id, authorization)
@@ -964,7 +964,7 @@ export default class ManagerApi {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ManagerDashboard>} a Promise, with an object containing data of type ManagerDashboard and HTTP response
+     * @return {CancelablePromise<ManagerDashboard>} a Promise, with an object containing data of type ManagerDashboard and HTTP response
      */
       v10ManagerGet(authorization, opts) {
       return this.v10ManagerGetWithHttpInfo(authorization, opts)
@@ -1019,7 +1019,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.twoFactorCode] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdClosePost(id, authorization, opts) {
       return this.v10ManagerProgramsByIdClosePostWithHttpInfo(id, authorization, opts)
@@ -1081,7 +1081,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, opts) {
       return this.v10ManagerProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts)
@@ -1139,7 +1139,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
+     * @return {CancelablePromise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
      */
       v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -1193,7 +1193,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramPwdUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdPasswordChangePost(id, authorization, opts) {
       return this.v10ManagerProgramsByIdPasswordChangePostWithHttpInfo(id, authorization, opts)
@@ -1244,7 +1244,7 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerProgramsByIdPeriodClosePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdPeriodClosePost(id, authorization) {
       return this.v10ManagerProgramsByIdPeriodClosePostWithHttpInfo(id, authorization)
@@ -1309,7 +1309,7 @@ export default class ManagerApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
       return this.v10ManagerProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
@@ -1363,7 +1363,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdUpdatePost(id, authorization, opts) {
       return this.v10ManagerProgramsByIdUpdatePostWithHttpInfo(id, authorization, opts)
@@ -1421,7 +1421,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization) {
       return this.v10ManagerProgramsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization)
@@ -1479,7 +1479,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
      */
       v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -1537,7 +1537,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
       return this.v10ManagerProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization)
@@ -1584,7 +1584,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewProgramRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsCreatePost(authorization, opts) {
       return this.v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts)
@@ -1644,7 +1644,7 @@ export default class ManagerApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
       v10ManagerProgramsGet(authorization, opts) {
       return this.v10ManagerProgramsGetWithHttpInfo(authorization, opts)
@@ -1688,7 +1688,7 @@ export default class ManagerApi {
      * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
+     * @return {CancelablePromise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
       v10ManagerProgramsInvestmentAmountGet(authorization) {
       return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization)
@@ -1739,7 +1739,7 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerProgramsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerProgramsRequestsByIdCancelPost(id, authorization) {
       return this.v10ManagerProgramsRequestsByIdCancelPostWithHttpInfo(id, authorization)
@@ -1797,7 +1797,7 @@ export default class ManagerApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10ManagerRequestsBySkipByTakeGet(skip, take, authorization) {
       return this.v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization)
@@ -1849,7 +1849,7 @@ export default class ManagerApi {
      * @param {String} [opts.programId] 
      * @param {Number} [opts.subscriptionFee] 
      * @param {Number} [opts.successFee] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerSignalCreatePost(authorization, opts) {
       return this.v10ManagerSignalCreatePostWithHttpInfo(authorization, opts)

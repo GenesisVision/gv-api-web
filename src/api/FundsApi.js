@@ -68,7 +68,7 @@ export default class FundsApi {
     /**
      * Get all supported assets for funds
      * @function FundsApi#v10FundsAssetsGet
-     * @return {Promise<PlatformAssets>} a Promise, with an object containing data of type PlatformAssets and HTTP response
+     * @return {CancelablePromise<PlatformAssets>} a Promise, with an object containing data of type PlatformAssets and HTTP response
      */
       v10FundsAssetsGet() {
       return this.v10FundsAssetsGetWithHttpInfo()
@@ -112,7 +112,7 @@ export default class FundsApi {
      * Fund assets info
      * @function FundsApi#v10FundsByIdAssetsGet
      * @param {String} id 
-     * @return {Promise<FundAssetsListInfo>} a Promise, with an object containing data of type FundAssetsListInfo and HTTP response
+     * @return {CancelablePromise<FundAssetsListInfo>} a Promise, with an object containing data of type FundAssetsListInfo and HTTP response
      */
       v10FundsByIdAssetsGet(id) {
       return this.v10FundsByIdAssetsGetWithHttpInfo(id)
@@ -164,7 +164,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<FundBalanceChart>} a Promise, with an object containing data of type FundBalanceChart and HTTP response
+     * @return {CancelablePromise<FundBalanceChart>} a Promise, with an object containing data of type FundBalanceChart and HTTP response
      */
       v10FundsByIdChartsBalanceGet(id, opts) {
       return this.v10FundsByIdChartsBalanceGetWithHttpInfo(id, opts)
@@ -216,7 +216,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
+     * @return {CancelablePromise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
      */
       v10FundsByIdChartsProfitGet(id, opts) {
       return this.v10FundsByIdChartsProfitGetWithHttpInfo(id, opts)
@@ -267,7 +267,7 @@ export default class FundsApi {
      * @function FundsApi#v10FundsByIdFavoriteAddPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10FundsByIdFavoriteAddPost(id, authorization) {
       return this.v10FundsByIdFavoriteAddPostWithHttpInfo(id, authorization)
@@ -318,7 +318,7 @@ export default class FundsApi {
      * @function FundsApi#v10FundsByIdFavoriteRemovePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10FundsByIdFavoriteRemovePost(id, authorization) {
       return this.v10FundsByIdFavoriteRemovePostWithHttpInfo(id, authorization)
@@ -368,7 +368,7 @@ export default class FundsApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
      * @param {String} [opts.currencySecondary] 
-     * @return {Promise<FundDetailsFull>} a Promise, with an object containing data of type FundDetailsFull and HTTP response
+     * @return {CancelablePromise<FundDetailsFull>} a Promise, with an object containing data of type FundDetailsFull and HTTP response
      */
       v10FundsByIdGet(id, opts) {
       return this.v10FundsByIdGetWithHttpInfo(id, opts)
@@ -441,7 +441,7 @@ export default class FundsApi {
      * @param {String} [opts.programManagerId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
+     * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
       v10FundsGet(opts) {
       return this.v10FundsGetWithHttpInfo(opts)
@@ -485,7 +485,7 @@ export default class FundsApi {
      * Fund sets
      * @function FundsApi#v10FundsSetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<FundSets>} a Promise, with an object containing data of type FundSets and HTTP response
+     * @return {CancelablePromise<FundSets>} a Promise, with an object containing data of type FundSets and HTTP response
      */
       v10FundsSetsGet(authorization) {
       return this.v10FundsSetsGetWithHttpInfo(authorization)

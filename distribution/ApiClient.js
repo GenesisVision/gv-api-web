@@ -27,9 +27,23 @@ var _querystring = require("querystring");
 
 var _querystring2 = _interopRequireDefault(_querystring);
 
+var _CancelablePromise = require("../cancelable-promise/CancelablePromise.js");
+
+var _CancelablePromise2 = _interopRequireDefault(_CancelablePromise);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * @interface CancelablePromise
+ * @template T
+ * @implements Promise<T>
+ */
+
+/**
+ * @name CancelablePromise#changecancel
+ */
 
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -472,7 +486,7 @@ var ApiClient = function () {
                 }
             }
 
-            return new Promise(function (resolve, reject) {
+            return new _CancelablePromise2.default(function (resolve, reject) {
                 request.end(function (error, response) {
                     if (error) {
                         reject(error);
@@ -489,6 +503,8 @@ var ApiClient = function () {
                         }
                     }
                 });
+            }, function () {
+                return request.abort();
             });
         }
 

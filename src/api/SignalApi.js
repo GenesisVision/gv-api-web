@@ -71,7 +71,7 @@ export default class SignalApi {
      * Get copytrading accounts
      * @function SignalApi#v10SignalAccountsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<CopyTradingAccountsList>} a Promise, with an object containing data of type CopyTradingAccountsList and HTTP response
+     * @return {CancelablePromise<CopyTradingAccountsList>} a Promise, with an object containing data of type CopyTradingAccountsList and HTTP response
      */
       v10SignalAccountsGet(authorization) {
       return this.v10SignalAccountsGetWithHttpInfo(authorization)
@@ -138,7 +138,7 @@ export default class SignalApi {
      * @param {String} [opts.fixedCurrency] 
      * @param {String} [opts.initialDepositCurrency] 
      * @param {Number} [opts.initialDepositAmount] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalAttachByIdPost(id, authorization, opts) {
       return this.v10SignalAttachByIdPostWithHttpInfo(id, authorization, opts)
@@ -189,7 +189,7 @@ export default class SignalApi {
      * @function SignalApi#v10SignalDetachByIdPost
      * @param {String} id Program id
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalDetachByIdPost(id, authorization) {
       return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization)
@@ -240,7 +240,7 @@ export default class SignalApi {
      * @function SignalApi#v10SignalTradesByIdClosePost
      * @param {String} id Trade id
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalTradesByIdClosePost(id, authorization) {
       return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization)
@@ -298,7 +298,7 @@ export default class SignalApi {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesHistorySignalSlaveViewModel>} a Promise, with an object containing data of type TradesHistorySignalSlaveViewModel and HTTP response
+     * @return {CancelablePromise<TradesHistorySignalSlaveViewModel>} a Promise, with an object containing data of type TradesHistorySignalSlaveViewModel and HTTP response
      */
       v10SignalTradesGet(authorization, opts) {
       return this.v10SignalTradesGetWithHttpInfo(authorization, opts)
@@ -352,7 +352,7 @@ export default class SignalApi {
      * @param {String} [opts.symbol] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesOpenSignalSlaveViewModel>} a Promise, with an object containing data of type TradesOpenSignalSlaveViewModel and HTTP response
+     * @return {CancelablePromise<TradesOpenSignalSlaveViewModel>} a Promise, with an object containing data of type TradesOpenSignalSlaveViewModel and HTTP response
      */
       v10SignalTradesOpenGet(authorization, opts) {
       return this.v10SignalTradesOpenGetWithHttpInfo(authorization, opts)
@@ -414,7 +414,7 @@ export default class SignalApi {
      * @param {String} [opts.fixedCurrency] 
      * @param {String} [opts.initialDepositCurrency] 
      * @param {Number} [opts.initialDepositAmount] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalUpdatePost(authorization, opts) {
       return this.v10SignalUpdatePostWithHttpInfo(authorization, opts)

@@ -141,7 +141,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -195,7 +195,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
+     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
      */
 
   }, {
@@ -256,7 +256,7 @@ var InvestorApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -315,7 +315,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -369,7 +369,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundWithdrawInfo>} a Promise, with an object containing data of type FundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<FundWithdrawInfo>} a Promise, with an object containing data of type FundWithdrawInfo and HTTP response
      */
 
   }, {
@@ -425,7 +425,7 @@ var InvestorApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
+     * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
 
   }, {
@@ -483,7 +483,7 @@ var InvestorApi = function () {
      * @param {Number} [opts.eventsTake] 
      * @param {Number} [opts.requestsSkip] 
      * @param {Number} [opts.requestsTake] 
-     * @return {Promise<DashboardSummary>} a Promise, with an object containing data of type DashboardSummary and HTTP response
+     * @return {CancelablePromise<DashboardSummary>} a Promise, with an object containing data of type DashboardSummary and HTTP response
      */
 
   }, {
@@ -535,7 +535,7 @@ var InvestorApi = function () {
      * @param {Date} [opts.to] 
      * @param {Number} [opts.balancePoints] 
      * @param {Number} [opts.programsPoints] 
-     * @return {Promise<DashboardChartValue>} a Promise, with an object containing data of type DashboardChartValue and HTTP response
+     * @return {CancelablePromise<DashboardChartValue>} a Promise, with an object containing data of type DashboardChartValue and HTTP response
      */
 
   }, {
@@ -591,7 +591,7 @@ var InvestorApi = function () {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<DashboardPortfolioEvents>} a Promise, with an object containing data of type DashboardPortfolioEvents and HTTP response
+     * @return {CancelablePromise<DashboardPortfolioEvents>} a Promise, with an object containing data of type DashboardPortfolioEvents and HTTP response
      */
 
   }, {
@@ -650,7 +650,7 @@ var InvestorApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -704,7 +704,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
+     * @return {CancelablePromise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
      */
 
   }, {
@@ -751,7 +751,7 @@ var InvestorApi = function () {
      * @function InvestorApi#v10InvestorProgramsByIdReinvestOffPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -798,7 +798,7 @@ var InvestorApi = function () {
      * @function InvestorApi#v10InvestorProgramsByIdReinvestOnPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -859,7 +859,7 @@ var InvestorApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -913,7 +913,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -967,7 +967,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramWithdrawInfo>} a Promise, with an object containing data of type ProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ProgramWithdrawInfo>} a Promise, with an object containing data of type ProgramWithdrawInfo and HTTP response
      */
 
   }, {
@@ -1021,7 +1021,7 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1077,7 +1077,7 @@ var InvestorApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
 
   }, {
@@ -1124,7 +1124,7 @@ var InvestorApi = function () {
      * @function InvestorApi#v10InvestorProgramsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1178,7 +1178,7 @@ var InvestorApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -1234,7 +1234,7 @@ var InvestorApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
+     * @return {CancelablePromise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
      */
 
   }, {

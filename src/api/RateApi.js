@@ -83,7 +83,7 @@ export default class RateApi {
      * @param {String} exchange 
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
       v10RateByExchangeByFromByToGet(exchange, from, to) {
       return this.v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to)
@@ -134,7 +134,7 @@ export default class RateApi {
      * @function RateApi#v10RateByFromByToGet
      * @param {String} from 
      * @param {String} to 
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
       v10RateByFromByToGet(from, to) {
       return this.v10RateByFromByToGetWithHttpInfo(from, to)
@@ -177,7 +177,7 @@ export default class RateApi {
      * @param {Object} [opts] Optional parameters
      * @param {Array<String>} [opts.from] 
      * @param {Array<String>} [opts.to] 
-     * @return {Promise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
+     * @return {CancelablePromise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
      */
       v10RateGet(opts) {
       return this.v10RateGetWithHttpInfo(opts)

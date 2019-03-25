@@ -14,6 +14,17 @@
 
 import superagent from "superagent";
 import querystring from "querystring";
+import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
+
+/**
+ * @interface CancelablePromise
+ * @template T
+ * @implements Promise<T>
+ */
+
+/**
+ * @name CancelablePromise#changecancel
+ */
 
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -431,7 +442,7 @@ export default class ApiClient {
             }
         }
 
-        return new Promise((resolve, reject) => {
+        return new CancelablePromise((resolve, reject) => {
             request.end((error, response) => {
                 if (error) {
                     reject(error);
@@ -448,7 +459,7 @@ export default class ApiClient {
                     }
                 }
             });
-        });
+        }, () => request.abort());
 
         
     }

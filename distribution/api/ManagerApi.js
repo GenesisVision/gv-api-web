@@ -149,7 +149,7 @@ var ManagerApi = function () {
      * Manager assets list
      * @function ManagerApi#v10ManagerAssetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
+     * @return {CancelablePromise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
      */
 
   }, {
@@ -188,7 +188,7 @@ var ManagerApi = function () {
      * Manager details
      * @function ManagerApi#v10ManagerByIdDetailsGet
      * @param {String} id 
-     * @return {Promise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
+     * @return {CancelablePromise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
      */
 
   }, {
@@ -227,7 +227,7 @@ var ManagerApi = function () {
      * Manager profile
      * @function ManagerApi#v10ManagerByIdGet
      * @param {String} id 
-     * @return {Promise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
+     * @return {CancelablePromise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
      */
 
   }, {
@@ -283,7 +283,7 @@ var ManagerApi = function () {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ManagerPortfolioEvents>} a Promise, with an object containing data of type ManagerPortfolioEvents and HTTP response
+     * @return {CancelablePromise<ManagerPortfolioEvents>} a Promise, with an object containing data of type ManagerPortfolioEvents and HTTP response
      */
 
   }, {
@@ -333,7 +333,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {[FundAssetPart]} [opts.assets] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -385,7 +385,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.twoFactorCode] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -444,7 +444,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -498,7 +498,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
+     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
      */
 
   }, {
@@ -559,7 +559,7 @@ var ManagerApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -609,7 +609,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -668,7 +668,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -722,7 +722,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
      */
 
   }, {
@@ -764,7 +764,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewFundRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -820,7 +820,7 @@ var ManagerApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
+     * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
 
   }, {
@@ -859,7 +859,7 @@ var ManagerApi = function () {
      * Get GVT investment to create fund
      * @function ManagerApi#v10ManagerFundsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
 
   }, {
@@ -906,7 +906,7 @@ var ManagerApi = function () {
      * @function ManagerApi#v10ManagerFundsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -962,7 +962,7 @@ var ManagerApi = function () {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ManagerDashboard>} a Promise, with an object containing data of type ManagerDashboard and HTTP response
+     * @return {CancelablePromise<ManagerDashboard>} a Promise, with an object containing data of type ManagerDashboard and HTTP response
      */
 
   }, {
@@ -1014,7 +1014,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.twoFactorCode] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1073,7 +1073,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1127,7 +1127,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
+     * @return {CancelablePromise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
      */
 
   }, {
@@ -1177,7 +1177,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramPwdUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1224,7 +1224,7 @@ var ManagerApi = function () {
      * @function ManagerApi#v10ManagerProgramsByIdPeriodClosePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1285,7 +1285,7 @@ var ManagerApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -1335,7 +1335,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ProgramUpdate} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1389,7 +1389,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1443,7 +1443,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
      */
 
   }, {
@@ -1497,7 +1497,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1539,7 +1539,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewProgramRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1595,7 +1595,7 @@ var ManagerApi = function () {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
 
   }, {
@@ -1634,7 +1634,7 @@ var ManagerApi = function () {
      * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
+     * @return {CancelablePromise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
 
   }, {
@@ -1681,7 +1681,7 @@ var ManagerApi = function () {
      * @function ManagerApi#v10ManagerProgramsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -1735,7 +1735,7 @@ var ManagerApi = function () {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
 
   }, {
@@ -1783,7 +1783,7 @@ var ManagerApi = function () {
      * @param {String} [opts.programId] 
      * @param {Number} [opts.subscriptionFee] 
      * @param {Number} [opts.successFee] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {

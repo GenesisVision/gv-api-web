@@ -83,7 +83,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
+     * @return {CancelablePromise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
      */
       v10ProgramsByIdChartsBalanceGet(id, opts) {
       return this.v10ProgramsByIdChartsBalanceGetWithHttpInfo(id, opts)
@@ -135,7 +135,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
-     * @return {Promise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
+     * @return {CancelablePromise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
      */
       v10ProgramsByIdChartsProfitGet(id, opts) {
       return this.v10ProgramsByIdChartsProfitGetWithHttpInfo(id, opts)
@@ -186,7 +186,7 @@ export default class ProgramsApi {
      * @function ProgramsApi#v10ProgramsByIdFavoriteAddPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProgramsByIdFavoriteAddPost(id, authorization) {
       return this.v10ProgramsByIdFavoriteAddPostWithHttpInfo(id, authorization)
@@ -237,7 +237,7 @@ export default class ProgramsApi {
      * @function ProgramsApi#v10ProgramsByIdFavoriteRemovePost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProgramsByIdFavoriteRemovePost(id, authorization) {
       return this.v10ProgramsByIdFavoriteRemovePostWithHttpInfo(id, authorization)
@@ -287,7 +287,7 @@ export default class ProgramsApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
      * @param {String} [opts.currencySecondary] 
-     * @return {Promise<ProgramDetailsFull>} a Promise, with an object containing data of type ProgramDetailsFull and HTTP response
+     * @return {CancelablePromise<ProgramDetailsFull>} a Promise, with an object containing data of type ProgramDetailsFull and HTTP response
      */
       v10ProgramsByIdGet(id, opts) {
       return this.v10ProgramsByIdGetWithHttpInfo(id, opts)
@@ -345,7 +345,7 @@ export default class ProgramsApi {
      * @param {String} [opts.sorting] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
+     * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
       v10ProgramsByIdTradesGet(id, opts) {
       return this.v10ProgramsByIdTradesGetWithHttpInfo(id, opts)
@@ -399,7 +399,7 @@ export default class ProgramsApi {
      * @param {String} [opts.symbol] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
+     * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
      */
       v10ProgramsByIdTradesOpenGet(id, opts) {
       return this.v10ProgramsByIdTradesOpenGetWithHttpInfo(id, opts)
@@ -488,7 +488,7 @@ export default class ProgramsApi {
      * @param {String} [opts.programManagerId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
       v10ProgramsGet(opts) {
       return this.v10ProgramsGetWithHttpInfo(opts)
@@ -529,7 +529,7 @@ export default class ProgramsApi {
      * @function ProgramsApi#v10ProgramsLevelupSummaryGet
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
-     * @return {Promise<LevelUpSummary>} a Promise, with an object containing data of type LevelUpSummary and HTTP response
+     * @return {CancelablePromise<LevelUpSummary>} a Promise, with an object containing data of type LevelUpSummary and HTTP response
      */
       v10ProgramsLevelupSummaryGet(opts) {
       return this.v10ProgramsLevelupSummaryGetWithHttpInfo(opts)
@@ -573,7 +573,7 @@ export default class ProgramsApi {
      * Programs sets
      * @function ProgramsApi#v10ProgramsSetsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
+     * @return {CancelablePromise<ProgramSets>} a Promise, with an object containing data of type ProgramSets and HTTP response
      */
       v10ProgramsSetsGet(authorization) {
       return this.v10ProgramsSetsGetWithHttpInfo(authorization)

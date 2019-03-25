@@ -81,7 +81,7 @@ var FileApi = function () {
      * Download file
      * @function FileApi#v10FileByIdGet
      * @param {String} id 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -128,7 +128,7 @@ var FileApi = function () {
      * @function FileApi#v10FileDocumentUploadPost
      * @param {String} authorization JWT access token
      * @param {File} uploadedFile Upload File
-     * @return {Promise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
+     * @return {CancelablePromise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
      */
 
   }, {
@@ -172,7 +172,7 @@ var FileApi = function () {
      * @param {File} uploadedFile Upload File
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
-     * @return {Promise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
+     * @return {CancelablePromise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
      */
 
   }, {

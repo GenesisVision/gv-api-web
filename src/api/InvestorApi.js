@@ -97,7 +97,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts) {
       return this.v10InvestorFundsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts)
@@ -155,7 +155,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
+     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
      */
       v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10InvestorFundsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -220,7 +220,7 @@ export default class InvestorApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
       return this.v10InvestorFundsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
@@ -282,7 +282,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts) {
       return this.v10InvestorFundsByIdWithdrawByPercentPostWithHttpInfo(id, percent, authorization, opts)
@@ -340,7 +340,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundWithdrawInfo>} a Promise, with an object containing data of type FundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<FundWithdrawInfo>} a Promise, with an object containing data of type FundWithdrawInfo and HTTP response
      */
       v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10InvestorFundsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -400,7 +400,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
+     * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
      */
       v10InvestorFundsGet(authorization, opts) {
       return this.v10InvestorFundsGetWithHttpInfo(authorization, opts)
@@ -462,7 +462,7 @@ export default class InvestorApi {
      * @param {Number} [opts.eventsTake] 
      * @param {Number} [opts.requestsSkip] 
      * @param {Number} [opts.requestsTake] 
-     * @return {Promise<DashboardSummary>} a Promise, with an object containing data of type DashboardSummary and HTTP response
+     * @return {CancelablePromise<DashboardSummary>} a Promise, with an object containing data of type DashboardSummary and HTTP response
      */
       v10InvestorGet(authorization, opts) {
       return this.v10InvestorGetWithHttpInfo(authorization, opts)
@@ -518,7 +518,7 @@ export default class InvestorApi {
      * @param {Date} [opts.to] 
      * @param {Number} [opts.balancePoints] 
      * @param {Number} [opts.programsPoints] 
-     * @return {Promise<DashboardChartValue>} a Promise, with an object containing data of type DashboardChartValue and HTTP response
+     * @return {CancelablePromise<DashboardChartValue>} a Promise, with an object containing data of type DashboardChartValue and HTTP response
      */
       v10InvestorPortfolioChartGet(authorization, opts) {
       return this.v10InvestorPortfolioChartGetWithHttpInfo(authorization, opts)
@@ -578,7 +578,7 @@ export default class InvestorApi {
      * @param {String} [opts.assetType] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<DashboardPortfolioEvents>} a Promise, with an object containing data of type DashboardPortfolioEvents and HTTP response
+     * @return {CancelablePromise<DashboardPortfolioEvents>} a Promise, with an object containing data of type DashboardPortfolioEvents and HTTP response
      */
       v10InvestorPortfolioEventsGet(authorization, opts) {
       return this.v10InvestorPortfolioEventsGetWithHttpInfo(authorization, opts)
@@ -640,7 +640,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.currency]  (default to 100)
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts) {
       return this.v10InvestorProgramsByIdInvestByAmountPostWithHttpInfo(id, amount, authorization, opts)
@@ -698,7 +698,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
+     * @return {CancelablePromise<ProgramInvestInfo>} a Promise, with an object containing data of type ProgramInvestInfo and HTTP response
      */
       v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10InvestorProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -749,7 +749,7 @@ export default class InvestorApi {
      * @function InvestorApi#v10InvestorProgramsByIdReinvestOffPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsByIdReinvestOffPost(id, authorization) {
       return this.v10InvestorProgramsByIdReinvestOffPostWithHttpInfo(id, authorization)
@@ -800,7 +800,7 @@ export default class InvestorApi {
      * @function InvestorApi#v10InvestorProgramsByIdReinvestOnPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsByIdReinvestOnPost(id, authorization) {
       return this.v10InvestorProgramsByIdReinvestOnPostWithHttpInfo(id, authorization)
@@ -865,7 +865,7 @@ export default class InvestorApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization) {
       return this.v10InvestorProgramsByIdRequestsBySkipByTakeGetWithHttpInfo(id, skip, take, authorization)
@@ -923,7 +923,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization) {
       return this.v10InvestorProgramsByIdWithdrawByAmountPostWithHttpInfo(id, amount, authorization)
@@ -981,7 +981,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramWithdrawInfo>} a Promise, with an object containing data of type ProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ProgramWithdrawInfo>} a Promise, with an object containing data of type ProgramWithdrawInfo and HTTP response
      */
       v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization) {
       return this.v10InvestorProgramsByIdWithdrawInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
@@ -1039,7 +1039,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
       return this.v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization)
@@ -1099,7 +1099,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
+     * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
      */
       v10InvestorProgramsGet(authorization, opts) {
       return this.v10InvestorProgramsGetWithHttpInfo(authorization, opts)
@@ -1150,7 +1150,7 @@ export default class InvestorApi {
      * @function InvestorApi#v10InvestorProgramsRequestsByIdCancelPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10InvestorProgramsRequestsByIdCancelPost(id, authorization) {
       return this.v10InvestorProgramsRequestsByIdCancelPostWithHttpInfo(id, authorization)
@@ -1208,7 +1208,7 @@ export default class InvestorApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
+     * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10InvestorRequestsBySkipByTakeGet(skip, take, authorization) {
       return this.v10InvestorRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization)
@@ -1268,7 +1268,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
+     * @return {CancelablePromise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
      */
       v10InvestorSignalsGet(authorization, opts) {
       return this.v10InvestorSignalsGetWithHttpInfo(authorization, opts)

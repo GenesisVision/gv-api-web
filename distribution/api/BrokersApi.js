@@ -73,7 +73,7 @@ var BrokersApi = function () {
     /**
      * Get all trade servers
      * @function BrokersApi#v10BrokersGet
-     * @return {Promise<BrokersInfo>} a Promise, with an object containing data of type BrokersInfo and HTTP response
+     * @return {CancelablePromise<BrokersInfo>} a Promise, with an object containing data of type BrokersInfo and HTTP response
      */
 
   }, {

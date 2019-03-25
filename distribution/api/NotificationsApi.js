@@ -105,7 +105,7 @@ var NotificationsApi = function () {
      * @function NotificationsApi#v10NotificationsByIdReadPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -151,7 +151,7 @@ var NotificationsApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<NotificationList>} a Promise, with an object containing data of type NotificationList and HTTP response
+     * @return {CancelablePromise<NotificationList>} a Promise, with an object containing data of type NotificationList and HTTP response
      */
 
   }, {
@@ -190,7 +190,7 @@ var NotificationsApi = function () {
      * Unread notifications count
      * @function NotificationsApi#v10NotificationsNewGet
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
 
   }, {
@@ -242,7 +242,7 @@ var NotificationsApi = function () {
      * @param {String} [opts.type] 
      * @param {String} [opts.conditionType] 
      * @param {Number} [opts.conditionAmount] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -296,7 +296,7 @@ var NotificationsApi = function () {
      * @param {String} id 
      * @param {Boolean} enable 
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -343,7 +343,7 @@ var NotificationsApi = function () {
      * @function NotificationsApi#v10NotificationsSettingsFundsByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<FundNotificationSettingList>} a Promise, with an object containing data of type FundNotificationSettingList and HTTP response
+     * @return {CancelablePromise<FundNotificationSettingList>} a Promise, with an object containing data of type FundNotificationSettingList and HTTP response
      */
 
   }, {
@@ -382,7 +382,7 @@ var NotificationsApi = function () {
      * User settings
      * @function NotificationsApi#v10NotificationsSettingsGet
      * @param {String} authorization JWT access token
-     * @return {Promise<NotificationSettingList>} a Promise, with an object containing data of type NotificationSettingList and HTTP response
+     * @return {CancelablePromise<NotificationSettingList>} a Promise, with an object containing data of type NotificationSettingList and HTTP response
      */
 
   }, {
@@ -429,7 +429,7 @@ var NotificationsApi = function () {
      * @function NotificationsApi#v10NotificationsSettingsManagersByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<ManagerNotificationSettingList>} a Promise, with an object containing data of type ManagerNotificationSettingList and HTTP response
+     * @return {CancelablePromise<ManagerNotificationSettingList>} a Promise, with an object containing data of type ManagerNotificationSettingList and HTTP response
      */
 
   }, {
@@ -476,7 +476,7 @@ var NotificationsApi = function () {
      * @function NotificationsApi#v10NotificationsSettingsProgramsByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<ProgramNotificationSettingList>} a Promise, with an object containing data of type ProgramNotificationSettingList and HTTP response
+     * @return {CancelablePromise<ProgramNotificationSettingList>} a Promise, with an object containing data of type ProgramNotificationSettingList and HTTP response
      */
 
   }, {
@@ -523,7 +523,7 @@ var NotificationsApi = function () {
      * @function NotificationsApi#v10NotificationsSettingsRemoveByIdPost
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {

@@ -137,7 +137,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletAddressesByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletInfo>} a Promise, with an object containing data of type WalletInfo and HTTP response
+     * @return {CancelablePromise<WalletInfo>} a Promise, with an object containing data of type WalletInfo and HTTP response
      */
 
   }, {
@@ -176,7 +176,7 @@ var WalletApi = function () {
      * Get user addresses
      * @function WalletApi#v10WalletAddressesGet
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletsInfo>} a Promise, with an object containing data of type WalletsInfo and HTTP response
+     * @return {CancelablePromise<WalletsInfo>} a Promise, with an object containing data of type WalletsInfo and HTTP response
      */
 
   }, {
@@ -223,7 +223,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletSummary>} a Promise, with an object containing data of type WalletSummary and HTTP response
+     * @return {CancelablePromise<WalletSummary>} a Promise, with an object containing data of type WalletSummary and HTTP response
      */
 
   }, {
@@ -262,7 +262,7 @@ var WalletApi = function () {
      * GenesisMarkets commission data
      * @function WalletApi#v10WalletFeeGvtholdingGet
      * @param {String} authorization JWT access token
-     * @return {Promise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
+     * @return {CancelablePromise<UserCommissionData>} a Promise, with an object containing data of type UserCommissionData and HTTP response
      */
 
   }, {
@@ -309,7 +309,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletMultiByCurrencyAvailableGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletMultiAvailable>} a Promise, with an object containing data of type WalletMultiAvailable and HTTP response
+     * @return {CancelablePromise<WalletMultiAvailable>} a Promise, with an object containing data of type WalletMultiAvailable and HTTP response
      */
 
   }, {
@@ -356,7 +356,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletMultiByCurrencyGet
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {Promise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
+     * @return {CancelablePromise<WalletMultiSummary>} a Promise, with an object containing data of type WalletMultiSummary and HTTP response
      */
 
   }, {
@@ -410,7 +410,7 @@ var WalletApi = function () {
      * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<MultiWalletExternalTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletExternalTransactionsViewModel and HTTP response
      */
 
   }, {
@@ -464,7 +464,7 @@ var WalletApi = function () {
      * @param {String} [opts.currency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<MultiWalletTransactionsViewModel>} a Promise, with an object containing data of type MultiWalletTransactionsViewModel and HTTP response
      */
 
   }, {
@@ -503,7 +503,7 @@ var WalletApi = function () {
      * Disable paying platform fees with GVT
      * @function WalletApi#v10WalletPaygvtfeeOffPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -542,7 +542,7 @@ var WalletApi = function () {
      * Enable paying platform fees with GVT
      * @function WalletApi#v10WalletPaygvtfeeOnPost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -589,7 +589,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletTransactionByIdGet
      * @param {String} id 
      * @param {String} authorization JWT access token
-     * @return {Promise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
+     * @return {CancelablePromise<TransactionDetails>} a Promise, with an object containing data of type TransactionDetails and HTTP response
      */
 
   }, {
@@ -647,7 +647,7 @@ var WalletApi = function () {
      * @param {String} [opts.wallet] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {Promise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
+     * @return {CancelablePromise<WalletTransactionsViewModel>} a Promise, with an object containing data of type WalletTransactionsViewModel and HTTP response
      */
 
   }, {
@@ -689,7 +689,7 @@ var WalletApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {InternalTransferRequest} [opts.request] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -727,7 +727,7 @@ var WalletApi = function () {
     /**
      * @function WalletApi#v10WalletWithdrawInfoGet
      * @param {String} authorization JWT access token
-     * @return {Promise<WithdrawalSummary>} a Promise, with an object containing data of type WithdrawalSummary and HTTP response
+     * @return {CancelablePromise<WithdrawalSummary>} a Promise, with an object containing data of type WithdrawalSummary and HTTP response
      */
 
   }, {
@@ -773,7 +773,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletWithdrawRequestCancelByTxIdPost
      * @param {String} txId 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -810,7 +810,7 @@ var WalletApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.requestId] 
      * @param {String} [opts.code] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -851,7 +851,7 @@ var WalletApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {CreateWithdrawalRequestModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -897,7 +897,7 @@ var WalletApi = function () {
      * @function WalletApi#v10WalletWithdrawRequestResendByTxIdPost
      * @param {String} txId 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {

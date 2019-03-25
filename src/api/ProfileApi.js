@@ -73,7 +73,7 @@ export default class ProfileApi {
      * Remove avatar
      * @function ProfileApi#v10ProfileAvatarRemovePost
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfileAvatarRemovePost(authorization) {
       return this.v10ProfileAvatarRemovePostWithHttpInfo(authorization)
@@ -124,7 +124,7 @@ export default class ProfileApi {
      * @function ProfileApi#v10ProfileAvatarUpdateByFileIdPost
      * @param {String} fileId 
      * @param {String} authorization JWT access token
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfileAvatarUpdateByFileIdPost(fileId, authorization) {
       return this.v10ProfileAvatarUpdateByFileIdPostWithHttpInfo(fileId, authorization)
@@ -168,7 +168,7 @@ export default class ProfileApi {
      * Get full profile
      * @function ProfileApi#v10ProfileGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProfileFullViewModel>} a Promise, with an object containing data of type ProfileFullViewModel and HTTP response
+     * @return {CancelablePromise<ProfileFullViewModel>} a Promise, with an object containing data of type ProfileFullViewModel and HTTP response
      */
       v10ProfileGet(authorization) {
       return this.v10ProfileGetWithHttpInfo(authorization)
@@ -212,7 +212,7 @@ export default class ProfileApi {
      * Get header profile
      * @function ProfileApi#v10ProfileHeaderGet
      * @param {String} authorization JWT access token
-     * @return {Promise<ProfileHeaderViewModel>} a Promise, with an object containing data of type ProfileHeaderViewModel and HTTP response
+     * @return {CancelablePromise<ProfileHeaderViewModel>} a Promise, with an object containing data of type ProfileHeaderViewModel and HTTP response
      */
       v10ProfileHeaderGet(authorization) {
       return this.v10ProfileHeaderGetWithHttpInfo(authorization)
@@ -259,7 +259,7 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {UpdatePersonalDetailViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfilePersonalUpdatePost(authorization, opts) {
       return this.v10ProfilePersonalUpdatePostWithHttpInfo(authorization, opts)
@@ -305,7 +305,7 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {FcmTokenViewModel} [opts.token] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfilePushTokenPost(authorization, opts) {
       return this.v10ProfilePushTokenPostWithHttpInfo(authorization, opts)
@@ -352,7 +352,7 @@ export default class ProfileApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {UpdateProfileViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ProfileUpdatePost(authorization, opts) {
       return this.v10ProfileUpdatePostWithHttpInfo(authorization, opts)
@@ -395,7 +395,7 @@ export default class ProfileApi {
     /**
      * @function ProfileApi#v10ProfileVerificationTokenPost
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10ProfileVerificationTokenPost(authorization) {
       return this.v10ProfileVerificationTokenPostWithHttpInfo(authorization)

@@ -132,7 +132,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
 
   }, {
@@ -171,7 +171,7 @@ var AuthApi = function () {
      * 2FA create
      * @function AuthApi#v10Auth2faCreatePost
      * @param {String} authorization JWT access token
-     * @return {Promise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
+     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
      */
 
   }, {
@@ -213,7 +213,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {TwoFactorCodeModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -252,7 +252,7 @@ var AuthApi = function () {
      * 2FA status
      * @function AuthApi#v10Auth2faGet
      * @param {String} authorization JWT access token
-     * @return {Promise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
+     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
      */
 
   }, {
@@ -294,7 +294,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {PasswordModel} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
 
   }, {
@@ -336,7 +336,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {PasswordModel} [opts.model] 
-     * @return {Promise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
      */
 
   }, {
@@ -378,7 +378,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ChangePasswordViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -412,7 +412,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthPasswordForgotInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -446,7 +446,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthPasswordForgotManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -480,7 +480,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthPasswordResetPost
      * @param {Object} [opts] Optional parameters
      * @param {ResetPasswordViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -519,7 +519,7 @@ var AuthApi = function () {
      * Get phone number verification code
      * @function AuthApi#v10AuthPhoneCodePost
      * @param {String} authorization JWT access token
-     * @return {Promise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
      */
 
   }, {
@@ -563,7 +563,7 @@ var AuthApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.code] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -597,7 +597,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthResendconfirmationlinkPost
      * @param {Object} [opts] Optional parameters
      * @param {ResendConfirmationViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -631,7 +631,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthSigninInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {LoginViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -665,7 +665,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthSigninManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {LoginViewModel} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -703,7 +703,7 @@ var AuthApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.userId] 
      * @param {String} [opts.code] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -737,7 +737,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthSignupInvestorPost
      * @param {Object} [opts] Optional parameters
      * @param {RegisterInvestorViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -771,7 +771,7 @@ var AuthApi = function () {
      * @function AuthApi#v10AuthSignupManagerPost
      * @param {Object} [opts] Optional parameters
      * @param {RegisterManagerViewModel} [opts.model] 
-     * @return {Promise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
@@ -810,7 +810,7 @@ var AuthApi = function () {
      * Logout from another devices
      * @function AuthApi#v10AuthTokenDevicesLogoutPost
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {
@@ -849,7 +849,7 @@ var AuthApi = function () {
      * Update auth token
      * @function AuthApi#v10AuthTokenUpdatePost
      * @param {String} authorization JWT access token
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
 
   }, {

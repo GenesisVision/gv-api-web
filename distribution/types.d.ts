@@ -1,3 +1,7 @@
+export declare interface CancelablePromise<T> extends Promise<T> {
+    cancel: () => CancelablePromise<T>
+}
+
 export declare class ApiClient {
     paramToString: any;
     buildUrl: any;
@@ -17,91 +21,91 @@ export declare class AuthApi {
     constructor(apiClient: ApiClient): AuthApi;
     v10Auth2faConfirmPost(authorization: string, opts?: {
         model?: TwoFactorAuthenticatorConfirm;
-    }): Promise<RecoveryCodesViewModel>;
-    v10Auth2faCreatePost(authorization: string): Promise<TwoFactorAuthenticator>;
+    }): CancelablePromise<RecoveryCodesViewModel>;
+    v10Auth2faCreatePost(authorization: string): CancelablePromise<TwoFactorAuthenticator>;
     v10Auth2faDisablePost(authorization: string, opts?: {
         model?: TwoFactorCodeModel;
-    }): Promise<any>;
-    v10Auth2faGet(authorization: string): Promise<TwoFactorStatus>;
+    }): CancelablePromise<any>;
+    v10Auth2faGet(authorization: string): CancelablePromise<TwoFactorStatus>;
     v10Auth2faRecoverycodesNewPost(authorization: string, opts?: {
         model?: PasswordModel;
-    }): Promise<RecoveryCodesViewModel>;
+    }): CancelablePromise<RecoveryCodesViewModel>;
     v10Auth2faRecoverycodesPost(authorization: string, opts?: {
         model?: PasswordModel;
-    }): Promise<RecoveryCodesViewModel>;
+    }): CancelablePromise<RecoveryCodesViewModel>;
     v10AuthPasswordChangePost(authorization: string, opts?: {
         model?: ChangePasswordViewModel;
-    }): Promise<'String'>;
+    }): CancelablePromise<string>;
     v10AuthPasswordForgotInvestorPost(opts?: {
         model?: ForgotPasswordViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10AuthPasswordForgotManagerPost(opts?: {
         model?: ForgotPasswordViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10AuthPasswordResetPost(opts?: {
         model?: ResetPasswordViewModel;
-    }): Promise<'String'>;
-    v10AuthPhoneCodePost(authorization: string): Promise<'Number'>;
+    }): CancelablePromise<string>;
+    v10AuthPhoneCodePost(authorization: string): CancelablePromise<number>;
     v10AuthPhoneVerifyPost(authorization: string, opts?: {
         code?: string;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10AuthResendconfirmationlinkPost(opts?: {
         model?: ResendConfirmationViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10AuthSigninInvestorPost(opts?: {
         model?: LoginViewModel;
-    }): Promise<'String'>;
+    }): CancelablePromise<string>;
     v10AuthSigninManagerPost(opts?: {
         model?: LoginViewModel;
-    }): Promise<'String'>;
+    }): CancelablePromise<string>;
     v10AuthSignupConfirmPost(opts?: {
         userId?: string;
         code?: string;
-    }): Promise<'String'>;
+    }): CancelablePromise<string>;
     v10AuthSignupInvestorPost(opts?: {
         model?: RegisterInvestorViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10AuthSignupManagerPost(opts?: {
         model?: RegisterManagerViewModel;
-    }): Promise<any>;
-    v10AuthTokenDevicesLogoutPost(authorization: string): Promise<'String'>;
-    v10AuthTokenUpdatePost(authorization: string): Promise<'String'>;
+    }): CancelablePromise<any>;
+    v10AuthTokenDevicesLogoutPost(authorization: string): CancelablePromise<string>;
+    v10AuthTokenUpdatePost(authorization: string): CancelablePromise<string>;
 }
 
 export declare class BrokersApi {
     constructor(apiClient: ApiClient): BrokersApi;
-    v10BrokersGet(): Promise<BrokersInfo>;
+    v10BrokersGet(): CancelablePromise<BrokersInfo>;
 }
 
 export declare class FileApi {
     constructor(apiClient: ApiClient): FileApi;
-    v10FileByIdGet(id: string): Promise<any>;
-    v10FileDocumentUploadPost(authorization: string, uploadedFile: File): Promise<UploadResult>;
+    v10FileByIdGet(id: string): CancelablePromise<any>;
+    v10FileDocumentUploadPost(authorization: string, uploadedFile: File): CancelablePromise<UploadResult>;
     v10FileUploadPost(uploadedFile: File, opts?: {
         authorization?: string;
-    }): Promise<UploadResult>;
+    }): CancelablePromise<UploadResult>;
 }
 
 export declare class FundsApi {
     constructor(apiClient: ApiClient): FundsApi;
-    v10FundsAssetsGet(): Promise<PlatformAssets>;
-    v10FundsByIdAssetsGet(id: string): Promise<FundAssetsListInfo>;
+    v10FundsAssetsGet(): CancelablePromise<PlatformAssets>;
+    v10FundsByIdAssetsGet(id: string): CancelablePromise<FundAssetsListInfo>;
     v10FundsByIdChartsBalanceGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-    }): Promise<FundBalanceChart>;
+    }): CancelablePromise<FundBalanceChart>;
     v10FundsByIdChartsProfitGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-    }): Promise<FundProfitChart>;
-    v10FundsByIdFavoriteAddPost(id: string, authorization: string): Promise<any>;
-    v10FundsByIdFavoriteRemovePost(id: string, authorization: string): Promise<any>;
+    }): CancelablePromise<FundProfitChart>;
+    v10FundsByIdFavoriteAddPost(id: string, authorization: string): CancelablePromise<any>;
+    v10FundsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
     v10FundsByIdGet(id: string, opts?: {
         authorization?: string;
         currencySecondary?: string;
-    }): Promise<FundDetailsFull>;
+    }): CancelablePromise<FundDetailsFull>;
     v10FundsGet(opts?: {
         authorization?: string;
         sorting?: string;
@@ -120,21 +124,21 @@ export declare class FundsApi {
         programManagerId?: string;
         skip?: number;
         take?: number;
-    }): Promise<FundsList>;
-    v10FundsSetsGet(authorization: string): Promise<FundSets>;
+    }): CancelablePromise<FundsList>;
+    v10FundsSetsGet(authorization: string): CancelablePromise<FundSets>;
 }
 
 export declare class InvestorApi {
     constructor(apiClient: ApiClient): InvestorApi;
     v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundInvestInfo>;
-    v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    }): CancelablePromise<any>;
+    v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<FundInvestInfo>;
+    v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundWithdrawInfo>;
+    }): CancelablePromise<any>;
+    v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<FundWithdrawInfo>;
     v10InvestorFundsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -143,7 +147,7 @@ export declare class InvestorApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<FundsList>;
+    }): CancelablePromise<FundsList>;
     v10InvestorGet(authorization: string, opts?: {
         chartCurrency?: string;
         from?: Date;
@@ -153,14 +157,14 @@ export declare class InvestorApi {
         eventsTake?: number;
         requestsSkip?: number;
         requestsTake?: number;
-    }): Promise<DashboardSummary>;
+    }): CancelablePromise<DashboardSummary>;
     v10InvestorPortfolioChartGet(authorization: string, opts?: {
         currency?: string;
         from?: Date;
         to?: Date;
         balancePoints?: number;
         programsPoints?: number;
-    }): Promise<DashboardChartValue>;
+    }): CancelablePromise<DashboardChartValue>;
     v10InvestorPortfolioEventsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -169,17 +173,17 @@ export declare class InvestorApi {
         assetType?: string;
         skip?: number;
         take?: number;
-    }): Promise<DashboardPortfolioEvents>;
+    }): CancelablePromise<DashboardPortfolioEvents>;
     v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramInvestInfo>;
-    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string): Promise<any>;
-    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string): Promise<any>;
-    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
-    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
-    v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramWithdrawInfo>;
-    v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    }): CancelablePromise<any>;
+    v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfo>;
+    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string): CancelablePromise<any>;
+    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string): CancelablePromise<any>;
+    v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
+    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
+    v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ProgramWithdrawInfo>;
+    v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
     v10InvestorProgramsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -188,9 +192,9 @@ export declare class InvestorApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<ProgramsList>;
-    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
-    v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    }): CancelablePromise<ProgramsList>;
+    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
+    v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10InvestorSignalsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -199,21 +203,21 @@ export declare class InvestorApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<SignalsList>;
+    }): CancelablePromise<SignalsList>;
 }
 
 export declare class KycApi {
     constructor(apiClient: ApiClient): KycApi;
     v10KycCallbackPost(opts?: {
         model?: KycCallback;
-    }): Promise<'String'>;
+    }): CancelablePromise<string>;
 }
 
 export declare class ManagerApi {
     constructor(apiClient: ApiClient): ManagerApi;
-    v10ManagerAssetsGet(authorization: string): Promise<ManagerAssets>;
-    v10ManagerByIdDetailsGet(id: string): Promise<ManagerProfileDetails>;
-    v10ManagerByIdGet(id: string): Promise<ManagerProfile>;
+    v10ManagerAssetsGet(authorization: string): CancelablePromise<ManagerAssets>;
+    v10ManagerByIdDetailsGet(id: string): CancelablePromise<ManagerProfileDetails>;
+    v10ManagerByIdGet(id: string): CancelablePromise<ManagerProfile>;
     v10ManagerEventsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -222,28 +226,28 @@ export declare class ManagerApi {
         assetType?: string;
         skip?: number;
         take?: number;
-    }): Promise<ManagerPortfolioEvents>;
+    }): CancelablePromise<ManagerPortfolioEvents>;
     v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, opts?: {
         assets?: FundAssetPart[];
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerFundsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<FundInvestInfo>;
-    v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    }): CancelablePromise<any>;
+    v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<FundInvestInfo>;
+    v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10ManagerFundsByIdUpdatePost(id: string, authorization: string, opts?: {
         model?: ProgramUpdate;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ManagerFundWithdrawInfo>;
+    }): CancelablePromise<any>;
+    v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ManagerFundWithdrawInfo>;
     v10ManagerFundsCreatePost(authorization: string, opts?: {
         request?: NewFundRequest;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerFundsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -252,9 +256,9 @@ export declare class ManagerApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<FundsList>;
-    v10ManagerFundsInvestmentAmountGet(authorization: string): Promise<'Number'>;
-    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
+    }): CancelablePromise<FundsList>;
+    v10ManagerFundsInvestmentAmountGet(authorization: string): CancelablePromise<number>;
+    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
     v10ManagerGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -263,28 +267,28 @@ export declare class ManagerApi {
         assetType?: string;
         skip?: number;
         take?: number;
-    }): Promise<ManagerDashboard>;
+    }): CancelablePromise<ManagerDashboard>;
     v10ManagerProgramsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
-    }): Promise<any>;
-    v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ProgramInvestInfo>;
+    }): CancelablePromise<any>;
+    v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfo>;
     v10ManagerProgramsByIdPasswordChangePost(id: string, authorization: string, opts?: {
         model?: ProgramPwdUpdate;
-    }): Promise<any>;
-    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string): Promise<any>;
-    v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    }): CancelablePromise<any>;
+    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string): CancelablePromise<any>;
+    v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, opts?: {
         model?: ProgramUpdate;
-    }): Promise<any>;
-    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
-    v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): Promise<ManagerProgramWithdrawInfo>;
-    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): Promise<any>;
+    }): CancelablePromise<any>;
+    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
+    v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ManagerProgramWithdrawInfo>;
+    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
     v10ManagerProgramsCreatePost(authorization: string, opts?: {
         request?: NewProgramRequest;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ManagerProgramsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -293,65 +297,65 @@ export declare class ManagerApi {
         currencySecondary?: string;
         skip?: number;
         take?: number;
-    }): Promise<ProgramsList>;
-    v10ManagerProgramsInvestmentAmountGet(authorization: string): Promise<ProgramMinimumDeposit>;
-    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): Promise<any>;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): Promise<ProgramRequests>;
+    }): CancelablePromise<ProgramsList>;
+    v10ManagerProgramsInvestmentAmountGet(authorization: string): CancelablePromise<ProgramMinimumDeposit>;
+    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, opts?: {
         programId?: string;
         subscriptionFee?: number;
         successFee?: number;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
 }
 
 export declare class NotificationsApi {
     constructor(apiClient: ApiClient): NotificationsApi;
-    v10NotificationsByIdReadPost(id: string, authorization: string): Promise<any>;
+    v10NotificationsByIdReadPost(id: string, authorization: string): CancelablePromise<any>;
     v10NotificationsGet(authorization: string, opts?: {
         skip?: number;
         take?: number;
-    }): Promise<NotificationList>;
-    v10NotificationsNewGet(authorization: string): Promise<'Number'>;
+    }): CancelablePromise<NotificationList>;
+    v10NotificationsNewGet(authorization: string): CancelablePromise<number>;
     v10NotificationsSettingsAddPost(authorization: string, opts?: {
         assetId?: string;
         managerId?: string;
         type?: string;
         conditionType?: string;
         conditionAmount?: number;
-    }): Promise<'String'>;
-    v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string): Promise<'String'>;
-    v10NotificationsSettingsFundsByIdGet(id: string, authorization: string): Promise<FundNotificationSettingList>;
-    v10NotificationsSettingsGet(authorization: string): Promise<NotificationSettingList>;
-    v10NotificationsSettingsManagersByIdGet(id: string, authorization: string): Promise<ManagerNotificationSettingList>;
-    v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string): Promise<ProgramNotificationSettingList>;
-    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string): Promise<any>;
+    }): CancelablePromise<string>;
+    v10NotificationsSettingsByIdByEnablePost(id: string, enable: boolean, authorization: string): CancelablePromise<string>;
+    v10NotificationsSettingsFundsByIdGet(id: string, authorization: string): CancelablePromise<FundNotificationSettingList>;
+    v10NotificationsSettingsGet(authorization: string): CancelablePromise<NotificationSettingList>;
+    v10NotificationsSettingsManagersByIdGet(id: string, authorization: string): CancelablePromise<ManagerNotificationSettingList>;
+    v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string): CancelablePromise<ProgramNotificationSettingList>;
+    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string): CancelablePromise<any>;
 }
 
 export declare class PlatformApi {
     constructor(apiClient: ApiClient): PlatformApi;
-    v10PlatformInfoGet(): Promise<PlatformInfo>;
+    v10PlatformInfoGet(): CancelablePromise<PlatformInfo>;
     v10PlatformLevelsGet(opts?: {
         currency?: string;
-    }): Promise<ProgramsLevelsInfo>;
-    v10PlatformStatisticGet(): Promise<PlatformStatistic>;
+    }): CancelablePromise<ProgramsLevelsInfo>;
+    v10PlatformStatisticGet(): CancelablePromise<PlatformStatistic>;
 }
 
 export declare class ProfileApi {
     constructor(apiClient: ApiClient): ProfileApi;
-    v10ProfileAvatarRemovePost(authorization: string): Promise<any>;
-    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string): Promise<any>;
-    v10ProfileGet(authorization: string): Promise<ProfileFullViewModel>;
-    v10ProfileHeaderGet(authorization: string): Promise<ProfileHeaderViewModel>;
+    v10ProfileAvatarRemovePost(authorization: string): CancelablePromise<any>;
+    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string): CancelablePromise<any>;
+    v10ProfileGet(authorization: string): CancelablePromise<ProfileFullViewModel>;
+    v10ProfileHeaderGet(authorization: string): CancelablePromise<ProfileHeaderViewModel>;
     v10ProfilePersonalUpdatePost(authorization: string, opts?: {
         model?: UpdatePersonalDetailViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ProfilePushTokenPost(authorization: string, opts?: {
         token?: FcmTokenViewModel;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10ProfileUpdatePost(authorization: string, opts?: {
         model?: UpdateProfileViewModel;
-    }): Promise<any>;
-    v10ProfileVerificationTokenPost(authorization: string): Promise<'String'>;
+    }): CancelablePromise<any>;
+    v10ProfileVerificationTokenPost(authorization: string): CancelablePromise<string>;
 }
 
 export declare class ProgramsApi {
@@ -360,18 +364,18 @@ export declare class ProgramsApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-    }): Promise<ProgramBalanceChart>;
+    }): CancelablePromise<ProgramBalanceChart>;
     v10ProgramsByIdChartsProfitGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-    }): Promise<ProgramProfitChart>;
-    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string): Promise<any>;
-    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string): Promise<any>;
+    }): CancelablePromise<ProgramProfitChart>;
+    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string): CancelablePromise<any>;
+    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
     v10ProgramsByIdGet(id: string, opts?: {
         authorization?: string;
         currencySecondary?: string;
-    }): Promise<ProgramDetailsFull>;
+    }): CancelablePromise<ProgramDetailsFull>;
     v10ProgramsByIdTradesGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -379,13 +383,13 @@ export declare class ProgramsApi {
         sorting?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesViewModel>;
+    }): CancelablePromise<TradesViewModel>;
     v10ProgramsByIdTradesOpenGet(id: string, opts?: {
         sorting?: string;
         symbol?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesViewModel>;
+    }): CancelablePromise<TradesViewModel>;
     v10ProgramsGet(opts?: {
         authorization?: string;
         levelMin?: number;
@@ -412,21 +416,21 @@ export declare class ProgramsApi {
         programManagerId?: string;
         skip?: number;
         take?: number;
-    }): Promise<ProgramsList>;
+    }): CancelablePromise<ProgramsList>;
     v10ProgramsLevelupSummaryGet(opts?: {
         authorization?: string;
-    }): Promise<LevelUpSummary>;
-    v10ProgramsSetsGet(authorization: string): Promise<ProgramSets>;
+    }): CancelablePromise<LevelUpSummary>;
+    v10ProgramsSetsGet(authorization: string): CancelablePromise<ProgramSets>;
 }
 
 export declare class RateApi {
     constructor(apiClient: ApiClient): RateApi;
-    v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string): Promise<'Number'>;
-    v10RateByFromByToGet(from: string, to: string): Promise<'Number'>;
+    v10RateByExchangeByFromByToGet(exchange: string, from: string, to: string): CancelablePromise<number>;
+    v10RateByFromByToGet(from: string, to: string): CancelablePromise<number>;
     v10RateGet(opts?: {
         from?: string[];
         to?: string[];
-    }): Promise<RatesModel>;
+    }): CancelablePromise<RatesModel>;
 }
 
 export declare class SearchApi {
@@ -434,12 +438,12 @@ export declare class SearchApi {
     v10SearchGet(opts?: {
         mask?: string;
         take?: number;
-    }): Promise<SearchViewModel>;
+    }): CancelablePromise<SearchViewModel>;
 }
 
 export declare class SignalApi {
     constructor(apiClient: ApiClient): SignalApi;
-    v10SignalAccountsGet(authorization: string): Promise<CopyTradingAccountsList>;
+    v10SignalAccountsGet(authorization: string): CancelablePromise<CopyTradingAccountsList>;
     v10SignalAttachByIdPost(id: string, authorization: string, opts?: {
         mode?: string;
         percent?: number;
@@ -448,9 +452,9 @@ export declare class SignalApi {
         fixedCurrency?: string;
         initialDepositCurrency?: string;
         initialDepositAmount?: number;
-    }): Promise<any>;
-    v10SignalDetachByIdPost(id: string, authorization: string): Promise<any>;
-    v10SignalTradesByIdClosePost(id: string, authorization: string): Promise<any>;
+    }): CancelablePromise<any>;
+    v10SignalDetachByIdPost(id: string, authorization: string): CancelablePromise<any>;
+    v10SignalTradesByIdClosePost(id: string, authorization: string): CancelablePromise<any>;
     v10SignalTradesGet(authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -458,13 +462,13 @@ export declare class SignalApi {
         sorting?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesHistorySignalSlaveViewModel>;
+    }): CancelablePromise<TradesHistorySignalSlaveViewModel>;
     v10SignalTradesOpenGet(authorization: string, opts?: {
         sorting?: string;
         symbol?: string;
         skip?: number;
         take?: number;
-    }): Promise<TradesOpenSignalSlaveViewModel>;
+    }): CancelablePromise<TradesOpenSignalSlaveViewModel>;
     v10SignalUpdatePost(authorization: string, opts?: {
         id?: string;
         mode?: string;
@@ -474,17 +478,17 @@ export declare class SignalApi {
         fixedCurrency?: string;
         initialDepositCurrency?: string;
         initialDepositAmount?: number;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
 }
 
 export declare class WalletApi {
     constructor(apiClient: ApiClient): WalletApi;
-    v10WalletAddressesByCurrencyGet(currency: string, authorization: string): Promise<WalletInfo>;
-    v10WalletAddressesGet(authorization: string): Promise<WalletsInfo>;
-    v10WalletByCurrencyGet(currency: string, authorization: string): Promise<WalletSummary>;
-    v10WalletFeeGvtholdingGet(authorization: string): Promise<UserCommissionData>;
-    v10WalletMultiByCurrencyAvailableGet(currency: string, authorization: string): Promise<WalletMultiAvailable>;
-    v10WalletMultiByCurrencyGet(currency: string, authorization: string): Promise<WalletMultiSummary>;
+    v10WalletAddressesByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletInfo>;
+    v10WalletAddressesGet(authorization: string): CancelablePromise<WalletsInfo>;
+    v10WalletByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletSummary>;
+    v10WalletFeeGvtholdingGet(authorization: string): CancelablePromise<UserCommissionData>;
+    v10WalletMultiByCurrencyAvailableGet(currency: string, authorization: string): CancelablePromise<WalletMultiAvailable>;
+    v10WalletMultiByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletMultiSummary>;
     v10WalletMultiTransactionsExternalGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
@@ -492,7 +496,7 @@ export declare class WalletApi {
         currency?: string;
         skip?: number;
         take?: number;
-    }): Promise<MultiWalletExternalTransactionsViewModel>;
+    }): CancelablePromise<MultiWalletExternalTransactionsViewModel>;
     v10WalletMultiTransactionsGet(authorization: string, opts?: {
         from?: Date;
         to?: Date;
@@ -500,10 +504,10 @@ export declare class WalletApi {
         currency?: string;
         skip?: number;
         take?: number;
-    }): Promise<MultiWalletTransactionsViewModel>;
-    v10WalletPaygvtfeeOffPost(authorization: string): Promise<any>;
-    v10WalletPaygvtfeeOnPost(authorization: string): Promise<any>;
-    v10WalletTransactionByIdGet(id: string, authorization: string): Promise<TransactionDetails>;
+    }): CancelablePromise<MultiWalletTransactionsViewModel>;
+    v10WalletPaygvtfeeOffPost(authorization: string): CancelablePromise<any>;
+    v10WalletPaygvtfeeOnPost(authorization: string): CancelablePromise<any>;
+    v10WalletTransactionByIdGet(id: string, authorization: string): CancelablePromise<TransactionDetails>;
     v10WalletTransactionsGet(authorization: string, opts?: {
         assetId?: string;
         from?: Date;
@@ -513,20 +517,20 @@ export declare class WalletApi {
         wallet?: string;
         skip?: number;
         take?: number;
-    }): Promise<WalletTransactionsViewModel>;
+    }): CancelablePromise<WalletTransactionsViewModel>;
     v10WalletTransferPost(authorization: string, opts?: {
         request?: InternalTransferRequest;
-    }): Promise<any>;
-    v10WalletWithdrawInfoGet(authorization: string): Promise<WithdrawalSummary>;
-    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string): Promise<any>;
+    }): CancelablePromise<any>;
+    v10WalletWithdrawInfoGet(authorization: string): CancelablePromise<WithdrawalSummary>;
+    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string): CancelablePromise<any>;
     v10WalletWithdrawRequestConfirmPost(opts?: {
         requestId?: string;
         code?: string;
-    }): Promise<any>;
+    }): CancelablePromise<any>;
     v10WalletWithdrawRequestNewPost(authorization: string, opts?: {
         model?: CreateWithdrawalRequestModel;
-    }): Promise<any>;
-    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string): Promise<any>;
+    }): CancelablePromise<any>;
+    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string): CancelablePromise<any>;
 }
 
 export declare interface index {

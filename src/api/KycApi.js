@@ -64,7 +64,7 @@ export default class KycApi {
      * @function KycApi#v10KycCallbackPost
      * @param {Object} [opts] Optional parameters
      * @param {KycCallback} [opts.model] 
-     * @return {Promise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
       v10KycCallbackPost(opts) {
       return this.v10KycCallbackPostWithHttpInfo(opts)
