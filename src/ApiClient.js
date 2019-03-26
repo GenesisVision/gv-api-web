@@ -27,6 +27,14 @@ import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
  */
 
 /**
+ * @name CancelablePromise#changethen
+ */
+
+/**
+ * @name CancelablePromise#changecatch
+ */
+
+/**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
 * application to use this class directly - the *Api and model classes provide the public API for the service. The
 * contents of this file should be regarded as internal but are documented for completeness.
