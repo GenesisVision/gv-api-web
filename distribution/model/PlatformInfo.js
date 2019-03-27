@@ -71,12 +71,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name PlatformInfo#programsFacets
- * @type {[ProgramFacet]}
+ * @type {Array<ProgramFacet>}
  */
 /**
  *
  * @name PlatformInfo#fundsFacets
- * @type {[FundFacet]}
+ * @type {Array<FundFacet>}
  */
 /**
  *
@@ -86,12 +86,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name PlatformInfo#currencies
- * @type {[String]}
+ * @type {Array<String>}
  */
 /**
  *
  * @name PlatformInfo#platformCurrencies
- * @type {[PlatformCurrency]}
+ * @type {Array<PlatformCurrency>}
  */
 /**
  *

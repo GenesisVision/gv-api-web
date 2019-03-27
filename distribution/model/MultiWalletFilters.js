@@ -33,12 +33,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletFilters#transactionType
- * @type {[String]}
+ * @type {Array<String>}
  */
 /**
  *
  * @name MultiWalletFilters#externalTransactionType
- * @type {[String]}
+ * @type {Array<String>}
  */
 
 var MultiWalletFilters = function () {

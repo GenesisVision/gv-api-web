@@ -41,12 +41,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerAssets#programs
- * @type {[ManagerSimpleProgram]}
+ * @type {Array<ManagerSimpleProgram>}
  */
 /**
  *
  * @name ManagerAssets#funds
- * @type {[ManagerSimpleFund]}
+ * @type {Array<ManagerSimpleFund>}
  */
 
 var ManagerAssets = function () {

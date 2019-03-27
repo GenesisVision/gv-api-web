@@ -332,7 +332,7 @@ var ManagerApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {[FundAssetPart]} [opts.assets] 
+     * @param {Array<FundAssetPart>} [opts.assets] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
