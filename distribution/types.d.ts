@@ -1971,6 +1971,7 @@ export declare interface TradesSignalSlaveViewModel {
 }
 
 export declare interface TradesViewModel {
+    tradesType: "Positions" | "Orders";
     trades: OrderModel[];
     total: number;
 }

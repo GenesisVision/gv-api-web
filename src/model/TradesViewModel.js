@@ -26,6 +26,11 @@ import OrderModel from './OrderModel';
     
     /**
      *
+     * @name TradesViewModel#tradesType
+     * @type {("Positions"|"Orders")}
+     */
+    /**
+     *
      * @name TradesViewModel#trades
      * @type {Array<OrderModel>}
      */
@@ -60,6 +65,9 @@ export default class TradesViewModel {
             
             
 
+            if (data.hasOwnProperty('tradesType')) {
+                obj['tradesType'] = ApiClient.convertToType(data['tradesType'], 'String');
+            }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderModel]);
             }
@@ -70,6 +78,7 @@ export default class TradesViewModel {
         return obj;
     }
 
+    tradesType = undefined;
     trades = undefined;
     total = undefined;
 
@@ -77,6 +86,13 @@ export default class TradesViewModel {
 
 
 
+
+    static TradesTypeEnum = {
+    
+        "Positions": "Positions",
+    
+        "Orders": "Orders"    
+    };
 
 
 
