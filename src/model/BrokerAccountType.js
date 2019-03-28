@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name BrokerAccountType#type
-     * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX")}
+     * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi")}
      */
     /**
      *
@@ -147,7 +147,9 @@ export default class BrokerAccountType {
     
         "Metastock": "Metastock",
     
-        "IDEX": "IDEX"    
+        "IDEX": "IDEX",
+    
+        "Huobi": "Huobi"    
     };
 
 

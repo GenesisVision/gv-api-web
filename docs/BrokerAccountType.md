@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 
 * `IDEX` (value: `"IDEX"`)
 
+* `Huobi` (value: `"Huobi"`)
+
 
 
 
