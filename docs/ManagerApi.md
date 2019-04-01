@@ -31,6 +31,7 @@ Method | HTTP request | Description
 [**v10ManagerProgramsByIdWithdrawByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from investment program in GVT
 [**v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**v10ManagerProgramsByIdWithdrawMultiByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
+[**v10ManagerProgramsCreateConfirmPost**](ManagerApi.md#v10ManagerProgramsCreateConfirmPost) | **POST** /v1.0/manager/programs/create/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 [**v10ManagerProgramsCreatePost**](ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 [**v10ManagerProgramsGet**](ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
 [**v10ManagerProgramsInvestmentAmountGet**](ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
@@ -1330,9 +1331,56 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
+<a name="v10ManagerProgramsCreateConfirmPost"></a>
+# **v10ManagerProgramsCreateConfirmPost**
+> v10ManagerProgramsCreateConfirmPost(authorization, opts)
+
+Confirm 2FA for program if required (for brokers like Huobi)
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'programId': "programId_example", // String | 
+  'twoFactorCode': "twoFactorCode_example" // String | 
+};
+apiInstance.v10ManagerProgramsCreateConfirmPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **programId** | [**String**](.md)|  | [optional] 
+ **twoFactorCode** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
 <a name="v10ManagerProgramsCreatePost"></a>
 # **v10ManagerProgramsCreatePost**
-> v10ManagerProgramsCreatePost(authorization, opts)
+> ManagerProgramCreateResult v10ManagerProgramsCreatePost(authorization, opts)
 
 Create an investment program
 
@@ -1347,8 +1395,8 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'request': new CoreApiV10.NewProgramRequest() // NewProgramRequest | 
 };
-apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10ManagerProgramsCreatePost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1364,7 +1412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ManagerProgramCreateResult**](ManagerProgramCreateResult.md)
 
 ### Authorization
 

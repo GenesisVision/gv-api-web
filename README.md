@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from investment program in GVT
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawMultiByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreateConfirmPost**](docs/ManagerApi.md#v10ManagerProgramsCreateConfirmPost) | **POST** /v1.0/manager/programs/create/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreatePost**](docs/ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsGet**](docs/ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
@@ -313,6 +314,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagerPortfolioEvents](docs/ManagerPortfolioEvents.md)
  - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.ManagerProfileDetails](docs/ManagerProfileDetails.md)
+ - [CoreApiV10.ManagerProgramCreateResult](docs/ManagerProgramCreateResult.md)
  - [CoreApiV10.ManagerProgramWithdrawInfo](docs/ManagerProgramWithdrawInfo.md)
  - [CoreApiV10.ManagerSimpleFund](docs/ManagerSimpleFund.md)
  - [CoreApiV10.ManagerSimpleProgram](docs/ManagerSimpleProgram.md)

@@ -61,6 +61,10 @@ var _ManagerProfileDetails = require('../model/ManagerProfileDetails');
 
 var _ManagerProfileDetails2 = _interopRequireDefault(_ManagerProfileDetails);
 
+var _ManagerProgramCreateResult = require('../model/ManagerProgramCreateResult');
+
+var _ManagerProgramCreateResult2 = _interopRequireDefault(_ManagerProgramCreateResult);
+
 var _ManagerProgramWithdrawInfo = require('../model/ManagerProgramWithdrawInfo');
 
 var _ManagerProgramWithdrawInfo2 = _interopRequireDefault(_ManagerProgramWithdrawInfo);
@@ -1508,6 +1512,52 @@ var ManagerApi = function () {
       });
     }
   }, {
+    key: 'v10ManagerProgramsCreateConfirmPostWithHttpInfo',
+    value: function v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsCreateConfirmPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'programId': opts['programId'],
+        'twoFactorCode': opts['twoFactorCode']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/create/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Confirm 2FA for program if required (for brokers like Huobi)
+     * @function ManagerApi#v10ManagerProgramsCreateConfirmPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @param {String} [opts.twoFactorCode] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerProgramsCreateConfirmPost',
+    value: function v10ManagerProgramsCreateConfirmPost(authorization, opts) {
+      return this.v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10ManagerProgramsCreatePostWithHttpInfo',
     value: function v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -1528,7 +1578,7 @@ var ManagerApi = function () {
       var authNames = [];
       var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
+      var returnType = _ManagerProgramCreateResult2.default;
 
       return this.apiClient.callApi('/v1.0/manager/programs/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -1539,7 +1589,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewProgramRequest} [opts.request] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<ManagerProgramCreateResult>} a Promise, with an object containing data of type ManagerProgramCreateResult and HTTP response
      */
 
   }, {

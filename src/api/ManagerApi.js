@@ -23,6 +23,7 @@ import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
 import ManagerPortfolioEvents from '../model/ManagerPortfolioEvents';
 import ManagerProfile from '../model/ManagerProfile';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
+import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
@@ -1546,6 +1547,56 @@ export default class ManagerApi {
         });
     }
 
+      v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsCreateConfirmPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'programId': opts['programId'],
+        'twoFactorCode': opts['twoFactorCode']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/create/confirm', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Confirm 2FA for program if required (for brokers like Huobi)
+     * @function ManagerApi#v10ManagerProgramsCreateConfirmPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @param {String} [opts.twoFactorCode] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ManagerProgramsCreateConfirmPost(authorization, opts) {
+      return this.v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['request'];
@@ -1569,7 +1620,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = ManagerProgramCreateResult;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs/create', 'POST',
@@ -1584,7 +1635,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewProgramRequest} [opts.request] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<ManagerProgramCreateResult>} a Promise, with an object containing data of type ManagerProgramCreateResult and HTTP response
      */
       v10ManagerProgramsCreatePost(authorization, opts) {
       return this.v10ManagerProgramsCreatePostWithHttpInfo(authorization, opts)

@@ -76,6 +76,7 @@ import ManagerPortfolioEvent from './model/ManagerPortfolioEvent';
 import ManagerPortfolioEvents from './model/ManagerPortfolioEvents';
 import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
+import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
@@ -580,6 +581,12 @@ export {
      * @type {ManagerProfileDetails}
      */
     ManagerProfileDetails,
+
+    /**
+     * @name index#ManagerProgramCreateResult
+     * @type {ManagerProgramCreateResult}
+     */
+    ManagerProgramCreateResult,
 
     /**
      * @name index#ManagerProgramWithdrawInfo

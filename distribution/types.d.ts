@@ -288,9 +288,13 @@ export declare class ManagerApi {
     v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
     v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ManagerProgramWithdrawInfo>;
     v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
+    v10ManagerProgramsCreateConfirmPost(authorization: string, opts?: {
+        programId?: string;
+        twoFactorCode?: string;
+    }): CancelablePromise<any>;
     v10ManagerProgramsCreatePost(authorization: string, opts?: {
         request?: NewProgramRequest;
-    }): CancelablePromise<any>;
+    }): CancelablePromise<ManagerProgramCreateResult>;
     v10ManagerProgramsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
@@ -604,6 +608,7 @@ export declare interface index {
     ManagerPortfolioEvents: ManagerPortfolioEvents;
     ManagerProfile: ManagerProfile;
     ManagerProfileDetails: ManagerProfileDetails;
+    ManagerProgramCreateResult: ManagerProgramCreateResult;
     ManagerProgramWithdrawInfo: ManagerProgramWithdrawInfo;
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
@@ -1218,6 +1223,12 @@ export declare interface ManagerProfileDetails {
     overview: ManagerOverview;
     programsCount: number;
     fundsCount: number;
+}
+
+export declare interface ManagerProgramCreateResult {
+    programId: string;
+    twoFactorRequired: boolean;
+    twoFactorToken: string;
 }
 
 export declare interface ManagerProgramWithdrawInfo {
