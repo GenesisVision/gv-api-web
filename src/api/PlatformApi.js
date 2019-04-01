@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CaptchaModel from '../model/CaptchaModel';
 import ErrorViewModel from '../model/ErrorViewModel';
 import PlatformInfo from '../model/PlatformInfo';
 import PlatformStatistic from '../model/PlatformStatistic';
@@ -109,6 +110,56 @@ export default class PlatformApi {
      */
       v10PlatformLevelsGet(opts) {
       return this.v10PlatformLevelsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10PlatformRiskcontrolGetWithHttpInfo(route, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'route' is set
+      if (route === undefined || route === null) {
+        throw new Error("Missing the required parameter 'route' when calling v10PlatformRiskcontrolGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Route': route,
+        'Device': opts['device'],
+        'Version': opts['version']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = CaptchaModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/riskcontrol', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Platform captcha details.
+     * @function PlatformApi#v10PlatformRiskcontrolGet
+     * @param {String} route 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.device] 
+     * @param {String} [opts.version] 
+     * @return {CancelablePromise<CaptchaModel>} a Promise, with an object containing data of type CaptchaModel and HTTP response
+     */
+      v10PlatformRiskcontrolGet(route, opts) {
+      return this.v10PlatformRiskcontrolGetWithHttpInfo(route, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

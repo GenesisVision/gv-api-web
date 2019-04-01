@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.PlatformApi* | [**v10PlatformLevelsGet**](docs/PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
+*CoreApiV10.PlatformApi* | [**v10PlatformRiskcontrolGet**](docs/PlatformApi.md#v10PlatformRiskcontrolGet) | **GET** /v1.0/platform/riskcontrol | Platform captcha details.
 *CoreApiV10.PlatformApi* | [**v10PlatformStatisticGet**](docs/PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
@@ -259,6 +260,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.Broker](docs/Broker.md)
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
+ - [CoreApiV10.CaptchaDetails](docs/CaptchaDetails.md)
+ - [CoreApiV10.CaptchaModel](docs/CaptchaModel.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.ConvertingDetails](docs/ConvertingDetails.md)
@@ -299,6 +302,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
+ - [CoreApiV10.LoginCheckDetails](docs/LoginCheckDetails.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)

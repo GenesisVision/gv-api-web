@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10PlatformInfoGet**](PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 [**v10PlatformLevelsGet**](PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
+[**v10PlatformRiskcontrolGet**](PlatformApi.md#v10PlatformRiskcontrolGet) | **GET** /v1.0/platform/riskcontrol | Platform captcha details.
 [**v10PlatformStatisticGet**](PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
 
 
@@ -76,6 +77,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramsLevelsInfo**](ProgramsLevelsInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10PlatformRiskcontrolGet"></a>
+# **v10PlatformRiskcontrolGet**
+> CaptchaModel v10PlatformRiskcontrolGet(route, opts)
+
+Platform captcha details.
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.PlatformApi();
+
+let route = "route_example"; // String | 
+
+let opts = { 
+  'device': "device_example", // String | 
+  'version': "version_example" // String | 
+};
+apiInstance.v10PlatformRiskcontrolGet(route, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **route** | **String**|  | 
+ **device** | **String**|  | [optional] 
+ **version** | **String**|  | [optional] 
+
+### Return type
+
+[**CaptchaModel**](CaptchaModel.md)
 
 ### Authorization
 

@@ -60,6 +60,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name LoginViewModel#client
  * @type {String}
  */
+/**
+ *
+ * @name LoginViewModel#captchaId
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#prefix
+ * @type {String}
+ */
 
 var LoginViewModel = function () {
     function LoginViewModel(email, password) {
@@ -71,6 +81,8 @@ var LoginViewModel = function () {
         this.twoFactorCode = undefined;
         this.recoveryCode = undefined;
         this.client = undefined;
+        this.captchaId = undefined;
+        this.prefix = undefined;
 
 
         this['email'] = email;this['password'] = password;
@@ -99,6 +111,12 @@ var LoginViewModel = function () {
                 }
                 if (data.hasOwnProperty('client')) {
                     obj['client'] = _ApiClient2.default.convertToType(data['client'], 'String');
+                }
+                if (data.hasOwnProperty('captchaId')) {
+                    obj['captchaId'] = _ApiClient2.default.convertToType(data['captchaId'], 'String');
+                }
+                if (data.hasOwnProperty('prefix')) {
+                    obj['prefix'] = _ApiClient2.default.convertToType(data['prefix'], 'String');
                 }
             }
             return obj;

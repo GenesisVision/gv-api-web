@@ -339,6 +339,10 @@ export declare class PlatformApi {
     v10PlatformLevelsGet(opts?: {
         currency?: string;
     }): CancelablePromise<ProgramsLevelsInfo>;
+    v10PlatformRiskcontrolGet(route: string, opts?: {
+        device?: string;
+        version?: string;
+    }): CancelablePromise<CaptchaModel>;
     v10PlatformStatisticGet(): CancelablePromise<PlatformStatistic>;
 }
 
@@ -547,6 +551,8 @@ export declare interface index {
     Broker: Broker;
     BrokerAccountType: BrokerAccountType;
     BrokersInfo: BrokersInfo;
+    CaptchaDetails: CaptchaDetails;
+    CaptchaModel: CaptchaModel;
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
@@ -587,6 +593,7 @@ export declare interface index {
     LevelInfo: LevelInfo;
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
+    LoginCheckDetails: LoginCheckDetails;
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
@@ -782,6 +789,18 @@ export declare interface BrokerAccountType {
 
 export declare interface BrokersInfo {
     brokers: Broker[];
+}
+
+export declare interface CaptchaDetails {
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+}
+
+export declare interface CaptchaModel {
+    id: string;
+    route: string;
+    loginCheckDetails: LoginCheckDetails;
 }
 
 export declare interface ChangePasswordViewModel {
@@ -1112,6 +1131,11 @@ export declare interface LevelUpSummary {
     levelData: LevelUpData[];
 }
 
+export declare interface LoginCheckDetails {
+    type: "None" | "PoW" | "CaptchaGeeTest";
+    details: CaptchaDetails;
+}
+
 export declare interface LoginViewModel {
     email: string;
     password: string;
@@ -1119,6 +1143,8 @@ export declare interface LoginViewModel {
     twoFactorCode: string;
     recoveryCode: string;
     client: string;
+    captchaId: string;
+    prefix: string;
 }
 
 export declare interface ManagerAssets {
