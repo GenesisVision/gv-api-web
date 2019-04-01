@@ -35,6 +35,11 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
+     * @name PersonalProgramDetailsFull#showTwoFactorButton
+     * @type {Boolean}
+     */
+    /**
+     *
      * @name PersonalProgramDetailsFull#isFavorite
      * @type {Boolean}
      */
@@ -150,6 +155,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('gvtValue')) {
                 obj['gvtValue'] = ApiClient.convertToType(data['gvtValue'], 'Number');
             }
+            if (data.hasOwnProperty('showTwoFactorButton')) {
+                obj['showTwoFactorButton'] = ApiClient.convertToType(data['showTwoFactorButton'], 'Boolean');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -207,6 +215,7 @@ export default class PersonalProgramDetailsFull {
 
     isReinvest = undefined;
     gvtValue = undefined;
+    showTwoFactorButton = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;

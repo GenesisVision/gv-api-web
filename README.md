@@ -169,6 +169,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerFundsInvestmentAmountGet) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerFundsRequestsByIdCancelPost) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**v10ManagerGet**](docs/ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
+*CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faConfirmPost**](docs/ManagerApi.md#v10ManagerPrograms2faConfirmPost) | **POST** /v1.0/manager/programs/2fa/confirm | Confirm 2FA for program if required (for brokers like Huobi)
+*CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faGetGet**](docs/ManagerApi.md#v10ManagerPrograms2faGetGet) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
@@ -179,7 +181,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/{amount} | Withdraw from investment program in GVT
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdWithdrawMultiByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/manager/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
-*CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreateConfirmPost**](docs/ManagerApi.md#v10ManagerProgramsCreateConfirmPost) | **POST** /v1.0/manager/programs/create/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsCreatePost**](docs/ManagerApi.md#v10ManagerProgramsCreatePost) | **POST** /v1.0/manager/programs/create | Create an investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsGet**](docs/ManagerApi.md#v10ManagerProgramsGet) | **GET** /v1.0/manager/programs | Manager programs
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerProgramsInvestmentAmountGet) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program

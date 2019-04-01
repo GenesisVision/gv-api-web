@@ -42,6 +42,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#showTwoFactorButton
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -132,6 +137,7 @@ var PersonalProgramDetailsFull = function () {
 
         this.isReinvest = undefined;
         this.gvtValue = undefined;
+        this.showTwoFactorButton = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -162,6 +168,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('gvtValue')) {
                     obj['gvtValue'] = _ApiClient2.default.convertToType(data['gvtValue'], 'Number');
+                }
+                if (data.hasOwnProperty('showTwoFactorButton')) {
+                    obj['showTwoFactorButton'] = _ApiClient2.default.convertToType(data['showTwoFactorButton'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');

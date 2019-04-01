@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **isReinvest** | **Boolean** |  | [optional] 
 **gvtValue** | **Number** |  | [optional] 
+**showTwoFactorButton** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 

@@ -101,6 +101,10 @@ var _ProgramsList = require('../model/ProgramsList');
 
 var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
+var _TwoFactorAuthenticator = require('../model/TwoFactorAuthenticator');
+
+var _TwoFactorAuthenticator2 = _interopRequireDefault(_TwoFactorAuthenticator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -977,6 +981,96 @@ var ManagerApi = function () {
       });
     }
   }, {
+    key: 'v10ManagerPrograms2faConfirmPostWithHttpInfo',
+    value: function v10ManagerPrograms2faConfirmPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerPrograms2faConfirmPost");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'programId': opts['programId'],
+        'twoFactorCode': opts['twoFactorCode']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Confirm 2FA for program if required (for brokers like Huobi)
+     * @function ManagerApi#v10ManagerPrograms2faConfirmPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @param {String} [opts.twoFactorCode] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerPrograms2faConfirmPost',
+    value: function v10ManagerPrograms2faConfirmPost(authorization, opts) {
+      return this.v10ManagerPrograms2faConfirmPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ManagerPrograms2faGetGetWithHttpInfo',
+    value: function v10ManagerPrograms2faGetGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerPrograms2faGetGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {
+        'programId': opts['programId']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _TwoFactorAuthenticator2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/2fa/get', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get 2FA for program if needed
+     * @function ManagerApi#v10ManagerPrograms2faGetGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerPrograms2faGetGet',
+    value: function v10ManagerPrograms2faGetGet(authorization, opts) {
+      return this.v10ManagerPrograms2faGetGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10ManagerProgramsByIdClosePostWithHttpInfo',
     value: function v10ManagerProgramsByIdClosePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
@@ -1508,52 +1602,6 @@ var ManagerApi = function () {
     key: 'v10ManagerProgramsByIdWithdrawMultiByAmountPost',
     value: function v10ManagerProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
       return this.v10ManagerProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }, {
-    key: 'v10ManagerProgramsCreateConfirmPostWithHttpInfo',
-    value: function v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsCreateConfirmPost");
-      }
-
-      var pathParams = {};
-      var queryParams = {
-        'programId': opts['programId'],
-        'twoFactorCode': opts['twoFactorCode']
-      };
-      var headerParams = {
-        'Authorization': authorization
-      };
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi('/v1.0/manager/programs/create/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Confirm 2FA for program if required (for brokers like Huobi)
-     * @function ManagerApi#v10ManagerProgramsCreateConfirmPost
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.programId] 
-     * @param {String} [opts.twoFactorCode] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-
-  }, {
-    key: 'v10ManagerProgramsCreateConfirmPost',
-    value: function v10ManagerProgramsCreateConfirmPost(authorization, opts) {
-      return this.v10ManagerProgramsCreateConfirmPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _TwoFactorAuthenticator = require('./TwoFactorAuthenticator');
+
+var _TwoFactorAuthenticator2 = _interopRequireDefault(_TwoFactorAuthenticator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42,8 +46,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name ManagerProgramCreateResult#twoFactorToken
- * @type {String}
+ * @name ManagerProgramCreateResult#twoFactor
+ * @type {TwoFactorAuthenticator}
  */
 
 var ManagerProgramCreateResult = function () {
@@ -52,7 +56,7 @@ var ManagerProgramCreateResult = function () {
 
         this.programId = undefined;
         this.twoFactorRequired = undefined;
-        this.twoFactorToken = undefined;
+        this.twoFactor = undefined;
     }
 
     _createClass(ManagerProgramCreateResult, null, [{
@@ -67,8 +71,8 @@ var ManagerProgramCreateResult = function () {
                 if (data.hasOwnProperty('twoFactorRequired')) {
                     obj['twoFactorRequired'] = _ApiClient2.default.convertToType(data['twoFactorRequired'], 'Boolean');
                 }
-                if (data.hasOwnProperty('twoFactorToken')) {
-                    obj['twoFactorToken'] = _ApiClient2.default.convertToType(data['twoFactorToken'], 'String');
+                if (data.hasOwnProperty('twoFactor')) {
+                    obj['twoFactor'] = _TwoFactorAuthenticator2.default.constructFromObject(data['twoFactor']);
                 }
             }
             return obj;

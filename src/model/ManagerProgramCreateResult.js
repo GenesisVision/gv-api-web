@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import TwoFactorAuthenticator from './TwoFactorAuthenticator';
 
 
 
@@ -35,8 +36,8 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name ManagerProgramCreateResult#twoFactorToken
-     * @type {String}
+     * @name ManagerProgramCreateResult#twoFactor
+     * @type {TwoFactorAuthenticator}
      */
 
 
@@ -70,8 +71,8 @@ export default class ManagerProgramCreateResult {
             if (data.hasOwnProperty('twoFactorRequired')) {
                 obj['twoFactorRequired'] = ApiClient.convertToType(data['twoFactorRequired'], 'Boolean');
             }
-            if (data.hasOwnProperty('twoFactorToken')) {
-                obj['twoFactorToken'] = ApiClient.convertToType(data['twoFactorToken'], 'String');
+            if (data.hasOwnProperty('twoFactor')) {
+                obj['twoFactor'] = TwoFactorAuthenticator.constructFromObject(data['twoFactor']);
             }
         }
         return obj;
@@ -79,7 +80,7 @@ export default class ManagerProgramCreateResult {
 
     programId = undefined;
     twoFactorRequired = undefined;
-    twoFactorToken = undefined;
+    twoFactor = undefined;
 
 
 

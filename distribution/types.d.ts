@@ -270,6 +270,13 @@ export declare class ManagerApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<ManagerDashboard>;
+    v10ManagerPrograms2faConfirmPost(authorization: string, opts?: {
+        programId?: string;
+        twoFactorCode?: string;
+    }): CancelablePromise<any>;
+    v10ManagerPrograms2faGetGet(authorization: string, opts?: {
+        programId?: string;
+    }): CancelablePromise<TwoFactorAuthenticator>;
     v10ManagerProgramsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
     }): CancelablePromise<any>;
@@ -288,10 +295,6 @@ export declare class ManagerApi {
     v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
     v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<ManagerProgramWithdrawInfo>;
     v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string): CancelablePromise<any>;
-    v10ManagerProgramsCreateConfirmPost(authorization: string, opts?: {
-        programId?: string;
-        twoFactorCode?: string;
-    }): CancelablePromise<any>;
     v10ManagerProgramsCreatePost(authorization: string, opts?: {
         request?: NewProgramRequest;
     }): CancelablePromise<ManagerProgramCreateResult>;
@@ -1228,7 +1231,7 @@ export declare interface ManagerProfileDetails {
 export declare interface ManagerProgramCreateResult {
     programId: string;
     twoFactorRequired: boolean;
-    twoFactorToken: string;
+    twoFactor: TwoFactorAuthenticator;
 }
 
 export declare interface ManagerProgramWithdrawInfo {
@@ -1504,6 +1507,7 @@ export declare interface PersonalFundDetailsFull {
 export declare interface PersonalProgramDetailsFull {
     isReinvest: boolean;
     gvtValue: number;
+    showTwoFactorButton: boolean;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
