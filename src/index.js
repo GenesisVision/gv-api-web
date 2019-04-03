@@ -122,6 +122,8 @@ import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
 import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
+import ProgramPeriodViewModel from './model/ProgramPeriodViewModel';
+import ProgramPeriodsViewModel from './model/ProgramPeriodsViewModel';
 import ProgramProfitChart from './model/ProgramProfitChart';
 import ProgramPwdUpdate from './model/ProgramPwdUpdate';
 import ProgramRequest from './model/ProgramRequest';
@@ -857,6 +859,18 @@ export {
      * @type {ProgramNotificationSettingList}
      */
     ProgramNotificationSettingList,
+
+    /**
+     * @name index#ProgramPeriodViewModel
+     * @type {ProgramPeriodViewModel}
+     */
+    ProgramPeriodViewModel,
+
+    /**
+     * @name index#ProgramPeriodsViewModel
+     * @type {ProgramPeriodsViewModel}
+     */
+    ProgramPeriodsViewModel,
 
     /**
      * @name index#ProgramProfitChart

@@ -21,116 +21,56 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ProgramPeriodViewModel = require('./ProgramPeriodViewModel');
+
+var _ProgramPeriodViewModel2 = _interopRequireDefault(_ProgramPeriodViewModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface WalletWithdrawalInfo
+ * @interface ProgramPeriodsViewModel
  */
 
 /**
  *
- * @name WalletWithdrawalInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name ProgramPeriodsViewModel#periods
+ * @type {[ProgramPeriodViewModel]}
  */
 /**
  *
- * @name WalletWithdrawalInfo#description
- * @type {String}
- */
-/**
- *
- * @name WalletWithdrawalInfo#logo
- * @type {String}
- */
-/**
- *
- * @name WalletWithdrawalInfo#commission
- * @type {Number}
- */
-/**
- *
- * @name WalletWithdrawalInfo#rateToGvt
- * @type {Number}
- */
-/**
- *
- * @name WalletWithdrawalInfo#availableToWithdrawal
+ * @name ProgramPeriodsViewModel#total
  * @type {Number}
  */
 
-var WalletWithdrawalInfo = function () {
-    function WalletWithdrawalInfo() {
-        _classCallCheck(this, WalletWithdrawalInfo);
+var ProgramPeriodsViewModel = function () {
+    function ProgramPeriodsViewModel() {
+        _classCallCheck(this, ProgramPeriodsViewModel);
 
-        this.currency = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.commission = undefined;
-        this.rateToGvt = undefined;
-        this.availableToWithdrawal = undefined;
+        this.periods = undefined;
+        this.total = undefined;
     }
 
-    _createClass(WalletWithdrawalInfo, null, [{
+    _createClass(ProgramPeriodsViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletWithdrawalInfo();
+                obj = obj || new ProgramPeriodsViewModel();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('periods')) {
+                    obj['periods'] = _ApiClient2.default.convertToType(data['periods'], [_ProgramPeriodViewModel2.default]);
                 }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('commission')) {
-                    obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
-                }
-                if (data.hasOwnProperty('rateToGvt')) {
-                    obj['rateToGvt'] = _ApiClient2.default.convertToType(data['rateToGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableToWithdrawal')) {
-                    obj['availableToWithdrawal'] = _ApiClient2.default.convertToType(data['availableToWithdrawal'], 'Number');
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletWithdrawalInfo;
+    return ProgramPeriodsViewModel;
 }();
 
-WalletWithdrawalInfo.CurrencyEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = WalletWithdrawalInfo;
+exports.default = ProgramPeriodsViewModel;

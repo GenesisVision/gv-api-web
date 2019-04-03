@@ -17,6 +17,7 @@ import ErrorViewModel from '../model/ErrorViewModel';
 import LevelUpSummary from '../model/LevelUpSummary';
 import ProgramBalanceChart from '../model/ProgramBalanceChart';
 import ProgramDetailsFull from '../model/ProgramDetailsFull';
+import ProgramPeriodsViewModel from '../model/ProgramPeriodsViewModel';
 import ProgramProfitChart from '../model/ProgramProfitChart';
 import ProgramSets from '../model/ProgramSets';
 import ProgramsList from '../model/ProgramsList';
@@ -291,6 +292,66 @@ export default class ProgramsApi {
      */
       v10ProgramsByIdGet(id, opts) {
       return this.v10ProgramsByIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdPeriodsGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'NumberMin': opts['numberMin'],
+        'NumberMax': opts['numberMax'],
+        'Status': opts['status'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramPeriodsViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/periods', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Program periods
+     * @function ProgramsApi#v10ProgramsByIdPeriodsGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.numberMin] 
+     * @param {Number} [opts.numberMax] 
+     * @param {String} [opts.status] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<ProgramPeriodsViewModel>} a Promise, with an object containing data of type ProgramPeriodsViewModel and HTTP response
+     */
+      v10ProgramsByIdPeriodsGet(id, opts) {
+      return this.v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

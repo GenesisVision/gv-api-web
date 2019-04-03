@@ -214,6 +214,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesOpenGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesOpenGet) | **GET** /v1.0/programs/{id}/trades/open | Open positions
 *CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
@@ -361,6 +362,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
  - [CoreApiV10.ProgramMinimumDeposit](docs/ProgramMinimumDeposit.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
+ - [CoreApiV10.ProgramPeriodViewModel](docs/ProgramPeriodViewModel.md)
+ - [CoreApiV10.ProgramPeriodsViewModel](docs/ProgramPeriodsViewModel.md)
  - [CoreApiV10.ProgramProfitChart](docs/ProgramProfitChart.md)
  - [CoreApiV10.ProgramPwdUpdate](docs/ProgramPwdUpdate.md)
  - [CoreApiV10.ProgramRequest](docs/ProgramRequest.md)

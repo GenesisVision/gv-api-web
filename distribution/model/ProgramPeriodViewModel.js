@@ -27,110 +27,81 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletWithdrawalInfo
+ * @interface ProgramPeriodViewModel
  */
 
 /**
  *
- * @name WalletWithdrawalInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name ProgramPeriodViewModel#dateFrom
+ * @type {Date}
  */
 /**
  *
- * @name WalletWithdrawalInfo#description
- * @type {String}
+ * @name ProgramPeriodViewModel#dateTo
+ * @type {Date}
  */
 /**
  *
- * @name WalletWithdrawalInfo#logo
- * @type {String}
+ * @name ProgramPeriodViewModel#status
+ * @type {("Planned"|"InProccess"|"Closed")}
  */
 /**
  *
- * @name WalletWithdrawalInfo#commission
+ * @name ProgramPeriodViewModel#number
  * @type {Number}
  */
 /**
  *
- * @name WalletWithdrawalInfo#rateToGvt
- * @type {Number}
- */
-/**
- *
- * @name WalletWithdrawalInfo#availableToWithdrawal
+ * @name ProgramPeriodViewModel#profit
  * @type {Number}
  */
 
-var WalletWithdrawalInfo = function () {
-    function WalletWithdrawalInfo() {
-        _classCallCheck(this, WalletWithdrawalInfo);
+var ProgramPeriodViewModel = function () {
+    function ProgramPeriodViewModel() {
+        _classCallCheck(this, ProgramPeriodViewModel);
 
-        this.currency = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.commission = undefined;
-        this.rateToGvt = undefined;
-        this.availableToWithdrawal = undefined;
+        this.dateFrom = undefined;
+        this.dateTo = undefined;
+        this.status = undefined;
+        this.number = undefined;
+        this.profit = undefined;
     }
 
-    _createClass(WalletWithdrawalInfo, null, [{
+    _createClass(ProgramPeriodViewModel, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletWithdrawalInfo();
+                obj = obj || new ProgramPeriodViewModel();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('dateFrom')) {
+                    obj['dateFrom'] = _ApiClient2.default.convertToType(data['dateFrom'], 'Date');
                 }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                if (data.hasOwnProperty('dateTo')) {
+                    obj['dateTo'] = _ApiClient2.default.convertToType(data['dateTo'], 'Date');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
-                if (data.hasOwnProperty('commission')) {
-                    obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
+                if (data.hasOwnProperty('number')) {
+                    obj['number'] = _ApiClient2.default.convertToType(data['number'], 'Number');
                 }
-                if (data.hasOwnProperty('rateToGvt')) {
-                    obj['rateToGvt'] = _ApiClient2.default.convertToType(data['rateToGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableToWithdrawal')) {
-                    obj['availableToWithdrawal'] = _ApiClient2.default.convertToType(data['availableToWithdrawal'], 'Number');
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletWithdrawalInfo;
+    return ProgramPeriodViewModel;
 }();
 
-WalletWithdrawalInfo.CurrencyEnum = {
+ProgramPeriodViewModel.StatusEnum = {
 
-    "Undefined": "Undefined",
+    "Planned": "Planned",
 
-    "GVT": "GVT",
+    "InProccess": "InProccess",
 
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "Closed": "Closed"
 };
-exports.default = WalletWithdrawalInfo;
+exports.default = ProgramPeriodViewModel;

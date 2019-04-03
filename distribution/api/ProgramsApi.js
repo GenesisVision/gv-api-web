@@ -37,6 +37,10 @@ var _ProgramDetailsFull = require('../model/ProgramDetailsFull');
 
 var _ProgramDetailsFull2 = _interopRequireDefault(_ProgramDetailsFull);
 
+var _ProgramPeriodsViewModel = require('../model/ProgramPeriodsViewModel');
+
+var _ProgramPeriodsViewModel2 = _interopRequireDefault(_ProgramPeriodsViewModel);
+
 var _ProgramProfitChart = require('../model/ProgramProfitChart');
 
 var _ProgramProfitChart2 = _interopRequireDefault(_ProgramProfitChart);
@@ -310,6 +314,62 @@ var ProgramsApi = function () {
     key: 'v10ProgramsByIdGet',
     value: function v10ProgramsByIdGet(id, opts) {
       return this.v10ProgramsByIdGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ProgramsByIdPeriodsGetWithHttpInfo',
+    value: function v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdPeriodsGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'NumberMin': opts['numberMin'],
+        'NumberMax': opts['numberMax'],
+        'Status': opts['status'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramPeriodsViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/programs/{id}/periods', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Program periods
+     * @function ProgramsApi#v10ProgramsByIdPeriodsGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.numberMin] 
+     * @param {Number} [opts.numberMax] 
+     * @param {String} [opts.status] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<ProgramPeriodsViewModel>} a Promise, with an object containing data of type ProgramPeriodsViewModel and HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramsByIdPeriodsGet',
+    value: function v10ProgramsByIdPeriodsGet(id, opts) {
+      return this.v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

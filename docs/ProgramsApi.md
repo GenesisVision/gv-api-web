@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**v10ProgramsByIdFavoriteAddPost**](ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 [**v10ProgramsByIdFavoriteRemovePost**](ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 [**v10ProgramsByIdGet**](ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
+[**v10ProgramsByIdPeriodsGet**](ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 [**v10ProgramsByIdTradesGet**](ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 [**v10ProgramsByIdTradesOpenGet**](ProgramsApi.md#v10ProgramsByIdTradesOpenGet) | **GET** /v1.0/programs/{id}/trades/open | Open positions
 [**v10ProgramsGet**](ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
@@ -239,6 +240,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramDetailsFull**](ProgramDetailsFull.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramsByIdPeriodsGet"></a>
+# **v10ProgramsByIdPeriodsGet**
+> ProgramPeriodsViewModel v10ProgramsByIdPeriodsGet(id, opts)
+
+Program periods
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'numberMin': 56, // Number | 
+  'numberMax': 56, // Number | 
+  'status': "status_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdPeriodsGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **numberMin** | **Number**|  | [optional] 
+ **numberMax** | **Number**|  | [optional] 
+ **status** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**ProgramPeriodsViewModel**](ProgramPeriodsViewModel.md)
 
 ### Authorization
 
