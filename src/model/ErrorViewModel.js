@@ -32,7 +32,7 @@ import ErrorMessage from './ErrorMessage';
     /**
      *
      * @name ErrorViewModel#code
-     * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor")}
+     * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor"|"WrongCaptcha")}
      */
 
 
@@ -84,7 +84,9 @@ export default class ErrorViewModel {
     
         "ValidationError": "ValidationError",
     
-        "RequiresTwoFactor": "RequiresTwoFactor"    
+        "RequiresTwoFactor": "RequiresTwoFactor",
+    
+        "WrongCaptcha": "WrongCaptcha"    
     };
 
 

@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 
 * `RequiresTwoFactor` (value: `"RequiresTwoFactor"`)
 
+* `WrongCaptcha` (value: `"WrongCaptcha"`)
+
 
 
 

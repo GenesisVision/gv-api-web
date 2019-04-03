@@ -911,7 +911,7 @@ export declare interface ErrorMessage {
 
 export declare interface ErrorViewModel {
     errors: ErrorMessage[];
-    code: "InternalServerError" | "ValidationError" | "RequiresTwoFactor";
+    code: "InternalServerError" | "ValidationError" | "RequiresTwoFactor" | "WrongCaptcha";
 }
 
 export declare interface ExternalTransactionDetails {

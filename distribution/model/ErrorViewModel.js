@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ErrorViewModel#code
- * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor")}
+ * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor"|"WrongCaptcha")}
  */
 
 var ErrorViewModel = function () {
@@ -79,6 +79,8 @@ ErrorViewModel.CodeEnum = {
 
     "ValidationError": "ValidationError",
 
-    "RequiresTwoFactor": "RequiresTwoFactor"
+    "RequiresTwoFactor": "RequiresTwoFactor",
+
+    "WrongCaptcha": "WrongCaptcha"
 };
 exports.default = ErrorViewModel;
