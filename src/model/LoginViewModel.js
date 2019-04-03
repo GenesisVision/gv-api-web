@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import LoginCheckInfo from './LoginCheckInfo';
 
 
 
@@ -55,13 +56,8 @@ import ApiClient from '../ApiClient';
      */
     /**
      *
-     * @name LoginViewModel#captchaId
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#prefix
-     * @type {String}
+     * @name LoginViewModel#loginCheckInfo
+     * @type {LoginCheckInfo}
      */
 
 
@@ -107,11 +103,8 @@ export default class LoginViewModel {
             if (data.hasOwnProperty('client')) {
                 obj['client'] = ApiClient.convertToType(data['client'], 'String');
             }
-            if (data.hasOwnProperty('captchaId')) {
-                obj['captchaId'] = ApiClient.convertToType(data['captchaId'], 'String');
-            }
-            if (data.hasOwnProperty('prefix')) {
-                obj['prefix'] = ApiClient.convertToType(data['prefix'], 'String');
+            if (data.hasOwnProperty('loginCheckInfo')) {
+                obj['loginCheckInfo'] = LoginCheckInfo.constructFromObject(data['loginCheckInfo']);
             }
         }
         return obj;
@@ -123,8 +116,7 @@ export default class LoginViewModel {
     twoFactorCode = undefined;
     recoveryCode = undefined;
     client = undefined;
-    captchaId = undefined;
-    prefix = undefined;
+    loginCheckInfo = undefined;
 
 
 

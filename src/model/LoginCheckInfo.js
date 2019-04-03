@@ -13,8 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
-import GeeTestDetails from './GeeTestDetails';
-import PoWDetails from './PoWDetails';
+import GeeTestResult from './GeeTestResult';
+import PoWResult from './PoWResult';
 
 
 
@@ -22,35 +22,30 @@ import PoWDetails from './PoWDetails';
 
     /**
      *
-     * @interface LoginCheckDetails
+     * @interface LoginCheckInfo
      */
     
     /**
      *
-     * @name LoginCheckDetails#id
+     * @name LoginCheckInfo#id
      * @type {String}
      */
     /**
      *
-     * @name LoginCheckDetails#route
-     * @type {String}
+     * @name LoginCheckInfo#poW
+     * @type {PoWResult}
      */
     /**
      *
-     * @name LoginCheckDetails#poW
-     * @type {PoWDetails}
-     */
-    /**
-     *
-     * @name LoginCheckDetails#geeTest
-     * @type {GeeTestDetails}
+     * @name LoginCheckInfo#geeTest
+     * @type {GeeTestResult}
      */
 
 
 
 
 
-export default class LoginCheckDetails {
+export default class LoginCheckInfo {
 
     constructor() {
         
@@ -65,7 +60,7 @@ export default class LoginCheckDetails {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new LoginCheckDetails();
+            obj = obj || new LoginCheckInfo();
 
             
             
@@ -74,21 +69,17 @@ export default class LoginCheckDetails {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('route')) {
-                obj['route'] = ApiClient.convertToType(data['route'], 'String');
-            }
             if (data.hasOwnProperty('poW')) {
-                obj['poW'] = PoWDetails.constructFromObject(data['poW']);
+                obj['poW'] = PoWResult.constructFromObject(data['poW']);
             }
             if (data.hasOwnProperty('geeTest')) {
-                obj['geeTest'] = GeeTestDetails.constructFromObject(data['geeTest']);
+                obj['geeTest'] = GeeTestResult.constructFromObject(data['geeTest']);
             }
         }
         return obj;
     }
 
     id = undefined;
-    route = undefined;
     poW = undefined;
     geeTest = undefined;
 

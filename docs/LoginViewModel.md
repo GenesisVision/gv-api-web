@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **twoFactorCode** | **String** |  | [optional] 
 **recoveryCode** | **String** |  | [optional] 
 **client** | **String** |  | [optional] 
-**captchaId** | **String** |  | [optional] 
-**prefix** | **String** |  | [optional] 
+**loginCheckInfo** | [**LoginCheckInfo**](LoginCheckInfo.md) |  | [optional] 
 
 

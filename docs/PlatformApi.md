@@ -89,7 +89,7 @@ No authorization required
 
 <a name="v10PlatformRiskcontrolGet"></a>
 # **v10PlatformRiskcontrolGet**
-> CaptchaModel v10PlatformRiskcontrolGet(route, opts)
+> LoginCheckDetails v10PlatformRiskcontrolGet(route, opts)
 
 Platform captcha details.
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CaptchaModel**](CaptchaModel.md)
+[**LoginCheckDetails**](LoginCheckDetails.md)
 
 ### Authorization
 

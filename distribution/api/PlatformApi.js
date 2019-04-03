@@ -21,13 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CaptchaModel = require('../model/CaptchaModel');
-
-var _CaptchaModel2 = _interopRequireDefault(_CaptchaModel);
-
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
+
+var _LoginCheckDetails = require('../model/LoginCheckDetails');
+
+var _LoginCheckDetails2 = _interopRequireDefault(_LoginCheckDetails);
 
 var _PlatformInfo = require('../model/PlatformInfo');
 
@@ -154,7 +154,7 @@ var PlatformApi = function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _CaptchaModel2.default;
+      var returnType = _LoginCheckDetails2.default;
 
       return this.apiClient.callApi('/v1.0/platform/riskcontrol', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
@@ -166,7 +166,7 @@ var PlatformApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.device] 
      * @param {String} [opts.version] 
-     * @return {CancelablePromise<CaptchaModel>} a Promise, with an object containing data of type CaptchaModel and HTTP response
+     * @return {CancelablePromise<LoginCheckDetails>} a Promise, with an object containing data of type LoginCheckDetails and HTTP response
      */
 
   }, {

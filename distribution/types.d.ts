@@ -349,7 +349,7 @@ export declare class PlatformApi {
     v10PlatformRiskcontrolGet(route: string, opts?: {
         device?: string;
         version?: string;
-    }): CancelablePromise<CaptchaModel>;
+    }): CancelablePromise<LoginCheckDetails>;
     v10PlatformStatisticGet(): CancelablePromise<PlatformStatistic>;
 }
 
@@ -567,8 +567,6 @@ export declare interface index {
     Broker: Broker;
     BrokerAccountType: BrokerAccountType;
     BrokersInfo: BrokersInfo;
-    CaptchaDetails: CaptchaDetails;
-    CaptchaModel: CaptchaModel;
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
@@ -603,6 +601,8 @@ export declare interface index {
     FundStatistic: FundStatistic;
     FundWithdrawInfo: FundWithdrawInfo;
     FundsList: FundsList;
+    GeeTestDetails: GeeTestDetails;
+    GeeTestResult: GeeTestResult;
     IOsAppVersion: IOsAppVersion;
     InternalTransferRequest: InternalTransferRequest;
     KycCallback: KycCallback;
@@ -610,6 +610,7 @@ export declare interface index {
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
     LoginCheckDetails: LoginCheckDetails;
+    LoginCheckInfo: LoginCheckInfo;
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
@@ -651,6 +652,8 @@ export declare interface index {
     PlatformCurrency: PlatformCurrency;
     PlatformInfo: PlatformInfo;
     PlatformStatistic: PlatformStatistic;
+    PoWDetails: PoWDetails;
+    PoWResult: PoWResult;
     ProfileFullViewModel: ProfileFullViewModel;
     ProfileHeaderViewModel: ProfileHeaderViewModel;
     ProfilePublic: ProfilePublic;
@@ -1109,6 +1112,12 @@ export declare interface FundsList {
     total: number;
 }
 
+export declare interface GeeTestDetails {
+}
+
+export declare interface GeeTestResult {
+}
+
 export declare interface IOsAppVersion {
     minVersion: string;
     lastVersion: string;
@@ -1151,8 +1160,16 @@ export declare interface LevelUpSummary {
 }
 
 export declare interface LoginCheckDetails {
-    type: "None" | "PoW" | "CaptchaGeeTest";
-    details: CaptchaDetails;
+    id: string;
+    route: string;
+    poW: PoWDetails;
+    geeTest: GeeTestDetails;
+}
+
+export declare interface LoginCheckInfo {
+    id: string;
+    poW: PoWResult;
+    geeTest: GeeTestResult;
 }
 
 export declare interface LoginViewModel {
@@ -1162,8 +1179,7 @@ export declare interface LoginViewModel {
     twoFactorCode: string;
     recoveryCode: string;
     client: string;
-    captchaId: string;
-    prefix: string;
+    loginCheckInfo: LoginCheckInfo;
 }
 
 export declare interface ManagerAssets {
@@ -1580,6 +1596,16 @@ export declare interface PlatformStatistic {
     investmentAmount: number;
     totalInvestorsProfit: number;
     totalProfit: number;
+}
+
+export declare interface PoWDetails {
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+}
+
+export declare interface PoWResult {
+    prefix: string;
 }
 
 export declare interface ProfileFullViewModel {

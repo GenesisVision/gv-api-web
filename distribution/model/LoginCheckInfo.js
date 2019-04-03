@@ -21,9 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _LoginCheckInfo = require('./LoginCheckInfo');
+var _GeeTestResult = require('./GeeTestResult');
 
-var _LoginCheckInfo2 = _interopRequireDefault(_LoginCheckInfo);
+var _GeeTestResult2 = _interopRequireDefault(_GeeTestResult);
+
+var _PoWResult = require('./PoWResult');
+
+var _PoWResult2 = _interopRequireDefault(_PoWResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,94 +35,55 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface LoginViewModel
+ * @interface LoginCheckInfo
  */
 
 /**
  *
- * @name LoginViewModel#email
+ * @name LoginCheckInfo#id
  * @type {String}
  */
 /**
  *
- * @name LoginViewModel#password
- * @type {String}
+ * @name LoginCheckInfo#poW
+ * @type {PoWResult}
  */
 /**
  *
- * @name LoginViewModel#rememberMe
- * @type {Boolean}
- */
-/**
- *
- * @name LoginViewModel#twoFactorCode
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#recoveryCode
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#client
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#loginCheckInfo
- * @type {LoginCheckInfo}
+ * @name LoginCheckInfo#geeTest
+ * @type {GeeTestResult}
  */
 
-var LoginViewModel = function () {
-    function LoginViewModel(email, password) {
-        _classCallCheck(this, LoginViewModel);
+var LoginCheckInfo = function () {
+    function LoginCheckInfo() {
+        _classCallCheck(this, LoginCheckInfo);
 
-        this.email = undefined;
-        this.password = undefined;
-        this.rememberMe = undefined;
-        this.twoFactorCode = undefined;
-        this.recoveryCode = undefined;
-        this.client = undefined;
-        this.loginCheckInfo = undefined;
-
-
-        this['email'] = email;this['password'] = password;
+        this.id = undefined;
+        this.poW = undefined;
+        this.geeTest = undefined;
     }
 
-    _createClass(LoginViewModel, null, [{
+    _createClass(LoginCheckInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new LoginViewModel();
+                obj = obj || new LoginCheckInfo();
 
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('password')) {
-                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
+                if (data.hasOwnProperty('poW')) {
+                    obj['poW'] = _PoWResult2.default.constructFromObject(data['poW']);
                 }
-                if (data.hasOwnProperty('rememberMe')) {
-                    obj['rememberMe'] = _ApiClient2.default.convertToType(data['rememberMe'], 'Boolean');
-                }
-                if (data.hasOwnProperty('twoFactorCode')) {
-                    obj['twoFactorCode'] = _ApiClient2.default.convertToType(data['twoFactorCode'], 'String');
-                }
-                if (data.hasOwnProperty('recoveryCode')) {
-                    obj['recoveryCode'] = _ApiClient2.default.convertToType(data['recoveryCode'], 'String');
-                }
-                if (data.hasOwnProperty('client')) {
-                    obj['client'] = _ApiClient2.default.convertToType(data['client'], 'String');
-                }
-                if (data.hasOwnProperty('loginCheckInfo')) {
-                    obj['loginCheckInfo'] = _LoginCheckInfo2.default.constructFromObject(data['loginCheckInfo']);
+                if (data.hasOwnProperty('geeTest')) {
+                    obj['geeTest'] = _GeeTestResult2.default.constructFromObject(data['geeTest']);
                 }
             }
             return obj;
         }
     }]);
 
-    return LoginViewModel;
+    return LoginCheckInfo;
 }();
 
-exports.default = LoginViewModel;
+exports.default = LoginCheckInfo;

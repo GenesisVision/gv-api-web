@@ -21,104 +21,65 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _LoginCheckInfo = require('./LoginCheckInfo');
-
-var _LoginCheckInfo2 = _interopRequireDefault(_LoginCheckInfo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface LoginViewModel
+ * @interface PoWDetails
  */
 
 /**
  *
- * @name LoginViewModel#email
+ * @name PoWDetails#secureAlgorithm
+ * @type {("Sha256")}
+ */
+/**
+ *
+ * @name PoWDetails#difficulty
+ * @type {Number}
+ */
+/**
+ *
+ * @name PoWDetails#nonce
  * @type {String}
- */
-/**
- *
- * @name LoginViewModel#password
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#rememberMe
- * @type {Boolean}
- */
-/**
- *
- * @name LoginViewModel#twoFactorCode
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#recoveryCode
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#client
- * @type {String}
- */
-/**
- *
- * @name LoginViewModel#loginCheckInfo
- * @type {LoginCheckInfo}
  */
 
-var LoginViewModel = function () {
-    function LoginViewModel(email, password) {
-        _classCallCheck(this, LoginViewModel);
+var PoWDetails = function () {
+    function PoWDetails() {
+        _classCallCheck(this, PoWDetails);
 
-        this.email = undefined;
-        this.password = undefined;
-        this.rememberMe = undefined;
-        this.twoFactorCode = undefined;
-        this.recoveryCode = undefined;
-        this.client = undefined;
-        this.loginCheckInfo = undefined;
-
-
-        this['email'] = email;this['password'] = password;
+        this.secureAlgorithm = undefined;
+        this.difficulty = undefined;
+        this.nonce = undefined;
     }
 
-    _createClass(LoginViewModel, null, [{
+    _createClass(PoWDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new LoginViewModel();
+                obj = obj || new PoWDetails();
 
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('secureAlgorithm')) {
+                    obj['secureAlgorithm'] = _ApiClient2.default.convertToType(data['secureAlgorithm'], 'String');
                 }
-                if (data.hasOwnProperty('password')) {
-                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
+                if (data.hasOwnProperty('difficulty')) {
+                    obj['difficulty'] = _ApiClient2.default.convertToType(data['difficulty'], 'Number');
                 }
-                if (data.hasOwnProperty('rememberMe')) {
-                    obj['rememberMe'] = _ApiClient2.default.convertToType(data['rememberMe'], 'Boolean');
-                }
-                if (data.hasOwnProperty('twoFactorCode')) {
-                    obj['twoFactorCode'] = _ApiClient2.default.convertToType(data['twoFactorCode'], 'String');
-                }
-                if (data.hasOwnProperty('recoveryCode')) {
-                    obj['recoveryCode'] = _ApiClient2.default.convertToType(data['recoveryCode'], 'String');
-                }
-                if (data.hasOwnProperty('client')) {
-                    obj['client'] = _ApiClient2.default.convertToType(data['client'], 'String');
-                }
-                if (data.hasOwnProperty('loginCheckInfo')) {
-                    obj['loginCheckInfo'] = _LoginCheckInfo2.default.constructFromObject(data['loginCheckInfo']);
+                if (data.hasOwnProperty('nonce')) {
+                    obj['nonce'] = _ApiClient2.default.convertToType(data['nonce'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return LoginViewModel;
+    return PoWDetails;
 }();
 
-exports.default = LoginViewModel;
+PoWDetails.SecureAlgorithmEnum = {
+
+    "Sha256": "Sha256"
+};
+exports.default = PoWDetails;

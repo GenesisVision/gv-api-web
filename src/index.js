@@ -23,8 +23,6 @@ import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
-import CaptchaDetails from './model/CaptchaDetails';
-import CaptchaModel from './model/CaptchaModel';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
@@ -59,6 +57,8 @@ import FundSets from './model/FundSets';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsList from './model/FundsList';
+import GeeTestDetails from './model/GeeTestDetails';
+import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
 import InternalTransferRequest from './model/InternalTransferRequest';
 import KycCallback from './model/KycCallback';
@@ -66,6 +66,7 @@ import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
 import LoginCheckDetails from './model/LoginCheckDetails';
+import LoginCheckInfo from './model/LoginCheckInfo';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
@@ -107,6 +108,8 @@ import PlatformAssets from './model/PlatformAssets';
 import PlatformCurrency from './model/PlatformCurrency';
 import PlatformInfo from './model/PlatformInfo';
 import PlatformStatistic from './model/PlatformStatistic';
+import PoWDetails from './model/PoWDetails';
+import PoWResult from './model/PoWResult';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
@@ -265,18 +268,6 @@ export {
      * @type {BrokersInfo}
      */
     BrokersInfo,
-
-    /**
-     * @name index#CaptchaDetails
-     * @type {CaptchaDetails}
-     */
-    CaptchaDetails,
-
-    /**
-     * @name index#CaptchaModel
-     * @type {CaptchaModel}
-     */
-    CaptchaModel,
 
     /**
      * @name index#ChangePasswordViewModel
@@ -483,6 +474,18 @@ export {
     FundsList,
 
     /**
+     * @name index#GeeTestDetails
+     * @type {GeeTestDetails}
+     */
+    GeeTestDetails,
+
+    /**
+     * @name index#GeeTestResult
+     * @type {GeeTestResult}
+     */
+    GeeTestResult,
+
+    /**
      * @name index#IOsAppVersion
      * @type {IOsAppVersion}
      */
@@ -523,6 +526,12 @@ export {
      * @type {LoginCheckDetails}
      */
     LoginCheckDetails,
+
+    /**
+     * @name index#LoginCheckInfo
+     * @type {LoginCheckInfo}
+     */
+    LoginCheckInfo,
 
     /**
      * @name index#LoginViewModel
@@ -769,6 +778,18 @@ export {
      * @type {PlatformStatistic}
      */
     PlatformStatistic,
+
+    /**
+     * @name index#PoWDetails
+     * @type {PoWDetails}
+     */
+    PoWDetails,
+
+    /**
+     * @name index#PoWResult
+     * @type {PoWResult}
+     */
+    PoWResult,
 
     /**
      * @name index#ProfileFullViewModel

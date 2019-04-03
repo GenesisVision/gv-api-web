@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import CaptchaModel from '../model/CaptchaModel';
 import ErrorViewModel from '../model/ErrorViewModel';
+import LoginCheckDetails from '../model/LoginCheckDetails';
 import PlatformInfo from '../model/PlatformInfo';
 import PlatformStatistic from '../model/PlatformStatistic';
 import ProgramsLevelsInfo from '../model/ProgramsLevelsInfo';
@@ -140,7 +140,7 @@ export default class PlatformApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = CaptchaModel;
+      let returnType = LoginCheckDetails;
 
       return this.apiClient.callApi(
         '/v1.0/platform/riskcontrol', 'GET',
@@ -156,7 +156,7 @@ export default class PlatformApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.device] 
      * @param {String} [opts.version] 
-     * @return {CancelablePromise<CaptchaModel>} a Promise, with an object containing data of type CaptchaModel and HTTP response
+     * @return {CancelablePromise<LoginCheckDetails>} a Promise, with an object containing data of type LoginCheckDetails and HTTP response
      */
       v10PlatformRiskcontrolGet(route, opts) {
       return this.v10PlatformRiskcontrolGetWithHttpInfo(route, opts)
