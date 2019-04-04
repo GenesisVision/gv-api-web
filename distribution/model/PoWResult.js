@@ -27,19 +27,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface PowResult
+ * @interface PoWResult
  */
 
 /**
  *
- * @name PowResult#prefix
+ * @name PoWResult#prefix
  * @type {String}
  */
 
-var PowResult = function () {
+var PoWResult = function () {
     function PowResult() {
         _classCallCheck(this, PowResult);
-
         this.prefix = undefined;
     }
 
@@ -60,4 +59,4 @@ var PowResult = function () {
     return PowResult;
 }();
 
-exports.default = PowResult;
+exports.default = PoWResult;

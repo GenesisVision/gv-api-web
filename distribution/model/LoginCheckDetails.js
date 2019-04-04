@@ -25,7 +25,7 @@ var _GeeTestDetails = require('./GeeTestDetails');
 
 var _GeeTestDetails2 = _interopRequireDefault(_GeeTestDetails);
 
-var _PowDetails = require('./PowDetails');
+var _PowDetails = require('./PoWDetails');
 
 var _PowDetails2 = _interopRequireDefault(_PowDetails);
 

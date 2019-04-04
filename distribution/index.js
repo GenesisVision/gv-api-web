@@ -390,11 +390,11 @@ var _PlatformStatistic = require('./model/PlatformStatistic');
 
 var _PlatformStatistic2 = _interopRequireDefault(_PlatformStatistic);
 
-var _PowDetails = require('./model/PowDetails');
+var _PowDetails = require('./model/PoWDetails');
 
 var _PowDetails2 = _interopRequireDefault(_PowDetails);
 
-var _PowResult = require('./model/PowResult');
+var _PowResult = require('./model/PoWResult');
 
 var _PowResult2 = _interopRequireDefault(_PowResult);
 

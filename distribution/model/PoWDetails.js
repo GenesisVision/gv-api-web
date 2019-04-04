@@ -27,29 +27,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface PowDetails
+ * @interface PoWDetails
  */
 
 /**
  *
- * @name PowDetails#secureAlgorithm
+ * @name PoWDetails#secureAlgorithm
  * @type {("Sha256")}
  */
 /**
  *
- * @name PowDetails#difficulty
+ * @name PoWDetails#difficulty
  * @type {Number}
  */
 /**
  *
- * @name PowDetails#nonce
+ * @name PoWDetails#nonce
  * @type {String}
  */
 
-var PowDetails = function () {
+var PoWDetails = function () {
     function PowDetails() {
         _classCallCheck(this, PowDetails);
-
         this.secureAlgorithm = undefined;
         this.difficulty = undefined;
         this.nonce = undefined;
@@ -78,8 +77,8 @@ var PowDetails = function () {
     return PowDetails;
 }();
 
-PowDetails.SecureAlgorithmEnum = {
+PoWDetails.SecureAlgorithmEnum = {
 
     "Sha256": "Sha256"
 };
-exports.default = PowDetails;
+exports.default = PoWDetails;
