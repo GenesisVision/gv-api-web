@@ -208,6 +208,16 @@
         done();
       });
     });
+    describe('v10InvestorProgramsByIdWithdrawMultiByAmountPost', function() {
+      it('should call v10InvestorProgramsByIdWithdrawMultiByAmountPost successfully', function(done) {
+        //uncomment below and update the code to test v10InvestorProgramsByIdWithdrawMultiByAmountPost
+        //instance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10InvestorProgramsGet', function() {
       it('should call v10InvestorProgramsGet successfully', function(done) {
         //uncomment below and update the code to test v10InvestorProgramsGet
@@ -232,6 +242,16 @@
       it('should call v10InvestorRequestsBySkipByTakeGet successfully', function(done) {
         //uncomment below and update the code to test v10InvestorRequestsBySkipByTakeGet
         //instance.v10InvestorRequestsBySkipByTakeGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10InvestorSignalsGet', function() {
+      it('should call v10InvestorSignalsGet successfully', function(done) {
+        //uncomment below and update the code to test v10InvestorSignalsGet
+        //instance.v10InvestorSignalsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

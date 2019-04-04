@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property color (base name: "color")', function() {
+      // uncomment below and update the code to test the property color
+      //var instane = new CoreApiV10.NotificationViewModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isUnread (base name: "isUnread")', function() {
       // uncomment below and update the code to test the property isUnread
       //var instane = new CoreApiV10.NotificationViewModel();

@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currencyToName (base name: "currencyToName")', function() {
+      // uncomment below and update the code to test the property currencyToName
+      //var instane = new CoreApiV10.ConvertingDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property amountTo (base name: "amountTo")', function() {
       // uncomment below and update the code to test the property amountTo
       //var instane = new CoreApiV10.ConvertingDetails();

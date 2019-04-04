@@ -54,20 +54,38 @@
       //expect(instance).to.be.a(CoreApiV10.SignalDetails);
     });
 
-    it('should have the property subscribers (base name: "subscribers")', function() {
-      // uncomment below and update the code to test the property subscribers
-      //var instane = new CoreApiV10.SignalDetails();
-      //expect(instance).to.be();
-    });
-
     it('should have the property statistic (base name: "statistic")', function() {
       // uncomment below and update the code to test the property statistic
       //var instane = new CoreApiV10.SignalDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property personalSignalDetails (base name: "personalSignalDetails")', function() {
-      // uncomment below and update the code to test the property personalSignalDetails
+    it('should have the property personalDetails (base name: "personalDetails")', function() {
+      // uncomment below and update the code to test the property personalDetails
+      //var instane = new CoreApiV10.SignalDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currency (base name: "currency")', function() {
+      // uncomment below and update the code to test the property currency
+      //var instane = new CoreApiV10.SignalDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property level (base name: "level")', function() {
+      // uncomment below and update the code to test the property level
+      //var instane = new CoreApiV10.SignalDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instane = new CoreApiV10.SignalDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subscribers (base name: "subscribers")', function() {
+      // uncomment below and update the code to test the property subscribers
       //var instane = new CoreApiV10.SignalDetails();
       //expect(instance).to.be();
     });
@@ -122,12 +140,6 @@
 
     it('should have the property chart (base name: "chart")', function() {
       // uncomment below and update the code to test the property chart
-      //var instane = new CoreApiV10.SignalDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dashboardAssetsDetails (base name: "dashboardAssetsDetails")', function() {
-      // uncomment below and update the code to test the property dashboardAssetsDetails
       //var instane = new CoreApiV10.SignalDetails();
       //expect(instance).to.be();
     });

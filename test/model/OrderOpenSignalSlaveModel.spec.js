@@ -138,6 +138,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property baseVolume (base name: "baseVolume")', function() {
+      // uncomment below and update the code to test the property baseVolume
+      //var instane = new CoreApiV10.OrderOpenSignalSlaveModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property commission (base name: "commission")', function() {
+      // uncomment below and update the code to test the property commission
+      //var instane = new CoreApiV10.OrderOpenSignalSlaveModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

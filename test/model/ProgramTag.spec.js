@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(CoreApiV10.ProgramTag);
     });
 
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new CoreApiV10.ProgramTag();
       //expect(instance).to.be();
     });

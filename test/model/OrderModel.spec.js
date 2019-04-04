@@ -108,8 +108,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property priceCurrent (base name: "priceCurrent")', function() {
+      // uncomment below and update the code to test the property priceCurrent
+      //var instane = new CoreApiV10.OrderModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property entry (base name: "entry")', function() {
       // uncomment below and update the code to test the property entry
+      //var instane = new CoreApiV10.OrderModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property baseVolume (base name: "baseVolume")', function() {
+      // uncomment below and update the code to test the property baseVolume
+      //var instane = new CoreApiV10.OrderModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property commission (base name: "commission")', function() {
+      // uncomment below and update the code to test the property commission
       //var instane = new CoreApiV10.OrderModel();
       //expect(instance).to.be();
     });

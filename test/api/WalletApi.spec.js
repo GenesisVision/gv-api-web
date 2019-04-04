@@ -48,6 +48,16 @@
   }
 
   describe('WalletApi', function() {
+    describe('v10WalletAddressesByCurrencyGet', function() {
+      it('should call v10WalletAddressesByCurrencyGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletAddressesByCurrencyGet
+        //instance.v10WalletAddressesByCurrencyGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10WalletAddressesGet', function() {
       it('should call v10WalletAddressesGet successfully', function(done) {
         //uncomment below and update the code to test v10WalletAddressesGet
@@ -68,6 +78,86 @@
         done();
       });
     });
+    describe('v10WalletFeeGvtholdingGet', function() {
+      it('should call v10WalletFeeGvtholdingGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletFeeGvtholdingGet
+        //instance.v10WalletFeeGvtholdingGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletMultiByCurrencyAvailableGet', function() {
+      it('should call v10WalletMultiByCurrencyAvailableGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletMultiByCurrencyAvailableGet
+        //instance.v10WalletMultiByCurrencyAvailableGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletMultiByCurrencyGet', function() {
+      it('should call v10WalletMultiByCurrencyGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletMultiByCurrencyGet
+        //instance.v10WalletMultiByCurrencyGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletMultiTransactionsExternalGet', function() {
+      it('should call v10WalletMultiTransactionsExternalGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletMultiTransactionsExternalGet
+        //instance.v10WalletMultiTransactionsExternalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletMultiTransactionsGet', function() {
+      it('should call v10WalletMultiTransactionsGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletMultiTransactionsGet
+        //instance.v10WalletMultiTransactionsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletPaygvtfeeOffPost', function() {
+      it('should call v10WalletPaygvtfeeOffPost successfully', function(done) {
+        //uncomment below and update the code to test v10WalletPaygvtfeeOffPost
+        //instance.v10WalletPaygvtfeeOffPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletPaygvtfeeOnPost', function() {
+      it('should call v10WalletPaygvtfeeOnPost successfully', function(done) {
+        //uncomment below and update the code to test v10WalletPaygvtfeeOnPost
+        //instance.v10WalletPaygvtfeeOnPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10WalletTransactionByIdGet', function() {
+      it('should call v10WalletTransactionByIdGet successfully', function(done) {
+        //uncomment below and update the code to test v10WalletTransactionByIdGet
+        //instance.v10WalletTransactionByIdGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10WalletTransactionsGet', function() {
       it('should call v10WalletTransactionsGet successfully', function(done) {
         //uncomment below and update the code to test v10WalletTransactionsGet
@@ -78,10 +168,10 @@
         done();
       });
     });
-    describe('v10WalletTransactionsPendingGet', function() {
-      it('should call v10WalletTransactionsPendingGet successfully', function(done) {
-        //uncomment below and update the code to test v10WalletTransactionsPendingGet
-        //instance.v10WalletTransactionsPendingGet(function(error) {
+    describe('v10WalletTransferPost', function() {
+      it('should call v10WalletTransferPost successfully', function(done) {
+        //uncomment below and update the code to test v10WalletTransferPost
+        //instance.v10WalletTransferPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

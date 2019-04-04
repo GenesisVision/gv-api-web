@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property availableToWithdrawal (base name: "availableToWithdrawal")', function() {
+      // uncomment below and update the code to test the property availableToWithdrawal
+      //var instane = new CoreApiV10.WalletWithdrawalInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

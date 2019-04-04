@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('v10PlatformRiskcontrolGet', function() {
+      it('should call v10PlatformRiskcontrolGet successfully', function(done) {
+        //uncomment below and update the code to test v10PlatformRiskcontrolGet
+        //instance.v10PlatformRiskcontrolGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10PlatformStatisticGet', function() {
       it('should call v10PlatformStatisticGet successfully', function(done) {
         //uncomment below and update the code to test v10PlatformStatisticGet

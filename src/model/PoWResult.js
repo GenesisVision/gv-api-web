@@ -20,12 +20,12 @@ import ApiClient from '../ApiClient';
 
     /**
      *
-     * @interface PoWResult
+     * @interface PowResult
      */
     
     /**
      *
-     * @name PoWResult#prefix
+     * @name PowResult#prefix
      * @type {String}
      */
 
@@ -33,7 +33,7 @@ import ApiClient from '../ApiClient';
 
 
 
-export default class PoWResult {
+export default class PowResult {
 
     constructor() {
         
@@ -48,7 +48,7 @@ export default class PoWResult {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PoWResult();
+            obj = obj || new PowResult();
 
             
             

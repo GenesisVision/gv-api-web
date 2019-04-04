@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property availableToInvestBase (base name: "availableToInvestBase")', function() {
+      // uncomment below and update the code to test the property availableToInvestBase
+      //var instane = new CoreApiV10.ProgramInvestInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
       //var instane = new CoreApiV10.ProgramInvestInfo();

@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property logo (base name: "logo")', function() {
+      // uncomment below and update the code to test the property logo
+      //var instane = new CoreApiV10.MultiWalletExternalTransaction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
       //var instane = new CoreApiV10.MultiWalletExternalTransaction();
@@ -90,20 +96,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instane = new CoreApiV10.MultiWalletExternalTransaction();
-      //expect(instance).to.be();
-    });
-
     it('should have the property isEnableActions (base name: "isEnableActions")', function() {
       // uncomment below and update the code to test the property isEnableActions
       //var instane = new CoreApiV10.MultiWalletExternalTransaction();
       //expect(instance).to.be();
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
+    it('should have the property statusUrl (base name: "statusUrl")', function() {
+      // uncomment below and update the code to test the property statusUrl
       //var instane = new CoreApiV10.MultiWalletExternalTransaction();
       //expect(instance).to.be();
     });

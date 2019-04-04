@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currencyLogo (base name: "currencyLogo")', function() {
+      // uncomment below and update the code to test the property currencyLogo
+      //var instane = new CoreApiV10.CopyTradingAccountInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property balance (base name: "balance")', function() {
       // uncomment below and update the code to test the property balance
       //var instane = new CoreApiV10.CopyTradingAccountInfo();

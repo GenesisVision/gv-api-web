@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isDepositEnabled (base name: "isDepositEnabled")', function() {
+      // uncomment below and update the code to test the property isDepositEnabled
+      //var instane = new CoreApiV10.WalletInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

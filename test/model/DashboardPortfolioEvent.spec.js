@@ -72,8 +72,50 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property valueTotal (base name: "valueTotal")', function() {
+      // uncomment below and update the code to test the property valueTotal
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property feeSuccessManager (base name: "feeSuccessManager")', function() {
+      // uncomment below and update the code to test the property feeSuccessManager
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property feeSuccessManagerCurrency (base name: "feeSuccessManagerCurrency")', function() {
+      // uncomment below and update the code to test the property feeSuccessManagerCurrency
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property feeSuccessPlatform (base name: "feeSuccessPlatform")', function() {
+      // uncomment below and update the code to test the property feeSuccessPlatform
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property feeSuccessPlatformCurrency (base name: "feeSuccessPlatformCurrency")', function() {
+      // uncomment below and update the code to test the property feeSuccessPlatformCurrency
+      //var instane = new CoreApiV10.DashboardPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property profitPercent (base name: "profitPercent")', function() {
+      // uncomment below and update the code to test the property profitPercent
       //var instane = new CoreApiV10.DashboardPortfolioEvent();
       //expect(instance).to.be();
     });

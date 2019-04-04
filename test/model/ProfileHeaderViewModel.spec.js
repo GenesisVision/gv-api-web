@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property userType (base name: "userType")', function() {
+      // uncomment below and update the code to test the property userType
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property notificationsCount (base name: "notificationsCount")', function() {
       // uncomment below and update the code to test the property notificationsCount
       //var instane = new CoreApiV10.ProfileHeaderViewModel();
@@ -86,6 +92,30 @@
 
     it('should have the property favoritesCount (base name: "favoritesCount")', function() {
       // uncomment below and update the code to test the property favoritesCount
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property kycConfirmed (base name: "kycConfirmed")', function() {
+      // uncomment below and update the code to test the property kycConfirmed
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property allowForex (base name: "allowForex")', function() {
+      // uncomment below and update the code to test the property allowForex
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isTwoFactorEnabled (base name: "isTwoFactorEnabled")', function() {
+      // uncomment below and update the code to test the property isTwoFactorEnabled
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isNewUser (base name: "isNewUser")', function() {
+      // uncomment below and update the code to test the property isNewUser
       //var instane = new CoreApiV10.ProfileHeaderViewModel();
       //expect(instance).to.be();
     });
@@ -108,20 +138,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property kycConfirmed (base name: "kycConfirmed")', function() {
-      // uncomment below and update the code to test the property kycConfirmed
+    it('should have the property totalBalance (base name: "totalBalance")', function() {
+      // uncomment below and update the code to test the property totalBalance
       //var instane = new CoreApiV10.ProfileHeaderViewModel();
       //expect(instance).to.be();
     });
 
-    it('should have the property isTwoFactorEnabled (base name: "isTwoFactorEnabled")', function() {
-      // uncomment below and update the code to test the property isTwoFactorEnabled
+    it('should have the property invested (base name: "invested")', function() {
+      // uncomment below and update the code to test the property invested
       //var instane = new CoreApiV10.ProfileHeaderViewModel();
       //expect(instance).to.be();
     });
 
-    it('should have the property isNewUser (base name: "isNewUser")', function() {
-      // uncomment below and update the code to test the property isNewUser
+    it('should have the property available (base name: "available")', function() {
+      // uncomment below and update the code to test the property available
+      //var instane = new CoreApiV10.ProfileHeaderViewModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pending (base name: "pending")', function() {
+      // uncomment below and update the code to test the property pending
       //var instane = new CoreApiV10.ProfileHeaderViewModel();
       //expect(instance).to.be();
     });

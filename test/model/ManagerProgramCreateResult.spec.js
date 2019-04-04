@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property twoFactorToken (base name: "twoFactorToken")', function() {
-      // uncomment below and update the code to test the property twoFactorToken
+    it('should have the property twoFactor (base name: "twoFactor")', function() {
+      // uncomment below and update the code to test the property twoFactor
       //var instane = new CoreApiV10.ManagerProgramCreateResult();
       //expect(instance).to.be();
     });

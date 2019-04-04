@@ -90,6 +90,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property signalSuccessFee (base name: "signalSuccessFee")', function() {
+      // uncomment below and update the code to test the property signalSuccessFee
+      //var instane = new CoreApiV10.NewProgramRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property signalSubscriptionFee (base name: "signalSubscriptionFee")', function() {
+      // uncomment below and update the code to test the property signalSubscriptionFee
+      //var instane = new CoreApiV10.NewProgramRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isSignalProgram (base name: "isSignalProgram")', function() {
+      // uncomment below and update the code to test the property isSignalProgram
+      //var instane = new CoreApiV10.NewProgramRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
       //var instane = new CoreApiV10.NewProgramRequest();
@@ -110,6 +128,18 @@
 
     it('should have the property entryFee (base name: "entryFee")', function() {
       // uncomment below and update the code to test the property entryFee
+      //var instane = new CoreApiV10.NewProgramRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property depositAmount (base name: "depositAmount")', function() {
+      // uncomment below and update the code to test the property depositAmount
+      //var instane = new CoreApiV10.NewProgramRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property depositWalletId (base name: "depositWalletId")', function() {
+      // uncomment below and update the code to test the property depositWalletId
       //var instane = new CoreApiV10.NewProgramRequest();
       //expect(instance).to.be();
     });

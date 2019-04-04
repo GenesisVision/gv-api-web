@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CoreApiV10.PoWDetails();
+    instance = new CoreApiV10.PowDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('PoWDetails', function() {
-    it('should create an instance of PoWDetails', function() {
-      // uncomment below and update the code to test PoWDetails
-      //var instane = new CoreApiV10.PoWDetails();
-      //expect(instance).to.be.a(CoreApiV10.PoWDetails);
+  describe('PowDetails', function() {
+    it('should create an instance of PowDetails', function() {
+      // uncomment below and update the code to test PowDetails
+      //var instane = new CoreApiV10.PowDetails();
+      //expect(instance).to.be.a(CoreApiV10.PowDetails);
     });
 
     it('should have the property secureAlgorithm (base name: "secureAlgorithm")', function() {
       // uncomment below and update the code to test the property secureAlgorithm
-      //var instane = new CoreApiV10.PoWDetails();
+      //var instane = new CoreApiV10.PowDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property difficulty (base name: "difficulty")', function() {
       // uncomment below and update the code to test the property difficulty
-      //var instane = new CoreApiV10.PoWDetails();
+      //var instane = new CoreApiV10.PowDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property nonce (base name: "nonce")', function() {
       // uncomment below and update the code to test the property nonce
-      //var instane = new CoreApiV10.PoWDetails();
+      //var instane = new CoreApiV10.PowDetails();
       //expect(instance).to.be();
     });
 

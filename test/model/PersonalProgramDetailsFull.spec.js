@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property showTwoFactorButton (base name: "showTwoFactorButton")', function() {
+      // uncomment below and update the code to test the property showTwoFactorButton
+      //var instane = new CoreApiV10.PersonalProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isFavorite (base name: "isFavorite")', function() {
       // uncomment below and update the code to test the property isFavorite
       //var instane = new CoreApiV10.PersonalProgramDetailsFull();
@@ -152,6 +158,18 @@
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
+      //var instane = new CoreApiV10.PersonalProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isFollowSignals (base name: "isFollowSignals")', function() {
+      // uncomment below and update the code to test the property isFollowSignals
+      //var instane = new CoreApiV10.PersonalProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canMakeSignalProvider (base name: "canMakeSignalProvider")', function() {
+      // uncomment below and update the code to test the property canMakeSignalProvider
       //var instane = new CoreApiV10.PersonalProgramDetailsFull();
       //expect(instance).to.be();
     });

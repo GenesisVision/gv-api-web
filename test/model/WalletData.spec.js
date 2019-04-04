@@ -60,6 +60,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property logo (base name: "logo")', function() {
+      // uncomment below and update the code to test the property logo
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rateToGVT (base name: "rateToGVT")', function() {
+      // uncomment below and update the code to test the property rateToGVT
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDepositEnabled (base name: "isDepositEnabled")', function() {
+      // uncomment below and update the code to test the property isDepositEnabled
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isWithdrawalEnabled (base name: "isWithdrawalEnabled")', function() {
+      // uncomment below and update the code to test the property isWithdrawalEnabled
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property withdrawalCommission (base name: "withdrawalCommission")', function() {
+      // uncomment below and update the code to test the property withdrawalCommission
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property depositAddress (base name: "depositAddress")', function() {
+      // uncomment below and update the code to test the property depositAddress
+      //var instane = new CoreApiV10.WalletData();
+      //expect(instance).to.be();
+    });
+
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
       //var instane = new CoreApiV10.WalletData();

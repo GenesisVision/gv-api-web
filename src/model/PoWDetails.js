@@ -20,22 +20,22 @@ import ApiClient from '../ApiClient';
 
     /**
      *
-     * @interface PoWDetails
+     * @interface PowDetails
      */
     
     /**
      *
-     * @name PoWDetails#secureAlgorithm
+     * @name PowDetails#secureAlgorithm
      * @type {("Sha256")}
      */
     /**
      *
-     * @name PoWDetails#difficulty
+     * @name PowDetails#difficulty
      * @type {Number}
      */
     /**
      *
-     * @name PoWDetails#nonce
+     * @name PowDetails#nonce
      * @type {String}
      */
 
@@ -43,7 +43,7 @@ import ApiClient from '../ApiClient';
 
 
 
-export default class PoWDetails {
+export default class PowDetails {
 
     constructor() {
         
@@ -58,7 +58,7 @@ export default class PoWDetails {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PoWDetails();
+            obj = obj || new PowDetails();
 
             
             

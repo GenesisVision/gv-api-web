@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property color (base name: "color")', function() {
+      // uncomment below and update the code to test the property color
+      //var instane = new CoreApiV10.ProgramNotificationSettingList();
+      //expect(instance).to.be();
+    });
+
     it('should have the property settingsGeneral (base name: "settingsGeneral")', function() {
       // uncomment below and update the code to test the property settingsGeneral
       //var instane = new CoreApiV10.ProgramNotificationSettingList();

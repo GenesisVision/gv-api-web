@@ -90,6 +90,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property logoFrom (base name: "logoFrom")', function() {
+      // uncomment below and update the code to test the property logoFrom
+      //var instane = new CoreApiV10.MultiWalletTransaction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property logoTo (base name: "logoTo")', function() {
+      // uncomment below and update the code to test the property logoTo
+      //var instane = new CoreApiV10.MultiWalletTransaction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
       //var instane = new CoreApiV10.MultiWalletTransaction();
@@ -98,6 +110,12 @@
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
+      //var instane = new CoreApiV10.MultiWalletTransaction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property amountTo (base name: "amountTo")', function() {
+      // uncomment below and update the code to test the property amountTo
       //var instane = new CoreApiV10.MultiWalletTransaction();
       //expect(instance).to.be();
     });

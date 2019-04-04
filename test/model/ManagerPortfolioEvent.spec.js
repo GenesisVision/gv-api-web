@@ -126,6 +126,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new CoreApiV10.ManagerPortfolioEvent();
+      //expect(instance).to.be();
+    });
+
     it('should have the property periodNumber (base name: "periodNumber")', function() {
       // uncomment below and update the code to test the property periodNumber
       //var instane = new CoreApiV10.ManagerPortfolioEvent();

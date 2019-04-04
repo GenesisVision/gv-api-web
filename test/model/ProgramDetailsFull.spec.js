@@ -108,14 +108,44 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property stopOutLevel (base name: "stopOutLevel")', function() {
+      // uncomment below and update the code to test the property stopOutLevel
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isReinvesting (base name: "isReinvesting")', function() {
       // uncomment below and update the code to test the property isReinvesting
       //var instane = new CoreApiV10.ProgramDetailsFull();
       //expect(instance).to.be();
     });
 
+    it('should have the property isSignalProgram (base name: "isSignalProgram")', function() {
+      // uncomment below and update the code to test the property isSignalProgram
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property signalSuccessFee (base name: "signalSuccessFee")', function() {
+      // uncomment below and update the code to test the property signalSuccessFee
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property signalSubscriptionFee (base name: "signalSubscriptionFee")', function() {
+      // uncomment below and update the code to test the property signalSubscriptionFee
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property availableInvestment (base name: "availableInvestment")', function() {
       // uncomment below and update the code to test the property availableInvestment
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property availableInvestmentBase (base name: "availableInvestmentBase")', function() {
+      // uncomment below and update the code to test the property availableInvestmentBase
       //var instane = new CoreApiV10.ProgramDetailsFull();
       //expect(instance).to.be();
     });
@@ -134,6 +164,12 @@
 
     it('should have the property personalProgramDetails (base name: "personalProgramDetails")', function() {
       // uncomment below and update the code to test the property personalProgramDetails
+      //var instane = new CoreApiV10.ProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
       //var instane = new CoreApiV10.ProgramDetailsFull();
       //expect(instance).to.be();
     });

@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property stopOutLevel (base name: "stopOutLevel")', function() {
+      // uncomment below and update the code to test the property stopOutLevel
+      //var instane = new CoreApiV10.ProgramUpdate();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

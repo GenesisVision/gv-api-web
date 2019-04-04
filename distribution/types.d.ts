@@ -813,18 +813,6 @@ export declare interface BrokersInfo {
     brokers: Broker[];
 }
 
-export declare interface CaptchaDetails {
-    secureAlgorithm: "Sha256";
-    difficulty: number;
-    nonce: string;
-}
-
-export declare interface CaptchaModel {
-    id: string;
-    route: string;
-    loginCheckDetails: LoginCheckDetails;
-}
-
 export declare interface ChangePasswordViewModel {
     oldPassword: string;
     password: string;
@@ -933,16 +921,6 @@ export declare interface ExternalTransactionDetails {
     descriptionUrl: string;
     fromAddress: string;
     isEnableActions: boolean;
-}
-
-export declare interface Facet {
-    id: string;
-    title: string;
-    description: string;
-    logo: string;
-    url: string;
-    sortType: "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp";
-    timeframe: "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
 }
 
 export declare interface FcmTokenViewModel {
@@ -1398,22 +1376,6 @@ export declare interface NotificationViewModel {
     assetType: "Program" | "Fund";
 }
 
-export declare interface OpenSignalTrade {
-    id: string;
-    symbol: string;
-    manager: ProfilePublic;
-    orderId: number;
-    openDate: Date;
-    openPrice: number;
-    volume: number;
-    price: number;
-    profit: number;
-}
-
-export declare interface OpenSignalTradesList {
-    signalTrades: OpenSignalTrade[];
-}
-
 export declare interface OrderClosedSignalSlaveModel {
     dateClose: Date;
     priceClose: number;
@@ -1476,23 +1438,6 @@ export declare interface OrderProgramData {
     color: string;
     url: string;
     logo: string;
-}
-
-export declare interface OrderSignalSlaveModel {
-    manager: ProfilePublic;
-    program: OrderProgramData;
-    programId: string;
-    id: string;
-    login: string;
-    ticket: string;
-    symbol: string;
-    volume: number;
-    profit: number;
-    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
-    date: Date;
-    price: number;
-    priceCurrent: number;
-    entry: "In" | "Out" | "InOut" | "OutBy";
 }
 
 export declare interface OtherAssetsValue {
@@ -1599,16 +1544,6 @@ export declare interface PlatformStatistic {
     investmentAmount: number;
     totalInvestorsProfit: number;
     totalProfit: number;
-}
-
-export declare interface PoWDetails {
-    secureAlgorithm: "Sha256";
-    difficulty: number;
-    nonce: string;
-}
-
-export declare interface PoWResult {
-    prefix: string;
 }
 
 export declare interface PowDetails {
@@ -2069,11 +2004,6 @@ export declare interface TradesOpenSignalSlaveViewModel {
     total: number;
 }
 
-export declare interface TradesSignalSlaveViewModel {
-    trades: OrderSignalSlaveModel[];
-    total: number;
-}
-
 export declare interface TradesViewModel {
     tradesType: "Positions" | "Orders";
     trades: OrderModel[];
@@ -2093,25 +2023,6 @@ export declare interface TransactionDetails {
     gvCommissionCurrency: "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
     gvCommissionPercent: number;
     amount: number;
-}
-
-export declare interface TransactionDetatils {
-    currencyFrom: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    currencyTo: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    type: "InvestingProgram" | "InvestingFund" | "WithdrawalProgram" | "WithdrawalFund" | "ExternalWithdrawal" | "ExternalDeposit";
-    programId: string;
-    foundId: string;
-    name: string;
-    logo: string;
-    entryFee: number;
-    gvCommission: number;
-    exitFee: number;
-    description: string;
-    descriptionUrl: string;
-    fromAddress: string;
-    amountFrom: number;
-    amountTo: number;
-    rateValue: number;
 }
 
 export declare interface TwoFactorAuthenticator {
@@ -2220,22 +2131,6 @@ export declare interface WalletMultiSummary {
     grandTotal: WalletsGrandTotal;
     wallets: WalletData[];
     payFeesWithGvt: boolean;
-}
-
-export declare interface WalletPendingTransaction {
-    id: string;
-    hash: string;
-    amount: number;
-    currency: "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-    type: "Deposit" | "Withdrawn";
-    dateCreated: Date;
-    lastUpdated: Date;
-    address: string;
-}
-
-export declare interface WalletPendingTransactionsViewModel {
-    transactions: WalletPendingTransaction[];
-    total: number;
 }
 
 export declare interface WalletSummary {

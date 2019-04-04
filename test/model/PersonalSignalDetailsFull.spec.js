@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property investorTrade (base name: "investorTrade")', function() {
-      // uncomment below and update the code to test the property investorTrade
+    it('should have the property investorTrades (base name: "investorTrades")', function() {
+      // uncomment below and update the code to test the property investorTrades
       //var instane = new CoreApiV10.PersonalSignalDetailsFull();
       //expect(instance).to.be();
     });

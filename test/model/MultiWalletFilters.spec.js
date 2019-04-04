@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(CoreApiV10.MultiWalletFilters);
     });
 
-    it('should have the property multiWalletTransactionType (base name: "multiWalletTransactionType")', function() {
-      // uncomment below and update the code to test the property multiWalletTransactionType
+    it('should have the property transactionType (base name: "transactionType")', function() {
+      // uncomment below and update the code to test the property transactionType
       //var instane = new CoreApiV10.MultiWalletFilters();
       //expect(instance).to.be();
     });
 
-    it('should have the property multiWalletExternalTransactionType (base name: "multiWalletExternalTransactionType")', function() {
-      // uncomment below and update the code to test the property multiWalletExternalTransactionType
+    it('should have the property externalTransactionType (base name: "externalTransactionType")', function() {
+      // uncomment below and update the code to test the property externalTransactionType
       //var instane = new CoreApiV10.MultiWalletFilters();
       //expect(instance).to.be();
     });

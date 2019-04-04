@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isEnableActions (base name: "isEnableActions")', function() {
+      // uncomment below and update the code to test the property isEnableActions
+      //var instane = new CoreApiV10.ExternalTransactionDetails();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -48,10 +48,10 @@
   }
 
   describe('SignalApi', function() {
-    describe('v10SignalAccountsPost', function() {
-      it('should call v10SignalAccountsPost successfully', function(done) {
-        //uncomment below and update the code to test v10SignalAccountsPost
-        //instance.v10SignalAccountsPost(function(error) {
+    describe('v10SignalAccountsGet', function() {
+      it('should call v10SignalAccountsGet successfully', function(done) {
+        //uncomment below and update the code to test v10SignalAccountsGet
+        //instance.v10SignalAccountsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -72,6 +72,36 @@
       it('should call v10SignalDetachByIdPost successfully', function(done) {
         //uncomment below and update the code to test v10SignalDetachByIdPost
         //instance.v10SignalDetachByIdPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10SignalTradesByIdClosePost', function() {
+      it('should call v10SignalTradesByIdClosePost successfully', function(done) {
+        //uncomment below and update the code to test v10SignalTradesByIdClosePost
+        //instance.v10SignalTradesByIdClosePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10SignalTradesGet', function() {
+      it('should call v10SignalTradesGet successfully', function(done) {
+        //uncomment below and update the code to test v10SignalTradesGet
+        //instance.v10SignalTradesGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10SignalTradesOpenGet', function() {
+      it('should call v10SignalTradesOpenGet successfully', function(done) {
+        //uncomment below and update the code to test v10SignalTradesOpenGet
+        //instance.v10SignalTradesOpenGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

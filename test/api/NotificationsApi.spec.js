@@ -48,6 +48,16 @@
   }
 
   describe('NotificationsApi', function() {
+    describe('v10NotificationsByIdReadPost', function() {
+      it('should call v10NotificationsByIdReadPost successfully', function(done) {
+        //uncomment below and update the code to test v10NotificationsByIdReadPost
+        //instance.v10NotificationsByIdReadPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10NotificationsGet', function() {
       it('should call v10NotificationsGet successfully', function(done) {
         //uncomment below and update the code to test v10NotificationsGet

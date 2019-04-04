@@ -1,4 +1,4 @@
-# CoreApiV10.PoWResult
+# CoreApiV10.PowResult
 
 ## Properties
 Name | Type | Description | Notes

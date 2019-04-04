@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property payFeesWithGvt (base name: "payFeesWithGvt")', function() {
+      // uncomment below and update the code to test the property payFeesWithGvt
+      //var instane = new CoreApiV10.WalletMultiSummary();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

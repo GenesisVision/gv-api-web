@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currencyName (base name: "currencyName")', function() {
+      // uncomment below and update the code to test the property currencyName
+      //var instane = new CoreApiV10.TransactionDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property currencyLogo (base name: "currencyLogo")', function() {
       // uncomment below and update the code to test the property currencyLogo
       //var instane = new CoreApiV10.TransactionDetails();
@@ -98,6 +104,18 @@
 
     it('should have the property gvCommission (base name: "gvCommission")', function() {
       // uncomment below and update the code to test the property gvCommission
+      //var instane = new CoreApiV10.TransactionDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property gvCommissionCurrency (base name: "gvCommissionCurrency")', function() {
+      // uncomment below and update the code to test the property gvCommissionCurrency
+      //var instane = new CoreApiV10.TransactionDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property gvCommissionPercent (base name: "gvCommissionPercent")', function() {
+      // uncomment below and update the code to test the property gvCommissionPercent
       //var instane = new CoreApiV10.TransactionDetails();
       //expect(instance).to.be();
     });

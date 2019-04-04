@@ -108,6 +108,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isForex (base name: "isForex")', function() {
+      // uncomment below and update the code to test the property isForex
+      //var instane = new CoreApiV10.Broker();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isSignalsAvailable (base name: "isSignalsAvailable")', function() {
+      // uncomment below and update the code to test the property isSignalsAvailable
+      //var instane = new CoreApiV10.Broker();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

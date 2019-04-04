@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(CoreApiV10.TradesViewModel);
     });
 
+    it('should have the property tradesType (base name: "tradesType")', function() {
+      // uncomment below and update the code to test the property tradesType
+      //var instane = new CoreApiV10.TradesViewModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property trades (base name: "trades")', function() {
       // uncomment below and update the code to test the property trades
       //var instane = new CoreApiV10.TradesViewModel();

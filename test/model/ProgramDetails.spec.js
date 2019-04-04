@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property stopOutLevel (base name: "stopOutLevel")', function() {
+      // uncomment below and update the code to test the property stopOutLevel
+      //var instane = new CoreApiV10.ProgramDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property periodStarts (base name: "periodStarts")', function() {
       // uncomment below and update the code to test the property periodStarts
       //var instane = new CoreApiV10.ProgramDetails();
@@ -90,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property availableInvestmentBase (base name: "availableInvestmentBase")', function() {
+      // uncomment below and update the code to test the property availableInvestmentBase
+      //var instane = new CoreApiV10.ProgramDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dashboardAssetsDetails (base name: "dashboardAssetsDetails")', function() {
+      // uncomment below and update the code to test the property dashboardAssetsDetails
+      //var instane = new CoreApiV10.ProgramDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property statistic (base name: "statistic")', function() {
       // uncomment below and update the code to test the property statistic
       //var instane = new CoreApiV10.ProgramDetails();
@@ -104,6 +122,12 @@
 
     it('should have the property personalDetails (base name: "personalDetails")', function() {
       // uncomment below and update the code to test the property personalDetails
+      //var instane = new CoreApiV10.ProgramDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
       //var instane = new CoreApiV10.ProgramDetails();
       //expect(instance).to.be();
     });
@@ -158,12 +182,6 @@
 
     it('should have the property chart (base name: "chart")', function() {
       // uncomment below and update the code to test the property chart
-      //var instane = new CoreApiV10.ProgramDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dashboardAssetsDetails (base name: "dashboardAssetsDetails")', function() {
-      // uncomment below and update the code to test the property dashboardAssetsDetails
       //var instane = new CoreApiV10.ProgramDetails();
       //expect(instance).to.be();
     });

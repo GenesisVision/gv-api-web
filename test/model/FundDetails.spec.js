@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dashboardAssetsDetails (base name: "dashboardAssetsDetails")', function() {
+      // uncomment below and update the code to test the property dashboardAssetsDetails
+      //var instane = new CoreApiV10.FundDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instane = new CoreApiV10.FundDetails();
@@ -128,12 +134,6 @@
 
     it('should have the property chart (base name: "chart")', function() {
       // uncomment below and update the code to test the property chart
-      //var instane = new CoreApiV10.FundDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dashboardAssetsDetails (base name: "dashboardAssetsDetails")', function() {
-      // uncomment below and update the code to test the property dashboardAssetsDetails
       //var instane = new CoreApiV10.FundDetails();
       //expect(instance).to.be();
     });

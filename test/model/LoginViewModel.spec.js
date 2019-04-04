@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property loginCheckInfo (base name: "loginCheckInfo")', function() {
+      // uncomment below and update the code to test the property loginCheckInfo
+      //var instane = new CoreApiV10.LoginViewModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

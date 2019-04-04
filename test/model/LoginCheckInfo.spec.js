@@ -60,8 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property poW (base name: "poW")', function() {
-      // uncomment below and update the code to test the property poW
+    it('should have the property pow (base name: "pow")', function() {
+      // uncomment below and update the code to test the property pow
       //var instane = new CoreApiV10.LoginCheckInfo();
       //expect(instance).to.be();
     });

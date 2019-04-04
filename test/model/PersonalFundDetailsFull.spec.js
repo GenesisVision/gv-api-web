@@ -162,6 +162,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isFollowSignals (base name: "isFollowSignals")', function() {
+      // uncomment below and update the code to test the property isFollowSignals
+      //var instane = new CoreApiV10.PersonalFundDetailsFull();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canMakeSignalProvider (base name: "canMakeSignalProvider")', function() {
+      // uncomment below and update the code to test the property canMakeSignalProvider
+      //var instane = new CoreApiV10.PersonalFundDetailsFull();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

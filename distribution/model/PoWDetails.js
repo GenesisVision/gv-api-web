@@ -27,39 +27,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface PoWDetails
+ * @interface PowDetails
  */
 
 /**
  *
- * @name PoWDetails#secureAlgorithm
+ * @name PowDetails#secureAlgorithm
  * @type {("Sha256")}
  */
 /**
  *
- * @name PoWDetails#difficulty
+ * @name PowDetails#difficulty
  * @type {Number}
  */
 /**
  *
- * @name PoWDetails#nonce
+ * @name PowDetails#nonce
  * @type {String}
  */
 
-var PoWDetails = function () {
-    function PoWDetails() {
-        _classCallCheck(this, PoWDetails);
+var PowDetails = function () {
+    function PowDetails() {
+        _classCallCheck(this, PowDetails);
 
         this.secureAlgorithm = undefined;
         this.difficulty = undefined;
         this.nonce = undefined;
     }
 
-    _createClass(PoWDetails, null, [{
+    _createClass(PowDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PoWDetails();
+                obj = obj || new PowDetails();
 
                 if (data.hasOwnProperty('secureAlgorithm')) {
                     obj['secureAlgorithm'] = _ApiClient2.default.convertToType(data['secureAlgorithm'], 'String');
@@ -75,11 +75,11 @@ var PoWDetails = function () {
         }
     }]);
 
-    return PoWDetails;
+    return PowDetails;
 }();
 
-PoWDetails.SecureAlgorithmEnum = {
+PowDetails.SecureAlgorithmEnum = {
 
     "Sha256": "Sha256"
 };
-exports.default = PoWDetails;
+exports.default = PowDetails;

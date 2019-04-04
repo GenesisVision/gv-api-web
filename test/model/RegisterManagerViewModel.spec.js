@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isAuto (base name: "isAuto")', function() {
+      // uncomment below and update the code to test the property isAuto
+      //var instane = new CoreApiV10.RegisterManagerViewModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -98,10 +98,30 @@
         done();
       });
     });
+    describe('v10ProgramsByIdPeriodsGet', function() {
+      it('should call v10ProgramsByIdPeriodsGet successfully', function(done) {
+        //uncomment below and update the code to test v10ProgramsByIdPeriodsGet
+        //instance.v10ProgramsByIdPeriodsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10ProgramsByIdTradesGet', function() {
       it('should call v10ProgramsByIdTradesGet successfully', function(done) {
         //uncomment below and update the code to test v10ProgramsByIdTradesGet
         //instance.v10ProgramsByIdTradesGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10ProgramsByIdTradesOpenGet', function() {
+      it('should call v10ProgramsByIdTradesOpenGet successfully', function(done) {
+        //uncomment below and update the code to test v10ProgramsByIdTradesOpenGet
+        //instance.v10ProgramsByIdTradesOpenGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

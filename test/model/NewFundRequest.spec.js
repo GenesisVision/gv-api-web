@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property depositAmount (base name: "depositAmount")', function() {
+      // uncomment below and update the code to test the property depositAmount
+      //var instane = new CoreApiV10.NewFundRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property depositWalletId (base name: "depositWalletId")', function() {
+      // uncomment below and update the code to test the property depositWalletId
+      //var instane = new CoreApiV10.NewFundRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

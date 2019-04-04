@@ -60,6 +60,30 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property managerProgramInvestmentUSD (base name: "managerProgramInvestmentUSD")', function() {
+      // uncomment below and update the code to test the property managerProgramInvestmentUSD
+      //var instane = new CoreApiV10.ProgramsInfo();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property managerProgramInvestmentUSDT (base name: "managerProgramInvestmentUSDT")', function() {
+      // uncomment below and update the code to test the property managerProgramInvestmentUSDT
+      //var instane = new CoreApiV10.ProgramsInfo();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property managerProgramInvestmentBTC (base name: "managerProgramInvestmentBTC")', function() {
+      // uncomment below and update the code to test the property managerProgramInvestmentBTC
+      //var instane = new CoreApiV10.ProgramsInfo();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property managerProgramInvestmentETH (base name: "managerProgramInvestmentETH")', function() {
+      // uncomment below and update the code to test the property managerProgramInvestmentETH
+      //var instane = new CoreApiV10.ProgramsInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property managerMaxEntryFee (base name: "managerMaxEntryFee")', function() {
       // uncomment below and update the code to test the property managerMaxEntryFee
       //var instane = new CoreApiV10.ProgramsInfo();

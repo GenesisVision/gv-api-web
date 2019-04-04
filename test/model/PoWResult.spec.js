@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CoreApiV10.PoWResult();
+    instance = new CoreApiV10.PowResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('PoWResult', function() {
-    it('should create an instance of PoWResult', function() {
-      // uncomment below and update the code to test PoWResult
-      //var instane = new CoreApiV10.PoWResult();
-      //expect(instance).to.be.a(CoreApiV10.PoWResult);
+  describe('PowResult', function() {
+    it('should create an instance of PowResult', function() {
+      // uncomment below and update the code to test PowResult
+      //var instane = new CoreApiV10.PowResult();
+      //expect(instance).to.be.a(CoreApiV10.PowResult);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instane = new CoreApiV10.PoWResult();
+      //var instane = new CoreApiV10.PowResult();
       //expect(instance).to.be();
     });
 

@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('v10ProfilePushTokenPost', function() {
+      it('should call v10ProfilePushTokenPost successfully', function(done) {
+        //uncomment below and update the code to test v10ProfilePushTokenPost
+        //instance.v10ProfilePushTokenPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10ProfileUpdatePost', function() {
       it('should call v10ProfileUpdatePost successfully', function(done) {
         //uncomment below and update the code to test v10ProfileUpdatePost

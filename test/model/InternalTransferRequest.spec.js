@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property transferAll (base name: "transferAll")', function() {
+      // uncomment below and update the code to test the property transferAll
+      //var instane = new CoreApiV10.InternalTransferRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

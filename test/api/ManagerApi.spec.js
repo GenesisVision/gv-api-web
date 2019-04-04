@@ -218,6 +218,26 @@
         done();
       });
     });
+    describe('v10ManagerPrograms2faConfirmPost', function() {
+      it('should call v10ManagerPrograms2faConfirmPost successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerPrograms2faConfirmPost
+        //instance.v10ManagerPrograms2faConfirmPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10ManagerPrograms2faGetGet', function() {
+      it('should call v10ManagerPrograms2faGetGet successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerPrograms2faGetGet
+        //instance.v10ManagerPrograms2faGetGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10ManagerProgramsByIdClosePost', function() {
       it('should call v10ManagerProgramsByIdClosePost successfully', function(done) {
         //uncomment below and update the code to test v10ManagerProgramsByIdClosePost
@@ -242,6 +262,16 @@
       it('should call v10ManagerProgramsByIdInvestInfoByCurrencyGet successfully', function(done) {
         //uncomment below and update the code to test v10ManagerProgramsByIdInvestInfoByCurrencyGet
         //instance.v10ManagerProgramsByIdInvestInfoByCurrencyGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10ManagerProgramsByIdPasswordChangePost', function() {
+      it('should call v10ManagerProgramsByIdPasswordChangePost successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerProgramsByIdPasswordChangePost
+        //instance.v10ManagerProgramsByIdPasswordChangePost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -298,6 +328,16 @@
         done();
       });
     });
+    describe('v10ManagerProgramsByIdWithdrawMultiByAmountPost', function() {
+      it('should call v10ManagerProgramsByIdWithdrawMultiByAmountPost successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerProgramsByIdWithdrawMultiByAmountPost
+        //instance.v10ManagerProgramsByIdWithdrawMultiByAmountPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10ManagerProgramsCreatePost', function() {
       it('should call v10ManagerProgramsCreatePost successfully', function(done) {
         //uncomment below and update the code to test v10ManagerProgramsCreatePost
@@ -342,6 +382,16 @@
       it('should call v10ManagerRequestsBySkipByTakeGet successfully', function(done) {
         //uncomment below and update the code to test v10ManagerRequestsBySkipByTakeGet
         //instance.v10ManagerRequestsBySkipByTakeGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10ManagerSignalCreatePost', function() {
+      it('should call v10ManagerSignalCreatePost successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerSignalCreatePost
+        //instance.v10ManagerSignalCreatePost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

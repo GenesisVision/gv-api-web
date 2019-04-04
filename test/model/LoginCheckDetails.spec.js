@@ -54,14 +54,26 @@
       //expect(instance).to.be.a(CoreApiV10.LoginCheckDetails);
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
       //var instane = new CoreApiV10.LoginCheckDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property details (base name: "details")', function() {
-      // uncomment below and update the code to test the property details
+    it('should have the property route (base name: "route")', function() {
+      // uncomment below and update the code to test the property route
+      //var instane = new CoreApiV10.LoginCheckDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pow (base name: "pow")', function() {
+      // uncomment below and update the code to test the property pow
+      //var instane = new CoreApiV10.LoginCheckDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property geeTest (base name: "geeTest")', function() {
+      // uncomment below and update the code to test the property geeTest
       //var instane = new CoreApiV10.LoginCheckDetails();
       //expect(instance).to.be();
     });

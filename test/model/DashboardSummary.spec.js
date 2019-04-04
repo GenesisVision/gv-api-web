@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property signalsCount (base name: "signalsCount")', function() {
+      // uncomment below and update the code to test the property signalsCount
+      //var instane = new CoreApiV10.DashboardSummary();
+      //expect(instance).to.be();
+    });
+
     it('should have the property requests (base name: "requests")', function() {
       // uncomment below and update the code to test the property requests
       //var instane = new CoreApiV10.DashboardSummary();

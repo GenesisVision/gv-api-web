@@ -27,27 +27,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface PoWResult
+ * @interface PowResult
  */
 
 /**
  *
- * @name PoWResult#prefix
+ * @name PowResult#prefix
  * @type {String}
  */
 
-var PoWResult = function () {
-    function PoWResult() {
-        _classCallCheck(this, PoWResult);
+var PowResult = function () {
+    function PowResult() {
+        _classCallCheck(this, PowResult);
 
         this.prefix = undefined;
     }
 
-    _createClass(PoWResult, null, [{
+    _createClass(PowResult, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PoWResult();
+                obj = obj || new PowResult();
 
                 if (data.hasOwnProperty('prefix')) {
                     obj['prefix'] = _ApiClient2.default.convertToType(data['prefix'], 'String');
@@ -57,7 +57,7 @@ var PoWResult = function () {
         }
     }]);
 
-    return PoWResult;
+    return PowResult;
 }();
 
-exports.default = PoWResult;
+exports.default = PowResult;

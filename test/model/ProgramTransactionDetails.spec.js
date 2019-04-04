@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property managerName (base name: "managerName")', function() {
+      // uncomment below and update the code to test the property managerName
+      //var instane = new CoreApiV10.ProgramTransactionDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property programType (base name: "programType")', function() {
       // uncomment below and update the code to test the property programType
       //var instane = new CoreApiV10.ProgramTransactionDetails();
@@ -84,8 +90,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property entryFeePercent (base name: "entryFeePercent")', function() {
+      // uncomment below and update the code to test the property entryFeePercent
+      //var instane = new CoreApiV10.ProgramTransactionDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property successFee (base name: "successFee")', function() {
       // uncomment below and update the code to test the property successFee
+      //var instane = new CoreApiV10.ProgramTransactionDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property successFeePercent (base name: "successFeePercent")', function() {
+      // uncomment below and update the code to test the property successFeePercent
       //var instane = new CoreApiV10.ProgramTransactionDetails();
       //expect(instance).to.be();
     });
@@ -98,6 +116,12 @@
 
     it('should have the property exitFee (base name: "exitFee")', function() {
       // uncomment below and update the code to test the property exitFee
+      //var instane = new CoreApiV10.ProgramTransactionDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exitFeePercent (base name: "exitFeePercent")', function() {
+      // uncomment below and update the code to test the property exitFeePercent
       //var instane = new CoreApiV10.ProgramTransactionDetails();
       //expect(instance).to.be();
     });

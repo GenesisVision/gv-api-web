@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property enums (base name: "enums")', function() {
+      // uncomment below and update the code to test the property enums
+      //var instane = new CoreApiV10.PlatformInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
