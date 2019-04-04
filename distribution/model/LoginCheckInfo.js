@@ -25,7 +25,7 @@ var _GeeTestResult = require('./GeeTestResult');
 
 var _GeeTestResult2 = _interopRequireDefault(_GeeTestResult);
 
-var _PowResult = require('./PoWResult');
+var _PowResult = require('./PowResult');
 
 var _PowResult2 = _interopRequireDefault(_PowResult);
 

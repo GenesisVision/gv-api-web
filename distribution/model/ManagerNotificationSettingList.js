@@ -62,7 +62,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerNotificationSettingList#settingsGeneral
- * @type {[NotificationSettingViewModel]}
+ * @type {Array<NotificationSettingViewModel>}
  */
 
 var ManagerNotificationSettingList = function () {

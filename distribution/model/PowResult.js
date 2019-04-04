@@ -27,58 +27,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface PoWDetails
+ * @interface PowResult
  */
 
 /**
  *
- * @name PoWDetails#secureAlgorithm
- * @type {("Sha256")}
- */
-/**
- *
- * @name PoWDetails#difficulty
- * @type {Number}
- */
-/**
- *
- * @name PoWDetails#nonce
+ * @name PowResult#prefix
  * @type {String}
  */
 
-var PoWDetails = function () {
-    function PowDetails() {
-        _classCallCheck(this, PowDetails);
-        this.secureAlgorithm = undefined;
-        this.difficulty = undefined;
-        this.nonce = undefined;
+var PowResult = function () {
+    function PowResult() {
+        _classCallCheck(this, PowResult);
+
+        this.prefix = undefined;
     }
 
-    _createClass(PowDetails, null, [{
+    _createClass(PowResult, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new PowDetails();
+                obj = obj || new PowResult();
 
-                if (data.hasOwnProperty('secureAlgorithm')) {
-                    obj['secureAlgorithm'] = _ApiClient2.default.convertToType(data['secureAlgorithm'], 'String');
-                }
-                if (data.hasOwnProperty('difficulty')) {
-                    obj['difficulty'] = _ApiClient2.default.convertToType(data['difficulty'], 'Number');
-                }
-                if (data.hasOwnProperty('nonce')) {
-                    obj['nonce'] = _ApiClient2.default.convertToType(data['nonce'], 'String');
+                if (data.hasOwnProperty('prefix')) {
+                    obj['prefix'] = _ApiClient2.default.convertToType(data['prefix'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return PowDetails;
+    return PowResult;
 }();
 
-PoWDetails.SecureAlgorithmEnum = {
-
-    "Sha256": "Sha256"
-};
-exports.default = PoWDetails;
+exports.default = PowResult;
