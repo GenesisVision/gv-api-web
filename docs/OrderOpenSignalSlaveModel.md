@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **priceCurrent** | **Number** |  | [optional] 
 **entry** | **String** |  | [optional] 
 **baseVolume** | **Number** | Volume in account currency. Only filled when trade have zero commission (for paying fees with GVT) | [optional] 
+**commission** | **Number** | Useful for spot markets profit calculation.  Huobi: sell - quote currency, buy - base currency | [optional] 
 
 
 <a name="DirectionEnum"></a>

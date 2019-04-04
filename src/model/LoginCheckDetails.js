@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import GeeTestDetails from './GeeTestDetails';
-import PoWDetails from './PoWDetails';
+import PowDetails from './PowDetails';
 
 
 
@@ -37,8 +37,8 @@ import PoWDetails from './PoWDetails';
      */
     /**
      *
-     * @name LoginCheckDetails#poW
-     * @type {PoWDetails}
+     * @name LoginCheckDetails#pow
+     * @type {PowDetails}
      */
     /**
      *
@@ -77,8 +77,8 @@ export default class LoginCheckDetails {
             if (data.hasOwnProperty('route')) {
                 obj['route'] = ApiClient.convertToType(data['route'], 'String');
             }
-            if (data.hasOwnProperty('poW')) {
-                obj['poW'] = PoWDetails.constructFromObject(data['poW']);
+            if (data.hasOwnProperty('pow')) {
+                obj['pow'] = PowDetails.constructFromObject(data['pow']);
             }
             if (data.hasOwnProperty('geeTest')) {
                 obj['geeTest'] = GeeTestDetails.constructFromObject(data['geeTest']);
@@ -89,7 +89,7 @@ export default class LoginCheckDetails {
 
     id = undefined;
     route = undefined;
-    poW = undefined;
+    pow = undefined;
     geeTest = undefined;
 
 

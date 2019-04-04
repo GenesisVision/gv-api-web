@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import GeeTestResult from './GeeTestResult';
-import PoWResult from './PoWResult';
+import PowResult from './PowResult';
 
 
 
@@ -32,8 +32,8 @@ import PoWResult from './PoWResult';
      */
     /**
      *
-     * @name LoginCheckInfo#poW
-     * @type {PoWResult}
+     * @name LoginCheckInfo#pow
+     * @type {PowResult}
      */
     /**
      *
@@ -69,8 +69,8 @@ export default class LoginCheckInfo {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('poW')) {
-                obj['poW'] = PoWResult.constructFromObject(data['poW']);
+            if (data.hasOwnProperty('pow')) {
+                obj['pow'] = PowResult.constructFromObject(data['pow']);
             }
             if (data.hasOwnProperty('geeTest')) {
                 obj['geeTest'] = GeeTestResult.constructFromObject(data['geeTest']);
@@ -80,7 +80,7 @@ export default class LoginCheckInfo {
     }
 
     id = undefined;
-    poW = undefined;
+    pow = undefined;
     geeTest = undefined;
 
 

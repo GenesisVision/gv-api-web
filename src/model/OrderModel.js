@@ -83,6 +83,11 @@ import ApiClient from '../ApiClient';
      * @name OrderModel#baseVolume
      * @type {Number}
      */
+    /**
+     *
+     * @name OrderModel#commission
+     * @type {Number}
+     */
 
 
 
@@ -145,6 +150,9 @@ export default class OrderModel {
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
             }
+            if (data.hasOwnProperty('commission')) {
+                obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
+            }
         }
         return obj;
     }
@@ -161,6 +169,7 @@ export default class OrderModel {
     priceCurrent = undefined;
     entry = undefined;
     baseVolume = undefined;
+    commission = undefined;
 
 
 

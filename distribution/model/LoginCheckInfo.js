@@ -25,9 +25,9 @@ var _GeeTestResult = require('./GeeTestResult');
 
 var _GeeTestResult2 = _interopRequireDefault(_GeeTestResult);
 
-var _PoWResult = require('./PoWResult');
+var _PowResult = require('./PowResult');
 
-var _PoWResult2 = _interopRequireDefault(_PoWResult);
+var _PowResult2 = _interopRequireDefault(_PowResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,8 +45,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name LoginCheckInfo#poW
- * @type {PoWResult}
+ * @name LoginCheckInfo#pow
+ * @type {PowResult}
  */
 /**
  *
@@ -59,7 +59,7 @@ var LoginCheckInfo = function () {
         _classCallCheck(this, LoginCheckInfo);
 
         this.id = undefined;
-        this.poW = undefined;
+        this.pow = undefined;
         this.geeTest = undefined;
     }
 
@@ -72,8 +72,8 @@ var LoginCheckInfo = function () {
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('poW')) {
-                    obj['poW'] = _PoWResult2.default.constructFromObject(data['poW']);
+                if (data.hasOwnProperty('pow')) {
+                    obj['pow'] = _PowResult2.default.constructFromObject(data['pow']);
                 }
                 if (data.hasOwnProperty('geeTest')) {
                     obj['geeTest'] = _GeeTestResult2.default.constructFromObject(data['geeTest']);

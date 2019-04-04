@@ -27,167 +27,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface OrderModel
+ * @interface PowDetails
  */
 
 /**
  *
- * @name OrderModel#id
+ * @name PowDetails#secureAlgorithm
+ * @type {("Sha256")}
+ */
+/**
+ *
+ * @name PowDetails#difficulty
+ * @type {Number}
+ */
+/**
+ *
+ * @name PowDetails#nonce
  * @type {String}
- */
-/**
- *
- * @name OrderModel#login
- * @type {String}
- */
-/**
- *
- * @name OrderModel#ticket
- * @type {String}
- */
-/**
- *
- * @name OrderModel#symbol
- * @type {String}
- */
-/**
- *
- * @name OrderModel#volume
- * @type {Number}
- */
-/**
- *
- * @name OrderModel#profit
- * @type {Number}
- */
-/**
- *
- * @name OrderModel#direction
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
- */
-/**
- *
- * @name OrderModel#date
- * @type {Date}
- */
-/**
- *
- * @name OrderModel#price
- * @type {Number}
- */
-/**
- *
- * @name OrderModel#priceCurrent
- * @type {Number}
- */
-/**
- *
- * @name OrderModel#entry
- * @type {("In"|"Out"|"InOut"|"OutBy")}
- */
-/**
- *
- * @name OrderModel#baseVolume
- * @type {Number}
- */
-/**
- *
- * @name OrderModel#commission
- * @type {Number}
  */
 
-var OrderModel = function () {
-    function OrderModel() {
-        _classCallCheck(this, OrderModel);
+var PowDetails = function () {
+    function PowDetails() {
+        _classCallCheck(this, PowDetails);
 
-        this.id = undefined;
-        this.login = undefined;
-        this.ticket = undefined;
-        this.symbol = undefined;
-        this.volume = undefined;
-        this.profit = undefined;
-        this.direction = undefined;
-        this.date = undefined;
-        this.price = undefined;
-        this.priceCurrent = undefined;
-        this.entry = undefined;
-        this.baseVolume = undefined;
-        this.commission = undefined;
+        this.secureAlgorithm = undefined;
+        this.difficulty = undefined;
+        this.nonce = undefined;
     }
 
-    _createClass(OrderModel, null, [{
+    _createClass(PowDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new OrderModel();
+                obj = obj || new PowDetails();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('secureAlgorithm')) {
+                    obj['secureAlgorithm'] = _ApiClient2.default.convertToType(data['secureAlgorithm'], 'String');
                 }
-                if (data.hasOwnProperty('login')) {
-                    obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
+                if (data.hasOwnProperty('difficulty')) {
+                    obj['difficulty'] = _ApiClient2.default.convertToType(data['difficulty'], 'Number');
                 }
-                if (data.hasOwnProperty('ticket')) {
-                    obj['ticket'] = _ApiClient2.default.convertToType(data['ticket'], 'String');
-                }
-                if (data.hasOwnProperty('symbol')) {
-                    obj['symbol'] = _ApiClient2.default.convertToType(data['symbol'], 'String');
-                }
-                if (data.hasOwnProperty('volume')) {
-                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
-                }
-                if (data.hasOwnProperty('profit')) {
-                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
-                }
-                if (data.hasOwnProperty('direction')) {
-                    obj['direction'] = _ApiClient2.default.convertToType(data['direction'], 'String');
-                }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
-                }
-                if (data.hasOwnProperty('price')) {
-                    obj['price'] = _ApiClient2.default.convertToType(data['price'], 'Number');
-                }
-                if (data.hasOwnProperty('priceCurrent')) {
-                    obj['priceCurrent'] = _ApiClient2.default.convertToType(data['priceCurrent'], 'Number');
-                }
-                if (data.hasOwnProperty('entry')) {
-                    obj['entry'] = _ApiClient2.default.convertToType(data['entry'], 'String');
-                }
-                if (data.hasOwnProperty('baseVolume')) {
-                    obj['baseVolume'] = _ApiClient2.default.convertToType(data['baseVolume'], 'Number');
-                }
-                if (data.hasOwnProperty('commission')) {
-                    obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
+                if (data.hasOwnProperty('nonce')) {
+                    obj['nonce'] = _ApiClient2.default.convertToType(data['nonce'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return OrderModel;
+    return PowDetails;
 }();
 
-OrderModel.DirectionEnum = {
+PowDetails.SecureAlgorithmEnum = {
 
-    "Buy": "Buy",
-
-    "Sell": "Sell",
-
-    "Balance": "Balance",
-
-    "Credit": "Credit",
-
-    "Undefined": "Undefined"
+    "Sha256": "Sha256"
 };
-OrderModel.EntryEnum = {
-
-    "In": "In",
-
-    "Out": "Out",
-
-    "InOut": "InOut",
-
-    "OutBy": "OutBy"
-};
-exports.default = OrderModel;
+exports.default = PowDetails;

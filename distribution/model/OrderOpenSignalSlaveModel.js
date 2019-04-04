@@ -113,6 +113,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name OrderOpenSignalSlaveModel#baseVolume
  * @type {Number}
  */
+/**
+ *
+ * @name OrderOpenSignalSlaveModel#commission
+ * @type {Number}
+ */
 
 var OrderOpenSignalSlaveModel = function () {
     function OrderOpenSignalSlaveModel() {
@@ -133,6 +138,7 @@ var OrderOpenSignalSlaveModel = function () {
         this.priceCurrent = undefined;
         this.entry = undefined;
         this.baseVolume = undefined;
+        this.commission = undefined;
     }
 
     _createClass(OrderOpenSignalSlaveModel, null, [{
@@ -185,6 +191,9 @@ var OrderOpenSignalSlaveModel = function () {
                 }
                 if (data.hasOwnProperty('baseVolume')) {
                     obj['baseVolume'] = _ApiClient2.default.convertToType(data['baseVolume'], 'Number');
+                }
+                if (data.hasOwnProperty('commission')) {
+                    obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
                 }
             }
             return obj;

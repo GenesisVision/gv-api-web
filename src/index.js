@@ -108,8 +108,8 @@ import PlatformAssets from './model/PlatformAssets';
 import PlatformCurrency from './model/PlatformCurrency';
 import PlatformInfo from './model/PlatformInfo';
 import PlatformStatistic from './model/PlatformStatistic';
-import PoWDetails from './model/PoWDetails';
-import PoWResult from './model/PoWResult';
+import PowDetails from './model/PowDetails';
+import PowResult from './model/PowResult';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
@@ -780,16 +780,16 @@ export {
     PlatformStatistic,
 
     /**
-     * @name index#PoWDetails
-     * @type {PoWDetails}
+     * @name index#PowDetails
+     * @type {PowDetails}
      */
-    PoWDetails,
+    PowDetails,
 
     /**
-     * @name index#PoWResult
-     * @type {PoWResult}
+     * @name index#PowResult
+     * @type {PowResult}
      */
-    PoWResult,
+    PowResult,
 
     /**
      * @name index#ProfileFullViewModel

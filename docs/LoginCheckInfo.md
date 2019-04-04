@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**poW** | [**PoWResult**](PoWResult.md) |  | [optional] 
+**pow** | [**PowResult**](PowResult.md) |  | [optional] 
 **geeTest** | [**GeeTestResult**](GeeTestResult.md) |  | [optional] 
 
 

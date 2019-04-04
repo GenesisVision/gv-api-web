@@ -652,8 +652,8 @@ export declare interface index {
     PlatformCurrency: PlatformCurrency;
     PlatformInfo: PlatformInfo;
     PlatformStatistic: PlatformStatistic;
-    PoWDetails: PoWDetails;
-    PoWResult: PoWResult;
+    PowDetails: PowDetails;
+    PowResult: PowResult;
     ProfileFullViewModel: ProfileFullViewModel;
     ProfileHeaderViewModel: ProfileHeaderViewModel;
     ProfilePublic: ProfilePublic;
@@ -1162,13 +1162,13 @@ export declare interface LevelUpSummary {
 export declare interface LoginCheckDetails {
     id: string;
     route: string;
-    poW: PoWDetails;
+    pow: PowDetails;
     geeTest: GeeTestDetails;
 }
 
 export declare interface LoginCheckInfo {
     id: string;
-    poW: PoWResult;
+    pow: PowResult;
     geeTest: GeeTestResult;
 }
 
@@ -1432,6 +1432,7 @@ export declare interface OrderClosedSignalSlaveModel {
     priceCurrent: number;
     entry: "In" | "Out" | "InOut" | "OutBy";
     baseVolume: number;
+    commission: number;
 }
 
 export declare interface OrderModel {
@@ -1447,6 +1448,7 @@ export declare interface OrderModel {
     priceCurrent: number;
     entry: "In" | "Out" | "InOut" | "OutBy";
     baseVolume: number;
+    commission: number;
 }
 
 export declare interface OrderOpenSignalSlaveModel {
@@ -1465,6 +1467,7 @@ export declare interface OrderOpenSignalSlaveModel {
     priceCurrent: number;
     entry: "In" | "Out" | "InOut" | "OutBy";
     baseVolume: number;
+    commission: number;
 }
 
 export declare interface OrderProgramData {
@@ -1605,6 +1608,16 @@ export declare interface PoWDetails {
 }
 
 export declare interface PoWResult {
+    prefix: string;
+}
+
+export declare interface PowDetails {
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+}
+
+export declare interface PowResult {
     prefix: string;
 }
 

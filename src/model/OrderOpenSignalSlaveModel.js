@@ -100,6 +100,11 @@ import ProfilePublic from './ProfilePublic';
      * @name OrderOpenSignalSlaveModel#baseVolume
      * @type {Number}
      */
+    /**
+     *
+     * @name OrderOpenSignalSlaveModel#commission
+     * @type {Number}
+     */
 
 
 
@@ -171,6 +176,9 @@ export default class OrderOpenSignalSlaveModel {
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
             }
+            if (data.hasOwnProperty('commission')) {
+                obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
+            }
         }
         return obj;
     }
@@ -190,6 +198,7 @@ export default class OrderOpenSignalSlaveModel {
     priceCurrent = undefined;
     entry = undefined;
     baseVolume = undefined;
+    commission = undefined;
 
 
 
