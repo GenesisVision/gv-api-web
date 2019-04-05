@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -21,177 +21,43 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ErrorViewModel = require('../model/ErrorViewModel');
-
-var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
-
-var _RatesModel = require('../model/RatesModel');
-
-var _RatesModel2 = _interopRequireDefault(_RatesModel);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* Rate service.
-* @class RateApi
-* @version v1.0
-*/
-var RateApi = function () {
+ *
+ * @interface PowResult
+ */
 
-  /**
-  * Constructs a new RateApi. 
-  * @function RateApi#constructor
-  * @param {ApiClient} apiClient Optional API client implementation to use,
-  * @return {RateApi}
-  */
-  function RateApi(apiClient) {
-    _classCallCheck(this, RateApi);
+/**
+ *
+ * @name PowResult#prefix
+ * @type {String}
+ */
 
-    this.apiClient = apiClient || _ApiClient2.default.instance;
-  }
+var PowResult = function () {
+    function PowResult() {
+        _classCallCheck(this, PowResult);
 
-  _createClass(RateApi, [{
-    key: 'v10RateByExchangeByFromByToGetWithHttpInfo',
-    value: function v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to) {
-      var postBody = null;
-
-      // verify the required parameter 'exchange' is set
-      if (exchange === undefined || exchange === null) {
-        throw new Error("Missing the required parameter 'exchange' when calling v10RateByExchangeByFromByToGet");
-      }
-
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByExchangeByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByExchangeByFromByToGet");
-      }
-
-      var pathParams = {
-        'exchange': exchange,
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
-
-      return this.apiClient.callApi('/v1.0/rate/{exchange}/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        this.prefix = undefined;
     }
 
-    /**
-     * Get rate
-     * @function RateApi#v10RateByExchangeByFromByToGet
-     * @param {String} exchange 
-     * @param {String} from 
-     * @param {String} to 
-     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
-     */
+    _createClass(PowResult, null, [{
+        key: 'constructFromObject',
+        value: function constructFromObject(data, obj) {
+            if (data) {
+                obj = obj || new PowResult();
 
-  }, {
-    key: 'v10RateByExchangeByFromByToGet',
-    value: function v10RateByExchangeByFromByToGet(exchange, from, to) {
-      return this.v10RateByExchangeByFromByToGetWithHttpInfo(exchange, from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }, {
-    key: 'v10RateByFromByToGetWithHttpInfo',
-    value: function v10RateByFromByToGetWithHttpInfo(from, to) {
-      var postBody = null;
+                if (data.hasOwnProperty('prefix')) {
+                    obj['prefix'] = _ApiClient2.default.convertToType(data['prefix'], 'String');
+                }
+            }
+            return obj;
+        }
+    }]);
 
-      // verify the required parameter 'from' is set
-      if (from === undefined || from === null) {
-        throw new Error("Missing the required parameter 'from' when calling v10RateByFromByToGet");
-      }
-
-      // verify the required parameter 'to' is set
-      if (to === undefined || to === null) {
-        throw new Error("Missing the required parameter 'to' when calling v10RateByFromByToGet");
-      }
-
-      var pathParams = {
-        'from': from,
-        'to': to
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = 'Number';
-
-      return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get rate
-     * @function RateApi#v10RateByFromByToGet
-     * @param {String} from 
-     * @param {String} to 
-     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
-     */
-
-  }, {
-    key: 'v10RateByFromByToGet',
-    value: function v10RateByFromByToGet(from, to) {
-      return this.v10RateByFromByToGetWithHttpInfo(from, to).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }, {
-    key: 'v10RateGetWithHttpInfo',
-    value: function v10RateGetWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
-
-      var pathParams = {};
-      var queryParams = {
-        'from': this.apiClient.buildCollectionParam(opts['from'], 'multi'),
-        'to': this.apiClient.buildCollectionParam(opts['to'], 'multi')
-      };
-      var headerParams = {};
-      var formParams = {};
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _RatesModel2.default;
-
-      return this.apiClient.callApi('/v1.0/rate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-
-    /**
-     * Get rates
-     * @function RateApi#v10RateGet
-     * @param {Object} [opts] Optional parameters
-     * @param {[String]} [opts.from] 
-     * @param {[String]} [opts.to] 
-     * @return {CancelablePromise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
-     */
-
-  }, {
-    key: 'v10RateGet',
-    value: function v10RateGet(opts) {
-      return this.v10RateGetWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-  }]);
-
-  return RateApi;
+    return PowResult;
 }();
 
-exports.default = RateApi;
+exports.default = PowResult;

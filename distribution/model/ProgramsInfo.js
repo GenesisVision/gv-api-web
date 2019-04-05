@@ -78,7 +78,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramsInfo#periods
- * @type {Array<Number>}
+ * @type {[Number]}
  */
 
 var ProgramsInfo = function () {

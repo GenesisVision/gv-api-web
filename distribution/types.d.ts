@@ -1550,9 +1550,27 @@ export declare interface PowDetails {
     secureAlgorithm: "Sha256";
     difficulty: number;
     nonce: string;
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
 }
 
 export declare interface PowResult {
+    prefix: string;
+    prefix: string;
+}
+
+export declare interface PowDetails {
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+}
+
+export declare interface PowResult {
+    prefix: string;
     prefix: string;
 }
 
