@@ -90,8 +90,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property loginCheckInfo (base name: "loginCheckInfo")', function() {
-      // uncomment below and update the code to test the property loginCheckInfo
+    it('should have the property captchaCheckResult (base name: "captchaCheckResult")', function() {
+      // uncomment below and update the code to test the property captchaCheckResult
       //var instane = new CoreApiV10.LoginViewModel();
       //expect(instance).to.be();
     });
