@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _LoginCheckInfo = require('./LoginCheckInfo');
+var _LoginCheckResult = require('./LoginCheckResult');
 
-var _LoginCheckInfo2 = _interopRequireDefault(_LoginCheckInfo);
+var _LoginCheckResult2 = _interopRequireDefault(_LoginCheckResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66,8 +66,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name LoginViewModel#loginCheckInfo
- * @type {LoginCheckInfo}
+ * @name LoginViewModel#loginCheckResult
+ * @type {LoginCheckResult}
  */
 
 var LoginViewModel = function () {
@@ -80,7 +80,7 @@ var LoginViewModel = function () {
         this.twoFactorCode = undefined;
         this.recoveryCode = undefined;
         this.client = undefined;
-        this.loginCheckInfo = undefined;
+        this.loginCheckResult = undefined;
 
 
         this['email'] = email;this['password'] = password;
@@ -110,8 +110,8 @@ var LoginViewModel = function () {
                 if (data.hasOwnProperty('client')) {
                     obj['client'] = _ApiClient2.default.convertToType(data['client'], 'String');
                 }
-                if (data.hasOwnProperty('loginCheckInfo')) {
-                    obj['loginCheckInfo'] = _LoginCheckInfo2.default.constructFromObject(data['loginCheckInfo']);
+                if (data.hasOwnProperty('loginCheckResult')) {
+                    obj['loginCheckResult'] = _LoginCheckResult2.default.constructFromObject(data['loginCheckResult']);
                 }
             }
             return obj;

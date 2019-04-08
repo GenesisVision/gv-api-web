@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **twoFactorCode** | **String** |  | [optional] 
 **recoveryCode** | **String** |  | [optional] 
 **client** | **String** |  | [optional] 
-**loginCheckInfo** | [**LoginCheckInfo**](LoginCheckInfo.md) |  | [optional] 
+**loginCheckResult** | [**LoginCheckResult**](LoginCheckResult.md) |  | [optional] 
 
 

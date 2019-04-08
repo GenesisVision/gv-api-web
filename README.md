@@ -304,7 +304,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
  - [CoreApiV10.LoginCheckDetails](docs/LoginCheckDetails.md)
- - [CoreApiV10.LoginCheckInfo](docs/LoginCheckInfo.md)
+ - [CoreApiV10.LoginCheckResult](docs/LoginCheckResult.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)

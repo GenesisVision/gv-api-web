@@ -27,6 +27,11 @@ import PowDetails from './PowDetails';
     
     /**
      *
+     * @name LoginCheckDetails#captchaType
+     * @type {("None"|"Pow"|"GeeTest")}
+     */
+    /**
+     *
      * @name LoginCheckDetails#id
      * @type {String}
      */
@@ -71,6 +76,9 @@ export default class LoginCheckDetails {
             
             
 
+            if (data.hasOwnProperty('captchaType')) {
+                obj['captchaType'] = ApiClient.convertToType(data['captchaType'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -87,6 +95,7 @@ export default class LoginCheckDetails {
         return obj;
     }
 
+    captchaType = undefined;
     id = undefined;
     route = undefined;
     pow = undefined;
@@ -96,6 +105,15 @@ export default class LoginCheckDetails {
 
 
 
+
+    static CaptchaTypeEnum = {
+    
+        "None": "None",
+    
+        "Pow": "Pow",
+    
+        "GeeTest": "GeeTest"    
+    };
 
 
 

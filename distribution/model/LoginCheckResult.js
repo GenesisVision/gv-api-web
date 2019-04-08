@@ -21,13 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _GeeTestDetails = require('./GeeTestDetails');
+var _GeeTestResult = require('./GeeTestResult');
 
-var _GeeTestDetails2 = _interopRequireDefault(_GeeTestDetails);
+var _GeeTestResult2 = _interopRequireDefault(_GeeTestResult);
 
-var _PowDetails = require('./PowDetails');
+var _PowResult = require('./PowResult');
 
-var _PowDetails2 = _interopRequireDefault(_PowDetails);
+var _PowResult2 = _interopRequireDefault(_PowResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,81 +35,55 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface LoginCheckDetails
+ * @interface LoginCheckResult
  */
 
 /**
  *
- * @name LoginCheckDetails#captchaType
- * @type {("None"|"Pow"|"GeeTest")}
- */
-/**
- *
- * @name LoginCheckDetails#id
+ * @name LoginCheckResult#id
  * @type {String}
  */
 /**
  *
- * @name LoginCheckDetails#route
- * @type {String}
+ * @name LoginCheckResult#pow
+ * @type {PowResult}
  */
 /**
  *
- * @name LoginCheckDetails#pow
- * @type {PowDetails}
- */
-/**
- *
- * @name LoginCheckDetails#geeTest
- * @type {GeeTestDetails}
+ * @name LoginCheckResult#geeTest
+ * @type {GeeTestResult}
  */
 
-var LoginCheckDetails = function () {
-    function LoginCheckDetails() {
-        _classCallCheck(this, LoginCheckDetails);
+var LoginCheckResult = function () {
+    function LoginCheckResult() {
+        _classCallCheck(this, LoginCheckResult);
 
-        this.captchaType = undefined;
         this.id = undefined;
-        this.route = undefined;
         this.pow = undefined;
         this.geeTest = undefined;
     }
 
-    _createClass(LoginCheckDetails, null, [{
+    _createClass(LoginCheckResult, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new LoginCheckDetails();
+                obj = obj || new LoginCheckResult();
 
-                if (data.hasOwnProperty('captchaType')) {
-                    obj['captchaType'] = _ApiClient2.default.convertToType(data['captchaType'], 'String');
-                }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('route')) {
-                    obj['route'] = _ApiClient2.default.convertToType(data['route'], 'String');
-                }
                 if (data.hasOwnProperty('pow')) {
-                    obj['pow'] = _PowDetails2.default.constructFromObject(data['pow']);
+                    obj['pow'] = _PowResult2.default.constructFromObject(data['pow']);
                 }
                 if (data.hasOwnProperty('geeTest')) {
-                    obj['geeTest'] = _GeeTestDetails2.default.constructFromObject(data['geeTest']);
+                    obj['geeTest'] = _GeeTestResult2.default.constructFromObject(data['geeTest']);
                 }
             }
             return obj;
         }
     }]);
 
-    return LoginCheckDetails;
+    return LoginCheckResult;
 }();
 
-LoginCheckDetails.CaptchaTypeEnum = {
-
-    "None": "None",
-
-    "Pow": "Pow",
-
-    "GeeTest": "GeeTest"
-};
-exports.default = LoginCheckDetails;
+exports.default = LoginCheckResult;

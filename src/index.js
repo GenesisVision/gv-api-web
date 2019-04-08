@@ -65,7 +65,7 @@ import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
 import LoginCheckDetails from './model/LoginCheckDetails';
-import LoginCheckInfo from './model/LoginCheckInfo';
+import LoginCheckResult from './model/LoginCheckResult';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
@@ -519,10 +519,10 @@ export {
     LoginCheckDetails,
 
     /**
-     * @name index#LoginCheckInfo
-     * @type {LoginCheckInfo}
+     * @name index#LoginCheckResult
+     * @type {LoginCheckResult}
      */
-    LoginCheckInfo,
+    LoginCheckResult,
 
     /**
      * @name index#LoginViewModel

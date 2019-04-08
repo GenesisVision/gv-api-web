@@ -609,7 +609,7 @@ export declare interface index {
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
     LoginCheckDetails: LoginCheckDetails;
-    LoginCheckInfo: LoginCheckInfo;
+    LoginCheckResult: LoginCheckResult;
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
@@ -1135,6 +1135,7 @@ export declare interface LevelUpSummary {
 }
 
 export declare interface LoginCheckDetails {
+    captchaType: "None" | "Pow" | "GeeTest";
     id: string;
     route: string;
     pow: PowDetails;
@@ -1147,6 +1148,12 @@ export declare interface LoginCheckInfo {
     geeTest: GeeTestResult;
 }
 
+export declare interface LoginCheckResult {
+    id: string;
+    pow: PowResult;
+    geeTest: GeeTestResult;
+}
+
 export declare interface LoginViewModel {
     email: string;
     password: string;
@@ -1154,7 +1161,7 @@ export declare interface LoginViewModel {
     twoFactorCode: string;
     recoveryCode: string;
     client: string;
-    loginCheckInfo: LoginCheckInfo;
+    loginCheckResult: LoginCheckResult;
 }
 
 export declare interface ManagerAssets {
