@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import LoginCheckResult from './LoginCheckResult';
+import CaptchaCheckResult from './CaptchaCheckResult';
 
 
 
@@ -56,8 +56,8 @@ import LoginCheckResult from './LoginCheckResult';
      */
     /**
      *
-     * @name LoginViewModel#loginCheckResult
-     * @type {LoginCheckResult}
+     * @name LoginViewModel#captchaCheckResult
+     * @type {CaptchaCheckResult}
      */
 
 
@@ -103,8 +103,8 @@ export default class LoginViewModel {
             if (data.hasOwnProperty('client')) {
                 obj['client'] = ApiClient.convertToType(data['client'], 'String');
             }
-            if (data.hasOwnProperty('loginCheckResult')) {
-                obj['loginCheckResult'] = LoginCheckResult.constructFromObject(data['loginCheckResult']);
+            if (data.hasOwnProperty('captchaCheckResult')) {
+                obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
             }
         }
         return obj;
@@ -116,7 +116,7 @@ export default class LoginViewModel {
     twoFactorCode = undefined;
     recoveryCode = undefined;
     client = undefined;
-    loginCheckResult = undefined;
+    captchaCheckResult = undefined;
 
 
 

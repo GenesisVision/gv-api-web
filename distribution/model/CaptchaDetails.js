@@ -21,297 +21,95 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _GeeTestDetails = require('./GeeTestDetails');
+
+var _GeeTestDetails2 = _interopRequireDefault(_GeeTestDetails);
+
+var _PowDetails = require('./PowDetails');
+
+var _PowDetails2 = _interopRequireDefault(_PowDetails);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface DashboardPortfolioEvent
+ * @interface CaptchaDetails
  */
 
 /**
  *
- * @name DashboardPortfolioEvent#assetId
+ * @name CaptchaDetails#captchaType
+ * @type {("None"|"Pow"|"GeeTest")}
+ */
+/**
+ *
+ * @name CaptchaDetails#id
  * @type {String}
  */
 /**
  *
- * @name DashboardPortfolioEvent#date
- * @type {Date}
- */
-/**
- *
- * @name DashboardPortfolioEvent#title
+ * @name CaptchaDetails#route
  * @type {String}
  */
 /**
  *
- * @name DashboardPortfolioEvent#url
- * @type {String}
+ * @name CaptchaDetails#pow
+ * @type {PowDetails}
  */
 /**
  *
- * @name DashboardPortfolioEvent#value
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#valueTotal
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessManager
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatform
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#profitPercent
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#logo
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#color
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#description
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#assetType
- * @type {("Program"|"Fund")}
+ * @name CaptchaDetails#geeTest
+ * @type {GeeTestDetails}
  */
 
-var DashboardPortfolioEvent = function () {
-    function DashboardPortfolioEvent() {
-        _classCallCheck(this, DashboardPortfolioEvent);
+var CaptchaDetails = function () {
+    function CaptchaDetails() {
+        _classCallCheck(this, CaptchaDetails);
 
-        this.assetId = undefined;
-        this.date = undefined;
-        this.title = undefined;
-        this.url = undefined;
-        this.value = undefined;
-        this.valueTotal = undefined;
-        this.feeSuccessManager = undefined;
-        this.feeSuccessManagerCurrency = undefined;
-        this.feeSuccessPlatform = undefined;
-        this.feeSuccessPlatformCurrency = undefined;
-        this.profitPercent = undefined;
-        this.currency = undefined;
-        this.type = undefined;
-        this.logo = undefined;
-        this.color = undefined;
-        this.description = undefined;
-        this.assetType = undefined;
+        this.captchaType = undefined;
+        this.id = undefined;
+        this.route = undefined;
+        this.pow = undefined;
+        this.geeTest = undefined;
     }
 
-    _createClass(DashboardPortfolioEvent, null, [{
+    _createClass(CaptchaDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new DashboardPortfolioEvent();
+                obj = obj || new CaptchaDetails();
 
-                if (data.hasOwnProperty('assetId')) {
-                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
+                if (data.hasOwnProperty('captchaType')) {
+                    obj['captchaType'] = _ApiClient2.default.convertToType(data['captchaType'], 'String');
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('route')) {
+                    obj['route'] = _ApiClient2.default.convertToType(data['route'], 'String');
                 }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                if (data.hasOwnProperty('pow')) {
+                    obj['pow'] = _PowDetails2.default.constructFromObject(data['pow']);
                 }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
-                }
-                if (data.hasOwnProperty('valueTotal')) {
-                    obj['valueTotal'] = _ApiClient2.default.convertToType(data['valueTotal'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessManager')) {
-                    obj['feeSuccessManager'] = _ApiClient2.default.convertToType(data['feeSuccessManager'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessManagerCurrency')) {
-                    obj['feeSuccessManagerCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessManagerCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatform')) {
-                    obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatformCurrency')) {
-                    obj['feeSuccessPlatformCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessPlatformCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('assetType')) {
-                    obj['assetType'] = _ApiClient2.default.convertToType(data['assetType'], 'String');
+                if (data.hasOwnProperty('geeTest')) {
+                    obj['geeTest'] = _GeeTestDetails2.default.constructFromObject(data['geeTest']);
                 }
             }
             return obj;
         }
     }]);
 
-    return DashboardPortfolioEvent;
+    return CaptchaDetails;
 }();
 
-DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
+CaptchaDetails.CaptchaTypeEnum = {
 
-    "BTC": "BTC",
+    "None": "None",
 
-    "ETH": "ETH",
+    "Pow": "Pow",
 
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "GeeTest": "GeeTest"
 };
-DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-DashboardPortfolioEvent.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-DashboardPortfolioEvent.TypeEnum = {
-
-    "All": "All",
-
-    "Invest": "Invest",
-
-    "Withdraw": "Withdraw",
-
-    "Profit": "Profit",
-
-    "Loss": "Loss",
-
-    "Reinvest": "Reinvest",
-
-    "Canceled": "Canceled",
-
-    "Ended": "Ended",
-
-    "WithdrawByStopOut": "WithdrawByStopOut"
-};
-DashboardPortfolioEvent.AssetTypeEnum = {
-
-    "Program": "Program",
-
-    "Fund": "Fund"
-};
-exports.default = DashboardPortfolioEvent;
+exports.default = CaptchaDetails;

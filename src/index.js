@@ -23,6 +23,8 @@ import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
+import CaptchaCheckResult from './model/CaptchaCheckResult';
+import CaptchaDetails from './model/CaptchaDetails';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
@@ -64,8 +66,6 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
-import LoginCheckDetails from './model/LoginCheckDetails';
-import LoginCheckResult from './model/LoginCheckResult';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
@@ -265,6 +265,18 @@ export {
      * @type {BrokersInfo}
      */
     BrokersInfo,
+
+    /**
+     * @name index#CaptchaCheckResult
+     * @type {CaptchaCheckResult}
+     */
+    CaptchaCheckResult,
+
+    /**
+     * @name index#CaptchaDetails
+     * @type {CaptchaDetails}
+     */
+    CaptchaDetails,
 
     /**
      * @name index#ChangePasswordViewModel
@@ -511,18 +523,6 @@ export {
      * @type {LevelUpSummary}
      */
     LevelUpSummary,
-
-    /**
-     * @name index#LoginCheckDetails
-     * @type {LoginCheckDetails}
-     */
-    LoginCheckDetails,
-
-    /**
-     * @name index#LoginCheckResult
-     * @type {LoginCheckResult}
-     */
-    LoginCheckResult,
 
     /**
      * @name index#LoginViewModel
