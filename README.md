@@ -151,7 +151,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsRequestsByIdCancelPost**](docs/InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
 *CoreApiV10.InvestorApi* | [**v10InvestorRequestsBySkipByTakeGet**](docs/InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.InvestorApi* | [**v10InvestorSignalsGet**](docs/InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard signal providers list
-*CoreApiV10.KycApi* | [**v10KycCallbackPost**](docs/KycApi.md#v10KycCallbackPost) | **POST** /v1.0/kyc/callback | 
 *CoreApiV10.ManagerApi* | [**v10ManagerAssetsGet**](docs/ManagerApi.md#v10ManagerAssetsGet) | **GET** /v1.0/manager/assets | Manager assets list
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdDetailsGet**](docs/ManagerApi.md#v10ManagerByIdDetailsGet) | **GET** /v1.0/manager/{id}/details | Manager details
 *CoreApiV10.ManagerApi* | [**v10ManagerByIdGet**](docs/ManagerApi.md#v10ManagerByIdGet) | **GET** /v1.0/manager/{id} | Manager profile
@@ -301,7 +300,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.GeeTestResult](docs/GeeTestResult.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.InternalTransferRequest](docs/InternalTransferRequest.md)
- - [CoreApiV10.KycCallback](docs/KycCallback.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
@@ -389,7 +387,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.RegisterManagerViewModel](docs/RegisterManagerViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
- - [CoreApiV10.Review](docs/Review.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalsList](docs/SignalsList.md)

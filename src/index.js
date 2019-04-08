@@ -61,7 +61,6 @@ import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
 import InternalTransferRequest from './model/InternalTransferRequest';
-import KycCallback from './model/KycCallback';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
@@ -149,7 +148,6 @@ import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
 import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
-import Review from './model/Review';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDetails from './model/SignalDetails';
 import SignalsList from './model/SignalsList';
@@ -184,7 +182,6 @@ import BrokersApi from './api/BrokersApi';
 import FileApi from './api/FileApi';
 import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
-import KycApi from './api/KycApi';
 import ManagerApi from './api/ManagerApi';
 import NotificationsApi from './api/NotificationsApi';
 import PlatformApi from './api/PlatformApi';
@@ -496,12 +493,6 @@ export {
      * @type {InternalTransferRequest}
      */
     InternalTransferRequest,
-
-    /**
-     * @name index#KycCallback
-     * @type {KycCallback}
-     */
-    KycCallback,
 
     /**
      * @name index#LevelInfo
@@ -1026,12 +1017,6 @@ export {
     ResetPasswordViewModel,
 
     /**
-     * @name index#Review
-     * @type {Review}
-     */
-    Review,
-
-    /**
      * @name index#SearchViewModel
      * @type {SearchViewModel}
      */
@@ -1234,12 +1219,6 @@ export {
     * @type {InvestorApi}
     */
     InvestorApi,
-
-    /**
-    * @name index#KycApi
-    * @type {KycApi}
-    */
-    KycApi,
 
     /**
     * @name index#ManagerApi

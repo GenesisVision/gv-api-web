@@ -605,7 +605,6 @@ export declare interface index {
     GeeTestResult: GeeTestResult;
     IOsAppVersion: IOsAppVersion;
     InternalTransferRequest: InternalTransferRequest;
-    KycCallback: KycCallback;
     LevelInfo: LevelInfo;
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
@@ -693,7 +692,6 @@ export declare interface index {
     RegisterManagerViewModel: RegisterManagerViewModel;
     ResendConfirmationViewModel: ResendConfirmationViewModel;
     ResetPasswordViewModel: ResetPasswordViewModel;
-    Review: Review;
     SearchViewModel: SearchViewModel;
     SignalDetails: SignalDetails;
     SignalsList: SignalsList;
@@ -728,7 +726,6 @@ export declare interface index {
     FileApi: FileApi;
     FundsApi: FundsApi;
     InvestorApi: InvestorApi;
-    KycApi: KycApi;
     ManagerApi: ManagerApi;
     NotificationsApi: NotificationsApi;
     PlatformApi: PlatformApi;
