@@ -340,7 +340,7 @@ export declare class PlatformApi {
         currency?: string;
     }): CancelablePromise<ProgramsLevelsInfo>;
     v10PlatformRiskcontrolGet(route: string, opts?: {
-        device?: string;
+        client?: string;
         version?: string;
     }): CancelablePromise<CaptchaDetails>;
     v10PlatformStatisticGet(): CancelablePromise<PlatformStatistic>;
@@ -1531,9 +1531,27 @@ export declare interface PowDetails {
     secureAlgorithm: "Sha256";
     difficulty: number;
     nonce: string;
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
 }
 
 export declare interface PowResult {
+    prefix: string;
+    prefix: string;
+}
+
+export declare interface PowDetails {
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+    secureAlgorithm: "Sha256";
+    difficulty: number;
+    nonce: string;
+}
+
+export declare interface PowResult {
+    prefix: string;
     prefix: string;
 }
 

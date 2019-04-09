@@ -102,7 +102,7 @@ let apiInstance = new CoreApiV10.PlatformApi();
 let route = "route_example"; // String | 
 
 let opts = { 
-  'device': "device_example", // String | 
+  'client': "client_example", // String | 
   'version': "version_example" // String | 
 };
 apiInstance.v10PlatformRiskcontrolGet(route, opts).then((data) => {
@@ -118,7 +118,7 @@ apiInstance.v10PlatformRiskcontrolGet(route, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **route** | **String**|  | 
- **device** | **String**|  | [optional] 
+ **client** | **String**|  | [optional] 
  **version** | **String**|  | [optional] 
 
 ### Return type

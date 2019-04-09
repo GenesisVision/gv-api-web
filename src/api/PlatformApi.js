@@ -129,7 +129,7 @@ export default class PlatformApi {
       };
       let queryParams = {
         'Route': route,
-        'Device': opts['device'],
+        'Client': opts['client'],
         'Version': opts['version']
       };
       let headerParams = {
@@ -154,7 +154,7 @@ export default class PlatformApi {
      * @function PlatformApi#v10PlatformRiskcontrolGet
      * @param {String} route 
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.device] 
+     * @param {String} [opts.client] 
      * @param {String} [opts.version] 
      * @return {CancelablePromise<CaptchaDetails>} a Promise, with an object containing data of type CaptchaDetails and HTTP response
      */
