@@ -27,110 +27,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletWithdrawalInfo
+ * @interface PowDetails
  */
 
 /**
  *
- * @name WalletWithdrawalInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @name PowDetails#secureAlgorithm
+ * @type {("Sha256")}
  */
 /**
  *
- * @name WalletWithdrawalInfo#description
+ * @name PowDetails#difficulty
+ * @type {Number}
+ */
+/**
+ *
+ * @name PowDetails#nonce
  * @type {String}
  */
-/**
- *
- * @name WalletWithdrawalInfo#logo
- * @type {String}
- */
-/**
- *
- * @name WalletWithdrawalInfo#commission
- * @type {Number}
- */
-/**
- *
- * @name WalletWithdrawalInfo#rateToGvt
- * @type {Number}
- */
-/**
- *
- * @name WalletWithdrawalInfo#availableToWithdrawal
- * @type {Number}
- */
 
-var WalletWithdrawalInfo = function () {
-    function WalletWithdrawalInfo() {
-        _classCallCheck(this, WalletWithdrawalInfo);
+var PowDetails = function () {
+    function PowDetails() {
+        _classCallCheck(this, PowDetails);
 
-        this.currency = undefined;
-        this.description = undefined;
-        this.logo = undefined;
-        this.commission = undefined;
-        this.rateToGvt = undefined;
-        this.availableToWithdrawal = undefined;
+        this.secureAlgorithm = undefined;
+        this.difficulty = undefined;
+        this.nonce = undefined;
     }
 
-    _createClass(WalletWithdrawalInfo, null, [{
+    _createClass(PowDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletWithdrawalInfo();
+                obj = obj || new PowDetails();
 
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('secureAlgorithm')) {
+                    obj['secureAlgorithm'] = _ApiClient2.default.convertToType(data['secureAlgorithm'], 'String');
                 }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
+                if (data.hasOwnProperty('difficulty')) {
+                    obj['difficulty'] = _ApiClient2.default.convertToType(data['difficulty'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('commission')) {
-                    obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
-                }
-                if (data.hasOwnProperty('rateToGvt')) {
-                    obj['rateToGvt'] = _ApiClient2.default.convertToType(data['rateToGvt'], 'Number');
-                }
-                if (data.hasOwnProperty('availableToWithdrawal')) {
-                    obj['availableToWithdrawal'] = _ApiClient2.default.convertToType(data['availableToWithdrawal'], 'Number');
+                if (data.hasOwnProperty('nonce')) {
+                    obj['nonce'] = _ApiClient2.default.convertToType(data['nonce'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletWithdrawalInfo;
+    return PowDetails;
 }();
 
-WalletWithdrawalInfo.CurrencyEnum = {
+PowDetails.SecureAlgorithmEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "Sha256": "Sha256"
 };
-exports.default = WalletWithdrawalInfo;
+exports.default = PowDetails;
