@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
+    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="update api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/ApiClient.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/AuthApi.js" beforeDir="false" />
@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/distribution/api/FileApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/FundsApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/InvestorApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/KycApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/ManagerApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/PlatformApi.js" beforeDir="false" />
@@ -70,13 +69,9 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/GeeTestResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/IOsAppVersion.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/InternalTransferRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/KycCallback.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LoginCheckDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LoginCheckInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LoginCheckResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LoginViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" beforeDir="false" />
@@ -159,7 +154,6 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/RegisterManagerViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ResendConfirmationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ResetPasswordViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/Review.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SearchViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SignalDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SignalsList.js" beforeDir="false" />
@@ -245,14 +239,9 @@
       <change beforePath="$PROJECT_DIR$/docs/IOsAppVersion.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/InternalTransferRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/InvestorApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/KycApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/KycCallback.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpSummary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LoginCheckDetails.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LoginCheckInfo.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LoginCheckResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LoginViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerAssets.md" beforeDir="false" />
@@ -341,7 +330,6 @@
       <change beforePath="$PROJECT_DIR$/docs/RegisterManagerViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ResendConfirmationViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ResetPasswordViewModel.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Review.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SearchApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SearchViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalApi.md" beforeDir="false" />
@@ -381,7 +369,6 @@
       <change beforePath="$PROJECT_DIR$/src/api/FileApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/FundsApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/InvestorApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/KycApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ManagerApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/NotificationsApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/PlatformApi.js" beforeDir="false" />
@@ -442,13 +429,9 @@
       <change beforePath="$PROJECT_DIR$/src/model/GeeTestResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/IOsAppVersion.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/InternalTransferRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/KycCallback.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LoginCheckDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LoginCheckInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LoginCheckResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LoginViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerDashboard.js" beforeDir="false" />
@@ -531,7 +514,6 @@
       <change beforePath="$PROJECT_DIR$/src/model/RegisterManagerViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ResendConfirmationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ResetPasswordViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Review.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SearchViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalsList.js" beforeDir="false" />
@@ -566,7 +548,6 @@
       <change beforePath="$PROJECT_DIR$/test/api/FileApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/FundsApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/InvestorApi.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/KycApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/ManagerApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/NotificationsApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/PlatformApi.spec.js" beforeDir="false" />
@@ -626,13 +607,9 @@
       <change beforePath="$PROJECT_DIR$/test/model/GeeTestResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/IOsAppVersion.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/InternalTransferRequest.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/KycCallback.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpSummary.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LoginCheckDetails.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LoginCheckInfo.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LoginCheckResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LoginViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerAssets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerDashboard.spec.js" beforeDir="false" />
@@ -715,7 +692,6 @@
       <change beforePath="$PROJECT_DIR$/test/model/RegisterManagerViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ResendConfirmationViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ResetPasswordViewModel.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/Review.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SearchViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalsList.spec.js" beforeDir="false" />
@@ -757,20 +733,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="138">
+              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -784,8 +751,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="40" selection-end-line="1" />
+              <first_editor relative-caret-position="322">
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -995,7 +962,8 @@
       <workItem from="1544438024324" duration="707000" />
       <workItem from="1544455154049" duration="10703000" />
       <workItem from="1544625888343" duration="6661000" />
-      <workItem from="1554741877261" duration="148000" />
+      <workItem from="1554741877261" duration="839000" />
+      <workItem from="1554892019888" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -1088,7 +1056,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554393778555</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update api">
+      <created>1554742205468</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554742205468</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -1100,7 +1075,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65090000" />
+    <option name="totallyTimeSpent" value="66127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -1198,23 +1173,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update api" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/TwoFactorAuthenticatorConfirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/partial_model_inner_enum.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/partial_model_generic.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/distribution/model/AndroidAppVersion.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1430,7 +1388,16 @@
     <entry file="file://$PROJECT_DIR$/distribution/model/ProfileFullViewModel.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/PowDetails.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/FundAssetPart.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mocha.opts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
@@ -1442,35 +1409,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution/model/PoWResult.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="322">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution/model/PoWDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/PowResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="40" selection-end-line="1" />
+          <first_editor relative-caret-position="322">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="138">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
