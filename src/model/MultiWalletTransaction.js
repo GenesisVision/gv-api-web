@@ -31,12 +31,12 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletTransaction#currencyFrom
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
      * @name MultiWalletTransaction#currencyTo
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -160,17 +160,17 @@ export default class MultiWalletTransaction {
 
     static CurrencyFromEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -189,17 +189,17 @@ export default class MultiWalletTransaction {
 
     static CurrencyToEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
