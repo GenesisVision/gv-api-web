@@ -871,7 +871,7 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'programId': "programId_example", // String | 
-  'twoFactorCode': "twoFactorCode_example" // String | 
+  'code': "code_example" // String | 
 };
 apiInstance.v10ManagerPrograms2faConfirmPost(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **programId** | [**String**](.md)|  | [optional] 
- **twoFactorCode** | **String**|  | [optional] 
+ **code** | **String**|  | [optional] 
 
 ### Return type
 

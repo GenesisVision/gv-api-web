@@ -265,7 +265,7 @@ export declare class ManagerApi {
     }): CancelablePromise<ManagerDashboard>;
     v10ManagerPrograms2faConfirmPost(authorization: string, opts?: {
         programId?: string;
-        twoFactorCode?: string;
+        code?: string;
     }): CancelablePromise<any>;
     v10ManagerPrograms2faGetGet(authorization: string, opts?: {
         programId?: string;

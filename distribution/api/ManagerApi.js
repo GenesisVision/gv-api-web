@@ -994,7 +994,7 @@ var ManagerApi = function () {
       var pathParams = {};
       var queryParams = {
         'programId': opts['programId'],
-        'twoFactorCode': opts['twoFactorCode']
+        'code': opts['code']
       };
       var headerParams = {
         'Authorization': authorization
@@ -1015,7 +1015,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {String} [opts.twoFactorCode] 
+     * @param {String} [opts.code] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 

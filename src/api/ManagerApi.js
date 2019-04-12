@@ -989,7 +989,7 @@ export default class ManagerApi {
       };
       let queryParams = {
         'programId': opts['programId'],
-        'twoFactorCode': opts['twoFactorCode']
+        'code': opts['code']
       };
       let headerParams = {
         'Authorization': authorization
@@ -1015,7 +1015,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {String} [opts.twoFactorCode] 
+     * @param {String} [opts.code] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10ManagerPrograms2faConfirmPost(authorization, opts) {
