@@ -62,7 +62,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundProfitChart#equityChart
- * @type {Array<ChartSimple>}
+ * @type {[ChartSimple]}
  */
 /**
  *

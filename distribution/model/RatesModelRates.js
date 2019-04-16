@@ -37,67 +37,67 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name RatesModelRates#Undefined
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#GVT
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#ETH
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#BTC
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#ADA
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#USDT
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#XRP
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#BCH
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#LTC
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#DOGE
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#BNB
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#USD
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 /**
  *
  * @name RatesModelRates#EUR
- * @type {Array<RateItem>}
+ * @type {[RateItem]}
  */
 
 var RatesModelRates = function () {

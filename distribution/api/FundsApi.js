@@ -437,7 +437,7 @@ var FundsApi = function () {
      * @param {Boolean} [opts.isEnabled] 
      * @param {Boolean} [opts.hasInvestorsForAll] 
      * @param {Boolean} [opts.hasInvestorsForClosed] 
-     * @param {Array<String>} [opts.ids] 
+     * @param {[String]} [opts.ids] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
      * @param {Number} [opts.skip] 

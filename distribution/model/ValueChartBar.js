@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ValueChartBar#topAssets
- * @type {Array<AssetsValue>}
+ * @type {[AssetsValue]}
  */
 /**
  *

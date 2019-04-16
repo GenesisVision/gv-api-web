@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransactionsViewModel#transactions
- * @type {Array<WalletTransaction>}
+ * @type {[WalletTransaction]}
  */
 /**
  *

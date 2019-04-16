@@ -49,22 +49,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name NotificationSettingList#settingsGeneral
- * @type {Array<NotificationSettingViewModel>}
+ * @type {[NotificationSettingViewModel]}
  */
 /**
  *
  * @name NotificationSettingList#settingsProgram
- * @type {Array<ProgramNotificationSettingList>}
+ * @type {[ProgramNotificationSettingList]}
  */
 /**
  *
  * @name NotificationSettingList#settingsFund
- * @type {Array<FundNotificationSettingList>}
+ * @type {[FundNotificationSettingList]}
  */
 /**
  *
  * @name NotificationSettingList#settingsManager
- * @type {Array<ManagerNotificationSettingList>}
+ * @type {[ManagerNotificationSettingList]}
  */
 
 var NotificationSettingList = function () {
