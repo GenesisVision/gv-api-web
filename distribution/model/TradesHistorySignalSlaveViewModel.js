@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TradesHistorySignalSlaveViewModel#trades
- * @type {[OrderClosedSignalSlaveModel]}
+ * @type {Array<OrderClosedSignalSlaveModel>}
  */
 /**
  *

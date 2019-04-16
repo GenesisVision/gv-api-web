@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name NewFundRequest#assets
- * @type {[FundAssetPart]}
+ * @type {Array<FundAssetPart>}
  */
 /**
  *

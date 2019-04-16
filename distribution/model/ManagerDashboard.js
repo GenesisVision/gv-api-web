@@ -72,7 +72,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerDashboard#allAssets
- * @type {[AssetSelection]}
+ * @type {Array<AssetSelection>}
  */
 /**
  *

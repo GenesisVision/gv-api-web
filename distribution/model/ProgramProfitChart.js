@@ -71,12 +71,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#pnLChart
- * @type {[ChartSimple]}
+ * @type {Array<ChartSimple>}
  */
 /**
  *
  * @name ProgramProfitChart#periods
- * @type {[PeriodDate]}
+ * @type {Array<PeriodDate>}
  */
 /**
  *
@@ -91,7 +91,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#equityChart
- * @type {[ChartSimple]}
+ * @type {Array<ChartSimple>}
  */
 /**
  *
