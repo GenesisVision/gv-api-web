@@ -41,12 +41,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardChartValue#investedProgramsInfo
- * @type {Array<ValueChartBar>}
+ * @type {[ValueChartBar]}
  */
 /**
  *
  * @name DashboardChartValue#balanceChart
- * @type {Array<ChartSimple>}
+ * @type {[ChartSimple]}
  */
 /**
  *

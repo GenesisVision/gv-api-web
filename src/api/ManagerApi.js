@@ -1958,5 +1958,57 @@ export default class ManagerApi {
         });
     }
 
+      v10ManagerSignalEditPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerSignalEditPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'ProgramId': opts['programId'],
+        'SubscriptionFee': opts['subscriptionFee'],
+        'SuccessFee': opts['successFee']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/signal/edit', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Make manager&#39;s program signal provider
+     * @function ManagerApi#v10ManagerSignalEditPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.successFee] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ManagerSignalEditPost(authorization, opts) {
+      return this.v10ManagerSignalEditPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
 }

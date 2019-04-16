@@ -186,6 +186,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**v10ManagerRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagerApi* | [**v10ManagerSignalCreatePost**](docs/ManagerApi.md#v10ManagerSignalCreatePost) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
+*CoreApiV10.ManagerApi* | [**v10ManagerSignalEditPost**](docs/ManagerApi.md#v10ManagerSignalEditPost) | **POST** /v1.0/manager/signal/edit | Make manager&#39;s program signal provider
 *CoreApiV10.NotificationsApi* | [**v10NotificationsByIdReadPost**](docs/NotificationsApi.md#v10NotificationsByIdReadPost) | **POST** /v1.0/notifications/{id}/read | Read notification
 *CoreApiV10.NotificationsApi* | [**v10NotificationsGet**](docs/NotificationsApi.md#v10NotificationsGet) | **GET** /v1.0/notifications | User notifications
 *CoreApiV10.NotificationsApi* | [**v10NotificationsNewGet**](docs/NotificationsApi.md#v10NotificationsNewGet) | **GET** /v1.0/notifications/new | Unread notifications count
@@ -224,12 +225,13 @@ Class | Method | HTTP request | Description
 *CoreApiV10.RateApi* | [**v10RateGet**](docs/RateApi.md#v10RateGet) | **GET** /v1.0/rate | Get rates
 *CoreApiV10.SearchApi* | [**v10SearchGet**](docs/SearchApi.md#v10SearchGet) | **GET** /v1.0/search | Program / fund / manager search
 *CoreApiV10.SignalApi* | [**v10SignalAccountsGet**](docs/SignalApi.md#v10SignalAccountsGet) | **GET** /v1.0/signal/accounts | Get copytrading accounts
+*CoreApiV10.SignalApi* | [**v10SignalAttachByIdInfoGet**](docs/SignalApi.md#v10SignalAttachByIdInfoGet) | **GET** /v1.0/signal/attach/{id}/info | Get subscribe to programs signals info
 *CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
+*CoreApiV10.SignalApi* | [**v10SignalByIdUpdatePost**](docs/SignalApi.md#v10SignalByIdUpdatePost) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 *CoreApiV10.SignalApi* | [**v10SignalTradesByIdClosePost**](docs/SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 *CoreApiV10.SignalApi* | [**v10SignalTradesGet**](docs/SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**v10SignalTradesOpenGet**](docs/SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
-*CoreApiV10.SignalApi* | [**v10SignalUpdatePost**](docs/SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | Get user addresses
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | Get user addresses
 *CoreApiV10.WalletApi* | [**v10WalletByCurrencyGet**](docs/WalletApi.md#v10WalletByCurrencyGet) | **GET** /v1.0/wallet/{currency} | Wallet summary
@@ -257,6 +259,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
  - [CoreApiV10.AssetSelection](docs/AssetSelection.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
+ - [CoreApiV10.AttachToSignalProviderInfo](docs/AttachToSignalProviderInfo.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
  - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)
  - [CoreApiV10.Broker](docs/Broker.md)
@@ -331,10 +334,10 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
- - [CoreApiV10.OrderClosedSignalSlaveModel](docs/OrderClosedSignalSlaveModel.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
- - [CoreApiV10.OrderOpenSignalSlaveModel](docs/OrderOpenSignalSlaveModel.md)
  - [CoreApiV10.OrderProgramData](docs/OrderProgramData.md)
+ - [CoreApiV10.OrderSignalModel](docs/OrderSignalModel.md)
+ - [CoreApiV10.OrderSignalProgramInfo](docs/OrderSignalProgramInfo.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
@@ -390,8 +393,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalsList](docs/SignalsList.md)
- - [CoreApiV10.TradesHistorySignalSlaveViewModel](docs/TradesHistorySignalSlaveViewModel.md)
- - [CoreApiV10.TradesOpenSignalSlaveViewModel](docs/TradesOpenSignalSlaveViewModel.md)
+ - [CoreApiV10.TradesSignalViewModel](docs/TradesSignalViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TransactionDetails](docs/TransactionDetails.md)
  - [CoreApiV10.TwoFactorAuthenticator](docs/TwoFactorAuthenticator.md)

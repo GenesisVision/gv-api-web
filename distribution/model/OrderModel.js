@@ -95,6 +95,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name OrderModel#commission
  * @type {Number}
  */
+/**
+ *
+ * @name OrderModel#masterLogin
+ * @type {String}
+ */
 
 var OrderModel = function () {
     function OrderModel() {
@@ -113,6 +118,7 @@ var OrderModel = function () {
         this.entry = undefined;
         this.baseVolume = undefined;
         this.commission = undefined;
+        this.masterLogin = undefined;
     }
 
     _createClass(OrderModel, null, [{
@@ -159,6 +165,9 @@ var OrderModel = function () {
                 }
                 if (data.hasOwnProperty('commission')) {
                     obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
+                }
+                if (data.hasOwnProperty('masterLogin')) {
+                    obj['masterLogin'] = _ApiClient2.default.convertToType(data['masterLogin'], 'String');
                 }
             }
             return obj;

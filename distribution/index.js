@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WalletApi = exports.SignalApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletsGrandTotal = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletMultiSummary = exports.WalletMultiAvailable = exports.WalletInfo = exports.WalletData = exports.WalletBaseData = exports.ValueChartBar = exports.UserCommissionData = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionDetails = exports.TradesViewModel = exports.TradesOpenSignalSlaveViewModel = exports.TradesHistorySignalSlaveViewModel = exports.SignalsList = exports.SignalDetails = exports.SearchViewModel = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramTransactionDetails = exports.ProgramTag = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramPwdUpdate = exports.ProgramProfitChart = exports.ProgramPeriodsViewModel = exports.ProgramPeriodViewModel = exports.ProgramNotificationSettingList = exports.ProgramMinimumDeposit = exports.ProgramInvestInfo = exports.ProgramInfo = exports.ProgramFilters = exports.ProgramFacet = exports.ProgramDetailsRating = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramBalanceChartElement = exports.ProgramBalanceChart = undefined;
-exports.ProfilePublic = exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PowResult = exports.PowDetails = exports.PlatformStatistic = exports.PlatformInfo = exports.PlatformCurrency = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalSignalDetailsFull = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PeriodDate = exports.PasswordModel = exports.OtherAssetsValue = exports.OrderProgramData = exports.OrderOpenSignalSlaveModel = exports.OrderModel = exports.OrderClosedSignalSlaveModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.MultiWalletTransactionsViewModel = exports.MultiWalletTransaction = exports.MultiWalletFilters = exports.MultiWalletExternalTransactionsViewModel = exports.MultiWalletExternalTransaction = exports.ManagersList = exports.ManagerSimpleProgram = exports.ManagerSimpleFund = exports.ManagerProgramWithdrawInfo = exports.ManagerProgramCreateResult = exports.ManagerProfileDetails = exports.ManagerProfile = exports.ManagerPortfolioEvents = exports.ManagerPortfolioEvent = exports.ManagerOverview = exports.ManagerNotificationSettingList = exports.ManagerFundWithdrawInfo = exports.ManagerDashboard = exports.ManagerAssets = exports.LoginViewModel = exports.LevelUpSummary = exports.LevelUpData = exports.LevelInfo = exports.InternalTransferRequest = exports.IOsAppVersion = exports.GeeTestResult = exports.GeeTestDetails = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundSets = exports.FundProfitChart = exports.FundNotificationSettingList = exports.FundInvestInfo = exports.FundFacet = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundBalanceChart = exports.FundAssetsListInfo = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPart = exports.FundAssetInfo = exports.ForgotPasswordViewModel = exports.FcmTokenViewModel = exports.ExternalTransactionDetails = exports.ErrorViewModel = exports.ErrorMessage = exports.Enums = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.CopyTradingAccountsList = exports.CopyTradingAccountInfo = exports.ConvertingDetails = exports.ChartSimple = exports.ChangePasswordViewModel = exports.CaptchaDetails = exports.CaptchaCheckResult = exports.BrokersInfo = exports.BrokerAccountType = exports.Broker = exports.BlockchainInfo = exports.BalanceChartElement = exports.AssetsValue = exports.AssetSelection = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
+exports.WalletApi = exports.SignalApi = exports.SearchApi = exports.RateApi = exports.ProgramsApi = exports.ProfileApi = exports.PlatformApi = exports.NotificationsApi = exports.ManagerApi = exports.InvestorApi = exports.FundsApi = exports.FileApi = exports.BrokersApi = exports.AuthApi = exports.WithdrawalSummary = exports.WithdrawalInfo = exports.WalletsInfo = exports.WalletsGrandTotal = exports.WalletWithdrawalInfo = exports.WalletTransactionsViewModel = exports.WalletTransaction = exports.WalletSummary = exports.WalletMultiSummary = exports.WalletMultiAvailable = exports.WalletInfo = exports.WalletData = exports.WalletBaseData = exports.ValueChartBar = exports.UserCommissionData = exports.UploadResult = exports.UpdateProfileViewModel = exports.UpdatePersonalDetailViewModel = exports.TwoFactorStatus = exports.TwoFactorCodeModel = exports.TwoFactorAuthenticatorConfirm = exports.TwoFactorAuthenticator = exports.TransactionDetails = exports.TradesViewModel = exports.TradesSignalViewModel = exports.SignalsList = exports.SignalDetails = exports.SearchViewModel = exports.ResetPasswordViewModel = exports.ResendConfirmationViewModel = exports.RegisterManagerViewModel = exports.RegisterInvestorViewModel = exports.RecoveryCodesViewModel = exports.RecoveryCode = exports.RatesModelRates = exports.RatesModel = exports.RateItem = exports.ProgramsList = exports.ProgramsLevelsInfo = exports.ProgramsInfo = exports.ProgramWithdrawInfo = exports.ProgramUpdate = exports.ProgramTransactionDetails = exports.ProgramTag = exports.ProgramStatistic = exports.ProgramSets = exports.ProgramRequests = exports.ProgramRequest = exports.ProgramPwdUpdate = exports.ProgramProfitChart = exports.ProgramPeriodsViewModel = exports.ProgramPeriodViewModel = exports.ProgramNotificationSettingList = exports.ProgramMinimumDeposit = exports.ProgramInvestInfo = exports.ProgramInfo = exports.ProgramFilters = exports.ProgramFacet = exports.ProgramDetailsRating = exports.ProgramDetailsListStatistic = exports.ProgramDetailsFull = exports.ProgramDetails = exports.ProgramBalanceChartElement = exports.ProgramBalanceChart = exports.ProfilePublic = undefined;
+exports.ProfileHeaderViewModel = exports.ProfileFullViewModel = exports.PowResult = exports.PowDetails = exports.PlatformStatistic = exports.PlatformInfo = exports.PlatformCurrency = exports.PlatformAssets = exports.PlatformAsset = exports.PersonalSignalDetailsFull = exports.PersonalProgramDetailsFull = exports.PersonalFundDetailsFull = exports.PeriodDate = exports.PasswordModel = exports.OtherAssetsValue = exports.OrderSignalProgramInfo = exports.OrderSignalModel = exports.OrderProgramData = exports.OrderModel = exports.NotificationViewModel = exports.NotificationSettingViewModel = exports.NotificationSettingList = exports.NotificationList = exports.NewProgramRequest = exports.NewFundRequest = exports.MultiWalletTransactionsViewModel = exports.MultiWalletTransaction = exports.MultiWalletFilters = exports.MultiWalletExternalTransactionsViewModel = exports.MultiWalletExternalTransaction = exports.ManagersList = exports.ManagerSimpleProgram = exports.ManagerSimpleFund = exports.ManagerProgramWithdrawInfo = exports.ManagerProgramCreateResult = exports.ManagerProfileDetails = exports.ManagerProfile = exports.ManagerPortfolioEvents = exports.ManagerPortfolioEvent = exports.ManagerOverview = exports.ManagerNotificationSettingList = exports.ManagerFundWithdrawInfo = exports.ManagerDashboard = exports.ManagerAssets = exports.LoginViewModel = exports.LevelUpSummary = exports.LevelUpData = exports.LevelInfo = exports.InternalTransferRequest = exports.IOsAppVersion = exports.GeeTestResult = exports.GeeTestDetails = exports.FundsList = exports.FundWithdrawInfo = exports.FundStatistic = exports.FundSets = exports.FundProfitChart = exports.FundNotificationSettingList = exports.FundInvestInfo = exports.FundFacet = exports.FundDetailsListStatistic = exports.FundDetailsFull = exports.FundDetails = exports.FundBalanceChart = exports.FundAssetsListInfo = exports.FundAssetPercent = exports.FundAssetPartWithIcon = exports.FundAssetPart = exports.FundAssetInfo = exports.ForgotPasswordViewModel = exports.FcmTokenViewModel = exports.ExternalTransactionDetails = exports.ErrorViewModel = exports.ErrorMessage = exports.Enums = exports.DashboardSummary = exports.DashboardProgramDetails = exports.DashboardPortfolioEvents = exports.DashboardPortfolioEvent = exports.DashboardChartValue = exports.CreateWithdrawalRequestModel = exports.CopyTradingAccountsList = exports.CopyTradingAccountInfo = exports.ConvertingDetails = exports.ChartSimple = exports.ChangePasswordViewModel = exports.CaptchaDetails = exports.CaptchaCheckResult = exports.BrokersInfo = exports.BrokerAccountType = exports.Broker = exports.BlockchainInfo = exports.BalanceChartElement = exports.AttachToSignalProviderInfo = exports.AssetsValue = exports.AssetSelection = exports.AndroidVersion = exports.AndroidAppVersion = exports.AmountWithCurrency = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -29,6 +29,10 @@ var _AssetSelection2 = _interopRequireDefault(_AssetSelection);
 var _AssetsValue = require('./model/AssetsValue');
 
 var _AssetsValue2 = _interopRequireDefault(_AssetsValue);
+
+var _AttachToSignalProviderInfo = require('./model/AttachToSignalProviderInfo');
+
+var _AttachToSignalProviderInfo2 = _interopRequireDefault(_AttachToSignalProviderInfo);
 
 var _BalanceChartElement = require('./model/BalanceChartElement');
 
@@ -326,21 +330,21 @@ var _NotificationViewModel = require('./model/NotificationViewModel');
 
 var _NotificationViewModel2 = _interopRequireDefault(_NotificationViewModel);
 
-var _OrderClosedSignalSlaveModel = require('./model/OrderClosedSignalSlaveModel');
-
-var _OrderClosedSignalSlaveModel2 = _interopRequireDefault(_OrderClosedSignalSlaveModel);
-
 var _OrderModel = require('./model/OrderModel');
 
 var _OrderModel2 = _interopRequireDefault(_OrderModel);
 
-var _OrderOpenSignalSlaveModel = require('./model/OrderOpenSignalSlaveModel');
-
-var _OrderOpenSignalSlaveModel2 = _interopRequireDefault(_OrderOpenSignalSlaveModel);
-
 var _OrderProgramData = require('./model/OrderProgramData');
 
 var _OrderProgramData2 = _interopRequireDefault(_OrderProgramData);
+
+var _OrderSignalModel = require('./model/OrderSignalModel');
+
+var _OrderSignalModel2 = _interopRequireDefault(_OrderSignalModel);
+
+var _OrderSignalProgramInfo = require('./model/OrderSignalProgramInfo');
+
+var _OrderSignalProgramInfo2 = _interopRequireDefault(_OrderSignalProgramInfo);
 
 var _OtherAssetsValue = require('./model/OtherAssetsValue');
 
@@ -562,13 +566,9 @@ var _SignalsList = require('./model/SignalsList');
 
 var _SignalsList2 = _interopRequireDefault(_SignalsList);
 
-var _TradesHistorySignalSlaveViewModel = require('./model/TradesHistorySignalSlaveViewModel');
+var _TradesSignalViewModel = require('./model/TradesSignalViewModel');
 
-var _TradesHistorySignalSlaveViewModel2 = _interopRequireDefault(_TradesHistorySignalSlaveViewModel);
-
-var _TradesOpenSignalSlaveViewModel = require('./model/TradesOpenSignalSlaveViewModel');
-
-var _TradesOpenSignalSlaveViewModel2 = _interopRequireDefault(_TradesOpenSignalSlaveViewModel);
+var _TradesSignalViewModel2 = _interopRequireDefault(_TradesSignalViewModel);
 
 var _TradesViewModel = require('./model/TradesViewModel');
 
@@ -735,6 +735,7 @@ exports.AndroidAppVersion = _AndroidAppVersion2.default;
 exports.AndroidVersion = _AndroidVersion2.default;
 exports.AssetSelection = _AssetSelection2.default;
 exports.AssetsValue = _AssetsValue2.default;
+exports.AttachToSignalProviderInfo = _AttachToSignalProviderInfo2.default;
 exports.BalanceChartElement = _BalanceChartElement2.default;
 exports.BlockchainInfo = _BlockchainInfo2.default;
 exports.Broker = _Broker2.default;
@@ -809,10 +810,10 @@ exports.NotificationList = _NotificationList2.default;
 exports.NotificationSettingList = _NotificationSettingList2.default;
 exports.NotificationSettingViewModel = _NotificationSettingViewModel2.default;
 exports.NotificationViewModel = _NotificationViewModel2.default;
-exports.OrderClosedSignalSlaveModel = _OrderClosedSignalSlaveModel2.default;
 exports.OrderModel = _OrderModel2.default;
-exports.OrderOpenSignalSlaveModel = _OrderOpenSignalSlaveModel2.default;
 exports.OrderProgramData = _OrderProgramData2.default;
+exports.OrderSignalModel = _OrderSignalModel2.default;
+exports.OrderSignalProgramInfo = _OrderSignalProgramInfo2.default;
 exports.OtherAssetsValue = _OtherAssetsValue2.default;
 exports.PasswordModel = _PasswordModel2.default;
 exports.PeriodDate = _PeriodDate2.default;
@@ -868,8 +869,7 @@ exports.ResetPasswordViewModel = _ResetPasswordViewModel2.default;
 exports.SearchViewModel = _SearchViewModel2.default;
 exports.SignalDetails = _SignalDetails2.default;
 exports.SignalsList = _SignalsList2.default;
-exports.TradesHistorySignalSlaveViewModel = _TradesHistorySignalSlaveViewModel2.default;
-exports.TradesOpenSignalSlaveViewModel = _TradesOpenSignalSlaveViewModel2.default;
+exports.TradesSignalViewModel = _TradesSignalViewModel2.default;
 exports.TradesViewModel = _TradesViewModel2.default;
 exports.TransactionDetails = _TransactionDetails2.default;
 exports.TwoFactorAuthenticator = _TwoFactorAuthenticator2.default;

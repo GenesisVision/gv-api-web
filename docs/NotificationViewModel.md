@@ -52,6 +52,8 @@ Name | Type | Description | Notes
 
 * `ManagerNewProgram` (value: `"ManagerNewProgram"`)
 
+* `Signals` (value: `"Signals"`)
+
 
 
 

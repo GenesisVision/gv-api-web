@@ -46,6 +46,10 @@ Name | Type | Description | Notes
 
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
+* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
+
+* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
+
 
 
 
@@ -53,17 +57,17 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -110,6 +114,10 @@ Name | Type | Description | Notes
 
 * `PayingFee` (value: `"PayingFee"`)
 
+* `SignalSlaveSubscribe` (value: `"SignalSlaveSubscribe"`)
+
+* `SignalMasterReceiveSubscription` (value: `"SignalMasterReceiveSubscription"`)
+
 
 
 
@@ -135,6 +143,10 @@ Name | Type | Description | Notes
 
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
+* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
+
+* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
+
 
 
 
@@ -142,17 +154,17 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

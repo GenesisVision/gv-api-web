@@ -39,6 +39,7 @@ Method | HTTP request | Description
 [**v10ManagerProgramsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerProgramsRequestsByIdCancelPost) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagerRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerRequestsBySkipByTakeGet) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 [**v10ManagerSignalCreatePost**](ManagerApi.md#v10ManagerSignalCreatePost) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
+[**v10ManagerSignalEditPost**](ManagerApi.md#v10ManagerSignalEditPost) | **POST** /v1.0/manager/signal/edit | Make manager&#39;s program signal provider
 
 
 <a name="v10ManagerAssetsGet"></a>
@@ -1678,6 +1679,55 @@ let opts = {
   'successFee': 1.2 // Number | 
 };
 apiInstance.v10ManagerSignalCreatePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **programId** | [**String**](.md)|  | [optional] 
+ **subscriptionFee** | **Number**|  | [optional] 
+ **successFee** | **Number**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerSignalEditPost"></a>
+# **v10ManagerSignalEditPost**
+> v10ManagerSignalEditPost(authorization, opts)
+
+Make manager&#39;s program signal provider
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'programId': "programId_example", // String | 
+  'subscriptionFee': 1.2, // Number | 
+  'successFee': 1.2 // Number | 
+};
+apiInstance.v10ManagerSignalEditPost(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

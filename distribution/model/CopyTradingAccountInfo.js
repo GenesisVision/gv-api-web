@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name CopyTradingAccountInfo#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -55,6 +55,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name CopyTradingAccountInfo#freeMargin
  * @type {Number}
  */
+/**
+ *
+ * @name CopyTradingAccountInfo#marginLevel
+ * @type {Number}
+ */
 
 var CopyTradingAccountInfo = function () {
     function CopyTradingAccountInfo() {
@@ -65,6 +70,7 @@ var CopyTradingAccountInfo = function () {
         this.balance = undefined;
         this.equity = undefined;
         this.freeMargin = undefined;
+        this.marginLevel = undefined;
     }
 
     _createClass(CopyTradingAccountInfo, null, [{
@@ -88,6 +94,9 @@ var CopyTradingAccountInfo = function () {
                 if (data.hasOwnProperty('freeMargin')) {
                     obj['freeMargin'] = _ApiClient2.default.convertToType(data['freeMargin'], 'Number');
                 }
+                if (data.hasOwnProperty('marginLevel')) {
+                    obj['marginLevel'] = _ApiClient2.default.convertToType(data['marginLevel'], 'Number');
+                }
             }
             return obj;
         }
@@ -98,17 +107,17 @@ var CopyTradingAccountInfo = function () {
 
 CopyTradingAccountInfo.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

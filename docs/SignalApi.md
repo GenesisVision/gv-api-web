@@ -5,12 +5,13 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10SignalAccountsGet**](SignalApi.md#v10SignalAccountsGet) | **GET** /v1.0/signal/accounts | Get copytrading accounts
+[**v10SignalAttachByIdInfoGet**](SignalApi.md#v10SignalAttachByIdInfoGet) | **GET** /v1.0/signal/attach/{id}/info | Get subscribe to programs signals info
 [**v10SignalAttachByIdPost**](SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
+[**v10SignalByIdUpdatePost**](SignalApi.md#v10SignalByIdUpdatePost) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 [**v10SignalTradesByIdClosePost**](SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**v10SignalTradesGet**](SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**v10SignalTradesOpenGet**](SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
-[**v10SignalUpdatePost**](SignalApi.md#v10SignalUpdatePost) | **POST** /v1.0/signal/update | Update signal subscription settings
 
 
 <a name="v10SignalAccountsGet"></a>
@@ -44,6 +45,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CopyTradingAccountsList**](CopyTradingAccountsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalAttachByIdInfoGet"></a>
+# **v10SignalAttachByIdInfoGet**
+> AttachToSignalProviderInfo v10SignalAttachByIdInfoGet(id, authorization)
+
+Get subscribe to programs signals info
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10SignalAttachByIdInfoGet(id, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**AttachToSignalProviderInfo**](AttachToSignalProviderInfo.md)
 
 ### Authorization
 
@@ -92,6 +137,66 @@ apiInstance.v10SignalAttachByIdPost(id, authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Program Id | 
+ **authorization** | **String**| JWT access token | 
+ **mode** | **String**|  | [optional] 
+ **percent** | **Number**|  | [optional] 
+ **openTolerancePercent** | **Number**|  | [optional] 
+ **fixedVolume** | **Number**|  | [optional] 
+ **fixedCurrency** | **String**|  | [optional] 
+ **initialDepositCurrency** | **String**|  | [optional] 
+ **initialDepositAmount** | **Number**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalByIdUpdatePost"></a>
+# **v10SignalByIdUpdatePost**
+> v10SignalByIdUpdatePost(id, authorization, opts)
+
+Update signal subscription settings
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let id = "id_example"; // String | Program id
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'mode': "mode_example", // String | 
+  'percent': 1.2, // Number | 
+  'openTolerancePercent': 1.2, // Number | 
+  'fixedVolume': 1.2, // Number | 
+  'fixedCurrency': "fixedCurrency_example", // String | 
+  'initialDepositCurrency': "initialDepositCurrency_example", // String | 
+  'initialDepositAmount': 1.2 // Number | 
+};
+apiInstance.v10SignalByIdUpdatePost(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Program id | 
  **authorization** | **String**| JWT access token | 
  **mode** | **String**|  | [optional] 
  **percent** | **Number**|  | [optional] 
@@ -204,7 +309,7 @@ No authorization required
 
 <a name="v10SignalTradesGet"></a>
 # **v10SignalTradesGet**
-> TradesHistorySignalSlaveViewModel v10SignalTradesGet(authorization, opts)
+> TradesSignalViewModel v10SignalTradesGet(authorization, opts)
 
 Get investors signals trades history
 
@@ -246,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TradesHistorySignalSlaveViewModel**](TradesHistorySignalSlaveViewModel.md)
+[**TradesSignalViewModel**](TradesSignalViewModel.md)
 
 ### Authorization
 
@@ -259,7 +364,7 @@ No authorization required
 
 <a name="v10SignalTradesOpenGet"></a>
 # **v10SignalTradesOpenGet**
-> TradesOpenSignalSlaveViewModel v10SignalTradesOpenGet(authorization, opts)
+> TradesSignalViewModel v10SignalTradesOpenGet(authorization, opts)
 
 Get investors signals open trades
 
@@ -297,66 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TradesOpenSignalSlaveViewModel**](TradesOpenSignalSlaveViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10SignalUpdatePost"></a>
-# **v10SignalUpdatePost**
-> v10SignalUpdatePost(authorization, opts)
-
-Update signal subscription settings
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.SignalApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'id': "id_example", // String | Program id
-  'mode': "mode_example", // String | 
-  'percent': 1.2, // Number | 
-  'openTolerancePercent': 1.2, // Number | 
-  'fixedVolume': 1.2, // Number | 
-  'fixedCurrency': "fixedCurrency_example", // String | 
-  'initialDepositCurrency': "initialDepositCurrency_example", // String | 
-  'initialDepositAmount': 1.2 // Number | 
-};
-apiInstance.v10SignalUpdatePost(authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **id** | [**String**](.md)| Program id | [optional] 
- **mode** | **String**|  | [optional] 
- **percent** | **Number**|  | [optional] 
- **openTolerancePercent** | **Number**|  | [optional] 
- **fixedVolume** | **Number**|  | [optional] 
- **fixedCurrency** | **String**|  | [optional] 
- **initialDepositCurrency** | **String**|  | [optional] 
- **initialDepositAmount** | **Number**|  | [optional] 
-
-### Return type
-
-null (empty response body)
+[**TradesSignalViewModel**](TradesSignalViewModel.md)
 
 ### Authorization
 

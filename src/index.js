@@ -18,6 +18,7 @@ import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
+import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElement from './model/BalanceChartElement';
 import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
@@ -92,10 +93,10 @@ import NotificationList from './model/NotificationList';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
-import OrderClosedSignalSlaveModel from './model/OrderClosedSignalSlaveModel';
 import OrderModel from './model/OrderModel';
-import OrderOpenSignalSlaveModel from './model/OrderOpenSignalSlaveModel';
 import OrderProgramData from './model/OrderProgramData';
+import OrderSignalModel from './model/OrderSignalModel';
+import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
@@ -151,8 +152,7 @@ import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDetails from './model/SignalDetails';
 import SignalsList from './model/SignalsList';
-import TradesHistorySignalSlaveViewModel from './model/TradesHistorySignalSlaveViewModel';
-import TradesOpenSignalSlaveViewModel from './model/TradesOpenSignalSlaveViewModel';
+import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
@@ -235,6 +235,12 @@ export {
      * @type {AssetsValue}
      */
     AssetsValue,
+
+    /**
+     * @name index#AttachToSignalProviderInfo
+     * @type {AttachToSignalProviderInfo}
+     */
+    AttachToSignalProviderInfo,
 
     /**
      * @name index#BalanceChartElement
@@ -681,28 +687,28 @@ export {
     NotificationViewModel,
 
     /**
-     * @name index#OrderClosedSignalSlaveModel
-     * @type {OrderClosedSignalSlaveModel}
-     */
-    OrderClosedSignalSlaveModel,
-
-    /**
      * @name index#OrderModel
      * @type {OrderModel}
      */
     OrderModel,
 
     /**
-     * @name index#OrderOpenSignalSlaveModel
-     * @type {OrderOpenSignalSlaveModel}
-     */
-    OrderOpenSignalSlaveModel,
-
-    /**
      * @name index#OrderProgramData
      * @type {OrderProgramData}
      */
     OrderProgramData,
+
+    /**
+     * @name index#OrderSignalModel
+     * @type {OrderSignalModel}
+     */
+    OrderSignalModel,
+
+    /**
+     * @name index#OrderSignalProgramInfo
+     * @type {OrderSignalProgramInfo}
+     */
+    OrderSignalProgramInfo,
 
     /**
      * @name index#OtherAssetsValue
@@ -1035,16 +1041,10 @@ export {
     SignalsList,
 
     /**
-     * @name index#TradesHistorySignalSlaveViewModel
-     * @type {TradesHistorySignalSlaveViewModel}
+     * @name index#TradesSignalViewModel
+     * @type {TradesSignalViewModel}
      */
-    TradesHistorySignalSlaveViewModel,
-
-    /**
-     * @name index#TradesOpenSignalSlaveViewModel
-     * @type {TradesOpenSignalSlaveViewModel}
-     */
-    TradesOpenSignalSlaveViewModel,
+    TradesSignalViewModel,
 
     /**
      * @name index#TradesViewModel

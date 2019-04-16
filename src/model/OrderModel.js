@@ -88,6 +88,11 @@ import ApiClient from '../ApiClient';
      * @name OrderModel#commission
      * @type {Number}
      */
+    /**
+     *
+     * @name OrderModel#masterLogin
+     * @type {String}
+     */
 
 
 
@@ -153,6 +158,9 @@ export default class OrderModel {
             if (data.hasOwnProperty('commission')) {
                 obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
             }
+            if (data.hasOwnProperty('masterLogin')) {
+                obj['masterLogin'] = ApiClient.convertToType(data['masterLogin'], 'String');
+            }
         }
         return obj;
     }
@@ -170,6 +178,7 @@ export default class OrderModel {
     entry = undefined;
     baseVolume = undefined;
     commission = undefined;
+    masterLogin = undefined;
 
 
 

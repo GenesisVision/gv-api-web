@@ -59,12 +59,12 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#sourceType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
      */
     /**
      *
      * @name WalletTransaction#sourceCurrency
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -84,7 +84,7 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#action
-     * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee")}
+     * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
      */
     /**
      *
@@ -99,12 +99,12 @@ import WithdrawalInfo from './WithdrawalInfo';
     /**
      *
      * @name WalletTransaction#destinationType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform")}
+     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
      */
     /**
      *
      * @name WalletTransaction#destinationCurrency
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -251,22 +251,26 @@ export default class WalletTransaction {
     
         "Blockchain": "Blockchain",
     
-        "GenesisVisionPlatform": "GenesisVisionPlatform"    
+        "GenesisVisionPlatform": "GenesisVisionPlatform",
+    
+        "SignalMasterSetting": "SignalMasterSetting",
+    
+        "SignalTradingAccount": "SignalTradingAccount"    
     };
 
     static SourceCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -307,7 +311,11 @@ export default class WalletTransaction {
     
         "ProgramRequestCancel": "ProgramRequestCancel",
     
-        "PayingFee": "PayingFee"    
+        "PayingFee": "PayingFee",
+    
+        "SignalSlaveSubscribe": "SignalSlaveSubscribe",
+    
+        "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription"    
     };
 
     static DestinationTypeEnum = {
@@ -328,22 +336,26 @@ export default class WalletTransaction {
     
         "Blockchain": "Blockchain",
     
-        "GenesisVisionPlatform": "GenesisVisionPlatform"    
+        "GenesisVisionPlatform": "GenesisVisionPlatform",
+    
+        "SignalMasterSetting": "SignalMasterSetting",
+    
+        "SignalTradingAccount": "SignalTradingAccount"    
     };
 
     static DestinationCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     

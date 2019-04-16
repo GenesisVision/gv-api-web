@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name NotificationViewModel#type
-     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram")}
+     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
      */
     /**
      *
@@ -190,7 +190,9 @@ export default class NotificationViewModel {
     
         "FundRebalancing": "FundRebalancing",
     
-        "ManagerNewProgram": "ManagerNewProgram"    
+        "ManagerNewProgram": "ManagerNewProgram",
+    
+        "Signals": "Signals"    
     };
 
     static AssetTypeEnum = {

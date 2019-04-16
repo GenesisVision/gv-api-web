@@ -26,7 +26,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name CopyTradingAccountInfo#currency
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
@@ -46,6 +46,11 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name CopyTradingAccountInfo#freeMargin
+     * @type {Number}
+     */
+    /**
+     *
+     * @name CopyTradingAccountInfo#marginLevel
      * @type {Number}
      */
 
@@ -89,6 +94,9 @@ export default class CopyTradingAccountInfo {
             if (data.hasOwnProperty('freeMargin')) {
                 obj['freeMargin'] = ApiClient.convertToType(data['freeMargin'], 'Number');
             }
+            if (data.hasOwnProperty('marginLevel')) {
+                obj['marginLevel'] = ApiClient.convertToType(data['marginLevel'], 'Number');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class CopyTradingAccountInfo {
     balance = undefined;
     equity = undefined;
     freeMargin = undefined;
+    marginLevel = undefined;
 
 
 
@@ -106,17 +115,17 @@ export default class CopyTradingAccountInfo {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
