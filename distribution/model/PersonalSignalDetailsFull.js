@@ -32,17 +32,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name PersonalSignalDetailsFull#subscribeDate
+ * @name PersonalSignalDetailsFull#subscriptionDate
  * @type {Date}
  */
 /**
  *
- * @name PersonalSignalDetailsFull#investorProfit
- * @type {Number}
- */
-/**
- *
- * @name PersonalSignalDetailsFull#investorTrades
+ * @name PersonalSignalDetailsFull#tradesCount
  * @type {Number}
  */
 
@@ -50,9 +45,8 @@ var PersonalSignalDetailsFull = function () {
     function PersonalSignalDetailsFull() {
         _classCallCheck(this, PersonalSignalDetailsFull);
 
-        this.subscribeDate = undefined;
-        this.investorProfit = undefined;
-        this.investorTrades = undefined;
+        this.subscriptionDate = undefined;
+        this.tradesCount = undefined;
     }
 
     _createClass(PersonalSignalDetailsFull, null, [{
@@ -61,14 +55,11 @@ var PersonalSignalDetailsFull = function () {
             if (data) {
                 obj = obj || new PersonalSignalDetailsFull();
 
-                if (data.hasOwnProperty('subscribeDate')) {
-                    obj['subscribeDate'] = _ApiClient2.default.convertToType(data['subscribeDate'], 'Date');
+                if (data.hasOwnProperty('subscriptionDate')) {
+                    obj['subscriptionDate'] = _ApiClient2.default.convertToType(data['subscriptionDate'], 'Date');
                 }
-                if (data.hasOwnProperty('investorProfit')) {
-                    obj['investorProfit'] = _ApiClient2.default.convertToType(data['investorProfit'], 'Number');
-                }
-                if (data.hasOwnProperty('investorTrades')) {
-                    obj['investorTrades'] = _ApiClient2.default.convertToType(data['investorTrades'], 'Number');
+                if (data.hasOwnProperty('tradesCount')) {
+                    obj['tradesCount'] = _ApiClient2.default.convertToType(data['tradesCount'], 'Number');
                 }
             }
             return obj;

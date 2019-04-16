@@ -1524,9 +1524,8 @@ export declare interface PersonalProgramDetailsFull {
 }
 
 export declare interface PersonalSignalDetailsFull {
-    subscribeDate: Date;
-    investorProfit: number;
-    investorTrades: number;
+    subscriptionDate: Date;
+    tradesCount: number;
 }
 
 export declare interface PlatformAsset {
