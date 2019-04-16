@@ -1,0 +1,9 @@
+
+{{#models}}{{#model}}
+{{#vars}}{{#isEnum}}{{#emitJSDoc}}
+/**
+ * @typedef {{datatypeWithEnum}} {{removedChildEnum}}
+ * @type {{#allowableValues}}{({{#enumVars}}"{{name}}"{{^-last}}|{{/-last}}{{/enumVars}})}{{/allowableValues}}{{^isEnum}}{{=<% %>=}}{<%datatype%>}<%={{ }}=%>{{/isEnum}}
+ */
+{{/emitJSDoc}}{{/isEnum}}{{/vars}}
+{{/model}}{{/models}}
