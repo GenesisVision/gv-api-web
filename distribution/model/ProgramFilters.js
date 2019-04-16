@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramFilters#programTags
- * @type {[ProgramTag]}
+ * @type {Array<ProgramTag>}
  */
 
 var ProgramFilters = function () {

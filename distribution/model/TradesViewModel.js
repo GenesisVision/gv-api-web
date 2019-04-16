@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TradesViewModel#trades
- * @type {[OrderModel]}
+ * @type {Array<OrderModel>}
  */
 /**
  *

@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramPeriodsViewModel#periods
- * @type {[ProgramPeriodViewModel]}
+ * @type {Array<ProgramPeriodViewModel>}
  */
 /**
  *
