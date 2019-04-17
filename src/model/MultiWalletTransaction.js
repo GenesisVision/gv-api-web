@@ -31,17 +31,17 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name MultiWalletTransaction#currencyFrom
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
      * @name MultiWalletTransaction#currencyTo
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
     /**
      *
      * @name MultiWalletTransaction#type
-     * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits")}
+     * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
      */
     /**
      *
@@ -160,17 +160,17 @@ export default class MultiWalletTransaction {
 
     static CurrencyFromEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -189,17 +189,17 @@ export default class MultiWalletTransaction {
 
     static CurrencyToEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -232,7 +232,13 @@ export default class MultiWalletTransaction {
     
         "Fee": "Fee",
     
-        "Profits": "Profits"    
+        "Profits": "Profits",
+    
+        "SubscribeSignal": "SubscribeSignal",
+    
+        "ReceiveSignal": "ReceiveSignal",
+    
+        "DepositSignal": "DepositSignal"    
     };
 
     static StatusEnum = {

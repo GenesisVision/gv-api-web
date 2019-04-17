@@ -45,7 +45,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#type
- * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee")}
+ * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
  */
 /**
  *
@@ -70,7 +70,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -90,7 +90,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#gvCommissionCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -189,7 +189,13 @@ TransactionDetails.TypeEnum = {
 
     "Profit": "Profit",
 
-    "PlatformFee": "PlatformFee"
+    "PlatformFee": "PlatformFee",
+
+    "SubscribeSignal": "SubscribeSignal",
+
+    "ReceiveSignal": "ReceiveSignal",
+
+    "DepositSignal": "DepositSignal"
 };
 TransactionDetails.StatusEnum = {
 
@@ -203,17 +209,17 @@ TransactionDetails.StatusEnum = {
 };
 TransactionDetails.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -231,17 +237,17 @@ TransactionDetails.CurrencyEnum = {
 };
 TransactionDetails.GvCommissionCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
