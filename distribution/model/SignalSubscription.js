@@ -27,184 +27,102 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface DashboardPortfolioEvent
+ * @interface SignalSubscription
  */
 
 /**
  *
- * @name DashboardPortfolioEvent#assetId
- * @type {String}
+ * @name SignalSubscription#hasSignalAccount
+ * @type {Boolean}
  */
 /**
  *
- * @name DashboardPortfolioEvent#date
- * @type {Date}
+ * @name SignalSubscription#hasActiveSubscription
+ * @type {Boolean}
  */
 /**
  *
- * @name DashboardPortfolioEvent#title
- * @type {String}
+ * @name SignalSubscription#mode
+ * @type {("ByBalance"|"Percent"|"Fixed")}
  */
 /**
  *
- * @name DashboardPortfolioEvent#url
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#value
+ * @name SignalSubscription#percent
  * @type {Number}
  */
 /**
  *
- * @name DashboardPortfolioEvent#valueTotal
+ * @name SignalSubscription#openTolerancePercent
  * @type {Number}
  */
 /**
  *
- * @name DashboardPortfolioEvent#feeSuccessManager
+ * @name SignalSubscription#fixedVolume
  * @type {Number}
  */
 /**
  *
- * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
+ * @name SignalSubscription#fixedCurrency
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatform
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#profitPercent
- * @type {Number}
- */
-/**
- *
- * @name DashboardPortfolioEvent#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
- */
-/**
- *
- * @name DashboardPortfolioEvent#logo
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#color
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#description
- * @type {String}
- */
-/**
- *
- * @name DashboardPortfolioEvent#assetType
- * @type {("Program"|"Fund")}
  */
 
-var DashboardPortfolioEvent = function () {
-    function DashboardPortfolioEvent() {
-        _classCallCheck(this, DashboardPortfolioEvent);
+var SignalSubscription = function () {
+    function SignalSubscription() {
+        _classCallCheck(this, SignalSubscription);
 
-        this.assetId = undefined;
-        this.date = undefined;
-        this.title = undefined;
-        this.url = undefined;
-        this.value = undefined;
-        this.valueTotal = undefined;
-        this.feeSuccessManager = undefined;
-        this.feeSuccessManagerCurrency = undefined;
-        this.feeSuccessPlatform = undefined;
-        this.feeSuccessPlatformCurrency = undefined;
-        this.profitPercent = undefined;
-        this.currency = undefined;
-        this.type = undefined;
-        this.logo = undefined;
-        this.color = undefined;
-        this.description = undefined;
-        this.assetType = undefined;
+        this.hasSignalAccount = undefined;
+        this.hasActiveSubscription = undefined;
+        this.mode = undefined;
+        this.percent = undefined;
+        this.openTolerancePercent = undefined;
+        this.fixedVolume = undefined;
+        this.fixedCurrency = undefined;
     }
 
-    _createClass(DashboardPortfolioEvent, null, [{
+    _createClass(SignalSubscription, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new DashboardPortfolioEvent();
+                obj = obj || new SignalSubscription();
 
-                if (data.hasOwnProperty('assetId')) {
-                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
+                if (data.hasOwnProperty('hasSignalAccount')) {
+                    obj['hasSignalAccount'] = _ApiClient2.default.convertToType(data['hasSignalAccount'], 'Boolean');
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
+                if (data.hasOwnProperty('hasActiveSubscription')) {
+                    obj['hasActiveSubscription'] = _ApiClient2.default.convertToType(data['hasActiveSubscription'], 'Boolean');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('mode')) {
+                    obj['mode'] = _ApiClient2.default.convertToType(data['mode'], 'String');
                 }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                if (data.hasOwnProperty('percent')) {
+                    obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
                 }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
+                if (data.hasOwnProperty('openTolerancePercent')) {
+                    obj['openTolerancePercent'] = _ApiClient2.default.convertToType(data['openTolerancePercent'], 'Number');
                 }
-                if (data.hasOwnProperty('valueTotal')) {
-                    obj['valueTotal'] = _ApiClient2.default.convertToType(data['valueTotal'], 'Number');
+                if (data.hasOwnProperty('fixedVolume')) {
+                    obj['fixedVolume'] = _ApiClient2.default.convertToType(data['fixedVolume'], 'Number');
                 }
-                if (data.hasOwnProperty('feeSuccessManager')) {
-                    obj['feeSuccessManager'] = _ApiClient2.default.convertToType(data['feeSuccessManager'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessManagerCurrency')) {
-                    obj['feeSuccessManagerCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessManagerCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatform')) {
-                    obj['feeSuccessPlatform'] = _ApiClient2.default.convertToType(data['feeSuccessPlatform'], 'Number');
-                }
-                if (data.hasOwnProperty('feeSuccessPlatformCurrency')) {
-                    obj['feeSuccessPlatformCurrency'] = _ApiClient2.default.convertToType(data['feeSuccessPlatformCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('assetType')) {
-                    obj['assetType'] = _ApiClient2.default.convertToType(data['assetType'], 'String');
+                if (data.hasOwnProperty('fixedCurrency')) {
+                    obj['fixedCurrency'] = _ApiClient2.default.convertToType(data['fixedCurrency'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return DashboardPortfolioEvent;
+    return SignalSubscription;
 }();
 
-DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
+SignalSubscription.ModeEnum = {
+
+    "ByBalance": "ByBalance",
+
+    "Percent": "Percent",
+
+    "Fixed": "Fixed"
+};
+SignalSubscription.FixedCurrencyEnum = {
 
     "BTC": "BTC",
 
@@ -232,86 +150,4 @@ DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 
     "EUR": "EUR"
 };
-DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-DashboardPortfolioEvent.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-DashboardPortfolioEvent.TypeEnum = {
-
-    "All": "All",
-
-    "Invest": "Invest",
-
-    "Withdraw": "Withdraw",
-
-    "Profit": "Profit",
-
-    "Loss": "Loss",
-
-    "Reinvest": "Reinvest",
-
-    "Canceled": "Canceled",
-
-    "Ended": "Ended",
-
-    "WithdrawByStopOut": "WithdrawByStopOut"
-};
-DashboardPortfolioEvent.AssetTypeEnum = {
-
-    "Program": "Program",
-
-    "Fund": "Fund"
-};
-exports.default = DashboardPortfolioEvent;
+exports.default = SignalSubscription;

@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _SignalSubscription = require('./SignalSubscription');
+
+var _SignalSubscription2 = _interopRequireDefault(_SignalSubscription);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,6 +48,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * @name PersonalProgramDetailsFull#showTwoFactorButton
  * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#signalSubscription
+ * @type {SignalSubscription}
  */
 /**
  *
@@ -138,6 +147,7 @@ var PersonalProgramDetailsFull = function () {
         this.isReinvest = undefined;
         this.gvtValue = undefined;
         this.showTwoFactorButton = undefined;
+        this.signalSubscription = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -171,6 +181,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('showTwoFactorButton')) {
                     obj['showTwoFactorButton'] = _ApiClient2.default.convertToType(data['showTwoFactorButton'], 'Boolean');
+                }
+                if (data.hasOwnProperty('signalSubscription')) {
+                    obj['signalSubscription'] = _SignalSubscription2.default.constructFromObject(data['signalSubscription']);
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');

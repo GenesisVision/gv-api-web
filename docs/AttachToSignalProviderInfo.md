@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hasSignalAccount** | **Boolean** |  | [optional] 
+**hasActiveSubscription** | **Boolean** |  | [optional] 
 **subscriptionFee** | **Number** |  | [optional] 
 **subscriptionFeeCurrency** | **String** |  | [optional] 
 **minDeposit** | **Number** |  | [optional] 
@@ -14,17 +15,17 @@ Name | Type | Description | Notes
 ## Enum: SubscriptionFeeCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -47,17 +48,17 @@ Name | Type | Description | Notes
 ## Enum: MinDepositCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

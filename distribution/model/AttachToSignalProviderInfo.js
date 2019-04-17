@@ -37,13 +37,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name AttachToSignalProviderInfo#hasActiveSubscription
+ * @type {Boolean}
+ */
+/**
+ *
  * @name AttachToSignalProviderInfo#subscriptionFee
  * @type {Number}
  */
 /**
  *
  * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -53,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name AttachToSignalProviderInfo#minDepositCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 var AttachToSignalProviderInfo = function () {
@@ -61,6 +66,7 @@ var AttachToSignalProviderInfo = function () {
         _classCallCheck(this, AttachToSignalProviderInfo);
 
         this.hasSignalAccount = undefined;
+        this.hasActiveSubscription = undefined;
         this.subscriptionFee = undefined;
         this.subscriptionFeeCurrency = undefined;
         this.minDeposit = undefined;
@@ -75,6 +81,9 @@ var AttachToSignalProviderInfo = function () {
 
                 if (data.hasOwnProperty('hasSignalAccount')) {
                     obj['hasSignalAccount'] = _ApiClient2.default.convertToType(data['hasSignalAccount'], 'Boolean');
+                }
+                if (data.hasOwnProperty('hasActiveSubscription')) {
+                    obj['hasActiveSubscription'] = _ApiClient2.default.convertToType(data['hasActiveSubscription'], 'Boolean');
                 }
                 if (data.hasOwnProperty('subscriptionFee')) {
                     obj['subscriptionFee'] = _ApiClient2.default.convertToType(data['subscriptionFee'], 'Number');
@@ -98,17 +107,17 @@ var AttachToSignalProviderInfo = function () {
 
 AttachToSignalProviderInfo.SubscriptionFeeCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -126,17 +135,17 @@ AttachToSignalProviderInfo.SubscriptionFeeCurrencyEnum = {
 };
 AttachToSignalProviderInfo.MinDepositCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

@@ -151,6 +151,7 @@ import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDetails from './model/SignalDetails';
+import SignalSubscription from './model/SignalSubscription';
 import SignalsList from './model/SignalsList';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
@@ -1033,6 +1034,12 @@ export {
      * @type {SignalDetails}
      */
     SignalDetails,
+
+    /**
+     * @name index#SignalSubscription
+     * @type {SignalSubscription}
+     */
+    SignalSubscription,
 
     /**
      * @name index#SignalsList

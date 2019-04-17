@@ -5,5 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **subscriptionDate** | **Date** |  | [optional] 
 **tradesCount** | **Number** |  | [optional] 
+**signalSubscription** | [**SignalSubscription**](SignalSubscription.md) |  | [optional] 
 
 

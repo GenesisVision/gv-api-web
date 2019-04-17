@@ -392,6 +392,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
+ - [CoreApiV10.SignalSubscription](docs/SignalSubscription.md)
  - [CoreApiV10.SignalsList](docs/SignalsList.md)
  - [CoreApiV10.TradesSignalViewModel](docs/TradesSignalViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)

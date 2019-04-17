@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SignalSubscription from './SignalSubscription';
 
 
 
@@ -37,6 +38,11 @@ import ApiClient from '../ApiClient';
      *
      * @name PersonalProgramDetailsFull#showTwoFactorButton
      * @type {Boolean}
+     */
+    /**
+     *
+     * @name PersonalProgramDetailsFull#signalSubscription
+     * @type {SignalSubscription}
      */
     /**
      *
@@ -158,6 +164,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('showTwoFactorButton')) {
                 obj['showTwoFactorButton'] = ApiClient.convertToType(data['showTwoFactorButton'], 'Boolean');
             }
+            if (data.hasOwnProperty('signalSubscription')) {
+                obj['signalSubscription'] = SignalSubscription.constructFromObject(data['signalSubscription']);
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -216,6 +225,7 @@ export default class PersonalProgramDetailsFull {
     isReinvest = undefined;
     gvtValue = undefined;
     showTwoFactorButton = undefined;
+    signalSubscription = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;

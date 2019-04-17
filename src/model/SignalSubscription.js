@@ -20,37 +20,42 @@ import ApiClient from '../ApiClient';
 
     /**
      *
-     * @interface AttachToSignalProviderInfo
+     * @interface SignalSubscription
      */
     
     /**
      *
-     * @name AttachToSignalProviderInfo#hasSignalAccount
+     * @name SignalSubscription#hasSignalAccount
      * @type {Boolean}
      */
     /**
      *
-     * @name AttachToSignalProviderInfo#hasActiveSubscription
+     * @name SignalSubscription#hasActiveSubscription
      * @type {Boolean}
      */
     /**
      *
-     * @name AttachToSignalProviderInfo#subscriptionFee
+     * @name SignalSubscription#mode
+     * @type {("ByBalance"|"Percent"|"Fixed")}
+     */
+    /**
+     *
+     * @name SignalSubscription#percent
      * @type {Number}
      */
     /**
      *
-     * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
-     * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#minDeposit
+     * @name SignalSubscription#openTolerancePercent
      * @type {Number}
      */
     /**
      *
-     * @name AttachToSignalProviderInfo#minDepositCurrency
+     * @name SignalSubscription#fixedVolume
+     * @type {Number}
+     */
+    /**
+     *
+     * @name SignalSubscription#fixedCurrency
      * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
      */
 
@@ -58,7 +63,7 @@ import ApiClient from '../ApiClient';
 
 
 
-export default class AttachToSignalProviderInfo {
+export default class SignalSubscription {
 
     constructor() {
         
@@ -73,7 +78,7 @@ export default class AttachToSignalProviderInfo {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AttachToSignalProviderInfo();
+            obj = obj || new SignalSubscription();
 
             
             
@@ -85,17 +90,20 @@ export default class AttachToSignalProviderInfo {
             if (data.hasOwnProperty('hasActiveSubscription')) {
                 obj['hasActiveSubscription'] = ApiClient.convertToType(data['hasActiveSubscription'], 'Boolean');
             }
-            if (data.hasOwnProperty('subscriptionFee')) {
-                obj['subscriptionFee'] = ApiClient.convertToType(data['subscriptionFee'], 'Number');
+            if (data.hasOwnProperty('mode')) {
+                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
             }
-            if (data.hasOwnProperty('subscriptionFeeCurrency')) {
-                obj['subscriptionFeeCurrency'] = ApiClient.convertToType(data['subscriptionFeeCurrency'], 'String');
+            if (data.hasOwnProperty('percent')) {
+                obj['percent'] = ApiClient.convertToType(data['percent'], 'Number');
             }
-            if (data.hasOwnProperty('minDeposit')) {
-                obj['minDeposit'] = ApiClient.convertToType(data['minDeposit'], 'Number');
+            if (data.hasOwnProperty('openTolerancePercent')) {
+                obj['openTolerancePercent'] = ApiClient.convertToType(data['openTolerancePercent'], 'Number');
             }
-            if (data.hasOwnProperty('minDepositCurrency')) {
-                obj['minDepositCurrency'] = ApiClient.convertToType(data['minDepositCurrency'], 'String');
+            if (data.hasOwnProperty('fixedVolume')) {
+                obj['fixedVolume'] = ApiClient.convertToType(data['fixedVolume'], 'Number');
+            }
+            if (data.hasOwnProperty('fixedCurrency')) {
+                obj['fixedCurrency'] = ApiClient.convertToType(data['fixedCurrency'], 'String');
             }
         }
         return obj;
@@ -103,46 +111,27 @@ export default class AttachToSignalProviderInfo {
 
     hasSignalAccount = undefined;
     hasActiveSubscription = undefined;
-    subscriptionFee = undefined;
-    subscriptionFeeCurrency = undefined;
-    minDeposit = undefined;
-    minDepositCurrency = undefined;
+    mode = undefined;
+    percent = undefined;
+    openTolerancePercent = undefined;
+    fixedVolume = undefined;
+    fixedCurrency = undefined;
 
 
 
 
 
 
-    static SubscriptionFeeCurrencyEnum = {
+    static ModeEnum = {
     
-        "BTC": "BTC",
+        "ByBalance": "ByBalance",
     
-        "ETH": "ETH",
+        "Percent": "Percent",
     
-        "USDT": "USDT",
-    
-        "GVT": "GVT",
-    
-        "Undefined": "Undefined",
-    
-        "ADA": "ADA",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "Fixed": "Fixed"    
     };
 
-    static MinDepositCurrencyEnum = {
+    static FixedCurrencyEnum = {
     
         "BTC": "BTC",
     

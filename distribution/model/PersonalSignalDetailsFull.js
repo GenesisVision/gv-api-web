@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _SignalSubscription = require('./SignalSubscription');
+
+var _SignalSubscription2 = _interopRequireDefault(_SignalSubscription);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,6 +44,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalSignalDetailsFull#tradesCount
  * @type {Number}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#signalSubscription
+ * @type {SignalSubscription}
+ */
 
 var PersonalSignalDetailsFull = function () {
     function PersonalSignalDetailsFull() {
@@ -47,6 +56,7 @@ var PersonalSignalDetailsFull = function () {
 
         this.subscriptionDate = undefined;
         this.tradesCount = undefined;
+        this.signalSubscription = undefined;
     }
 
     _createClass(PersonalSignalDetailsFull, null, [{
@@ -60,6 +70,9 @@ var PersonalSignalDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('tradesCount')) {
                     obj['tradesCount'] = _ApiClient2.default.convertToType(data['tradesCount'], 'Number');
+                }
+                if (data.hasOwnProperty('signalSubscription')) {
+                    obj['signalSubscription'] = _SignalSubscription2.default.constructFromObject(data['signalSubscription']);
                 }
             }
             return obj;
