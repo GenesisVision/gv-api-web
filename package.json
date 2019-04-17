@@ -1,0 +1,39 @@
+{
+  "name": "gv-api-web",
+  "version": "1.0.486",
+  "description": "genesis.vision-api-web",
+  "license": "Unlicense",
+  "main": "distribution/index.js",
+  "types": "distribution/types.d.ts",
+  "scripts": {
+    "generate-tsd": "node bash/replace.js && jsdoc -t node_modules/tsd-jsdoc/dist -r ./src -d ./distribution && node bash/add_exports.js",
+    "build": "babel src --out-dir distribution && npm run generate-tsd",
+    "precommit": "npm install && npm run build && npm run addfiles",
+    "addfiles": "git add .",
+    "test": "mocha --require babel-core/register --recursive",
+    "test:promise": "mocha --require babel-core/register ./cancelable-promise/*.js"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "^4.1.0",
+    "querystring": "0.2.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "expect.js": "~0.3.1",
+    "husky": "^0.14.3",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "shelljs": "^0.8.3",
+    "sinon": "1.17.3",
+    "tsd-jsdoc": "^2.0.4"
+  }
+}
