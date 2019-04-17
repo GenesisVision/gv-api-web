@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **destinationType** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **transferAll** | **Boolean** |  | [optional] 
+**walletToWallet** | **Boolean** |  | [optional] 
+**walletToCopyTradingAccount** | **Boolean** |  | [optional] 
+**copyTradingAccountToWallet** | **Boolean** |  | [optional] 
 
 
 <a name="SourceTypeEnum"></a>
@@ -18,6 +21,8 @@ Name | Type | Description | Notes
 * `Undefined` (value: `"Undefined"`)
 
 * `Wallet` (value: `"Wallet"`)
+
+* `CopyTradingAccount` (value: `"CopyTradingAccount"`)
 
 
 
@@ -29,6 +34,8 @@ Name | Type | Description | Notes
 * `Undefined` (value: `"Undefined"`)
 
 * `Wallet` (value: `"Wallet"`)
+
+* `CopyTradingAccount` (value: `"CopyTradingAccount"`)
 
 
 

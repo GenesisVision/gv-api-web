@@ -31,7 +31,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name InternalTransferRequest#sourceType
-     * @type {("Undefined"|"Wallet")}
+     * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
      */
     /**
      *
@@ -41,7 +41,7 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name InternalTransferRequest#destinationType
-     * @type {("Undefined"|"Wallet")}
+     * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
      */
     /**
      *
@@ -51,6 +51,21 @@ import ApiClient from '../ApiClient';
     /**
      *
      * @name InternalTransferRequest#transferAll
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name InternalTransferRequest#walletToWallet
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name InternalTransferRequest#walletToCopyTradingAccount
+     * @type {Boolean}
+     */
+    /**
+     *
+     * @name InternalTransferRequest#copyTradingAccountToWallet
      * @type {Boolean}
      */
 
@@ -97,6 +112,15 @@ export default class InternalTransferRequest {
             if (data.hasOwnProperty('transferAll')) {
                 obj['transferAll'] = ApiClient.convertToType(data['transferAll'], 'Boolean');
             }
+            if (data.hasOwnProperty('walletToWallet')) {
+                obj['walletToWallet'] = ApiClient.convertToType(data['walletToWallet'], 'Boolean');
+            }
+            if (data.hasOwnProperty('walletToCopyTradingAccount')) {
+                obj['walletToCopyTradingAccount'] = ApiClient.convertToType(data['walletToCopyTradingAccount'], 'Boolean');
+            }
+            if (data.hasOwnProperty('copyTradingAccountToWallet')) {
+                obj['copyTradingAccountToWallet'] = ApiClient.convertToType(data['copyTradingAccountToWallet'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -107,6 +131,9 @@ export default class InternalTransferRequest {
     destinationType = undefined;
     amount = undefined;
     transferAll = undefined;
+    walletToWallet = undefined;
+    walletToCopyTradingAccount = undefined;
+    copyTradingAccountToWallet = undefined;
 
 
 
@@ -117,14 +144,18 @@ export default class InternalTransferRequest {
     
         "Undefined": "Undefined",
     
-        "Wallet": "Wallet"    
+        "Wallet": "Wallet",
+    
+        "CopyTradingAccount": "CopyTradingAccount"    
     };
 
     static DestinationTypeEnum = {
     
         "Undefined": "Undefined",
     
-        "Wallet": "Wallet"    
+        "Wallet": "Wallet",
+    
+        "CopyTradingAccount": "CopyTradingAccount"    
     };
 
 

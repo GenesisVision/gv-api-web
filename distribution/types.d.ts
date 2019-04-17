@@ -1123,11 +1123,14 @@ export declare interface IOsAppVersion {
 
 export declare interface InternalTransferRequest {
     sourceId: string;
-    sourceType: "Undefined" | "Wallet";
+    sourceType: "Undefined" | "Wallet" | "CopyTradingAccount";
     destinationId: string;
-    destinationType: "Undefined" | "Wallet";
+    destinationType: "Undefined" | "Wallet" | "CopyTradingAccount";
     amount: number;
     transferAll: boolean;
+    walletToWallet: boolean;
+    walletToCopyTradingAccount: boolean;
+    copyTradingAccountToWallet: boolean;
 }
 
 export declare interface LevelInfo {

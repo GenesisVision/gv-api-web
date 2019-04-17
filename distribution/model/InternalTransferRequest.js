@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name InternalTransferRequest#sourceType
- * @type {("Undefined"|"Wallet")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
  */
 /**
  *
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name InternalTransferRequest#destinationType
- * @type {("Undefined"|"Wallet")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
  */
 /**
  *
@@ -58,6 +58,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name InternalTransferRequest#transferAll
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#walletToWallet
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#walletToCopyTradingAccount
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#copyTradingAccountToWallet
  * @type {Boolean}
  */
 
@@ -71,6 +86,9 @@ var InternalTransferRequest = function () {
         this.destinationType = undefined;
         this.amount = undefined;
         this.transferAll = undefined;
+        this.walletToWallet = undefined;
+        this.walletToCopyTradingAccount = undefined;
+        this.copyTradingAccountToWallet = undefined;
     }
 
     _createClass(InternalTransferRequest, null, [{
@@ -97,6 +115,15 @@ var InternalTransferRequest = function () {
                 if (data.hasOwnProperty('transferAll')) {
                     obj['transferAll'] = _ApiClient2.default.convertToType(data['transferAll'], 'Boolean');
                 }
+                if (data.hasOwnProperty('walletToWallet')) {
+                    obj['walletToWallet'] = _ApiClient2.default.convertToType(data['walletToWallet'], 'Boolean');
+                }
+                if (data.hasOwnProperty('walletToCopyTradingAccount')) {
+                    obj['walletToCopyTradingAccount'] = _ApiClient2.default.convertToType(data['walletToCopyTradingAccount'], 'Boolean');
+                }
+                if (data.hasOwnProperty('copyTradingAccountToWallet')) {
+                    obj['copyTradingAccountToWallet'] = _ApiClient2.default.convertToType(data['copyTradingAccountToWallet'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -109,12 +136,16 @@ InternalTransferRequest.SourceTypeEnum = {
 
     "Undefined": "Undefined",
 
-    "Wallet": "Wallet"
+    "Wallet": "Wallet",
+
+    "CopyTradingAccount": "CopyTradingAccount"
 };
 InternalTransferRequest.DestinationTypeEnum = {
 
     "Undefined": "Undefined",
 
-    "Wallet": "Wallet"
+    "Wallet": "Wallet",
+
+    "CopyTradingAccount": "CopyTradingAccount"
 };
 exports.default = InternalTransferRequest;
