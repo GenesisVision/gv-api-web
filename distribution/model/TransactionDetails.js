@@ -70,7 +70,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#currency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -90,7 +90,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#gvCommissionCurrency
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 /**
  *
@@ -209,17 +209,17 @@ TransactionDetails.StatusEnum = {
 };
 TransactionDetails.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -237,17 +237,17 @@ TransactionDetails.CurrencyEnum = {
 };
 TransactionDetails.GvCommissionCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
