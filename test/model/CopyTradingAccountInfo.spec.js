@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property marginLevel (base name: "marginLevel")', function() {
+      // uncomment below and update the code to test the property marginLevel
+      //var instane = new CoreApiV10.CopyTradingAccountInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -58,10 +58,30 @@
         done();
       });
     });
+    describe('v10SignalAttachByIdInfoGet', function() {
+      it('should call v10SignalAttachByIdInfoGet successfully', function(done) {
+        //uncomment below and update the code to test v10SignalAttachByIdInfoGet
+        //instance.v10SignalAttachByIdInfoGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v10SignalAttachByIdPost', function() {
       it('should call v10SignalAttachByIdPost successfully', function(done) {
         //uncomment below and update the code to test v10SignalAttachByIdPost
         //instance.v10SignalAttachByIdPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v10SignalByIdUpdatePost', function() {
+      it('should call v10SignalByIdUpdatePost successfully', function(done) {
+        //uncomment below and update the code to test v10SignalByIdUpdatePost
+        //instance.v10SignalByIdUpdatePost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -102,16 +122,6 @@
       it('should call v10SignalTradesOpenGet successfully', function(done) {
         //uncomment below and update the code to test v10SignalTradesOpenGet
         //instance.v10SignalTradesOpenGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('v10SignalUpdatePost', function() {
-      it('should call v10SignalUpdatePost successfully', function(done) {
-        //uncomment below and update the code to test v10SignalUpdatePost
-        //instance.v10SignalUpdatePost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -398,6 +398,16 @@
         done();
       });
     });
+    describe('v10ManagerSignalEditPost', function() {
+      it('should call v10ManagerSignalEditPost successfully', function(done) {
+        //uncomment below and update the code to test v10ManagerSignalEditPost
+        //instance.v10ManagerSignalEditPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

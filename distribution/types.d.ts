@@ -1373,27 +1373,6 @@ export declare interface NotificationViewModel {
     assetType: "Program" | "Fund";
 }
 
-export declare interface OrderClosedSignalSlaveModel {
-    dateClose: Date;
-    priceClose: number;
-    manager: ProfilePublic;
-    program: OrderProgramData;
-    programId: string;
-    id: string;
-    login: string;
-    ticket: string;
-    symbol: string;
-    volume: number;
-    profit: number;
-    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
-    date: Date;
-    price: number;
-    priceCurrent: number;
-    entry: "In" | "Out" | "InOut" | "OutBy";
-    baseVolume: number;
-    commission: number;
-}
-
 export declare interface OrderModel {
     id: string;
     login: string;
@@ -1409,25 +1388,6 @@ export declare interface OrderModel {
     baseVolume: number;
     commission: number;
     masterLogin: string;
-}
-
-export declare interface OrderOpenSignalSlaveModel {
-    manager: ProfilePublic;
-    program: OrderProgramData;
-    programId: string;
-    id: string;
-    login: string;
-    ticket: string;
-    symbol: string;
-    volume: number;
-    profit: number;
-    direction: "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
-    date: Date;
-    price: number;
-    priceCurrent: number;
-    entry: "In" | "Out" | "InOut" | "OutBy";
-    baseVolume: number;
-    commission: number;
 }
 
 export declare interface OrderProgramData {
@@ -1574,27 +1534,9 @@ export declare interface PowDetails {
     secureAlgorithm: "Sha256";
     difficulty: number;
     nonce: string;
-    secureAlgorithm: "Sha256";
-    difficulty: number;
-    nonce: string;
 }
 
 export declare interface PowResult {
-    prefix: string;
-    prefix: string;
-}
-
-export declare interface PowDetails {
-    secureAlgorithm: "Sha256";
-    difficulty: number;
-    nonce: string;
-    secureAlgorithm: "Sha256";
-    difficulty: number;
-    nonce: string;
-}
-
-export declare interface PowResult {
-    prefix: string;
     prefix: string;
 }
 
@@ -2035,16 +1977,6 @@ export declare interface SignalSubscription {
 
 export declare interface SignalsList {
     programs: SignalDetails[];
-    total: number;
-}
-
-export declare interface TradesHistorySignalSlaveViewModel {
-    trades: OrderClosedSignalSlaveModel[];
-    total: number;
-}
-
-export declare interface TradesOpenSignalSlaveViewModel {
-    trades: OrderOpenSignalSlaveModel[];
     total: number;
 }
 

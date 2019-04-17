@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property signalSubscription (base name: "signalSubscription")', function() {
+      // uncomment below and update the code to test the property signalSubscription
+      //var instane = new CoreApiV10.PersonalProgramDetailsFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isFavorite (base name: "isFavorite")', function() {
       // uncomment below and update the code to test the property isFavorite
       //var instane = new CoreApiV10.PersonalProgramDetailsFull();

@@ -132,6 +132,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property masterLogin (base name: "masterLogin")', function() {
+      // uncomment below and update the code to test the property masterLogin
+      //var instane = new CoreApiV10.OrderModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -54,20 +54,20 @@
       //expect(instance).to.be.a(CoreApiV10.PersonalSignalDetailsFull);
     });
 
-    it('should have the property subscribeDate (base name: "subscribeDate")', function() {
-      // uncomment below and update the code to test the property subscribeDate
+    it('should have the property subscriptionDate (base name: "subscriptionDate")', function() {
+      // uncomment below and update the code to test the property subscriptionDate
       //var instane = new CoreApiV10.PersonalSignalDetailsFull();
       //expect(instance).to.be();
     });
 
-    it('should have the property investorProfit (base name: "investorProfit")', function() {
-      // uncomment below and update the code to test the property investorProfit
+    it('should have the property tradesCount (base name: "tradesCount")', function() {
+      // uncomment below and update the code to test the property tradesCount
       //var instane = new CoreApiV10.PersonalSignalDetailsFull();
       //expect(instance).to.be();
     });
 
-    it('should have the property investorTrades (base name: "investorTrades")', function() {
-      // uncomment below and update the code to test the property investorTrades
+    it('should have the property signalSubscription (base name: "signalSubscription")', function() {
+      // uncomment below and update the code to test the property signalSubscription
       //var instane = new CoreApiV10.PersonalSignalDetailsFull();
       //expect(instance).to.be();
     });

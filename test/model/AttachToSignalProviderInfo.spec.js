@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property hasActiveSubscription (base name: "hasActiveSubscription")', function() {
+      // uncomment below and update the code to test the property hasActiveSubscription
+      //var instane = new CoreApiV10.AttachToSignalProviderInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property subscriptionFee (base name: "subscriptionFee")', function() {
       // uncomment below and update the code to test the property subscriptionFee
       //var instane = new CoreApiV10.AttachToSignalProviderInfo();
