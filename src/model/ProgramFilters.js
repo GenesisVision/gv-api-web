@@ -31,11 +31,6 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name ProgramFilters#assetStatus
- * @type {Array<String>}
- */
-/**
- *
  * @name ProgramFilters#actionType
  * @type {Array<String>}
  */
@@ -68,9 +63,6 @@ export default class ProgramFilters {
             if (data.hasOwnProperty('programTags')) {
                 obj['programTags'] = ApiClient.convertToType(data['programTags'], [ProgramTag]);
             }
-            if (data.hasOwnProperty('assetStatus')) {
-                obj['assetStatus'] = ApiClient.convertToType(data['assetStatus'], ['String']);
-            }
             if (data.hasOwnProperty('actionType')) {
                 obj['actionType'] = ApiClient.convertToType(data['actionType'], ['String']);
             }
@@ -79,7 +71,6 @@ export default class ProgramFilters {
     }
 
     programTags = undefined;
-    assetStatus = undefined;
     actionType = undefined;
 
 

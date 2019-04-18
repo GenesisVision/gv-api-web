@@ -148,8 +148,7 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
-        investorActionStatus?: string;
-        managerActionStatus?: string;
+        actionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -195,8 +194,7 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
-        investorActionStatus?: string;
-        managerActionStatus?: string;
+        actionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -208,8 +206,7 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
-        investorActionStatus?: string;
-        managerActionStatus?: string;
+        actionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalsList>;
@@ -256,8 +253,7 @@ export declare class ManagerApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
-        investorActionStatus?: string;
-        managerActionStatus?: string;
+        actionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -306,8 +302,7 @@ export declare class ManagerApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
-        investorActionStatus?: string;
-        managerActionStatus?: string;
+        actionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -1824,7 +1819,6 @@ export declare interface ProgramFacet {
 
 export declare interface ProgramFilters {
     programTags: ProgramTag[];
-    assetStatus: string[];
     actionType: string[];
 }
 

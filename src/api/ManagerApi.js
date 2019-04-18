@@ -778,8 +778,7 @@ export default class ManagerApi {
         'To': opts['to'],
         'ChartPointsCount': opts['chartPointsCount'],
         'CurrencySecondary': opts['currencySecondary'],
-        'InvestorActionStatus': opts['investorActionStatus'],
-        'ManagerActionStatus': opts['managerActionStatus'],
+        'ActionStatus': opts['actionStatus'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -811,8 +810,7 @@ export default class ManagerApi {
      * @param {Date} [opts.to] 
      * @param {Number} [opts.chartPointsCount] 
      * @param {String} [opts.currencySecondary] 
-     * @param {String} [opts.investorActionStatus] 
-     * @param {String} [opts.managerActionStatus] 
+     * @param {String} [opts.actionStatus] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
@@ -1715,8 +1713,7 @@ export default class ManagerApi {
         'To': opts['to'],
         'ChartPointsCount': opts['chartPointsCount'],
         'CurrencySecondary': opts['currencySecondary'],
-        'InvestorActionStatus': opts['investorActionStatus'],
-        'ManagerActionStatus': opts['managerActionStatus'],
+        'ActionStatus': opts['actionStatus'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1748,8 +1745,7 @@ export default class ManagerApi {
      * @param {Date} [opts.to] 
      * @param {Number} [opts.chartPointsCount] 
      * @param {String} [opts.currencySecondary] 
-     * @param {String} [opts.investorActionStatus] 
-     * @param {String} [opts.managerActionStatus] 
+     * @param {String} [opts.actionStatus] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response

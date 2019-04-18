@@ -293,8 +293,7 @@ let opts = {
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
-  'investorActionStatus': "investorActionStatus_example", // String | 
-  'managerActionStatus': "managerActionStatus_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -316,8 +315,7 @@ Name | Type | Description  | Notes
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
- **investorActionStatus** | **String**|  | [optional] 
- **managerActionStatus** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -900,8 +898,7 @@ let opts = {
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
-  'investorActionStatus': "investorActionStatus_example", // String | 
-  'managerActionStatus': "managerActionStatus_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -923,8 +920,7 @@ Name | Type | Description  | Notes
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
- **investorActionStatus** | **String**|  | [optional] 
- **managerActionStatus** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -1052,8 +1048,7 @@ let opts = {
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
-  'investorActionStatus': "investorActionStatus_example", // String | 
-  'managerActionStatus': "managerActionStatus_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -1075,8 +1070,7 @@ Name | Type | Description  | Notes
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
- **investorActionStatus** | **String**|  | [optional] 
- **managerActionStatus** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
