@@ -487,6 +487,7 @@ var ProgramsApi = function () {
       var queryParams = {
         'LevelMin': opts['levelMin'],
         'LevelMax': opts['levelMax'],
+        'LevelsSet': this.apiClient.buildCollectionParam(opts['levelsSet'], 'multi'),
         'ProfitAvgMin': opts['profitAvgMin'],
         'ProfitAvgMax': opts['profitAvgMax'],
         'Sorting': opts['sorting'],
@@ -507,6 +508,7 @@ var ProgramsApi = function () {
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
+        'Status': this.apiClient.buildCollectionParam(opts['status'], 'multi'),
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -530,6 +532,7 @@ var ProgramsApi = function () {
      * @param {String} [opts.authorization] 
      * @param {Number} [opts.levelMin] 
      * @param {Number} [opts.levelMax] 
+     * @param {[Number]} [opts.levelsSet] 
      * @param {Number} [opts.profitAvgMin] 
      * @param {Number} [opts.profitAvgMax] 
      * @param {String} [opts.sorting] 
@@ -550,6 +553,7 @@ var ProgramsApi = function () {
      * @param {[String]} [opts.ids] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
+     * @param {[String]} [opts.status] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response

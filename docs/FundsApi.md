@@ -352,6 +352,7 @@ let opts = {
   'ids': ["ids_example"], // [String] | 
   'managerId': "managerId_example", // String | 
   'programManagerId': "programManagerId_example", // String | 
+  'status': ["status_example"], // [String] | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -382,6 +383,7 @@ Name | Type | Description  | Notes
  **ids** | [**[String]**](String.md)|  | [optional] 
  **managerId** | **String**|  | [optional] 
  **programManagerId** | [**String**](.md)|  | [optional] 
+ **status** | [**[String]**](String.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

@@ -399,6 +399,7 @@ export default class FundsApi {
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
+        'Status': this.apiClient.buildCollectionParam(opts['status'], 'multi'),
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -439,6 +440,7 @@ export default class FundsApi {
      * @param {Array<String>} [opts.ids] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
+     * @param {Array<String>} [opts.status] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response

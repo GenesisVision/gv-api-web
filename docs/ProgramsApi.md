@@ -429,6 +429,7 @@ let opts = {
   'authorization': "authorization_example", // String | 
   'levelMin': 56, // Number | 
   'levelMax': 56, // Number | 
+  'levelsSet': [3.4], // [Number] | 
   'profitAvgMin': 1.2, // Number | 
   'profitAvgMax': 1.2, // Number | 
   'sorting': "sorting_example", // String | 
@@ -449,6 +450,7 @@ let opts = {
   'ids': ["ids_example"], // [String] | 
   'managerId': "managerId_example", // String | 
   'programManagerId': "programManagerId_example", // String | 
+  'status': ["status_example"], // [String] | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -467,6 +469,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**|  | [optional] 
  **levelMin** | **Number**|  | [optional] 
  **levelMax** | **Number**|  | [optional] 
+ **levelsSet** | [**[Number]**](Number.md)|  | [optional] 
  **profitAvgMin** | **Number**|  | [optional] 
  **profitAvgMax** | **Number**|  | [optional] 
  **sorting** | **String**|  | [optional] 
@@ -487,6 +490,7 @@ Name | Type | Description  | Notes
  **ids** | [**[String]**](String.md)|  | [optional] 
  **managerId** | **String**|  | [optional] 
  **programManagerId** | [**String**](.md)|  | [optional] 
+ **status** | [**[String]**](String.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

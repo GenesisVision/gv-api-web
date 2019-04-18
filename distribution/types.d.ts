@@ -124,6 +124,7 @@ export declare class FundsApi {
         ids?: string[];
         managerId?: string;
         programManagerId?: string;
+        status?: string[];
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -147,6 +148,8 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
+        investorActionStatus?: string;
+        managerActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -192,6 +195,8 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
+        investorActionStatus?: string;
+        managerActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -203,6 +208,8 @@ export declare class InvestorApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
+        investorActionStatus?: string;
+        managerActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalsList>;
@@ -249,6 +256,8 @@ export declare class ManagerApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
+        investorActionStatus?: string;
+        managerActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -297,6 +306,8 @@ export declare class ManagerApi {
         to?: Date;
         chartPointsCount?: number;
         currencySecondary?: string;
+        investorActionStatus?: string;
+        managerActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -414,6 +425,7 @@ export declare class ProgramsApi {
         authorization?: string;
         levelMin?: number;
         levelMax?: number;
+        levelsSet?: number[];
         profitAvgMin?: number;
         profitAvgMax?: number;
         sorting?: string;
@@ -434,6 +446,7 @@ export declare class ProgramsApi {
         ids?: string[];
         managerId?: string;
         programManagerId?: string;
+        status?: string[];
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -1811,6 +1824,8 @@ export declare interface ProgramFacet {
 
 export declare interface ProgramFilters {
     programTags: ProgramTag[];
+    assetStatus: string[];
+    actionType: string[];
 }
 
 export declare interface ProgramInfo {

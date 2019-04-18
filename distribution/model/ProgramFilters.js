@@ -39,12 +39,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProgramFilters#programTags
  * @type {[ProgramTag]}
  */
+/**
+ *
+ * @name ProgramFilters#assetStatus
+ * @type {[String]}
+ */
+/**
+ *
+ * @name ProgramFilters#actionType
+ * @type {[String]}
+ */
 
 var ProgramFilters = function () {
     function ProgramFilters() {
         _classCallCheck(this, ProgramFilters);
 
         this.programTags = undefined;
+        this.assetStatus = undefined;
+        this.actionType = undefined;
     }
 
     _createClass(ProgramFilters, null, [{
@@ -55,6 +67,12 @@ var ProgramFilters = function () {
 
                 if (data.hasOwnProperty('programTags')) {
                     obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                }
+                if (data.hasOwnProperty('assetStatus')) {
+                    obj['assetStatus'] = _ApiClient2.default.convertToType(data['assetStatus'], ['String']);
+                }
+                if (data.hasOwnProperty('actionType')) {
+                    obj['actionType'] = _ApiClient2.default.convertToType(data['actionType'], ['String']);
                 }
             }
             return obj;
