@@ -2,7 +2,7 @@
 {{#models}}{{#model}}
 {{#vars}}{{#isEnum}}{{#emitJSDoc}}
 /**
- * @typedef {{datatypeWithEnum}} {{removedChildEnum}}
+ * @typedef {{classname}}{{datatypeWithEnum}} {{removedChildEnum}}
  * @type {{#allowableValues}}{({{#enumVars}}"{{name}}"{{^-last}}|{{/-last}}{{/enumVars}})}{{/allowableValues}}{{^isEnum}}{{=<% %>=}}{<%datatype%>}<%={{ }}=%>{{/isEnum}}
  */
 {{/emitJSDoc}}{{/isEnum}}{{/vars}}
