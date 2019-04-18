@@ -20,36 +20,36 @@ import PowDetails from './PowDetails';
 
 
 
-    /**
-     *
-     * @interface CaptchaDetails
-     */
-    
-    /**
-     *
-     * @name CaptchaDetails#captchaType
-     * @type {("None"|"Pow"|"GeeTest")}
-     */
-    /**
-     *
-     * @name CaptchaDetails#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name CaptchaDetails#route
-     * @type {String}
-     */
-    /**
-     *
-     * @name CaptchaDetails#pow
-     * @type {PowDetails}
-     */
-    /**
-     *
-     * @name CaptchaDetails#geeTest
-     * @type {GeeTestDetails}
-     */
+/**
+ *
+ * @interface CaptchaDetails
+ */
+
+/**
+ *
+ * @name CaptchaDetails#captchaType
+ * @type CaptchaDetailsCaptchaTypeEnum
+ */
+/**
+ *
+ * @name CaptchaDetails#id
+ * @type {String}
+ */
+/**
+ *
+ * @name CaptchaDetails#route
+ * @type {String}
+ */
+/**
+ *
+ * @name CaptchaDetails#pow
+ * @type {PowDetails}
+ */
+/**
+ *
+ * @name CaptchaDetails#geeTest
+ * @type {GeeTestDetails}
+ */
 
 
 
@@ -118,5 +118,14 @@ export default class CaptchaDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef CaptchaDetailsCaptchaTypeEnum 
+ * @type {("None"|"Pow"|"GeeTest")}
+ */
+
 
 

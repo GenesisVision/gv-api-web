@@ -22,46 +22,46 @@ import ProgramRequests from './ProgramRequests';
 
 
 
-    /**
-     *
-     * @interface DashboardSummary
-     */
-    
-    /**
-     *
-     * @name DashboardSummary#chart
-     * @type {DashboardChartValue}
-     */
-    /**
-     *
-     * @name DashboardSummary#events
-     * @type {DashboardPortfolioEvents}
-     */
-    /**
-     *
-     * @name DashboardSummary#profileHeader
-     * @type {ProfileHeaderViewModel}
-     */
-    /**
-     *
-     * @name DashboardSummary#programsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardSummary#fundsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardSummary#signalsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardSummary#requests
-     * @type {ProgramRequests}
-     */
+/**
+ *
+ * @interface DashboardSummary
+ */
+
+/**
+ *
+ * @name DashboardSummary#chart
+ * @type {DashboardChartValue}
+ */
+/**
+ *
+ * @name DashboardSummary#events
+ * @type {DashboardPortfolioEvents}
+ */
+/**
+ *
+ * @name DashboardSummary#profileHeader
+ * @type {ProfileHeaderViewModel}
+ */
+/**
+ *
+ * @name DashboardSummary#programsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardSummary#fundsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardSummary#signalsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardSummary#requests
+ * @type {ProgramRequests}
+ */
 
 
 
@@ -129,5 +129,9 @@ export default class DashboardSummary {
 
 
 }
+
+
+
+
 
 

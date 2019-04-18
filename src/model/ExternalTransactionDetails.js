@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ExternalTransactionDetails
-     */
-    
-    /**
-     *
-     * @name ExternalTransactionDetails#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ExternalTransactionDetails#descriptionUrl
-     * @type {String}
-     */
-    /**
-     *
-     * @name ExternalTransactionDetails#fromAddress
-     * @type {String}
-     */
-    /**
-     *
-     * @name ExternalTransactionDetails#isEnableActions
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface ExternalTransactionDetails
+ */
+
+/**
+ *
+ * @name ExternalTransactionDetails#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ExternalTransactionDetails#descriptionUrl
+ * @type {String}
+ */
+/**
+ *
+ * @name ExternalTransactionDetails#fromAddress
+ * @type {String}
+ */
+/**
+ *
+ * @name ExternalTransactionDetails#isEnableActions
+ * @type {Boolean}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ExternalTransactionDetails {
 
 
 }
+
+
+
+
 
 

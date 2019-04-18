@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ConvertingDetails#currencyTo
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type ConvertingDetailsCurrencyToEnum
  */
 /**
  *
@@ -95,6 +95,12 @@ var ConvertingDetails = function () {
 
     return ConvertingDetails;
 }();
+
+/**
+ * @typedef ConvertingDetailsCurrencyToEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 ConvertingDetails.CurrencyToEnum = {
 

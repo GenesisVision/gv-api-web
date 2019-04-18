@@ -18,46 +18,46 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundInvestInfo
-     */
-    
-    /**
-     *
-     * @name FundInvestInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundInvestInfo#availableInWallet
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundInvestInfo#minInvestmentAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundInvestInfo#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundInvestInfo#gvCommission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundInvestInfo#rate
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundInvestInfo#isOwnProgram
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface FundInvestInfo
+ */
+
+/**
+ *
+ * @name FundInvestInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundInvestInfo#availableInWallet
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundInvestInfo#minInvestmentAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundInvestInfo#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundInvestInfo#gvCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundInvestInfo#rate
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundInvestInfo#isOwnProgram
+ * @type {Boolean}
+ */
 
 
 
@@ -125,5 +125,9 @@ export default class FundInvestInfo {
 
 
 }
+
+
+
+
 
 

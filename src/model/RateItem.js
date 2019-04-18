@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface RateItem
-     */
-    
-    /**
-     *
-     * @name RateItem#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name RateItem#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface RateItem
+ */
+
+/**
+ *
+ * @name RateItem#currency
+ * @type RateItemCurrencyEnum
+ */
+/**
+ *
+ * @name RateItem#rate
+ * @type {Number}
+ */
 
 
 
@@ -109,5 +109,14 @@ export default class RateItem {
 
 
 }
+
+
+
+
+/**
+ * @typedef RateItemCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

@@ -19,21 +19,21 @@ import SignalDetails from './SignalDetails';
 
 
 
-    /**
-     *
-     * @interface SignalsList
-     */
-    
-    /**
-     *
-     * @name SignalsList#programs
-     * @type {Array<SignalDetails>}
-     */
-    /**
-     *
-     * @name SignalsList#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface SignalsList
+ */
+
+/**
+ *
+ * @name SignalsList#programs
+ * @type {Array<SignalDetails>}
+ */
+/**
+ *
+ * @name SignalsList#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class SignalsList {
 
 
 }
+
+
+
+
 
 

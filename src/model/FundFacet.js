@@ -18,51 +18,51 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundFacet
-     */
-    
-    /**
-     *
-     * @name FundFacet#sorting
-     * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
-     */
-    /**
-     *
-     * @name FundFacet#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundFacet#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundFacet#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundFacet#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundFacet#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundFacet#sortType
-     * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
-     */
-    /**
-     *
-     * @name FundFacet#timeframe
-     * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
-     */
+/**
+ *
+ * @interface FundFacet
+ */
+
+/**
+ *
+ * @name FundFacet#sorting
+ * @type FundFacetSortingEnum
+ */
+/**
+ *
+ * @name FundFacet#id
+ * @type {String}
+ */
+/**
+ *
+ * @name FundFacet#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundFacet#description
+ * @type {String}
+ */
+/**
+ *
+ * @name FundFacet#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name FundFacet#url
+ * @type {String}
+ */
+/**
+ *
+ * @name FundFacet#sortType
+ * @type FundFacetSortTypeEnum
+ */
+/**
+ *
+ * @name FundFacet#timeframe
+ * @type FundFacetTimeframeEnum
+ */
 
 
 
@@ -189,5 +189,24 @@ export default class FundFacet {
 
 
 }
+
+
+
+
+/**
+ * @typedef FundFacetSortingEnum 
+ * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
+ */
+
+/**
+ * @typedef FundFacetSortTypeEnum 
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ */
+
+/**
+ * @typedef FundFacetTimeframeEnum 
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ */
+
 
 

@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerSimpleProgram
-     */
-    
-    /**
-     *
-     * @name ManagerSimpleProgram#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerSimpleProgram#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleProgram#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleProgram#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleProgram#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleProgram#url
-     * @type {String}
-     */
+/**
+ *
+ * @interface ManagerSimpleProgram
+ */
+
+/**
+ *
+ * @name ManagerSimpleProgram#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerSimpleProgram#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleProgram#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleProgram#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleProgram#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleProgram#url
+ * @type {String}
+ */
 
 
 
@@ -116,5 +116,9 @@ export default class ManagerSimpleProgram {
 
 
 }
+
+
+
+
 
 

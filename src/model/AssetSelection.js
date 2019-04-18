@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface AssetSelection
-     */
-    
-    /**
-     *
-     * @name AssetSelection#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetSelection#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetSelection#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetSelection#type
-     * @type {("Program"|"Fund")}
-     */
+/**
+ *
+ * @interface AssetSelection
+ */
+
+/**
+ *
+ * @name AssetSelection#id
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetSelection#title
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetSelection#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetSelection#type
+ * @type AssetSelectionTypeEnum
+ */
 
 
 
@@ -105,5 +105,14 @@ export default class AssetSelection {
 
 
 }
+
+
+
+
+/**
+ * @typedef AssetSelectionTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

@@ -20,21 +20,21 @@ import ManagerSimpleProgram from './ManagerSimpleProgram';
 
 
 
-    /**
-     *
-     * @interface ManagerAssets
-     */
-    
-    /**
-     *
-     * @name ManagerAssets#programs
-     * @type {Array<ManagerSimpleProgram>}
-     */
-    /**
-     *
-     * @name ManagerAssets#funds
-     * @type {Array<ManagerSimpleFund>}
-     */
+/**
+ *
+ * @interface ManagerAssets
+ */
+
+/**
+ *
+ * @name ManagerAssets#programs
+ * @type {Array<ManagerSimpleProgram>}
+ */
+/**
+ *
+ * @name ManagerAssets#funds
+ * @type {Array<ManagerSimpleFund>}
+ */
 
 
 
@@ -82,5 +82,9 @@ export default class ManagerAssets {
 
 
 }
+
+
+
+
 
 

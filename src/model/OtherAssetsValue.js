@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface OtherAssetsValue
-     */
-    
-    /**
-     *
-     * @name OtherAssetsValue#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OtherAssetsValue#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OtherAssetsValue#changePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OtherAssetsValue#changeValue
-     * @type {Number}
-     */
+/**
+ *
+ * @interface OtherAssetsValue
+ */
+
+/**
+ *
+ * @name OtherAssetsValue#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name OtherAssetsValue#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name OtherAssetsValue#changePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name OtherAssetsValue#changeValue
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class OtherAssetsValue {
 
 
 }
+
+
+
+
 
 

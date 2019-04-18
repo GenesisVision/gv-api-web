@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FcmTokenViewModel
-     */
-    
-    /**
-     *
-     * @name FcmTokenViewModel#token
-     * @type {String}
-     */
+/**
+ *
+ * @interface FcmTokenViewModel
+ */
+
+/**
+ *
+ * @name FcmTokenViewModel#token
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class FcmTokenViewModel {
 
 
 }
+
+
+
+
 
 

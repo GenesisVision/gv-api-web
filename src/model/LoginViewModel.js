@@ -19,46 +19,46 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 
 
-    /**
-     *
-     * @interface LoginViewModel
-     */
-    
-    /**
-     *
-     * @name LoginViewModel#email
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#rememberMe
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name LoginViewModel#twoFactorCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#recoveryCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#client
-     * @type {String}
-     */
-    /**
-     *
-     * @name LoginViewModel#captchaCheckResult
-     * @type {CaptchaCheckResult}
-     */
+/**
+ *
+ * @interface LoginViewModel
+ */
+
+/**
+ *
+ * @name LoginViewModel#email
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#password
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#rememberMe
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name LoginViewModel#twoFactorCode
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#recoveryCode
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#client
+ * @type {String}
+ */
+/**
+ *
+ * @name LoginViewModel#captchaCheckResult
+ * @type {CaptchaCheckResult}
+ */
 
 
 
@@ -126,5 +126,9 @@ export default class LoginViewModel {
 
 
 }
+
+
+
+
 
 

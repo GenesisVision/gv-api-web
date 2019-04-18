@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface UserCommissionData
-     */
-    
-    /**
-     *
-     * @name UserCommissionData#isPayingCommissionInGvt
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name UserCommissionData#gvtHolderTradingFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name UserCommissionData#gvtHolderDiscount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name UserCommissionData#regularTradingFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name UserCommissionData#regularDiscount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface UserCommissionData
+ */
+
+/**
+ *
+ * @name UserCommissionData#isPayingCommissionInGvt
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name UserCommissionData#gvtHolderTradingFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name UserCommissionData#gvtHolderDiscount
+ * @type {Number}
+ */
+/**
+ *
+ * @name UserCommissionData#regularTradingFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name UserCommissionData#regularDiscount
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class UserCommissionData {
 
 
 }
+
+
+
+
 
 

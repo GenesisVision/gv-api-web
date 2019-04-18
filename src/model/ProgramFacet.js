@@ -18,51 +18,51 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramFacet
-     */
-    
-    /**
-     *
-     * @name ProgramFacet#sorting
-     * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
-     */
-    /**
-     *
-     * @name ProgramFacet#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramFacet#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramFacet#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramFacet#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramFacet#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramFacet#sortType
-     * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
-     */
-    /**
-     *
-     * @name ProgramFacet#timeframe
-     * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
-     */
+/**
+ *
+ * @interface ProgramFacet
+ */
+
+/**
+ *
+ * @name ProgramFacet#sorting
+ * @type ProgramFacetSortingEnum
+ */
+/**
+ *
+ * @name ProgramFacet#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramFacet#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramFacet#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramFacet#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramFacet#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramFacet#sortType
+ * @type ProgramFacetSortTypeEnum
+ */
+/**
+ *
+ * @name ProgramFacet#timeframe
+ * @type ProgramFacetTimeframeEnum
+ */
 
 
 
@@ -205,5 +205,24 @@ export default class ProgramFacet {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramFacetSortingEnum 
+ * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
+ */
+
+/**
+ * @typedef ProgramFacetSortTypeEnum 
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ */
+
+/**
+ * @typedef ProgramFacetTimeframeEnum 
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ */
+
 
 

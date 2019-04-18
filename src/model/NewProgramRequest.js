@@ -18,86 +18,86 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface NewProgramRequest
-     */
-    
-    /**
-     *
-     * @name NewProgramRequest#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name NewProgramRequest#periodLength
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#successFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#stopOutLevel
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#leverage
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#brokerAccountTypeId
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewProgramRequest#signalSuccessFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#signalSubscriptionFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#isSignalProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name NewProgramRequest#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewProgramRequest#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewProgramRequest#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewProgramRequest#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#depositAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewProgramRequest#depositWalletId
-     * @type {String}
-     */
+/**
+ *
+ * @interface NewProgramRequest
+ */
+
+/**
+ *
+ * @name NewProgramRequest#currency
+ * @type NewProgramRequestCurrencyEnum
+ */
+/**
+ *
+ * @name NewProgramRequest#periodLength
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#successFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#leverage
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#brokerAccountTypeId
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#signalSuccessFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#signalSubscriptionFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#isSignalProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name NewProgramRequest#title
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#description
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#depositAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewProgramRequest#depositWalletId
+ * @type {String}
+ */
 
 
 
@@ -226,5 +226,14 @@ export default class NewProgramRequest {
 
 
 }
+
+
+
+
+/**
+ * @typedef NewProgramRequestCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

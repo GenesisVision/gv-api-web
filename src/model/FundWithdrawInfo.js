@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundWithdrawInfo
-     */
-    
-    /**
-     *
-     * @name FundWithdrawInfo#exitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundWithdrawInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundWithdrawInfo#availableToWithdraw
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundWithdrawInfo#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundWithdrawInfo
+ */
+
+/**
+ *
+ * @name FundWithdrawInfo#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundWithdrawInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundWithdrawInfo#availableToWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundWithdrawInfo#rate
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class FundWithdrawInfo {
 
 
 }
+
+
+
+
 
 

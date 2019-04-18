@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletSummary
-     */
-    
-    /**
-     *
-     * @name WalletSummary#totalBalanceGVT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletSummary#totalBalanceCurrency
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletSummary#investedGVT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletSummary#investedCurrency
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletSummary#availableGVT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletSummary#availableCurrency
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletSummary
+ */
+
+/**
+ *
+ * @name WalletSummary#totalBalanceGVT
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletSummary#totalBalanceCurrency
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletSummary#investedGVT
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletSummary#investedCurrency
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletSummary#availableGVT
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletSummary#availableCurrency
+ * @type {Number}
+ */
 
 
 
@@ -116,5 +116,9 @@ export default class WalletSummary {
 
 
 }
+
+
+
+
 
 

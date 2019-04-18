@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundFacet#sorting
- * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
+ * @type FundFacetSortingEnum
  */
 /**
  *
@@ -63,12 +63,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundFacet#sortType
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ * @type FundFacetSortTypeEnum
  */
 /**
  *
  * @name FundFacet#timeframe
- * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ * @type FundFacetTimeframeEnum
  */
 
 var FundFacet = function () {
@@ -122,6 +122,22 @@ var FundFacet = function () {
 
     return FundFacet;
 }();
+
+/**
+ * @typedef FundFacetSortingEnum 
+ * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
+ */
+
+/**
+ * @typedef FundFacetSortTypeEnum 
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ */
+
+/**
+ * @typedef FundFacetTimeframeEnum 
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ */
+
 
 FundFacet.SortingEnum = {
 

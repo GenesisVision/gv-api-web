@@ -19,21 +19,21 @@ import AndroidVersion from './AndroidVersion';
 
 
 
-    /**
-     *
-     * @interface AndroidAppVersion
-     */
-    
-    /**
-     *
-     * @name AndroidAppVersion#minVersion
-     * @type {AndroidVersion}
-     */
-    /**
-     *
-     * @name AndroidAppVersion#lastVersion
-     * @type {AndroidVersion}
-     */
+/**
+ *
+ * @interface AndroidAppVersion
+ */
+
+/**
+ *
+ * @name AndroidAppVersion#minVersion
+ * @type {AndroidVersion}
+ */
+/**
+ *
+ * @name AndroidAppVersion#lastVersion
+ * @type {AndroidVersion}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class AndroidAppVersion {
 
 
 }
+
+
+
+
 
 

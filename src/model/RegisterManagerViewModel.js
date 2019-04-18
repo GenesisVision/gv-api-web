@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface RegisterManagerViewModel
-     */
-    
-    /**
-     *
-     * @name RegisterManagerViewModel#userName
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterManagerViewModel#email
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterManagerViewModel#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterManagerViewModel#confirmPassword
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterManagerViewModel#refCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterManagerViewModel#isAuto
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface RegisterManagerViewModel
+ */
+
+/**
+ *
+ * @name RegisterManagerViewModel#userName
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#email
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#password
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#confirmPassword
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#refCode
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#isAuto
+ * @type {Boolean}
+ */
 
 
 
@@ -116,5 +116,9 @@ export default class RegisterManagerViewModel {
 
 
 }
+
+
+
+
 
 

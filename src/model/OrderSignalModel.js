@@ -19,86 +19,86 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
 
 
 
-    /**
-     *
-     * @interface OrderSignalModel
-     */
-    
-    /**
-     *
-     * @name OrderSignalModel#providers
-     * @type {Array<OrderSignalProgramInfo>}
-     */
-    /**
-     *
-     * @name OrderSignalModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderSignalModel#login
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderSignalModel#ticket
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderSignalModel#symbol
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderSignalModel#volume
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#direction
-     * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
-     */
-    /**
-     *
-     * @name OrderSignalModel#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name OrderSignalModel#price
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#priceCurrent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#entry
-     * @type {("In"|"Out"|"InOut"|"OutBy")}
-     */
-    /**
-     *
-     * @name OrderSignalModel#baseVolume
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#commission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderSignalModel#masterLogin
-     * @type {String}
-     */
+/**
+ *
+ * @interface OrderSignalModel
+ */
+
+/**
+ *
+ * @name OrderSignalModel#providers
+ * @type {Array<OrderSignalProgramInfo>}
+ */
+/**
+ *
+ * @name OrderSignalModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderSignalModel#login
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderSignalModel#ticket
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderSignalModel#symbol
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderSignalModel#volume
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#direction
+ * @type OrderSignalModelDirectionEnum
+ */
+/**
+ *
+ * @name OrderSignalModel#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name OrderSignalModel#price
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#priceCurrent
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#entry
+ * @type OrderSignalModelEntryEnum
+ */
+/**
+ *
+ * @name OrderSignalModel#baseVolume
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#commission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#masterLogin
+ * @type {String}
+ */
 
 
 
@@ -222,5 +222,19 @@ export default class OrderSignalModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef OrderSignalModelDirectionEnum 
+ * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ */
+
+/**
+ * @typedef OrderSignalModelEntryEnum 
+ * @type {("In"|"Out"|"InOut"|"OutBy")}
+ */
+
 
 

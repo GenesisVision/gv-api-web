@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletBaseData
-     */
-    
-    /**
-     *
-     * @name WalletBaseData#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletBaseData#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletBaseData#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletBaseData#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletBaseData#available
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletBaseData#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletBaseData
+ */
+
+/**
+ *
+ * @name WalletBaseData#id
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletBaseData#title
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletBaseData#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletBaseData#currency
+ * @type WalletBaseDataCurrencyEnum
+ */
+/**
+ *
+ * @name WalletBaseData#available
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletBaseData#rate
+ * @type {Number}
+ */
 
 
 
@@ -145,5 +145,14 @@ export default class WalletBaseData {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletBaseDataCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

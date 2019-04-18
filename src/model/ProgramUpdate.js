@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramUpdate
-     */
-    
-    /**
-     *
-     * @name ProgramUpdate#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramUpdate#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramUpdate#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramUpdate#stopOutLevel
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramUpdate
+ */
+
+/**
+ *
+ * @name ProgramUpdate#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramUpdate#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramUpdate#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramUpdate#stopOutLevel
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ProgramUpdate {
 
 
 }
+
+
+
+
 
 

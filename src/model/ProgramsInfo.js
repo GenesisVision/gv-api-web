@@ -18,61 +18,61 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramsInfo
-     */
-    
-    /**
-     *
-     * @name ProgramsInfo#managerProgramInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerProgramInvestmentUSD
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerProgramInvestmentUSDT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerProgramInvestmentBTC
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerProgramInvestmentETH
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerMaxEntryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerMaxSuccessFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerFundInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#managerMaxExitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramsInfo#periods
-     * @type {Array<Number>}
-     */
+/**
+ *
+ * @interface ProgramsInfo
+ */
+
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentUSD
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentUSDT
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentBTC
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerProgramInvestmentETH
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMaxEntryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMaxSuccessFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerFundInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMaxExitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#periods
+ * @type {Array<Number>}
+ */
 
 
 
@@ -152,5 +152,9 @@ export default class ProgramsInfo {
 
 
 }
+
+
+
+
 
 

@@ -43,7 +43,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramTransactionDetails#programType
- * @type {("Program"|"Fund")}
+ * @type ProgramTransactionDetailsProgramTypeEnum
  */
 /**
  *
@@ -167,6 +167,12 @@ var ProgramTransactionDetails = function () {
 
     return ProgramTransactionDetails;
 }();
+
+/**
+ * @typedef ProgramTransactionDetailsProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 ProgramTransactionDetails.ProgramTypeEnum = {
 

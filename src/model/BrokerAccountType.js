@@ -18,51 +18,51 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface BrokerAccountType
-     */
-    
-    /**
-     *
-     * @name BrokerAccountType#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name BrokerAccountType#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name BrokerAccountType#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name BrokerAccountType#type
-     * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi")}
-     */
-    /**
-     *
-     * @name BrokerAccountType#leverages
-     * @type {Array<Number>}
-     */
-    /**
-     *
-     * @name BrokerAccountType#currencies
-     * @type {Array<String>}
-     */
-    /**
-     *
-     * @name BrokerAccountType#isForex
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name BrokerAccountType#isSignalsAvailable
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface BrokerAccountType
+ */
+
+/**
+ *
+ * @name BrokerAccountType#id
+ * @type {String}
+ */
+/**
+ *
+ * @name BrokerAccountType#name
+ * @type {String}
+ */
+/**
+ *
+ * @name BrokerAccountType#description
+ * @type {String}
+ */
+/**
+ *
+ * @name BrokerAccountType#type
+ * @type BrokerAccountTypeTypeEnum
+ */
+/**
+ *
+ * @name BrokerAccountType#leverages
+ * @type {Array<Number>}
+ */
+/**
+ *
+ * @name BrokerAccountType#currencies
+ * @type {Array<String>}
+ */
+/**
+ *
+ * @name BrokerAccountType#isForex
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerAccountType#isSignalsAvailable
+ * @type {Boolean}
+ */
 
 
 
@@ -155,5 +155,14 @@ export default class BrokerAccountType {
 
 
 }
+
+
+
+
+/**
+ * @typedef BrokerAccountTypeTypeEnum 
+ * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi")}
+ */
+
 
 

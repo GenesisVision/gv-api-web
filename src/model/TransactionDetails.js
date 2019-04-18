@@ -21,71 +21,71 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
 
 
 
-    /**
-     *
-     * @interface TransactionDetails
-     */
-    
-    /**
-     *
-     * @name TransactionDetails#type
-     * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
-     */
-    /**
-     *
-     * @name TransactionDetails#programDetails
-     * @type {ProgramTransactionDetails}
-     */
-    /**
-     *
-     * @name TransactionDetails#convertingDetails
-     * @type {ConvertingDetails}
-     */
-    /**
-     *
-     * @name TransactionDetails#externalTransactionDetails
-     * @type {ExternalTransactionDetails}
-     */
-    /**
-     *
-     * @name TransactionDetails#status
-     * @type {("Done"|"Pending"|"Canceled"|"Error")}
-     */
-    /**
-     *
-     * @name TransactionDetails#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name TransactionDetails#currencyName
-     * @type {String}
-     */
-    /**
-     *
-     * @name TransactionDetails#currencyLogo
-     * @type {String}
-     */
-    /**
-     *
-     * @name TransactionDetails#gvCommission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name TransactionDetails#gvCommissionCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name TransactionDetails#gvCommissionPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name TransactionDetails#amount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface TransactionDetails
+ */
+
+/**
+ *
+ * @name TransactionDetails#type
+ * @type TransactionDetailsTypeEnum
+ */
+/**
+ *
+ * @name TransactionDetails#programDetails
+ * @type {ProgramTransactionDetails}
+ */
+/**
+ *
+ * @name TransactionDetails#convertingDetails
+ * @type {ConvertingDetails}
+ */
+/**
+ *
+ * @name TransactionDetails#externalTransactionDetails
+ * @type {ExternalTransactionDetails}
+ */
+/**
+ *
+ * @name TransactionDetails#status
+ * @type TransactionDetailsStatusEnum
+ */
+/**
+ *
+ * @name TransactionDetails#currency
+ * @type TransactionDetailsCurrencyEnum
+ */
+/**
+ *
+ * @name TransactionDetails#currencyName
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetails#currencyLogo
+ * @type {String}
+ */
+/**
+ *
+ * @name TransactionDetails#gvCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetails#gvCommissionCurrency
+ * @type TransactionDetailsGvCommissionCurrencyEnum
+ */
+/**
+ *
+ * @name TransactionDetails#gvCommissionPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name TransactionDetails#amount
+ * @type {Number}
+ */
 
 
 
@@ -269,5 +269,29 @@ export default class TransactionDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef TransactionDetailsTypeEnum 
+ * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ */
+
+/**
+ * @typedef TransactionDetailsStatusEnum 
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ */
+
+/**
+ * @typedef TransactionDetailsCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef TransactionDetailsGvCommissionCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

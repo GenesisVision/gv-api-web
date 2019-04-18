@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name PowDetails#secureAlgorithm
- * @type {("Sha256")}
+ * @type PowDetailsSecureAlgorithmEnum
  */
 /**
  *
@@ -77,6 +77,12 @@ var PowDetails = function () {
 
     return PowDetails;
 }();
+
+/**
+ * @typedef PowDetailsSecureAlgorithmEnum 
+ * @type {("Sha256")}
+ */
+
 
 PowDetails.SecureAlgorithmEnum = {
 

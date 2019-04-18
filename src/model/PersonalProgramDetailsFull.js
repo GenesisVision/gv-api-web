@@ -19,116 +19,116 @@ import SignalSubscription from './SignalSubscription';
 
 
 
-    /**
-     *
-     * @interface PersonalProgramDetailsFull
-     */
-    
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isReinvest
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#gvtValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#showTwoFactorButton
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#signalSubscription
-     * @type {SignalSubscription}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isFavorite
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isInvested
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isOwnProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#canCloseProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isFinishing
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#canInvest
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#canWithdraw
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#canClosePeriod
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#hasNotifications
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#invested
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#pendingInput
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#pendingOutput
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#status
-     * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#isFollowSignals
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalProgramDetailsFull#canMakeSignalProvider
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface PersonalProgramDetailsFull
+ */
+
+/**
+ *
+ * @name PersonalProgramDetailsFull#isReinvest
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#gvtValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#showTwoFactorButton
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#signalSubscription
+ * @type {SignalSubscription}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#isFavorite
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#isInvested
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#isOwnProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canCloseProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#isFinishing
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canInvest
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canWithdraw
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canClosePeriod
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#hasNotifications
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#invested
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#pendingInput
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#pendingOutput
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#status
+ * @type PersonalProgramDetailsFullStatusEnum
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#isFollowSignals
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#canMakeSignalProvider
+ * @type {Boolean}
+ */
 
 
 
@@ -265,5 +265,14 @@ export default class PersonalProgramDetailsFull {
 
 
 }
+
+
+
+
+/**
+ * @typedef PersonalProgramDetailsFullStatusEnum 
+ * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
+ */
+
 
 

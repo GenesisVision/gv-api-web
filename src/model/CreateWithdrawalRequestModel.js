@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface CreateWithdrawalRequestModel
-     */
-    
-    /**
-     *
-     * @name CreateWithdrawalRequestModel#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name CreateWithdrawalRequestModel#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name CreateWithdrawalRequestModel#address
-     * @type {String}
-     */
-    /**
-     *
-     * @name CreateWithdrawalRequestModel#twoFactorCode
-     * @type {String}
-     */
+/**
+ *
+ * @interface CreateWithdrawalRequestModel
+ */
+
+/**
+ *
+ * @name CreateWithdrawalRequestModel#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name CreateWithdrawalRequestModel#currency
+ * @type CreateWithdrawalRequestModelCurrencyEnum
+ */
+/**
+ *
+ * @name CreateWithdrawalRequestModel#address
+ * @type {String}
+ */
+/**
+ *
+ * @name CreateWithdrawalRequestModel#twoFactorCode
+ * @type {String}
+ */
 
 
 
@@ -127,5 +127,14 @@ export default class CreateWithdrawalRequestModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef CreateWithdrawalRequestModelCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

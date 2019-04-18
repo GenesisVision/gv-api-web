@@ -18,61 +18,61 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramInvestInfo
-     */
-    
-    /**
-     *
-     * @name ProgramInvestInfo#periodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#availableToInvest
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#availableToInvestBase
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#availableInWallet
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#minInvestmentAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#gvCommission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#rate
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramInvestInfo#isOwnProgram
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface ProgramInvestInfo
+ */
+
+/**
+ *
+ * @name ProgramInvestInfo#periodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#availableToInvest
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#availableToInvestBase
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#availableInWallet
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#minInvestmentAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#gvCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#rate
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramInvestInfo#isOwnProgram
+ * @type {Boolean}
+ */
 
 
 
@@ -152,5 +152,9 @@ export default class ProgramInvestInfo {
 
 
 }
+
+
+
+
 
 

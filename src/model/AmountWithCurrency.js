@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface AmountWithCurrency
-     */
-    
-    /**
-     *
-     * @name AmountWithCurrency#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name AmountWithCurrency#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
+/**
+ *
+ * @interface AmountWithCurrency
+ */
+
+/**
+ *
+ * @name AmountWithCurrency#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name AmountWithCurrency#currency
+ * @type AmountWithCurrencyCurrencyEnum
+ */
 
 
 
@@ -109,5 +109,14 @@ export default class AmountWithCurrency {
 
 
 }
+
+
+
+
+/**
+ * @typedef AmountWithCurrencyCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

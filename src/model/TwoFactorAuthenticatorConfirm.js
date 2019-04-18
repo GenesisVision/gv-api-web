@@ -18,26 +18,26 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface TwoFactorAuthenticatorConfirm
-     */
-    
-    /**
-     *
-     * @name TwoFactorAuthenticatorConfirm#code
-     * @type {String}
-     */
-    /**
-     *
-     * @name TwoFactorAuthenticatorConfirm#sharedKey
-     * @type {String}
-     */
-    /**
-     *
-     * @name TwoFactorAuthenticatorConfirm#password
-     * @type {String}
-     */
+/**
+ *
+ * @interface TwoFactorAuthenticatorConfirm
+ */
+
+/**
+ *
+ * @name TwoFactorAuthenticatorConfirm#code
+ * @type {String}
+ */
+/**
+ *
+ * @name TwoFactorAuthenticatorConfirm#sharedKey
+ * @type {String}
+ */
+/**
+ *
+ * @name TwoFactorAuthenticatorConfirm#password
+ * @type {String}
+ */
 
 
 
@@ -89,5 +89,9 @@ export default class TwoFactorAuthenticatorConfirm {
 
 
 }
+
+
+
+
 
 

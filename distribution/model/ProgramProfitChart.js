@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#programCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type ProgramProfitChartProgramCurrencyEnum
  */
 /**
  *
@@ -247,6 +247,12 @@ var ProgramProfitChart = function () {
 
     return ProgramProfitChart;
 }();
+
+/**
+ * @typedef ProgramProfitChartProgramCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 ProgramProfitChart.ProgramCurrencyEnum = {
 

@@ -19,16 +19,16 @@ import WalletBaseData from './WalletBaseData';
 
 
 
-    /**
-     *
-     * @interface WalletMultiAvailable
-     */
-    
-    /**
-     *
-     * @name WalletMultiAvailable#wallets
-     * @type {Array<WalletBaseData>}
-     */
+/**
+ *
+ * @interface WalletMultiAvailable
+ */
+
+/**
+ *
+ * @name WalletMultiAvailable#wallets
+ * @type {Array<WalletBaseData>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class WalletMultiAvailable {
 
 
 }
+
+
+
+
 
 

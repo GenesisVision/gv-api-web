@@ -19,21 +19,21 @@ import ProgramFacet from './ProgramFacet';
 
 
 
-    /**
-     *
-     * @interface ProgramSets
-     */
-    
-    /**
-     *
-     * @name ProgramSets#sets
-     * @type {Array<ProgramFacet>}
-     */
-    /**
-     *
-     * @name ProgramSets#favoritesCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramSets
+ */
+
+/**
+ *
+ * @name ProgramSets#sets
+ * @type {Array<ProgramFacet>}
+ */
+/**
+ *
+ * @name ProgramSets#favoritesCount
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class ProgramSets {
 
 
 }
+
+
+
+
 
 

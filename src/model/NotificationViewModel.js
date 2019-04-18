@@ -18,66 +18,66 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface NotificationViewModel
-     */
-    
-    /**
-     *
-     * @name NotificationViewModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#text
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name NotificationViewModel#type
-     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
-     */
-    /**
-     *
-     * @name NotificationViewModel#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#managerId
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationViewModel#isUnread
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name NotificationViewModel#assetType
-     * @type {("Program"|"Fund")}
-     */
+/**
+ *
+ * @interface NotificationViewModel
+ */
+
+/**
+ *
+ * @name NotificationViewModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#text
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name NotificationViewModel#type
+ * @type NotificationViewModelTypeEnum
+ */
+/**
+ *
+ * @name NotificationViewModel#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#managerId
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#url
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#color
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationViewModel#isUnread
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name NotificationViewModel#assetType
+ * @type NotificationViewModelAssetTypeEnum
+ */
 
 
 
@@ -205,5 +205,19 @@ export default class NotificationViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef NotificationViewModelTypeEnum 
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ */
+
+/**
+ * @typedef NotificationViewModelAssetTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

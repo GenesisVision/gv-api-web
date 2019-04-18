@@ -19,41 +19,41 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
 
 
 
-    /**
-     *
-     * @interface ManagerNotificationSettingList
-     */
-    
-    /**
-     *
-     * @name ManagerNotificationSettingList#managerId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerNotificationSettingList#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerNotificationSettingList#username
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerNotificationSettingList#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerNotificationSettingList#about
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerNotificationSettingList#settingsGeneral
-     * @type {Array<NotificationSettingViewModel>}
-     */
+/**
+ *
+ * @interface ManagerNotificationSettingList
+ */
+
+/**
+ *
+ * @name ManagerNotificationSettingList#managerId
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerNotificationSettingList#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerNotificationSettingList#username
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerNotificationSettingList#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerNotificationSettingList#about
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerNotificationSettingList#settingsGeneral
+ * @type {Array<NotificationSettingViewModel>}
+ */
 
 
 
@@ -117,5 +117,9 @@ export default class ManagerNotificationSettingList {
 
 
 }
+
+
+
+
 
 

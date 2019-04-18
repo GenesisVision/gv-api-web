@@ -19,16 +19,16 @@ import Broker from './Broker';
 
 
 
-    /**
-     *
-     * @interface BrokersInfo
-     */
-    
-    /**
-     *
-     * @name BrokersInfo#brokers
-     * @type {Array<Broker>}
-     */
+/**
+ *
+ * @interface BrokersInfo
+ */
+
+/**
+ *
+ * @name BrokersInfo#brokers
+ * @type {Array<Broker>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class BrokersInfo {
 
 
 }
+
+
+
+
 
 

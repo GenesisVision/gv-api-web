@@ -20,51 +20,51 @@ import ValueChartBar from './ValueChartBar';
 
 
 
-    /**
-     *
-     * @interface DashboardChartValue
-     */
-    
-    /**
-     *
-     * @name DashboardChartValue#investedProgramsInfo
-     * @type {Array<ValueChartBar>}
-     */
-    /**
-     *
-     * @name DashboardChartValue#balanceChart
-     * @type {Array<ChartSimple>}
-     */
-    /**
-     *
-     * @name DashboardChartValue#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardChartValue#valueCurrency
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardChartValue#changePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardChartValue#changeValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardChartValue#changeValueCurrency
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardChartValue#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface DashboardChartValue
+ */
+
+/**
+ *
+ * @name DashboardChartValue#investedProgramsInfo
+ * @type {Array<ValueChartBar>}
+ */
+/**
+ *
+ * @name DashboardChartValue#balanceChart
+ * @type {Array<ChartSimple>}
+ */
+/**
+ *
+ * @name DashboardChartValue#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardChartValue#valueCurrency
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardChartValue#changePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardChartValue#changeValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardChartValue#changeValueCurrency
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardChartValue#rate
+ * @type {Number}
+ */
 
 
 
@@ -136,5 +136,9 @@ export default class DashboardChartValue {
 
 
 }
+
+
+
+
 
 

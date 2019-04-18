@@ -18,106 +18,106 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProfileFullViewModel
-     */
-    
-    /**
-     *
-     * @name ProfileFullViewModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#email
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#firstName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#middleName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#lastName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#country
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#city
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#address
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#phone
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#phoneNumberConfirmed
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#birthday
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#gender
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#about
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#userName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#index
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#citizenship
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#refUrl
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileFullViewModel#verificationStatus
-     * @type {("NotVerified"|"Verified"|"UnderReview"|"Rejected")}
-     */
+/**
+ *
+ * @interface ProfileFullViewModel
+ */
+
+/**
+ *
+ * @name ProfileFullViewModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#email
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#firstName
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#middleName
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#lastName
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#country
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#city
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#address
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#phone
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#phoneNumberConfirmed
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#birthday
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#gender
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#about
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#userName
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#index
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#citizenship
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#refUrl
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileFullViewModel#verificationStatus
+ * @type ProfileFullViewModelVerificationStatusEnum
+ */
 
 
 
@@ -244,5 +244,14 @@ export default class ProfileFullViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProfileFullViewModelVerificationStatusEnum 
+ * @type {("NotVerified"|"Verified"|"UnderReview"|"Rejected")}
+ */
+
 
 

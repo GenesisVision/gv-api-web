@@ -75,12 +75,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#sourceType
- * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ * @type WalletTransactionSourceTypeEnum
  */
 /**
  *
  * @name WalletTransaction#sourceCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type WalletTransactionSourceCurrencyEnum
  */
 /**
  *
@@ -100,7 +100,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#action
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
+ * @type WalletTransactionActionEnum
  */
 /**
  *
@@ -115,12 +115,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletTransaction#destinationType
- * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ * @type WalletTransactionDestinationTypeEnum
  */
 /**
  *
  * @name WalletTransaction#destinationCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type WalletTransactionDestinationCurrencyEnum
  */
 /**
  *
@@ -233,6 +233,32 @@ var WalletTransaction = function () {
 
     return WalletTransaction;
 }();
+
+/**
+ * @typedef WalletTransactionSourceTypeEnum 
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ */
+
+/**
+ * @typedef WalletTransactionSourceCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef WalletTransactionActionEnum 
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
+ */
+
+/**
+ * @typedef WalletTransactionDestinationTypeEnum 
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ */
+
+/**
+ * @typedef WalletTransactionDestinationCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 WalletTransaction.SourceTypeEnum = {
 

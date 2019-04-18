@@ -19,91 +19,91 @@ import ChartSimple from './ChartSimple';
 
 
 
-    /**
-     *
-     * @interface FundProfitChart
-     */
-    
-    /**
-     *
-     * @name FundProfitChart#totalUsdProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#timeframeUsdProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#rebalances
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name FundProfitChart#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#equityChart
-     * @type {Array<ChartSimple>}
-     */
-    /**
-     *
-     * @name FundProfitChart#balance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#investors
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#profitChangePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#sharpeRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#sortinoRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#calmarRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#maxDrawdown
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#totalGvtProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#timeframeGvtProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundProfitChart#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundProfitChart
+ */
+
+/**
+ *
+ * @name FundProfitChart#totalUsdProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#timeframeUsdProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#rebalances
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name FundProfitChart#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#equityChart
+ * @type {Array<ChartSimple>}
+ */
+/**
+ *
+ * @name FundProfitChart#balance
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#investors
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#profitChangePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#sharpeRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#sortinoRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#calmarRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#maxDrawdown
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#totalGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#timeframeGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#rate
+ * @type {Number}
+ */
 
 
 
@@ -207,5 +207,9 @@ export default class FundProfitChart {
 
 
 }
+
+
+
+
 
 

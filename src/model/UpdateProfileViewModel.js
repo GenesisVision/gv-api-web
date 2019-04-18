@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface UpdateProfileViewModel
-     */
-    
-    /**
-     *
-     * @name UpdateProfileViewModel#userName
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdateProfileViewModel#about
-     * @type {String}
-     */
+/**
+ *
+ * @interface UpdateProfileViewModel
+ */
+
+/**
+ *
+ * @name UpdateProfileViewModel#userName
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdateProfileViewModel#about
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class UpdateProfileViewModel {
 
 
 }
+
+
+
+
 
 

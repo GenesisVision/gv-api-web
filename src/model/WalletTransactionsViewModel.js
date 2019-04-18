@@ -19,21 +19,21 @@ import WalletTransaction from './WalletTransaction';
 
 
 
-    /**
-     *
-     * @interface WalletTransactionsViewModel
-     */
-    
-    /**
-     *
-     * @name WalletTransactionsViewModel#transactions
-     * @type {Array<WalletTransaction>}
-     */
-    /**
-     *
-     * @name WalletTransactionsViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletTransactionsViewModel
+ */
+
+/**
+ *
+ * @name WalletTransactionsViewModel#transactions
+ * @type {Array<WalletTransaction>}
+ */
+/**
+ *
+ * @name WalletTransactionsViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class WalletTransactionsViewModel {
 
 
 }
+
+
+
+
 
 

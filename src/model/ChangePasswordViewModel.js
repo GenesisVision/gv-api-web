@@ -18,26 +18,26 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ChangePasswordViewModel
-     */
-    
-    /**
-     *
-     * @name ChangePasswordViewModel#oldPassword
-     * @type {String}
-     */
-    /**
-     *
-     * @name ChangePasswordViewModel#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name ChangePasswordViewModel#confirmPassword
-     * @type {String}
-     */
+/**
+ *
+ * @interface ChangePasswordViewModel
+ */
+
+/**
+ *
+ * @name ChangePasswordViewModel#oldPassword
+ * @type {String}
+ */
+/**
+ *
+ * @name ChangePasswordViewModel#password
+ * @type {String}
+ */
+/**
+ *
+ * @name ChangePasswordViewModel#confirmPassword
+ * @type {String}
+ */
 
 
 
@@ -89,5 +89,9 @@ export default class ChangePasswordViewModel {
 
 
 }
+
+
+
+
 
 

@@ -23,91 +23,91 @@ import ProgramTag from './ProgramTag';
 
 
 
-    /**
-     *
-     * @interface SignalDetails
-     */
-    
-    /**
-     *
-     * @name SignalDetails#statistic
-     * @type {ProgramDetailsListStatistic}
-     */
-    /**
-     *
-     * @name SignalDetails#personalDetails
-     * @type {PersonalSignalDetailsFull}
-     */
-    /**
-     *
-     * @name SignalDetails#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name SignalDetails#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name SignalDetails#tags
-     * @type {Array<ProgramTag>}
-     */
-    /**
-     *
-     * @name SignalDetails#subscribers
-     * @type {Number}
-     */
-    /**
-     *
-     * @name SignalDetails#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name SignalDetails#status
-     * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
-     */
-    /**
-     *
-     * @name SignalDetails#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name SignalDetails#manager
-     * @type {ProfilePublic}
-     */
-    /**
-     *
-     * @name SignalDetails#chart
-     * @type {Array<ChartSimple>}
-     */
+/**
+ *
+ * @interface SignalDetails
+ */
+
+/**
+ *
+ * @name SignalDetails#statistic
+ * @type {ProgramDetailsListStatistic}
+ */
+/**
+ *
+ * @name SignalDetails#personalDetails
+ * @type {PersonalSignalDetailsFull}
+ */
+/**
+ *
+ * @name SignalDetails#currency
+ * @type SignalDetailsCurrencyEnum
+ */
+/**
+ *
+ * @name SignalDetails#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalDetails#tags
+ * @type {Array<ProgramTag>}
+ */
+/**
+ *
+ * @name SignalDetails#subscribers
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalDetails#id
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#url
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#color
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#title
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#description
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDetails#status
+ * @type SignalDetailsStatusEnum
+ */
+/**
+ *
+ * @name SignalDetails#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name SignalDetails#manager
+ * @type {ProfilePublic}
+ */
+/**
+ *
+ * @name SignalDetails#chart
+ * @type {Array<ChartSimple>}
+ */
 
 
 
@@ -257,5 +257,19 @@ export default class SignalDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef SignalDetailsCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef SignalDetailsStatusEnum 
+ * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
+ */
+
 
 

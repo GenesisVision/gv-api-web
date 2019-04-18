@@ -19,16 +19,16 @@ import WalletInfo from './WalletInfo';
 
 
 
-    /**
-     *
-     * @interface WalletsInfo
-     */
-    
-    /**
-     *
-     * @name WalletsInfo#wallets
-     * @type {Array<WalletInfo>}
-     */
+/**
+ *
+ * @interface WalletsInfo
+ */
+
+/**
+ *
+ * @name WalletsInfo#wallets
+ * @type {Array<WalletInfo>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class WalletsInfo {
 
 
 }
+
+
+
+
 
 

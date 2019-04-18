@@ -20,26 +20,26 @@ import PowResult from './PowResult';
 
 
 
-    /**
-     *
-     * @interface CaptchaCheckResult
-     */
-    
-    /**
-     *
-     * @name CaptchaCheckResult#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name CaptchaCheckResult#pow
-     * @type {PowResult}
-     */
-    /**
-     *
-     * @name CaptchaCheckResult#geeTest
-     * @type {GeeTestResult}
-     */
+/**
+ *
+ * @interface CaptchaCheckResult
+ */
+
+/**
+ *
+ * @name CaptchaCheckResult#id
+ * @type {String}
+ */
+/**
+ *
+ * @name CaptchaCheckResult#pow
+ * @type {PowResult}
+ */
+/**
+ *
+ * @name CaptchaCheckResult#geeTest
+ * @type {GeeTestResult}
+ */
 
 
 
@@ -91,5 +91,9 @@ export default class CaptchaCheckResult {
 
 
 }
+
+
+
+
 
 

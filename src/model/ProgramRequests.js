@@ -19,26 +19,26 @@ import ProgramRequest from './ProgramRequest';
 
 
 
-    /**
-     *
-     * @interface ProgramRequests
-     */
-    
-    /**
-     *
-     * @name ProgramRequests#requests
-     * @type {Array<ProgramRequest>}
-     */
-    /**
-     *
-     * @name ProgramRequests#total
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequests#totalValue
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramRequests
+ */
+
+/**
+ *
+ * @name ProgramRequests#requests
+ * @type {Array<ProgramRequest>}
+ */
+/**
+ *
+ * @name ProgramRequests#total
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequests#totalValue
+ * @type {Number}
+ */
 
 
 
@@ -90,5 +90,9 @@ export default class ProgramRequests {
 
 
 }
+
+
+
+
 
 

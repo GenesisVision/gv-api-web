@@ -19,21 +19,21 @@ import RecoveryCode from './RecoveryCode';
 
 
 
-    /**
-     *
-     * @interface RecoveryCodesViewModel
-     */
-    
-    /**
-     *
-     * @name RecoveryCodesViewModel#codes
-     * @type {Array<RecoveryCode>}
-     */
-    /**
-     *
-     * @name RecoveryCodesViewModel#authToken
-     * @type {String}
-     */
+/**
+ *
+ * @interface RecoveryCodesViewModel
+ */
+
+/**
+ *
+ * @name RecoveryCodesViewModel#codes
+ * @type {Array<RecoveryCode>}
+ */
+/**
+ *
+ * @name RecoveryCodesViewModel#authToken
+ * @type {String}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class RecoveryCodesViewModel {
 
 
 }
+
+
+
+
 
 

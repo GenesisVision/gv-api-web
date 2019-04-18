@@ -18,11 +18,11 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerOverview
-     */
-    
+/**
+ *
+ * @interface ManagerOverview
+ */
+
 
 
 
@@ -62,5 +62,9 @@ export default class ManagerOverview {
 
 
 }
+
+
+
+
 
 

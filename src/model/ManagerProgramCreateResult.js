@@ -19,26 +19,26 @@ import TwoFactorAuthenticator from './TwoFactorAuthenticator';
 
 
 
-    /**
-     *
-     * @interface ManagerProgramCreateResult
-     */
-    
-    /**
-     *
-     * @name ManagerProgramCreateResult#programId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProgramCreateResult#twoFactorRequired
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ManagerProgramCreateResult#twoFactor
-     * @type {TwoFactorAuthenticator}
-     */
+/**
+ *
+ * @interface ManagerProgramCreateResult
+ */
+
+/**
+ *
+ * @name ManagerProgramCreateResult#programId
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProgramCreateResult#twoFactorRequired
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ManagerProgramCreateResult#twoFactor
+ * @type {TwoFactorAuthenticator}
+ */
 
 
 
@@ -90,5 +90,9 @@ export default class ManagerProgramCreateResult {
 
 
 }
+
+
+
+
 
 

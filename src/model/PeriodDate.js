@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PeriodDate
-     */
-    
-    /**
-     *
-     * @name PeriodDate#dateFrom
-     * @type {Date}
-     */
-    /**
-     *
-     * @name PeriodDate#dateTo
-     * @type {Date}
-     */
+/**
+ *
+ * @interface PeriodDate
+ */
+
+/**
+ *
+ * @name PeriodDate#dateFrom
+ * @type {Date}
+ */
+/**
+ *
+ * @name PeriodDate#dateTo
+ * @type {Date}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class PeriodDate {
 
 
 }
+
+
+
+
 
 

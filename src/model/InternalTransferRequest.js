@@ -18,56 +18,56 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface InternalTransferRequest
-     */
-    
-    /**
-     *
-     * @name InternalTransferRequest#sourceId
-     * @type {String}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#sourceType
-     * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#destinationId
-     * @type {String}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#destinationType
-     * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#transferAll
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#walletToWallet
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#walletToCopyTradingAccount
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name InternalTransferRequest#copyTradingAccountToWallet
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface InternalTransferRequest
+ */
+
+/**
+ *
+ * @name InternalTransferRequest#sourceId
+ * @type {String}
+ */
+/**
+ *
+ * @name InternalTransferRequest#sourceType
+ * @type InternalTransferRequestSourceTypeEnum
+ */
+/**
+ *
+ * @name InternalTransferRequest#destinationId
+ * @type {String}
+ */
+/**
+ *
+ * @name InternalTransferRequest#destinationType
+ * @type InternalTransferRequestDestinationTypeEnum
+ */
+/**
+ *
+ * @name InternalTransferRequest#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name InternalTransferRequest#transferAll
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#walletToWallet
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#walletToCopyTradingAccount
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name InternalTransferRequest#copyTradingAccountToWallet
+ * @type {Boolean}
+ */
 
 
 
@@ -161,5 +161,19 @@ export default class InternalTransferRequest {
 
 
 }
+
+
+
+
+/**
+ * @typedef InternalTransferRequestSourceTypeEnum 
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ */
+
+/**
+ * @typedef InternalTransferRequestDestinationTypeEnum 
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ */
+
 
 

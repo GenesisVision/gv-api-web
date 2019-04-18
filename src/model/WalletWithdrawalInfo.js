@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletWithdrawalInfo
-     */
-    
-    /**
-     *
-     * @name WalletWithdrawalInfo#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletWithdrawalInfo#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletWithdrawalInfo#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletWithdrawalInfo#commission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletWithdrawalInfo#rateToGvt
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletWithdrawalInfo#availableToWithdrawal
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletWithdrawalInfo
+ */
+
+/**
+ *
+ * @name WalletWithdrawalInfo#currency
+ * @type WalletWithdrawalInfoCurrencyEnum
+ */
+/**
+ *
+ * @name WalletWithdrawalInfo#description
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletWithdrawalInfo#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletWithdrawalInfo#commission
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletWithdrawalInfo#rateToGvt
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletWithdrawalInfo#availableToWithdrawal
+ * @type {Number}
+ */
 
 
 
@@ -145,5 +145,14 @@ export default class WalletWithdrawalInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletWithdrawalInfoCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

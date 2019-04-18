@@ -19,26 +19,26 @@ import OrderSignalModel from './OrderSignalModel';
 
 
 
-    /**
-     *
-     * @interface TradesSignalViewModel
-     */
-    
-    /**
-     *
-     * @name TradesSignalViewModel#tradesType
-     * @type {("Positions"|"Orders")}
-     */
-    /**
-     *
-     * @name TradesSignalViewModel#trades
-     * @type {Array<OrderSignalModel>}
-     */
-    /**
-     *
-     * @name TradesSignalViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface TradesSignalViewModel
+ */
+
+/**
+ *
+ * @name TradesSignalViewModel#tradesType
+ * @type TradesSignalViewModelTradesTypeEnum
+ */
+/**
+ *
+ * @name TradesSignalViewModel#trades
+ * @type {Array<OrderSignalModel>}
+ */
+/**
+ *
+ * @name TradesSignalViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -97,5 +97,14 @@ export default class TradesSignalViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef TradesSignalViewModelTradesTypeEnum 
+ * @type {("Positions"|"Orders")}
+ */
+
 
 

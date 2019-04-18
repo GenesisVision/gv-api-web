@@ -19,16 +19,16 @@ import FundAssetInfo from './FundAssetInfo';
 
 
 
-    /**
-     *
-     * @interface FundAssetsListInfo
-     */
-    
-    /**
-     *
-     * @name FundAssetsListInfo#assets
-     * @type {Array<FundAssetInfo>}
-     */
+/**
+ *
+ * @interface FundAssetsListInfo
+ */
+
+/**
+ *
+ * @name FundAssetsListInfo#assets
+ * @type {Array<FundAssetInfo>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class FundAssetsListInfo {
 
 
 }
+
+
+
+
 
 

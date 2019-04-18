@@ -41,7 +41,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name CaptchaDetails#captchaType
- * @type {("None"|"Pow"|"GeeTest")}
+ * @type CaptchaDetailsCaptchaTypeEnum
  */
 /**
  *
@@ -103,6 +103,12 @@ var CaptchaDetails = function () {
 
     return CaptchaDetails;
 }();
+
+/**
+ * @typedef CaptchaDetailsCaptchaTypeEnum 
+ * @type {("None"|"Pow"|"GeeTest")}
+ */
+
 
 CaptchaDetails.CaptchaTypeEnum = {
 

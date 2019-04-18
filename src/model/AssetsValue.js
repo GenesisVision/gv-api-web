@@ -18,51 +18,51 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface AssetsValue
-     */
-    
-    /**
-     *
-     * @name AssetsValue#type
-     * @type {("All"|"Program"|"Fund")}
-     */
-    /**
-     *
-     * @name AssetsValue#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetsValue#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetsValue#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetsValue#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name AssetsValue#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name AssetsValue#changePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name AssetsValue#changeValue
-     * @type {Number}
-     */
+/**
+ *
+ * @interface AssetsValue
+ */
+
+/**
+ *
+ * @name AssetsValue#type
+ * @type AssetsValueTypeEnum
+ */
+/**
+ *
+ * @name AssetsValue#id
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetsValue#title
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetsValue#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetsValue#color
+ * @type {String}
+ */
+/**
+ *
+ * @name AssetsValue#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name AssetsValue#changePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name AssetsValue#changeValue
+ * @type {Number}
+ */
 
 
 
@@ -143,5 +143,14 @@ export default class AssetsValue {
 
 
 }
+
+
+
+
+/**
+ * @typedef AssetsValueTypeEnum 
+ * @type {("All"|"Program"|"Fund")}
+ */
+
 
 

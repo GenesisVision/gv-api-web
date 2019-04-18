@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ConvertingDetails
-     */
-    
-    /**
-     *
-     * @name ConvertingDetails#currencyTo
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ConvertingDetails#currencyToName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ConvertingDetails#amountTo
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ConvertingDetails#rateValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ConvertingDetails#currencyToLogo
-     * @type {String}
-     */
+/**
+ *
+ * @interface ConvertingDetails
+ */
+
+/**
+ *
+ * @name ConvertingDetails#currencyTo
+ * @type ConvertingDetailsCurrencyToEnum
+ */
+/**
+ *
+ * @name ConvertingDetails#currencyToName
+ * @type {String}
+ */
+/**
+ *
+ * @name ConvertingDetails#amountTo
+ * @type {Number}
+ */
+/**
+ *
+ * @name ConvertingDetails#rateValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ConvertingDetails#currencyToLogo
+ * @type {String}
+ */
 
 
 
@@ -136,5 +136,14 @@ export default class ConvertingDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef ConvertingDetailsCurrencyToEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

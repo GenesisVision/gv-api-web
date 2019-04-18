@@ -19,26 +19,26 @@ import BalanceChartElement from './BalanceChartElement';
 
 
 
-    /**
-     *
-     * @interface FundBalanceChart
-     */
-    
-    /**
-     *
-     * @name FundBalanceChart#usdBalance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundBalanceChart#balanceChart
-     * @type {Array<BalanceChartElement>}
-     */
-    /**
-     *
-     * @name FundBalanceChart#gvtBalance
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundBalanceChart
+ */
+
+/**
+ *
+ * @name FundBalanceChart#usdBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundBalanceChart#balanceChart
+ * @type {Array<BalanceChartElement>}
+ */
+/**
+ *
+ * @name FundBalanceChart#gvtBalance
+ * @type {Number}
+ */
 
 
 
@@ -90,5 +90,9 @@ export default class FundBalanceChart {
 
 
 }
+
+
+
+
 
 

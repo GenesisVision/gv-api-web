@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface UploadResult
-     */
-    
-    /**
-     *
-     * @name UploadResult#id
-     * @type {String}
-     */
+/**
+ *
+ * @interface UploadResult
+ */
+
+/**
+ *
+ * @name UploadResult#id
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class UploadResult {
 
 
 }
+
+
+
+
 
 

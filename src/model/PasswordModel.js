@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PasswordModel
-     */
-    
-    /**
-     *
-     * @name PasswordModel#password
-     * @type {String}
-     */
+/**
+ *
+ * @interface PasswordModel
+ */
+
+/**
+ *
+ * @name PasswordModel#password
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class PasswordModel {
 
 
 }
+
+
+
+
 
 

@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramDetailsRating
-     */
-    
-    /**
-     *
-     * @name ProgramDetailsRating#rating
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsRating#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsRating#canLevelUp
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProgramDetailsRating#topPercent
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramDetailsRating
+ */
+
+/**
+ *
+ * @name ProgramDetailsRating#rating
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsRating#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsRating#canLevelUp
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramDetailsRating#topPercent
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ProgramDetailsRating {
 
 
 }
+
+
+
+
 
 

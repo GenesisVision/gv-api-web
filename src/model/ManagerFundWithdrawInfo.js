@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerFundWithdrawInfo
-     */
-    
-    /**
-     *
-     * @name ManagerFundWithdrawInfo#withheldInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerFundWithdrawInfo#exitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerFundWithdrawInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerFundWithdrawInfo#availableToWithdraw
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerFundWithdrawInfo#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagerFundWithdrawInfo
+ */
+
+/**
+ *
+ * @name ManagerFundWithdrawInfo#withheldInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerFundWithdrawInfo#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerFundWithdrawInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerFundWithdrawInfo#availableToWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerFundWithdrawInfo#rate
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class ManagerFundWithdrawInfo {
 
 
 }
+
+
+
+
 
 

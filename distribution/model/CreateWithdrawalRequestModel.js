@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name CreateWithdrawalRequestModel#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type CreateWithdrawalRequestModelCurrencyEnum
  */
 /**
  *
@@ -86,6 +86,12 @@ var CreateWithdrawalRequestModel = function () {
 
     return CreateWithdrawalRequestModel;
 }();
+
+/**
+ * @typedef CreateWithdrawalRequestModelCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 CreateWithdrawalRequestModel.CurrencyEnum = {
 

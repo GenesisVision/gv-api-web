@@ -21,106 +21,106 @@ import WithdrawalInfo from './WithdrawalInfo';
 
 
 
-    /**
-     *
-     * @interface WalletTransaction
-     */
-    
-    /**
-     *
-     * @name WalletTransaction#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletTransaction#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletTransaction#amountConverted
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletTransaction#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name WalletTransaction#number
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceId
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceProgramInfo
-     * @type {ProgramInfo}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceBlockchainInfo
-     * @type {BlockchainInfo}
-     */
-    /**
-     *
-     * @name WalletTransaction#sourceWithdrawalInfo
-     * @type {WithdrawalInfo}
-     */
-    /**
-     *
-     * @name WalletTransaction#action
-     * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
-     */
-    /**
-     *
-     * @name WalletTransaction#information
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationId
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationType
-     * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationProgramInfo
-     * @type {ProgramInfo}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationBlockchainInfo
-     * @type {BlockchainInfo}
-     */
-    /**
-     *
-     * @name WalletTransaction#destinationWithdrawalInfo
-     * @type {WithdrawalInfo}
-     */
+/**
+ *
+ * @interface WalletTransaction
+ */
+
+/**
+ *
+ * @name WalletTransaction#id
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletTransaction#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletTransaction#amountConverted
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletTransaction#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name WalletTransaction#number
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletTransaction#sourceId
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletTransaction#sourceType
+ * @type WalletTransactionSourceTypeEnum
+ */
+/**
+ *
+ * @name WalletTransaction#sourceCurrency
+ * @type WalletTransactionSourceCurrencyEnum
+ */
+/**
+ *
+ * @name WalletTransaction#sourceProgramInfo
+ * @type {ProgramInfo}
+ */
+/**
+ *
+ * @name WalletTransaction#sourceBlockchainInfo
+ * @type {BlockchainInfo}
+ */
+/**
+ *
+ * @name WalletTransaction#sourceWithdrawalInfo
+ * @type {WithdrawalInfo}
+ */
+/**
+ *
+ * @name WalletTransaction#action
+ * @type WalletTransactionActionEnum
+ */
+/**
+ *
+ * @name WalletTransaction#information
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletTransaction#destinationId
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletTransaction#destinationType
+ * @type WalletTransactionDestinationTypeEnum
+ */
+/**
+ *
+ * @name WalletTransaction#destinationCurrency
+ * @type WalletTransactionDestinationCurrencyEnum
+ */
+/**
+ *
+ * @name WalletTransaction#destinationProgramInfo
+ * @type {ProgramInfo}
+ */
+/**
+ *
+ * @name WalletTransaction#destinationBlockchainInfo
+ * @type {BlockchainInfo}
+ */
+/**
+ *
+ * @name WalletTransaction#destinationWithdrawalInfo
+ * @type {WithdrawalInfo}
+ */
 
 
 
@@ -375,5 +375,34 @@ export default class WalletTransaction {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletTransactionSourceTypeEnum 
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ */
+
+/**
+ * @typedef WalletTransactionSourceCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef WalletTransactionActionEnum 
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
+ */
+
+/**
+ * @typedef WalletTransactionDestinationTypeEnum 
+ * @type {("Wallet"|"Program"|"Fund"|"ProgramRequest"|"FundRequest"|"WithdrawalRequest"|"PaymentTransaction"|"Blockchain"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ */
+
+/**
+ * @typedef WalletTransactionDestinationCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

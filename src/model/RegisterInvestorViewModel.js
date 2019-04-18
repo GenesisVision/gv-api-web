@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface RegisterInvestorViewModel
-     */
-    
-    /**
-     *
-     * @name RegisterInvestorViewModel#email
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterInvestorViewModel#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterInvestorViewModel#confirmPassword
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterInvestorViewModel#refCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name RegisterInvestorViewModel#isAuto
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface RegisterInvestorViewModel
+ */
+
+/**
+ *
+ * @name RegisterInvestorViewModel#email
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterInvestorViewModel#password
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterInvestorViewModel#confirmPassword
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterInvestorViewModel#refCode
+ * @type {String}
+ */
+/**
+ *
+ * @name RegisterInvestorViewModel#isAuto
+ * @type {Boolean}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class RegisterInvestorViewModel {
 
 
 }
+
+
+
+
 
 

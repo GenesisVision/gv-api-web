@@ -72,7 +72,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderSignalModel#direction
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ * @type OrderSignalModelDirectionEnum
  */
 /**
  *
@@ -92,7 +92,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderSignalModel#entry
- * @type {("In"|"Out"|"InOut"|"OutBy")}
+ * @type OrderSignalModelEntryEnum
  */
 /**
  *
@@ -189,6 +189,17 @@ var OrderSignalModel = function () {
 
     return OrderSignalModel;
 }();
+
+/**
+ * @typedef OrderSignalModelDirectionEnum 
+ * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ */
+
+/**
+ * @typedef OrderSignalModelEntryEnum 
+ * @type {("In"|"Out"|"InOut"|"OutBy")}
+ */
+
 
 OrderSignalModel.DirectionEnum = {
 

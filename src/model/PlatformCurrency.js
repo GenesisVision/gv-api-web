@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PlatformCurrency
-     */
-    
-    /**
-     *
-     * @name PlatformCurrency#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformCurrency#rateToGvt
-     * @type {Number}
-     */
+/**
+ *
+ * @interface PlatformCurrency
+ */
+
+/**
+ *
+ * @name PlatformCurrency#name
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformCurrency#rateToGvt
+ * @type {Number}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class PlatformCurrency {
 
 
 }
+
+
+
+
 
 

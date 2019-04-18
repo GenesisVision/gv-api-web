@@ -25,51 +25,51 @@ import ProgramsInfo from './ProgramsInfo';
 
 
 
-    /**
-     *
-     * @interface PlatformInfo
-     */
-    
-    /**
-     *
-     * @name PlatformInfo#iOSVersion
-     * @type {IOsAppVersion}
-     */
-    /**
-     *
-     * @name PlatformInfo#androidVersion
-     * @type {AndroidAppVersion}
-     */
-    /**
-     *
-     * @name PlatformInfo#programsFacets
-     * @type {Array<ProgramFacet>}
-     */
-    /**
-     *
-     * @name PlatformInfo#fundsFacets
-     * @type {Array<FundFacet>}
-     */
-    /**
-     *
-     * @name PlatformInfo#programsInfo
-     * @type {ProgramsInfo}
-     */
-    /**
-     *
-     * @name PlatformInfo#currencies
-     * @type {Array<String>}
-     */
-    /**
-     *
-     * @name PlatformInfo#platformCurrencies
-     * @type {Array<PlatformCurrency>}
-     */
-    /**
-     *
-     * @name PlatformInfo#enums
-     * @type {Enums}
-     */
+/**
+ *
+ * @interface PlatformInfo
+ */
+
+/**
+ *
+ * @name PlatformInfo#iOSVersion
+ * @type {IOsAppVersion}
+ */
+/**
+ *
+ * @name PlatformInfo#androidVersion
+ * @type {AndroidAppVersion}
+ */
+/**
+ *
+ * @name PlatformInfo#programsFacets
+ * @type {Array<ProgramFacet>}
+ */
+/**
+ *
+ * @name PlatformInfo#fundsFacets
+ * @type {Array<FundFacet>}
+ */
+/**
+ *
+ * @name PlatformInfo#programsInfo
+ * @type {ProgramsInfo}
+ */
+/**
+ *
+ * @name PlatformInfo#currencies
+ * @type {Array<String>}
+ */
+/**
+ *
+ * @name PlatformInfo#platformCurrencies
+ * @type {Array<PlatformCurrency>}
+ */
+/**
+ *
+ * @name PlatformInfo#enums
+ * @type {Enums}
+ */
 
 
 
@@ -141,5 +141,9 @@ export default class PlatformInfo {
 
 
 }
+
+
+
+
 
 

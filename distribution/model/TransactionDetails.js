@@ -45,7 +45,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#type
- * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ * @type TransactionDetailsTypeEnum
  */
 /**
  *
@@ -65,12 +65,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#status
- * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ * @type TransactionDetailsStatusEnum
  */
 /**
  *
  * @name TransactionDetails#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type TransactionDetailsCurrencyEnum
  */
 /**
  *
@@ -90,7 +90,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TransactionDetails#gvCommissionCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type TransactionDetailsGvCommissionCurrencyEnum
  */
 /**
  *
@@ -170,6 +170,27 @@ var TransactionDetails = function () {
 
     return TransactionDetails;
 }();
+
+/**
+ * @typedef TransactionDetailsTypeEnum 
+ * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ */
+
+/**
+ * @typedef TransactionDetailsStatusEnum 
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ */
+
+/**
+ * @typedef TransactionDetailsCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef TransactionDetailsGvCommissionCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 TransactionDetails.TypeEnum = {
 

@@ -19,21 +19,21 @@ import MultiWalletTransaction from './MultiWalletTransaction';
 
 
 
-    /**
-     *
-     * @interface MultiWalletTransactionsViewModel
-     */
-    
-    /**
-     *
-     * @name MultiWalletTransactionsViewModel#transactions
-     * @type {Array<MultiWalletTransaction>}
-     */
-    /**
-     *
-     * @name MultiWalletTransactionsViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface MultiWalletTransactionsViewModel
+ */
+
+/**
+ *
+ * @name MultiWalletTransactionsViewModel#transactions
+ * @type {Array<MultiWalletTransaction>}
+ */
+/**
+ *
+ * @name MultiWalletTransactionsViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class MultiWalletTransactionsViewModel {
 
 
 }
+
+
+
+
 
 

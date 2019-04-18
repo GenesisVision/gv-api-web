@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundAssetInfo
-     */
-    
-    /**
-     *
-     * @name FundAssetInfo#asset
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetInfo#symbol
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetInfo#icon
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetInfo#target
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundAssetInfo#current
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundAssetInfo
+ */
+
+/**
+ *
+ * @name FundAssetInfo#asset
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetInfo#symbol
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetInfo#icon
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetInfo#target
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundAssetInfo#current
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class FundAssetInfo {
 
 
 }
+
+
+
+
 
 

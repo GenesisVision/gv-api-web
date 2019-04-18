@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerProgramWithdrawInfo
-     */
-    
-    /**
-     *
-     * @name ManagerProgramWithdrawInfo#withheldInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerProgramWithdrawInfo#periodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ManagerProgramWithdrawInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProgramWithdrawInfo#availableToWithdraw
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerProgramWithdrawInfo#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagerProgramWithdrawInfo
+ */
+
+/**
+ *
+ * @name ManagerProgramWithdrawInfo#withheldInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerProgramWithdrawInfo#periodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ManagerProgramWithdrawInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProgramWithdrawInfo#availableToWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerProgramWithdrawInfo#rate
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class ManagerProgramWithdrawInfo {
 
 
 }
+
+
+
+
 
 

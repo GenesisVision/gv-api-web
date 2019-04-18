@@ -19,16 +19,16 @@ import PlatformAsset from './PlatformAsset';
 
 
 
-    /**
-     *
-     * @interface PlatformAssets
-     */
-    
-    /**
-     *
-     * @name PlatformAssets#assets
-     * @type {Array<PlatformAsset>}
-     */
+/**
+ *
+ * @interface PlatformAssets
+ */
+
+/**
+ *
+ * @name PlatformAssets#assets
+ * @type {Array<PlatformAsset>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class PlatformAssets {
 
 
 }
+
+
+
+
 
 

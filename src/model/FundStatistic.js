@@ -19,56 +19,56 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 
 
-    /**
-     *
-     * @interface FundStatistic
-     */
-    
-    /**
-     *
-     * @name FundStatistic#balanceGVT
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name FundStatistic#balanceSecondary
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name FundStatistic#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundStatistic#drawdownPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundStatistic#investorsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundStatistic#startDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name FundStatistic#startBalance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundStatistic#investedAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundStatistic#rebalancingCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundStatistic
+ */
+
+/**
+ *
+ * @name FundStatistic#balanceGVT
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name FundStatistic#balanceSecondary
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name FundStatistic#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundStatistic#drawdownPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundStatistic#investorsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundStatistic#startDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name FundStatistic#startBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundStatistic#investedAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundStatistic#rebalancingCount
+ * @type {Number}
+ */
 
 
 
@@ -144,5 +144,9 @@ export default class FundStatistic {
 
 
 }
+
+
+
+
 
 

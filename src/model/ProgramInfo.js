@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramInfo
-     */
-    
-    /**
-     *
-     * @name ProgramInfo#title
-     * @type {String}
-     */
+/**
+ *
+ * @interface ProgramInfo
+ */
+
+/**
+ *
+ * @name ProgramInfo#title
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class ProgramInfo {
 
 
 }
+
+
+
+
 
 

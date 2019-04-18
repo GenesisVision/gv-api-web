@@ -19,16 +19,16 @@ import LevelUpData from './LevelUpData';
 
 
 
-    /**
-     *
-     * @interface LevelUpSummary
-     */
-    
-    /**
-     *
-     * @name LevelUpSummary#levelData
-     * @type {Array<LevelUpData>}
-     */
+/**
+ *
+ * @interface LevelUpSummary
+ */
+
+/**
+ *
+ * @name LevelUpSummary#levelData
+ * @type {Array<LevelUpData>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class LevelUpSummary {
 
 
 }
+
+
+
+
 
 

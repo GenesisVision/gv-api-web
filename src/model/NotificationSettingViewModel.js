@@ -18,46 +18,46 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface NotificationSettingViewModel
-     */
-    
-    /**
-     *
-     * @name NotificationSettingViewModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#isEnabled
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#managerId
-     * @type {String}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#type
-     * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#conditionType
-     * @type {("Empty"|"Profit"|"Level")}
-     */
-    /**
-     *
-     * @name NotificationSettingViewModel#conditionAmount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface NotificationSettingViewModel
+ */
+
+/**
+ *
+ * @name NotificationSettingViewModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#isEnabled
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#managerId
+ * @type {String}
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#type
+ * @type NotificationSettingViewModelTypeEnum
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#conditionType
+ * @type NotificationSettingViewModelConditionTypeEnum
+ */
+/**
+ *
+ * @name NotificationSettingViewModel#conditionAmount
+ * @type {Number}
+ */
 
 
 
@@ -171,5 +171,19 @@ export default class NotificationSettingViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef NotificationSettingViewModelTypeEnum 
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ */
+
+/**
+ * @typedef NotificationSettingViewModelConditionTypeEnum 
+ * @type {("Empty"|"Profit"|"Level")}
+ */
+
 
 

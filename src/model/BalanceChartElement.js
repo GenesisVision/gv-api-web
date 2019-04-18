@@ -18,26 +18,26 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface BalanceChartElement
-     */
-    
-    /**
-     *
-     * @name BalanceChartElement#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name BalanceChartElement#managerFunds
-     * @type {Number}
-     */
-    /**
-     *
-     * @name BalanceChartElement#investorsFunds
-     * @type {Number}
-     */
+/**
+ *
+ * @interface BalanceChartElement
+ */
+
+/**
+ *
+ * @name BalanceChartElement#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name BalanceChartElement#managerFunds
+ * @type {Number}
+ */
+/**
+ *
+ * @name BalanceChartElement#investorsFunds
+ * @type {Number}
+ */
 
 
 
@@ -89,5 +89,9 @@ export default class BalanceChartElement {
 
 
 }
+
+
+
+
 
 

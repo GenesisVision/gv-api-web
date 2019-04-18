@@ -53,12 +53,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name NotificationSettingViewModel#type
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ * @type NotificationSettingViewModelTypeEnum
  */
 /**
  *
  * @name NotificationSettingViewModel#conditionType
- * @type {("Empty"|"Profit"|"Level")}
+ * @type NotificationSettingViewModelConditionTypeEnum
  */
 /**
  *
@@ -113,6 +113,17 @@ var NotificationSettingViewModel = function () {
 
     return NotificationSettingViewModel;
 }();
+
+/**
+ * @typedef NotificationSettingViewModelTypeEnum 
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ */
+
+/**
+ * @typedef NotificationSettingViewModelConditionTypeEnum 
+ * @type {("Empty"|"Profit"|"Level")}
+ */
+
 
 NotificationSettingViewModel.TypeEnum = {
 

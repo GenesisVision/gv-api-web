@@ -38,17 +38,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletTransaction#currencyFrom
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type MultiWalletTransactionCurrencyFromEnum
  */
 /**
  *
  * @name MultiWalletTransaction#currencyTo
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type MultiWalletTransactionCurrencyToEnum
  */
 /**
  *
  * @name MultiWalletTransaction#type
- * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ * @type MultiWalletTransactionTypeEnum
  */
 /**
  *
@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletTransaction#status
- * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ * @type MultiWalletTransactionStatusEnum
  */
 /**
  *
@@ -149,6 +149,27 @@ var MultiWalletTransaction = function () {
 
     return MultiWalletTransaction;
 }();
+
+/**
+ * @typedef MultiWalletTransactionCurrencyFromEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionCurrencyToEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionTypeEnum 
+ * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionStatusEnum 
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ */
+
 
 MultiWalletTransaction.CurrencyFromEnum = {
 

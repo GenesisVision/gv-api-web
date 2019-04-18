@@ -19,56 +19,56 @@ import FundAssetPart from './FundAssetPart';
 
 
 
-    /**
-     *
-     * @interface NewFundRequest
-     */
-    
-    /**
-     *
-     * @name NewFundRequest#exitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewFundRequest#managementFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewFundRequest#assets
-     * @type {Array<FundAssetPart>}
-     */
-    /**
-     *
-     * @name NewFundRequest#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewFundRequest#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewFundRequest#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name NewFundRequest#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewFundRequest#depositAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name NewFundRequest#depositWalletId
-     * @type {String}
-     */
+/**
+ *
+ * @interface NewFundRequest
+ */
+
+/**
+ *
+ * @name NewFundRequest#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewFundRequest#managementFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewFundRequest#assets
+ * @type {Array<FundAssetPart>}
+ */
+/**
+ *
+ * @name NewFundRequest#title
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#description
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewFundRequest#depositAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewFundRequest#depositWalletId
+ * @type {String}
+ */
 
 
 
@@ -144,5 +144,9 @@ export default class NewFundRequest {
 
 
 }
+
+
+
+
 
 

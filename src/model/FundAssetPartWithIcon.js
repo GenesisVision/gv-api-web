@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundAssetPartWithIcon
-     */
-    
-    /**
-     *
-     * @name FundAssetPartWithIcon#icon
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetPartWithIcon#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetPartWithIcon#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetPartWithIcon#asset
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetPartWithIcon#percent
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundAssetPartWithIcon
+ */
+
+/**
+ *
+ * @name FundAssetPartWithIcon#icon
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetPartWithIcon#color
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetPartWithIcon#name
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetPartWithIcon#asset
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetPartWithIcon#percent
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class FundAssetPartWithIcon {
 
 
 }
+
+
+
+
 
 

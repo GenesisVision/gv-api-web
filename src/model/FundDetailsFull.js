@@ -22,91 +22,91 @@ import ProfilePublic from './ProfilePublic';
 
 
 
-    /**
-     *
-     * @interface FundDetailsFull
-     */
-    
-    /**
-     *
-     * @name FundDetailsFull#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetailsFull#exitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetailsFull#managementFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetailsFull#currentAssets
-     * @type {Array<FundAssetPartWithIcon>}
-     */
-    /**
-     *
-     * @name FundDetailsFull#statistic
-     * @type {FundStatistic}
-     */
-    /**
-     *
-     * @name FundDetailsFull#personalFundDetails
-     * @type {PersonalFundDetailsFull}
-     */
-    /**
-     *
-     * @name FundDetailsFull#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#ipfsHash
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetailsFull#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name FundDetailsFull#status
-     * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
-     */
-    /**
-     *
-     * @name FundDetailsFull#manager
-     * @type {ProfilePublic}
-     */
+/**
+ *
+ * @interface FundDetailsFull
+ */
+
+/**
+ *
+ * @name FundDetailsFull#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetailsFull#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetailsFull#managementFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetailsFull#currentAssets
+ * @type {Array<FundAssetPartWithIcon>}
+ */
+/**
+ *
+ * @name FundDetailsFull#statistic
+ * @type {FundStatistic}
+ */
+/**
+ *
+ * @name FundDetailsFull#personalFundDetails
+ * @type {PersonalFundDetailsFull}
+ */
+/**
+ *
+ * @name FundDetailsFull#id
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#url
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#color
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#description
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#ipfsHash
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetailsFull#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name FundDetailsFull#status
+ * @type FundDetailsFullStatusEnum
+ */
+/**
+ *
+ * @name FundDetailsFull#manager
+ * @type {ProfilePublic}
+ */
 
 
 
@@ -227,5 +227,14 @@ export default class FundDetailsFull {
 
 
 }
+
+
+
+
+/**
+ * @typedef FundDetailsFullStatusEnum 
+ * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
+ */
+
 
 

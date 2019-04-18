@@ -20,26 +20,26 @@ import WalletsGrandTotal from './WalletsGrandTotal';
 
 
 
-    /**
-     *
-     * @interface WalletMultiSummary
-     */
-    
-    /**
-     *
-     * @name WalletMultiSummary#grandTotal
-     * @type {WalletsGrandTotal}
-     */
-    /**
-     *
-     * @name WalletMultiSummary#wallets
-     * @type {Array<WalletData>}
-     */
-    /**
-     *
-     * @name WalletMultiSummary#payFeesWithGvt
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface WalletMultiSummary
+ */
+
+/**
+ *
+ * @name WalletMultiSummary#grandTotal
+ * @type {WalletsGrandTotal}
+ */
+/**
+ *
+ * @name WalletMultiSummary#wallets
+ * @type {Array<WalletData>}
+ */
+/**
+ *
+ * @name WalletMultiSummary#payFeesWithGvt
+ * @type {Boolean}
+ */
 
 
 
@@ -91,5 +91,9 @@ export default class WalletMultiSummary {
 
 
 }
+
+
+
+
 
 

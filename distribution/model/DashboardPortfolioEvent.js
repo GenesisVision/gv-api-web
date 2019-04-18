@@ -68,7 +68,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum
  */
 /**
  *
@@ -78,7 +78,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum
  */
 /**
  *
@@ -88,12 +88,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type DashboardPortfolioEventCurrencyEnum
  */
 /**
  *
  * @name DashboardPortfolioEvent#type
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
+ * @type DashboardPortfolioEventTypeEnum
  */
 /**
  *
@@ -113,7 +113,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name DashboardPortfolioEvent#assetType
- * @type {("Program"|"Fund")}
+ * @type DashboardPortfolioEventAssetTypeEnum
  */
 
 var DashboardPortfolioEvent = function () {
@@ -203,6 +203,32 @@ var DashboardPortfolioEvent = function () {
 
     return DashboardPortfolioEvent;
 }();
+
+/**
+ * @typedef DashboardPortfolioEventFeeSuccessManagerCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventTypeEnum 
+ * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventAssetTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 

@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface RecoveryCode
-     */
-    
-    /**
-     *
-     * @name RecoveryCode#code
-     * @type {String}
-     */
-    /**
-     *
-     * @name RecoveryCode#isActive
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface RecoveryCode
+ */
+
+/**
+ *
+ * @name RecoveryCode#code
+ * @type {String}
+ */
+/**
+ *
+ * @name RecoveryCode#isActive
+ * @type {Boolean}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class RecoveryCode {
 
 
 }
+
+
+
+
 
 

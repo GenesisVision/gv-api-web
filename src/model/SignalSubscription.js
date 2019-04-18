@@ -18,46 +18,46 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface SignalSubscription
-     */
-    
-    /**
-     *
-     * @name SignalSubscription#hasSignalAccount
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name SignalSubscription#hasActiveSubscription
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name SignalSubscription#mode
-     * @type {("ByBalance"|"Percent"|"Fixed")}
-     */
-    /**
-     *
-     * @name SignalSubscription#percent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name SignalSubscription#openTolerancePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name SignalSubscription#fixedVolume
-     * @type {Number}
-     */
-    /**
-     *
-     * @name SignalSubscription#fixedCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
+/**
+ *
+ * @interface SignalSubscription
+ */
+
+/**
+ *
+ * @name SignalSubscription#hasSignalAccount
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name SignalSubscription#hasActiveSubscription
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name SignalSubscription#mode
+ * @type SignalSubscriptionModeEnum
+ */
+/**
+ *
+ * @name SignalSubscription#percent
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscription#openTolerancePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscription#fixedVolume
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscription#fixedCurrency
+ * @type SignalSubscriptionFixedCurrencyEnum
+ */
 
 
 
@@ -163,5 +163,19 @@ export default class SignalSubscription {
 
 
 }
+
+
+
+
+/**
+ * @typedef SignalSubscriptionModeEnum 
+ * @type {("ByBalance"|"Percent"|"Fixed")}
+ */
+
+/**
+ * @typedef SignalSubscriptionFixedCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

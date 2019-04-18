@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProfilePublic
-     */
-    
-    /**
-     *
-     * @name ProfilePublic#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfilePublic#username
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfilePublic#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfilePublic#registrationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProfilePublic#url
-     * @type {String}
-     */
+/**
+ *
+ * @interface ProfilePublic
+ */
+
+/**
+ *
+ * @name ProfilePublic#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfilePublic#username
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfilePublic#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfilePublic#registrationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProfilePublic#url
+ * @type {String}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class ProfilePublic {
 
 
 }
+
+
+
+
 
 

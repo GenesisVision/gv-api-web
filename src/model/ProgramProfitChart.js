@@ -20,116 +20,116 @@ import PeriodDate from './PeriodDate';
 
 
 
-    /**
-     *
-     * @interface ProgramProfitChart
-     */
-    
-    /**
-     *
-     * @name ProgramProfitChart#totalProgramCurrencyProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#timeframeProgramCurrencyProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#programCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#trades
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#successTradesPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#profitFactor
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#pnLChart
-     * @type {Array<ChartSimple>}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#periods
-     * @type {Array<PeriodDate>}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#lastPeriodStarts
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#lastPeriodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#equityChart
-     * @type {Array<ChartSimple>}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#balance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#investors
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#profitChangePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#sharpeRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#sortinoRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#calmarRatio
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#maxDrawdown
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#totalGvtProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#timeframeGvtProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramProfitChart#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramProfitChart
+ */
+
+/**
+ *
+ * @name ProgramProfitChart#totalProgramCurrencyProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#timeframeProgramCurrencyProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#programCurrency
+ * @type ProgramProfitChartProgramCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramProfitChart#trades
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#successTradesPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#profitFactor
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#pnLChart
+ * @type {Array<ChartSimple>}
+ */
+/**
+ *
+ * @name ProgramProfitChart#periods
+ * @type {Array<PeriodDate>}
+ */
+/**
+ *
+ * @name ProgramProfitChart#lastPeriodStarts
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramProfitChart#lastPeriodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramProfitChart#equityChart
+ * @type {Array<ChartSimple>}
+ */
+/**
+ *
+ * @name ProgramProfitChart#balance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#investors
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#profitChangePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#sharpeRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#sortinoRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#calmarRatio
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#maxDrawdown
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#totalGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#timeframeGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#rate
+ * @type {Number}
+ */
 
 
 
@@ -282,5 +282,14 @@ export default class ProgramProfitChart {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramProfitChartProgramCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

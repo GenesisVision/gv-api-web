@@ -18,101 +18,101 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletData
-     */
-    
-    /**
-     *
-     * @name WalletData#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletData#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletData#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletData#rateToGVT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#isDepositEnabled
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name WalletData#isWithdrawalEnabled
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name WalletData#withdrawalCommission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#depositAddress
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletData#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletData#available
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#invested
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#pending
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#total
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#currencyCcy
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletData#availableCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#investedCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#pendingCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletData#totalCcy
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletData
+ */
+
+/**
+ *
+ * @name WalletData#id
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletData#title
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletData#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletData#rateToGVT
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#isDepositEnabled
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name WalletData#isWithdrawalEnabled
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name WalletData#withdrawalCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#depositAddress
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletData#currency
+ * @type WalletDataCurrencyEnum
+ */
+/**
+ *
+ * @name WalletData#available
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#invested
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#pending
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#total
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#currencyCcy
+ * @type WalletDataCurrencyCcyEnum
+ */
+/**
+ *
+ * @name WalletData#availableCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#investedCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#pendingCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletData#totalCcy
+ * @type {Number}
+ */
 
 
 
@@ -282,5 +282,19 @@ export default class WalletData {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletDataCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef WalletDataCurrencyCcyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

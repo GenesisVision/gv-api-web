@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WalletWithdrawalInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type WalletWithdrawalInfoCurrencyEnum
  */
 /**
  *
@@ -104,6 +104,12 @@ var WalletWithdrawalInfo = function () {
 
     return WalletWithdrawalInfo;
 }();
+
+/**
+ * @typedef WalletWithdrawalInfoCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 WalletWithdrawalInfo.CurrencyEnum = {
 

@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface AttachToSignalProviderInfo
-     */
-    
-    /**
-     *
-     * @name AttachToSignalProviderInfo#hasSignalAccount
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#hasActiveSubscription
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#subscriptionFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#minDeposit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name AttachToSignalProviderInfo#minDepositCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
+/**
+ *
+ * @interface AttachToSignalProviderInfo
+ */
+
+/**
+ *
+ * @name AttachToSignalProviderInfo#hasSignalAccount
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name AttachToSignalProviderInfo#hasActiveSubscription
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name AttachToSignalProviderInfo#subscriptionFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
+ * @type AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProviderInfo#minDeposit
+ * @type {Number}
+ */
+/**
+ *
+ * @name AttachToSignalProviderInfo#minDepositCurrency
+ * @type AttachToSignalProviderInfoMinDepositCurrencyEnum
+ */
 
 
 
@@ -174,5 +174,19 @@ export default class AttachToSignalProviderInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

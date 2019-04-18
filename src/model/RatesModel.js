@@ -19,16 +19,16 @@ import RatesModelRates from './RatesModelRates';
 
 
 
-    /**
-     *
-     * @interface RatesModel
-     */
-    
-    /**
-     *
-     * @name RatesModel#rates
-     * @type {RatesModelRates}
-     */
+/**
+ *
+ * @interface RatesModel
+ */
+
+/**
+ *
+ * @name RatesModel#rates
+ * @type {RatesModelRates}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class RatesModel {
 
 
 }
+
+
+
+
 
 

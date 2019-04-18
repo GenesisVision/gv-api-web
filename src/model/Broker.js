@@ -19,66 +19,66 @@ import BrokerAccountType from './BrokerAccountType';
 
 
 
-    /**
-     *
-     * @interface Broker
-     */
-    
-    /**
-     *
-     * @name Broker#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name Broker#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name Broker#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name Broker#terms
-     * @type {String}
-     */
-    /**
-     *
-     * @name Broker#assets
-     * @type {String}
-     */
-    /**
-     *
-     * @name Broker#fee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name Broker#leverageMin
-     * @type {Number}
-     */
-    /**
-     *
-     * @name Broker#leverageMax
-     * @type {Number}
-     */
-    /**
-     *
-     * @name Broker#accountTypes
-     * @type {Array<BrokerAccountType>}
-     */
-    /**
-     *
-     * @name Broker#isForex
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name Broker#isSignalsAvailable
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface Broker
+ */
+
+/**
+ *
+ * @name Broker#name
+ * @type {String}
+ */
+/**
+ *
+ * @name Broker#description
+ * @type {String}
+ */
+/**
+ *
+ * @name Broker#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name Broker#terms
+ * @type {String}
+ */
+/**
+ *
+ * @name Broker#assets
+ * @type {String}
+ */
+/**
+ *
+ * @name Broker#fee
+ * @type {Number}
+ */
+/**
+ *
+ * @name Broker#leverageMin
+ * @type {Number}
+ */
+/**
+ *
+ * @name Broker#leverageMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name Broker#accountTypes
+ * @type {Array<BrokerAccountType>}
+ */
+/**
+ *
+ * @name Broker#isForex
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name Broker#isSignalsAvailable
+ * @type {Boolean}
+ */
 
 
 
@@ -162,5 +162,9 @@ export default class Broker {
 
 
 }
+
+
+
+
 
 

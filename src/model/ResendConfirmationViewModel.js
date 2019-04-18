@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ResendConfirmationViewModel
-     */
-    
-    /**
-     *
-     * @name ResendConfirmationViewModel#email
-     * @type {String}
-     */
+/**
+ *
+ * @interface ResendConfirmationViewModel
+ */
+
+/**
+ *
+ * @name ResendConfirmationViewModel#email
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class ResendConfirmationViewModel {
 
 
 }
+
+
+
+
 
 

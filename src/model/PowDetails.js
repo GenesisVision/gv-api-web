@@ -18,26 +18,26 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PowDetails
-     */
-    
-    /**
-     *
-     * @name PowDetails#secureAlgorithm
-     * @type {("Sha256")}
-     */
-    /**
-     *
-     * @name PowDetails#difficulty
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PowDetails#nonce
-     * @type {String}
-     */
+/**
+ *
+ * @interface PowDetails
+ */
+
+/**
+ *
+ * @name PowDetails#secureAlgorithm
+ * @type PowDetailsSecureAlgorithmEnum
+ */
+/**
+ *
+ * @name PowDetails#difficulty
+ * @type {Number}
+ */
+/**
+ *
+ * @name PowDetails#nonce
+ * @type {String}
+ */
 
 
 
@@ -94,5 +94,14 @@ export default class PowDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef PowDetailsSecureAlgorithmEnum 
+ * @type {("Sha256")}
+ */
+
 
 

@@ -18,71 +18,71 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface UpdatePersonalDetailViewModel
-     */
-    
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#firstName
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#middleName
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#lastName
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#birthday
-     * @type {Date}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#citizenship
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#gender
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#documentId
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#phoneNumber
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#country
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#city
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#address
-     * @type {String}
-     */
-    /**
-     *
-     * @name UpdatePersonalDetailViewModel#index
-     * @type {String}
-     */
+/**
+ *
+ * @interface UpdatePersonalDetailViewModel
+ */
+
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#firstName
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#middleName
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#lastName
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#birthday
+ * @type {Date}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#citizenship
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#gender
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#documentId
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#phoneNumber
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#country
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#city
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#address
+ * @type {String}
+ */
+/**
+ *
+ * @name UpdatePersonalDetailViewModel#index
+ * @type {String}
+ */
 
 
 
@@ -170,5 +170,9 @@ export default class UpdatePersonalDetailViewModel {
 
 
 }
+
+
+
+
 
 

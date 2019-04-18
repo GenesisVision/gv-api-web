@@ -18,66 +18,66 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface MultiWalletTransaction
-     */
-    
-    /**
-     *
-     * @name MultiWalletTransaction#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#currencyFrom
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#currencyTo
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#type
-     * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#status
-     * @type {("Done"|"Pending"|"Canceled"|"Error")}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#logoFrom
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#logoTo
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name MultiWalletTransaction#amountTo
-     * @type {Number}
-     */
+/**
+ *
+ * @interface MultiWalletTransaction
+ */
+
+/**
+ *
+ * @name MultiWalletTransaction#id
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#currencyFrom
+ * @type MultiWalletTransactionCurrencyFromEnum
+ */
+/**
+ *
+ * @name MultiWalletTransaction#currencyTo
+ * @type MultiWalletTransactionCurrencyToEnum
+ */
+/**
+ *
+ * @name MultiWalletTransaction#type
+ * @type MultiWalletTransactionTypeEnum
+ */
+/**
+ *
+ * @name MultiWalletTransaction#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#status
+ * @type MultiWalletTransactionStatusEnum
+ */
+/**
+ *
+ * @name MultiWalletTransaction#logoFrom
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#logoTo
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#description
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name MultiWalletTransaction#amountTo
+ * @type {Number}
+ */
 
 
 
@@ -255,5 +255,29 @@ export default class MultiWalletTransaction {
 
 
 }
+
+
+
+
+/**
+ * @typedef MultiWalletTransactionCurrencyFromEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionCurrencyToEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionTypeEnum 
+ * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ */
+
+/**
+ * @typedef MultiWalletTransactionStatusEnum 
+ * @type {("Done"|"Pending"|"Canceled"|"Error")}
+ */
+
 
 

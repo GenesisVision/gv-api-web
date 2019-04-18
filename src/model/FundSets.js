@@ -19,21 +19,21 @@ import FundFacet from './FundFacet';
 
 
 
-    /**
-     *
-     * @interface FundSets
-     */
-    
-    /**
-     *
-     * @name FundSets#sets
-     * @type {Array<FundFacet>}
-     */
-    /**
-     *
-     * @name FundSets#favoritesCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundSets
+ */
+
+/**
+ *
+ * @name FundSets#sets
+ * @type {Array<FundFacet>}
+ */
+/**
+ *
+ * @name FundSets#favoritesCount
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class FundSets {
 
 
 }
+
+
+
+
 
 

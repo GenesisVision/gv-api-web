@@ -18,61 +18,61 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletsGrandTotal
-     */
-    
-    /**
-     *
-     * @name WalletsGrandTotal#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#available
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#invested
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#pending
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#total
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#currencyCcy
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#availableCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#investedCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#pendingCcy
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletsGrandTotal#totalCcy
-     * @type {Number}
-     */
+/**
+ *
+ * @interface WalletsGrandTotal
+ */
+
+/**
+ *
+ * @name WalletsGrandTotal#currency
+ * @type WalletsGrandTotalCurrencyEnum
+ */
+/**
+ *
+ * @name WalletsGrandTotal#available
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#invested
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#pending
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#total
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#currencyCcy
+ * @type WalletsGrandTotalCurrencyCcyEnum
+ */
+/**
+ *
+ * @name WalletsGrandTotal#availableCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#investedCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#pendingCcy
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletsGrandTotal#totalCcy
+ * @type {Number}
+ */
 
 
 
@@ -210,5 +210,19 @@ export default class WalletsGrandTotal {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletsGrandTotalCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef WalletsGrandTotalCurrencyCcyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

@@ -19,16 +19,16 @@ import ProgramTag from './ProgramTag';
 
 
 
-    /**
-     *
-     * @interface ProgramFilters
-     */
-    
-    /**
-     *
-     * @name ProgramFilters#programTags
-     * @type {Array<ProgramTag>}
-     */
+/**
+ *
+ * @interface ProgramFilters
+ */
+
+/**
+ *
+ * @name ProgramFilters#programTags
+ * @type {Array<ProgramTag>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class ProgramFilters {
 
 
 }
+
+
+
+
 
 

@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ResetPasswordViewModel
-     */
-    
-    /**
-     *
-     * @name ResetPasswordViewModel#userId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ResetPasswordViewModel#code
-     * @type {String}
-     */
-    /**
-     *
-     * @name ResetPasswordViewModel#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name ResetPasswordViewModel#confirmPassword
-     * @type {String}
-     */
+/**
+ *
+ * @interface ResetPasswordViewModel
+ */
+
+/**
+ *
+ * @name ResetPasswordViewModel#userId
+ * @type {String}
+ */
+/**
+ *
+ * @name ResetPasswordViewModel#code
+ * @type {String}
+ */
+/**
+ *
+ * @name ResetPasswordViewModel#password
+ * @type {String}
+ */
+/**
+ *
+ * @name ResetPasswordViewModel#confirmPassword
+ * @type {String}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ResetPasswordViewModel {
 
 
 }
+
+
+
+
 
 

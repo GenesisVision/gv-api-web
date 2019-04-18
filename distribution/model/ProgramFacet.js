@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramFacet#sorting
- * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
+ * @type ProgramFacetSortingEnum
  */
 /**
  *
@@ -63,12 +63,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramFacet#sortType
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ * @type ProgramFacetSortTypeEnum
  */
 /**
  *
  * @name ProgramFacet#timeframe
- * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ * @type ProgramFacetTimeframeEnum
  */
 
 var ProgramFacet = function () {
@@ -122,6 +122,22 @@ var ProgramFacet = function () {
 
     return ProgramFacet;
 }();
+
+/**
+ * @typedef ProgramFacetSortingEnum 
+ * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
+ */
+
+/**
+ * @typedef ProgramFacetSortTypeEnum 
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ */
+
+/**
+ * @typedef ProgramFacetTimeframeEnum 
+ * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
+ */
+
 
 ProgramFacet.SortingEnum = {
 

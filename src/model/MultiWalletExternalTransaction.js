@@ -18,56 +18,56 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface MultiWalletExternalTransaction
-     */
-    
-    /**
-     *
-     * @name MultiWalletExternalTransaction#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#amount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#type
-     * @type {("All"|"Deposit"|"Withdrawal")}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#status
-     * @type {String}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#isEnableActions
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransaction#statusUrl
-     * @type {String}
-     */
+/**
+ *
+ * @interface MultiWalletExternalTransaction
+ */
+
+/**
+ *
+ * @name MultiWalletExternalTransaction#id
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#currency
+ * @type MultiWalletExternalTransactionCurrencyEnum
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#amount
+ * @type {Number}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#type
+ * @type MultiWalletExternalTransactionTypeEnum
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#status
+ * @type {String}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#isEnableActions
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransaction#statusUrl
+ * @type {String}
+ */
 
 
 
@@ -181,5 +181,19 @@ export default class MultiWalletExternalTransaction {
 
 
 }
+
+
+
+
+/**
+ * @typedef MultiWalletExternalTransactionCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletExternalTransactionTypeEnum 
+ * @type {("All"|"Deposit"|"Withdrawal")}
+ */
+
 
 

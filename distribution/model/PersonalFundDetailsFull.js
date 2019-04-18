@@ -118,7 +118,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name PersonalFundDetailsFull#status
- * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
+ * @type PersonalFundDetailsFullStatusEnum
  */
 /**
  *
@@ -230,6 +230,12 @@ var PersonalFundDetailsFull = function () {
 
     return PersonalFundDetailsFull;
 }();
+
+/**
+ * @typedef PersonalFundDetailsFullStatusEnum 
+ * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
+ */
+
 
 PersonalFundDetailsFull.StatusEnum = {
 

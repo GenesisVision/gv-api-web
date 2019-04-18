@@ -18,111 +18,111 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PersonalFundDetailsFull
-     */
-    
-    /**
-     *
-     * @name PersonalFundDetailsFull#withdrawPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canReallocate
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#possibleReallocationTime
-     * @type {Date}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#isFavorite
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#isInvested
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#isOwnProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canCloseProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#isFinishing
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canInvest
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canWithdraw
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canClosePeriod
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#hasNotifications
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#invested
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#pendingInput
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#pendingOutput
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#status
-     * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#isFollowSignals
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name PersonalFundDetailsFull#canMakeSignalProvider
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface PersonalFundDetailsFull
+ */
+
+/**
+ *
+ * @name PersonalFundDetailsFull#withdrawPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canReallocate
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#possibleReallocationTime
+ * @type {Date}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#isFavorite
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#isInvested
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#isOwnProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canCloseProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#isFinishing
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canInvest
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canWithdraw
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canClosePeriod
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#hasNotifications
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#invested
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#pendingInput
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#pendingOutput
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#status
+ * @type PersonalFundDetailsFullStatusEnum
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#isFollowSignals
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#canMakeSignalProvider
+ * @type {Boolean}
+ */
 
 
 
@@ -255,5 +255,14 @@ export default class PersonalFundDetailsFull {
 
 
 }
+
+
+
+
+/**
+ * @typedef PersonalFundDetailsFullStatusEnum 
+ * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
+ */
+
 
 

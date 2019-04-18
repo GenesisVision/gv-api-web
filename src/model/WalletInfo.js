@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WalletInfo
-     */
-    
-    /**
-     *
-     * @name WalletInfo#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name WalletInfo#address
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletInfo#rateToGVT
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WalletInfo#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletInfo#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name WalletInfo#isDepositEnabled
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface WalletInfo
+ */
+
+/**
+ *
+ * @name WalletInfo#currency
+ * @type WalletInfoCurrencyEnum
+ */
+/**
+ *
+ * @name WalletInfo#address
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletInfo#rateToGVT
+ * @type {Number}
+ */
+/**
+ *
+ * @name WalletInfo#description
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletInfo#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name WalletInfo#isDepositEnabled
+ * @type {Boolean}
+ */
 
 
 
@@ -145,5 +145,14 @@ export default class WalletInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef WalletInfoCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

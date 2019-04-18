@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface LevelInfo
-     */
-    
-    /**
-     *
-     * @name LevelInfo#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name LevelInfo#investmentLimit
-     * @type {Number}
-     */
+/**
+ *
+ * @interface LevelInfo
+ */
+
+/**
+ *
+ * @name LevelInfo#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelInfo#investmentLimit
+ * @type {Number}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class LevelInfo {
 
 
 }
+
+
+
+
 
 

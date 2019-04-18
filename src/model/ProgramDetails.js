@@ -25,126 +25,126 @@ import ProgramTag from './ProgramTag';
 
 
 
-    /**
-     *
-     * @interface ProgramDetails
-     */
-    
-    /**
-     *
-     * @name ProgramDetails#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramDetails#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetails#periodDuration
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetails#stopOutLevel
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetails#periodStarts
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetails#periodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetails#availableInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetails#availableInvestmentBase
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetails#dashboardAssetsDetails
-     * @type {DashboardProgramDetails}
-     */
-    /**
-     *
-     * @name ProgramDetails#statistic
-     * @type {ProgramDetailsListStatistic}
-     */
-    /**
-     *
-     * @name ProgramDetails#rating
-     * @type {ProgramDetailsRating}
-     */
-    /**
-     *
-     * @name ProgramDetails#personalDetails
-     * @type {PersonalProgramDetailsFull}
-     */
-    /**
-     *
-     * @name ProgramDetails#tags
-     * @type {Array<ProgramTag>}
-     */
-    /**
-     *
-     * @name ProgramDetails#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetails#status
-     * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
-     */
-    /**
-     *
-     * @name ProgramDetails#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetails#manager
-     * @type {ProfilePublic}
-     */
-    /**
-     *
-     * @name ProgramDetails#chart
-     * @type {Array<ChartSimple>}
-     */
+/**
+ *
+ * @interface ProgramDetails
+ */
+
+/**
+ *
+ * @name ProgramDetails#currency
+ * @type ProgramDetailsCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramDetails#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#periodDuration
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#periodStarts
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetails#periodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetails#availableInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#availableInvestmentBase
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#dashboardAssetsDetails
+ * @type {DashboardProgramDetails}
+ */
+/**
+ *
+ * @name ProgramDetails#statistic
+ * @type {ProgramDetailsListStatistic}
+ */
+/**
+ *
+ * @name ProgramDetails#rating
+ * @type {ProgramDetailsRating}
+ */
+/**
+ *
+ * @name ProgramDetails#personalDetails
+ * @type {PersonalProgramDetailsFull}
+ */
+/**
+ *
+ * @name ProgramDetails#tags
+ * @type {Array<ProgramTag>}
+ */
+/**
+ *
+ * @name ProgramDetails#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetails#status
+ * @type ProgramDetailsStatusEnum
+ */
+/**
+ *
+ * @name ProgramDetails#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetails#manager
+ * @type {ProfilePublic}
+ */
+/**
+ *
+ * @name ProgramDetails#chart
+ * @type {Array<ChartSimple>}
+ */
 
 
 
@@ -322,5 +322,19 @@ export default class ProgramDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramDetailsCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramDetailsStatusEnum 
+ * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
+ */
+
 
 

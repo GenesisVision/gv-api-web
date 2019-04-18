@@ -19,26 +19,26 @@ import OrderModel from './OrderModel';
 
 
 
-    /**
-     *
-     * @interface TradesViewModel
-     */
-    
-    /**
-     *
-     * @name TradesViewModel#tradesType
-     * @type {("Positions"|"Orders")}
-     */
-    /**
-     *
-     * @name TradesViewModel#trades
-     * @type {Array<OrderModel>}
-     */
-    /**
-     *
-     * @name TradesViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface TradesViewModel
+ */
+
+/**
+ *
+ * @name TradesViewModel#tradesType
+ * @type TradesViewModelTradesTypeEnum
+ */
+/**
+ *
+ * @name TradesViewModel#trades
+ * @type {Array<OrderModel>}
+ */
+/**
+ *
+ * @name TradesViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -97,5 +97,14 @@ export default class TradesViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef TradesViewModelTradesTypeEnum 
+ * @type {("Positions"|"Orders")}
+ */
+
 
 

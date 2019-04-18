@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name CopyTradingAccountInfo#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type CopyTradingAccountInfoCurrencyEnum
  */
 /**
  *
@@ -104,6 +104,12 @@ var CopyTradingAccountInfo = function () {
 
     return CopyTradingAccountInfo;
 }();
+
+/**
+ * @typedef CopyTradingAccountInfoCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 CopyTradingAccountInfo.CurrencyEnum = {
 

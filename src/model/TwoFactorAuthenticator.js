@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface TwoFactorAuthenticator
-     */
-    
-    /**
-     *
-     * @name TwoFactorAuthenticator#sharedKey
-     * @type {String}
-     */
-    /**
-     *
-     * @name TwoFactorAuthenticator#authenticatorUri
-     * @type {String}
-     */
+/**
+ *
+ * @interface TwoFactorAuthenticator
+ */
+
+/**
+ *
+ * @name TwoFactorAuthenticator#sharedKey
+ * @type {String}
+ */
+/**
+ *
+ * @name TwoFactorAuthenticator#authenticatorUri
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class TwoFactorAuthenticator {
 
 
 }
+
+
+
+
 
 

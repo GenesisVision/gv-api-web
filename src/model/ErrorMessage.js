@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ErrorMessage
-     */
-    
-    /**
-     *
-     * @name ErrorMessage#message
-     * @type {String}
-     */
-    /**
-     *
-     * @name ErrorMessage#property
-     * @type {String}
-     */
+/**
+ *
+ * @interface ErrorMessage
+ */
+
+/**
+ *
+ * @name ErrorMessage#message
+ * @type {String}
+ */
+/**
+ *
+ * @name ErrorMessage#property
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class ErrorMessage {
 
 
 }
+
+
+
+
 
 

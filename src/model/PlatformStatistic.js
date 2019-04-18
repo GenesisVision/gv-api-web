@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PlatformStatistic
-     */
-    
-    /**
-     *
-     * @name PlatformStatistic#managers
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PlatformStatistic#investors
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PlatformStatistic#profitWeek
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PlatformStatistic#investmentAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PlatformStatistic#totalInvestorsProfit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PlatformStatistic#totalProfit
-     * @type {Number}
-     */
+/**
+ *
+ * @interface PlatformStatistic
+ */
+
+/**
+ *
+ * @name PlatformStatistic#managers
+ * @type {Number}
+ */
+/**
+ *
+ * @name PlatformStatistic#investors
+ * @type {Number}
+ */
+/**
+ *
+ * @name PlatformStatistic#profitWeek
+ * @type {Number}
+ */
+/**
+ *
+ * @name PlatformStatistic#investmentAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name PlatformStatistic#totalInvestorsProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name PlatformStatistic#totalProfit
+ * @type {Number}
+ */
 
 
 
@@ -116,5 +116,9 @@ export default class PlatformStatistic {
 
 
 }
+
+
+
+
 
 

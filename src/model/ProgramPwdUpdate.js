@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramPwdUpdate
-     */
-    
-    /**
-     *
-     * @name ProgramPwdUpdate#password
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramPwdUpdate#twoFactorCode
-     * @type {String}
-     */
+/**
+ *
+ * @interface ProgramPwdUpdate
+ */
+
+/**
+ *
+ * @name ProgramPwdUpdate#password
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramPwdUpdate#twoFactorCode
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class ProgramPwdUpdate {
 
 
 }
+
+
+
+
 
 

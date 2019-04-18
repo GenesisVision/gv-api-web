@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface DashboardProgramDetails
-     */
-    
-    /**
-     *
-     * @name DashboardProgramDetails#share
-     * @type {Number}
-     */
+/**
+ *
+ * @interface DashboardProgramDetails
+ */
+
+/**
+ *
+ * @name DashboardProgramDetails#share
+ * @type {Number}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class DashboardProgramDetails {
 
 
 }
+
+
+
+
 
 

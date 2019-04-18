@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramBalanceChartElement
-     */
-    
-    /**
-     *
-     * @name ProgramBalanceChartElement#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramBalanceChartElement#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramBalanceChartElement#managerFunds
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramBalanceChartElement#investorsFunds
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramBalanceChartElement
+ */
+
+/**
+ *
+ * @name ProgramBalanceChartElement#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramBalanceChartElement#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramBalanceChartElement#managerFunds
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramBalanceChartElement#investorsFunds
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ProgramBalanceChartElement {
 
 
 }
+
+
+
+
 
 

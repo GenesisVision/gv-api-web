@@ -19,21 +19,21 @@ import MultiWalletExternalTransaction from './MultiWalletExternalTransaction';
 
 
 
-    /**
-     *
-     * @interface MultiWalletExternalTransactionsViewModel
-     */
-    
-    /**
-     *
-     * @name MultiWalletExternalTransactionsViewModel#transactions
-     * @type {Array<MultiWalletExternalTransaction>}
-     */
-    /**
-     *
-     * @name MultiWalletExternalTransactionsViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface MultiWalletExternalTransactionsViewModel
+ */
+
+/**
+ *
+ * @name MultiWalletExternalTransactionsViewModel#transactions
+ * @type {Array<MultiWalletExternalTransaction>}
+ */
+/**
+ *
+ * @name MultiWalletExternalTransactionsViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class MultiWalletExternalTransactionsViewModel {
 
 
 }
+
+
+
+
 
 

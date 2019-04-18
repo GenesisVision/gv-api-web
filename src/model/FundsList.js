@@ -19,21 +19,21 @@ import FundDetails from './FundDetails';
 
 
 
-    /**
-     *
-     * @interface FundsList
-     */
-    
-    /**
-     *
-     * @name FundsList#funds
-     * @type {Array<FundDetails>}
-     */
-    /**
-     *
-     * @name FundsList#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundsList
+ */
+
+/**
+ *
+ * @name FundsList#funds
+ * @type {Array<FundDetails>}
+ */
+/**
+ *
+ * @name FundsList#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class FundsList {
 
 
 }
+
+
+
+
 
 

@@ -19,21 +19,21 @@ import NotificationViewModel from './NotificationViewModel';
 
 
 
-    /**
-     *
-     * @interface NotificationList
-     */
-    
-    /**
-     *
-     * @name NotificationList#notifications
-     * @type {Array<NotificationViewModel>}
-     */
-    /**
-     *
-     * @name NotificationList#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface NotificationList
+ */
+
+/**
+ *
+ * @name NotificationList#notifications
+ * @type {Array<NotificationViewModel>}
+ */
+/**
+ *
+ * @name NotificationList#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class NotificationList {
 
 
 }
+
+
+
+
 
 

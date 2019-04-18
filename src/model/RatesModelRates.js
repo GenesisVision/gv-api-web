@@ -19,76 +19,76 @@ import RateItem from './RateItem';
 
 
 
-    /**
-     *
-     * @interface RatesModelRates
-     */
-    
-    /**
-     *
-     * @name RatesModelRates#Undefined
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#GVT
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#ETH
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#BTC
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#ADA
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#USDT
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#XRP
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#BCH
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#LTC
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#DOGE
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#BNB
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#USD
-     * @type {Array<RateItem>}
-     */
-    /**
-     *
-     * @name RatesModelRates#EUR
-     * @type {Array<RateItem>}
-     */
+/**
+ *
+ * @interface RatesModelRates
+ */
+
+/**
+ *
+ * @name RatesModelRates#Undefined
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#GVT
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#ETH
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#BTC
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#ADA
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#USDT
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#XRP
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#BCH
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#LTC
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#DOGE
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#BNB
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#USD
+ * @type {Array<RateItem>}
+ */
+/**
+ *
+ * @name RatesModelRates#EUR
+ * @type {Array<RateItem>}
+ */
 
 
 
@@ -180,5 +180,9 @@ export default class RatesModelRates {
 
 
 }
+
+
+
+
 
 

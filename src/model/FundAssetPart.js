@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface FundAssetPart
-     */
-    
-    /**
-     *
-     * @name FundAssetPart#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundAssetPart#percent
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundAssetPart
+ */
+
+/**
+ *
+ * @name FundAssetPart#id
+ * @type {String}
+ */
+/**
+ *
+ * @name FundAssetPart#percent
+ * @type {Number}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class FundAssetPart {
 
 
 }
+
+
+
+
 
 

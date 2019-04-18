@@ -20,31 +20,31 @@ import ManagerProfile from './ManagerProfile';
 
 
 
-    /**
-     *
-     * @interface ManagerProfileDetails
-     */
-    
-    /**
-     *
-     * @name ManagerProfileDetails#managerProfile
-     * @type {ManagerProfile}
-     */
-    /**
-     *
-     * @name ManagerProfileDetails#overview
-     * @type {ManagerOverview}
-     */
-    /**
-     *
-     * @name ManagerProfileDetails#programsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerProfileDetails#fundsCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagerProfileDetails
+ */
+
+/**
+ *
+ * @name ManagerProfileDetails#managerProfile
+ * @type {ManagerProfile}
+ */
+/**
+ *
+ * @name ManagerProfileDetails#overview
+ * @type {ManagerOverview}
+ */
+/**
+ *
+ * @name ManagerProfileDetails#programsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerProfileDetails#fundsCount
+ * @type {Number}
+ */
 
 
 
@@ -100,5 +100,9 @@ export default class ManagerProfileDetails {
 
 
 }
+
+
+
+
 
 

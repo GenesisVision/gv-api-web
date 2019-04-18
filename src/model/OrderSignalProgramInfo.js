@@ -20,31 +20,31 @@ import ProfilePublic from './ProfilePublic';
 
 
 
-    /**
-     *
-     * @interface OrderSignalProgramInfo
-     */
-    
-    /**
-     *
-     * @name OrderSignalProgramInfo#manager
-     * @type {ProfilePublic}
-     */
-    /**
-     *
-     * @name OrderSignalProgramInfo#program
-     * @type {OrderProgramData}
-     */
-    /**
-     *
-     * @name OrderSignalProgramInfo#programId
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderSignalProgramInfo#volume
-     * @type {Number}
-     */
+/**
+ *
+ * @interface OrderSignalProgramInfo
+ */
+
+/**
+ *
+ * @name OrderSignalProgramInfo#manager
+ * @type {ProfilePublic}
+ */
+/**
+ *
+ * @name OrderSignalProgramInfo#program
+ * @type {OrderProgramData}
+ */
+/**
+ *
+ * @name OrderSignalProgramInfo#programId
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderSignalProgramInfo#volume
+ * @type {Number}
+ */
 
 
 
@@ -100,5 +100,9 @@ export default class OrderSignalProgramInfo {
 
 
 }
+
+
+
+
 
 

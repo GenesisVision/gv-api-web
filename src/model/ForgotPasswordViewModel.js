@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ForgotPasswordViewModel
-     */
-    
-    /**
-     *
-     * @name ForgotPasswordViewModel#email
-     * @type {String}
-     */
+/**
+ *
+ * @interface ForgotPasswordViewModel
+ */
+
+/**
+ *
+ * @name ForgotPasswordViewModel#email
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class ForgotPasswordViewModel {
 
 
 }
+
+
+
+
 
 

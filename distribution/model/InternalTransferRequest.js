@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name InternalTransferRequest#sourceType
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ * @type InternalTransferRequestSourceTypeEnum
  */
 /**
  *
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name InternalTransferRequest#destinationType
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ * @type InternalTransferRequestDestinationTypeEnum
  */
 /**
  *
@@ -131,6 +131,17 @@ var InternalTransferRequest = function () {
 
     return InternalTransferRequest;
 }();
+
+/**
+ * @typedef InternalTransferRequestSourceTypeEnum 
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ */
+
+/**
+ * @typedef InternalTransferRequestDestinationTypeEnum 
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ */
+
 
 InternalTransferRequest.SourceTypeEnum = {
 

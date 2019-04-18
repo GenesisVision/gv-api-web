@@ -19,16 +19,16 @@ import CopyTradingAccountInfo from './CopyTradingAccountInfo';
 
 
 
-    /**
-     *
-     * @interface CopyTradingAccountsList
-     */
-    
-    /**
-     *
-     * @name CopyTradingAccountsList#accounts
-     * @type {Array<CopyTradingAccountInfo>}
-     */
+/**
+ *
+ * @interface CopyTradingAccountsList
+ */
+
+/**
+ *
+ * @name CopyTradingAccountsList#accounts
+ * @type {Array<CopyTradingAccountInfo>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class CopyTradingAccountsList {
 
 
 }
+
+
+
+
 
 

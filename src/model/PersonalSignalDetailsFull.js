@@ -19,26 +19,26 @@ import SignalSubscription from './SignalSubscription';
 
 
 
-    /**
-     *
-     * @interface PersonalSignalDetailsFull
-     */
-    
-    /**
-     *
-     * @name PersonalSignalDetailsFull#subscriptionDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name PersonalSignalDetailsFull#tradesCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name PersonalSignalDetailsFull#signalSubscription
-     * @type {SignalSubscription}
-     */
+/**
+ *
+ * @interface PersonalSignalDetailsFull
+ */
+
+/**
+ *
+ * @name PersonalSignalDetailsFull#subscriptionDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name PersonalSignalDetailsFull#tradesCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalSignalDetailsFull#signalSubscription
+ * @type {SignalSubscription}
+ */
 
 
 
@@ -90,5 +90,9 @@ export default class PersonalSignalDetailsFull {
 
 
 }
+
+
+
+
 
 

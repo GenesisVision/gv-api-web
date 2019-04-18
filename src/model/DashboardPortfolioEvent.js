@@ -18,96 +18,96 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface DashboardPortfolioEvent
-     */
-    
-    /**
-     *
-     * @name DashboardPortfolioEvent#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#valueTotal
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#feeSuccessManager
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#feeSuccessPlatform
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#type
-     * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvent#assetType
-     * @type {("Program"|"Fund")}
-     */
+/**
+ *
+ * @interface DashboardPortfolioEvent
+ */
+
+/**
+ *
+ * @name DashboardPortfolioEvent#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#title
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#url
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#valueTotal
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessManager
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessManagerCurrency
+ * @type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessPlatform
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#feeSuccessPlatformCurrency
+ * @type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#currency
+ * @type DashboardPortfolioEventCurrencyEnum
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#type
+ * @type DashboardPortfolioEventTypeEnum
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#color
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#description
+ * @type {String}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvent#assetType
+ * @type DashboardPortfolioEventAssetTypeEnum
+ */
 
 
 
@@ -330,5 +330,34 @@ export default class DashboardPortfolioEvent {
 
 
 }
+
+
+
+
+/**
+ * @typedef DashboardPortfolioEventFeeSuccessManagerCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventTypeEnum 
+ * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
+ */
+
+/**
+ * @typedef DashboardPortfolioEventAssetTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

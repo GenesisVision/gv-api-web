@@ -19,21 +19,21 @@ import ProgramDetails from './ProgramDetails';
 
 
 
-    /**
-     *
-     * @interface ProgramsList
-     */
-    
-    /**
-     *
-     * @name ProgramsList#programs
-     * @type {Array<ProgramDetails>}
-     */
-    /**
-     *
-     * @name ProgramsList#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramsList
+ */
+
+/**
+ *
+ * @name ProgramsList#programs
+ * @type {Array<ProgramDetails>}
+ */
+/**
+ *
+ * @name ProgramsList#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class ProgramsList {
 
 
 }
+
+
+
+
 
 

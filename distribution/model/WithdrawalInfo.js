@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WithdrawalInfo#status
- * @type {("New"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
+ * @type WithdrawalInfoStatusEnum
  */
 /**
  *
@@ -86,6 +86,12 @@ var WithdrawalInfo = function () {
 
     return WithdrawalInfo;
 }();
+
+/**
+ * @typedef WithdrawalInfoStatusEnum 
+ * @type {("New"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
+ */
+
 
 WithdrawalInfo.StatusEnum = {
 

@@ -53,7 +53,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProfileHeaderViewModel#userType
- * @type {("Investor"|"Manager")}
+ * @type ProfileHeaderViewModelUserTypeEnum
  */
 /**
  *
@@ -212,6 +212,12 @@ var ProfileHeaderViewModel = function () {
 
     return ProfileHeaderViewModel;
 }();
+
+/**
+ * @typedef ProfileHeaderViewModelUserTypeEnum 
+ * @type {("Investor"|"Manager")}
+ */
+
 
 ProfileHeaderViewModel.UserTypeEnum = {
 

@@ -24,86 +24,86 @@ import ProfilePublic from './ProfilePublic';
 
 
 
-    /**
-     *
-     * @interface FundDetails
-     */
-    
-    /**
-     *
-     * @name FundDetails#totalAssetsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetails#topFundAssets
-     * @type {Array<FundAssetPercent>}
-     */
-    /**
-     *
-     * @name FundDetails#statistic
-     * @type {FundDetailsListStatistic}
-     */
-    /**
-     *
-     * @name FundDetails#personalDetails
-     * @type {PersonalFundDetailsFull}
-     */
-    /**
-     *
-     * @name FundDetails#dashboardAssetsDetails
-     * @type {DashboardProgramDetails}
-     */
-    /**
-     *
-     * @name FundDetails#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundDetails#status
-     * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
-     */
-    /**
-     *
-     * @name FundDetails#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name FundDetails#manager
-     * @type {ProfilePublic}
-     */
-    /**
-     *
-     * @name FundDetails#chart
-     * @type {Array<ChartSimple>}
-     */
+/**
+ *
+ * @interface FundDetails
+ */
+
+/**
+ *
+ * @name FundDetails#totalAssetsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetails#topFundAssets
+ * @type {Array<FundAssetPercent>}
+ */
+/**
+ *
+ * @name FundDetails#statistic
+ * @type {FundDetailsListStatistic}
+ */
+/**
+ *
+ * @name FundDetails#personalDetails
+ * @type {PersonalFundDetailsFull}
+ */
+/**
+ *
+ * @name FundDetails#dashboardAssetsDetails
+ * @type {DashboardProgramDetails}
+ */
+/**
+ *
+ * @name FundDetails#id
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#url
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#color
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#description
+ * @type {String}
+ */
+/**
+ *
+ * @name FundDetails#status
+ * @type FundDetailsStatusEnum
+ */
+/**
+ *
+ * @name FundDetails#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name FundDetails#manager
+ * @type {ProfilePublic}
+ */
+/**
+ *
+ * @name FundDetails#chart
+ * @type {Array<ChartSimple>}
+ */
 
 
 
@@ -220,5 +220,14 @@ export default class FundDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef FundDetailsStatusEnum 
+ * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
+ */
+
 
 

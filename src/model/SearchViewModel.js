@@ -21,26 +21,26 @@ import ProgramsList from './ProgramsList';
 
 
 
-    /**
-     *
-     * @interface SearchViewModel
-     */
-    
-    /**
-     *
-     * @name SearchViewModel#programs
-     * @type {ProgramsList}
-     */
-    /**
-     *
-     * @name SearchViewModel#funds
-     * @type {FundsList}
-     */
-    /**
-     *
-     * @name SearchViewModel#managers
-     * @type {ManagersList}
-     */
+/**
+ *
+ * @interface SearchViewModel
+ */
+
+/**
+ *
+ * @name SearchViewModel#programs
+ * @type {ProgramsList}
+ */
+/**
+ *
+ * @name SearchViewModel#funds
+ * @type {FundsList}
+ */
+/**
+ *
+ * @name SearchViewModel#managers
+ * @type {ManagersList}
+ */
 
 
 
@@ -92,5 +92,9 @@ export default class SearchViewModel {
 
 
 }
+
+
+
+
 
 

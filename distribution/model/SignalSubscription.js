@@ -43,7 +43,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name SignalSubscription#mode
- * @type {("ByBalance"|"Percent"|"Fixed")}
+ * @type SignalSubscriptionModeEnum
  */
 /**
  *
@@ -63,7 +63,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name SignalSubscription#fixedCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type SignalSubscriptionFixedCurrencyEnum
  */
 
 var SignalSubscription = function () {
@@ -113,6 +113,17 @@ var SignalSubscription = function () {
 
     return SignalSubscription;
 }();
+
+/**
+ * @typedef SignalSubscriptionModeEnum 
+ * @type {("ByBalance"|"Percent"|"Fixed")}
+ */
+
+/**
+ * @typedef SignalSubscriptionFixedCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 SignalSubscription.ModeEnum = {
 

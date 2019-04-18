@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerSimpleFund
-     */
-    
-    /**
-     *
-     * @name ManagerSimpleFund#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleFund#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleFund#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleFund#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerSimpleFund#url
-     * @type {String}
-     */
+/**
+ *
+ * @interface ManagerSimpleFund
+ */
+
+/**
+ *
+ * @name ManagerSimpleFund#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleFund#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleFund#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleFund#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerSimpleFund#url
+ * @type {String}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class ManagerSimpleFund {
 
 
 }
+
+
+
+
 
 

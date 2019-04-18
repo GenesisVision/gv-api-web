@@ -19,31 +19,31 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
 
 
 
-    /**
-     *
-     * @interface ProgramBalanceChart
-     */
-    
-    /**
-     *
-     * @name ProgramBalanceChart#programCurrencyBalance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramBalanceChart#programCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramBalanceChart#balanceChart
-     * @type {Array<ProgramBalanceChartElement>}
-     */
-    /**
-     *
-     * @name ProgramBalanceChart#gvtBalance
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramBalanceChart
+ */
+
+/**
+ *
+ * @name ProgramBalanceChart#programCurrencyBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramBalanceChart#programCurrency
+ * @type ProgramBalanceChartProgramCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramBalanceChart#balanceChart
+ * @type {Array<ProgramBalanceChartElement>}
+ */
+/**
+ *
+ * @name ProgramBalanceChart#gvtBalance
+ * @type {Number}
+ */
 
 
 
@@ -128,5 +128,14 @@ export default class ProgramBalanceChart {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramBalanceChartProgramCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

@@ -19,16 +19,16 @@ import LevelInfo from './LevelInfo';
 
 
 
-    /**
-     *
-     * @interface ProgramsLevelsInfo
-     */
-    
-    /**
-     *
-     * @name ProgramsLevelsInfo#levels
-     * @type {Array<LevelInfo>}
-     */
+/**
+ *
+ * @interface ProgramsLevelsInfo
+ */
+
+/**
+ *
+ * @name ProgramsLevelsInfo#levels
+ * @type {Array<LevelInfo>}
+ */
 
 
 
@@ -72,5 +72,9 @@ export default class ProgramsLevelsInfo {
 
 
 }
+
+
+
+
 
 

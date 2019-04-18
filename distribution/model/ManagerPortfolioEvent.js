@@ -63,17 +63,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerPortfolioEvent#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type ManagerPortfolioEventCurrencyEnum
  */
 /**
  *
  * @name ManagerPortfolioEvent#type
- * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
+ * @type ManagerPortfolioEventTypeEnum
  */
 /**
  *
  * @name ManagerPortfolioEvent#programType
- * @type {("Program"|"Fund")}
+ * @type ManagerPortfolioEventProgramTypeEnum
  */
 /**
  *
@@ -176,6 +176,22 @@ var ManagerPortfolioEvent = function () {
 
     return ManagerPortfolioEvent;
 }();
+
+/**
+ * @typedef ManagerPortfolioEventCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ManagerPortfolioEventTypeEnum 
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
+ */
+
+/**
+ * @typedef ManagerPortfolioEventProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 ManagerPortfolioEvent.CurrencyEnum = {
 

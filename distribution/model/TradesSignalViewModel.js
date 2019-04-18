@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name TradesSignalViewModel#tradesType
- * @type {("Positions"|"Orders")}
+ * @type TradesSignalViewModelTradesTypeEnum
  */
 /**
  *
@@ -81,6 +81,12 @@ var TradesSignalViewModel = function () {
 
     return TradesSignalViewModel;
 }();
+
+/**
+ * @typedef TradesSignalViewModelTradesTypeEnum 
+ * @type {("Positions"|"Orders")}
+ */
+
 
 TradesSignalViewModel.TradesTypeEnum = {
 

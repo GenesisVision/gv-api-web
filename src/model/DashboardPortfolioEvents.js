@@ -19,21 +19,21 @@ import DashboardPortfolioEvent from './DashboardPortfolioEvent';
 
 
 
-    /**
-     *
-     * @interface DashboardPortfolioEvents
-     */
-    
-    /**
-     *
-     * @name DashboardPortfolioEvents#events
-     * @type {Array<DashboardPortfolioEvent>}
-     */
-    /**
-     *
-     * @name DashboardPortfolioEvents#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface DashboardPortfolioEvents
+ */
+
+/**
+ *
+ * @name DashboardPortfolioEvents#events
+ * @type {Array<DashboardPortfolioEvent>}
+ */
+/**
+ *
+ * @name DashboardPortfolioEvents#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class DashboardPortfolioEvents {
 
 
 }
+
+
+
+
 
 

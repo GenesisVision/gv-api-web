@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface TwoFactorCodeModel
-     */
-    
-    /**
-     *
-     * @name TwoFactorCodeModel#twoFactorCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name TwoFactorCodeModel#password
-     * @type {String}
-     */
+/**
+ *
+ * @interface TwoFactorCodeModel
+ */
+
+/**
+ *
+ * @name TwoFactorCodeModel#twoFactorCode
+ * @type {String}
+ */
+/**
+ *
+ * @name TwoFactorCodeModel#password
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class TwoFactorCodeModel {
 
 
 }
+
+
+
+
 
 

@@ -19,41 +19,41 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
 
 
 
-    /**
-     *
-     * @interface FundNotificationSettingList
-     */
-    
-    /**
-     *
-     * @name FundNotificationSettingList#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundNotificationSettingList#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundNotificationSettingList#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundNotificationSettingList#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundNotificationSettingList#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name FundNotificationSettingList#settingsGeneral
-     * @type {Array<NotificationSettingViewModel>}
-     */
+/**
+ *
+ * @interface FundNotificationSettingList
+ */
+
+/**
+ *
+ * @name FundNotificationSettingList#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name FundNotificationSettingList#title
+ * @type {String}
+ */
+/**
+ *
+ * @name FundNotificationSettingList#url
+ * @type {String}
+ */
+/**
+ *
+ * @name FundNotificationSettingList#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name FundNotificationSettingList#color
+ * @type {String}
+ */
+/**
+ *
+ * @name FundNotificationSettingList#settingsGeneral
+ * @type {Array<NotificationSettingViewModel>}
+ */
 
 
 
@@ -117,5 +117,9 @@ export default class FundNotificationSettingList {
 
 
 }
+
+
+
+
 
 

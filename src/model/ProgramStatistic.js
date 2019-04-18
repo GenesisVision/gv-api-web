@@ -19,101 +19,101 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 
 
-    /**
-     *
-     * @interface ProgramStatistic
-     */
-    
-    /**
-     *
-     * @name ProgramStatistic#balanceBase
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramStatistic#balanceGVT
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramStatistic#balanceSecondary
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramStatistic#currentValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#profitValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#drawdownPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#investorsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#hasNotifications
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProgramStatistic#startDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramStatistic#startBalance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#startCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramStatistic#investedAmount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#investedCurrency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramStatistic#tradesCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#tradesSuccessCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#profitFactorPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramStatistic#sharpeRatioPercent
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramStatistic
+ */
+
+/**
+ *
+ * @name ProgramStatistic#balanceBase
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramStatistic#balanceGVT
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramStatistic#balanceSecondary
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramStatistic#currentValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#profitValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#drawdownPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#investorsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#hasNotifications
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramStatistic#startDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramStatistic#startBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#startCurrency
+ * @type ProgramStatisticStartCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramStatistic#investedAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#investedCurrency
+ * @type ProgramStatisticInvestedCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramStatistic#tradesCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#tradesSuccessCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#profitFactorPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramStatistic#sharpeRatioPercent
+ * @type {Number}
+ */
 
 
 
@@ -283,5 +283,19 @@ export default class ProgramStatistic {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramStatisticStartCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramStatisticInvestedCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

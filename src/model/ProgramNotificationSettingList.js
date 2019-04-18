@@ -19,51 +19,51 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
 
 
 
-    /**
-     *
-     * @interface ProgramNotificationSettingList
-     */
-    
-    /**
-     *
-     * @name ProgramNotificationSettingList#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#settingsCustom
-     * @type {Array<NotificationSettingViewModel>}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramNotificationSettingList#settingsGeneral
-     * @type {Array<NotificationSettingViewModel>}
-     */
+/**
+ *
+ * @interface ProgramNotificationSettingList
+ */
+
+/**
+ *
+ * @name ProgramNotificationSettingList#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#settingsCustom
+ * @type {Array<NotificationSettingViewModel>}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramNotificationSettingList#settingsGeneral
+ * @type {Array<NotificationSettingViewModel>}
+ */
 
 
 
@@ -135,5 +135,9 @@ export default class ProgramNotificationSettingList {
 
 
 }
+
+
+
+
 
 

@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name BlockchainInfo#status
- * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
+ * @type BlockchainInfoStatusEnum
  */
 
 var BlockchainInfo = function () {
@@ -68,6 +68,12 @@ var BlockchainInfo = function () {
 
     return BlockchainInfo;
 }();
+
+/**
+ * @typedef BlockchainInfoStatusEnum 
+ * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
+ */
+
 
 BlockchainInfo.StatusEnum = {
 

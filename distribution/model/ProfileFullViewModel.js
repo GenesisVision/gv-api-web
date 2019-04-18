@@ -123,7 +123,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProfileFullViewModel#verificationStatus
- * @type {("NotVerified"|"Verified"|"UnderReview"|"Rejected")}
+ * @type ProfileFullViewModelVerificationStatusEnum
  */
 
 var ProfileFullViewModel = function () {
@@ -221,6 +221,12 @@ var ProfileFullViewModel = function () {
 
     return ProfileFullViewModel;
 }();
+
+/**
+ * @typedef ProfileFullViewModelVerificationStatusEnum 
+ * @type {("NotVerified"|"Verified"|"UnderReview"|"Rejected")}
+ */
+
 
 ProfileFullViewModel.VerificationStatusEnum = {
 

@@ -18,76 +18,76 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramTransactionDetails
-     */
-    
-    /**
-     *
-     * @name ProgramTransactionDetails#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#managerName
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#programType
-     * @type {("Program"|"Fund")}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#entryFeePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#successFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#successFeePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#exitFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#exitFeePercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramTransactionDetails#color
-     * @type {String}
-     */
+/**
+ *
+ * @interface ProgramTransactionDetails
+ */
+
+/**
+ *
+ * @name ProgramTransactionDetails#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#managerName
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#programType
+ * @type ProgramTransactionDetailsProgramTypeEnum
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#entryFeePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#successFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#successFeePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#exitFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#exitFeePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramTransactionDetails#color
+ * @type {String}
+ */
 
 
 
@@ -186,5 +186,14 @@ export default class ProgramTransactionDetails {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramTransactionDetailsProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

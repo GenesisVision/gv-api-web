@@ -19,21 +19,21 @@ import ManagerPortfolioEvent from './ManagerPortfolioEvent';
 
 
 
-    /**
-     *
-     * @interface ManagerPortfolioEvents
-     */
-    
-    /**
-     *
-     * @name ManagerPortfolioEvents#events
-     * @type {Array<ManagerPortfolioEvent>}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvents#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagerPortfolioEvents
+ */
+
+/**
+ *
+ * @name ManagerPortfolioEvents#events
+ * @type {Array<ManagerPortfolioEvent>}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvents#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class ManagerPortfolioEvents {
 
 
 }
+
+
+
+
 
 

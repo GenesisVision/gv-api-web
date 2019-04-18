@@ -38,7 +38,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletExternalTransaction#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type MultiWalletExternalTransactionCurrencyEnum
  */
 /**
  *
@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletExternalTransaction#type
- * @type {("All"|"Deposit"|"Withdrawal")}
+ * @type MultiWalletExternalTransactionTypeEnum
  */
 /**
  *
@@ -131,6 +131,17 @@ var MultiWalletExternalTransaction = function () {
 
     return MultiWalletExternalTransaction;
 }();
+
+/**
+ * @typedef MultiWalletExternalTransactionCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef MultiWalletExternalTransactionTypeEnum 
+ * @type {("All"|"Deposit"|"Withdrawal")}
+ */
+
 
 MultiWalletExternalTransaction.CurrencyEnum = {
 

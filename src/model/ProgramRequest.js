@@ -18,91 +18,91 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramRequest
-     */
-    
-    /**
-     *
-     * @name ProgramRequest#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramRequest#programId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramRequest#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramRequest#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequest#valueGvt
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequest#feeEntry
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequest#feeExit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequest#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramRequest#fundWithdrawPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramRequest#type
-     * @type {("Invest"|"Withdrawal")}
-     */
-    /**
-     *
-     * @name ProgramRequest#status
-     * @type {("New"|"Executed"|"Cancelled")}
-     */
-    /**
-     *
-     * @name ProgramRequest#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramRequest#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramRequest#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramRequest#canCancelRequest
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProgramRequest#programType
-     * @type {("Program"|"Fund")}
-     */
+/**
+ *
+ * @interface ProgramRequest
+ */
+
+/**
+ *
+ * @name ProgramRequest#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramRequest#programId
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramRequest#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramRequest#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequest#valueGvt
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequest#feeEntry
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequest#feeExit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequest#currency
+ * @type ProgramRequestCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramRequest#fundWithdrawPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramRequest#type
+ * @type ProgramRequestTypeEnum
+ */
+/**
+ *
+ * @name ProgramRequest#status
+ * @type ProgramRequestStatusEnum
+ */
+/**
+ *
+ * @name ProgramRequest#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramRequest#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramRequest#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramRequest#canCancelRequest
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramRequest#programType
+ * @type ProgramRequestProgramTypeEnum
+ */
 
 
 
@@ -258,5 +258,29 @@ export default class ProgramRequest {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramRequestCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramRequestTypeEnum 
+ * @type {("Invest"|"Withdrawal")}
+ */
+
+/**
+ * @typedef ProgramRequestStatusEnum 
+ * @type {("New"|"Executed"|"Cancelled")}
+ */
+
+/**
+ * @typedef ProgramRequestProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

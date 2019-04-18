@@ -18,81 +18,81 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface OrderModel
-     */
-    
-    /**
-     *
-     * @name OrderModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderModel#login
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderModel#ticket
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderModel#symbol
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderModel#volume
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#profit
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#direction
-     * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
-     */
-    /**
-     *
-     * @name OrderModel#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name OrderModel#price
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#priceCurrent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#entry
-     * @type {("In"|"Out"|"InOut"|"OutBy")}
-     */
-    /**
-     *
-     * @name OrderModel#baseVolume
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#commission
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderModel#masterLogin
-     * @type {String}
-     */
+/**
+ *
+ * @interface OrderModel
+ */
+
+/**
+ *
+ * @name OrderModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderModel#login
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderModel#ticket
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderModel#symbol
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderModel#volume
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#direction
+ * @type OrderModelDirectionEnum
+ */
+/**
+ *
+ * @name OrderModel#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name OrderModel#price
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#priceCurrent
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#entry
+ * @type OrderModelEntryEnum
+ */
+/**
+ *
+ * @name OrderModel#baseVolume
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#commission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#masterLogin
+ * @type {String}
+ */
 
 
 
@@ -212,5 +212,19 @@ export default class OrderModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef OrderModelDirectionEnum 
+ * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ */
+
+/**
+ * @typedef OrderModelEntryEnum 
+ * @type {("In"|"Out"|"InOut"|"OutBy")}
+ */
+
 
 

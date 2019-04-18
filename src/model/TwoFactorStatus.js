@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface TwoFactorStatus
-     */
-    
-    /**
-     *
-     * @name TwoFactorStatus#twoFactorEnabled
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface TwoFactorStatus
+ */
+
+/**
+ *
+ * @name TwoFactorStatus#twoFactorEnabled
+ * @type {Boolean}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class TwoFactorStatus {
 
 
 }
+
+
+
+
 
 

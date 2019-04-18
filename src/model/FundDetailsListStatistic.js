@@ -19,36 +19,36 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 
 
-    /**
-     *
-     * @interface FundDetailsListStatistic
-     */
-    
-    /**
-     *
-     * @name FundDetailsListStatistic#balanceGVT
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name FundDetailsListStatistic#balanceSecondary
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name FundDetailsListStatistic#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetailsListStatistic#drawdownPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name FundDetailsListStatistic#investorsCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface FundDetailsListStatistic
+ */
+
+/**
+ *
+ * @name FundDetailsListStatistic#balanceGVT
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name FundDetailsListStatistic#balanceSecondary
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name FundDetailsListStatistic#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetailsListStatistic#drawdownPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundDetailsListStatistic#investorsCount
+ * @type {Number}
+ */
 
 
 
@@ -108,5 +108,9 @@ export default class FundDetailsListStatistic {
 
 
 }
+
+
+
+
 
 

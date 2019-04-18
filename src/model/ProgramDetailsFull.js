@@ -23,161 +23,161 @@ import ProgramTag from './ProgramTag';
 
 
 
-    /**
-     *
-     * @interface ProgramDetailsFull
-     */
-    
-    /**
-     *
-     * @name ProgramDetailsFull#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#periodDuration
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#periodStarts
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#periodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#entryFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#entryFeeSelected
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#entryFeeCurrent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#successFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#stopOutLevel
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#isReinvesting
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#isSignalProgram
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#signalSuccessFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#signalSubscriptionFee
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#availableInvestment
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#availableInvestmentBase
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#statistic
-     * @type {ProgramStatistic}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#rating
-     * @type {ProgramDetailsRating}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#personalProgramDetails
-     * @type {PersonalProgramDetailsFull}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#tags
-     * @type {Array<ProgramTag>}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#ipfsHash
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#creationDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#status
-     * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
-     */
-    /**
-     *
-     * @name ProgramDetailsFull#manager
-     * @type {ProfilePublic}
-     */
+/**
+ *
+ * @interface ProgramDetailsFull
+ */
+
+/**
+ *
+ * @name ProgramDetailsFull#currency
+ * @type ProgramDetailsFullCurrencyEnum
+ */
+/**
+ *
+ * @name ProgramDetailsFull#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#periodDuration
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#periodStarts
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#periodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#entryFeeSelected
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#entryFeeCurrent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#successFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#isReinvesting
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#isSignalProgram
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#signalSuccessFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#signalSubscriptionFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#availableInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#availableInvestmentBase
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#statistic
+ * @type {ProgramStatistic}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#rating
+ * @type {ProgramDetailsRating}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#personalProgramDetails
+ * @type {PersonalProgramDetailsFull}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#tags
+ * @type {Array<ProgramTag>}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#ipfsHash
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#creationDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#status
+ * @type ProgramDetailsFullStatusEnum
+ */
+/**
+ *
+ * @name ProgramDetailsFull#manager
+ * @type {ProfilePublic}
+ */
 
 
 
@@ -383,5 +383,19 @@ export default class ProgramDetailsFull {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramDetailsFullCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramDetailsFullStatusEnum 
+ * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
+ */
+
 
 

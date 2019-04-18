@@ -19,21 +19,21 @@ import ErrorMessage from './ErrorMessage';
 
 
 
-    /**
-     *
-     * @interface ErrorViewModel
-     */
-    
-    /**
-     *
-     * @name ErrorViewModel#errors
-     * @type {Array<ErrorMessage>}
-     */
-    /**
-     *
-     * @name ErrorViewModel#code
-     * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor"|"WrongCaptcha")}
-     */
+/**
+ *
+ * @interface ErrorViewModel
+ */
+
+/**
+ *
+ * @name ErrorViewModel#errors
+ * @type {Array<ErrorMessage>}
+ */
+/**
+ *
+ * @name ErrorViewModel#code
+ * @type ErrorViewModelCodeEnum
+ */
 
 
 
@@ -92,5 +92,14 @@ export default class ErrorViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef ErrorViewModelCodeEnum 
+ * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor"|"WrongCaptcha")}
+ */
+
 
 

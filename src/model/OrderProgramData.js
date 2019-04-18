@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface OrderProgramData
-     */
-    
-    /**
-     *
-     * @name OrderProgramData#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderProgramData#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name OrderProgramData#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderProgramData#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name OrderProgramData#logo
-     * @type {String}
-     */
+/**
+ *
+ * @interface OrderProgramData
+ */
+
+/**
+ *
+ * @name OrderProgramData#title
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderProgramData#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderProgramData#color
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderProgramData#url
+ * @type {String}
+ */
+/**
+ *
+ * @name OrderProgramData#logo
+ * @type {String}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class OrderProgramData {
 
 
 }
+
+
+
+
 
 

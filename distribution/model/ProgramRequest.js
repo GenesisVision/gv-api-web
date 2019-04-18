@@ -68,7 +68,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramRequest#currency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type ProgramRequestCurrencyEnum
  */
 /**
  *
@@ -78,12 +78,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramRequest#type
- * @type {("Invest"|"Withdrawal")}
+ * @type ProgramRequestTypeEnum
  */
 /**
  *
  * @name ProgramRequest#status
- * @type {("New"|"Executed"|"Cancelled")}
+ * @type ProgramRequestStatusEnum
  */
 /**
  *
@@ -108,7 +108,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramRequest#programType
- * @type {("Program"|"Fund")}
+ * @type ProgramRequestProgramTypeEnum
  */
 
 var ProgramRequest = function () {
@@ -194,6 +194,27 @@ var ProgramRequest = function () {
 
     return ProgramRequest;
 }();
+
+/**
+ * @typedef ProgramRequestCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramRequestTypeEnum 
+ * @type {("Invest"|"Withdrawal")}
+ */
+
+/**
+ * @typedef ProgramRequestStatusEnum 
+ * @type {("New"|"Executed"|"Cancelled")}
+ */
+
+/**
+ * @typedef ProgramRequestProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 ProgramRequest.CurrencyEnum = {
 

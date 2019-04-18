@@ -18,101 +18,101 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProfileHeaderViewModel
-     */
-    
-    /**
-     *
-     * @name ProfileHeaderViewModel#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#email
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#userType
-     * @type {("Investor"|"Manager")}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#notificationsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#favoritesCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#kycConfirmed
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#allowForex
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#isTwoFactorEnabled
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#isNewUser
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#totalBalanceGvt
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#investedGvt
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#availableGvt
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#totalBalance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#invested
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#available
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProfileHeaderViewModel#pending
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProfileHeaderViewModel
+ */
+
+/**
+ *
+ * @name ProfileHeaderViewModel#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#name
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#email
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#userType
+ * @type ProfileHeaderViewModelUserTypeEnum
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#notificationsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#favoritesCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#kycConfirmed
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#allowForex
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#isTwoFactorEnabled
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#isNewUser
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#totalBalanceGvt
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#investedGvt
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#availableGvt
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#totalBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#invested
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#available
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProfileHeaderViewModel#pending
+ * @type {Number}
+ */
 
 
 
@@ -231,5 +231,14 @@ export default class ProfileHeaderViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProfileHeaderViewModelUserTypeEnum 
+ * @type {("Investor"|"Manager")}
+ */
+
 
 

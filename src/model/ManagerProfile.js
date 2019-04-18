@@ -18,46 +18,46 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerProfile
-     */
-    
-    /**
-     *
-     * @name ManagerProfile#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProfile#username
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProfile#about
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProfile#avatar
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerProfile#regDate
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ManagerProfile#assets
-     * @type {Array<String>}
-     */
-    /**
-     *
-     * @name ManagerProfile#url
-     * @type {String}
-     */
+/**
+ *
+ * @interface ManagerProfile
+ */
+
+/**
+ *
+ * @name ManagerProfile#id
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProfile#username
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProfile#about
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProfile#avatar
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerProfile#regDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name ManagerProfile#assets
+ * @type {Array<String>}
+ */
+/**
+ *
+ * @name ManagerProfile#url
+ * @type {String}
+ */
 
 
 
@@ -125,5 +125,9 @@ export default class ManagerProfile {
 
 
 }
+
+
+
+
 
 

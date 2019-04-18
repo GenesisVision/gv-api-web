@@ -22,31 +22,31 @@ import ProgramNotificationSettingList from './ProgramNotificationSettingList';
 
 
 
-    /**
-     *
-     * @interface NotificationSettingList
-     */
-    
-    /**
-     *
-     * @name NotificationSettingList#settingsGeneral
-     * @type {Array<NotificationSettingViewModel>}
-     */
-    /**
-     *
-     * @name NotificationSettingList#settingsProgram
-     * @type {Array<ProgramNotificationSettingList>}
-     */
-    /**
-     *
-     * @name NotificationSettingList#settingsFund
-     * @type {Array<FundNotificationSettingList>}
-     */
-    /**
-     *
-     * @name NotificationSettingList#settingsManager
-     * @type {Array<ManagerNotificationSettingList>}
-     */
+/**
+ *
+ * @interface NotificationSettingList
+ */
+
+/**
+ *
+ * @name NotificationSettingList#settingsGeneral
+ * @type {Array<NotificationSettingViewModel>}
+ */
+/**
+ *
+ * @name NotificationSettingList#settingsProgram
+ * @type {Array<ProgramNotificationSettingList>}
+ */
+/**
+ *
+ * @name NotificationSettingList#settingsFund
+ * @type {Array<FundNotificationSettingList>}
+ */
+/**
+ *
+ * @name NotificationSettingList#settingsManager
+ * @type {Array<ManagerNotificationSettingList>}
+ */
 
 
 
@@ -102,5 +102,9 @@ export default class NotificationSettingList {
 
 
 }
+
+
+
+
 
 

@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface BlockchainInfo
-     */
-    
-    /**
-     *
-     * @name BlockchainInfo#hash
-     * @type {String}
-     */
-    /**
-     *
-     * @name BlockchainInfo#status
-     * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
-     */
+/**
+ *
+ * @interface BlockchainInfo
+ */
+
+/**
+ *
+ * @name BlockchainInfo#hash
+ * @type {String}
+ */
+/**
+ *
+ * @name BlockchainInfo#status
+ * @type BlockchainInfoStatusEnum
+ */
 
 
 
@@ -97,5 +97,14 @@ export default class BlockchainInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef BlockchainInfoStatusEnum 
+ * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
+ */
+
 
 

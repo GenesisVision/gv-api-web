@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface LevelUpData
-     */
-    
-    /**
-     *
-     * @name LevelUpData#level
-     * @type {Number}
-     */
-    /**
-     *
-     * @name LevelUpData#total
-     * @type {Number}
-     */
-    /**
-     *
-     * @name LevelUpData#totalOwn
-     * @type {Number}
-     */
-    /**
-     *
-     * @name LevelUpData#quota
-     * @type {Number}
-     */
-    /**
-     *
-     * @name LevelUpData#targetProfit
-     * @type {Number}
-     */
+/**
+ *
+ * @interface LevelUpData
+ */
+
+/**
+ *
+ * @name LevelUpData#level
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelUpData#total
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelUpData#totalOwn
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelUpData#quota
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelUpData#targetProfit
+ * @type {Number}
+ */
 
 
 
@@ -107,5 +107,9 @@ export default class LevelUpData {
 
 
 }
+
+
+
+
 
 

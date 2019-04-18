@@ -18,36 +18,36 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramPeriodViewModel
-     */
-    
-    /**
-     *
-     * @name ProgramPeriodViewModel#dateFrom
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramPeriodViewModel#dateTo
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramPeriodViewModel#status
-     * @type {("Planned"|"InProccess"|"Closed")}
-     */
-    /**
-     *
-     * @name ProgramPeriodViewModel#number
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramPeriodViewModel#profit
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramPeriodViewModel
+ */
+
+/**
+ *
+ * @name ProgramPeriodViewModel#dateFrom
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#dateTo
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#status
+ * @type ProgramPeriodViewModelStatusEnum
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#number
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#profit
+ * @type {Number}
+ */
 
 
 
@@ -116,5 +116,14 @@ export default class ProgramPeriodViewModel {
 
 
 }
+
+
+
+
+/**
+ * @typedef ProgramPeriodViewModelStatusEnum 
+ * @type {("Planned"|"InProccess"|"Closed")}
+ */
+
 
 

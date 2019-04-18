@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PowResult
-     */
-    
-    /**
-     *
-     * @name PowResult#prefix
-     * @type {String}
-     */
+/**
+ *
+ * @interface PowResult
+ */
+
+/**
+ *
+ * @name PowResult#prefix
+ * @type {String}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class PowResult {
 
 
 }
+
+
+
+
 
 

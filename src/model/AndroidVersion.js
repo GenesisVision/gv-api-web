@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface AndroidVersion
-     */
-    
-    /**
-     *
-     * @name AndroidVersion#versionCode
-     * @type {String}
-     */
-    /**
-     *
-     * @name AndroidVersion#versionName
-     * @type {String}
-     */
+/**
+ *
+ * @interface AndroidVersion
+ */
+
+/**
+ *
+ * @name AndroidVersion#versionCode
+ * @type {String}
+ */
+/**
+ *
+ * @name AndroidVersion#versionName
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class AndroidVersion {
 
 
 }
+
+
+
+
 
 

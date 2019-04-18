@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramTag
-     */
-    
-    /**
-     *
-     * @name ProgramTag#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramTag#color
-     * @type {String}
-     */
+/**
+ *
+ * @interface ProgramTag
+ */
+
+/**
+ *
+ * @name ProgramTag#name
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramTag#color
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class ProgramTag {
 
 
 }
+
+
+
+
 
 

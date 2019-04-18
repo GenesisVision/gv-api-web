@@ -20,31 +20,31 @@ import OtherAssetsValue from './OtherAssetsValue';
 
 
 
-    /**
-     *
-     * @interface ValueChartBar
-     */
-    
-    /**
-     *
-     * @name ValueChartBar#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ValueChartBar#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ValueChartBar#topAssets
-     * @type {Array<AssetsValue>}
-     */
-    /**
-     *
-     * @name ValueChartBar#otherAssetsValue
-     * @type {OtherAssetsValue}
-     */
+/**
+ *
+ * @interface ValueChartBar
+ */
+
+/**
+ *
+ * @name ValueChartBar#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name ValueChartBar#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name ValueChartBar#topAssets
+ * @type {Array<AssetsValue>}
+ */
+/**
+ *
+ * @name ValueChartBar#otherAssetsValue
+ * @type {OtherAssetsValue}
+ */
 
 
 
@@ -100,5 +100,9 @@ export default class ValueChartBar {
 
 
 }
+
+
+
+
 
 

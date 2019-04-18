@@ -19,56 +19,56 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 
 
-    /**
-     *
-     * @interface ProgramDetailsListStatistic
-     */
-    
-    /**
-     *
-     * @name ProgramDetailsListStatistic#balanceBase
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#balanceGVT
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#balanceSecondary
-     * @type {AmountWithCurrency}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#currentValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#profitValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#drawdownPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#investorsCount
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramDetailsListStatistic#tradesCount
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramDetailsListStatistic
+ */
+
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceBase
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceGVT
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceSecondary
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#currentValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#profitValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#drawdownPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#investorsCount
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#tradesCount
+ * @type {Number}
+ */
 
 
 
@@ -144,5 +144,9 @@ export default class ProgramDetailsListStatistic {
 
 
 }
+
+
+
+
 
 

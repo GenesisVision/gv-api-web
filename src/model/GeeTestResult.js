@@ -18,11 +18,11 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface GeeTestResult
-     */
-    
+/**
+ *
+ * @interface GeeTestResult
+ */
+
 
 
 
@@ -62,5 +62,9 @@ export default class GeeTestResult {
 
 
 }
+
+
+
+
 
 

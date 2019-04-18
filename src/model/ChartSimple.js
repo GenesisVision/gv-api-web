@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ChartSimple
-     */
-    
-    /**
-     *
-     * @name ChartSimple#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ChartSimple#date
-     * @type {Date}
-     */
+/**
+ *
+ * @interface ChartSimple
+ */
+
+/**
+ *
+ * @name ChartSimple#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name ChartSimple#date
+ * @type {Date}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class ChartSimple {
 
 
 }
+
+
+
+
 
 

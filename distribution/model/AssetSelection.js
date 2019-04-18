@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name AssetSelection#type
- * @type {("Program"|"Fund")}
+ * @type AssetSelectionTypeEnum
  */
 
 var AssetSelection = function () {
@@ -86,6 +86,12 @@ var AssetSelection = function () {
 
     return AssetSelection;
 }();
+
+/**
+ * @typedef AssetSelectionTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 AssetSelection.TypeEnum = {
 

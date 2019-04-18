@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface MultiWalletFilters
-     */
-    
-    /**
-     *
-     * @name MultiWalletFilters#transactionType
-     * @type {Array<String>}
-     */
-    /**
-     *
-     * @name MultiWalletFilters#externalTransactionType
-     * @type {Array<String>}
-     */
+/**
+ *
+ * @interface MultiWalletFilters
+ */
+
+/**
+ *
+ * @name MultiWalletFilters#transactionType
+ * @type {Array<String>}
+ */
+/**
+ *
+ * @name MultiWalletFilters#externalTransactionType
+ * @type {Array<String>}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class MultiWalletFilters {
 
 
 }
+
+
+
+
 
 

@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface CopyTradingAccountInfo
-     */
-    
-    /**
-     *
-     * @name CopyTradingAccountInfo#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name CopyTradingAccountInfo#currencyLogo
-     * @type {String}
-     */
-    /**
-     *
-     * @name CopyTradingAccountInfo#balance
-     * @type {Number}
-     */
-    /**
-     *
-     * @name CopyTradingAccountInfo#equity
-     * @type {Number}
-     */
-    /**
-     *
-     * @name CopyTradingAccountInfo#freeMargin
-     * @type {Number}
-     */
-    /**
-     *
-     * @name CopyTradingAccountInfo#marginLevel
-     * @type {Number}
-     */
+/**
+ *
+ * @interface CopyTradingAccountInfo
+ */
+
+/**
+ *
+ * @name CopyTradingAccountInfo#currency
+ * @type CopyTradingAccountInfoCurrencyEnum
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#currencyLogo
+ * @type {String}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#balance
+ * @type {Number}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#equity
+ * @type {Number}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#freeMargin
+ * @type {Number}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#marginLevel
+ * @type {Number}
+ */
 
 
 
@@ -145,5 +145,14 @@ export default class CopyTradingAccountInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef CopyTradingAccountInfoCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 

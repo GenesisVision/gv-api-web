@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramWithdrawInfo
-     */
-    
-    /**
-     *
-     * @name ProgramWithdrawInfo#periodEnds
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ProgramWithdrawInfo#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ProgramWithdrawInfo#availableToWithdraw
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ProgramWithdrawInfo#rate
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramWithdrawInfo
+ */
+
+/**
+ *
+ * @name ProgramWithdrawInfo#periodEnds
+ * @type {Date}
+ */
+/**
+ *
+ * @name ProgramWithdrawInfo#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ProgramWithdrawInfo#availableToWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramWithdrawInfo#rate
+ * @type {Number}
+ */
 
 
 
@@ -98,5 +98,9 @@ export default class ProgramWithdrawInfo {
 
 
 }
+
+
+
+
 
 

@@ -18,41 +18,41 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface PlatformAsset
-     */
-    
-    /**
-     *
-     * @name PlatformAsset#id
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformAsset#name
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformAsset#asset
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformAsset#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformAsset#icon
-     * @type {String}
-     */
-    /**
-     *
-     * @name PlatformAsset#color
-     * @type {String}
-     */
+/**
+ *
+ * @interface PlatformAsset
+ */
+
+/**
+ *
+ * @name PlatformAsset#id
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformAsset#name
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformAsset#asset
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformAsset#description
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformAsset#icon
+ * @type {String}
+ */
+/**
+ *
+ * @name PlatformAsset#color
+ * @type {String}
+ */
 
 
 
@@ -116,5 +116,9 @@ export default class PlatformAsset {
 
 
 }
+
+
+
+
 
 

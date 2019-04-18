@@ -20,21 +20,21 @@ import ProgramFilters from './ProgramFilters';
 
 
 
-    /**
-     *
-     * @interface Enums
-     */
-    
-    /**
-     *
-     * @name Enums#multiWallet
-     * @type {MultiWalletFilters}
-     */
-    /**
-     *
-     * @name Enums#program
-     * @type {ProgramFilters}
-     */
+/**
+ *
+ * @interface Enums
+ */
+
+/**
+ *
+ * @name Enums#multiWallet
+ * @type {MultiWalletFilters}
+ */
+/**
+ *
+ * @name Enums#program
+ * @type {ProgramFilters}
+ */
 
 
 
@@ -82,5 +82,9 @@ export default class Enums {
 
 
 }
+
+
+
+
 
 

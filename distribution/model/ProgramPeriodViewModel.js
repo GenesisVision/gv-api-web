@@ -43,7 +43,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramPeriodViewModel#status
- * @type {("Planned"|"InProccess"|"Closed")}
+ * @type ProgramPeriodViewModelStatusEnum
  */
 /**
  *
@@ -95,6 +95,12 @@ var ProgramPeriodViewModel = function () {
 
     return ProgramPeriodViewModel;
 }();
+
+/**
+ * @typedef ProgramPeriodViewModelStatusEnum 
+ * @type {("Planned"|"InProccess"|"Closed")}
+ */
+
 
 ProgramPeriodViewModel.StatusEnum = {
 

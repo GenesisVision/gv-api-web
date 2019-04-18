@@ -24,41 +24,41 @@ import ProgramRequest from './ProgramRequest';
 
 
 
-    /**
-     *
-     * @interface ManagerDashboard
-     */
-    
-    /**
-     *
-     * @name ManagerDashboard#profile
-     * @type {ManagerProfileDetails}
-     */
-    /**
-     *
-     * @name ManagerDashboard#requests
-     * @type {ProgramRequest}
-     */
-    /**
-     *
-     * @name ManagerDashboard#events
-     * @type {ManagerPortfolioEvents}
-     */
-    /**
-     *
-     * @name ManagerDashboard#allAssets
-     * @type {Array<AssetSelection>}
-     */
-    /**
-     *
-     * @name ManagerDashboard#programChart
-     * @type {ProgramProfitChart}
-     */
-    /**
-     *
-     * @name ManagerDashboard#fundChart
-     * @type {FundProfitChart}
-     */
+/**
+ *
+ * @interface ManagerDashboard
+ */
+
+/**
+ *
+ * @name ManagerDashboard#profile
+ * @type {ManagerProfileDetails}
+ */
+/**
+ *
+ * @name ManagerDashboard#requests
+ * @type {ProgramRequest}
+ */
+/**
+ *
+ * @name ManagerDashboard#events
+ * @type {ManagerPortfolioEvents}
+ */
+/**
+ *
+ * @name ManagerDashboard#allAssets
+ * @type {Array<AssetSelection>}
+ */
+/**
+ *
+ * @name ManagerDashboard#programChart
+ * @type {ProgramProfitChart}
+ */
+/**
+ *
+ * @name ManagerDashboard#fundChart
+ * @type {FundProfitChart}
+ */
 
 
 
@@ -122,5 +122,9 @@ export default class ManagerDashboard {
 
 
 }
+
+
+
+
 
 

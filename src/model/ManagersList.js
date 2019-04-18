@@ -19,21 +19,21 @@ import ManagerProfile from './ManagerProfile';
 
 
 
-    /**
-     *
-     * @interface ManagersList
-     */
-    
-    /**
-     *
-     * @name ManagersList#managers
-     * @type {Array<ManagerProfile>}
-     */
-    /**
-     *
-     * @name ManagersList#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagersList
+ */
+
+/**
+ *
+ * @name ManagersList#managers
+ * @type {Array<ManagerProfile>}
+ */
+/**
+ *
+ * @name ManagersList#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class ManagersList {
 
 
 }
+
+
+
+
 
 

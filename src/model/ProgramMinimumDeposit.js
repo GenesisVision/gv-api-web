@@ -18,16 +18,16 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ProgramMinimumDeposit
-     */
-    
-    /**
-     *
-     * @name ProgramMinimumDeposit#minimumDepositsAmount
-     * @type {{String: Number}}
-     */
+/**
+ *
+ * @interface ProgramMinimumDeposit
+ */
+
+/**
+ *
+ * @name ProgramMinimumDeposit#minimumDepositsAmount
+ * @type {{String: Number}}
+ */
 
 
 
@@ -71,5 +71,9 @@ export default class ProgramMinimumDeposit {
 
 
 }
+
+
+
+
 
 

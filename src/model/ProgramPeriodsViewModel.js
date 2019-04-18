@@ -19,21 +19,21 @@ import ProgramPeriodViewModel from './ProgramPeriodViewModel';
 
 
 
-    /**
-     *
-     * @interface ProgramPeriodsViewModel
-     */
-    
-    /**
-     *
-     * @name ProgramPeriodsViewModel#periods
-     * @type {Array<ProgramPeriodViewModel>}
-     */
-    /**
-     *
-     * @name ProgramPeriodsViewModel#total
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ProgramPeriodsViewModel
+ */
+
+/**
+ *
+ * @name ProgramPeriodsViewModel#periods
+ * @type {Array<ProgramPeriodViewModel>}
+ */
+/**
+ *
+ * @name ProgramPeriodsViewModel#total
+ * @type {Number}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class ProgramPeriodsViewModel {
 
 
 }
+
+
+
+
 
 

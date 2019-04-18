@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum
  */
 /**
  *
@@ -58,7 +58,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name AttachToSignalProviderInfo#minDepositCurrency
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type AttachToSignalProviderInfoMinDepositCurrencyEnum
  */
 
 var AttachToSignalProviderInfo = function () {
@@ -104,6 +104,17 @@ var AttachToSignalProviderInfo = function () {
 
     return AttachToSignalProviderInfo;
 }();
+
+/**
+ * @typedef AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 AttachToSignalProviderInfo.SubscriptionFeeCurrencyEnum = {
 

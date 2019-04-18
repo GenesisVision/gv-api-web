@@ -18,81 +18,81 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface ManagerPortfolioEvent
-     */
-    
-    /**
-     *
-     * @name ManagerPortfolioEvent#assetId
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#date
-     * @type {Date}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#title
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#value
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#feeValue
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#profitPercent
-     * @type {Number}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#currency
-     * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#type
-     * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#programType
-     * @type {("Program"|"Fund")}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#logo
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#color
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#description
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#url
-     * @type {String}
-     */
-    /**
-     *
-     * @name ManagerPortfolioEvent#periodNumber
-     * @type {Number}
-     */
+/**
+ *
+ * @interface ManagerPortfolioEvent
+ */
+
+/**
+ *
+ * @name ManagerPortfolioEvent#assetId
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#date
+ * @type {Date}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#title
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#value
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#feeValue
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#profitPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#currency
+ * @type ManagerPortfolioEventCurrencyEnum
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#type
+ * @type ManagerPortfolioEventTypeEnum
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#programType
+ * @type ManagerPortfolioEventProgramTypeEnum
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#logo
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#color
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#description
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#url
+ * @type {String}
+ */
+/**
+ *
+ * @name ManagerPortfolioEvent#periodNumber
+ * @type {Number}
+ */
 
 
 
@@ -253,5 +253,24 @@ export default class ManagerPortfolioEvent {
 
 
 }
+
+
+
+
+/**
+ * @typedef ManagerPortfolioEventCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ManagerPortfolioEventTypeEnum 
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
+ */
+
+/**
+ * @typedef ManagerPortfolioEventProgramTypeEnum 
+ * @type {("Program"|"Fund")}
+ */
+
 
 

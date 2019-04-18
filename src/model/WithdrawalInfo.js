@@ -18,31 +18,31 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface WithdrawalInfo
-     */
-    
-    /**
-     *
-     * @name WithdrawalInfo#wallet
-     * @type {String}
-     */
-    /**
-     *
-     * @name WithdrawalInfo#status
-     * @type {("New"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
-     */
-    /**
-     *
-     * @name WithdrawalInfo#canResendEmail
-     * @type {Boolean}
-     */
-    /**
-     *
-     * @name WithdrawalInfo#canCancelRequest
-     * @type {Boolean}
-     */
+/**
+ *
+ * @interface WithdrawalInfo
+ */
+
+/**
+ *
+ * @name WithdrawalInfo#wallet
+ * @type {String}
+ */
+/**
+ *
+ * @name WithdrawalInfo#status
+ * @type WithdrawalInfoStatusEnum
+ */
+/**
+ *
+ * @name WithdrawalInfo#canResendEmail
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name WithdrawalInfo#canCancelRequest
+ * @type {Boolean}
+ */
 
 
 
@@ -113,5 +113,14 @@ export default class WithdrawalInfo {
 
 
 }
+
+
+
+
+/**
+ * @typedef WithdrawalInfoStatusEnum 
+ * @type {("New"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
+ */
+
 
 

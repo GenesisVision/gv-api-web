@@ -19,21 +19,21 @@ import WalletWithdrawalInfo from './WalletWithdrawalInfo';
 
 
 
-    /**
-     *
-     * @interface WithdrawalSummary
-     */
-    
-    /**
-     *
-     * @name WithdrawalSummary#availableToWithdrawal
-     * @type {Number}
-     */
-    /**
-     *
-     * @name WithdrawalSummary#wallets
-     * @type {Array<WalletWithdrawalInfo>}
-     */
+/**
+ *
+ * @interface WithdrawalSummary
+ */
+
+/**
+ *
+ * @name WithdrawalSummary#availableToWithdrawal
+ * @type {Number}
+ */
+/**
+ *
+ * @name WithdrawalSummary#wallets
+ * @type {Array<WalletWithdrawalInfo>}
+ */
 
 
 
@@ -81,5 +81,9 @@ export default class WithdrawalSummary {
 
 
 }
+
+
+
+
 
 

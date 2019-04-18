@@ -18,21 +18,21 @@ import ApiClient from '../ApiClient';
 
 
 
-    /**
-     *
-     * @interface IOsAppVersion
-     */
-    
-    /**
-     *
-     * @name IOsAppVersion#minVersion
-     * @type {String}
-     */
-    /**
-     *
-     * @name IOsAppVersion#lastVersion
-     * @type {String}
-     */
+/**
+ *
+ * @interface IOsAppVersion
+ */
+
+/**
+ *
+ * @name IOsAppVersion#minVersion
+ * @type {String}
+ */
+/**
+ *
+ * @name IOsAppVersion#lastVersion
+ * @type {String}
+ */
 
 
 
@@ -80,5 +80,9 @@ export default class IOsAppVersion {
 
 
 }
+
+
+
+
 
 
