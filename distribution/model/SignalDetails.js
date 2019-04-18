@@ -117,6 +117,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name SignalDetails#creationDate
+ * @type {Date}
+ */
+/**
+ *
  * @name SignalDetails#manager
  * @type {ProfilePublic}
  */
@@ -143,6 +148,7 @@ var SignalDetails = function () {
         this.title = undefined;
         this.description = undefined;
         this.status = undefined;
+        this.creationDate = undefined;
         this.manager = undefined;
         this.chart = undefined;
     }
@@ -191,6 +197,9 @@ var SignalDetails = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('creationDate')) {
+                    obj['creationDate'] = _ApiClient2.default.convertToType(data['creationDate'], 'Date');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);

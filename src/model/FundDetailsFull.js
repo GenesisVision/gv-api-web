@@ -94,6 +94,11 @@ import ProfilePublic from './ProfilePublic';
      */
     /**
      *
+     * @name FundDetailsFull#creationDate
+     * @type {Date}
+     */
+    /**
+     *
      * @name FundDetailsFull#status
      * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
      */
@@ -167,6 +172,9 @@ export default class FundDetailsFull {
             if (data.hasOwnProperty('ipfsHash')) {
                 obj['ipfsHash'] = ApiClient.convertToType(data['ipfsHash'], 'String');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -190,6 +198,7 @@ export default class FundDetailsFull {
     description = undefined;
     title = undefined;
     ipfsHash = undefined;
+    creationDate = undefined;
     status = undefined;
     manager = undefined;
 

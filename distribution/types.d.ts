@@ -1002,6 +1002,7 @@ export declare interface FundDetails {
     title: string;
     description: string;
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+    creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
 }
@@ -1020,6 +1021,7 @@ export declare interface FundDetailsFull {
     description: string;
     title: string;
     ipfsHash: string;
+    creationDate: Date;
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
     manager: ProfilePublic;
 }
@@ -1629,6 +1631,7 @@ export declare interface ProgramDetails {
     title: string;
     description: string;
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+    creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
 }
@@ -1661,6 +1664,7 @@ export declare interface ProgramDetailsFull {
     description: string;
     title: string;
     ipfsHash: string;
+    creationDate: Date;
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
     manager: ProfilePublic;
 }
@@ -1964,6 +1968,7 @@ export declare interface SignalDetails {
     title: string;
     description: string;
     status: "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+    creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
 }

@@ -116,6 +116,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name FundDetails#creationDate
+ * @type {Date}
+ */
+/**
+ *
  * @name FundDetails#manager
  * @type {ProfilePublic}
  */
@@ -141,6 +146,7 @@ var FundDetails = function () {
         this.title = undefined;
         this.description = undefined;
         this.status = undefined;
+        this.creationDate = undefined;
         this.manager = undefined;
         this.chart = undefined;
     }
@@ -186,6 +192,9 @@ var FundDetails = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
+                if (data.hasOwnProperty('creationDate')) {
+                    obj['creationDate'] = _ApiClient2.default.convertToType(data['creationDate'], 'Date');
                 }
                 if (data.hasOwnProperty('manager')) {
                     obj['manager'] = _ProfilePublic2.default.constructFromObject(data['manager']);

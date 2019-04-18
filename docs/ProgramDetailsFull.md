@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **ipfsHash** | **String** |  | [optional] 
+**creationDate** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 

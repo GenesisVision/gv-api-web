@@ -95,6 +95,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name SignalDetails#creationDate
+     * @type {Date}
+     */
+    /**
+     *
      * @name SignalDetails#manager
      * @type {ProfilePublic}
      */
@@ -168,6 +173,9 @@ export default class SignalDetails {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
@@ -191,6 +199,7 @@ export default class SignalDetails {
     title = undefined;
     description = undefined;
     status = undefined;
+    creationDate = undefined;
     manager = undefined;
     chart = undefined;
 

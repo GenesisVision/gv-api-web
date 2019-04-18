@@ -187,6 +187,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#creationDate
+ * @type {Date}
+ */
+/**
+ *
  * @name ProgramDetailsFull#status
  * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
  */
@@ -227,6 +232,7 @@ var ProgramDetailsFull = function () {
         this.description = undefined;
         this.title = undefined;
         this.ipfsHash = undefined;
+        this.creationDate = undefined;
         this.status = undefined;
         this.manager = undefined;
     }
@@ -317,6 +323,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('ipfsHash')) {
                     obj['ipfsHash'] = _ApiClient2.default.convertToType(data['ipfsHash'], 'String');
+                }
+                if (data.hasOwnProperty('creationDate')) {
+                    obj['creationDate'] = _ApiClient2.default.convertToType(data['creationDate'], 'Date');
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');

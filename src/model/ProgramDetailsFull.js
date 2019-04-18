@@ -165,6 +165,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetailsFull#creationDate
+     * @type {Date}
+     */
+    /**
+     *
      * @name ProgramDetailsFull#status
      * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
      */
@@ -280,6 +285,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('ipfsHash')) {
                 obj['ipfsHash'] = ApiClient.convertToType(data['ipfsHash'], 'String');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -317,6 +325,7 @@ export default class ProgramDetailsFull {
     description = undefined;
     title = undefined;
     ipfsHash = undefined;
+    creationDate = undefined;
     status = undefined;
     manager = undefined;
 

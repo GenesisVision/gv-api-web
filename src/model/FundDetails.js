@@ -91,6 +91,11 @@ import ProfilePublic from './ProfilePublic';
      */
     /**
      *
+     * @name FundDetails#creationDate
+     * @type {Date}
+     */
+    /**
+     *
      * @name FundDetails#manager
      * @type {ProfilePublic}
      */
@@ -161,6 +166,9 @@ export default class FundDetails {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
@@ -183,6 +191,7 @@ export default class FundDetails {
     title = undefined;
     description = undefined;
     status = undefined;
+    creationDate = undefined;
     manager = undefined;
     chart = undefined;
 

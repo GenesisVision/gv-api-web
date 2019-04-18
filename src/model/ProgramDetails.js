@@ -132,6 +132,11 @@ import ProgramTag from './ProgramTag';
      */
     /**
      *
+     * @name ProgramDetails#creationDate
+     * @type {Date}
+     */
+    /**
+     *
      * @name ProgramDetails#manager
      * @type {ProfilePublic}
      */
@@ -226,6 +231,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('creationDate')) {
+                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
+            }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
             }
@@ -256,6 +264,7 @@ export default class ProgramDetails {
     title = undefined;
     description = undefined;
     status = undefined;
+    creationDate = undefined;
     manager = undefined;
     chart = undefined;
 
