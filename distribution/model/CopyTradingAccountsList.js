@@ -39,12 +39,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name CopyTradingAccountsList#accounts
  * @type {[CopyTradingAccountInfo]}
  */
+/**
+ *
+ * @name CopyTradingAccountsList#total
+ * @type {Number}
+ */
 
 var CopyTradingAccountsList = function () {
     function CopyTradingAccountsList() {
         _classCallCheck(this, CopyTradingAccountsList);
 
         this.accounts = undefined;
+        this.total = undefined;
     }
 
     _createClass(CopyTradingAccountsList, null, [{
@@ -55,6 +61,9 @@ var CopyTradingAccountsList = function () {
 
                 if (data.hasOwnProperty('accounts')) {
                     obj['accounts'] = _ApiClient2.default.convertToType(data['accounts'], [_CopyTradingAccountInfo2.default]);
+                }
+                if (data.hasOwnProperty('total')) {
+                    obj['total'] = _ApiClient2.default.convertToType(data['total'], 'Number');
                 }
             }
             return obj;

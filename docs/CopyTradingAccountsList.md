@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounts** | [**[CopyTradingAccountInfo]**](CopyTradingAccountInfo.md) |  | [optional] 
+**total** | **Number** |  | [optional] 
 
 

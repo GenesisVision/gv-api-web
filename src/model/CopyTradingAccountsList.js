@@ -29,6 +29,11 @@ import CopyTradingAccountInfo from './CopyTradingAccountInfo';
  * @name CopyTradingAccountsList#accounts
  * @type {Array<CopyTradingAccountInfo>}
  */
+/**
+ *
+ * @name CopyTradingAccountsList#total
+ * @type {Number}
+ */
 
 
 
@@ -58,11 +63,15 @@ export default class CopyTradingAccountsList {
             if (data.hasOwnProperty('accounts')) {
                 obj['accounts'] = ApiClient.convertToType(data['accounts'], [CopyTradingAccountInfo]);
             }
+            if (data.hasOwnProperty('total')) {
+                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
+            }
         }
         return obj;
     }
 
     accounts = undefined;
+    total = undefined;
 
 
 
