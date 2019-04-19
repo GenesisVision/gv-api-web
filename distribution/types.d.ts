@@ -880,6 +880,7 @@ export declare interface ConvertingDetails {
 export declare type CopyTradingAccountInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface CopyTradingAccountInfo {
+    id: string;
     currency: CopyTradingAccountInfoCurrencyEnum;
     currencyLogo: string;
     balance: number;

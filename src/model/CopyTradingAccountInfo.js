@@ -25,6 +25,11 @@ import ApiClient from '../ApiClient';
 
 /**
  *
+ * @name CopyTradingAccountInfo#id
+ * @type {String}
+ */
+/**
+ *
  * @name CopyTradingAccountInfo#currency
  * @type CopyTradingAccountInfoCurrencyEnum
  */
@@ -79,6 +84,9 @@ export default class CopyTradingAccountInfo {
             
             
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -101,6 +109,7 @@ export default class CopyTradingAccountInfo {
         return obj;
     }
 
+    id = undefined;
     currency = undefined;
     currencyLogo = undefined;
     balance = undefined;

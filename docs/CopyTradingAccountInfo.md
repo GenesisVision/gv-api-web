@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **currencyLogo** | **String** |  | [optional] 
 **balance** | **Number** |  | [optional] 

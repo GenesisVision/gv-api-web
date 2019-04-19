@@ -32,6 +32,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
+ * @name CopyTradingAccountInfo#id
+ * @type {String}
+ */
+/**
+ *
  * @name CopyTradingAccountInfo#currency
  * @type CopyTradingAccountInfoCurrencyEnum
  */
@@ -65,6 +70,7 @@ var CopyTradingAccountInfo = function () {
     function CopyTradingAccountInfo() {
         _classCallCheck(this, CopyTradingAccountInfo);
 
+        this.id = undefined;
         this.currency = undefined;
         this.currencyLogo = undefined;
         this.balance = undefined;
@@ -79,6 +85,9 @@ var CopyTradingAccountInfo = function () {
             if (data) {
                 obj = obj || new CopyTradingAccountInfo();
 
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
