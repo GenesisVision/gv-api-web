@@ -121,7 +121,7 @@ var NotificationSettingViewModel = function () {
 
 /**
  * @typedef NotificationSettingViewModelConditionTypeEnum 
- * @type {("Empty"|"Profit"|"Level")}
+ * @type {("Empty"|"Profit"|"Level"|"AvailableToInvest")}
  */
 
 
@@ -167,6 +167,8 @@ NotificationSettingViewModel.ConditionTypeEnum = {
 
     "Profit": "Profit",
 
-    "Level": "Level"
+    "Level": "Level",
+
+    "AvailableToInvest": "AvailableToInvest"
 };
 exports.default = NotificationSettingViewModel;

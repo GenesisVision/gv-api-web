@@ -63,6 +63,8 @@ Name | Type | Description | Notes
 
 * `Level` (value: `"Level"`)
 
+* `AvailableToInvest` (value: `"AvailableToInvest"`)
+
 
 
 

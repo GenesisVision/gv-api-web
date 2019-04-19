@@ -165,7 +165,9 @@ export default class NotificationSettingViewModel {
     
         "Profit": "Profit",
     
-        "Level": "Level"    
+        "Level": "Level",
+    
+        "AvailableToInvest": "AvailableToInvest"    
     };
 
 
@@ -182,7 +184,7 @@ export default class NotificationSettingViewModel {
 
 /**
  * @typedef NotificationSettingViewModelConditionTypeEnum 
- * @type {("Empty"|"Profit"|"Level")}
+ * @type {("Empty"|"Profit"|"Level"|"AvailableToInvest")}
  */
 
 
