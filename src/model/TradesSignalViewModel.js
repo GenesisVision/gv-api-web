@@ -26,11 +26,6 @@ import OrderSignalModel from './OrderSignalModel';
 
 /**
  *
- * @name TradesSignalViewModel#tradesType
- * @type TradesSignalViewModelTradesTypeEnum
- */
-/**
- *
  * @name TradesSignalViewModel#trades
  * @type {Array<OrderSignalModel>}
  */
@@ -65,9 +60,6 @@ export default class TradesSignalViewModel {
             
             
 
-            if (data.hasOwnProperty('tradesType')) {
-                obj['tradesType'] = ApiClient.convertToType(data['tradesType'], 'String');
-            }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderSignalModel]);
             }
@@ -78,7 +70,6 @@ export default class TradesSignalViewModel {
         return obj;
     }
 
-    tradesType = undefined;
     trades = undefined;
     total = undefined;
 
@@ -87,24 +78,12 @@ export default class TradesSignalViewModel {
 
 
 
-    static TradesTypeEnum = {
-    
-        "Positions": "Positions",
-    
-        "Orders": "Orders"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef TradesSignalViewModelTradesTypeEnum 
- * @type {("Positions"|"Orders")}
- */
 
 
 

@@ -2140,18 +2140,12 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type TradesSignalViewModelTradesTypeEnum = "Positions" | "Orders";
-
 export declare interface TradesSignalViewModel {
-    tradesType: TradesSignalViewModelTradesTypeEnum;
     trades: OrderSignalModel[];
     total: number;
 }
 
-export declare type TradesViewModelTradesTypeEnum = "Positions" | "Orders";
-
 export declare interface TradesViewModel {
-    tradesType: TradesViewModelTradesTypeEnum;
     trades: OrderModel[];
     total: number;
 }

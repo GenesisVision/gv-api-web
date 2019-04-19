@@ -36,11 +36,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name TradesSignalViewModel#tradesType
- * @type TradesSignalViewModelTradesTypeEnum
- */
-/**
- *
  * @name TradesSignalViewModel#trades
  * @type {[OrderSignalModel]}
  */
@@ -54,7 +49,6 @@ var TradesSignalViewModel = function () {
     function TradesSignalViewModel() {
         _classCallCheck(this, TradesSignalViewModel);
 
-        this.tradesType = undefined;
         this.trades = undefined;
         this.total = undefined;
     }
@@ -65,9 +59,6 @@ var TradesSignalViewModel = function () {
             if (data) {
                 obj = obj || new TradesSignalViewModel();
 
-                if (data.hasOwnProperty('tradesType')) {
-                    obj['tradesType'] = _ApiClient2.default.convertToType(data['tradesType'], 'String');
-                }
                 if (data.hasOwnProperty('trades')) {
                     obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderSignalModel2.default]);
                 }
@@ -82,16 +73,4 @@ var TradesSignalViewModel = function () {
     return TradesSignalViewModel;
 }();
 
-/**
- * @typedef TradesSignalViewModelTradesTypeEnum 
- * @type {("Positions"|"Orders")}
- */
-
-
-TradesSignalViewModel.TradesTypeEnum = {
-
-    "Positions": "Positions",
-
-    "Orders": "Orders"
-};
 exports.default = TradesSignalViewModel;
