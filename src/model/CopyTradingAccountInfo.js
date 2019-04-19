@@ -35,7 +35,7 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name CopyTradingAccountInfo#currencyLogo
+ * @name CopyTradingAccountInfo#logo
  * @type {String}
  */
 /**
@@ -56,6 +56,11 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name CopyTradingAccountInfo#marginLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name CopyTradingAccountInfo#available
  * @type {Number}
  */
 
@@ -90,8 +95,8 @@ export default class CopyTradingAccountInfo {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('currencyLogo')) {
-                obj['currencyLogo'] = ApiClient.convertToType(data['currencyLogo'], 'String');
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
@@ -105,17 +110,21 @@ export default class CopyTradingAccountInfo {
             if (data.hasOwnProperty('marginLevel')) {
                 obj['marginLevel'] = ApiClient.convertToType(data['marginLevel'], 'Number');
             }
+            if (data.hasOwnProperty('available')) {
+                obj['available'] = ApiClient.convertToType(data['available'], 'Number');
+            }
         }
         return obj;
     }
 
     id = undefined;
     currency = undefined;
-    currencyLogo = undefined;
+    logo = undefined;
     balance = undefined;
     equity = undefined;
     freeMargin = undefined;
     marginLevel = undefined;
+    available = undefined;
 
 
 

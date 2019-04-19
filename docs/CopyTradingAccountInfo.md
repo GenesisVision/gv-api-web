@@ -5,11 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**currencyLogo** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **equity** | **Number** |  | [optional] 
 **freeMargin** | **Number** |  | [optional] 
 **marginLevel** | **Number** |  | [optional] 
+**available** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

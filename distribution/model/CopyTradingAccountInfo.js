@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name CopyTradingAccountInfo#currencyLogo
+ * @name CopyTradingAccountInfo#logo
  * @type {String}
  */
 /**
@@ -65,6 +65,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name CopyTradingAccountInfo#marginLevel
  * @type {Number}
  */
+/**
+ *
+ * @name CopyTradingAccountInfo#available
+ * @type {Number}
+ */
 
 var CopyTradingAccountInfo = function () {
     function CopyTradingAccountInfo() {
@@ -72,11 +77,12 @@ var CopyTradingAccountInfo = function () {
 
         this.id = undefined;
         this.currency = undefined;
-        this.currencyLogo = undefined;
+        this.logo = undefined;
         this.balance = undefined;
         this.equity = undefined;
         this.freeMargin = undefined;
         this.marginLevel = undefined;
+        this.available = undefined;
     }
 
     _createClass(CopyTradingAccountInfo, null, [{
@@ -91,8 +97,8 @@ var CopyTradingAccountInfo = function () {
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
-                if (data.hasOwnProperty('currencyLogo')) {
-                    obj['currencyLogo'] = _ApiClient2.default.convertToType(data['currencyLogo'], 'String');
+                if (data.hasOwnProperty('logo')) {
+                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
                 }
                 if (data.hasOwnProperty('balance')) {
                     obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');
@@ -105,6 +111,9 @@ var CopyTradingAccountInfo = function () {
                 }
                 if (data.hasOwnProperty('marginLevel')) {
                     obj['marginLevel'] = _ApiClient2.default.convertToType(data['marginLevel'], 'Number');
+                }
+                if (data.hasOwnProperty('available')) {
+                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
                 }
             }
             return obj;

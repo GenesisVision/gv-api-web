@@ -882,11 +882,12 @@ export declare type CopyTradingAccountInfoCurrencyEnum = "Undefined" | "GVT" | "
 export declare interface CopyTradingAccountInfo {
     id: string;
     currency: CopyTradingAccountInfoCurrencyEnum;
-    currencyLogo: string;
+    logo: string;
     balance: number;
     equity: number;
     freeMargin: number;
     marginLevel: number;
+    available: number;
 }
 
 export declare interface CopyTradingAccountsList {
