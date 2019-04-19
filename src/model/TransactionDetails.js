@@ -194,7 +194,9 @@ export default class TransactionDetails {
     
         "ReceiveSignal": "ReceiveSignal",
     
-        "DepositSignal": "DepositSignal"    
+        "DepositSignal": "DepositSignal",
+    
+        "WithdrawalSignal": "WithdrawalSignal"    
     };
 
     static StatusEnum = {
@@ -210,17 +212,17 @@ export default class TransactionDetails {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -239,17 +241,17 @@ export default class TransactionDetails {
 
     static GvCommissionCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -275,7 +277,7 @@ export default class TransactionDetails {
 
 /**
  * @typedef TransactionDetailsTypeEnum 
- * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal"|"WithdrawalSignal")}
  */
 
 /**
@@ -285,12 +287,12 @@ export default class TransactionDetails {
 
 /**
  * @typedef TransactionDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

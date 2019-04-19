@@ -152,17 +152,17 @@ var MultiWalletTransaction = function () {
 
 /**
  * @typedef MultiWalletTransactionCurrencyFromEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef MultiWalletTransactionCurrencyToEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef MultiWalletTransactionTypeEnum 
- * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal")}
+ * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal"|"WithdrawalSignal")}
  */
 
 /**
@@ -173,17 +173,17 @@ var MultiWalletTransaction = function () {
 
 MultiWalletTransaction.CurrencyFromEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -201,17 +201,17 @@ MultiWalletTransaction.CurrencyFromEnum = {
 };
 MultiWalletTransaction.CurrencyToEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -249,7 +249,9 @@ MultiWalletTransaction.TypeEnum = {
 
     "ReceiveSignal": "ReceiveSignal",
 
-    "DepositSignal": "DepositSignal"
+    "DepositSignal": "DepositSignal",
+
+    "WithdrawalSignal": "WithdrawalSignal"
 };
 MultiWalletTransaction.StatusEnum = {
 
