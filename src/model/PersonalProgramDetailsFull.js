@@ -46,6 +46,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#login
+ * @type {String}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -167,6 +172,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('signalSubscription')) {
                 obj['signalSubscription'] = SignalSubscription.constructFromObject(data['signalSubscription']);
             }
+            if (data.hasOwnProperty('login')) {
+                obj['login'] = ApiClient.convertToType(data['login'], 'String');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -226,6 +234,7 @@ export default class PersonalProgramDetailsFull {
     gvtValue = undefined;
     showTwoFactorButton = undefined;
     signalSubscription = undefined;
+    login = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;

@@ -56,6 +56,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#login
+ * @type {String}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -148,6 +153,7 @@ var PersonalProgramDetailsFull = function () {
         this.gvtValue = undefined;
         this.showTwoFactorButton = undefined;
         this.signalSubscription = undefined;
+        this.login = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -184,6 +190,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('signalSubscription')) {
                     obj['signalSubscription'] = _SignalSubscription2.default.constructFromObject(data['signalSubscription']);
+                }
+                if (data.hasOwnProperty('login')) {
+                    obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
