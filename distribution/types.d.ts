@@ -883,6 +883,7 @@ export declare interface CopyTradingAccountInfo {
     id: string;
     currency: CopyTradingAccountInfoCurrencyEnum;
     logo: string;
+    title: string;
     balance: number;
     equity: number;
     freeMargin: number;

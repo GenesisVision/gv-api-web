@@ -40,6 +40,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name CopyTradingAccountInfo#title
+ * @type {String}
+ */
+/**
+ *
  * @name CopyTradingAccountInfo#balance
  * @type {Number}
  */
@@ -98,6 +103,9 @@ export default class CopyTradingAccountInfo {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
@@ -120,6 +128,7 @@ export default class CopyTradingAccountInfo {
     id = undefined;
     currency = undefined;
     logo = undefined;
+    title = undefined;
     balance = undefined;
     equity = undefined;
     freeMargin = undefined;

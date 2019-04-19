@@ -47,6 +47,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name CopyTradingAccountInfo#title
+ * @type {String}
+ */
+/**
+ *
  * @name CopyTradingAccountInfo#balance
  * @type {Number}
  */
@@ -78,6 +83,7 @@ var CopyTradingAccountInfo = function () {
         this.id = undefined;
         this.currency = undefined;
         this.logo = undefined;
+        this.title = undefined;
         this.balance = undefined;
         this.equity = undefined;
         this.freeMargin = undefined;
@@ -99,6 +105,9 @@ var CopyTradingAccountInfo = function () {
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                }
+                if (data.hasOwnProperty('title')) {
+                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
                 }
                 if (data.hasOwnProperty('balance')) {
                     obj['balance'] = _ApiClient2.default.convertToType(data['balance'], 'Number');

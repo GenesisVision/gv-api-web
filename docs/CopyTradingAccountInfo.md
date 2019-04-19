@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **equity** | **Number** |  | [optional] 
 **freeMargin** | **Number** |  | [optional] 
