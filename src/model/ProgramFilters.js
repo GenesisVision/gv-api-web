@@ -34,6 +34,11 @@ import ProgramTag from './ProgramTag';
  * @name ProgramFilters#actionType
  * @type {Array<String>}
  */
+/**
+ *
+ * @name ProgramFilters#customNotificationType
+ * @type {Array<String>}
+ */
 
 
 
@@ -66,12 +71,16 @@ export default class ProgramFilters {
             if (data.hasOwnProperty('actionType')) {
                 obj['actionType'] = ApiClient.convertToType(data['actionType'], ['String']);
             }
+            if (data.hasOwnProperty('customNotificationType')) {
+                obj['customNotificationType'] = ApiClient.convertToType(data['customNotificationType'], ['String']);
+            }
         }
         return obj;
     }
 
     programTags = undefined;
     actionType = undefined;
+    customNotificationType = undefined;
 
 
 

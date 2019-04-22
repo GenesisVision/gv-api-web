@@ -44,6 +44,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProgramFilters#actionType
  * @type {[String]}
  */
+/**
+ *
+ * @name ProgramFilters#customNotificationType
+ * @type {[String]}
+ */
 
 var ProgramFilters = function () {
     function ProgramFilters() {
@@ -51,6 +56,7 @@ var ProgramFilters = function () {
 
         this.programTags = undefined;
         this.actionType = undefined;
+        this.customNotificationType = undefined;
     }
 
     _createClass(ProgramFilters, null, [{
@@ -64,6 +70,9 @@ var ProgramFilters = function () {
                 }
                 if (data.hasOwnProperty('actionType')) {
                     obj['actionType'] = _ApiClient2.default.convertToType(data['actionType'], ['String']);
+                }
+                if (data.hasOwnProperty('customNotificationType')) {
+                    obj['customNotificationType'] = _ApiClient2.default.convertToType(data['customNotificationType'], ['String']);
                 }
             }
             return obj;
