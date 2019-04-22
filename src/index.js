@@ -70,6 +70,7 @@ import LevelUpSummary from './model/LevelUpSummary';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
+import ManagerEvent from './model/ManagerEvent';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
@@ -548,6 +549,12 @@ export {
      * @type {ManagerDashboard}
      */
     ManagerDashboard,
+
+    /**
+     * @name index#ManagerEvent
+     * @type {ManagerEvent}
+     */
+    ManagerEvent,
 
     /**
      * @name index#ManagerFundWithdrawInfo

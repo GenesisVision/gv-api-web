@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ManagerEvent = require('./ManagerEvent');
+
+var _ManagerEvent2 = _interopRequireDefault(_ManagerEvent);
+
 var _ProgramTag = require('./ProgramTag');
 
 var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
@@ -49,6 +53,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ProgramFilters#customNotificationType
  * @type {[String]}
  */
+/**
+ *
+ * @name ProgramFilters#managerNotificationType
+ * @type {ManagerEvent}
+ */
 
 var ProgramFilters = function () {
     function ProgramFilters() {
@@ -57,6 +66,7 @@ var ProgramFilters = function () {
         this.programTags = undefined;
         this.actionType = undefined;
         this.customNotificationType = undefined;
+        this.managerNotificationType = undefined;
     }
 
     _createClass(ProgramFilters, null, [{
@@ -73,6 +83,9 @@ var ProgramFilters = function () {
                 }
                 if (data.hasOwnProperty('customNotificationType')) {
                     obj['customNotificationType'] = _ApiClient2.default.convertToType(data['customNotificationType'], ['String']);
+                }
+                if (data.hasOwnProperty('managerNotificationType')) {
+                    obj['managerNotificationType'] = _ManagerEvent2.default.constructFromObject(data['managerNotificationType']);
                 }
             }
             return obj;

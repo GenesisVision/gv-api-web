@@ -82,6 +82,8 @@ Name | Type | Description | Notes
 
 * `ProgramManagerTradingFeeAccrual` (value: `"ProgramManagerTradingFeeAccrual"`)
 
+* `ProgramSignalSubscribe` (value: `"ProgramSignalSubscribe"`)
+
 
 
 

@@ -240,7 +240,9 @@ export default class ManagerPortfolioEvent {
     
         "ProgramStopOut": "ProgramStopOut",
     
-        "ProgramManagerTradingFeeAccrual": "ProgramManagerTradingFeeAccrual"    
+        "ProgramManagerTradingFeeAccrual": "ProgramManagerTradingFeeAccrual",
+    
+        "ProgramSignalSubscribe": "ProgramSignalSubscribe"    
     };
 
     static ProgramTypeEnum = {
@@ -264,7 +266,7 @@ export default class ManagerPortfolioEvent {
 
 /**
  * @typedef ManagerPortfolioEventTypeEnum 
- * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual")}
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual"|"ProgramSignalSubscribe")}
  */
 
 /**

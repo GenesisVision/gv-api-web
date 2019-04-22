@@ -27,234 +27,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface ManagerPortfolioEvent
+ * @interface ManagerEvent
  */
 
 /**
  *
- * @name ManagerPortfolioEvent#assetId
- * @type {String}
+ * @name ManagerEvent#programs
+ * @type {[String]}
  */
 /**
  *
- * @name ManagerPortfolioEvent#date
- * @type {Date}
- */
-/**
- *
- * @name ManagerPortfolioEvent#title
- * @type {String}
- */
-/**
- *
- * @name ManagerPortfolioEvent#value
- * @type {Number}
- */
-/**
- *
- * @name ManagerPortfolioEvent#feeValue
- * @type {Number}
- */
-/**
- *
- * @name ManagerPortfolioEvent#profitPercent
- * @type {Number}
- */
-/**
- *
- * @name ManagerPortfolioEvent#currency
- * @type ManagerPortfolioEventCurrencyEnum
- */
-/**
- *
- * @name ManagerPortfolioEvent#type
- * @type ManagerPortfolioEventTypeEnum
- */
-/**
- *
- * @name ManagerPortfolioEvent#programType
- * @type ManagerPortfolioEventProgramTypeEnum
- */
-/**
- *
- * @name ManagerPortfolioEvent#logo
- * @type {String}
- */
-/**
- *
- * @name ManagerPortfolioEvent#color
- * @type {String}
- */
-/**
- *
- * @name ManagerPortfolioEvent#description
- * @type {String}
- */
-/**
- *
- * @name ManagerPortfolioEvent#url
- * @type {String}
- */
-/**
- *
- * @name ManagerPortfolioEvent#periodNumber
- * @type {Number}
+ * @name ManagerEvent#funds
+ * @type {[String]}
  */
 
-var ManagerPortfolioEvent = function () {
-    function ManagerPortfolioEvent() {
-        _classCallCheck(this, ManagerPortfolioEvent);
+var ManagerEvent = function () {
+    function ManagerEvent() {
+        _classCallCheck(this, ManagerEvent);
 
-        this.assetId = undefined;
-        this.date = undefined;
-        this.title = undefined;
-        this.value = undefined;
-        this.feeValue = undefined;
-        this.profitPercent = undefined;
-        this.currency = undefined;
-        this.type = undefined;
-        this.programType = undefined;
-        this.logo = undefined;
-        this.color = undefined;
-        this.description = undefined;
-        this.url = undefined;
-        this.periodNumber = undefined;
+        this.programs = undefined;
+        this.funds = undefined;
     }
 
-    _createClass(ManagerPortfolioEvent, null, [{
+    _createClass(ManagerEvent, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ManagerPortfolioEvent();
+                obj = obj || new ManagerEvent();
 
-                if (data.hasOwnProperty('assetId')) {
-                    obj['assetId'] = _ApiClient2.default.convertToType(data['assetId'], 'String');
+                if (data.hasOwnProperty('programs')) {
+                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], ['String']);
                 }
-                if (data.hasOwnProperty('date')) {
-                    obj['date'] = _ApiClient2.default.convertToType(data['date'], 'Date');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('value')) {
-                    obj['value'] = _ApiClient2.default.convertToType(data['value'], 'Number');
-                }
-                if (data.hasOwnProperty('feeValue')) {
-                    obj['feeValue'] = _ApiClient2.default.convertToType(data['feeValue'], 'Number');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('programType')) {
-                    obj['programType'] = _ApiClient2.default.convertToType(data['programType'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('color')) {
-                    obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');
-                }
-                if (data.hasOwnProperty('description')) {
-                    obj['description'] = _ApiClient2.default.convertToType(data['description'], 'String');
-                }
-                if (data.hasOwnProperty('url')) {
-                    obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
-                }
-                if (data.hasOwnProperty('periodNumber')) {
-                    obj['periodNumber'] = _ApiClient2.default.convertToType(data['periodNumber'], 'Number');
+                if (data.hasOwnProperty('funds')) {
+                    obj['funds'] = _ApiClient2.default.convertToType(data['funds'], ['String']);
                 }
             }
             return obj;
         }
     }]);
 
-    return ManagerPortfolioEvent;
+    return ManagerEvent;
 }();
 
-/**
- * @typedef ManagerPortfolioEventCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef ManagerPortfolioEventTypeEnum 
- * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual"|"ProgramSignalSubscribe")}
- */
-
-/**
- * @typedef ManagerPortfolioEventProgramTypeEnum 
- * @type {("Program"|"Fund")}
- */
-
-
-ManagerPortfolioEvent.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-ManagerPortfolioEvent.TypeEnum = {
-
-    "All": "All",
-
-    "AssetStarted": "AssetStarted",
-
-    "ProgramPeriodStarts": "ProgramPeriodStarts",
-
-    "ProgramPeriodEnds": "ProgramPeriodEnds",
-
-    "InvestorInvest": "InvestorInvest",
-
-    "InvestorWithdraw": "InvestorWithdraw",
-
-    "ManagerInvest": "ManagerInvest",
-
-    "ManagerWithdraw": "ManagerWithdraw",
-
-    "AssetFinished": "AssetFinished",
-
-    "EntranceFee": "EntranceFee",
-
-    "ExitFee": "ExitFee",
-
-    "ProgramStopOut": "ProgramStopOut",
-
-    "ProgramManagerTradingFeeAccrual": "ProgramManagerTradingFeeAccrual",
-
-    "ProgramSignalSubscribe": "ProgramSignalSubscribe"
-};
-ManagerPortfolioEvent.ProgramTypeEnum = {
-
-    "Program": "Program",
-
-    "Fund": "Fund"
-};
-exports.default = ManagerPortfolioEvent;
+exports.default = ManagerEvent;

@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import ManagerEvent from './ManagerEvent';
 import ProgramTag from './ProgramTag';
 
 
@@ -38,6 +39,11 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramFilters#customNotificationType
  * @type {Array<String>}
+ */
+/**
+ *
+ * @name ProgramFilters#managerNotificationType
+ * @type {ManagerEvent}
  */
 
 
@@ -74,6 +80,9 @@ export default class ProgramFilters {
             if (data.hasOwnProperty('customNotificationType')) {
                 obj['customNotificationType'] = ApiClient.convertToType(data['customNotificationType'], ['String']);
             }
+            if (data.hasOwnProperty('managerNotificationType')) {
+                obj['managerNotificationType'] = ManagerEvent.constructFromObject(data['managerNotificationType']);
+            }
         }
         return obj;
     }
@@ -81,6 +90,7 @@ export default class ProgramFilters {
     programTags = undefined;
     actionType = undefined;
     customNotificationType = undefined;
+    managerNotificationType = undefined;
 
 
 

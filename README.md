@@ -311,6 +311,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)
+ - [CoreApiV10.ManagerEvent](docs/ManagerEvent.md)
  - [CoreApiV10.ManagerFundWithdrawInfo](docs/ManagerFundWithdrawInfo.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerOverview](docs/ManagerOverview.md)

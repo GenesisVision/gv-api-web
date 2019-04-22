@@ -620,6 +620,7 @@ export declare interface index {
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
+    ManagerEvent: ManagerEvent;
     ManagerFundWithdrawInfo: ManagerFundWithdrawInfo;
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
@@ -1236,6 +1237,11 @@ export declare interface ManagerDashboard {
     fundChart: FundProfitChart;
 }
 
+export declare interface ManagerEvent {
+    programs: string[];
+    funds: string[];
+}
+
 export declare interface ManagerFundWithdrawInfo {
     withheldInvestment: number;
     exitFee: number;
@@ -1258,7 +1264,7 @@ export declare interface ManagerOverview {
 
 export declare type ManagerPortfolioEventCurrencyEnum = "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type ManagerPortfolioEventTypeEnum = "All" | "AssetStarted" | "ProgramPeriodStarts" | "ProgramPeriodEnds" | "InvestorInvest" | "InvestorWithdraw" | "ManagerInvest" | "ManagerWithdraw" | "AssetFinished" | "EntranceFee" | "ExitFee" | "ProgramStopOut" | "ProgramManagerTradingFeeAccrual";
+export declare type ManagerPortfolioEventTypeEnum = "All" | "AssetStarted" | "ProgramPeriodStarts" | "ProgramPeriodEnds" | "InvestorInvest" | "InvestorWithdraw" | "ManagerInvest" | "ManagerWithdraw" | "AssetFinished" | "EntranceFee" | "ExitFee" | "ProgramStopOut" | "ProgramManagerTradingFeeAccrual" | "ProgramSignalSubscribe";
 
 export declare type ManagerPortfolioEventProgramTypeEnum = "Program" | "Fund";
 
@@ -1826,6 +1832,7 @@ export declare interface ProgramFilters {
     programTags: ProgramTag[];
     actionType: string[];
     customNotificationType: string[];
+    managerNotificationType: ManagerEvent;
 }
 
 export declare interface ProgramInfo {
