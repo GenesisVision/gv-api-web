@@ -58,7 +58,7 @@ import CoreApiV10 from 'core_api_v10';
 let apiInstance = new CoreApiV10.PlatformApi();
 
 let opts = { 
-  'currency': "currency_example" // String | 
+  'currency': "100" // String | 
 };
 apiInstance.v10PlatformLevelsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -72,7 +72,7 @@ apiInstance.v10PlatformLevelsGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currency** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] [default to 100]
 
 ### Return type
 

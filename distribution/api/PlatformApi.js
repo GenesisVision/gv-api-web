@@ -120,7 +120,7 @@ var PlatformApi = function () {
      * Investment programs levels
      * @function PlatformApi#v10PlatformLevelsGet
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency] 
+     * @param {String} [opts.currency]  (default to 100)
      * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
      */
 
