@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
+import AssetEvent from './model/AssetEvent';
 import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
@@ -70,7 +71,6 @@ import LevelUpSummary from './model/LevelUpSummary';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
-import ManagerEvent from './model/ManagerEvent';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
@@ -225,6 +225,12 @@ export {
      * @type {AndroidVersion}
      */
     AndroidVersion,
+
+    /**
+     * @name index#AssetEvent
+     * @type {AssetEvent}
+     */
+    AssetEvent,
 
     /**
      * @name index#AssetSelection
@@ -549,12 +555,6 @@ export {
      * @type {ManagerDashboard}
      */
     ManagerDashboard,
-
-    /**
-     * @name index#ManagerEvent
-     * @type {ManagerEvent}
-     */
-    ManagerEvent,
 
     /**
      * @name index#ManagerFundWithdrawInfo

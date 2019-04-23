@@ -566,6 +566,7 @@ export declare interface index {
     AmountWithCurrency: AmountWithCurrency;
     AndroidAppVersion: AndroidAppVersion;
     AndroidVersion: AndroidVersion;
+    AssetEvent: AssetEvent;
     AssetSelection: AssetSelection;
     AssetsValue: AssetsValue;
     AttachToSignalProviderInfo: AttachToSignalProviderInfo;
@@ -620,7 +621,6 @@ export declare interface index {
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
-    ManagerEvent: ManagerEvent;
     ManagerFundWithdrawInfo: ManagerFundWithdrawInfo;
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
@@ -760,6 +760,11 @@ export declare interface AndroidAppVersion {
 export declare interface AndroidVersion {
     versionCode: string;
     versionName: string;
+}
+
+export declare interface AssetEvent {
+    programs: string[];
+    funds: string[];
 }
 
 export declare type AssetSelectionTypeEnum = "Program" | "Fund";
@@ -1832,7 +1837,8 @@ export declare interface ProgramFilters {
     programTags: ProgramTag[];
     actionType: string[];
     customNotificationType: string[];
-    managerNotificationType: ManagerEvent;
+    managerNotificationType: AssetEvent;
+    investorNotificationType: AssetEvent;
 }
 
 export declare interface ProgramInfo {

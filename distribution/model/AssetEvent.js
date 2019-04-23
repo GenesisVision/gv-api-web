@@ -21,87 +21,52 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AssetEvent = require('./AssetEvent');
-
-var _AssetEvent2 = _interopRequireDefault(_AssetEvent);
-
-var _ProgramTag = require('./ProgramTag');
-
-var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface ProgramFilters
+ * @interface AssetEvent
  */
 
 /**
  *
- * @name ProgramFilters#programTags
- * @type {[ProgramTag]}
- */
-/**
- *
- * @name ProgramFilters#actionType
+ * @name AssetEvent#programs
  * @type {[String]}
  */
 /**
  *
- * @name ProgramFilters#customNotificationType
+ * @name AssetEvent#funds
  * @type {[String]}
  */
-/**
- *
- * @name ProgramFilters#managerNotificationType
- * @type {AssetEvent}
- */
-/**
- *
- * @name ProgramFilters#investorNotificationType
- * @type {AssetEvent}
- */
 
-var ProgramFilters = function () {
-    function ProgramFilters() {
-        _classCallCheck(this, ProgramFilters);
+var AssetEvent = function () {
+    function AssetEvent() {
+        _classCallCheck(this, AssetEvent);
 
-        this.programTags = undefined;
-        this.actionType = undefined;
-        this.customNotificationType = undefined;
-        this.managerNotificationType = undefined;
-        this.investorNotificationType = undefined;
+        this.programs = undefined;
+        this.funds = undefined;
     }
 
-    _createClass(ProgramFilters, null, [{
+    _createClass(AssetEvent, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramFilters();
+                obj = obj || new AssetEvent();
 
-                if (data.hasOwnProperty('programTags')) {
-                    obj['programTags'] = _ApiClient2.default.convertToType(data['programTags'], [_ProgramTag2.default]);
+                if (data.hasOwnProperty('programs')) {
+                    obj['programs'] = _ApiClient2.default.convertToType(data['programs'], ['String']);
                 }
-                if (data.hasOwnProperty('actionType')) {
-                    obj['actionType'] = _ApiClient2.default.convertToType(data['actionType'], ['String']);
-                }
-                if (data.hasOwnProperty('customNotificationType')) {
-                    obj['customNotificationType'] = _ApiClient2.default.convertToType(data['customNotificationType'], ['String']);
-                }
-                if (data.hasOwnProperty('managerNotificationType')) {
-                    obj['managerNotificationType'] = _AssetEvent2.default.constructFromObject(data['managerNotificationType']);
-                }
-                if (data.hasOwnProperty('investorNotificationType')) {
-                    obj['investorNotificationType'] = _AssetEvent2.default.constructFromObject(data['investorNotificationType']);
+                if (data.hasOwnProperty('funds')) {
+                    obj['funds'] = _ApiClient2.default.convertToType(data['funds'], ['String']);
                 }
             }
             return obj;
         }
     }]);
 
-    return ProgramFilters;
+    return AssetEvent;
 }();
 
-exports.default = ProgramFilters;
+exports.default = AssetEvent;
