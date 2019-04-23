@@ -70,6 +70,26 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramsInfo#managerMaxSignalSubscriptionFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMinSignalSubscriptionFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMaxSignalSuccessFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramsInfo#managerMinSignalSuccessFee
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramsInfo#periods
  * @type {Array<Number>}
  */
@@ -126,6 +146,18 @@ export default class ProgramsInfo {
             if (data.hasOwnProperty('managerMaxExitFee')) {
                 obj['managerMaxExitFee'] = ApiClient.convertToType(data['managerMaxExitFee'], 'Number');
             }
+            if (data.hasOwnProperty('managerMaxSignalSubscriptionFee')) {
+                obj['managerMaxSignalSubscriptionFee'] = ApiClient.convertToType(data['managerMaxSignalSubscriptionFee'], 'Number');
+            }
+            if (data.hasOwnProperty('managerMinSignalSubscriptionFee')) {
+                obj['managerMinSignalSubscriptionFee'] = ApiClient.convertToType(data['managerMinSignalSubscriptionFee'], 'Number');
+            }
+            if (data.hasOwnProperty('managerMaxSignalSuccessFee')) {
+                obj['managerMaxSignalSuccessFee'] = ApiClient.convertToType(data['managerMaxSignalSuccessFee'], 'Number');
+            }
+            if (data.hasOwnProperty('managerMinSignalSuccessFee')) {
+                obj['managerMinSignalSuccessFee'] = ApiClient.convertToType(data['managerMinSignalSuccessFee'], 'Number');
+            }
             if (data.hasOwnProperty('periods')) {
                 obj['periods'] = ApiClient.convertToType(data['periods'], ['Number']);
             }
@@ -142,6 +174,10 @@ export default class ProgramsInfo {
     managerMaxSuccessFee = undefined;
     managerFundInvestment = undefined;
     managerMaxExitFee = undefined;
+    managerMaxSignalSubscriptionFee = undefined;
+    managerMinSignalSubscriptionFee = undefined;
+    managerMaxSignalSuccessFee = undefined;
+    managerMinSignalSuccessFee = undefined;
     periods = undefined;
 
 

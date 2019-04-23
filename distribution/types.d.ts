@@ -2037,6 +2037,10 @@ export declare interface ProgramsInfo {
     managerMaxSuccessFee: number;
     managerFundInvestment: number;
     managerMaxExitFee: number;
+    managerMaxSignalSubscriptionFee: number;
+    managerMinSignalSubscriptionFee: number;
+    managerMaxSignalSuccessFee: number;
+    managerMinSignalSuccessFee: number;
     periods: number[];
 }
 
