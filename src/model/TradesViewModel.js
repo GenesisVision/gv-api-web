@@ -26,6 +26,16 @@ import OrderModel from './OrderModel';
 
 /**
  *
+ * @name TradesViewModel#showSwaps
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name TradesViewModel#showTickets
+ * @type {Boolean}
+ */
+/**
+ *
  * @name TradesViewModel#trades
  * @type {Array<OrderModel>}
  */
@@ -60,6 +70,12 @@ export default class TradesViewModel {
             
             
 
+            if (data.hasOwnProperty('showSwaps')) {
+                obj['showSwaps'] = ApiClient.convertToType(data['showSwaps'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showTickets')) {
+                obj['showTickets'] = ApiClient.convertToType(data['showTickets'], 'Boolean');
+            }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderModel]);
             }
@@ -70,6 +86,8 @@ export default class TradesViewModel {
         return obj;
     }
 
+    showSwaps = undefined;
+    showTickets = undefined;
     trades = undefined;
     total = undefined;
 

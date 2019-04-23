@@ -92,8 +92,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name OrderModel#originalCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#originalCommissionCurrency
+ * @type {String}
+ */
+/**
+ *
  * @name OrderModel#commission
  * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#swap
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#showOriginalCommission
+ * @type {Boolean}
  */
 /**
  *
@@ -117,7 +137,11 @@ var OrderModel = function () {
         this.priceCurrent = undefined;
         this.entry = undefined;
         this.baseVolume = undefined;
+        this.originalCommission = undefined;
+        this.originalCommissionCurrency = undefined;
         this.commission = undefined;
+        this.swap = undefined;
+        this.showOriginalCommission = undefined;
         this.masterLogin = undefined;
     }
 
@@ -163,8 +187,20 @@ var OrderModel = function () {
                 if (data.hasOwnProperty('baseVolume')) {
                     obj['baseVolume'] = _ApiClient2.default.convertToType(data['baseVolume'], 'Number');
                 }
+                if (data.hasOwnProperty('originalCommission')) {
+                    obj['originalCommission'] = _ApiClient2.default.convertToType(data['originalCommission'], 'Number');
+                }
+                if (data.hasOwnProperty('originalCommissionCurrency')) {
+                    obj['originalCommissionCurrency'] = _ApiClient2.default.convertToType(data['originalCommissionCurrency'], 'String');
+                }
                 if (data.hasOwnProperty('commission')) {
                     obj['commission'] = _ApiClient2.default.convertToType(data['commission'], 'Number');
+                }
+                if (data.hasOwnProperty('swap')) {
+                    obj['swap'] = _ApiClient2.default.convertToType(data['swap'], 'Number');
+                }
+                if (data.hasOwnProperty('showOriginalCommission')) {
+                    obj['showOriginalCommission'] = _ApiClient2.default.convertToType(data['showOriginalCommission'], 'Boolean');
                 }
                 if (data.hasOwnProperty('masterLogin')) {
                     obj['masterLogin'] = _ApiClient2.default.convertToType(data['masterLogin'], 'String');

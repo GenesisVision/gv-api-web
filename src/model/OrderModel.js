@@ -85,8 +85,28 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name OrderModel#originalCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#originalCommissionCurrency
+ * @type {String}
+ */
+/**
+ *
  * @name OrderModel#commission
  * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#swap
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderModel#showOriginalCommission
+ * @type {Boolean}
  */
 /**
  *
@@ -155,8 +175,20 @@ export default class OrderModel {
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
             }
+            if (data.hasOwnProperty('originalCommission')) {
+                obj['originalCommission'] = ApiClient.convertToType(data['originalCommission'], 'Number');
+            }
+            if (data.hasOwnProperty('originalCommissionCurrency')) {
+                obj['originalCommissionCurrency'] = ApiClient.convertToType(data['originalCommissionCurrency'], 'String');
+            }
             if (data.hasOwnProperty('commission')) {
                 obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
+            }
+            if (data.hasOwnProperty('swap')) {
+                obj['swap'] = ApiClient.convertToType(data['swap'], 'Number');
+            }
+            if (data.hasOwnProperty('showOriginalCommission')) {
+                obj['showOriginalCommission'] = ApiClient.convertToType(data['showOriginalCommission'], 'Boolean');
             }
             if (data.hasOwnProperty('masterLogin')) {
                 obj['masterLogin'] = ApiClient.convertToType(data['masterLogin'], 'String');
@@ -177,7 +209,11 @@ export default class OrderModel {
     priceCurrent = undefined;
     entry = undefined;
     baseVolume = undefined;
+    originalCommission = undefined;
+    originalCommissionCurrency = undefined;
     commission = undefined;
+    swap = undefined;
+    showOriginalCommission = undefined;
     masterLogin = undefined;
 
 

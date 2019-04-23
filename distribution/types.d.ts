@@ -1494,7 +1494,11 @@ export declare interface OrderModel {
     priceCurrent: number;
     entry: OrderModelEntryEnum;
     baseVolume: number;
+    originalCommission: number;
+    originalCommissionCurrency: string;
     commission: number;
+    swap: number;
+    showOriginalCommission: boolean;
     masterLogin: string;
 }
 
@@ -1524,7 +1528,11 @@ export declare interface OrderSignalModel {
     priceCurrent: number;
     entry: OrderSignalModelEntryEnum;
     baseVolume: number;
+    originalCommission: number;
+    originalCommissionCurrency: string;
     commission: number;
+    swap: number;
+    showOriginalCommission: boolean;
     masterLogin: string;
 }
 
@@ -2160,6 +2168,8 @@ export declare interface TradesSignalViewModel {
 }
 
 export declare interface TradesViewModel {
+    showSwaps: boolean;
+    showTickets: boolean;
     trades: OrderModel[];
     total: number;
 }

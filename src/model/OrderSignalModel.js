@@ -91,8 +91,28 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
  */
 /**
  *
+ * @name OrderSignalModel#originalCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#originalCommissionCurrency
+ * @type {String}
+ */
+/**
+ *
  * @name OrderSignalModel#commission
  * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#swap
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#showOriginalCommission
+ * @type {Boolean}
  */
 /**
  *
@@ -164,8 +184,20 @@ export default class OrderSignalModel {
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
             }
+            if (data.hasOwnProperty('originalCommission')) {
+                obj['originalCommission'] = ApiClient.convertToType(data['originalCommission'], 'Number');
+            }
+            if (data.hasOwnProperty('originalCommissionCurrency')) {
+                obj['originalCommissionCurrency'] = ApiClient.convertToType(data['originalCommissionCurrency'], 'String');
+            }
             if (data.hasOwnProperty('commission')) {
                 obj['commission'] = ApiClient.convertToType(data['commission'], 'Number');
+            }
+            if (data.hasOwnProperty('swap')) {
+                obj['swap'] = ApiClient.convertToType(data['swap'], 'Number');
+            }
+            if (data.hasOwnProperty('showOriginalCommission')) {
+                obj['showOriginalCommission'] = ApiClient.convertToType(data['showOriginalCommission'], 'Boolean');
             }
             if (data.hasOwnProperty('masterLogin')) {
                 obj['masterLogin'] = ApiClient.convertToType(data['masterLogin'], 'String');
@@ -187,7 +219,11 @@ export default class OrderSignalModel {
     priceCurrent = undefined;
     entry = undefined;
     baseVolume = undefined;
+    originalCommission = undefined;
+    originalCommissionCurrency = undefined;
     commission = undefined;
+    swap = undefined;
+    showOriginalCommission = undefined;
     masterLogin = undefined;
 
 

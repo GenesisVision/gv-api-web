@@ -36,6 +36,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
+ * @name TradesViewModel#showSwaps
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name TradesViewModel#showTickets
+ * @type {Boolean}
+ */
+/**
+ *
  * @name TradesViewModel#trades
  * @type {[OrderModel]}
  */
@@ -49,6 +59,8 @@ var TradesViewModel = function () {
     function TradesViewModel() {
         _classCallCheck(this, TradesViewModel);
 
+        this.showSwaps = undefined;
+        this.showTickets = undefined;
         this.trades = undefined;
         this.total = undefined;
     }
@@ -59,6 +71,12 @@ var TradesViewModel = function () {
             if (data) {
                 obj = obj || new TradesViewModel();
 
+                if (data.hasOwnProperty('showSwaps')) {
+                    obj['showSwaps'] = _ApiClient2.default.convertToType(data['showSwaps'], 'Boolean');
+                }
+                if (data.hasOwnProperty('showTickets')) {
+                    obj['showTickets'] = _ApiClient2.default.convertToType(data['showTickets'], 'Boolean');
+                }
                 if (data.hasOwnProperty('trades')) {
                     obj['trades'] = _ApiClient2.default.convertToType(data['trades'], [_OrderModel2.default]);
                 }
