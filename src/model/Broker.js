@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import BrokerAccountType from './BrokerAccountType';
+import ProgramTag from './ProgramTag';
 
 
 
@@ -79,6 +80,11 @@ import BrokerAccountType from './BrokerAccountType';
  * @name Broker#isSignalsAvailable
  * @type {Boolean}
  */
+/**
+ *
+ * @name Broker#tags
+ * @type {Array<ProgramTag>}
+ */
 
 
 
@@ -138,6 +144,9 @@ export default class Broker {
             if (data.hasOwnProperty('isSignalsAvailable')) {
                 obj['isSignalsAvailable'] = ApiClient.convertToType(data['isSignalsAvailable'], 'Boolean');
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
+            }
         }
         return obj;
     }
@@ -153,6 +162,7 @@ export default class Broker {
     accountTypes = undefined;
     isForex = undefined;
     isSignalsAvailable = undefined;
+    tags = undefined;
 
 
 

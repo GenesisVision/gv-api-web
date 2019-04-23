@@ -827,6 +827,7 @@ export declare interface Broker {
     accountTypes: BrokerAccountType[];
     isForex: boolean;
     isSignalsAvailable: boolean;
+    tags: ProgramTag[];
 }
 
 export declare type BrokerAccountTypeTypeEnum = "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX" | "Huobi";

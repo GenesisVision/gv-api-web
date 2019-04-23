@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **accountTypes** | [**[BrokerAccountType]**](BrokerAccountType.md) |  | [optional] 
 **isForex** | **Boolean** |  | [optional] 
 **isSignalsAvailable** | **Boolean** |  | [optional] 
+**tags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
 
 

@@ -25,6 +25,10 @@ var _BrokerAccountType = require('./BrokerAccountType');
 
 var _BrokerAccountType2 = _interopRequireDefault(_BrokerAccountType);
 
+var _ProgramTag = require('./ProgramTag');
+
+var _ProgramTag2 = _interopRequireDefault(_ProgramTag);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -89,6 +93,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name Broker#isSignalsAvailable
  * @type {Boolean}
  */
+/**
+ *
+ * @name Broker#tags
+ * @type {[ProgramTag]}
+ */
 
 var Broker = function () {
     function Broker() {
@@ -105,6 +114,7 @@ var Broker = function () {
         this.accountTypes = undefined;
         this.isForex = undefined;
         this.isSignalsAvailable = undefined;
+        this.tags = undefined;
     }
 
     _createClass(Broker, null, [{
@@ -145,6 +155,9 @@ var Broker = function () {
                 }
                 if (data.hasOwnProperty('isSignalsAvailable')) {
                     obj['isSignalsAvailable'] = _ApiClient2.default.convertToType(data['isSignalsAvailable'], 'Boolean');
+                }
+                if (data.hasOwnProperty('tags')) {
+                    obj['tags'] = _ApiClient2.default.convertToType(data['tags'], [_ProgramTag2.default]);
                 }
             }
             return obj;
