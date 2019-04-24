@@ -385,6 +385,7 @@ var SignalApi = function () {
         'DateTo': opts['dateTo'],
         'Symbol': opts['symbol'],
         'Sorting': opts['sorting'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -410,6 +411,7 @@ var SignalApi = function () {
      * @param {Date} [opts.dateTo] 
      * @param {String} [opts.symbol] 
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response
@@ -437,6 +439,7 @@ var SignalApi = function () {
       var queryParams = {
         'Sorting': opts['sorting'],
         'Symbol': opts['symbol'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -460,6 +463,7 @@ var SignalApi = function () {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
      * @param {String} [opts.symbol] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response

@@ -326,6 +326,7 @@ let opts = {
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'symbol': "symbol_example", // String | 
   'sorting': "sorting_example", // String | 
+  'accountId': "accountId_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -346,6 +347,7 @@ Name | Type | Description  | Notes
  **dateTo** | **Date**|  | [optional] 
  **symbol** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
+ **accountId** | [**String**](.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -379,6 +381,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'sorting': "sorting_example", // String | 
   'symbol': "symbol_example", // String | 
+  'accountId': "accountId_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -397,6 +400,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**| JWT access token | 
  **sorting** | **String**|  | [optional] 
  **symbol** | **String**|  | [optional] 
+ **accountId** | [**String**](.md)|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

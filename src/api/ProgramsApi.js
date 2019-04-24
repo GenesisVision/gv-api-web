@@ -375,6 +375,7 @@ export default class ProgramsApi {
         'DateTo': opts['dateTo'],
         'Symbol': opts['symbol'],
         'Sorting': opts['sorting'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -404,6 +405,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateTo] 
      * @param {String} [opts.symbol] 
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response
@@ -431,6 +433,7 @@ export default class ProgramsApi {
       let queryParams = {
         'Sorting': opts['sorting'],
         'Symbol': opts['symbol'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -458,6 +461,7 @@ export default class ProgramsApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
      * @param {String} [opts.symbol] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesViewModel>} a Promise, with an object containing data of type TradesViewModel and HTTP response

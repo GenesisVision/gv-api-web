@@ -384,6 +384,7 @@ export default class SignalApi {
         'DateTo': opts['dateTo'],
         'Symbol': opts['symbol'],
         'Sorting': opts['sorting'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -414,6 +415,7 @@ export default class SignalApi {
      * @param {Date} [opts.dateTo] 
      * @param {String} [opts.symbol] 
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response
@@ -440,6 +442,7 @@ export default class SignalApi {
       let queryParams = {
         'Sorting': opts['sorting'],
         'Symbol': opts['symbol'],
+        'AccountId': opts['accountId'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -468,6 +471,7 @@ export default class SignalApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
      * @param {String} [opts.symbol] 
+     * @param {String} [opts.accountId] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response
