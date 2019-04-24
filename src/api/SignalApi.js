@@ -13,8 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import AttachToSignalProvider from '../model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from '../model/AttachToSignalProviderInfo';
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
+import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
 
@@ -133,7 +135,7 @@ export default class SignalApi {
 
       v10SignalAttachByIdPostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      let postBody = null;
+      let postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -150,13 +152,6 @@ export default class SignalApi {
         'id': id
       };
       let queryParams = {
-        'Mode': opts['mode'],
-        'Percent': opts['percent'],
-        'OpenTolerancePercent': opts['openTolerancePercent'],
-        'FixedVolume': opts['fixedVolume'],
-        'FixedCurrency': opts['fixedCurrency'],
-        'InitialDepositCurrency': opts['initialDepositCurrency'],
-        'InitialDepositAmount': opts['initialDepositAmount']
       };
       let headerParams = {
         'Authorization': authorization
@@ -165,7 +160,7 @@ export default class SignalApi {
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
 
@@ -182,13 +177,7 @@ export default class SignalApi {
      * @param {String} id Program Id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.mode] 
-     * @param {Number} [opts.percent] 
-     * @param {Number} [opts.openTolerancePercent] 
-     * @param {Number} [opts.fixedVolume] 
-     * @param {String} [opts.fixedCurrency] 
-     * @param {String} [opts.initialDepositCurrency] 
-     * @param {Number} [opts.initialDepositAmount] 
+     * @param {AttachToSignalProvider} [opts.model] Subscription settings
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalAttachByIdPost(id, authorization, opts) {
@@ -200,7 +189,7 @@ export default class SignalApi {
 
       v10SignalByIdUpdatePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      let postBody = null;
+      let postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -217,13 +206,6 @@ export default class SignalApi {
         'id': id
       };
       let queryParams = {
-        'Mode': opts['mode'],
-        'Percent': opts['percent'],
-        'OpenTolerancePercent': opts['openTolerancePercent'],
-        'FixedVolume': opts['fixedVolume'],
-        'FixedCurrency': opts['fixedCurrency'],
-        'InitialDepositCurrency': opts['initialDepositCurrency'],
-        'InitialDepositAmount': opts['initialDepositAmount']
       };
       let headerParams = {
         'Authorization': authorization
@@ -232,7 +214,7 @@ export default class SignalApi {
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
 
@@ -249,13 +231,7 @@ export default class SignalApi {
      * @param {String} id Program id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.mode] 
-     * @param {Number} [opts.percent] 
-     * @param {Number} [opts.openTolerancePercent] 
-     * @param {Number} [opts.fixedVolume] 
-     * @param {String} [opts.fixedCurrency] 
-     * @param {String} [opts.initialDepositCurrency] 
-     * @param {Number} [opts.initialDepositAmount] 
+     * @param {AttachToSignalProvider} [opts.model] Subscription settings
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       v10SignalByIdUpdatePost(id, authorization, opts) {
@@ -265,8 +241,9 @@ export default class SignalApi {
         });
     }
 
-      v10SignalDetachByIdPostWithHttpInfo(id, authorization) {
-      let postBody = null;
+      v10SignalDetachByIdPostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -291,7 +268,7 @@ export default class SignalApi {
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
 
@@ -305,12 +282,14 @@ export default class SignalApi {
     /**
      * Unsubscribe from program signals
      * @function SignalApi#v10SignalDetachByIdPost
-     * @param {String} id Program id
+     * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {DetachFromSignalProvider} [opts.model] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      v10SignalDetachByIdPost(id, authorization) {
-      return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization)
+      v10SignalDetachByIdPost(id, authorization, opts) {
+      return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

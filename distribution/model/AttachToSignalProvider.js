@@ -27,91 +27,118 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface AttachToSignalProvider
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
+ * @name AttachToSignalProvider#mode
+ * @type AttachToSignalProviderModeEnum
  */
 /**
  *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
+ * @name AttachToSignalProvider#percent
  * @type {Number}
  */
 /**
  *
- * @name WalletBaseData#rate
+ * @name AttachToSignalProvider#openTolerancePercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name AttachToSignalProvider#fixedVolume
+ * @type {Number}
+ */
+/**
+ *
+ * @name AttachToSignalProvider#fixedCurrency
+ * @type AttachToSignalProviderFixedCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProvider#initialDepositCurrency
+ * @type AttachToSignalProviderInitialDepositCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProvider#initialDepositAmount
  * @type {Number}
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var AttachToSignalProvider = function () {
+    function AttachToSignalProvider() {
+        _classCallCheck(this, AttachToSignalProvider);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.mode = undefined;
+        this.percent = undefined;
+        this.openTolerancePercent = undefined;
+        this.fixedVolume = undefined;
+        this.fixedCurrency = undefined;
+        this.initialDepositCurrency = undefined;
+        this.initialDepositAmount = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(AttachToSignalProvider, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new AttachToSignalProvider();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('mode')) {
+                    obj['mode'] = _ApiClient2.default.convertToType(data['mode'], 'String');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('percent')) {
+                    obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('openTolerancePercent')) {
+                    obj['openTolerancePercent'] = _ApiClient2.default.convertToType(data['openTolerancePercent'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('fixedVolume')) {
+                    obj['fixedVolume'] = _ApiClient2.default.convertToType(data['fixedVolume'], 'Number');
                 }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
+                if (data.hasOwnProperty('fixedCurrency')) {
+                    obj['fixedCurrency'] = _ApiClient2.default.convertToType(data['fixedCurrency'], 'String');
                 }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('initialDepositCurrency')) {
+                    obj['initialDepositCurrency'] = _ApiClient2.default.convertToType(data['initialDepositCurrency'], 'String');
+                }
+                if (data.hasOwnProperty('initialDepositAmount')) {
+                    obj['initialDepositAmount'] = _ApiClient2.default.convertToType(data['initialDepositAmount'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return AttachToSignalProvider;
 }();
 
 /**
- * @typedef WalletBaseDataCurrencyEnum 
+ * @typedef AttachToSignalProviderModeEnum 
+ * @type {("ByBalance"|"Percent"|"Fixed")}
+ */
+
+/**
+ * @typedef AttachToSignalProviderFixedCurrencyEnum 
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
-WalletBaseData.CurrencyEnum = {
+AttachToSignalProvider.ModeEnum = {
+
+    "ByBalance": "ByBalance",
+
+    "Percent": "Percent",
+
+    "Fixed": "Fixed"
+};
+AttachToSignalProvider.FixedCurrencyEnum = {
 
     "BTC": "BTC",
 
@@ -139,4 +166,32 @@ WalletBaseData.CurrencyEnum = {
 
     "EUR": "EUR"
 };
-exports.default = WalletBaseData;
+AttachToSignalProvider.InitialDepositCurrencyEnum = {
+
+    "BTC": "BTC",
+
+    "ETH": "ETH",
+
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
+
+    "ADA": "ADA",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
+};
+exports.default = AttachToSignalProvider;

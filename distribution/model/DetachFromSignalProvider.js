@@ -27,116 +27,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface DetachFromSignalProvider
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
- * @type {Number}
- */
-/**
- *
- * @name WalletBaseData#rate
- * @type {Number}
+ * @name DetachFromSignalProvider#mode
+ * @type DetachFromSignalProviderModeEnum
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var DetachFromSignalProvider = function () {
+    function DetachFromSignalProvider() {
+        _classCallCheck(this, DetachFromSignalProvider);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.mode = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(DetachFromSignalProvider, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new DetachFromSignalProvider();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
-                }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('mode')) {
+                    obj['mode'] = _ApiClient2.default.convertToType(data['mode'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return DetachFromSignalProvider;
 }();
 
 /**
- * @typedef WalletBaseDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @typedef DetachFromSignalProviderModeEnum 
+ * @type {("None"|"ProviderCloseOnly"|"CloseAllImmediately")}
  */
 
 
-WalletBaseData.CurrencyEnum = {
+DetachFromSignalProvider.ModeEnum = {
 
-    "BTC": "BTC",
+    "None": "None",
 
-    "ETH": "ETH",
+    "ProviderCloseOnly": "ProviderCloseOnly",
 
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "CloseAllImmediately": "CloseAllImmediately"
 };
-exports.default = WalletBaseData;
+exports.default = DetachFromSignalProvider;

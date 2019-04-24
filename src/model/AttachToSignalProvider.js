@@ -20,50 +20,50 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface SignalSubscription
+ * @interface AttachToSignalProvider
  */
 
 /**
  *
- * @name SignalSubscription#hasSignalAccount
- * @type {Boolean}
+ * @name AttachToSignalProvider#mode
+ * @type AttachToSignalProviderModeEnum
  */
 /**
  *
- * @name SignalSubscription#hasActiveSubscription
- * @type {Boolean}
- */
-/**
- *
- * @name SignalSubscription#mode
- * @type SignalSubscriptionModeEnum
- */
-/**
- *
- * @name SignalSubscription#percent
+ * @name AttachToSignalProvider#percent
  * @type {Number}
  */
 /**
  *
- * @name SignalSubscription#openTolerancePercent
+ * @name AttachToSignalProvider#openTolerancePercent
  * @type {Number}
  */
 /**
  *
- * @name SignalSubscription#fixedVolume
+ * @name AttachToSignalProvider#fixedVolume
  * @type {Number}
  */
 /**
  *
- * @name SignalSubscription#fixedCurrency
- * @type SignalSubscriptionFixedCurrencyEnum
+ * @name AttachToSignalProvider#fixedCurrency
+ * @type AttachToSignalProviderFixedCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProvider#initialDepositCurrency
+ * @type AttachToSignalProviderInitialDepositCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProvider#initialDepositAmount
+ * @type {Number}
  */
 
 
 
 
 
-export default class SignalSubscription {
+export default class AttachToSignalProvider {
 
     constructor() {
         
@@ -78,18 +78,12 @@ export default class SignalSubscription {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new SignalSubscription();
+            obj = obj || new AttachToSignalProvider();
 
             
             
             
 
-            if (data.hasOwnProperty('hasSignalAccount')) {
-                obj['hasSignalAccount'] = ApiClient.convertToType(data['hasSignalAccount'], 'Boolean');
-            }
-            if (data.hasOwnProperty('hasActiveSubscription')) {
-                obj['hasActiveSubscription'] = ApiClient.convertToType(data['hasActiveSubscription'], 'Boolean');
-            }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
             }
@@ -105,17 +99,23 @@ export default class SignalSubscription {
             if (data.hasOwnProperty('fixedCurrency')) {
                 obj['fixedCurrency'] = ApiClient.convertToType(data['fixedCurrency'], 'String');
             }
+            if (data.hasOwnProperty('initialDepositCurrency')) {
+                obj['initialDepositCurrency'] = ApiClient.convertToType(data['initialDepositCurrency'], 'String');
+            }
+            if (data.hasOwnProperty('initialDepositAmount')) {
+                obj['initialDepositAmount'] = ApiClient.convertToType(data['initialDepositAmount'], 'Number');
+            }
         }
         return obj;
     }
 
-    hasSignalAccount = undefined;
-    hasActiveSubscription = undefined;
     mode = undefined;
     percent = undefined;
     openTolerancePercent = undefined;
     fixedVolume = undefined;
     fixedCurrency = undefined;
+    initialDepositCurrency = undefined;
+    initialDepositAmount = undefined;
 
 
 
@@ -160,6 +160,35 @@ export default class SignalSubscription {
         "EUR": "EUR"    
     };
 
+    static InitialDepositCurrencyEnum = {
+    
+        "BTC": "BTC",
+    
+        "ETH": "ETH",
+    
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
+    
+        "ADA": "ADA",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
 
 
 }
@@ -168,12 +197,17 @@ export default class SignalSubscription {
 
 
 /**
- * @typedef SignalSubscriptionModeEnum 
+ * @typedef AttachToSignalProviderModeEnum 
  * @type {("ByBalance"|"Percent"|"Fixed")}
  */
 
 /**
- * @typedef SignalSubscriptionFixedCurrencyEnum 
+ * @typedef AttachToSignalProviderFixedCurrencyEnum 
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 

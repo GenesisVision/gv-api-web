@@ -1,22 +1,32 @@
-# CoreApiV10.WalletsGrandTotal
+# CoreApiV10.AttachToSignalProvider
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currency** | **String** |  | [optional] 
-**available** | **Number** |  | [optional] 
-**invested** | **Number** |  | [optional] 
-**pending** | **Number** |  | [optional] 
-**total** | **Number** |  | [optional] 
-**currencyCcy** | **String** |  | [optional] 
-**availableCcy** | **Number** |  | [optional] 
-**investedCcy** | **Number** |  | [optional] 
-**pendingCcy** | **Number** |  | [optional] 
-**totalCcy** | **Number** |  | [optional] 
+**mode** | **String** |  | [optional] 
+**percent** | **Number** |  | [optional] 
+**openTolerancePercent** | **Number** |  | [optional] 
+**fixedVolume** | **Number** |  | [optional] 
+**fixedCurrency** | **String** |  | [optional] 
+**initialDepositCurrency** | **String** |  | [optional] 
+**initialDepositAmount** | **Number** |  | [optional] 
 
 
-<a name="CurrencyEnum"></a>
-## Enum: CurrencyEnum
+<a name="ModeEnum"></a>
+## Enum: ModeEnum
+
+
+* `ByBalance` (value: `"ByBalance"`)
+
+* `Percent` (value: `"Percent"`)
+
+* `Fixed` (value: `"Fixed"`)
+
+
+
+
+<a name="FixedCurrencyEnum"></a>
+## Enum: FixedCurrencyEnum
 
 
 * `BTC` (value: `"BTC"`)
@@ -48,8 +58,8 @@ Name | Type | Description | Notes
 
 
 
-<a name="CurrencyCcyEnum"></a>
-## Enum: CurrencyCcyEnum
+<a name="InitialDepositCurrencyEnum"></a>
+## Enum: InitialDepositCurrencyEnum
 
 
 * `BTC` (value: `"BTC"`)

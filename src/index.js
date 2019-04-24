@@ -19,6 +19,7 @@ import AndroidVersion from './model/AndroidVersion';
 import AssetEvent from './model/AssetEvent';
 import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
+import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElement from './model/BalanceChartElement';
 import BlockchainInfo from './model/BlockchainInfo';
@@ -38,6 +39,7 @@ import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
 import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardSummary from './model/DashboardSummary';
+import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import Enums from './model/Enums';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
@@ -245,6 +247,12 @@ export {
     AssetsValue,
 
     /**
+     * @name index#AttachToSignalProvider
+     * @type {AttachToSignalProvider}
+     */
+    AttachToSignalProvider,
+
+    /**
      * @name index#AttachToSignalProviderInfo
      * @type {AttachToSignalProviderInfo}
      */
@@ -357,6 +365,12 @@ export {
      * @type {DashboardSummary}
      */
     DashboardSummary,
+
+    /**
+     * @name index#DetachFromSignalProvider
+     * @type {DetachFromSignalProvider}
+     */
+    DetachFromSignalProvider,
 
     /**
      * @name index#Enums

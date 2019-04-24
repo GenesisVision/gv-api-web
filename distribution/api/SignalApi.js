@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AttachToSignalProvider = require('../model/AttachToSignalProvider');
+
+var _AttachToSignalProvider2 = _interopRequireDefault(_AttachToSignalProvider);
+
 var _AttachToSignalProviderInfo = require('../model/AttachToSignalProviderInfo');
 
 var _AttachToSignalProviderInfo2 = _interopRequireDefault(_AttachToSignalProviderInfo);
@@ -28,6 +32,10 @@ var _AttachToSignalProviderInfo2 = _interopRequireDefault(_AttachToSignalProvide
 var _CopyTradingAccountsList = require('../model/CopyTradingAccountsList');
 
 var _CopyTradingAccountsList2 = _interopRequireDefault(_CopyTradingAccountsList);
+
+var _DetachFromSignalProvider = require('../model/DetachFromSignalProvider');
+
+var _DetachFromSignalProvider2 = _interopRequireDefault(_DetachFromSignalProvider);
 
 var _ErrorViewModel = require('../model/ErrorViewModel');
 
@@ -150,7 +158,7 @@ var SignalApi = function () {
     key: 'v10SignalAttachByIdPostWithHttpInfo',
     value: function v10SignalAttachByIdPostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -165,22 +173,14 @@ var SignalApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {
-        'Mode': opts['mode'],
-        'Percent': opts['percent'],
-        'OpenTolerancePercent': opts['openTolerancePercent'],
-        'FixedVolume': opts['fixedVolume'],
-        'FixedCurrency': opts['fixedCurrency'],
-        'InitialDepositCurrency': opts['initialDepositCurrency'],
-        'InitialDepositAmount': opts['initialDepositAmount']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': authorization
       };
       var formParams = {};
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
@@ -193,13 +193,7 @@ var SignalApi = function () {
      * @param {String} id Program Id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.mode] 
-     * @param {Number} [opts.percent] 
-     * @param {Number} [opts.openTolerancePercent] 
-     * @param {Number} [opts.fixedVolume] 
-     * @param {String} [opts.fixedCurrency] 
-     * @param {String} [opts.initialDepositCurrency] 
-     * @param {Number} [opts.initialDepositAmount] 
+     * @param {AttachToSignalProvider} [opts.model] Subscription settings
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
@@ -214,7 +208,7 @@ var SignalApi = function () {
     key: 'v10SignalByIdUpdatePostWithHttpInfo',
     value: function v10SignalByIdUpdatePostWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -229,22 +223,14 @@ var SignalApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {
-        'Mode': opts['mode'],
-        'Percent': opts['percent'],
-        'OpenTolerancePercent': opts['openTolerancePercent'],
-        'FixedVolume': opts['fixedVolume'],
-        'FixedCurrency': opts['fixedCurrency'],
-        'InitialDepositCurrency': opts['initialDepositCurrency'],
-        'InitialDepositAmount': opts['initialDepositAmount']
-      };
+      var queryParams = {};
       var headerParams = {
         'Authorization': authorization
       };
       var formParams = {};
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
@@ -257,13 +243,7 @@ var SignalApi = function () {
      * @param {String} id Program id
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.mode] 
-     * @param {Number} [opts.percent] 
-     * @param {Number} [opts.openTolerancePercent] 
-     * @param {Number} [opts.fixedVolume] 
-     * @param {String} [opts.fixedCurrency] 
-     * @param {String} [opts.initialDepositCurrency] 
-     * @param {Number} [opts.initialDepositAmount] 
+     * @param {AttachToSignalProvider} [opts.model] Subscription settings
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
@@ -276,8 +256,9 @@ var SignalApi = function () {
     }
   }, {
     key: 'v10SignalDetachByIdPostWithHttpInfo',
-    value: function v10SignalDetachByIdPostWithHttpInfo(id, authorization) {
-      var postBody = null;
+    value: function v10SignalDetachByIdPostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -299,7 +280,7 @@ var SignalApi = function () {
       var formParams = {};
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = null;
 
@@ -309,15 +290,17 @@ var SignalApi = function () {
     /**
      * Unsubscribe from program signals
      * @function SignalApi#v10SignalDetachByIdPost
-     * @param {String} id Program id
+     * @param {String} id 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {DetachFromSignalProvider} [opts.model] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10SignalDetachByIdPost',
-    value: function v10SignalDetachByIdPost(id, authorization) {
-      return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization).then(function (response_and_data) {
+    value: function v10SignalDetachByIdPost(id, authorization, opts) {
+      return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

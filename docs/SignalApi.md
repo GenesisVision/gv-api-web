@@ -116,13 +116,7 @@ let id = "id_example"; // String | Program Id
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'mode': "mode_example", // String | 
-  'percent': 1.2, // Number | 
-  'openTolerancePercent': 1.2, // Number | 
-  'fixedVolume': 1.2, // Number | 
-  'fixedCurrency': "fixedCurrency_example", // String | 
-  'initialDepositCurrency': "initialDepositCurrency_example", // String | 
-  'initialDepositAmount': 1.2 // Number | 
+  'model': new CoreApiV10.AttachToSignalProvider() // AttachToSignalProvider | Subscription settings
 };
 apiInstance.v10SignalAttachByIdPost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -138,13 +132,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Program Id | 
  **authorization** | **String**| JWT access token | 
- **mode** | **String**|  | [optional] 
- **percent** | **Number**|  | [optional] 
- **openTolerancePercent** | **Number**|  | [optional] 
- **fixedVolume** | **Number**|  | [optional] 
- **fixedCurrency** | **String**|  | [optional] 
- **initialDepositCurrency** | **String**|  | [optional] 
- **initialDepositAmount** | **Number**|  | [optional] 
+ **model** | [**AttachToSignalProvider**](AttachToSignalProvider.md)| Subscription settings | [optional] 
 
 ### Return type
 
@@ -156,7 +144,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10SignalByIdUpdatePost"></a>
@@ -176,13 +164,7 @@ let id = "id_example"; // String | Program id
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'mode': "mode_example", // String | 
-  'percent': 1.2, // Number | 
-  'openTolerancePercent': 1.2, // Number | 
-  'fixedVolume': 1.2, // Number | 
-  'fixedCurrency': "fixedCurrency_example", // String | 
-  'initialDepositCurrency': "initialDepositCurrency_example", // String | 
-  'initialDepositAmount': 1.2 // Number | 
+  'model': new CoreApiV10.AttachToSignalProvider() // AttachToSignalProvider | Subscription settings
 };
 apiInstance.v10SignalByIdUpdatePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -198,13 +180,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Program id | 
  **authorization** | **String**| JWT access token | 
- **mode** | **String**|  | [optional] 
- **percent** | **Number**|  | [optional] 
- **openTolerancePercent** | **Number**|  | [optional] 
- **fixedVolume** | **Number**|  | [optional] 
- **fixedCurrency** | **String**|  | [optional] 
- **initialDepositCurrency** | **String**|  | [optional] 
- **initialDepositAmount** | **Number**|  | [optional] 
+ **model** | [**AttachToSignalProvider**](AttachToSignalProvider.md)| Subscription settings | [optional] 
 
 ### Return type
 
@@ -216,12 +192,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10SignalDetachByIdPost"></a>
 # **v10SignalDetachByIdPost**
-> v10SignalDetachByIdPost(id, authorization)
+> v10SignalDetachByIdPost(id, authorization, opts)
 
 Unsubscribe from program signals
 
@@ -231,11 +207,14 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.SignalApi();
 
-let id = "id_example"; // String | Program id
+let id = "id_example"; // String | 
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10SignalDetachByIdPost(id, authorization).then(() => {
+let opts = { 
+  'model': new CoreApiV10.DetachFromSignalProvider() // DetachFromSignalProvider | 
+};
+apiInstance.v10SignalDetachByIdPost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -247,8 +226,9 @@ apiInstance.v10SignalDetachByIdPost(id, authorization).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Program id | 
+ **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
+ **model** | [**DetachFromSignalProvider**](DetachFromSignalProvider.md)|  | [optional] 
 
 ### Return type
 
@@ -260,7 +240,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10SignalTradesByIdClosePost"></a>
