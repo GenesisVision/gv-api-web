@@ -61,6 +61,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#notificationAvailableToInvestId
+ * @type {String}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -154,6 +159,7 @@ var PersonalProgramDetailsFull = function () {
         this.showTwoFactorButton = undefined;
         this.signalSubscription = undefined;
         this.login = undefined;
+        this.notificationAvailableToInvestId = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -193,6 +199,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('login')) {
                     obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
+                }
+                if (data.hasOwnProperty('notificationAvailableToInvestId')) {
+                    obj['notificationAvailableToInvestId'] = _ApiClient2.default.convertToType(data['notificationAvailableToInvestId'], 'String');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');

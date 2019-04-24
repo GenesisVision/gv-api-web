@@ -1597,6 +1597,7 @@ export declare interface PersonalProgramDetailsFull {
     showTwoFactorButton: boolean;
     signalSubscription: SignalSubscription;
     login: string;
+    notificationAvailableToInvestId: string;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;

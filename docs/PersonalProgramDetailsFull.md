@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **showTwoFactorButton** | **Boolean** |  | [optional] 
 **signalSubscription** | [**SignalSubscription**](SignalSubscription.md) |  | [optional] 
 **login** | **String** |  | [optional] 
+**notificationAvailableToInvestId** | **String** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 

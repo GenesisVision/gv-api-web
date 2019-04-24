@@ -51,6 +51,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#notificationAvailableToInvestId
+ * @type {String}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -175,6 +180,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('login')) {
                 obj['login'] = ApiClient.convertToType(data['login'], 'String');
             }
+            if (data.hasOwnProperty('notificationAvailableToInvestId')) {
+                obj['notificationAvailableToInvestId'] = ApiClient.convertToType(data['notificationAvailableToInvestId'], 'String');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -235,6 +243,7 @@ export default class PersonalProgramDetailsFull {
     showTwoFactorButton = undefined;
     signalSubscription = undefined;
     login = undefined;
+    notificationAvailableToInvestId = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;
