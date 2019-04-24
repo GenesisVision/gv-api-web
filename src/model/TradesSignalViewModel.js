@@ -26,6 +26,16 @@ import OrderSignalModel from './OrderSignalModel';
 
 /**
  *
+ * @name TradesSignalViewModel#showSwaps
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name TradesSignalViewModel#showTickets
+ * @type {Boolean}
+ */
+/**
+ *
  * @name TradesSignalViewModel#trades
  * @type {Array<OrderSignalModel>}
  */
@@ -60,6 +70,12 @@ export default class TradesSignalViewModel {
             
             
 
+            if (data.hasOwnProperty('showSwaps')) {
+                obj['showSwaps'] = ApiClient.convertToType(data['showSwaps'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showTickets')) {
+                obj['showTickets'] = ApiClient.convertToType(data['showTickets'], 'Boolean');
+            }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderSignalModel]);
             }
@@ -70,6 +86,8 @@ export default class TradesSignalViewModel {
         return obj;
     }
 
+    showSwaps = undefined;
+    showTickets = undefined;
     trades = undefined;
     total = undefined;
 

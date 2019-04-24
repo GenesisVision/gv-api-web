@@ -2175,6 +2175,8 @@ export declare interface SignalsList {
 }
 
 export declare interface TradesSignalViewModel {
+    showSwaps: boolean;
+    showTickets: boolean;
     trades: OrderSignalModel[];
     total: number;
 }
