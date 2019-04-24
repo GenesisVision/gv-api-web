@@ -1757,7 +1757,8 @@ export default class ManagerApi {
         });
     }
 
-      v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization) {
+      v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1769,6 +1770,7 @@ export default class ManagerApi {
       let pathParams = {
       };
       let queryParams = {
+        'brokerTradingAccount': opts['brokerTradingAccount']
       };
       let headerParams = {
         'Authorization': authorization
@@ -1792,10 +1794,12 @@ export default class ManagerApi {
      * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.brokerTradingAccount] 
      * @return {CancelablePromise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
-      v10ManagerProgramsInvestmentAmountGet(authorization) {
-      return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization)
+      v10ManagerProgramsInvestmentAmountGet(authorization, opts) {
+      return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

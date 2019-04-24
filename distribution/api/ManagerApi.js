@@ -1709,7 +1709,8 @@ var ManagerApi = function () {
     }
   }, {
     key: 'v10ManagerProgramsInvestmentAmountGetWithHttpInfo',
-    value: function v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization) {
+    value: function v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'authorization' is set
@@ -1718,7 +1719,9 @@ var ManagerApi = function () {
       }
 
       var pathParams = {};
-      var queryParams = {};
+      var queryParams = {
+        'brokerTradingAccount': opts['brokerTradingAccount']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -1736,13 +1739,15 @@ var ManagerApi = function () {
      * Get investment amount to create program
      * @function ManagerApi#v10ManagerProgramsInvestmentAmountGet
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.brokerTradingAccount] 
      * @return {CancelablePromise<ProgramMinimumDeposit>} a Promise, with an object containing data of type ProgramMinimumDeposit and HTTP response
      */
 
   }, {
     key: 'v10ManagerProgramsInvestmentAmountGet',
-    value: function v10ManagerProgramsInvestmentAmountGet(authorization) {
-      return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization).then(function (response_and_data) {
+    value: function v10ManagerProgramsInvestmentAmountGet(authorization, opts) {
+      return this.v10ManagerProgramsInvestmentAmountGetWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

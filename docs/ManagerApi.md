@@ -1533,7 +1533,7 @@ No authorization required
 
 <a name="v10ManagerProgramsInvestmentAmountGet"></a>
 # **v10ManagerProgramsInvestmentAmountGet**
-> ProgramMinimumDeposit v10ManagerProgramsInvestmentAmountGet(authorization)
+> ProgramMinimumDeposit v10ManagerProgramsInvestmentAmountGet(authorization, opts)
 
 Get investment amount to create program
 
@@ -1545,7 +1545,10 @@ let apiInstance = new CoreApiV10.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ManagerProgramsInvestmentAmountGet(authorization).then((data) => {
+let opts = { 
+  'brokerTradingAccount': "brokerTradingAccount_example" // String | 
+};
+apiInstance.v10ManagerProgramsInvestmentAmountGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1558,6 +1561,7 @@ apiInstance.v10ManagerProgramsInvestmentAmountGet(authorization).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **brokerTradingAccount** | [**String**](.md)|  | [optional] 
 
 ### Return type
 
