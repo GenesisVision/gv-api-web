@@ -1217,9 +1217,6 @@ export declare interface InternalTransferRequest {
     destinationType: InternalTransferRequestDestinationTypeEnum;
     amount: number;
     transferAll: boolean;
-    walletToWallet: boolean;
-    walletToCopyTradingAccount: boolean;
-    copyTradingAccountToWallet: boolean;
 }
 
 export declare interface LevelInfo {
