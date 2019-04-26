@@ -122,6 +122,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#isForex
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProgramDetailsFull#availableInvestment
  * @type {Number}
  */
@@ -219,6 +224,7 @@ var ProgramDetailsFull = function () {
         this.isSignalProgram = undefined;
         this.signalSuccessFee = undefined;
         this.signalSubscriptionFee = undefined;
+        this.isForex = undefined;
         this.availableInvestment = undefined;
         this.availableInvestmentBase = undefined;
         this.statistic = undefined;
@@ -285,6 +291,9 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('signalSubscriptionFee')) {
                     obj['signalSubscriptionFee'] = _ApiClient2.default.convertToType(data['signalSubscriptionFee'], 'Number');
                 }
+                if (data.hasOwnProperty('isForex')) {
+                    obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');
+                }
                 if (data.hasOwnProperty('availableInvestment')) {
                     obj['availableInvestment'] = _ApiClient2.default.convertToType(data['availableInvestment'], 'Number');
                 }
@@ -343,7 +352,7 @@ var ProgramDetailsFull = function () {
 
 /**
  * @typedef ProgramDetailsFullCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -354,17 +363,17 @@ var ProgramDetailsFull = function () {
 
 ProgramDetailsFull.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

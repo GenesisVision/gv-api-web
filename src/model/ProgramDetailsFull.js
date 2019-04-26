@@ -100,6 +100,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetailsFull#isForex
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProgramDetailsFull#availableInvestment
  * @type {Number}
  */
@@ -246,6 +251,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('signalSubscriptionFee')) {
                 obj['signalSubscriptionFee'] = ApiClient.convertToType(data['signalSubscriptionFee'], 'Number');
             }
+            if (data.hasOwnProperty('isForex')) {
+                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
+            }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
@@ -312,6 +320,7 @@ export default class ProgramDetailsFull {
     isSignalProgram = undefined;
     signalSuccessFee = undefined;
     signalSubscriptionFee = undefined;
+    isForex = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     statistic = undefined;
@@ -336,17 +345,17 @@ export default class ProgramDetailsFull {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -389,7 +398,7 @@ export default class ProgramDetailsFull {
 
 /**
  * @typedef ProgramDetailsFullCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**

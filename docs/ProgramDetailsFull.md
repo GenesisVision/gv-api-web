@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **isSignalProgram** | **Boolean** |  | [optional] 
 **signalSuccessFee** | **Number** |  | [optional] 
 **signalSubscriptionFee** | **Number** |  | [optional] 
+**isForex** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
@@ -39,17 +40,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
