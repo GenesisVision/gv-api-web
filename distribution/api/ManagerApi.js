@@ -801,6 +801,7 @@ var ManagerApi = function () {
         'ChartPointsCount': opts['chartPointsCount'],
         'CurrencySecondary': opts['currencySecondary'],
         'ActionStatus': opts['actionStatus'],
+        'DashboardActionStatus': opts['dashboardActionStatus'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -828,6 +829,7 @@ var ManagerApi = function () {
      * @param {Number} [opts.chartPointsCount] 
      * @param {String} [opts.currencySecondary] 
      * @param {String} [opts.actionStatus] 
+     * @param {String} [opts.dashboardActionStatus] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
@@ -1668,6 +1670,7 @@ var ManagerApi = function () {
         'ChartPointsCount': opts['chartPointsCount'],
         'CurrencySecondary': opts['currencySecondary'],
         'ActionStatus': opts['actionStatus'],
+        'DashboardActionStatus': opts['dashboardActionStatus'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1695,6 +1698,7 @@ var ManagerApi = function () {
      * @param {Number} [opts.chartPointsCount] 
      * @param {String} [opts.currencySecondary] 
      * @param {String} [opts.actionStatus] 
+     * @param {String} [opts.dashboardActionStatus] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response

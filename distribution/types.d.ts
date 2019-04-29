@@ -149,6 +149,7 @@ export declare class InvestorApi {
         chartPointsCount?: number;
         currencySecondary?: string;
         actionStatus?: string;
+        dashboardActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -195,6 +196,7 @@ export declare class InvestorApi {
         chartPointsCount?: number;
         currencySecondary?: string;
         actionStatus?: string;
+        dashboardActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -207,6 +209,7 @@ export declare class InvestorApi {
         chartPointsCount?: number;
         currencySecondary?: string;
         actionStatus?: string;
+        dashboardActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalsList>;
@@ -254,6 +257,7 @@ export declare class ManagerApi {
         chartPointsCount?: number;
         currencySecondary?: string;
         actionStatus?: string;
+        dashboardActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -303,6 +307,7 @@ export declare class ManagerApi {
         chartPointsCount?: number;
         currencySecondary?: string;
         actionStatus?: string;
+        dashboardActionStatus?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;

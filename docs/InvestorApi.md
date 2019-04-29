@@ -294,6 +294,7 @@ let opts = {
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -316,6 +317,7 @@ Name | Type | Description  | Notes
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -899,6 +901,7 @@ let opts = {
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -921,6 +924,7 @@ Name | Type | Description  | Notes
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -1049,6 +1053,7 @@ let opts = {
   'chartPointsCount': 56, // Number | 
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -1071,6 +1076,7 @@ Name | Type | Description  | Notes
  **chartPointsCount** | **Number**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
