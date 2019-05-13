@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import BinanceKey from '../model/BinanceKey';
 import DashboardChartValue from '../model/DashboardChartValue';
 import DashboardPortfolioEvents from '../model/DashboardPortfolioEvents';
 import DashboardSummary from '../model/DashboardSummary';
@@ -470,6 +471,153 @@ export default class InvestorApi {
      */
       v10InvestorGet(authorization, opts) {
       return this.v10InvestorGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10InvestorKeysBinanceGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorKeysBinanceGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [BinanceKey];
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/keys/binance', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get Binance Keys by user
+     * @function InvestorApi#v10InvestorKeysBinanceGet
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<[BinanceKey]>} a Promise, with an object containing data of type [BinanceKey] and HTTP response
+     */
+      v10InvestorKeysBinanceGet(authorization) {
+      return this.v10InvestorKeysBinanceGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10InvestorKeysBinanceRemoveByKeyIdPostWithHttpInfo(keyId, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'keyId' is set
+      if (keyId === undefined || keyId === null) {
+        throw new Error("Missing the required parameter 'keyId' when calling v10InvestorKeysBinanceRemoveByKeyIdPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorKeysBinanceRemoveByKeyIdPost");
+      }
+
+
+      let pathParams = {
+        'keyId': keyId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/keys/binance/remove/{keyId}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Remove Binance Key
+     * @function InvestorApi#v10InvestorKeysBinanceRemoveByKeyIdPost
+     * @param {String} keyId 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10InvestorKeysBinanceRemoveByKeyIdPost(keyId, authorization) {
+      return this.v10InvestorKeysBinanceRemoveByKeyIdPostWithHttpInfo(keyId, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10InvestorKeysBinanceSavePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorKeysBinanceSavePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'title': opts['title'],
+        'appKey': opts['appKey'],
+        'encryptedSecret': opts['encryptedSecret']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/keys/binance/save', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Save Binance Key
+     * @function InvestorApi#v10InvestorKeysBinanceSavePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.title] 
+     * @param {String} [opts.appKey] 
+     * @param {String} [opts.encryptedSecret] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10InvestorKeysBinanceSavePost(authorization, opts) {
+      return this.v10InvestorKeysBinanceSavePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -11,6 +11,9 @@ Method | HTTP request | Description
 [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Dashboard funds list
 [**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
+[**v10InvestorKeysBinanceGet**](InvestorApi.md#v10InvestorKeysBinanceGet) | **GET** /v1.0/investor/keys/binance | Get Binance Keys by user
+[**v10InvestorKeysBinanceRemoveByKeyIdPost**](InvestorApi.md#v10InvestorKeysBinanceRemoveByKeyIdPost) | **POST** /v1.0/investor/keys/binance/remove/{keyId} | Remove Binance Key
+[**v10InvestorKeysBinanceSavePost**](InvestorApi.md#v10InvestorKeysBinanceSavePost) | **POST** /v1.0/investor/keys/binance/save | Save Binance Key
 [**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
 [**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
@@ -383,6 +386,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DashboardSummary**](DashboardSummary.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorKeysBinanceGet"></a>
+# **v10InvestorKeysBinanceGet**
+> [BinanceKey] v10InvestorKeysBinanceGet(authorization)
+
+Get Binance Keys by user
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorKeysBinanceGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**[BinanceKey]**](BinanceKey.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorKeysBinanceRemoveByKeyIdPost"></a>
+# **v10InvestorKeysBinanceRemoveByKeyIdPost**
+> v10InvestorKeysBinanceRemoveByKeyIdPost(keyId, authorization)
+
+Remove Binance Key
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let keyId = "keyId_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10InvestorKeysBinanceRemoveByKeyIdPost(keyId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **keyId** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10InvestorKeysBinanceSavePost"></a>
+# **v10InvestorKeysBinanceSavePost**
+> v10InvestorKeysBinanceSavePost(authorization, opts)
+
+Save Binance Key
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'title': "title_example", // String | 
+  'appKey': "appKey_example", // String | 
+  'encryptedSecret': "encryptedSecret_example" // String | 
+};
+apiInstance.v10InvestorKeysBinanceSavePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **title** | **String**|  | [optional] 
+ **appKey** | **String**|  | [optional] 
+ **encryptedSecret** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
