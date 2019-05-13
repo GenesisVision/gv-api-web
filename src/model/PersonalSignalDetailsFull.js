@@ -39,6 +39,11 @@ import SignalSubscription from './SignalSubscription';
  * @name PersonalSignalDetailsFull#signalSubscription
  * @type {SignalSubscription}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#profit
+ * @type {Number}
+ */
 
 
 
@@ -74,6 +79,9 @@ export default class PersonalSignalDetailsFull {
             if (data.hasOwnProperty('signalSubscription')) {
                 obj['signalSubscription'] = SignalSubscription.constructFromObject(data['signalSubscription']);
             }
+            if (data.hasOwnProperty('profit')) {
+                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            }
         }
         return obj;
     }
@@ -81,6 +89,7 @@ export default class PersonalSignalDetailsFull {
     subscriptionDate = undefined;
     tradesCount = undefined;
     signalSubscription = undefined;
+    profit = undefined;
 
 
 

@@ -1639,6 +1639,7 @@ export declare interface PersonalSignalDetailsFull {
     subscriptionDate: Date;
     tradesCount: number;
     signalSubscription: SignalSubscription;
+    profit: number;
 }
 
 export declare interface PlatformAsset {

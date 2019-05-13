@@ -49,6 +49,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalSignalDetailsFull#signalSubscription
  * @type {SignalSubscription}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#profit
+ * @type {Number}
+ */
 
 var PersonalSignalDetailsFull = function () {
     function PersonalSignalDetailsFull() {
@@ -57,6 +62,7 @@ var PersonalSignalDetailsFull = function () {
         this.subscriptionDate = undefined;
         this.tradesCount = undefined;
         this.signalSubscription = undefined;
+        this.profit = undefined;
     }
 
     _createClass(PersonalSignalDetailsFull, null, [{
@@ -73,6 +79,9 @@ var PersonalSignalDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('signalSubscription')) {
                     obj['signalSubscription'] = _SignalSubscription2.default.constructFromObject(data['signalSubscription']);
+                }
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
             }
             return obj;
