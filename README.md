@@ -137,9 +137,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Dashboard funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
-*CoreApiV10.InvestorApi* | [**v10InvestorKeysBinanceGet**](docs/InvestorApi.md#v10InvestorKeysBinanceGet) | **GET** /v1.0/investor/keys/binance | Get Binance Keys by user
-*CoreApiV10.InvestorApi* | [**v10InvestorKeysBinanceRemoveByKeyIdPost**](docs/InvestorApi.md#v10InvestorKeysBinanceRemoveByKeyIdPost) | **POST** /v1.0/investor/keys/binance/remove/{keyId} | Remove Binance Key
-*CoreApiV10.InvestorApi* | [**v10InvestorKeysBinanceSavePost**](docs/InvestorApi.md#v10InvestorKeysBinanceSavePost) | **POST** /v1.0/investor/keys/binance/save | Save Binance Key
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
@@ -266,7 +263,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AttachToSignalProvider](docs/AttachToSignalProvider.md)
  - [CoreApiV10.AttachToSignalProviderInfo](docs/AttachToSignalProviderInfo.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
- - [CoreApiV10.BinanceKey](docs/BinanceKey.md)
  - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)
  - [CoreApiV10.Broker](docs/Broker.md)
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)

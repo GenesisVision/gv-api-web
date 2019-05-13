@@ -22,7 +22,6 @@ import AssetsValue from './model/AssetsValue';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElement from './model/BalanceChartElement';
-import BinanceKey from './model/BinanceKey';
 import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
@@ -264,12 +263,6 @@ export {
      * @type {BalanceChartElement}
      */
     BalanceChartElement,
-
-    /**
-     * @name index#BinanceKey
-     * @type {BinanceKey}
-     */
-    BinanceKey,
 
     /**
      * @name index#BlockchainInfo
