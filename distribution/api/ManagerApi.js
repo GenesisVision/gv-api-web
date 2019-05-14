@@ -1870,7 +1870,7 @@ var ManagerApi = function () {
       var pathParams = {};
       var queryParams = {
         'ProgramId': opts['programId'],
-        'SubscriptionFee': opts['subscriptionFee'],
+        'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
       var headerParams = {
@@ -1892,7 +1892,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
@@ -1918,7 +1918,7 @@ var ManagerApi = function () {
       var pathParams = {};
       var queryParams = {
         'ProgramId': opts['programId'],
-        'SubscriptionFee': opts['subscriptionFee'],
+        'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
       var headerParams = {
@@ -1940,7 +1940,7 @@ var ManagerApi = function () {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */

@@ -1687,7 +1687,7 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'programId': "programId_example", // String | 
-  'subscriptionFee': 1.2, // Number | 
+  'volumeFee': 1.2, // Number | 
   'successFee': 1.2 // Number | 
 };
 apiInstance.v10ManagerSignalCreatePost(authorization, opts).then(() => {
@@ -1704,7 +1704,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **programId** | [**String**](.md)|  | [optional] 
- **subscriptionFee** | **Number**|  | [optional] 
+ **volumeFee** | **Number**|  | [optional] 
  **successFee** | **Number**|  | [optional] 
 
 ### Return type
@@ -1736,7 +1736,7 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'programId': "programId_example", // String | 
-  'subscriptionFee': 1.2, // Number | 
+  'volumeFee': 1.2, // Number | 
   'successFee': 1.2 // Number | 
 };
 apiInstance.v10ManagerSignalEditPost(authorization, opts).then(() => {
@@ -1753,7 +1753,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **programId** | [**String**](.md)|  | [optional] 
- **subscriptionFee** | **Number**|  | [optional] 
+ **volumeFee** | **Number**|  | [optional] 
  **successFee** | **Number**|  | [optional] 
 
 ### Return type

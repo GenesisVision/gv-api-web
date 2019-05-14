@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **leverage** | **Number** |  | [optional] 
 **brokerAccountTypeId** | **String** |  | [optional] 
 **signalSuccessFee** | **Number** |  | [optional] 
-**signalSubscriptionFee** | **Number** |  | [optional] 
+**signalVolumeFee** | **Number** |  | [optional] 
 **isSignalProgram** | **Boolean** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
@@ -24,17 +24,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

@@ -35,13 +35,8 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name AttachToSignalProviderInfo#subscriptionFee
+ * @name AttachToSignalProviderInfo#volumeFee
  * @type {Number}
- */
-/**
- *
- * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
- * @type AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum
  */
 /**
  *
@@ -85,11 +80,8 @@ export default class AttachToSignalProviderInfo {
             if (data.hasOwnProperty('hasActiveSubscription')) {
                 obj['hasActiveSubscription'] = ApiClient.convertToType(data['hasActiveSubscription'], 'Boolean');
             }
-            if (data.hasOwnProperty('subscriptionFee')) {
-                obj['subscriptionFee'] = ApiClient.convertToType(data['subscriptionFee'], 'Number');
-            }
-            if (data.hasOwnProperty('subscriptionFeeCurrency')) {
-                obj['subscriptionFeeCurrency'] = ApiClient.convertToType(data['subscriptionFeeCurrency'], 'String');
+            if (data.hasOwnProperty('volumeFee')) {
+                obj['volumeFee'] = ApiClient.convertToType(data['volumeFee'], 'Number');
             }
             if (data.hasOwnProperty('minDeposit')) {
                 obj['minDeposit'] = ApiClient.convertToType(data['minDeposit'], 'Number');
@@ -103,8 +95,7 @@ export default class AttachToSignalProviderInfo {
 
     hasSignalAccount = undefined;
     hasActiveSubscription = undefined;
-    subscriptionFee = undefined;
-    subscriptionFeeCurrency = undefined;
+    volumeFee = undefined;
     minDeposit = undefined;
     minDepositCurrency = undefined;
 
@@ -113,48 +104,19 @@ export default class AttachToSignalProviderInfo {
 
 
 
-    static SubscriptionFeeCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
     static MinDepositCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -179,13 +141,8 @@ export default class AttachToSignalProviderInfo {
 
 
 /**
- * @typedef AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
  * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

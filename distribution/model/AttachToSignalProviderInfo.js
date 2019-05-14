@@ -42,13 +42,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name AttachToSignalProviderInfo#subscriptionFee
+ * @name AttachToSignalProviderInfo#volumeFee
  * @type {Number}
- */
-/**
- *
- * @name AttachToSignalProviderInfo#subscriptionFeeCurrency
- * @type AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum
  */
 /**
  *
@@ -67,8 +62,7 @@ var AttachToSignalProviderInfo = function () {
 
         this.hasSignalAccount = undefined;
         this.hasActiveSubscription = undefined;
-        this.subscriptionFee = undefined;
-        this.subscriptionFeeCurrency = undefined;
+        this.volumeFee = undefined;
         this.minDeposit = undefined;
         this.minDepositCurrency = undefined;
     }
@@ -85,11 +79,8 @@ var AttachToSignalProviderInfo = function () {
                 if (data.hasOwnProperty('hasActiveSubscription')) {
                     obj['hasActiveSubscription'] = _ApiClient2.default.convertToType(data['hasActiveSubscription'], 'Boolean');
                 }
-                if (data.hasOwnProperty('subscriptionFee')) {
-                    obj['subscriptionFee'] = _ApiClient2.default.convertToType(data['subscriptionFee'], 'Number');
-                }
-                if (data.hasOwnProperty('subscriptionFeeCurrency')) {
-                    obj['subscriptionFeeCurrency'] = _ApiClient2.default.convertToType(data['subscriptionFeeCurrency'], 'String');
+                if (data.hasOwnProperty('volumeFee')) {
+                    obj['volumeFee'] = _ApiClient2.default.convertToType(data['volumeFee'], 'Number');
                 }
                 if (data.hasOwnProperty('minDeposit')) {
                     obj['minDeposit'] = _ApiClient2.default.convertToType(data['minDeposit'], 'Number');
@@ -106,57 +97,24 @@ var AttachToSignalProviderInfo = function () {
 }();
 
 /**
- * @typedef AttachToSignalProviderInfoSubscriptionFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
  * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
-AttachToSignalProviderInfo.SubscriptionFeeCurrencyEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
 AttachToSignalProviderInfo.MinDepositCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

@@ -60,7 +60,7 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name NewProgramRequest#signalSubscriptionFee
+ * @name NewProgramRequest#signalVolumeFee
  * @type {Number}
  */
 /**
@@ -145,8 +145,8 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('signalSuccessFee')) {
                 obj['signalSuccessFee'] = ApiClient.convertToType(data['signalSuccessFee'], 'Number');
             }
-            if (data.hasOwnProperty('signalSubscriptionFee')) {
-                obj['signalSubscriptionFee'] = ApiClient.convertToType(data['signalSubscriptionFee'], 'Number');
+            if (data.hasOwnProperty('signalVolumeFee')) {
+                obj['signalVolumeFee'] = ApiClient.convertToType(data['signalVolumeFee'], 'Number');
             }
             if (data.hasOwnProperty('isSignalProgram')) {
                 obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'Boolean');
@@ -180,7 +180,7 @@ export default class NewProgramRequest {
     leverage = undefined;
     brokerAccountTypeId = undefined;
     signalSuccessFee = undefined;
-    signalSubscriptionFee = undefined;
+    signalVolumeFee = undefined;
     isSignalProgram = undefined;
     title = undefined;
     description = undefined;
@@ -196,17 +196,17 @@ export default class NewProgramRequest {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -232,7 +232,7 @@ export default class NewProgramRequest {
 
 /**
  * @typedef NewProgramRequestCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

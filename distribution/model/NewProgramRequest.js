@@ -67,7 +67,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name NewProgramRequest#signalSubscriptionFee
+ * @name NewProgramRequest#signalVolumeFee
  * @type {Number}
  */
 /**
@@ -117,7 +117,7 @@ var NewProgramRequest = function () {
         this.leverage = undefined;
         this.brokerAccountTypeId = undefined;
         this.signalSuccessFee = undefined;
-        this.signalSubscriptionFee = undefined;
+        this.signalVolumeFee = undefined;
         this.isSignalProgram = undefined;
         this.title = undefined;
         this.description = undefined;
@@ -154,8 +154,8 @@ var NewProgramRequest = function () {
                 if (data.hasOwnProperty('signalSuccessFee')) {
                     obj['signalSuccessFee'] = _ApiClient2.default.convertToType(data['signalSuccessFee'], 'Number');
                 }
-                if (data.hasOwnProperty('signalSubscriptionFee')) {
-                    obj['signalSubscriptionFee'] = _ApiClient2.default.convertToType(data['signalSubscriptionFee'], 'Number');
+                if (data.hasOwnProperty('signalVolumeFee')) {
+                    obj['signalVolumeFee'] = _ApiClient2.default.convertToType(data['signalVolumeFee'], 'Number');
                 }
                 if (data.hasOwnProperty('isSignalProgram')) {
                     obj['isSignalProgram'] = _ApiClient2.default.convertToType(data['isSignalProgram'], 'Boolean');
@@ -188,23 +188,23 @@ var NewProgramRequest = function () {
 
 /**
  * @typedef NewProgramRequestCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 NewProgramRequest.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

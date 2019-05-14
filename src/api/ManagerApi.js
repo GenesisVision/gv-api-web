@@ -1932,7 +1932,7 @@ export default class ManagerApi {
       };
       let queryParams = {
         'ProgramId': opts['programId'],
-        'SubscriptionFee': opts['subscriptionFee'],
+        'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
       let headerParams = {
@@ -1959,7 +1959,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
@@ -1984,7 +1984,7 @@ export default class ManagerApi {
       };
       let queryParams = {
         'ProgramId': opts['programId'],
-        'SubscriptionFee': opts['subscriptionFee'],
+        'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
       let headerParams = {
@@ -2011,7 +2011,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.programId] 
-     * @param {Number} [opts.subscriptionFee] 
+     * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */

@@ -117,7 +117,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name ProgramDetailsFull#signalSubscriptionFee
+ * @name ProgramDetailsFull#signalVolumeFee
  * @type {Number}
  */
 /**
@@ -223,7 +223,7 @@ var ProgramDetailsFull = function () {
         this.isReinvesting = undefined;
         this.isSignalProgram = undefined;
         this.signalSuccessFee = undefined;
-        this.signalSubscriptionFee = undefined;
+        this.signalVolumeFee = undefined;
         this.isForex = undefined;
         this.availableInvestment = undefined;
         this.availableInvestmentBase = undefined;
@@ -288,8 +288,8 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('signalSuccessFee')) {
                     obj['signalSuccessFee'] = _ApiClient2.default.convertToType(data['signalSuccessFee'], 'Number');
                 }
-                if (data.hasOwnProperty('signalSubscriptionFee')) {
-                    obj['signalSubscriptionFee'] = _ApiClient2.default.convertToType(data['signalSubscriptionFee'], 'Number');
+                if (data.hasOwnProperty('signalVolumeFee')) {
+                    obj['signalVolumeFee'] = _ApiClient2.default.convertToType(data['signalVolumeFee'], 'Number');
                 }
                 if (data.hasOwnProperty('isForex')) {
                     obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');
@@ -352,7 +352,7 @@ var ProgramDetailsFull = function () {
 
 /**
  * @typedef ProgramDetailsFullCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -363,17 +363,17 @@ var ProgramDetailsFull = function () {
 
 ProgramDetailsFull.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

@@ -77,12 +77,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name ProgramsInfo#managerMaxSignalSubscriptionFee
+ * @name ProgramsInfo#managerMaxSignalVolumeFee
  * @type {Number}
  */
 /**
  *
- * @name ProgramsInfo#managerMinSignalSubscriptionFee
+ * @name ProgramsInfo#managerMinSignalVolumeFee
  * @type {Number}
  */
 /**
@@ -114,8 +114,8 @@ var ProgramsInfo = function () {
         this.managerMaxSuccessFee = undefined;
         this.managerFundInvestment = undefined;
         this.managerMaxExitFee = undefined;
-        this.managerMaxSignalSubscriptionFee = undefined;
-        this.managerMinSignalSubscriptionFee = undefined;
+        this.managerMaxSignalVolumeFee = undefined;
+        this.managerMinSignalVolumeFee = undefined;
         this.managerMaxSignalSuccessFee = undefined;
         this.managerMinSignalSuccessFee = undefined;
         this.periods = undefined;
@@ -154,11 +154,11 @@ var ProgramsInfo = function () {
                 if (data.hasOwnProperty('managerMaxExitFee')) {
                     obj['managerMaxExitFee'] = _ApiClient2.default.convertToType(data['managerMaxExitFee'], 'Number');
                 }
-                if (data.hasOwnProperty('managerMaxSignalSubscriptionFee')) {
-                    obj['managerMaxSignalSubscriptionFee'] = _ApiClient2.default.convertToType(data['managerMaxSignalSubscriptionFee'], 'Number');
+                if (data.hasOwnProperty('managerMaxSignalVolumeFee')) {
+                    obj['managerMaxSignalVolumeFee'] = _ApiClient2.default.convertToType(data['managerMaxSignalVolumeFee'], 'Number');
                 }
-                if (data.hasOwnProperty('managerMinSignalSubscriptionFee')) {
-                    obj['managerMinSignalSubscriptionFee'] = _ApiClient2.default.convertToType(data['managerMinSignalSubscriptionFee'], 'Number');
+                if (data.hasOwnProperty('managerMinSignalVolumeFee')) {
+                    obj['managerMinSignalVolumeFee'] = _ApiClient2.default.convertToType(data['managerMinSignalVolumeFee'], 'Number');
                 }
                 if (data.hasOwnProperty('managerMaxSignalSuccessFee')) {
                     obj['managerMaxSignalSuccessFee'] = _ApiClient2.default.convertToType(data['managerMaxSignalSuccessFee'], 'Number');

@@ -70,12 +70,12 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name ProgramsInfo#managerMaxSignalSubscriptionFee
+ * @name ProgramsInfo#managerMaxSignalVolumeFee
  * @type {Number}
  */
 /**
  *
- * @name ProgramsInfo#managerMinSignalSubscriptionFee
+ * @name ProgramsInfo#managerMinSignalVolumeFee
  * @type {Number}
  */
 /**
@@ -146,11 +146,11 @@ export default class ProgramsInfo {
             if (data.hasOwnProperty('managerMaxExitFee')) {
                 obj['managerMaxExitFee'] = ApiClient.convertToType(data['managerMaxExitFee'], 'Number');
             }
-            if (data.hasOwnProperty('managerMaxSignalSubscriptionFee')) {
-                obj['managerMaxSignalSubscriptionFee'] = ApiClient.convertToType(data['managerMaxSignalSubscriptionFee'], 'Number');
+            if (data.hasOwnProperty('managerMaxSignalVolumeFee')) {
+                obj['managerMaxSignalVolumeFee'] = ApiClient.convertToType(data['managerMaxSignalVolumeFee'], 'Number');
             }
-            if (data.hasOwnProperty('managerMinSignalSubscriptionFee')) {
-                obj['managerMinSignalSubscriptionFee'] = ApiClient.convertToType(data['managerMinSignalSubscriptionFee'], 'Number');
+            if (data.hasOwnProperty('managerMinSignalVolumeFee')) {
+                obj['managerMinSignalVolumeFee'] = ApiClient.convertToType(data['managerMinSignalVolumeFee'], 'Number');
             }
             if (data.hasOwnProperty('managerMaxSignalSuccessFee')) {
                 obj['managerMaxSignalSuccessFee'] = ApiClient.convertToType(data['managerMaxSignalSuccessFee'], 'Number');
@@ -174,8 +174,8 @@ export default class ProgramsInfo {
     managerMaxSuccessFee = undefined;
     managerFundInvestment = undefined;
     managerMaxExitFee = undefined;
-    managerMaxSignalSubscriptionFee = undefined;
-    managerMinSignalSubscriptionFee = undefined;
+    managerMaxSignalVolumeFee = undefined;
+    managerMinSignalVolumeFee = undefined;
     managerMaxSignalSuccessFee = undefined;
     managerMinSignalSuccessFee = undefined;
     periods = undefined;
