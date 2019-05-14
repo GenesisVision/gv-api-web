@@ -306,7 +306,8 @@ var SignalApi = function () {
     }
   }, {
     key: 'v10SignalTradesByIdClosePostWithHttpInfo',
-    value: function v10SignalTradesByIdClosePostWithHttpInfo(id, authorization) {
+    value: function v10SignalTradesByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -322,7 +323,9 @@ var SignalApi = function () {
       var pathParams = {
         'id': id
       };
-      var queryParams = {};
+      var queryParams = {
+        'programId': opts['programId']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -341,13 +344,15 @@ var SignalApi = function () {
      * @function SignalApi#v10SignalTradesByIdClosePost
      * @param {String} id Trade id
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] Provider program id
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10SignalTradesByIdClosePost',
-    value: function v10SignalTradesByIdClosePost(id, authorization) {
-      return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization).then(function (response_and_data) {
+    value: function v10SignalTradesByIdClosePost(id, authorization, opts) {
+      return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

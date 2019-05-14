@@ -295,7 +295,8 @@ export default class SignalApi {
         });
     }
 
-      v10SignalTradesByIdClosePostWithHttpInfo(id, authorization) {
+      v10SignalTradesByIdClosePostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -313,6 +314,7 @@ export default class SignalApi {
         'id': id
       };
       let queryParams = {
+        'programId': opts['programId']
       };
       let headerParams = {
         'Authorization': authorization
@@ -337,10 +339,12 @@ export default class SignalApi {
      * @function SignalApi#v10SignalTradesByIdClosePost
      * @param {String} id Trade id
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] Provider program id
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      v10SignalTradesByIdClosePost(id, authorization) {
-      return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization)
+      v10SignalTradesByIdClosePost(id, authorization, opts) {
+      return this.v10SignalTradesByIdClosePostWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

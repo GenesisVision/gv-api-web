@@ -245,7 +245,7 @@ No authorization required
 
 <a name="v10SignalTradesByIdClosePost"></a>
 # **v10SignalTradesByIdClosePost**
-> v10SignalTradesByIdClosePost(id, authorization)
+> v10SignalTradesByIdClosePost(id, authorization, opts)
 
 Close signal trade
 
@@ -259,7 +259,10 @@ let id = "id_example"; // String | Trade id
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10SignalTradesByIdClosePost(id, authorization).then(() => {
+let opts = { 
+  'programId': "programId_example" // String | Provider program id
+};
+apiInstance.v10SignalTradesByIdClosePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -273,6 +276,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trade id | 
  **authorization** | **String**| JWT access token | 
+ **programId** | [**String**](.md)| Provider program id | [optional] 
 
 ### Return type
 
