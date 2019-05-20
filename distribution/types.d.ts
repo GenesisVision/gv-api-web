@@ -1646,6 +1646,8 @@ export declare interface PersonalSignalDetailsFull {
     tradesCount: number;
     signalSubscription: SignalSubscription;
     profit: number;
+    isFavorite: boolean;
+    isInvested: boolean;
 }
 
 export declare interface PlatformAsset {

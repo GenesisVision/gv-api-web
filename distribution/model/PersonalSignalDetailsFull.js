@@ -54,6 +54,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalSignalDetailsFull#profit
  * @type {Number}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#isFavorite
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalSignalDetailsFull#isInvested
+ * @type {Boolean}
+ */
 
 var PersonalSignalDetailsFull = function () {
     function PersonalSignalDetailsFull() {
@@ -63,6 +73,8 @@ var PersonalSignalDetailsFull = function () {
         this.tradesCount = undefined;
         this.signalSubscription = undefined;
         this.profit = undefined;
+        this.isFavorite = undefined;
+        this.isInvested = undefined;
     }
 
     _createClass(PersonalSignalDetailsFull, null, [{
@@ -82,6 +94,12 @@ var PersonalSignalDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('profit')) {
                     obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('isFavorite')) {
+                    obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
+                }
+                if (data.hasOwnProperty('isInvested')) {
+                    obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
                 }
             }
             return obj;
