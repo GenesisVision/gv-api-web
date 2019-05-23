@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **signalSubscription** | [**SignalSubscription**](SignalSubscription.md) |  | [optional] 
 **login** | **String** |  | [optional] 
 **notificationAvailableToInvestId** | **String** |  | [optional] 
+**canMakeSignalProvider** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
@@ -24,8 +25,6 @@ Name | Type | Description | Notes
 **pendingInput** | **Number** |  | [optional] 
 **pendingOutput** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
-**isFollowSignals** | **Boolean** |  | [optional] 
-**canMakeSignalProvider** | **Boolean** |  | [optional] 
 
 
 <a name="StatusEnum"></a>

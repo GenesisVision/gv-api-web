@@ -56,6 +56,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#canMakeSignalProvider
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -129,16 +134,6 @@ import SignalSubscription from './SignalSubscription';
  * @name PersonalProgramDetailsFull#status
  * @type PersonalProgramDetailsFullStatusEnum
  */
-/**
- *
- * @name PersonalProgramDetailsFull#isFollowSignals
- * @type {Boolean}
- */
-/**
- *
- * @name PersonalProgramDetailsFull#canMakeSignalProvider
- * @type {Boolean}
- */
 
 
 
@@ -182,6 +177,9 @@ export default class PersonalProgramDetailsFull {
             }
             if (data.hasOwnProperty('notificationAvailableToInvestId')) {
                 obj['notificationAvailableToInvestId'] = ApiClient.convertToType(data['notificationAvailableToInvestId'], 'String');
+            }
+            if (data.hasOwnProperty('canMakeSignalProvider')) {
+                obj['canMakeSignalProvider'] = ApiClient.convertToType(data['canMakeSignalProvider'], 'Boolean');
             }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
@@ -228,12 +226,6 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('isFollowSignals')) {
-                obj['isFollowSignals'] = ApiClient.convertToType(data['isFollowSignals'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canMakeSignalProvider')) {
-                obj['canMakeSignalProvider'] = ApiClient.convertToType(data['canMakeSignalProvider'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -244,6 +236,7 @@ export default class PersonalProgramDetailsFull {
     signalSubscription = undefined;
     login = undefined;
     notificationAvailableToInvestId = undefined;
+    canMakeSignalProvider = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;
@@ -259,8 +252,6 @@ export default class PersonalProgramDetailsFull {
     pendingInput = undefined;
     pendingOutput = undefined;
     status = undefined;
-    isFollowSignals = undefined;
-    canMakeSignalProvider = undefined;
 
 
 

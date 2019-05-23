@@ -66,6 +66,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#canMakeSignalProvider
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -139,16 +144,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalProgramDetailsFull#status
  * @type PersonalProgramDetailsFullStatusEnum
  */
-/**
- *
- * @name PersonalProgramDetailsFull#isFollowSignals
- * @type {Boolean}
- */
-/**
- *
- * @name PersonalProgramDetailsFull#canMakeSignalProvider
- * @type {Boolean}
- */
 
 var PersonalProgramDetailsFull = function () {
     function PersonalProgramDetailsFull() {
@@ -160,6 +155,7 @@ var PersonalProgramDetailsFull = function () {
         this.signalSubscription = undefined;
         this.login = undefined;
         this.notificationAvailableToInvestId = undefined;
+        this.canMakeSignalProvider = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -175,8 +171,6 @@ var PersonalProgramDetailsFull = function () {
         this.pendingInput = undefined;
         this.pendingOutput = undefined;
         this.status = undefined;
-        this.isFollowSignals = undefined;
-        this.canMakeSignalProvider = undefined;
     }
 
     _createClass(PersonalProgramDetailsFull, null, [{
@@ -202,6 +196,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('notificationAvailableToInvestId')) {
                     obj['notificationAvailableToInvestId'] = _ApiClient2.default.convertToType(data['notificationAvailableToInvestId'], 'String');
+                }
+                if (data.hasOwnProperty('canMakeSignalProvider')) {
+                    obj['canMakeSignalProvider'] = _ApiClient2.default.convertToType(data['canMakeSignalProvider'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
@@ -247,12 +244,6 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('isFollowSignals')) {
-                    obj['isFollowSignals'] = _ApiClient2.default.convertToType(data['isFollowSignals'], 'Boolean');
-                }
-                if (data.hasOwnProperty('canMakeSignalProvider')) {
-                    obj['canMakeSignalProvider'] = _ApiClient2.default.convertToType(data['canMakeSignalProvider'], 'Boolean');
                 }
             }
             return obj;

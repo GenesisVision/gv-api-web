@@ -113,16 +113,6 @@ import ApiClient from '../ApiClient';
  * @name PersonalFundDetailsFull#status
  * @type PersonalFundDetailsFullStatusEnum
  */
-/**
- *
- * @name PersonalFundDetailsFull#isFollowSignals
- * @type {Boolean}
- */
-/**
- *
- * @name PersonalFundDetailsFull#canMakeSignalProvider
- * @type {Boolean}
- */
 
 
 
@@ -203,12 +193,6 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('isFollowSignals')) {
-                obj['isFollowSignals'] = ApiClient.convertToType(data['isFollowSignals'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canMakeSignalProvider')) {
-                obj['canMakeSignalProvider'] = ApiClient.convertToType(data['canMakeSignalProvider'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -231,8 +215,6 @@ export default class PersonalFundDetailsFull {
     pendingInput = undefined;
     pendingOutput = undefined;
     status = undefined;
-    isFollowSignals = undefined;
-    canMakeSignalProvider = undefined;
 
 
 

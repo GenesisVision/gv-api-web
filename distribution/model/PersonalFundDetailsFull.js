@@ -120,16 +120,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalFundDetailsFull#status
  * @type PersonalFundDetailsFullStatusEnum
  */
-/**
- *
- * @name PersonalFundDetailsFull#isFollowSignals
- * @type {Boolean}
- */
-/**
- *
- * @name PersonalFundDetailsFull#canMakeSignalProvider
- * @type {Boolean}
- */
 
 var PersonalFundDetailsFull = function () {
     function PersonalFundDetailsFull() {
@@ -153,8 +143,6 @@ var PersonalFundDetailsFull = function () {
         this.pendingInput = undefined;
         this.pendingOutput = undefined;
         this.status = undefined;
-        this.isFollowSignals = undefined;
-        this.canMakeSignalProvider = undefined;
     }
 
     _createClass(PersonalFundDetailsFull, null, [{
@@ -216,12 +204,6 @@ var PersonalFundDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
-                }
-                if (data.hasOwnProperty('isFollowSignals')) {
-                    obj['isFollowSignals'] = _ApiClient2.default.convertToType(data['isFollowSignals'], 'Boolean');
-                }
-                if (data.hasOwnProperty('canMakeSignalProvider')) {
-                    obj['canMakeSignalProvider'] = _ApiClient2.default.convertToType(data['canMakeSignalProvider'], 'Boolean');
                 }
             }
             return obj;
