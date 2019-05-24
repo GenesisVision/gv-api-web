@@ -62,6 +62,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name BrokerAccountType#minimumDepositsAmount
+ * @type {{String: Number}}
+ */
+/**
+ *
  * @name BrokerAccountType#isForex
  * @type {Boolean}
  */
@@ -81,6 +86,7 @@ var BrokerAccountType = function () {
         this.type = undefined;
         this.leverages = undefined;
         this.currencies = undefined;
+        this.minimumDepositsAmount = undefined;
         this.isForex = undefined;
         this.isSignalsAvailable = undefined;
     }
@@ -108,6 +114,9 @@ var BrokerAccountType = function () {
                 }
                 if (data.hasOwnProperty('currencies')) {
                     obj['currencies'] = _ApiClient2.default.convertToType(data['currencies'], ['String']);
+                }
+                if (data.hasOwnProperty('minimumDepositsAmount')) {
+                    obj['minimumDepositsAmount'] = _ApiClient2.default.convertToType(data['minimumDepositsAmount'], { 'String': 'Number' });
                 }
                 if (data.hasOwnProperty('isForex')) {
                     obj['isForex'] = _ApiClient2.default.convertToType(data['isForex'], 'Boolean');

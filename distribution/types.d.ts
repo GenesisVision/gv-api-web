@@ -864,6 +864,7 @@ export declare interface BrokerAccountType {
     type: BrokerAccountTypeTypeEnum;
     leverages: number[];
     currencies: string[];
+    minimumDepositsAmount: any;
     isForex: boolean;
     isSignalsAvailable: boolean;
 }

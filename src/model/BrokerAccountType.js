@@ -55,6 +55,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name BrokerAccountType#minimumDepositsAmount
+ * @type {{String: Number}}
+ */
+/**
+ *
  * @name BrokerAccountType#isForex
  * @type {Boolean}
  */
@@ -107,6 +112,9 @@ export default class BrokerAccountType {
             if (data.hasOwnProperty('currencies')) {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
             }
+            if (data.hasOwnProperty('minimumDepositsAmount')) {
+                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], {'String': 'Number'});
+            }
             if (data.hasOwnProperty('isForex')) {
                 obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
             }
@@ -123,6 +131,7 @@ export default class BrokerAccountType {
     type = undefined;
     leverages = undefined;
     currencies = undefined;
+    minimumDepositsAmount = undefined;
     isForex = undefined;
     isSignalsAvailable = undefined;
 

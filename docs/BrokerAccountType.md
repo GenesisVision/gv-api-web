@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **leverages** | **[Number]** |  | [optional] 
 **currencies** | **[String]** |  | [optional] 
+**minimumDepositsAmount** | **{String: Number}** |  | [optional] 
 **isForex** | **Boolean** |  | [optional] 
 **isSignalsAvailable** | **Boolean** |  | [optional] 
 
