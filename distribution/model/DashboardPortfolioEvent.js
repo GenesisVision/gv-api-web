@@ -206,17 +206,17 @@ var DashboardPortfolioEvent = function () {
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessManagerCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef DashboardPortfolioEventCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -232,17 +232,17 @@ var DashboardPortfolioEvent = function () {
 
 DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -260,17 +260,17 @@ DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 };
 DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -288,17 +288,17 @@ DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
 };
 DashboardPortfolioEvent.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
