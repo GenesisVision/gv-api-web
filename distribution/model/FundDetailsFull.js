@@ -64,7 +64,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundDetailsFull#currentAssets
- * @type {Array<FundAssetPartWithIcon>}
+ * @type {[FundAssetPartWithIcon]}
  */
 /**
  *

@@ -41,17 +41,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramFilters#programTags
- * @type {Array<ProgramTag>}
+ * @type {[ProgramTag]}
  */
 /**
  *
  * @name ProgramFilters#actionType
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *
  * @name ProgramFilters#customNotificationType
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *

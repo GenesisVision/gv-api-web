@@ -73,7 +73,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name SignalDetails#tags
- * @type {Array<ProgramTag>}
+ * @type {[ProgramTag]}
  */
 /**
  *
@@ -128,7 +128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name SignalDetails#chart
- * @type {Array<ChartSimple>}
+ * @type {[ChartSimple]}
  */
 
 var SignalDetails = function () {

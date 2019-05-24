@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramBalanceChart#balanceChart
- * @type {Array<ProgramBalanceChartElement>}
+ * @type {[ProgramBalanceChartElement]}
  */
 /**
  *

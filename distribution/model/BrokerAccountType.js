@@ -53,12 +53,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name BrokerAccountType#leverages
- * @type {Array<Number>}
+ * @type {[Number]}
  */
 /**
  *
  * @name BrokerAccountType#currencies
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *
