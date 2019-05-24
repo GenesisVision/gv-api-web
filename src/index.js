@@ -156,6 +156,8 @@ import SearchViewModel from './model/SearchViewModel';
 import SignalDetails from './model/SignalDetails';
 import SignalSubscription from './model/SignalSubscription';
 import SignalsList from './model/SignalsList';
+import SocialLinkViewModel from './model/SocialLinkViewModel';
+import SocialLinksViewModel from './model/SocialLinksViewModel';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
@@ -165,6 +167,7 @@ import TwoFactorCodeModel from './model/TwoFactorCodeModel';
 import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdatePersonalDetailViewModel from './model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
+import UpdateSocialLinkViewModel from './model/UpdateSocialLinkViewModel';
 import UploadResult from './model/UploadResult';
 import UserCommissionData from './model/UserCommissionData';
 import ValueChartBar from './model/ValueChartBar';
@@ -1069,6 +1072,18 @@ export {
     SignalsList,
 
     /**
+     * @name index#SocialLinkViewModel
+     * @type {SocialLinkViewModel}
+     */
+    SocialLinkViewModel,
+
+    /**
+     * @name index#SocialLinksViewModel
+     * @type {SocialLinksViewModel}
+     */
+    SocialLinksViewModel,
+
+    /**
      * @name index#TradesSignalViewModel
      * @type {TradesSignalViewModel}
      */
@@ -1121,6 +1136,12 @@ export {
      * @type {UpdateProfileViewModel}
      */
     UpdateProfileViewModel,
+
+    /**
+     * @name index#UpdateSocialLinkViewModel
+     * @type {UpdateSocialLinkViewModel}
+     */
+    UpdateSocialLinkViewModel,
 
     /**
      * @name index#UploadResult

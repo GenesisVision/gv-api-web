@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _SocialLinkViewModel = require('./SocialLinkViewModel');
+
+var _SocialLinkViewModel2 = _interopRequireDefault(_SocialLinkViewModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65,6 +69,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name ManagerProfile#url
  * @type {String}
  */
+/**
+ *
+ * @name ManagerProfile#socialLinks
+ * @type {[SocialLinkViewModel]}
+ */
 
 var ManagerProfile = function () {
     function ManagerProfile() {
@@ -77,6 +86,7 @@ var ManagerProfile = function () {
         this.regDate = undefined;
         this.assets = undefined;
         this.url = undefined;
+        this.socialLinks = undefined;
     }
 
     _createClass(ManagerProfile, null, [{
@@ -105,6 +115,9 @@ var ManagerProfile = function () {
                 }
                 if (data.hasOwnProperty('url')) {
                     obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
+                }
+                if (data.hasOwnProperty('socialLinks')) {
+                    obj['socialLinks'] = _ApiClient2.default.convertToType(data['socialLinks'], [_SocialLinkViewModel2.default]);
                 }
             }
             return obj;

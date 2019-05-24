@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SocialLinkViewModel from './SocialLinkViewModel';
 
 
 
@@ -57,6 +58,11 @@ import ApiClient from '../ApiClient';
  *
  * @name ManagerProfile#url
  * @type {String}
+ */
+/**
+ *
+ * @name ManagerProfile#socialLinks
+ * @type {Array<SocialLinkViewModel>}
  */
 
 
@@ -105,6 +111,9 @@ export default class ManagerProfile {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('socialLinks')) {
+                obj['socialLinks'] = ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]);
+            }
         }
         return obj;
     }
@@ -116,6 +125,7 @@ export default class ManagerProfile {
     regDate = undefined;
     assets = undefined;
     url = undefined;
+    socialLinks = undefined;
 
 
 

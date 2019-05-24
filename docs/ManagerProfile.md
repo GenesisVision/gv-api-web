@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **regDate** | **Date** |  | [optional] 
 **assets** | **[String]** |  | [optional] 
 **url** | **String** |  | [optional] 
+**socialLinks** | [**[SocialLinkViewModel]**](SocialLinkViewModel.md) |  | [optional] 
 
 

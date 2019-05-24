@@ -37,6 +37,10 @@ var _ProfileHeaderViewModel = require('../model/ProfileHeaderViewModel');
 
 var _ProfileHeaderViewModel2 = _interopRequireDefault(_ProfileHeaderViewModel);
 
+var _SocialLinksViewModel = require('../model/SocialLinksViewModel');
+
+var _SocialLinksViewModel2 = _interopRequireDefault(_SocialLinksViewModel);
+
 var _UpdatePersonalDetailViewModel = require('../model/UpdatePersonalDetailViewModel');
 
 var _UpdatePersonalDetailViewModel2 = _interopRequireDefault(_UpdatePersonalDetailViewModel);
@@ -44,6 +48,10 @@ var _UpdatePersonalDetailViewModel2 = _interopRequireDefault(_UpdatePersonalDeta
 var _UpdateProfileViewModel = require('../model/UpdateProfileViewModel');
 
 var _UpdateProfileViewModel2 = _interopRequireDefault(_UpdateProfileViewModel);
+
+var _UpdateSocialLinkViewModel = require('../model/UpdateSocialLinkViewModel');
+
+var _UpdateSocialLinkViewModel2 = _interopRequireDefault(_UpdateSocialLinkViewModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -312,6 +320,87 @@ var ProfileApi = function () {
     key: 'v10ProfilePushTokenPost',
     value: function v10ProfilePushTokenPost(authorization, opts) {
       return this.v10ProfilePushTokenPostWithHttpInfo(authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ProfileSociallinksGetWithHttpInfo',
+    value: function v10ProfileSociallinksGetWithHttpInfo(authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileSociallinksGet");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SocialLinksViewModel2.default;
+
+      return this.apiClient.callApi('/v1.0/profile/sociallinks', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get social links
+     * @function ProfileApi#v10ProfileSociallinksGet
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<SocialLinksViewModel>} a Promise, with an object containing data of type SocialLinksViewModel and HTTP response
+     */
+
+  }, {
+    key: 'v10ProfileSociallinksGet',
+    value: function v10ProfileSociallinksGet(authorization) {
+      return this.v10ProfileSociallinksGetWithHttpInfo(authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ProfileSociallinksUpdatePostWithHttpInfo',
+    value: function v10ProfileSociallinksUpdatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      var postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileSociallinksUpdatePost");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/profile/sociallinks/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Add or update social links
+     * @function ProfileApi#v10ProfileSociallinksUpdatePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {UpdateSocialLinkViewModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProfileSociallinksUpdatePost',
+    value: function v10ProfileSociallinksUpdatePost(authorization, opts) {
+      return this.v10ProfileSociallinksUpdatePostWithHttpInfo(authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

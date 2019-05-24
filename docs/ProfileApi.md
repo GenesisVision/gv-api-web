@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**v10ProfileHeaderGet**](ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 [**v10ProfilePersonalUpdatePost**](ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
 [**v10ProfilePushTokenPost**](ProfileApi.md#v10ProfilePushTokenPost) | **POST** /v1.0/profile/push/token | 
+[**v10ProfileSociallinksGet**](ProfileApi.md#v10ProfileSociallinksGet) | **GET** /v1.0/profile/sociallinks | Get social links
+[**v10ProfileSociallinksUpdatePost**](ProfileApi.md#v10ProfileSociallinksUpdatePost) | **POST** /v1.0/profile/sociallinks/update | Add or update social links
 [**v10ProfileUpdatePost**](ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
 [**v10ProfileVerificationTokenPost**](ProfileApi.md#v10ProfileVerificationTokenPost) | **POST** /v1.0/profile/verification/token | 
 
@@ -257,6 +259,92 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **token** | [**FcmTokenViewModel**](FcmTokenViewModel.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProfileSociallinksGet"></a>
+# **v10ProfileSociallinksGet**
+> SocialLinksViewModel v10ProfileSociallinksGet(authorization)
+
+Get social links
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ProfileSociallinksGet(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**SocialLinksViewModel**](SocialLinksViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProfileSociallinksUpdatePost"></a>
+# **v10ProfileSociallinksUpdatePost**
+> v10ProfileSociallinksUpdatePost(authorization, opts)
+
+Add or update social links
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.UpdateSocialLinkViewModel() // UpdateSocialLinkViewModel | 
+};
+apiInstance.v10ProfileSociallinksUpdatePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **model** | [**UpdateSocialLinkViewModel**](UpdateSocialLinkViewModel.md)|  | [optional] 
 
 ### Return type
 

@@ -207,6 +207,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**v10ProfilePersonalUpdatePost**](docs/ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
 *CoreApiV10.ProfileApi* | [**v10ProfilePushTokenPost**](docs/ProfileApi.md#v10ProfilePushTokenPost) | **POST** /v1.0/profile/push/token | 
+*CoreApiV10.ProfileApi* | [**v10ProfileSociallinksGet**](docs/ProfileApi.md#v10ProfileSociallinksGet) | **GET** /v1.0/profile/sociallinks | Get social links
+*CoreApiV10.ProfileApi* | [**v10ProfileSociallinksUpdatePost**](docs/ProfileApi.md#v10ProfileSociallinksUpdatePost) | **POST** /v1.0/profile/sociallinks/update | Add or update social links
 *CoreApiV10.ProfileApi* | [**v10ProfileUpdatePost**](docs/ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
 *CoreApiV10.ProfileApi* | [**v10ProfileVerificationTokenPost**](docs/ProfileApi.md#v10ProfileVerificationTokenPost) | **POST** /v1.0/profile/verification/token | 
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdChartsBalanceGet**](docs/ProgramsApi.md#v10ProgramsByIdChartsBalanceGet) | **GET** /v1.0/programs/{id}/charts/balance | Program balance chart
@@ -397,6 +399,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalSubscription](docs/SignalSubscription.md)
  - [CoreApiV10.SignalsList](docs/SignalsList.md)
+ - [CoreApiV10.SocialLinkViewModel](docs/SocialLinkViewModel.md)
+ - [CoreApiV10.SocialLinksViewModel](docs/SocialLinksViewModel.md)
  - [CoreApiV10.TradesSignalViewModel](docs/TradesSignalViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TransactionDetails](docs/TransactionDetails.md)
@@ -406,6 +410,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.TwoFactorStatus](docs/TwoFactorStatus.md)
  - [CoreApiV10.UpdatePersonalDetailViewModel](docs/UpdatePersonalDetailViewModel.md)
  - [CoreApiV10.UpdateProfileViewModel](docs/UpdateProfileViewModel.md)
+ - [CoreApiV10.UpdateSocialLinkViewModel](docs/UpdateSocialLinkViewModel.md)
  - [CoreApiV10.UploadResult](docs/UploadResult.md)
  - [CoreApiV10.UserCommissionData](docs/UserCommissionData.md)
  - [CoreApiV10.ValueChartBar](docs/ValueChartBar.md)
