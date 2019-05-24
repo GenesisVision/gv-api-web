@@ -438,10 +438,10 @@ var FundsApi = function () {
      * @param {Boolean} [opts.isEnabled] 
      * @param {Boolean} [opts.hasInvestorsForAll] 
      * @param {Boolean} [opts.hasInvestorsForClosed] 
-     * @param {[String]} [opts.ids] 
+     * @param {Array<String>} [opts.ids] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
-     * @param {[String]} [opts.status] 
+     * @param {Array<String>} [opts.status] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
