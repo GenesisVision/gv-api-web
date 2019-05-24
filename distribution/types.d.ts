@@ -1607,6 +1607,7 @@ export declare interface PersonalFundDetailsFull {
     isInvested: boolean;
     isOwnProgram: boolean;
     canCloseProgram: boolean;
+    canCloseAsset: boolean;
     isFinishing: boolean;
     canInvest: boolean;
     canWithdraw: boolean;
@@ -1634,6 +1635,7 @@ export declare interface PersonalProgramDetailsFull {
     isInvested: boolean;
     isOwnProgram: boolean;
     canCloseProgram: boolean;
+    canCloseAsset: boolean;
     isFinishing: boolean;
     canInvest: boolean;
     canWithdraw: boolean;

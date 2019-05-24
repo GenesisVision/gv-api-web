@@ -91,6 +91,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#canCloseAsset
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFinishing
  * @type {Boolean}
  */
@@ -160,6 +165,7 @@ var PersonalProgramDetailsFull = function () {
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
         this.canCloseProgram = undefined;
+        this.canCloseAsset = undefined;
         this.isFinishing = undefined;
         this.canInvest = undefined;
         this.canWithdraw = undefined;
@@ -211,6 +217,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('canCloseProgram')) {
                     obj['canCloseProgram'] = _ApiClient2.default.convertToType(data['canCloseProgram'], 'Boolean');
+                }
+                if (data.hasOwnProperty('canCloseAsset')) {
+                    obj['canCloseAsset'] = _ApiClient2.default.convertToType(data['canCloseAsset'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isFinishing')) {
                     obj['isFinishing'] = _ApiClient2.default.convertToType(data['isFinishing'], 'Boolean');

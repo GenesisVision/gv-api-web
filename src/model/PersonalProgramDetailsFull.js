@@ -81,6 +81,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#canCloseAsset
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFinishing
  * @type {Boolean}
  */
@@ -193,6 +198,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('canCloseProgram')) {
                 obj['canCloseProgram'] = ApiClient.convertToType(data['canCloseProgram'], 'Boolean');
             }
+            if (data.hasOwnProperty('canCloseAsset')) {
+                obj['canCloseAsset'] = ApiClient.convertToType(data['canCloseAsset'], 'Boolean');
+            }
             if (data.hasOwnProperty('isFinishing')) {
                 obj['isFinishing'] = ApiClient.convertToType(data['isFinishing'], 'Boolean');
             }
@@ -241,6 +249,7 @@ export default class PersonalProgramDetailsFull {
     isInvested = undefined;
     isOwnProgram = undefined;
     canCloseProgram = undefined;
+    canCloseAsset = undefined;
     isFinishing = undefined;
     canInvest = undefined;
     canWithdraw = undefined;

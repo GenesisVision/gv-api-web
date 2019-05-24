@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
 **canCloseProgram** | **Boolean** |  | [optional] 
+**canCloseAsset** | **Boolean** |  | [optional] 
 **isFinishing** | **Boolean** |  | [optional] 
 **canInvest** | **Boolean** |  | [optional] 
 **canWithdraw** | **Boolean** |  | [optional] 
