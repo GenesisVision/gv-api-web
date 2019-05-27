@@ -63,7 +63,9 @@ var SearchApi = function () {
         'mask': opts['mask'],
         'take': opts['take']
       };
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
       var formParams = {};
 
       var authNames = [];
@@ -78,6 +80,7 @@ var SearchApi = function () {
      * Program / fund / manager search
      * @function SearchApi#v10SearchGet
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
      * @param {String} [opts.mask] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response

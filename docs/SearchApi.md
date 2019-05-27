@@ -20,6 +20,7 @@ import CoreApiV10 from 'core_api_v10';
 let apiInstance = new CoreApiV10.SearchApi();
 
 let opts = { 
+  'authorization': "authorization_example", // String | 
   'mask': "mask_example", // String | 
   'take': 56 // Number | 
 };
@@ -35,6 +36,7 @@ apiInstance.v10SearchGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
  **mask** | **String**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

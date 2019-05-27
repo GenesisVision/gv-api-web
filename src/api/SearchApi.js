@@ -46,6 +46,7 @@ export default class SearchApi {
         'take': opts['take']
       };
       let headerParams = {
+        'Authorization': opts['authorization']
       };
       let formParams = {
       };
@@ -66,6 +67,7 @@ export default class SearchApi {
      * Program / fund / manager search
      * @function SearchApi#v10SearchGet
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
      * @param {String} [opts.mask] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
