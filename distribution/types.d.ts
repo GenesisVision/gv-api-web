@@ -353,6 +353,7 @@ export declare class NotificationsApi {
 
 export declare class PlatformApi {
     constructor(apiClient: ApiClient): PlatformApi;
+    v10PlatformDatePost(): CancelablePromise<string>;
     v10PlatformInfoGet(): CancelablePromise<PlatformInfo>;
     v10PlatformLevelsGet(opts?: {
         currency?: string;

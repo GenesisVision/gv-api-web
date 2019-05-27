@@ -4,11 +4,47 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v10PlatformDatePost**](PlatformApi.md#v10PlatformDatePost) | **POST** /v1.0/platform/date | Server date
 [**v10PlatformInfoGet**](PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 [**v10PlatformLevelsGet**](PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
 [**v10PlatformRiskcontrolGet**](PlatformApi.md#v10PlatformRiskcontrolGet) | **GET** /v1.0/platform/riskcontrol | Platform captcha details.
 [**v10PlatformStatisticGet**](PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
 
+
+<a name="v10PlatformDatePost"></a>
+# **v10PlatformDatePost**
+> &#39;String&#39; v10PlatformDatePost()
+
+Server date
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.PlatformApi();
+apiInstance.v10PlatformDatePost().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 <a name="v10PlatformInfoGet"></a>
 # **v10PlatformInfoGet**

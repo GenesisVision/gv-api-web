@@ -37,6 +37,43 @@ export default class PlatformApi {
     }
 
 
+      v10PlatformDatePostWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/date', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Server date
+     * @function PlatformApi#v10PlatformDatePost
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     */
+      v10PlatformDatePost() {
+      return this.v10PlatformDatePostWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10PlatformInfoGetWithHttpInfo() {
       let postBody = null;
 

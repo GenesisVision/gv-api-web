@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsManagersByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsManagersByIdGet) | **GET** /v1.0/notifications/settings/managers/{id} | User settings for manager
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsProgramsByIdGet**](docs/NotificationsApi.md#v10NotificationsSettingsProgramsByIdGet) | **GET** /v1.0/notifications/settings/programs/{id} | User settings for program
 *CoreApiV10.NotificationsApi* | [**v10NotificationsSettingsRemoveByIdPost**](docs/NotificationsApi.md#v10NotificationsSettingsRemoveByIdPost) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
+*CoreApiV10.PlatformApi* | [**v10PlatformDatePost**](docs/PlatformApi.md#v10PlatformDatePost) | **POST** /v1.0/platform/date | Server date
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.PlatformApi* | [**v10PlatformLevelsGet**](docs/PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
 *CoreApiV10.PlatformApi* | [**v10PlatformRiskcontrolGet**](docs/PlatformApi.md#v10PlatformRiskcontrolGet) | **GET** /v1.0/platform/riskcontrol | Platform captcha details.
