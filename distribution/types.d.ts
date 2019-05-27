@@ -2040,10 +2040,13 @@ export declare interface ProgramTag {
 
 export declare type ProgramTransactionDetailsProgramTypeEnum = "Program" | "Fund";
 
+export declare type ProgramTransactionDetailsSuccessFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
 export declare interface ProgramTransactionDetails {
     id: string;
     managerName: string;
     programType: ProgramTransactionDetailsProgramTypeEnum;
+    successFeeCurrency: ProgramTransactionDetailsSuccessFeeCurrencyEnum;
     logo: string;
     title: string;
     entryFee: number;

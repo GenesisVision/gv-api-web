@@ -40,6 +40,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramTransactionDetails#successFeeCurrency
+ * @type ProgramTransactionDetailsSuccessFeeCurrencyEnum
+ */
+/**
+ *
  * @name ProgramTransactionDetails#logo
  * @type {String}
  */
@@ -123,6 +128,9 @@ export default class ProgramTransactionDetails {
             if (data.hasOwnProperty('programType')) {
                 obj['programType'] = ApiClient.convertToType(data['programType'], 'String');
             }
+            if (data.hasOwnProperty('successFeeCurrency')) {
+                obj['successFeeCurrency'] = ApiClient.convertToType(data['successFeeCurrency'], 'String');
+            }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
@@ -160,6 +168,7 @@ export default class ProgramTransactionDetails {
     id = undefined;
     managerName = undefined;
     programType = undefined;
+    successFeeCurrency = undefined;
     logo = undefined;
     title = undefined;
     entryFee = undefined;
@@ -183,6 +192,35 @@ export default class ProgramTransactionDetails {
         "Fund": "Fund"    
     };
 
+    static SuccessFeeCurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
 
 
 }
@@ -193,6 +231,11 @@ export default class ProgramTransactionDetails {
 /**
  * @typedef ProgramTransactionDetailsProgramTypeEnum 
  * @type {("Program"|"Fund")}
+ */
+
+/**
+ * @typedef ProgramTransactionDetailsSuccessFeeCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

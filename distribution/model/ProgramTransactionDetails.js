@@ -47,6 +47,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramTransactionDetails#successFeeCurrency
+ * @type ProgramTransactionDetailsSuccessFeeCurrencyEnum
+ */
+/**
+ *
  * @name ProgramTransactionDetails#logo
  * @type {String}
  */
@@ -103,6 +108,7 @@ var ProgramTransactionDetails = function () {
         this.id = undefined;
         this.managerName = undefined;
         this.programType = undefined;
+        this.successFeeCurrency = undefined;
         this.logo = undefined;
         this.title = undefined;
         this.entryFee = undefined;
@@ -129,6 +135,9 @@ var ProgramTransactionDetails = function () {
                 }
                 if (data.hasOwnProperty('programType')) {
                     obj['programType'] = _ApiClient2.default.convertToType(data['programType'], 'String');
+                }
+                if (data.hasOwnProperty('successFeeCurrency')) {
+                    obj['successFeeCurrency'] = _ApiClient2.default.convertToType(data['successFeeCurrency'], 'String');
                 }
                 if (data.hasOwnProperty('logo')) {
                     obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
@@ -173,11 +182,44 @@ var ProgramTransactionDetails = function () {
  * @type {("Program"|"Fund")}
  */
 
+/**
+ * @typedef ProgramTransactionDetailsSuccessFeeCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
 
 ProgramTransactionDetails.ProgramTypeEnum = {
 
     "Program": "Program",
 
     "Fund": "Fund"
+};
+ProgramTransactionDetails.SuccessFeeCurrencyEnum = {
+
+    "Undefined": "Undefined",
+
+    "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
+
+    "ADA": "ADA",
+
+    "USDT": "USDT",
+
+    "XRP": "XRP",
+
+    "BCH": "BCH",
+
+    "LTC": "LTC",
+
+    "DOGE": "DOGE",
+
+    "BNB": "BNB",
+
+    "USD": "USD",
+
+    "EUR": "EUR"
 };
 exports.default = ProgramTransactionDetails;
