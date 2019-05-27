@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **login** | **String** |  | [optional] 
 **notificationAvailableToInvestId** | **String** |  | [optional] 
 **canMakeSignalProvider** | **Boolean** |  | [optional] 
+**canChangePassword** | **Boolean** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 

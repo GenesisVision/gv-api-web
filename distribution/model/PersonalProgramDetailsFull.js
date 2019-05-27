@@ -71,6 +71,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#canChangePassword
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -161,6 +166,7 @@ var PersonalProgramDetailsFull = function () {
         this.login = undefined;
         this.notificationAvailableToInvestId = undefined;
         this.canMakeSignalProvider = undefined;
+        this.canChangePassword = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -205,6 +211,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('canMakeSignalProvider')) {
                     obj['canMakeSignalProvider'] = _ApiClient2.default.convertToType(data['canMakeSignalProvider'], 'Boolean');
+                }
+                if (data.hasOwnProperty('canChangePassword')) {
+                    obj['canChangePassword'] = _ApiClient2.default.convertToType(data['canChangePassword'], 'Boolean');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
