@@ -260,17 +260,17 @@ export default class WalletTransaction {
 
     static SourceCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -311,11 +311,21 @@ export default class WalletTransaction {
     
         "ProgramRequestCancel": "ProgramRequestCancel",
     
-        "PayingFee": "PayingFee",
+        "PayingTradingFee": "PayingTradingFee",
     
         "SignalSlaveSubscribe": "SignalSlaveSubscribe",
     
-        "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription"    
+        "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription",
+    
+        "SignalSlavePaySuccessFee": "SignalSlavePaySuccessFee",
+    
+        "SignalMasterReceiveSuccessFee": "SignalMasterReceiveSuccessFee",
+    
+        "SignalSlavePayVolumeFee": "SignalSlavePayVolumeFee",
+    
+        "SignalMasterReceiveVolumeFee": "SignalMasterReceiveVolumeFee",
+    
+        "SignalSlavePayPlatformSuccessFee": "SignalSlavePayPlatformSuccessFee"    
     };
 
     static DestinationTypeEnum = {
@@ -345,17 +355,17 @@ export default class WalletTransaction {
 
     static DestinationCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -386,12 +396,12 @@ export default class WalletTransaction {
 
 /**
  * @typedef WalletTransactionSourceCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef WalletTransactionActionEnum 
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription"|"SignalSlavePaySuccessFee"|"SignalMasterReceiveSuccessFee"|"SignalSlavePayVolumeFee"|"SignalMasterReceiveVolumeFee"|"SignalSlavePayPlatformSuccessFee")}
  */
 
 /**
@@ -401,7 +411,7 @@ export default class WalletTransaction {
 
 /**
  * @typedef WalletTransactionDestinationCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

@@ -241,12 +241,12 @@ var WalletTransaction = function () {
 
 /**
  * @typedef WalletTransactionSourceCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef WalletTransactionActionEnum 
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription")}
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription"|"SignalSlavePaySuccessFee"|"SignalMasterReceiveSuccessFee"|"SignalSlavePayVolumeFee"|"SignalMasterReceiveVolumeFee"|"SignalSlavePayPlatformSuccessFee")}
  */
 
 /**
@@ -256,7 +256,7 @@ var WalletTransaction = function () {
 
 /**
  * @typedef WalletTransactionDestinationCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
@@ -286,17 +286,17 @@ WalletTransaction.SourceTypeEnum = {
 };
 WalletTransaction.SourceCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -336,11 +336,21 @@ WalletTransaction.ActionEnum = {
 
     "ProgramRequestCancel": "ProgramRequestCancel",
 
-    "PayingFee": "PayingFee",
+    "PayingTradingFee": "PayingTradingFee",
 
     "SignalSlaveSubscribe": "SignalSlaveSubscribe",
 
-    "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription"
+    "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription",
+
+    "SignalSlavePaySuccessFee": "SignalSlavePaySuccessFee",
+
+    "SignalMasterReceiveSuccessFee": "SignalMasterReceiveSuccessFee",
+
+    "SignalSlavePayVolumeFee": "SignalSlavePayVolumeFee",
+
+    "SignalMasterReceiveVolumeFee": "SignalMasterReceiveVolumeFee",
+
+    "SignalSlavePayPlatformSuccessFee": "SignalSlavePayPlatformSuccessFee"
 };
 WalletTransaction.DestinationTypeEnum = {
 
@@ -368,17 +378,17 @@ WalletTransaction.DestinationTypeEnum = {
 };
 WalletTransaction.DestinationCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

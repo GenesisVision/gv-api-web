@@ -21,6 +21,12 @@ Name | Type | Description | Notes
 
 * `CopyTradingAccount` (value: `"CopyTradingAccount"`)
 
+* `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
+
+* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
+
+* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
+
 
 
 
@@ -33,6 +39,12 @@ Name | Type | Description | Notes
 * `Wallet` (value: `"Wallet"`)
 
 * `CopyTradingAccount` (value: `"CopyTradingAccount"`)
+
+* `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
+
+* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
+
+* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
 
 
 

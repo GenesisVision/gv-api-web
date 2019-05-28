@@ -119,7 +119,13 @@ export default class InternalTransferRequest {
     
         "Wallet": "Wallet",
     
-        "CopyTradingAccount": "CopyTradingAccount"    
+        "CopyTradingAccount": "CopyTradingAccount",
+    
+        "GenesisVisionPlatform": "GenesisVisionPlatform",
+    
+        "SignalMasterSetting": "SignalMasterSetting",
+    
+        "SignalTradingAccount": "SignalTradingAccount"    
     };
 
     static DestinationTypeEnum = {
@@ -128,7 +134,13 @@ export default class InternalTransferRequest {
     
         "Wallet": "Wallet",
     
-        "CopyTradingAccount": "CopyTradingAccount"    
+        "CopyTradingAccount": "CopyTradingAccount",
+    
+        "GenesisVisionPlatform": "GenesisVisionPlatform",
+    
+        "SignalMasterSetting": "SignalMasterSetting",
+    
+        "SignalTradingAccount": "SignalTradingAccount"    
     };
 
 
@@ -140,12 +152,12 @@ export default class InternalTransferRequest {
 
 /**
  * @typedef InternalTransferRequestSourceTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
  */
 
 /**
  * @typedef InternalTransferRequestDestinationTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
  */
 
 

@@ -57,17 +57,17 @@ Name | Type | Description | Notes
 ## Enum: SourceCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -112,11 +112,21 @@ Name | Type | Description | Notes
 
 * `ProgramRequestCancel` (value: `"ProgramRequestCancel"`)
 
-* `PayingFee` (value: `"PayingFee"`)
+* `PayingTradingFee` (value: `"PayingTradingFee"`)
 
 * `SignalSlaveSubscribe` (value: `"SignalSlaveSubscribe"`)
 
 * `SignalMasterReceiveSubscription` (value: `"SignalMasterReceiveSubscription"`)
+
+* `SignalSlavePaySuccessFee` (value: `"SignalSlavePaySuccessFee"`)
+
+* `SignalMasterReceiveSuccessFee` (value: `"SignalMasterReceiveSuccessFee"`)
+
+* `SignalSlavePayVolumeFee` (value: `"SignalSlavePayVolumeFee"`)
+
+* `SignalMasterReceiveVolumeFee` (value: `"SignalMasterReceiveVolumeFee"`)
+
+* `SignalSlavePayPlatformSuccessFee` (value: `"SignalSlavePayPlatformSuccessFee"`)
 
 
 
@@ -154,17 +164,17 @@ Name | Type | Description | Notes
 ## Enum: DestinationCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
