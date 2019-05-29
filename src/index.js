@@ -97,6 +97,7 @@ import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
 import NotificationViewModel from './model/NotificationViewModel';
 import OrderModel from './model/OrderModel';
+import OrderModelSignalData from './model/OrderModelSignalData';
 import OrderProgramData from './model/OrderProgramData';
 import OrderSignalModel from './model/OrderSignalModel';
 import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
@@ -716,6 +717,12 @@ export {
      * @type {OrderModel}
      */
     OrderModel,
+
+    /**
+     * @name index#OrderModelSignalData
+     * @type {OrderModelSignalData}
+     */
+    OrderModelSignalData,
 
     /**
      * @name index#OrderProgramData

@@ -656,6 +656,7 @@ export declare interface index {
     NotificationSettingViewModel: NotificationSettingViewModel;
     NotificationViewModel: NotificationViewModel;
     OrderModel: OrderModel;
+    OrderModelSignalData: OrderModelSignalData;
     OrderProgramData: OrderProgramData;
     OrderSignalModel: OrderSignalModel;
     OrderSignalProgramInfo: OrderSignalProgramInfo;
@@ -1539,7 +1540,11 @@ export declare interface OrderModel {
     commission: number;
     swap: number;
     showOriginalCommission: boolean;
-    masterLogin: string;
+    signalData: OrderModelSignalData;
+}
+
+export declare interface OrderModelSignalData {
+    masterLogins: any;
 }
 
 export declare interface OrderProgramData {
@@ -1573,7 +1578,7 @@ export declare interface OrderSignalModel {
     commission: number;
     swap: number;
     showOriginalCommission: boolean;
-    masterLogin: string;
+    signalData: OrderModelSignalData;
 }
 
 export declare interface OrderSignalProgramInfo {

@@ -341,6 +341,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.NotificationSettingViewModel](docs/NotificationSettingViewModel.md)
  - [CoreApiV10.NotificationViewModel](docs/NotificationViewModel.md)
  - [CoreApiV10.OrderModel](docs/OrderModel.md)
+ - [CoreApiV10.OrderModelSignalData](docs/OrderModelSignalData.md)
  - [CoreApiV10.OrderProgramData](docs/OrderProgramData.md)
  - [CoreApiV10.OrderSignalModel](docs/OrderSignalModel.md)
  - [CoreApiV10.OrderSignalProgramInfo](docs/OrderSignalProgramInfo.md)

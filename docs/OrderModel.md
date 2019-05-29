@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **commission** | **Number** | In account currency | [optional] 
 **swap** | **Number** |  | [optional] 
 **showOriginalCommission** | **Boolean** |  | [optional] 
-**masterLogin** | **String** | For signals | [optional] 
+**signalData** | [**OrderModelSignalData**](OrderModelSignalData.md) | For signals | [optional] 
 
 
 <a name="DirectionEnum"></a>

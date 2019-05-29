@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _OrderModelSignalData = require('./OrderModelSignalData');
+
+var _OrderModelSignalData2 = _interopRequireDefault(_OrderModelSignalData);
+
 var _OrderSignalProgramInfo = require('./OrderSignalProgramInfo');
 
 var _OrderSignalProgramInfo2 = _interopRequireDefault(_OrderSignalProgramInfo);
@@ -126,8 +130,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name OrderSignalModel#masterLogin
- * @type {String}
+ * @name OrderSignalModel#signalData
+ * @type {OrderModelSignalData}
  */
 
 var OrderSignalModel = function () {
@@ -152,7 +156,7 @@ var OrderSignalModel = function () {
         this.commission = undefined;
         this.swap = undefined;
         this.showOriginalCommission = undefined;
-        this.masterLogin = undefined;
+        this.signalData = undefined;
     }
 
     _createClass(OrderSignalModel, null, [{
@@ -215,8 +219,8 @@ var OrderSignalModel = function () {
                 if (data.hasOwnProperty('showOriginalCommission')) {
                     obj['showOriginalCommission'] = _ApiClient2.default.convertToType(data['showOriginalCommission'], 'Boolean');
                 }
-                if (data.hasOwnProperty('masterLogin')) {
-                    obj['masterLogin'] = _ApiClient2.default.convertToType(data['masterLogin'], 'String');
+                if (data.hasOwnProperty('signalData')) {
+                    obj['signalData'] = _OrderModelSignalData2.default.constructFromObject(data['signalData']);
                 }
             }
             return obj;

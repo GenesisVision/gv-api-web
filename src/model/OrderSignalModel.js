@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import OrderModelSignalData from './OrderModelSignalData';
 import OrderSignalProgramInfo from './OrderSignalProgramInfo';
 
 
@@ -116,8 +117,8 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
  */
 /**
  *
- * @name OrderSignalModel#masterLogin
- * @type {String}
+ * @name OrderSignalModel#signalData
+ * @type {OrderModelSignalData}
  */
 
 
@@ -199,8 +200,8 @@ export default class OrderSignalModel {
             if (data.hasOwnProperty('showOriginalCommission')) {
                 obj['showOriginalCommission'] = ApiClient.convertToType(data['showOriginalCommission'], 'Boolean');
             }
-            if (data.hasOwnProperty('masterLogin')) {
-                obj['masterLogin'] = ApiClient.convertToType(data['masterLogin'], 'String');
+            if (data.hasOwnProperty('signalData')) {
+                obj['signalData'] = OrderModelSignalData.constructFromObject(data['signalData']);
             }
         }
         return obj;
@@ -224,7 +225,7 @@ export default class OrderSignalModel {
     commission = undefined;
     swap = undefined;
     showOriginalCommission = undefined;
-    masterLogin = undefined;
+    signalData = undefined;
 
 
 

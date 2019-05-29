@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import OrderModelSignalData from './OrderModelSignalData';
 
 
 
@@ -110,8 +111,8 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name OrderModel#masterLogin
- * @type {String}
+ * @name OrderModel#signalData
+ * @type {OrderModelSignalData}
  */
 
 
@@ -190,8 +191,8 @@ export default class OrderModel {
             if (data.hasOwnProperty('showOriginalCommission')) {
                 obj['showOriginalCommission'] = ApiClient.convertToType(data['showOriginalCommission'], 'Boolean');
             }
-            if (data.hasOwnProperty('masterLogin')) {
-                obj['masterLogin'] = ApiClient.convertToType(data['masterLogin'], 'String');
+            if (data.hasOwnProperty('signalData')) {
+                obj['signalData'] = OrderModelSignalData.constructFromObject(data['signalData']);
             }
         }
         return obj;
@@ -214,7 +215,7 @@ export default class OrderModel {
     commission = undefined;
     swap = undefined;
     showOriginalCommission = undefined;
-    masterLogin = undefined;
+    signalData = undefined;
 
 
 
