@@ -713,6 +713,7 @@ export declare interface index {
     ResendConfirmationViewModel: ResendConfirmationViewModel;
     ResetPasswordViewModel: ResetPasswordViewModel;
     SearchViewModel: SearchViewModel;
+    SignalDataMaster: SignalDataMaster;
     SignalDetails: SignalDetails;
     SignalSubscription: SignalSubscription;
     SignalsList: SignalsList;
@@ -1544,7 +1545,7 @@ export declare interface OrderModel {
 }
 
 export declare interface OrderModelSignalData {
-    masterLogins: any;
+    masters: SignalDataMaster[];
 }
 
 export declare interface OrderProgramData {
@@ -2175,6 +2176,11 @@ export declare interface SearchViewModel {
     programs: ProgramsList;
     funds: FundsList;
     managers: ManagersList;
+}
+
+export declare interface SignalDataMaster {
+    login: string;
+    share: number;
 }
 
 export declare type SignalDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";

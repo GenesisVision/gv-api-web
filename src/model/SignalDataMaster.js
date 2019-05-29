@@ -13,7 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import SignalDataMaster from './SignalDataMaster';
 
 
 
@@ -21,20 +20,25 @@ import SignalDataMaster from './SignalDataMaster';
 
 /**
  *
- * @interface OrderModelSignalData
+ * @interface SignalDataMaster
  */
 
 /**
  *
- * @name OrderModelSignalData#masters
- * @type {Array<SignalDataMaster>}
+ * @name SignalDataMaster#login
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDataMaster#share
+ * @type {Number}
  */
 
 
 
 
 
-export default class OrderModelSignalData {
+export default class SignalDataMaster {
 
     constructor() {
         
@@ -49,20 +53,24 @@ export default class OrderModelSignalData {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrderModelSignalData();
+            obj = obj || new SignalDataMaster();
 
             
             
             
 
-            if (data.hasOwnProperty('masters')) {
-                obj['masters'] = ApiClient.convertToType(data['masters'], [SignalDataMaster]);
+            if (data.hasOwnProperty('login')) {
+                obj['login'] = ApiClient.convertToType(data['login'], 'String');
+            }
+            if (data.hasOwnProperty('share')) {
+                obj['share'] = ApiClient.convertToType(data['share'], 'Number');
             }
         }
         return obj;
     }
 
-    masters = undefined;
+    login = undefined;
+    share = undefined;
 
 
 

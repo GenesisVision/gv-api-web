@@ -21,47 +21,52 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _SignalDataMaster = require('./SignalDataMaster');
-
-var _SignalDataMaster2 = _interopRequireDefault(_SignalDataMaster);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface OrderModelSignalData
+ * @interface SignalDataMaster
  */
 
 /**
  *
- * @name OrderModelSignalData#masters
- * @type {[SignalDataMaster]}
+ * @name SignalDataMaster#login
+ * @type {String}
+ */
+/**
+ *
+ * @name SignalDataMaster#share
+ * @type {Number}
  */
 
-var OrderModelSignalData = function () {
-    function OrderModelSignalData() {
-        _classCallCheck(this, OrderModelSignalData);
+var SignalDataMaster = function () {
+    function SignalDataMaster() {
+        _classCallCheck(this, SignalDataMaster);
 
-        this.masters = undefined;
+        this.login = undefined;
+        this.share = undefined;
     }
 
-    _createClass(OrderModelSignalData, null, [{
+    _createClass(SignalDataMaster, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new OrderModelSignalData();
+                obj = obj || new SignalDataMaster();
 
-                if (data.hasOwnProperty('masters')) {
-                    obj['masters'] = _ApiClient2.default.convertToType(data['masters'], [_SignalDataMaster2.default]);
+                if (data.hasOwnProperty('login')) {
+                    obj['login'] = _ApiClient2.default.convertToType(data['login'], 'String');
+                }
+                if (data.hasOwnProperty('share')) {
+                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return OrderModelSignalData;
+    return SignalDataMaster;
 }();
 
-exports.default = OrderModelSignalData;
+exports.default = SignalDataMaster;

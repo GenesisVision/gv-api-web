@@ -154,6 +154,7 @@ import RegisterManagerViewModel from './model/RegisterManagerViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import SearchViewModel from './model/SearchViewModel';
+import SignalDataMaster from './model/SignalDataMaster';
 import SignalDetails from './model/SignalDetails';
 import SignalSubscription from './model/SignalSubscription';
 import SignalsList from './model/SignalsList';
@@ -1059,6 +1060,12 @@ export {
      * @type {SearchViewModel}
      */
     SearchViewModel,
+
+    /**
+     * @name index#SignalDataMaster
+     * @type {SignalDataMaster}
+     */
+    SignalDataMaster,
 
     /**
      * @name index#SignalDetails

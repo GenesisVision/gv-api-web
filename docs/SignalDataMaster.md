@@ -1,8 +1,9 @@
-# CoreApiV10.OrderModelSignalData
+# CoreApiV10.SignalDataMaster
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**masters** | [**[SignalDataMaster]**](SignalDataMaster.md) |  | [optional] 
+**login** | **String** |  | [optional] 
+**share** | **Number** |  | [optional] 
 
 
