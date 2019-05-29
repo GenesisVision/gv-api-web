@@ -23,9 +23,7 @@ Name | Type | Description | Notes
 
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
-* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
-
-* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
+* `SignalProviderSettings` (value: `"SignalProviderSettings"`)
 
 
 
@@ -42,9 +40,7 @@ Name | Type | Description | Notes
 
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
-* `SignalMasterSetting` (value: `"SignalMasterSetting"`)
-
-* `SignalTradingAccount` (value: `"SignalTradingAccount"`)
+* `SignalProviderSettings` (value: `"SignalProviderSettings"`)
 
 
 

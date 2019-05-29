@@ -1227,9 +1227,9 @@ export declare interface IOsAppVersion {
     lastVersion: string;
 }
 
-export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalMasterSetting" | "SignalTradingAccount";
+export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings";
 
-export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalMasterSetting" | "SignalTradingAccount";
+export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings";
 
 export declare interface InternalTransferRequest {
     sourceId: string;

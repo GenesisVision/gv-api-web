@@ -107,12 +107,12 @@ var InternalTransferRequest = function () {
 
 /**
  * @typedef InternalTransferRequestSourceTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalProviderSettings")}
  */
 
 /**
  * @typedef InternalTransferRequestDestinationTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalMasterSetting"|"SignalTradingAccount")}
+ * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalProviderSettings")}
  */
 
 
@@ -126,9 +126,7 @@ InternalTransferRequest.SourceTypeEnum = {
 
     "GenesisVisionPlatform": "GenesisVisionPlatform",
 
-    "SignalMasterSetting": "SignalMasterSetting",
-
-    "SignalTradingAccount": "SignalTradingAccount"
+    "SignalProviderSettings": "SignalProviderSettings"
 };
 InternalTransferRequest.DestinationTypeEnum = {
 
@@ -140,8 +138,6 @@ InternalTransferRequest.DestinationTypeEnum = {
 
     "GenesisVisionPlatform": "GenesisVisionPlatform",
 
-    "SignalMasterSetting": "SignalMasterSetting",
-
-    "SignalTradingAccount": "SignalTradingAccount"
+    "SignalProviderSettings": "SignalProviderSettings"
 };
 exports.default = InternalTransferRequest;
