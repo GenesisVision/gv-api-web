@@ -358,13 +358,18 @@ export default class ProgramsApi {
         });
     }
 
-      v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts) {
+      v10ProgramsByIdSubscribersGetWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdSubscribersGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByIdSubscribersGet");
       }
 
 
@@ -377,6 +382,7 @@ export default class ProgramsApi {
         'Take': opts['take']
       };
       let headerParams = {
+        'Authorization': authorization
       };
       let formParams = {
       };
@@ -397,14 +403,15 @@ export default class ProgramsApi {
      * Signal subscribers
      * @function ProgramsApi#v10ProgramsByIdSubscribersGet
      * @param {String} id 
+     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.dashboardActionStatus] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SignalProviderSubscribers>} a Promise, with an object containing data of type SignalProviderSubscribers and HTTP response
      */
-      v10ProgramsByIdSubscribersGet(id, opts) {
-      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts)
+      v10ProgramsByIdSubscribersGet(id, authorization, opts) {
+      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -310,7 +310,7 @@ No authorization required
 
 <a name="v10ProgramsByIdSubscribersGet"></a>
 # **v10ProgramsByIdSubscribersGet**
-> SignalProviderSubscribers v10ProgramsByIdSubscribersGet(id, opts)
+> SignalProviderSubscribers v10ProgramsByIdSubscribersGet(id, authorization, opts)
 
 Signal subscribers
 
@@ -322,12 +322,14 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 
 let id = "id_example"; // String | 
 
+let authorization = "authorization_example"; // String | JWT access token
+
 let opts = { 
   'dashboardActionStatus': "dashboardActionStatus_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdSubscribersGet(id, opts).then((data) => {
+apiInstance.v10ProgramsByIdSubscribersGet(id, authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -340,6 +342,7 @@ apiInstance.v10ProgramsByIdSubscribersGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
  **dashboardActionStatus** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 

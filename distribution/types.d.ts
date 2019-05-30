@@ -414,7 +414,7 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramPeriodsViewModel>;
-    v10ProgramsByIdSubscribersGet(id: string, opts?: {
+    v10ProgramsByIdSubscribersGet(id: string, authorization: string, opts?: {
         dashboardActionStatus?: string;
         skip?: number;
         take?: number;

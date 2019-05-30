@@ -379,13 +379,18 @@ var ProgramsApi = function () {
     }
   }, {
     key: 'v10ProgramsByIdSubscribersGetWithHttpInfo',
-    value: function v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts) {
+    value: function v10ProgramsByIdSubscribersGetWithHttpInfo(id, authorization, opts) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdSubscribersGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByIdSubscribersGet");
       }
 
       var pathParams = {
@@ -396,7 +401,9 @@ var ProgramsApi = function () {
         'Skip': opts['skip'],
         'Take': opts['take']
       };
-      var headerParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
       var formParams = {};
 
       var authNames = [];
@@ -411,6 +418,7 @@ var ProgramsApi = function () {
      * Signal subscribers
      * @function ProgramsApi#v10ProgramsByIdSubscribersGet
      * @param {String} id 
+     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.dashboardActionStatus] 
      * @param {Number} [opts.skip] 
@@ -420,8 +428,8 @@ var ProgramsApi = function () {
 
   }, {
     key: 'v10ProgramsByIdSubscribersGet',
-    value: function v10ProgramsByIdSubscribersGet(id, opts) {
-      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts).then(function (response_and_data) {
+    value: function v10ProgramsByIdSubscribersGet(id, authorization, opts) {
+      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
