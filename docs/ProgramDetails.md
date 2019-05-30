@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
 **periodStarts** | **Date** |  | [optional] 

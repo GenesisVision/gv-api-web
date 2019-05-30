@@ -1386,6 +1386,7 @@ export declare interface ManagerSimpleFund {
 
 export declare interface ManagerSimpleProgram {
     level: number;
+    levelProgress: number;
     id: string;
     title: string;
     color: string;
@@ -1559,6 +1560,7 @@ export declare interface OrderModelSignalData {
 export declare interface OrderProgramData {
     title: string;
     level: number;
+    levelProgress: number;
     color: string;
     url: string;
     logo: string;
@@ -1816,6 +1818,7 @@ export declare type ProgramDetailsStatusEnum = "None" | "Pending" | "ErrorCreati
 export declare interface ProgramDetails {
     currency: ProgramDetailsCurrencyEnum;
     level: number;
+    levelProgress: number;
     periodDuration: number;
     stopOutLevel: number;
     periodStarts: Date;
@@ -1846,6 +1849,7 @@ export declare type ProgramDetailsFullStatusEnum = "None" | "Pending" | "ErrorCr
 export declare interface ProgramDetailsFull {
     currency: ProgramDetailsFullCurrencyEnum;
     level: number;
+    levelProgress: number;
     periodDuration: number;
     periodStarts: Date;
     periodEnds: Date;
@@ -1944,6 +1948,7 @@ export declare interface ProgramMinimumDeposit {
 
 export declare interface ProgramNotificationSettingList {
     level: number;
+    levelProgress: number;
     settingsCustom: NotificationSettingViewModel[];
     assetId: string;
     title: string;
@@ -2083,6 +2088,7 @@ export declare interface ProgramTransactionDetails {
     successFee: number;
     successFeePercent: number;
     level: number;
+    levelProgress: number;
     exitFee: number;
     exitFeePercent: number;
     color: string;
@@ -2213,6 +2219,7 @@ export declare interface SignalDetails {
     personalDetails: PersonalSignalDetailsFull;
     currency: SignalDetailsCurrencyEnum;
     level: number;
+    levelProgress: number;
     tags: ProgramTag[];
     subscribers: number;
     id: string;

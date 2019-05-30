@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **level** | **Number** |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 **settingsCustom** | [**[NotificationSettingViewModel]**](NotificationSettingViewModel.md) |  | [optional] 
 **assetId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 

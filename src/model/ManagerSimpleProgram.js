@@ -30,6 +30,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ManagerSimpleProgram#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ManagerSimpleProgram#id
  * @type {String}
  */
@@ -82,6 +87,9 @@ export default class ManagerSimpleProgram {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -102,6 +110,7 @@ export default class ManagerSimpleProgram {
     }
 
     level = undefined;
+    levelProgress = undefined;
     id = undefined;
     title = undefined;
     color = undefined;

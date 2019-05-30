@@ -72,6 +72,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name SignalDetails#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name SignalDetails#tags
  * @type {[ProgramTag]}
  */
@@ -139,6 +144,7 @@ var SignalDetails = function () {
         this.personalDetails = undefined;
         this.currency = undefined;
         this.level = undefined;
+        this.levelProgress = undefined;
         this.tags = undefined;
         this.subscribers = undefined;
         this.id = undefined;
@@ -170,6 +176,9 @@ var SignalDetails = function () {
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('tags')) {
                     obj['tags'] = _ApiClient2.default.convertToType(data['tags'], [_ProgramTag2.default]);

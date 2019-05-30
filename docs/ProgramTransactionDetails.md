@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **successFee** | **Number** |  | [optional] 
 **successFeePercent** | **Number** |  | [optional] 
 **level** | **Number** |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 **exitFee** | **Number** |  | [optional] 
 **exitFeePercent** | **Number** |  | [optional] 
 **color** | **String** |  | [optional] 

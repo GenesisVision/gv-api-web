@@ -31,6 +31,11 @@ import NotificationSettingViewModel from './NotificationSettingViewModel';
  */
 /**
  *
+ * @name ProgramNotificationSettingList#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramNotificationSettingList#settingsCustom
  * @type {Array<NotificationSettingViewModel>}
  */
@@ -93,6 +98,9 @@ export default class ProgramNotificationSettingList {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('settingsCustom')) {
                 obj['settingsCustom'] = ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]);
             }
@@ -119,6 +127,7 @@ export default class ProgramNotificationSettingList {
     }
 
     level = undefined;
+    levelProgress = undefined;
     settingsCustom = undefined;
     assetId = undefined;
     title = undefined;

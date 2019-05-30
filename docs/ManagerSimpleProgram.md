@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **level** | **Number** |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 

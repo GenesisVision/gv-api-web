@@ -80,6 +80,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramTransactionDetails#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramTransactionDetails#exitFee
  * @type {Number}
  */
@@ -152,6 +157,9 @@ export default class ProgramTransactionDetails {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('exitFee')) {
                 obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
             }
@@ -176,6 +184,7 @@ export default class ProgramTransactionDetails {
     successFee = undefined;
     successFeePercent = undefined;
     level = undefined;
+    levelProgress = undefined;
     exitFee = undefined;
     exitFeePercent = undefined;
     color = undefined;

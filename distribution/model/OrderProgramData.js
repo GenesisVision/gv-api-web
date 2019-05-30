@@ -42,6 +42,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name OrderProgramData#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name OrderProgramData#color
  * @type {String}
  */
@@ -62,6 +67,7 @@ var OrderProgramData = function () {
 
         this.title = undefined;
         this.level = undefined;
+        this.levelProgress = undefined;
         this.color = undefined;
         this.url = undefined;
         this.logo = undefined;
@@ -78,6 +84,9 @@ var OrderProgramData = function () {
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('color')) {
                     obj['color'] = _ApiClient2.default.convertToType(data['color'], 'String');

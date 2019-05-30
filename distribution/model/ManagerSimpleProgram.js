@@ -37,6 +37,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ManagerSimpleProgram#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ManagerSimpleProgram#id
  * @type {String}
  */
@@ -66,6 +71,7 @@ var ManagerSimpleProgram = function () {
         _classCallCheck(this, ManagerSimpleProgram);
 
         this.level = undefined;
+        this.levelProgress = undefined;
         this.id = undefined;
         this.title = undefined;
         this.color = undefined;
@@ -81,6 +87,9 @@ var ManagerSimpleProgram = function () {
 
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');

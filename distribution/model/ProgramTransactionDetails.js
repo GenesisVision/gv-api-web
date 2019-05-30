@@ -87,6 +87,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramTransactionDetails#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramTransactionDetails#exitFee
  * @type {Number}
  */
@@ -116,6 +121,7 @@ var ProgramTransactionDetails = function () {
         this.successFee = undefined;
         this.successFeePercent = undefined;
         this.level = undefined;
+        this.levelProgress = undefined;
         this.exitFee = undefined;
         this.exitFeePercent = undefined;
         this.color = undefined;
@@ -159,6 +165,9 @@ var ProgramTransactionDetails = function () {
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('exitFee')) {
                     obj['exitFee'] = _ApiClient2.default.convertToType(data['exitFee'], 'Number');

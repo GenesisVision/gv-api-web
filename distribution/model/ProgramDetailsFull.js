@@ -62,6 +62,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#periodDuration
  * @type {Number}
  */
@@ -212,6 +217,7 @@ var ProgramDetailsFull = function () {
 
         this.currency = undefined;
         this.level = undefined;
+        this.levelProgress = undefined;
         this.periodDuration = undefined;
         this.periodStarts = undefined;
         this.periodEnds = undefined;
@@ -254,6 +260,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('periodDuration')) {
                     obj['periodDuration'] = _ApiClient2.default.convertToType(data['periodDuration'], 'Number');

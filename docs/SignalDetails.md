@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **personalDetails** | [**PersonalSignalDetailsFull**](PersonalSignalDetailsFull.md) |  | [optional] 
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 **tags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
 **subscribers** | **Number** |  | [optional] 
 **id** | **String** |  | [optional] 

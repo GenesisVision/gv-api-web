@@ -41,6 +41,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramNotificationSettingList#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramNotificationSettingList#settingsCustom
  * @type {[NotificationSettingViewModel]}
  */
@@ -80,6 +85,7 @@ var ProgramNotificationSettingList = function () {
         _classCallCheck(this, ProgramNotificationSettingList);
 
         this.level = undefined;
+        this.levelProgress = undefined;
         this.settingsCustom = undefined;
         this.assetId = undefined;
         this.title = undefined;
@@ -97,6 +103,9 @@ var ProgramNotificationSettingList = function () {
 
                 if (data.hasOwnProperty('level')) {
                     obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
+                }
+                if (data.hasOwnProperty('levelProgress')) {
+                    obj['levelProgress'] = _ApiClient2.default.convertToType(data['levelProgress'], 'Number');
                 }
                 if (data.hasOwnProperty('settingsCustom')) {
                     obj['settingsCustom'] = _ApiClient2.default.convertToType(data['settingsCustom'], [_NotificationSettingViewModel2.default]);

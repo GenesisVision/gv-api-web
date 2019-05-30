@@ -42,6 +42,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetails#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetails#periodDuration
  * @type {Number}
  */
@@ -177,6 +182,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('periodDuration')) {
                 obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'Number');
             }
@@ -246,6 +254,7 @@ export default class ProgramDetails {
 
     currency = undefined;
     level = undefined;
+    levelProgress = undefined;
     periodDuration = undefined;
     stopOutLevel = undefined;
     periodStarts = undefined;

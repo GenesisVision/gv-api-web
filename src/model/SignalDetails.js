@@ -50,6 +50,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name SignalDetails#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name SignalDetails#tags
  * @type {Array<ProgramTag>}
  */
@@ -146,6 +151,9 @@ export default class SignalDetails {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
             }
@@ -190,6 +198,7 @@ export default class SignalDetails {
     personalDetails = undefined;
     currency = undefined;
     level = undefined;
+    levelProgress = undefined;
     tags = undefined;
     subscribers = undefined;
     id = undefined;

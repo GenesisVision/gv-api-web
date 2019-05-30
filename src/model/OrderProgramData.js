@@ -35,6 +35,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name OrderProgramData#levelProgress
+ * @type {Number}
+ */
+/**
+ *
  * @name OrderProgramData#color
  * @type {String}
  */
@@ -80,6 +85,9 @@ export default class OrderProgramData {
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
             if (data.hasOwnProperty('color')) {
                 obj['color'] = ApiClient.convertToType(data['color'], 'String');
             }
@@ -95,6 +103,7 @@ export default class OrderProgramData {
 
     title = undefined;
     level = undefined;
+    levelProgress = undefined;
     color = undefined;
     url = undefined;
     logo = undefined;
