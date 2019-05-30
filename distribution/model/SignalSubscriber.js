@@ -27,116 +27,103 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface SignalSubscriber
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
+ * @name SignalSubscriber#number
  * @type {Number}
  */
 /**
  *
- * @name WalletBaseData#rate
+ * @name SignalSubscriber#trades
  * @type {Number}
  */
+/**
+ *
+ * @name SignalSubscriber#profit
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscriber#volume
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscriber#subscriptionDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name SignalSubscriber#unsubscriptionDate
+ * @type {Date}
+ */
+/**
+ *
+ * @name SignalSubscriber#status
+ * @type SignalSubscriberStatusEnum
+ */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var SignalSubscriber = function () {
+    function SignalSubscriber() {
+        _classCallCheck(this, SignalSubscriber);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.number = undefined;
+        this.trades = undefined;
+        this.profit = undefined;
+        this.volume = undefined;
+        this.subscriptionDate = undefined;
+        this.unsubscriptionDate = undefined;
+        this.status = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(SignalSubscriber, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new SignalSubscriber();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('number')) {
+                    obj['number'] = _ApiClient2.default.convertToType(data['number'], 'Number');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('trades')) {
+                    obj['trades'] = _ApiClient2.default.convertToType(data['trades'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('profit')) {
+                    obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('volume')) {
+                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
                 }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
+                if (data.hasOwnProperty('subscriptionDate')) {
+                    obj['subscriptionDate'] = _ApiClient2.default.convertToType(data['subscriptionDate'], 'Date');
                 }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('unsubscriptionDate')) {
+                    obj['unsubscriptionDate'] = _ApiClient2.default.convertToType(data['unsubscriptionDate'], 'Date');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return SignalSubscriber;
 }();
 
 /**
- * @typedef WalletBaseDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @typedef SignalSubscriberStatusEnum 
+ * @type {("Active"|"Ended")}
  */
 
 
-WalletBaseData.CurrencyEnum = {
+SignalSubscriber.StatusEnum = {
 
-    "BTC": "BTC",
+    "Active": "Active",
 
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
+    "Ended": "Ended"
 };
-exports.default = WalletBaseData;
+exports.default = SignalSubscriber;

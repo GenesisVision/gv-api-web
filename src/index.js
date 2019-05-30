@@ -157,6 +157,8 @@ import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDataMaster from './model/SignalDataMaster';
 import SignalDetails from './model/SignalDetails';
+import SignalProviderSubscribers from './model/SignalProviderSubscribers';
+import SignalSubscriber from './model/SignalSubscriber';
 import SignalSubscription from './model/SignalSubscription';
 import SignalsList from './model/SignalsList';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
@@ -1079,6 +1081,18 @@ export {
      * @type {SignalDetails}
      */
     SignalDetails,
+
+    /**
+     * @name index#SignalProviderSubscribers
+     * @type {SignalProviderSubscribers}
+     */
+    SignalProviderSubscribers,
+
+    /**
+     * @name index#SignalSubscriber
+     * @type {SignalSubscriber}
+     */
+    SignalSubscriber,
 
     /**
      * @name index#SignalSubscription

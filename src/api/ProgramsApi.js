@@ -21,6 +21,7 @@ import ProgramPeriodsViewModel from '../model/ProgramPeriodsViewModel';
 import ProgramProfitChart from '../model/ProgramProfitChart';
 import ProgramSets from '../model/ProgramSets';
 import ProgramsList from '../model/ProgramsList';
+import SignalProviderSubscribers from '../model/SignalProviderSubscribers';
 import TradesViewModel from '../model/TradesViewModel';
 
 /**
@@ -352,6 +353,58 @@ export default class ProgramsApi {
      */
       v10ProgramsByIdPeriodsGet(id, opts) {
       return this.v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdSubscribersGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DashboardActionStatus': opts['dashboardActionStatus'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SignalProviderSubscribers;
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/subscribers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Signal subscribers
+     * @function ProgramsApi#v10ProgramsByIdSubscribersGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.dashboardActionStatus] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<SignalProviderSubscribers>} a Promise, with an object containing data of type SignalProviderSubscribers and HTTP response
+     */
+      v10ProgramsByIdSubscribersGet(id, opts) {
+      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

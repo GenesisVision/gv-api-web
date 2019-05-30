@@ -53,6 +53,10 @@ var _ProgramsList = require('../model/ProgramsList');
 
 var _ProgramsList2 = _interopRequireDefault(_ProgramsList);
 
+var _SignalProviderSubscribers = require('../model/SignalProviderSubscribers');
+
+var _SignalProviderSubscribers2 = _interopRequireDefault(_SignalProviderSubscribers);
+
 var _TradesViewModel = require('../model/TradesViewModel');
 
 var _TradesViewModel2 = _interopRequireDefault(_TradesViewModel);
@@ -370,6 +374,54 @@ var ProgramsApi = function () {
     key: 'v10ProgramsByIdPeriodsGet',
     value: function v10ProgramsByIdPeriodsGet(id, opts) {
       return this.v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ProgramsByIdSubscribersGetWithHttpInfo',
+    value: function v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdSubscribersGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'DashboardActionStatus': opts['dashboardActionStatus'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SignalProviderSubscribers2.default;
+
+      return this.apiClient.callApi('/v1.0/programs/{id}/subscribers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Signal subscribers
+     * @function ProgramsApi#v10ProgramsByIdSubscribersGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.dashboardActionStatus] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<SignalProviderSubscribers>} a Promise, with an object containing data of type SignalProviderSubscribers and HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramsByIdSubscribersGet',
+    value: function v10ProgramsByIdSubscribersGet(id, opts) {
+      return this.v10ProgramsByIdSubscribersGetWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
