@@ -1047,6 +1047,7 @@ let apiInstance = new CoreApiV10.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
+  'status': "status_example", // String | 
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -1070,6 +1071,7 @@ apiInstance.v10InvestorSignalsGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **status** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 

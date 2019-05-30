@@ -1209,6 +1209,7 @@ var InvestorApi = function () {
 
       var pathParams = {};
       var queryParams = {
+        'Status': opts['status'],
         'Sorting': opts['sorting'],
         'From': opts['from'],
         'To': opts['to'],
@@ -1237,6 +1238,7 @@ var InvestorApi = function () {
      * @function InvestorApi#v10InvestorSignalsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.status] 
      * @param {String} [opts.sorting] 
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 

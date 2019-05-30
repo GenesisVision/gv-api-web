@@ -1238,6 +1238,7 @@ export default class InvestorApi {
       let pathParams = {
       };
       let queryParams = {
+        'Status': opts['status'],
         'Sorting': opts['sorting'],
         'From': opts['from'],
         'To': opts['to'],
@@ -1271,6 +1272,7 @@ export default class InvestorApi {
      * @function InvestorApi#v10InvestorSignalsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.status] 
      * @param {String} [opts.sorting] 
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 

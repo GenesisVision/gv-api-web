@@ -69,6 +69,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name PersonalSignalDetailsFull#isInvested
  * @type {Boolean}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#status
+ * @type PersonalSignalDetailsFullStatusEnum
+ */
 
 var PersonalSignalDetailsFull = function () {
     function PersonalSignalDetailsFull() {
@@ -81,6 +86,7 @@ var PersonalSignalDetailsFull = function () {
         this.volume = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
+        this.status = undefined;
     }
 
     _createClass(PersonalSignalDetailsFull, null, [{
@@ -110,6 +116,9 @@ var PersonalSignalDetailsFull = function () {
                 if (data.hasOwnProperty('isInvested')) {
                     obj['isInvested'] = _ApiClient2.default.convertToType(data['isInvested'], 'Boolean');
                 }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
+                }
             }
             return obj;
         }
@@ -118,4 +127,16 @@ var PersonalSignalDetailsFull = function () {
     return PersonalSignalDetailsFull;
 }();
 
+/**
+ * @typedef PersonalSignalDetailsFullStatusEnum 
+ * @type {("Active"|"Ended")}
+ */
+
+
+PersonalSignalDetailsFull.StatusEnum = {
+
+    "Active": "Active",
+
+    "Ended": "Ended"
+};
 exports.default = PersonalSignalDetailsFull;

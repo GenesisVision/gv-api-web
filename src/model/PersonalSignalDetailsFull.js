@@ -59,6 +59,11 @@ import SignalSubscription from './SignalSubscription';
  * @name PersonalSignalDetailsFull#isInvested
  * @type {Boolean}
  */
+/**
+ *
+ * @name PersonalSignalDetailsFull#status
+ * @type PersonalSignalDetailsFullStatusEnum
+ */
 
 
 
@@ -106,6 +111,9 @@ export default class PersonalSignalDetailsFull {
             if (data.hasOwnProperty('isInvested')) {
                 obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
             }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
         }
         return obj;
     }
@@ -117,11 +125,19 @@ export default class PersonalSignalDetailsFull {
     volume = undefined;
     isFavorite = undefined;
     isInvested = undefined;
+    status = undefined;
 
 
 
 
 
+
+    static StatusEnum = {
+    
+        "Active": "Active",
+    
+        "Ended": "Ended"    
+    };
 
 
 
@@ -129,6 +145,11 @@ export default class PersonalSignalDetailsFull {
 
 
 
+
+/**
+ * @typedef PersonalSignalDetailsFullStatusEnum 
+ * @type {("Active"|"Ended")}
+ */
 
 
 
