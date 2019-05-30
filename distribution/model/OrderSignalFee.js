@@ -27,91 +27,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface OrderSignalFee
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
+ * @name OrderSignalFee#amount
  * @type {Number}
  */
 /**
  *
- * @name WalletBaseData#rate
- * @type {Number}
+ * @name OrderSignalFee#currency
+ * @type OrderSignalFeeCurrencyEnum
+ */
+/**
+ *
+ * @name OrderSignalFee#type
+ * @type OrderSignalFeeTypeEnum
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var OrderSignalFee = function () {
+    function OrderSignalFee() {
+        _classCallCheck(this, OrderSignalFee);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
+        this.amount = undefined;
         this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.type = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(OrderSignalFee, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new OrderSignalFee();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
                 if (data.hasOwnProperty('currency')) {
                     obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
-                }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return OrderSignalFee;
 }();
 
 /**
- * @typedef WalletBaseDataCurrencyEnum 
+ * @typedef OrderSignalFeeCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
+/**
+ * @typedef OrderSignalFeeTypeEnum 
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
+ */
 
-WalletBaseData.CurrencyEnum = {
+
+OrderSignalFee.CurrencyEnum = {
 
     "BTC": "BTC",
 
@@ -139,4 +117,32 @@ WalletBaseData.CurrencyEnum = {
 
     "EUR": "EUR"
 };
-exports.default = WalletBaseData;
+OrderSignalFee.TypeEnum = {
+
+    "Undefined": "Undefined",
+
+    "GvProgramEntry": "GvProgramEntry",
+
+    "GvProgramSuccess": "GvProgramSuccess",
+
+    "GvFundEntry": "GvFundEntry",
+
+    "GvGmGvtHolderFee": "GvGmGvtHolderFee",
+
+    "ManagerProgramEntry": "ManagerProgramEntry",
+
+    "ManagerProgramSuccess": "ManagerProgramSuccess",
+
+    "ManagerFundEntry": "ManagerFundEntry",
+
+    "ManagerFundExit": "ManagerFundExit",
+
+    "GvWithdrawal": "GvWithdrawal",
+
+    "ManagerSignalMasterSuccessFee": "ManagerSignalMasterSuccessFee",
+
+    "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
+
+    "GvSignalSuccessFee": "GvSignalSuccessFee"
+};
+exports.default = OrderSignalFee;

@@ -99,6 +99,7 @@ import NotificationViewModel from './model/NotificationViewModel';
 import OrderModel from './model/OrderModel';
 import OrderModelSignalData from './model/OrderModelSignalData';
 import OrderProgramData from './model/OrderProgramData';
+import OrderSignalFee from './model/OrderSignalFee';
 import OrderSignalModel from './model/OrderSignalModel';
 import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
@@ -730,6 +731,12 @@ export {
      * @type {OrderProgramData}
      */
     OrderProgramData,
+
+    /**
+     * @name index#OrderSignalFee
+     * @type {OrderSignalFee}
+     */
+    OrderSignalFee,
 
     /**
      * @name index#OrderSignalModel

@@ -20,35 +20,30 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface CreateWithdrawalRequestModel
+ * @interface OrderSignalFee
  */
 
 /**
  *
- * @name CreateWithdrawalRequestModel#amount
+ * @name OrderSignalFee#amount
  * @type {Number}
  */
 /**
  *
- * @name CreateWithdrawalRequestModel#currency
- * @type CreateWithdrawalRequestModelCurrencyEnum
+ * @name OrderSignalFee#currency
+ * @type OrderSignalFeeCurrencyEnum
  */
 /**
  *
- * @name CreateWithdrawalRequestModel#address
- * @type {String}
- */
-/**
- *
- * @name CreateWithdrawalRequestModel#twoFactorCode
- * @type {String}
+ * @name OrderSignalFee#type
+ * @type OrderSignalFeeTypeEnum
  */
 
 
 
 
 
-export default class CreateWithdrawalRequestModel {
+export default class OrderSignalFee {
 
     constructor() {
         
@@ -63,7 +58,7 @@ export default class CreateWithdrawalRequestModel {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CreateWithdrawalRequestModel();
+            obj = obj || new OrderSignalFee();
 
             
             
@@ -75,11 +70,8 @@ export default class CreateWithdrawalRequestModel {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('twoFactorCode')) {
-                obj['twoFactorCode'] = ApiClient.convertToType(data['twoFactorCode'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -87,8 +79,7 @@ export default class CreateWithdrawalRequestModel {
 
     amount = undefined;
     currency = undefined;
-    address = undefined;
-    twoFactorCode = undefined;
+    type = undefined;
 
 
 
@@ -124,6 +115,35 @@ export default class CreateWithdrawalRequestModel {
         "EUR": "EUR"    
     };
 
+    static TypeEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GvProgramEntry": "GvProgramEntry",
+    
+        "GvProgramSuccess": "GvProgramSuccess",
+    
+        "GvFundEntry": "GvFundEntry",
+    
+        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
+    
+        "ManagerProgramEntry": "ManagerProgramEntry",
+    
+        "ManagerProgramSuccess": "ManagerProgramSuccess",
+    
+        "ManagerFundEntry": "ManagerFundEntry",
+    
+        "ManagerFundExit": "ManagerFundExit",
+    
+        "GvWithdrawal": "GvWithdrawal",
+    
+        "ManagerSignalMasterSuccessFee": "ManagerSignalMasterSuccessFee",
+    
+        "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
+    
+        "GvSignalSuccessFee": "GvSignalSuccessFee"    
+    };
+
 
 
 }
@@ -132,8 +152,13 @@ export default class CreateWithdrawalRequestModel {
 
 
 /**
- * @typedef CreateWithdrawalRequestModelCurrencyEnum 
+ * @typedef OrderSignalFeeCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef OrderSignalFeeTypeEnum 
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
  */
 
 

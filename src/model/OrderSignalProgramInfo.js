@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import OrderProgramData from './OrderProgramData';
+import OrderSignalFee from './OrderSignalFee';
 import ProfilePublic from './ProfilePublic';
 
 
@@ -44,6 +45,11 @@ import ProfilePublic from './ProfilePublic';
  *
  * @name OrderSignalProgramInfo#volume
  * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalProgramInfo#fees
+ * @type {Array<OrderSignalFee>}
  */
 
 
@@ -83,6 +89,9 @@ export default class OrderSignalProgramInfo {
             if (data.hasOwnProperty('volume')) {
                 obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
             }
+            if (data.hasOwnProperty('fees')) {
+                obj['fees'] = ApiClient.convertToType(data['fees'], [OrderSignalFee]);
+            }
         }
         return obj;
     }
@@ -91,6 +100,7 @@ export default class OrderSignalProgramInfo {
     program = undefined;
     programId = undefined;
     volume = undefined;
+    fees = undefined;
 
 
 

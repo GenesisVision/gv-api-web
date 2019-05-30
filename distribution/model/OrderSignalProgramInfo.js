@@ -25,6 +25,10 @@ var _OrderProgramData = require('./OrderProgramData');
 
 var _OrderProgramData2 = _interopRequireDefault(_OrderProgramData);
 
+var _OrderSignalFee = require('./OrderSignalFee');
+
+var _OrderSignalFee2 = _interopRequireDefault(_OrderSignalFee);
+
 var _ProfilePublic = require('./ProfilePublic');
 
 var _ProfilePublic2 = _interopRequireDefault(_ProfilePublic);
@@ -58,6 +62,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name OrderSignalProgramInfo#volume
  * @type {Number}
  */
+/**
+ *
+ * @name OrderSignalProgramInfo#fees
+ * @type {[OrderSignalFee]}
+ */
 
 var OrderSignalProgramInfo = function () {
     function OrderSignalProgramInfo() {
@@ -67,6 +76,7 @@ var OrderSignalProgramInfo = function () {
         this.program = undefined;
         this.programId = undefined;
         this.volume = undefined;
+        this.fees = undefined;
     }
 
     _createClass(OrderSignalProgramInfo, null, [{
@@ -86,6 +96,9 @@ var OrderSignalProgramInfo = function () {
                 }
                 if (data.hasOwnProperty('volume')) {
                     obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
+                }
+                if (data.hasOwnProperty('fees')) {
+                    obj['fees'] = _ApiClient2.default.convertToType(data['fees'], [_OrderSignalFee2.default]);
                 }
             }
             return obj;
