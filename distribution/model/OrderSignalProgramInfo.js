@@ -64,6 +64,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name OrderSignalProgramInfo#firstOrderDate
+ * @type {Date}
+ */
+/**
+ *
  * @name OrderSignalProgramInfo#fees
  * @type {[OrderSignalFee]}
  */
@@ -76,6 +81,7 @@ var OrderSignalProgramInfo = function () {
         this.program = undefined;
         this.programId = undefined;
         this.volume = undefined;
+        this.firstOrderDate = undefined;
         this.fees = undefined;
     }
 
@@ -96,6 +102,9 @@ var OrderSignalProgramInfo = function () {
                 }
                 if (data.hasOwnProperty('volume')) {
                     obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
+                }
+                if (data.hasOwnProperty('firstOrderDate')) {
+                    obj['firstOrderDate'] = _ApiClient2.default.convertToType(data['firstOrderDate'], 'Date');
                 }
                 if (data.hasOwnProperty('fees')) {
                     obj['fees'] = _ApiClient2.default.convertToType(data['fees'], [_OrderSignalFee2.default]);

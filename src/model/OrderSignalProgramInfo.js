@@ -48,6 +48,11 @@ import ProfilePublic from './ProfilePublic';
  */
 /**
  *
+ * @name OrderSignalProgramInfo#firstOrderDate
+ * @type {Date}
+ */
+/**
+ *
  * @name OrderSignalProgramInfo#fees
  * @type {Array<OrderSignalFee>}
  */
@@ -89,6 +94,9 @@ export default class OrderSignalProgramInfo {
             if (data.hasOwnProperty('volume')) {
                 obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
             }
+            if (data.hasOwnProperty('firstOrderDate')) {
+                obj['firstOrderDate'] = ApiClient.convertToType(data['firstOrderDate'], 'Date');
+            }
             if (data.hasOwnProperty('fees')) {
                 obj['fees'] = ApiClient.convertToType(data['fees'], [OrderSignalFee]);
             }
@@ -100,6 +108,7 @@ export default class OrderSignalProgramInfo {
     program = undefined;
     programId = undefined;
     volume = undefined;
+    firstOrderDate = undefined;
     fees = undefined;
 
 

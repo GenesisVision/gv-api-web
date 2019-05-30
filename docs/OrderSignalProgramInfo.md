@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **program** | [**OrderProgramData**](OrderProgramData.md) |  | [optional] 
 **programId** | **String** |  | [optional] 
 **volume** | **Number** |  | [optional] 
+**firstOrderDate** | **Date** |  | [optional] 
 **fees** | [**[OrderSignalFee]**](OrderSignalFee.md) |  | [optional] 
 
 
