@@ -46,6 +46,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalSignalDetailsFull#volume
+ * @type {Number}
+ */
+/**
+ *
  * @name PersonalSignalDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -92,6 +97,9 @@ export default class PersonalSignalDetailsFull {
             if (data.hasOwnProperty('profit')) {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
+            if (data.hasOwnProperty('volume')) {
+                obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -106,6 +114,7 @@ export default class PersonalSignalDetailsFull {
     tradesCount = undefined;
     signalSubscription = undefined;
     profit = undefined;
+    volume = undefined;
     isFavorite = undefined;
     isInvested = undefined;
 

@@ -56,6 +56,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalSignalDetailsFull#volume
+ * @type {Number}
+ */
+/**
+ *
  * @name PersonalSignalDetailsFull#isFavorite
  * @type {Boolean}
  */
@@ -73,6 +78,7 @@ var PersonalSignalDetailsFull = function () {
         this.tradesCount = undefined;
         this.signalSubscription = undefined;
         this.profit = undefined;
+        this.volume = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
     }
@@ -94,6 +100,9 @@ var PersonalSignalDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('profit')) {
                     obj['profit'] = _ApiClient2.default.convertToType(data['profit'], 'Number');
+                }
+                if (data.hasOwnProperty('volume')) {
+                    obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');
