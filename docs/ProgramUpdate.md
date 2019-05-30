@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
+**investmentLimit** | **Number** |  | [optional] 
 
 

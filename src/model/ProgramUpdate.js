@@ -43,6 +43,11 @@ import ApiClient from '../ApiClient';
  * @name ProgramUpdate#stopOutLevel
  * @type {Number}
  */
+/**
+ *
+ * @name ProgramUpdate#investmentLimit
+ * @type {Number}
+ */
 
 
 
@@ -81,6 +86,9 @@ export default class ProgramUpdate {
             if (data.hasOwnProperty('stopOutLevel')) {
                 obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
             }
+            if (data.hasOwnProperty('investmentLimit')) {
+                obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'Number');
+            }
         }
         return obj;
     }
@@ -89,6 +97,7 @@ export default class ProgramUpdate {
     description = undefined;
     logo = undefined;
     stopOutLevel = undefined;
+    investmentLimit = undefined;
 
 
 

@@ -2103,6 +2103,7 @@ export declare interface ProgramUpdate {
     description: string;
     logo: string;
     stopOutLevel: number;
+    investmentLimit: number;
 }
 
 export declare interface ProgramWithdrawInfo {
