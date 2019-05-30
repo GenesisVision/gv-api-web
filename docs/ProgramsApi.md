@@ -325,7 +325,7 @@ let id = "id_example"; // String |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'status': "status_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **dashboardActionStatus** | **String**|  | [optional] 
+ **status** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

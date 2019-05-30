@@ -397,7 +397,7 @@ var ProgramsApi = function () {
         'id': id
       };
       var queryParams = {
-        'DashboardActionStatus': opts['dashboardActionStatus'],
+        'Status': opts['status'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -420,7 +420,7 @@ var ProgramsApi = function () {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.dashboardActionStatus] 
+     * @param {String} [opts.status] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SignalProviderSubscribers>} a Promise, with an object containing data of type SignalProviderSubscribers and HTTP response
