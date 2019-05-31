@@ -246,7 +246,7 @@ var WalletTransaction = function () {
 
 /**
  * @typedef WalletTransactionActionEnum 
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription"|"SignalSlavePaySuccessFee"|"SignalMasterReceiveSuccessFee"|"SignalSlavePayVolumeFee"|"SignalMasterReceiveVolumeFee"|"SignalSlavePayPlatformSuccessFee")}
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSubscriberPayingFee"|"SignalProviderReceiveFee")}
  */
 
 /**
@@ -338,19 +338,9 @@ WalletTransaction.ActionEnum = {
 
     "PayingTradingFee": "PayingTradingFee",
 
-    "SignalSlaveSubscribe": "SignalSlaveSubscribe",
+    "SignalSubscriberPayingFee": "SignalSubscriberPayingFee",
 
-    "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription",
-
-    "SignalSlavePaySuccessFee": "SignalSlavePaySuccessFee",
-
-    "SignalMasterReceiveSuccessFee": "SignalMasterReceiveSuccessFee",
-
-    "SignalSlavePayVolumeFee": "SignalSlavePayVolumeFee",
-
-    "SignalMasterReceiveVolumeFee": "SignalMasterReceiveVolumeFee",
-
-    "SignalSlavePayPlatformSuccessFee": "SignalSlavePayPlatformSuccessFee"
+    "SignalProviderReceiveFee": "SignalProviderReceiveFee"
 };
 WalletTransaction.DestinationTypeEnum = {
 

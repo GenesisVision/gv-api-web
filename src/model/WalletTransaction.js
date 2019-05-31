@@ -313,19 +313,9 @@ export default class WalletTransaction {
     
         "PayingTradingFee": "PayingTradingFee",
     
-        "SignalSlaveSubscribe": "SignalSlaveSubscribe",
+        "SignalSubscriberPayingFee": "SignalSubscriberPayingFee",
     
-        "SignalMasterReceiveSubscription": "SignalMasterReceiveSubscription",
-    
-        "SignalSlavePaySuccessFee": "SignalSlavePaySuccessFee",
-    
-        "SignalMasterReceiveSuccessFee": "SignalMasterReceiveSuccessFee",
-    
-        "SignalSlavePayVolumeFee": "SignalSlavePayVolumeFee",
-    
-        "SignalMasterReceiveVolumeFee": "SignalMasterReceiveVolumeFee",
-    
-        "SignalSlavePayPlatformSuccessFee": "SignalSlavePayPlatformSuccessFee"    
+        "SignalProviderReceiveFee": "SignalProviderReceiveFee"    
     };
 
     static DestinationTypeEnum = {
@@ -401,7 +391,7 @@ export default class WalletTransaction {
 
 /**
  * @typedef WalletTransactionActionEnum 
- * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSlaveSubscribe"|"SignalMasterReceiveSubscription"|"SignalSlavePaySuccessFee"|"SignalMasterReceiveSuccessFee"|"SignalSlavePayVolumeFee"|"SignalMasterReceiveVolumeFee"|"SignalSlavePayPlatformSuccessFee")}
+ * @type {("Transfer"|"ProgramOpen"|"ProgramProfit"|"ProgramInvest"|"ProgramWithdrawal"|"ProgramRefundPartialExecution"|"ProgramRefundClose"|"ProgramRefundStopOut"|"ProgramRequestInvest"|"ProgramRequestWithdrawal"|"ProgramRequestCancel"|"PayingTradingFee"|"SignalSubscriberPayingFee"|"SignalProviderReceiveFee")}
  */
 
 /**

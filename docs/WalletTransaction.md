@@ -114,19 +114,9 @@ Name | Type | Description | Notes
 
 * `PayingTradingFee` (value: `"PayingTradingFee"`)
 
-* `SignalSlaveSubscribe` (value: `"SignalSlaveSubscribe"`)
+* `SignalSubscriberPayingFee` (value: `"SignalSubscriberPayingFee"`)
 
-* `SignalMasterReceiveSubscription` (value: `"SignalMasterReceiveSubscription"`)
-
-* `SignalSlavePaySuccessFee` (value: `"SignalSlavePaySuccessFee"`)
-
-* `SignalMasterReceiveSuccessFee` (value: `"SignalMasterReceiveSuccessFee"`)
-
-* `SignalSlavePayVolumeFee` (value: `"SignalSlavePayVolumeFee"`)
-
-* `SignalMasterReceiveVolumeFee` (value: `"SignalMasterReceiveVolumeFee"`)
-
-* `SignalSlavePayPlatformSuccessFee` (value: `"SignalSlavePayPlatformSuccessFee"`)
+* `SignalProviderReceiveFee` (value: `"SignalProviderReceiveFee"`)
 
 
 
