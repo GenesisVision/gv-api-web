@@ -1,10 +1,10 @@
-# CoreApiV10.RateItem
+# CoreApiV10.OrderTradingFee
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**rate** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

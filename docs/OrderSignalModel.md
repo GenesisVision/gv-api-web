@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**tradingFee** | [**OrderTradingFee**](OrderTradingFee.md) |  | [optional] 
 **providers** | [**[OrderSignalProgramInfo]**](OrderSignalProgramInfo.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **login** | **String** |  | [optional] 

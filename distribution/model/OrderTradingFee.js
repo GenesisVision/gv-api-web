@@ -21,214 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AmountWithCurrency = require('./AmountWithCurrency');
-
-var _AmountWithCurrency2 = _interopRequireDefault(_AmountWithCurrency);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface ProgramStatistic
+ * @interface OrderTradingFee
  */
 
 /**
  *
- * @name ProgramStatistic#balanceBase
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name ProgramStatistic#balanceGVT
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name ProgramStatistic#balanceSecondary
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name ProgramStatistic#currentValue
+ * @name OrderTradingFee#amount
  * @type {Number}
  */
 /**
  *
- * @name ProgramStatistic#profitPercent
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#profitValue
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#drawdownPercent
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#investorsCount
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#hasNotifications
- * @type {Boolean}
- */
-/**
- *
- * @name ProgramStatistic#startDate
- * @type {Date}
- */
-/**
- *
- * @name ProgramStatistic#startBalance
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#startCurrency
- * @type ProgramStatisticStartCurrencyEnum
- */
-/**
- *
- * @name ProgramStatistic#investedAmount
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#investedCurrency
- * @type ProgramStatisticInvestedCurrencyEnum
- */
-/**
- *
- * @name ProgramStatistic#tradesCount
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#tradesSuccessCount
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#profitFactorPercent
- * @type {Number}
- */
-/**
- *
- * @name ProgramStatistic#sharpeRatioPercent
- * @type {Number}
+ * @name OrderTradingFee#currency
+ * @type OrderTradingFeeCurrencyEnum
  */
 
-var ProgramStatistic = function () {
-    function ProgramStatistic() {
-        _classCallCheck(this, ProgramStatistic);
+var OrderTradingFee = function () {
+    function OrderTradingFee() {
+        _classCallCheck(this, OrderTradingFee);
 
-        this.balanceBase = undefined;
-        this.balanceGVT = undefined;
-        this.balanceSecondary = undefined;
-        this.currentValue = undefined;
-        this.profitPercent = undefined;
-        this.profitValue = undefined;
-        this.drawdownPercent = undefined;
-        this.investorsCount = undefined;
-        this.hasNotifications = undefined;
-        this.startDate = undefined;
-        this.startBalance = undefined;
-        this.startCurrency = undefined;
-        this.investedAmount = undefined;
-        this.investedCurrency = undefined;
-        this.tradesCount = undefined;
-        this.tradesSuccessCount = undefined;
-        this.profitFactorPercent = undefined;
-        this.sharpeRatioPercent = undefined;
+        this.amount = undefined;
+        this.currency = undefined;
     }
 
-    _createClass(ProgramStatistic, null, [{
+    _createClass(OrderTradingFee, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ProgramStatistic();
+                obj = obj || new OrderTradingFee();
 
-                if (data.hasOwnProperty('balanceBase')) {
-                    obj['balanceBase'] = _AmountWithCurrency2.default.constructFromObject(data['balanceBase']);
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
-                if (data.hasOwnProperty('balanceGVT')) {
-                    obj['balanceGVT'] = _AmountWithCurrency2.default.constructFromObject(data['balanceGVT']);
-                }
-                if (data.hasOwnProperty('balanceSecondary')) {
-                    obj['balanceSecondary'] = _AmountWithCurrency2.default.constructFromObject(data['balanceSecondary']);
-                }
-                if (data.hasOwnProperty('currentValue')) {
-                    obj['currentValue'] = _ApiClient2.default.convertToType(data['currentValue'], 'Number');
-                }
-                if (data.hasOwnProperty('profitPercent')) {
-                    obj['profitPercent'] = _ApiClient2.default.convertToType(data['profitPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('profitValue')) {
-                    obj['profitValue'] = _ApiClient2.default.convertToType(data['profitValue'], 'Number');
-                }
-                if (data.hasOwnProperty('drawdownPercent')) {
-                    obj['drawdownPercent'] = _ApiClient2.default.convertToType(data['drawdownPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('investorsCount')) {
-                    obj['investorsCount'] = _ApiClient2.default.convertToType(data['investorsCount'], 'Number');
-                }
-                if (data.hasOwnProperty('hasNotifications')) {
-                    obj['hasNotifications'] = _ApiClient2.default.convertToType(data['hasNotifications'], 'Boolean');
-                }
-                if (data.hasOwnProperty('startDate')) {
-                    obj['startDate'] = _ApiClient2.default.convertToType(data['startDate'], 'Date');
-                }
-                if (data.hasOwnProperty('startBalance')) {
-                    obj['startBalance'] = _ApiClient2.default.convertToType(data['startBalance'], 'Number');
-                }
-                if (data.hasOwnProperty('startCurrency')) {
-                    obj['startCurrency'] = _ApiClient2.default.convertToType(data['startCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('investedAmount')) {
-                    obj['investedAmount'] = _ApiClient2.default.convertToType(data['investedAmount'], 'Number');
-                }
-                if (data.hasOwnProperty('investedCurrency')) {
-                    obj['investedCurrency'] = _ApiClient2.default.convertToType(data['investedCurrency'], 'String');
-                }
-                if (data.hasOwnProperty('tradesCount')) {
-                    obj['tradesCount'] = _ApiClient2.default.convertToType(data['tradesCount'], 'Number');
-                }
-                if (data.hasOwnProperty('tradesSuccessCount')) {
-                    obj['tradesSuccessCount'] = _ApiClient2.default.convertToType(data['tradesSuccessCount'], 'Number');
-                }
-                if (data.hasOwnProperty('profitFactorPercent')) {
-                    obj['profitFactorPercent'] = _ApiClient2.default.convertToType(data['profitFactorPercent'], 'Number');
-                }
-                if (data.hasOwnProperty('sharpeRatioPercent')) {
-                    obj['sharpeRatioPercent'] = _ApiClient2.default.convertToType(data['sharpeRatioPercent'], 'Number');
+                if (data.hasOwnProperty('currency')) {
+                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
                 }
             }
             return obj;
         }
     }]);
 
-    return ProgramStatistic;
+    return OrderTradingFee;
 }();
 
 /**
- * @typedef ProgramStatisticStartCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef ProgramStatisticInvestedCurrencyEnum 
+ * @typedef OrderTradingFeeCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
-ProgramStatistic.StartCurrencyEnum = {
+OrderTradingFee.CurrencyEnum = {
 
     "Undefined": "Undefined",
 
@@ -256,32 +103,4 @@ ProgramStatistic.StartCurrencyEnum = {
 
     "EUR": "EUR"
 };
-ProgramStatistic.InvestedCurrencyEnum = {
-
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
-
-    "ETH": "ETH",
-
-    "BTC": "BTC",
-
-    "ADA": "ADA",
-
-    "USDT": "USDT",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = ProgramStatistic;
+exports.default = OrderTradingFee;

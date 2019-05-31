@@ -20,35 +20,25 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface CreateWithdrawalRequestModel
+ * @interface OrderTradingFee
  */
 
 /**
  *
- * @name CreateWithdrawalRequestModel#amount
+ * @name OrderTradingFee#amount
  * @type {Number}
  */
 /**
  *
- * @name CreateWithdrawalRequestModel#currency
- * @type CreateWithdrawalRequestModelCurrencyEnum
- */
-/**
- *
- * @name CreateWithdrawalRequestModel#address
- * @type {String}
- */
-/**
- *
- * @name CreateWithdrawalRequestModel#twoFactorCode
- * @type {String}
+ * @name OrderTradingFee#currency
+ * @type OrderTradingFeeCurrencyEnum
  */
 
 
 
 
 
-export default class CreateWithdrawalRequestModel {
+export default class OrderTradingFee {
 
     constructor() {
         
@@ -63,7 +53,7 @@ export default class CreateWithdrawalRequestModel {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CreateWithdrawalRequestModel();
+            obj = obj || new OrderTradingFee();
 
             
             
@@ -75,20 +65,12 @@ export default class CreateWithdrawalRequestModel {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('twoFactorCode')) {
-                obj['twoFactorCode'] = ApiClient.convertToType(data['twoFactorCode'], 'String');
-            }
         }
         return obj;
     }
 
     amount = undefined;
     currency = undefined;
-    address = undefined;
-    twoFactorCode = undefined;
 
 
 
@@ -132,7 +114,7 @@ export default class CreateWithdrawalRequestModel {
 
 
 /**
- * @typedef CreateWithdrawalRequestModelCurrencyEnum 
+ * @typedef OrderTradingFeeCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 

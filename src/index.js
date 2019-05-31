@@ -102,6 +102,7 @@ import OrderProgramData from './model/OrderProgramData';
 import OrderSignalFee from './model/OrderSignalFee';
 import OrderSignalModel from './model/OrderSignalModel';
 import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
+import OrderTradingFee from './model/OrderTradingFee';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
@@ -751,6 +752,12 @@ export {
      * @type {OrderSignalProgramInfo}
      */
     OrderSignalProgramInfo,
+
+    /**
+     * @name index#OrderTradingFee
+     * @type {OrderTradingFee}
+     */
+    OrderTradingFee,
 
     /**
      * @name index#OtherAssetsValue
