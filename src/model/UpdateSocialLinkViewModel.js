@@ -25,11 +25,6 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @name UpdateSocialLinkViewModel#id
- * @type {String}
- */
-/**
- *
  * @name UpdateSocialLinkViewModel#type
  * @type UpdateSocialLinkViewModelTypeEnum
  */
@@ -64,9 +59,6 @@ export default class UpdateSocialLinkViewModel {
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -77,7 +69,6 @@ export default class UpdateSocialLinkViewModel {
         return obj;
     }
 
-    id = undefined;
     type = undefined;
     value = undefined;
 

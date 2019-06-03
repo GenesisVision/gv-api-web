@@ -25,11 +25,6 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @name SocialLinkViewModel#id
- * @type {String}
- */
-/**
- *
  * @name SocialLinkViewModel#url
  * @type {String}
  */
@@ -47,6 +42,11 @@ import ApiClient from '../ApiClient';
  *
  * @name SocialLinkViewModel#value
  * @type {String}
+ */
+/**
+ *
+ * @name SocialLinkViewModel#type
+ * @type SocialLinkViewModelTypeEnum
  */
 
 
@@ -74,9 +74,6 @@ export default class SocialLinkViewModel {
             
             
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
@@ -89,20 +86,42 @@ export default class SocialLinkViewModel {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
         }
         return obj;
     }
 
-    id = undefined;
     url = undefined;
     logo = undefined;
     name = undefined;
     value = undefined;
+    type = undefined;
 
 
 
 
 
+
+    static TypeEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "Twitter": "Twitter",
+    
+        "Telegram": "Telegram",
+    
+        "Facebook": "Facebook",
+    
+        "LinkedIn": "LinkedIn",
+    
+        "Youtube": "Youtube",
+    
+        "WeChat": "WeChat",
+    
+        "Email": "Email"    
+    };
 
 
 
@@ -110,6 +129,11 @@ export default class SocialLinkViewModel {
 
 
 
+
+/**
+ * @typedef SocialLinkViewModelTypeEnum 
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
+ */
 
 
 

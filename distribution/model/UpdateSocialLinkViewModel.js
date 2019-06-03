@@ -32,11 +32,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name UpdateSocialLinkViewModel#id
- * @type {String}
- */
-/**
- *
  * @name UpdateSocialLinkViewModel#type
  * @type UpdateSocialLinkViewModelTypeEnum
  */
@@ -50,7 +45,6 @@ var UpdateSocialLinkViewModel = function () {
     function UpdateSocialLinkViewModel() {
         _classCallCheck(this, UpdateSocialLinkViewModel);
 
-        this.id = undefined;
         this.type = undefined;
         this.value = undefined;
     }
@@ -61,9 +55,6 @@ var UpdateSocialLinkViewModel = function () {
             if (data) {
                 obj = obj || new UpdateSocialLinkViewModel();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }

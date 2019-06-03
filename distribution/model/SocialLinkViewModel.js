@@ -32,11 +32,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name SocialLinkViewModel#id
- * @type {String}
- */
-/**
- *
  * @name SocialLinkViewModel#url
  * @type {String}
  */
@@ -55,16 +50,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name SocialLinkViewModel#value
  * @type {String}
  */
+/**
+ *
+ * @name SocialLinkViewModel#type
+ * @type SocialLinkViewModelTypeEnum
+ */
 
 var SocialLinkViewModel = function () {
     function SocialLinkViewModel() {
         _classCallCheck(this, SocialLinkViewModel);
 
-        this.id = undefined;
         this.url = undefined;
         this.logo = undefined;
         this.name = undefined;
         this.value = undefined;
+        this.type = undefined;
     }
 
     _createClass(SocialLinkViewModel, null, [{
@@ -73,9 +73,6 @@ var SocialLinkViewModel = function () {
             if (data) {
                 obj = obj || new SocialLinkViewModel();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
                 if (data.hasOwnProperty('url')) {
                     obj['url'] = _ApiClient2.default.convertToType(data['url'], 'String');
                 }
@@ -88,6 +85,9 @@ var SocialLinkViewModel = function () {
                 if (data.hasOwnProperty('value')) {
                     obj['value'] = _ApiClient2.default.convertToType(data['value'], 'String');
                 }
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                }
             }
             return obj;
         }
@@ -96,4 +96,28 @@ var SocialLinkViewModel = function () {
     return SocialLinkViewModel;
 }();
 
+/**
+ * @typedef SocialLinkViewModelTypeEnum 
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
+ */
+
+
+SocialLinkViewModel.TypeEnum = {
+
+    "Undefined": "Undefined",
+
+    "Twitter": "Twitter",
+
+    "Telegram": "Telegram",
+
+    "Facebook": "Facebook",
+
+    "LinkedIn": "LinkedIn",
+
+    "Youtube": "Youtube",
+
+    "WeChat": "WeChat",
+
+    "Email": "Email"
+};
 exports.default = SocialLinkViewModel;
