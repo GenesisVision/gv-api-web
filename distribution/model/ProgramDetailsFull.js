@@ -102,7 +102,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#successFeeSelected
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#successFeeCurrent
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#stopOutLevelSelected
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#stopOutLevelCurrent
  * @type {Number}
  */
 /**
@@ -230,7 +250,11 @@ var ProgramDetailsFull = function () {
         this.entryFeeSelected = undefined;
         this.entryFeeCurrent = undefined;
         this.successFee = undefined;
+        this.successFeeSelected = undefined;
+        this.successFeeCurrent = undefined;
         this.stopOutLevel = undefined;
+        this.stopOutLevelSelected = undefined;
+        this.stopOutLevelCurrent = undefined;
         this.isReinvesting = undefined;
         this.isSignalProgram = undefined;
         this.signalSuccessFee = undefined;
@@ -291,8 +315,20 @@ var ProgramDetailsFull = function () {
                 if (data.hasOwnProperty('successFee')) {
                     obj['successFee'] = _ApiClient2.default.convertToType(data['successFee'], 'Number');
                 }
+                if (data.hasOwnProperty('successFeeSelected')) {
+                    obj['successFeeSelected'] = _ApiClient2.default.convertToType(data['successFeeSelected'], 'Number');
+                }
+                if (data.hasOwnProperty('successFeeCurrent')) {
+                    obj['successFeeCurrent'] = _ApiClient2.default.convertToType(data['successFeeCurrent'], 'Number');
+                }
                 if (data.hasOwnProperty('stopOutLevel')) {
                     obj['stopOutLevel'] = _ApiClient2.default.convertToType(data['stopOutLevel'], 'Number');
+                }
+                if (data.hasOwnProperty('stopOutLevelSelected')) {
+                    obj['stopOutLevelSelected'] = _ApiClient2.default.convertToType(data['stopOutLevelSelected'], 'Number');
+                }
+                if (data.hasOwnProperty('stopOutLevelCurrent')) {
+                    obj['stopOutLevelCurrent'] = _ApiClient2.default.convertToType(data['stopOutLevelCurrent'], 'Number');
                 }
                 if (data.hasOwnProperty('isReinvesting')) {
                     obj['isReinvesting'] = _ApiClient2.default.convertToType(data['isReinvesting'], 'Boolean');

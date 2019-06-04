@@ -1873,7 +1873,11 @@ export declare interface ProgramDetailsFull {
     entryFeeSelected: number;
     entryFeeCurrent: number;
     successFee: number;
+    successFeeSelected: number;
+    successFeeCurrent: number;
     stopOutLevel: number;
+    stopOutLevelSelected: number;
+    stopOutLevelCurrent: number;
     isReinvesting: boolean;
     isSignalProgram: boolean;
     signalSuccessFee: number;

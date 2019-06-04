@@ -80,7 +80,27 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetailsFull#successFeeSelected
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#successFeeCurrent
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#stopOutLevel
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#stopOutLevelSelected
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#stopOutLevelCurrent
  * @type {Number}
  */
 /**
@@ -249,8 +269,20 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
+            if (data.hasOwnProperty('successFeeSelected')) {
+                obj['successFeeSelected'] = ApiClient.convertToType(data['successFeeSelected'], 'Number');
+            }
+            if (data.hasOwnProperty('successFeeCurrent')) {
+                obj['successFeeCurrent'] = ApiClient.convertToType(data['successFeeCurrent'], 'Number');
+            }
             if (data.hasOwnProperty('stopOutLevel')) {
                 obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
+            }
+            if (data.hasOwnProperty('stopOutLevelSelected')) {
+                obj['stopOutLevelSelected'] = ApiClient.convertToType(data['stopOutLevelSelected'], 'Number');
+            }
+            if (data.hasOwnProperty('stopOutLevelCurrent')) {
+                obj['stopOutLevelCurrent'] = ApiClient.convertToType(data['stopOutLevelCurrent'], 'Number');
             }
             if (data.hasOwnProperty('isReinvesting')) {
                 obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'Boolean');
@@ -332,7 +364,11 @@ export default class ProgramDetailsFull {
     entryFeeSelected = undefined;
     entryFeeCurrent = undefined;
     successFee = undefined;
+    successFeeSelected = undefined;
+    successFeeCurrent = undefined;
     stopOutLevel = undefined;
+    stopOutLevelSelected = undefined;
+    stopOutLevelCurrent = undefined;
     isReinvesting = undefined;
     isSignalProgram = undefined;
     signalSuccessFee = undefined;
