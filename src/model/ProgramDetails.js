@@ -77,6 +77,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetails#availableInvestmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetails#dashboardAssetsDetails
  * @type {DashboardProgramDetails}
  */
@@ -203,6 +208,9 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('availableInvestmentBase')) {
                 obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
             }
+            if (data.hasOwnProperty('availableInvestmentLimit')) {
+                obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
+            }
             if (data.hasOwnProperty('dashboardAssetsDetails')) {
                 obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
             }
@@ -261,6 +269,7 @@ export default class ProgramDetails {
     periodEnds = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
+    availableInvestmentLimit = undefined;
     dashboardAssetsDetails = undefined;
     statistic = undefined;
     rating = undefined;

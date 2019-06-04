@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **isForex** | **Boolean** |  | [optional] 
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
+**availableInvestmentLimit** | **Number** |  | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
 **personalProgramDetails** | [**PersonalProgramDetailsFull**](PersonalProgramDetailsFull.md) | Fields for authorized user | [optional] 

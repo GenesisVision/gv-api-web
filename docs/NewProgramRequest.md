@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **signalSuccessFee** | **Number** |  | [optional] 
 **signalVolumeFee** | **Number** |  | [optional] 
 **isSignalProgram** | **Boolean** |  | [optional] 
+**investmentLimit** | **Number** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 

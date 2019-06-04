@@ -70,6 +70,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name NewProgramRequest#investmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name NewProgramRequest#title
  * @type {String}
  */
@@ -151,6 +156,9 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('isSignalProgram')) {
                 obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'Boolean');
             }
+            if (data.hasOwnProperty('investmentLimit')) {
+                obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'Number');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -182,6 +190,7 @@ export default class NewProgramRequest {
     signalSuccessFee = undefined;
     signalVolumeFee = undefined;
     isSignalProgram = undefined;
+    investmentLimit = undefined;
     title = undefined;
     description = undefined;
     logo = undefined;

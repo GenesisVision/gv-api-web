@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **periodEnds** | **Date** |  | [optional] 
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
+**availableInvestmentLimit** | **Number** |  | [optional] 
 **dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
 **statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 

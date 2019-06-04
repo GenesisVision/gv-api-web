@@ -77,6 +77,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name NewProgramRequest#investmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name NewProgramRequest#title
  * @type {String}
  */
@@ -119,6 +124,7 @@ var NewProgramRequest = function () {
         this.signalSuccessFee = undefined;
         this.signalVolumeFee = undefined;
         this.isSignalProgram = undefined;
+        this.investmentLimit = undefined;
         this.title = undefined;
         this.description = undefined;
         this.logo = undefined;
@@ -159,6 +165,9 @@ var NewProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('isSignalProgram')) {
                     obj['isSignalProgram'] = _ApiClient2.default.convertToType(data['isSignalProgram'], 'Boolean');
+                }
+                if (data.hasOwnProperty('investmentLimit')) {
+                    obj['investmentLimit'] = _ApiClient2.default.convertToType(data['investmentLimit'], 'Number');
                 }
                 if (data.hasOwnProperty('title')) {
                     obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');

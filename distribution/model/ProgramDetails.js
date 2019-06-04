@@ -105,6 +105,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetails#availableInvestmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetails#dashboardAssetsDetails
  * @type {DashboardProgramDetails}
  */
@@ -192,6 +197,7 @@ var ProgramDetails = function () {
         this.periodEnds = undefined;
         this.availableInvestment = undefined;
         this.availableInvestmentBase = undefined;
+        this.availableInvestmentLimit = undefined;
         this.dashboardAssetsDetails = undefined;
         this.statistic = undefined;
         this.rating = undefined;
@@ -241,6 +247,9 @@ var ProgramDetails = function () {
                 }
                 if (data.hasOwnProperty('availableInvestmentBase')) {
                     obj['availableInvestmentBase'] = _ApiClient2.default.convertToType(data['availableInvestmentBase'], 'Number');
+                }
+                if (data.hasOwnProperty('availableInvestmentLimit')) {
+                    obj['availableInvestmentLimit'] = _ApiClient2.default.convertToType(data['availableInvestmentLimit'], 'Number');
                 }
                 if (data.hasOwnProperty('dashboardAssetsDetails')) {
                     obj['dashboardAssetsDetails'] = _DashboardProgramDetails2.default.constructFromObject(data['dashboardAssetsDetails']);

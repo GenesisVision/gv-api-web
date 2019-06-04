@@ -1478,6 +1478,7 @@ export declare interface NewProgramRequest {
     signalSuccessFee: number;
     signalVolumeFee: number;
     isSignalProgram: boolean;
+    investmentLimit: number;
     title: string;
     description: string;
     logo: string;
@@ -1839,6 +1840,7 @@ export declare interface ProgramDetails {
     periodEnds: Date;
     availableInvestment: number;
     availableInvestmentBase: number;
+    availableInvestmentLimit: number;
     dashboardAssetsDetails: DashboardProgramDetails;
     statistic: ProgramDetailsListStatistic;
     rating: ProgramDetailsRating;
@@ -1879,6 +1881,7 @@ export declare interface ProgramDetailsFull {
     isForex: boolean;
     availableInvestment: number;
     availableInvestmentBase: number;
+    availableInvestmentLimit: number;
     statistic: ProgramStatistic;
     rating: ProgramDetailsRating;
     personalProgramDetails: PersonalProgramDetailsFull;

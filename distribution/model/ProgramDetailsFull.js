@@ -142,6 +142,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramDetailsFull#availableInvestmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#statistic
  * @type {ProgramStatistic}
  */
@@ -233,6 +238,7 @@ var ProgramDetailsFull = function () {
         this.isForex = undefined;
         this.availableInvestment = undefined;
         this.availableInvestmentBase = undefined;
+        this.availableInvestmentLimit = undefined;
         this.statistic = undefined;
         this.rating = undefined;
         this.personalProgramDetails = undefined;
@@ -308,6 +314,9 @@ var ProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('availableInvestmentBase')) {
                     obj['availableInvestmentBase'] = _ApiClient2.default.convertToType(data['availableInvestmentBase'], 'Number');
+                }
+                if (data.hasOwnProperty('availableInvestmentLimit')) {
+                    obj['availableInvestmentLimit'] = _ApiClient2.default.convertToType(data['availableInvestmentLimit'], 'Number');
                 }
                 if (data.hasOwnProperty('statistic')) {
                     obj['statistic'] = _ProgramStatistic2.default.constructFromObject(data['statistic']);

@@ -120,6 +120,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetailsFull#availableInvestmentLimit
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#statistic
  * @type {ProgramStatistic}
  */
@@ -268,6 +273,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('availableInvestmentBase')) {
                 obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
             }
+            if (data.hasOwnProperty('availableInvestmentLimit')) {
+                obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
+            }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
             }
@@ -332,6 +340,7 @@ export default class ProgramDetailsFull {
     isForex = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
+    availableInvestmentLimit = undefined;
     statistic = undefined;
     rating = undefined;
     personalProgramDetails = undefined;
