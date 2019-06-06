@@ -116,7 +116,7 @@ var NotificationSettingViewModel = function () {
 
 /**
  * @typedef NotificationSettingViewModelTypeEnum 
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"ProgramExceedInvestmentLimit"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
  */
 
 /**
@@ -150,6 +150,8 @@ NotificationSettingViewModel.TypeEnum = {
     "ProgramEndOfPeriod": "ProgramEndOfPeriod",
 
     "ProgramCondition": "ProgramCondition",
+
+    "ProgramExceedInvestmentLimit": "ProgramExceedInvestmentLimit",
 
     "FundNewsAndUpdates": "FundNewsAndUpdates",
 

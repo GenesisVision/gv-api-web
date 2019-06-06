@@ -44,6 +44,8 @@ Name | Type | Description | Notes
 
 * `ProgramCondition` (value: `"ProgramCondition"`)
 
+* `ProgramExceedInvestmentLimit` (value: `"ProgramExceedInvestmentLimit"`)
+
 * `FundNewsAndUpdates` (value: `"FundNewsAndUpdates"`)
 
 * `FundEndOfPeriod` (value: `"FundEndOfPeriod"`)
