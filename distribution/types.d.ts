@@ -281,6 +281,12 @@ export declare class ManagerApi {
     v10ManagerPrograms2faGetGet(authorization: string, opts?: {
         programId?: string;
     }): CancelablePromise<TwoFactorAuthenticator>;
+    v10ManagerProgramsBrokerChangeCancelPost(authorization: string, opts?: {
+        programId?: string;
+    }): CancelablePromise<any>;
+    v10ManagerProgramsBrokerChangePost(authorization: string, opts?: {
+        request?: ChangeBrokerProgramRequest;
+    }): CancelablePromise<any>;
     v10ManagerProgramsByIdClosePost(id: string, authorization: string, opts?: {
         twoFactorCode?: string;
     }): CancelablePromise<any>;
@@ -594,6 +600,7 @@ export declare interface index {
     BrokersInfo: BrokersInfo;
     CaptchaCheckResult: CaptchaCheckResult;
     CaptchaDetails: CaptchaDetails;
+    ChangeBrokerProgramRequest: ChangeBrokerProgramRequest;
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
@@ -909,6 +916,12 @@ export declare interface CaptchaDetails {
     route: string;
     pow: PowDetails;
     geeTest: GeeTestDetails;
+}
+
+export declare interface ChangeBrokerProgramRequest {
+    programId: string;
+    newBrokerAccountTypeId: string;
+    newLeverage: number;
 }
 
 export declare interface ChangePasswordViewModel {
@@ -1572,7 +1585,7 @@ export declare interface OrderProgramData {
 
 export declare type OrderSignalFeeCurrencyEnum = "BTC" | "ETH" | "USDT" | "GVT" | "Undefined" | "ADA" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type OrderSignalFeeTypeEnum = "GvGmGvtHolderFee" | "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
+export declare type OrderSignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
 
 export declare interface OrderSignalFee {
     amount: number;

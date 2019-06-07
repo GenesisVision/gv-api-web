@@ -170,6 +170,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerGet**](docs/ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
 *CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faConfirmPost**](docs/ManagerApi.md#v10ManagerPrograms2faConfirmPost) | **POST** /v1.0/manager/programs/2fa/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 *CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faGetGet**](docs/ManagerApi.md#v10ManagerPrograms2faGetGet) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsBrokerChangeCancelPost**](docs/ManagerApi.md#v10ManagerProgramsBrokerChangeCancelPost) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsBrokerChangePost**](docs/ManagerApi.md#v10ManagerProgramsBrokerChangePost) | **POST** /v1.0/manager/programs/broker/change | Change broker in existing program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
@@ -273,6 +275,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
  - [CoreApiV10.CaptchaCheckResult](docs/CaptchaCheckResult.md)
  - [CoreApiV10.CaptchaDetails](docs/CaptchaDetails.md)
+ - [CoreApiV10.ChangeBrokerProgramRequest](docs/ChangeBrokerProgramRequest.md)
  - [CoreApiV10.ChangePasswordViewModel](docs/ChangePasswordViewModel.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.ConvertingDetails](docs/ConvertingDetails.md)

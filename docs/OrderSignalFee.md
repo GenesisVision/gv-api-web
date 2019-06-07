@@ -45,8 +45,6 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GvProgramEntry` (value: `"GvProgramEntry"`)
@@ -54,6 +52,8 @@ Name | Type | Description | Notes
 * `GvProgramSuccess` (value: `"GvProgramSuccess"`)
 
 * `GvFundEntry` (value: `"GvFundEntry"`)
+
+* `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
 
 * `ManagerProgramEntry` (value: `"ManagerProgramEntry"`)
 

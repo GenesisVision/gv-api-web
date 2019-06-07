@@ -28,6 +28,7 @@ import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
 import CaptchaDetails from './model/CaptchaDetails';
+import ChangeBrokerProgramRequest from './model/ChangeBrokerProgramRequest';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
@@ -308,6 +309,12 @@ export {
      * @type {CaptchaDetails}
      */
     CaptchaDetails,
+
+    /**
+     * @name index#ChangeBrokerProgramRequest
+     * @type {ChangeBrokerProgramRequest}
+     */
+    ChangeBrokerProgramRequest,
 
     /**
      * @name index#ChangePasswordViewModel

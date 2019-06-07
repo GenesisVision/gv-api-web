@@ -27,122 +27,55 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface OrderSignalFee
+ * @interface ChangeBrokerProgramRequest
  */
 
 /**
  *
- * @name OrderSignalFee#amount
+ * @name ChangeBrokerProgramRequest#programId
+ * @type {String}
+ */
+/**
+ *
+ * @name ChangeBrokerProgramRequest#newBrokerAccountTypeId
+ * @type {String}
+ */
+/**
+ *
+ * @name ChangeBrokerProgramRequest#newLeverage
  * @type {Number}
  */
-/**
- *
- * @name OrderSignalFee#currency
- * @type OrderSignalFeeCurrencyEnum
- */
-/**
- *
- * @name OrderSignalFee#type
- * @type OrderSignalFeeTypeEnum
- */
 
-var OrderSignalFee = function () {
-    function OrderSignalFee() {
-        _classCallCheck(this, OrderSignalFee);
+var ChangeBrokerProgramRequest = function () {
+    function ChangeBrokerProgramRequest() {
+        _classCallCheck(this, ChangeBrokerProgramRequest);
 
-        this.amount = undefined;
-        this.currency = undefined;
-        this.type = undefined;
+        this.programId = undefined;
+        this.newBrokerAccountTypeId = undefined;
+        this.newLeverage = undefined;
     }
 
-    _createClass(OrderSignalFee, null, [{
+    _createClass(ChangeBrokerProgramRequest, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new OrderSignalFee();
+                obj = obj || new ChangeBrokerProgramRequest();
 
-                if (data.hasOwnProperty('amount')) {
-                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
+                if (data.hasOwnProperty('programId')) {
+                    obj['programId'] = _ApiClient2.default.convertToType(data['programId'], 'String');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('newBrokerAccountTypeId')) {
+                    obj['newBrokerAccountTypeId'] = _ApiClient2.default.convertToType(data['newBrokerAccountTypeId'], 'String');
                 }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                if (data.hasOwnProperty('newLeverage')) {
+                    obj['newLeverage'] = _ApiClient2.default.convertToType(data['newLeverage'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return OrderSignalFee;
+    return ChangeBrokerProgramRequest;
 }();
 
-/**
- * @typedef OrderSignalFeeCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef OrderSignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
- */
-
-
-OrderSignalFee.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-OrderSignalFee.TypeEnum = {
-
-    "Undefined": "Undefined",
-
-    "GvProgramEntry": "GvProgramEntry",
-
-    "GvProgramSuccess": "GvProgramSuccess",
-
-    "GvFundEntry": "GvFundEntry",
-
-    "GvGmGvtHolderFee": "GvGmGvtHolderFee",
-
-    "ManagerProgramEntry": "ManagerProgramEntry",
-
-    "ManagerProgramSuccess": "ManagerProgramSuccess",
-
-    "ManagerFundEntry": "ManagerFundEntry",
-
-    "ManagerFundExit": "ManagerFundExit",
-
-    "GvWithdrawal": "GvWithdrawal",
-
-    "ManagerSignalMasterSuccessFee": "ManagerSignalMasterSuccessFee",
-
-    "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
-
-    "GvSignalSuccessFee": "GvSignalSuccessFee"
-};
-exports.default = OrderSignalFee;
+exports.default = ChangeBrokerProgramRequest;

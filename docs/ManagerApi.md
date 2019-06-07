@@ -23,6 +23,8 @@ Method | HTTP request | Description
 [**v10ManagerGet**](ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
 [**v10ManagerPrograms2faConfirmPost**](ManagerApi.md#v10ManagerPrograms2faConfirmPost) | **POST** /v1.0/manager/programs/2fa/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 [**v10ManagerPrograms2faGetGet**](ManagerApi.md#v10ManagerPrograms2faGetGet) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
+[**v10ManagerProgramsBrokerChangeCancelPost**](ManagerApi.md#v10ManagerProgramsBrokerChangeCancelPost) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
+[**v10ManagerProgramsBrokerChangePost**](ManagerApi.md#v10ManagerProgramsBrokerChangePost) | **POST** /v1.0/manager/programs/broker/change | Change broker in existing program
 [**v10ManagerProgramsByIdClosePost**](ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 [**v10ManagerProgramsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
@@ -950,6 +952,96 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerProgramsBrokerChangeCancelPost"></a>
+# **v10ManagerProgramsBrokerChangeCancelPost**
+> v10ManagerProgramsBrokerChangeCancelPost(authorization, opts)
+
+Cancel changing broker in existing program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'programId': "programId_example" // String | 
+};
+apiInstance.v10ManagerProgramsBrokerChangeCancelPost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **programId** | [**String**](.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerProgramsBrokerChangePost"></a>
+# **v10ManagerProgramsBrokerChangePost**
+> v10ManagerProgramsBrokerChangePost(authorization, opts)
+
+Change broker in existing program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'request': new CoreApiV10.ChangeBrokerProgramRequest() // ChangeBrokerProgramRequest | 
+};
+apiInstance.v10ManagerProgramsBrokerChangePost(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **request** | [**ChangeBrokerProgramRequest**](ChangeBrokerProgramRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10ManagerProgramsByIdClosePost"></a>

@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ChangeBrokerProgramRequest from '../model/ChangeBrokerProgramRequest';
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetPart from '../model/FundAssetPart';
 import FundInvestInfo from '../model/FundInvestInfo';
@@ -1072,6 +1073,101 @@ export default class ManagerApi {
      */
       v10ManagerPrograms2faGetGet(authorization, opts) {
       return this.v10ManagerPrograms2faGetGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ManagerProgramsBrokerChangeCancelPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsBrokerChangeCancelPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'programId': opts['programId']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/broker/change/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Cancel changing broker in existing program
+     * @function ManagerApi#v10ManagerProgramsBrokerChangeCancelPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ManagerProgramsBrokerChangeCancelPost(authorization, opts) {
+      return this.v10ManagerProgramsBrokerChangeCancelPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ManagerProgramsBrokerChangePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsBrokerChangePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/broker/change', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Change broker in existing program
+     * @function ManagerApi#v10ManagerProgramsBrokerChangePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {ChangeBrokerProgramRequest} [opts.request] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ManagerProgramsBrokerChangePost(authorization, opts) {
+      return this.v10ManagerProgramsBrokerChangePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
