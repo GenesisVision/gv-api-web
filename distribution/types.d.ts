@@ -205,7 +205,6 @@ export declare class InvestorApi {
     v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
     v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10InvestorSignalsGet(authorization: string, opts?: {
-        status?: string;
         sorting?: string;
         from?: Date;
         to?: Date;
