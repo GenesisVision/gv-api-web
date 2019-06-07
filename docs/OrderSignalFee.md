@@ -12,17 +12,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -45,6 +45,8 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
+* `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
+
 * `Undefined` (value: `"Undefined"`)
 
 * `GvProgramEntry` (value: `"GvProgramEntry"`)
@@ -52,8 +54,6 @@ Name | Type | Description | Notes
 * `GvProgramSuccess` (value: `"GvProgramSuccess"`)
 
 * `GvFundEntry` (value: `"GvFundEntry"`)
-
-* `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
 
 * `ManagerProgramEntry` (value: `"ManagerProgramEntry"`)
 

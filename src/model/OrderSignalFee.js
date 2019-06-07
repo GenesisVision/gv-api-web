@@ -88,17 +88,17 @@ export default class OrderSignalFee {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -117,6 +117,8 @@ export default class OrderSignalFee {
 
     static TypeEnum = {
     
+        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
+    
         "Undefined": "Undefined",
     
         "GvProgramEntry": "GvProgramEntry",
@@ -124,8 +126,6 @@ export default class OrderSignalFee {
         "GvProgramSuccess": "GvProgramSuccess",
     
         "GvFundEntry": "GvFundEntry",
-    
-        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
     
         "ManagerProgramEntry": "ManagerProgramEntry",
     
@@ -153,12 +153,12 @@ export default class OrderSignalFee {
 
 /**
  * @typedef OrderSignalFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef OrderSignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
+ * @type {("GvGmGvtHolderFee"|"Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
  */
 
 
