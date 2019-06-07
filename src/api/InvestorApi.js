@@ -994,7 +994,8 @@ export default class InvestorApi {
         });
     }
 
-      v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization) {
+      v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1018,6 +1019,7 @@ export default class InvestorApi {
         'amount': amount
       };
       let queryParams = {
+        'withdrawAll': opts['withdrawAll']
       };
       let headerParams = {
         'Authorization': authorization
@@ -1043,10 +1045,12 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Boolean} [opts.withdrawAll]  (default to false)
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
-      return this.v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization)
+      v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts) {
+      return this.v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

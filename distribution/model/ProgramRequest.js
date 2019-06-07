@@ -57,6 +57,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramRequest#withdrawAll
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProgramRequest#feeEntry
  * @type {Number}
  */
@@ -120,6 +125,7 @@ var ProgramRequest = function () {
         this.date = undefined;
         this.value = undefined;
         this.valueGvt = undefined;
+        this.withdrawAll = undefined;
         this.feeEntry = undefined;
         this.feeExit = undefined;
         this.currency = undefined;
@@ -153,6 +159,9 @@ var ProgramRequest = function () {
                 }
                 if (data.hasOwnProperty('valueGvt')) {
                     obj['valueGvt'] = _ApiClient2.default.convertToType(data['valueGvt'], 'Number');
+                }
+                if (data.hasOwnProperty('withdrawAll')) {
+                    obj['withdrawAll'] = _ApiClient2.default.convertToType(data['withdrawAll'], 'Boolean');
                 }
                 if (data.hasOwnProperty('feeEntry')) {
                     obj['feeEntry'] = _ApiClient2.default.convertToType(data['feeEntry'], 'Number');
@@ -197,7 +206,7 @@ var ProgramRequest = function () {
 
 /**
  * @typedef ProgramRequestCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -218,17 +227,17 @@ var ProgramRequest = function () {
 
 ProgramRequest.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

@@ -50,6 +50,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramRequest#withdrawAll
+ * @type {Boolean}
+ */
+/**
+ *
  * @name ProgramRequest#feeEntry
  * @type {Number}
  */
@@ -144,6 +149,9 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('valueGvt')) {
                 obj['valueGvt'] = ApiClient.convertToType(data['valueGvt'], 'Number');
             }
+            if (data.hasOwnProperty('withdrawAll')) {
+                obj['withdrawAll'] = ApiClient.convertToType(data['withdrawAll'], 'Boolean');
+            }
             if (data.hasOwnProperty('feeEntry')) {
                 obj['feeEntry'] = ApiClient.convertToType(data['feeEntry'], 'Number');
             }
@@ -186,6 +194,7 @@ export default class ProgramRequest {
     date = undefined;
     value = undefined;
     valueGvt = undefined;
+    withdrawAll = undefined;
     feeEntry = undefined;
     feeExit = undefined;
     currency = undefined;
@@ -205,17 +214,17 @@ export default class ProgramRequest {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -264,7 +273,7 @@ export default class ProgramRequest {
 
 /**
  * @typedef ProgramRequestCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**

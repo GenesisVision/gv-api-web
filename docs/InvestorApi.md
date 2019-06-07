@@ -835,7 +835,7 @@ No authorization required
 
 <a name="v10InvestorProgramsByIdWithdrawMultiByAmountPost"></a>
 # **v10InvestorProgramsByIdWithdrawMultiByAmountPost**
-> v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization)
+> v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts)
 
 Withdraw from investment program in program currency
 
@@ -851,7 +851,10 @@ let amount = 1.2; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization).then(() => {
+let opts = { 
+  'withdrawAll': false // Boolean | 
+};
+apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -866,6 +869,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
+ **withdrawAll** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 

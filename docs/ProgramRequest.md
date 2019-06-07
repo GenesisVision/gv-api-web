@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | [optional] 
 **value** | **Number** |  | [optional] 
 **valueGvt** | **Number** |  | [optional] 
+**withdrawAll** | **Boolean** |  | [optional] 
 **feeEntry** | **Number** |  | [optional] 
 **feeExit** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
@@ -25,17 +26,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

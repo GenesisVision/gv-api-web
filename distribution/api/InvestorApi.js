@@ -983,7 +983,8 @@ var InvestorApi = function () {
     }
   }, {
     key: 'v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo',
-    value: function v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization) {
+    value: function v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1005,7 +1006,9 @@ var InvestorApi = function () {
         'id': id,
         'amount': amount
       };
-      var queryParams = {};
+      var queryParams = {
+        'withdrawAll': opts['withdrawAll']
+      };
       var headerParams = {
         'Authorization': authorization
       };
@@ -1025,13 +1028,15 @@ var InvestorApi = function () {
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Boolean} [opts.withdrawAll]  (default to false)
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
 
   }, {
     key: 'v10InvestorProgramsByIdWithdrawMultiByAmountPost',
-    value: function v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization) {
-      return this.v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization).then(function (response_and_data) {
+    value: function v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts) {
+      return this.v10InvestorProgramsByIdWithdrawMultiByAmountPostWithHttpInfo(id, amount, authorization, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
