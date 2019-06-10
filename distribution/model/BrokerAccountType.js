@@ -134,7 +134,7 @@ var BrokerAccountType = function () {
 
 /**
  * @typedef BrokerAccountTypeTypeEnum 
- * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi")}
+ * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"Huobi")}
  */
 
 
@@ -153,8 +153,6 @@ BrokerAccountType.TypeEnum = {
     "Rumus": "Rumus",
 
     "Metastock": "Metastock",
-
-    "IDEX": "IDEX",
 
     "Huobi": "Huobi"
 };
