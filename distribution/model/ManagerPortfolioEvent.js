@@ -179,12 +179,12 @@ var ManagerPortfolioEvent = function () {
 
 /**
  * @typedef ManagerPortfolioEventCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef ManagerPortfolioEventTypeEnum 
- * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual"|"ProgramSignalSubscribe")}
+ * @type {("All"|"AssetStarted"|"ProgramPeriodStarts"|"ProgramPeriodEnds"|"InvestorInvest"|"InvestorWithdraw"|"ManagerInvest"|"ManagerWithdraw"|"AssetFinished"|"EntranceFee"|"ExitFee"|"ProgramStopOut"|"ProgramManagerTradingFeeAccrual"|"ProgramSignalSubscribe"|"ProgramBrokerChanged")}
  */
 
 /**
@@ -195,17 +195,17 @@ var ManagerPortfolioEvent = function () {
 
 ManagerPortfolioEvent.CurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -249,7 +249,9 @@ ManagerPortfolioEvent.TypeEnum = {
 
     "ProgramManagerTradingFeeAccrual": "ProgramManagerTradingFeeAccrual",
 
-    "ProgramSignalSubscribe": "ProgramSignalSubscribe"
+    "ProgramSignalSubscribe": "ProgramSignalSubscribe",
+
+    "ProgramBrokerChanged": "ProgramBrokerChanged"
 };
 ManagerPortfolioEvent.ProgramTypeEnum = {
 
