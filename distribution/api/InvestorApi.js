@@ -1041,6 +1041,60 @@ var InvestorApi = function () {
       });
     }
   }, {
+    key: 'v10InvestorProgramsByIdWithdrawMultiPostWithHttpInfo',
+    value: function v10InvestorProgramsByIdWithdrawMultiPostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10InvestorProgramsByIdWithdrawMultiPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorProgramsByIdWithdrawMultiPost");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'amount': opts['amount'],
+        'withdrawAll': opts['withdrawAll']
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/investor/programs/{id}/withdraw/multi', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Withdraw from investment program in program currency
+     * @function InvestorApi#v10InvestorProgramsByIdWithdrawMultiPost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Number} [opts.amount] 
+     * @param {Boolean} [opts.withdrawAll]  (default to false)
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10InvestorProgramsByIdWithdrawMultiPost',
+    value: function v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, opts) {
+      return this.v10InvestorProgramsByIdWithdrawMultiPostWithHttpInfo(id, authorization, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
     key: 'v10InvestorProgramsGetWithHttpInfo',
     value: function v10InvestorProgramsGetWithHttpInfo(authorization, opts) {
       opts = opts || {};

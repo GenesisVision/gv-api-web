@@ -191,6 +191,10 @@ export declare class InvestorApi {
     v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, opts?: {
         withdrawAll?: boolean;
     }): CancelablePromise<any>;
+    v10InvestorProgramsByIdWithdrawMultiPost(id: string, authorization: string, opts?: {
+        amount?: number;
+        withdrawAll?: boolean;
+    }): CancelablePromise<any>;
     v10InvestorProgramsGet(authorization: string, opts?: {
         sorting?: string;
         from?: Date;
