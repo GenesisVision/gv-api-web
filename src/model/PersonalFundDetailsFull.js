@@ -115,6 +115,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name PersonalFundDetailsFull#pendingOutputIsWithdrawAll
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalFundDetailsFull#status
  * @type PersonalFundDetailsFullStatusEnum
  */
@@ -198,6 +203,9 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('pendingOutput')) {
                 obj['pendingOutput'] = ApiClient.convertToType(data['pendingOutput'], 'Number');
             }
+            if (data.hasOwnProperty('pendingOutputIsWithdrawAll')) {
+                obj['pendingOutputIsWithdrawAll'] = ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'Boolean');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -223,6 +231,7 @@ export default class PersonalFundDetailsFull {
     invested = undefined;
     pendingInput = undefined;
     pendingOutput = undefined;
+    pendingOutputIsWithdrawAll = undefined;
     status = undefined;
 
 

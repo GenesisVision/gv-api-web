@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **invested** | **Number** |  | [optional] 
 **pendingInput** | **Number** |  | [optional] 
 **pendingOutput** | **Number** |  | [optional] 
+**pendingOutputIsWithdrawAll** | **Boolean** |  | [optional] 
 **status** | **String** |  | [optional] 
 
 

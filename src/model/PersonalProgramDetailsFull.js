@@ -147,6 +147,11 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
+ * @name PersonalProgramDetailsFull#pendingOutputIsWithdrawAll
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalProgramDetailsFull#status
  * @type PersonalProgramDetailsFullStatusEnum
  */
@@ -248,6 +253,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('pendingOutput')) {
                 obj['pendingOutput'] = ApiClient.convertToType(data['pendingOutput'], 'Number');
             }
+            if (data.hasOwnProperty('pendingOutputIsWithdrawAll')) {
+                obj['pendingOutputIsWithdrawAll'] = ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'Boolean');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -279,6 +287,7 @@ export default class PersonalProgramDetailsFull {
     invested = undefined;
     pendingInput = undefined;
     pendingOutput = undefined;
+    pendingOutputIsWithdrawAll = undefined;
     status = undefined;
 
 

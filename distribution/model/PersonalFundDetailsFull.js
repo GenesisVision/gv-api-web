@@ -122,6 +122,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name PersonalFundDetailsFull#pendingOutputIsWithdrawAll
+ * @type {Boolean}
+ */
+/**
+ *
  * @name PersonalFundDetailsFull#status
  * @type PersonalFundDetailsFullStatusEnum
  */
@@ -148,6 +153,7 @@ var PersonalFundDetailsFull = function () {
         this.invested = undefined;
         this.pendingInput = undefined;
         this.pendingOutput = undefined;
+        this.pendingOutputIsWithdrawAll = undefined;
         this.status = undefined;
     }
 
@@ -210,6 +216,9 @@ var PersonalFundDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('pendingOutput')) {
                     obj['pendingOutput'] = _ApiClient2.default.convertToType(data['pendingOutput'], 'Number');
+                }
+                if (data.hasOwnProperty('pendingOutputIsWithdrawAll')) {
+                    obj['pendingOutputIsWithdrawAll'] = _ApiClient2.default.convertToType(data['pendingOutputIsWithdrawAll'], 'Boolean');
                 }
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'String');
