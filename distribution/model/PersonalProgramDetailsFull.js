@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _MigrationRequest = require('./MigrationRequest');
+
+var _MigrationRequest2 = _interopRequireDefault(_MigrationRequest);
+
 var _SignalSubscription = require('./SignalSubscription');
 
 var _SignalSubscription2 = _interopRequireDefault(_SignalSubscription);
@@ -73,6 +77,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * @name PersonalProgramDetailsFull#canChangePassword
  * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#migration
+ * @type {MigrationRequest}
  */
 /**
  *
@@ -167,6 +176,7 @@ var PersonalProgramDetailsFull = function () {
         this.notificationAvailableToInvestId = undefined;
         this.canMakeSignalProvider = undefined;
         this.canChangePassword = undefined;
+        this.migration = undefined;
         this.isFavorite = undefined;
         this.isInvested = undefined;
         this.isOwnProgram = undefined;
@@ -214,6 +224,9 @@ var PersonalProgramDetailsFull = function () {
                 }
                 if (data.hasOwnProperty('canChangePassword')) {
                     obj['canChangePassword'] = _ApiClient2.default.convertToType(data['canChangePassword'], 'Boolean');
+                }
+                if (data.hasOwnProperty('migration')) {
+                    obj['migration'] = _MigrationRequest2.default.constructFromObject(data['migration']);
                 }
                 if (data.hasOwnProperty('isFavorite')) {
                     obj['isFavorite'] = _ApiClient2.default.convertToType(data['isFavorite'], 'Boolean');

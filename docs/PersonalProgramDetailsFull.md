@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **notificationAvailableToInvestId** | **String** |  | [optional] 
 **canMakeSignalProvider** | **Boolean** |  | [optional] 
 **canChangePassword** | **Boolean** |  | [optional] 
+**migration** | [**MigrationRequest**](MigrationRequest.md) |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 

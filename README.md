@@ -334,6 +334,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagerSimpleFund](docs/ManagerSimpleFund.md)
  - [CoreApiV10.ManagerSimpleProgram](docs/ManagerSimpleProgram.md)
  - [CoreApiV10.ManagersList](docs/ManagersList.md)
+ - [CoreApiV10.MigrationRequest](docs/MigrationRequest.md)
  - [CoreApiV10.MultiWalletExternalTransaction](docs/MultiWalletExternalTransaction.md)
  - [CoreApiV10.MultiWalletExternalTransactionsViewModel](docs/MultiWalletExternalTransactionsViewModel.md)
  - [CoreApiV10.MultiWalletFilters](docs/MultiWalletFilters.md)

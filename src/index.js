@@ -86,6 +86,7 @@ import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersList from './model/ManagersList';
+import MigrationRequest from './model/MigrationRequest';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
 import MultiWalletFilters from './model/MultiWalletFilters';
@@ -657,6 +658,12 @@ export {
      * @type {ManagersList}
      */
     ManagersList,
+
+    /**
+     * @name index#MigrationRequest
+     * @type {MigrationRequest}
+     */
+    MigrationRequest,
 
     /**
      * @name index#MultiWalletExternalTransaction

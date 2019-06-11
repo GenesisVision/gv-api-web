@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import MigrationRequest from './MigrationRequest';
 import SignalSubscription from './SignalSubscription';
 
 
@@ -63,6 +64,11 @@ import SignalSubscription from './SignalSubscription';
  *
  * @name PersonalProgramDetailsFull#canChangePassword
  * @type {Boolean}
+ */
+/**
+ *
+ * @name PersonalProgramDetailsFull#migration
+ * @type {MigrationRequest}
  */
 /**
  *
@@ -194,6 +200,9 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('canChangePassword')) {
                 obj['canChangePassword'] = ApiClient.convertToType(data['canChangePassword'], 'Boolean');
             }
+            if (data.hasOwnProperty('migration')) {
+                obj['migration'] = MigrationRequest.constructFromObject(data['migration']);
+            }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
@@ -254,6 +263,7 @@ export default class PersonalProgramDetailsFull {
     notificationAvailableToInvestId = undefined;
     canMakeSignalProvider = undefined;
     canChangePassword = undefined;
+    migration = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;

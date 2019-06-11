@@ -662,6 +662,7 @@ export declare interface index {
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
     ManagersList: ManagersList;
+    MigrationRequest: MigrationRequest;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
     MultiWalletFilters: MultiWalletFilters;
@@ -1419,6 +1420,14 @@ export declare interface ManagersList {
     total: number;
 }
 
+export declare interface MigrationRequest {
+    dateCreate: Date;
+    newLeverage: number;
+    brokerTradingAccountId: string;
+    brokerTradingAccountName: string;
+    brokerName: string;
+}
+
 export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type MultiWalletExternalTransactionTypeEnum = "All" | "Deposit" | "Withdrawal";
@@ -1692,6 +1701,7 @@ export declare interface PersonalProgramDetailsFull {
     notificationAvailableToInvestId: string;
     canMakeSignalProvider: boolean;
     canChangePassword: boolean;
+    migration: MigrationRequest;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
