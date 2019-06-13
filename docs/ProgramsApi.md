@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**v10ProgramsGet**](ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 [**v10ProgramsLevelupSummaryGet**](ProgramsApi.md#v10ProgramsLevelupSummaryGet) | **GET** /v1.0/programs/levelup/summary | Level up summary
 [**v10ProgramsSetsGet**](ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
+[**v10ProgramsTradesExportByProgramIdGet**](ProgramsApi.md#v10ProgramsTradesExportByProgramIdGet) | **GET** /v1.0/programs/trades/export/{programId} | Export trades
 
 
 <a name="v10ProgramsByIdChartsBalanceGet"></a>
@@ -637,6 +638,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramSets**](ProgramSets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramsTradesExportByProgramIdGet"></a>
+# **v10ProgramsTradesExportByProgramIdGet**
+> v10ProgramsTradesExportByProgramIdGet(programId, opts)
+
+Export trades
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let programId = "programId_example"; // String | 
+
+let opts = { 
+  'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.v10ProgramsTradesExportByProgramIdGet(programId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **programId** | [**String**](.md)|  | 
+ **start** | **Date**|  | [optional] 
+ **end** | **Date**|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

@@ -705,6 +705,52 @@ var ProgramsApi = function () {
         return response_and_data.data;
       });
     }
+  }, {
+    key: 'v10ProgramsTradesExportByProgramIdGetWithHttpInfo',
+    value: function v10ProgramsTradesExportByProgramIdGetWithHttpInfo(programId, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'programId' is set
+      if (programId === undefined || programId === null) {
+        throw new Error("Missing the required parameter 'programId' when calling v10ProgramsTradesExportByProgramIdGet");
+      }
+
+      var pathParams = {
+        'programId': programId
+      };
+      var queryParams = {
+        'start': opts['start'],
+        'end': opts['end']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi('/v1.0/programs/trades/export/{programId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Export trades
+     * @function ProgramsApi#v10ProgramsTradesExportByProgramIdGet
+     * @param {String} programId 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.start] 
+     * @param {Date} [opts.end] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+
+  }, {
+    key: 'v10ProgramsTradesExportByProgramIdGet',
+    value: function v10ProgramsTradesExportByProgramIdGet(programId, opts) {
+      return this.v10ProgramsTradesExportByProgramIdGetWithHttpInfo(programId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
   }]);
 
   return ProgramsApi;

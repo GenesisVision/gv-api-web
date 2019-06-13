@@ -484,6 +484,10 @@ export declare class ProgramsApi {
         authorization?: string;
     }): CancelablePromise<LevelUpSummary>;
     v10ProgramsSetsGet(authorization: string): CancelablePromise<ProgramSets>;
+    v10ProgramsTradesExportByProgramIdGet(programId: string, opts?: {
+        start?: Date;
+        end?: Date;
+    }): CancelablePromise<any>;
 }
 
 export declare class RateApi {
