@@ -27,116 +27,100 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface ProgramLevelInfo
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
+ * @name ProgramLevelInfo#isKycPassed
+ * @type {Boolean}
  */
 /**
  *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
+ * @name ProgramLevelInfo#level
  * @type {Number}
  */
 /**
  *
- * @name WalletBaseData#rate
+ * @name ProgramLevelInfo#levelProgressPercent
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramLevelInfo#weightedProfitToDeviation
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramLevelInfo#programAge
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramLevelInfo#weightedVolumeScale
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramLevelInfo#managerBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramLevelInfo#investmentScale
  * @type {Number}
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var ProgramLevelInfo = function () {
+    function ProgramLevelInfo() {
+        _classCallCheck(this, ProgramLevelInfo);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.isKycPassed = undefined;
+        this.level = undefined;
+        this.levelProgressPercent = undefined;
+        this.weightedProfitToDeviation = undefined;
+        this.programAge = undefined;
+        this.weightedVolumeScale = undefined;
+        this.managerBalance = undefined;
+        this.investmentScale = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(ProgramLevelInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new ProgramLevelInfo();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('isKycPassed')) {
+                    obj['isKycPassed'] = _ApiClient2.default.convertToType(data['isKycPassed'], 'Boolean');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('level')) {
+                    obj['level'] = _ApiClient2.default.convertToType(data['level'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('levelProgressPercent')) {
+                    obj['levelProgressPercent'] = _ApiClient2.default.convertToType(data['levelProgressPercent'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('weightedProfitToDeviation')) {
+                    obj['weightedProfitToDeviation'] = _ApiClient2.default.convertToType(data['weightedProfitToDeviation'], 'Number');
                 }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
+                if (data.hasOwnProperty('programAge')) {
+                    obj['programAge'] = _ApiClient2.default.convertToType(data['programAge'], 'Number');
                 }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('weightedVolumeScale')) {
+                    obj['weightedVolumeScale'] = _ApiClient2.default.convertToType(data['weightedVolumeScale'], 'Number');
+                }
+                if (data.hasOwnProperty('managerBalance')) {
+                    obj['managerBalance'] = _ApiClient2.default.convertToType(data['managerBalance'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentScale')) {
+                    obj['investmentScale'] = _ApiClient2.default.convertToType(data['investmentScale'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return ProgramLevelInfo;
 }();
 
-/**
- * @typedef WalletBaseDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-
-WalletBaseData.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = WalletBaseData;
+exports.default = ProgramLevelInfo;

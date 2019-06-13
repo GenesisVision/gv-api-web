@@ -28,6 +28,7 @@ Method | HTTP request | Description
 [**v10ManagerProgramsByIdClosePost**](ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 [**v10ManagerProgramsByIdInvestByAmountPost**](ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+[**v10ManagerProgramsByIdLevelsInfoGet**](ManagerApi.md#v10ManagerProgramsByIdLevelsInfoGet) | **GET** /v1.0/manager/programs/{id}/levels/info | Get program data for levels calculator
 [**v10ManagerProgramsByIdPasswordChangePost**](ManagerApi.md#v10ManagerProgramsByIdPasswordChangePost) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 [**v10ManagerProgramsByIdPeriodClosePost**](ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
 [**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
@@ -1180,6 +1181,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramInvestInfo**](ProgramInvestInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerProgramsByIdLevelsInfoGet"></a>
+# **v10ManagerProgramsByIdLevelsInfoGet**
+> ProgramLevelInfo v10ManagerProgramsByIdLevelsInfoGet(id, authorization)
+
+Get program data for levels calculator
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.v10ManagerProgramsByIdLevelsInfoGet(id, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramLevelInfo**](ProgramLevelInfo.md)
 
 ### Authorization
 

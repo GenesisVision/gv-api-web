@@ -29,6 +29,7 @@ import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramInvestInfo from '../model/ProgramInvestInfo';
+import ProgramLevelInfo from '../model/ProgramLevelInfo';
 import ProgramMinimumDeposit from '../model/ProgramMinimumDeposit';
 import ProgramPwdUpdate from '../model/ProgramPwdUpdate';
 import ProgramRequests from '../model/ProgramRequests';
@@ -1343,6 +1344,57 @@ export default class ManagerApi {
      */
       v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ManagerProgramsByIdLevelsInfoGetWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerProgramsByIdLevelsInfoGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsByIdLevelsInfoGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramLevelInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/{id}/levels/info', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get program data for levels calculator
+     * @function ManagerApi#v10ManagerProgramsByIdLevelsInfoGet
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ProgramLevelInfo>} a Promise, with an object containing data of type ProgramLevelInfo and HTTP response
+     */
+      v10ManagerProgramsByIdLevelsInfoGet(id, authorization) {
+      return this.v10ManagerProgramsByIdLevelsInfoGetWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

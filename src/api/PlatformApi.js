@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import CaptchaDetails from '../model/CaptchaDetails';
 import ErrorViewModel from '../model/ErrorViewModel';
+import LevelsParamsInfo from '../model/LevelsParamsInfo';
 import PlatformInfo from '../model/PlatformInfo';
 import PlatformStatistic from '../model/PlatformStatistic';
 import ProgramsLevelsInfo from '../model/ProgramsLevelsInfo';
@@ -147,6 +148,47 @@ export default class PlatformApi {
      */
       v10PlatformLevelsGet(opts) {
       return this.v10PlatformLevelsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10PlatformLevelsParametersGetWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'currency': opts['currency']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = LevelsParamsInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/levels/parameters', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Investment programs levels parameters
+     * @function PlatformApi#v10PlatformLevelsParametersGet
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 104)
+     * @return {CancelablePromise<LevelsParamsInfo>} a Promise, with an object containing data of type LevelsParamsInfo and HTTP response
+     */
+      v10PlatformLevelsParametersGet(opts) {
+      return this.v10PlatformLevelsParametersGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

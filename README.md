@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdClosePost) | **POST** /v1.0/manager/programs/{id}/close | Close existing investment program
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestByAmountPost**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestByAmountPost) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdInvestInfoByCurrencyGet**](docs/ManagerApi.md#v10ManagerProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
+*CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdLevelsInfoGet**](docs/ManagerApi.md#v10ManagerProgramsByIdLevelsInfoGet) | **GET** /v1.0/manager/programs/{id}/levels/info | Get program data for levels calculator
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdPasswordChangePost**](docs/ManagerApi.md#v10ManagerProgramsByIdPasswordChangePost) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdPeriodClosePost**](docs/ManagerApi.md#v10ManagerProgramsByIdPeriodClosePost) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsByIdRequestsBySkipByTakeGet**](docs/ManagerApi.md#v10ManagerProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
@@ -203,6 +204,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.PlatformApi* | [**v10PlatformDatePost**](docs/PlatformApi.md#v10PlatformDatePost) | **POST** /v1.0/platform/date | Server date
 *CoreApiV10.PlatformApi* | [**v10PlatformInfoGet**](docs/PlatformApi.md#v10PlatformInfoGet) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.PlatformApi* | [**v10PlatformLevelsGet**](docs/PlatformApi.md#v10PlatformLevelsGet) | **GET** /v1.0/platform/levels | Investment programs levels
+*CoreApiV10.PlatformApi* | [**v10PlatformLevelsParametersGet**](docs/PlatformApi.md#v10PlatformLevelsParametersGet) | **GET** /v1.0/platform/levels/parameters | Investment programs levels parameters
 *CoreApiV10.PlatformApi* | [**v10PlatformRiskcontrolGet**](docs/PlatformApi.md#v10PlatformRiskcontrolGet) | **GET** /v1.0/platform/riskcontrol | Platform captcha details.
 *CoreApiV10.PlatformApi* | [**v10PlatformStatisticGet**](docs/PlatformApi.md#v10PlatformStatisticGet) | **GET** /v1.0/platform/statistic | Platform statistic
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarRemovePost**](docs/ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
@@ -319,6 +321,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)
+ - [CoreApiV10.LevelsParamsInfo](docs/LevelsParamsInfo.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
  - [CoreApiV10.ManagerAssets](docs/ManagerAssets.md)
  - [CoreApiV10.ManagerDashboard](docs/ManagerDashboard.md)
@@ -379,6 +382,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramFilters](docs/ProgramFilters.md)
  - [CoreApiV10.ProgramInfo](docs/ProgramInfo.md)
  - [CoreApiV10.ProgramInvestInfo](docs/ProgramInvestInfo.md)
+ - [CoreApiV10.ProgramLevelInfo](docs/ProgramLevelInfo.md)
  - [CoreApiV10.ProgramMinimumDeposit](docs/ProgramMinimumDeposit.md)
  - [CoreApiV10.ProgramNotificationSettingList](docs/ProgramNotificationSettingList.md)
  - [CoreApiV10.ProgramPeriodViewModel](docs/ProgramPeriodViewModel.md)

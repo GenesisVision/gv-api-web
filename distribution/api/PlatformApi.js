@@ -29,6 +29,10 @@ var _ErrorViewModel = require('../model/ErrorViewModel');
 
 var _ErrorViewModel2 = _interopRequireDefault(_ErrorViewModel);
 
+var _LevelsParamsInfo = require('../model/LevelsParamsInfo');
+
+var _LevelsParamsInfo2 = _interopRequireDefault(_LevelsParamsInfo);
+
 var _PlatformInfo = require('../model/PlatformInfo');
 
 var _PlatformInfo2 = _interopRequireDefault(_PlatformInfo);
@@ -159,6 +163,42 @@ var PlatformApi = function () {
     key: 'v10PlatformLevelsGet',
     value: function v10PlatformLevelsGet(opts) {
       return this.v10PlatformLevelsGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10PlatformLevelsParametersGetWithHttpInfo',
+    value: function v10PlatformLevelsParametersGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {};
+      var queryParams = {
+        'currency': opts['currency']
+      };
+      var headerParams = {};
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _LevelsParamsInfo2.default;
+
+      return this.apiClient.callApi('/v1.0/platform/levels/parameters', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Investment programs levels parameters
+     * @function PlatformApi#v10PlatformLevelsParametersGet
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 104)
+     * @return {CancelablePromise<LevelsParamsInfo>} a Promise, with an object containing data of type LevelsParamsInfo and HTTP response
+     */
+
+  }, {
+    key: 'v10PlatformLevelsParametersGet',
+    value: function v10PlatformLevelsParametersGet(opts) {
+      return this.v10PlatformLevelsParametersGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

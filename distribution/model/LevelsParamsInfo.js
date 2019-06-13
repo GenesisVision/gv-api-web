@@ -27,116 +27,136 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @interface WalletBaseData
+ * @interface LevelsParamsInfo
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
+ * @name LevelsParamsInfo#minAvailableToInvest
  * @type {Number}
  */
 /**
  *
- * @name WalletBaseData#rate
+ * @name LevelsParamsInfo#maxAvailableToInvest
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#unverifiedAvailableToInvest
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#profitToDeviationMin
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#profitToDeviationMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#volumeScaleMin
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#volumeScaleMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#programAgeMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#ageByVolumeMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#investmentScaleMin
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#investmentScaleMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#investmentScaleHighRisk
  * @type {Number}
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var LevelsParamsInfo = function () {
+    function LevelsParamsInfo() {
+        _classCallCheck(this, LevelsParamsInfo);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.minAvailableToInvest = undefined;
+        this.maxAvailableToInvest = undefined;
+        this.unverifiedAvailableToInvest = undefined;
+        this.profitToDeviationMin = undefined;
+        this.profitToDeviationMax = undefined;
+        this.volumeScaleMin = undefined;
+        this.volumeScaleMax = undefined;
+        this.programAgeMax = undefined;
+        this.ageByVolumeMax = undefined;
+        this.investmentScaleMin = undefined;
+        this.investmentScaleMax = undefined;
+        this.investmentScaleHighRisk = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(LevelsParamsInfo, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new LevelsParamsInfo();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
+                if (data.hasOwnProperty('minAvailableToInvest')) {
+                    obj['minAvailableToInvest'] = _ApiClient2.default.convertToType(data['minAvailableToInvest'], 'Number');
                 }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
+                if (data.hasOwnProperty('maxAvailableToInvest')) {
+                    obj['maxAvailableToInvest'] = _ApiClient2.default.convertToType(data['maxAvailableToInvest'], 'Number');
                 }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
+                if (data.hasOwnProperty('unverifiedAvailableToInvest')) {
+                    obj['unverifiedAvailableToInvest'] = _ApiClient2.default.convertToType(data['unverifiedAvailableToInvest'], 'Number');
                 }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
+                if (data.hasOwnProperty('profitToDeviationMin')) {
+                    obj['profitToDeviationMin'] = _ApiClient2.default.convertToType(data['profitToDeviationMin'], 'Number');
                 }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
+                if (data.hasOwnProperty('profitToDeviationMax')) {
+                    obj['profitToDeviationMax'] = _ApiClient2.default.convertToType(data['profitToDeviationMax'], 'Number');
                 }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('volumeScaleMin')) {
+                    obj['volumeScaleMin'] = _ApiClient2.default.convertToType(data['volumeScaleMin'], 'Number');
+                }
+                if (data.hasOwnProperty('volumeScaleMax')) {
+                    obj['volumeScaleMax'] = _ApiClient2.default.convertToType(data['volumeScaleMax'], 'Number');
+                }
+                if (data.hasOwnProperty('programAgeMax')) {
+                    obj['programAgeMax'] = _ApiClient2.default.convertToType(data['programAgeMax'], 'Number');
+                }
+                if (data.hasOwnProperty('ageByVolumeMax')) {
+                    obj['ageByVolumeMax'] = _ApiClient2.default.convertToType(data['ageByVolumeMax'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentScaleMin')) {
+                    obj['investmentScaleMin'] = _ApiClient2.default.convertToType(data['investmentScaleMin'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentScaleMax')) {
+                    obj['investmentScaleMax'] = _ApiClient2.default.convertToType(data['investmentScaleMax'], 'Number');
+                }
+                if (data.hasOwnProperty('investmentScaleHighRisk')) {
+                    obj['investmentScaleHighRisk'] = _ApiClient2.default.convertToType(data['investmentScaleHighRisk'], 'Number');
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return LevelsParamsInfo;
 }();
 
-/**
- * @typedef WalletBaseDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-
-WalletBaseData.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = WalletBaseData;
+exports.default = LevelsParamsInfo;

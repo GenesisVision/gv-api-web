@@ -71,6 +71,7 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
+import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
@@ -131,6 +132,7 @@ import ProgramFacet from './model/ProgramFacet';
 import ProgramFilters from './model/ProgramFilters';
 import ProgramInfo from './model/ProgramInfo';
 import ProgramInvestInfo from './model/ProgramInvestInfo';
+import ProgramLevelInfo from './model/ProgramLevelInfo';
 import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramPeriodViewModel from './model/ProgramPeriodViewModel';
@@ -570,6 +572,12 @@ export {
     LevelUpSummary,
 
     /**
+     * @name index#LevelsParamsInfo
+     * @type {LevelsParamsInfo}
+     */
+    LevelsParamsInfo,
+
+    /**
      * @name index#LoginViewModel
      * @type {LoginViewModel}
      */
@@ -928,6 +936,12 @@ export {
      * @type {ProgramInvestInfo}
      */
     ProgramInvestInfo,
+
+    /**
+     * @name index#ProgramLevelInfo
+     * @type {ProgramLevelInfo}
+     */
+    ProgramLevelInfo,
 
     /**
      * @name index#ProgramMinimumDeposit

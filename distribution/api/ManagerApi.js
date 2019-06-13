@@ -85,6 +85,10 @@ var _ProgramInvestInfo = require('../model/ProgramInvestInfo');
 
 var _ProgramInvestInfo2 = _interopRequireDefault(_ProgramInvestInfo);
 
+var _ProgramLevelInfo = require('../model/ProgramLevelInfo');
+
+var _ProgramLevelInfo2 = _interopRequireDefault(_ProgramLevelInfo);
+
 var _ProgramMinimumDeposit = require('../model/ProgramMinimumDeposit');
 
 var _ProgramMinimumDeposit2 = _interopRequireDefault(_ProgramMinimumDeposit);
@@ -1326,6 +1330,53 @@ var ManagerApi = function () {
     key: 'v10ManagerProgramsByIdInvestInfoByCurrencyGet',
     value: function v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization) {
       return this.v10ManagerProgramsByIdInvestInfoByCurrencyGetWithHttpInfo(id, currency, authorization).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+  }, {
+    key: 'v10ManagerProgramsByIdLevelsInfoGetWithHttpInfo',
+    value: function v10ManagerProgramsByIdLevelsInfoGetWithHttpInfo(id, authorization) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ManagerProgramsByIdLevelsInfoGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ManagerProgramsByIdLevelsInfoGet");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {};
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProgramLevelInfo2.default;
+
+      return this.apiClient.callApi('/v1.0/manager/programs/{id}/levels/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+
+    /**
+     * Get program data for levels calculator
+     * @function ManagerApi#v10ManagerProgramsByIdLevelsInfoGet
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ProgramLevelInfo>} a Promise, with an object containing data of type ProgramLevelInfo and HTTP response
+     */
+
+  }, {
+    key: 'v10ManagerProgramsByIdLevelsInfoGet',
+    value: function v10ManagerProgramsByIdLevelsInfoGet(id, authorization) {
+      return this.v10ManagerProgramsByIdLevelsInfoGetWithHttpInfo(id, authorization).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
