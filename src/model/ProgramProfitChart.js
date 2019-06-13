@@ -77,6 +77,11 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
+ * @name ProgramProfitChart#tradingVolume
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramProfitChart#equityChart
  * @type {Array<ChartSimple>}
  */
@@ -186,6 +191,9 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('lastPeriodEnds')) {
                 obj['lastPeriodEnds'] = ApiClient.convertToType(data['lastPeriodEnds'], 'Date');
             }
+            if (data.hasOwnProperty('tradingVolume')) {
+                obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
@@ -233,6 +241,7 @@ export default class ProgramProfitChart {
     periods = undefined;
     lastPeriodStarts = undefined;
     lastPeriodEnds = undefined;
+    tradingVolume = undefined;
     equityChart = undefined;
     balance = undefined;
     investors = undefined;

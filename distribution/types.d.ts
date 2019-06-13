@@ -2037,6 +2037,7 @@ export declare interface ProgramProfitChart {
     periods: PeriodDate[];
     lastPeriodStarts: Date;
     lastPeriodEnds: Date;
+    tradingVolume: number;
     equityChart: ChartSimple[];
     balance: number;
     investors: number;

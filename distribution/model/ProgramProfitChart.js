@@ -90,6 +90,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name ProgramProfitChart#tradingVolume
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramProfitChart#equityChart
  * @type {[ChartSimple]}
  */
@@ -158,6 +163,7 @@ var ProgramProfitChart = function () {
         this.periods = undefined;
         this.lastPeriodStarts = undefined;
         this.lastPeriodEnds = undefined;
+        this.tradingVolume = undefined;
         this.equityChart = undefined;
         this.balance = undefined;
         this.investors = undefined;
@@ -206,6 +212,9 @@ var ProgramProfitChart = function () {
                 }
                 if (data.hasOwnProperty('lastPeriodEnds')) {
                     obj['lastPeriodEnds'] = _ApiClient2.default.convertToType(data['lastPeriodEnds'], 'Date');
+                }
+                if (data.hasOwnProperty('tradingVolume')) {
+                    obj['tradingVolume'] = _ApiClient2.default.convertToType(data['tradingVolume'], 'Number');
                 }
                 if (data.hasOwnProperty('equityChart')) {
                     obj['equityChart'] = _ApiClient2.default.convertToType(data['equityChart'], [_ChartSimple2.default]);

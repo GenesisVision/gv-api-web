@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **periods** | [**[PeriodDate]**](PeriodDate.md) |  | [optional] 
 **lastPeriodStarts** | **Date** |  | [optional] 
 **lastPeriodEnds** | **Date** |  | [optional] 
+**tradingVolume** | **Number** |  | [optional] 
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
