@@ -40,7 +40,7 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name ProgramLevelInfo#weightedProfitToDeviation
+ * @name ProgramLevelInfo#genesisRatio
  * @type {Number}
  */
 /**
@@ -98,8 +98,8 @@ export default class ProgramLevelInfo {
             if (data.hasOwnProperty('levelProgressPercent')) {
                 obj['levelProgressPercent'] = ApiClient.convertToType(data['levelProgressPercent'], 'Number');
             }
-            if (data.hasOwnProperty('weightedProfitToDeviation')) {
-                obj['weightedProfitToDeviation'] = ApiClient.convertToType(data['weightedProfitToDeviation'], 'Number');
+            if (data.hasOwnProperty('genesisRatio')) {
+                obj['genesisRatio'] = ApiClient.convertToType(data['genesisRatio'], 'Number');
             }
             if (data.hasOwnProperty('programAge')) {
                 obj['programAge'] = ApiClient.convertToType(data['programAge'], 'Number');
@@ -120,7 +120,7 @@ export default class ProgramLevelInfo {
     isKycPassed = undefined;
     level = undefined;
     levelProgressPercent = undefined;
-    weightedProfitToDeviation = undefined;
+    genesisRatio = undefined;
     programAge = undefined;
     weightedVolumeScale = undefined;
     managerBalance = undefined;

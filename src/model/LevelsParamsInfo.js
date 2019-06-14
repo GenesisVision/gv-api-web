@@ -40,12 +40,17 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name LevelsParamsInfo#profitToDeviationMin
+ * @name LevelsParamsInfo#genesisRatioMin
  * @type {Number}
  */
 /**
  *
- * @name LevelsParamsInfo#profitToDeviationMax
+ * @name LevelsParamsInfo#genesisRatioMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#genesisRatioHighRisk
  * @type {Number}
  */
 /**
@@ -118,11 +123,14 @@ export default class LevelsParamsInfo {
             if (data.hasOwnProperty('unverifiedAvailableToInvest')) {
                 obj['unverifiedAvailableToInvest'] = ApiClient.convertToType(data['unverifiedAvailableToInvest'], 'Number');
             }
-            if (data.hasOwnProperty('profitToDeviationMin')) {
-                obj['profitToDeviationMin'] = ApiClient.convertToType(data['profitToDeviationMin'], 'Number');
+            if (data.hasOwnProperty('genesisRatioMin')) {
+                obj['genesisRatioMin'] = ApiClient.convertToType(data['genesisRatioMin'], 'Number');
             }
-            if (data.hasOwnProperty('profitToDeviationMax')) {
-                obj['profitToDeviationMax'] = ApiClient.convertToType(data['profitToDeviationMax'], 'Number');
+            if (data.hasOwnProperty('genesisRatioMax')) {
+                obj['genesisRatioMax'] = ApiClient.convertToType(data['genesisRatioMax'], 'Number');
+            }
+            if (data.hasOwnProperty('genesisRatioHighRisk')) {
+                obj['genesisRatioHighRisk'] = ApiClient.convertToType(data['genesisRatioHighRisk'], 'Number');
             }
             if (data.hasOwnProperty('volumeScaleMin')) {
                 obj['volumeScaleMin'] = ApiClient.convertToType(data['volumeScaleMin'], 'Number');
@@ -152,8 +160,9 @@ export default class LevelsParamsInfo {
     minAvailableToInvest = undefined;
     maxAvailableToInvest = undefined;
     unverifiedAvailableToInvest = undefined;
-    profitToDeviationMin = undefined;
-    profitToDeviationMax = undefined;
+    genesisRatioMin = undefined;
+    genesisRatioMax = undefined;
+    genesisRatioHighRisk = undefined;
     volumeScaleMin = undefined;
     volumeScaleMax = undefined;
     programAgeMax = undefined;

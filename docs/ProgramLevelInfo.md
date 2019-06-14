@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **isKycPassed** | **Boolean** |  | [optional] 
 **level** | **Number** |  | [optional] 
 **levelProgressPercent** | **Number** |  | [optional] 
-**weightedProfitToDeviation** | **Number** |  | [optional] 
+**genesisRatio** | **Number** |  | [optional] 
 **programAge** | **Number** |  | [optional] 
 **weightedVolumeScale** | **Number** |  | [optional] 
 **managerBalance** | **Number** |  | [optional] 

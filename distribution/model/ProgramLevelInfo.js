@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name ProgramLevelInfo#weightedProfitToDeviation
+ * @name ProgramLevelInfo#genesisRatio
  * @type {Number}
  */
 /**
@@ -78,7 +78,7 @@ var ProgramLevelInfo = function () {
         this.isKycPassed = undefined;
         this.level = undefined;
         this.levelProgressPercent = undefined;
-        this.weightedProfitToDeviation = undefined;
+        this.genesisRatio = undefined;
         this.programAge = undefined;
         this.weightedVolumeScale = undefined;
         this.managerBalance = undefined;
@@ -100,8 +100,8 @@ var ProgramLevelInfo = function () {
                 if (data.hasOwnProperty('levelProgressPercent')) {
                     obj['levelProgressPercent'] = _ApiClient2.default.convertToType(data['levelProgressPercent'], 'Number');
                 }
-                if (data.hasOwnProperty('weightedProfitToDeviation')) {
-                    obj['weightedProfitToDeviation'] = _ApiClient2.default.convertToType(data['weightedProfitToDeviation'], 'Number');
+                if (data.hasOwnProperty('genesisRatio')) {
+                    obj['genesisRatio'] = _ApiClient2.default.convertToType(data['genesisRatio'], 'Number');
                 }
                 if (data.hasOwnProperty('programAge')) {
                     obj['programAge'] = _ApiClient2.default.convertToType(data['programAge'], 'Number');

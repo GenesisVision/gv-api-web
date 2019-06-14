@@ -47,12 +47,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name LevelsParamsInfo#profitToDeviationMin
+ * @name LevelsParamsInfo#genesisRatioMin
  * @type {Number}
  */
 /**
  *
- * @name LevelsParamsInfo#profitToDeviationMax
+ * @name LevelsParamsInfo#genesisRatioMax
+ * @type {Number}
+ */
+/**
+ *
+ * @name LevelsParamsInfo#genesisRatioHighRisk
  * @type {Number}
  */
 /**
@@ -98,8 +103,9 @@ var LevelsParamsInfo = function () {
         this.minAvailableToInvest = undefined;
         this.maxAvailableToInvest = undefined;
         this.unverifiedAvailableToInvest = undefined;
-        this.profitToDeviationMin = undefined;
-        this.profitToDeviationMax = undefined;
+        this.genesisRatioMin = undefined;
+        this.genesisRatioMax = undefined;
+        this.genesisRatioHighRisk = undefined;
         this.volumeScaleMin = undefined;
         this.volumeScaleMax = undefined;
         this.programAgeMax = undefined;
@@ -124,11 +130,14 @@ var LevelsParamsInfo = function () {
                 if (data.hasOwnProperty('unverifiedAvailableToInvest')) {
                     obj['unverifiedAvailableToInvest'] = _ApiClient2.default.convertToType(data['unverifiedAvailableToInvest'], 'Number');
                 }
-                if (data.hasOwnProperty('profitToDeviationMin')) {
-                    obj['profitToDeviationMin'] = _ApiClient2.default.convertToType(data['profitToDeviationMin'], 'Number');
+                if (data.hasOwnProperty('genesisRatioMin')) {
+                    obj['genesisRatioMin'] = _ApiClient2.default.convertToType(data['genesisRatioMin'], 'Number');
                 }
-                if (data.hasOwnProperty('profitToDeviationMax')) {
-                    obj['profitToDeviationMax'] = _ApiClient2.default.convertToType(data['profitToDeviationMax'], 'Number');
+                if (data.hasOwnProperty('genesisRatioMax')) {
+                    obj['genesisRatioMax'] = _ApiClient2.default.convertToType(data['genesisRatioMax'], 'Number');
+                }
+                if (data.hasOwnProperty('genesisRatioHighRisk')) {
+                    obj['genesisRatioHighRisk'] = _ApiClient2.default.convertToType(data['genesisRatioHighRisk'], 'Number');
                 }
                 if (data.hasOwnProperty('volumeScaleMin')) {
                     obj['volumeScaleMin'] = _ApiClient2.default.convertToType(data['volumeScaleMin'], 'Number');
