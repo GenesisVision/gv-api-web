@@ -241,7 +241,7 @@ var WalletTransaction = function () {
 
 /**
  * @typedef WalletTransactionSourceCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -256,7 +256,7 @@ var WalletTransaction = function () {
 
 /**
  * @typedef WalletTransactionDestinationCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
@@ -286,13 +286,13 @@ WalletTransaction.SourceTypeEnum = {
 };
 WalletTransaction.SourceCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 
@@ -368,13 +368,13 @@ WalletTransaction.DestinationTypeEnum = {
 };
 WalletTransaction.DestinationCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 

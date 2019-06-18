@@ -143,24 +143,24 @@ var WalletsGrandTotal = function () {
 
 /**
  * @typedef WalletsGrandTotalCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef WalletsGrandTotalCurrencyCcyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 WalletsGrandTotal.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 
@@ -182,13 +182,13 @@ WalletsGrandTotal.CurrencyEnum = {
 };
 WalletsGrandTotal.CurrencyCcyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 

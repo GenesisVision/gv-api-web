@@ -219,24 +219,24 @@ var ProgramStatistic = function () {
 
 /**
  * @typedef ProgramStatisticStartCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef ProgramStatisticInvestedCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 ProgramStatistic.StartCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 
@@ -258,13 +258,13 @@ ProgramStatistic.StartCurrencyEnum = {
 };
 ProgramStatistic.InvestedCurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 

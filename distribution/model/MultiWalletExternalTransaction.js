@@ -134,7 +134,7 @@ var MultiWalletExternalTransaction = function () {
 
 /**
  * @typedef MultiWalletExternalTransactionCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -145,13 +145,13 @@ var MultiWalletExternalTransaction = function () {
 
 MultiWalletExternalTransaction.CurrencyEnum = {
 
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
     "Undefined": "Undefined",
 
     "GVT": "GVT",
+
+    "ETH": "ETH",
+
+    "BTC": "BTC",
 
     "ADA": "ADA",
 

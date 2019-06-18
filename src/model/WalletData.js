@@ -223,13 +223,13 @@ export default class WalletData {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -252,13 +252,13 @@ export default class WalletData {
 
     static CurrencyCcyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -288,12 +288,12 @@ export default class WalletData {
 
 /**
  * @typedef WalletDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef WalletDataCurrencyCcyEnum 
- * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
