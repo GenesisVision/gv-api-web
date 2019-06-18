@@ -177,8 +177,8 @@ var RateApi = function () {
      * Get rates
      * @function RateApi#v10RateGet
      * @param {Object} [opts] Optional parameters
-     * @param {[String]} [opts.from] 
-     * @param {[String]} [opts.to] 
+     * @param {Array<String>} [opts.from] 
+     * @param {Array<String>} [opts.to] 
      * @return {CancelablePromise<RatesModel>} a Promise, with an object containing data of type RatesModel and HTTP response
      */
 

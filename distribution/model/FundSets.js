@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundSets#sets
- * @type {[FundFacet]}
+ * @type {Array<FundFacet>}
  */
 /**
  *

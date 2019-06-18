@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderModelSignalData#masters
- * @type {[SignalDataMaster]}
+ * @type {Array<SignalDataMaster>}
  */
 
 var OrderModelSignalData = function () {
