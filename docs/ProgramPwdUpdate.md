@@ -1,0 +1,9 @@
+# CoreApiV10.ProgramPwdUpdate
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**password** | **String** |  | [optional] 
+**twoFactorCode** | **String** |  | [optional] 
+
+

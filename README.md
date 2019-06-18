@@ -1,7 +1,3 @@
-swagger-codegen generate -i <url> -l javascript -c config.json -t ./template/es6/
-
-npm run build
-
 # core_api_v10
 
 CoreApiV10 - JavaScript client for core_api_v10
@@ -28,6 +24,30 @@ Then install it via:
 npm install core_api_v10 --save
 ```
 
+##### Local development
+
+To use the library locally without publishing to a remote npm registry, first install the dependencies by changing 
+into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
+
+```shell
+npm install
+```
+
+Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the following, also from `JAVASCRIPT_CLIENT_DIR`:
+
+```shell
+npm link
+```
+
+Finally, switch to the directory you want to use your core_api_v10 from, and run:
+
+```shell
+npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
+```
+
+You should now be able to `require('core_api_v10')` in javascript files from the directory you ran the last 
+command above from.
+
 #### git
 #
 If the library is hosted at a git repository, e.g.
@@ -42,7 +62,8 @@ then install it via:
 
 The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
 the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file):
+perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually 
+use this library):
 
 ```shell
 browserify main.js > bundle.js
@@ -308,6 +329,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
  - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
  - [CoreApiV10.FundFacet](docs/FundFacet.md)
+ - [CoreApiV10.FundFilters](docs/FundFilters.md)
  - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
  - [CoreApiV10.FundNotificationSettingList](docs/FundNotificationSettingList.md)
  - [CoreApiV10.FundProfitChart](docs/FundProfitChart.md)
