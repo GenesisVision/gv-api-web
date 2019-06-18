@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **avatar** | **String** |  | [optional] 
 **registrationDate** | **Date** |  | [optional] 
 **url** | **String** |  | [optional] 
+**socialLinks** | [**[SocialLinkViewModel]**](SocialLinkViewModel.md) |  | [optional] 
 
 

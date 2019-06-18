@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SocialLinkViewModel from './SocialLinkViewModel';
 
 
 
@@ -47,6 +48,11 @@ import ApiClient from '../ApiClient';
  *
  * @name ProfilePublic#url
  * @type {String}
+ */
+/**
+ *
+ * @name ProfilePublic#socialLinks
+ * @type {Array<SocialLinkViewModel>}
  */
 
 
@@ -89,6 +95,9 @@ export default class ProfilePublic {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('socialLinks')) {
+                obj['socialLinks'] = ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]);
+            }
         }
         return obj;
     }
@@ -98,6 +107,7 @@ export default class ProfilePublic {
     avatar = undefined;
     registrationDate = undefined;
     url = undefined;
+    socialLinks = undefined;
 
 
 

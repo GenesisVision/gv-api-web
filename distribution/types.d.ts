@@ -1870,6 +1870,7 @@ export declare interface ProfilePublic {
     avatar: string;
     registrationDate: Date;
     url: string;
+    socialLinks: SocialLinkViewModel[];
 }
 
 export declare type ProgramBalanceChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
