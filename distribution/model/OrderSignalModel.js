@@ -50,7 +50,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderSignalModel#providers
- * @type {Array<OrderSignalProgramInfo>}
+ * @type {[OrderSignalProgramInfo]}
  */
 /**
  *

@@ -71,12 +71,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#pnLChart
- * @type {Array<ChartSimple>}
+ * @type {[ChartSimple]}
  */
 /**
  *
  * @name ProgramProfitChart#periods
- * @type {Array<PeriodDate>}
+ * @type {[PeriodDate]}
  */
 /**
  *
@@ -96,7 +96,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramProfitChart#equityChart
- * @type {Array<ChartSimple>}
+ * @type {[ChartSimple]}
  */
 /**
  *
@@ -259,23 +259,23 @@ var ProgramProfitChart = function () {
 
 /**
  * @typedef ProgramProfitChartProgramCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 ProgramProfitChart.ProgramCurrencyEnum = {
 
-    "Undefined": "Undefined",
-
-    "GVT": "GVT",
+    "BTC": "BTC",
 
     "ETH": "ETH",
 
-    "BTC": "BTC",
+    "USDT": "USDT",
+
+    "GVT": "GVT",
+
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

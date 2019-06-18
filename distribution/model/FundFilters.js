@@ -21,122 +21,47 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _PlatformAsset = require('./PlatformAsset');
+
+var _PlatformAsset2 = _interopRequireDefault(_PlatformAsset);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  *
- * @interface WalletBaseData
+ * @interface FundFilters
  */
 
 /**
  *
- * @name WalletBaseData#id
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#title
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#logo
- * @type {String}
- */
-/**
- *
- * @name WalletBaseData#currency
- * @type WalletBaseDataCurrencyEnum
- */
-/**
- *
- * @name WalletBaseData#available
- * @type {Number}
- */
-/**
- *
- * @name WalletBaseData#rate
- * @type {Number}
+ * @name FundFilters#assets
+ * @type {[PlatformAsset]}
  */
 
-var WalletBaseData = function () {
-    function WalletBaseData() {
-        _classCallCheck(this, WalletBaseData);
+var FundFilters = function () {
+    function FundFilters() {
+        _classCallCheck(this, FundFilters);
 
-        this.id = undefined;
-        this.title = undefined;
-        this.logo = undefined;
-        this.currency = undefined;
-        this.available = undefined;
-        this.rate = undefined;
+        this.assets = undefined;
     }
 
-    _createClass(WalletBaseData, null, [{
+    _createClass(FundFilters, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WalletBaseData();
+                obj = obj || new FundFilters();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
-                }
-                if (data.hasOwnProperty('title')) {
-                    obj['title'] = _ApiClient2.default.convertToType(data['title'], 'String');
-                }
-                if (data.hasOwnProperty('logo')) {
-                    obj['logo'] = _ApiClient2.default.convertToType(data['logo'], 'String');
-                }
-                if (data.hasOwnProperty('currency')) {
-                    obj['currency'] = _ApiClient2.default.convertToType(data['currency'], 'String');
-                }
-                if (data.hasOwnProperty('available')) {
-                    obj['available'] = _ApiClient2.default.convertToType(data['available'], 'Number');
-                }
-                if (data.hasOwnProperty('rate')) {
-                    obj['rate'] = _ApiClient2.default.convertToType(data['rate'], 'Number');
+                if (data.hasOwnProperty('assets')) {
+                    obj['assets'] = _ApiClient2.default.convertToType(data['assets'], [_PlatformAsset2.default]);
                 }
             }
             return obj;
         }
     }]);
 
-    return WalletBaseData;
+    return FundFilters;
 }();
 
-/**
- * @typedef WalletBaseDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-
-WalletBaseData.CurrencyEnum = {
-
-    "BTC": "BTC",
-
-    "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
-
-    "Undefined": "Undefined",
-
-    "ADA": "ADA",
-
-    "XRP": "XRP",
-
-    "BCH": "BCH",
-
-    "LTC": "LTC",
-
-    "DOGE": "DOGE",
-
-    "BNB": "BNB",
-
-    "USD": "USD",
-
-    "EUR": "EUR"
-};
-exports.default = WalletBaseData;
+exports.default = FundFilters;

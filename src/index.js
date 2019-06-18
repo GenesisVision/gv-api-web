@@ -57,6 +57,7 @@ import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundFacet from './model/FundFacet';
+import FundFilters from './model/FundFilters';
 import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChart from './model/FundProfitChart';
@@ -486,6 +487,12 @@ export {
      * @type {FundFacet}
      */
     FundFacet,
+
+    /**
+     * @name index#FundFilters
+     * @type {FundFilters}
+     */
+    FundFilters,
 
     /**
      * @name index#FundInvestInfo

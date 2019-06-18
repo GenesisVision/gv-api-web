@@ -75,7 +75,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderSignalProgramInfo#fees
- * @type {Array<OrderSignalFee>}
+ * @type {[OrderSignalFee]}
  */
 
 var OrderSignalProgramInfo = function () {

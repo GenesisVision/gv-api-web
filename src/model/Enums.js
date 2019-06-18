@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import FundFilters from './FundFilters';
 import MultiWalletFilters from './MultiWalletFilters';
 import ProgramFilters from './ProgramFilters';
 
@@ -34,6 +35,11 @@ import ProgramFilters from './ProgramFilters';
  *
  * @name Enums#program
  * @type {ProgramFilters}
+ */
+/**
+ *
+ * @name Enums#fund
+ * @type {FundFilters}
  */
 
 
@@ -67,12 +73,16 @@ export default class Enums {
             if (data.hasOwnProperty('program')) {
                 obj['program'] = ProgramFilters.constructFromObject(data['program']);
             }
+            if (data.hasOwnProperty('fund')) {
+                obj['fund'] = FundFilters.constructFromObject(data['fund']);
+            }
         }
         return obj;
     }
 
     multiWallet = undefined;
     program = undefined;
+    fund = undefined;
 
 
 

@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _FundFilters = require('./FundFilters');
+
+var _FundFilters2 = _interopRequireDefault(_FundFilters);
+
 var _MultiWalletFilters = require('./MultiWalletFilters');
 
 var _MultiWalletFilters2 = _interopRequireDefault(_MultiWalletFilters);
@@ -48,6 +52,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @name Enums#program
  * @type {ProgramFilters}
  */
+/**
+ *
+ * @name Enums#fund
+ * @type {FundFilters}
+ */
 
 var Enums = function () {
     function Enums() {
@@ -55,6 +64,7 @@ var Enums = function () {
 
         this.multiWallet = undefined;
         this.program = undefined;
+        this.fund = undefined;
     }
 
     _createClass(Enums, null, [{
@@ -68,6 +78,9 @@ var Enums = function () {
                 }
                 if (data.hasOwnProperty('program')) {
                     obj['program'] = _ProgramFilters2.default.constructFromObject(data['program']);
+                }
+                if (data.hasOwnProperty('fund')) {
+                    obj['fund'] = _FundFilters2.default.constructFromObject(data['fund']);
                 }
             }
             return obj;

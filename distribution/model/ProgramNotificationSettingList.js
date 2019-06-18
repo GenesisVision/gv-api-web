@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramNotificationSettingList#settingsCustom
- * @type {Array<NotificationSettingViewModel>}
+ * @type {[NotificationSettingViewModel]}
  */
 /**
  *
@@ -77,7 +77,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProgramNotificationSettingList#settingsGeneral
- * @type {Array<NotificationSettingViewModel>}
+ * @type {[NotificationSettingViewModel]}
  */
 
 var ProgramNotificationSettingList = function () {
