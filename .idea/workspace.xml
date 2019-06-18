@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="remove pow">
+      <change afterPath="$PROJECT_DIR$/bash/generate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bash/add_exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/bash/add_exports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bash/replace.js" beforeDir="false" afterPath="$PROJECT_DIR$/bash/replace.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/ApiClient.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/AuthApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/BrokersApi.js" beforeDir="false" />
@@ -21,16 +28,20 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/AmountWithCurrency.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/AndroidAppVersion.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/AndroidVersion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/AssetEvent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/AssetSelection.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/AssetsValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/AttachToSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/AttachToSignalProviderInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/BalanceChartElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/BinanceKey.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/BlockchainInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/Broker.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/CaptchaCheckResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/CaptchaDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ChangeBrokerProgramRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ChangePasswordViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ChartSimple.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ConvertingDetails.js" beforeDir="false" />
@@ -42,6 +53,7 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/DashboardProgramDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/DashboardSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/DetachFromSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/Enums.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ErrorMessage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" beforeDir="false" />
@@ -72,9 +84,11 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/LevelsParamsInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/LoginViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerEvent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerFundWithdrawInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerOverview.js" beforeDir="false" />
@@ -87,6 +101,7 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerSimpleFund.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagerSimpleProgram.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ManagersList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/MigrationRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletExternalTransaction.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletExternalTransactionsViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletFilters.js" beforeDir="false" />
@@ -99,9 +114,12 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/NotificationSettingViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/NotificationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/OrderModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/OrderModelSignalData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/OrderProgramData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/OrderSignalFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/OrderSignalModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/OrderSignalProgramInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/OrderTradingFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/OtherAssetsValue.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/PasswordModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/PeriodDate.js" beforeDir="false" />
@@ -128,6 +146,7 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramFilters.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramInvestInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramLevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramMinimumDeposit.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ProgramPeriodViewModel.js" beforeDir="false" />
@@ -155,9 +174,14 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/ResendConfirmationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ResetPasswordViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SearchViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SignalDataMaster.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SignalDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SignalProviderSubscribers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SignalSubscriber.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SignalSubscription.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/SignalsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SocialLinkViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SocialLinksViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/TradesSignalViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/TransactionDetails.js" beforeDir="false" />
@@ -167,6 +191,7 @@
       <change beforePath="$PROJECT_DIR$/distribution/model/TwoFactorStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/UpdatePersonalDetailViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/UpdateProfileViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/UpdateSocialLinkViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/UploadResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/UserCommissionData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" beforeDir="false" />
@@ -187,11 +212,14 @@
       <change beforePath="$PROJECT_DIR$/docs/AmountWithCurrency.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AndroidAppVersion.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AndroidVersion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetEvent.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AssetSelection.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AssetsValue.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AttachToSignalProvider.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AttachToSignalProviderInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AuthApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BalanceChartElement.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BinanceKey.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BlockchainInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Broker.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BrokerAccountType.md" beforeDir="false" />
@@ -199,6 +227,7 @@
       <change beforePath="$PROJECT_DIR$/docs/BrokersInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CaptchaCheckResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CaptchaDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ChangeBrokerProgramRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ChangePasswordViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ChartSimple.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ConvertingDetails.md" beforeDir="false" />
@@ -210,6 +239,7 @@
       <change beforePath="$PROJECT_DIR$/docs/DashboardPortfolioEvents.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardProgramDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardSummary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DetachFromSignalProvider.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Enums.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ErrorMessage.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ErrorViewModel.md" beforeDir="false" />
@@ -243,10 +273,12 @@
       <change beforePath="$PROJECT_DIR$/docs/LevelInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpSummary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LevelsParamsInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LoginViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerAssets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerDashboard.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerEvent.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerFundWithdrawInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerNotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerOverview.md" beforeDir="false" />
@@ -259,6 +291,7 @@
       <change beforePath="$PROJECT_DIR$/docs/ManagerSimpleFund.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerSimpleProgram.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagersList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MigrationRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransaction.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransactionsViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletFilters.md" beforeDir="false" />
@@ -272,9 +305,12 @@
       <change beforePath="$PROJECT_DIR$/docs/NotificationViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationsApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderModelSignalData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderProgramData.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderSignalFee.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderSignalModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderSignalProgramInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderTradingFee.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OtherAssetsValue.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PasswordModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PeriodDate.md" beforeDir="false" />
@@ -287,6 +323,8 @@
       <change beforePath="$PROJECT_DIR$/docs/PlatformCurrency.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PoWDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PoWResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileFullViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileHeaderViewModel.md" beforeDir="false" />
@@ -301,6 +339,7 @@
       <change beforePath="$PROJECT_DIR$/docs/ProgramFilters.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramInvestInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramLevelInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramMinimumDeposit.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramNotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramPeriodViewModel.md" beforeDir="false" />
@@ -332,9 +371,14 @@
       <change beforePath="$PROJECT_DIR$/docs/SearchApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SearchViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalDataMaster.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalProviderSubscribers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalSubscriber.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalSubscription.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalsList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SocialLinkViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SocialLinksViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TradesSignalViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TradesViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TransactionDetails.md" beforeDir="false" />
@@ -344,6 +388,7 @@
       <change beforePath="$PROJECT_DIR$/docs/TwoFactorStatus.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UpdatePersonalDetailViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UpdateProfileViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UpdateSocialLinkViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UploadResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UserCommissionData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ValueChartBar.md" beforeDir="false" />
@@ -361,6 +406,8 @@
       <change beforePath="$PROJECT_DIR$/docs/WalletsInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WithdrawalInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WithdrawalSummary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/AuthApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/BrokersApi.js" beforeDir="false" />
@@ -380,16 +427,20 @@
       <change beforePath="$PROJECT_DIR$/src/model/AmountWithCurrency.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AndroidAppVersion.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AndroidVersion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetEvent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AssetSelection.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AssetsValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AttachToSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AttachToSignalProviderInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BalanceChartElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BinanceKey.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BlockchainInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Broker.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BrokerAccountType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BrokersInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CaptchaCheckResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CaptchaDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ChangeBrokerProgramRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ChangePasswordViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ChartSimple.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ConvertingDetails.js" beforeDir="false" />
@@ -401,6 +452,7 @@
       <change beforePath="$PROJECT_DIR$/src/model/DashboardPortfolioEvents.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardProgramDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DetachFromSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Enums.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ErrorMessage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ErrorViewModel.js" beforeDir="false" />
@@ -431,9 +483,11 @@
       <change beforePath="$PROJECT_DIR$/src/model/LevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LevelsParamsInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LoginViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerDashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerEvent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerFundWithdrawInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerOverview.js" beforeDir="false" />
@@ -446,6 +500,7 @@
       <change beforePath="$PROJECT_DIR$/src/model/ManagerSimpleFund.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerSimpleProgram.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagersList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MigrationRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransaction.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransactionsViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletFilters.js" beforeDir="false" />
@@ -458,9 +513,12 @@
       <change beforePath="$PROJECT_DIR$/src/model/NotificationSettingViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NotificationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderModelSignalData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderProgramData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderSignalFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderSignalModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderSignalProgramInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderTradingFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OtherAssetsValue.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PasswordModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PeriodDate.js" beforeDir="false" />
@@ -472,6 +530,8 @@
       <change beforePath="$PROJECT_DIR$/src/model/PlatformCurrency.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PowDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PowResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfileFullViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfileHeaderViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfilePublic.js" beforeDir="false" />
@@ -485,6 +545,7 @@
       <change beforePath="$PROJECT_DIR$/src/model/ProgramFilters.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramInvestInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramLevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramMinimumDeposit.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramPeriodViewModel.js" beforeDir="false" />
@@ -512,9 +573,14 @@
       <change beforePath="$PROJECT_DIR$/src/model/ResendConfirmationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ResetPasswordViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SearchViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalDataMaster.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalProviderSubscribers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalSubscriber.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalSubscription.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SocialLinkViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SocialLinksViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TradesSignalViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TradesViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TransactionDetails.js" beforeDir="false" />
@@ -524,6 +590,7 @@
       <change beforePath="$PROJECT_DIR$/src/model/TwoFactorStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UpdatePersonalDetailViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UpdateProfileViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UpdateSocialLinkViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UploadResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UserCommissionData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ValueChartBar.js" beforeDir="false" />
@@ -557,16 +624,20 @@
       <change beforePath="$PROJECT_DIR$/test/model/AmountWithCurrency.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AndroidAppVersion.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AndroidVersion.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetEvent.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AssetSelection.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AssetsValue.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AttachToSignalProvider.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AttachToSignalProviderInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BalanceChartElement.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BinanceKey.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BlockchainInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/Broker.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BrokerAccountType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BrokersInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CaptchaCheckResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CaptchaDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ChangeBrokerProgramRequest.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ChangePasswordViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ChartSimple.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ConvertingDetails.spec.js" beforeDir="false" />
@@ -578,6 +649,7 @@
       <change beforePath="$PROJECT_DIR$/test/model/DashboardPortfolioEvents.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardProgramDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardSummary.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/DetachFromSignalProvider.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/Enums.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ErrorMessage.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ErrorViewModel.spec.js" beforeDir="false" />
@@ -608,9 +680,11 @@
       <change beforePath="$PROJECT_DIR$/test/model/LevelInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpSummary.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/LevelsParamsInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LoginViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerAssets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerDashboard.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagerEvent.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerFundWithdrawInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerNotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerOverview.spec.js" beforeDir="false" />
@@ -623,6 +697,7 @@
       <change beforePath="$PROJECT_DIR$/test/model/ManagerSimpleFund.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerSimpleProgram.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagersList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MigrationRequest.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletExternalTransaction.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletExternalTransactionsViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletFilters.spec.js" beforeDir="false" />
@@ -635,9 +710,12 @@
       <change beforePath="$PROJECT_DIR$/test/model/NotificationSettingViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NotificationViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderModelSignalData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderProgramData.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderSignalFee.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderSignalModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderSignalProgramInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderTradingFee.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OtherAssetsValue.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PasswordModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PeriodDate.spec.js" beforeDir="false" />
@@ -649,6 +727,8 @@
       <change beforePath="$PROJECT_DIR$/test/model/PlatformCurrency.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PoWDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PoWResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfileFullViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfileHeaderViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfilePublic.spec.js" beforeDir="false" />
@@ -662,6 +742,7 @@
       <change beforePath="$PROJECT_DIR$/test/model/ProgramFilters.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramInvestInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramLevelInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramMinimumDeposit.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramNotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramPeriodViewModel.spec.js" beforeDir="false" />
@@ -689,9 +770,14 @@
       <change beforePath="$PROJECT_DIR$/test/model/ResendConfirmationViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ResetPasswordViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SearchViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalDataMaster.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalProviderSubscribers.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalSubscriber.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalSubscription.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalsList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SocialLinkViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SocialLinksViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TradesSignalViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TradesViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TransactionDetails.spec.js" beforeDir="false" />
@@ -701,6 +787,7 @@
       <change beforePath="$PROJECT_DIR$/test/model/TwoFactorStatus.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UpdatePersonalDetailViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UpdateProfileViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/UpdateSocialLinkViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UploadResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UserCommissionData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ValueChartBar.spec.js" beforeDir="false" />
@@ -718,10 +805,6 @@
       <change beforePath="$PROJECT_DIR$/test/model/WithdrawalInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WithdrawalSummary.spec.js" beforeDir="false" />
     </list>
-    <list id="9beb2a50-8b3d-479b-9f19-0f71cf9cbd52" name="Revert: remove pow" comment="">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -732,12 +815,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="209">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/partial_model_generic.mustache">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state relative-caret-position="115">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -751,54 +834,54 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.babelrc">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/model.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="115">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/model_interface.mustache">
+        <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/partial_model_inner_enum.mustache">
+        <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="31" selection-start-column="11" selection-end-column="31" />
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bash/replace.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bash/generate.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -861,7 +944,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.ts" />
         <option value="$PROJECT_DIR$/template/typescript/modelEnum.mustache" />
@@ -902,6 +984,8 @@
         <option value="$PROJECT_DIR$/distribution/model/PowDetails.js" />
         <option value="$PROJECT_DIR$/distribution/model/PowResult.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -934,7 +1018,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bash" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1124,13 +1208,13 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66666000" />
+    <option name="totallyTimeSpent" value="67359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18625678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1141,8 +1225,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961586" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40981856" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.409234" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -1223,21 +1307,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="remove pow" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api.ts" />
-    <entry file="file://$PROJECT_DIR$/distribution/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9872" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1389">
-          <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/types.d.ts" />
-    <entry file="file://$PROJECT_DIR$/swagger.json" />
     <entry file="file://$PROJECT_DIR$/template/es6/api_interface.mustache" />
     <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1343,13 +1412,6 @@
     <entry file="file://$PROJECT_DIR$/replace" />
     <entry file="file://$PROJECT_DIR$/add_exports" />
     <entry file="file://$PROJECT_DIR$/bash/replace" />
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/index.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1399,21 +1461,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bash/replace.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/.babelrc.mustache">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/template/es6/enumClass.mustache">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution/model/AssetsValue.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1475,8 +1527,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.swagger-codegen-ignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash/replace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash/generate.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mocha.opts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1485,17 +1572,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git_push.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="115">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
