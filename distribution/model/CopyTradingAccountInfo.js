@@ -134,7 +134,7 @@ var CopyTradingAccountInfo = function () {
 
 /**
  * @typedef CopyTradingAccountInfoCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
@@ -144,13 +144,13 @@ CopyTradingAccountInfo.CurrencyEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

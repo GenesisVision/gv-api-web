@@ -228,13 +228,13 @@ export default class ProgramStatistic {
     
         "ETH": "ETH",
     
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
-    
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -257,13 +257,13 @@ export default class ProgramStatistic {
     
         "ETH": "ETH",
     
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
-    
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -289,12 +289,12 @@ export default class ProgramStatistic {
 
 /**
  * @typedef ProgramStatisticStartCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef ProgramStatisticInvestedCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

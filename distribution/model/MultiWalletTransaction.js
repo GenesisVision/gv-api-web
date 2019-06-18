@@ -152,12 +152,12 @@ var MultiWalletTransaction = function () {
 
 /**
  * @typedef MultiWalletTransactionCurrencyFromEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef MultiWalletTransactionCurrencyToEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -177,13 +177,13 @@ MultiWalletTransaction.CurrencyFromEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -205,13 +205,13 @@ MultiWalletTransaction.CurrencyToEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

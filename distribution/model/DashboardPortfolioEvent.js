@@ -206,17 +206,17 @@ var DashboardPortfolioEvent = function () {
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessManagerCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef DashboardPortfolioEventCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -236,13 +236,13 @@ DashboardPortfolioEvent.FeeSuccessManagerCurrencyEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -264,13 +264,13 @@ DashboardPortfolioEvent.FeeSuccessPlatformCurrencyEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -292,13 +292,13 @@ DashboardPortfolioEvent.CurrencyEnum = {
 
     "ETH": "ETH",
 
-    "USDT": "USDT",
+    "Undefined": "Undefined",
 
     "GVT": "GVT",
 
-    "Undefined": "Undefined",
-
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
