@@ -1645,6 +1645,8 @@ export declare type OrderSignalModelEntryEnum = "In" | "Out" | "InOut" | "OutBy"
 export declare interface OrderSignalModel {
     tradingFee: OrderTradingFee;
     providers: OrderSignalProgramInfo[];
+    totalCommission: number;
+    tradingAccountId: string;
     id: string;
     login: string;
     ticket: string;
@@ -2368,7 +2370,7 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type SocialLinkViewModelTypeEnum = "Twitter" | "Undefined" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
 
 export declare interface SocialLinkViewModel {
     url: string;
@@ -2459,7 +2461,7 @@ export declare interface UpdateProfileViewModel {
     about: string;
 }
 
-export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type UpdateSocialLinkViewModelTypeEnum = "Twitter" | "Undefined" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
 
 export declare interface UpdateSocialLinkViewModel {
     type: UpdateSocialLinkViewModelTypeEnum;

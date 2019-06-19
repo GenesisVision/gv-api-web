@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `Twitter` (value: `"Twitter"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `Telegram` (value: `"Telegram"`)
 

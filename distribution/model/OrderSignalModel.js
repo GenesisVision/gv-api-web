@@ -54,6 +54,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
+ * @name OrderSignalModel#totalCommission
+ * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#tradingAccountId
+ * @type {String}
+ */
+/**
+ *
  * @name OrderSignalModel#id
  * @type {String}
  */
@@ -149,6 +159,8 @@ var OrderSignalModel = function () {
 
         this.tradingFee = undefined;
         this.providers = undefined;
+        this.totalCommission = undefined;
+        this.tradingAccountId = undefined;
         this.id = undefined;
         this.login = undefined;
         this.ticket = undefined;
@@ -180,6 +192,12 @@ var OrderSignalModel = function () {
                 }
                 if (data.hasOwnProperty('providers')) {
                     obj['providers'] = _ApiClient2.default.convertToType(data['providers'], [_OrderSignalProgramInfo2.default]);
+                }
+                if (data.hasOwnProperty('totalCommission')) {
+                    obj['totalCommission'] = _ApiClient2.default.convertToType(data['totalCommission'], 'Number');
+                }
+                if (data.hasOwnProperty('tradingAccountId')) {
+                    obj['tradingAccountId'] = _ApiClient2.default.convertToType(data['tradingAccountId'], 'String');
                 }
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'String');
