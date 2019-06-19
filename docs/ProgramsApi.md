@@ -27,20 +27,20 @@ Program balance chart
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdChartsBalanceGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdChartsBalanceGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -76,20 +76,20 @@ Program profit chart
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdChartsProfitGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdChartsProfitGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -125,17 +125,17 @@ Add to favorites
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProgramsByIdFavoriteAddPost(id, authorization).then(function() {
+apiInstance.v10ProgramsByIdFavoriteAddPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -169,17 +169,17 @@ Remove from favorites
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProgramsByIdFavoriteRemovePost(id, authorization).then(function() {
+apiInstance.v10ProgramsByIdFavoriteRemovePost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -213,19 +213,19 @@ Program details
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example", // String | 
   'currencySecondary': "currencySecondary_example" // String | 
 };
-apiInstance.v10ProgramsByIdGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -260,13 +260,13 @@ Program periods
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'numberMin': 56, // Number | 
@@ -275,9 +275,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdPeriodsGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdPeriodsGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -317,22 +317,22 @@ Signal subscribers
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'status': "status_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdSubscribersGet(id, authorization, opts).then(function(data) {
+apiInstance.v10ProgramsByIdSubscribersGet(id, authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -369,13 +369,13 @@ Trade history
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'symbol': "symbol_example", // String | 
@@ -384,9 +384,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdTradesGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdTradesGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -426,22 +426,22 @@ Open positions
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'sorting': "sorting_example", // String | 
   'symbol': "symbol_example", // String | 
   'accountId': "accountId_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsByIdTradesOpenGet(id, opts).then(function(data) {
+apiInstance.v10ProgramsByIdTradesOpenGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -479,19 +479,19 @@ Export trades
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var programId = "programId_example"; // String | 
+let programId = "programId_example"; // String | 
 
-var opts = { 
+let opts = { 
   'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, opts).then(function() {
+apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -526,11 +526,11 @@ Programs list
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example", // String | 
   'levelMin': 56, // Number | 
   'levelMax': 56, // Number | 
@@ -559,9 +559,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10ProgramsGet(opts).then(function(data) {
+apiInstance.v10ProgramsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -620,16 +620,16 @@ Level up summary
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example" // String | 
 };
-apiInstance.v10ProgramsLevelupSummaryGet(opts).then(function(data) {
+apiInstance.v10ProgramsLevelupSummaryGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -662,15 +662,15 @@ Programs sets
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProgramsApi();
+let apiInstance = new CoreApiV10.ProgramsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProgramsSetsGet(authorization).then(function(data) {
+apiInstance.v10ProgramsSetsGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

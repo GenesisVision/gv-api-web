@@ -20,12 +20,12 @@ Server date
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
-apiInstance.v10PlatformDatePost().then(function(data) {
+let apiInstance = new CoreApiV10.PlatformApi();
+apiInstance.v10PlatformDatePost().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -55,12 +55,12 @@ Platform info
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
-apiInstance.v10PlatformInfoGet().then(function(data) {
+let apiInstance = new CoreApiV10.PlatformApi();
+apiInstance.v10PlatformInfoGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -90,16 +90,16 @@ Investment programs levels
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
+let apiInstance = new CoreApiV10.PlatformApi();
 
-var opts = { 
+let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10PlatformLevelsGet(opts).then(function(data) {
+apiInstance.v10PlatformLevelsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -132,16 +132,16 @@ Investment programs levels parameters
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
+let apiInstance = new CoreApiV10.PlatformApi();
 
-var opts = { 
+let opts = { 
   'currency': "104" // String | 
 };
-apiInstance.v10PlatformLevelsParametersGet(opts).then(function(data) {
+apiInstance.v10PlatformLevelsParametersGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -174,19 +174,19 @@ Platform captcha details.
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
+let apiInstance = new CoreApiV10.PlatformApi();
 
-var route = "route_example"; // String | 
+let route = "route_example"; // String | 
 
-var opts = { 
+let opts = { 
   'client': "client_example", // String | 
   'version': "version_example" // String | 
 };
-apiInstance.v10PlatformRiskcontrolGet(route, opts).then(function(data) {
+apiInstance.v10PlatformRiskcontrolGet(route, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -221,12 +221,12 @@ Platform statistic
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.PlatformApi();
-apiInstance.v10PlatformStatisticGet().then(function(data) {
+let apiInstance = new CoreApiV10.PlatformApi();
+apiInstance.v10PlatformStatisticGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

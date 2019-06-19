@@ -15,12 +15,12 @@ Get all trade servers
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.BrokersApi();
-apiInstance.v10BrokersGet().then(function(data) {
+let apiInstance = new CoreApiV10.BrokersApi();
+apiInstance.v10BrokersGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

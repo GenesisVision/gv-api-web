@@ -34,18 +34,18 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.TwoFactorAuthenticatorConfirm() // TwoFactorAuthenticatorConfirm | 
 };
-apiInstance.v10Auth2faConfirmPost(authorization, opts).then(function(data) {
+apiInstance.v10Auth2faConfirmPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -79,15 +79,15 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10Auth2faCreatePost(authorization).then(function(data) {
+apiInstance.v10Auth2faCreatePost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -120,18 +120,18 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.TwoFactorCodeModel() // TwoFactorCodeModel | 
 };
-apiInstance.v10Auth2faDisablePost(authorization, opts).then(function() {
+apiInstance.v10Auth2faDisablePost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -165,15 +165,15 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10Auth2faGet(authorization).then(function(data) {
+apiInstance.v10Auth2faGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -206,18 +206,18 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.PasswordModel() // PasswordModel | 
 };
-apiInstance.v10Auth2faRecoverycodesNewPost(authorization, opts).then(function(data) {
+apiInstance.v10Auth2faRecoverycodesNewPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -251,18 +251,18 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.PasswordModel() // PasswordModel | 
 };
-apiInstance.v10Auth2faRecoverycodesPost(authorization, opts).then(function(data) {
+apiInstance.v10Auth2faRecoverycodesPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -296,18 +296,18 @@ Change password
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.ChangePasswordViewModel() // ChangePasswordViewModel | 
 };
-apiInstance.v10AuthPasswordChangePost(authorization, opts).then(function(data) {
+apiInstance.v10AuthPasswordChangePost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -341,16 +341,16 @@ Forgot password for investor
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordForgotInvestorPost(opts).then(function() {
+apiInstance.v10AuthPasswordForgotInvestorPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -383,16 +383,16 @@ Forgot password for manager
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.ForgotPasswordViewModel() // ForgotPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordForgotManagerPost(opts).then(function() {
+apiInstance.v10AuthPasswordForgotManagerPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -425,16 +425,16 @@ Reset password
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.ResetPasswordViewModel() // ResetPasswordViewModel | 
 };
-apiInstance.v10AuthPasswordResetPost(opts).then(function(data) {
+apiInstance.v10AuthPasswordResetPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -467,15 +467,15 @@ Get phone number verification code
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10AuthPhoneCodePost(authorization).then(function(data) {
+apiInstance.v10AuthPhoneCodePost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -508,18 +508,18 @@ Verify phone number
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'code': "code_example" // String | 
 };
-apiInstance.v10AuthPhoneVerifyPost(authorization, opts).then(function() {
+apiInstance.v10AuthPhoneVerifyPost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -553,16 +553,16 @@ Resend Confirmation Link
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.ResendConfirmationViewModel() // ResendConfirmationViewModel | 
 };
-apiInstance.v10AuthResendconfirmationlinkPost(opts).then(function() {
+apiInstance.v10AuthResendconfirmationlinkPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -595,16 +595,16 @@ Authorize
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
 };
-apiInstance.v10AuthSigninInvestorPost(opts).then(function(data) {
+apiInstance.v10AuthSigninInvestorPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -637,16 +637,16 @@ Authorize
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.LoginViewModel() // LoginViewModel | 
 };
-apiInstance.v10AuthSigninManagerPost(opts).then(function(data) {
+apiInstance.v10AuthSigninManagerPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -679,17 +679,17 @@ Confirm email after registration
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'userId': "userId_example", // String | 
   'code': "code_example" // String | 
 };
-apiInstance.v10AuthSignupConfirmPost(opts).then(function(data) {
+apiInstance.v10AuthSignupConfirmPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -723,16 +723,16 @@ New investor registration
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.RegisterInvestorViewModel() // RegisterInvestorViewModel | 
 };
-apiInstance.v10AuthSignupInvestorPost(opts).then(function() {
+apiInstance.v10AuthSignupInvestorPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -765,16 +765,16 @@ New manager registration
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.RegisterManagerViewModel() // RegisterManagerViewModel | 
 };
-apiInstance.v10AuthSignupManagerPost(opts).then(function() {
+apiInstance.v10AuthSignupManagerPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -807,15 +807,15 @@ Logout from another devices
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10AuthTokenDevicesLogoutPost(authorization).then(function(data) {
+apiInstance.v10AuthTokenDevicesLogoutPost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -848,15 +848,15 @@ Update auth token
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.AuthApi();
+let apiInstance = new CoreApiV10.AuthApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10AuthTokenUpdatePost(authorization).then(function(data) {
+apiInstance.v10AuthTokenUpdatePost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

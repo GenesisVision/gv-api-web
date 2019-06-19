@@ -17,15 +17,15 @@ Download file
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FileApi();
+let apiInstance = new CoreApiV10.FileApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-apiInstance.v10FileByIdGet(id).then(function() {
+apiInstance.v10FileByIdGet(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -58,17 +58,17 @@ Upload document
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FileApi();
+let apiInstance = new CoreApiV10.FileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var uploadedFile = "/path/to/file.txt"; // File | Upload File
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
 
-apiInstance.v10FileDocumentUploadPost(authorization, uploadedFile).then(function(data) {
+apiInstance.v10FileDocumentUploadPost(authorization, uploadedFile).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -102,18 +102,18 @@ Upload file
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FileApi();
+let apiInstance = new CoreApiV10.FileApi();
 
-var uploadedFile = "/path/to/file.txt"; // File | Upload File
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example" // String | 
 };
-apiInstance.v10FileUploadPost(uploadedFile, opts).then(function(data) {
+apiInstance.v10FileUploadPost(uploadedFile, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

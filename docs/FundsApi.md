@@ -23,12 +23,12 @@ Get all supported assets for funds
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
-apiInstance.v10FundsAssetsGet().then(function(data) {
+let apiInstance = new CoreApiV10.FundsApi();
+apiInstance.v10FundsAssetsGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -58,15 +58,15 @@ Fund assets info
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-apiInstance.v10FundsByIdAssetsGet(id).then(function(data) {
+apiInstance.v10FundsByIdAssetsGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -99,20 +99,20 @@ Fund balance chart
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56 // Number | 
 };
-apiInstance.v10FundsByIdChartsBalanceGet(id, opts).then(function(data) {
+apiInstance.v10FundsByIdChartsBalanceGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -148,20 +148,20 @@ Fund profit chart
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56 // Number | 
 };
-apiInstance.v10FundsByIdChartsProfitGet(id, opts).then(function(data) {
+apiInstance.v10FundsByIdChartsProfitGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -197,17 +197,17 @@ Add to favorites
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10FundsByIdFavoriteAddPost(id, authorization).then(function() {
+apiInstance.v10FundsByIdFavoriteAddPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -241,17 +241,17 @@ Remove from favorites
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10FundsByIdFavoriteRemovePost(id, authorization).then(function() {
+apiInstance.v10FundsByIdFavoriteRemovePost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -285,19 +285,19 @@ Funds details
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example", // String | 
   'currencySecondary': "currencySecondary_example" // String | 
 };
-apiInstance.v10FundsByIdGet(id, opts).then(function(data) {
+apiInstance.v10FundsByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -332,11 +332,11 @@ Funds list
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example", // String | 
   'sorting': "sorting_example", // String | 
   'currencySecondary': "currencySecondary_example", // String | 
@@ -356,9 +356,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10FundsGet(opts).then(function(data) {
+apiInstance.v10FundsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -408,15 +408,15 @@ Fund sets
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.FundsApi();
+let apiInstance = new CoreApiV10.FundsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10FundsSetsGet(authorization).then(function(data) {
+apiInstance.v10FundsSetsGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

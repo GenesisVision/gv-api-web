@@ -17,19 +17,19 @@ Get rate
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.RateApi();
+let apiInstance = new CoreApiV10.RateApi();
 
-var exchange = "exchange_example"; // String | 
+let exchange = "exchange_example"; // String | 
 
-var from = "from_example"; // String | 
+let from = "from_example"; // String | 
 
-var to = "to_example"; // String | 
+let to = "to_example"; // String | 
 
-apiInstance.v10RateByExchangeByFromByToGet(exchange, from, to).then(function(data) {
+apiInstance.v10RateByExchangeByFromByToGet(exchange, from, to).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -64,17 +64,17 @@ Get rate
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.RateApi();
+let apiInstance = new CoreApiV10.RateApi();
 
-var from = "from_example"; // String | 
+let from = "from_example"; // String | 
 
-var to = "to_example"; // String | 
+let to = "to_example"; // String | 
 
-apiInstance.v10RateByFromByToGet(from, to).then(function(data) {
+apiInstance.v10RateByFromByToGet(from, to).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -108,17 +108,17 @@ Get rates
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.RateApi();
+let apiInstance = new CoreApiV10.RateApi();
 
-var opts = { 
+let opts = { 
   'from': ["from_example"], // [String] | 
   'to': ["to_example"] // [String] | 
 };
-apiInstance.v10RateGet(opts).then(function(data) {
+apiInstance.v10RateGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

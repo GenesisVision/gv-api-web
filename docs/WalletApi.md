@@ -32,17 +32,17 @@ Get user addresses
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletAddressesByCurrencyGet(currency, authorization).then(function(data) {
+apiInstance.v10WalletAddressesByCurrencyGet(currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -76,15 +76,15 @@ Get user addresses
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletAddressesGet(authorization).then(function(data) {
+apiInstance.v10WalletAddressesGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -117,17 +117,17 @@ Wallet summary
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletByCurrencyGet(currency, authorization).then(function(data) {
+apiInstance.v10WalletByCurrencyGet(currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -161,15 +161,15 @@ GenesisMarkets commission data
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletFeeGvtholdingGet(authorization).then(function(data) {
+apiInstance.v10WalletFeeGvtholdingGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -202,17 +202,17 @@ Multi wallet available
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletMultiByCurrencyAvailableGet(currency, authorization).then(function(data) {
+apiInstance.v10WalletMultiByCurrencyAvailableGet(currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -246,17 +246,17 @@ Multi wallet summary
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletMultiByCurrencyGet(currency, authorization).then(function(data) {
+apiInstance.v10WalletMultiByCurrencyGet(currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -290,13 +290,13 @@ Wallet pending transactions
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'type': "type_example", // String | 
@@ -304,9 +304,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10WalletMultiTransactionsExternalGet(authorization, opts).then(function(data) {
+apiInstance.v10WalletMultiTransactionsExternalGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -345,13 +345,13 @@ Multi wallet transactions
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'type': "type_example", // String | 
@@ -359,9 +359,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10WalletMultiTransactionsGet(authorization, opts).then(function(data) {
+apiInstance.v10WalletMultiTransactionsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -400,15 +400,15 @@ Disable paying platform fees with GVT
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletPaygvtfeeOffPost(authorization).then(function() {
+apiInstance.v10WalletPaygvtfeeOffPost(authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -441,15 +441,15 @@ Enable paying platform fees with GVT
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletPaygvtfeeOnPost(authorization).then(function() {
+apiInstance.v10WalletPaygvtfeeOnPost(authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -482,17 +482,17 @@ Get transaction details
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletTransactionByIdGet(id, authorization).then(function(data) {
+apiInstance.v10WalletTransactionByIdGet(id, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -526,13 +526,13 @@ Wallet transactions
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'assetId': "assetId_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -542,9 +542,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10WalletTransactionsGet(authorization, opts).then(function(data) {
+apiInstance.v10WalletTransactionsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -585,18 +585,18 @@ Transfer money
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'request': new CoreApiV10.InternalTransferRequest() // InternalTransferRequest | 
 };
-apiInstance.v10WalletTransferPost(authorization, opts).then(function() {
+apiInstance.v10WalletTransferPost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -630,15 +630,15 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletWithdrawInfoGet(authorization).then(function(data) {
+apiInstance.v10WalletWithdrawInfoGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -671,17 +671,17 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var txId = "txId_example"; // String | 
+let txId = "txId_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization).then(function() {
+apiInstance.v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -715,17 +715,17 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var opts = { 
+let opts = { 
   'requestId': "requestId_example", // String | 
   'code': "code_example" // String | 
 };
-apiInstance.v10WalletWithdrawRequestConfirmPost(opts).then(function() {
+apiInstance.v10WalletWithdrawRequestConfirmPost(opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -759,18 +759,18 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.CreateWithdrawalRequestModel() // CreateWithdrawalRequestModel | 
 };
-apiInstance.v10WalletWithdrawRequestNewPost(authorization, opts).then(function() {
+apiInstance.v10WalletWithdrawRequestNewPost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -804,17 +804,17 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.WalletApi();
+let apiInstance = new CoreApiV10.WalletApi();
 
-var txId = "txId_example"; // String | 
+let txId = "txId_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10WalletWithdrawRequestResendByTxIdPost(txId, authorization).then(function() {
+apiInstance.v10WalletWithdrawRequestResendByTxIdPost(txId, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

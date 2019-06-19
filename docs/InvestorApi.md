@@ -36,22 +36,22 @@ Investing into the fund.  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var amount = 1.2; // Number | 
+let amount = 1.2; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts).then(function() {
+apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -87,19 +87,19 @@ Data for investing into the fund
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then(function(data) {
+apiInstance.v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -134,21 +134,21 @@ Get program/fund requests
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var skip = 56; // Number | 
+let skip = 56; // Number | 
 
-var take = 56; // Number | 
+let take = 56; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then(function(data) {
+apiInstance.v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -184,22 +184,22 @@ Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if cu
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var percent = 1.2; // Number | 
+let percent = 1.2; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts).then(function() {
+apiInstance.v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -235,19 +235,19 @@ Data for withdrawal from fund
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then(function(data) {
+apiInstance.v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -282,13 +282,13 @@ Dashboard funds list
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -299,9 +299,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorFundsGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorFundsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -343,13 +343,13 @@ Summary dashboard info
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'chartCurrency': "chartCurrency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -359,9 +359,9 @@ var opts = {
   'requestsSkip': 56, // Number | 
   'requestsTake': 56 // Number | 
 };
-apiInstance.v10InvestorGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -402,22 +402,22 @@ Portfolio charts
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'currency': "currency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'balancePoints': 56, // Number | 
   'programsPoints': 56 // Number | 
 };
-apiInstance.v10InvestorPortfolioChartGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorPortfolioChartGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -455,13 +455,13 @@ Portfolio events
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'assetId': "assetId_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -470,9 +470,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorPortfolioEventsGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorPortfolioEventsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -512,22 +512,22 @@ Investing into the program.  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var amount = 1.2; // Number | 
+let amount = 1.2; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts).then(function() {
+apiInstance.v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -563,19 +563,19 @@ Data for investing into the program
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization).then(function(data) {
+apiInstance.v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -610,17 +610,17 @@ Disable reinvesting
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdReinvestOffPost(id, authorization).then(function() {
+apiInstance.v10InvestorProgramsByIdReinvestOffPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -654,17 +654,17 @@ Enable reinvesting
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdReinvestOnPost(id, authorization).then(function() {
+apiInstance.v10InvestorProgramsByIdReinvestOnPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -698,21 +698,21 @@ Get program/fund requests
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var skip = 56; // Number | 
+let skip = 56; // Number | 
 
-var take = 56; // Number | 
+let take = 56; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then(function(data) {
+apiInstance.v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -748,19 +748,19 @@ Withdraw from investment program in GVT
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var amount = 1.2; // Number | 
+let amount = 1.2; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization).then(function() {
+apiInstance.v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -795,19 +795,19 @@ Data for withdrawal from investment program
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var currency = "currency_example"; // String | 
+let currency = "currency_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then(function(data) {
+apiInstance.v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -842,22 +842,22 @@ Withdraw from investment program in program currency
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var amount = 1.2; // Number | 
+let amount = 1.2; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'withdrawAll': false // Boolean | 
 };
-apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts).then(function() {
+apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -893,21 +893,21 @@ Withdraw from investment program in program currency
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'amount': 1.2, // Number | 
   'withdrawAll': false // Boolean | 
 };
-apiInstance.v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, opts).then(function() {
+apiInstance.v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -943,13 +943,13 @@ Dashboard program list
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -960,9 +960,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorProgramsGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorProgramsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1004,17 +1004,17 @@ Cancel investment program request
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsRequestsByIdCancelPost(id, authorization).then(function() {
+apiInstance.v10InvestorProgramsRequestsByIdCancelPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1048,19 +1048,19 @@ Get all requests
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var skip = 56; // Number | 
+let skip = 56; // Number | 
 
-var take = 56; // Number | 
+let take = 56; // Number | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization).then(function(data) {
+apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1095,13 +1095,13 @@ Dashboard signal providers list
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.InvestorApi();
+let apiInstance = new CoreApiV10.InvestorApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'sorting': "sorting_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -1112,9 +1112,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorSignalsGet(authorization, opts).then(function(data) {
+apiInstance.v10InvestorSignalsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

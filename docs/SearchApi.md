@@ -15,18 +15,18 @@ Program / fund / manager search
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SearchApi();
+let apiInstance = new CoreApiV10.SearchApi();
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example", // String | 
   'mask': "mask_example", // String | 
   'take': 56 // Number | 
 };
-apiInstance.v10SearchGet(opts).then(function(data) {
+apiInstance.v10SearchGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

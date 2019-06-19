@@ -24,17 +24,17 @@ Read notification
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsByIdReadPost(id, authorization).then(function() {
+apiInstance.v10NotificationsByIdReadPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -68,19 +68,19 @@ User notifications
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10NotificationsGet(authorization, opts).then(function(data) {
+apiInstance.v10NotificationsGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -115,15 +115,15 @@ Unread notifications count
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsNewGet(authorization).then(function(data) {
+apiInstance.v10NotificationsNewGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -156,22 +156,22 @@ Add new setting
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'assetId': "assetId_example", // String | 
   'managerId': "managerId_example", // String | 
   'type': "type_example", // String | 
   'conditionType': "conditionType_example", // String | 
   'conditionAmount': 1.2 // Number | 
 };
-apiInstance.v10NotificationsSettingsAddPost(authorization, opts).then(function(data) {
+apiInstance.v10NotificationsSettingsAddPost(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -209,19 +209,19 @@ Enable/disable setting
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var enable = true; // Boolean | 
+let enable = true; // Boolean | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsByIdByEnablePost(id, enable, authorization).then(function(data) {
+apiInstance.v10NotificationsSettingsByIdByEnablePost(id, enable, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -256,17 +256,17 @@ User settings for fund
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsFundsByIdGet(id, authorization).then(function(data) {
+apiInstance.v10NotificationsSettingsFundsByIdGet(id, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -300,15 +300,15 @@ User settings
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsGet(authorization).then(function(data) {
+apiInstance.v10NotificationsSettingsGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -341,17 +341,17 @@ User settings for manager
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsManagersByIdGet(id, authorization).then(function(data) {
+apiInstance.v10NotificationsSettingsManagersByIdGet(id, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -385,17 +385,17 @@ User settings for program
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsProgramsByIdGet(id, authorization).then(function(data) {
+apiInstance.v10NotificationsSettingsProgramsByIdGet(id, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -429,17 +429,17 @@ Remove setting
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.NotificationsApi();
+let apiInstance = new CoreApiV10.NotificationsApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10NotificationsSettingsRemoveByIdPost(id, authorization).then(function() {
+apiInstance.v10NotificationsSettingsRemoveByIdPost(id, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

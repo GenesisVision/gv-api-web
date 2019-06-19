@@ -22,15 +22,15 @@ Get copytrading accounts
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10SignalAccountsGet(authorization).then(function(data) {
+apiInstance.v10SignalAccountsGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -63,17 +63,17 @@ Get subscribe to programs signals info
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10SignalAttachByIdInfoGet(id, authorization).then(function(data) {
+apiInstance.v10SignalAttachByIdInfoGet(id, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -107,20 +107,20 @@ Subscribe to programs signals
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var id = "id_example"; // String | Program Id
+let id = "id_example"; // String | Program Id
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.AttachToSignalProvider() // AttachToSignalProvider | Subscription settings
 };
-apiInstance.v10SignalAttachByIdPost(id, authorization, opts).then(function() {
+apiInstance.v10SignalAttachByIdPost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -155,20 +155,20 @@ Update signal subscription settings
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var id = "id_example"; // String | Program id
+let id = "id_example"; // String | Program id
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.AttachToSignalProvider() // AttachToSignalProvider | Subscription settings
 };
-apiInstance.v10SignalByIdUpdatePost(id, authorization, opts).then(function() {
+apiInstance.v10SignalByIdUpdatePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -203,20 +203,20 @@ Unsubscribe from program signals
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var id = "id_example"; // String | 
+let id = "id_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.DetachFromSignalProvider() // DetachFromSignalProvider | 
 };
-apiInstance.v10SignalDetachByIdPost(id, authorization, opts).then(function() {
+apiInstance.v10SignalDetachByIdPost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -251,20 +251,20 @@ Close signal trade
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var id = "id_example"; // String | Trade id
+let id = "id_example"; // String | Trade id
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'programId': "programId_example" // String | Provider program id
 };
-apiInstance.v10SignalTradesByIdClosePost(id, authorization, opts).then(function() {
+apiInstance.v10SignalTradesByIdClosePost(id, authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -299,13 +299,13 @@ Get investors signals trades history
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'symbol': "symbol_example", // String | 
@@ -314,9 +314,9 @@ var opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10SignalTradesGet(authorization, opts).then(function(data) {
+apiInstance.v10SignalTradesGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -356,22 +356,22 @@ Get investors signals open trades
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.SignalApi();
+let apiInstance = new CoreApiV10.SignalApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'sorting': "sorting_example", // String | 
   'symbol': "symbol_example", // String | 
   'accountId': "accountId_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10SignalTradesOpenGet(authorization, opts).then(function(data) {
+apiInstance.v10SignalTradesOpenGet(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

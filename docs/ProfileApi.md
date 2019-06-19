@@ -24,15 +24,15 @@ Remove avatar
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileAvatarRemovePost(authorization).then(function() {
+apiInstance.v10ProfileAvatarRemovePost(authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -65,17 +65,17 @@ Update avatar
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var fileId = "fileId_example"; // String | 
+let fileId = "fileId_example"; // String | 
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileAvatarUpdateByFileIdPost(fileId, authorization).then(function() {
+apiInstance.v10ProfileAvatarUpdateByFileIdPost(fileId, authorization).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -109,15 +109,15 @@ Get full profile
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileGet(authorization).then(function(data) {
+apiInstance.v10ProfileGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -150,15 +150,15 @@ Get header profile
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileHeaderGet(authorization).then(function(data) {
+apiInstance.v10ProfileHeaderGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -191,18 +191,18 @@ Update user personal details
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.UpdatePersonalDetailViewModel() // UpdatePersonalDetailViewModel | 
 };
-apiInstance.v10ProfilePersonalUpdatePost(authorization, opts).then(function() {
+apiInstance.v10ProfilePersonalUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -236,18 +236,18 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'token': new CoreApiV10.FcmTokenViewModel() // FcmTokenViewModel | 
 };
-apiInstance.v10ProfilePushTokenPost(authorization, opts).then(function() {
+apiInstance.v10ProfilePushTokenPost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -281,15 +281,15 @@ Get social links
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileSociallinksGet(authorization).then(function(data) {
+apiInstance.v10ProfileSociallinksGet(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -322,18 +322,18 @@ Add or update social links
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.UpdateSocialLinkViewModel() // UpdateSocialLinkViewModel | 
 };
-apiInstance.v10ProfileSociallinksUpdatePost(authorization, opts).then(function() {
+apiInstance.v10ProfileSociallinksUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -367,18 +367,18 @@ Update profile
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-var opts = { 
+let opts = { 
   'model': new CoreApiV10.UpdateProfileViewModel() // UpdateProfileViewModel | 
 };
-apiInstance.v10ProfileUpdatePost(authorization, opts).then(function() {
+apiInstance.v10ProfileUpdatePost(authorization, opts).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -412,15 +412,15 @@ No authorization required
 
 ### Example
 ```javascript
-var CoreApiV10 = require('core_api_v10');
+import CoreApiV10 from 'core_api_v10';
 
-var apiInstance = new CoreApiV10.ProfileApi();
+let apiInstance = new CoreApiV10.ProfileApi();
 
-var authorization = "authorization_example"; // String | JWT access token
+let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileVerificationTokenPost(authorization).then(function(data) {
+apiInstance.v10ProfileVerificationTokenPost(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
