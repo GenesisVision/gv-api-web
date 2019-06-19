@@ -125,21 +125,21 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
+* `All` (value: `"All"`)
+
 * `Invest` (value: `"Invest"`)
 
 * `Withdraw` (value: `"Withdraw"`)
 
 * `Profit` (value: `"Profit"`)
 
-* `Ended` (value: `"Ended"`)
-
-* `All` (value: `"All"`)
-
 * `Loss` (value: `"Loss"`)
 
 * `Reinvest` (value: `"Reinvest"`)
 
 * `Canceled` (value: `"Canceled"`)
+
+* `Ended` (value: `"Ended"`)
 
 * `WithdrawByStopOut` (value: `"WithdrawByStopOut"`)
 

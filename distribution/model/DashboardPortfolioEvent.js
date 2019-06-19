@@ -221,7 +221,7 @@ var DashboardPortfolioEvent = function () {
 
 /**
  * @typedef DashboardPortfolioEventTypeEnum 
- * @type {("Invest"|"Withdraw"|"Profit"|"Ended"|"All"|"Loss"|"Reinvest"|"Canceled"|"WithdrawByStopOut")}
+ * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
  */
 
 /**
@@ -316,21 +316,21 @@ DashboardPortfolioEvent.CurrencyEnum = {
 };
 DashboardPortfolioEvent.TypeEnum = {
 
+    "All": "All",
+
     "Invest": "Invest",
 
     "Withdraw": "Withdraw",
 
     "Profit": "Profit",
 
-    "Ended": "Ended",
-
-    "All": "All",
-
     "Loss": "Loss",
 
     "Reinvest": "Reinvest",
 
     "Canceled": "Canceled",
+
+    "Ended": "Ended",
 
     "WithdrawByStopOut": "WithdrawByStopOut"
 };
