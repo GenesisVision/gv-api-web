@@ -183,12 +183,12 @@ var TransactionDetails = function () {
 
 /**
  * @typedef TransactionDetailsCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
@@ -234,17 +234,17 @@ TransactionDetails.StatusEnum = {
 };
 TransactionDetails.CurrencyEnum = {
 
-    "BTC": "BTC",
-
     "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
 
     "Undefined": "Undefined",
 
+    "GVT": "GVT",
+
+    "BTC": "BTC",
+
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -262,17 +262,17 @@ TransactionDetails.CurrencyEnum = {
 };
 TransactionDetails.GvCommissionCurrencyEnum = {
 
-    "BTC": "BTC",
-
     "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
 
     "Undefined": "Undefined",
 
+    "GVT": "GVT",
+
+    "BTC": "BTC",
+
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

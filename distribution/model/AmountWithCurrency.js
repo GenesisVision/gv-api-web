@@ -71,23 +71,23 @@ var AmountWithCurrency = function () {
 
 /**
  * @typedef AmountWithCurrencyCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 AmountWithCurrency.CurrencyEnum = {
 
-    "BTC": "BTC",
-
     "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
 
     "Undefined": "Undefined",
 
+    "GVT": "GVT",
+
+    "BTC": "BTC",
+
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 

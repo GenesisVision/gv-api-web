@@ -98,26 +98,26 @@ var SocialLinkViewModel = function () {
 
 /**
  * @typedef SocialLinkViewModelTypeEnum 
- * @type {("Twitter"|"Undefined"|"Email"|"WeChat"|"Youtube"|"Facebook"|"Telegram"|"LinkedIn")}
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
  */
 
 
 SocialLinkViewModel.TypeEnum = {
 
-    "Twitter": "Twitter",
-
     "Undefined": "Undefined",
 
-    "Email": "Email",
-
-    "WeChat": "WeChat",
-
-    "Youtube": "Youtube",
-
-    "Facebook": "Facebook",
+    "Twitter": "Twitter",
 
     "Telegram": "Telegram",
 
-    "LinkedIn": "LinkedIn"
+    "Facebook": "Facebook",
+
+    "LinkedIn": "LinkedIn",
+
+    "Youtube": "Youtube",
+
+    "WeChat": "WeChat",
+
+    "Email": "Email"
 };
 exports.default = SocialLinkViewModel;

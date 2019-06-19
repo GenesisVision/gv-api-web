@@ -26,17 +26,17 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessManagerCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
 * `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `GVT` (value: `"GVT"`)
 
 * `Undefined` (value: `"Undefined"`)
 
+* `GVT` (value: `"GVT"`)
+
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -59,17 +59,17 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessPlatformCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
 * `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `GVT` (value: `"GVT"`)
 
 * `Undefined` (value: `"Undefined"`)
 
+* `GVT` (value: `"GVT"`)
+
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -92,17 +92,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
 * `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `GVT` (value: `"GVT"`)
 
 * `Undefined` (value: `"Undefined"`)
 
+* `GVT` (value: `"GVT"`)
+
+* `BTC` (value: `"BTC"`)
+
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

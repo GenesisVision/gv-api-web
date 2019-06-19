@@ -215,28 +215,28 @@ var WalletData = function () {
 
 /**
  * @typedef WalletDataCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef WalletDataCurrencyCcyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
 WalletData.CurrencyEnum = {
 
-    "BTC": "BTC",
-
     "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
 
     "Undefined": "Undefined",
 
+    "GVT": "GVT",
+
+    "BTC": "BTC",
+
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -254,17 +254,17 @@ WalletData.CurrencyEnum = {
 };
 WalletData.CurrencyCcyEnum = {
 
-    "BTC": "BTC",
-
     "ETH": "ETH",
-
-    "USDT": "USDT",
-
-    "GVT": "GVT",
 
     "Undefined": "Undefined",
 
+    "GVT": "GVT",
+
+    "BTC": "BTC",
+
     "ADA": "ADA",
+
+    "USDT": "USDT",
 
     "XRP": "XRP",
 
