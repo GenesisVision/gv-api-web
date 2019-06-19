@@ -71,15 +71,15 @@ var UpdateSocialLinkViewModel = function () {
 
 /**
  * @typedef UpdateSocialLinkViewModelTypeEnum 
- * @type {("Twitter"|"Undefined"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
  */
 
 
 UpdateSocialLinkViewModel.TypeEnum = {
 
-    "Twitter": "Twitter",
-
     "Undefined": "Undefined",
+
+    "Twitter": "Twitter",
 
     "Telegram": "Telegram",
 

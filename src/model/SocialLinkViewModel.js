@@ -106,9 +106,9 @@ export default class SocialLinkViewModel {
 
     static TypeEnum = {
     
-        "Twitter": "Twitter",
-    
         "Undefined": "Undefined",
+    
+        "Twitter": "Twitter",
     
         "Telegram": "Telegram",
     
@@ -132,7 +132,7 @@ export default class SocialLinkViewModel {
 
 /**
  * @typedef SocialLinkViewModelTypeEnum 
- * @type {("Twitter"|"Undefined"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
  */
 
 
