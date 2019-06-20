@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 
 * `Huobi` (value: `"Huobi"`)
 
+* `Exante` (value: `"Exante"`)
+
 
 
 
