@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **convertingDetails** | [**ConvertingDetails**](ConvertingDetails.md) |  | [optional] 
 **externalTransactionDetails** | [**ExternalTransactionDetails**](ExternalTransactionDetails.md) |  | [optional] 
 **status** | **String** |  | [optional] 
+**signalFees** | [**[SignalFee]**](SignalFee.md) |  | [optional] 
 **currency** | **String** |  | [optional] 
 **currencyName** | **String** |  | [optional] 
 **currencyLogo** | **String** |  | [optional] 
@@ -73,15 +74,15 @@ Name | Type | Description | Notes
 
 * `BTC` (value: `"BTC"`)
 
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -106,15 +107,15 @@ Name | Type | Description | Notes
 
 * `BTC` (value: `"BTC"`)
 
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

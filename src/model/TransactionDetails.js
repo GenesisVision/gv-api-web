@@ -16,6 +16,7 @@ import ApiClient from '../ApiClient';
 import ConvertingDetails from './ConvertingDetails';
 import ExternalTransactionDetails from './ExternalTransactionDetails';
 import ProgramTransactionDetails from './ProgramTransactionDetails';
+import SignalFee from './SignalFee';
 
 
 
@@ -50,6 +51,11 @@ import ProgramTransactionDetails from './ProgramTransactionDetails';
  *
  * @name TransactionDetails#status
  * @type TransactionDetailsStatusEnum
+ */
+/**
+ *
+ * @name TransactionDetails#signalFees
+ * @type {Array<SignalFee>}
  */
 /**
  *
@@ -127,6 +133,9 @@ export default class TransactionDetails {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('signalFees')) {
+                obj['signalFees'] = ApiClient.convertToType(data['signalFees'], [SignalFee]);
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -157,6 +166,7 @@ export default class TransactionDetails {
     convertingDetails = undefined;
     externalTransactionDetails = undefined;
     status = undefined;
+    signalFees = undefined;
     currency = undefined;
     currencyName = undefined;
     currencyLogo = undefined;
@@ -216,15 +226,15 @@ export default class TransactionDetails {
     
         "BTC": "BTC",
     
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -245,15 +255,15 @@ export default class TransactionDetails {
     
         "BTC": "BTC",
     
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -289,12 +299,12 @@ export default class TransactionDetails {
 
 /**
  * @typedef TransactionDetailsCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

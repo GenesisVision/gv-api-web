@@ -413,6 +413,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
+ - [CoreApiV10.SignalFee](docs/SignalFee.md)
  - [CoreApiV10.SignalProviderSubscribers](docs/SignalProviderSubscribers.md)
  - [CoreApiV10.SignalSubscriber](docs/SignalSubscriber.md)
  - [CoreApiV10.SignalSubscription](docs/SignalSubscription.md)
