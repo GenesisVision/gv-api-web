@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name WithdrawalSummary#wallets
- * @type {[WalletWithdrawalInfo]}
+ * @type {Array<WalletWithdrawalInfo>}
  */
 
 var WithdrawalSummary = function () {

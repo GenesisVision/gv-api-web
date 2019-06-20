@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerPortfolioEvents#events
- * @type {[ManagerPortfolioEvent]}
+ * @type {Array<ManagerPortfolioEvent>}
  */
 /**
  *

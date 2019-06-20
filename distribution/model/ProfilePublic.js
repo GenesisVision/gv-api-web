@@ -62,7 +62,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ProfilePublic#socialLinks
- * @type {[SocialLinkViewModel]}
+ * @type {Array<SocialLinkViewModel>}
  */
 
 var ProfilePublic = function () {

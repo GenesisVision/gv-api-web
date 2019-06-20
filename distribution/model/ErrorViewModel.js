@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ErrorViewModel#errors
- * @type {[ErrorMessage]}
+ * @type {Array<ErrorMessage>}
  */
 /**
  *

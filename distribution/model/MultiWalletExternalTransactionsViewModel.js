@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name MultiWalletExternalTransactionsViewModel#transactions
- * @type {[MultiWalletExternalTransaction]}
+ * @type {Array<MultiWalletExternalTransaction>}
  */
 /**
  *
