@@ -121,12 +121,12 @@ var AttachToSignalProvider = function () {
 
 /**
  * @typedef AttachToSignalProviderFixedCurrencyEnum 
- * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
- * @type {("ETH"|"Undefined"|"GVT"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
@@ -140,17 +140,17 @@ AttachToSignalProvider.ModeEnum = {
 };
 AttachToSignalProvider.FixedCurrencyEnum = {
 
+    "BTC": "BTC",
+
     "ETH": "ETH",
 
-    "Undefined": "Undefined",
+    "USDT": "USDT",
 
     "GVT": "GVT",
 
-    "BTC": "BTC",
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 
@@ -168,17 +168,17 @@ AttachToSignalProvider.FixedCurrencyEnum = {
 };
 AttachToSignalProvider.InitialDepositCurrencyEnum = {
 
+    "BTC": "BTC",
+
     "ETH": "ETH",
 
-    "Undefined": "Undefined",
+    "USDT": "USDT",
 
     "GVT": "GVT",
 
-    "BTC": "BTC",
+    "Undefined": "Undefined",
 
     "ADA": "ADA",
-
-    "USDT": "USDT",
 
     "XRP": "XRP",
 

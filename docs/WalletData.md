@@ -27,17 +27,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
+* `BTC` (value: `"BTC"`)
+
 * `ETH` (value: `"ETH"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `USDT` (value: `"USDT"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -60,17 +60,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyCcyEnum
 
 
+* `BTC` (value: `"BTC"`)
+
 * `ETH` (value: `"ETH"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `USDT` (value: `"USDT"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
