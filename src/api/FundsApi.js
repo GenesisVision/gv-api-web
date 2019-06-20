@@ -387,6 +387,7 @@ export default class FundsApi {
       let queryParams = {
         'Sorting': opts['sorting'],
         'CurrencySecondary': opts['currencySecondary'],
+        'Assets': this.apiClient.buildCollectionParam(opts['assets'], 'multi'),
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -428,6 +429,7 @@ export default class FundsApi {
      * @param {String} [opts.authorization] 
      * @param {String} [opts.sorting] 
      * @param {String} [opts.currencySecondary] 
+     * @param {Array<String>} [opts.assets] 
      * @param {Date} [opts.statisticDateFrom] 
      * @param {Date} [opts.statisticDateTo] 
      * @param {Number} [opts.chartPointsCount] 
