@@ -340,6 +340,7 @@ let opts = {
   'authorization': "authorization_example", // String | 
   'sorting': "sorting_example", // String | 
   'currencySecondary': "currencySecondary_example", // String | 
+  'assets': ["assets_example"], // [String] | 
   'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
@@ -371,6 +372,7 @@ Name | Type | Description  | Notes
  **authorization** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
+ **assets** | [**[String]**](String.md)|  | [optional] 
  **statisticDateFrom** | **Date**|  | [optional] 
  **statisticDateTo** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 

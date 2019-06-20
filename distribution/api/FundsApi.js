@@ -393,6 +393,7 @@ var FundsApi = function () {
       var queryParams = {
         'Sorting': opts['sorting'],
         'CurrencySecondary': opts['currencySecondary'],
+        'Assets': this.apiClient.buildCollectionParam(opts['assets'], 'multi'),
         'StatisticDateFrom': opts['statisticDateFrom'],
         'StatisticDateTo': opts['statisticDateTo'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -429,6 +430,7 @@ var FundsApi = function () {
      * @param {String} [opts.authorization] 
      * @param {String} [opts.sorting] 
      * @param {String} [opts.currencySecondary] 
+     * @param {[String]} [opts.assets] 
      * @param {Date} [opts.statisticDateFrom] 
      * @param {Date} [opts.statisticDateTo] 
      * @param {Number} [opts.chartPointsCount] 
