@@ -62,7 +62,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerProfile#assets
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *
@@ -72,7 +72,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name ManagerProfile#socialLinks
- * @type {Array<SocialLinkViewModel>}
+ * @type {[SocialLinkViewModel]}
  */
 
 var ManagerProfile = function () {

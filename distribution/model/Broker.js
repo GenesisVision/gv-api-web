@@ -81,7 +81,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name Broker#accountTypes
- * @type {Array<BrokerAccountType>}
+ * @type {[BrokerAccountType]}
  */
 /**
  *
@@ -96,7 +96,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name Broker#tags
- * @type {Array<ProgramTag>}
+ * @type {[ProgramTag]}
  */
 
 var Broker = function () {

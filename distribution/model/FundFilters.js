@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name FundFilters#assets
- * @type {Array<PlatformAsset>}
+ * @type {[PlatformAsset]}
  */
 
 var FundFilters = function () {

@@ -1,6 +1,6 @@
 # CoreApiV10.NotificationsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

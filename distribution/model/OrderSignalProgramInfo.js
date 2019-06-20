@@ -64,7 +64,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 /**
  *
- * @name OrderSignalProgramInfo#priceCurrent
+ * @name OrderSignalProgramInfo#priceOpenAvg
  * @type {Number}
  */
 /**
@@ -75,7 +75,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name OrderSignalProgramInfo#fees
- * @type {Array<OrderSignalFee>}
+ * @type {[OrderSignalFee]}
  */
 
 var OrderSignalProgramInfo = function () {
@@ -86,7 +86,7 @@ var OrderSignalProgramInfo = function () {
         this.program = undefined;
         this.programId = undefined;
         this.volume = undefined;
-        this.priceCurrent = undefined;
+        this.priceOpenAvg = undefined;
         this.firstOrderDate = undefined;
         this.fees = undefined;
     }
@@ -109,8 +109,8 @@ var OrderSignalProgramInfo = function () {
                 if (data.hasOwnProperty('volume')) {
                     obj['volume'] = _ApiClient2.default.convertToType(data['volume'], 'Number');
                 }
-                if (data.hasOwnProperty('priceCurrent')) {
-                    obj['priceCurrent'] = _ApiClient2.default.convertToType(data['priceCurrent'], 'Number');
+                if (data.hasOwnProperty('priceOpenAvg')) {
+                    obj['priceOpenAvg'] = _ApiClient2.default.convertToType(data['priceOpenAvg'], 'Number');
                 }
                 if (data.hasOwnProperty('firstOrderDate')) {
                     obj['firstOrderDate'] = _ApiClient2.default.convertToType(data['firstOrderDate'], 'Date');

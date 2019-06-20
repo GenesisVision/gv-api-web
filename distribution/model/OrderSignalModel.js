@@ -29,10 +29,6 @@ var _OrderSignalProgramInfo = require('./OrderSignalProgramInfo');
 
 var _OrderSignalProgramInfo2 = _interopRequireDefault(_OrderSignalProgramInfo);
 
-var _OrderTradingFee = require('./OrderTradingFee');
-
-var _OrderTradingFee2 = _interopRequireDefault(_OrderTradingFee);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,13 +40,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  *
- * @name OrderSignalModel#tradingFee
- * @type {OrderTradingFee}
- */
-/**
- *
  * @name OrderSignalModel#providers
- * @type {Array<OrderSignalProgramInfo>}
+ * @type {[OrderSignalProgramInfo]}
  */
 /**
  *
@@ -157,7 +148,6 @@ var OrderSignalModel = function () {
     function OrderSignalModel() {
         _classCallCheck(this, OrderSignalModel);
 
-        this.tradingFee = undefined;
         this.providers = undefined;
         this.totalCommission = undefined;
         this.tradingAccountId = undefined;
@@ -187,9 +177,6 @@ var OrderSignalModel = function () {
             if (data) {
                 obj = obj || new OrderSignalModel();
 
-                if (data.hasOwnProperty('tradingFee')) {
-                    obj['tradingFee'] = _OrderTradingFee2.default.constructFromObject(data['tradingFee']);
-                }
                 if (data.hasOwnProperty('providers')) {
                     obj['providers'] = _ApiClient2.default.convertToType(data['providers'], [_OrderSignalProgramInfo2.default]);
                 }

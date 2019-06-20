@@ -33,12 +33,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
  *
  * @name AssetEvent#programs
- * @type {Array<String>}
+ * @type {[String]}
  */
 /**
  *
  * @name AssetEvent#funds
- * @type {Array<String>}
+ * @type {[String]}
  */
 
 var AssetEvent = function () {

@@ -93,7 +93,7 @@ api.v10Auth2faConfirmPost(authorization, opts).then(function(data) {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://localhost/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -357,7 +357,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.OrderSignalFee](docs/OrderSignalFee.md)
  - [CoreApiV10.OrderSignalModel](docs/OrderSignalModel.md)
  - [CoreApiV10.OrderSignalProgramInfo](docs/OrderSignalProgramInfo.md)
- - [CoreApiV10.OrderTradingFee](docs/OrderTradingFee.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
