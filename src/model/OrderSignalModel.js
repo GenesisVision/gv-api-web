@@ -15,7 +15,6 @@
 import ApiClient from '../ApiClient';
 import OrderModelSignalData from './OrderModelSignalData';
 import OrderSignalProgramInfo from './OrderSignalProgramInfo';
-import OrderTradingFee from './OrderTradingFee';
 
 
 
@@ -26,11 +25,6 @@ import OrderTradingFee from './OrderTradingFee';
  * @interface OrderSignalModel
  */
 
-/**
- *
- * @name OrderSignalModel#tradingFee
- * @type {OrderTradingFee}
- */
 /**
  *
  * @name OrderSignalModel#providers
@@ -162,9 +156,6 @@ export default class OrderSignalModel {
             
             
 
-            if (data.hasOwnProperty('tradingFee')) {
-                obj['tradingFee'] = OrderTradingFee.constructFromObject(data['tradingFee']);
-            }
             if (data.hasOwnProperty('providers')) {
                 obj['providers'] = ApiClient.convertToType(data['providers'], [OrderSignalProgramInfo]);
             }
@@ -232,7 +223,6 @@ export default class OrderSignalModel {
         return obj;
     }
 
-    tradingFee = undefined;
     providers = undefined;
     totalCommission = undefined;
     tradingAccountId = undefined;
