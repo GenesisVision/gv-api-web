@@ -21,3 +21,4 @@ shell.sed(
 );
 shell.sed("-i", /'String'/, "string", "src/types.d.ts");
 shell.sed("-i", /'Number'/, "number", "src/types.d.ts");
+shell.sed("-i", /'Blob'/, "Blob", "src/types.d.ts");
