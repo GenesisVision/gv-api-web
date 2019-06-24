@@ -420,6 +420,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SignalsList](docs/SignalsList.md)
  - [CoreApiV10.SocialLinkViewModel](docs/SocialLinkViewModel.md)
  - [CoreApiV10.SocialLinksViewModel](docs/SocialLinksViewModel.md)
+ - [CoreApiV10.TotalCommission](docs/TotalCommission.md)
  - [CoreApiV10.TradesSignalViewModel](docs/TradesSignalViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
  - [CoreApiV10.TransactionDetails](docs/TransactionDetails.md)

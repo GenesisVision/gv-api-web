@@ -20,30 +20,30 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface OrderSignalFee
+ * @interface TotalCommission
  */
 
 /**
  *
- * @name OrderSignalFee#amount
+ * @name TotalCommission#amount
  * @type {Number}
  */
 /**
  *
- * @name OrderSignalFee#currency
- * @type OrderSignalFeeCurrencyEnum
+ * @name TotalCommission#currency
+ * @type TotalCommissionCurrencyEnum
  */
 /**
  *
- * @name OrderSignalFee#type
- * @type OrderSignalFeeTypeEnum
+ * @name TotalCommission#type
+ * @type TotalCommissionTypeEnum
  */
 
 
 
 
 
-export default class OrderSignalFee {
+export default class TotalCommission {
 
     constructor() {
         
@@ -58,7 +58,7 @@ export default class OrderSignalFee {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrderSignalFee();
+            obj = obj || new TotalCommission();
 
             
             
@@ -152,12 +152,12 @@ export default class OrderSignalFee {
 
 
 /**
- * @typedef OrderSignalFeeCurrencyEnum 
+ * @typedef TotalCommissionCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
- * @typedef OrderSignalFeeTypeEnum 
+ * @typedef TotalCommissionTypeEnum 
  * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
  */
 

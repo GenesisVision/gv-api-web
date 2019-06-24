@@ -15,6 +15,7 @@
 import ApiClient from '../ApiClient';
 import OrderModelSignalData from './OrderModelSignalData';
 import OrderSignalProgramInfo from './OrderSignalProgramInfo';
+import TotalCommission from './TotalCommission';
 
 
 
@@ -34,6 +35,11 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
  *
  * @name OrderSignalModel#totalCommission
  * @type {Number}
+ */
+/**
+ *
+ * @name OrderSignalModel#totalCommissionByType
+ * @type {Array<TotalCommission>}
  */
 /**
  *
@@ -162,6 +168,9 @@ export default class OrderSignalModel {
             if (data.hasOwnProperty('totalCommission')) {
                 obj['totalCommission'] = ApiClient.convertToType(data['totalCommission'], 'Number');
             }
+            if (data.hasOwnProperty('totalCommissionByType')) {
+                obj['totalCommissionByType'] = ApiClient.convertToType(data['totalCommissionByType'], [TotalCommission]);
+            }
             if (data.hasOwnProperty('tradingAccountId')) {
                 obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');
             }
@@ -225,6 +234,7 @@ export default class OrderSignalModel {
 
     providers = undefined;
     totalCommission = undefined;
+    totalCommissionByType = undefined;
     tradingAccountId = undefined;
     id = undefined;
     login = undefined;

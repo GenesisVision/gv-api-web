@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **providers** | [**[OrderSignalProgramInfo]**](OrderSignalProgramInfo.md) |  | [optional] 
 **totalCommission** | **Number** |  | [optional] 
+**totalCommissionByType** | [**[TotalCommission]**](TotalCommission.md) |  | [optional] 
 **tradingAccountId** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **login** | **String** |  | [optional] 

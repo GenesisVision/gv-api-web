@@ -1,4 +1,4 @@
-# CoreApiV10.OrderSignalFee
+# CoreApiV10.TotalCommission
 
 ## Properties
 Name | Type | Description | Notes

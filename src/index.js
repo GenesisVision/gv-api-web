@@ -169,6 +169,7 @@ import SignalSubscription from './model/SignalSubscription';
 import SignalsList from './model/SignalsList';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
 import SocialLinksViewModel from './model/SocialLinksViewModel';
+import TotalCommission from './model/TotalCommission';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
@@ -1159,6 +1160,12 @@ export {
      * @type {SocialLinksViewModel}
      */
     SocialLinksViewModel,
+
+    /**
+     * @name index#TotalCommission
+     * @type {TotalCommission}
+     */
+    TotalCommission,
 
     /**
      * @name index#TradesSignalViewModel
