@@ -455,7 +455,7 @@ export declare class ProgramsApi {
     v10ProgramsByProgramIdTradesExportGet(programId: string, authorization: string, opts?: {
         start?: Date;
         end?: Date;
-    }): CancelablePromise<'Blob'>;
+    }): CancelablePromise<Blob>;
     v10ProgramsGet(opts?: {
         authorization?: string;
         levelMin?: number;
