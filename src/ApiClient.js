@@ -346,7 +346,7 @@ export default class ApiClient {
         // Rely on SuperAgent for parsing response body.
         // See http://visionmedia.github.io/superagent/#parsing-response-bodies
         var data = response.body;
-        if (data == null || (typeof data === 'object' && typeof data.length === 'undefined' && !Object.keys(data).length)) {
+        if (data == null || (typeof data === 'object' && typeof data.length === 'undefined' && !Object.keys(data).length) && typeof data.slice === 'undefined') {
             // SuperAgent does not always produce a body; use the unparsed response as a fallback
             data = response.text;
         }
