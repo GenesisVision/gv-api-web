@@ -16,19 +16,19 @@ Name | Type | Description | Notes
 
 * `Undefined` (value: `"Undefined"`)
 
-* `Twitter` (value: `"Twitter"`)
-
-* `Telegram` (value: `"Telegram"`)
-
-* `Facebook` (value: `"Facebook"`)
-
-* `LinkedIn` (value: `"LinkedIn"`)
-
-* `Youtube` (value: `"Youtube"`)
+* `Email` (value: `"Email"`)
 
 * `WeChat` (value: `"WeChat"`)
 
-* `Email` (value: `"Email"`)
+* `Youtube` (value: `"Youtube"`)
+
+* `Facebook` (value: `"Facebook"`)
+
+* `Telegram` (value: `"Telegram"`)
+
+* `Twitter` (value: `"Twitter"`)
+
+* `LinkedIn` (value: `"LinkedIn"`)
 
 
 
