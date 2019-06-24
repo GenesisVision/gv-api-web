@@ -564,7 +564,7 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/v1.0/programs/{programId}/trades/export', 'GET',
@@ -581,7 +581,7 @@ export default class ProgramsApi {
      * @param {Object} [opts] Optional parameters
      * @param {Date} [opts.start] 
      * @param {Date} [opts.end] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<'Blob'>} a Promise, with an object containing data of type 'Blob' and HTTP response
      */
       v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts) {
       return this.v10ProgramsByProgramIdTradesExportGetWithHttpInfo(programId, authorization, opts)

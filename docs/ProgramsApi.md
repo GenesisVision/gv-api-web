@@ -473,7 +473,7 @@ No authorization required
 
 <a name="v10ProgramsByProgramIdTradesExportGet"></a>
 # **v10ProgramsByProgramIdTradesExportGet**
-> v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts)
+> &#39;Blob&#39; v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts)
 
 Export trades
 
@@ -491,8 +491,8 @@ let opts = {
   'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**&#39;Blob&#39;**
 
 ### Authorization
 
