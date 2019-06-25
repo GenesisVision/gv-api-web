@@ -26,13 +26,13 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessManagerCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 
@@ -59,13 +59,13 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessPlatformCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 
@@ -92,13 +92,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 

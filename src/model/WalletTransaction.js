@@ -260,13 +260,13 @@ export default class WalletTransaction {
 
     static SourceCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
@@ -345,13 +345,13 @@ export default class WalletTransaction {
 
     static DestinationCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
@@ -386,7 +386,7 @@ export default class WalletTransaction {
 
 /**
  * @typedef WalletTransactionSourceCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
@@ -401,7 +401,7 @@ export default class WalletTransaction {
 
 /**
  * @typedef WalletTransactionDestinationCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

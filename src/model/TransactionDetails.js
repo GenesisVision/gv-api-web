@@ -224,13 +224,13 @@ export default class TransactionDetails {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
@@ -253,13 +253,13 @@ export default class TransactionDetails {
 
     static GvCommissionCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
     
         "ADA": "ADA",
     
@@ -299,12 +299,12 @@ export default class TransactionDetails {
 
 /**
  * @typedef TransactionDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"Undefined"|"GVT"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

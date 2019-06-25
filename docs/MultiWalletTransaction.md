@@ -20,13 +20,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyFromEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 
@@ -53,13 +53,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyToEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 * `ADA` (value: `"ADA"`)
 
