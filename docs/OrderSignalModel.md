@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **totalCommission** | **Number** |  | [optional] 
 **totalCommissionByType** | [**[TotalCommission]**](TotalCommission.md) |  | [optional] 
 **tradingAccountId** | **String** |  | [optional] 
+**currency** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **login** | **String** |  | [optional] 
 **ticket** | **String** |  | [optional] 
@@ -25,6 +26,39 @@ Name | Type | Description | Notes
 **swap** | **Number** |  | [optional] 
 **showOriginalCommission** | **Boolean** |  | [optional] 
 **signalData** | [**OrderModelSignalData**](OrderModelSignalData.md) | For signals | [optional] 
+
+
+<a name="CurrencyEnum"></a>
+## Enum: CurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="DirectionEnum"></a>

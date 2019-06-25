@@ -48,6 +48,11 @@ import TotalCommission from './TotalCommission';
  */
 /**
  *
+ * @name OrderSignalModel#currency
+ * @type OrderSignalModelCurrencyEnum
+ */
+/**
+ *
  * @name OrderSignalModel#id
  * @type {String}
  */
@@ -174,6 +179,9 @@ export default class OrderSignalModel {
             if (data.hasOwnProperty('tradingAccountId')) {
                 obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');
             }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -236,6 +244,7 @@ export default class OrderSignalModel {
     totalCommission = undefined;
     totalCommissionByType = undefined;
     tradingAccountId = undefined;
+    currency = undefined;
     id = undefined;
     login = undefined;
     ticket = undefined;
@@ -259,6 +268,35 @@ export default class OrderSignalModel {
 
 
 
+
+    static CurrencyEnum = {
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "USDT": "USDT",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
 
     static DirectionEnum = {
     
@@ -290,6 +328,11 @@ export default class OrderSignalModel {
 
 
 
+
+/**
+ * @typedef OrderSignalModelCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
 
 /**
  * @typedef OrderSignalModelDirectionEnum 

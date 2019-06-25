@@ -1640,6 +1640,8 @@ export declare interface OrderSignalFee {
     type: OrderSignalFeeTypeEnum;
 }
 
+export declare type OrderSignalModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
 export declare type OrderSignalModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
 
 export declare type OrderSignalModelEntryEnum = "In" | "Out" | "InOut" | "OutBy";
@@ -1649,6 +1651,7 @@ export declare interface OrderSignalModel {
     totalCommission: number;
     totalCommissionByType: TotalCommission[];
     tradingAccountId: string;
+    currency: OrderSignalModelCurrencyEnum;
     id: string;
     login: string;
     ticket: string;
