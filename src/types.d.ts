@@ -1008,7 +1008,7 @@ export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = "Und
 
 export declare type DashboardPortfolioEventCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type DashboardPortfolioEventTypeEnum = "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended" | "WithdrawByStopOut";
+export declare type DashboardPortfolioEventTypeEnum = "WithdrawByStopOut" | "Loss" | "Reinvest" | "Profit" | "Invest" | "All" | "Withdraw" | "Canceled" | "Ended";
 
 export declare type DashboardPortfolioEventAssetTypeEnum = "Program" | "Fund";
 
@@ -2387,7 +2387,7 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type SocialLinkViewModelTypeEnum = "Twitter" | "Telegram" | "Facebook" | "Youtube" | "WeChat" | "Email" | "Undefined" | "LinkedIn";
 
 export declare interface SocialLinkViewModel {
     url: string;
@@ -2489,7 +2489,7 @@ export declare interface UpdateProfileViewModel {
     about: string;
 }
 
-export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type UpdateSocialLinkViewModelTypeEnum = "Twitter" | "Telegram" | "Facebook" | "Youtube" | "WeChat" | "Email" | "Undefined" | "LinkedIn";
 
 export declare interface UpdateSocialLinkViewModel {
     type: UpdateSocialLinkViewModelTypeEnum;
