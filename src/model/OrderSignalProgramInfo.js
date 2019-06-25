@@ -53,6 +53,11 @@ import ProfilePublic from './ProfilePublic';
  */
 /**
  *
+ * @name OrderSignalProgramInfo#profit
+ * @type {Number}
+ */
+/**
+ *
  * @name OrderSignalProgramInfo#firstOrderDate
  * @type {Date}
  */
@@ -102,6 +107,9 @@ export default class OrderSignalProgramInfo {
             if (data.hasOwnProperty('priceOpenAvg')) {
                 obj['priceOpenAvg'] = ApiClient.convertToType(data['priceOpenAvg'], 'Number');
             }
+            if (data.hasOwnProperty('profit')) {
+                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            }
             if (data.hasOwnProperty('firstOrderDate')) {
                 obj['firstOrderDate'] = ApiClient.convertToType(data['firstOrderDate'], 'Date');
             }
@@ -117,6 +125,7 @@ export default class OrderSignalProgramInfo {
     programId = undefined;
     volume = undefined;
     priceOpenAvg = undefined;
+    profit = undefined;
     firstOrderDate = undefined;
     fees = undefined;
 

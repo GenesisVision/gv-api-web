@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **programId** | **String** |  | [optional] 
 **volume** | **Number** |  | [optional] 
 **priceOpenAvg** | **Number** |  | [optional] 
+**profit** | **Number** |  | [optional] 
 **firstOrderDate** | **Date** |  | [optional] 
 **fees** | [**[OrderSignalFee]**](OrderSignalFee.md) |  | [optional] 
 

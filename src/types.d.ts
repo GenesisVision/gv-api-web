@@ -1678,6 +1678,7 @@ export declare interface OrderSignalProgramInfo {
     programId: string;
     volume: number;
     priceOpenAvg: number;
+    profit: number;
     firstOrderDate: Date;
     fees: OrderSignalFee[];
 }
