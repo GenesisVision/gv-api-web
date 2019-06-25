@@ -57,6 +57,10 @@ Name | Type | Description | Notes
 
 * `ByCurrAsc` (value: `"ByCurrAsc"`)
 
+* `ByLevelProgressDesc` (value: `"ByLevelProgressDesc"`)
+
+* `ByLevelProgressAsc` (value: `"ByLevelProgressAsc"`)
+
 
 
 
@@ -73,6 +77,8 @@ Name | Type | Description | Notes
 * `Popular` (value: `"Popular"`)
 
 * `ToLevelUp` (value: `"ToLevelUp"`)
+
+* `MostReliable` (value: `"MostReliable"`)
 
 
 

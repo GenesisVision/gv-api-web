@@ -26,17 +26,17 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessManagerCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -59,17 +59,17 @@ Name | Type | Description | Notes
 ## Enum: FeeSuccessPlatformCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -92,17 +92,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -125,23 +125,23 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `WithdrawByStopOut` (value: `"WithdrawByStopOut"`)
+* `All` (value: `"All"`)
+
+* `Invest` (value: `"Invest"`)
+
+* `Withdraw` (value: `"Withdraw"`)
+
+* `Profit` (value: `"Profit"`)
 
 * `Loss` (value: `"Loss"`)
 
 * `Reinvest` (value: `"Reinvest"`)
 
-* `Profit` (value: `"Profit"`)
-
-* `Invest` (value: `"Invest"`)
-
-* `All` (value: `"All"`)
-
-* `Withdraw` (value: `"Withdraw"`)
-
 * `Canceled` (value: `"Canceled"`)
 
 * `Ended` (value: `"Ended"`)
+
+* `WithdrawByStopOut` (value: `"WithdrawByStopOut"`)
 
 
 

@@ -171,7 +171,11 @@ export default class ProgramFacet {
     
         "ByCurrDesc": "ByCurrDesc",
     
-        "ByCurrAsc": "ByCurrAsc"    
+        "ByCurrAsc": "ByCurrAsc",
+    
+        "ByLevelProgressDesc": "ByLevelProgressDesc",
+    
+        "ByLevelProgressAsc": "ByLevelProgressAsc"    
     };
 
     static SortTypeEnum = {
@@ -184,7 +188,9 @@ export default class ProgramFacet {
     
         "Popular": "Popular",
     
-        "ToLevelUp": "ToLevelUp"    
+        "ToLevelUp": "ToLevelUp",
+    
+        "MostReliable": "MostReliable"    
     };
 
     static TimeframeEnum = {
@@ -211,12 +217,12 @@ export default class ProgramFacet {
 
 /**
  * @typedef ProgramFacetSortingEnum 
- * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc")}
+ * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc"|"ByLevelProgressDesc"|"ByLevelProgressAsc")}
  */
 
 /**
  * @typedef ProgramFacetSortTypeEnum 
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp"|"MostReliable")}
  */
 
 /**

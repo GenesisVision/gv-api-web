@@ -168,7 +168,9 @@ export default class FundFacet {
     
         "Popular": "Popular",
     
-        "ToLevelUp": "ToLevelUp"    
+        "ToLevelUp": "ToLevelUp",
+    
+        "MostReliable": "MostReliable"    
     };
 
     static TimeframeEnum = {
@@ -200,7 +202,7 @@ export default class FundFacet {
 
 /**
  * @typedef FundFacetSortTypeEnum 
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp")}
+ * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp"|"MostReliable")}
  */
 
 /**

@@ -58,6 +58,8 @@ Name | Type | Description | Notes
 
 * `ToLevelUp` (value: `"ToLevelUp"`)
 
+* `MostReliable` (value: `"MostReliable"`)
+
 
 
 
