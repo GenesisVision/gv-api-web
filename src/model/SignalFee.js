@@ -126,13 +126,13 @@ export default class SignalFee {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
     
         "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -167,7 +167,7 @@ export default class SignalFee {
 
 /**
  * @typedef SignalFeeCurrencyEnum 
- * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
