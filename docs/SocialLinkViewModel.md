@@ -14,21 +14,21 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `Twitter` (value: `"Twitter"`)
-
-* `Telegram` (value: `"Telegram"`)
+* `LinkedIn` (value: `"LinkedIn"`)
 
 * `Facebook` (value: `"Facebook"`)
 
-* `LinkedIn` (value: `"LinkedIn"`)
+* `Telegram` (value: `"Telegram"`)
 
-* `Youtube` (value: `"Youtube"`)
+* `Twitter` (value: `"Twitter"`)
+
+* `Email` (value: `"Email"`)
 
 * `WeChat` (value: `"WeChat"`)
 
-* `Email` (value: `"Email"`)
+* `Youtube` (value: `"Youtube"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 
 
