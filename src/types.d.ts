@@ -1954,6 +1954,13 @@ export declare interface ProgramDetailsFull {
     signalSuccessFee: number;
     signalVolumeFee: number;
     isForex: boolean;
+    leverageMin: number;
+    leverageMax: number;
+    brokerLogo: string;
+    ageDays: number;
+    genesisRatio: number;
+    investmentScale: number;
+    tradingVolume: number;
     availableInvestment: number;
     availableInvestmentBase: number;
     availableInvestmentLimit: number;
