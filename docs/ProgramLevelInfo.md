@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **weightedVolumeScale** | **Number** |  | [optional] 
 **managerBalance** | **Number** |  | [optional] 
 **investmentScale** | **Number** |  | [optional] 
+**totalAvailableToInvest** | **Number** |  | [optional] 
 
 

@@ -2057,6 +2057,7 @@ export declare interface ProgramLevelInfo {
     weightedVolumeScale: number;
     managerBalance: number;
     investmentScale: number;
+    totalAvailableToInvest: number;
 }
 
 export declare interface ProgramMinimumDeposit {

@@ -63,6 +63,11 @@ import ApiClient from '../ApiClient';
  * @name ProgramLevelInfo#investmentScale
  * @type {Number}
  */
+/**
+ *
+ * @name ProgramLevelInfo#totalAvailableToInvest
+ * @type {Number}
+ */
 
 
 
@@ -113,6 +118,9 @@ export default class ProgramLevelInfo {
             if (data.hasOwnProperty('investmentScale')) {
                 obj['investmentScale'] = ApiClient.convertToType(data['investmentScale'], 'Number');
             }
+            if (data.hasOwnProperty('totalAvailableToInvest')) {
+                obj['totalAvailableToInvest'] = ApiClient.convertToType(data['totalAvailableToInvest'], 'Number');
+            }
         }
         return obj;
     }
@@ -125,6 +133,7 @@ export default class ProgramLevelInfo {
     weightedVolumeScale = undefined;
     managerBalance = undefined;
     investmentScale = undefined;
+    totalAvailableToInvest = undefined;
 
 
 
