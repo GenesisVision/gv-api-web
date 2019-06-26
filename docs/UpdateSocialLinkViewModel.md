@@ -11,17 +11,17 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Youtube` (value: `"Youtube"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `Twitter` (value: `"Twitter"`)
 
 * `Telegram` (value: `"Telegram"`)
 
-* `Undefined` (value: `"Undefined"`)
-
 * `Facebook` (value: `"Facebook"`)
 
 * `LinkedIn` (value: `"LinkedIn"`)
+
+* `Youtube` (value: `"Youtube"`)
 
 * `WeChat` (value: `"WeChat"`)
 
