@@ -26,6 +26,7 @@ import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokersInfo from './model/BrokersInfo';
+import BrokersProgramInfo from './model/BrokersProgramInfo';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
 import CaptchaDetails from './model/CaptchaDetails';
 import ChangeBrokerProgramRequest from './model/ChangeBrokerProgramRequest';
@@ -302,6 +303,12 @@ export {
      * @type {BrokersInfo}
      */
     BrokersInfo,
+
+    /**
+     * @name index#BrokersProgramInfo
+     * @type {BrokersProgramInfo}
+     */
+    BrokersProgramInfo,
 
     /**
      * @name index#CaptchaCheckResult

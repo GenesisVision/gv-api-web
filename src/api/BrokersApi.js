@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import BrokersInfo from '../model/BrokersInfo';
+import BrokersProgramInfo from '../model/BrokersProgramInfo';
 import ErrorViewModel from '../model/ErrorViewModel';
 
 /**
@@ -33,6 +34,50 @@ export default class BrokersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+      v10BrokersByProgramIdGetWithHttpInfo(programId) {
+      let postBody = null;
+
+      // verify the required parameter 'programId' is set
+      if (programId === undefined || programId === null) {
+        throw new Error("Missing the required parameter 'programId' when calling v10BrokersByProgramIdGet");
+      }
+
+
+      let pathParams = {
+        'programId': programId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = BrokersProgramInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/brokers/{programId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get trade servers for program
+     * @function BrokersApi#v10BrokersByProgramIdGet
+     * @param {String} programId 
+     * @return {CancelablePromise<BrokersProgramInfo>} a Promise, with an object containing data of type BrokersProgramInfo and HTTP response
+     */
+      v10BrokersByProgramIdGet(programId) {
+      return this.v10BrokersByProgramIdGetWithHttpInfo(programId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
       v10BrokersGetWithHttpInfo() {
       let postBody = null;

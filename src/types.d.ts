@@ -76,6 +76,7 @@ export declare class AuthApi {
 
 export declare class BrokersApi {
     constructor(apiClient: ApiClient): BrokersApi;
+    v10BrokersByProgramIdGet(programId: string): CancelablePromise<BrokersProgramInfo>;
     v10BrokersGet(): CancelablePromise<BrokersInfo>;
 }
 
@@ -611,6 +612,7 @@ export declare interface index {
     Broker: Broker;
     BrokerAccountType: BrokerAccountType;
     BrokersInfo: BrokersInfo;
+    BrokersProgramInfo: BrokersProgramInfo;
     CaptchaCheckResult: CaptchaCheckResult;
     CaptchaDetails: CaptchaDetails;
     ChangeBrokerProgramRequest: ChangeBrokerProgramRequest;
@@ -918,6 +920,11 @@ export declare interface BrokerAccountType {
 
 export declare interface BrokersInfo {
     brokers: Broker[];
+}
+
+export declare interface BrokersProgramInfo {
+    brokers: Broker[];
+    currentAccountTypeId: string;
 }
 
 export declare interface CaptchaCheckResult {

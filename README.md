@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.AuthApi* | [**v10AuthSignupManagerPost**](docs/AuthApi.md#v10AuthSignupManagerPost) | **POST** /v1.0/auth/signup/manager | New manager registration
 *CoreApiV10.AuthApi* | [**v10AuthTokenDevicesLogoutPost**](docs/AuthApi.md#v10AuthTokenDevicesLogoutPost) | **POST** /v1.0/auth/token/devices/logout | Logout from another devices
 *CoreApiV10.AuthApi* | [**v10AuthTokenUpdatePost**](docs/AuthApi.md#v10AuthTokenUpdatePost) | **POST** /v1.0/auth/token/update | Update auth token
+*CoreApiV10.BrokersApi* | [**v10BrokersByProgramIdGet**](docs/BrokersApi.md#v10BrokersByProgramIdGet) | **GET** /v1.0/brokers/{programId} | Get trade servers for program
 *CoreApiV10.BrokersApi* | [**v10BrokersGet**](docs/BrokersApi.md#v10BrokersGet) | **GET** /v1.0/brokers | Get all trade servers
 *CoreApiV10.FileApi* | [**v10FileByIdGet**](docs/FileApi.md#v10FileByIdGet) | **GET** /v1.0/file/{id} | Download file
 *CoreApiV10.FileApi* | [**v10FileDocumentUploadPost**](docs/FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
@@ -277,6 +278,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.Broker](docs/Broker.md)
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
+ - [CoreApiV10.BrokersProgramInfo](docs/BrokersProgramInfo.md)
  - [CoreApiV10.CaptchaCheckResult](docs/CaptchaCheckResult.md)
  - [CoreApiV10.CaptchaDetails](docs/CaptchaDetails.md)
  - [CoreApiV10.ChangeBrokerProgramRequest](docs/ChangeBrokerProgramRequest.md)
