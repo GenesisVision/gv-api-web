@@ -97,8 +97,6 @@ export default class SignalFee {
 
     static TypeEnum = {
     
-        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
-    
         "Undefined": "Undefined",
     
         "GvProgramEntry": "GvProgramEntry",
@@ -106,6 +104,8 @@ export default class SignalFee {
         "GvProgramSuccess": "GvProgramSuccess",
     
         "GvFundEntry": "GvFundEntry",
+    
+        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
     
         "ManagerProgramEntry": "ManagerProgramEntry",
     
@@ -162,7 +162,7 @@ export default class SignalFee {
 
 /**
  * @typedef SignalFeeTypeEnum 
- * @type {("GvGmGvtHolderFee"|"Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
  */
 
 /**
