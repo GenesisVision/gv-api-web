@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import BrokerDetails from './BrokerDetails';
 import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsRating from './ProgramDetailsRating';
@@ -125,11 +126,6 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name ProgramDetailsFull#isForex
- * @type {Boolean}
- */
-/**
- *
  * @name ProgramDetailsFull#leverageMin
  * @type {Number}
  */
@@ -137,11 +133,6 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramDetailsFull#leverageMax
  * @type {Number}
- */
-/**
- *
- * @name ProgramDetailsFull#brokerLogo
- * @type {String}
  */
 /**
  *
@@ -177,6 +168,11 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramDetailsFull#availableInvestmentLimit
  * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetailsFull#brokerDetails
+ * @type {BrokerDetails}
  */
 /**
  *
@@ -331,17 +327,11 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('signalVolumeFee')) {
                 obj['signalVolumeFee'] = ApiClient.convertToType(data['signalVolumeFee'], 'Number');
             }
-            if (data.hasOwnProperty('isForex')) {
-                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
-            }
             if (data.hasOwnProperty('leverageMin')) {
                 obj['leverageMin'] = ApiClient.convertToType(data['leverageMin'], 'Number');
             }
             if (data.hasOwnProperty('leverageMax')) {
                 obj['leverageMax'] = ApiClient.convertToType(data['leverageMax'], 'Number');
-            }
-            if (data.hasOwnProperty('brokerLogo')) {
-                obj['brokerLogo'] = ApiClient.convertToType(data['brokerLogo'], 'String');
             }
             if (data.hasOwnProperty('ageDays')) {
                 obj['ageDays'] = ApiClient.convertToType(data['ageDays'], 'Number');
@@ -363,6 +353,9 @@ export default class ProgramDetailsFull {
             }
             if (data.hasOwnProperty('availableInvestmentLimit')) {
                 obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
+            }
+            if (data.hasOwnProperty('brokerDetails')) {
+                obj['brokerDetails'] = BrokerDetails.constructFromObject(data['brokerDetails']);
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
@@ -429,10 +422,8 @@ export default class ProgramDetailsFull {
     isSignalProgram = undefined;
     signalSuccessFee = undefined;
     signalVolumeFee = undefined;
-    isForex = undefined;
     leverageMin = undefined;
     leverageMax = undefined;
-    brokerLogo = undefined;
     ageDays = undefined;
     genesisRatio = undefined;
     investmentScale = undefined;
@@ -440,6 +431,7 @@ export default class ProgramDetailsFull {
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     availableInvestmentLimit = undefined;
+    brokerDetails = undefined;
     statistic = undefined;
     rating = undefined;
     personalProgramDetails = undefined;

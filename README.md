@@ -277,6 +277,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.BlockchainInfo](docs/BlockchainInfo.md)
  - [CoreApiV10.Broker](docs/Broker.md)
  - [CoreApiV10.BrokerAccountType](docs/BrokerAccountType.md)
+ - [CoreApiV10.BrokerDetails](docs/BrokerDetails.md)
  - [CoreApiV10.BrokersInfo](docs/BrokersInfo.md)
  - [CoreApiV10.BrokersProgramInfo](docs/BrokersProgramInfo.md)
  - [CoreApiV10.CaptchaCheckResult](docs/CaptchaCheckResult.md)

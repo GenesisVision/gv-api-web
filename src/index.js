@@ -25,6 +25,7 @@ import BalanceChartElement from './model/BalanceChartElement';
 import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
+import BrokerDetails from './model/BrokerDetails';
 import BrokersInfo from './model/BrokersInfo';
 import BrokersProgramInfo from './model/BrokersProgramInfo';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
@@ -297,6 +298,12 @@ export {
      * @type {BrokerAccountType}
      */
     BrokerAccountType,
+
+    /**
+     * @name index#BrokerDetails
+     * @type {BrokerDetails}
+     */
+    BrokerDetails,
 
     /**
      * @name index#BrokersInfo
