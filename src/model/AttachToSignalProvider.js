@@ -133,15 +133,15 @@ export default class AttachToSignalProvider {
 
     static FixedCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
         "USDT": "USDT",
+    
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -162,15 +162,15 @@ export default class AttachToSignalProvider {
 
     static InitialDepositCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
         "USDT": "USDT",
+    
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -203,12 +203,12 @@ export default class AttachToSignalProvider {
 
 /**
  * @typedef AttachToSignalProviderFixedCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

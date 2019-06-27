@@ -12,6 +12,10 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **totalCommissionAmount** | **Number** |  | [optional] 
 **totalCommissionCurrency** | **String** |  | [optional] 
+**totalSuccessFeeAmount** | **Number** |  | [optional] 
+**totalSuccessFeeCurrency** | **String** |  | [optional] 
+**totalVolumeFeeAmount** | **Number** |  | [optional] 
+**totalVolumeFeeCurrency** | **String** |  | [optional] 
 
 
 <a name="StatusEnum"></a>
@@ -29,15 +33,81 @@ Name | Type | Description | Notes
 ## Enum: TotalCommissionCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
 * `USDT` (value: `"USDT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="TotalSuccessFeeCurrencyEnum"></a>
+## Enum: TotalSuccessFeeCurrencyEnum
+
+
+* `USDT` (value: `"USDT"`)
+
 * `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="TotalVolumeFeeCurrencyEnum"></a>
+## Enum: TotalVolumeFeeCurrencyEnum
+
+
+* `USDT` (value: `"USDT"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
 

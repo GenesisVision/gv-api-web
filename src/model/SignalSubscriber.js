@@ -68,6 +68,26 @@ import ApiClient from '../ApiClient';
  * @name SignalSubscriber#totalCommissionCurrency
  * @type SignalSubscriberTotalCommissionCurrencyEnum
  */
+/**
+ *
+ * @name SignalSubscriber#totalSuccessFeeAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscriber#totalSuccessFeeCurrency
+ * @type SignalSubscriberTotalSuccessFeeCurrencyEnum
+ */
+/**
+ *
+ * @name SignalSubscriber#totalVolumeFeeAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscriber#totalVolumeFeeCurrency
+ * @type SignalSubscriberTotalVolumeFeeCurrencyEnum
+ */
 
 
 
@@ -121,6 +141,18 @@ export default class SignalSubscriber {
             if (data.hasOwnProperty('totalCommissionCurrency')) {
                 obj['totalCommissionCurrency'] = ApiClient.convertToType(data['totalCommissionCurrency'], 'String');
             }
+            if (data.hasOwnProperty('totalSuccessFeeAmount')) {
+                obj['totalSuccessFeeAmount'] = ApiClient.convertToType(data['totalSuccessFeeAmount'], 'Number');
+            }
+            if (data.hasOwnProperty('totalSuccessFeeCurrency')) {
+                obj['totalSuccessFeeCurrency'] = ApiClient.convertToType(data['totalSuccessFeeCurrency'], 'String');
+            }
+            if (data.hasOwnProperty('totalVolumeFeeAmount')) {
+                obj['totalVolumeFeeAmount'] = ApiClient.convertToType(data['totalVolumeFeeAmount'], 'Number');
+            }
+            if (data.hasOwnProperty('totalVolumeFeeCurrency')) {
+                obj['totalVolumeFeeCurrency'] = ApiClient.convertToType(data['totalVolumeFeeCurrency'], 'String');
+            }
         }
         return obj;
     }
@@ -134,6 +166,10 @@ export default class SignalSubscriber {
     status = undefined;
     totalCommissionAmount = undefined;
     totalCommissionCurrency = undefined;
+    totalSuccessFeeAmount = undefined;
+    totalSuccessFeeCurrency = undefined;
+    totalVolumeFeeAmount = undefined;
+    totalVolumeFeeCurrency = undefined;
 
 
 
@@ -149,15 +185,73 @@ export default class SignalSubscriber {
 
     static TotalCommissionCurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
         "USDT": "USDT",
+    
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
+    static TotalSuccessFeeCurrencyEnum = {
+    
+        "USDT": "USDT",
+    
         "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
+    static TotalVolumeFeeCurrencyEnum = {
+    
+        "USDT": "USDT",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -190,7 +284,17 @@ export default class SignalSubscriber {
 
 /**
  * @typedef SignalSubscriberTotalCommissionCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef SignalSubscriberTotalSuccessFeeCurrencyEnum 
+ * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef SignalSubscriberTotalVolumeFeeCurrencyEnum 
+ * @type {("USDT"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
