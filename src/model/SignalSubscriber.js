@@ -58,6 +58,16 @@ import ApiClient from '../ApiClient';
  * @name SignalSubscriber#status
  * @type SignalSubscriberStatusEnum
  */
+/**
+ *
+ * @name SignalSubscriber#totalCommissionAmount
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscriber#totalCommissionCurrency
+ * @type SignalSubscriberTotalCommissionCurrencyEnum
+ */
 
 
 
@@ -105,6 +115,12 @@ export default class SignalSubscriber {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('totalCommissionAmount')) {
+                obj['totalCommissionAmount'] = ApiClient.convertToType(data['totalCommissionAmount'], 'Number');
+            }
+            if (data.hasOwnProperty('totalCommissionCurrency')) {
+                obj['totalCommissionCurrency'] = ApiClient.convertToType(data['totalCommissionCurrency'], 'String');
+            }
         }
         return obj;
     }
@@ -116,6 +132,8 @@ export default class SignalSubscriber {
     subscriptionDate = undefined;
     unsubscriptionDate = undefined;
     status = undefined;
+    totalCommissionAmount = undefined;
+    totalCommissionCurrency = undefined;
 
 
 
@@ -129,6 +147,35 @@ export default class SignalSubscriber {
         "Ended": "Ended"    
     };
 
+    static TotalCommissionCurrencyEnum = {
+    
+        "BTC": "BTC",
+    
+        "ETH": "ETH",
+    
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
+    
+        "ADA": "ADA",
+    
+        "XRP": "XRP",
+    
+        "BCH": "BCH",
+    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
+    };
+
 
 
 }
@@ -139,6 +186,11 @@ export default class SignalSubscriber {
 /**
  * @typedef SignalSubscriberStatusEnum 
  * @type {("Active"|"Ended")}
+ */
+
+/**
+ * @typedef SignalSubscriberTotalCommissionCurrencyEnum 
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

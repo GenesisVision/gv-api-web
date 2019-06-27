@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **subscriptionDate** | **Date** |  | [optional] 
 **unsubscriptionDate** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
+**totalCommissionAmount** | **Number** |  | [optional] 
+**totalCommissionCurrency** | **String** |  | [optional] 
 
 
 <a name="StatusEnum"></a>
@@ -19,6 +21,39 @@ Name | Type | Description | Notes
 * `Active` (value: `"Active"`)
 
 * `Ended` (value: `"Ended"`)
+
+
+
+
+<a name="TotalCommissionCurrencyEnum"></a>
+## Enum: TotalCommissionCurrencyEnum
+
+
+* `BTC` (value: `"BTC"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 
