@@ -58,6 +58,16 @@ import ApiClient from '../ApiClient';
  * @name SignalSubscription#fixedCurrency
  * @type SignalSubscriptionFixedCurrencyEnum
  */
+/**
+ *
+ * @name SignalSubscription#totalProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name SignalSubscription#totalVolume
+ * @type {Number}
+ */
 
 
 
@@ -105,6 +115,12 @@ export default class SignalSubscription {
             if (data.hasOwnProperty('fixedCurrency')) {
                 obj['fixedCurrency'] = ApiClient.convertToType(data['fixedCurrency'], 'String');
             }
+            if (data.hasOwnProperty('totalProfit')) {
+                obj['totalProfit'] = ApiClient.convertToType(data['totalProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('totalVolume')) {
+                obj['totalVolume'] = ApiClient.convertToType(data['totalVolume'], 'Number');
+            }
         }
         return obj;
     }
@@ -116,6 +132,8 @@ export default class SignalSubscription {
     openTolerancePercent = undefined;
     fixedVolume = undefined;
     fixedCurrency = undefined;
+    totalProfit = undefined;
+    totalVolume = undefined;
 
 
 

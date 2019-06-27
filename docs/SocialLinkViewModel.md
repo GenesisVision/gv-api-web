@@ -14,13 +14,7 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `LinkedIn` (value: `"LinkedIn"`)
-
-* `Facebook` (value: `"Facebook"`)
-
-* `Telegram` (value: `"Telegram"`)
-
-* `Twitter` (value: `"Twitter"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `Email` (value: `"Email"`)
 
@@ -28,7 +22,13 @@ Name | Type | Description | Notes
 
 * `Youtube` (value: `"Youtube"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `Facebook` (value: `"Facebook"`)
+
+* `Telegram` (value: `"Telegram"`)
+
+* `Twitter` (value: `"Twitter"`)
+
+* `LinkedIn` (value: `"LinkedIn"`)
 
 
 

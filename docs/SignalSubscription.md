@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **openTolerancePercent** | **Number** |  | [optional] 
 **fixedVolume** | **Number** |  | [optional] 
 **fixedCurrency** | **String** |  | [optional] 
+**totalProfit** | **Number** |  | [optional] 
+**totalVolume** | **Number** |  | [optional] 
 
 
 <a name="ModeEnum"></a>
