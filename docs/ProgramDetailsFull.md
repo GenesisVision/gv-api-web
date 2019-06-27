@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **ageDays** | **Number** |  | [optional] 
 **genesisRatio** | **Number** |  | [optional] 
 **investmentScale** | **Number** |  | [optional] 
-**tradingVolume** | **Number** |  | [optional] 
+**volumeScale** | **Number** |  | [optional] 
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
 **availableInvestmentLimit** | **Number** |  | [optional] 

@@ -151,7 +151,7 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name ProgramDetailsFull#tradingVolume
+ * @name ProgramDetailsFull#volumeScale
  * @type {Number}
  */
 /**
@@ -347,8 +347,8 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('investmentScale')) {
                 obj['investmentScale'] = ApiClient.convertToType(data['investmentScale'], 'Number');
             }
-            if (data.hasOwnProperty('tradingVolume')) {
-                obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
+            if (data.hasOwnProperty('volumeScale')) {
+                obj['volumeScale'] = ApiClient.convertToType(data['volumeScale'], 'Number');
             }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
@@ -435,7 +435,7 @@ export default class ProgramDetailsFull {
     ageDays = undefined;
     genesisRatio = undefined;
     investmentScale = undefined;
-    tradingVolume = undefined;
+    volumeScale = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     availableInvestmentLimit = undefined;
