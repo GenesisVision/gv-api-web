@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
 **availableInvestmentLimit** | **Number** |  | [optional] 
+**totalAvailableInvestment** | **Number** |  | [optional] 
 **brokerDetails** | [**BrokerDetails**](BrokerDetails.md) |  | [optional] 
 **statistic** | [**ProgramStatistic**](ProgramStatistic.md) |  | [optional] 
 **rating** | [**ProgramDetailsRating**](ProgramDetailsRating.md) |  | [optional] 
@@ -52,13 +53,13 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
+* `BTC` (value: `"BTC"`)
+
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
 * `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
 

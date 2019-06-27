@@ -171,6 +171,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetailsFull#totalAvailableInvestment
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramDetailsFull#brokerDetails
  * @type {BrokerDetails}
  */
@@ -354,6 +359,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('availableInvestmentLimit')) {
                 obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
             }
+            if (data.hasOwnProperty('totalAvailableInvestment')) {
+                obj['totalAvailableInvestment'] = ApiClient.convertToType(data['totalAvailableInvestment'], 'Number');
+            }
             if (data.hasOwnProperty('brokerDetails')) {
                 obj['brokerDetails'] = BrokerDetails.constructFromObject(data['brokerDetails']);
             }
@@ -431,6 +439,7 @@ export default class ProgramDetailsFull {
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     availableInvestmentLimit = undefined;
+    totalAvailableInvestment = undefined;
     brokerDetails = undefined;
     statistic = undefined;
     rating = undefined;
@@ -454,13 +463,13 @@ export default class ProgramDetailsFull {
 
     static CurrencyEnum = {
     
+        "BTC": "BTC",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
     
         "ETH": "ETH",
-    
-        "BTC": "BTC",
     
         "ADA": "ADA",
     
@@ -507,7 +516,7 @@ export default class ProgramDetailsFull {
 
 /**
  * @typedef ProgramDetailsFullCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"Undefined"|"GVT"|"ETH"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
