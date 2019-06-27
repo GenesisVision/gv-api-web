@@ -35,15 +35,15 @@ Name | Type | Description | Notes
 ## Enum: SuccessFeeCurrencyEnum
 
 
-* `USDT` (value: `"USDT"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
 

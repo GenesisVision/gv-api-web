@@ -20,15 +20,15 @@ Name | Type | Description | Notes
 ## Enum: CurrencyFromEnum
 
 
-* `USDT` (value: `"USDT"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
 
@@ -53,15 +53,15 @@ Name | Type | Description | Notes
 ## Enum: CurrencyToEnum
 
 
-* `USDT` (value: `"USDT"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
+* `BTC` (value: `"BTC"`)
 
 * `ETH` (value: `"ETH"`)
 
-* `BTC` (value: `"BTC"`)
+* `USDT` (value: `"USDT"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 * `ADA` (value: `"ADA"`)
 
