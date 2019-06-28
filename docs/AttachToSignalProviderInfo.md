@@ -14,17 +14,17 @@ Name | Type | Description | Notes
 ## Enum: MinDepositCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
