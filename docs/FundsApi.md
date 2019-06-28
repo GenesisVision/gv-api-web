@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**v10FundsByIdFavoriteAddPost**](FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
 [**v10FundsByIdFavoriteRemovePost**](FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 [**v10FundsByIdGet**](FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
+[**v10FundsByIdReallocationsGet**](FundsApi.md#v10FundsByIdReallocationsGet) | **GET** /v1.0/funds/{id}/reallocations | Get history of asset part update requests.
 [**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 [**v10FundsSetsGet**](FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 
@@ -314,6 +315,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FundDetailsFull**](FundDetailsFull.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsByIdReallocationsGet"></a>
+# **v10FundsByIdReallocationsGet**
+> v10FundsByIdReallocationsGet(id, opts)
+
+Get history of asset part update requests.
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10FundsByIdReallocationsGet(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteAddPost**](docs/FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdFavoriteRemovePost**](docs/FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.FundsApi* | [**v10FundsByIdGet**](docs/FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
+*CoreApiV10.FundsApi* | [**v10FundsByIdReallocationsGet**](docs/FundsApi.md#v10FundsByIdReallocationsGet) | **GET** /v1.0/funds/{id}/reallocations | Get history of asset part update requests.
 *CoreApiV10.FundsApi* | [**v10FundsGet**](docs/FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
 *CoreApiV10.FundsApi* | [**v10FundsSetsGet**](docs/FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty

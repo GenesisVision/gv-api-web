@@ -377,6 +377,60 @@ export default class FundsApi {
         });
     }
 
+      v10FundsByIdReallocationsGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10FundsByIdReallocationsGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/funds/{id}/reallocations', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get history of asset part update requests.
+     * @function FundsApi#v10FundsByIdReallocationsGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10FundsByIdReallocationsGet(id, opts) {
+      return this.v10FundsByIdReallocationsGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10FundsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
