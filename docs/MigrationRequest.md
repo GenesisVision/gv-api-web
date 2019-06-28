@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **brokerTradingAccountId** | **String** |  | [optional] 
 **brokerTradingAccountName** | **String** |  | [optional] 
 **brokerName** | **String** |  | [optional] 
+**brokerLogo** | **String** |  | [optional] 
 
 

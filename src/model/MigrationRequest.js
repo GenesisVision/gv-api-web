@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
  * @name MigrationRequest#brokerName
  * @type {String}
  */
+/**
+ *
+ * @name MigrationRequest#brokerLogo
+ * @type {String}
+ */
 
 
 
@@ -89,6 +94,9 @@ export default class MigrationRequest {
             if (data.hasOwnProperty('brokerName')) {
                 obj['brokerName'] = ApiClient.convertToType(data['brokerName'], 'String');
             }
+            if (data.hasOwnProperty('brokerLogo')) {
+                obj['brokerLogo'] = ApiClient.convertToType(data['brokerLogo'], 'String');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class MigrationRequest {
     brokerTradingAccountId = undefined;
     brokerTradingAccountName = undefined;
     brokerName = undefined;
+    brokerLogo = undefined;
 
 
 

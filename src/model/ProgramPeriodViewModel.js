@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
  * @name ProgramPeriodViewModel#profit
  * @type {Number}
  */
+/**
+ *
+ * @name ProgramPeriodViewModel#investors
+ * @type {Number}
+ */
 
 
 
@@ -89,6 +94,9 @@ export default class ProgramPeriodViewModel {
             if (data.hasOwnProperty('profit')) {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
+            if (data.hasOwnProperty('investors')) {
+                obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class ProgramPeriodViewModel {
     status = undefined;
     number = undefined;
     profit = undefined;
+    investors = undefined;
 
 
 

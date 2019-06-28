@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **_number** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
+**investors** | **Number** |  | [optional] 
 
 
 <a name="StatusEnum"></a>

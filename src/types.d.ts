@@ -1473,6 +1473,7 @@ export declare interface MigrationRequest {
     brokerTradingAccountId: string;
     brokerTradingAccountName: string;
     brokerName: string;
+    brokerLogo: string;
 }
 
 export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -2090,6 +2091,7 @@ export declare interface ProgramPeriodViewModel {
     status: ProgramPeriodViewModelStatusEnum;
     number: number;
     profit: number;
+    investors: number;
 }
 
 export declare interface ProgramPeriodsViewModel {
