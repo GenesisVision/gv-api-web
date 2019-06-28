@@ -321,6 +321,7 @@ export default class ProgramsApi {
         'Take': opts['take']
       };
       let headerParams = {
+        'Authorization': opts['authorization']
       };
       let formParams = {
       };
@@ -342,6 +343,7 @@ export default class ProgramsApi {
      * @function ProgramsApi#v10ProgramsByIdPeriodsGet
      * @param {String} id 
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.numberMin] 

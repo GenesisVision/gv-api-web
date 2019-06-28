@@ -267,6 +267,7 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 let id = "id_example"; // String | 
 
 let opts = { 
+  'authorization': "authorization_example", // String | 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'numberMin': 56, // Number | 
@@ -288,6 +289,7 @@ apiInstance.v10ProgramsByIdPeriodsGet(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
+ **authorization** | **String**|  | [optional] 
  **dateFrom** | **Date**|  | [optional] 
  **dateTo** | **Date**|  | [optional] 
  **numberMin** | **Number**|  | [optional] 

@@ -48,6 +48,7 @@ import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
+import FinancialStatistic from './model/FinancialStatistic';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
@@ -436,6 +437,12 @@ export {
      * @type {FcmTokenViewModel}
      */
     FcmTokenViewModel,
+
+    /**
+     * @name index#FinancialStatistic
+     * @type {FinancialStatistic}
+     */
+    FinancialStatistic,
 
     /**
      * @name index#ForgotPasswordViewModel

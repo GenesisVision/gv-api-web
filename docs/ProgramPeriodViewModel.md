@@ -8,7 +8,9 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **_number** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
+**balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
+**managerStatistic** | [**FinancialStatistic**](FinancialStatistic.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>

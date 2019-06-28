@@ -300,6 +300,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
  - [CoreApiV10.ExternalTransactionDetails](docs/ExternalTransactionDetails.md)
  - [CoreApiV10.FcmTokenViewModel](docs/FcmTokenViewModel.md)
+ - [CoreApiV10.FinancialStatistic](docs/FinancialStatistic.md)
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.FundAssetInfo](docs/FundAssetInfo.md)
  - [CoreApiV10.FundAssetPart](docs/FundAssetPart.md)
