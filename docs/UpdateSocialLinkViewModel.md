@@ -19,13 +19,13 @@ Name | Type | Description | Notes
 
 * `Facebook` (value: `"Facebook"`)
 
+* `LinkedIn` (value: `"LinkedIn"`)
+
 * `Youtube` (value: `"Youtube"`)
 
 * `WeChat` (value: `"WeChat"`)
 
 * `Email` (value: `"Email"`)
-
-* `LinkedIn` (value: `"LinkedIn"`)
 
 
 
