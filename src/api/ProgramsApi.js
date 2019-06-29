@@ -535,18 +535,13 @@ export default class ProgramsApi {
         });
     }
 
-      v10ProgramsByProgramIdTradesExportGetWithHttpInfo(programId, authorization, opts) {
+      v10ProgramsByProgramIdTradesExportGetWithHttpInfo(programId, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'programId' is set
       if (programId === undefined || programId === null) {
         throw new Error("Missing the required parameter 'programId' when calling v10ProgramsByProgramIdTradesExportGet");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByProgramIdTradesExportGet");
       }
 
 
@@ -558,7 +553,6 @@ export default class ProgramsApi {
         'end': opts['end']
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -579,14 +573,13 @@ export default class ProgramsApi {
      * Export trades
      * @function ProgramsApi#v10ProgramsByProgramIdTradesExportGet
      * @param {String} programId 
-     * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {Date} [opts.start] 
      * @param {Date} [opts.end] 
      * @return {CancelablePromise<'Blob'>} a Promise, with an object containing data of type 'Blob' and HTTP response
      */
-      v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts) {
-      return this.v10ProgramsByProgramIdTradesExportGetWithHttpInfo(programId, authorization, opts)
+      v10ProgramsByProgramIdTradesExportGet(programId, opts) {
+      return this.v10ProgramsByProgramIdTradesExportGetWithHttpInfo(programId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

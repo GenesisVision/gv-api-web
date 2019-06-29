@@ -460,7 +460,7 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesViewModel>;
-    v10ProgramsByProgramIdTradesExportGet(programId: string, authorization: string, opts?: {
+    v10ProgramsByProgramIdTradesExportGet(programId: string, opts?: {
         start?: Date;
         end?: Date;
     }): CancelablePromise<Blob>;

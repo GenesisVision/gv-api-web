@@ -475,7 +475,7 @@ No authorization required
 
 <a name="v10ProgramsByProgramIdTradesExportGet"></a>
 # **v10ProgramsByProgramIdTradesExportGet**
-> &#39;Blob&#39; v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts)
+> &#39;Blob&#39; v10ProgramsByProgramIdTradesExportGet(programId, opts)
 
 Export trades
 
@@ -487,13 +487,11 @@ let apiInstance = new CoreApiV10.ProgramsApi();
 
 let programId = "programId_example"; // String | 
 
-let authorization = "authorization_example"; // String | JWT access token
-
 let opts = { 
   'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts).then((data) => {
+apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -506,7 +504,6 @@ apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, authorization, opts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **programId** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
  **start** | **Date**|  | [optional] 
  **end** | **Date**|  | [optional] 
 
