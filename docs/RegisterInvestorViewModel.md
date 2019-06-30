@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **confirmPassword** | **String** |  | [optional] 
 **refCode** | **String** |  | [optional] 
 **isAuto** | **Boolean** |  | [optional] 
+**captchaCheckResult** | [**CaptchaCheckResult**](CaptchaCheckResult.md) |  | [optional] 
 
 

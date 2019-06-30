@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import CaptchaCheckResult from './CaptchaCheckResult';
 
 
 
@@ -52,6 +53,11 @@ import ApiClient from '../ApiClient';
  *
  * @name RegisterManagerViewModel#isAuto
  * @type {Boolean}
+ */
+/**
+ *
+ * @name RegisterManagerViewModel#captchaCheckResult
+ * @type {CaptchaCheckResult}
  */
 
 
@@ -97,6 +103,9 @@ export default class RegisterManagerViewModel {
             if (data.hasOwnProperty('isAuto')) {
                 obj['isAuto'] = ApiClient.convertToType(data['isAuto'], 'Boolean');
             }
+            if (data.hasOwnProperty('captchaCheckResult')) {
+                obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
+            }
         }
         return obj;
     }
@@ -107,6 +116,7 @@ export default class RegisterManagerViewModel {
     confirmPassword = undefined;
     refCode = undefined;
     isAuto = undefined;
+    captchaCheckResult = undefined;
 
 
 

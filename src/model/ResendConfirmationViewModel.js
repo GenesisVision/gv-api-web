@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import CaptchaCheckResult from './CaptchaCheckResult';
 
 
 
@@ -27,6 +28,11 @@ import ApiClient from '../ApiClient';
  *
  * @name ResendConfirmationViewModel#email
  * @type {String}
+ */
+/**
+ *
+ * @name ResendConfirmationViewModel#captchaCheckResult
+ * @type {CaptchaCheckResult}
  */
 
 
@@ -57,11 +63,15 @@ export default class ResendConfirmationViewModel {
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
+            if (data.hasOwnProperty('captchaCheckResult')) {
+                obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
+            }
         }
         return obj;
     }
 
     email = undefined;
+    captchaCheckResult = undefined;
 
 
 

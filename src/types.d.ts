@@ -1115,6 +1115,7 @@ export declare interface FinancialStatistic {
 
 export declare interface ForgotPasswordViewModel {
     email: string;
+    captchaCheckResult: CaptchaCheckResult;
 }
 
 export declare interface FundAssetInfo {
@@ -2322,6 +2323,7 @@ export declare interface RegisterInvestorViewModel {
     confirmPassword: string;
     refCode: string;
     isAuto: boolean;
+    captchaCheckResult: CaptchaCheckResult;
 }
 
 export declare interface RegisterManagerViewModel {
@@ -2331,10 +2333,12 @@ export declare interface RegisterManagerViewModel {
     confirmPassword: string;
     refCode: string;
     isAuto: boolean;
+    captchaCheckResult: CaptchaCheckResult;
 }
 
 export declare interface ResendConfirmationViewModel {
     email: string;
+    captchaCheckResult: CaptchaCheckResult;
 }
 
 export declare interface ResetPasswordViewModel {
