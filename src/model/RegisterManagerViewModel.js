@@ -31,11 +31,6 @@ import CaptchaCheckResult from './CaptchaCheckResult';
  */
 /**
  *
- * @name RegisterManagerViewModel#email
- * @type {String}
- */
-/**
- *
  * @name RegisterManagerViewModel#password
  * @type {String}
  */
@@ -56,6 +51,11 @@ import CaptchaCheckResult from './CaptchaCheckResult';
  */
 /**
  *
+ * @name RegisterManagerViewModel#email
+ * @type {String}
+ */
+/**
+ *
  * @name RegisterManagerViewModel#captchaCheckResult
  * @type {CaptchaCheckResult}
  */
@@ -66,13 +66,13 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 export default class RegisterManagerViewModel {
 
-    constructor(userName, email, password) {
+    constructor(userName, password, email) {
         
 
         
         
 
-        this['userName'] = userName;this['email'] = email;this['password'] = password;
+        this['userName'] = userName;this['password'] = password;this['email'] = email;
 
         
     }
@@ -88,9 +88,6 @@ export default class RegisterManagerViewModel {
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
             }
@@ -103,6 +100,9 @@ export default class RegisterManagerViewModel {
             if (data.hasOwnProperty('isAuto')) {
                 obj['isAuto'] = ApiClient.convertToType(data['isAuto'], 'Boolean');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('captchaCheckResult')) {
                 obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
             }
@@ -111,11 +111,11 @@ export default class RegisterManagerViewModel {
     }
 
     userName = undefined;
-    email = undefined;
     password = undefined;
     confirmPassword = undefined;
     refCode = undefined;
     isAuto = undefined;
+    email = undefined;
     captchaCheckResult = undefined;
 
 

@@ -1351,12 +1351,12 @@ export declare interface LevelsParamsInfo {
 }
 
 export declare interface LoginViewModel {
-    email: string;
     password: string;
     rememberMe: boolean;
     twoFactorCode: string;
     recoveryCode: string;
     client: string;
+    email: string;
     captchaCheckResult: CaptchaCheckResult;
 }
 
@@ -2318,21 +2318,21 @@ export declare interface RecoveryCodesViewModel {
 }
 
 export declare interface RegisterInvestorViewModel {
-    email: string;
     password: string;
     confirmPassword: string;
     refCode: string;
     isAuto: boolean;
+    email: string;
     captchaCheckResult: CaptchaCheckResult;
 }
 
 export declare interface RegisterManagerViewModel {
     userName: string;
-    email: string;
     password: string;
     confirmPassword: string;
     refCode: string;
     isAuto: boolean;
+    email: string;
     captchaCheckResult: CaptchaCheckResult;
 }
 

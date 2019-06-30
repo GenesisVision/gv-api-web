@@ -26,11 +26,6 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 /**
  *
- * @name LoginViewModel#email
- * @type {String}
- */
-/**
- *
  * @name LoginViewModel#password
  * @type {String}
  */
@@ -56,6 +51,11 @@ import CaptchaCheckResult from './CaptchaCheckResult';
  */
 /**
  *
+ * @name LoginViewModel#email
+ * @type {String}
+ */
+/**
+ *
  * @name LoginViewModel#captchaCheckResult
  * @type {CaptchaCheckResult}
  */
@@ -66,13 +66,13 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 export default class LoginViewModel {
 
-    constructor(email, password) {
+    constructor(password, email) {
         
 
         
         
 
-        this['email'] = email;this['password'] = password;
+        this['password'] = password;this['email'] = email;
 
         
     }
@@ -85,9 +85,6 @@ export default class LoginViewModel {
             
             
 
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
             }
@@ -103,6 +100,9 @@ export default class LoginViewModel {
             if (data.hasOwnProperty('client')) {
                 obj['client'] = ApiClient.convertToType(data['client'], 'String');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('captchaCheckResult')) {
                 obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
             }
@@ -110,12 +110,12 @@ export default class LoginViewModel {
         return obj;
     }
 
-    email = undefined;
     password = undefined;
     rememberMe = undefined;
     twoFactorCode = undefined;
     recoveryCode = undefined;
     client = undefined;
+    email = undefined;
     captchaCheckResult = undefined;
 
 

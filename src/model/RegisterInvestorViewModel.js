@@ -26,11 +26,6 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 /**
  *
- * @name RegisterInvestorViewModel#email
- * @type {String}
- */
-/**
- *
  * @name RegisterInvestorViewModel#password
  * @type {String}
  */
@@ -51,6 +46,11 @@ import CaptchaCheckResult from './CaptchaCheckResult';
  */
 /**
  *
+ * @name RegisterInvestorViewModel#email
+ * @type {String}
+ */
+/**
+ *
  * @name RegisterInvestorViewModel#captchaCheckResult
  * @type {CaptchaCheckResult}
  */
@@ -61,13 +61,13 @@ import CaptchaCheckResult from './CaptchaCheckResult';
 
 export default class RegisterInvestorViewModel {
 
-    constructor(email, password) {
+    constructor(password, email) {
         
 
         
         
 
-        this['email'] = email;this['password'] = password;
+        this['password'] = password;this['email'] = email;
 
         
     }
@@ -80,9 +80,6 @@ export default class RegisterInvestorViewModel {
             
             
 
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
             }
@@ -95,6 +92,9 @@ export default class RegisterInvestorViewModel {
             if (data.hasOwnProperty('isAuto')) {
                 obj['isAuto'] = ApiClient.convertToType(data['isAuto'], 'Boolean');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('captchaCheckResult')) {
                 obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
             }
@@ -102,11 +102,11 @@ export default class RegisterInvestorViewModel {
         return obj;
     }
 
-    email = undefined;
     password = undefined;
     confirmPassword = undefined;
     refCode = undefined;
     isAuto = undefined;
+    email = undefined;
     captchaCheckResult = undefined;
 
 
