@@ -48,6 +48,11 @@ import ApiClient from '../ApiClient';
  * @name FinancialStatistic#entryFee
  * @type {Number}
  */
+/**
+ *
+ * @name FinancialStatistic#profit
+ * @type {Number}
+ */
 
 
 
@@ -89,6 +94,9 @@ export default class FinancialStatistic {
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
+            if (data.hasOwnProperty('profit')) {
+                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
+            }
         }
         return obj;
     }
@@ -98,6 +106,7 @@ export default class FinancialStatistic {
     commissionRebate = undefined;
     successFee = undefined;
     entryFee = undefined;
+    profit = undefined;
 
 
 

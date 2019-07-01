@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **commissionRebate** | **Number** |  | [optional] 
 **successFee** | **Number** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
+**profit** | **Number** |  | [optional] 
 
 
