@@ -14,8 +14,6 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
 * `Twitter` (value: `"Twitter"`)
 
 * `Telegram` (value: `"Telegram"`)
@@ -29,6 +27,8 @@ Name | Type | Description | Notes
 * `WeChat` (value: `"WeChat"`)
 
 * `Email` (value: `"Email"`)
+
+* `Undefined` (value: `"Undefined"`)
 
 
 
