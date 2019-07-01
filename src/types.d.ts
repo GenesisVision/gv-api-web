@@ -925,7 +925,7 @@ export declare interface Broker {
     tags: ProgramTag[];
 }
 
-export declare type BrokerAccountTypeTypeEnum = "MetaTrader5" | "Undefined" | "MetaTrader4" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "Huobi" | "Exante";
+export declare type BrokerAccountTypeTypeEnum = "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "Huobi" | "Exante";
 
 export declare interface BrokerAccountType {
     id: string;
