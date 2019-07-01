@@ -169,6 +169,8 @@ import SignalFee from './model/SignalFee';
 import SignalProviderSubscribers from './model/SignalProviderSubscribers';
 import SignalSubscriber from './model/SignalSubscriber';
 import SignalSubscription from './model/SignalSubscription';
+import SignalTradingEvent from './model/SignalTradingEvent';
+import SignalTradingEvents from './model/SignalTradingEvents';
 import SignalsList from './model/SignalsList';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
 import SocialLinksViewModel from './model/SocialLinksViewModel';
@@ -1163,6 +1165,18 @@ export {
      * @type {SignalSubscription}
      */
     SignalSubscription,
+
+    /**
+     * @name index#SignalTradingEvent
+     * @type {SignalTradingEvent}
+     */
+    SignalTradingEvent,
+
+    /**
+     * @name index#SignalTradingEvents
+     * @type {SignalTradingEvents}
+     */
+    SignalTradingEvents,
 
     /**
      * @name index#SignalsList

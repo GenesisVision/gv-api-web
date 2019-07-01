@@ -551,7 +551,7 @@ export declare class SignalApi {
         accountCurrency?: string;
         skip?: number;
         take?: number;
-    }): CancelablePromise<any>;
+    }): CancelablePromise<SignalTradingEvents>;
     v10SignalTradesOpenGet(authorization: string, opts?: {
         sorting?: string;
         symbol?: string;
@@ -772,6 +772,8 @@ export declare interface index {
     SignalProviderSubscribers: SignalProviderSubscribers;
     SignalSubscriber: SignalSubscriber;
     SignalSubscription: SignalSubscription;
+    SignalTradingEvent: SignalTradingEvent;
+    SignalTradingEvents: SignalTradingEvents;
     SignalsList: SignalsList;
     SocialLinkViewModel: SocialLinkViewModel;
     SocialLinksViewModel: SocialLinksViewModel;
@@ -2449,6 +2451,16 @@ export declare interface SignalSubscription {
     fixedCurrency: SignalSubscriptionFixedCurrencyEnum;
     totalProfit: number;
     totalVolume: number;
+}
+
+export declare interface SignalTradingEvent {
+    date: Date;
+    message: string;
+}
+
+export declare interface SignalTradingEvents {
+    events: SignalTradingEvent[];
+    total: number;
 }
 
 export declare interface SignalsList {

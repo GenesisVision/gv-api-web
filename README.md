@@ -423,6 +423,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SignalProviderSubscribers](docs/SignalProviderSubscribers.md)
  - [CoreApiV10.SignalSubscriber](docs/SignalSubscriber.md)
  - [CoreApiV10.SignalSubscription](docs/SignalSubscription.md)
+ - [CoreApiV10.SignalTradingEvent](docs/SignalTradingEvent.md)
+ - [CoreApiV10.SignalTradingEvents](docs/SignalTradingEvents.md)
  - [CoreApiV10.SignalsList](docs/SignalsList.md)
  - [CoreApiV10.SocialLinkViewModel](docs/SocialLinkViewModel.md)
  - [CoreApiV10.SocialLinksViewModel](docs/SocialLinksViewModel.md)

@@ -353,7 +353,7 @@ No authorization required
 
 <a name="v10SignalTradesLogGet"></a>
 # **v10SignalTradesLogGet**
-> v10SignalTradesLogGet(authorization, opts)
+> SignalTradingEvents v10SignalTradesLogGet(authorization, opts)
 
 Get investors signals trading log
 
@@ -371,8 +371,8 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10SignalTradesLogGet(authorization, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10SignalTradesLogGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SignalTradingEvents**](SignalTradingEvents.md)
 
 ### Authorization
 
