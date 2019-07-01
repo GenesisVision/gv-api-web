@@ -33,6 +33,16 @@ import ApiClient from '../ApiClient';
  * @name BrokerDetails#logo
  * @type {String}
  */
+/**
+ *
+ * @name BrokerDetails#showSwaps
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerDetails#showTickets
+ * @type {Boolean}
+ */
 
 
 
@@ -65,12 +75,20 @@ export default class BrokerDetails {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('showSwaps')) {
+                obj['showSwaps'] = ApiClient.convertToType(data['showSwaps'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showTickets')) {
+                obj['showTickets'] = ApiClient.convertToType(data['showTickets'], 'Boolean');
+            }
         }
         return obj;
     }
 
     isForex = undefined;
     logo = undefined;
+    showSwaps = undefined;
+    showTickets = undefined;
 
 
 

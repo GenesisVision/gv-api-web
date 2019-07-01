@@ -930,6 +930,8 @@ export declare interface BrokerAccountType {
 export declare interface BrokerDetails {
     isForex: boolean;
     logo: string;
+    showSwaps: boolean;
+    showTickets: boolean;
 }
 
 export declare interface BrokersInfo {
