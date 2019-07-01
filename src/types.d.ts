@@ -944,6 +944,7 @@ export declare interface BrokerDetails {
     logo: string;
     showSwaps: boolean;
     showTickets: boolean;
+    name: string;
 }
 
 export declare interface BrokersInfo {

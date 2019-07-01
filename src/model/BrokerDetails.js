@@ -43,6 +43,11 @@ import ApiClient from '../ApiClient';
  * @name BrokerDetails#showTickets
  * @type {Boolean}
  */
+/**
+ *
+ * @name BrokerDetails#name
+ * @type {String}
+ */
 
 
 
@@ -81,6 +86,9 @@ export default class BrokerDetails {
             if (data.hasOwnProperty('showTickets')) {
                 obj['showTickets'] = ApiClient.convertToType(data['showTickets'], 'Boolean');
             }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
         }
         return obj;
     }
@@ -89,6 +97,7 @@ export default class BrokerDetails {
     logo = undefined;
     showSwaps = undefined;
     showTickets = undefined;
+    name = undefined;
 
 
 
