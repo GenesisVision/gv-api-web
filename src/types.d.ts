@@ -1126,6 +1126,8 @@ export declare interface FinancialStatistic {
     deposit: number;
     withdraw: number;
     commissionRebate: number;
+    successFee: number;
+    entryFee: number;
 }
 
 export declare interface ForgotPasswordViewModel {
