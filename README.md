@@ -243,6 +243,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 *CoreApiV10.SignalApi* | [**v10SignalTradesByIdClosePost**](docs/SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 *CoreApiV10.SignalApi* | [**v10SignalTradesGet**](docs/SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
+*CoreApiV10.SignalApi* | [**v10SignalTradesLogGet**](docs/SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
 *CoreApiV10.SignalApi* | [**v10SignalTradesOpenGet**](docs/SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.WalletApi* | [**v10WalletAddressesByCurrencyGet**](docs/WalletApi.md#v10WalletAddressesByCurrencyGet) | **GET** /v1.0/wallet/addresses/{currency} | Get user addresses
 *CoreApiV10.WalletApi* | [**v10WalletAddressesGet**](docs/WalletApi.md#v10WalletAddressesGet) | **GET** /v1.0/wallet/addresses | Get user addresses

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 [**v10SignalTradesByIdClosePost**](SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**v10SignalTradesGet**](SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
+[**v10SignalTradesLogGet**](SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
 [**v10SignalTradesOpenGet**](SignalApi.md#v10SignalTradesOpenGet) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 
 
@@ -311,6 +312,7 @@ let opts = {
   'symbol': "symbol_example", // String | 
   'sorting': "sorting_example", // String | 
   'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -332,12 +334,64 @@ Name | Type | Description  | Notes
  **symbol** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
 ### Return type
 
 [**TradesSignalViewModel**](TradesSignalViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalTradesLogGet"></a>
+# **v10SignalTradesLogGet**
+> v10SignalTradesLogGet(authorization, opts)
+
+Get investors signals trading log
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10SignalTradesLogGet(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -366,6 +420,7 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'symbol': "symbol_example", // String | 
   'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -385,6 +440,7 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **symbol** | **String**|  | [optional] 
  **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

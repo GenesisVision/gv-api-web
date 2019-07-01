@@ -450,6 +450,7 @@ export declare class ProgramsApi {
         symbol?: string;
         sorting?: string;
         accountId?: string;
+        accountCurrency?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesViewModel>;
@@ -457,6 +458,7 @@ export declare class ProgramsApi {
         sorting?: string;
         symbol?: string;
         accountId?: string;
+        accountCurrency?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesViewModel>;
@@ -540,13 +542,21 @@ export declare class SignalApi {
         symbol?: string;
         sorting?: string;
         accountId?: string;
+        accountCurrency?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesSignalViewModel>;
+    v10SignalTradesLogGet(authorization: string, opts?: {
+        accountId?: string;
+        accountCurrency?: string;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<any>;
     v10SignalTradesOpenGet(authorization: string, opts?: {
         sorting?: string;
         symbol?: string;
         accountId?: string;
+        accountCurrency?: string;
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesSignalViewModel>;

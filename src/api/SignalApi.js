@@ -368,6 +368,7 @@ export default class SignalApi {
         'Symbol': opts['symbol'],
         'Sorting': opts['sorting'],
         'AccountId': opts['accountId'],
+        'AccountCurrency': opts['accountCurrency'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -399,12 +400,67 @@ export default class SignalApi {
      * @param {String} [opts.symbol] 
      * @param {String} [opts.sorting] 
      * @param {String} [opts.accountId] 
+     * @param {String} [opts.accountCurrency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response
      */
       v10SignalTradesGet(authorization, opts) {
       return this.v10SignalTradesGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10SignalTradesLogGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalTradesLogGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'AccountId': opts['accountId'],
+        'AccountCurrency': opts['accountCurrency'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/trades/log', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get investors signals trading log
+     * @function SignalApi#v10SignalTradesLogGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.accountId] 
+     * @param {String} [opts.accountCurrency] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10SignalTradesLogGet(authorization, opts) {
+      return this.v10SignalTradesLogGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -426,6 +482,7 @@ export default class SignalApi {
         'Sorting': opts['sorting'],
         'Symbol': opts['symbol'],
         'AccountId': opts['accountId'],
+        'AccountCurrency': opts['accountCurrency'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -455,6 +512,7 @@ export default class SignalApi {
      * @param {String} [opts.sorting] 
      * @param {String} [opts.symbol] 
      * @param {String} [opts.accountId] 
+     * @param {String} [opts.accountCurrency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<TradesSignalViewModel>} a Promise, with an object containing data of type TradesSignalViewModel and HTTP response

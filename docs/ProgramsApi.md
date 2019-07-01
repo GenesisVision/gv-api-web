@@ -383,6 +383,7 @@ let opts = {
   'symbol': "symbol_example", // String | 
   'sorting': "sorting_example", // String | 
   'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -404,6 +405,7 @@ Name | Type | Description  | Notes
  **symbol** | **String**|  | [optional] 
  **sorting** | **String**|  | [optional] 
  **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -438,6 +440,7 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'symbol': "symbol_example", // String | 
   'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -457,6 +460,7 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **symbol** | **String**|  | [optional] 
  **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
