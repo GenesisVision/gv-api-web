@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import FundAssetPartDetails from './FundAssetPartDetails';
+import FundAssetPartWithIcon from './FundAssetPartWithIcon';
 
 
 
@@ -32,7 +32,7 @@ import FundAssetPartDetails from './FundAssetPartDetails';
 /**
  *
  * @name ReallocationModel#parts
- * @type {Array<FundAssetPartDetails>}
+ * @type {Array<FundAssetPartWithIcon>}
  */
 
 
@@ -64,7 +64,7 @@ export default class ReallocationModel {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
             if (data.hasOwnProperty('parts')) {
-                obj['parts'] = ApiClient.convertToType(data['parts'], [FundAssetPartDetails]);
+                obj['parts'] = ApiClient.convertToType(data['parts'], [FundAssetPartWithIcon]);
             }
         }
         return obj;

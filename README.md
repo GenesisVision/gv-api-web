@@ -306,7 +306,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ForgotPasswordViewModel](docs/ForgotPasswordViewModel.md)
  - [CoreApiV10.FundAssetInfo](docs/FundAssetInfo.md)
  - [CoreApiV10.FundAssetPart](docs/FundAssetPart.md)
- - [CoreApiV10.FundAssetPartDetails](docs/FundAssetPartDetails.md)
  - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
  - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
  - [CoreApiV10.FundAssetsListInfo](docs/FundAssetsListInfo.md)

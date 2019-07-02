@@ -52,7 +52,6 @@ import FinancialStatistic from './model/FinancialStatistic';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
-import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
@@ -466,12 +465,6 @@ export {
      * @type {FundAssetPart}
      */
     FundAssetPart,
-
-    /**
-     * @name index#FundAssetPartDetails
-     * @type {FundAssetPartDetails}
-     */
-    FundAssetPartDetails,
 
     /**
      * @name index#FundAssetPartWithIcon

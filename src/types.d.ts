@@ -655,7 +655,6 @@ export declare interface index {
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
     FundAssetPart: FundAssetPart;
-    FundAssetPartDetails: FundAssetPartDetails;
     FundAssetPartWithIcon: FundAssetPartWithIcon;
     FundAssetPercent: FundAssetPercent;
     FundAssetsListInfo: FundAssetsListInfo;
@@ -2336,7 +2335,7 @@ export declare interface RatesModelRates {
 
 export declare interface ReallocationModel {
     date: Date;
-    parts: FundAssetPartDetails[];
+    parts: FundAssetPartWithIcon[];
 }
 
 export declare interface ReallocationsViewModel {
