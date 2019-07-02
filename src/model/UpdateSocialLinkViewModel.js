@@ -87,13 +87,13 @@ export default class UpdateSocialLinkViewModel {
     
         "Facebook": "Facebook",
     
-        "LinkedIn": "LinkedIn",
-    
         "Youtube": "Youtube",
     
         "WeChat": "WeChat",
     
-        "Email": "Email"    
+        "Email": "Email",
+    
+        "LinkedIn": "LinkedIn"    
     };
 
 
@@ -105,7 +105,7 @@ export default class UpdateSocialLinkViewModel {
 
 /**
  * @typedef UpdateSocialLinkViewModelTypeEnum 
- * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"Youtube"|"WeChat"|"Email"|"LinkedIn")}
  */
 
 
