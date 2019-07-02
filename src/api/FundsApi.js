@@ -21,6 +21,7 @@ import FundProfitChart from '../model/FundProfitChart';
 import FundSets from '../model/FundSets';
 import FundsList from '../model/FundsList';
 import PlatformAssets from '../model/PlatformAssets';
+import ReallocationsViewModel from '../model/ReallocationsViewModel';
 
 /**
 * Funds service.
@@ -404,7 +405,7 @@ export default class FundsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = ReallocationsViewModel;
 
       return this.apiClient.callApi(
         '/v1.0/funds/{id}/reallocations', 'GET',
@@ -422,7 +423,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     * @return {CancelablePromise<ReallocationsViewModel>} a Promise, with an object containing data of type ReallocationsViewModel and HTTP response
      */
       v10FundsByIdReallocationsGet(id, opts) {
       return this.v10FundsByIdReallocationsGetWithHttpInfo(id, opts)

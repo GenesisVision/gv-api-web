@@ -52,6 +52,7 @@ import FinancialStatistic from './model/FinancialStatistic';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
+import FundAssetPartDetails from './model/FundAssetPartDetails';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
@@ -156,6 +157,8 @@ import ProgramsList from './model/ProgramsList';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
 import RatesModelRates from './model/RatesModelRates';
+import ReallocationModel from './model/ReallocationModel';
+import ReallocationsViewModel from './model/ReallocationsViewModel';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
 import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
@@ -463,6 +466,12 @@ export {
      * @type {FundAssetPart}
      */
     FundAssetPart,
+
+    /**
+     * @name index#FundAssetPartDetails
+     * @type {FundAssetPartDetails}
+     */
+    FundAssetPartDetails,
 
     /**
      * @name index#FundAssetPartWithIcon
@@ -1087,6 +1096,18 @@ export {
      * @type {RatesModelRates}
      */
     RatesModelRates,
+
+    /**
+     * @name index#ReallocationModel
+     * @type {ReallocationModel}
+     */
+    ReallocationModel,
+
+    /**
+     * @name index#ReallocationsViewModel
+     * @type {ReallocationsViewModel}
+     */
+    ReallocationsViewModel,
 
     /**
      * @name index#RecoveryCode

@@ -327,7 +327,7 @@ No authorization required
 
 <a name="v10FundsByIdReallocationsGet"></a>
 # **v10FundsByIdReallocationsGet**
-> v10FundsByIdReallocationsGet(id, opts)
+> ReallocationsViewModel v10FundsByIdReallocationsGet(id, opts)
 
 Get history of asset part update requests.
 
@@ -345,8 +345,8 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10FundsByIdReallocationsGet(id, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.v10FundsByIdReallocationsGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ReallocationsViewModel**](ReallocationsViewModel.md)
 
 ### Authorization
 
