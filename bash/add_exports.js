@@ -19,6 +19,12 @@ shell.sed(
   "then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): CancelablePromise<TResult1 | TResult2>;",
   "src/types.d.ts"
 );
+shell.sed(
+  "-i",
+  /changefinally: any;/,
+  "finally(onfinally?: (() => void) | undefined | null): Promise<T>",
+  "src/types.d.ts"
+);
 shell.sed("-i", /'String'/, "string", "src/types.d.ts");
 shell.sed("-i", /'Number'/, "number", "src/types.d.ts");
 shell.sed("-i", /'Blob'/, "Blob", "src/types.d.ts");
