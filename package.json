@@ -3,12 +3,13 @@
   "version": "1.0.747",
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
-  "module": "src/index.js",
-  "types": "src/types.d.ts",
+  "module": "dist/index.js",
+  "types": "dist/types.d.ts",
   "scripts": {
     "generate-api": "node bash/generate",
     "generate-tsd": "node bash/replace.js && jsdoc -t ../../node_modules/tsd-jsdoc/dist -r ./src -d ./src && node bash/add_exports.js",
     "build": "npm run generate-tsd",
+    "tsc": "tsc",
     "test": "mocha --require babel-core/register --recursive",
     "test:promise": "mocha --require babel-core/register ./cancelable-promise/*.js"
   },
@@ -16,16 +17,11 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "^4.1.0",
-    "querystring": "0.2.0",
-    "dotenv": "^8.0.0"
+    "url": "^0.11.0",
+    "portable-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "expect.js": "~0.3.1",
-    "jsdoc": "3.5.5",
-    "mocha": "^5.2.0",
     "shelljs": "^0.8.3",
-    "sinon": "1.17.3",
-    "tsd-jsdoc": "2.0.4"
+    "typescript": "^3.2.2"
   }
 }
