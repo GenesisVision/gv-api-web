@@ -37,6 +37,15 @@ export class RequiredError extends Error {
         this.field = field;
     }
 }
+const formatResponse = async (response) => {
+    const data = await response.text();
+    try {
+        return JSON.parse(data);
+    }
+    catch (e) {
+        return data;
+    }
+};
 export const AuthApiFetchParamCreator = function (configuration) {
     return {
         v10Auth2faConfirmPost(authorization, model, options = {}) {
@@ -471,261 +480,121 @@ export const AuthApiFp = function (configuration) {
         v10Auth2faConfirmPost(authorization, model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faConfirmPost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10Auth2faCreatePost(authorization, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faCreatePost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10Auth2faDisablePost(authorization, model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faDisablePost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10Auth2faGet(authorization, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10Auth2faRecoverycodesNewPost(authorization, model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faRecoverycodesNewPost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10Auth2faRecoverycodesPost(authorization, model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10Auth2faRecoverycodesPost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPasswordChangePost(authorization, model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPasswordChangePost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPasswordForgotInvestorPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPasswordForgotInvestorPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPasswordForgotManagerPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPasswordForgotManagerPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPasswordResetPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPasswordResetPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPhoneCodePost(authorization, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPhoneCodePost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthPhoneVerifyPost(authorization, code, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthPhoneVerifyPost(authorization, code, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthResendconfirmationlinkPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthResendconfirmationlinkPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthSigninInvestorPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthSigninInvestorPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthSigninManagerPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthSigninManagerPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthSignupConfirmPost(userId, code, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthSignupConfirmPost(userId, code, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthSignupInvestorPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthSignupInvestorPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthSignupManagerPost(model, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthSignupManagerPost(model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthTokenDevicesLogoutPost(authorization, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthTokenDevicesLogoutPost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10AuthTokenUpdatePost(authorization, options) {
             const localVarFetchArgs = AuthApiFetchParamCreator(configuration).v10AuthTokenUpdatePost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -851,27 +720,13 @@ export const BrokersApiFp = function (configuration) {
         v10BrokersByProgramIdGet(programId, options) {
             const localVarFetchArgs = BrokersApiFetchParamCreator(configuration).v10BrokersByProgramIdGet(programId, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10BrokersGet(options) {
             const localVarFetchArgs = BrokersApiFetchParamCreator(configuration).v10BrokersGet(options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -973,40 +828,19 @@ export const FileApiFp = function (configuration) {
         v10FileByIdGet(id, options) {
             const localVarFetchArgs = FileApiFetchParamCreator(configuration).v10FileByIdGet(id, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FileDocumentUploadPost(authorization, uploadedFile, options) {
             const localVarFetchArgs = FileApiFetchParamCreator(configuration).v10FileDocumentUploadPost(authorization, uploadedFile, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FileUploadPost(uploadedFile, authorization, options) {
             const localVarFetchArgs = FileApiFetchParamCreator(configuration).v10FileUploadPost(uploadedFile, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -1072,10 +906,10 @@ export const FundsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (maxPointCount !== undefined) {
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
@@ -1101,10 +935,10 @@ export const FundsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (maxPointCount !== undefined) {
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
@@ -1210,10 +1044,10 @@ export const FundsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (skip !== undefined) {
                 localVarQueryParameter['Skip'] = skip;
@@ -1246,10 +1080,10 @@ export const FundsApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Assets'] = assets;
             }
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom.toISOString();
+                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom;
             }
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = statisticDateTo.toISOString();
+                localVarQueryParameter['StatisticDateTo'] = statisticDateTo;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -1331,131 +1165,61 @@ export const FundsApiFp = function (configuration) {
         v10FundsAssetsGet(options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsAssetsGet(options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdAssetsGet(id, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdAssetsGet(id, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdFavoriteAddPost(id, authorization, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdFavoriteAddPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdFavoriteRemovePost(id, authorization, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdFavoriteRemovePost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdGet(id, authorization, currencySecondary, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdGet(id, authorization, currencySecondary, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsByIdReallocationsGet(id, dateFrom, dateTo, skip, take, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsByIdReallocationsGet(id, dateFrom, dateTo, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsGet(authorization, sorting, currencySecondary, assets, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, hasInvestorsForAll, hasInvestorsForClosed, ids, managerId, programManagerId, status, skip, take, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsGet(authorization, sorting, currencySecondary, assets, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, hasInvestorsForAll, hasInvestorsForClosed, ids, managerId, programManagerId, status, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10FundsSetsGet(authorization, options) {
             const localVarFetchArgs = FundsApiFetchParamCreator(configuration).v10FundsSetsGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -1684,10 +1448,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Sorting'] = sorting;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -1733,10 +1497,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['chartCurrency'] = chartCurrency;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (balancePoints !== undefined) {
                 localVarQueryParameter['BalancePoints'] = balancePoints;
@@ -1779,10 +1543,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['currency'] = currency;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (balancePoints !== undefined) {
                 localVarQueryParameter['BalancePoints'] = balancePoints;
@@ -1816,10 +1580,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['AssetId'] = assetId;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (type !== undefined) {
                 localVarQueryParameter['Type'] = type;
@@ -2149,10 +1913,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Sorting'] = sorting;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -2257,10 +2021,10 @@ export const InvestorApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Sorting'] = sorting;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -2299,287 +2063,133 @@ export const InvestorApiFp = function (configuration) {
         v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, currency, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, currency, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorGet(authorization, chartCurrency, from, to, balancePoints, programsPoints, eventsTake, requestsSkip, requestsTake, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorGet(authorization, chartCurrency, from, to, balancePoints, programsPoints, eventsTake, requestsSkip, requestsTake, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorPortfolioChartGet(authorization, currency, from, to, balancePoints, programsPoints, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorPortfolioChartGet(authorization, currency, from, to, balancePoints, programsPoints, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorPortfolioEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorPortfolioEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, currency, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdReinvestOffPost(id, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdReinvestOffPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdReinvestOnPost(id, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdReinvestOnPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, withdrawAll, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, withdrawAll, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, amount, withdrawAll, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, amount, withdrawAll, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorProgramsRequestsByIdCancelPost(id, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorProgramsRequestsByIdCancelPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorRequestsBySkipByTakeGet(skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10InvestorSignalsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options) {
             const localVarFetchArgs = InvestorApiFetchParamCreator(configuration).v10InvestorSignalsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -2741,10 +2351,10 @@ export const ManagerApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['AssetId'] = assetId;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (type !== undefined) {
                 localVarQueryParameter['Type'] = type;
@@ -3070,10 +2680,10 @@ export const ManagerApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Sorting'] = sorting;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -3168,10 +2778,10 @@ export const ManagerApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['AssetId'] = assetId;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (type !== undefined) {
                 localVarQueryParameter['Type'] = type;
@@ -3683,10 +3293,10 @@ export const ManagerApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['Sorting'] = sorting;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -3871,508 +3481,235 @@ export const ManagerApiFp = function (configuration) {
         v10ManagerAssetsGet(authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerAssetsGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerByIdDetailsGet(id, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerByIdDetailsGet(id, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerByIdGet(id, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerByIdGet(id, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerEventsGet(authorization, assetId, from, to, type, assetType, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdAssetsUpdatePost(id, authorization, assets, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdAssetsUpdatePost(id, authorization, assets, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdClosePost(id, authorization, twoFactorCode, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdClosePost(id, authorization, twoFactorCode, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, currency, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdInvestByAmountPost(id, amount, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdInvestInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdUpdatePost(id, authorization, model, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdUpdatePost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, currency, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdWithdrawByPercentPost(id, percent, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsCreatePost(authorization, request, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsCreatePost(authorization, request, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsInvestmentAmountGet(authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsInvestmentAmountGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerFundsRequestsByIdCancelPost(id, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerFundsRequestsByIdCancelPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerGet(authorization, assetId, from, to, type, assetType, skip, take, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerGet(authorization, assetId, from, to, type, assetType, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerPrograms2faConfirmPost(authorization, programId, code, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerPrograms2faConfirmPost(authorization, programId, code, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerPrograms2faGetGet(authorization, programId, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerPrograms2faGetGet(authorization, programId, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsBrokerChangeCancelPost(authorization, programId, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsBrokerChangeCancelPost(authorization, programId, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsBrokerChangePost(authorization, request, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsBrokerChangePost(authorization, request, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdClosePost(id, authorization, twoFactorCode, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdClosePost(id, authorization, twoFactorCode, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, currency, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdInvestByAmountPost(id, amount, authorization, currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdLevelsInfoGet(id, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdLevelsInfoGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdPasswordChangePost(id, authorization, model, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdPasswordChangePost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdPeriodClosePost(id, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdPeriodClosePost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdUpdatePost(id, authorization, model, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdUpdatePost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdWithdrawByAmountPost(id, amount, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsCreatePost(authorization, request, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsCreatePost(authorization, request, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsGet(authorization, sorting, from, to, chartPointsCount, currencySecondary, actionStatus, dashboardActionStatus, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsInvestmentAmountGet(authorization, brokerTradingAccount, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsInvestmentAmountGet(authorization, brokerTradingAccount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerProgramsRequestsByIdCancelPost(id, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerProgramsRequestsByIdCancelPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerSignalCreatePost(authorization, programId, volumeFee, successFee, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerSignalCreatePost(authorization, programId, volumeFee, successFee, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ManagerSignalEditPost(authorization, programId, volumeFee, successFee, options) {
             const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerSignalEditPost(authorization, programId, volumeFee, successFee, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -4803,131 +4140,61 @@ export const NotificationsApiFp = function (configuration) {
         v10NotificationsByIdReadPost(id, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsByIdReadPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsGet(authorization, skip, take, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsGet(authorization, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsNewGet(authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsNewGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsAddPost(authorization, assetId, managerId, type, conditionType, conditionAmount, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsAddPost(authorization, assetId, managerId, type, conditionType, conditionAmount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsByIdByEnablePost(id, enable, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsFundsByIdGet(id, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsFundsByIdGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsGet(authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsManagersByIdGet(id, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsManagersByIdGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsProgramsByIdGet(id, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsProgramsByIdGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10NotificationsSettingsRemoveByIdPost(id, authorization, options) {
             const localVarFetchArgs = NotificationsApiFetchParamCreator(configuration).v10NotificationsSettingsRemoveByIdPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -5084,79 +4351,37 @@ export const PlatformApiFp = function (configuration) {
         v10PlatformDatePost(options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformDatePost(options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10PlatformInfoGet(options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformInfoGet(options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10PlatformLevelsGet(currency, options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformLevelsGet(currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10PlatformLevelsParametersGet(currency, options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformLevelsParametersGet(currency, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10PlatformRiskcontrolGet(route, client, version, options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformRiskcontrolGet(route, client, version, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10PlatformStatisticGet(options) {
             const localVarFetchArgs = PlatformApiFetchParamCreator(configuration).v10PlatformStatisticGet(options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -5430,131 +4655,61 @@ export const ProfileApiFp = function (configuration) {
         v10ProfileAvatarRemovePost(authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileAvatarRemovePost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileAvatarUpdateByFileIdPost(fileId, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileGet(authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileHeaderGet(authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileHeaderGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfilePersonalUpdatePost(authorization, model, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfilePersonalUpdatePost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfilePushTokenPost(authorization, token, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfilePushTokenPost(authorization, token, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileSociallinksGet(authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileSociallinksGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileSociallinksUpdatePost(authorization, model, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileSociallinksUpdatePost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileUpdatePost(authorization, model, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileUpdatePost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProfileVerificationTokenPost(authorization, options) {
             const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).v10ProfileVerificationTokenPost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -5609,10 +4764,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (maxPointCount !== undefined) {
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
@@ -5638,10 +4793,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (maxPointCount !== undefined) {
                 localVarQueryParameter['MaxPointCount'] = maxPointCount;
@@ -5747,10 +4902,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (numberMin !== undefined) {
                 localVarQueryParameter['NumberMin'] = numberMin;
@@ -5827,10 +4982,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (symbol !== undefined) {
                 localVarQueryParameter['Symbol'] = symbol;
@@ -5909,10 +5064,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (start !== undefined) {
-                localVarQueryParameter['start'] = start.toISOString();
+                localVarQueryParameter['start'] = start;
             }
             if (end !== undefined) {
-                localVarQueryParameter['end'] = end.toISOString();
+                localVarQueryParameter['end'] = end;
             }
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
@@ -5963,10 +5118,10 @@ export const ProgramsApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['IsSignal'] = isSignal;
             }
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom.toISOString();
+                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom;
             }
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = statisticDateTo.toISOString();
+                localVarQueryParameter['StatisticDateTo'] = statisticDateTo;
             }
             if (chartPointsCount !== undefined) {
                 localVarQueryParameter['ChartPointsCount'] = chartPointsCount;
@@ -6066,170 +5221,79 @@ export const ProgramsApiFp = function (configuration) {
         v10ProgramsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdChartsBalanceGet(id, dateFrom, dateTo, maxPointCount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdChartsProfitGet(id, dateFrom, dateTo, maxPointCount, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdFavoriteAddPost(id, authorization, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdFavoriteAddPost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdFavoriteRemovePost(id, authorization, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdFavoriteRemovePost(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdGet(id, authorization, currencySecondary, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdGet(id, authorization, currencySecondary, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdPeriodsGet(id, authorization, dateFrom, dateTo, numberMin, numberMax, status, skip, take, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdPeriodsGet(id, authorization, dateFrom, dateTo, numberMin, numberMax, status, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdSubscribersGet(id, authorization, status, skip, take, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdSubscribersGet(id, authorization, status, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdTradesGet(id, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdTradesGet(id, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByIdTradesOpenGet(id, sorting, symbol, accountId, accountCurrency, skip, take, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdTradesOpenGet(id, sorting, symbol, accountId, accountCurrency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsByProgramIdTradesExportGet(programId, start, end, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByProgramIdTradesExportGet(programId, start, end, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsGet(authorization, levelMin, levelMax, levelsSet, profitAvgMin, profitAvgMax, sorting, programCurrency, currencySecondary, levelUpFrom, tags, isSignal, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, hasInvestorsForAll, hasInvestorsForClosed, ids, managerId, programManagerId, status, skip, take, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsGet(authorization, levelMin, levelMax, levelsSet, profitAvgMin, profitAvgMax, sorting, programCurrency, currencySecondary, levelUpFrom, tags, isSignal, statisticDateFrom, statisticDateTo, chartPointsCount, mask, facetId, isFavorite, isEnabled, hasInvestorsForAll, hasInvestorsForClosed, ids, managerId, programManagerId, status, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsLevelupSummaryGet(authorization, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsLevelupSummaryGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10ProgramsSetsGet(authorization, options) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsSetsGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -6370,40 +5434,19 @@ export const RateApiFp = function (configuration) {
         v10RateByExchangeByFromByToGet(exchange, from, to, options) {
             const localVarFetchArgs = RateApiFetchParamCreator(configuration).v10RateByExchangeByFromByToGet(exchange, from, to, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10RateByFromByToGet(from, to, options) {
             const localVarFetchArgs = RateApiFetchParamCreator(configuration).v10RateByFromByToGet(from, to, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10RateGet(from, to, options) {
             const localVarFetchArgs = RateApiFetchParamCreator(configuration).v10RateGet(from, to, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -6453,14 +5496,7 @@ export const SearchApiFp = function (configuration) {
         v10SearchGet(authorization, mask, take, options) {
             const localVarFetchArgs = SearchApiFetchParamCreator(configuration).v10SearchGet(authorization, mask, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -6653,10 +5689,10 @@ export const SignalApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom.toISOString();
+                localVarQueryParameter['DateFrom'] = dateFrom;
             }
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo.toISOString();
+                localVarQueryParameter['DateTo'] = dateTo;
             }
             if (symbol !== undefined) {
                 localVarQueryParameter['Symbol'] = symbol;
@@ -6769,118 +5805,55 @@ export const SignalApiFp = function (configuration) {
         v10SignalAccountsGet(authorization, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalAccountsGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalAttachByIdInfoGet(id, authorization, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalAttachByIdInfoGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalAttachByIdPost(id, authorization, model, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalAttachByIdPost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalByIdUpdatePost(id, authorization, model, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalByIdUpdatePost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalDetachByIdPost(id, authorization, model, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalDetachByIdPost(id, authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalTradesByIdClosePost(id, authorization, programId, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalTradesByIdClosePost(id, authorization, programId, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalTradesGet(authorization, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalTradesGet(authorization, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalTradesLogGet(authorization, accountId, accountCurrency, skip, take, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalTradesLogGet(authorization, accountId, accountCurrency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10SignalTradesOpenGet(authorization, sorting, symbol, accountId, accountCurrency, skip, take, options) {
             const localVarFetchArgs = SignalApiFetchParamCreator(configuration).v10SignalTradesOpenGet(authorization, sorting, symbol, accountId, accountCurrency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };
@@ -7086,10 +6059,10 @@ export const WalletApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (type !== undefined) {
                 localVarQueryParameter['Type'] = type;
@@ -7126,10 +6099,10 @@ export const WalletApiFetchParamCreator = function (configuration) {
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (type !== undefined) {
                 localVarQueryParameter['Type'] = type;
@@ -7240,10 +6213,10 @@ export const WalletApiFetchParamCreator = function (configuration) {
                 localVarQueryParameter['AssetId'] = assetId;
             }
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from.toISOString();
+                localVarQueryParameter['From'] = from;
             }
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to.toISOString();
+                localVarQueryParameter['To'] = to;
             }
             if (assetType !== undefined) {
                 localVarQueryParameter['AssetType'] = assetType;
@@ -7426,235 +6399,109 @@ export const WalletApiFp = function (configuration) {
         v10WalletAddressesByCurrencyGet(currency, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletAddressesByCurrencyGet(currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletAddressesGet(authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletAddressesGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletByCurrencyGet(currency, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletByCurrencyGet(currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletFeeGvtholdingGet(authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletFeeGvtholdingGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletMultiByCurrencyAvailableGet(currency, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletMultiByCurrencyAvailableGet(currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletMultiByCurrencyGet(currency, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletMultiByCurrencyGet(currency, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletMultiTransactionsExternalGet(authorization, from, to, type, currency, skip, take, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletMultiTransactionsExternalGet(authorization, from, to, type, currency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletMultiTransactionsGet(authorization, from, to, type, currency, skip, take, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletMultiTransactionsGet(authorization, from, to, type, currency, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletPaygvtfeeOffPost(authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletPaygvtfeeOffPost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletPaygvtfeeOnPost(authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletPaygvtfeeOnPost(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletTransactionByIdGet(id, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletTransactionByIdGet(id, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletTransactionsGet(authorization, assetId, from, to, assetType, txAction, wallet, skip, take, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletTransactionsGet(authorization, assetId, from, to, assetType, txAction, wallet, skip, take, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletTransferPost(authorization, request, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletTransferPost(authorization, request, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletWithdrawInfoGet(authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletWithdrawInfoGet(authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletWithdrawRequestCancelByTxIdPost(txId, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletWithdrawRequestConfirmPost(requestId, code, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletWithdrawRequestConfirmPost(requestId, code, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletWithdrawRequestNewPost(authorization, model, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletWithdrawRequestNewPost(authorization, model, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
         v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, options) {
             const localVarFetchArgs = WalletApiFetchParamCreator(configuration).v10WalletWithdrawRequestResendByTxIdPost(txId, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse(response));
             };
         },
     };

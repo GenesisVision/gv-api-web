@@ -9,7 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-/// <reference path="../custom.d.ts" />
+/// <reference path="custom.d.ts" />
 import { Configuration } from "./configuration";
 export declare const COLLECTION_FORMATS: {
     csv: string;
@@ -36,198 +36,198 @@ export declare class RequiredError extends Error {
     constructor(field: string, msg?: string);
 }
 export interface AmountWithCurrency {
-    amount?: number;
-    currency?: AmountWithCurrencyCurrencyEnum;
+    amount: number;
+    currency: AmountWithCurrencyCurrencyEnum;
 }
 export declare type AmountWithCurrencyCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface AndroidAppVersion {
-    minVersion?: AndroidVersion;
-    lastVersion?: AndroidVersion;
+    minVersion: AndroidVersion;
+    lastVersion: AndroidVersion;
 }
 export interface AndroidVersion {
-    versionCode?: string;
-    versionName?: string;
+    versionCode: string;
+    versionName: string;
 }
 export interface AssetEvent {
-    programs?: Array<string>;
-    funds?: Array<string>;
+    programs: Array<string>;
+    funds: Array<string>;
 }
 export interface AssetSelection {
-    id?: string;
-    title?: string;
-    logo?: string;
-    type?: AssetSelectionTypeEnum;
+    id: string;
+    title: string;
+    logo: string;
+    type: AssetSelectionTypeEnum;
 }
 export declare type AssetSelectionTypeEnum = 'Program' | 'Fund';
 export interface AssetsValue {
-    type?: AssetsValueTypeEnum;
-    id?: string;
-    title?: string;
-    avatar?: string;
-    color?: string;
-    value?: number;
-    changePercent?: number;
-    changeValue?: number;
+    type: AssetsValueTypeEnum;
+    id: string;
+    title: string;
+    avatar: string;
+    color: string;
+    value: number;
+    changePercent: number;
+    changeValue: number;
 }
 export declare type AssetsValueTypeEnum = 'All' | 'Program' | 'Fund';
 export interface AttachToSignalProvider {
-    mode?: AttachToSignalProviderModeEnum;
-    percent?: number;
-    openTolerancePercent?: number;
-    fixedVolume?: number;
-    fixedCurrency?: AttachToSignalProviderFixedCurrencyEnum;
-    initialDepositCurrency?: AttachToSignalProviderInitialDepositCurrencyEnum;
-    initialDepositAmount?: number;
+    mode: AttachToSignalProviderModeEnum;
+    percent: number;
+    openTolerancePercent: number;
+    fixedVolume: number;
+    fixedCurrency: AttachToSignalProviderFixedCurrencyEnum;
+    initialDepositCurrency: AttachToSignalProviderInitialDepositCurrencyEnum;
+    initialDepositAmount: number;
 }
 export declare type AttachToSignalProviderModeEnum = 'ByBalance' | 'Percent' | 'Fixed';
 export declare type AttachToSignalProviderFixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type AttachToSignalProviderInitialDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface AttachToSignalProviderInfo {
-    hasSignalAccount?: boolean;
-    hasActiveSubscription?: boolean;
-    volumeFee?: number;
-    minDeposit?: number;
-    minDepositCurrency?: AttachToSignalProviderInfoMinDepositCurrencyEnum;
+    hasSignalAccount: boolean;
+    hasActiveSubscription: boolean;
+    volumeFee: number;
+    minDeposit: number;
+    minDepositCurrency: AttachToSignalProviderInfoMinDepositCurrencyEnum;
 }
 export declare type AttachToSignalProviderInfoMinDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface BalanceChartElement {
-    date?: Date;
-    managerFunds?: number;
-    investorsFunds?: number;
+    date: Date;
+    managerFunds: number;
+    investorsFunds: number;
 }
 export interface BlockchainInfo {
-    hash?: string;
-    status?: BlockchainInfoStatusEnum;
+    hash: string;
+    status: BlockchainInfoStatusEnum;
 }
 export declare type BlockchainInfoStatusEnum = 'Undefined' | 'New' | 'Pending' | 'ConfirmedByGate' | 'ConfirmedAndValidated' | 'Error' | 'Cancelled';
 export interface Broker {
-    name?: string;
-    description?: string;
-    logo?: string;
-    terms?: string;
-    assets?: string;
-    fee?: number;
-    leverageMin?: number;
-    leverageMax?: number;
-    accountTypes?: Array<BrokerAccountType>;
-    isForex?: boolean;
-    isSignalsAvailable?: boolean;
-    tags?: Array<ProgramTag>;
+    name: string;
+    description: string;
+    logo: string;
+    terms: string;
+    assets: string;
+    fee: number;
+    leverageMin: number;
+    leverageMax: number;
+    accountTypes: Array<BrokerAccountType>;
+    isForex: boolean;
+    isSignalsAvailable: boolean;
+    tags: Array<ProgramTag>;
 }
 export interface BrokerAccountType {
-    id?: string;
-    name?: string;
-    description?: string;
-    type?: BrokerAccountTypeTypeEnum;
-    leverages?: Array<number>;
-    currencies?: Array<string>;
-    minimumDepositsAmount?: {
+    id: string;
+    name: string;
+    description: string;
+    type: BrokerAccountTypeTypeEnum;
+    leverages: Array<number>;
+    currencies: Array<string>;
+    minimumDepositsAmount: {
         [key: string]: number;
     };
-    isForex?: boolean;
-    isSignalsAvailable?: boolean;
+    isForex: boolean;
+    isSignalsAvailable: boolean;
 }
 export declare type BrokerAccountTypeTypeEnum = 'Undefined' | 'MetaTrader4' | 'MetaTrader5' | 'NinjaTrader' | 'cTrader' | 'Rumus' | 'Metastock' | 'Huobi' | 'Exante';
 export interface BrokerDetails {
-    isForex?: boolean;
-    logo?: string;
-    showSwaps?: boolean;
-    showTickets?: boolean;
-    name?: string;
+    isForex: boolean;
+    logo: string;
+    showSwaps: boolean;
+    showTickets: boolean;
+    name: string;
 }
 export interface BrokersInfo {
-    brokers?: Array<Broker>;
+    brokers: Array<Broker>;
 }
 export interface BrokersProgramInfo {
-    brokers?: Array<Broker>;
-    currentAccountTypeId?: string;
+    brokers: Array<Broker>;
+    currentAccountTypeId: string;
 }
 export interface CaptchaCheckResult {
-    id?: string;
-    pow?: PowResult;
-    geeTest?: GeeTestResult;
+    id: string;
+    pow: PowResult;
+    geeTest: GeeTestResult;
 }
 export interface CaptchaDetails {
-    captchaType?: CaptchaDetailsCaptchaTypeEnum;
-    id?: string;
-    route?: string;
-    pow?: PowDetails;
-    geeTest?: GeeTestDetails;
+    captchaType: CaptchaDetailsCaptchaTypeEnum;
+    id: string;
+    route: string;
+    pow: PowDetails;
+    geeTest: GeeTestDetails;
 }
 export declare type CaptchaDetailsCaptchaTypeEnum = 'None' | 'Pow' | 'GeeTest';
 export interface ChangeBrokerProgramRequest {
-    programId?: string;
-    newBrokerAccountTypeId?: string;
-    newLeverage?: number;
+    programId: string;
+    newBrokerAccountTypeId: string;
+    newLeverage: number;
 }
 export interface ChangePasswordViewModel {
     oldPassword: string;
     password: string;
-    confirmPassword?: string;
+    confirmPassword: string;
 }
 export interface ChartSimple {
-    value?: number;
-    date?: Date;
+    value: number;
+    date: Date;
 }
 export interface ConvertingDetails {
-    currencyTo?: ConvertingDetailsCurrencyToEnum;
-    currencyToName?: string;
-    amountTo?: number;
-    rateValue?: number;
-    currencyToLogo?: string;
+    currencyTo: ConvertingDetailsCurrencyToEnum;
+    currencyToName: string;
+    amountTo: number;
+    rateValue: number;
+    currencyToLogo: string;
 }
 export declare type ConvertingDetailsCurrencyToEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface CopyTradingAccountInfo {
-    id?: string;
-    currency?: CopyTradingAccountInfoCurrencyEnum;
-    logo?: string;
-    title?: string;
-    balance?: number;
-    equity?: number;
-    freeMargin?: number;
-    marginLevel?: number;
-    available?: number;
+    id: string;
+    currency: CopyTradingAccountInfoCurrencyEnum;
+    logo: string;
+    title: string;
+    balance: number;
+    equity: number;
+    freeMargin: number;
+    marginLevel: number;
+    available: number;
 }
 export declare type CopyTradingAccountInfoCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface CopyTradingAccountsList {
-    accounts?: Array<CopyTradingAccountInfo>;
-    total?: number;
+    accounts: Array<CopyTradingAccountInfo>;
+    total: number;
 }
 export interface CreateWithdrawalRequestModel {
-    amount?: number;
-    currency?: CreateWithdrawalRequestModelCurrencyEnum;
-    address?: string;
-    twoFactorCode?: string;
+    amount: number;
+    currency: CreateWithdrawalRequestModelCurrencyEnum;
+    address: string;
+    twoFactorCode: string;
 }
 export declare type CreateWithdrawalRequestModelCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface DashboardChartValue {
-    investedProgramsInfo?: Array<ValueChartBar>;
-    balanceChart?: Array<ChartSimple>;
-    value?: number;
-    valueCurrency?: number;
-    changePercent?: number;
-    changeValue?: number;
-    changeValueCurrency?: number;
-    rate?: number;
+    investedProgramsInfo: Array<ValueChartBar>;
+    balanceChart: Array<ChartSimple>;
+    value: number;
+    valueCurrency: number;
+    changePercent: number;
+    changeValue: number;
+    changeValueCurrency: number;
+    rate: number;
 }
 export interface DashboardPortfolioEvent {
-    assetId?: string;
-    date?: Date;
-    title?: string;
-    url?: string;
-    value?: number;
-    valueTotal?: number;
-    feeSuccessManager?: number;
-    feeSuccessManagerCurrency?: DashboardPortfolioEventFeeSuccessManagerCurrencyEnum;
-    feeSuccessPlatform?: number;
-    feeSuccessPlatformCurrency?: DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum;
-    profitPercent?: number;
-    currency?: DashboardPortfolioEventCurrencyEnum;
-    type?: DashboardPortfolioEventTypeEnum;
-    logo?: string;
-    color?: string;
-    description?: string;
-    assetType?: DashboardPortfolioEventAssetTypeEnum;
+    assetId: string;
+    date: Date;
+    title: string;
+    url: string;
+    value: number;
+    valueTotal: number;
+    feeSuccessManager: number;
+    feeSuccessManagerCurrency: DashboardPortfolioEventFeeSuccessManagerCurrencyEnum;
+    feeSuccessPlatform: number;
+    feeSuccessPlatformCurrency: DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum;
+    profitPercent: number;
+    currency: DashboardPortfolioEventCurrencyEnum;
+    type: DashboardPortfolioEventTypeEnum;
+    logo: string;
+    color: string;
+    description: string;
+    assetType: DashboardPortfolioEventAssetTypeEnum;
 }
 export declare type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
@@ -235,1263 +235,1263 @@ export declare type DashboardPortfolioEventCurrencyEnum = 'Undefined' | 'GVT' | 
 export declare type DashboardPortfolioEventTypeEnum = 'All' | 'Invest' | 'Withdraw' | 'Profit' | 'Loss' | 'Reinvest' | 'Canceled' | 'Ended' | 'WithdrawByStopOut';
 export declare type DashboardPortfolioEventAssetTypeEnum = 'Program' | 'Fund';
 export interface DashboardPortfolioEvents {
-    events?: Array<DashboardPortfolioEvent>;
-    total?: number;
+    events: Array<DashboardPortfolioEvent>;
+    total: number;
 }
 export interface DashboardProgramDetails {
-    share?: number;
+    share: number;
 }
 export interface DashboardSummary {
-    chart?: DashboardChartValue;
-    events?: DashboardPortfolioEvents;
-    profileHeader?: ProfileHeaderViewModel;
-    programsCount?: number;
-    fundsCount?: number;
-    signalsCount?: number;
-    requests?: ProgramRequests;
+    chart: DashboardChartValue;
+    events: DashboardPortfolioEvents;
+    profileHeader: ProfileHeaderViewModel;
+    programsCount: number;
+    fundsCount: number;
+    signalsCount: number;
+    requests: ProgramRequests;
 }
 export interface DetachFromSignalProvider {
-    mode?: DetachFromSignalProviderModeEnum;
+    mode: DetachFromSignalProviderModeEnum;
 }
 export declare type DetachFromSignalProviderModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
 export interface Enums {
-    multiWallet?: MultiWalletFilters;
-    program?: ProgramFilters;
-    fund?: FundFilters;
+    multiWallet: MultiWalletFilters;
+    program: ProgramFilters;
+    fund: FundFilters;
 }
 export interface ErrorMessage {
-    message?: string;
-    property?: string;
+    message: string;
+    property: string;
 }
 export interface ErrorViewModel {
-    errors?: Array<ErrorMessage>;
-    code?: ErrorViewModelCodeEnum;
+    errors: Array<ErrorMessage>;
+    code: ErrorViewModelCodeEnum;
 }
 export declare type ErrorViewModelCodeEnum = 'InternalServerError' | 'ValidationError' | 'RequiresTwoFactor' | 'WrongCaptcha';
 export interface ExternalTransactionDetails {
-    description?: string;
-    descriptionUrl?: string;
-    fromAddress?: string;
-    isEnableActions?: boolean;
+    description: string;
+    descriptionUrl: string;
+    fromAddress: string;
+    isEnableActions: boolean;
 }
 export interface FcmTokenViewModel {
     token: string;
 }
 export interface FinancialStatistic {
-    deposit?: number;
-    withdraw?: number;
-    commissionRebate?: number;
-    successFee?: number;
-    entryFee?: number;
-    profit?: number;
-    balance?: number;
+    deposit: number;
+    withdraw: number;
+    commissionRebate: number;
+    successFee: number;
+    entryFee: number;
+    profit: number;
+    balance: number;
 }
 export interface ForgotPasswordViewModel {
     email: string;
-    captchaCheckResult?: CaptchaCheckResult;
+    captchaCheckResult: CaptchaCheckResult;
 }
 export interface FundAssetInfo {
-    asset?: string;
-    symbol?: string;
-    icon?: string;
-    target?: number;
-    current?: number;
+    asset: string;
+    symbol: string;
+    icon: string;
+    target: number;
+    current: number;
 }
 export interface FundAssetPart {
-    id?: string;
-    percent?: number;
+    id: string;
+    percent: number;
 }
 export interface FundAssetPartWithIcon {
-    icon?: string;
-    color?: string;
-    name?: string;
-    asset?: string;
-    percent?: number;
+    icon: string;
+    color: string;
+    name: string;
+    asset: string;
+    percent: number;
 }
 export interface FundAssetPercent {
-    asset?: string;
-    name?: string;
-    percent?: number;
-    icon?: string;
+    asset: string;
+    name: string;
+    percent: number;
+    icon: string;
 }
 export interface FundAssetsListInfo {
-    assets?: Array<FundAssetInfo>;
+    assets: Array<FundAssetInfo>;
 }
 export interface FundBalanceChart {
-    usdBalance?: number;
-    balanceChart?: Array<BalanceChartElement>;
-    gvtBalance?: number;
+    usdBalance: number;
+    balanceChart: Array<BalanceChartElement>;
+    gvtBalance: number;
 }
 export interface FundDetails {
-    totalAssetsCount?: number;
-    topFundAssets?: Array<FundAssetPercent>;
-    statistic?: FundDetailsListStatistic;
-    personalDetails?: PersonalFundDetailsFull;
-    dashboardAssetsDetails?: DashboardProgramDetails;
-    id?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    title?: string;
-    description?: string;
-    status?: FundDetailsStatusEnum;
-    creationDate?: Date;
-    manager?: ProfilePublic;
-    chart?: Array<ChartSimple>;
+    totalAssetsCount: number;
+    topFundAssets: Array<FundAssetPercent>;
+    statistic: FundDetailsListStatistic;
+    personalDetails: PersonalFundDetailsFull;
+    dashboardAssetsDetails: DashboardProgramDetails;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    title: string;
+    description: string;
+    status: FundDetailsStatusEnum;
+    creationDate: Date;
+    manager: ProfilePublic;
+    chart: Array<ChartSimple>;
 }
 export declare type FundDetailsStatusEnum = 'None' | 'Pending' | 'ErrorCreating' | 'Active' | 'Closed' | 'Archived' | 'ClosedDueToInactivity';
 export interface FundDetailsFull {
-    entryFee?: number;
-    exitFee?: number;
-    managementFee?: number;
-    currentAssets?: Array<FundAssetPartWithIcon>;
-    statistic?: FundStatistic;
-    personalFundDetails?: PersonalFundDetailsFull;
-    id?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    description?: string;
-    title?: string;
-    ipfsHash?: string;
-    creationDate?: Date;
-    status?: FundDetailsFullStatusEnum;
-    manager?: ProfilePublic;
+    entryFee: number;
+    exitFee: number;
+    managementFee: number;
+    currentAssets: Array<FundAssetPartWithIcon>;
+    statistic: FundStatistic;
+    personalFundDetails: PersonalFundDetailsFull;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    description: string;
+    title: string;
+    ipfsHash: string;
+    creationDate: Date;
+    status: FundDetailsFullStatusEnum;
+    manager: ProfilePublic;
 }
 export declare type FundDetailsFullStatusEnum = 'None' | 'Pending' | 'ErrorCreating' | 'Active' | 'Closed' | 'Archived' | 'ClosedDueToInactivity';
 export interface FundDetailsListStatistic {
-    balanceGVT?: AmountWithCurrency;
-    balanceSecondary?: AmountWithCurrency;
-    profitPercent?: number;
-    drawdownPercent?: number;
-    investorsCount?: number;
+    balanceGVT: AmountWithCurrency;
+    balanceSecondary: AmountWithCurrency;
+    profitPercent: number;
+    drawdownPercent: number;
+    investorsCount: number;
 }
 export interface FundFacet {
-    sorting?: FundFacetSortingEnum;
-    id?: string;
-    title?: string;
-    description?: string;
-    logo?: string;
-    url?: string;
-    sortType?: FundFacetSortTypeEnum;
-    timeframe?: FundFacetTimeframeEnum;
+    sorting: FundFacetSortingEnum;
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: FundFacetSortTypeEnum;
+    timeframe: FundFacetTimeframeEnum;
 }
 export declare type FundFacetSortingEnum = 'ByProfitAsc' | 'ByProfitDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByTitleAsc' | 'ByTitleDesc' | 'ByBalanceAsc' | 'ByBalanceDesc';
 export declare type FundFacetSortTypeEnum = 'New' | 'Top' | 'WeeklyTop' | 'Popular' | 'ToLevelUp' | 'MostReliable';
 export declare type FundFacetTimeframeEnum = 'Day' | 'Week' | 'Month' | 'ThreeMonths' | 'Year' | 'AllTime';
 export interface FundFilters {
-    assets?: Array<PlatformAsset>;
+    assets: Array<PlatformAsset>;
 }
 export interface FundInvestInfo {
-    title?: string;
-    availableInWallet?: number;
-    minInvestmentAmount?: number;
-    entryFee?: number;
-    gvCommission?: number;
-    rate?: number;
-    isOwnProgram?: boolean;
+    title: string;
+    availableInWallet: number;
+    minInvestmentAmount: number;
+    entryFee: number;
+    gvCommission: number;
+    rate: number;
+    isOwnProgram: boolean;
 }
 export interface FundNotificationSettingList {
-    assetId?: string;
-    title?: string;
-    url?: string;
-    logo?: string;
-    color?: string;
-    settingsGeneral?: Array<NotificationSettingViewModel>;
+    assetId: string;
+    title: string;
+    url: string;
+    logo: string;
+    color: string;
+    settingsGeneral: Array<NotificationSettingViewModel>;
 }
 export interface FundProfitChart {
-    totalUsdProfit?: number;
-    timeframeUsdProfit?: number;
-    rebalances?: number;
-    creationDate?: Date;
-    profitPercent?: number;
-    equityChart?: Array<ChartSimple>;
-    balance?: number;
-    investors?: number;
-    profitChangePercent?: number;
-    sharpeRatio?: number;
-    sortinoRatio?: number;
-    calmarRatio?: number;
-    maxDrawdown?: number;
-    totalGvtProfit?: number;
-    timeframeGvtProfit?: number;
-    rate?: number;
+    totalUsdProfit: number;
+    timeframeUsdProfit: number;
+    rebalances: number;
+    creationDate: Date;
+    profitPercent: number;
+    equityChart: Array<ChartSimple>;
+    balance: number;
+    investors: number;
+    profitChangePercent: number;
+    sharpeRatio: number;
+    sortinoRatio: number;
+    calmarRatio: number;
+    maxDrawdown: number;
+    totalGvtProfit: number;
+    timeframeGvtProfit: number;
+    rate: number;
 }
 export interface FundSets {
-    sets?: Array<FundFacet>;
-    favoritesCount?: number;
+    sets: Array<FundFacet>;
+    favoritesCount: number;
 }
 export interface FundStatistic {
-    balanceGVT?: AmountWithCurrency;
-    balanceSecondary?: AmountWithCurrency;
-    profitPercent?: number;
-    drawdownPercent?: number;
-    investorsCount?: number;
-    startDate?: Date;
-    startBalance?: number;
-    investedAmount?: number;
-    rebalancingCount?: number;
+    balanceGVT: AmountWithCurrency;
+    balanceSecondary: AmountWithCurrency;
+    profitPercent: number;
+    drawdownPercent: number;
+    investorsCount: number;
+    startDate: Date;
+    startBalance: number;
+    investedAmount: number;
+    rebalancingCount: number;
 }
 export interface FundWithdrawInfo {
-    exitFee?: number;
-    title?: string;
-    availableToWithdraw?: number;
-    rate?: number;
+    exitFee: number;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
 }
 export interface FundsList {
-    funds?: Array<FundDetails>;
-    total?: number;
+    funds: Array<FundDetails>;
+    total: number;
 }
 export interface GeeTestDetails {
 }
 export interface GeeTestResult {
 }
 export interface IOsAppVersion {
-    minVersion?: string;
-    lastVersion?: string;
+    minVersion: string;
+    lastVersion: string;
 }
 export interface InternalTransferRequest {
-    sourceId?: string;
-    sourceType?: InternalTransferRequestSourceTypeEnum;
-    destinationId?: string;
-    destinationType?: InternalTransferRequestDestinationTypeEnum;
-    amount?: number;
-    transferAll?: boolean;
+    sourceId: string;
+    sourceType: InternalTransferRequestSourceTypeEnum;
+    destinationId: string;
+    destinationType: InternalTransferRequestDestinationTypeEnum;
+    amount: number;
+    transferAll: boolean;
 }
 export declare type InternalTransferRequestSourceTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings';
 export declare type InternalTransferRequestDestinationTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings';
 export interface LevelInfo {
-    level?: number;
-    investmentLimit?: number;
+    level: number;
+    investmentLimit: number;
 }
 export interface LevelUpData {
-    level?: number;
-    total?: number;
-    totalOwn?: number;
-    quota?: number;
-    targetProfit?: number;
+    level: number;
+    total: number;
+    totalOwn: number;
+    quota: number;
+    targetProfit: number;
 }
 export interface LevelUpSummary {
-    levelData?: Array<LevelUpData>;
+    levelData: Array<LevelUpData>;
 }
 export interface LevelsParamsInfo {
-    minAvailableToInvest?: number;
-    maxAvailableToInvest?: number;
-    unverifiedAvailableToInvest?: number;
-    genesisRatioMin?: number;
-    genesisRatioMax?: number;
-    genesisRatioHighRisk?: number;
-    volumeScaleMin?: number;
-    volumeScaleMax?: number;
-    programAgeMax?: number;
-    ageByVolumeMax?: number;
-    investmentScaleMin?: number;
-    investmentScaleMax?: number;
-    investmentScaleHighRisk?: number;
+    minAvailableToInvest: number;
+    maxAvailableToInvest: number;
+    unverifiedAvailableToInvest: number;
+    genesisRatioMin: number;
+    genesisRatioMax: number;
+    genesisRatioHighRisk: number;
+    volumeScaleMin: number;
+    volumeScaleMax: number;
+    programAgeMax: number;
+    ageByVolumeMax: number;
+    investmentScaleMin: number;
+    investmentScaleMax: number;
+    investmentScaleHighRisk: number;
 }
 export interface LoginViewModel {
     password: string;
-    rememberMe?: boolean;
-    twoFactorCode?: string;
-    recoveryCode?: string;
-    client?: string;
+    rememberMe: boolean;
+    twoFactorCode: string;
+    recoveryCode: string;
+    client: string;
     email: string;
-    captchaCheckResult?: CaptchaCheckResult;
+    captchaCheckResult: CaptchaCheckResult;
 }
 export interface ManagerAssets {
-    programs?: Array<ManagerSimpleProgram>;
-    funds?: Array<ManagerSimpleFund>;
+    programs: Array<ManagerSimpleProgram>;
+    funds: Array<ManagerSimpleFund>;
 }
 export interface ManagerDashboard {
-    profile?: ManagerProfileDetails;
-    requests?: ProgramRequest;
-    events?: ManagerPortfolioEvents;
-    allAssets?: Array<AssetSelection>;
-    programChart?: ProgramProfitChart;
-    fundChart?: FundProfitChart;
+    profile: ManagerProfileDetails;
+    requests: ProgramRequest;
+    events: ManagerPortfolioEvents;
+    allAssets: Array<AssetSelection>;
+    programChart: ProgramProfitChart;
+    fundChart: FundProfitChart;
 }
 export interface ManagerFundWithdrawInfo {
-    withheldInvestment?: number;
-    exitFee?: number;
-    title?: string;
-    availableToWithdraw?: number;
-    rate?: number;
+    withheldInvestment: number;
+    exitFee: number;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
 }
 export interface ManagerNotificationSettingList {
-    managerId?: string;
-    url?: string;
-    username?: string;
-    avatar?: string;
-    about?: string;
-    settingsGeneral?: Array<NotificationSettingViewModel>;
+    managerId: string;
+    url: string;
+    username: string;
+    avatar: string;
+    about: string;
+    settingsGeneral: Array<NotificationSettingViewModel>;
 }
 export interface ManagerOverview {
 }
 export interface ManagerPortfolioEvent {
-    assetId?: string;
-    date?: Date;
-    title?: string;
-    value?: number;
-    feeValue?: number;
-    profitPercent?: number;
-    currency?: ManagerPortfolioEventCurrencyEnum;
-    type?: ManagerPortfolioEventTypeEnum;
-    programType?: ManagerPortfolioEventProgramTypeEnum;
-    logo?: string;
-    color?: string;
-    description?: string;
-    url?: string;
-    periodNumber?: number;
+    assetId: string;
+    date: Date;
+    title: string;
+    value: number;
+    feeValue: number;
+    profitPercent: number;
+    currency: ManagerPortfolioEventCurrencyEnum;
+    type: ManagerPortfolioEventTypeEnum;
+    programType: ManagerPortfolioEventProgramTypeEnum;
+    logo: string;
+    color: string;
+    description: string;
+    url: string;
+    periodNumber: number;
 }
 export declare type ManagerPortfolioEventCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type ManagerPortfolioEventTypeEnum = 'All' | 'AssetStarted' | 'ProgramPeriodStarts' | 'ProgramPeriodEnds' | 'InvestorInvest' | 'InvestorWithdraw' | 'ManagerInvest' | 'ManagerWithdraw' | 'AssetFinished' | 'EntranceFee' | 'ExitFee' | 'ProgramStopOut' | 'ProgramManagerTradingFeeAccrual' | 'ProgramSignalSubscribe' | 'ProgramBrokerChanged';
 export declare type ManagerPortfolioEventProgramTypeEnum = 'Program' | 'Fund';
 export interface ManagerPortfolioEvents {
-    events?: Array<ManagerPortfolioEvent>;
-    total?: number;
+    events: Array<ManagerPortfolioEvent>;
+    total: number;
 }
 export interface ManagerProfile {
-    id?: string;
-    username?: string;
-    about?: string;
-    avatar?: string;
-    regDate?: Date;
-    assets?: Array<string>;
-    url?: string;
-    socialLinks?: Array<SocialLinkViewModel>;
+    id: string;
+    username: string;
+    about: string;
+    avatar: string;
+    regDate: Date;
+    assets: Array<string>;
+    url: string;
+    socialLinks: Array<SocialLinkViewModel>;
 }
 export interface ManagerProfileDetails {
-    managerProfile?: ManagerProfile;
-    overview?: ManagerOverview;
-    programsCount?: number;
-    fundsCount?: number;
+    managerProfile: ManagerProfile;
+    overview: ManagerOverview;
+    programsCount: number;
+    fundsCount: number;
 }
 export interface ManagerProgramCreateResult {
-    programId?: string;
-    twoFactorRequired?: boolean;
-    twoFactor?: TwoFactorAuthenticator;
+    programId: string;
+    twoFactorRequired: boolean;
+    twoFactor: TwoFactorAuthenticator;
 }
 export interface ManagerProgramWithdrawInfo {
-    withheldInvestment?: number;
-    periodEnds?: Date;
-    title?: string;
-    availableToWithdraw?: number;
-    rate?: number;
+    withheldInvestment: number;
+    periodEnds: Date;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
 }
 export interface ManagerSimpleFund {
-    id?: string;
-    title?: string;
-    color?: string;
-    logo?: string;
-    url?: string;
+    id: string;
+    title: string;
+    color: string;
+    logo: string;
+    url: string;
 }
 export interface ManagerSimpleProgram {
-    level?: number;
-    levelProgress?: number;
-    id?: string;
-    title?: string;
-    color?: string;
-    logo?: string;
-    url?: string;
+    level: number;
+    levelProgress: number;
+    id: string;
+    title: string;
+    color: string;
+    logo: string;
+    url: string;
 }
 export interface ManagersList {
-    managers?: Array<ManagerProfile>;
-    total?: number;
+    managers: Array<ManagerProfile>;
+    total: number;
 }
 export interface MigrationRequest {
-    dateCreate?: Date;
-    newLeverage?: number;
-    brokerTradingAccountId?: string;
-    brokerTradingAccountName?: string;
-    brokerName?: string;
-    brokerLogo?: string;
+    dateCreate: Date;
+    newLeverage: number;
+    brokerTradingAccountId: string;
+    brokerTradingAccountName: string;
+    brokerName: string;
+    brokerLogo: string;
 }
 export interface MultiWalletExternalTransaction {
-    id?: string;
-    currency?: MultiWalletExternalTransactionCurrencyEnum;
-    logo?: string;
-    date?: Date;
-    amount?: number;
-    type?: MultiWalletExternalTransactionTypeEnum;
-    status?: string;
-    isEnableActions?: boolean;
-    statusUrl?: string;
+    id: string;
+    currency: MultiWalletExternalTransactionCurrencyEnum;
+    logo: string;
+    date: Date;
+    amount: number;
+    type: MultiWalletExternalTransactionTypeEnum;
+    status: string;
+    isEnableActions: boolean;
+    statusUrl: string;
 }
 export declare type MultiWalletExternalTransactionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type MultiWalletExternalTransactionTypeEnum = 'All' | 'Deposit' | 'Withdrawal';
 export interface MultiWalletExternalTransactionsViewModel {
-    transactions?: Array<MultiWalletExternalTransaction>;
-    total?: number;
+    transactions: Array<MultiWalletExternalTransaction>;
+    total: number;
 }
 export interface MultiWalletFilters {
-    transactionType?: Array<string>;
-    externalTransactionType?: Array<string>;
+    transactionType: Array<string>;
+    externalTransactionType: Array<string>;
 }
 export interface MultiWalletTransaction {
-    id?: string;
-    currencyFrom?: MultiWalletTransactionCurrencyFromEnum;
-    currencyTo?: MultiWalletTransactionCurrencyToEnum;
-    type?: MultiWalletTransactionTypeEnum;
-    date?: Date;
-    status?: MultiWalletTransactionStatusEnum;
-    logoFrom?: string;
-    logoTo?: string;
-    description?: string;
-    amount?: number;
-    amountTo?: number;
+    id: string;
+    currencyFrom: MultiWalletTransactionCurrencyFromEnum;
+    currencyTo: MultiWalletTransactionCurrencyToEnum;
+    type: MultiWalletTransactionTypeEnum;
+    date: Date;
+    status: MultiWalletTransactionStatusEnum;
+    logoFrom: string;
+    logoTo: string;
+    description: string;
+    amount: number;
+    amountTo: number;
 }
 export declare type MultiWalletTransactionCurrencyFromEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type MultiWalletTransactionCurrencyToEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type MultiWalletTransactionTypeEnum = 'All' | 'Investment' | 'Converting' | 'Withdrawal' | 'Close' | 'Open' | 'Fee' | 'Profits' | 'SubscribeSignal' | 'ReceiveSignal' | 'DepositSignal' | 'WithdrawalSignal' | 'Platform';
 export declare type MultiWalletTransactionStatusEnum = 'Done' | 'Pending' | 'Canceled' | 'Error';
 export interface MultiWalletTransactionsViewModel {
-    transactions?: Array<MultiWalletTransaction>;
-    total?: number;
+    transactions: Array<MultiWalletTransaction>;
+    total: number;
 }
 export interface NewFundRequest {
-    exitFee?: number;
-    managementFee?: number;
-    assets?: Array<FundAssetPart>;
-    title?: string;
-    description?: string;
-    logo?: string;
-    entryFee?: number;
-    depositAmount?: number;
-    depositWalletId?: string;
+    exitFee: number;
+    managementFee: number;
+    assets: Array<FundAssetPart>;
+    title: string;
+    description: string;
+    logo: string;
+    entryFee: number;
+    depositAmount: number;
+    depositWalletId: string;
 }
 export interface NewProgramRequest {
-    currency?: NewProgramRequestCurrencyEnum;
-    periodLength?: number;
-    successFee?: number;
-    stopOutLevel?: number;
-    leverage?: number;
-    brokerAccountTypeId?: string;
-    signalSuccessFee?: number;
-    signalVolumeFee?: number;
-    isSignalProgram?: boolean;
-    investmentLimit?: number;
-    title?: string;
-    description?: string;
-    logo?: string;
-    entryFee?: number;
-    depositAmount?: number;
-    depositWalletId?: string;
+    currency: NewProgramRequestCurrencyEnum;
+    periodLength: number;
+    successFee: number;
+    stopOutLevel: number;
+    leverage: number;
+    brokerAccountTypeId: string;
+    signalSuccessFee: number;
+    signalVolumeFee: number;
+    isSignalProgram: boolean;
+    investmentLimit: number;
+    title: string;
+    description: string;
+    logo: string;
+    entryFee: number;
+    depositAmount: number;
+    depositWalletId: string;
 }
 export declare type NewProgramRequestCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface NotificationList {
-    notifications?: Array<NotificationViewModel>;
-    total?: number;
+    notifications: Array<NotificationViewModel>;
+    total: number;
 }
 export interface NotificationSettingList {
-    settingsGeneral?: Array<NotificationSettingViewModel>;
-    settingsProgram?: Array<ProgramNotificationSettingList>;
-    settingsFund?: Array<FundNotificationSettingList>;
-    settingsManager?: Array<ManagerNotificationSettingList>;
+    settingsGeneral: Array<NotificationSettingViewModel>;
+    settingsProgram: Array<ProgramNotificationSettingList>;
+    settingsFund: Array<FundNotificationSettingList>;
+    settingsManager: Array<ManagerNotificationSettingList>;
 }
 export interface NotificationSettingViewModel {
-    id?: string;
-    isEnabled?: boolean;
-    assetId?: string;
-    managerId?: string;
-    type?: NotificationSettingViewModelTypeEnum;
-    conditionType?: NotificationSettingViewModelConditionTypeEnum;
-    conditionAmount?: number;
+    id: string;
+    isEnabled: boolean;
+    assetId: string;
+    managerId: string;
+    type: NotificationSettingViewModelTypeEnum;
+    conditionType: NotificationSettingViewModelConditionTypeEnum;
+    conditionAmount: number;
 }
 export declare type NotificationSettingViewModelTypeEnum = 'PlatformNewsAndUpdates' | 'PlatformEmergency' | 'PlatformOther' | 'ProfileUpdated' | 'ProfilePwdUpdated' | 'ProfileVerification' | 'Profile2FA' | 'ProfileSecurity' | 'TradingAccountPwdUpdated' | 'ProgramNewsAndUpdates' | 'ProgramEndOfPeriod' | 'ProgramCondition' | 'ProgramExceedInvestmentLimit' | 'FundNewsAndUpdates' | 'FundEndOfPeriod' | 'FundRebalancing' | 'ManagerNewProgram' | 'Signals';
 export declare type NotificationSettingViewModelConditionTypeEnum = 'Empty' | 'Profit' | 'Level' | 'AvailableToInvest';
 export interface NotificationViewModel {
-    id?: string;
-    text?: string;
-    date?: Date;
-    type?: NotificationViewModelTypeEnum;
-    assetId?: string;
-    managerId?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    isUnread?: boolean;
-    assetType?: NotificationViewModelAssetTypeEnum;
+    id: string;
+    text: string;
+    date: Date;
+    type: NotificationViewModelTypeEnum;
+    assetId: string;
+    managerId: string;
+    logo: string;
+    url: string;
+    color: string;
+    isUnread: boolean;
+    assetType: NotificationViewModelAssetTypeEnum;
 }
 export declare type NotificationViewModelTypeEnum = 'PlatformNewsAndUpdates' | 'PlatformEmergency' | 'PlatformOther' | 'ProfileUpdated' | 'ProfilePwdUpdated' | 'ProfileVerification' | 'Profile2FA' | 'ProfileSecurity' | 'TradingAccountPwdUpdated' | 'ProgramNewsAndUpdates' | 'ProgramEndOfPeriod' | 'ProgramCondition' | 'ProgramExceedInvestmentLimit' | 'FundNewsAndUpdates' | 'FundEndOfPeriod' | 'FundRebalancing' | 'ManagerNewProgram' | 'Signals';
 export declare type NotificationViewModelAssetTypeEnum = 'Program' | 'Fund';
 export interface OrderModel {
-    id?: string;
-    login?: string;
-    ticket?: string;
-    symbol?: string;
-    volume?: number;
-    profit?: number;
-    direction?: OrderModelDirectionEnum;
-    date?: Date;
-    price?: number;
-    priceCurrent?: number;
-    entry?: OrderModelEntryEnum;
-    baseVolume?: number;
-    originalCommission?: number;
-    originalCommissionCurrency?: string;
-    commission?: number;
-    swap?: number;
-    showOriginalCommission?: boolean;
-    signalData?: OrderModelSignalData;
+    id: string;
+    login: string;
+    ticket: string;
+    symbol: string;
+    volume: number;
+    profit: number;
+    direction: OrderModelDirectionEnum;
+    date: Date;
+    price: number;
+    priceCurrent: number;
+    entry: OrderModelEntryEnum;
+    baseVolume: number;
+    originalCommission: number;
+    originalCommissionCurrency: string;
+    commission: number;
+    swap: number;
+    showOriginalCommission: boolean;
+    signalData: OrderModelSignalData;
 }
 export declare type OrderModelDirectionEnum = 'Buy' | 'Sell' | 'Balance' | 'Credit' | 'Undefined';
 export declare type OrderModelEntryEnum = 'In' | 'Out' | 'InOut' | 'OutBy';
 export interface OrderModelSignalData {
-    masters?: Array<SignalDataMaster>;
+    masters: Array<SignalDataMaster>;
 }
 export interface OrderProgramData {
-    title?: string;
-    level?: number;
-    levelProgress?: number;
-    color?: string;
-    url?: string;
-    logo?: string;
+    title: string;
+    level: number;
+    levelProgress: number;
+    color: string;
+    url: string;
+    logo: string;
 }
 export interface OrderSignalFee {
-    amount?: number;
-    currency?: OrderSignalFeeCurrencyEnum;
-    type?: OrderSignalFeeTypeEnum;
+    amount: number;
+    currency: OrderSignalFeeCurrencyEnum;
+    type: OrderSignalFeeTypeEnum;
 }
 export declare type OrderSignalFeeCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type OrderSignalFeeTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
 export interface OrderSignalModel {
-    providers?: Array<OrderSignalProgramInfo>;
-    totalCommission?: number;
-    totalCommissionByType?: Array<TotalCommission>;
-    tradingAccountId?: string;
-    currency?: OrderSignalModelCurrencyEnum;
-    id?: string;
-    login?: string;
-    ticket?: string;
-    symbol?: string;
-    volume?: number;
-    profit?: number;
-    direction?: OrderSignalModelDirectionEnum;
-    date?: Date;
-    price?: number;
-    priceCurrent?: number;
-    entry?: OrderSignalModelEntryEnum;
-    baseVolume?: number;
-    originalCommission?: number;
-    originalCommissionCurrency?: string;
-    commission?: number;
-    swap?: number;
-    showOriginalCommission?: boolean;
-    signalData?: OrderModelSignalData;
+    providers: Array<OrderSignalProgramInfo>;
+    totalCommission: number;
+    totalCommissionByType: Array<TotalCommission>;
+    tradingAccountId: string;
+    currency: OrderSignalModelCurrencyEnum;
+    id: string;
+    login: string;
+    ticket: string;
+    symbol: string;
+    volume: number;
+    profit: number;
+    direction: OrderSignalModelDirectionEnum;
+    date: Date;
+    price: number;
+    priceCurrent: number;
+    entry: OrderSignalModelEntryEnum;
+    baseVolume: number;
+    originalCommission: number;
+    originalCommissionCurrency: string;
+    commission: number;
+    swap: number;
+    showOriginalCommission: boolean;
+    signalData: OrderModelSignalData;
 }
 export declare type OrderSignalModelCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type OrderSignalModelDirectionEnum = 'Buy' | 'Sell' | 'Balance' | 'Credit' | 'Undefined';
 export declare type OrderSignalModelEntryEnum = 'In' | 'Out' | 'InOut' | 'OutBy';
 export interface OrderSignalProgramInfo {
-    manager?: ProfilePublic;
-    program?: OrderProgramData;
-    programId?: string;
-    volume?: number;
-    priceOpenAvg?: number;
-    profit?: number;
-    firstOrderDate?: Date;
-    fees?: Array<OrderSignalFee>;
+    manager: ProfilePublic;
+    program: OrderProgramData;
+    programId: string;
+    volume: number;
+    priceOpenAvg: number;
+    profit: number;
+    firstOrderDate: Date;
+    fees: Array<OrderSignalFee>;
 }
 export interface OtherAssetsValue {
-    amount?: number;
-    value?: number;
-    changePercent?: number;
-    changeValue?: number;
+    amount: number;
+    value: number;
+    changePercent: number;
+    changeValue: number;
 }
 export interface PasswordModel {
     password: string;
 }
 export interface PeriodDate {
-    dateFrom?: Date;
-    dateTo?: Date;
+    dateFrom: Date;
+    dateTo: Date;
 }
 export interface PersonalFundDetailsFull {
-    withdrawPercent?: number;
-    canReallocate?: boolean;
-    possibleReallocationTime?: Date;
-    isFavorite?: boolean;
-    isInvested?: boolean;
-    isOwnProgram?: boolean;
-    canCloseProgram?: boolean;
-    canCloseAsset?: boolean;
-    isFinishing?: boolean;
-    canInvest?: boolean;
-    canWithdraw?: boolean;
-    canClosePeriod?: boolean;
-    hasNotifications?: boolean;
-    value?: number;
-    profit?: number;
-    invested?: number;
-    pendingInput?: number;
-    pendingOutput?: number;
-    pendingOutputIsWithdrawAll?: boolean;
-    status?: PersonalFundDetailsFullStatusEnum;
+    withdrawPercent: number;
+    canReallocate: boolean;
+    possibleReallocationTime: Date;
+    isFavorite: boolean;
+    isInvested: boolean;
+    isOwnProgram: boolean;
+    canCloseProgram: boolean;
+    canCloseAsset: boolean;
+    isFinishing: boolean;
+    canInvest: boolean;
+    canWithdraw: boolean;
+    canClosePeriod: boolean;
+    hasNotifications: boolean;
+    value: number;
+    profit: number;
+    invested: number;
+    pendingInput: number;
+    pendingOutput: number;
+    pendingOutputIsWithdrawAll: boolean;
+    status: PersonalFundDetailsFullStatusEnum;
 }
 export declare type PersonalFundDetailsFullStatusEnum = 'Pending' | 'Active' | 'Investing' | 'Withdrawing' | 'Ended';
 export interface PersonalProgramDetailsFull {
-    isReinvest?: boolean;
-    gvtValue?: number;
-    showTwoFactorButton?: boolean;
-    signalSubscription?: SignalSubscription;
-    login?: string;
-    notificationAvailableToInvestId?: string;
-    canMakeSignalProvider?: boolean;
-    canChangePassword?: boolean;
-    migration?: MigrationRequest;
-    isFavorite?: boolean;
-    isInvested?: boolean;
-    isOwnProgram?: boolean;
-    canCloseProgram?: boolean;
-    canCloseAsset?: boolean;
-    isFinishing?: boolean;
-    canInvest?: boolean;
-    canWithdraw?: boolean;
-    canClosePeriod?: boolean;
-    hasNotifications?: boolean;
-    value?: number;
-    profit?: number;
-    invested?: number;
-    pendingInput?: number;
-    pendingOutput?: number;
-    pendingOutputIsWithdrawAll?: boolean;
-    status?: PersonalProgramDetailsFullStatusEnum;
+    isReinvest: boolean;
+    gvtValue: number;
+    showTwoFactorButton: boolean;
+    signalSubscription: SignalSubscription;
+    login: string;
+    notificationAvailableToInvestId: string;
+    canMakeSignalProvider: boolean;
+    canChangePassword: boolean;
+    migration: MigrationRequest;
+    isFavorite: boolean;
+    isInvested: boolean;
+    isOwnProgram: boolean;
+    canCloseProgram: boolean;
+    canCloseAsset: boolean;
+    isFinishing: boolean;
+    canInvest: boolean;
+    canWithdraw: boolean;
+    canClosePeriod: boolean;
+    hasNotifications: boolean;
+    value: number;
+    profit: number;
+    invested: number;
+    pendingInput: number;
+    pendingOutput: number;
+    pendingOutputIsWithdrawAll: boolean;
+    status: PersonalProgramDetailsFullStatusEnum;
 }
 export declare type PersonalProgramDetailsFullStatusEnum = 'Pending' | 'Active' | 'Investing' | 'Withdrawing' | 'Ended';
 export interface PersonalSignalDetailsFull {
-    subscriptionDate?: Date;
-    tradesCount?: number;
-    signalSubscription?: SignalSubscription;
-    profit?: number;
-    volume?: number;
-    isFavorite?: boolean;
-    isInvested?: boolean;
-    status?: PersonalSignalDetailsFullStatusEnum;
+    subscriptionDate: Date;
+    tradesCount: number;
+    signalSubscription: SignalSubscription;
+    profit: number;
+    volume: number;
+    isFavorite: boolean;
+    isInvested: boolean;
+    status: PersonalSignalDetailsFullStatusEnum;
 }
 export declare type PersonalSignalDetailsFullStatusEnum = 'Active' | 'Ended';
 export interface PlatformAsset {
-    id?: string;
-    name?: string;
-    asset?: string;
-    description?: string;
-    icon?: string;
-    color?: string;
+    id: string;
+    name: string;
+    asset: string;
+    description: string;
+    icon: string;
+    color: string;
 }
 export interface PlatformAssets {
-    assets?: Array<PlatformAsset>;
+    assets: Array<PlatformAsset>;
 }
 export interface PlatformCurrency {
-    name?: string;
-    rateToGvt?: number;
+    name: string;
+    rateToGvt: number;
 }
 export interface PlatformInfo {
-    iOSVersion?: IOsAppVersion;
-    androidVersion?: AndroidAppVersion;
-    programsFacets?: Array<ProgramFacet>;
-    fundsFacets?: Array<FundFacet>;
-    programsInfo?: ProgramsInfo;
-    currencies?: Array<string>;
-    programCurrencies?: Array<string>;
-    platformCurrencies?: Array<PlatformCurrency>;
-    enums?: Enums;
+    iOSVersion: IOsAppVersion;
+    androidVersion: AndroidAppVersion;
+    programsFacets: Array<ProgramFacet>;
+    fundsFacets: Array<FundFacet>;
+    programsInfo: ProgramsInfo;
+    currencies: Array<string>;
+    programCurrencies: Array<string>;
+    platformCurrencies: Array<PlatformCurrency>;
+    enums: Enums;
 }
 export interface PlatformStatistic {
-    managers?: number;
-    investors?: number;
-    profitWeek?: number;
-    investmentAmount?: number;
-    totalInvestorsProfit?: number;
-    totalProfit?: number;
+    managers: number;
+    investors: number;
+    profitWeek: number;
+    investmentAmount: number;
+    totalInvestorsProfit: number;
+    totalProfit: number;
 }
 export interface PowDetails {
-    secureAlgorithm?: PowDetailsSecureAlgorithmEnum;
-    difficulty?: number;
-    nonce?: string;
+    secureAlgorithm: PowDetailsSecureAlgorithmEnum;
+    difficulty: number;
+    nonce: string;
 }
 export declare type PowDetailsSecureAlgorithmEnum = 'Sha256';
 export interface PowResult {
-    prefix?: string;
+    prefix: string;
 }
 export interface ProfileFullViewModel {
-    id?: string;
-    email?: string;
-    firstName?: string;
-    middleName?: string;
-    lastName?: string;
-    country?: string;
-    city?: string;
-    address?: string;
-    phone?: string;
-    phoneNumberConfirmed?: boolean;
-    birthday?: Date;
-    gender?: boolean;
-    avatar?: string;
-    about?: string;
-    userName?: string;
-    index?: string;
-    citizenship?: string;
-    refUrl?: string;
-    verificationStatus?: ProfileFullViewModelVerificationStatusEnum;
+    id: string;
+    email: string;
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    country: string;
+    city: string;
+    address: string;
+    phone: string;
+    phoneNumberConfirmed: boolean;
+    birthday: Date;
+    gender: boolean;
+    avatar: string;
+    about: string;
+    userName: string;
+    index: string;
+    citizenship: string;
+    refUrl: string;
+    verificationStatus: ProfileFullViewModelVerificationStatusEnum;
 }
 export declare type ProfileFullViewModelVerificationStatusEnum = 'NotVerified' | 'Verified' | 'UnderReview' | 'Rejected';
 export interface ProfileHeaderViewModel {
-    id?: string;
-    name?: string;
-    email?: string;
-    avatar?: string;
-    userType?: ProfileHeaderViewModelUserTypeEnum;
-    notificationsCount?: number;
-    favoritesCount?: number;
-    kycConfirmed?: boolean;
-    allowForex?: boolean;
-    isTwoFactorEnabled?: boolean;
-    isNewUser?: boolean;
-    totalBalanceGvt?: number;
-    investedGvt?: number;
-    availableGvt?: number;
-    totalBalance?: number;
-    invested?: number;
-    available?: number;
-    pending?: number;
+    id: string;
+    name: string;
+    email: string;
+    avatar: string;
+    userType: ProfileHeaderViewModelUserTypeEnum;
+    notificationsCount: number;
+    favoritesCount: number;
+    kycConfirmed: boolean;
+    allowForex: boolean;
+    isTwoFactorEnabled: boolean;
+    isNewUser: boolean;
+    totalBalanceGvt: number;
+    investedGvt: number;
+    availableGvt: number;
+    totalBalance: number;
+    invested: number;
+    available: number;
+    pending: number;
 }
 export declare type ProfileHeaderViewModelUserTypeEnum = 'Investor' | 'Manager';
 export interface ProfilePublic {
-    id?: string;
-    username?: string;
-    avatar?: string;
-    registrationDate?: Date;
-    url?: string;
-    socialLinks?: Array<SocialLinkViewModel>;
+    id: string;
+    username: string;
+    avatar: string;
+    registrationDate: Date;
+    url: string;
+    socialLinks: Array<SocialLinkViewModel>;
 }
 export interface ProgramBalanceChart {
-    programCurrencyBalance?: number;
-    programCurrency?: ProgramBalanceChartProgramCurrencyEnum;
-    balanceChart?: Array<ProgramBalanceChartElement>;
-    gvtBalance?: number;
+    programCurrencyBalance: number;
+    programCurrency: ProgramBalanceChartProgramCurrencyEnum;
+    balanceChart: Array<ProgramBalanceChartElement>;
+    gvtBalance: number;
 }
 export declare type ProgramBalanceChartProgramCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface ProgramBalanceChartElement {
-    profit?: number;
-    date?: Date;
-    managerFunds?: number;
-    investorsFunds?: number;
+    profit: number;
+    date: Date;
+    managerFunds: number;
+    investorsFunds: number;
 }
 export interface ProgramDetails {
-    currency?: ProgramDetailsCurrencyEnum;
-    level?: number;
-    levelProgress?: number;
-    periodDuration?: number;
-    stopOutLevel?: number;
-    periodStarts?: Date;
-    periodEnds?: Date;
-    availableInvestment?: number;
-    availableInvestmentBase?: number;
-    availableInvestmentLimit?: number;
-    dashboardAssetsDetails?: DashboardProgramDetails;
-    statistic?: ProgramDetailsListStatistic;
-    rating?: ProgramDetailsRating;
-    personalDetails?: PersonalProgramDetailsFull;
-    tags?: Array<ProgramTag>;
-    id?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    title?: string;
-    description?: string;
-    status?: ProgramDetailsStatusEnum;
-    creationDate?: Date;
-    manager?: ProfilePublic;
-    chart?: Array<ChartSimple>;
+    currency: ProgramDetailsCurrencyEnum;
+    level: number;
+    levelProgress: number;
+    periodDuration: number;
+    stopOutLevel: number;
+    periodStarts: Date;
+    periodEnds: Date;
+    availableInvestment: number;
+    availableInvestmentBase: number;
+    availableInvestmentLimit: number;
+    dashboardAssetsDetails: DashboardProgramDetails;
+    statistic: ProgramDetailsListStatistic;
+    rating: ProgramDetailsRating;
+    personalDetails: PersonalProgramDetailsFull;
+    tags: Array<ProgramTag>;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    title: string;
+    description: string;
+    status: ProgramDetailsStatusEnum;
+    creationDate: Date;
+    manager: ProfilePublic;
+    chart: Array<ChartSimple>;
 }
 export declare type ProgramDetailsCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type ProgramDetailsStatusEnum = 'None' | 'Pending' | 'ErrorCreating' | 'Active' | 'Closed' | 'Archived' | 'ClosedDueToInactivity';
 export interface ProgramDetailsFull {
-    currency?: ProgramDetailsFullCurrencyEnum;
-    level?: number;
-    levelProgress?: number;
-    periodDuration?: number;
-    periodStarts?: Date;
-    periodEnds?: Date;
-    entryFee?: number;
-    entryFeeSelected?: number;
-    entryFeeCurrent?: number;
-    successFee?: number;
-    successFeeSelected?: number;
-    successFeeCurrent?: number;
-    stopOutLevel?: number;
-    stopOutLevelSelected?: number;
-    stopOutLevelCurrent?: number;
-    isReinvesting?: boolean;
-    isSignalProgram?: boolean;
-    signalSuccessFee?: number;
-    signalVolumeFee?: number;
-    leverageMin?: number;
-    leverageMax?: number;
-    ageDays?: number;
-    genesisRatio?: number;
-    investmentScale?: number;
-    volumeScale?: number;
-    availableInvestment?: number;
-    availableInvestmentBase?: number;
-    availableInvestmentLimit?: number;
-    totalAvailableInvestment?: number;
-    brokerDetails?: BrokerDetails;
-    statistic?: ProgramStatistic;
-    rating?: ProgramDetailsRating;
-    personalProgramDetails?: PersonalProgramDetailsFull;
-    tags?: Array<ProgramTag>;
-    id?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    description?: string;
-    title?: string;
-    ipfsHash?: string;
-    creationDate?: Date;
-    status?: ProgramDetailsFullStatusEnum;
-    manager?: ProfilePublic;
+    currency: ProgramDetailsFullCurrencyEnum;
+    level: number;
+    levelProgress: number;
+    periodDuration: number;
+    periodStarts: Date;
+    periodEnds: Date;
+    entryFee: number;
+    entryFeeSelected: number;
+    entryFeeCurrent: number;
+    successFee: number;
+    successFeeSelected: number;
+    successFeeCurrent: number;
+    stopOutLevel: number;
+    stopOutLevelSelected: number;
+    stopOutLevelCurrent: number;
+    isReinvesting: boolean;
+    isSignalProgram: boolean;
+    signalSuccessFee: number;
+    signalVolumeFee: number;
+    leverageMin: number;
+    leverageMax: number;
+    ageDays: number;
+    genesisRatio: number;
+    investmentScale: number;
+    volumeScale: number;
+    availableInvestment: number;
+    availableInvestmentBase: number;
+    availableInvestmentLimit: number;
+    totalAvailableInvestment: number;
+    brokerDetails: BrokerDetails;
+    statistic: ProgramStatistic;
+    rating: ProgramDetailsRating;
+    personalProgramDetails: PersonalProgramDetailsFull;
+    tags: Array<ProgramTag>;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    description: string;
+    title: string;
+    ipfsHash: string;
+    creationDate: Date;
+    status: ProgramDetailsFullStatusEnum;
+    manager: ProfilePublic;
 }
 export declare type ProgramDetailsFullCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type ProgramDetailsFullStatusEnum = 'None' | 'Pending' | 'ErrorCreating' | 'Active' | 'Closed' | 'Archived' | 'ClosedDueToInactivity';
 export interface ProgramDetailsListStatistic {
-    balanceBase?: AmountWithCurrency;
-    balanceGVT?: AmountWithCurrency;
-    balanceSecondary?: AmountWithCurrency;
-    currentValue?: number;
-    profitPercent?: number;
-    profitValue?: number;
-    drawdownPercent?: number;
-    investorsCount?: number;
-    tradesCount?: number;
+    balanceBase: AmountWithCurrency;
+    balanceGVT: AmountWithCurrency;
+    balanceSecondary: AmountWithCurrency;
+    currentValue: number;
+    profitPercent: number;
+    profitValue: number;
+    drawdownPercent: number;
+    investorsCount: number;
+    tradesCount: number;
 }
 export interface ProgramDetailsRating {
-    rating?: number;
-    profit?: number;
-    canLevelUp?: boolean;
-    topPercent?: number;
+    rating: number;
+    profit: number;
+    canLevelUp: boolean;
+    topPercent: number;
 }
 export interface ProgramFacet {
-    sorting?: ProgramFacetSortingEnum;
-    id?: string;
-    title?: string;
-    description?: string;
-    logo?: string;
-    url?: string;
-    sortType?: ProgramFacetSortTypeEnum;
-    timeframe?: ProgramFacetTimeframeEnum;
+    sorting: ProgramFacetSortingEnum;
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: ProgramFacetSortTypeEnum;
+    timeframe: ProgramFacetTimeframeEnum;
 }
 export declare type ProgramFacetSortingEnum = 'ByLevelAsc' | 'ByLevelDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByTradesAsc' | 'ByTradesDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByNewDesc' | 'ByNewAsc' | 'ByEndOfPeriodAsc' | 'ByEndOfPeriodDesc' | 'ByTitleAsc' | 'ByTitleDesc' | 'ByBalanceAsc' | 'ByBalanceDesc' | 'ByCurrDesc' | 'ByCurrAsc' | 'ByLevelProgressDesc' | 'ByLevelProgressAsc';
 export declare type ProgramFacetSortTypeEnum = 'New' | 'Top' | 'WeeklyTop' | 'Popular' | 'ToLevelUp' | 'MostReliable';
 export declare type ProgramFacetTimeframeEnum = 'Day' | 'Week' | 'Month' | 'ThreeMonths' | 'Year' | 'AllTime';
 export interface ProgramFilters {
-    programTags?: Array<ProgramTag>;
-    actionType?: Array<string>;
-    customNotificationType?: Array<string>;
-    managerNotificationType?: AssetEvent;
-    investorNotificationType?: AssetEvent;
+    programTags: Array<ProgramTag>;
+    actionType: Array<string>;
+    customNotificationType: Array<string>;
+    managerNotificationType: AssetEvent;
+    investorNotificationType: AssetEvent;
 }
 export interface ProgramInfo {
-    title?: string;
+    title: string;
 }
 export interface ProgramInvestInfo {
-    periodEnds?: Date;
-    availableToInvest?: number;
-    availableToInvestBase?: number;
-    title?: string;
-    availableInWallet?: number;
-    minInvestmentAmount?: number;
-    entryFee?: number;
-    gvCommission?: number;
-    rate?: number;
-    isOwnProgram?: boolean;
+    periodEnds: Date;
+    availableToInvest: number;
+    availableToInvestBase: number;
+    title: string;
+    availableInWallet: number;
+    minInvestmentAmount: number;
+    entryFee: number;
+    gvCommission: number;
+    rate: number;
+    isOwnProgram: boolean;
 }
 export interface ProgramLevelInfo {
-    isKycPassed?: boolean;
-    level?: number;
-    levelProgressPercent?: number;
-    genesisRatio?: number;
-    programAge?: number;
-    weightedVolumeScale?: number;
-    managerBalance?: number;
-    investmentScale?: number;
-    totalAvailableToInvest?: number;
+    isKycPassed: boolean;
+    level: number;
+    levelProgressPercent: number;
+    genesisRatio: number;
+    programAge: number;
+    weightedVolumeScale: number;
+    managerBalance: number;
+    investmentScale: number;
+    totalAvailableToInvest: number;
 }
 export interface ProgramMinimumDeposit {
-    minimumDepositsAmount?: {
+    minimumDepositsAmount: {
         [key: string]: number;
     };
 }
 export interface ProgramNotificationSettingList {
-    level?: number;
-    levelProgress?: number;
-    settingsCustom?: Array<NotificationSettingViewModel>;
-    assetId?: string;
-    title?: string;
-    url?: string;
-    logo?: string;
-    color?: string;
-    settingsGeneral?: Array<NotificationSettingViewModel>;
+    level: number;
+    levelProgress: number;
+    settingsCustom: Array<NotificationSettingViewModel>;
+    assetId: string;
+    title: string;
+    url: string;
+    logo: string;
+    color: string;
+    settingsGeneral: Array<NotificationSettingViewModel>;
 }
 export interface ProgramPeriodViewModel {
-    dateFrom?: Date;
-    dateTo?: Date;
-    status?: ProgramPeriodViewModelStatusEnum;
-    number?: number;
-    profit?: number;
-    balance?: number;
-    investors?: number;
-    managerStatistic?: FinancialStatistic;
+    dateFrom: Date;
+    dateTo: Date;
+    status: ProgramPeriodViewModelStatusEnum;
+    number: number;
+    profit: number;
+    balance: number;
+    investors: number;
+    managerStatistic: FinancialStatistic;
 }
 export declare type ProgramPeriodViewModelStatusEnum = 'Planned' | 'InProccess' | 'Closed';
 export interface ProgramPeriodsViewModel {
-    periods?: Array<ProgramPeriodViewModel>;
-    total?: number;
+    periods: Array<ProgramPeriodViewModel>;
+    total: number;
 }
 export interface ProgramProfitChart {
-    totalProgramCurrencyProfit?: number;
-    timeframeProgramCurrencyProfit?: number;
-    programCurrency?: ProgramProfitChartProgramCurrencyEnum;
-    trades?: number;
-    successTradesPercent?: number;
-    profitFactor?: number;
-    pnLChart?: Array<ChartSimple>;
-    periods?: Array<PeriodDate>;
-    lastPeriodStarts?: Date;
-    lastPeriodEnds?: Date;
-    tradingVolume?: number;
-    equityChart?: Array<ChartSimple>;
-    balance?: number;
-    investors?: number;
-    profitChangePercent?: number;
-    sharpeRatio?: number;
-    sortinoRatio?: number;
-    calmarRatio?: number;
-    maxDrawdown?: number;
-    totalGvtProfit?: number;
-    timeframeGvtProfit?: number;
-    rate?: number;
+    totalProgramCurrencyProfit: number;
+    timeframeProgramCurrencyProfit: number;
+    programCurrency: ProgramProfitChartProgramCurrencyEnum;
+    trades: number;
+    successTradesPercent: number;
+    profitFactor: number;
+    pnLChart: Array<ChartSimple>;
+    periods: Array<PeriodDate>;
+    lastPeriodStarts: Date;
+    lastPeriodEnds: Date;
+    tradingVolume: number;
+    equityChart: Array<ChartSimple>;
+    balance: number;
+    investors: number;
+    profitChangePercent: number;
+    sharpeRatio: number;
+    sortinoRatio: number;
+    calmarRatio: number;
+    maxDrawdown: number;
+    totalGvtProfit: number;
+    timeframeGvtProfit: number;
+    rate: number;
 }
 export declare type ProgramProfitChartProgramCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface ProgramPwdUpdate {
-    password?: string;
-    twoFactorCode?: string;
+    password: string;
+    twoFactorCode: string;
 }
 export interface ProgramRequest {
-    id?: string;
-    programId?: string;
-    date?: Date;
-    value?: number;
-    valueGvt?: number;
-    withdrawAll?: boolean;
-    feeEntry?: number;
-    feeExit?: number;
-    currency?: ProgramRequestCurrencyEnum;
-    fundWithdrawPercent?: number;
-    type?: ProgramRequestTypeEnum;
-    status?: ProgramRequestStatusEnum;
-    logo?: string;
-    title?: string;
-    color?: string;
-    canCancelRequest?: boolean;
-    programType?: ProgramRequestProgramTypeEnum;
+    id: string;
+    programId: string;
+    date: Date;
+    value: number;
+    valueGvt: number;
+    withdrawAll: boolean;
+    feeEntry: number;
+    feeExit: number;
+    currency: ProgramRequestCurrencyEnum;
+    fundWithdrawPercent: number;
+    type: ProgramRequestTypeEnum;
+    status: ProgramRequestStatusEnum;
+    logo: string;
+    title: string;
+    color: string;
+    canCancelRequest: boolean;
+    programType: ProgramRequestProgramTypeEnum;
 }
 export declare type ProgramRequestCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type ProgramRequestTypeEnum = 'Invest' | 'Withdrawal';
 export declare type ProgramRequestStatusEnum = 'New' | 'Executed' | 'Cancelled';
 export declare type ProgramRequestProgramTypeEnum = 'Program' | 'Fund';
 export interface ProgramRequests {
-    requests?: Array<ProgramRequest>;
-    total?: number;
-    totalValue?: number;
+    requests: Array<ProgramRequest>;
+    total: number;
+    totalValue: number;
 }
 export interface ProgramSets {
-    sets?: Array<ProgramFacet>;
-    favoritesCount?: number;
+    sets: Array<ProgramFacet>;
+    favoritesCount: number;
 }
 export interface ProgramStatistic {
-    balanceBase?: AmountWithCurrency;
-    balanceGVT?: AmountWithCurrency;
-    balanceSecondary?: AmountWithCurrency;
-    currentValue?: number;
-    profitPercent?: number;
-    profitValue?: number;
-    drawdownPercent?: number;
-    investorsCount?: number;
-    hasNotifications?: boolean;
-    startDate?: Date;
-    startBalance?: number;
-    startCurrency?: ProgramStatisticStartCurrencyEnum;
-    investedAmount?: number;
-    investedCurrency?: ProgramStatisticInvestedCurrencyEnum;
-    tradesCount?: number;
-    tradesSuccessCount?: number;
-    profitFactorPercent?: number;
-    sharpeRatioPercent?: number;
+    balanceBase: AmountWithCurrency;
+    balanceGVT: AmountWithCurrency;
+    balanceSecondary: AmountWithCurrency;
+    currentValue: number;
+    profitPercent: number;
+    profitValue: number;
+    drawdownPercent: number;
+    investorsCount: number;
+    hasNotifications: boolean;
+    startDate: Date;
+    startBalance: number;
+    startCurrency: ProgramStatisticStartCurrencyEnum;
+    investedAmount: number;
+    investedCurrency: ProgramStatisticInvestedCurrencyEnum;
+    tradesCount: number;
+    tradesSuccessCount: number;
+    profitFactorPercent: number;
+    sharpeRatioPercent: number;
 }
 export declare type ProgramStatisticStartCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type ProgramStatisticInvestedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface ProgramTag {
-    name?: string;
-    color?: string;
+    name: string;
+    color: string;
 }
 export interface ProgramTransactionDetails {
-    id?: string;
-    managerName?: string;
-    programType?: ProgramTransactionDetailsProgramTypeEnum;
-    successFeeCurrency?: ProgramTransactionDetailsSuccessFeeCurrencyEnum;
-    logo?: string;
-    title?: string;
-    entryFee?: number;
-    entryFeePercent?: number;
-    successFee?: number;
-    successFeePercent?: number;
-    level?: number;
-    levelProgress?: number;
-    exitFee?: number;
-    exitFeePercent?: number;
-    color?: string;
+    id: string;
+    managerName: string;
+    programType: ProgramTransactionDetailsProgramTypeEnum;
+    successFeeCurrency: ProgramTransactionDetailsSuccessFeeCurrencyEnum;
+    logo: string;
+    title: string;
+    entryFee: number;
+    entryFeePercent: number;
+    successFee: number;
+    successFeePercent: number;
+    level: number;
+    levelProgress: number;
+    exitFee: number;
+    exitFeePercent: number;
+    color: string;
 }
 export declare type ProgramTransactionDetailsProgramTypeEnum = 'Program' | 'Fund';
 export declare type ProgramTransactionDetailsSuccessFeeCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface ProgramUpdate {
-    title?: string;
-    description?: string;
-    logo?: string;
-    stopOutLevel?: number;
-    investmentLimit?: number;
+    title: string;
+    description: string;
+    logo: string;
+    stopOutLevel: number;
+    investmentLimit: number;
 }
 export interface ProgramWithdrawInfo {
-    periodEnds?: Date;
-    title?: string;
-    availableToWithdraw?: number;
-    rate?: number;
+    periodEnds: Date;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
 }
 export interface ProgramsInfo {
-    managerProgramInvestment?: number;
-    managerProgramInvestmentUSD?: number;
-    managerProgramInvestmentUSDT?: number;
-    managerProgramInvestmentBTC?: number;
-    managerProgramInvestmentETH?: number;
-    managerMaxEntryFee?: number;
-    managerMaxSuccessFee?: number;
-    managerFundInvestment?: number;
-    managerMaxExitFee?: number;
-    managerMaxSignalVolumeFee?: number;
-    managerMinSignalVolumeFee?: number;
-    managerMaxSignalSuccessFee?: number;
-    managerMinSignalSuccessFee?: number;
-    periods?: Array<number>;
+    managerProgramInvestment: number;
+    managerProgramInvestmentUSD: number;
+    managerProgramInvestmentUSDT: number;
+    managerProgramInvestmentBTC: number;
+    managerProgramInvestmentETH: number;
+    managerMaxEntryFee: number;
+    managerMaxSuccessFee: number;
+    managerFundInvestment: number;
+    managerMaxExitFee: number;
+    managerMaxSignalVolumeFee: number;
+    managerMinSignalVolumeFee: number;
+    managerMaxSignalSuccessFee: number;
+    managerMinSignalSuccessFee: number;
+    periods: Array<number>;
 }
 export interface ProgramsLevelsInfo {
-    levels?: Array<LevelInfo>;
+    levels: Array<LevelInfo>;
 }
 export interface ProgramsList {
-    programs?: Array<ProgramDetails>;
-    total?: number;
+    programs: Array<ProgramDetails>;
+    total: number;
 }
 export interface RateItem {
-    currency?: RateItemCurrencyEnum;
-    rate?: number;
+    currency: RateItemCurrencyEnum;
+    rate: number;
 }
 export declare type RateItemCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface RatesModel {
-    rates?: RatesModelRates;
+    rates: RatesModelRates;
 }
 export interface RatesModelRates {
-    undefined?: Array<RateItem>;
-    GVT?: Array<RateItem>;
-    ETH?: Array<RateItem>;
-    BTC?: Array<RateItem>;
-    ADA?: Array<RateItem>;
-    USDT?: Array<RateItem>;
-    XRP?: Array<RateItem>;
-    BCH?: Array<RateItem>;
-    LTC?: Array<RateItem>;
-    DOGE?: Array<RateItem>;
-    BNB?: Array<RateItem>;
-    USD?: Array<RateItem>;
-    EUR?: Array<RateItem>;
+    undefined: Array<RateItem>;
+    GVT: Array<RateItem>;
+    ETH: Array<RateItem>;
+    BTC: Array<RateItem>;
+    ADA: Array<RateItem>;
+    USDT: Array<RateItem>;
+    XRP: Array<RateItem>;
+    BCH: Array<RateItem>;
+    LTC: Array<RateItem>;
+    DOGE: Array<RateItem>;
+    BNB: Array<RateItem>;
+    USD: Array<RateItem>;
+    EUR: Array<RateItem>;
 }
 export interface ReallocationModel {
-    date?: Date;
-    parts?: Array<FundAssetPartWithIcon>;
+    date: Date;
+    parts: Array<FundAssetPartWithIcon>;
 }
 export interface ReallocationsViewModel {
-    reallocations?: Array<ReallocationModel>;
-    total?: number;
+    reallocations: Array<ReallocationModel>;
+    total: number;
 }
 export interface RecoveryCode {
-    code?: string;
-    isActive?: boolean;
+    code: string;
+    isActive: boolean;
 }
 export interface RecoveryCodesViewModel {
-    codes?: Array<RecoveryCode>;
-    authToken?: string;
+    codes: Array<RecoveryCode>;
+    authToken: string;
 }
 export interface RegisterInvestorViewModel {
     password: string;
-    confirmPassword?: string;
-    refCode?: string;
-    isAuto?: boolean;
+    confirmPassword: string;
+    refCode: string;
+    isAuto: boolean;
     email: string;
-    captchaCheckResult?: CaptchaCheckResult;
+    captchaCheckResult: CaptchaCheckResult;
 }
 export interface RegisterManagerViewModel {
     userName: string;
     password: string;
-    confirmPassword?: string;
-    refCode?: string;
-    isAuto?: boolean;
+    confirmPassword: string;
+    refCode: string;
+    isAuto: boolean;
     email: string;
-    captchaCheckResult?: CaptchaCheckResult;
+    captchaCheckResult: CaptchaCheckResult;
 }
 export interface ResendConfirmationViewModel {
     email: string;
-    captchaCheckResult?: CaptchaCheckResult;
+    captchaCheckResult: CaptchaCheckResult;
 }
 export interface ResetPasswordViewModel {
     userId: string;
     code: string;
     password: string;
-    confirmPassword?: string;
+    confirmPassword: string;
 }
 export interface SearchViewModel {
-    programs?: ProgramsList;
-    funds?: FundsList;
-    managers?: ManagersList;
+    programs: ProgramsList;
+    funds: FundsList;
+    managers: ManagersList;
 }
 export interface SignalDataMaster {
-    login?: string;
-    share?: number;
+    login: string;
+    share: number;
 }
 export interface SignalDetails {
-    statistic?: ProgramDetailsListStatistic;
-    personalDetails?: PersonalSignalDetailsFull;
-    currency?: SignalDetailsCurrencyEnum;
-    level?: number;
-    levelProgress?: number;
-    tags?: Array<ProgramTag>;
-    subscribers?: number;
-    id?: string;
-    logo?: string;
-    url?: string;
-    color?: string;
-    title?: string;
-    description?: string;
-    status?: SignalDetailsStatusEnum;
-    creationDate?: Date;
-    manager?: ProfilePublic;
-    chart?: Array<ChartSimple>;
+    statistic: ProgramDetailsListStatistic;
+    personalDetails: PersonalSignalDetailsFull;
+    currency: SignalDetailsCurrencyEnum;
+    level: number;
+    levelProgress: number;
+    tags: Array<ProgramTag>;
+    subscribers: number;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    title: string;
+    description: string;
+    status: SignalDetailsStatusEnum;
+    creationDate: Date;
+    manager: ProfilePublic;
+    chart: Array<ChartSimple>;
 }
 export declare type SignalDetailsCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type SignalDetailsStatusEnum = 'None' | 'Pending' | 'ErrorCreating' | 'Active' | 'Closed' | 'Archived' | 'ClosedDueToInactivity';
 export interface SignalFee {
-    title?: string;
-    type?: SignalFeeTypeEnum;
-    value?: number;
-    currency?: SignalFeeCurrencyEnum;
+    title: string;
+    type: SignalFeeTypeEnum;
+    value: number;
+    currency: SignalFeeCurrencyEnum;
 }
 export declare type SignalFeeTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
 export declare type SignalFeeCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface SignalProviderSubscribers {
-    subscribers?: Array<SignalSubscriber>;
-    total?: number;
+    subscribers: Array<SignalSubscriber>;
+    total: number;
 }
 export interface SignalSubscriber {
-    number?: number;
-    trades?: number;
-    profit?: number;
-    volume?: number;
-    subscriptionDate?: Date;
-    unsubscriptionDate?: Date;
-    status?: SignalSubscriberStatusEnum;
-    totalCommissionAmount?: number;
-    totalCommissionCurrency?: SignalSubscriberTotalCommissionCurrencyEnum;
-    totalSuccessFeeAmount?: number;
-    totalSuccessFeeCurrency?: SignalSubscriberTotalSuccessFeeCurrencyEnum;
-    totalVolumeFeeAmount?: number;
-    totalVolumeFeeCurrency?: SignalSubscriberTotalVolumeFeeCurrencyEnum;
+    number: number;
+    trades: number;
+    profit: number;
+    volume: number;
+    subscriptionDate: Date;
+    unsubscriptionDate: Date;
+    status: SignalSubscriberStatusEnum;
+    totalCommissionAmount: number;
+    totalCommissionCurrency: SignalSubscriberTotalCommissionCurrencyEnum;
+    totalSuccessFeeAmount: number;
+    totalSuccessFeeCurrency: SignalSubscriberTotalSuccessFeeCurrencyEnum;
+    totalVolumeFeeAmount: number;
+    totalVolumeFeeCurrency: SignalSubscriberTotalVolumeFeeCurrencyEnum;
 }
 export declare type SignalSubscriberStatusEnum = 'Active' | 'Ended';
 export declare type SignalSubscriberTotalCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type SignalSubscriberTotalSuccessFeeCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type SignalSubscriberTotalVolumeFeeCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface SignalSubscription {
-    hasSignalAccount?: boolean;
-    hasActiveSubscription?: boolean;
-    mode?: SignalSubscriptionModeEnum;
-    percent?: number;
-    openTolerancePercent?: number;
-    fixedVolume?: number;
-    fixedCurrency?: SignalSubscriptionFixedCurrencyEnum;
-    totalProfit?: number;
-    totalVolume?: number;
+    hasSignalAccount: boolean;
+    hasActiveSubscription: boolean;
+    mode: SignalSubscriptionModeEnum;
+    percent: number;
+    openTolerancePercent: number;
+    fixedVolume: number;
+    fixedCurrency: SignalSubscriptionFixedCurrencyEnum;
+    totalProfit: number;
+    totalVolume: number;
 }
 export declare type SignalSubscriptionModeEnum = 'ByBalance' | 'Percent' | 'Fixed';
 export declare type SignalSubscriptionFixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface SignalTradingEvent {
-    date?: Date;
-    message?: string;
+    date: Date;
+    message: string;
 }
 export interface SignalTradingEvents {
-    events?: Array<SignalTradingEvent>;
-    total?: number;
+    events: Array<SignalTradingEvent>;
+    total: number;
 }
 export interface SignalsList {
-    programs?: Array<SignalDetails>;
-    total?: number;
+    programs: Array<SignalDetails>;
+    total: number;
 }
 export interface SocialLinkViewModel {
-    url?: string;
-    logo?: string;
-    name?: string;
-    value?: string;
-    type?: SocialLinkViewModelTypeEnum;
+    url: string;
+    logo: string;
+    name: string;
+    value: string;
+    type: SocialLinkViewModelTypeEnum;
 }
 export declare type SocialLinkViewModelTypeEnum = 'Undefined' | 'Twitter' | 'Telegram' | 'Facebook' | 'LinkedIn' | 'Youtube' | 'WeChat' | 'Email';
 export interface SocialLinksViewModel {
-    socialLinks?: Array<SocialLinkViewModel>;
+    socialLinks: Array<SocialLinkViewModel>;
 }
 export interface TotalCommission {
-    amount?: number;
-    currency?: TotalCommissionCurrencyEnum;
-    type?: TotalCommissionTypeEnum;
+    amount: number;
+    currency: TotalCommissionCurrencyEnum;
+    type: TotalCommissionTypeEnum;
 }
 export declare type TotalCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type TotalCommissionTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
 export interface TradesSignalViewModel {
-    showSwaps?: boolean;
-    showTickets?: boolean;
-    trades?: Array<OrderSignalModel>;
-    total?: number;
+    showSwaps: boolean;
+    showTickets: boolean;
+    trades: Array<OrderSignalModel>;
+    total: number;
 }
 export interface TradesViewModel {
-    showSwaps?: boolean;
-    showTickets?: boolean;
-    trades?: Array<OrderModel>;
-    total?: number;
+    showSwaps: boolean;
+    showTickets: boolean;
+    trades: Array<OrderModel>;
+    total: number;
 }
 export interface TransactionDetails {
-    type?: TransactionDetailsTypeEnum;
-    programDetails?: ProgramTransactionDetails;
-    convertingDetails?: ConvertingDetails;
-    externalTransactionDetails?: ExternalTransactionDetails;
-    status?: TransactionDetailsStatusEnum;
-    signalFees?: Array<SignalFee>;
-    currency?: TransactionDetailsCurrencyEnum;
-    currencyName?: string;
-    currencyLogo?: string;
-    gvCommission?: number;
-    gvCommissionCurrency?: TransactionDetailsGvCommissionCurrencyEnum;
-    gvCommissionPercent?: number;
-    amount?: number;
+    type: TransactionDetailsTypeEnum;
+    programDetails: ProgramTransactionDetails;
+    convertingDetails: ConvertingDetails;
+    externalTransactionDetails: ExternalTransactionDetails;
+    status: TransactionDetailsStatusEnum;
+    signalFees: Array<SignalFee>;
+    currency: TransactionDetailsCurrencyEnum;
+    currencyName: string;
+    currencyLogo: string;
+    gvCommission: number;
+    gvCommissionCurrency: TransactionDetailsGvCommissionCurrencyEnum;
+    gvCommissionPercent: number;
+    amount: number;
 }
 export declare type TransactionDetailsTypeEnum = 'Investing' | 'Withdrawal' | 'ExternalWithdrawal' | 'ExternalDeposit' | 'Converting' | 'Open' | 'Close' | 'Profit' | 'PlatformFee' | 'SubscribeSignal' | 'ReceiveSignal' | 'DepositSignal' | 'WithdrawalSignal' | 'Platform';
 export declare type TransactionDetailsStatusEnum = 'Done' | 'Pending' | 'Canceled' | 'Error';
 export declare type TransactionDetailsCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type TransactionDetailsGvCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface TwoFactorAuthenticator {
-    sharedKey?: string;
-    authenticatorUri?: string;
+    sharedKey: string;
+    authenticatorUri: string;
 }
 export interface TwoFactorAuthenticatorConfirm {
     code: string;
@@ -1503,123 +1503,123 @@ export interface TwoFactorCodeModel {
     password: string;
 }
 export interface TwoFactorStatus {
-    twoFactorEnabled?: boolean;
+    twoFactorEnabled: boolean;
 }
 export interface UpdatePersonalDetailViewModel {
-    firstName?: string;
-    middleName?: string;
-    lastName?: string;
-    birthday?: Date;
-    citizenship?: string;
-    gender?: boolean;
-    documentId?: string;
-    phoneNumber?: string;
-    country?: string;
-    city?: string;
-    address?: string;
-    index?: string;
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    birthday: Date;
+    citizenship: string;
+    gender: boolean;
+    documentId: string;
+    phoneNumber: string;
+    country: string;
+    city: string;
+    address: string;
+    index: string;
 }
 export interface UpdateProfileViewModel {
-    userName?: string;
-    about?: string;
+    userName: string;
+    about: string;
 }
 export interface UpdateSocialLinkViewModel {
-    type?: UpdateSocialLinkViewModelTypeEnum;
-    value?: string;
+    type: UpdateSocialLinkViewModelTypeEnum;
+    value: string;
 }
 export declare type UpdateSocialLinkViewModelTypeEnum = 'Undefined' | 'Twitter' | 'Telegram' | 'Facebook' | 'LinkedIn' | 'Youtube' | 'WeChat' | 'Email';
 export interface UploadResult {
-    id?: string;
+    id: string;
 }
 export interface UserCommissionData {
-    isPayingCommissionInGvt?: boolean;
-    gvtHolderTradingFee?: number;
-    gvtHolderDiscount?: number;
-    regularTradingFee?: number;
-    regularDiscount?: number;
+    isPayingCommissionInGvt: boolean;
+    gvtHolderTradingFee: number;
+    gvtHolderDiscount: number;
+    regularTradingFee: number;
+    regularDiscount: number;
 }
 export interface ValueChartBar {
-    value?: number;
-    date?: Date;
-    topAssets?: Array<AssetsValue>;
-    otherAssetsValue?: OtherAssetsValue;
+    value: number;
+    date: Date;
+    topAssets: Array<AssetsValue>;
+    otherAssetsValue: OtherAssetsValue;
 }
 export interface WalletBaseData {
-    id?: string;
-    title?: string;
-    logo?: string;
-    currency?: WalletBaseDataCurrencyEnum;
-    available?: number;
-    rate?: number;
+    id: string;
+    title: string;
+    logo: string;
+    currency: WalletBaseDataCurrencyEnum;
+    available: number;
+    rate: number;
 }
 export declare type WalletBaseDataCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletData {
-    id?: string;
-    title?: string;
-    logo?: string;
-    rateToGVT?: number;
-    isDepositEnabled?: boolean;
-    isWithdrawalEnabled?: boolean;
-    withdrawalCommission?: number;
-    depositAddress?: string;
-    currency?: WalletDataCurrencyEnum;
-    available?: number;
-    invested?: number;
-    pending?: number;
-    total?: number;
-    currencyCcy?: WalletDataCurrencyCcyEnum;
-    availableCcy?: number;
-    investedCcy?: number;
-    pendingCcy?: number;
-    totalCcy?: number;
+    id: string;
+    title: string;
+    logo: string;
+    rateToGVT: number;
+    isDepositEnabled: boolean;
+    isWithdrawalEnabled: boolean;
+    withdrawalCommission: number;
+    depositAddress: string;
+    currency: WalletDataCurrencyEnum;
+    available: number;
+    invested: number;
+    pending: number;
+    total: number;
+    currencyCcy: WalletDataCurrencyCcyEnum;
+    availableCcy: number;
+    investedCcy: number;
+    pendingCcy: number;
+    totalCcy: number;
 }
 export declare type WalletDataCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type WalletDataCurrencyCcyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletInfo {
-    currency?: WalletInfoCurrencyEnum;
-    address?: string;
-    rateToGVT?: number;
-    description?: string;
-    logo?: string;
-    isDepositEnabled?: boolean;
+    currency: WalletInfoCurrencyEnum;
+    address: string;
+    rateToGVT: number;
+    description: string;
+    logo: string;
+    isDepositEnabled: boolean;
 }
 export declare type WalletInfoCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletMultiAvailable {
-    wallets?: Array<WalletBaseData>;
+    wallets: Array<WalletBaseData>;
 }
 export interface WalletMultiSummary {
-    grandTotal?: WalletsGrandTotal;
-    wallets?: Array<WalletData>;
-    payFeesWithGvt?: boolean;
+    grandTotal: WalletsGrandTotal;
+    wallets: Array<WalletData>;
+    payFeesWithGvt: boolean;
 }
 export interface WalletSummary {
-    totalBalanceGVT?: number;
-    totalBalanceCurrency?: number;
-    investedGVT?: number;
-    investedCurrency?: number;
-    availableGVT?: number;
-    availableCurrency?: number;
+    totalBalanceGVT: number;
+    totalBalanceCurrency: number;
+    investedGVT: number;
+    investedCurrency: number;
+    availableGVT: number;
+    availableCurrency: number;
 }
 export interface WalletTransaction {
-    id?: string;
-    amount?: number;
-    amountConverted?: number;
-    date?: Date;
-    number?: number;
-    sourceId?: string;
-    sourceType?: WalletTransactionSourceTypeEnum;
-    sourceCurrency?: WalletTransactionSourceCurrencyEnum;
-    sourceProgramInfo?: ProgramInfo;
-    sourceBlockchainInfo?: BlockchainInfo;
-    sourceWithdrawalInfo?: WithdrawalInfo;
-    action?: WalletTransactionActionEnum;
-    information?: string;
-    destinationId?: string;
-    destinationType?: WalletTransactionDestinationTypeEnum;
-    destinationCurrency?: WalletTransactionDestinationCurrencyEnum;
-    destinationProgramInfo?: ProgramInfo;
-    destinationBlockchainInfo?: BlockchainInfo;
-    destinationWithdrawalInfo?: WithdrawalInfo;
+    id: string;
+    amount: number;
+    amountConverted: number;
+    date: Date;
+    number: number;
+    sourceId: string;
+    sourceType: WalletTransactionSourceTypeEnum;
+    sourceCurrency: WalletTransactionSourceCurrencyEnum;
+    sourceProgramInfo: ProgramInfo;
+    sourceBlockchainInfo: BlockchainInfo;
+    sourceWithdrawalInfo: WithdrawalInfo;
+    action: WalletTransactionActionEnum;
+    information: string;
+    destinationId: string;
+    destinationType: WalletTransactionDestinationTypeEnum;
+    destinationCurrency: WalletTransactionDestinationCurrencyEnum;
+    destinationProgramInfo: ProgramInfo;
+    destinationBlockchainInfo: BlockchainInfo;
+    destinationWithdrawalInfo: WithdrawalInfo;
 }
 export declare type WalletTransactionSourceTypeEnum = 'Wallet' | 'Program' | 'Fund' | 'ProgramRequest' | 'FundRequest' | 'WithdrawalRequest' | 'PaymentTransaction' | 'Blockchain' | 'GenesisVisionPlatform' | 'SignalMasterSetting' | 'SignalTradingAccount';
 export declare type WalletTransactionSourceCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
@@ -1627,45 +1627,45 @@ export declare type WalletTransactionActionEnum = 'Transfer' | 'ProgramOpen' | '
 export declare type WalletTransactionDestinationTypeEnum = 'Wallet' | 'Program' | 'Fund' | 'ProgramRequest' | 'FundRequest' | 'WithdrawalRequest' | 'PaymentTransaction' | 'Blockchain' | 'GenesisVisionPlatform' | 'SignalMasterSetting' | 'SignalTradingAccount';
 export declare type WalletTransactionDestinationCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletTransactionsViewModel {
-    transactions?: Array<WalletTransaction>;
-    total?: number;
+    transactions: Array<WalletTransaction>;
+    total: number;
 }
 export interface WalletWithdrawalInfo {
-    currency?: WalletWithdrawalInfoCurrencyEnum;
-    description?: string;
-    logo?: string;
-    commission?: number;
-    rateToGvt?: number;
-    availableToWithdrawal?: number;
+    currency: WalletWithdrawalInfoCurrencyEnum;
+    description: string;
+    logo: string;
+    commission: number;
+    rateToGvt: number;
+    availableToWithdrawal: number;
 }
 export declare type WalletWithdrawalInfoCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletsGrandTotal {
-    currency?: WalletsGrandTotalCurrencyEnum;
-    available?: number;
-    invested?: number;
-    pending?: number;
-    total?: number;
-    currencyCcy?: WalletsGrandTotalCurrencyCcyEnum;
-    availableCcy?: number;
-    investedCcy?: number;
-    pendingCcy?: number;
-    totalCcy?: number;
+    currency: WalletsGrandTotalCurrencyEnum;
+    available: number;
+    invested: number;
+    pending: number;
+    total: number;
+    currencyCcy: WalletsGrandTotalCurrencyCcyEnum;
+    availableCcy: number;
+    investedCcy: number;
+    pendingCcy: number;
+    totalCcy: number;
 }
 export declare type WalletsGrandTotalCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type WalletsGrandTotalCurrencyCcyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface WalletsInfo {
-    wallets?: Array<WalletInfo>;
+    wallets: Array<WalletInfo>;
 }
 export interface WithdrawalInfo {
-    wallet?: string;
-    status?: WithdrawalInfoStatusEnum;
-    canResendEmail?: boolean;
-    canCancelRequest?: boolean;
+    wallet: string;
+    status: WithdrawalInfoStatusEnum;
+    canResendEmail: boolean;
+    canCancelRequest: boolean;
 }
 export declare type WithdrawalInfoStatusEnum = 'New' | 'InProcess' | 'Done' | 'Error' | 'Rejected' | 'Cancelled';
 export interface WithdrawalSummary {
-    availableToWithdrawal?: number;
-    wallets?: Array<WalletWithdrawalInfo>;
+    availableToWithdrawal: number;
+    wallets: Array<WalletWithdrawalInfo>;
 }
 export declare const AuthApiFetchParamCreator: (configuration?: Configuration) => {
     v10Auth2faConfirmPost(authorization: string, model?: TwoFactorAuthenticatorConfirm, options?: any): FetchArgs;
@@ -1692,22 +1692,22 @@ export declare const AuthApiFetchParamCreator: (configuration?: Configuration) =
 export declare const AuthApiFp: (configuration?: Configuration) => {
     v10Auth2faConfirmPost(authorization: string, model?: TwoFactorAuthenticatorConfirm, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RecoveryCodesViewModel>;
     v10Auth2faCreatePost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TwoFactorAuthenticator>;
-    v10Auth2faDisablePost(authorization: string, model?: TwoFactorCodeModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10Auth2faDisablePost(authorization: string, model?: TwoFactorCodeModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10Auth2faGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TwoFactorStatus>;
     v10Auth2faRecoverycodesNewPost(authorization: string, model?: PasswordModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RecoveryCodesViewModel>;
     v10Auth2faRecoverycodesPost(authorization: string, model?: PasswordModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RecoveryCodesViewModel>;
     v10AuthPasswordChangePost(authorization: string, model?: ChangePasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
-    v10AuthPasswordForgotInvestorPost(model?: ForgotPasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10AuthPasswordForgotManagerPost(model?: ForgotPasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10AuthPasswordForgotInvestorPost(model?: ForgotPasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10AuthPasswordForgotManagerPost(model?: ForgotPasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10AuthPasswordResetPost(model?: ResetPasswordViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10AuthPhoneCodePost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<number>;
-    v10AuthPhoneVerifyPost(authorization: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10AuthResendconfirmationlinkPost(model?: ResendConfirmationViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10AuthPhoneVerifyPost(authorization: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10AuthResendconfirmationlinkPost(model?: ResendConfirmationViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10AuthSigninInvestorPost(model?: LoginViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10AuthSigninManagerPost(model?: LoginViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10AuthSignupConfirmPost(userId?: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
-    v10AuthSignupInvestorPost(model?: RegisterInvestorViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10AuthSignupManagerPost(model?: RegisterManagerViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10AuthSignupInvestorPost(model?: RegisterInvestorViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10AuthSignupManagerPost(model?: RegisterManagerViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10AuthTokenDevicesLogoutPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10AuthTokenUpdatePost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
 };
@@ -1718,7 +1718,7 @@ export declare class AuthApi extends BaseAPI {
     v10Auth2faCreatePost(authorization: string, init?: RequestInit): Promise<TwoFactorAuthenticator>;
     v10Auth2faDisablePost(authorization: string, options?: {
         model?: TwoFactorCodeModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10Auth2faGet(authorization: string, init?: RequestInit): Promise<TwoFactorStatus>;
     v10Auth2faRecoverycodesNewPost(authorization: string, options?: {
         model?: PasswordModel;
@@ -1731,20 +1731,20 @@ export declare class AuthApi extends BaseAPI {
     }, init?: RequestInit): Promise<string>;
     v10AuthPasswordForgotInvestorPost(options?: {
         model?: ForgotPasswordViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthPasswordForgotManagerPost(options?: {
         model?: ForgotPasswordViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthPasswordResetPost(options?: {
         model?: ResetPasswordViewModel;
     }, init?: RequestInit): Promise<string>;
     v10AuthPhoneCodePost(authorization: string, init?: RequestInit): Promise<number>;
     v10AuthPhoneVerifyPost(authorization: string, options?: {
         code?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthResendconfirmationlinkPost(options?: {
         model?: ResendConfirmationViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthSigninInvestorPost(options?: {
         model?: LoginViewModel;
     }, init?: RequestInit): Promise<string>;
@@ -1757,10 +1757,10 @@ export declare class AuthApi extends BaseAPI {
     }, init?: RequestInit): Promise<string>;
     v10AuthSignupInvestorPost(options?: {
         model?: RegisterInvestorViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthSignupManagerPost(options?: {
         model?: RegisterManagerViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10AuthTokenDevicesLogoutPost(authorization: string, init?: RequestInit): Promise<string>;
     v10AuthTokenUpdatePost(authorization: string, init?: RequestInit): Promise<string>;
 }
@@ -1782,12 +1782,12 @@ export declare const FileApiFetchParamCreator: (configuration?: Configuration) =
     v10FileUploadPost(uploadedFile: any, authorization?: string, options?: any): FetchArgs;
 };
 export declare const FileApiFp: (configuration?: Configuration) => {
-    v10FileByIdGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10FileByIdGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10FileDocumentUploadPost(authorization: string, uploadedFile: any, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<UploadResult>;
     v10FileUploadPost(uploadedFile: any, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<UploadResult>;
 };
 export declare class FileApi extends BaseAPI {
-    v10FileByIdGet(id: string, init?: RequestInit): Promise<Response>;
+    v10FileByIdGet(id: string, init?: RequestInit): Promise<void>;
     v10FileDocumentUploadPost(authorization: string, uploadedFile: any, init?: RequestInit): Promise<UploadResult>;
     v10FileUploadPost(uploadedFile: any, options?: {
         authorization?: string;
@@ -1810,8 +1810,8 @@ export declare const FundsApiFp: (configuration?: Configuration) => {
     v10FundsByIdAssetsGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundAssetsListInfo>;
     v10FundsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundBalanceChart>;
     v10FundsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundProfitChart>;
-    v10FundsByIdFavoriteAddPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10FundsByIdFavoriteAddPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10FundsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundDetailsFull>;
     v10FundsByIdReallocationsGet(id: string, dateFrom?: Date, dateTo?: Date, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ReallocationsViewModel>;
     v10FundsGet(authorization?: string, sorting?: string, currencySecondary?: string, assets?: string[], statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, hasInvestorsForAll?: boolean, hasInvestorsForClosed?: boolean, ids?: string[], managerId?: string, programManagerId?: string, status?: string[], skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundsList>;
@@ -1830,8 +1830,8 @@ export declare class FundsApi extends BaseAPI {
         dateTo?: Date;
         maxPointCount?: number;
     }, init?: RequestInit): Promise<FundProfitChart>;
-    v10FundsByIdFavoriteAddPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
-    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10FundsByIdFavoriteAddPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
+    v10FundsByIdFavoriteRemovePost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10FundsByIdGet(id: string, options?: {
         authorization?: string;
         currencySecondary?: string;
@@ -1890,38 +1890,38 @@ export declare const InvestorApiFetchParamCreator: (configuration?: Configuratio
     v10InvestorSignalsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): FetchArgs;
 };
 export declare const InvestorApiFp: (configuration?: Configuration) => {
-    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundInvestInfo>;
     v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
-    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundWithdrawInfo>;
     v10InvestorFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundsList>;
     v10InvestorGet(authorization: string, chartCurrency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, eventsTake?: number, requestsSkip?: number, requestsTake?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DashboardSummary>;
     v10InvestorPortfolioChartGet(authorization: string, currency?: string, from?: Date, to?: Date, balancePoints?: number, programsPoints?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DashboardChartValue>;
     v10InvestorPortfolioEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DashboardPortfolioEvents>;
-    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramInvestInfo>;
-    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
-    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramWithdrawInfo>;
-    v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, withdrawAll?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10InvestorProgramsByIdWithdrawMultiPost(id: string, authorization: string, amount?: number, withdrawAll?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, withdrawAll?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10InvestorProgramsByIdWithdrawMultiPost(id: string, authorization: string, amount?: number, withdrawAll?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramsList>;
-    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
     v10InvestorSignalsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignalsList>;
 };
 export declare class InvestorApi extends BaseAPI {
     v10InvestorFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10InvestorFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<FundInvestInfo>;
     v10InvestorFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
     v10InvestorFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<FundWithdrawInfo>;
     v10InvestorFundsGet(authorization: string, options?: {
         sorting?: string;
@@ -1962,20 +1962,20 @@ export declare class InvestorApi extends BaseAPI {
     }, init?: RequestInit): Promise<DashboardPortfolioEvents>;
     v10InvestorProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10InvestorProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<ProgramInvestInfo>;
-    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
-    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10InvestorProgramsByIdReinvestOffPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
+    v10InvestorProgramsByIdReinvestOnPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10InvestorProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
-    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<Response>;
+    v10InvestorProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<void>;
     v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<ProgramWithdrawInfo>;
     v10InvestorProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, options?: {
         withdrawAll?: boolean;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10InvestorProgramsByIdWithdrawMultiPost(id: string, authorization: string, options?: {
         amount?: number;
         withdrawAll?: boolean;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10InvestorProgramsGet(authorization: string, options?: {
         sorting?: string;
         from?: Date;
@@ -1987,7 +1987,7 @@ export declare class InvestorApi extends BaseAPI {
         skip?: number;
         take?: number;
     }, init?: RequestInit): Promise<ProgramsList>;
-    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10InvestorProgramsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10InvestorRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
     v10InvestorSignalsGet(authorization: string, options?: {
         sorting?: string;
@@ -2047,41 +2047,41 @@ export declare const ManagerApiFp: (configuration?: Configuration) => {
     v10ManagerByIdDetailsGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerProfileDetails>;
     v10ManagerByIdGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerProfile>;
     v10ManagerEventsGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerPortfolioEvents>;
-    v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, assets?: FundAssetPart[], options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerFundsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, assets?: FundAssetPart[], options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerFundsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundInvestInfo>;
     v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
-    v10ManagerFundsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerFundsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerFundWithdrawInfo>;
-    v10ManagerFundsCreatePost(authorization: string, request?: NewFundRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerFundsCreatePost(authorization: string, request?: NewFundRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerFundsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<FundsList>;
     v10ManagerFundsInvestmentAmountGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<number>;
-    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerGet(authorization: string, assetId?: string, from?: Date, to?: Date, type?: string, assetType?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerDashboard>;
-    v10ManagerPrograms2faConfirmPost(authorization: string, programId?: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerPrograms2faConfirmPost(authorization: string, programId?: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerPrograms2faGetGet(authorization: string, programId?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TwoFactorAuthenticator>;
-    v10ManagerProgramsBrokerChangeCancelPost(authorization: string, programId?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerProgramsBrokerChangePost(authorization: string, request?: ChangeBrokerProgramRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerProgramsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerProgramsBrokerChangeCancelPost(authorization: string, programId?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerProgramsBrokerChangePost(authorization: string, request?: ChangeBrokerProgramRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerProgramsByIdClosePost(id: string, authorization: string, twoFactorCode?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, currency?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramInvestInfo>;
     v10ManagerProgramsByIdLevelsInfoGet(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramLevelInfo>;
-    v10ManagerProgramsByIdPasswordChangePost(id: string, authorization: string, model?: ProgramPwdUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerProgramsByIdPasswordChangePost(id: string, authorization: string, model?: ProgramPwdUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
-    v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, model?: ProgramUpdate, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerProgramWithdrawInfo>;
-    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerProgramsCreatePost(authorization: string, request?: NewProgramRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerProgramCreateResult>;
     v10ManagerProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramsList>;
     v10ManagerProgramsInvestmentAmountGet(authorization: string, brokerTradingAccount?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramMinimumDeposit>;
-    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
-    v10ManagerSignalCreatePost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ManagerSignalEditPost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ManagerSignalCreatePost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ManagerSignalEditPost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
 };
 export declare class ManagerApi extends BaseAPI {
     v10ManagerAssetsGet(authorization: string, init?: RequestInit): Promise<ManagerAssets>;
@@ -2098,25 +2098,25 @@ export declare class ManagerApi extends BaseAPI {
     }, init?: RequestInit): Promise<ManagerPortfolioEvents>;
     v10ManagerFundsByIdAssetsUpdatePost(id: string, authorization: string, options?: {
         assets?: Array<FundAssetPart>;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsByIdClosePost(id: string, authorization: string, options?: {
         twoFactorCode?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<FundInvestInfo>;
     v10ManagerFundsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
     v10ManagerFundsByIdUpdatePost(id: string, authorization: string, options?: {
         model?: ProgramUpdate;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsByIdWithdrawByPercentPost(id: string, percent: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<ManagerFundWithdrawInfo>;
     v10ManagerFundsCreatePost(authorization: string, options?: {
         request?: NewFundRequest;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerFundsGet(authorization: string, options?: {
         sorting?: string;
         from?: Date;
@@ -2129,7 +2129,7 @@ export declare class ManagerApi extends BaseAPI {
         take?: number;
     }, init?: RequestInit): Promise<FundsList>;
     v10ManagerFundsInvestmentAmountGet(authorization: string, init?: RequestInit): Promise<number>;
-    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10ManagerFundsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10ManagerGet(authorization: string, options?: {
         assetId?: string;
         from?: Date;
@@ -2142,35 +2142,35 @@ export declare class ManagerApi extends BaseAPI {
     v10ManagerPrograms2faConfirmPost(authorization: string, options?: {
         programId?: string;
         code?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerPrograms2faGetGet(authorization: string, options?: {
         programId?: string;
     }, init?: RequestInit): Promise<TwoFactorAuthenticator>;
     v10ManagerProgramsBrokerChangeCancelPost(authorization: string, options?: {
         programId?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerProgramsBrokerChangePost(authorization: string, options?: {
         request?: ChangeBrokerProgramRequest;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerProgramsByIdClosePost(id: string, authorization: string, options?: {
         twoFactorCode?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerProgramsByIdInvestByAmountPost(id: string, amount: number, authorization: string, options?: {
         currency?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerProgramsByIdInvestInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<ProgramInvestInfo>;
     v10ManagerProgramsByIdLevelsInfoGet(id: string, authorization: string, init?: RequestInit): Promise<ProgramLevelInfo>;
     v10ManagerProgramsByIdPasswordChangePost(id: string, authorization: string, options?: {
         model?: ProgramPwdUpdate;
-    }, init?: RequestInit): Promise<Response>;
-    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
+    v10ManagerProgramsByIdPeriodClosePost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10ManagerProgramsByIdRequestsBySkipByTakeGet(id: string, skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
     v10ManagerProgramsByIdUpdatePost(id: string, authorization: string, options?: {
         model?: ProgramUpdate;
-    }, init?: RequestInit): Promise<Response>;
-    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
+    v10ManagerProgramsByIdWithdrawByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<void>;
     v10ManagerProgramsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string, init?: RequestInit): Promise<ManagerProgramWithdrawInfo>;
-    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<Response>;
+    v10ManagerProgramsByIdWithdrawMultiByAmountPost(id: string, amount: number, authorization: string, init?: RequestInit): Promise<void>;
     v10ManagerProgramsCreatePost(authorization: string, options?: {
         request?: NewProgramRequest;
     }, init?: RequestInit): Promise<ManagerProgramCreateResult>;
@@ -2188,18 +2188,18 @@ export declare class ManagerApi extends BaseAPI {
     v10ManagerProgramsInvestmentAmountGet(authorization: string, options?: {
         brokerTradingAccount?: string;
     }, init?: RequestInit): Promise<ProgramMinimumDeposit>;
-    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, options?: {
         programId?: string;
         volumeFee?: number;
         successFee?: number;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ManagerSignalEditPost(authorization: string, options?: {
         programId?: string;
         volumeFee?: number;
         successFee?: number;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
 }
 export declare const NotificationsApiFetchParamCreator: (configuration?: Configuration) => {
     v10NotificationsByIdReadPost(id: string, authorization: string, options?: any): FetchArgs;
@@ -2214,7 +2214,7 @@ export declare const NotificationsApiFetchParamCreator: (configuration?: Configu
     v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, options?: any): FetchArgs;
 };
 export declare const NotificationsApiFp: (configuration?: Configuration) => {
-    v10NotificationsByIdReadPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10NotificationsByIdReadPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10NotificationsGet(authorization: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<NotificationList>;
     v10NotificationsNewGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<number>;
     v10NotificationsSettingsAddPost(authorization: string, assetId?: string, managerId?: string, type?: string, conditionType?: string, conditionAmount?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
@@ -2223,10 +2223,10 @@ export declare const NotificationsApiFp: (configuration?: Configuration) => {
     v10NotificationsSettingsGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<NotificationSettingList>;
     v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ManagerNotificationSettingList>;
     v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramNotificationSettingList>;
-    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
 };
 export declare class NotificationsApi extends BaseAPI {
-    v10NotificationsByIdReadPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10NotificationsByIdReadPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10NotificationsGet(authorization: string, options?: {
         skip?: number;
         take?: number;
@@ -2244,7 +2244,7 @@ export declare class NotificationsApi extends BaseAPI {
     v10NotificationsSettingsGet(authorization: string, init?: RequestInit): Promise<NotificationSettingList>;
     v10NotificationsSettingsManagersByIdGet(id: string, authorization: string, init?: RequestInit): Promise<ManagerNotificationSettingList>;
     v10NotificationsSettingsProgramsByIdGet(id: string, authorization: string, init?: RequestInit): Promise<ProgramNotificationSettingList>;
-    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10NotificationsSettingsRemoveByIdPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
 }
 export declare const PlatformApiFetchParamCreator: (configuration?: Configuration) => {
     v10PlatformDatePost(options?: any): FetchArgs;
@@ -2290,35 +2290,35 @@ export declare const ProfileApiFetchParamCreator: (configuration?: Configuration
     v10ProfileVerificationTokenPost(authorization: string, options?: any): FetchArgs;
 };
 export declare const ProfileApiFp: (configuration?: Configuration) => {
-    v10ProfileAvatarRemovePost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ProfileAvatarRemovePost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProfileGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProfileFullViewModel>;
     v10ProfileHeaderGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProfileHeaderViewModel>;
-    v10ProfilePersonalUpdatePost(authorization: string, model?: UpdatePersonalDetailViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ProfilePushTokenPost(authorization: string, token?: FcmTokenViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ProfilePersonalUpdatePost(authorization: string, model?: UpdatePersonalDetailViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ProfilePushTokenPost(authorization: string, token?: FcmTokenViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProfileSociallinksGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SocialLinksViewModel>;
-    v10ProfileSociallinksUpdatePost(authorization: string, model?: UpdateSocialLinkViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ProfileUpdatePost(authorization: string, model?: UpdateProfileViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ProfileSociallinksUpdatePost(authorization: string, model?: UpdateSocialLinkViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ProfileUpdatePost(authorization: string, model?: UpdateProfileViewModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProfileVerificationTokenPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
 };
 export declare class ProfileApi extends BaseAPI {
-    v10ProfileAvatarRemovePost(authorization: string, init?: RequestInit): Promise<Response>;
-    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10ProfileAvatarRemovePost(authorization: string, init?: RequestInit): Promise<void>;
+    v10ProfileAvatarUpdateByFileIdPost(fileId: string, authorization: string, init?: RequestInit): Promise<void>;
     v10ProfileGet(authorization: string, init?: RequestInit): Promise<ProfileFullViewModel>;
     v10ProfileHeaderGet(authorization: string, init?: RequestInit): Promise<ProfileHeaderViewModel>;
     v10ProfilePersonalUpdatePost(authorization: string, options?: {
         model?: UpdatePersonalDetailViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ProfilePushTokenPost(authorization: string, options?: {
         token?: FcmTokenViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ProfileSociallinksGet(authorization: string, init?: RequestInit): Promise<SocialLinksViewModel>;
     v10ProfileSociallinksUpdatePost(authorization: string, options?: {
         model?: UpdateSocialLinkViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ProfileUpdatePost(authorization: string, options?: {
         model?: UpdateProfileViewModel;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10ProfileVerificationTokenPost(authorization: string, init?: RequestInit): Promise<string>;
 }
 export declare const ProgramsApiFetchParamCreator: (configuration?: Configuration) => {
@@ -2339,8 +2339,8 @@ export declare const ProgramsApiFetchParamCreator: (configuration?: Configuratio
 export declare const ProgramsApiFp: (configuration?: Configuration) => {
     v10ProgramsByIdChartsBalanceGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramBalanceChart>;
     v10ProgramsByIdChartsProfitGet(id: string, dateFrom?: Date, dateTo?: Date, maxPointCount?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramProfitChart>;
-    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProgramsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramDetailsFull>;
     v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramPeriodsViewModel>;
     v10ProgramsByIdSubscribersGet(id: string, authorization: string, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignalProviderSubscribers>;
@@ -2362,8 +2362,8 @@ export declare class ProgramsApi extends BaseAPI {
         dateTo?: Date;
         maxPointCount?: number;
     }, init?: RequestInit): Promise<ProgramProfitChart>;
-    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
-    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
+    v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, init?: RequestInit): Promise<void>;
     v10ProgramsByIdGet(id: string, options?: {
         authorization?: string;
         currencySecondary?: string;
@@ -2484,10 +2484,10 @@ export declare const SignalApiFetchParamCreator: (configuration?: Configuration)
 export declare const SignalApiFp: (configuration?: Configuration) => {
     v10SignalAccountsGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CopyTradingAccountsList>;
     v10SignalAttachByIdInfoGet(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AttachToSignalProviderInfo>;
-    v10SignalAttachByIdPost(id: string, authorization: string, model?: AttachToSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10SignalByIdUpdatePost(id: string, authorization: string, model?: AttachToSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10SignalDetachByIdPost(id: string, authorization: string, model?: DetachFromSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10SignalTradesByIdClosePost(id: string, authorization: string, programId?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10SignalAttachByIdPost(id: string, authorization: string, model?: AttachToSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10SignalByIdUpdatePost(id: string, authorization: string, model?: AttachToSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10SignalDetachByIdPost(id: string, authorization: string, model?: DetachFromSignalProvider, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10SignalTradesByIdClosePost(id: string, authorization: string, programId?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10SignalTradesGet(authorization: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesSignalViewModel>;
     v10SignalTradesLogGet(authorization: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignalTradingEvents>;
     v10SignalTradesOpenGet(authorization: string, sorting?: string, symbol?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesSignalViewModel>;
@@ -2497,16 +2497,16 @@ export declare class SignalApi extends BaseAPI {
     v10SignalAttachByIdInfoGet(id: string, authorization: string, init?: RequestInit): Promise<AttachToSignalProviderInfo>;
     v10SignalAttachByIdPost(id: string, authorization: string, options?: {
         model?: AttachToSignalProvider;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10SignalByIdUpdatePost(id: string, authorization: string, options?: {
         model?: AttachToSignalProvider;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10SignalDetachByIdPost(id: string, authorization: string, options?: {
         model?: DetachFromSignalProvider;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10SignalTradesByIdClosePost(id: string, authorization: string, options?: {
         programId?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10SignalTradesGet(authorization: string, options?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -2561,16 +2561,16 @@ export declare const WalletApiFp: (configuration?: Configuration) => {
     v10WalletMultiByCurrencyGet(currency: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<WalletMultiSummary>;
     v10WalletMultiTransactionsExternalGet(authorization: string, from?: Date, to?: Date, type?: string, currency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MultiWalletExternalTransactionsViewModel>;
     v10WalletMultiTransactionsGet(authorization: string, from?: Date, to?: Date, type?: string, currency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MultiWalletTransactionsViewModel>;
-    v10WalletPaygvtfeeOffPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10WalletPaygvtfeeOnPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10WalletPaygvtfeeOffPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10WalletPaygvtfeeOnPost(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10WalletTransactionByIdGet(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TransactionDetails>;
     v10WalletTransactionsGet(authorization: string, assetId?: string, from?: Date, to?: Date, assetType?: string, txAction?: string, wallet?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<WalletTransactionsViewModel>;
-    v10WalletTransferPost(authorization: string, request?: InternalTransferRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10WalletTransferPost(authorization: string, request?: InternalTransferRequest, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10WalletWithdrawInfoGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<WithdrawalSummary>;
-    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10WalletWithdrawRequestConfirmPost(requestId?: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10WalletWithdrawRequestNewPost(authorization: string, model?: CreateWithdrawalRequestModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
-    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10WalletWithdrawRequestConfirmPost(requestId?: string, code?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10WalletWithdrawRequestNewPost(authorization: string, model?: CreateWithdrawalRequestModel, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
+    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
 };
 export declare class WalletApi extends BaseAPI {
     v10WalletAddressesByCurrencyGet(currency: string, authorization: string, init?: RequestInit): Promise<WalletInfo>;
@@ -2595,8 +2595,8 @@ export declare class WalletApi extends BaseAPI {
         skip?: number;
         take?: number;
     }, init?: RequestInit): Promise<MultiWalletTransactionsViewModel>;
-    v10WalletPaygvtfeeOffPost(authorization: string, init?: RequestInit): Promise<Response>;
-    v10WalletPaygvtfeeOnPost(authorization: string, init?: RequestInit): Promise<Response>;
+    v10WalletPaygvtfeeOffPost(authorization: string, init?: RequestInit): Promise<void>;
+    v10WalletPaygvtfeeOnPost(authorization: string, init?: RequestInit): Promise<void>;
     v10WalletTransactionByIdGet(id: string, authorization: string, init?: RequestInit): Promise<TransactionDetails>;
     v10WalletTransactionsGet(authorization: string, options?: {
         assetId?: string;
@@ -2610,15 +2610,15 @@ export declare class WalletApi extends BaseAPI {
     }, init?: RequestInit): Promise<WalletTransactionsViewModel>;
     v10WalletTransferPost(authorization: string, options?: {
         request?: InternalTransferRequest;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10WalletWithdrawInfoGet(authorization: string, init?: RequestInit): Promise<WithdrawalSummary>;
-    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, init?: RequestInit): Promise<Response>;
+    v10WalletWithdrawRequestCancelByTxIdPost(txId: string, authorization: string, init?: RequestInit): Promise<void>;
     v10WalletWithdrawRequestConfirmPost(options?: {
         requestId?: string;
         code?: string;
-    }, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
     v10WalletWithdrawRequestNewPost(authorization: string, options?: {
         model?: CreateWithdrawalRequestModel;
-    }, init?: RequestInit): Promise<Response>;
-    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, init?: RequestInit): Promise<Response>;
+    }, init?: RequestInit): Promise<void>;
+    v10WalletWithdrawRequestResendByTxIdPost(txId: string, authorization: string, init?: RequestInit): Promise<void>;
 }

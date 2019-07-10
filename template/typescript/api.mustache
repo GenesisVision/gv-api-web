@@ -42,6 +42,15 @@ export class RequiredError extends Error {
     }
 }
 
+const formatResponse = async <T>(response: Response): Promise<T> => {
+  const data = await response.text();
+  try {
+    return JSON.parse(data) as T;
+  } catch (e) {
+    return (data as unknown) as T;
+  }
+};
+
 {{#models}}
 {{#model}}{{#isEnum}}{{>modelEnum}}{{/isEnum}}{{^isEnum}}{{>modelGeneric}}{{/isEnum}}{{/model}}
 {{/models}}
@@ -120,11 +129,11 @@ export const {{classname}}FetchParamCreator = function (configuration?: Configur
             {{^isListContainer}}
             if ({{paramName}} !== undefined) {
                 {{#isDateTime}}
-                localVarQueryParameter['{{baseName}}'] = ({{paramName}} as any).toISOString();
+                localVarQueryParameter['{{baseName}}'] = {{paramName}};
                 {{/isDateTime}}
                 {{^isDateTime}}
                 {{#isDate}}
-                localVarQueryParameter['{{baseName}}'] = ({{paramName}} as any).toISOString();
+                localVarQueryParameter['{{baseName}}'] = {{paramName}};
                 {{/isDate}}
                 {{^isDate}}
                 localVarQueryParameter['{{baseName}}'] = {{paramName}};
@@ -204,16 +213,10 @@ export const {{classname}}FetchParamCreator = function (configuration?: Configur
 export const {{classname}}Fp = function(configuration?: Configuration) {
     return {
     {{#operation}}
-        {{nickname}}({{#allParams}}{{paramName}}{{^required}}?{{/required}}: {{{dataType}}}, {{/allParams}}options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}Response{{/returnType}}> {
+        {{nickname}}({{#allParams}}{{paramName}}{{^required}}?{{/required}}: {{{dataType}}}, {{/allParams}}options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
             const localVarFetchArgs = {{classname}}FetchParamCreator(configuration).{{nickname}}({{#allParams}}{{paramName}}, {{/allParams}}options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response{{#returnType}}.json(){{/returnType}};
-                    } else {
-                        throw response;
-                    }
-                });
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}>(response));
             };
         },
     {{/operation}}

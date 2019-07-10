@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "declarationDir": "./",
     "target": "es2018",
@@ -9,7 +10,7 @@
       "es6",
       "dom"
     ],
-    "outDir": "dist"
+    "outDir": "./"
   },
   "exclude": [
     "dist",

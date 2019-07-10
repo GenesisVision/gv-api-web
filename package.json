@@ -3,8 +3,8 @@
   "version": "1.0.747",
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
-  "module": "dist/index.js",
-  "types": "dist/types.d.ts",
+  "main": "index.js",
+  "types": "types.d.ts",
   "scripts": {
     "generate-api": "node bash/generate",
     "generate-tsd": "node bash/replace.js && jsdoc -t ../../node_modules/tsd-jsdoc/dist -r ./src -d ./src && node bash/add_exports.js",

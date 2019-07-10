@@ -4,7 +4,7 @@ export interface {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
 
 {{/additionalPropertiesType}}
 {{#vars}}
-    {{name}}{{^required}}?{{/required}}: {{#isEnum}}{{classname}}{{enumName}}{{/isEnum}}{{^isEnum}}{{{datatype}}}{{/isEnum}};
+    {{name}}: {{#isEnum}}{{classname}}{{enumName}}{{/isEnum}}{{^isEnum}}{{{datatype}}}{{/isEnum}};
 {{/vars}}
 }{{#hasEnums}}
 {{#vars}}{{#isEnum}}
