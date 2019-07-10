@@ -110,17 +110,17 @@ export default class SocialLinkViewModel {
     
         "Twitter": "Twitter",
     
-        "LinkedIn": "LinkedIn",
-    
-        "Youtube": "Youtube",
-    
-        "Email": "Email",
-    
         "Telegram": "Telegram",
     
         "Facebook": "Facebook",
     
-        "WeChat": "WeChat"    
+        "LinkedIn": "LinkedIn",
+    
+        "Youtube": "Youtube",
+    
+        "WeChat": "WeChat",
+    
+        "Email": "Email"    
     };
 
 
@@ -132,7 +132,7 @@ export default class SocialLinkViewModel {
 
 /**
  * @typedef SocialLinkViewModelTypeEnum 
- * @type {("Undefined"|"Twitter"|"LinkedIn"|"Youtube"|"Email"|"Telegram"|"Facebook"|"WeChat")}
+ * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
  */
 
 

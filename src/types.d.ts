@@ -2493,7 +2493,7 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "LinkedIn" | "Youtube" | "Email" | "Telegram" | "Facebook" | "WeChat";
+export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
 
 export declare interface SocialLinkViewModel {
     url: string;
@@ -2595,7 +2595,7 @@ export declare interface UpdateProfileViewModel {
     about: string;
 }
 
-export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "LinkedIn" | "Youtube" | "Email" | "Telegram" | "Facebook" | "WeChat";
+export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
 
 export declare interface UpdateSocialLinkViewModel {
     type: UpdateSocialLinkViewModelTypeEnum;
