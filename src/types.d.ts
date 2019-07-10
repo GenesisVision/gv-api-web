@@ -2,6 +2,7 @@ export declare interface CancelablePromise<T> extends Promise<T> {
     cancel: () => CancelablePromise<T>;
     then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): CancelablePromise<TResult1 | TResult2>;
     catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): CancelablePromise<T | TResult>;
+    finally(onfinally?: (() => void) | undefined | null): Promise<T>
 }
 
 export declare class ApiClient {
@@ -1131,6 +1132,7 @@ export declare interface FinancialStatistic {
     successFee: number;
     entryFee: number;
     profit: number;
+    balance: number;
 }
 
 export declare interface ForgotPasswordViewModel {
@@ -1855,6 +1857,7 @@ export declare interface PlatformInfo {
     fundsFacets: FundFacet[];
     programsInfo: ProgramsInfo;
     currencies: string[];
+    programCurrencies: string[];
     platformCurrencies: PlatformCurrency[];
     enums: Enums;
 }
@@ -2490,7 +2493,7 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "LinkedIn" | "Youtube" | "Email" | "Telegram" | "Facebook" | "WeChat";
 
 export declare interface SocialLinkViewModel {
     url: string;
@@ -2592,7 +2595,7 @@ export declare interface UpdateProfileViewModel {
     about: string;
 }
 
-export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "LinkedIn" | "Youtube" | "Email" | "Telegram" | "Facebook" | "WeChat";
 
 export declare interface UpdateSocialLinkViewModel {
     type: UpdateSocialLinkViewModelTypeEnum;

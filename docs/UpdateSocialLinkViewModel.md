@@ -15,17 +15,17 @@ Name | Type | Description | Notes
 
 * `Twitter` (value: `"Twitter"`)
 
-* `Telegram` (value: `"Telegram"`)
-
-* `Facebook` (value: `"Facebook"`)
-
 * `LinkedIn` (value: `"LinkedIn"`)
 
 * `Youtube` (value: `"Youtube"`)
 
-* `WeChat` (value: `"WeChat"`)
-
 * `Email` (value: `"Email"`)
+
+* `Telegram` (value: `"Telegram"`)
+
+* `Facebook` (value: `"Facebook"`)
+
+* `WeChat` (value: `"WeChat"`)
 
 
 

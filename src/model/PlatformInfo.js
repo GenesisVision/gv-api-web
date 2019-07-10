@@ -62,6 +62,11 @@ import ProgramsInfo from './ProgramsInfo';
  */
 /**
  *
+ * @name PlatformInfo#programCurrencies
+ * @type {Array<String>}
+ */
+/**
+ *
  * @name PlatformInfo#platformCurrencies
  * @type {Array<PlatformCurrency>}
  */
@@ -114,6 +119,9 @@ export default class PlatformInfo {
             if (data.hasOwnProperty('currencies')) {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['String']);
             }
+            if (data.hasOwnProperty('programCurrencies')) {
+                obj['programCurrencies'] = ApiClient.convertToType(data['programCurrencies'], ['String']);
+            }
             if (data.hasOwnProperty('platformCurrencies')) {
                 obj['platformCurrencies'] = ApiClient.convertToType(data['platformCurrencies'], [PlatformCurrency]);
             }
@@ -130,6 +138,7 @@ export default class PlatformInfo {
     fundsFacets = undefined;
     programsInfo = undefined;
     currencies = undefined;
+    programCurrencies = undefined;
     platformCurrencies = undefined;
     enums = undefined;
 

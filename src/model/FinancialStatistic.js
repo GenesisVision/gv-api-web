@@ -53,6 +53,11 @@ import ApiClient from '../ApiClient';
  * @name FinancialStatistic#profit
  * @type {Number}
  */
+/**
+ *
+ * @name FinancialStatistic#balance
+ * @type {Number}
+ */
 
 
 
@@ -97,6 +102,9 @@ export default class FinancialStatistic {
             if (data.hasOwnProperty('profit')) {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
+            }
         }
         return obj;
     }
@@ -107,6 +115,7 @@ export default class FinancialStatistic {
     successFee = undefined;
     entryFee = undefined;
     profit = undefined;
+    balance = undefined;
 
 
 
