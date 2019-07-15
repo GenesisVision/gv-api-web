@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 
 * `Metastock` (value: `"Metastock"`)
 
+* `IDEX` (value: `"IDEX"`)
+
 * `Huobi` (value: `"Huobi"`)
 
 * `Exante` (value: `"Exante"`)

@@ -156,6 +156,8 @@ export default class BrokerAccountType {
     
         "Metastock": "Metastock",
     
+        "IDEX": "IDEX",
+    
         "Huobi": "Huobi",
     
         "Exante": "Exante"    
@@ -170,7 +172,7 @@ export default class BrokerAccountType {
 
 /**
  * @typedef BrokerAccountTypeTypeEnum 
- * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"Huobi"|"Exante")}
+ * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi"|"Exante")}
  */
 
 
