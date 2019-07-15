@@ -22,7 +22,7 @@ shell.sed(
 shell.sed(
   "-i",
   /changefinally: any;/,
-  "finally(onfinally?: (() => void) | undefined | null): Promise<T>",
+  "finally(onfinally?: (() => void) | undefined | null): CancelablePromise<T>",
   "src/types.d.ts"
 );
 shell.sed("-i", /'String'/, "string", "src/types.d.ts");
