@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

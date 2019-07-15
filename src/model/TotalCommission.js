@@ -38,6 +38,11 @@ import ApiClient from '../ApiClient';
  * @name TotalCommission#type
  * @type TotalCommissionTypeEnum
  */
+/**
+ *
+ * @name TotalCommission#title
+ * @type {String}
+ */
 
 
 
@@ -73,6 +78,9 @@ export default class TotalCommission {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
         }
         return obj;
     }
@@ -80,6 +88,7 @@ export default class TotalCommission {
     amount = undefined;
     currency = undefined;
     type = undefined;
+    title = undefined;
 
 
 

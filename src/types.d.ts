@@ -2,7 +2,7 @@ export declare interface CancelablePromise<T> extends Promise<T> {
     cancel: () => CancelablePromise<T>;
     then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): CancelablePromise<TResult1 | TResult2>;
     catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): CancelablePromise<T | TResult>;
-    finally(onfinally?: (() => void) | undefined | null): Promise<T>
+    finally(onfinally?: (() => void) | undefined | null): CancelablePromise<T>
 }
 
 export declare class ApiClient {
@@ -2515,6 +2515,7 @@ export declare interface TotalCommission {
     amount: number;
     currency: TotalCommissionCurrencyEnum;
     type: TotalCommissionTypeEnum;
+    title: string;
 }
 
 export declare interface TradesSignalViewModel {
