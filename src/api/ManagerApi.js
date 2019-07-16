@@ -2008,7 +2008,8 @@ export default class ManagerApi {
         });
     }
 
-      v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization) {
+      v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'skip' is set
@@ -2032,6 +2033,7 @@ export default class ManagerApi {
         'take': take
       };
       let queryParams = {
+        'assetType': opts['assetType']
       };
       let headerParams = {
         'Authorization': authorization
@@ -2057,10 +2059,12 @@ export default class ManagerApi {
      * @param {Number} skip 
      * @param {Number} take 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetType]  (default to 0)
      * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
-      v10ManagerRequestsBySkipByTakeGet(skip, take, authorization) {
-      return this.v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization)
+      v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, opts) {
+      return this.v10ManagerRequestsBySkipByTakeGetWithHttpInfo(skip, take, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

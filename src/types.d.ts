@@ -337,7 +337,9 @@ export declare class ManagerApi {
         brokerTradingAccount?: string;
     }): CancelablePromise<ProgramMinimumDeposit>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, opts?: {
+        assetType?: string;
+    }): CancelablePromise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, opts?: {
         programId?: string;
         volumeFee?: number;
