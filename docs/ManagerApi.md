@@ -1780,7 +1780,7 @@ let take = 56; // Number |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'assetType': "0" // String | 
+  'assetType': "assetType_example" // String | 
 };
 apiInstance.v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1797,7 +1797,7 @@ Name | Type | Description  | Notes
  **skip** | **Number**|  | 
  **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **assetType** | **String**|  | [optional] [default to 0]
+ **assetType** | **String**|  | [optional] 
 
 ### Return type
 

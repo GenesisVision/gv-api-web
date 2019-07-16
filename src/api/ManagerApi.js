@@ -2060,7 +2060,7 @@ export default class ManagerApi {
      * @param {Number} take 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.assetType]  (default to 0)
+     * @param {String} [opts.assetType] 
      * @return {CancelablePromise<ProgramRequests>} a Promise, with an object containing data of type ProgramRequests and HTTP response
      */
       v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, opts) {
