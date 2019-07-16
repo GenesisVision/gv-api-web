@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 
 * `Facebook` (value: `"Facebook"`)
 
+* `LinkedIn` (value: `"LinkedIn"`)
+
 * `Youtube` (value: `"Youtube"`)
 
 * `WeChat` (value: `"WeChat"`)
@@ -27,8 +29,6 @@ Name | Type | Description | Notes
 * `Email` (value: `"Email"`)
 
 * `Undefined` (value: `"Undefined"`)
-
-* `LinkedIn` (value: `"LinkedIn"`)
 
 
 
