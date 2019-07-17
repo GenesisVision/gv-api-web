@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **brokerTradingAccountName** | **String** |  | [optional] 
 **brokerName** | **String** |  | [optional] 
 **brokerLogo** | **String** |  | [optional] 
+**brokerTags** | [**[ProgramTag]**](ProgramTag.md) |  | [optional] 
 
 

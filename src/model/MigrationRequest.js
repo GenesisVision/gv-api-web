@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import ProgramTag from './ProgramTag';
 
 
 
@@ -52,6 +53,11 @@ import ApiClient from '../ApiClient';
  *
  * @name MigrationRequest#brokerLogo
  * @type {String}
+ */
+/**
+ *
+ * @name MigrationRequest#brokerTags
+ * @type {Array<ProgramTag>}
  */
 
 
@@ -97,6 +103,9 @@ export default class MigrationRequest {
             if (data.hasOwnProperty('brokerLogo')) {
                 obj['brokerLogo'] = ApiClient.convertToType(data['brokerLogo'], 'String');
             }
+            if (data.hasOwnProperty('brokerTags')) {
+                obj['brokerTags'] = ApiClient.convertToType(data['brokerTags'], [ProgramTag]);
+            }
         }
         return obj;
     }
@@ -107,6 +116,7 @@ export default class MigrationRequest {
     brokerTradingAccountName = undefined;
     brokerName = undefined;
     brokerLogo = undefined;
+    brokerTags = undefined;
 
 
 
