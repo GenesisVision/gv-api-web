@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ProgramTag from './ProgramTag';
+import Broker from './Broker';
 
 
 
@@ -36,28 +36,8 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name MigrationRequest#brokerTradingAccountId
- * @type {String}
- */
-/**
- *
- * @name MigrationRequest#brokerTradingAccountName
- * @type {String}
- */
-/**
- *
- * @name MigrationRequest#brokerName
- * @type {String}
- */
-/**
- *
- * @name MigrationRequest#brokerLogo
- * @type {String}
- */
-/**
- *
- * @name MigrationRequest#brokerTags
- * @type {Array<ProgramTag>}
+ * @name MigrationRequest#newBroker
+ * @type {Broker}
  */
 
 
@@ -91,20 +71,8 @@ export default class MigrationRequest {
             if (data.hasOwnProperty('newLeverage')) {
                 obj['newLeverage'] = ApiClient.convertToType(data['newLeverage'], 'Number');
             }
-            if (data.hasOwnProperty('brokerTradingAccountId')) {
-                obj['brokerTradingAccountId'] = ApiClient.convertToType(data['brokerTradingAccountId'], 'String');
-            }
-            if (data.hasOwnProperty('brokerTradingAccountName')) {
-                obj['brokerTradingAccountName'] = ApiClient.convertToType(data['brokerTradingAccountName'], 'String');
-            }
-            if (data.hasOwnProperty('brokerName')) {
-                obj['brokerName'] = ApiClient.convertToType(data['brokerName'], 'String');
-            }
-            if (data.hasOwnProperty('brokerLogo')) {
-                obj['brokerLogo'] = ApiClient.convertToType(data['brokerLogo'], 'String');
-            }
-            if (data.hasOwnProperty('brokerTags')) {
-                obj['brokerTags'] = ApiClient.convertToType(data['brokerTags'], [ProgramTag]);
+            if (data.hasOwnProperty('newBroker')) {
+                obj['newBroker'] = Broker.constructFromObject(data['newBroker']);
             }
         }
         return obj;
@@ -112,11 +80,7 @@ export default class MigrationRequest {
 
     dateCreate = undefined;
     newLeverage = undefined;
-    brokerTradingAccountId = undefined;
-    brokerTradingAccountName = undefined;
-    brokerName = undefined;
-    brokerLogo = undefined;
-    brokerTags = undefined;
+    newBroker = undefined;
 
 
 
