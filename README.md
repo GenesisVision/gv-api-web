@@ -224,6 +224,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteAddPost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdFavoriteRemovePost**](docs/ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdGet**](docs/ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsExportGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsExportGet) | **GET** /v1.0/programs/{id}/periods/export | Export periods
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsExportStatisticGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsExportStatisticGet) | **GET** /v1.0/programs/{id}/periods/export/statistic | Export period financial statistic
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdSubscribersGet**](docs/ProgramsApi.md#v10ProgramsByIdSubscribersGet) | **GET** /v1.0/programs/{id}/subscribers | Signal subscribers
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history

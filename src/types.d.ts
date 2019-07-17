@@ -432,6 +432,24 @@ export declare class ProgramsApi {
         authorization?: string;
         currencySecondary?: string;
     }): CancelablePromise<ProgramDetailsFull>;
+    v10ProgramsByIdPeriodsExportGet(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        numberMin?: number;
+        numberMax?: number;
+        status?: string;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<Blob>;
+    v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        numberMin?: number;
+        numberMax?: number;
+        status?: string;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<Blob>;
     v10ProgramsByIdPeriodsGet(id: string, opts?: {
         authorization?: string;
         dateFrom?: Date;

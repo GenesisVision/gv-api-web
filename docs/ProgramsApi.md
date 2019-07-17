@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**v10ProgramsByIdFavoriteAddPost**](ProgramsApi.md#v10ProgramsByIdFavoriteAddPost) | **POST** /v1.0/programs/{id}/favorite/add | Add to favorites
 [**v10ProgramsByIdFavoriteRemovePost**](ProgramsApi.md#v10ProgramsByIdFavoriteRemovePost) | **POST** /v1.0/programs/{id}/favorite/remove | Remove from favorites
 [**v10ProgramsByIdGet**](ProgramsApi.md#v10ProgramsByIdGet) | **GET** /v1.0/programs/{id} | Program details
+[**v10ProgramsByIdPeriodsExportGet**](ProgramsApi.md#v10ProgramsByIdPeriodsExportGet) | **GET** /v1.0/programs/{id}/periods/export | Export periods
+[**v10ProgramsByIdPeriodsExportStatisticGet**](ProgramsApi.md#v10ProgramsByIdPeriodsExportStatisticGet) | **GET** /v1.0/programs/{id}/periods/export/statistic | Export period financial statistic
 [**v10ProgramsByIdPeriodsGet**](ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 [**v10ProgramsByIdSubscribersGet**](ProgramsApi.md#v10ProgramsByIdSubscribersGet) | **GET** /v1.0/programs/{id}/subscribers | Signal subscribers
 [**v10ProgramsByIdTradesGet**](ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
@@ -242,6 +244,123 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramDetailsFull**](ProgramDetailsFull.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramsByIdPeriodsExportGet"></a>
+# **v10ProgramsByIdPeriodsExportGet**
+> &#39;Blob&#39; v10ProgramsByIdPeriodsExportGet(id, opts)
+
+Export periods
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'numberMin': 56, // Number | 
+  'numberMax': 56, // Number | 
+  'status': "status_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdPeriodsExportGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **numberMin** | **Number**|  | [optional] 
+ **numberMax** | **Number**|  | [optional] 
+ **status** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ProgramsByIdPeriodsExportStatisticGet"></a>
+# **v10ProgramsByIdPeriodsExportStatisticGet**
+> &#39;Blob&#39; v10ProgramsByIdPeriodsExportStatisticGet(id, authorization, opts)
+
+Export period financial statistic
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'numberMin': 56, // Number | 
+  'numberMax': 56, // Number | 
+  'status': "status_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdPeriodsExportStatisticGet(id, authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **numberMin** | **Number**|  | [optional] 
+ **numberMax** | **Number**|  | [optional] 
+ **status** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
 
 ### Authorization
 

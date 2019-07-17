@@ -298,6 +298,133 @@ export default class ProgramsApi {
         });
     }
 
+      v10ProgramsByIdPeriodsExportGetWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdPeriodsExportGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'NumberMin': opts['numberMin'],
+        'NumberMax': opts['numberMax'],
+        'Status': opts['status'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/periods/export', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Export periods
+     * @function ProgramsApi#v10ProgramsByIdPeriodsExportGet
+     * @param {String} id 
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.numberMin] 
+     * @param {Number} [opts.numberMax] 
+     * @param {String} [opts.status] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<'Blob'>} a Promise, with an object containing data of type 'Blob' and HTTP response
+     */
+      v10ProgramsByIdPeriodsExportGet(id, opts) {
+      return this.v10ProgramsByIdPeriodsExportGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProgramsByIdPeriodsExportStatisticGetWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10ProgramsByIdPeriodsExportStatisticGet");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProgramsByIdPeriodsExportStatisticGet");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'NumberMin': opts['numberMin'],
+        'NumberMax': opts['numberMax'],
+        'Status': opts['status'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/v1.0/programs/{id}/periods/export/statistic', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Export period financial statistic
+     * @function ProgramsApi#v10ProgramsByIdPeriodsExportStatisticGet
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.numberMin] 
+     * @param {Number} [opts.numberMax] 
+     * @param {String} [opts.status] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<'Blob'>} a Promise, with an object containing data of type 'Blob' and HTTP response
+     */
+      v10ProgramsByIdPeriodsExportStatisticGet(id, authorization, opts) {
+      return this.v10ProgramsByIdPeriodsExportStatisticGetWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       v10ProgramsByIdPeriodsGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
