@@ -52,13 +52,22 @@ export class RequiredError extends Error {
     }
 }
 
-const formatResponse = async <T>(response: Response): Promise<T> => {
-  const data = await response.text();
-  try {
-    return JSON.parse(data) as T;
-  } catch (e) {
-    return (data as unknown) as T;
-  }
+const formatResponse = <T>(response: Response): Promise<T> => {
+  return new Promise(async (resolve, reject) => {
+    if (!response.ok) {
+      const body = await response.json();
+      return reject({
+        statusCode: response.status,
+        body
+      });
+    }
+    const data = await response.text();
+    try {
+      resolve(JSON.parse(data));
+    } catch (e) {
+      resolve((data as unknown) as T);
+    }
+  });
 };
 
 export interface AmountWithCurrency {
@@ -158,7 +167,7 @@ export interface BrokerAccountType {
     isSignalsAvailable: boolean;
 }
 
-export type BrokerAccountTypeTypeEnum = 'Undefined' |'MetaTrader4' |'MetaTrader5' |'NinjaTrader' |'cTrader' |'Rumus' |'Metastock' |'Huobi' |'Exante'; 
+export type BrokerAccountTypeTypeEnum = 'Undefined' |'MetaTrader4' |'MetaTrader5' |'NinjaTrader' |'cTrader' |'Rumus' |'Metastock' |'IDEX' |'Huobi' |'Exante'; 
 export interface BrokerDetails {
     isForex: boolean;
     logo: string;
@@ -268,7 +277,7 @@ export interface DashboardPortfolioEvent {
 export type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
 export type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
 export type DashboardPortfolioEventCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
-export type DashboardPortfolioEventTypeEnum = 'All' |'Invest' |'Withdraw' |'Profit' |'Loss' |'Reinvest' |'Canceled' |'Ended' |'WithdrawByStopOut'; 
+export type DashboardPortfolioEventTypeEnum = 'Invest' |'Canceled' |'WithdrawByStopOut' |'Loss' |'Reinvest' |'Profit' |'All' |'Withdraw' |'Ended'; 
 export type DashboardPortfolioEventAssetTypeEnum = 'Program' |'Fund'; 
 export interface DashboardPortfolioEvents {
     events: Array<DashboardPortfolioEvent>;
@@ -644,10 +653,7 @@ export interface ManagersList {
 export interface MigrationRequest {
     dateCreate: Date;
     newLeverage: number;
-    brokerTradingAccountId: string;
-    brokerTradingAccountName: string;
-    brokerName: string;
-    brokerLogo: string;
+    newBroker: Broker;
 }
 export interface MultiWalletExternalTransaction {
     id: string;
@@ -1525,6 +1531,7 @@ export interface TotalCommission {
     amount: number;
     currency: TotalCommissionCurrencyEnum;
     type: TotalCommissionTypeEnum;
+    title: string;
 }
 
 export type TotalCommissionCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
@@ -6004,7 +6011,7 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
-        v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options: any = {}): FetchArgs {
+        v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, assetType?: string, options: any = {}): FetchArgs {
             // verify required parameter 'skip' is not null or undefined
             if (skip === null || skip === undefined) {
                 throw new RequiredError('skip','Required parameter skip was null or undefined when calling v10ManagerRequestsBySkipByTakeGet.');
@@ -6024,6 +6031,10 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (assetType !== undefined) {
+                localVarQueryParameter['assetType'] = assetType;
+            }
 
             if (authorization !== undefined && authorization !== null) {
                 localVarHeaderParameter['Authorization'] = String(authorization);
@@ -6334,8 +6345,8 @@ export const ManagerApiFp = function(configuration?: Configuration) {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<void>(response));
             };
         },
-        v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests> {
-            const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, options);
+        v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, assetType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests> {
+            const localVarFetchArgs = ManagerApiFetchParamCreator(configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, assetType, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<ProgramRequests>(response));
             };
@@ -6788,8 +6799,14 @@ export class ManagerApi extends BaseAPI {
     skip: number,
     take: number,
     authorization: string,
+    options: {
+        assetType?: string
+    } = {},
     init?: RequestInit) {
-        return ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, init)(this.fetch, this.basePath);
+	      const {
+	        assetType
+	      } = options;
+        return ManagerApiFp(this.configuration).v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, assetType, init)(this.fetch, this.basePath);
     }
 
     public v10ManagerSignalCreatePost(
@@ -8120,6 +8137,114 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 options: localVarRequestOptions,
             };
         },
+        v10ProgramsByIdPeriodsExportGet(id: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling v10ProgramsByIdPeriodsExportGet.');
+            }
+            const localVarPath = `/v1.0/programs/{id}/periods/export`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (dateFrom !== undefined) {
+                localVarQueryParameter['DateFrom'] = dateFrom;
+            }
+
+            if (dateTo !== undefined) {
+                localVarQueryParameter['DateTo'] = dateTo;
+            }
+
+            if (numberMin !== undefined) {
+                localVarQueryParameter['NumberMin'] = numberMin;
+            }
+
+            if (numberMax !== undefined) {
+                localVarQueryParameter['NumberMax'] = numberMax;
+            }
+
+            if (status !== undefined) {
+                localVarQueryParameter['Status'] = status;
+            }
+
+            if (skip !== undefined) {
+                localVarQueryParameter['Skip'] = skip;
+            }
+
+            if (take !== undefined) {
+                localVarQueryParameter['Take'] = take;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling v10ProgramsByIdPeriodsExportStatisticGet.');
+            }
+            // verify required parameter 'authorization' is not null or undefined
+            if (authorization === null || authorization === undefined) {
+                throw new RequiredError('authorization','Required parameter authorization was null or undefined when calling v10ProgramsByIdPeriodsExportStatisticGet.');
+            }
+            const localVarPath = `/v1.0/programs/{id}/periods/export/statistic`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (dateFrom !== undefined) {
+                localVarQueryParameter['DateFrom'] = dateFrom;
+            }
+
+            if (dateTo !== undefined) {
+                localVarQueryParameter['DateTo'] = dateTo;
+            }
+
+            if (numberMin !== undefined) {
+                localVarQueryParameter['NumberMin'] = numberMin;
+            }
+
+            if (numberMax !== undefined) {
+                localVarQueryParameter['NumberMax'] = numberMax;
+            }
+
+            if (status !== undefined) {
+                localVarQueryParameter['Status'] = status;
+            }
+
+            if (skip !== undefined) {
+                localVarQueryParameter['Skip'] = skip;
+            }
+
+            if (take !== undefined) {
+                localVarQueryParameter['Take'] = take;
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['Authorization'] = String(authorization);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
@@ -8552,6 +8677,18 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<ProgramDetailsFull>(response));
             };
         },
+        v10ProgramsByIdPeriodsExportGet(id: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string> {
+            const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdPeriodsExportGet(id, dateFrom, dateTo, numberMin, numberMax, status, skip, take, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<string>(response));
+            };
+        },
+        v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string> {
+            const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdPeriodsExportStatisticGet(id, authorization, dateFrom, dateTo, numberMin, numberMax, status, skip, take, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<string>(response));
+            };
+        },
         v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramPeriodsViewModel> {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdPeriodsGet(id, authorization, dateFrom, dateTo, numberMin, numberMax, status, skip, take, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
@@ -8662,6 +8799,55 @@ export class ProgramsApi extends BaseAPI {
 	        currencySecondary
 	      } = options;
         return ProgramsApiFp(this.configuration).v10ProgramsByIdGet(id, authorization, currencySecondary, init)(this.fetch, this.basePath);
+    }
+
+    public v10ProgramsByIdPeriodsExportGet(
+    id: string,
+    options: {
+        dateFrom?: Date,
+        dateTo?: Date,
+        numberMin?: number,
+        numberMax?: number,
+        status?: string,
+        skip?: number,
+        take?: number
+    } = {},
+    init?: RequestInit) {
+	      const {
+	        dateFrom,
+	        dateTo,
+	        numberMin,
+	        numberMax,
+	        status,
+	        skip,
+	        take
+	      } = options;
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdPeriodsExportGet(id, dateFrom, dateTo, numberMin, numberMax, status, skip, take, init)(this.fetch, this.basePath);
+    }
+
+    public v10ProgramsByIdPeriodsExportStatisticGet(
+    id: string,
+    authorization: string,
+    options: {
+        dateFrom?: Date,
+        dateTo?: Date,
+        numberMin?: number,
+        numberMax?: number,
+        status?: string,
+        skip?: number,
+        take?: number
+    } = {},
+    init?: RequestInit) {
+	      const {
+	        dateFrom,
+	        dateTo,
+	        numberMin,
+	        numberMax,
+	        status,
+	        skip,
+	        take
+	      } = options;
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdPeriodsExportStatisticGet(id, authorization, dateFrom, dateTo, numberMin, numberMax, status, skip, take, init)(this.fetch, this.basePath);
     }
 
     public v10ProgramsByIdPeriodsGet(

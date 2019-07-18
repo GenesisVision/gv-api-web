@@ -127,7 +127,7 @@ export interface BrokerAccountType {
     isForex: boolean;
     isSignalsAvailable: boolean;
 }
-export declare type BrokerAccountTypeTypeEnum = 'Undefined' | 'MetaTrader4' | 'MetaTrader5' | 'NinjaTrader' | 'cTrader' | 'Rumus' | 'Metastock' | 'Huobi' | 'Exante';
+export declare type BrokerAccountTypeTypeEnum = 'Undefined' | 'MetaTrader4' | 'MetaTrader5' | 'NinjaTrader' | 'cTrader' | 'Rumus' | 'Metastock' | 'IDEX' | 'Huobi' | 'Exante';
 export interface BrokerDetails {
     isForex: boolean;
     logo: string;
@@ -232,7 +232,7 @@ export interface DashboardPortfolioEvent {
 export declare type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type DashboardPortfolioEventCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-export declare type DashboardPortfolioEventTypeEnum = 'All' | 'Invest' | 'Withdraw' | 'Profit' | 'Loss' | 'Reinvest' | 'Canceled' | 'Ended' | 'WithdrawByStopOut';
+export declare type DashboardPortfolioEventTypeEnum = 'Invest' | 'Canceled' | 'WithdrawByStopOut' | 'Loss' | 'Reinvest' | 'Profit' | 'All' | 'Withdraw' | 'Ended';
 export declare type DashboardPortfolioEventAssetTypeEnum = 'Program' | 'Fund';
 export interface DashboardPortfolioEvents {
     events: Array<DashboardPortfolioEvent>;
@@ -601,10 +601,7 @@ export interface ManagersList {
 export interface MigrationRequest {
     dateCreate: Date;
     newLeverage: number;
-    brokerTradingAccountId: string;
-    brokerTradingAccountName: string;
-    brokerName: string;
-    brokerLogo: string;
+    newBroker: Broker;
 }
 export interface MultiWalletExternalTransaction {
     id: string;
@@ -1455,6 +1452,7 @@ export interface TotalCommission {
     amount: number;
     currency: TotalCommissionCurrencyEnum;
     type: TotalCommissionTypeEnum;
+    title: string;
 }
 export declare type TotalCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type TotalCommissionTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
@@ -2038,7 +2036,7 @@ export declare const ManagerApiFetchParamCreator: (configuration?: Configuration
     v10ManagerProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ManagerProgramsInvestmentAmountGet(authorization: string, brokerTradingAccount?: string, options?: any): FetchArgs;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): FetchArgs;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): FetchArgs;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, assetType?: string, options?: any): FetchArgs;
     v10ManagerSignalCreatePost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): FetchArgs;
     v10ManagerSignalEditPost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): FetchArgs;
 };
@@ -2079,7 +2077,7 @@ export declare const ManagerApiFp: (configuration?: Configuration) => {
     v10ManagerProgramsGet(authorization: string, sorting?: string, from?: Date, to?: Date, chartPointsCount?: number, currencySecondary?: string, actionStatus?: string, dashboardActionStatus?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramsList>;
     v10ManagerProgramsInvestmentAmountGet(authorization: string, brokerTradingAccount?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramMinimumDeposit>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, assetType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ManagerSignalEditPost(authorization: string, programId?: string, volumeFee?: number, successFee?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
 };
@@ -2189,7 +2187,9 @@ export declare class ManagerApi extends BaseAPI {
         brokerTradingAccount?: string;
     }, init?: RequestInit): Promise<ProgramMinimumDeposit>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string, init?: RequestInit): Promise<void>;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, init?: RequestInit): Promise<ProgramRequests>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, options?: {
+        assetType?: string;
+    }, init?: RequestInit): Promise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, options?: {
         programId?: string;
         volumeFee?: number;
@@ -2327,6 +2327,8 @@ export declare const ProgramsApiFetchParamCreator: (configuration?: Configuratio
     v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any): FetchArgs;
     v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): FetchArgs;
     v10ProgramsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): FetchArgs;
+    v10ProgramsByIdPeriodsExportGet(id: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
+    v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdSubscribersGet(id: string, authorization: string, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): FetchArgs;
@@ -2342,6 +2344,8 @@ export declare const ProgramsApiFp: (configuration?: Configuration) => {
     v10ProgramsByIdFavoriteAddPost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<void>;
     v10ProgramsByIdGet(id: string, authorization?: string, currencySecondary?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramDetailsFull>;
+    v10ProgramsByIdPeriodsExportGet(id: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
+    v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramPeriodsViewModel>;
     v10ProgramsByIdSubscribersGet(id: string, authorization: string, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignalProviderSubscribers>;
     v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesViewModel>;
@@ -2368,6 +2372,24 @@ export declare class ProgramsApi extends BaseAPI {
         authorization?: string;
         currencySecondary?: string;
     }, init?: RequestInit): Promise<ProgramDetailsFull>;
+    v10ProgramsByIdPeriodsExportGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        numberMin?: number;
+        numberMax?: number;
+        status?: string;
+        skip?: number;
+        take?: number;
+    }, init?: RequestInit): Promise<string>;
+    v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        numberMin?: number;
+        numberMax?: number;
+        status?: string;
+        skip?: number;
+        take?: number;
+    }, init?: RequestInit): Promise<string>;
     v10ProgramsByIdPeriodsGet(id: string, options?: {
         authorization?: string;
         dateFrom?: Date;
