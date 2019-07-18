@@ -301,23 +301,23 @@ export default class DashboardPortfolioEvent {
 
     static TypeEnum = {
     
-        "All": "All",
-    
         "Invest": "Invest",
     
-        "Withdraw": "Withdraw",
+        "Canceled": "Canceled",
     
-        "Profit": "Profit",
+        "WithdrawByStopOut": "WithdrawByStopOut",
     
         "Loss": "Loss",
     
         "Reinvest": "Reinvest",
     
-        "Canceled": "Canceled",
+        "Profit": "Profit",
     
-        "Ended": "Ended",
+        "All": "All",
     
-        "WithdrawByStopOut": "WithdrawByStopOut"    
+        "Withdraw": "Withdraw",
+    
+        "Ended": "Ended"    
     };
 
     static AssetTypeEnum = {
@@ -351,7 +351,7 @@ export default class DashboardPortfolioEvent {
 
 /**
  * @typedef DashboardPortfolioEventTypeEnum 
- * @type {("All"|"Invest"|"Withdraw"|"Profit"|"Loss"|"Reinvest"|"Canceled"|"Ended"|"WithdrawByStopOut")}
+ * @type {("Invest"|"Canceled"|"WithdrawByStopOut"|"Loss"|"Reinvest"|"Profit"|"All"|"Withdraw"|"Ended")}
  */
 
 /**
