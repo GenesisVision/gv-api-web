@@ -115,12 +115,6 @@ export default class WalletInfo {
 
     static CurrencyEnum = {
     
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -139,7 +133,13 @@ export default class WalletInfo {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE"    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
     };
 
 
@@ -151,7 +151,7 @@ export default class WalletInfo {
 
 /**
  * @typedef WalletInfoCurrencyEnum 
- * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

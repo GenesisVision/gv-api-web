@@ -25,12 +25,6 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -50,6 +44,12 @@ Name | Type | Description | Notes
 * `LTC` (value: `"LTC"`)
 
 * `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 

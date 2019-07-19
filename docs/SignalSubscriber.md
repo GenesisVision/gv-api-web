@@ -33,12 +33,6 @@ Name | Type | Description | Notes
 ## Enum: TotalCommissionCurrencyEnum
 
 
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -58,6 +52,12 @@ Name | Type | Description | Notes
 * `LTC` (value: `"LTC"`)
 
 * `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 
@@ -66,12 +66,6 @@ Name | Type | Description | Notes
 ## Enum: TotalSuccessFeeCurrencyEnum
 
 
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -91,6 +85,12 @@ Name | Type | Description | Notes
 * `LTC` (value: `"LTC"`)
 
 * `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 
@@ -99,12 +99,6 @@ Name | Type | Description | Notes
 ## Enum: TotalVolumeFeeCurrencyEnum
 
 
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -124,6 +118,12 @@ Name | Type | Description | Notes
 * `LTC` (value: `"LTC"`)
 
 * `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 
