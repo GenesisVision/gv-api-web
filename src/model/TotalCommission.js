@@ -97,6 +97,12 @@ export default class TotalCommission {
 
     static CurrencyEnum = {
     
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -115,13 +121,7 @@ export default class TotalCommission {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "DOGE": "DOGE"    
     };
 
     static TypeEnum = {
@@ -162,7 +162,7 @@ export default class TotalCommission {
 
 /**
  * @typedef TotalCommissionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
  */
 
 /**

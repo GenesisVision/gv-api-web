@@ -224,6 +224,12 @@ export default class ProgramStatistic {
 
     static StartCurrencyEnum = {
     
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -242,17 +248,17 @@ export default class ProgramStatistic {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "DOGE": "DOGE"    
     };
 
     static InvestedCurrencyEnum = {
     
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -271,13 +277,7 @@ export default class ProgramStatistic {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "DOGE": "DOGE"    
     };
 
 
@@ -289,12 +289,12 @@ export default class ProgramStatistic {
 
 /**
  * @typedef ProgramStatisticStartCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
  */
 
 /**
  * @typedef ProgramStatisticInvestedCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
  */
 
 

@@ -142,6 +142,12 @@ export default class MultiWalletExternalTransaction {
 
     static CurrencyEnum = {
     
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -160,13 +166,7 @@ export default class MultiWalletExternalTransaction {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "DOGE": "DOGE"    
     };
 
     static TypeEnum = {
@@ -187,7 +187,7 @@ export default class MultiWalletExternalTransaction {
 
 /**
  * @typedef MultiWalletExternalTransactionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
  */
 
 /**

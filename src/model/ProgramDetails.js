@@ -293,6 +293,12 @@ export default class ProgramDetails {
 
     static CurrencyEnum = {
     
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR",
+    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -311,13 +317,7 @@ export default class ProgramDetails {
     
         "LTC": "LTC",
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
+        "DOGE": "DOGE"    
     };
 
     static StatusEnum = {
@@ -346,7 +346,7 @@ export default class ProgramDetails {
 
 /**
  * @typedef ProgramDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE")}
  */
 
 /**
