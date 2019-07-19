@@ -13,9 +13,9 @@ Method | HTTP request | Description
 [**v10ProgramsByIdPeriodsExportStatisticGet**](ProgramsApi.md#v10ProgramsByIdPeriodsExportStatisticGet) | **GET** /v1.0/programs/{id}/periods/export/statistic | Export period financial statistic
 [**v10ProgramsByIdPeriodsGet**](ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 [**v10ProgramsByIdSubscribersGet**](ProgramsApi.md#v10ProgramsByIdSubscribersGet) | **GET** /v1.0/programs/{id}/subscribers | Signal subscribers
+[**v10ProgramsByIdTradesExportGet**](ProgramsApi.md#v10ProgramsByIdTradesExportGet) | **GET** /v1.0/programs/{id}/trades/export | Export trades
 [**v10ProgramsByIdTradesGet**](ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 [**v10ProgramsByIdTradesOpenGet**](ProgramsApi.md#v10ProgramsByIdTradesOpenGet) | **GET** /v1.0/programs/{id}/trades/open | Open positions
-[**v10ProgramsByProgramIdTradesExportGet**](ProgramsApi.md#v10ProgramsByProgramIdTradesExportGet) | **GET** /v1.0/programs/{programId}/trades/export | Export trades
 [**v10ProgramsGet**](ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 [**v10ProgramsLevelupSummaryGet**](ProgramsApi.md#v10ProgramsLevelupSummaryGet) | **GET** /v1.0/programs/levelup/summary | Level up summary
 [**v10ProgramsSetsGet**](ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets
@@ -482,6 +482,65 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
+<a name="v10ProgramsByIdTradesExportGet"></a>
+# **v10ProgramsByIdTradesExportGet**
+> &#39;Blob&#39; v10ProgramsByIdTradesExportGet(id, opts)
+
+Export trades
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProgramsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'symbol': "symbol_example", // String | 
+  'sorting': "sorting_example", // String | 
+  'accountId': "accountId_example", // String | 
+  'accountCurrency': "accountCurrency_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ProgramsByIdTradesExportGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **symbol** | **String**|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **accountId** | [**String**](.md)|  | [optional] 
+ **accountCurrency** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
 <a name="v10ProgramsByIdTradesGet"></a>
 # **v10ProgramsByIdTradesGet**
 > TradesViewModel v10ProgramsByIdTradesGet(id, opts)
@@ -586,53 +645,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TradesViewModel**](TradesViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProgramsByProgramIdTradesExportGet"></a>
-# **v10ProgramsByProgramIdTradesExportGet**
-> &#39;Blob&#39; v10ProgramsByProgramIdTradesExportGet(programId, opts)
-
-Export trades
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProgramsApi();
-
-let programId = "programId_example"; // String | 
-
-let opts = { 
-  'start': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'end': new Date("2013-10-20T19:20:30+01:00") // Date | 
-};
-apiInstance.v10ProgramsByProgramIdTradesExportGet(programId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **programId** | [**String**](.md)|  | 
- **start** | **Date**|  | [optional] 
- **end** | **Date**|  | [optional] 
-
-### Return type
-
-**&#39;Blob&#39;**
 
 ### Authorization
 

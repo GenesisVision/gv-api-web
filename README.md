@@ -228,9 +228,9 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsExportStatisticGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsExportStatisticGet) | **GET** /v1.0/programs/{id}/periods/export/statistic | Export period financial statistic
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdPeriodsGet**](docs/ProgramsApi.md#v10ProgramsByIdPeriodsGet) | **GET** /v1.0/programs/{id}/periods | Program periods
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdSubscribersGet**](docs/ProgramsApi.md#v10ProgramsByIdSubscribersGet) | **GET** /v1.0/programs/{id}/subscribers | Signal subscribers
+*CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesExportGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesExportGet) | **GET** /v1.0/programs/{id}/trades/export | Export trades
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesGet) | **GET** /v1.0/programs/{id}/trades | Trade history
 *CoreApiV10.ProgramsApi* | [**v10ProgramsByIdTradesOpenGet**](docs/ProgramsApi.md#v10ProgramsByIdTradesOpenGet) | **GET** /v1.0/programs/{id}/trades/open | Open positions
-*CoreApiV10.ProgramsApi* | [**v10ProgramsByProgramIdTradesExportGet**](docs/ProgramsApi.md#v10ProgramsByProgramIdTradesExportGet) | **GET** /v1.0/programs/{programId}/trades/export | Export trades
 *CoreApiV10.ProgramsApi* | [**v10ProgramsGet**](docs/ProgramsApi.md#v10ProgramsGet) | **GET** /v1.0/programs | Programs list
 *CoreApiV10.ProgramsApi* | [**v10ProgramsLevelupSummaryGet**](docs/ProgramsApi.md#v10ProgramsLevelupSummaryGet) | **GET** /v1.0/programs/levelup/summary | Level up summary
 *CoreApiV10.ProgramsApi* | [**v10ProgramsSetsGet**](docs/ProgramsApi.md#v10ProgramsSetsGet) | **GET** /v1.0/programs/sets | Programs sets

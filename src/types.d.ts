@@ -465,6 +465,16 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalProviderSubscribers>;
+    v10ProgramsByIdTradesExportGet(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        symbol?: string;
+        sorting?: string;
+        accountId?: string;
+        accountCurrency?: string;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<Blob>;
     v10ProgramsByIdTradesGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -483,10 +493,6 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesViewModel>;
-    v10ProgramsByProgramIdTradesExportGet(programId: string, opts?: {
-        start?: Date;
-        end?: Date;
-    }): CancelablePromise<Blob>;
     v10ProgramsGet(opts?: {
         authorization?: string;
         levelMin?: number;
