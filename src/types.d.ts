@@ -1067,7 +1067,7 @@ export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = "Und
 
 export declare type DashboardPortfolioEventCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type DashboardPortfolioEventTypeEnum = "Invest" | "Canceled" | "WithdrawByStopOut" | "Loss" | "Reinvest" | "Profit" | "All" | "Withdraw" | "Ended";
+export declare type DashboardPortfolioEventTypeEnum = "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended" | "WithdrawByStopOut";
 
 export declare type DashboardPortfolioEventAssetTypeEnum = "Program" | "Fund";
 
