@@ -1,6 +1,6 @@
 {
   "name": "gv-api-web",
-  "version": "1.0.771",
+  "version": "1.0.772",
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
   "module": "src/index.js",
