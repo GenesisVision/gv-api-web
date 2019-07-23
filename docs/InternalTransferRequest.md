@@ -25,6 +25,10 @@ Name | Type | Description | Notes
 
 * `SignalProviderSettings` (value: `"SignalProviderSettings"`)
 
+* `Program` (value: `"Program"`)
+
+* `Fund` (value: `"Fund"`)
+
 
 
 
@@ -41,6 +45,10 @@ Name | Type | Description | Notes
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
 * `SignalProviderSettings` (value: `"SignalProviderSettings"`)
+
+* `Program` (value: `"Program"`)
+
+* `Fund` (value: `"Fund"`)
 
 
 

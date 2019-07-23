@@ -13,9 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
+import FeeDetails from './FeeDetails';
 import OrderModelSignalData from './OrderModelSignalData';
 import OrderSignalProgramInfo from './OrderSignalProgramInfo';
-import TotalCommission from './TotalCommission';
 
 
 
@@ -39,7 +39,7 @@ import TotalCommission from './TotalCommission';
 /**
  *
  * @name OrderSignalModel#totalCommissionByType
- * @type {Array<TotalCommission>}
+ * @type {Array<FeeDetails>}
  */
 /**
  *
@@ -174,7 +174,7 @@ export default class OrderSignalModel {
                 obj['totalCommission'] = ApiClient.convertToType(data['totalCommission'], 'Number');
             }
             if (data.hasOwnProperty('totalCommissionByType')) {
-                obj['totalCommissionByType'] = ApiClient.convertToType(data['totalCommissionByType'], [TotalCommission]);
+                obj['totalCommissionByType'] = ApiClient.convertToType(data['totalCommissionByType'], [FeeDetails]);
             }
             if (data.hasOwnProperty('tradingAccountId')) {
                 obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');

@@ -1763,7 +1763,7 @@ No authorization required
 
 <a name="v10ManagerRequestsBySkipByTakeGet"></a>
 # **v10ManagerRequestsBySkipByTakeGet**
-> ProgramRequests v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, opts)
+> ProgramRequests v10ManagerRequestsBySkipByTakeGet(skip, take, authorization)
 
 Get all requests
 
@@ -1779,10 +1779,7 @@ let take = 56; // Number |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'assetType': "assetType_example" // String | 
-};
-apiInstance.v10ManagerRequestsBySkipByTakeGet(skip, take, authorization, opts).then((data) => {
+apiInstance.v10ManagerRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1797,7 +1794,6 @@ Name | Type | Description  | Notes
  **skip** | **Number**|  | 
  **take** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **assetType** | **String**|  | [optional] 
 
 ### Return type
 

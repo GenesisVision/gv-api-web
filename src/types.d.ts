@@ -337,9 +337,7 @@ export declare class ManagerApi {
         brokerTradingAccount?: string;
     }): CancelablePromise<ProgramMinimumDeposit>;
     v10ManagerProgramsRequestsByIdCancelPost(id: string, authorization: string): CancelablePromise<any>;
-    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string, opts?: {
-        assetType?: string;
-    }): CancelablePromise<ProgramRequests>;
+    v10ManagerRequestsBySkipByTakeGet(skip: number, take: number, authorization: string): CancelablePromise<ProgramRequests>;
     v10ManagerSignalCreatePost(authorization: string, opts?: {
         programId?: string;
         volumeFee?: number;
@@ -678,6 +676,7 @@ export declare interface index {
     ErrorViewModel: ErrorViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
     FcmTokenViewModel: FcmTokenViewModel;
+    FeeDetails: FeeDetails;
     FinancialStatistic: FinancialStatistic;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
@@ -806,7 +805,6 @@ export declare interface index {
     SignalsList: SignalsList;
     SocialLinkViewModel: SocialLinkViewModel;
     SocialLinksViewModel: SocialLinksViewModel;
-    TotalCommission: TotalCommission;
     TradesSignalViewModel: TradesSignalViewModel;
     TradesViewModel: TradesViewModel;
     TransactionDetails: TransactionDetails;
@@ -880,7 +878,7 @@ export declare interface AssetSelection {
     type: AssetSelectionTypeEnum;
 }
 
-export declare type AssetsValueTypeEnum = "All" | "Program" | "Fund";
+export declare type AssetsValueTypeEnum = "All" | "Program" | "Fund" | "Signal";
 
 export declare interface AssetsValue {
     type: AssetsValueTypeEnum;
@@ -1151,6 +1149,17 @@ export declare interface FcmTokenViewModel {
     token: string;
 }
 
+export declare type FeeDetailsTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
+
+export declare type FeeDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface FeeDetails {
+    title: string;
+    type: FeeDetailsTypeEnum;
+    amount: number;
+    currency: FeeDetailsCurrencyEnum;
+}
+
 export declare interface FinancialStatistic {
     deposit: number;
     withdraw: number;
@@ -1358,9 +1367,9 @@ export declare interface IOsAppVersion {
     lastVersion: string;
 }
 
-export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings";
+export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund";
 
-export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings";
+export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund";
 
 export declare interface InternalTransferRequest {
     sourceId: string;
@@ -1729,7 +1738,7 @@ export declare type OrderSignalModelEntryEnum = "In" | "Out" | "InOut" | "OutBy"
 export declare interface OrderSignalModel {
     providers: OrderSignalProgramInfo[];
     totalCommission: number;
-    totalCommissionByType: TotalCommission[];
+    totalCommissionByType: FeeDetails[];
     tradingAccountId: string;
     currency: OrderSignalModelCurrencyEnum;
     id: string;

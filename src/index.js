@@ -48,6 +48,7 @@ import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
+import FeeDetails from './model/FeeDetails';
 import FinancialStatistic from './model/FinancialStatistic';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
@@ -176,7 +177,6 @@ import SignalTradingEvents from './model/SignalTradingEvents';
 import SignalsList from './model/SignalsList';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
 import SocialLinksViewModel from './model/SocialLinksViewModel';
-import TotalCommission from './model/TotalCommission';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
@@ -441,6 +441,12 @@ export {
      * @type {FcmTokenViewModel}
      */
     FcmTokenViewModel,
+
+    /**
+     * @name index#FeeDetails
+     * @type {FeeDetails}
+     */
+    FeeDetails,
 
     /**
      * @name index#FinancialStatistic
@@ -1209,12 +1215,6 @@ export {
      * @type {SocialLinksViewModel}
      */
     SocialLinksViewModel,
-
-    /**
-     * @name index#TotalCommission
-     * @type {TotalCommission}
-     */
-    TotalCommission,
 
     /**
      * @name index#TradesSignalViewModel

@@ -137,7 +137,9 @@ export default class AssetsValue {
     
         "Program": "Program",
     
-        "Fund": "Fund"    
+        "Fund": "Fund",
+    
+        "Signal": "Signal"    
     };
 
 
@@ -149,7 +151,7 @@ export default class AssetsValue {
 
 /**
  * @typedef AssetsValueTypeEnum 
- * @type {("All"|"Program"|"Fund")}
+ * @type {("All"|"Program"|"Fund"|"Signal")}
  */
 
 

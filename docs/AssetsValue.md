@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 
 * `Fund` (value: `"Fund"`)
 
+* `Signal` (value: `"Signal"`)
+
 
 
 
