@@ -107,7 +107,7 @@ export interface AssetsValue {
     changeValue: number;
 }
 
-export type AssetsValueTypeEnum = 'All' |'Program' |'Fund'; 
+export type AssetsValueTypeEnum = 'All' |'Program' |'Fund' |'Signal'; 
 export interface AttachToSignalProvider {
     mode: AttachToSignalProviderModeEnum;
     percent: number;
@@ -277,7 +277,7 @@ export interface DashboardPortfolioEvent {
 export type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
 export type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
 export type DashboardPortfolioEventCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
-export type DashboardPortfolioEventTypeEnum = 'Invest' |'Canceled' |'WithdrawByStopOut' |'Loss' |'Reinvest' |'Profit' |'All' |'Withdraw' |'Ended'; 
+export type DashboardPortfolioEventTypeEnum = 'All' |'Invest' |'Withdraw' |'Profit' |'Loss' |'Reinvest' |'Canceled' |'Ended' |'WithdrawByStopOut'; 
 export type DashboardPortfolioEventAssetTypeEnum = 'Program' |'Fund'; 
 export interface DashboardPortfolioEvents {
     events: Array<DashboardPortfolioEvent>;
@@ -324,6 +324,15 @@ export interface ExternalTransactionDetails {
 export interface FcmTokenViewModel {
     token: string;
 }
+export interface FeeDetails {
+    title: string;
+    type: FeeDetailsTypeEnum;
+    amount: number;
+    currency: FeeDetailsCurrencyEnum;
+}
+
+export type FeeDetailsTypeEnum = 'Undefined' |'GvProgramEntry' |'GvProgramSuccess' |'GvFundEntry' |'GvGmGvtHolderFee' |'ManagerProgramEntry' |'ManagerProgramSuccess' |'ManagerFundEntry' |'ManagerFundExit' |'GvWithdrawal' |'ManagerSignalMasterSuccessFee' |'ManagerSignalMasterVolumeFee' |'GvSignalSuccessFee'; 
+export type FeeDetailsCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
 export interface FinancialStatistic {
     deposit: number;
     withdraw: number;
@@ -509,8 +518,8 @@ export interface InternalTransferRequest {
     transferAll: boolean;
 }
 
-export type InternalTransferRequestSourceTypeEnum = 'Undefined' |'Wallet' |'CopyTradingAccount' |'GenesisVisionPlatform' |'SignalProviderSettings'; 
-export type InternalTransferRequestDestinationTypeEnum = 'Undefined' |'Wallet' |'CopyTradingAccount' |'GenesisVisionPlatform' |'SignalProviderSettings'; 
+export type InternalTransferRequestSourceTypeEnum = 'Undefined' |'Wallet' |'CopyTradingAccount' |'GenesisVisionPlatform' |'SignalProviderSettings' |'Program' |'Fund'; 
+export type InternalTransferRequestDestinationTypeEnum = 'Undefined' |'Wallet' |'CopyTradingAccount' |'GenesisVisionPlatform' |'SignalProviderSettings' |'Program' |'Fund'; 
 export interface LevelInfo {
     level: number;
     investmentLimit: number;
@@ -813,7 +822,7 @@ export type OrderSignalFeeTypeEnum = 'Undefined' |'GvProgramEntry' |'GvProgramSu
 export interface OrderSignalModel {
     providers: Array<OrderSignalProgramInfo>;
     totalCommission: number;
-    totalCommissionByType: Array<TotalCommission>;
+    totalCommissionByType: Array<FeeDetails>;
     tradingAccountId: string;
     currency: OrderSignalModelCurrencyEnum;
     id: string;
@@ -925,6 +934,7 @@ export interface PersonalSignalDetailsFull {
     isFavorite: boolean;
     isInvested: boolean;
     status: PersonalSignalDetailsFullStatusEnum;
+    signalAccountId: string;
 }
 
 export type PersonalSignalDetailsFullStatusEnum = 'Active' |'Ended'; 
@@ -1527,15 +1537,6 @@ export type SocialLinkViewModelTypeEnum = 'Undefined' |'Twitter' |'Telegram' |'F
 export interface SocialLinksViewModel {
     socialLinks: Array<SocialLinkViewModel>;
 }
-export interface TotalCommission {
-    amount: number;
-    currency: TotalCommissionCurrencyEnum;
-    type: TotalCommissionTypeEnum;
-    title: string;
-}
-
-export type TotalCommissionCurrencyEnum = 'Undefined' |'GVT' |'ETH' |'BTC' |'ADA' |'USDT' |'XRP' |'BCH' |'LTC' |'DOGE' |'BNB' |'USD' |'EUR'; 
-export type TotalCommissionTypeEnum = 'Undefined' |'GvProgramEntry' |'GvProgramSuccess' |'GvFundEntry' |'GvGmGvtHolderFee' |'ManagerProgramEntry' |'ManagerProgramSuccess' |'ManagerFundEntry' |'ManagerFundExit' |'GvWithdrawal' |'ManagerSignalMasterSuccessFee' |'ManagerSignalMasterVolumeFee' |'GvSignalSuccessFee'; 
 export interface TradesSignalViewModel {
     showSwaps: boolean;
     showTickets: boolean;
@@ -2864,11 +2865,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (maxPointCount !== undefined) {
@@ -2898,11 +2899,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (maxPointCount !== undefined) {
@@ -3022,11 +3023,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (skip !== undefined) {
@@ -3067,11 +3068,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom;
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toIsoString();
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = statisticDateTo;
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -3585,11 +3586,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -3646,11 +3647,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (balancePoints !== undefined) {
@@ -3703,11 +3704,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (balancePoints !== undefined) {
@@ -3748,11 +3749,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (type !== undefined) {
@@ -4122,11 +4123,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -4248,11 +4249,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -4836,11 +4837,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (type !== undefined) {
@@ -5208,11 +5209,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -5324,11 +5325,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (type !== undefined) {
@@ -5907,11 +5908,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -7992,11 +7993,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (maxPointCount !== undefined) {
@@ -8026,11 +8027,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (maxPointCount !== undefined) {
@@ -8150,11 +8151,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (numberMin !== undefined) {
@@ -8204,11 +8205,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (numberMin !== undefined) {
@@ -8258,11 +8259,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (numberMin !== undefined) {
@@ -8341,6 +8342,60 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 options: localVarRequestOptions,
             };
         },
+        v10ProgramsByIdTradesExportGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling v10ProgramsByIdTradesExportGet.');
+            }
+            const localVarPath = `/v1.0/programs/{id}/trades/export`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (dateFrom !== undefined) {
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+            }
+
+            if (dateTo !== undefined) {
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+            }
+
+            if (symbol !== undefined) {
+                localVarQueryParameter['Symbol'] = symbol;
+            }
+
+            if (sorting !== undefined) {
+                localVarQueryParameter['Sorting'] = sorting;
+            }
+
+            if (accountId !== undefined) {
+                localVarQueryParameter['AccountId'] = accountId;
+            }
+
+            if (accountCurrency !== undefined) {
+                localVarQueryParameter['AccountCurrency'] = accountCurrency;
+            }
+
+            if (skip !== undefined) {
+                localVarQueryParameter['Skip'] = skip;
+            }
+
+            if (take !== undefined) {
+                localVarQueryParameter['Take'] = take;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options: any = {}): FetchArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
@@ -8354,11 +8409,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (symbol !== undefined) {
@@ -8441,36 +8496,6 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
                 options: localVarRequestOptions,
             };
         },
-        v10ProgramsByProgramIdTradesExportGet(programId: string, start?: Date, end?: Date, options: any = {}): FetchArgs {
-            // verify required parameter 'programId' is not null or undefined
-            if (programId === null || programId === undefined) {
-                throw new RequiredError('programId','Required parameter programId was null or undefined when calling v10ProgramsByProgramIdTradesExportGet.');
-            }
-            const localVarPath = `/v1.0/programs/{programId}/trades/export`
-                .replace(`{${"programId"}}`, encodeURIComponent(String(programId)));
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (start !== undefined) {
-                localVarQueryParameter['start'] = start;
-            }
-
-            if (end !== undefined) {
-                localVarQueryParameter['end'] = end;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
         v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, levelsSet?: Array<number>, profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, tags?: Array<string>, isSignal?: boolean, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, hasInvestorsForAll?: boolean, hasInvestorsForClosed?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, status?: Array<string>, skip?: number, take?: number, options: any = {}): FetchArgs {
             const localVarPath = `/v1.0/programs`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -8523,11 +8548,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = statisticDateFrom;
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toIsoString();
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = statisticDateTo;
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toIsoString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -8701,6 +8726,12 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<SignalProviderSubscribers>(response));
             };
         },
+        v10ProgramsByIdTradesExportGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string> {
+            const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdTradesExportGet(id, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<string>(response));
+            };
+        },
         v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesViewModel> {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdTradesGet(id, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
@@ -8711,12 +8742,6 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByIdTradesOpenGet(id, sorting, symbol, accountId, accountCurrency, skip, take, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<TradesViewModel>(response));
-            };
-        },
-        v10ProgramsByProgramIdTradesExportGet(programId: string, start?: Date, end?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string> {
-            const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).v10ProgramsByProgramIdTradesExportGet(programId, start, end, options);
-            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => formatResponse<string>(response));
             };
         },
         v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, levelsSet?: Array<number>, profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, tags?: Array<string>, isSignal?: boolean, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, hasInvestorsForAll?: boolean, hasInvestorsForClosed?: boolean, ids?: Array<string>, managerId?: string, programManagerId?: string, status?: Array<string>, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramsList> {
@@ -8893,6 +8918,32 @@ export class ProgramsApi extends BaseAPI {
         return ProgramsApiFp(this.configuration).v10ProgramsByIdSubscribersGet(id, authorization, status, skip, take, init)(this.fetch, this.basePath);
     }
 
+    public v10ProgramsByIdTradesExportGet(
+    id: string,
+    options: {
+        dateFrom?: Date,
+        dateTo?: Date,
+        symbol?: string,
+        sorting?: string,
+        accountId?: string,
+        accountCurrency?: string,
+        skip?: number,
+        take?: number
+    } = {},
+    init?: RequestInit) {
+	      const {
+	        dateFrom,
+	        dateTo,
+	        symbol,
+	        sorting,
+	        accountId,
+	        accountCurrency,
+	        skip,
+	        take
+	      } = options;
+        return ProgramsApiFp(this.configuration).v10ProgramsByIdTradesExportGet(id, dateFrom, dateTo, symbol, sorting, accountId, accountCurrency, skip, take, init)(this.fetch, this.basePath);
+    }
+
     public v10ProgramsByIdTradesGet(
     id: string,
     options: {
@@ -8939,20 +8990,6 @@ export class ProgramsApi extends BaseAPI {
 	        take
 	      } = options;
         return ProgramsApiFp(this.configuration).v10ProgramsByIdTradesOpenGet(id, sorting, symbol, accountId, accountCurrency, skip, take, init)(this.fetch, this.basePath);
-    }
-
-    public v10ProgramsByProgramIdTradesExportGet(
-    programId: string,
-    options: {
-        start?: Date,
-        end?: Date
-    } = {},
-    init?: RequestInit) {
-	      const {
-	        start,
-	        end
-	      } = options;
-        return ProgramsApiFp(this.configuration).v10ProgramsByProgramIdTradesExportGet(programId, start, end, init)(this.fetch, this.basePath);
     }
 
     public v10ProgramsGet(
@@ -9451,11 +9488,11 @@ export const SignalApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = dateFrom;
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = dateTo;
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
             }
 
             if (symbol !== undefined) {
@@ -9967,11 +10004,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (type !== undefined) {
@@ -10016,11 +10053,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (type !== undefined) {
@@ -10149,11 +10186,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = from;
+                localVarQueryParameter['From'] = (from as Date).toIsoString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = to;
+                localVarQueryParameter['To'] = (to as Date).toIsoString();
             }
 
             if (assetType !== undefined) {
@@ -10662,3 +10699,4 @@ export class WalletApi extends BaseAPI {
     }
 
 }
+
