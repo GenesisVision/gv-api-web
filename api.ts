@@ -2865,11 +2865,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (maxPointCount !== undefined) {
@@ -2899,11 +2899,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (maxPointCount !== undefined) {
@@ -3023,11 +3023,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (skip !== undefined) {
@@ -3068,11 +3068,11 @@ export const FundsApiFetchParamCreator = function (configuration?: Configuration
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toIsoString();
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toISOString();
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toIsoString();
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -3586,11 +3586,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -3647,11 +3647,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (balancePoints !== undefined) {
@@ -3704,11 +3704,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (balancePoints !== undefined) {
@@ -3749,11 +3749,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (type !== undefined) {
@@ -4123,11 +4123,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -4249,11 +4249,11 @@ export const InvestorApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -4837,11 +4837,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (type !== undefined) {
@@ -5209,11 +5209,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -5325,11 +5325,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (type !== undefined) {
@@ -5908,11 +5908,11 @@ export const ManagerApiFetchParamCreator = function (configuration?: Configurati
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -7993,11 +7993,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (maxPointCount !== undefined) {
@@ -8027,11 +8027,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (maxPointCount !== undefined) {
@@ -8151,11 +8151,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (numberMin !== undefined) {
@@ -8205,11 +8205,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (numberMin !== undefined) {
@@ -8259,11 +8259,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (numberMin !== undefined) {
@@ -8355,11 +8355,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (symbol !== undefined) {
@@ -8409,11 +8409,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (symbol !== undefined) {
@@ -8548,11 +8548,11 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
             }
 
             if (statisticDateFrom !== undefined) {
-                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toIsoString();
+                localVarQueryParameter['StatisticDateFrom'] = (statisticDateFrom as Date).toISOString();
             }
 
             if (statisticDateTo !== undefined) {
-                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toIsoString();
+                localVarQueryParameter['StatisticDateTo'] = (statisticDateTo as Date).toISOString();
             }
 
             if (chartPointsCount !== undefined) {
@@ -9488,11 +9488,11 @@ export const SignalApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (dateFrom !== undefined) {
-                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toIsoString();
+                localVarQueryParameter['DateFrom'] = (dateFrom as Date).toISOString();
             }
 
             if (dateTo !== undefined) {
-                localVarQueryParameter['DateTo'] = (dateTo as Date).toIsoString();
+                localVarQueryParameter['DateTo'] = (dateTo as Date).toISOString();
             }
 
             if (symbol !== undefined) {
@@ -10004,11 +10004,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (type !== undefined) {
@@ -10053,11 +10053,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (type !== undefined) {
@@ -10186,11 +10186,11 @@ export const WalletApiFetchParamCreator = function (configuration?: Configuratio
             }
 
             if (from !== undefined) {
-                localVarQueryParameter['From'] = (from as Date).toIsoString();
+                localVarQueryParameter['From'] = (from as Date).toISOString();
             }
 
             if (to !== undefined) {
-                localVarQueryParameter['To'] = (to as Date).toIsoString();
+                localVarQueryParameter['To'] = (to as Date).toISOString();
             }
 
             if (assetType !== undefined) {
