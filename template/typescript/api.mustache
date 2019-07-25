@@ -138,7 +138,7 @@ export const {{classname}}FetchParamCreator = function (configuration?: Configur
             {{^isListContainer}}
             if ({{paramName}} !== undefined) {
                 {{#isDateTime}}
-                if (typeof {{paramName}} === "string")
+                if (typeof {{paramName}} === "string") {
                     localVarQueryParameter['{{baseName}}'] = {{paramName}};
                 } else {
                     localVarQueryParameter['{{baseName}}'] = ({{paramName}} as Date).toISOString();
