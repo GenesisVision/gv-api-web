@@ -35,7 +35,12 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name PersonalFundDetailsFull#possibleReallocationTime
+ * @name PersonalFundDetailsFull#availableReallocationPercents
+ * @type {Number}
+ */
+/**
+ *
+ * @name PersonalFundDetailsFull#nextReallocationPercents
  * @type {Date}
  */
 /**
@@ -155,8 +160,11 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('canReallocate')) {
                 obj['canReallocate'] = ApiClient.convertToType(data['canReallocate'], 'Boolean');
             }
-            if (data.hasOwnProperty('possibleReallocationTime')) {
-                obj['possibleReallocationTime'] = ApiClient.convertToType(data['possibleReallocationTime'], 'Date');
+            if (data.hasOwnProperty('availableReallocationPercents')) {
+                obj['availableReallocationPercents'] = ApiClient.convertToType(data['availableReallocationPercents'], 'Number');
+            }
+            if (data.hasOwnProperty('nextReallocationPercents')) {
+                obj['nextReallocationPercents'] = ApiClient.convertToType(data['nextReallocationPercents'], 'Date');
             }
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
@@ -215,7 +223,8 @@ export default class PersonalFundDetailsFull {
 
     withdrawPercent = undefined;
     canReallocate = undefined;
-    possibleReallocationTime = undefined;
+    availableReallocationPercents = undefined;
+    nextReallocationPercents = undefined;
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;

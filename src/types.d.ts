@@ -1802,7 +1802,8 @@ export declare type PersonalFundDetailsFullStatusEnum = "Pending" | "Active" | "
 export declare interface PersonalFundDetailsFull {
     withdrawPercent: number;
     canReallocate: boolean;
-    possibleReallocationTime: Date;
+    availableReallocationPercents: number;
+    nextReallocationPercents: Date;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
