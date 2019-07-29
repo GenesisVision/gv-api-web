@@ -69,7 +69,7 @@ export interface AssetsValue {
     changePercent: number;
     changeValue: number;
 }
-export declare type AssetsValueTypeEnum = 'All' | 'Program' | 'Fund';
+export declare type AssetsValueTypeEnum = 'All' | 'Program' | 'Fund' | 'Signal';
 export interface AttachToSignalProvider {
     mode: AttachToSignalProviderModeEnum;
     percent: number;
@@ -232,7 +232,7 @@ export interface DashboardPortfolioEvent {
 export declare type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export declare type DashboardPortfolioEventCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-export declare type DashboardPortfolioEventTypeEnum = 'Invest' | 'Canceled' | 'WithdrawByStopOut' | 'Loss' | 'Reinvest' | 'Profit' | 'All' | 'Withdraw' | 'Ended';
+export declare type DashboardPortfolioEventTypeEnum = 'All' | 'Invest' | 'Withdraw' | 'Profit' | 'Loss' | 'Reinvest' | 'Canceled' | 'Ended' | 'WithdrawByStopOut';
 export declare type DashboardPortfolioEventAssetTypeEnum = 'Program' | 'Fund';
 export interface DashboardPortfolioEvents {
     events: Array<DashboardPortfolioEvent>;
@@ -277,6 +277,14 @@ export interface ExternalTransactionDetails {
 export interface FcmTokenViewModel {
     token: string;
 }
+export interface FeeDetails {
+    title: string;
+    type: FeeDetailsTypeEnum;
+    amount: number;
+    currency: FeeDetailsCurrencyEnum;
+}
+export declare type FeeDetailsTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
+export declare type FeeDetailsCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export interface FinancialStatistic {
     deposit: number;
     withdraw: number;
@@ -458,8 +466,8 @@ export interface InternalTransferRequest {
     amount: number;
     transferAll: boolean;
 }
-export declare type InternalTransferRequestSourceTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings';
-export declare type InternalTransferRequestDestinationTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings';
+export declare type InternalTransferRequestSourceTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings' | 'Program' | 'Fund';
+export declare type InternalTransferRequestDestinationTypeEnum = 'Undefined' | 'Wallet' | 'CopyTradingAccount' | 'GenesisVisionPlatform' | 'SignalProviderSettings' | 'Program' | 'Fund';
 export interface LevelInfo {
     level: number;
     investmentLimit: number;
@@ -754,7 +762,7 @@ export declare type OrderSignalFeeTypeEnum = 'Undefined' | 'GvProgramEntry' | 'G
 export interface OrderSignalModel {
     providers: Array<OrderSignalProgramInfo>;
     totalCommission: number;
-    totalCommissionByType: Array<TotalCommission>;
+    totalCommissionByType: Array<FeeDetails>;
     tradingAccountId: string;
     currency: OrderSignalModelCurrencyEnum;
     id: string;
@@ -805,7 +813,8 @@ export interface PeriodDate {
 export interface PersonalFundDetailsFull {
     withdrawPercent: number;
     canReallocate: boolean;
-    possibleReallocationTime: Date;
+    availableReallocationPercents: number;
+    nextReallocationPercents: Date;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
@@ -863,6 +872,7 @@ export interface PersonalSignalDetailsFull {
     isFavorite: boolean;
     isInvested: boolean;
     status: PersonalSignalDetailsFullStatusEnum;
+    signalAccountId: string;
 }
 export declare type PersonalSignalDetailsFullStatusEnum = 'Active' | 'Ended';
 export interface PlatformAsset {
@@ -1448,14 +1458,6 @@ export declare type SocialLinkViewModelTypeEnum = 'Undefined' | 'Twitter' | 'Tel
 export interface SocialLinksViewModel {
     socialLinks: Array<SocialLinkViewModel>;
 }
-export interface TotalCommission {
-    amount: number;
-    currency: TotalCommissionCurrencyEnum;
-    type: TotalCommissionTypeEnum;
-    title: string;
-}
-export declare type TotalCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-export declare type TotalCommissionTypeEnum = 'Undefined' | 'GvProgramEntry' | 'GvProgramSuccess' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee';
 export interface TradesSignalViewModel {
     showSwaps: boolean;
     showTickets: boolean;
@@ -2331,9 +2333,9 @@ export declare const ProgramsApiFetchParamCreator: (configuration?: Configuratio
     v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdSubscribersGet(id: string, authorization: string, status?: string, skip?: number, take?: number, options?: any): FetchArgs;
+    v10ProgramsByIdTradesExportGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsByIdTradesOpenGet(id: string, sorting?: string, symbol?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): FetchArgs;
-    v10ProgramsByProgramIdTradesExportGet(programId: string, start?: Date, end?: Date, options?: any): FetchArgs;
     v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, levelsSet?: number[], profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, tags?: string[], isSignal?: boolean, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, hasInvestorsForAll?: boolean, hasInvestorsForClosed?: boolean, ids?: string[], managerId?: string, programManagerId?: string, status?: string[], skip?: number, take?: number, options?: any): FetchArgs;
     v10ProgramsLevelupSummaryGet(authorization?: string, options?: any): FetchArgs;
     v10ProgramsSetsGet(authorization: string, options?: any): FetchArgs;
@@ -2348,9 +2350,9 @@ export declare const ProgramsApiFp: (configuration?: Configuration) => {
     v10ProgramsByIdPeriodsExportStatisticGet(id: string, authorization: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10ProgramsByIdPeriodsGet(id: string, authorization?: string, dateFrom?: Date, dateTo?: Date, numberMin?: number, numberMax?: number, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramPeriodsViewModel>;
     v10ProgramsByIdSubscribersGet(id: string, authorization: string, status?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignalProviderSubscribers>;
+    v10ProgramsByIdTradesExportGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10ProgramsByIdTradesGet(id: string, dateFrom?: Date, dateTo?: Date, symbol?: string, sorting?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesViewModel>;
     v10ProgramsByIdTradesOpenGet(id: string, sorting?: string, symbol?: string, accountId?: string, accountCurrency?: string, skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TradesViewModel>;
-    v10ProgramsByProgramIdTradesExportGet(programId: string, start?: Date, end?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<string>;
     v10ProgramsGet(authorization?: string, levelMin?: number, levelMax?: number, levelsSet?: number[], profitAvgMin?: number, profitAvgMax?: number, sorting?: string, programCurrency?: string, currencySecondary?: string, levelUpFrom?: number, tags?: string[], isSignal?: boolean, statisticDateFrom?: Date, statisticDateTo?: Date, chartPointsCount?: number, mask?: string, facetId?: string, isFavorite?: boolean, isEnabled?: boolean, hasInvestorsForAll?: boolean, hasInvestorsForClosed?: boolean, ids?: string[], managerId?: string, programManagerId?: string, status?: string[], skip?: number, take?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramsList>;
     v10ProgramsLevelupSummaryGet(authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<LevelUpSummary>;
     v10ProgramsSetsGet(authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ProgramSets>;
@@ -2405,6 +2407,16 @@ export declare class ProgramsApi extends BaseAPI {
         skip?: number;
         take?: number;
     }, init?: RequestInit): Promise<SignalProviderSubscribers>;
+    v10ProgramsByIdTradesExportGet(id: string, options?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        symbol?: string;
+        sorting?: string;
+        accountId?: string;
+        accountCurrency?: string;
+        skip?: number;
+        take?: number;
+    }, init?: RequestInit): Promise<string>;
     v10ProgramsByIdTradesGet(id: string, options?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -2423,10 +2435,6 @@ export declare class ProgramsApi extends BaseAPI {
         skip?: number;
         take?: number;
     }, init?: RequestInit): Promise<TradesViewModel>;
-    v10ProgramsByProgramIdTradesExportGet(programId: string, options?: {
-        start?: Date;
-        end?: Date;
-    }, init?: RequestInit): Promise<string>;
     v10ProgramsGet(options?: {
         authorization?: string;
         levelMin?: number;
