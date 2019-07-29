@@ -874,7 +874,8 @@ export interface PeriodDate {
 export interface PersonalFundDetailsFull {
     withdrawPercent: number;
     canReallocate: boolean;
-    possibleReallocationTime: Date;
+    availableReallocationPercents: number;
+    nextReallocationPercents: Date;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
