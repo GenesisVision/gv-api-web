@@ -1683,7 +1683,7 @@ export declare interface NotificationViewModel {
     assetType: NotificationViewModelAssetTypeEnum;
 }
 
-export declare type OrderModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
+export declare type OrderModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined" | "ManualBalancing";
 
 export declare type OrderModelEntryEnum = "In" | "Out" | "InOut" | "OutBy";
 
@@ -1733,7 +1733,7 @@ export declare interface OrderSignalFee {
 
 export declare type OrderSignalModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type OrderSignalModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined";
+export declare type OrderSignalModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined" | "ManualBalancing";
 
 export declare type OrderSignalModelEntryEnum = "In" | "Out" | "InOut" | "OutBy";
 

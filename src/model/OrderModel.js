@@ -232,7 +232,9 @@ export default class OrderModel {
     
         "Credit": "Credit",
     
-        "Undefined": "Undefined"    
+        "Undefined": "Undefined",
+    
+        "ManualBalancing": "ManualBalancing"    
     };
 
     static EntryEnum = {
@@ -255,7 +257,7 @@ export default class OrderModel {
 
 /**
  * @typedef OrderModelDirectionEnum 
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined")}
+ * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined"|"ManualBalancing")}
  */
 
 /**

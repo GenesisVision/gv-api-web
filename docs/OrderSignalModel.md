@@ -75,6 +75,8 @@ Name | Type | Description | Notes
 
 * `Undefined` (value: `"Undefined"`)
 
+* `ManualBalancing` (value: `"ManualBalancing"`)
+
 
 
 
