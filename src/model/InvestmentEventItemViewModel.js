@@ -20,25 +20,30 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface RateItem
+ * @interface InvestmentEventItemViewModel
  */
 
 /**
  *
- * @name RateItem#currency
- * @type RateItemCurrencyEnum
+ * @name InvestmentEventItemViewModel#title
+ * @type {String}
  */
 /**
  *
- * @name RateItem#rate
+ * @name InvestmentEventItemViewModel#amount
  * @type {Number}
  */
+/**
+ *
+ * @name InvestmentEventItemViewModel#currency
+ * @type InvestmentEventItemViewModelCurrencyEnum
+ */
 
 
 
 
 
-export default class RateItem {
+export default class InvestmentEventItemViewModel {
 
     constructor() {
         
@@ -53,24 +58,28 @@ export default class RateItem {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RateItem();
+            obj = obj || new InvestmentEventItemViewModel();
 
             
             
             
 
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('amount')) {
+                obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
-            }
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
         }
         return obj;
     }
 
+    title = undefined;
+    amount = undefined;
     currency = undefined;
-    rate = undefined;
 
 
 
@@ -114,7 +123,7 @@ export default class RateItem {
 
 
 /**
- * @typedef RateItemCurrencyEnum 
+ * @typedef InvestmentEventItemViewModelCurrencyEnum 
  * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 

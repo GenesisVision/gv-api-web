@@ -30,6 +30,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name FeeDetails#description
+ * @type {String}
+ */
+/**
+ *
  * @name FeeDetails#type
  * @type FeeDetailsTypeEnum
  */
@@ -72,6 +77,9 @@ export default class FeeDetails {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -86,6 +94,7 @@ export default class FeeDetails {
     }
 
     title = undefined;
+    description = undefined;
     type = undefined;
     amount = undefined;
     currency = undefined;
@@ -126,17 +135,17 @@ export default class FeeDetails {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
+        "BTC": "BTC",
     
         "ETH": "ETH",
     
-        "BTC": "BTC",
+        "USDT": "USDT",
+    
+        "GVT": "GVT",
+    
+        "Undefined": "Undefined",
     
         "ADA": "ADA",
-    
-        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -167,7 +176,7 @@ export default class FeeDetails {
 
 /**
  * @typedef FeeDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

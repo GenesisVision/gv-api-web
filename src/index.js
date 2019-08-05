@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
+import AssetDetails from './model/AssetDetails';
 import AssetEvent from './model/AssetEvent';
 import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
@@ -73,6 +74,9 @@ import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
 import InternalTransferRequest from './model/InternalTransferRequest';
+import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
+import InvestmentEventViewModel from './model/InvestmentEventViewModel';
+import InvestmentEventViewModels from './model/InvestmentEventViewModels';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
@@ -249,6 +253,12 @@ export {
      * @type {AndroidVersion}
      */
     AndroidVersion,
+
+    /**
+     * @name index#AssetDetails
+     * @type {AssetDetails}
+     */
+    AssetDetails,
 
     /**
      * @name index#AssetEvent
@@ -591,6 +601,24 @@ export {
      * @type {InternalTransferRequest}
      */
     InternalTransferRequest,
+
+    /**
+     * @name index#InvestmentEventItemViewModel
+     * @type {InvestmentEventItemViewModel}
+     */
+    InvestmentEventItemViewModel,
+
+    /**
+     * @name index#InvestmentEventViewModel
+     * @type {InvestmentEventViewModel}
+     */
+    InvestmentEventViewModel,
+
+    /**
+     * @name index#InvestmentEventViewModels
+     * @type {InvestmentEventViewModels}
+     */
+    InvestmentEventViewModels,
 
     /**
      * @name index#LevelInfo

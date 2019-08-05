@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](docs/InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**v10InvestorFundsGet**](docs/InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Dashboard funds list
 *CoreApiV10.InvestorApi* | [**v10InvestorGet**](docs/InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
+*CoreApiV10.InvestorApi* | [**v10InvestorInvestmentsEventsGet**](docs/InvestorApi.md#v10InvestorInvestmentsEventsGet) | **GET** /v1.0/investor/investments/events | Events
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioChartGet**](docs/InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**v10InvestorPortfolioEventsGet**](docs/InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
 *CoreApiV10.InvestorApi* | [**v10InvestorProgramsByIdInvestByAmountPost**](docs/InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
@@ -171,6 +172,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsInvestmentAmountGet**](docs/ManagerApi.md#v10ManagerFundsInvestmentAmountGet) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagerApi* | [**v10ManagerFundsRequestsByIdCancelPost**](docs/ManagerApi.md#v10ManagerFundsRequestsByIdCancelPost) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**v10ManagerGet**](docs/ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
+*CoreApiV10.ManagerApi* | [**v10ManagerInvestmentsEventsGet**](docs/ManagerApi.md#v10ManagerInvestmentsEventsGet) | **GET** /v1.0/manager/investments/events | Events
 *CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faConfirmPost**](docs/ManagerApi.md#v10ManagerPrograms2faConfirmPost) | **POST** /v1.0/manager/programs/2fa/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 *CoreApiV10.ManagerApi* | [**v10ManagerPrograms2faGetGet**](docs/ManagerApi.md#v10ManagerPrograms2faGetGet) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
 *CoreApiV10.ManagerApi* | [**v10ManagerProgramsBrokerChangeCancelPost**](docs/ManagerApi.md#v10ManagerProgramsBrokerChangeCancelPost) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
@@ -272,6 +274,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AmountWithCurrency](docs/AmountWithCurrency.md)
  - [CoreApiV10.AndroidAppVersion](docs/AndroidAppVersion.md)
  - [CoreApiV10.AndroidVersion](docs/AndroidVersion.md)
+ - [CoreApiV10.AssetDetails](docs/AssetDetails.md)
  - [CoreApiV10.AssetEvent](docs/AssetEvent.md)
  - [CoreApiV10.AssetSelection](docs/AssetSelection.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
@@ -329,6 +332,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.GeeTestResult](docs/GeeTestResult.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
  - [CoreApiV10.InternalTransferRequest](docs/InternalTransferRequest.md)
+ - [CoreApiV10.InvestmentEventItemViewModel](docs/InvestmentEventItemViewModel.md)
+ - [CoreApiV10.InvestmentEventViewModel](docs/InvestmentEventViewModel.md)
+ - [CoreApiV10.InvestmentEventViewModels](docs/InvestmentEventViewModels.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)

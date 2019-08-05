@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**v10ManagerFundsInvestmentAmountGet**](ManagerApi.md#v10ManagerFundsInvestmentAmountGet) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
 [**v10ManagerFundsRequestsByIdCancelPost**](ManagerApi.md#v10ManagerFundsRequestsByIdCancelPost) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
 [**v10ManagerGet**](ManagerApi.md#v10ManagerGet) | **GET** /v1.0/manager | Manager dashboard
+[**v10ManagerInvestmentsEventsGet**](ManagerApi.md#v10ManagerInvestmentsEventsGet) | **GET** /v1.0/manager/investments/events | Events
 [**v10ManagerPrograms2faConfirmPost**](ManagerApi.md#v10ManagerPrograms2faConfirmPost) | **POST** /v1.0/manager/programs/2fa/confirm | Confirm 2FA for program if required (for brokers like Huobi)
 [**v10ManagerPrograms2faGetGet**](ManagerApi.md#v10ManagerPrograms2faGetGet) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
 [**v10ManagerProgramsBrokerChangeCancelPost**](ManagerApi.md#v10ManagerProgramsBrokerChangeCancelPost) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
@@ -853,6 +854,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ManagerDashboard**](ManagerDashboard.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10ManagerInvestmentsEventsGet"></a>
+# **v10ManagerInvestmentsEventsGet**
+> InvestmentEventViewModels v10ManagerInvestmentsEventsGet(authorization, opts)
+
+Events
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'assetId': "assetId_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'eventType': "eventType_example", // String | 
+  'assetType': "assetType_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10ManagerInvestmentsEventsGet(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **assetId** | [**String**](.md)|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **eventType** | **String**|  | [optional] 
+ **assetType** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**InvestmentEventViewModels**](InvestmentEventViewModels.md)
 
 ### Authorization
 

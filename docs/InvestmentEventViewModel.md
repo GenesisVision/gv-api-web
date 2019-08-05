@@ -1,26 +1,18 @@
-# CoreApiV10.WalletData
+# CoreApiV10.InvestmentEventViewModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
-**logo** | **String** |  | [optional] 
-**rateToGVT** | **Number** |  | [optional] 
-**isDepositEnabled** | **Boolean** |  | [optional] 
-**isWithdrawalEnabled** | **Boolean** |  | [optional] 
-**withdrawalCommission** | **Number** |  | [optional] 
-**depositAddress** | **String** |  | [optional] 
+**icon** | **String** |  | [optional] 
+**_date** | **Date** |  | [optional] 
+**assetDetails** | [**AssetDetails**](AssetDetails.md) |  | [optional] 
+**amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**available** | **Number** |  | [optional] 
-**invested** | **Number** |  | [optional] 
-**pending** | **Number** |  | [optional] 
-**total** | **Number** |  | [optional] 
-**currencyCcy** | **String** |  | [optional] 
-**availableCcy** | **Number** |  | [optional] 
-**investedCcy** | **Number** |  | [optional] 
-**pendingCcy** | **Number** |  | [optional] 
-**totalCcy** | **Number** |  | [optional] 
+**extendedInfo** | [**[InvestmentEventItemViewModel]**](InvestmentEventItemViewModel.md) |  | [optional] 
+**feesInfo** | [**[FeeDetails]**](FeeDetails.md) |  | [optional] 
+**totalFeesAmount** | **Number** |  | [optional] 
+**totalFeesCurrency** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
@@ -56,8 +48,8 @@ Name | Type | Description | Notes
 
 
 
-<a name="CurrencyCcyEnum"></a>
-## Enum: CurrencyCcyEnum
+<a name="TotalFeesCurrencyEnum"></a>
+## Enum: TotalFeesCurrencyEnum
 
 
 * `BTC` (value: `"BTC"`)

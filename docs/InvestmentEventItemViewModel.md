@@ -1,10 +1,11 @@
-# CoreApiV10.RateItem
+# CoreApiV10.InvestmentEventItemViewModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**title** | **String** |  | [optional] 
+**amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**rate** | **Number** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

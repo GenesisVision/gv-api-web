@@ -20,6 +20,7 @@ import ErrorViewModel from '../model/ErrorViewModel';
 import FundInvestInfo from '../model/FundInvestInfo';
 import FundWithdrawInfo from '../model/FundWithdrawInfo';
 import FundsList from '../model/FundsList';
+import InvestmentEventViewModels from '../model/InvestmentEventViewModels';
 import ProgramInvestInfo from '../model/ProgramInvestInfo';
 import ProgramRequests from '../model/ProgramRequests';
 import ProgramWithdrawInfo from '../model/ProgramWithdrawInfo';
@@ -470,6 +471,66 @@ export default class InvestorApi {
      */
       v10InvestorGet(authorization, opts) {
       return this.v10InvestorGetWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10InvestorInvestmentsEventsGetWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10InvestorInvestmentsEventsGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'AssetId': opts['assetId'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'EventType': opts['eventType'],
+        'AssetType': opts['assetType'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = InvestmentEventViewModels;
+
+      return this.apiClient.callApi(
+        '/v1.0/investor/investments/events', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Events
+     * @function InvestorApi#v10InvestorInvestmentsEventsGet
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.assetId] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {String} [opts.eventType] 
+     * @param {String} [opts.assetType] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<InvestmentEventViewModels>} a Promise, with an object containing data of type InvestmentEventViewModels and HTTP response
+     */
+      v10InvestorInvestmentsEventsGet(authorization, opts) {
+      return this.v10InvestorInvestmentsEventsGetWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
