@@ -160,7 +160,9 @@ export default class BrokerAccountType {
     
         "Huobi": "Huobi",
     
-        "Exante": "Exante"    
+        "Exante": "Exante",
+    
+        "BinanceExchange": "BinanceExchange"    
     };
 
 
@@ -172,7 +174,7 @@ export default class BrokerAccountType {
 
 /**
  * @typedef BrokerAccountTypeTypeEnum 
- * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi"|"Exante")}
+ * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi"|"Exante"|"BinanceExchange")}
  */
 
 

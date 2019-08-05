@@ -13,29 +13,29 @@ Name | Type | Description | Notes
 **signalVolumeFee** | **Number** |  | [optional] 
 **isSignalProgram** | **Boolean** |  | [optional] 
 **investmentLimit** | **Number** |  | [optional] 
-**title** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**logo** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
 **depositWalletId** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**logo** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

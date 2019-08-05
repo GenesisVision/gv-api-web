@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**v10SignalAttachByIdPost**](SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 [**v10SignalByIdUpdatePost**](SignalApi.md#v10SignalByIdUpdatePost) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
+[**v10SignalExternalAttachByIdExternalPost**](SignalApi.md#v10SignalExternalAttachByIdExternalPost) | **POST** /v1.0/signal/external/attach/{id}/external | Subscribe to external signal account
+[**v10SignalExternalCreatePost**](SignalApi.md#v10SignalExternalCreatePost) | **POST** /v1.0/signal/external/create | Create external signal account
 [**v10SignalTradesByIdClosePost**](SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**v10SignalTradesGet**](SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**v10SignalTradesLogGet**](SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
@@ -234,6 +236,99 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalExternalAttachByIdExternalPost"></a>
+# **v10SignalExternalAttachByIdExternalPost**
+> v10SignalExternalAttachByIdExternalPost(id, authorization, opts)
+
+Subscribe to external signal account
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.AttachToExternalSignalProviderExt() // AttachToExternalSignalProviderExt | 
+};
+apiInstance.v10SignalExternalAttachByIdExternalPost(id, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+ **model** | [**AttachToExternalSignalProviderExt**](AttachToExternalSignalProviderExt.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalExternalCreatePost"></a>
+# **v10SignalExternalCreatePost**
+> ManagerProgramCreateResult v10SignalExternalCreatePost(authorization, opts)
+
+Create external signal account
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'request': new CoreApiV10.NewExternalSignalAccountRequest() // NewExternalSignalAccountRequest | 
+};
+apiInstance.v10SignalExternalCreatePost(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **request** | [**NewExternalSignalAccountRequest**](NewExternalSignalAccountRequest.md)|  | [optional] 
+
+### Return type
+
+[**ManagerProgramCreateResult**](ManagerProgramCreateResult.md)
 
 ### Authorization
 

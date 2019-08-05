@@ -75,21 +75,6 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name NewProgramRequest#title
- * @type {String}
- */
-/**
- *
- * @name NewProgramRequest#description
- * @type {String}
- */
-/**
- *
- * @name NewProgramRequest#logo
- * @type {String}
- */
-/**
- *
  * @name NewProgramRequest#entryFee
  * @type {Number}
  */
@@ -101,6 +86,21 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name NewProgramRequest#depositWalletId
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#title
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#description
+ * @type {String}
+ */
+/**
+ *
+ * @name NewProgramRequest#logo
  * @type {String}
  */
 
@@ -159,15 +159,6 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('investmentLimit')) {
                 obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'Number');
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
-            }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
@@ -176,6 +167,15 @@ export default class NewProgramRequest {
             }
             if (data.hasOwnProperty('depositWalletId')) {
                 obj['depositWalletId'] = ApiClient.convertToType(data['depositWalletId'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
         }
         return obj;
@@ -191,12 +191,12 @@ export default class NewProgramRequest {
     signalVolumeFee = undefined;
     isSignalProgram = undefined;
     investmentLimit = undefined;
-    title = undefined;
-    description = undefined;
-    logo = undefined;
     entryFee = undefined;
     depositAmount = undefined;
     depositWalletId = undefined;
+    title = undefined;
+    description = undefined;
+    logo = undefined;
 
 
 
@@ -205,17 +205,17 @@ export default class NewProgramRequest {
 
     static CurrencyEnum = {
     
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
-        "Undefined": "Undefined",
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
     
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -241,7 +241,7 @@ export default class NewProgramRequest {
 
 /**
  * @typedef NewProgramRequestCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

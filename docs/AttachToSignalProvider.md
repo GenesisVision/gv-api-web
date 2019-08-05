@@ -3,13 +3,46 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**initialDepositCurrency** | **String** |  | [optional] 
+**initialDepositAmount** | **Number** |  | [optional] 
 **mode** | **String** |  | [optional] 
 **percent** | **Number** |  | [optional] 
 **openTolerancePercent** | **Number** |  | [optional] 
 **fixedVolume** | **Number** |  | [optional] 
 **fixedCurrency** | **String** |  | [optional] 
-**initialDepositCurrency** | **String** |  | [optional] 
-**initialDepositAmount** | **Number** |  | [optional] 
+
+
+<a name="InitialDepositCurrencyEnum"></a>
+## Enum: InitialDepositCurrencyEnum
+
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
+
+* `XRP` (value: `"XRP"`)
+
+* `BCH` (value: `"BCH"`)
+
+* `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
+
+
 
 
 <a name="ModeEnum"></a>
@@ -29,50 +62,17 @@ Name | Type | Description | Notes
 ## Enum: FixedCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `XRP` (value: `"XRP"`)
-
-* `BCH` (value: `"BCH"`)
-
-* `LTC` (value: `"LTC"`)
-
-* `DOGE` (value: `"DOGE"`)
-
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="InitialDepositCurrencyEnum"></a>
-## Enum: InitialDepositCurrencyEnum
-
+* `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
 
-* `ETH` (value: `"ETH"`)
+* `ADA` (value: `"ADA"`)
 
 * `USDT` (value: `"USDT"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `ADA` (value: `"ADA"`)
 
 * `XRP` (value: `"XRP"`)
 

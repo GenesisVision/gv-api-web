@@ -20,6 +20,7 @@ import AssetDetails from './model/AssetDetails';
 import AssetEvent from './model/AssetEvent';
 import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
+import AttachToExternalSignalProviderExt from './model/AttachToExternalSignalProviderExt';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElement from './model/BalanceChartElement';
@@ -47,6 +48,9 @@ import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import Enums from './model/Enums';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
+import ExternalKeyAddViewModel from './model/ExternalKeyAddViewModel';
+import ExternalKeyViewModel from './model/ExternalKeyViewModel';
+import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import FeeDetails from './model/FeeDetails';
@@ -73,6 +77,7 @@ import FundsList from './model/FundsList';
 import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
+import IdModel from './model/IdModel';
 import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
@@ -102,6 +107,7 @@ import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExterna
 import MultiWalletFilters from './model/MultiWalletFilters';
 import MultiWalletTransaction from './model/MultiWalletTransaction';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
+import NewExternalSignalAccountRequest from './model/NewExternalSignalAccountRequest';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
@@ -279,6 +285,12 @@ export {
     AssetsValue,
 
     /**
+     * @name index#AttachToExternalSignalProviderExt
+     * @type {AttachToExternalSignalProviderExt}
+     */
+    AttachToExternalSignalProviderExt,
+
+    /**
      * @name index#AttachToSignalProvider
      * @type {AttachToSignalProvider}
      */
@@ -441,6 +453,24 @@ export {
     ErrorViewModel,
 
     /**
+     * @name index#ExternalKeyAddViewModel
+     * @type {ExternalKeyAddViewModel}
+     */
+    ExternalKeyAddViewModel,
+
+    /**
+     * @name index#ExternalKeyViewModel
+     * @type {ExternalKeyViewModel}
+     */
+    ExternalKeyViewModel,
+
+    /**
+     * @name index#ExternalKeysViewModel
+     * @type {ExternalKeysViewModel}
+     */
+    ExternalKeysViewModel,
+
+    /**
      * @name index#ExternalTransactionDetails
      * @type {ExternalTransactionDetails}
      */
@@ -595,6 +625,12 @@ export {
      * @type {IOsAppVersion}
      */
     IOsAppVersion,
+
+    /**
+     * @name index#IdModel
+     * @type {IdModel}
+     */
+    IdModel,
 
     /**
      * @name index#InternalTransferRequest
@@ -769,6 +805,12 @@ export {
      * @type {MultiWalletTransactionsViewModel}
      */
     MultiWalletTransactionsViewModel,
+
+    /**
+     * @name index#NewExternalSignalAccountRequest
+     * @type {NewExternalSignalAccountRequest}
+     */
+    NewExternalSignalAccountRequest,
 
     /**
      * @name index#NewFundRequest

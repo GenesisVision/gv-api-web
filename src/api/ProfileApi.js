@@ -14,7 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
+import ExternalKeyAddViewModel from '../model/ExternalKeyAddViewModel';
+import ExternalKeysViewModel from '../model/ExternalKeysViewModel';
 import FcmTokenViewModel from '../model/FcmTokenViewModel';
+import IdModel from '../model/IdModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
 import SocialLinksViewModel from '../model/SocialLinksViewModel';
@@ -218,6 +221,144 @@ export default class ProfileApi {
      */
       v10ProfileHeaderGet(authorization) {
       return this.v10ProfileHeaderGetWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProfileKeysAddPostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileKeysAddPost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/keys/add', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Add external exchange key
+     * @function ProfileApi#v10ProfileKeysAddPost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {ExternalKeyAddViewModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ProfileKeysAddPost(authorization, opts) {
+      return this.v10ProfileKeysAddPostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProfileKeysDeletePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileKeysDeletePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/keys/delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Delete external exchange key
+     * @function ProfileApi#v10ProfileKeysDeletePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {IdModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10ProfileKeysDeletePost(authorization, opts) {
+      return this.v10ProfileKeysDeletePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10ProfileKeysGetWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10ProfileKeysGet");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ExternalKeysViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/keys', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get external exchange keys
+     * @function ProfileApi#v10ProfileKeysGet
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ExternalKeysViewModel>} a Promise, with an object containing data of type ExternalKeysViewModel and HTTP response
+     */
+      v10ProfileKeysGet(authorization) {
+      return this.v10ProfileKeysGetWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

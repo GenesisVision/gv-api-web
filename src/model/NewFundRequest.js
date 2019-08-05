@@ -41,21 +41,6 @@ import FundAssetPart from './FundAssetPart';
  */
 /**
  *
- * @name NewFundRequest#title
- * @type {String}
- */
-/**
- *
- * @name NewFundRequest#description
- * @type {String}
- */
-/**
- *
- * @name NewFundRequest#logo
- * @type {String}
- */
-/**
- *
  * @name NewFundRequest#entryFee
  * @type {Number}
  */
@@ -67,6 +52,21 @@ import FundAssetPart from './FundAssetPart';
 /**
  *
  * @name NewFundRequest#depositWalletId
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#title
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#description
+ * @type {String}
+ */
+/**
+ *
+ * @name NewFundRequest#logo
  * @type {String}
  */
 
@@ -104,15 +104,6 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('assets')) {
                 obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPart]);
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
-            }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
@@ -122,6 +113,15 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('depositWalletId')) {
                 obj['depositWalletId'] = ApiClient.convertToType(data['depositWalletId'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('logo')) {
+                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
         }
         return obj;
     }
@@ -129,12 +129,12 @@ export default class NewFundRequest {
     exitFee = undefined;
     managementFee = undefined;
     assets = undefined;
-    title = undefined;
-    description = undefined;
-    logo = undefined;
     entryFee = undefined;
     depositAmount = undefined;
     depositWalletId = undefined;
+    title = undefined;
+    description = undefined;
+    logo = undefined;
 
 
 

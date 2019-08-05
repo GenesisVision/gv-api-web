@@ -13,11 +13,14 @@
 
 
 import ApiClient from "../ApiClient";
+import AttachToExternalSignalProviderExt from '../model/AttachToExternalSignalProviderExt';
 import AttachToSignalProvider from '../model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from '../model/AttachToSignalProviderInfo';
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
 import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
+import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
+import NewExternalSignalAccountRequest from '../model/NewExternalSignalAccountRequest';
 import SignalTradingEvents from '../model/SignalTradingEvents';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
 
@@ -291,6 +294,107 @@ export default class SignalApi {
      */
       v10SignalDetachByIdPost(id, authorization, opts) {
       return this.v10SignalDetachByIdPostWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10SignalExternalAttachByIdExternalPostWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling v10SignalExternalAttachByIdExternalPost");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalExternalAttachByIdExternalPost");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/external/attach/{id}/external', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Subscribe to external signal account
+     * @function SignalApi#v10SignalExternalAttachByIdExternalPost
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {AttachToExternalSignalProviderExt} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      v10SignalExternalAttachByIdExternalPost(id, authorization, opts) {
+      return this.v10SignalExternalAttachByIdExternalPostWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10SignalExternalCreatePostWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['request'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10SignalExternalCreatePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProgramCreateResult;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/external/create', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Create external signal account
+     * @function SignalApi#v10SignalExternalCreatePost
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {NewExternalSignalAccountRequest} [opts.request] 
+     * @return {CancelablePromise<ManagerProgramCreateResult>} a Promise, with an object containing data of type ManagerProgramCreateResult and HTTP response
+     */
+      v10SignalExternalCreatePost(authorization, opts) {
+      return this.v10SignalExternalCreatePostWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

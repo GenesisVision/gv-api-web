@@ -19,17 +19,17 @@ Name | Type | Description | Notes
 ## Enum: CurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 
@@ -52,17 +52,17 @@ Name | Type | Description | Notes
 ## Enum: TotalFeesCurrencyEnum
 
 
-* `BTC` (value: `"BTC"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `USDT` (value: `"USDT"`)
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
-* `Undefined` (value: `"Undefined"`)
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
 
 * `ADA` (value: `"ADA"`)
+
+* `USDT` (value: `"USDT"`)
 
 * `XRP` (value: `"XRP"`)
 

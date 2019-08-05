@@ -158,7 +158,13 @@ export default class NotificationSettingViewModel {
     
         "ManagerNewProgram": "ManagerNewProgram",
     
-        "Signals": "Signals"    
+        "ManagerNewFund": "ManagerNewFund",
+    
+        "ManagerNewExternalSignalAccount": "ManagerNewExternalSignalAccount",
+    
+        "Signals": "Signals",
+    
+        "ExternalSignals": "ExternalSignals"    
     };
 
     static ConditionTypeEnum = {
@@ -181,7 +187,7 @@ export default class NotificationSettingViewModel {
 
 /**
  * @typedef NotificationSettingViewModelTypeEnum 
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"ProgramExceedInvestmentLimit"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"Signals")}
+ * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"ProgramExceedInvestmentLimit"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"ManagerNewFund"|"ManagerNewExternalSignalAccount"|"Signals"|"ExternalSignals")}
  */
 
 /**

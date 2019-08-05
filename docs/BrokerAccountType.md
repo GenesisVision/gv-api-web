@@ -38,6 +38,8 @@ Name | Type | Description | Notes
 
 * `Exante` (value: `"Exante"`)
 
+* `BinanceExchange` (value: `"BinanceExchange"`)
+
 
 
 

@@ -50,7 +50,13 @@ Name | Type | Description | Notes
 
 * `ManagerNewProgram` (value: `"ManagerNewProgram"`)
 
+* `ManagerNewFund` (value: `"ManagerNewFund"`)
+
+* `ManagerNewExternalSignalAccount` (value: `"ManagerNewExternalSignalAccount"`)
+
 * `Signals` (value: `"Signals"`)
+
+* `ExternalSignals` (value: `"ExternalSignals"`)
 
 
 

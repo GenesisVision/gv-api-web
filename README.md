@@ -215,6 +215,9 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProfileApi* | [**v10ProfileAvatarUpdateByFileIdPost**](docs/ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
 *CoreApiV10.ProfileApi* | [**v10ProfileGet**](docs/ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**v10ProfileHeaderGet**](docs/ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
+*CoreApiV10.ProfileApi* | [**v10ProfileKeysAddPost**](docs/ProfileApi.md#v10ProfileKeysAddPost) | **POST** /v1.0/profile/keys/add | Add external exchange key
+*CoreApiV10.ProfileApi* | [**v10ProfileKeysDeletePost**](docs/ProfileApi.md#v10ProfileKeysDeletePost) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
+*CoreApiV10.ProfileApi* | [**v10ProfileKeysGet**](docs/ProfileApi.md#v10ProfileKeysGet) | **GET** /v1.0/profile/keys | Get external exchange keys
 *CoreApiV10.ProfileApi* | [**v10ProfilePersonalUpdatePost**](docs/ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
 *CoreApiV10.ProfileApi* | [**v10ProfilePushTokenPost**](docs/ProfileApi.md#v10ProfilePushTokenPost) | **POST** /v1.0/profile/push/token | 
 *CoreApiV10.ProfileApi* | [**v10ProfileSociallinksGet**](docs/ProfileApi.md#v10ProfileSociallinksGet) | **GET** /v1.0/profile/sociallinks | Get social links
@@ -245,6 +248,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**v10SignalAttachByIdPost**](docs/SignalApi.md#v10SignalAttachByIdPost) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 *CoreApiV10.SignalApi* | [**v10SignalByIdUpdatePost**](docs/SignalApi.md#v10SignalByIdUpdatePost) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
+*CoreApiV10.SignalApi* | [**v10SignalExternalAttachByIdExternalPost**](docs/SignalApi.md#v10SignalExternalAttachByIdExternalPost) | **POST** /v1.0/signal/external/attach/{id}/external | Subscribe to external signal account
+*CoreApiV10.SignalApi* | [**v10SignalExternalCreatePost**](docs/SignalApi.md#v10SignalExternalCreatePost) | **POST** /v1.0/signal/external/create | Create external signal account
 *CoreApiV10.SignalApi* | [**v10SignalTradesByIdClosePost**](docs/SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 *CoreApiV10.SignalApi* | [**v10SignalTradesGet**](docs/SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**v10SignalTradesLogGet**](docs/SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
@@ -278,6 +283,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AssetEvent](docs/AssetEvent.md)
  - [CoreApiV10.AssetSelection](docs/AssetSelection.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
+ - [CoreApiV10.AttachToExternalSignalProviderExt](docs/AttachToExternalSignalProviderExt.md)
  - [CoreApiV10.AttachToSignalProvider](docs/AttachToSignalProvider.md)
  - [CoreApiV10.AttachToSignalProviderInfo](docs/AttachToSignalProviderInfo.md)
  - [CoreApiV10.BalanceChartElement](docs/BalanceChartElement.md)
@@ -305,6 +311,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.Enums](docs/Enums.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
  - [CoreApiV10.ErrorViewModel](docs/ErrorViewModel.md)
+ - [CoreApiV10.ExternalKeyAddViewModel](docs/ExternalKeyAddViewModel.md)
+ - [CoreApiV10.ExternalKeyViewModel](docs/ExternalKeyViewModel.md)
+ - [CoreApiV10.ExternalKeysViewModel](docs/ExternalKeysViewModel.md)
  - [CoreApiV10.ExternalTransactionDetails](docs/ExternalTransactionDetails.md)
  - [CoreApiV10.FcmTokenViewModel](docs/FcmTokenViewModel.md)
  - [CoreApiV10.FeeDetails](docs/FeeDetails.md)
@@ -331,6 +340,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.GeeTestDetails](docs/GeeTestDetails.md)
  - [CoreApiV10.GeeTestResult](docs/GeeTestResult.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
+ - [CoreApiV10.IdModel](docs/IdModel.md)
  - [CoreApiV10.InternalTransferRequest](docs/InternalTransferRequest.md)
  - [CoreApiV10.InvestmentEventItemViewModel](docs/InvestmentEventItemViewModel.md)
  - [CoreApiV10.InvestmentEventViewModel](docs/InvestmentEventViewModel.md)
@@ -360,6 +370,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.MultiWalletFilters](docs/MultiWalletFilters.md)
  - [CoreApiV10.MultiWalletTransaction](docs/MultiWalletTransaction.md)
  - [CoreApiV10.MultiWalletTransactionsViewModel](docs/MultiWalletTransactionsViewModel.md)
+ - [CoreApiV10.NewExternalSignalAccountRequest](docs/NewExternalSignalAccountRequest.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
  - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.NotificationList](docs/NotificationList.md)

@@ -25,6 +25,16 @@ import ApiClient from '../ApiClient';
 
 /**
  *
+ * @name AttachToSignalProvider#initialDepositCurrency
+ * @type AttachToSignalProviderInitialDepositCurrencyEnum
+ */
+/**
+ *
+ * @name AttachToSignalProvider#initialDepositAmount
+ * @type {Number}
+ */
+/**
+ *
  * @name AttachToSignalProvider#mode
  * @type AttachToSignalProviderModeEnum
  */
@@ -47,16 +57,6 @@ import ApiClient from '../ApiClient';
  *
  * @name AttachToSignalProvider#fixedCurrency
  * @type AttachToSignalProviderFixedCurrencyEnum
- */
-/**
- *
- * @name AttachToSignalProvider#initialDepositCurrency
- * @type AttachToSignalProviderInitialDepositCurrencyEnum
- */
-/**
- *
- * @name AttachToSignalProvider#initialDepositAmount
- * @type {Number}
  */
 
 
@@ -84,6 +84,12 @@ export default class AttachToSignalProvider {
             
             
 
+            if (data.hasOwnProperty('initialDepositCurrency')) {
+                obj['initialDepositCurrency'] = ApiClient.convertToType(data['initialDepositCurrency'], 'String');
+            }
+            if (data.hasOwnProperty('initialDepositAmount')) {
+                obj['initialDepositAmount'] = ApiClient.convertToType(data['initialDepositAmount'], 'Number');
+            }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
             }
@@ -99,51 +105,36 @@ export default class AttachToSignalProvider {
             if (data.hasOwnProperty('fixedCurrency')) {
                 obj['fixedCurrency'] = ApiClient.convertToType(data['fixedCurrency'], 'String');
             }
-            if (data.hasOwnProperty('initialDepositCurrency')) {
-                obj['initialDepositCurrency'] = ApiClient.convertToType(data['initialDepositCurrency'], 'String');
-            }
-            if (data.hasOwnProperty('initialDepositAmount')) {
-                obj['initialDepositAmount'] = ApiClient.convertToType(data['initialDepositAmount'], 'Number');
-            }
         }
         return obj;
     }
 
+    initialDepositCurrency = undefined;
+    initialDepositAmount = undefined;
     mode = undefined;
     percent = undefined;
     openTolerancePercent = undefined;
     fixedVolume = undefined;
     fixedCurrency = undefined;
-    initialDepositCurrency = undefined;
-    initialDepositAmount = undefined;
 
 
 
 
 
 
-    static ModeEnum = {
-    
-        "ByBalance": "ByBalance",
-    
-        "Percent": "Percent",
-    
-        "Fixed": "Fixed"    
-    };
-
-    static FixedCurrencyEnum = {
-    
-        "BTC": "BTC",
-    
-        "ETH": "ETH",
-    
-        "USDT": "USDT",
-    
-        "GVT": "GVT",
+    static InitialDepositCurrencyEnum = {
     
         "Undefined": "Undefined",
     
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -160,19 +151,28 @@ export default class AttachToSignalProvider {
         "EUR": "EUR"    
     };
 
-    static InitialDepositCurrencyEnum = {
+    static ModeEnum = {
     
-        "BTC": "BTC",
+        "ByBalance": "ByBalance",
     
-        "ETH": "ETH",
+        "Percent": "Percent",
     
-        "USDT": "USDT",
-    
-        "GVT": "GVT",
+        "Fixed": "Fixed"    
+    };
+
+    static FixedCurrencyEnum = {
     
         "Undefined": "Undefined",
     
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
         "ADA": "ADA",
+    
+        "USDT": "USDT",
     
         "XRP": "XRP",
     
@@ -197,18 +197,18 @@ export default class AttachToSignalProvider {
 
 
 /**
+ * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
  * @typedef AttachToSignalProviderModeEnum 
  * @type {("ByBalance"|"Percent"|"Fixed")}
  */
 
 /**
  * @typedef AttachToSignalProviderFixedCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
- * @type {("BTC"|"ETH"|"USDT"|"GVT"|"Undefined"|"ADA"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
