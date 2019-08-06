@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**statistic** | [**ProgramDetailsListStatistic**](ProgramDetailsListStatistic.md) |  | [optional] 
 **personalDetails** | [**PersonalSignalDetailsFull**](PersonalSignalDetailsFull.md) |  | [optional] 
 **currency** | **String** |  | [optional] 
 **level** | **Number** |  | [optional] 

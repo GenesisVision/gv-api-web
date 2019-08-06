@@ -16,7 +16,6 @@ import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
 import PersonalSignalDetailsFull from './PersonalSignalDetailsFull';
 import ProfilePublic from './ProfilePublic';
-import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
 import ProgramTag from './ProgramTag';
 
 
@@ -28,11 +27,6 @@ import ProgramTag from './ProgramTag';
  * @interface SignalDetails
  */
 
-/**
- *
- * @name SignalDetails#statistic
- * @type {ProgramDetailsListStatistic}
- */
 /**
  *
  * @name SignalDetails#personalDetails
@@ -139,9 +133,6 @@ export default class SignalDetails {
             
             
 
-            if (data.hasOwnProperty('statistic')) {
-                obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
-            }
             if (data.hasOwnProperty('personalDetails')) {
                 obj['personalDetails'] = PersonalSignalDetailsFull.constructFromObject(data['personalDetails']);
             }
@@ -194,7 +185,6 @@ export default class SignalDetails {
         return obj;
     }
 
-    statistic = undefined;
     personalDetails = undefined;
     currency = undefined;
     level = undefined;

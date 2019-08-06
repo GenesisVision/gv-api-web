@@ -2011,6 +2011,7 @@ export declare interface PersonalSignalDetailsFull {
     tradesCount: number;
     signalSubscription: SignalSubscription;
     profit: number;
+    timeframeProfit: number;
     volume: number;
     isFavorite: boolean;
     isInvested: boolean;
@@ -2610,7 +2611,6 @@ export declare type SignalDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "B
 export declare type SignalDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
 export declare interface SignalDetails {
-    statistic: ProgramDetailsListStatistic;
     personalDetails: PersonalSignalDetailsFull;
     currency: SignalDetailsCurrencyEnum;
     level: number;
