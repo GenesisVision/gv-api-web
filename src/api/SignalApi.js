@@ -21,6 +21,7 @@ import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
 import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
 import NewExternalSignalAccountRequest from '../model/NewExternalSignalAccountRequest';
+import SignalAccountsList from '../model/SignalAccountsList';
 import SignalTradingEvents from '../model/SignalTradingEvents';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
 
@@ -395,6 +396,81 @@ export default class SignalApi {
      */
       v10SignalExternalCreatePost(authorization, opts) {
       return this.v10SignalExternalCreatePostWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10SignalExternalGetWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Tags': this.apiClient.buildCollectionParam(opts['tags'], 'multi'),
+        'Sorting': opts['sorting'],
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'Mask': opts['mask'],
+        'FacetId': opts['facetId'],
+        'IsFavorite': opts['isFavorite'],
+        'IsEnabled': opts['isEnabled'],
+        'HasInvestorsForAll': opts['hasInvestorsForAll'],
+        'HasInvestorsForClosed': opts['hasInvestorsForClosed'],
+        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'ManagerId': opts['managerId'],
+        'ProgramManagerId': opts['programManagerId'],
+        'Status': this.apiClient.buildCollectionParam(opts['status'], 'multi'),
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': opts['authorization']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SignalAccountsList;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/external', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Accounts list
+     * @function SignalApi#v10SignalExternalGet
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {Array<String>} [opts.tags] 
+     * @param {String} [opts.sorting] 
+     * @param {Date} [opts.statisticDateFrom] 
+     * @param {Date} [opts.statisticDateTo] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.mask] 
+     * @param {String} [opts.facetId] 
+     * @param {Boolean} [opts.isFavorite] 
+     * @param {Boolean} [opts.isEnabled] 
+     * @param {Boolean} [opts.hasInvestorsForAll] 
+     * @param {Boolean} [opts.hasInvestorsForClosed] 
+     * @param {Array<String>} [opts.ids] 
+     * @param {String} [opts.managerId] 
+     * @param {String} [opts.programManagerId] 
+     * @param {Array<String>} [opts.status] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<SignalAccountsList>} a Promise, with an object containing data of type SignalAccountsList and HTTP response
+     */
+      v10SignalExternalGet(opts) {
+      return this.v10SignalExternalGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -591,6 +591,26 @@ export declare class SignalApi {
     v10SignalExternalCreatePost(authorization: string, opts?: {
         request?: NewExternalSignalAccountRequest;
     }): CancelablePromise<ManagerProgramCreateResult>;
+    v10SignalExternalGet(opts?: {
+        authorization?: string;
+        tags?: string[];
+        sorting?: string;
+        statisticDateFrom?: Date;
+        statisticDateTo?: Date;
+        chartPointsCount?: number;
+        mask?: string;
+        facetId?: string;
+        isFavorite?: boolean;
+        isEnabled?: boolean;
+        hasInvestorsForAll?: boolean;
+        hasInvestorsForClosed?: boolean;
+        ids?: string[];
+        managerId?: string;
+        programManagerId?: string;
+        status?: string[];
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<SignalAccountsList>;
     v10SignalTradesByIdClosePost(id: string, authorization: string, opts?: {
         programId?: string;
     }): CancelablePromise<any>;
@@ -837,6 +857,8 @@ export declare interface index {
     ResendConfirmationViewModel: ResendConfirmationViewModel;
     ResetPasswordViewModel: ResetPasswordViewModel;
     SearchViewModel: SearchViewModel;
+    SignalAccountDetails: SignalAccountDetails;
+    SignalAccountsList: SignalAccountsList;
     SignalDataMaster: SignalDataMaster;
     SignalDetails: SignalDetails;
     SignalFee: SignalFee;
@@ -2555,6 +2577,27 @@ export declare interface SearchViewModel {
     programs: ProgramsList;
     funds: FundsList;
     managers: ManagersList;
+}
+
+export declare type SignalAccountDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+
+export declare interface SignalAccountDetails {
+    tags: ProgramTag[];
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    title: string;
+    description: string;
+    status: SignalAccountDetailsStatusEnum;
+    creationDate: Date;
+    manager: ProfilePublic;
+    chart: ChartSimple[];
+}
+
+export declare interface SignalAccountsList {
+    signalAccounts: SignalAccountDetails[];
+    total: number;
 }
 
 export declare interface SignalDataMaster {

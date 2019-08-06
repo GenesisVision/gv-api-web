@@ -250,6 +250,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**v10SignalDetachByIdPost**](docs/SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 *CoreApiV10.SignalApi* | [**v10SignalExternalAttachByIdExternalPost**](docs/SignalApi.md#v10SignalExternalAttachByIdExternalPost) | **POST** /v1.0/signal/external/attach/{id}/external | Subscribe to external signal account
 *CoreApiV10.SignalApi* | [**v10SignalExternalCreatePost**](docs/SignalApi.md#v10SignalExternalCreatePost) | **POST** /v1.0/signal/external/create | Create external signal account
+*CoreApiV10.SignalApi* | [**v10SignalExternalGet**](docs/SignalApi.md#v10SignalExternalGet) | **GET** /v1.0/signal/external | Accounts list
 *CoreApiV10.SignalApi* | [**v10SignalTradesByIdClosePost**](docs/SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 *CoreApiV10.SignalApi* | [**v10SignalTradesGet**](docs/SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**v10SignalTradesLogGet**](docs/SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
@@ -439,6 +440,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
+ - [CoreApiV10.SignalAccountDetails](docs/SignalAccountDetails.md)
+ - [CoreApiV10.SignalAccountsList](docs/SignalAccountsList.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalFee](docs/SignalFee.md)

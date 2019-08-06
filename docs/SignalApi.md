@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**v10SignalDetachByIdPost**](SignalApi.md#v10SignalDetachByIdPost) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
 [**v10SignalExternalAttachByIdExternalPost**](SignalApi.md#v10SignalExternalAttachByIdExternalPost) | **POST** /v1.0/signal/external/attach/{id}/external | Subscribe to external signal account
 [**v10SignalExternalCreatePost**](SignalApi.md#v10SignalExternalCreatePost) | **POST** /v1.0/signal/external/create | Create external signal account
+[**v10SignalExternalGet**](SignalApi.md#v10SignalExternalGet) | **GET** /v1.0/signal/external | Accounts list
 [**v10SignalTradesByIdClosePost**](SignalApi.md#v10SignalTradesByIdClosePost) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**v10SignalTradesGet**](SignalApi.md#v10SignalTradesGet) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**v10SignalTradesLogGet**](SignalApi.md#v10SignalTradesLogGet) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
@@ -337,6 +338,82 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10SignalExternalGet"></a>
+# **v10SignalExternalGet**
+> SignalAccountsList v10SignalExternalGet(opts)
+
+Accounts list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let opts = { 
+  'authorization': "authorization_example", // String | 
+  'tags': ["tags_example"], // [String] | 
+  'sorting': "sorting_example", // String | 
+  'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'mask': "mask_example", // String | 
+  'facetId': "facetId_example", // String | 
+  'isFavorite': true, // Boolean | 
+  'isEnabled': true, // Boolean | 
+  'hasInvestorsForAll': true, // Boolean | 
+  'hasInvestorsForClosed': true, // Boolean | 
+  'ids': ["ids_example"], // [String] | 
+  'managerId': "managerId_example", // String | 
+  'programManagerId': "programManagerId_example", // String | 
+  'status': ["status_example"], // [String] | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.v10SignalExternalGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **tags** | [**[String]**](String.md)|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **statisticDateFrom** | **Date**|  | [optional] 
+ **statisticDateTo** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **mask** | **String**|  | [optional] 
+ **facetId** | **String**|  | [optional] 
+ **isFavorite** | **Boolean**|  | [optional] 
+ **isEnabled** | **Boolean**|  | [optional] 
+ **hasInvestorsForAll** | **Boolean**|  | [optional] 
+ **hasInvestorsForClosed** | **Boolean**|  | [optional] 
+ **ids** | [**[String]**](String.md)|  | [optional] 
+ **managerId** | **String**|  | [optional] 
+ **programManagerId** | [**String**](.md)|  | [optional] 
+ **status** | [**[String]**](String.md)|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**SignalAccountsList**](SignalAccountsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="v10SignalTradesByIdClosePost"></a>
