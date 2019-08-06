@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **tradesCount** | **Number** |  | [optional] 
 **signalSubscription** | [**SignalSubscription**](SignalSubscription.md) |  | [optional] 
 **profit** | **Number** |  | [optional] 
-**timeframeProfit** | **Number** |  | [optional] 
 **volume** | **Number** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 

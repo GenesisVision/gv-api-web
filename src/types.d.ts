@@ -2011,7 +2011,6 @@ export declare interface PersonalSignalDetailsFull {
     tradesCount: number;
     signalSubscription: SignalSubscription;
     profit: number;
-    timeframeProfit: number;
     volume: number;
     isFavorite: boolean;
     isInvested: boolean;
