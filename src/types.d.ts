@@ -93,6 +93,7 @@ export declare class FileApi {
 export declare class FundsApi {
     constructor(apiClient: ApiClient): FundsApi;
     v10FundsAssetsGet(): CancelablePromise<PlatformAssets>;
+    v10FundsAssetsMandatoryGet(): CancelablePromise<FundMandatoryAssets>;
     v10FundsByIdAssetsGet(id: string): CancelablePromise<FundAssetsListInfo>;
     v10FundsByIdChartsBalanceGet(id: string, opts?: {
         dateFrom?: Date;
@@ -749,6 +750,8 @@ export declare interface index {
     FundFacet: FundFacet;
     FundFilters: FundFilters;
     FundInvestInfo: FundInvestInfo;
+    FundMandatoryAsset: FundMandatoryAsset;
+    FundMandatoryAssets: FundMandatoryAssets;
     FundNotificationSettingList: FundNotificationSettingList;
     FundProfitChart: FundProfitChart;
     FundSets: FundSets;
@@ -1406,6 +1409,15 @@ export declare interface FundInvestInfo {
     gvCommission: number;
     rate: number;
     isOwnProgram: boolean;
+}
+
+export declare interface FundMandatoryAsset {
+    asset: PlatformAsset;
+    mandatoryPart: number;
+}
+
+export declare interface FundMandatoryAssets {
+    assets: FundMandatoryAsset[];
 }
 
 export declare interface FundNotificationSettingList {

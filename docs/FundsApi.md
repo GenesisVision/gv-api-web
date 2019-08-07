@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v10FundsAssetsGet**](FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+[**v10FundsAssetsMandatoryGet**](FundsApi.md#v10FundsAssetsMandatoryGet) | **GET** /v1.0/funds/assets/mandatory | Get mandatory assets for funds
 [**v10FundsByIdAssetsGet**](FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
 [**v10FundsByIdChartsBalanceGet**](FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
 [**v10FundsByIdChartsProfitGet**](FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
@@ -41,6 +42,41 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**PlatformAssets**](PlatformAssets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="v10FundsAssetsMandatoryGet"></a>
+# **v10FundsAssetsMandatoryGet**
+> FundMandatoryAssets v10FundsAssetsMandatoryGet()
+
+Get mandatory assets for funds
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+apiInstance.v10FundsAssetsMandatoryGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**FundMandatoryAssets**](FundMandatoryAssets.md)
 
 ### Authorization
 
