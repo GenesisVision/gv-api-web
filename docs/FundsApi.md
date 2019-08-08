@@ -439,6 +439,7 @@ let opts = {
   'hasInvestorsForAll': true, // Boolean | 
   'hasInvestorsForClosed': true, // Boolean | 
   'ids': ["ids_example"], // [String] | 
+  'forceUseIdsList': true, // Boolean | 
   'managerId': "managerId_example", // String | 
   'programManagerId': "programManagerId_example", // String | 
   'status': ["status_example"], // [String] | 
@@ -471,6 +472,7 @@ Name | Type | Description  | Notes
  **hasInvestorsForAll** | **Boolean**|  | [optional] 
  **hasInvestorsForClosed** | **Boolean**|  | [optional] 
  **ids** | [**[String]**](String.md)|  | [optional] 
+ **forceUseIdsList** | **Boolean**|  | [optional] 
  **managerId** | **String**|  | [optional] 
  **programManagerId** | [**String**](.md)|  | [optional] 
  **status** | [**[String]**](String.md)|  | [optional] 

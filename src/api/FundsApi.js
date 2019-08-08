@@ -491,6 +491,7 @@ export default class FundsApi {
         'HasInvestorsForAll': opts['hasInvestorsForAll'],
         'HasInvestorsForClosed': opts['hasInvestorsForClosed'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'ForceUseIdsList': opts['forceUseIdsList'],
         'ManagerId': opts['managerId'],
         'ProgramManagerId': opts['programManagerId'],
         'Status': this.apiClient.buildCollectionParam(opts['status'], 'multi'),
@@ -533,6 +534,7 @@ export default class FundsApi {
      * @param {Boolean} [opts.hasInvestorsForAll] 
      * @param {Boolean} [opts.hasInvestorsForClosed] 
      * @param {Array<String>} [opts.ids] 
+     * @param {Boolean} [opts.forceUseIdsList] 
      * @param {String} [opts.managerId] 
      * @param {String} [opts.programManagerId] 
      * @param {Array<String>} [opts.status] 

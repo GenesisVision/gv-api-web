@@ -132,6 +132,7 @@ export declare class FundsApi {
         hasInvestorsForAll?: boolean;
         hasInvestorsForClosed?: boolean;
         ids?: string[];
+        forceUseIdsList?: boolean;
         managerId?: string;
         programManagerId?: string;
         status?: string[];
@@ -542,6 +543,7 @@ export declare class ProgramsApi {
         hasInvestorsForAll?: boolean;
         hasInvestorsForClosed?: boolean;
         ids?: string[];
+        forceUseIdsList?: boolean;
         managerId?: string;
         programManagerId?: string;
         status?: string[];
@@ -606,6 +608,7 @@ export declare class SignalApi {
         hasInvestorsForAll?: boolean;
         hasInvestorsForClosed?: boolean;
         ids?: string[];
+        forceUseIdsList?: boolean;
         managerId?: string;
         programManagerId?: string;
         status?: string[];
