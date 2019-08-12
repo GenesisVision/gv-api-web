@@ -177,6 +177,7 @@ export declare class InvestorApi {
         requestsTake?: number;
     }): CancelablePromise<DashboardSummary>;
     v10InvestorInvestmentsEventsGet(authorization: string, opts?: {
+        eventLocation?: string;
         assetId?: string;
         from?: Date;
         to?: Date;
@@ -301,6 +302,7 @@ export declare class ManagerApi {
         take?: number;
     }): CancelablePromise<ManagerDashboard>;
     v10ManagerInvestmentsEventsGet(authorization: string, opts?: {
+        eventLocation?: string;
         assetId?: string;
         from?: Date;
         to?: Date;

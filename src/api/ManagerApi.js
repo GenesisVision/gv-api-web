@@ -995,6 +995,7 @@ export default class ManagerApi {
       let pathParams = {
       };
       let queryParams = {
+        'EventLocation': opts['eventLocation'],
         'AssetId': opts['assetId'],
         'From': opts['from'],
         'To': opts['to'],
@@ -1026,6 +1027,7 @@ export default class ManagerApi {
      * @function ManagerApi#v10ManagerInvestmentsEventsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.eventLocation] 
      * @param {String} [opts.assetId] 
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 

@@ -410,6 +410,7 @@ let apiInstance = new CoreApiV10.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
+  'eventLocation': "eventLocation_example", // String | 
   'assetId': "assetId_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
@@ -431,6 +432,7 @@ apiInstance.v10InvestorInvestmentsEventsGet(authorization, opts).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
+ **eventLocation** | **String**|  | [optional] 
  **assetId** | [**String**](.md)|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 

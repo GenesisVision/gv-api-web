@@ -489,6 +489,7 @@ export default class InvestorApi {
       let pathParams = {
       };
       let queryParams = {
+        'EventLocation': opts['eventLocation'],
         'AssetId': opts['assetId'],
         'From': opts['from'],
         'To': opts['to'],
@@ -520,6 +521,7 @@ export default class InvestorApi {
      * @function InvestorApi#v10InvestorInvestmentsEventsGet
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.eventLocation] 
      * @param {String} [opts.assetId] 
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 
