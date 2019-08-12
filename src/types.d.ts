@@ -99,11 +99,13 @@ export declare class FundsApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
+        currency?: string;
     }): CancelablePromise<FundBalanceChart>;
     v10FundsByIdChartsProfitGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
+        currency?: string;
     }): CancelablePromise<FundProfitChart>;
     v10FundsByIdFavoriteAddPost(id: string, authorization: string): CancelablePromise<any>;
     v10FundsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
@@ -447,11 +449,13 @@ export declare class ProgramsApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
+        currency?: string;
     }): CancelablePromise<ProgramBalanceChart>;
     v10ProgramsByIdChartsProfitGet(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
+        currency?: string;
     }): CancelablePromise<ProgramProfitChart>;
     v10ProgramsByIdFavoriteAddPost(id: string, authorization: string): CancelablePromise<any>;
     v10ProgramsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
@@ -1329,9 +1333,10 @@ export declare interface FundAssetsListInfo {
 }
 
 export declare interface FundBalanceChart {
-    usdBalance: number;
-    balanceChart: BalanceChartElement[];
     gvtBalance: number;
+    usdBalance: number;
+    balance: number;
+    balanceChart: BalanceChartElement[];
 }
 
 export declare type FundDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
@@ -1378,6 +1383,7 @@ export declare interface FundDetailsFull {
 export declare interface FundDetailsListStatistic {
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
+    balance: AmountWithCurrency;
     profitPercent: number;
     drawdownPercent: number;
     investorsCount: number;
@@ -1459,6 +1465,7 @@ export declare interface FundSets {
 export declare interface FundStatistic {
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
+    balance: AmountWithCurrency;
     profitPercent: number;
     drawdownPercent: number;
     investorsCount: number;
@@ -2143,10 +2150,10 @@ export declare interface ProfilePublic {
 export declare type ProgramBalanceChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramBalanceChart {
+    gvtBalance: number;
     programCurrencyBalance: number;
     programCurrency: ProgramBalanceChartProgramCurrencyEnum;
     balanceChart: ProgramBalanceChartElement[];
-    gvtBalance: number;
 }
 
 export declare interface ProgramBalanceChartElement {

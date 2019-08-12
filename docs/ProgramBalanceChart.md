@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**gvtBalance** | **Number** |  | [optional] 
 **programCurrencyBalance** | **Number** |  | [optional] 
 **programCurrency** | **String** |  | [optional] 
 **balanceChart** | [**[ProgramBalanceChartElement]**](ProgramBalanceChartElement.md) |  | [optional] 
-**gvtBalance** | **Number** |  | [optional] 
 
 
 <a name="ProgramCurrencyEnum"></a>

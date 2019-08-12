@@ -58,7 +58,8 @@ export default class ProgramsApi {
       let queryParams = {
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
+        'MaxPointCount': opts['maxPointCount'],
+        'Currency': opts['currency']
       };
       let headerParams = {
       };
@@ -85,6 +86,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
      */
       v10ProgramsByIdChartsBalanceGet(id, opts) {
@@ -110,7 +112,8 @@ export default class ProgramsApi {
       let queryParams = {
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
+        'MaxPointCount': opts['maxPointCount'],
+        'Currency': opts['currency']
       };
       let headerParams = {
       };
@@ -137,6 +140,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
      */
       v10ProgramsByIdChartsProfitGet(id, opts) {

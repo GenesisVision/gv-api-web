@@ -176,7 +176,8 @@ export default class FundsApi {
       let queryParams = {
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
+        'MaxPointCount': opts['maxPointCount'],
+        'Currency': opts['currency']
       };
       let headerParams = {
       };
@@ -203,6 +204,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<FundBalanceChart>} a Promise, with an object containing data of type FundBalanceChart and HTTP response
      */
       v10FundsByIdChartsBalanceGet(id, opts) {
@@ -228,7 +230,8 @@ export default class FundsApi {
       let queryParams = {
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
-        'MaxPointCount': opts['maxPointCount']
+        'MaxPointCount': opts['maxPointCount'],
+        'Currency': opts['currency']
       };
       let headerParams = {
       };
@@ -255,6 +258,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
      */
       v10FundsByIdChartsProfitGet(id, opts) {

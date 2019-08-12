@@ -26,6 +26,11 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
 
 /**
  *
+ * @name ProgramBalanceChart#gvtBalance
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramBalanceChart#programCurrencyBalance
  * @type {Number}
  */
@@ -38,11 +43,6 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
  *
  * @name ProgramBalanceChart#balanceChart
  * @type {Array<ProgramBalanceChartElement>}
- */
-/**
- *
- * @name ProgramBalanceChart#gvtBalance
- * @type {Number}
  */
 
 
@@ -70,6 +70,9 @@ export default class ProgramBalanceChart {
             
             
 
+            if (data.hasOwnProperty('gvtBalance')) {
+                obj['gvtBalance'] = ApiClient.convertToType(data['gvtBalance'], 'Number');
+            }
             if (data.hasOwnProperty('programCurrencyBalance')) {
                 obj['programCurrencyBalance'] = ApiClient.convertToType(data['programCurrencyBalance'], 'Number');
             }
@@ -79,17 +82,14 @@ export default class ProgramBalanceChart {
             if (data.hasOwnProperty('balanceChart')) {
                 obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElement]);
             }
-            if (data.hasOwnProperty('gvtBalance')) {
-                obj['gvtBalance'] = ApiClient.convertToType(data['gvtBalance'], 'Number');
-            }
         }
         return obj;
     }
 
+    gvtBalance = undefined;
     programCurrencyBalance = undefined;
     programCurrency = undefined;
     balanceChart = undefined;
-    gvtBalance = undefined;
 
 
 

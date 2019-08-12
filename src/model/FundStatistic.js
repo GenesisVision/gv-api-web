@@ -36,6 +36,11 @@ import AmountWithCurrency from './AmountWithCurrency';
  */
 /**
  *
+ * @name FundStatistic#balance
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
  * @name FundStatistic#profitPercent
  * @type {Number}
  */
@@ -101,6 +106,9 @@ export default class FundStatistic {
             if (data.hasOwnProperty('balanceSecondary')) {
                 obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
             }
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
+            }
             if (data.hasOwnProperty('profitPercent')) {
                 obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
             }
@@ -128,6 +136,7 @@ export default class FundStatistic {
 
     balanceGVT = undefined;
     balanceSecondary = undefined;
+    balance = undefined;
     profitPercent = undefined;
     drawdownPercent = undefined;
     investorsCount = undefined;

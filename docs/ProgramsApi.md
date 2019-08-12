@@ -38,7 +38,8 @@ let id = "id_example"; // String |
 let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'maxPointCount': 56 // Number | 
+  'maxPointCount': 56, // Number | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.v10ProgramsByIdChartsBalanceGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **dateFrom** | **Date**|  | [optional] 
  **dateTo** | **Date**|  | [optional] 
  **maxPointCount** | **Number**|  | [optional] 
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 
@@ -87,7 +89,8 @@ let id = "id_example"; // String |
 let opts = { 
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'maxPointCount': 56 // Number | 
+  'maxPointCount': 56, // Number | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.v10ProgramsByIdChartsProfitGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -105,6 +108,7 @@ Name | Type | Description  | Notes
  **dateFrom** | **Date**|  | [optional] 
  **dateTo** | **Date**|  | [optional] 
  **maxPointCount** | **Number**|  | [optional] 
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 

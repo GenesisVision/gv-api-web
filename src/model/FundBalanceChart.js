@@ -26,18 +26,23 @@ import BalanceChartElement from './BalanceChartElement';
 
 /**
  *
+ * @name FundBalanceChart#gvtBalance
+ * @type {Number}
+ */
+/**
+ *
  * @name FundBalanceChart#usdBalance
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundBalanceChart#balance
  * @type {Number}
  */
 /**
  *
  * @name FundBalanceChart#balanceChart
  * @type {Array<BalanceChartElement>}
- */
-/**
- *
- * @name FundBalanceChart#gvtBalance
- * @type {Number}
  */
 
 
@@ -65,22 +70,26 @@ export default class FundBalanceChart {
             
             
 
+            if (data.hasOwnProperty('gvtBalance')) {
+                obj['gvtBalance'] = ApiClient.convertToType(data['gvtBalance'], 'Number');
+            }
             if (data.hasOwnProperty('usdBalance')) {
                 obj['usdBalance'] = ApiClient.convertToType(data['usdBalance'], 'Number');
             }
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
+            }
             if (data.hasOwnProperty('balanceChart')) {
                 obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [BalanceChartElement]);
-            }
-            if (data.hasOwnProperty('gvtBalance')) {
-                obj['gvtBalance'] = ApiClient.convertToType(data['gvtBalance'], 'Number');
             }
         }
         return obj;
     }
 
-    usdBalance = undefined;
-    balanceChart = undefined;
     gvtBalance = undefined;
+    usdBalance = undefined;
+    balance = undefined;
+    balanceChart = undefined;
 
 
 
