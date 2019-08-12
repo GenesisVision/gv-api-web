@@ -123,7 +123,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.FileApi* | [**v10FileDocumentUploadPost**](docs/FileApi.md#v10FileDocumentUploadPost) | **POST** /v1.0/file/document/upload | Upload document
 *CoreApiV10.FileApi* | [**v10FileUploadPost**](docs/FileApi.md#v10FileUploadPost) | **POST** /v1.0/file/upload | Upload file
 *CoreApiV10.FundsApi* | [**v10FundsAssetsGet**](docs/FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
-*CoreApiV10.FundsApi* | [**v10FundsAssetsMandatoryGet**](docs/FundsApi.md#v10FundsAssetsMandatoryGet) | **GET** /v1.0/funds/assets/mandatory | Get mandatory assets for funds
 *CoreApiV10.FundsApi* | [**v10FundsByIdAssetsGet**](docs/FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
 *CoreApiV10.FundsApi* | [**v10FundsByIdChartsBalanceGet**](docs/FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
 *CoreApiV10.FundsApi* | [**v10FundsByIdChartsProfitGet**](docs/FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
@@ -333,8 +332,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundFacet](docs/FundFacet.md)
  - [CoreApiV10.FundFilters](docs/FundFilters.md)
  - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
- - [CoreApiV10.FundMandatoryAsset](docs/FundMandatoryAsset.md)
- - [CoreApiV10.FundMandatoryAssets](docs/FundMandatoryAssets.md)
  - [CoreApiV10.FundNotificationSettingList](docs/FundNotificationSettingList.md)
  - [CoreApiV10.FundProfitChart](docs/FundProfitChart.md)
  - [CoreApiV10.FundSets](docs/FundSets.md)

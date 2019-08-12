@@ -17,7 +17,6 @@ import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetsListInfo from '../model/FundAssetsListInfo';
 import FundBalanceChart from '../model/FundBalanceChart';
 import FundDetailsFull from '../model/FundDetailsFull';
-import FundMandatoryAssets from '../model/FundMandatoryAssets';
 import FundProfitChart from '../model/FundProfitChart';
 import FundSets from '../model/FundSets';
 import FundsList from '../model/FundsList';
@@ -74,43 +73,6 @@ export default class FundsApi {
      */
       v10FundsAssetsGet() {
       return this.v10FundsAssetsGetWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10FundsAssetsMandatoryGetWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundMandatoryAssets;
-
-      return this.apiClient.callApi(
-        '/v1.0/funds/assets/mandatory', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get mandatory assets for funds
-     * @function FundsApi#v10FundsAssetsMandatoryGet
-     * @return {CancelablePromise<FundMandatoryAssets>} a Promise, with an object containing data of type FundMandatoryAssets and HTTP response
-     */
-      v10FundsAssetsMandatoryGet() {
-      return this.v10FundsAssetsMandatoryGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

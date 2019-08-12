@@ -68,8 +68,6 @@ import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundFacet from './model/FundFacet';
 import FundFilters from './model/FundFilters';
 import FundInvestInfo from './model/FundInvestInfo';
-import FundMandatoryAsset from './model/FundMandatoryAsset';
-import FundMandatoryAssets from './model/FundMandatoryAssets';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChart from './model/FundProfitChart';
 import FundSets from './model/FundSets';
@@ -575,18 +573,6 @@ export {
      * @type {FundInvestInfo}
      */
     FundInvestInfo,
-
-    /**
-     * @name index#FundMandatoryAsset
-     * @type {FundMandatoryAsset}
-     */
-    FundMandatoryAsset,
-
-    /**
-     * @name index#FundMandatoryAssets
-     * @type {FundMandatoryAssets}
-     */
-    FundMandatoryAssets,
 
     /**
      * @name index#FundNotificationSettingList

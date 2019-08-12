@@ -53,6 +53,11 @@ import ApiClient from '../ApiClient';
  * @name PlatformAsset#color
  * @type {String}
  */
+/**
+ *
+ * @name PlatformAsset#mandatoryFundPercent
+ * @type {Number}
+ */
 
 
 
@@ -97,6 +102,9 @@ export default class PlatformAsset {
             if (data.hasOwnProperty('color')) {
                 obj['color'] = ApiClient.convertToType(data['color'], 'String');
             }
+            if (data.hasOwnProperty('mandatoryFundPercent')) {
+                obj['mandatoryFundPercent'] = ApiClient.convertToType(data['mandatoryFundPercent'], 'Number');
+            }
         }
         return obj;
     }
@@ -107,6 +115,7 @@ export default class PlatformAsset {
     description = undefined;
     icon = undefined;
     color = undefined;
+    mandatoryFundPercent = undefined;
 
 
 
