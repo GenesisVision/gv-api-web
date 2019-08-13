@@ -122,6 +122,7 @@ export declare class FundsApi {
         authorization?: string;
         sorting?: string;
         currencySecondary?: string;
+        currency?: string;
         assets?: string[];
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
@@ -156,6 +157,7 @@ export declare class InvestorApi {
     v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id: string, currency: string, authorization: string): CancelablePromise<FundWithdrawInfo>;
     v10InvestorFundsGet(authorization: string, opts?: {
         sorting?: string;
+        currency?: string;
         from?: Date;
         to?: Date;
         chartPointsCount?: number;
@@ -280,6 +282,7 @@ export declare class ManagerApi {
     }): CancelablePromise<any>;
     v10ManagerFundsGet(authorization: string, opts?: {
         sorting?: string;
+        currency?: string;
         from?: Date;
         to?: Date;
         chartPointsCount?: number;
