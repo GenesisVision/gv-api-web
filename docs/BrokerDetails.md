@@ -3,10 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isForex** | **Boolean** |  | [optional] 
 **logo** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**isForex** | **Boolean** |  | [optional] 
 **showSwaps** | **Boolean** |  | [optional] 
 **showTickets** | **Boolean** |  | [optional] 
-**name** | **String** |  | [optional] 
+**showCommissionRebate** | **Boolean** |  | [optional] 
+**isForexSometime** | **Boolean** |  | [optional] 
+**showSwapsSometime** | **Boolean** |  | [optional] 
+**showTicketsSometime** | **Boolean** |  | [optional] 
+**showCommissionRebateSometime** | **Boolean** |  | [optional] 
 
 

@@ -25,13 +25,18 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @name BrokerDetails#isForex
- * @type {Boolean}
+ * @name BrokerDetails#logo
+ * @type {String}
  */
 /**
  *
- * @name BrokerDetails#logo
+ * @name BrokerDetails#name
  * @type {String}
+ */
+/**
+ *
+ * @name BrokerDetails#isForex
+ * @type {Boolean}
  */
 /**
  *
@@ -45,8 +50,28 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name BrokerDetails#name
- * @type {String}
+ * @name BrokerDetails#showCommissionRebate
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerDetails#isForexSometime
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerDetails#showSwapsSometime
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerDetails#showTicketsSometime
+ * @type {Boolean}
+ */
+/**
+ *
+ * @name BrokerDetails#showCommissionRebateSometime
+ * @type {Boolean}
  */
 
 
@@ -74,11 +99,14 @@ export default class BrokerDetails {
             
             
 
-            if (data.hasOwnProperty('isForex')) {
-                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
-            }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('isForex')) {
+                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
             }
             if (data.hasOwnProperty('showSwaps')) {
                 obj['showSwaps'] = ApiClient.convertToType(data['showSwaps'], 'Boolean');
@@ -86,18 +114,35 @@ export default class BrokerDetails {
             if (data.hasOwnProperty('showTickets')) {
                 obj['showTickets'] = ApiClient.convertToType(data['showTickets'], 'Boolean');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('showCommissionRebate')) {
+                obj['showCommissionRebate'] = ApiClient.convertToType(data['showCommissionRebate'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isForexSometime')) {
+                obj['isForexSometime'] = ApiClient.convertToType(data['isForexSometime'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showSwapsSometime')) {
+                obj['showSwapsSometime'] = ApiClient.convertToType(data['showSwapsSometime'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showTicketsSometime')) {
+                obj['showTicketsSometime'] = ApiClient.convertToType(data['showTicketsSometime'], 'Boolean');
+            }
+            if (data.hasOwnProperty('showCommissionRebateSometime')) {
+                obj['showCommissionRebateSometime'] = ApiClient.convertToType(data['showCommissionRebateSometime'], 'Boolean');
             }
         }
         return obj;
     }
 
-    isForex = undefined;
     logo = undefined;
+    name = undefined;
+    isForex = undefined;
     showSwaps = undefined;
     showTickets = undefined;
-    name = undefined;
+    showCommissionRebate = undefined;
+    isForexSometime = undefined;
+    showSwapsSometime = undefined;
+    showTicketsSometime = undefined;
+    showCommissionRebateSometime = undefined;
 
 
 

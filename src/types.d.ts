@@ -1068,11 +1068,16 @@ export declare interface BrokerAccountType {
 }
 
 export declare interface BrokerDetails {
-    isForex: boolean;
     logo: string;
+    name: string;
+    isForex: boolean;
     showSwaps: boolean;
     showTickets: boolean;
-    name: string;
+    showCommissionRebate: boolean;
+    isForexSometime: boolean;
+    showSwapsSometime: boolean;
+    showTicketsSometime: boolean;
+    showCommissionRebateSometime: boolean;
 }
 
 export declare interface BrokersInfo {
