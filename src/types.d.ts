@@ -110,7 +110,7 @@ export declare class FundsApi {
     v10FundsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
     v10FundsByIdGet(id: string, opts?: {
         authorization?: string;
-        currencySecondary?: string;
+        currency?: string;
     }): CancelablePromise<FundDetailsFull>;
     v10FundsByIdReallocationsGet(id: string, opts?: {
         dateFrom?: Date;

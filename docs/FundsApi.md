@@ -298,7 +298,7 @@ let id = "id_example"; // String |
 
 let opts = { 
   'authorization': "authorization_example", // String | 
-  'currencySecondary': "currencySecondary_example" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.v10FundsByIdGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
  **authorization** | **String**|  | [optional] 
- **currencySecondary** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 

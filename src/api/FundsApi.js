@@ -346,7 +346,7 @@ export default class FundsApi {
         'id': id
       };
       let queryParams = {
-        'currencySecondary': opts['currencySecondary']
+        'currency': opts['currency']
       };
       let headerParams = {
         'Authorization': opts['authorization']
@@ -372,7 +372,7 @@ export default class FundsApi {
      * @param {String} id 
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
-     * @param {String} [opts.currencySecondary] 
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<FundDetailsFull>} a Promise, with an object containing data of type FundDetailsFull and HTTP response
      */
       v10FundsByIdGet(id, opts) {
