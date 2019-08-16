@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **status** | **String** |  | [optional] 
-**signalAccountId** | **String** |  | [optional] 
+**signalSettingsId** | **String** |  | [optional] 
 
 
 <a name="StatusEnum"></a>

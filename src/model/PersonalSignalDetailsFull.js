@@ -66,7 +66,7 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
- * @name PersonalSignalDetailsFull#signalAccountId
+ * @name PersonalSignalDetailsFull#signalSettingsId
  * @type {String}
  */
 
@@ -119,8 +119,8 @@ export default class PersonalSignalDetailsFull {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('signalAccountId')) {
-                obj['signalAccountId'] = ApiClient.convertToType(data['signalAccountId'], 'String');
+            if (data.hasOwnProperty('signalSettingsId')) {
+                obj['signalSettingsId'] = ApiClient.convertToType(data['signalSettingsId'], 'String');
             }
         }
         return obj;
@@ -134,7 +134,7 @@ export default class PersonalSignalDetailsFull {
     isFavorite = undefined;
     isInvested = undefined;
     status = undefined;
-    signalAccountId = undefined;
+    signalSettingsId = undefined;
 
 
 

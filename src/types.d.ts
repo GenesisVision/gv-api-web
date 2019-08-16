@@ -2044,7 +2044,7 @@ export declare interface PersonalSignalDetailsFull {
     isFavorite: boolean;
     isInvested: boolean;
     status: PersonalSignalDetailsFullStatusEnum;
-    signalAccountId: string;
+    signalSettingsId: string;
 }
 
 export declare interface PlatformAsset {
