@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dateFrom** | **Date** |  | [optional] 
 **dateTo** | **Date** |  | [optional] 
+**periodLength** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 **_number** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 

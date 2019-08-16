@@ -2348,6 +2348,7 @@ export declare type ProgramPeriodViewModelStatusEnum = "Planned" | "InProccess" 
 export declare interface ProgramPeriodViewModel {
     dateFrom: Date;
     dateTo: Date;
+    periodLength: number;
     status: ProgramPeriodViewModelStatusEnum;
     number: number;
     profit: number;

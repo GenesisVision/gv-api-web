@@ -36,6 +36,11 @@ import FinancialStatistic from './FinancialStatistic';
  */
 /**
  *
+ * @name ProgramPeriodViewModel#periodLength
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramPeriodViewModel#status
  * @type ProgramPeriodViewModelStatusEnum
  */
@@ -96,6 +101,9 @@ export default class ProgramPeriodViewModel {
             if (data.hasOwnProperty('dateTo')) {
                 obj['dateTo'] = ApiClient.convertToType(data['dateTo'], 'Date');
             }
+            if (data.hasOwnProperty('periodLength')) {
+                obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'Number');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -120,6 +128,7 @@ export default class ProgramPeriodViewModel {
 
     dateFrom = undefined;
     dateTo = undefined;
+    periodLength = undefined;
     status = undefined;
     number = undefined;
     profit = undefined;
