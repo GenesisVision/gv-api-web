@@ -2064,6 +2064,7 @@ export declare interface PlatformAssets {
 export declare interface PlatformCurrency {
     name: string;
     rateToGvt: number;
+    color: string;
 }
 
 export declare interface PlatformInfo {

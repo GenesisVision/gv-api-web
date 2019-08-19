@@ -33,6 +33,11 @@ import ApiClient from '../ApiClient';
  * @name PlatformCurrency#rateToGvt
  * @type {Number}
  */
+/**
+ *
+ * @name PlatformCurrency#color
+ * @type {String}
+ */
 
 
 
@@ -65,12 +70,16 @@ export default class PlatformCurrency {
             if (data.hasOwnProperty('rateToGvt')) {
                 obj['rateToGvt'] = ApiClient.convertToType(data['rateToGvt'], 'Number');
             }
+            if (data.hasOwnProperty('color')) {
+                obj['color'] = ApiClient.convertToType(data['color'], 'String');
+            }
         }
         return obj;
     }
 
     name = undefined;
     rateToGvt = undefined;
+    color = undefined;
 
 
 
