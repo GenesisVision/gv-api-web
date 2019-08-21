@@ -1524,16 +1524,15 @@ export declare interface InternalTransferRequest {
 
 export declare type InvestmentEventItemViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type InvestmentEventItemViewModelChangeStateEnum = "Increased" | "Decreased" | "NotChanged";
-
 export declare interface InvestmentEventItemViewModel {
     title: string;
     amount: number;
     currency: InvestmentEventItemViewModelCurrencyEnum;
-    changeState: InvestmentEventItemViewModelChangeStateEnum;
 }
 
 export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare type InvestmentEventViewModelChangeStateEnum = "Increased" | "Decreased" | "NotChanged";
 
 export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
@@ -1544,6 +1543,7 @@ export declare interface InvestmentEventViewModel {
     assetDetails: AssetDetails;
     amount: number;
     currency: InvestmentEventViewModelCurrencyEnum;
+    changeState: InvestmentEventViewModelChangeStateEnum;
     extendedInfo: InvestmentEventItemViewModel[];
     feesInfo: FeeDetails[];
     totalFeesAmount: number;

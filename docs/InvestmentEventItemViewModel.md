@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**changeState** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
@@ -38,19 +37,6 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="ChangeStateEnum"></a>
-## Enum: ChangeStateEnum
-
-
-* `Increased` (value: `"Increased"`)
-
-* `Decreased` (value: `"Decreased"`)
-
-* `NotChanged` (value: `"NotChanged"`)
 
 
 

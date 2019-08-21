@@ -38,11 +38,6 @@ import ApiClient from '../ApiClient';
  * @name InvestmentEventItemViewModel#currency
  * @type InvestmentEventItemViewModelCurrencyEnum
  */
-/**
- *
- * @name InvestmentEventItemViewModel#changeState
- * @type InvestmentEventItemViewModelChangeStateEnum
- */
 
 
 
@@ -78,9 +73,6 @@ export default class InvestmentEventItemViewModel {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('changeState')) {
-                obj['changeState'] = ApiClient.convertToType(data['changeState'], 'String');
-            }
         }
         return obj;
     }
@@ -88,7 +80,6 @@ export default class InvestmentEventItemViewModel {
     title = undefined;
     amount = undefined;
     currency = undefined;
-    changeState = undefined;
 
 
 
@@ -124,15 +115,6 @@ export default class InvestmentEventItemViewModel {
         "EUR": "EUR"    
     };
 
-    static ChangeStateEnum = {
-    
-        "Increased": "Increased",
-    
-        "Decreased": "Decreased",
-    
-        "NotChanged": "NotChanged"    
-    };
-
 
 
 }
@@ -143,11 +125,6 @@ export default class InvestmentEventItemViewModel {
 /**
  * @typedef InvestmentEventItemViewModelCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef InvestmentEventItemViewModelChangeStateEnum 
- * @type {("Increased"|"Decreased"|"NotChanged")}
  */
 
 
