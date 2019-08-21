@@ -115,6 +115,16 @@ export default class WalletBaseData {
 
     static CurrencyEnum = {
     
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA",
+    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -129,17 +139,7 @@ export default class WalletBaseData {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA"    
+        "EUR": "EUR"    
     };
 
 
@@ -151,7 +151,7 @@ export default class WalletBaseData {
 
 /**
  * @typedef WalletBaseDataCurrencyEnum 
- * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
