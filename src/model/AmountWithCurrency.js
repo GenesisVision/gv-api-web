@@ -79,8 +79,6 @@ export default class AmountWithCurrency {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -103,7 +101,9 @@ export default class AmountWithCurrency {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined"    
     };
 
 
@@ -115,7 +115,7 @@ export default class AmountWithCurrency {
 
 /**
  * @typedef AmountWithCurrencyCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
  */
 
 
