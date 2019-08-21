@@ -154,16 +154,6 @@ export default class InvestmentEventViewModel {
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -178,21 +168,21 @@ export default class InvestmentEventViewModel {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static TotalFeesCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -207,7 +197,17 @@ export default class InvestmentEventViewModel {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
 
@@ -219,12 +219,12 @@ export default class InvestmentEventViewModel {
 
 /**
  * @typedef InvestmentEventViewModelCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
  * @typedef InvestmentEventViewModelTotalFeesCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 

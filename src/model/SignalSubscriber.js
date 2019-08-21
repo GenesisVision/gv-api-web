@@ -185,16 +185,6 @@ export default class SignalSubscriber {
 
     static TotalCommissionCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -209,21 +199,21 @@ export default class SignalSubscriber {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static TotalSuccessFeeCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -238,21 +228,21 @@ export default class SignalSubscriber {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static TotalVolumeFeeCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -267,7 +257,17 @@ export default class SignalSubscriber {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
 
@@ -284,17 +284,17 @@ export default class SignalSubscriber {
 
 /**
  * @typedef SignalSubscriberTotalCommissionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
  * @typedef SignalSubscriberTotalSuccessFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
  * @typedef SignalSubscriberTotalVolumeFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 

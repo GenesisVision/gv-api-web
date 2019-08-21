@@ -40,8 +40,8 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name InvestmentEventItemViewModel#state
- * @type InvestmentEventItemViewModelStateEnum
+ * @name InvestmentEventItemViewModel#changeState
+ * @type InvestmentEventItemViewModelChangeStateEnum
  */
 
 
@@ -78,8 +78,8 @@ export default class InvestmentEventItemViewModel {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
-            if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], 'String');
+            if (data.hasOwnProperty('changeState')) {
+                obj['changeState'] = ApiClient.convertToType(data['changeState'], 'String');
             }
         }
         return obj;
@@ -88,7 +88,7 @@ export default class InvestmentEventItemViewModel {
     title = undefined;
     amount = undefined;
     currency = undefined;
-    state = undefined;
+    changeState = undefined;
 
 
 
@@ -96,16 +96,6 @@ export default class InvestmentEventItemViewModel {
 
 
     static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
     
         "USDT": "USDT",
     
@@ -121,10 +111,20 @@ export default class InvestmentEventItemViewModel {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
-    static StateEnum = {
+    static ChangeStateEnum = {
     
         "Increased": "Increased",
     
@@ -142,11 +142,11 @@ export default class InvestmentEventItemViewModel {
 
 /**
  * @typedef InvestmentEventItemViewModelCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
- * @typedef InvestmentEventItemViewModelStateEnum 
+ * @typedef InvestmentEventItemViewModelChangeStateEnum 
  * @type {("Increased"|"Decreased"|"NotChanged")}
  */
 

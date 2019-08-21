@@ -6,22 +6,12 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**state** | **String** |  | [optional] 
+**changeState** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
 ## Enum: CurrencyEnum
 
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
 
 * `USDT` (value: `"USDT"`)
 
@@ -39,11 +29,21 @@ Name | Type | Description | Notes
 
 * `EUR` (value: `"EUR"`)
 
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
+* `ETH` (value: `"ETH"`)
+
+* `BTC` (value: `"BTC"`)
+
+* `ADA` (value: `"ADA"`)
 
 
 
-<a name="StateEnum"></a>
-## Enum: StateEnum
+
+<a name="ChangeStateEnum"></a>
+## Enum: ChangeStateEnum
 
 
 * `Increased` (value: `"Increased"`)

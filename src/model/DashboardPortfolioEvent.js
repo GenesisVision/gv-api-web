@@ -214,16 +214,6 @@ export default class DashboardPortfolioEvent {
 
     static FeeSuccessManagerCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -238,21 +228,21 @@ export default class DashboardPortfolioEvent {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static FeeSuccessPlatformCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -267,21 +257,21 @@ export default class DashboardPortfolioEvent {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static CurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
         "USDT": "USDT",
     
         "XRP": "XRP",
@@ -296,7 +286,17 @@ export default class DashboardPortfolioEvent {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
+        "ETH": "ETH",
+    
+        "BTC": "BTC",
+    
+        "ADA": "ADA"    
     };
 
     static TypeEnum = {
@@ -336,17 +336,17 @@ export default class DashboardPortfolioEvent {
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessManagerCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
  * @typedef DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
  * @typedef DashboardPortfolioEventCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA")}
  */
 
 /**
