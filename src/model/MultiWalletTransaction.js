@@ -160,6 +160,8 @@ export default class MultiWalletTransaction {
 
     static CurrencyFromEnum = {
     
+        "Undefined": "Undefined",
+    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -182,13 +184,13 @@ export default class MultiWalletTransaction {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined"    
+        "EUR": "EUR"    
     };
 
     static CurrencyToEnum = {
     
+        "Undefined": "Undefined",
+    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -211,9 +213,7 @@ export default class MultiWalletTransaction {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined"    
+        "EUR": "EUR"    
     };
 
     static TypeEnum = {
@@ -265,12 +265,12 @@ export default class MultiWalletTransaction {
 
 /**
  * @typedef MultiWalletTransactionCurrencyFromEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**
  * @typedef MultiWalletTransactionCurrencyToEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**

@@ -124,6 +124,8 @@ export default class AttachToExternalSignalProviderExt {
 
     static FixedCurrencyEnum = {
     
+        "Undefined": "Undefined",
+    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -146,9 +148,7 @@ export default class AttachToExternalSignalProviderExt {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined"    
+        "EUR": "EUR"    
     };
 
 
@@ -165,7 +165,7 @@ export default class AttachToExternalSignalProviderExt {
 
 /**
  * @typedef AttachToExternalSignalProviderExtFixedCurrencyEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

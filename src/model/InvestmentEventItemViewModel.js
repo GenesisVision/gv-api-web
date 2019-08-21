@@ -38,6 +38,11 @@ import ApiClient from '../ApiClient';
  * @name InvestmentEventItemViewModel#currency
  * @type InvestmentEventItemViewModelCurrencyEnum
  */
+/**
+ *
+ * @name InvestmentEventItemViewModel#state
+ * @type InvestmentEventItemViewModelStateEnum
+ */
 
 
 
@@ -73,6 +78,9 @@ export default class InvestmentEventItemViewModel {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = ApiClient.convertToType(data['state'], 'String');
+            }
         }
         return obj;
     }
@@ -80,6 +88,7 @@ export default class InvestmentEventItemViewModel {
     title = undefined;
     amount = undefined;
     currency = undefined;
+    state = undefined;
 
 
 
@@ -87,6 +96,8 @@ export default class InvestmentEventItemViewModel {
 
 
     static CurrencyEnum = {
+    
+        "Undefined": "Undefined",
     
         "GVT": "GVT",
     
@@ -110,9 +121,16 @@ export default class InvestmentEventItemViewModel {
     
         "USD": "USD",
     
-        "EUR": "EUR",
+        "EUR": "EUR"    
+    };
+
+    static StateEnum = {
     
-        "Undefined": "Undefined"    
+        "Increased": "Increased",
+    
+        "Decreased": "Decreased",
+    
+        "NotChanged": "NotChanged"    
     };
 
 
@@ -124,7 +142,12 @@ export default class InvestmentEventItemViewModel {
 
 /**
  * @typedef InvestmentEventItemViewModelCurrencyEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef InvestmentEventItemViewModelStateEnum 
+ * @type {("Increased"|"Decreased"|"NotChanged")}
  */
 
 

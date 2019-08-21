@@ -106,6 +106,8 @@ export default class AttachToSignalProviderInfo {
 
     static MinDepositCurrencyEnum = {
     
+        "Undefined": "Undefined",
+    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -128,9 +130,7 @@ export default class AttachToSignalProviderInfo {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined"    
+        "EUR": "EUR"    
     };
 
 
@@ -142,7 +142,7 @@ export default class AttachToSignalProviderInfo {
 
 /**
  * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

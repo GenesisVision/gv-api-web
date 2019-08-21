@@ -261,6 +261,8 @@ export default class ProgramProfitChart {
 
     static ProgramCurrencyEnum = {
     
+        "Undefined": "Undefined",
+    
         "GVT": "GVT",
     
         "ETH": "ETH",
@@ -283,9 +285,7 @@ export default class ProgramProfitChart {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined"    
+        "EUR": "EUR"    
     };
 
 
@@ -297,7 +297,7 @@ export default class ProgramProfitChart {
 
 /**
  * @typedef ProgramProfitChartProgramCurrencyEnum 
- * @type {("GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

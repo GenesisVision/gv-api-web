@@ -924,7 +924,7 @@ export declare interface index {
     WalletApi: WalletApi;
 }
 
-export declare type AmountWithCurrencyCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type AmountWithCurrencyCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AmountWithCurrency {
     amount: number;
@@ -981,7 +981,7 @@ export declare interface AssetsValue {
 
 export declare type AttachToExternalSignalProviderExtModeEnum = "ByBalance" | "Percent" | "Fixed";
 
-export declare type AttachToExternalSignalProviderExtFixedCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type AttachToExternalSignalProviderExtFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToExternalSignalProviderExt {
     externalKeyId: string;
@@ -992,11 +992,11 @@ export declare interface AttachToExternalSignalProviderExt {
     fixedCurrency: AttachToExternalSignalProviderExtFixedCurrencyEnum;
 }
 
-export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type AttachToSignalProviderModeEnum = "ByBalance" | "Percent" | "Fixed";
 
-export declare type AttachToSignalProviderFixedCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type AttachToSignalProviderFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToSignalProvider {
     initialDepositCurrency: AttachToSignalProviderInitialDepositCurrencyEnum;
@@ -1008,7 +1008,7 @@ export declare interface AttachToSignalProvider {
     fixedCurrency: AttachToSignalProviderFixedCurrencyEnum;
 }
 
-export declare type AttachToSignalProviderInfoMinDepositCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type AttachToSignalProviderInfoMinDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToSignalProviderInfo {
     hasSignalAccount: boolean;
@@ -1122,7 +1122,7 @@ export declare interface ChartSimple {
     date: Date;
 }
 
-export declare type ConvertingDetailsCurrencyToEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ConvertingDetailsCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ConvertingDetails {
     currencyTo: ConvertingDetailsCurrencyToEnum;
@@ -1132,7 +1132,7 @@ export declare interface ConvertingDetails {
     currencyToLogo: string;
 }
 
-export declare type CopyTradingAccountInfoCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type CopyTradingAccountInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface CopyTradingAccountInfo {
     id: string;
@@ -1151,7 +1151,7 @@ export declare interface CopyTradingAccountsList {
     total: number;
 }
 
-export declare type CreateWithdrawalRequestModelCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type CreateWithdrawalRequestModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface CreateWithdrawalRequestModel {
     amount: number;
@@ -1171,11 +1171,11 @@ export declare interface DashboardChartValue {
     rate: number;
 }
 
-export declare type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type DashboardPortfolioEventFeeSuccessManagerCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type DashboardPortfolioEventFeeSuccessPlatformCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type DashboardPortfolioEventCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type DashboardPortfolioEventCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type DashboardPortfolioEventTypeEnum = "All" | "Invest" | "Withdraw" | "Profit" | "Loss" | "Reinvest" | "Canceled" | "Ended" | "WithdrawByStopOut";
 
@@ -1276,7 +1276,7 @@ export declare interface FcmTokenViewModel {
 
 export declare type FeeDetailsTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
 
-export declare type FeeDetailsCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type FeeDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface FeeDetails {
     title: string;
@@ -1522,17 +1522,20 @@ export declare interface InternalTransferRequest {
     transferAll: boolean;
 }
 
-export declare type InvestmentEventItemViewModelCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type InvestmentEventItemViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare type InvestmentEventItemViewModelStateEnum = "Increased" | "Decreased" | "NotChanged";
 
 export declare interface InvestmentEventItemViewModel {
     title: string;
     amount: number;
     currency: InvestmentEventItemViewModelCurrencyEnum;
+    state: InvestmentEventItemViewModelStateEnum;
 }
 
-export declare type InvestmentEventViewModelCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface InvestmentEventViewModel {
     title: string;
@@ -1634,7 +1637,7 @@ export declare interface ManagerNotificationSettingList {
 export declare interface ManagerOverview {
 }
 
-export declare type ManagerPortfolioEventCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ManagerPortfolioEventCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type ManagerPortfolioEventTypeEnum = "All" | "AssetStarted" | "ProgramPeriodStarts" | "ProgramPeriodEnds" | "InvestorInvest" | "InvestorWithdraw" | "ManagerInvest" | "ManagerWithdraw" | "AssetFinished" | "EntranceFee" | "ExitFee" | "ProgramStopOut" | "ProgramManagerTradingFeeAccrual" | "ProgramSignalSubscribe" | "ProgramBrokerChanged";
 
@@ -1723,7 +1726,7 @@ export declare interface MigrationRequest {
     newBroker: Broker;
 }
 
-export declare type MultiWalletExternalTransactionCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type MultiWalletExternalTransactionTypeEnum = "All" | "Deposit" | "Withdrawal";
 
@@ -1749,9 +1752,9 @@ export declare interface MultiWalletFilters {
     externalTransactionType: string[];
 }
 
-export declare type MultiWalletTransactionCurrencyFromEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type MultiWalletTransactionCurrencyFromEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type MultiWalletTransactionCurrencyToEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type MultiWalletTransactionCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type MultiWalletTransactionTypeEnum = "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits" | "SubscribeSignal" | "ReceiveSignal" | "DepositSignal" | "WithdrawalSignal" | "Platform";
 
@@ -1797,7 +1800,7 @@ export declare interface NewFundRequest {
     logo: string;
 }
 
-export declare type NewProgramRequestCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type NewProgramRequestCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface NewProgramRequest {
     currency: NewProgramRequestCurrencyEnum;
@@ -1900,7 +1903,7 @@ export declare interface OrderProgramData {
     logo: string;
 }
 
-export declare type OrderSignalFeeCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type OrderSignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type OrderSignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
 
@@ -1910,7 +1913,7 @@ export declare interface OrderSignalFee {
     type: OrderSignalFeeTypeEnum;
 }
 
-export declare type OrderSignalModelCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type OrderSignalModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type OrderSignalModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined" | "ManualBalancing";
 
@@ -2156,7 +2159,7 @@ export declare interface ProfilePublic {
     socialLinks: SocialLinkViewModel[];
 }
 
-export declare type ProgramBalanceChartProgramCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramBalanceChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramBalanceChart {
     gvtBalance: number;
@@ -2172,7 +2175,7 @@ export declare interface ProgramBalanceChartElement {
     investorsFunds: number;
 }
 
-export declare type ProgramDetailsCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type ProgramDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
@@ -2204,7 +2207,7 @@ export declare interface ProgramDetails {
     chart: ChartSimple[];
 }
 
-export declare type ProgramDetailsFullCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramDetailsFullCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type ProgramDetailsFullStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
@@ -2363,7 +2366,7 @@ export declare interface ProgramPeriodsViewModel {
     total: number;
 }
 
-export declare type ProgramProfitChartProgramCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramProfitChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramProfitChart {
     totalProgramCurrencyProfit: number;
@@ -2395,7 +2398,7 @@ export declare interface ProgramPwdUpdate {
     twoFactorCode: string;
 }
 
-export declare type ProgramRequestCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramRequestCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type ProgramRequestTypeEnum = "Invest" | "Withdrawal";
 
@@ -2434,9 +2437,9 @@ export declare interface ProgramSets {
     favoritesCount: number;
 }
 
-export declare type ProgramStatisticStartCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramStatisticStartCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type ProgramStatisticInvestedCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramStatisticInvestedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramStatistic {
     balanceBase: AmountWithCurrency;
@@ -2466,7 +2469,7 @@ export declare interface ProgramTag {
 
 export declare type ProgramTransactionDetailsProgramTypeEnum = "Program" | "Fund";
 
-export declare type ProgramTransactionDetailsSuccessFeeCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type ProgramTransactionDetailsSuccessFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramTransactionDetails {
     id: string;
@@ -2527,7 +2530,7 @@ export declare interface ProgramsList {
     total: number;
 }
 
-export declare type RateItemCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type RateItemCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface RateItem {
     currency: RateItemCurrencyEnum;
@@ -2637,7 +2640,7 @@ export declare interface SignalDataMaster {
     share: number;
 }
 
-export declare type SignalDetailsCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type SignalDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
@@ -2662,7 +2665,7 @@ export declare interface SignalDetails {
 
 export declare type SignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
 
-export declare type SignalFeeCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalFee {
     title: string;
@@ -2678,11 +2681,11 @@ export declare interface SignalProviderSubscribers {
 
 export declare type SignalSubscriberStatusEnum = "Active" | "Ended";
 
-export declare type SignalSubscriberTotalCommissionCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalSubscriberTotalCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type SignalSubscriberTotalSuccessFeeCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalSubscriberTotalSuccessFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type SignalSubscriberTotalVolumeFeeCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalSubscriberTotalVolumeFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalSubscriber {
     number: number;
@@ -2702,7 +2705,7 @@ export declare interface SignalSubscriber {
 
 export declare type SignalSubscriptionModeEnum = "ByBalance" | "Percent" | "Fixed";
 
-export declare type SignalSubscriptionFixedCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type SignalSubscriptionFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalSubscription {
     hasSignalAccount: boolean;
@@ -2774,9 +2777,9 @@ export declare type TransactionDetailsTypeEnum = "Investing" | "Withdrawal" | "E
 
 export declare type TransactionDetailsStatusEnum = "Done" | "Pending" | "Canceled" | "Error";
 
-export declare type TransactionDetailsCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type TransactionDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type TransactionDetailsGvCommissionCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type TransactionDetailsGvCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface TransactionDetails {
     type: TransactionDetailsTypeEnum;
@@ -2860,7 +2863,7 @@ export declare interface ValueChartBar {
     otherAssetsValue: OtherAssetsValue;
 }
 
-export declare type WalletBaseDataCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletBaseDataCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletBaseData {
     id: string;
@@ -2871,9 +2874,9 @@ export declare interface WalletBaseData {
     rate: number;
 }
 
-export declare type WalletDataCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletDataCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type WalletDataCurrencyCcyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletDataCurrencyCcyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletData {
     id: string;
@@ -2896,7 +2899,7 @@ export declare interface WalletData {
     totalCcy: number;
 }
 
-export declare type WalletInfoCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletInfo {
     currency: WalletInfoCurrencyEnum;
@@ -2928,13 +2931,13 @@ export declare interface WalletSummary {
 
 export declare type WalletTransactionSourceTypeEnum = "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain" | "GenesisVisionPlatform" | "SignalMasterSetting" | "SignalTradingAccount";
 
-export declare type WalletTransactionSourceCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletTransactionSourceCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type WalletTransactionActionEnum = "Transfer" | "ProgramOpen" | "ProgramProfit" | "ProgramInvest" | "ProgramWithdrawal" | "ProgramRefundPartialExecution" | "ProgramRefundClose" | "ProgramRefundStopOut" | "ProgramRequestInvest" | "ProgramRequestWithdrawal" | "ProgramRequestCancel" | "PayingTradingFee" | "SignalSubscriberPayingFee" | "SignalProviderReceiveFee";
 
 export declare type WalletTransactionDestinationTypeEnum = "Wallet" | "Program" | "Fund" | "ProgramRequest" | "FundRequest" | "WithdrawalRequest" | "PaymentTransaction" | "Blockchain" | "GenesisVisionPlatform" | "SignalMasterSetting" | "SignalTradingAccount";
 
-export declare type WalletTransactionDestinationCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletTransactionDestinationCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletTransaction {
     id: string;
@@ -2963,7 +2966,7 @@ export declare interface WalletTransactionsViewModel {
     total: number;
 }
 
-export declare type WalletWithdrawalInfoCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletWithdrawalInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletWithdrawalInfo {
     currency: WalletWithdrawalInfoCurrencyEnum;
@@ -2974,9 +2977,9 @@ export declare interface WalletWithdrawalInfo {
     availableToWithdrawal: number;
 }
 
-export declare type WalletsGrandTotalCurrencyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletsGrandTotalCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type WalletsGrandTotalCurrencyCcyEnum = "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR" | "Undefined";
+export declare type WalletsGrandTotalCurrencyCcyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletsGrandTotal {
     currency: WalletsGrandTotalCurrencyEnum;

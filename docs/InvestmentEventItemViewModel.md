@@ -6,11 +6,14 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
+**state** | **String** |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>
 ## Enum: CurrencyEnum
 
+
+* `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
 
@@ -36,7 +39,18 @@ Name | Type | Description | Notes
 
 * `EUR` (value: `"EUR"`)
 
-* `Undefined` (value: `"Undefined"`)
+
+
+
+<a name="StateEnum"></a>
+## Enum: StateEnum
+
+
+* `Increased` (value: `"Increased"`)
+
+* `Decreased` (value: `"Decreased"`)
+
+* `NotChanged` (value: `"NotChanged"`)
 
 
 
