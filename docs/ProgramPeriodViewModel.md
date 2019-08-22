@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **profit** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
-**managerStatistic** | [**FinancialStatistic**](FinancialStatistic.md) |  | [optional] 
+**platformSuccessFee** | **Number** |  | [optional] 
+**managerStatistic** | [**ManagerFinancialStatistic**](ManagerFinancialStatistic.md) |  | [optional] 
+**investorsStatistic** | [**InvestorsFinancialStatistic**](InvestorsFinancialStatistic.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>

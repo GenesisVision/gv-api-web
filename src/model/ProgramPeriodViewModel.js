@@ -13,7 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
-import FinancialStatistic from './FinancialStatistic';
+import InvestorsFinancialStatistic from './InvestorsFinancialStatistic';
+import ManagerFinancialStatistic from './ManagerFinancialStatistic';
 
 
 
@@ -66,8 +67,18 @@ import FinancialStatistic from './FinancialStatistic';
  */
 /**
  *
+ * @name ProgramPeriodViewModel#platformSuccessFee
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramPeriodViewModel#managerStatistic
- * @type {FinancialStatistic}
+ * @type {ManagerFinancialStatistic}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#investorsStatistic
+ * @type {InvestorsFinancialStatistic}
  */
 
 
@@ -119,8 +130,14 @@ export default class ProgramPeriodViewModel {
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
+            if (data.hasOwnProperty('platformSuccessFee')) {
+                obj['platformSuccessFee'] = ApiClient.convertToType(data['platformSuccessFee'], 'Number');
+            }
             if (data.hasOwnProperty('managerStatistic')) {
-                obj['managerStatistic'] = FinancialStatistic.constructFromObject(data['managerStatistic']);
+                obj['managerStatistic'] = ManagerFinancialStatistic.constructFromObject(data['managerStatistic']);
+            }
+            if (data.hasOwnProperty('investorsStatistic')) {
+                obj['investorsStatistic'] = InvestorsFinancialStatistic.constructFromObject(data['investorsStatistic']);
             }
         }
         return obj;
@@ -134,7 +151,9 @@ export default class ProgramPeriodViewModel {
     profit = undefined;
     balance = undefined;
     investors = undefined;
+    platformSuccessFee = undefined;
     managerStatistic = undefined;
+    investorsStatistic = undefined;
 
 
 

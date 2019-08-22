@@ -747,7 +747,6 @@ export declare interface index {
     ExternalTransactionDetails: ExternalTransactionDetails;
     FcmTokenViewModel: FcmTokenViewModel;
     FeeDetails: FeeDetails;
-    FinancialStatistic: FinancialStatistic;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
     FundAssetPart: FundAssetPart;
@@ -775,6 +774,7 @@ export declare interface index {
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
     InvestmentEventViewModel: InvestmentEventViewModel;
     InvestmentEventViewModels: InvestmentEventViewModels;
+    InvestorsFinancialStatistic: InvestorsFinancialStatistic;
     LevelInfo: LevelInfo;
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
@@ -782,6 +782,7 @@ export declare interface index {
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerDashboard: ManagerDashboard;
+    ManagerFinancialStatistic: ManagerFinancialStatistic;
     ManagerFundWithdrawInfo: ManagerFundWithdrawInfo;
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
@@ -1555,6 +1556,12 @@ export declare interface InvestmentEventViewModels {
     total: number;
 }
 
+export declare interface InvestorsFinancialStatistic {
+    deposit: number;
+    withdraw: number;
+    profitWithdraw: number;
+}
+
 export declare interface LevelInfo {
     level: number;
     investmentLimit: number;
@@ -1615,6 +1622,16 @@ export declare interface ManagerDashboard {
 export declare interface ManagerEvent {
     programs: string[];
     funds: string[];
+}
+
+export declare interface ManagerFinancialStatistic {
+    deposit: number;
+    withdraw: number;
+    commissionRebate: number;
+    successFee: number;
+    entryFee: number;
+    profit: number;
+    balance: number;
 }
 
 export declare interface ManagerFundWithdrawInfo {
@@ -2358,7 +2375,9 @@ export declare interface ProgramPeriodViewModel {
     profit: number;
     balance: number;
     investors: number;
-    managerStatistic: FinancialStatistic;
+    platformSuccessFee: number;
+    managerStatistic: ManagerFinancialStatistic;
+    investorsStatistic: InvestorsFinancialStatistic;
 }
 
 export declare interface ProgramPeriodsViewModel {

@@ -54,7 +54,6 @@ import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import FeeDetails from './model/FeeDetails';
-import FinancialStatistic from './model/FinancialStatistic';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
@@ -82,6 +81,7 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
+import InvestorsFinancialStatistic from './model/InvestorsFinancialStatistic';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
@@ -89,6 +89,7 @@ import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerDashboard from './model/ManagerDashboard';
+import ManagerFinancialStatistic from './model/ManagerFinancialStatistic';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
@@ -491,12 +492,6 @@ export {
     FeeDetails,
 
     /**
-     * @name index#FinancialStatistic
-     * @type {FinancialStatistic}
-     */
-    FinancialStatistic,
-
-    /**
      * @name index#ForgotPasswordViewModel
      * @type {ForgotPasswordViewModel}
      */
@@ -659,6 +654,12 @@ export {
     InvestmentEventViewModels,
 
     /**
+     * @name index#InvestorsFinancialStatistic
+     * @type {InvestorsFinancialStatistic}
+     */
+    InvestorsFinancialStatistic,
+
+    /**
      * @name index#LevelInfo
      * @type {LevelInfo}
      */
@@ -699,6 +700,12 @@ export {
      * @type {ManagerDashboard}
      */
     ManagerDashboard,
+
+    /**
+     * @name index#ManagerFinancialStatistic
+     * @type {ManagerFinancialStatistic}
+     */
+    ManagerFinancialStatistic,
 
     /**
      * @name index#ManagerFundWithdrawInfo
