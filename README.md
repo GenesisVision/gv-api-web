@@ -345,7 +345,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.InvestmentEventItemViewModel](docs/InvestmentEventItemViewModel.md)
  - [CoreApiV10.InvestmentEventViewModel](docs/InvestmentEventViewModel.md)
  - [CoreApiV10.InvestmentEventViewModels](docs/InvestmentEventViewModels.md)
- - [CoreApiV10.InvestorsFinancialStatistic](docs/InvestorsFinancialStatistic.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelUpData](docs/LevelUpData.md)
  - [CoreApiV10.LevelUpSummary](docs/LevelUpSummary.md)

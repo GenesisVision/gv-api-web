@@ -774,7 +774,6 @@ export declare interface index {
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
     InvestmentEventViewModel: InvestmentEventViewModel;
     InvestmentEventViewModels: InvestmentEventViewModels;
-    InvestorsFinancialStatistic: InvestorsFinancialStatistic;
     LevelInfo: LevelInfo;
     LevelUpData: LevelUpData;
     LevelUpSummary: LevelUpSummary;
@@ -2375,9 +2374,14 @@ export declare interface ProgramPeriodViewModel {
     profit: number;
     balance: number;
     investors: number;
+    managerDeposit: number;
+    managerWithdraw: number;
+    managerCommissionRebate: number;
+    investorsDeposit: number;
+    investorsWithdraw: number;
+    investorsProfitWithdraw: number;
     platformSuccessFee: number;
     managerStatistic: ManagerFinancialStatistic;
-    investorsStatistic: InvestorsFinancialStatistic;
 }
 
 export declare interface ProgramPeriodsViewModel {

@@ -13,7 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import InvestorsFinancialStatistic from './InvestorsFinancialStatistic';
 import ManagerFinancialStatistic from './ManagerFinancialStatistic';
 
 
@@ -67,6 +66,36 @@ import ManagerFinancialStatistic from './ManagerFinancialStatistic';
  */
 /**
  *
+ * @name ProgramPeriodViewModel#managerDeposit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#managerWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#managerCommissionRebate
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#investorsDeposit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#investorsWithdraw
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramPeriodViewModel#investorsProfitWithdraw
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramPeriodViewModel#platformSuccessFee
  * @type {Number}
  */
@@ -74,11 +103,6 @@ import ManagerFinancialStatistic from './ManagerFinancialStatistic';
  *
  * @name ProgramPeriodViewModel#managerStatistic
  * @type {ManagerFinancialStatistic}
- */
-/**
- *
- * @name ProgramPeriodViewModel#investorsStatistic
- * @type {InvestorsFinancialStatistic}
  */
 
 
@@ -130,14 +154,29 @@ export default class ProgramPeriodViewModel {
             if (data.hasOwnProperty('investors')) {
                 obj['investors'] = ApiClient.convertToType(data['investors'], 'Number');
             }
+            if (data.hasOwnProperty('managerDeposit')) {
+                obj['managerDeposit'] = ApiClient.convertToType(data['managerDeposit'], 'Number');
+            }
+            if (data.hasOwnProperty('managerWithdraw')) {
+                obj['managerWithdraw'] = ApiClient.convertToType(data['managerWithdraw'], 'Number');
+            }
+            if (data.hasOwnProperty('managerCommissionRebate')) {
+                obj['managerCommissionRebate'] = ApiClient.convertToType(data['managerCommissionRebate'], 'Number');
+            }
+            if (data.hasOwnProperty('investorsDeposit')) {
+                obj['investorsDeposit'] = ApiClient.convertToType(data['investorsDeposit'], 'Number');
+            }
+            if (data.hasOwnProperty('investorsWithdraw')) {
+                obj['investorsWithdraw'] = ApiClient.convertToType(data['investorsWithdraw'], 'Number');
+            }
+            if (data.hasOwnProperty('investorsProfitWithdraw')) {
+                obj['investorsProfitWithdraw'] = ApiClient.convertToType(data['investorsProfitWithdraw'], 'Number');
+            }
             if (data.hasOwnProperty('platformSuccessFee')) {
                 obj['platformSuccessFee'] = ApiClient.convertToType(data['platformSuccessFee'], 'Number');
             }
             if (data.hasOwnProperty('managerStatistic')) {
                 obj['managerStatistic'] = ManagerFinancialStatistic.constructFromObject(data['managerStatistic']);
-            }
-            if (data.hasOwnProperty('investorsStatistic')) {
-                obj['investorsStatistic'] = InvestorsFinancialStatistic.constructFromObject(data['investorsStatistic']);
             }
         }
         return obj;
@@ -151,9 +190,14 @@ export default class ProgramPeriodViewModel {
     profit = undefined;
     balance = undefined;
     investors = undefined;
+    managerDeposit = undefined;
+    managerWithdraw = undefined;
+    managerCommissionRebate = undefined;
+    investorsDeposit = undefined;
+    investorsWithdraw = undefined;
+    investorsProfitWithdraw = undefined;
     platformSuccessFee = undefined;
     managerStatistic = undefined;
-    investorsStatistic = undefined;
 
 
 

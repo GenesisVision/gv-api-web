@@ -11,9 +11,14 @@ Name | Type | Description | Notes
 **profit** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
+**managerDeposit** | **Number** |  | [optional] 
+**managerWithdraw** | **Number** |  | [optional] 
+**managerCommissionRebate** | **Number** |  | [optional] 
+**investorsDeposit** | **Number** |  | [optional] 
+**investorsWithdraw** | **Number** |  | [optional] 
+**investorsProfitWithdraw** | **Number** |  | [optional] 
 **platformSuccessFee** | **Number** |  | [optional] 
 **managerStatistic** | [**ManagerFinancialStatistic**](ManagerFinancialStatistic.md) |  | [optional] 
-**investorsStatistic** | [**InvestorsFinancialStatistic**](InvestorsFinancialStatistic.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>

@@ -81,7 +81,6 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
-import InvestorsFinancialStatistic from './model/InvestorsFinancialStatistic';
 import LevelInfo from './model/LevelInfo';
 import LevelUpData from './model/LevelUpData';
 import LevelUpSummary from './model/LevelUpSummary';
@@ -652,12 +651,6 @@ export {
      * @type {InvestmentEventViewModels}
      */
     InvestmentEventViewModels,
-
-    /**
-     * @name index#InvestorsFinancialStatistic
-     * @type {InvestorsFinancialStatistic}
-     */
-    InvestorsFinancialStatistic,
 
     /**
      * @name index#LevelInfo
