@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import FundAssetsState from './FundAssetsState';
 
 
 
@@ -48,6 +49,11 @@ import ChartSimple from './ChartSimple';
  *
  * @name FundProfitChart#profitPercent
  * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#assetsStates
+ * @type {Array<FundAssetsState>}
  */
 /**
  *
@@ -145,6 +151,9 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('profitPercent')) {
                 obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
             }
+            if (data.hasOwnProperty('assetsStates')) {
+                obj['assetsStates'] = ApiClient.convertToType(data['assetsStates'], [FundAssetsState]);
+            }
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
@@ -187,6 +196,7 @@ export default class FundProfitChart {
     rebalances = undefined;
     creationDate = undefined;
     profitPercent = undefined;
+    assetsStates = undefined;
     equityChart = undefined;
     balance = undefined;
     investors = undefined;

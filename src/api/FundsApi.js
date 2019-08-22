@@ -193,7 +193,8 @@ export default class FundsApi {
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
         'MaxPointCount': opts['maxPointCount'],
-        'Currency': opts['currency']
+        'Currency': opts['currency'],
+        'chartAssetsCount': opts['chartAssetsCount']
       };
       let headerParams = {
       };
@@ -221,6 +222,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
      * @param {String} [opts.currency] 
+     * @param {Number} [opts.chartAssetsCount]  (default to 3)
      * @return {CancelablePromise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
      */
       v10FundsByIdChartsProfitGet(id, opts) {

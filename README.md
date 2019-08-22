@@ -324,6 +324,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundAssetPartWithIcon](docs/FundAssetPartWithIcon.md)
  - [CoreApiV10.FundAssetPercent](docs/FundAssetPercent.md)
  - [CoreApiV10.FundAssetsListInfo](docs/FundAssetsListInfo.md)
+ - [CoreApiV10.FundAssetsState](docs/FundAssetsState.md)
  - [CoreApiV10.FundBalanceChart](docs/FundBalanceChart.md)
  - [CoreApiV10.FundDetails](docs/FundDetails.md)
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)

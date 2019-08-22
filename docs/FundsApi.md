@@ -161,7 +161,8 @@ let opts = {
   'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'maxPointCount': 56, // Number | 
-  'currency': "currency_example" // String | 
+  'currency': "currency_example", // String | 
+  'chartAssetsCount': 3 // Number | 
 };
 apiInstance.v10FundsByIdChartsProfitGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -180,6 +181,7 @@ Name | Type | Description  | Notes
  **dateTo** | **Date**|  | [optional] 
  **maxPointCount** | **Number**|  | [optional] 
  **currency** | **String**|  | [optional] 
+ **chartAssetsCount** | **Number**|  | [optional] [default to 3]
 
 ### Return type
 

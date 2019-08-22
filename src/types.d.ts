@@ -105,6 +105,7 @@ export declare class FundsApi {
         dateTo?: Date;
         maxPointCount?: number;
         currency?: string;
+        chartAssetsCount?: number;
     }): CancelablePromise<FundProfitChart>;
     v10FundsByIdFavoriteAddPost(id: string, authorization: string): CancelablePromise<any>;
     v10FundsByIdFavoriteRemovePost(id: string, authorization: string): CancelablePromise<any>;
@@ -753,6 +754,7 @@ export declare interface index {
     FundAssetPartWithIcon: FundAssetPartWithIcon;
     FundAssetPercent: FundAssetPercent;
     FundAssetsListInfo: FundAssetsListInfo;
+    FundAssetsState: FundAssetsState;
     FundBalanceChart: FundBalanceChart;
     FundDetails: FundDetails;
     FundDetailsFull: FundDetailsFull;
@@ -1339,6 +1341,12 @@ export declare interface FundAssetsListInfo {
     assets: FundAssetInfo[];
 }
 
+export declare interface FundAssetsState {
+    dateFrom: Date;
+    assets: FundAssetPartWithIcon[];
+    otherPercent: number;
+}
+
 export declare interface FundBalanceChart {
     gvtBalance: number;
     usdBalance: number;
@@ -1451,6 +1459,7 @@ export declare interface FundProfitChart {
     rebalances: number;
     creationDate: Date;
     profitPercent: number;
+    assetsStates: FundAssetsState[];
     equityChart: ChartSimple[];
     balance: number;
     investors: number;

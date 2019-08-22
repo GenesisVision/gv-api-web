@@ -60,6 +60,7 @@ import FundAssetPart from './model/FundAssetPart';
 import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
+import FundAssetsState from './model/FundAssetsState';
 import FundBalanceChart from './model/FundBalanceChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
@@ -525,6 +526,12 @@ export {
      * @type {FundAssetsListInfo}
      */
     FundAssetsListInfo,
+
+    /**
+     * @name index#FundAssetsState
+     * @type {FundAssetsState}
+     */
+    FundAssetsState,
 
     /**
      * @name index#FundBalanceChart

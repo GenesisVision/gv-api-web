@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **rebalances** | **Number** |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
 **profitPercent** | **Number** |  | [optional] 
+**assetsStates** | [**[FundAssetsState]**](FundAssetsState.md) |  | [optional] 
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
