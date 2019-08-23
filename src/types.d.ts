@@ -1429,6 +1429,7 @@ export declare interface FundInvestInfo {
     title: string;
     availableInWallet: number;
     minInvestmentAmount: number;
+    programCurrencyMinInvestment: number;
     entryFee: number;
     gvCommission: number;
     rate: number;
@@ -2338,6 +2339,7 @@ export declare interface ProgramInvestInfo {
     title: string;
     availableInWallet: number;
     minInvestmentAmount: number;
+    programCurrencyMinInvestment: number;
     entryFee: number;
     gvCommission: number;
     rate: number;
