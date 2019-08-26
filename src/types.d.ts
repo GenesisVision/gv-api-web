@@ -759,6 +759,7 @@ export declare interface index {
     FundDetails: FundDetails;
     FundDetailsFull: FundDetailsFull;
     FundDetailsListStatistic: FundDetailsListStatistic;
+    FundEquityChartElement: FundEquityChartElement;
     FundFacet: FundFacet;
     FundFilters: FundFilters;
     FundInvestInfo: FundInvestInfo;
@@ -1342,7 +1343,6 @@ export declare interface FundAssetsListInfo {
 }
 
 export declare interface FundAssetsState {
-    dateFrom: Date;
     assets: FundAssetPartWithIcon[];
     otherPercent: number;
 }
@@ -1404,6 +1404,12 @@ export declare interface FundDetailsListStatistic {
     investorsCount: number;
 }
 
+export declare interface FundEquityChartElement {
+    assetsState: FundAssetsState;
+    value: number;
+    date: Date;
+}
+
 export declare type FundFacetSortingEnum = "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewAsc" | "ByNewDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc";
 
 export declare type FundFacetSortTypeEnum = "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp" | "MostReliable";
@@ -1458,10 +1464,11 @@ export declare interface FundProfitChart {
     totalUsdProfit: number;
     timeframeUsdProfit: number;
     rebalances: number;
+    totalGvtProfit: number;
+    timeframeGvtProfit: number;
     creationDate: Date;
     profitPercent: number;
-    assetsStates: FundAssetsState[];
-    equityChart: ChartSimple[];
+    equityChart: FundEquityChartElement[];
     balance: number;
     investors: number;
     profitChangePercent: number;
@@ -1469,8 +1476,6 @@ export declare interface FundProfitChart {
     sortinoRatio: number;
     calmarRatio: number;
     maxDrawdown: number;
-    totalGvtProfit: number;
-    timeframeGvtProfit: number;
     rate: number;
 }
 
@@ -2403,6 +2408,7 @@ export declare interface ProgramPeriodsViewModel {
 export declare type ProgramProfitChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface ProgramProfitChart {
+    equityChart: ChartSimple[];
     totalProgramCurrencyProfit: number;
     timeframeProgramCurrencyProfit: number;
     programCurrency: ProgramProfitChartProgramCurrencyEnum;
@@ -2414,7 +2420,8 @@ export declare interface ProgramProfitChart {
     lastPeriodStarts: Date;
     lastPeriodEnds: Date;
     tradingVolume: number;
-    equityChart: ChartSimple[];
+    totalGvtProfit: number;
+    timeframeGvtProfit: number;
     balance: number;
     investors: number;
     profitChangePercent: number;
@@ -2422,8 +2429,6 @@ export declare interface ProgramProfitChart {
     sortinoRatio: number;
     calmarRatio: number;
     maxDrawdown: number;
-    totalGvtProfit: number;
-    timeframeGvtProfit: number;
     rate: number;
 }
 

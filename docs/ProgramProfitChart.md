@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **totalProgramCurrencyProfit** | **Number** |  | [optional] 
 **timeframeProgramCurrencyProfit** | **Number** |  | [optional] 
 **programCurrency** | **String** |  | [optional] 
@@ -14,7 +15,8 @@ Name | Type | Description | Notes
 **lastPeriodStarts** | **Date** |  | [optional] 
 **lastPeriodEnds** | **Date** |  | [optional] 
 **tradingVolume** | **Number** |  | [optional] 
-**equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
+**totalGvtProfit** | **Number** |  | [optional] 
+**timeframeGvtProfit** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **investors** | **Number** |  | [optional] 
 **profitChangePercent** | **Number** |  | [optional] 
@@ -22,8 +24,6 @@ Name | Type | Description | Notes
 **sortinoRatio** | **Number** |  | [optional] 
 **calmarRatio** | **Number** |  | [optional] 
 **maxDrawdown** | **Number** |  | [optional] 
-**totalGvtProfit** | **Number** |  | [optional] 
-**timeframeGvtProfit** | **Number** |  | [optional] 
 **rate** | **Number** |  | [optional] 
 
 

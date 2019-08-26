@@ -65,6 +65,7 @@ import FundBalanceChart from './model/FundBalanceChart';
 import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
+import FundEquityChartElement from './model/FundEquityChartElement';
 import FundFacet from './model/FundFacet';
 import FundFilters from './model/FundFilters';
 import FundInvestInfo from './model/FundInvestInfo';
@@ -556,6 +557,12 @@ export {
      * @type {FundDetailsListStatistic}
      */
     FundDetailsListStatistic,
+
+    /**
+     * @name index#FundEquityChartElement
+     * @type {FundEquityChartElement}
+     */
+    FundEquityChartElement,
 
     /**
      * @name index#FundFacet

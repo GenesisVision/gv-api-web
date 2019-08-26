@@ -27,6 +27,11 @@ import PeriodDate from './PeriodDate';
 
 /**
  *
+ * @name ProgramProfitChart#equityChart
+ * @type {Array<ChartSimple>}
+ */
+/**
+ *
  * @name ProgramProfitChart#totalProgramCurrencyProfit
  * @type {Number}
  */
@@ -82,8 +87,13 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
- * @name ProgramProfitChart#equityChart
- * @type {Array<ChartSimple>}
+ * @name ProgramProfitChart#totalGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#timeframeGvtProfit
+ * @type {Number}
  */
 /**
  *
@@ -122,16 +132,6 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
- * @name ProgramProfitChart#totalGvtProfit
- * @type {Number}
- */
-/**
- *
- * @name ProgramProfitChart#timeframeGvtProfit
- * @type {Number}
- */
-/**
- *
  * @name ProgramProfitChart#rate
  * @type {Number}
  */
@@ -161,6 +161,9 @@ export default class ProgramProfitChart {
             
             
 
+            if (data.hasOwnProperty('equityChart')) {
+                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
+            }
             if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
                 obj['totalProgramCurrencyProfit'] = ApiClient.convertToType(data['totalProgramCurrencyProfit'], 'Number');
             }
@@ -194,8 +197,11 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('tradingVolume')) {
                 obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
             }
-            if (data.hasOwnProperty('equityChart')) {
-                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
+            if (data.hasOwnProperty('totalGvtProfit')) {
+                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('timeframeGvtProfit')) {
+                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
             }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
@@ -218,12 +224,6 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('maxDrawdown')) {
                 obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
             }
-            if (data.hasOwnProperty('totalGvtProfit')) {
-                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeGvtProfit')) {
-                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -231,6 +231,7 @@ export default class ProgramProfitChart {
         return obj;
     }
 
+    equityChart = undefined;
     totalProgramCurrencyProfit = undefined;
     timeframeProgramCurrencyProfit = undefined;
     programCurrency = undefined;
@@ -242,7 +243,8 @@ export default class ProgramProfitChart {
     lastPeriodStarts = undefined;
     lastPeriodEnds = undefined;
     tradingVolume = undefined;
-    equityChart = undefined;
+    totalGvtProfit = undefined;
+    timeframeGvtProfit = undefined;
     balance = undefined;
     investors = undefined;
     profitChangePercent = undefined;
@@ -250,8 +252,6 @@ export default class ProgramProfitChart {
     sortinoRatio = undefined;
     calmarRatio = undefined;
     maxDrawdown = undefined;
-    totalGvtProfit = undefined;
-    timeframeGvtProfit = undefined;
     rate = undefined;
 
 

@@ -13,8 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ChartSimple from './ChartSimple';
-import FundAssetsState from './FundAssetsState';
+import FundEquityChartElement from './FundEquityChartElement';
 
 
 
@@ -42,6 +41,16 @@ import FundAssetsState from './FundAssetsState';
  */
 /**
  *
+ * @name FundProfitChart#totalGvtProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name FundProfitChart#timeframeGvtProfit
+ * @type {Number}
+ */
+/**
+ *
  * @name FundProfitChart#creationDate
  * @type {Date}
  */
@@ -52,13 +61,8 @@ import FundAssetsState from './FundAssetsState';
  */
 /**
  *
- * @name FundProfitChart#assetsStates
- * @type {Array<FundAssetsState>}
- */
-/**
- *
  * @name FundProfitChart#equityChart
- * @type {Array<ChartSimple>}
+ * @type {Array<FundEquityChartElement>}
  */
 /**
  *
@@ -93,16 +97,6 @@ import FundAssetsState from './FundAssetsState';
 /**
  *
  * @name FundProfitChart#maxDrawdown
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#totalGvtProfit
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#timeframeGvtProfit
  * @type {Number}
  */
 /**
@@ -145,17 +139,20 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('rebalances')) {
                 obj['rebalances'] = ApiClient.convertToType(data['rebalances'], 'Number');
             }
+            if (data.hasOwnProperty('totalGvtProfit')) {
+                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('timeframeGvtProfit')) {
+                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
+            }
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
             }
             if (data.hasOwnProperty('profitPercent')) {
                 obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'Number');
             }
-            if (data.hasOwnProperty('assetsStates')) {
-                obj['assetsStates'] = ApiClient.convertToType(data['assetsStates'], [FundAssetsState]);
-            }
             if (data.hasOwnProperty('equityChart')) {
-                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
+                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [FundEquityChartElement]);
             }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
@@ -178,12 +175,6 @@ export default class FundProfitChart {
             if (data.hasOwnProperty('maxDrawdown')) {
                 obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'Number');
             }
-            if (data.hasOwnProperty('totalGvtProfit')) {
-                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeGvtProfit')) {
-                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -194,9 +185,10 @@ export default class FundProfitChart {
     totalUsdProfit = undefined;
     timeframeUsdProfit = undefined;
     rebalances = undefined;
+    totalGvtProfit = undefined;
+    timeframeGvtProfit = undefined;
     creationDate = undefined;
     profitPercent = undefined;
-    assetsStates = undefined;
     equityChart = undefined;
     balance = undefined;
     investors = undefined;
@@ -205,8 +197,6 @@ export default class FundProfitChart {
     sortinoRatio = undefined;
     calmarRatio = undefined;
     maxDrawdown = undefined;
-    totalGvtProfit = undefined;
-    timeframeGvtProfit = undefined;
     rate = undefined;
 
 

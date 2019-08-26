@@ -329,6 +329,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.FundDetails](docs/FundDetails.md)
  - [CoreApiV10.FundDetailsFull](docs/FundDetailsFull.md)
  - [CoreApiV10.FundDetailsListStatistic](docs/FundDetailsListStatistic.md)
+ - [CoreApiV10.FundEquityChartElement](docs/FundEquityChartElement.md)
  - [CoreApiV10.FundFacet](docs/FundFacet.md)
  - [CoreApiV10.FundFilters](docs/FundFilters.md)
  - [CoreApiV10.FundInvestInfo](docs/FundInvestInfo.md)
