@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import EventFilters from './EventFilters';
 import FundFilters from './FundFilters';
 import MultiWalletFilters from './MultiWalletFilters';
 import ProgramFilters from './ProgramFilters';
@@ -40,6 +41,16 @@ import ProgramFilters from './ProgramFilters';
  *
  * @name Enums#fund
  * @type {FundFilters}
+ */
+/**
+ *
+ * @name Enums#event
+ * @type {EventFilters}
+ */
+/**
+ *
+ * @name Enums#assetTypes
+ * @type {Array<String>}
  */
 
 
@@ -76,6 +87,12 @@ export default class Enums {
             if (data.hasOwnProperty('fund')) {
                 obj['fund'] = FundFilters.constructFromObject(data['fund']);
             }
+            if (data.hasOwnProperty('event')) {
+                obj['event'] = EventFilters.constructFromObject(data['event']);
+            }
+            if (data.hasOwnProperty('assetTypes')) {
+                obj['assetTypes'] = ApiClient.convertToType(data['assetTypes'], ['String']);
+            }
         }
         return obj;
     }
@@ -83,6 +100,8 @@ export default class Enums {
     multiWallet = undefined;
     program = undefined;
     fund = undefined;
+    event = undefined;
+    assetTypes = undefined;
 
 
 

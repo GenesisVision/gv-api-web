@@ -742,12 +742,16 @@ export declare interface index {
     Enums: Enums;
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
+    EventFilters: EventFilters;
+    EventInvestorItemFilters: EventInvestorItemFilters;
+    EventItemFilters: EventItemFilters;
     ExternalKeyAddViewModel: ExternalKeyAddViewModel;
     ExternalKeyViewModel: ExternalKeyViewModel;
     ExternalKeysViewModel: ExternalKeysViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
     FcmTokenViewModel: FcmTokenViewModel;
     FeeDetails: FeeDetails;
+    FilterModel: FilterModel;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
     FundAssetPart: FundAssetPart;
@@ -1233,6 +1237,8 @@ export declare interface Enums {
     multiWallet: MultiWalletFilters;
     program: ProgramFilters;
     fund: FundFilters;
+    event: EventFilters;
+    assetTypes: string[];
 }
 
 export declare interface ErrorMessage {
@@ -1245,6 +1251,24 @@ export declare type ErrorViewModelCodeEnum = "InternalServerError" | "Validation
 export declare interface ErrorViewModel {
     errors: ErrorMessage[];
     code: ErrorViewModelCodeEnum;
+}
+
+export declare interface EventFilters {
+    manager: EventItemFilters;
+    investor: EventInvestorItemFilters;
+}
+
+export declare interface EventInvestorItemFilters {
+    signalProgramDetails: FilterModel[];
+    programDetails: FilterModel[];
+    fundDetails: FilterModel[];
+    allAssets: FilterModel[];
+}
+
+export declare interface EventItemFilters {
+    programDetails: FilterModel[];
+    fundDetails: FilterModel[];
+    allAssets: FilterModel[];
 }
 
 export declare interface ExternalKeyAddViewModel {
@@ -1287,6 +1311,11 @@ export declare interface FeeDetails {
     type: FeeDetailsTypeEnum;
     amount: number;
     currency: FeeDetailsCurrencyEnum;
+}
+
+export declare interface FilterModel {
+    key: string;
+    title: string;
 }
 
 export declare interface FinancialStatistic {

@@ -48,12 +48,16 @@ import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import Enums from './model/Enums';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
+import EventFilters from './model/EventFilters';
+import EventInvestorItemFilters from './model/EventInvestorItemFilters';
+import EventItemFilters from './model/EventItemFilters';
 import ExternalKeyAddViewModel from './model/ExternalKeyAddViewModel';
 import ExternalKeyViewModel from './model/ExternalKeyViewModel';
 import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import FeeDetails from './model/FeeDetails';
+import FilterModel from './model/FilterModel';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
@@ -457,6 +461,24 @@ export {
     ErrorViewModel,
 
     /**
+     * @name index#EventFilters
+     * @type {EventFilters}
+     */
+    EventFilters,
+
+    /**
+     * @name index#EventInvestorItemFilters
+     * @type {EventInvestorItemFilters}
+     */
+    EventInvestorItemFilters,
+
+    /**
+     * @name index#EventItemFilters
+     * @type {EventItemFilters}
+     */
+    EventItemFilters,
+
+    /**
      * @name index#ExternalKeyAddViewModel
      * @type {ExternalKeyAddViewModel}
      */
@@ -491,6 +513,12 @@ export {
      * @type {FeeDetails}
      */
     FeeDetails,
+
+    /**
+     * @name index#FilterModel
+     * @type {FilterModel}
+     */
+    FilterModel,
 
     /**
      * @name index#ForgotPasswordViewModel
