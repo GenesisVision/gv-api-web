@@ -51,6 +51,8 @@ Name | Type | Description | Notes
 
 * `GvProgramSuccess` (value: `"GvProgramSuccess"`)
 
+* `GvProgramSuccessSum` (value: `"GvProgramSuccessSum"`)
+
 * `GvFundEntry` (value: `"GvFundEntry"`)
 
 * `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
@@ -58,6 +60,8 @@ Name | Type | Description | Notes
 * `ManagerProgramEntry` (value: `"ManagerProgramEntry"`)
 
 * `ManagerProgramSuccess` (value: `"ManagerProgramSuccess"`)
+
+* `ManagerProgramSuccessSum` (value: `"ManagerProgramSuccessSum"`)
 
 * `ManagerFundEntry` (value: `"ManagerFundEntry"`)
 

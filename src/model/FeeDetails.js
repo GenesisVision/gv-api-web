@@ -112,6 +112,8 @@ export default class FeeDetails {
     
         "GvProgramSuccess": "GvProgramSuccess",
     
+        "GvProgramSuccessSum": "GvProgramSuccessSum",
+    
         "GvFundEntry": "GvFundEntry",
     
         "GvGmGvtHolderFee": "GvGmGvtHolderFee",
@@ -119,6 +121,8 @@ export default class FeeDetails {
         "ManagerProgramEntry": "ManagerProgramEntry",
     
         "ManagerProgramSuccess": "ManagerProgramSuccess",
+    
+        "ManagerProgramSuccessSum": "ManagerProgramSuccessSum",
     
         "ManagerFundEntry": "ManagerFundEntry",
     
@@ -171,7 +175,7 @@ export default class FeeDetails {
 
 /**
  * @typedef FeeDetailsTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
  */
 
 /**
