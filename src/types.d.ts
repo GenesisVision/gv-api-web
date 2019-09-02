@@ -1576,7 +1576,7 @@ export declare interface InvestmentEventItemViewModel {
 
 export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type InvestmentEventViewModelChangeStateEnum = "Increased" | "Decreased" | "NotChanged";
+export declare type InvestmentEventViewModelChangeStateEnum = "NotChanged" | "Increased" | "Decreased";
 
 export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 

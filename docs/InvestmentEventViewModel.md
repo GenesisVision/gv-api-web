@@ -53,11 +53,11 @@ Name | Type | Description | Notes
 ## Enum: ChangeStateEnum
 
 
+* `NotChanged` (value: `"NotChanged"`)
+
 * `Increased` (value: `"Increased"`)
 
 * `Decreased` (value: `"Decreased"`)
-
-* `NotChanged` (value: `"NotChanged"`)
 
 
 

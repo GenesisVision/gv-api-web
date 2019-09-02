@@ -192,11 +192,11 @@ export default class InvestmentEventViewModel {
 
     static ChangeStateEnum = {
     
+        "NotChanged": "NotChanged",
+    
         "Increased": "Increased",
     
-        "Decreased": "Decreased",
-    
-        "NotChanged": "NotChanged"    
+        "Decreased": "Decreased"    
     };
 
     static TotalFeesCurrencyEnum = {
@@ -242,7 +242,7 @@ export default class InvestmentEventViewModel {
 
 /**
  * @typedef InvestmentEventViewModelChangeStateEnum 
- * @type {("Increased"|"Decreased"|"NotChanged")}
+ * @type {("NotChanged"|"Increased"|"Decreased")}
  */
 
 /**
