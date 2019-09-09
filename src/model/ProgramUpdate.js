@@ -40,6 +40,16 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramUpdate#feeEntrance
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramUpdate#feeSuccess
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramUpdate#stopOutLevel
  * @type {Number}
  */
@@ -83,6 +93,12 @@ export default class ProgramUpdate {
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
+            if (data.hasOwnProperty('feeEntrance')) {
+                obj['feeEntrance'] = ApiClient.convertToType(data['feeEntrance'], 'Number');
+            }
+            if (data.hasOwnProperty('feeSuccess')) {
+                obj['feeSuccess'] = ApiClient.convertToType(data['feeSuccess'], 'Number');
+            }
             if (data.hasOwnProperty('stopOutLevel')) {
                 obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'Number');
             }
@@ -96,6 +112,8 @@ export default class ProgramUpdate {
     title = undefined;
     description = undefined;
     logo = undefined;
+    feeEntrance = undefined;
+    feeSuccess = undefined;
     stopOutLevel = undefined;
     investmentLimit = undefined;
 
