@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **feeEntrance** | **Number** |  | [optional] 
+**feeExit** | **Number** |  | [optional] 
 **feeSuccess** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
 **investmentLimit** | **Number** |  | [optional] 
