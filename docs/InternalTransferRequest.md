@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 
 * `Fund` (value: `"Fund"`)
 
+* `PaymentTransaction` (value: `"PaymentTransaction"`)
+
 
 
 
@@ -49,6 +51,8 @@ Name | Type | Description | Notes
 * `Program` (value: `"Program"`)
 
 * `Fund` (value: `"Fund"`)
+
+* `PaymentTransaction` (value: `"PaymentTransaction"`)
 
 
 

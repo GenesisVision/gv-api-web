@@ -99,6 +99,8 @@ export default class WithdrawalInfo {
     
         "New": "New",
     
+        "ReadyForWithdraw": "ReadyForWithdraw",
+    
         "InProcess": "InProcess",
     
         "Done": "Done",
@@ -119,7 +121,7 @@ export default class WithdrawalInfo {
 
 /**
  * @typedef WithdrawalInfoStatusEnum 
- * @type {("New"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
+ * @type {("New"|"ReadyForWithdraw"|"InProcess"|"Done"|"Error"|"Rejected"|"Cancelled")}
  */
 
 

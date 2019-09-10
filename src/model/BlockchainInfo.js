@@ -89,6 +89,8 @@ export default class BlockchainInfo {
     
         "ConfirmedAndValidated": "ConfirmedAndValidated",
     
+        "PendingAddInWallet": "PendingAddInWallet",
+    
         "Error": "Error",
     
         "Cancelled": "Cancelled"    
@@ -103,7 +105,7 @@ export default class BlockchainInfo {
 
 /**
  * @typedef BlockchainInfoStatusEnum 
- * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"Error"|"Cancelled")}
+ * @type {("Undefined"|"New"|"Pending"|"ConfirmedByGate"|"ConfirmedAndValidated"|"PendingAddInWallet"|"Error"|"Cancelled")}
  */
 
 

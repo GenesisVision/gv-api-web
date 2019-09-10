@@ -1038,7 +1038,7 @@ export declare interface BinanceKey {
     isValid: boolean;
 }
 
-export declare type BlockchainInfoStatusEnum = "Undefined" | "New" | "Pending" | "ConfirmedByGate" | "ConfirmedAndValidated" | "Error" | "Cancelled";
+export declare type BlockchainInfoStatusEnum = "Undefined" | "New" | "Pending" | "ConfirmedByGate" | "ConfirmedAndValidated" | "PendingAddInWallet" | "Error" | "Cancelled";
 
 export declare interface BlockchainInfo {
     hash: string;
@@ -1553,9 +1553,9 @@ export declare interface IdModel {
     id: string;
 }
 
-export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund";
+export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund" | "PaymentTransaction";
 
-export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund";
+export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund" | "PaymentTransaction";
 
 export declare interface InternalTransferRequest {
     sourceId: string;
@@ -3069,7 +3069,7 @@ export declare interface WalletsInfo {
     wallets: WalletInfo[];
 }
 
-export declare type WithdrawalInfoStatusEnum = "New" | "InProcess" | "Done" | "Error" | "Rejected" | "Cancelled";
+export declare type WithdrawalInfoStatusEnum = "New" | "ReadyForWithdraw" | "InProcess" | "Done" | "Error" | "Rejected" | "Cancelled";
 
 export declare interface WithdrawalInfo {
     wallet: string;

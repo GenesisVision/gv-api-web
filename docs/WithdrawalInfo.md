@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 
 * `New` (value: `"New"`)
 
+* `ReadyForWithdraw` (value: `"ReadyForWithdraw"`)
+
 * `InProcess` (value: `"InProcess"`)
 
 * `Done` (value: `"Done"`)
