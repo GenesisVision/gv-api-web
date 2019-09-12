@@ -166,6 +166,7 @@ export declare class InvestorApi {
         currencySecondary?: string;
         actionStatus?: string;
         dashboardActionStatus?: string;
+        isHideInList?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -229,6 +230,7 @@ export declare class InvestorApi {
         currencySecondary?: string;
         actionStatus?: string;
         dashboardActionStatus?: string;
+        isHideInList?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;
@@ -242,6 +244,7 @@ export declare class InvestorApi {
         currencySecondary?: string;
         actionStatus?: string;
         dashboardActionStatus?: string;
+        isHideInList?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalsList>;
@@ -291,6 +294,7 @@ export declare class ManagerApi {
         currencySecondary?: string;
         actionStatus?: string;
         dashboardActionStatus?: string;
+        isHideInList?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsList>;
@@ -358,6 +362,7 @@ export declare class ManagerApi {
         currencySecondary?: string;
         actionStatus?: string;
         dashboardActionStatus?: string;
+        isHideInList?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<ProgramsList>;

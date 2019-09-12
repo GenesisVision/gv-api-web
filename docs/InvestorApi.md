@@ -298,6 +298,7 @@ let opts = {
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
   'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -322,6 +323,7 @@ Name | Type | Description  | Notes
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
  **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -1019,6 +1021,7 @@ let opts = {
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
   'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -1042,6 +1045,7 @@ Name | Type | Description  | Notes
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
  **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
@@ -1171,6 +1175,7 @@ let opts = {
   'currencySecondary': "currencySecondary_example", // String | 
   'actionStatus': "actionStatus_example", // String | 
   'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -1194,6 +1199,7 @@ Name | Type | Description  | Notes
  **currencySecondary** | **String**|  | [optional] 
  **actionStatus** | **String**|  | [optional] 
  **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

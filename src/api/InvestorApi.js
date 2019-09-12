@@ -371,6 +371,7 @@ export default class InvestorApi {
         'CurrencySecondary': opts['currencySecondary'],
         'ActionStatus': opts['actionStatus'],
         'DashboardActionStatus': opts['dashboardActionStatus'],
+        'IsHideInList': opts['isHideInList'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -405,6 +406,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {String} [opts.actionStatus] 
      * @param {String} [opts.dashboardActionStatus] 
+     * @param {Boolean} [opts.isHideInList] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<FundsList>} a Promise, with an object containing data of type FundsList and HTTP response
@@ -1198,6 +1200,7 @@ export default class InvestorApi {
         'CurrencySecondary': opts['currencySecondary'],
         'ActionStatus': opts['actionStatus'],
         'DashboardActionStatus': opts['dashboardActionStatus'],
+        'IsHideInList': opts['isHideInList'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1231,6 +1234,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {String} [opts.actionStatus] 
      * @param {String} [opts.dashboardActionStatus] 
+     * @param {Boolean} [opts.isHideInList] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<ProgramsList>} a Promise, with an object containing data of type ProgramsList and HTTP response
@@ -1371,6 +1375,7 @@ export default class InvestorApi {
         'CurrencySecondary': opts['currencySecondary'],
         'ActionStatus': opts['actionStatus'],
         'DashboardActionStatus': opts['dashboardActionStatus'],
+        'IsHideInList': opts['isHideInList'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -1404,6 +1409,7 @@ export default class InvestorApi {
      * @param {String} [opts.currencySecondary] 
      * @param {String} [opts.actionStatus] 
      * @param {String} [opts.dashboardActionStatus] 
+     * @param {Boolean} [opts.isHideInList] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SignalsList>} a Promise, with an object containing data of type SignalsList and HTTP response
