@@ -2561,9 +2561,9 @@ export declare interface ProgramUpdate {
     title: string;
     description: string;
     logo: string;
-    feeEntrance: number;
-    feeExit: number;
-    feeSuccess: number;
+    entryFee: number;
+    exitFee: number;
+    successFee: number;
     stopOutLevel: number;
     investmentLimit: number;
 }

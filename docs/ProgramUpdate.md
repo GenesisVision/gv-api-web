@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
-**feeEntrance** | **Number** |  | [optional] 
-**feeExit** | **Number** |  | [optional] 
-**feeSuccess** | **Number** |  | [optional] 
+**entryFee** | **Number** |  | [optional] 
+**exitFee** | **Number** |  | [optional] 
+**successFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
 **investmentLimit** | **Number** |  | [optional] 
 
