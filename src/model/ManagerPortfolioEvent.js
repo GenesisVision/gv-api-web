@@ -187,6 +187,10 @@ export default class ManagerPortfolioEvent {
 
     static CurrencyEnum = {
     
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT",
+    
         "ETH": "ETH",
     
         "BTC": "BTC",
@@ -207,11 +211,7 @@ export default class ManagerPortfolioEvent {
     
         "USD": "USD",
     
-        "EUR": "EUR",
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT"    
+        "EUR": "EUR"    
     };
 
     static TypeEnum = {
@@ -263,7 +263,7 @@ export default class ManagerPortfolioEvent {
 
 /**
  * @typedef ManagerPortfolioEventCurrencyEnum 
- * @type {("ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 /**

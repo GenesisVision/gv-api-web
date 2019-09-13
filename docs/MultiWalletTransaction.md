@@ -20,6 +20,10 @@ Name | Type | Description | Notes
 ## Enum: CurrencyFromEnum
 
 
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
@@ -41,10 +45,6 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
 
 
 
@@ -53,6 +53,10 @@ Name | Type | Description | Notes
 ## Enum: CurrencyToEnum
 
 
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
+
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
@@ -74,10 +78,6 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
 
 
 
