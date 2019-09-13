@@ -33,10 +33,6 @@ Name | Type | Description | Notes
 ## Enum: TotalCommissionCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
@@ -58,6 +54,10 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 
 
@@ -66,10 +66,6 @@ Name | Type | Description | Notes
 ## Enum: TotalSuccessFeeCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
@@ -91,6 +87,10 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 
 
@@ -99,10 +99,6 @@ Name | Type | Description | Notes
 ## Enum: TotalVolumeFeeCurrencyEnum
 
 
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
 * `ETH` (value: `"ETH"`)
 
 * `BTC` (value: `"BTC"`)
@@ -124,6 +120,10 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+* `Undefined` (value: `"Undefined"`)
+
+* `GVT` (value: `"GVT"`)
 
 
 

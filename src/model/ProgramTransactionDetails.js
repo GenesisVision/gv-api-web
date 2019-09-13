@@ -203,10 +203,6 @@ export default class ProgramTransactionDetails {
 
     static SuccessFeeCurrencyEnum = {
     
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
         "ETH": "ETH",
     
         "BTC": "BTC",
@@ -227,7 +223,11 @@ export default class ProgramTransactionDetails {
     
         "USD": "USD",
     
-        "EUR": "EUR"    
+        "EUR": "EUR",
+    
+        "Undefined": "Undefined",
+    
+        "GVT": "GVT"    
     };
 
 
@@ -244,7 +244,7 @@ export default class ProgramTransactionDetails {
 
 /**
  * @typedef ProgramTransactionDetailsSuccessFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ * @type {("ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT")}
  */
 
 
