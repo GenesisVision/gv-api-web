@@ -210,6 +210,8 @@ import UserCommissionData from './model/UserCommissionData';
 import ValueChartBar from './model/ValueChartBar';
 import WalletBaseData from './model/WalletBaseData';
 import WalletData from './model/WalletData';
+import WalletDeposit from './model/WalletDeposit';
+import WalletDepositSummary from './model/WalletDepositSummary';
 import WalletInfo from './model/WalletInfo';
 import WalletMultiAvailable from './model/WalletMultiAvailable';
 import WalletMultiSummary from './model/WalletMultiSummary';
@@ -1431,6 +1433,18 @@ export {
      * @type {WalletData}
      */
     WalletData,
+
+    /**
+     * @name index#WalletDeposit
+     * @type {WalletDeposit}
+     */
+    WalletDeposit,
+
+    /**
+     * @name index#WalletDepositSummary
+     * @type {WalletDepositSummary}
+     */
+    WalletDepositSummary,
 
     /**
      * @name index#WalletInfo

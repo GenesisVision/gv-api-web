@@ -666,6 +666,7 @@ export declare class WalletApi {
     v10WalletAddressesByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletInfo>;
     v10WalletAddressesGet(authorization: string): CancelablePromise<WalletsInfo>;
     v10WalletByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletSummary>;
+    v10WalletDepositUpdatePost(authorization: string): CancelablePromise<WalletDepositSummary>;
     v10WalletFeeGvtholdingGet(authorization: string): CancelablePromise<UserCommissionData>;
     v10WalletMultiByCurrencyAvailableGet(currency: string, authorization: string): CancelablePromise<WalletMultiAvailable>;
     v10WalletMultiByCurrencyGet(currency: string, authorization: string): CancelablePromise<WalletMultiSummary>;
@@ -912,6 +913,8 @@ export declare interface index {
     ValueChartBar: ValueChartBar;
     WalletBaseData: WalletBaseData;
     WalletData: WalletData;
+    WalletDeposit: WalletDeposit;
+    WalletDepositSummary: WalletDepositSummary;
     WalletInfo: WalletInfo;
     WalletMultiAvailable: WalletMultiAvailable;
     WalletMultiSummary: WalletMultiSummary;
@@ -2976,6 +2979,17 @@ export declare interface WalletData {
     investedCcy: number;
     pendingCcy: number;
     totalCcy: number;
+}
+
+export declare type WalletDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface WalletDeposit {
+    currency: WalletDepositCurrencyEnum;
+    depositAddress: string;
+}
+
+export declare interface WalletDepositSummary {
+    wallets: WalletDeposit[];
 }
 
 export declare type WalletInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";

@@ -20,6 +20,7 @@ import MultiWalletExternalTransactionsViewModel from '../model/MultiWalletExtern
 import MultiWalletTransactionsViewModel from '../model/MultiWalletTransactionsViewModel';
 import TransactionDetails from '../model/TransactionDetails';
 import UserCommissionData from '../model/UserCommissionData';
+import WalletDepositSummary from '../model/WalletDepositSummary';
 import WalletInfo from '../model/WalletInfo';
 import WalletMultiAvailable from '../model/WalletMultiAvailable';
 import WalletMultiSummary from '../model/WalletMultiSummary';
@@ -187,6 +188,50 @@ export default class WalletApi {
      */
       v10WalletByCurrencyGet(currency, authorization) {
       return this.v10WalletByCurrencyGetWithHttpInfo(currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      v10WalletDepositUpdatePostWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling v10WalletDepositUpdatePost");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = WalletDepositSummary;
+
+      return this.apiClient.callApi(
+        '/v1.0/wallet/deposit/update', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Update deposit wallets
+     * @function WalletApi#v10WalletDepositUpdatePost
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<WalletDepositSummary>} a Promise, with an object containing data of type WalletDepositSummary and HTTP response
+     */
+      v10WalletDepositUpdatePost(authorization) {
+      return this.v10WalletDepositUpdatePostWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
