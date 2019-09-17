@@ -63,6 +63,11 @@ import ApiClient from '../ApiClient';
  * @name ProgramUpdate#investmentLimit
  * @type {Number}
  */
+/**
+ *
+ * @name ProgramUpdate#tradesDelay
+ * @type ProgramUpdateTradesDelayEnum
+ */
 
 
 
@@ -113,6 +118,9 @@ export default class ProgramUpdate {
             if (data.hasOwnProperty('investmentLimit')) {
                 obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'Number');
             }
+            if (data.hasOwnProperty('tradesDelay')) {
+                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+            }
         }
         return obj;
     }
@@ -125,11 +133,27 @@ export default class ProgramUpdate {
     successFee = undefined;
     stopOutLevel = undefined;
     investmentLimit = undefined;
+    tradesDelay = undefined;
 
 
 
 
 
+
+    static TradesDelayEnum = {
+    
+        "None": "None",
+    
+        "FiveMinutes": "FiveMinutes",
+    
+        "FifteenMinutes": "FifteenMinutes",
+    
+        "ThirtyMinutes": "ThirtyMinutes",
+    
+        "OneHour": "OneHour",
+    
+        "SixHours": "SixHours"    
+    };
 
 
 
@@ -137,6 +161,11 @@ export default class ProgramUpdate {
 
 
 
+
+/**
+ * @typedef ProgramUpdateTradesDelayEnum 
+ * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
+ */
 
 
 

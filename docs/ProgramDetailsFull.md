@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **genesisRatio** | **Number** |  | [optional] 
 **investmentScale** | **Number** |  | [optional] 
 **volumeScale** | **Number** |  | [optional] 
+**tradesDelay** | **String** |  | [optional] 
 **availableInvestment** | **Number** | In GVT | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
 **availableInvestmentLimit** | **Number** |  | [optional] 
@@ -78,6 +79,25 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="TradesDelayEnum"></a>
+## Enum: TradesDelayEnum
+
+
+* `None` (value: `"None"`)
+
+* `FiveMinutes` (value: `"FiveMinutes"`)
+
+* `FifteenMinutes` (value: `"FifteenMinutes"`)
+
+* `ThirtyMinutes` (value: `"ThirtyMinutes"`)
+
+* `OneHour` (value: `"OneHour"`)
+
+* `SixHours` (value: `"SixHours"`)
 
 
 

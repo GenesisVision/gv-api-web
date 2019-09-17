@@ -156,6 +156,11 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
+ * @name ProgramDetailsFull#tradesDelay
+ * @type ProgramDetailsFullTradesDelayEnum
+ */
+/**
+ *
  * @name ProgramDetailsFull#availableInvestment
  * @type {Number}
  */
@@ -350,6 +355,9 @@ export default class ProgramDetailsFull {
             if (data.hasOwnProperty('volumeScale')) {
                 obj['volumeScale'] = ApiClient.convertToType(data['volumeScale'], 'Number');
             }
+            if (data.hasOwnProperty('tradesDelay')) {
+                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+            }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
             }
@@ -436,6 +444,7 @@ export default class ProgramDetailsFull {
     genesisRatio = undefined;
     investmentScale = undefined;
     volumeScale = undefined;
+    tradesDelay = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     availableInvestmentLimit = undefined;
@@ -490,6 +499,21 @@ export default class ProgramDetailsFull {
         "EUR": "EUR"    
     };
 
+    static TradesDelayEnum = {
+    
+        "None": "None",
+    
+        "FiveMinutes": "FiveMinutes",
+    
+        "FifteenMinutes": "FifteenMinutes",
+    
+        "ThirtyMinutes": "ThirtyMinutes",
+    
+        "OneHour": "OneHour",
+    
+        "SixHours": "SixHours"    
+    };
+
     static StatusEnum = {
     
         "None": "None",
@@ -517,6 +541,11 @@ export default class ProgramDetailsFull {
 /**
  * @typedef ProgramDetailsFullCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef ProgramDetailsFullTradesDelayEnum 
+ * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
  */
 
 /**

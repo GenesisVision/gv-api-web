@@ -1873,6 +1873,8 @@ export declare interface NewFundRequest {
 
 export declare type NewProgramRequestCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
+export declare type NewProgramRequestTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
+
 export declare interface NewProgramRequest {
     currency: NewProgramRequestCurrencyEnum;
     periodLength: number;
@@ -1884,6 +1886,7 @@ export declare interface NewProgramRequest {
     signalVolumeFee: number;
     isSignalProgram: boolean;
     investmentLimit: number;
+    tradesDelay: NewProgramRequestTradesDelayEnum;
     entryFee: number;
     depositAmount: number;
     depositWalletId: string;
@@ -2280,6 +2283,8 @@ export declare interface ProgramDetails {
 
 export declare type ProgramDetailsFullCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
+export declare type ProgramDetailsFullTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
+
 export declare type ProgramDetailsFullStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
 export declare interface ProgramDetailsFull {
@@ -2308,6 +2313,7 @@ export declare interface ProgramDetailsFull {
     genesisRatio: number;
     investmentScale: number;
     volumeScale: number;
+    tradesDelay: ProgramDetailsFullTradesDelayEnum;
     availableInvestment: number;
     availableInvestmentBase: number;
     availableInvestmentLimit: number;
@@ -2568,6 +2574,8 @@ export declare interface ProgramTransactionDetails {
     color: string;
 }
 
+export declare type ProgramUpdateTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
+
 export declare interface ProgramUpdate {
     title: string;
     description: string;
@@ -2577,6 +2585,7 @@ export declare interface ProgramUpdate {
     successFee: number;
     stopOutLevel: number;
     investmentLimit: number;
+    tradesDelay: ProgramUpdateTradesDelayEnum;
 }
 
 export declare interface ProgramWithdrawInfo {
@@ -2848,10 +2857,13 @@ export declare interface TradesSignalViewModel {
     total: number;
 }
 
+export declare type TradesViewModelTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
+
 export declare interface TradesViewModel {
     showSwaps: boolean;
     showTickets: boolean;
     trades: OrderModel[];
+    tradesDelay: TradesViewModelTradesDelayEnum;
     total: number;
 }
 

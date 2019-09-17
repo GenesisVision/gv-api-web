@@ -75,6 +75,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name NewProgramRequest#tradesDelay
+ * @type NewProgramRequestTradesDelayEnum
+ */
+/**
+ *
  * @name NewProgramRequest#entryFee
  * @type {Number}
  */
@@ -159,6 +164,9 @@ export default class NewProgramRequest {
             if (data.hasOwnProperty('investmentLimit')) {
                 obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'Number');
             }
+            if (data.hasOwnProperty('tradesDelay')) {
+                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+            }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
@@ -191,6 +199,7 @@ export default class NewProgramRequest {
     signalVolumeFee = undefined;
     isSignalProgram = undefined;
     investmentLimit = undefined;
+    tradesDelay = undefined;
     entryFee = undefined;
     depositAmount = undefined;
     depositWalletId = undefined;
@@ -232,6 +241,21 @@ export default class NewProgramRequest {
         "EUR": "EUR"    
     };
 
+    static TradesDelayEnum = {
+    
+        "None": "None",
+    
+        "FiveMinutes": "FiveMinutes",
+    
+        "FifteenMinutes": "FifteenMinutes",
+    
+        "ThirtyMinutes": "ThirtyMinutes",
+    
+        "OneHour": "OneHour",
+    
+        "SixHours": "SixHours"    
+    };
+
 
 
 }
@@ -242,6 +266,11 @@ export default class NewProgramRequest {
 /**
  * @typedef NewProgramRequestCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
+ */
+
+/**
+ * @typedef NewProgramRequestTradesDelayEnum 
+ * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
  */
 
 

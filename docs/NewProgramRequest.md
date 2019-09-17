@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **signalVolumeFee** | **Number** |  | [optional] 
 **isSignalProgram** | **Boolean** |  | [optional] 
 **investmentLimit** | **Number** |  | [optional] 
+**tradesDelay** | **String** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
 **depositWalletId** | **String** |  | [optional] 
@@ -50,6 +51,25 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
+
+
+
+
+<a name="TradesDelayEnum"></a>
+## Enum: TradesDelayEnum
+
+
+* `None` (value: `"None"`)
+
+* `FiveMinutes` (value: `"FiveMinutes"`)
+
+* `FifteenMinutes` (value: `"FifteenMinutes"`)
+
+* `ThirtyMinutes` (value: `"ThirtyMinutes"`)
+
+* `OneHour` (value: `"OneHour"`)
+
+* `SixHours` (value: `"SixHours"`)
 
 
 

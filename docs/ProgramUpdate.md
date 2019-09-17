@@ -11,5 +11,25 @@ Name | Type | Description | Notes
 **successFee** | **Number** |  | [optional] 
 **stopOutLevel** | **Number** |  | [optional] 
 **investmentLimit** | **Number** |  | [optional] 
+**tradesDelay** | **String** |  | [optional] 
+
+
+<a name="TradesDelayEnum"></a>
+## Enum: TradesDelayEnum
+
+
+* `None` (value: `"None"`)
+
+* `FiveMinutes` (value: `"FiveMinutes"`)
+
+* `FifteenMinutes` (value: `"FifteenMinutes"`)
+
+* `ThirtyMinutes` (value: `"ThirtyMinutes"`)
+
+* `OneHour` (value: `"OneHour"`)
+
+* `SixHours` (value: `"SixHours"`)
+
+
 
 

@@ -41,6 +41,11 @@ import OrderModel from './OrderModel';
  */
 /**
  *
+ * @name TradesViewModel#tradesDelay
+ * @type TradesViewModelTradesDelayEnum
+ */
+/**
+ *
  * @name TradesViewModel#total
  * @type {Number}
  */
@@ -79,6 +84,9 @@ export default class TradesViewModel {
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderModel]);
             }
+            if (data.hasOwnProperty('tradesDelay')) {
+                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+            }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
@@ -89,6 +97,7 @@ export default class TradesViewModel {
     showSwaps = undefined;
     showTickets = undefined;
     trades = undefined;
+    tradesDelay = undefined;
     total = undefined;
 
 
@@ -96,12 +105,32 @@ export default class TradesViewModel {
 
 
 
+    static TradesDelayEnum = {
+    
+        "None": "None",
+    
+        "FiveMinutes": "FiveMinutes",
+    
+        "FifteenMinutes": "FifteenMinutes",
+    
+        "ThirtyMinutes": "ThirtyMinutes",
+    
+        "OneHour": "OneHour",
+    
+        "SixHours": "SixHours"    
+    };
+
 
 
 }
 
 
 
+
+/**
+ * @typedef TradesViewModelTradesDelayEnum 
+ * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
+ */
 
 
 
