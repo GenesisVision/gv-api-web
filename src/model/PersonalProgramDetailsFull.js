@@ -72,11 +72,6 @@ import SignalSubscription from './SignalSubscription';
  */
 /**
  *
- * @name PersonalProgramDetailsFull#successFee
- * @type {Number}
- */
-/**
- *
  * @name PersonalProgramDetailsFull#successFeePersonal
  * @type {Number}
  */
@@ -218,9 +213,6 @@ export default class PersonalProgramDetailsFull {
             if (data.hasOwnProperty('migration')) {
                 obj['migration'] = MigrationRequest.constructFromObject(data['migration']);
             }
-            if (data.hasOwnProperty('successFee')) {
-                obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
-            }
             if (data.hasOwnProperty('successFeePersonal')) {
                 obj['successFeePersonal'] = ApiClient.convertToType(data['successFeePersonal'], 'Number');
             }
@@ -288,7 +280,6 @@ export default class PersonalProgramDetailsFull {
     canMakeSignalProvider = undefined;
     canChangePassword = undefined;
     migration = undefined;
-    successFee = undefined;
     successFeePersonal = undefined;
     isFavorite = undefined;
     isInvested = undefined;

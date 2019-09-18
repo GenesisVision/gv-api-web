@@ -2060,7 +2060,6 @@ export declare interface PersonalFundDetailsFull {
     canReallocate: boolean;
     availableReallocationPercents: number;
     nextReallocationPercents: Date;
-    exitFee: number;
     exitFeePersonal: number;
     isFavorite: boolean;
     isInvested: boolean;
@@ -2093,7 +2092,6 @@ export declare interface PersonalProgramDetailsFull {
     canMakeSignalProvider: boolean;
     canChangePassword: boolean;
     migration: MigrationRequest;
-    successFee: number;
     successFeePersonal: number;
     isFavorite: boolean;
     isInvested: boolean;

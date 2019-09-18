@@ -45,11 +45,6 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name PersonalFundDetailsFull#exitFee
- * @type {Number}
- */
-/**
- *
  * @name PersonalFundDetailsFull#exitFeePersonal
  * @type {Number}
  */
@@ -176,9 +171,6 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('nextReallocationPercents')) {
                 obj['nextReallocationPercents'] = ApiClient.convertToType(data['nextReallocationPercents'], 'Date');
             }
-            if (data.hasOwnProperty('exitFee')) {
-                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
-            }
             if (data.hasOwnProperty('exitFeePersonal')) {
                 obj['exitFeePersonal'] = ApiClient.convertToType(data['exitFeePersonal'], 'Number');
             }
@@ -241,7 +233,6 @@ export default class PersonalFundDetailsFull {
     canReallocate = undefined;
     availableReallocationPercents = undefined;
     nextReallocationPercents = undefined;
-    exitFee = undefined;
     exitFeePersonal = undefined;
     isFavorite = undefined;
     isInvested = undefined;

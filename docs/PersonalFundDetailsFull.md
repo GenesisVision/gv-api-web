@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **canReallocate** | **Boolean** |  | [optional] 
 **availableReallocationPercents** | **Number** |  | [optional] 
 **nextReallocationPercents** | **Date** |  | [optional] 
-**exitFee** | **Number** |  | [optional] 
 **exitFeePersonal** | **Number** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
