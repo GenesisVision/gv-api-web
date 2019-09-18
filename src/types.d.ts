@@ -2500,6 +2500,7 @@ export declare interface ProgramRequest {
     withdrawAll: boolean;
     feeEntry: number;
     feeExit: number;
+    feeSuccess: number;
     currency: ProgramRequestCurrencyEnum;
     fundWithdrawPercent: number;
     type: ProgramRequestTypeEnum;

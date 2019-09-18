@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **withdrawAll** | **Boolean** |  | [optional] 
 **feeEntry** | **Number** |  | [optional] 
 **feeExit** | **Number** |  | [optional] 
+**feeSuccess** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **fundWithdrawPercent** | **Number** | Used only in fund withdraw request | [optional] 
 **type** | **String** |  | [optional] 

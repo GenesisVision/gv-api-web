@@ -65,6 +65,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProgramRequest#feeSuccess
+ * @type {Number}
+ */
+/**
+ *
  * @name ProgramRequest#currency
  * @type ProgramRequestCurrencyEnum
  */
@@ -158,6 +163,9 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('feeExit')) {
                 obj['feeExit'] = ApiClient.convertToType(data['feeExit'], 'Number');
             }
+            if (data.hasOwnProperty('feeSuccess')) {
+                obj['feeSuccess'] = ApiClient.convertToType(data['feeSuccess'], 'Number');
+            }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
@@ -197,6 +205,7 @@ export default class ProgramRequest {
     withdrawAll = undefined;
     feeEntry = undefined;
     feeExit = undefined;
+    feeSuccess = undefined;
     currency = undefined;
     fundWithdrawPercent = undefined;
     type = undefined;
