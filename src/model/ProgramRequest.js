@@ -55,17 +55,17 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name ProgramRequest#feeEntry
+ * @name ProgramRequest#entryFee
  * @type {Number}
  */
 /**
  *
- * @name ProgramRequest#feeExit
+ * @name ProgramRequest#exitFee
  * @type {Number}
  */
 /**
  *
- * @name ProgramRequest#feeSuccess
+ * @name ProgramRequest#successFee
  * @type {Number}
  */
 /**
@@ -157,14 +157,14 @@ export default class ProgramRequest {
             if (data.hasOwnProperty('withdrawAll')) {
                 obj['withdrawAll'] = ApiClient.convertToType(data['withdrawAll'], 'Boolean');
             }
-            if (data.hasOwnProperty('feeEntry')) {
-                obj['feeEntry'] = ApiClient.convertToType(data['feeEntry'], 'Number');
+            if (data.hasOwnProperty('entryFee')) {
+                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('feeExit')) {
-                obj['feeExit'] = ApiClient.convertToType(data['feeExit'], 'Number');
+            if (data.hasOwnProperty('exitFee')) {
+                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
             }
-            if (data.hasOwnProperty('feeSuccess')) {
-                obj['feeSuccess'] = ApiClient.convertToType(data['feeSuccess'], 'Number');
+            if (data.hasOwnProperty('successFee')) {
+                obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
@@ -203,9 +203,9 @@ export default class ProgramRequest {
     value = undefined;
     valueGvt = undefined;
     withdrawAll = undefined;
-    feeEntry = undefined;
-    feeExit = undefined;
-    feeSuccess = undefined;
+    entryFee = undefined;
+    exitFee = undefined;
+    successFee = undefined;
     currency = undefined;
     fundWithdrawPercent = undefined;
     type = undefined;

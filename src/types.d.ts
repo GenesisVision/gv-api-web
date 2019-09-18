@@ -2060,6 +2060,8 @@ export declare interface PersonalFundDetailsFull {
     canReallocate: boolean;
     availableReallocationPercents: number;
     nextReallocationPercents: Date;
+    exitFee: number;
+    exitFeePersonal: number;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
@@ -2091,6 +2093,8 @@ export declare interface PersonalProgramDetailsFull {
     canMakeSignalProvider: boolean;
     canChangePassword: boolean;
     migration: MigrationRequest;
+    successFee: number;
+    successFeePersonal: number;
     isFavorite: boolean;
     isInvested: boolean;
     isOwnProgram: boolean;
@@ -2498,9 +2502,9 @@ export declare interface ProgramRequest {
     value: number;
     valueGvt: number;
     withdrawAll: boolean;
-    feeEntry: number;
-    feeExit: number;
-    feeSuccess: number;
+    entryFee: number;
+    exitFee: number;
+    successFee: number;
     currency: ProgramRequestCurrencyEnum;
     fundWithdrawPercent: number;
     type: ProgramRequestTypeEnum;

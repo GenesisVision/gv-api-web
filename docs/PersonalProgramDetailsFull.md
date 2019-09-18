@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **canMakeSignalProvider** | **Boolean** |  | [optional] 
 **canChangePassword** | **Boolean** |  | [optional] 
 **migration** | [**MigrationRequest**](MigrationRequest.md) |  | [optional] 
+**successFee** | **Number** |  | [optional] 
+**successFeePersonal** | **Number** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
