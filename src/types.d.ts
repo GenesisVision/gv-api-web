@@ -2211,6 +2211,7 @@ export declare interface ProfileHeaderViewModel {
     email: string;
     avatar: string;
     userType: ProfileHeaderViewModelUserTypeEnum;
+    countryCode: string;
     notificationsCount: number;
     favoritesCount: number;
     kycConfirmed: boolean;

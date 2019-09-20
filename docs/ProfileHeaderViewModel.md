@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
 **userType** | **String** |  | [optional] 
+**countryCode** | **String** |  | [optional] 
 **notificationsCount** | **Number** |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 **kycConfirmed** | **Boolean** |  | [optional] 

@@ -50,6 +50,11 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
+ * @name ProfileHeaderViewModel#countryCode
+ * @type {String}
+ */
+/**
+ *
  * @name ProfileHeaderViewModel#notificationsCount
  * @type {Number}
  */
@@ -154,6 +159,9 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('userType')) {
                 obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
             }
+            if (data.hasOwnProperty('countryCode')) {
+                obj['countryCode'] = ApiClient.convertToType(data['countryCode'], 'String');
+            }
             if (data.hasOwnProperty('notificationsCount')) {
                 obj['notificationsCount'] = ApiClient.convertToType(data['notificationsCount'], 'Number');
             }
@@ -202,6 +210,7 @@ export default class ProfileHeaderViewModel {
     email = undefined;
     avatar = undefined;
     userType = undefined;
+    countryCode = undefined;
     notificationsCount = undefined;
     favoritesCount = undefined;
     kycConfirmed = undefined;
