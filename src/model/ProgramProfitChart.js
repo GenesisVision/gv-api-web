@@ -32,12 +32,12 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
- * @name ProgramProfitChart#totalProgramCurrencyProfit
+ * @name ProgramProfitChart#totalProfit
  * @type {Number}
  */
 /**
  *
- * @name ProgramProfitChart#timeframeProgramCurrencyProfit
+ * @name ProgramProfitChart#timeframeProfit
  * @type {Number}
  */
 /**
@@ -83,6 +83,16 @@ import PeriodDate from './PeriodDate';
 /**
  *
  * @name ProgramProfitChart#tradingVolume
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#totalProgramCurrencyProfit
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#timeframeProgramCurrencyProfit
  * @type {Number}
  */
 /**
@@ -164,11 +174,11 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('equityChart')) {
                 obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [ChartSimple]);
             }
-            if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
-                obj['totalProgramCurrencyProfit'] = ApiClient.convertToType(data['totalProgramCurrencyProfit'], 'Number');
+            if (data.hasOwnProperty('totalProfit')) {
+                obj['totalProfit'] = ApiClient.convertToType(data['totalProfit'], 'Number');
             }
-            if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
-                obj['timeframeProgramCurrencyProfit'] = ApiClient.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
+            if (data.hasOwnProperty('timeframeProfit')) {
+                obj['timeframeProfit'] = ApiClient.convertToType(data['timeframeProfit'], 'Number');
             }
             if (data.hasOwnProperty('programCurrency')) {
                 obj['programCurrency'] = ApiClient.convertToType(data['programCurrency'], 'String');
@@ -196,6 +206,12 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('tradingVolume')) {
                 obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
+            }
+            if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
+                obj['totalProgramCurrencyProfit'] = ApiClient.convertToType(data['totalProgramCurrencyProfit'], 'Number');
+            }
+            if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
+                obj['timeframeProgramCurrencyProfit'] = ApiClient.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
             }
             if (data.hasOwnProperty('totalGvtProfit')) {
                 obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
@@ -232,8 +248,8 @@ export default class ProgramProfitChart {
     }
 
     equityChart = undefined;
-    totalProgramCurrencyProfit = undefined;
-    timeframeProgramCurrencyProfit = undefined;
+    totalProfit = undefined;
+    timeframeProfit = undefined;
     programCurrency = undefined;
     trades = undefined;
     successTradesPercent = undefined;
@@ -243,6 +259,8 @@ export default class ProgramProfitChart {
     lastPeriodStarts = undefined;
     lastPeriodEnds = undefined;
     tradingVolume = undefined;
+    totalProgramCurrencyProfit = undefined;
+    timeframeProgramCurrencyProfit = undefined;
     totalGvtProfit = undefined;
     timeframeGvtProfit = undefined;
     balance = undefined;

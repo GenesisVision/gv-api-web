@@ -681,6 +681,7 @@ let opts = {
   'sorting': "sorting_example", // String | 
   'programCurrency': "programCurrency_example", // String | 
   'currencySecondary': "currencySecondary_example", // String | 
+  'currency': "currency_example", // String | 
   'levelUpFrom': 56, // Number | 
   'tags': ["tags_example"], // [String] | 
   'isSignal': true, // Boolean | 
@@ -723,6 +724,7 @@ Name | Type | Description  | Notes
  **sorting** | **String**|  | [optional] 
  **programCurrency** | **String**|  | [optional] 
  **currencySecondary** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **levelUpFrom** | **Number**|  | [optional] 
  **tags** | [**[String]**](String.md)|  | [optional] 
  **isSignal** | **Boolean**|  | [optional] 

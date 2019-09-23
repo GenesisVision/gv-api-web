@@ -748,6 +748,7 @@ export default class ProgramsApi {
         'Sorting': opts['sorting'],
         'ProgramCurrency': opts['programCurrency'],
         'CurrencySecondary': opts['currencySecondary'],
+        'Currency': opts['currency'],
         'LevelUpFrom': opts['levelUpFrom'],
         'Tags': this.apiClient.buildCollectionParam(opts['tags'], 'multi'),
         'IsSignal': opts['isSignal'],
@@ -800,6 +801,7 @@ export default class ProgramsApi {
      * @param {String} [opts.sorting] 
      * @param {String} [opts.programCurrency] 
      * @param {String} [opts.currencySecondary] 
+     * @param {String} [opts.currency] 
      * @param {Number} [opts.levelUpFrom] 
      * @param {Array<String>} [opts.tags] 
      * @param {Boolean} [opts.isSignal] 

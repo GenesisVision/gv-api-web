@@ -545,6 +545,7 @@ export declare class ProgramsApi {
         sorting?: string;
         programCurrency?: string;
         currencySecondary?: string;
+        currency?: string;
         levelUpFrom?: number;
         tags?: string[];
         isSignal?: boolean;
@@ -2458,8 +2459,8 @@ export declare type ProgramProfitChartProgramCurrencyEnum = "Undefined" | "GVT" 
 
 export declare interface ProgramProfitChart {
     equityChart: ChartSimple[];
-    totalProgramCurrencyProfit: number;
-    timeframeProgramCurrencyProfit: number;
+    totalProfit: number;
+    timeframeProfit: number;
     programCurrency: ProgramProfitChartProgramCurrencyEnum;
     trades: number;
     successTradesPercent: number;
@@ -2469,6 +2470,8 @@ export declare interface ProgramProfitChart {
     lastPeriodStarts: Date;
     lastPeriodEnds: Date;
     tradingVolume: number;
+    totalProgramCurrencyProfit: number;
+    timeframeProgramCurrencyProfit: number;
     totalGvtProfit: number;
     timeframeGvtProfit: number;
     balance: number;

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-**totalProgramCurrencyProfit** | **Number** |  | [optional] 
-**timeframeProgramCurrencyProfit** | **Number** |  | [optional] 
+**totalProfit** | **Number** |  | [optional] 
+**timeframeProfit** | **Number** |  | [optional] 
 **programCurrency** | **String** |  | [optional] 
 **trades** | **Number** |  | [optional] 
 **successTradesPercent** | **Number** |  | [optional] 
@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **lastPeriodStarts** | **Date** |  | [optional] 
 **lastPeriodEnds** | **Date** |  | [optional] 
 **tradingVolume** | **Number** |  | [optional] 
+**totalProgramCurrencyProfit** | **Number** |  | [optional] 
+**timeframeProgramCurrencyProfit** | **Number** |  | [optional] 
 **totalGvtProfit** | **Number** |  | [optional] 
 **timeframeGvtProfit** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
