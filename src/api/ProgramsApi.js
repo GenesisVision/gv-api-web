@@ -761,7 +761,6 @@ export default class ProgramsApi {
         'IsEnabled': opts['isEnabled'],
         'HasInvestorsForAll': opts['hasInvestorsForAll'],
         'HasInvestorsForClosed': opts['hasInvestorsForClosed'],
-        'IsHideInList': opts['isHideInList'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
         'ForceUseIdsList': opts['forceUseIdsList'],
         'ManagerId': opts['managerId'],
@@ -814,7 +813,6 @@ export default class ProgramsApi {
      * @param {Boolean} [opts.isEnabled] 
      * @param {Boolean} [opts.hasInvestorsForAll] 
      * @param {Boolean} [opts.hasInvestorsForClosed] 
-     * @param {Boolean} [opts.isHideInList] 
      * @param {Array<String>} [opts.ids] 
      * @param {Boolean} [opts.forceUseIdsList] 
      * @param {String} [opts.managerId] 
