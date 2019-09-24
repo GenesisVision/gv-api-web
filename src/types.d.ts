@@ -223,6 +223,7 @@ export declare class InvestorApi {
     }): CancelablePromise<any>;
     v10InvestorProgramsGet(authorization: string, opts?: {
         sorting?: string;
+        currency?: string;
         from?: Date;
         to?: Date;
         chartPointsCount?: number;
@@ -355,6 +356,7 @@ export declare class ManagerApi {
     }): CancelablePromise<ManagerProgramCreateResult>;
     v10ManagerProgramsGet(authorization: string, opts?: {
         sorting?: string;
+        currency?: string;
         from?: Date;
         to?: Date;
         chartPointsCount?: number;
@@ -2239,6 +2241,7 @@ export declare type ProgramBalanceChartProgramCurrencyEnum = "Undefined" | "GVT"
 export declare interface ProgramBalanceChart {
     gvtBalance: number;
     programCurrencyBalance: number;
+    balance: number;
     programCurrency: ProgramBalanceChartProgramCurrencyEnum;
     balanceChart: ProgramBalanceChartElement[];
 }
@@ -2340,6 +2343,7 @@ export declare interface ProgramDetailsListStatistic {
     balanceBase: AmountWithCurrency;
     balanceGVT: AmountWithCurrency;
     balanceSecondary: AmountWithCurrency;
+    balance: AmountWithCurrency;
     currentValue: number;
     profitPercent: number;
     profitValue: number;
@@ -2462,11 +2466,11 @@ export declare interface ProgramProfitChart {
     trades: number;
     successTradesPercent: number;
     profitFactor: number;
-    pnLChart: ChartSimple[];
     periods: PeriodDate[];
     lastPeriodStarts: Date;
     lastPeriodEnds: Date;
     tradingVolume: number;
+    pnLChart: ChartSimple[];
     totalProgramCurrencyProfit: number;
     timeframeProgramCurrencyProfit: number;
     totalGvtProfit: number;

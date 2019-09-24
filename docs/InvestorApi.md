@@ -1015,6 +1015,7 @@ let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
   'sorting': "sorting_example", // String | 
+  'currency': "currency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'chartPointsCount': 56, // Number | 
@@ -1039,6 +1040,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
  **sorting** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
  **chartPointsCount** | **Number**|  | [optional] 

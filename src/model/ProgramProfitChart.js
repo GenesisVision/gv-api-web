@@ -62,11 +62,6 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
- * @name ProgramProfitChart#pnLChart
- * @type {Array<ChartSimple>}
- */
-/**
- *
  * @name ProgramProfitChart#periods
  * @type {Array<PeriodDate>}
  */
@@ -84,6 +79,11 @@ import PeriodDate from './PeriodDate';
  *
  * @name ProgramProfitChart#tradingVolume
  * @type {Number}
+ */
+/**
+ *
+ * @name ProgramProfitChart#pnLChart
+ * @type {Array<ChartSimple>}
  */
 /**
  *
@@ -192,9 +192,6 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('profitFactor')) {
                 obj['profitFactor'] = ApiClient.convertToType(data['profitFactor'], 'Number');
             }
-            if (data.hasOwnProperty('pnLChart')) {
-                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
-            }
             if (data.hasOwnProperty('periods')) {
                 obj['periods'] = ApiClient.convertToType(data['periods'], [PeriodDate]);
             }
@@ -206,6 +203,9 @@ export default class ProgramProfitChart {
             }
             if (data.hasOwnProperty('tradingVolume')) {
                 obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
+            }
+            if (data.hasOwnProperty('pnLChart')) {
+                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
             }
             if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
                 obj['totalProgramCurrencyProfit'] = ApiClient.convertToType(data['totalProgramCurrencyProfit'], 'Number');
@@ -254,11 +254,11 @@ export default class ProgramProfitChart {
     trades = undefined;
     successTradesPercent = undefined;
     profitFactor = undefined;
-    pnLChart = undefined;
     periods = undefined;
     lastPeriodStarts = undefined;
     lastPeriodEnds = undefined;
     tradingVolume = undefined;
+    pnLChart = undefined;
     totalProgramCurrencyProfit = undefined;
     timeframeProgramCurrencyProfit = undefined;
     totalGvtProfit = undefined;

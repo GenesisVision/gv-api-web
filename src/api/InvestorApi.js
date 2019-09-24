@@ -1194,6 +1194,7 @@ export default class InvestorApi {
       };
       let queryParams = {
         'Sorting': opts['sorting'],
+        'Currency': opts['currency'],
         'From': opts['from'],
         'To': opts['to'],
         'ChartPointsCount': opts['chartPointsCount'],
@@ -1228,6 +1229,7 @@ export default class InvestorApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.sorting] 
+     * @param {String} [opts.currency] 
      * @param {Date} [opts.from] 
      * @param {Date} [opts.to] 
      * @param {Number} [opts.chartPointsCount] 

@@ -41,6 +41,11 @@ import AmountWithCurrency from './AmountWithCurrency';
  */
 /**
  *
+ * @name ProgramDetailsListStatistic#balance
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
  * @name ProgramDetailsListStatistic#currentValue
  * @type {Number}
  */
@@ -104,6 +109,9 @@ export default class ProgramDetailsListStatistic {
             if (data.hasOwnProperty('balanceSecondary')) {
                 obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
             }
+            if (data.hasOwnProperty('balance')) {
+                obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
+            }
             if (data.hasOwnProperty('currentValue')) {
                 obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'Number');
             }
@@ -129,6 +137,7 @@ export default class ProgramDetailsListStatistic {
     balanceBase = undefined;
     balanceGVT = undefined;
     balanceSecondary = undefined;
+    balance = undefined;
     currentValue = undefined;
     profitPercent = undefined;
     profitValue = undefined;
