@@ -67,12 +67,7 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name ProgramDetails#availableInvestment
- * @type {Number}
- */
-/**
- *
- * @name ProgramDetails#availableInvestmentBase
+ * @name ProgramDetails#availableInvestmentInCurrency
  * @type {Number}
  */
 /**
@@ -104,6 +99,16 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramDetails#tags
  * @type {Array<ProgramTag>}
+ */
+/**
+ *
+ * @name ProgramDetails#availableInvestment
+ * @type {Number}
+ */
+/**
+ *
+ * @name ProgramDetails#availableInvestmentBase
+ * @type {Number}
  */
 /**
  *
@@ -202,11 +207,8 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('periodEnds')) {
                 obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
             }
-            if (data.hasOwnProperty('availableInvestment')) {
-                obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
-            }
-            if (data.hasOwnProperty('availableInvestmentBase')) {
-                obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
+            if (data.hasOwnProperty('availableInvestmentInCurrency')) {
+                obj['availableInvestmentInCurrency'] = ApiClient.convertToType(data['availableInvestmentInCurrency'], 'Number');
             }
             if (data.hasOwnProperty('availableInvestmentLimit')) {
                 obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
@@ -225,6 +227,12 @@ export default class ProgramDetails {
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
+            }
+            if (data.hasOwnProperty('availableInvestment')) {
+                obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
+            }
+            if (data.hasOwnProperty('availableInvestmentBase')) {
+                obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -267,14 +275,15 @@ export default class ProgramDetails {
     stopOutLevel = undefined;
     periodStarts = undefined;
     periodEnds = undefined;
-    availableInvestment = undefined;
-    availableInvestmentBase = undefined;
+    availableInvestmentInCurrency = undefined;
     availableInvestmentLimit = undefined;
     dashboardAssetsDetails = undefined;
     statistic = undefined;
     rating = undefined;
     personalDetails = undefined;
     tags = undefined;
+    availableInvestment = undefined;
+    availableInvestmentBase = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;

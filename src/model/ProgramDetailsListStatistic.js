@@ -26,21 +26,6 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 /**
  *
- * @name ProgramDetailsListStatistic#balanceBase
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name ProgramDetailsListStatistic#balanceGVT
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name ProgramDetailsListStatistic#balanceSecondary
- * @type {AmountWithCurrency}
- */
-/**
- *
  * @name ProgramDetailsListStatistic#balance
  * @type {AmountWithCurrency}
  */
@@ -74,6 +59,21 @@ import AmountWithCurrency from './AmountWithCurrency';
  * @name ProgramDetailsListStatistic#tradesCount
  * @type {Number}
  */
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceBase
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceGVT
+ * @type {AmountWithCurrency}
+ */
+/**
+ *
+ * @name ProgramDetailsListStatistic#balanceSecondary
+ * @type {AmountWithCurrency}
+ */
 
 
 
@@ -100,15 +100,6 @@ export default class ProgramDetailsListStatistic {
             
             
 
-            if (data.hasOwnProperty('balanceBase')) {
-                obj['balanceBase'] = AmountWithCurrency.constructFromObject(data['balanceBase']);
-            }
-            if (data.hasOwnProperty('balanceGVT')) {
-                obj['balanceGVT'] = AmountWithCurrency.constructFromObject(data['balanceGVT']);
-            }
-            if (data.hasOwnProperty('balanceSecondary')) {
-                obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
-            }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
             }
@@ -130,13 +121,19 @@ export default class ProgramDetailsListStatistic {
             if (data.hasOwnProperty('tradesCount')) {
                 obj['tradesCount'] = ApiClient.convertToType(data['tradesCount'], 'Number');
             }
+            if (data.hasOwnProperty('balanceBase')) {
+                obj['balanceBase'] = AmountWithCurrency.constructFromObject(data['balanceBase']);
+            }
+            if (data.hasOwnProperty('balanceGVT')) {
+                obj['balanceGVT'] = AmountWithCurrency.constructFromObject(data['balanceGVT']);
+            }
+            if (data.hasOwnProperty('balanceSecondary')) {
+                obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
+            }
         }
         return obj;
     }
 
-    balanceBase = undefined;
-    balanceGVT = undefined;
-    balanceSecondary = undefined;
     balance = undefined;
     currentValue = undefined;
     profitPercent = undefined;
@@ -144,6 +141,9 @@ export default class ProgramDetailsListStatistic {
     drawdownPercent = undefined;
     investorsCount = undefined;
     tradesCount = undefined;
+    balanceBase = undefined;
+    balanceGVT = undefined;
+    balanceSecondary = undefined;
 
 
 

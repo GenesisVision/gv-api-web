@@ -2265,14 +2265,15 @@ export declare interface ProgramDetails {
     stopOutLevel: number;
     periodStarts: Date;
     periodEnds: Date;
-    availableInvestment: number;
-    availableInvestmentBase: number;
+    availableInvestmentInCurrency: number;
     availableInvestmentLimit: number;
     dashboardAssetsDetails: DashboardProgramDetails;
     statistic: ProgramDetailsListStatistic;
     rating: ProgramDetailsRating;
     personalDetails: PersonalProgramDetailsFull;
     tags: ProgramTag[];
+    availableInvestment: number;
+    availableInvestmentBase: number;
     id: string;
     logo: string;
     url: string;
@@ -2340,9 +2341,6 @@ export declare interface ProgramDetailsFull {
 }
 
 export declare interface ProgramDetailsListStatistic {
-    balanceBase: AmountWithCurrency;
-    balanceGVT: AmountWithCurrency;
-    balanceSecondary: AmountWithCurrency;
     balance: AmountWithCurrency;
     currentValue: number;
     profitPercent: number;
@@ -2350,6 +2348,9 @@ export declare interface ProgramDetailsListStatistic {
     drawdownPercent: number;
     investorsCount: number;
     tradesCount: number;
+    balanceBase: AmountWithCurrency;
+    balanceGVT: AmountWithCurrency;
+    balanceSecondary: AmountWithCurrency;
 }
 
 export declare interface ProgramDetailsRating {
