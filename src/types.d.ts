@@ -2269,9 +2269,9 @@ export declare interface ProgramDetails {
     availableInvestmentLimit: number;
     dashboardAssetsDetails: DashboardProgramDetails;
     statistic: ProgramDetailsListStatistic;
-    rating: ProgramDetailsRating;
     personalDetails: PersonalProgramDetailsFull;
     tags: ProgramTag[];
+    rating: ProgramDetailsRating;
     availableInvestment: number;
     availableInvestmentBase: number;
     id: string;

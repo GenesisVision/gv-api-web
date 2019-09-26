@@ -87,11 +87,6 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name ProgramDetails#rating
- * @type {ProgramDetailsRating}
- */
-/**
- *
  * @name ProgramDetails#personalDetails
  * @type {PersonalProgramDetailsFull}
  */
@@ -99,6 +94,11 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramDetails#tags
  * @type {Array<ProgramTag>}
+ */
+/**
+ *
+ * @name ProgramDetails#rating
+ * @type {ProgramDetailsRating}
  */
 /**
  *
@@ -219,14 +219,14 @@ export default class ProgramDetails {
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
             }
-            if (data.hasOwnProperty('rating')) {
-                obj['rating'] = ProgramDetailsRating.constructFromObject(data['rating']);
-            }
             if (data.hasOwnProperty('personalDetails')) {
                 obj['personalDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalDetails']);
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
+            }
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ProgramDetailsRating.constructFromObject(data['rating']);
             }
             if (data.hasOwnProperty('availableInvestment')) {
                 obj['availableInvestment'] = ApiClient.convertToType(data['availableInvestment'], 'Number');
@@ -279,9 +279,9 @@ export default class ProgramDetails {
     availableInvestmentLimit = undefined;
     dashboardAssetsDetails = undefined;
     statistic = undefined;
-    rating = undefined;
     personalDetails = undefined;
     tags = undefined;
+    rating = undefined;
     availableInvestment = undefined;
     availableInvestmentBase = undefined;
     id = undefined;
