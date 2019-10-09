@@ -4,21 +4,65 @@ All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10FundsAssetsGet**](FundsApi.md#v10FundsAssetsGet) | **GET** /v1.0/funds/assets | Get all supported assets for funds
-[**v10FundsByIdAssetsGet**](FundsApi.md#v10FundsByIdAssetsGet) | **GET** /v1.0/funds/{id}/assets | Fund assets info
-[**v10FundsByIdChartsBalanceGet**](FundsApi.md#v10FundsByIdChartsBalanceGet) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
-[**v10FundsByIdChartsProfitGet**](FundsApi.md#v10FundsByIdChartsProfitGet) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
-[**v10FundsByIdFavoriteAddPost**](FundsApi.md#v10FundsByIdFavoriteAddPost) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
-[**v10FundsByIdFavoriteRemovePost**](FundsApi.md#v10FundsByIdFavoriteRemovePost) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
-[**v10FundsByIdGet**](FundsApi.md#v10FundsByIdGet) | **GET** /v1.0/funds/{id} | Funds details
-[**v10FundsByIdReallocationsGet**](FundsApi.md#v10FundsByIdReallocationsGet) | **GET** /v1.0/funds/{id}/reallocations | Get history of asset part update requests.
-[**v10FundsGet**](FundsApi.md#v10FundsGet) | **GET** /v1.0/funds | Funds list
-[**v10FundsSetsGet**](FundsApi.md#v10FundsSetsGet) | **GET** /v1.0/funds/sets | Fund sets
+[**addToFavorites**](FundsApi.md#addToFavorites) | **POST** /v1.0/funds/{id}/favorite/add | Add to favorites
+[**getAllAssets**](FundsApi.md#getAllAssets) | **GET** /v1.0/funds/assets | Get all supported assets for funds
+[**getFundAssets**](FundsApi.md#getFundAssets) | **GET** /v1.0/funds/{id}/assets | Fund assets info
+[**getFundBalanceChart**](FundsApi.md#getFundBalanceChart) | **GET** /v1.0/funds/{id}/charts/balance | Fund balance chart
+[**getFundDetails**](FundsApi.md#getFundDetails) | **GET** /v1.0/funds/{id} | Funds details
+[**getFundProfitChart**](FundsApi.md#getFundProfitChart) | **GET** /v1.0/funds/{id}/charts/profit | Fund profit chart
+[**getFunds**](FundsApi.md#getFunds) | **GET** /v1.0/funds | Funds list
+[**getProgramSets**](FundsApi.md#getProgramSets) | **GET** /v1.0/funds/sets | Fund sets
+[**getReallocationsHistory**](FundsApi.md#getReallocationsHistory) | **GET** /v1.0/funds/{id}/reallocations | Get history of asset part update requests.
+[**removeFromFavorites**](FundsApi.md#removeFromFavorites) | **POST** /v1.0/funds/{id}/favorite/remove | Remove from favorites
 
 
-<a name="v10FundsAssetsGet"></a>
-# **v10FundsAssetsGet**
-> PlatformAssets v10FundsAssetsGet()
+<a name="addToFavorites"></a>
+# **addToFavorites**
+> addToFavorites(id, authorization)
+
+Add to favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.addToFavorites(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getAllAssets"></a>
+# **getAllAssets**
+> PlatformAssets getAllAssets()
 
 Get all supported assets for funds
 
@@ -27,7 +71,7 @@ Get all supported assets for funds
 import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.FundsApi();
-apiInstance.v10FundsAssetsGet().then((data) => {
+apiInstance.getAllAssets().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -51,9 +95,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10FundsByIdAssetsGet"></a>
-# **v10FundsByIdAssetsGet**
-> FundAssetsListInfo v10FundsByIdAssetsGet(id)
+<a name="getFundAssets"></a>
+# **getFundAssets**
+> FundAssetsListInfo getFundAssets(id)
 
 Fund assets info
 
@@ -65,7 +109,7 @@ let apiInstance = new CoreApiV10.FundsApi();
 
 let id = "id_example"; // String | 
 
-apiInstance.v10FundsByIdAssetsGet(id).then((data) => {
+apiInstance.getFundAssets(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -92,9 +136,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10FundsByIdChartsBalanceGet"></a>
-# **v10FundsByIdChartsBalanceGet**
-> FundBalanceChart v10FundsByIdChartsBalanceGet(id, opts)
+<a name="getFundBalanceChart"></a>
+# **getFundBalanceChart**
+> FundBalanceChart getFundBalanceChart(id, opts)
 
 Fund balance chart
 
@@ -112,7 +156,7 @@ let opts = {
   'maxPointCount': 56, // Number | 
   'currency': "currency_example" // String | 
 };
-apiInstance.v10FundsByIdChartsBalanceGet(id, opts).then((data) => {
+apiInstance.getFundBalanceChart(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -143,9 +187,56 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10FundsByIdChartsProfitGet"></a>
-# **v10FundsByIdChartsProfitGet**
-> FundProfitChart v10FundsByIdChartsProfitGet(id, opts)
+<a name="getFundDetails"></a>
+# **getFundDetails**
+> FundDetailsFull getFundDetails(id, opts)
+
+Funds details
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'authorization': "authorization_example", // String | 
+  'currency': "currency_example" // String | 
+};
+apiInstance.getFundDetails(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **authorization** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
+
+### Return type
+
+[**FundDetailsFull**](FundDetailsFull.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getFundProfitChart"></a>
+# **getFundProfitChart**
+> FundProfitChart getFundProfitChart(id, opts)
 
 Fund profit chart
 
@@ -164,7 +255,7 @@ let opts = {
   'currency': "currency_example", // String | 
   'chartAssetsCount': 3 // Number | 
 };
-apiInstance.v10FundsByIdChartsProfitGet(id, opts).then((data) => {
+apiInstance.getFundProfitChart(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -196,195 +287,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10FundsByIdFavoriteAddPost"></a>
-# **v10FundsByIdFavoriteAddPost**
-> v10FundsByIdFavoriteAddPost(id, authorization)
-
-Add to favorites
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.FundsApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10FundsByIdFavoriteAddPost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10FundsByIdFavoriteRemovePost"></a>
-# **v10FundsByIdFavoriteRemovePost**
-> v10FundsByIdFavoriteRemovePost(id, authorization)
-
-Remove from favorites
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.FundsApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10FundsByIdFavoriteRemovePost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10FundsByIdGet"></a>
-# **v10FundsByIdGet**
-> FundDetailsFull v10FundsByIdGet(id, opts)
-
-Funds details
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.FundsApi();
-
-let id = "id_example"; // String | 
-
-let opts = { 
-  'authorization': "authorization_example", // String | 
-  'currency': "currency_example" // String | 
-};
-apiInstance.v10FundsByIdGet(id, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **authorization** | **String**|  | [optional] 
- **currency** | **String**|  | [optional] 
-
-### Return type
-
-[**FundDetailsFull**](FundDetailsFull.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10FundsByIdReallocationsGet"></a>
-# **v10FundsByIdReallocationsGet**
-> ReallocationsViewModel v10FundsByIdReallocationsGet(id, opts)
-
-Get history of asset part update requests.
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.FundsApi();
-
-let id = "id_example"; // String | 
-
-let opts = { 
-  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10FundsByIdReallocationsGet(id, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **dateFrom** | **Date**|  | [optional] 
- **dateTo** | **Date**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
-
-### Return type
-
-[**ReallocationsViewModel**](ReallocationsViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10FundsGet"></a>
-# **v10FundsGet**
-> FundsList v10FundsGet(opts)
+<a name="getFunds"></a>
+# **getFunds**
+> FundsListOld getFunds(opts)
 
 Funds list
 
@@ -417,7 +322,7 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10FundsGet(opts).then((data) => {
+apiInstance.getFunds(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -453,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FundsList**](FundsList.md)
+[**FundsListOld**](FundsListOld.md)
 
 ### Authorization
 
@@ -464,9 +369,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10FundsSetsGet"></a>
-# **v10FundsSetsGet**
-> FundSets v10FundsSetsGet(authorization)
+<a name="getProgramSets"></a>
+# **getProgramSets**
+> FundSets getProgramSets(authorization)
 
 Fund sets
 
@@ -478,7 +383,7 @@ let apiInstance = new CoreApiV10.FundsApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10FundsSetsGet(authorization).then((data) => {
+apiInstance.getProgramSets(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -495,6 +400,101 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FundSets**](FundSets.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getReallocationsHistory"></a>
+# **getReallocationsHistory**
+> ReallocationsViewModel getReallocationsHistory(id, opts)
+
+Get history of asset part update requests.
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let opts = { 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.getReallocationsHistory(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**ReallocationsViewModel**](ReallocationsViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="removeFromFavorites"></a>
+# **removeFromFavorites**
+> removeFromFavorites(id, authorization)
+
+Remove from favorites
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.FundsApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.removeFromFavorites(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

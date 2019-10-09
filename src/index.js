@@ -17,14 +17,10 @@ import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetDetails from './model/AssetDetails';
-import AssetEvent from './model/AssetEvent';
-import AssetSelection from './model/AssetSelection';
 import AssetsValue from './model/AssetsValue';
-import AttachToExternalSignalProviderExt from './model/AttachToExternalSignalProviderExt';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElement from './model/BalanceChartElement';
-import BlockchainInfo from './model/BlockchainInfo';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokerDetails from './model/BrokerDetails';
@@ -40,8 +36,6 @@ import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
 import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DashboardChartValue from './model/DashboardChartValue';
-import DashboardPortfolioEvent from './model/DashboardPortfolioEvent';
-import DashboardPortfolioEvents from './model/DashboardPortfolioEvents';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardSummary from './model/DashboardSummary';
 import DetachFromSignalProvider from './model/DetachFromSignalProvider';
@@ -66,9 +60,9 @@ import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
 import FundAssetsState from './model/FundAssetsState';
 import FundBalanceChart from './model/FundBalanceChart';
-import FundDetails from './model/FundDetails';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
+import FundDetailsOld from './model/FundDetailsOld';
 import FundEquityChartElement from './model/FundEquityChartElement';
 import FundFacet from './model/FundFacet';
 import FundFilters from './model/FundFilters';
@@ -78,7 +72,7 @@ import FundProfitChart from './model/FundProfitChart';
 import FundSets from './model/FundSets';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
-import FundsList from './model/FundsList';
+import FundsListOld from './model/FundsListOld';
 import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
@@ -88,18 +82,12 @@ import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
 import LevelInfo from './model/LevelInfo';
-import LevelUpData from './model/LevelUpData';
-import LevelUpSummary from './model/LevelUpSummary';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
-import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
-import ManagerDashboard from './model/ManagerDashboard';
 import ManagerFinancialStatistic from './model/ManagerFinancialStatistic';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
-import ManagerPortfolioEvent from './model/ManagerPortfolioEvent';
-import ManagerPortfolioEvents from './model/ManagerPortfolioEvents';
 import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
@@ -113,7 +101,6 @@ import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExterna
 import MultiWalletFilters from './model/MultiWalletFilters';
 import MultiWalletTransaction from './model/MultiWalletTransaction';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
-import NewExternalSignalAccountRequest from './model/NewExternalSignalAccountRequest';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
@@ -144,23 +131,21 @@ import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
 import ProgramBalanceChart from './model/ProgramBalanceChart';
 import ProgramBalanceChartElement from './model/ProgramBalanceChartElement';
-import ProgramDetails from './model/ProgramDetails';
-import ProgramDetailsFull from './model/ProgramDetailsFull';
+import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
-import ProgramDetailsRating from './model/ProgramDetailsRating';
+import ProgramDetailsOld from './model/ProgramDetailsOld';
 import ProgramFacet from './model/ProgramFacet';
 import ProgramFilters from './model/ProgramFilters';
-import ProgramInfo from './model/ProgramInfo';
-import ProgramInvestInfo from './model/ProgramInvestInfo';
+import ProgramInvestInfoOld from './model/ProgramInvestInfoOld';
 import ProgramLevelInfo from './model/ProgramLevelInfo';
-import ProgramMinimumDeposit from './model/ProgramMinimumDeposit';
+import ProgramMinimumDepositOld from './model/ProgramMinimumDepositOld';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramPeriodViewModel from './model/ProgramPeriodViewModel';
 import ProgramPeriodsViewModel from './model/ProgramPeriodsViewModel';
 import ProgramProfitChart from './model/ProgramProfitChart';
 import ProgramPwdUpdate from './model/ProgramPwdUpdate';
-import ProgramRequest from './model/ProgramRequest';
-import ProgramRequests from './model/ProgramRequests';
+import ProgramRequestOld from './model/ProgramRequestOld';
+import ProgramRequestsOld from './model/ProgramRequestsOld';
 import ProgramSets from './model/ProgramSets';
 import ProgramStatistic from './model/ProgramStatistic';
 import ProgramTag from './model/ProgramTag';
@@ -169,7 +154,7 @@ import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsInfo from './model/ProgramsInfo';
 import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
-import ProgramsList from './model/ProgramsList';
+import ProgramsListOld from './model/ProgramsListOld';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
 import RatesModelRates from './model/RatesModelRates';
@@ -177,13 +162,10 @@ import ReallocationModel from './model/ReallocationModel';
 import ReallocationsViewModel from './model/ReallocationsViewModel';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
-import RegisterInvestorViewModel from './model/RegisterInvestorViewModel';
-import RegisterManagerViewModel from './model/RegisterManagerViewModel';
+import RegisterViewModel from './model/RegisterViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import SearchViewModel from './model/SearchViewModel';
-import SignalAccountDetails from './model/SignalAccountDetails';
-import SignalAccountsList from './model/SignalAccountsList';
 import SignalDataMaster from './model/SignalDataMaster';
 import SignalDetails from './model/SignalDetails';
 import SignalFee from './model/SignalFee';
@@ -212,16 +194,10 @@ import WalletBaseData from './model/WalletBaseData';
 import WalletData from './model/WalletData';
 import WalletDeposit from './model/WalletDeposit';
 import WalletDepositSummary from './model/WalletDepositSummary';
-import WalletInfo from './model/WalletInfo';
 import WalletMultiAvailable from './model/WalletMultiAvailable';
 import WalletMultiSummary from './model/WalletMultiSummary';
-import WalletSummary from './model/WalletSummary';
-import WalletTransaction from './model/WalletTransaction';
-import WalletTransactionsViewModel from './model/WalletTransactionsViewModel';
 import WalletWithdrawalInfo from './model/WalletWithdrawalInfo';
 import WalletsGrandTotal from './model/WalletsGrandTotal';
-import WalletsInfo from './model/WalletsInfo';
-import WithdrawalInfo from './model/WithdrawalInfo';
 import WithdrawalSummary from './model/WithdrawalSummary';
 import AuthApi from './api/AuthApi';
 import BrokersApi from './api/BrokersApi';
@@ -277,28 +253,10 @@ export {
     AssetDetails,
 
     /**
-     * @name index#AssetEvent
-     * @type {AssetEvent}
-     */
-    AssetEvent,
-
-    /**
-     * @name index#AssetSelection
-     * @type {AssetSelection}
-     */
-    AssetSelection,
-
-    /**
      * @name index#AssetsValue
      * @type {AssetsValue}
      */
     AssetsValue,
-
-    /**
-     * @name index#AttachToExternalSignalProviderExt
-     * @type {AttachToExternalSignalProviderExt}
-     */
-    AttachToExternalSignalProviderExt,
 
     /**
      * @name index#AttachToSignalProvider
@@ -317,12 +275,6 @@ export {
      * @type {BalanceChartElement}
      */
     BalanceChartElement,
-
-    /**
-     * @name index#BlockchainInfo
-     * @type {BlockchainInfo}
-     */
-    BlockchainInfo,
 
     /**
      * @name index#Broker
@@ -413,18 +365,6 @@ export {
      * @type {DashboardChartValue}
      */
     DashboardChartValue,
-
-    /**
-     * @name index#DashboardPortfolioEvent
-     * @type {DashboardPortfolioEvent}
-     */
-    DashboardPortfolioEvent,
-
-    /**
-     * @name index#DashboardPortfolioEvents
-     * @type {DashboardPortfolioEvents}
-     */
-    DashboardPortfolioEvents,
 
     /**
      * @name index#DashboardProgramDetails
@@ -571,12 +511,6 @@ export {
     FundBalanceChart,
 
     /**
-     * @name index#FundDetails
-     * @type {FundDetails}
-     */
-    FundDetails,
-
-    /**
      * @name index#FundDetailsFull
      * @type {FundDetailsFull}
      */
@@ -587,6 +521,12 @@ export {
      * @type {FundDetailsListStatistic}
      */
     FundDetailsListStatistic,
+
+    /**
+     * @name index#FundDetailsOld
+     * @type {FundDetailsOld}
+     */
+    FundDetailsOld,
 
     /**
      * @name index#FundEquityChartElement
@@ -643,10 +583,10 @@ export {
     FundWithdrawInfo,
 
     /**
-     * @name index#FundsList
-     * @type {FundsList}
+     * @name index#FundsListOld
+     * @type {FundsListOld}
      */
-    FundsList,
+    FundsListOld,
 
     /**
      * @name index#GeeTestDetails
@@ -703,40 +643,16 @@ export {
     LevelInfo,
 
     /**
-     * @name index#LevelUpData
-     * @type {LevelUpData}
-     */
-    LevelUpData,
-
-    /**
-     * @name index#LevelUpSummary
-     * @type {LevelUpSummary}
-     */
-    LevelUpSummary,
-
-    /**
      * @name index#LevelsParamsInfo
      * @type {LevelsParamsInfo}
      */
     LevelsParamsInfo,
 
     /**
-     * @name index#LoginViewModel
-     * @type {LoginViewModel}
-     */
-    LoginViewModel,
-
-    /**
      * @name index#ManagerAssets
      * @type {ManagerAssets}
      */
     ManagerAssets,
-
-    /**
-     * @name index#ManagerDashboard
-     * @type {ManagerDashboard}
-     */
-    ManagerDashboard,
 
     /**
      * @name index#ManagerFinancialStatistic
@@ -761,18 +677,6 @@ export {
      * @type {ManagerOverview}
      */
     ManagerOverview,
-
-    /**
-     * @name index#ManagerPortfolioEvent
-     * @type {ManagerPortfolioEvent}
-     */
-    ManagerPortfolioEvent,
-
-    /**
-     * @name index#ManagerPortfolioEvents
-     * @type {ManagerPortfolioEvents}
-     */
-    ManagerPortfolioEvents,
 
     /**
      * @name index#ManagerProfile
@@ -851,12 +755,6 @@ export {
      * @type {MultiWalletTransactionsViewModel}
      */
     MultiWalletTransactionsViewModel,
-
-    /**
-     * @name index#NewExternalSignalAccountRequest
-     * @type {NewExternalSignalAccountRequest}
-     */
-    NewExternalSignalAccountRequest,
 
     /**
      * @name index#NewFundRequest
@@ -1039,16 +937,10 @@ export {
     ProgramBalanceChartElement,
 
     /**
-     * @name index#ProgramDetails
-     * @type {ProgramDetails}
+     * @name index#ProgramDetailsFullOld
+     * @type {ProgramDetailsFullOld}
      */
-    ProgramDetails,
-
-    /**
-     * @name index#ProgramDetailsFull
-     * @type {ProgramDetailsFull}
-     */
-    ProgramDetailsFull,
+    ProgramDetailsFullOld,
 
     /**
      * @name index#ProgramDetailsListStatistic
@@ -1057,10 +949,10 @@ export {
     ProgramDetailsListStatistic,
 
     /**
-     * @name index#ProgramDetailsRating
-     * @type {ProgramDetailsRating}
+     * @name index#ProgramDetailsOld
+     * @type {ProgramDetailsOld}
      */
-    ProgramDetailsRating,
+    ProgramDetailsOld,
 
     /**
      * @name index#ProgramFacet
@@ -1075,16 +967,10 @@ export {
     ProgramFilters,
 
     /**
-     * @name index#ProgramInfo
-     * @type {ProgramInfo}
+     * @name index#ProgramInvestInfoOld
+     * @type {ProgramInvestInfoOld}
      */
-    ProgramInfo,
-
-    /**
-     * @name index#ProgramInvestInfo
-     * @type {ProgramInvestInfo}
-     */
-    ProgramInvestInfo,
+    ProgramInvestInfoOld,
 
     /**
      * @name index#ProgramLevelInfo
@@ -1093,10 +979,10 @@ export {
     ProgramLevelInfo,
 
     /**
-     * @name index#ProgramMinimumDeposit
-     * @type {ProgramMinimumDeposit}
+     * @name index#ProgramMinimumDepositOld
+     * @type {ProgramMinimumDepositOld}
      */
-    ProgramMinimumDeposit,
+    ProgramMinimumDepositOld,
 
     /**
      * @name index#ProgramNotificationSettingList
@@ -1129,16 +1015,16 @@ export {
     ProgramPwdUpdate,
 
     /**
-     * @name index#ProgramRequest
-     * @type {ProgramRequest}
+     * @name index#ProgramRequestOld
+     * @type {ProgramRequestOld}
      */
-    ProgramRequest,
+    ProgramRequestOld,
 
     /**
-     * @name index#ProgramRequests
-     * @type {ProgramRequests}
+     * @name index#ProgramRequestsOld
+     * @type {ProgramRequestsOld}
      */
-    ProgramRequests,
+    ProgramRequestsOld,
 
     /**
      * @name index#ProgramSets
@@ -1189,10 +1075,10 @@ export {
     ProgramsLevelsInfo,
 
     /**
-     * @name index#ProgramsList
-     * @type {ProgramsList}
+     * @name index#ProgramsListOld
+     * @type {ProgramsListOld}
      */
-    ProgramsList,
+    ProgramsListOld,
 
     /**
      * @name index#RateItem
@@ -1237,16 +1123,10 @@ export {
     RecoveryCodesViewModel,
 
     /**
-     * @name index#RegisterInvestorViewModel
-     * @type {RegisterInvestorViewModel}
+     * @name index#RegisterViewModel
+     * @type {RegisterViewModel}
      */
-    RegisterInvestorViewModel,
-
-    /**
-     * @name index#RegisterManagerViewModel
-     * @type {RegisterManagerViewModel}
-     */
-    RegisterManagerViewModel,
+    RegisterViewModel,
 
     /**
      * @name index#ResendConfirmationViewModel
@@ -1265,18 +1145,6 @@ export {
      * @type {SearchViewModel}
      */
     SearchViewModel,
-
-    /**
-     * @name index#SignalAccountDetails
-     * @type {SignalAccountDetails}
-     */
-    SignalAccountDetails,
-
-    /**
-     * @name index#SignalAccountsList
-     * @type {SignalAccountsList}
-     */
-    SignalAccountsList,
 
     /**
      * @name index#SignalDataMaster
@@ -1447,12 +1315,6 @@ export {
     WalletDepositSummary,
 
     /**
-     * @name index#WalletInfo
-     * @type {WalletInfo}
-     */
-    WalletInfo,
-
-    /**
      * @name index#WalletMultiAvailable
      * @type {WalletMultiAvailable}
      */
@@ -1465,24 +1327,6 @@ export {
     WalletMultiSummary,
 
     /**
-     * @name index#WalletSummary
-     * @type {WalletSummary}
-     */
-    WalletSummary,
-
-    /**
-     * @name index#WalletTransaction
-     * @type {WalletTransaction}
-     */
-    WalletTransaction,
-
-    /**
-     * @name index#WalletTransactionsViewModel
-     * @type {WalletTransactionsViewModel}
-     */
-    WalletTransactionsViewModel,
-
-    /**
      * @name index#WalletWithdrawalInfo
      * @type {WalletWithdrawalInfo}
      */
@@ -1493,18 +1337,6 @@ export {
      * @type {WalletsGrandTotal}
      */
     WalletsGrandTotal,
-
-    /**
-     * @name index#WalletsInfo
-     * @type {WalletsInfo}
-     */
-    WalletsInfo,
-
-    /**
-     * @name index#WithdrawalInfo
-     * @type {WithdrawalInfo}
-     */
-    WithdrawalInfo,
 
     /**
      * @name index#WithdrawalSummary

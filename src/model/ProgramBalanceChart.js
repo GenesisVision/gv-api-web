@@ -26,16 +26,6 @@ import ProgramBalanceChartElement from './ProgramBalanceChartElement';
 
 /**
  *
- * @name ProgramBalanceChart#gvtBalance
- * @type {Number}
- */
-/**
- *
- * @name ProgramBalanceChart#programCurrencyBalance
- * @type {Number}
- */
-/**
- *
  * @name ProgramBalanceChart#balance
  * @type {Number}
  */
@@ -75,12 +65,6 @@ export default class ProgramBalanceChart {
             
             
 
-            if (data.hasOwnProperty('gvtBalance')) {
-                obj['gvtBalance'] = ApiClient.convertToType(data['gvtBalance'], 'Number');
-            }
-            if (data.hasOwnProperty('programCurrencyBalance')) {
-                obj['programCurrencyBalance'] = ApiClient.convertToType(data['programCurrencyBalance'], 'Number');
-            }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
@@ -94,8 +78,6 @@ export default class ProgramBalanceChart {
         return obj;
     }
 
-    gvtBalance = undefined;
-    programCurrencyBalance = undefined;
     balance = undefined;
     programCurrency = undefined;
     balanceChart = undefined;

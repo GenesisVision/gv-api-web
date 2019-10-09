@@ -65,11 +65,6 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name PersonalFundDetailsFull#canCloseProgram
- * @type {Boolean}
- */
-/**
- *
  * @name PersonalFundDetailsFull#canCloseAsset
  * @type {Boolean}
  */
@@ -183,9 +178,6 @@ export default class PersonalFundDetailsFull {
             if (data.hasOwnProperty('isOwnProgram')) {
                 obj['isOwnProgram'] = ApiClient.convertToType(data['isOwnProgram'], 'Boolean');
             }
-            if (data.hasOwnProperty('canCloseProgram')) {
-                obj['canCloseProgram'] = ApiClient.convertToType(data['canCloseProgram'], 'Boolean');
-            }
             if (data.hasOwnProperty('canCloseAsset')) {
                 obj['canCloseAsset'] = ApiClient.convertToType(data['canCloseAsset'], 'Boolean');
             }
@@ -237,7 +229,6 @@ export default class PersonalFundDetailsFull {
     isFavorite = undefined;
     isInvested = undefined;
     isOwnProgram = undefined;
-    canCloseProgram = undefined;
     canCloseAsset = undefined;
     isFinishing = undefined;
     canInvest = undefined;

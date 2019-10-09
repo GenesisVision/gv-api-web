@@ -3,11 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalUsdProfit** | **Number** |  | [optional] 
-**timeframeUsdProfit** | **Number** |  | [optional] 
-**rebalances** | **Number** |  | [optional] 
-**totalGvtProfit** | **Number** |  | [optional] 
-**timeframeGvtProfit** | **Number** |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
 **profitPercent** | **Number** |  | [optional] 
 **equityChart** | [**[FundEquityChartElement]**](FundEquityChartElement.md) |  | [optional] 

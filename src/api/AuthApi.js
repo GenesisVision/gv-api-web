@@ -16,11 +16,9 @@ import ApiClient from "../ApiClient";
 import ChangePasswordViewModel from '../model/ChangePasswordViewModel';
 import ErrorViewModel from '../model/ErrorViewModel';
 import ForgotPasswordViewModel from '../model/ForgotPasswordViewModel';
-import LoginViewModel from '../model/LoginViewModel';
 import PasswordModel from '../model/PasswordModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
-import RegisterInvestorViewModel from '../model/RegisterInvestorViewModel';
-import RegisterManagerViewModel from '../model/RegisterManagerViewModel';
+import RegisterViewModel from '../model/RegisterViewModel';
 import ResendConfirmationViewModel from '../model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from '../model/ResetPasswordViewModel';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
@@ -46,68 +44,35 @@ export default class AuthApi {
     }
 
 
-      v10Auth2faConfirmPostWithHttpInfo(authorization, opts) {
+      authorizeWithHttpInfo(password, email, opts) {
       opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faConfirmPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/confirm', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA confirm
-     * @function AuthApi#v10Auth2faConfirmPost
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      v10Auth2faConfirmPost(authorization, opts) {
-      return this.v10Auth2faConfirmPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10Auth2faCreatePostWithHttpInfo(authorization) {
       let postBody = null;
 
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faCreatePost");
+      // verify the required parameter 'password' is set
+      if (password === undefined || password === null) {
+        throw new Error("Missing the required parameter 'password' when calling authorize");
+      }
+
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling authorize");
       }
 
 
       let pathParams = {
       };
       let queryParams = {
+        'Password': password,
+        'RememberMe': opts['rememberMe'],
+        'TwoFactorCode': opts['twoFactorCode'],
+        'RecoveryCode': opts['recoveryCode'],
+        'Client': opts['client'],
+        'Email': email,
+        'CaptchaCheckResult.Id': opts['captchaCheckResultId'],
+        'CaptchaCheckResult.Pow.Prefix': opts['captchaCheckResultPowPrefix'],
+        'CaptchaCheckResult.GeeTest': opts['captchaCheckResultGeeTest']
       };
       let headerParams = {
-        'Authorization': authorization
       };
       let formParams = {
       };
@@ -115,220 +80,44 @@ export default class AuthApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TwoFactorAuthenticator;
+      let returnType = 'String';
 
       return this.apiClient.callApi(
-        '/v1.0/auth/2fa/create', 'POST',
+        '/v1.0/auth/signin', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * 2FA create
-     * @function AuthApi#v10Auth2faCreatePost
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
-     */
-      v10Auth2faCreatePost(authorization) {
-      return this.v10Auth2faCreatePostWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10Auth2faDisablePostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faDisablePost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/disable', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA disable
-     * @function AuthApi#v10Auth2faDisablePost
-     * @param {String} authorization JWT access token
+     * Authorize
+     * @function AuthApi#authorize
+     * @param {String} password 
+     * @param {String} email 
      * @param {Object} [opts] Optional parameters
-     * @param {TwoFactorCodeModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     * @param {Boolean} [opts.rememberMe] 
+     * @param {String} [opts.twoFactorCode] 
+     * @param {String} [opts.recoveryCode] 
+     * @param {String} [opts.client] 
+     * @param {String} [opts.captchaCheckResultId] 
+     * @param {String} [opts.captchaCheckResultPowPrefix] 
+     * @param {{String: String}} [opts.captchaCheckResultGeeTest] 
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10Auth2faDisablePost(authorization, opts) {
-      return this.v10Auth2faDisablePostWithHttpInfo(authorization, opts)
+      authorize(password, email, opts) {
+      return this.authorizeWithHttpInfo(password, email, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10Auth2faGetWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TwoFactorStatus;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA status
-     * @function AuthApi#v10Auth2faGet
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
-     */
-      v10Auth2faGet(authorization) {
-      return this.v10Auth2faGetWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10Auth2faRecoverycodesNewPostWithHttpInfo(authorization, opts) {
+      changePasswordWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faRecoverycodesNewPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/recoverycodes/new', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA generate new recovery codes
-     * @function AuthApi#v10Auth2faRecoverycodesNewPost
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {PasswordModel} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      v10Auth2faRecoverycodesNewPost(authorization, opts) {
-      return this.v10Auth2faRecoverycodesNewPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10Auth2faRecoverycodesPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10Auth2faRecoverycodesPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/recoverycodes', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA recovery codes
-     * @function AuthApi#v10Auth2faRecoverycodesPost
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {PasswordModel} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      v10Auth2faRecoverycodesPost(authorization, opts) {
-      return this.v10Auth2faRecoverycodesPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthPasswordChangePostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPasswordChangePost");
+        throw new Error("Missing the required parameter 'authorization' when calling changePassword");
       }
 
 
@@ -356,352 +145,20 @@ export default class AuthApi {
 
     /**
      * Change password
-     * @function AuthApi#v10AuthPasswordChangePost
+     * @function AuthApi#changePassword
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {ChangePasswordViewModel} [opts.model] 
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10AuthPasswordChangePost(authorization, opts) {
-      return this.v10AuthPasswordChangePostWithHttpInfo(authorization, opts)
+      changePassword(authorization, opts) {
+      return this.changePasswordWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10AuthPasswordForgotInvestorPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/password/forgot/investor', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Forgot password for investor
-     * @function AuthApi#v10AuthPasswordForgotInvestorPost
-     * @param {Object} [opts] Optional parameters
-     * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10AuthPasswordForgotInvestorPost(opts) {
-      return this.v10AuthPasswordForgotInvestorPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthPasswordForgotManagerPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/password/forgot/manager', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Forgot password for manager
-     * @function AuthApi#v10AuthPasswordForgotManagerPost
-     * @param {Object} [opts] Optional parameters
-     * @param {ForgotPasswordViewModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10AuthPasswordForgotManagerPost(opts) {
-      return this.v10AuthPasswordForgotManagerPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthPasswordResetPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/password/reset', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Reset password
-     * @function AuthApi#v10AuthPasswordResetPost
-     * @param {Object} [opts] Optional parameters
-     * @param {ResetPasswordViewModel} [opts.model] 
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      v10AuthPasswordResetPost(opts) {
-      return this.v10AuthPasswordResetPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthPhoneCodePostWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneCodePost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'Number';
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/phone/code', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get phone number verification code
-     * @function AuthApi#v10AuthPhoneCodePost
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
-     */
-      v10AuthPhoneCodePost(authorization) {
-      return this.v10AuthPhoneCodePostWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthPhoneVerifyPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthPhoneVerifyPost");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'code': opts['code']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/phone/verify', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Verify phone number
-     * @function AuthApi#v10AuthPhoneVerifyPost
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.code] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10AuthPhoneVerifyPost(authorization, opts) {
-      return this.v10AuthPhoneVerifyPostWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthResendconfirmationlinkPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/resendconfirmationlink', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Resend Confirmation Link
-     * @function AuthApi#v10AuthResendconfirmationlinkPost
-     * @param {Object} [opts] Optional parameters
-     * @param {ResendConfirmationViewModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10AuthResendconfirmationlinkPost(opts) {
-      return this.v10AuthResendconfirmationlinkPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthSigninInvestorPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/signin/investor', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Authorize
-     * @function AuthApi#v10AuthSigninInvestorPost
-     * @param {Object} [opts] Optional parameters
-     * @param {LoginViewModel} [opts.model] 
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      v10AuthSigninInvestorPost(opts) {
-      return this.v10AuthSigninInvestorPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthSigninManagerPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/signin/manager', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Authorize
-     * @function AuthApi#v10AuthSigninManagerPost
-     * @param {Object} [opts] Optional parameters
-     * @param {LoginViewModel} [opts.model] 
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      v10AuthSigninManagerPost(opts) {
-      return this.v10AuthSigninManagerPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthSignupConfirmPostWithHttpInfo(opts) {
+      confirmEmailWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -731,20 +188,20 @@ export default class AuthApi {
 
     /**
      * Confirm email after registration
-     * @function AuthApi#v10AuthSignupConfirmPost
+     * @function AuthApi#confirmEmail
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.userId] 
      * @param {String} [opts.code] 
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10AuthSignupConfirmPost(opts) {
-      return this.v10AuthSignupConfirmPostWithHttpInfo(opts)
+      confirmEmail(opts) {
+      return this.confirmEmailWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10AuthSignupInvestorPostWithHttpInfo(opts) {
+      forgotPasswordWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
 
@@ -764,72 +221,32 @@ export default class AuthApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/auth/signup/investor', 'POST',
+        '/v1.0/auth/password/forgot', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * New investor registration
-     * @function AuthApi#v10AuthSignupInvestorPost
+     * Forgot password for investor
+     * @function AuthApi#forgotPassword
      * @param {Object} [opts] Optional parameters
-     * @param {RegisterInvestorViewModel} [opts.model] 
+     * @param {ForgotPasswordViewModel} [opts.model] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      v10AuthSignupInvestorPost(opts) {
-      return this.v10AuthSignupInvestorPostWithHttpInfo(opts)
+      forgotPassword(opts) {
+      return this.forgotPasswordWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10AuthSignupManagerPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/signup/manager', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * New manager registration
-     * @function AuthApi#v10AuthSignupManagerPost
-     * @param {Object} [opts] Optional parameters
-     * @param {RegisterManagerViewModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10AuthSignupManagerPost(opts) {
-      return this.v10AuthSignupManagerPostWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10AuthTokenDevicesLogoutPostWithHttpInfo(authorization) {
+      logoutFromAnotherDevicesWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthTokenDevicesLogoutPost");
+        throw new Error("Missing the required parameter 'authorization' when calling logoutFromAnotherDevices");
       }
 
 
@@ -857,23 +274,463 @@ export default class AuthApi {
 
     /**
      * Logout from another devices
-     * @function AuthApi#v10AuthTokenDevicesLogoutPost
+     * @function AuthApi#logoutFromAnotherDevices
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10AuthTokenDevicesLogoutPost(authorization) {
-      return this.v10AuthTokenDevicesLogoutPostWithHttpInfo(authorization)
+      logoutFromAnotherDevices(authorization) {
+      return this.logoutFromAnotherDevicesWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10AuthTokenUpdatePostWithHttpInfo(authorization) {
+      registerWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/signup', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * New registration
+     * @function AuthApi#register
+     * @param {Object} [opts] Optional parameters
+     * @param {RegisterViewModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      register(opts) {
+      return this.registerWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      requestPhoneNumberVerificationCodeWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10AuthTokenUpdatePost");
+        throw new Error("Missing the required parameter 'authorization' when calling requestPhoneNumberVerificationCode");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Number';
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/phone/code', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get phone number verification code
+     * @function AuthApi#requestPhoneNumberVerificationCode
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     */
+      requestPhoneNumberVerificationCode(authorization) {
+      return this.requestPhoneNumberVerificationCodeWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      resendConfirmationLinkWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/resendconfirmationlink', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Resend Confirmation Link
+     * @function AuthApi#resendConfirmationLink
+     * @param {Object} [opts] Optional parameters
+     * @param {ResendConfirmationViewModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      resendConfirmationLink(opts) {
+      return this.resendConfirmationLinkWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      resetPasswordWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/password/reset', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Reset password
+     * @function AuthApi#resetPassword
+     * @param {Object} [opts] Optional parameters
+     * @param {ResetPasswordViewModel} [opts.model] 
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     */
+      resetPassword(opts) {
+      return this.resetPasswordWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthConfirmWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthConfirm");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/confirm', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA confirm
+     * @function AuthApi#twoStepAuthConfirm
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      twoStepAuthConfirm(authorization, opts) {
+      return this.twoStepAuthConfirmWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthCreateWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthCreate");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TwoFactorAuthenticator;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/create', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA create
+     * @function AuthApi#twoStepAuthCreate
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
+     */
+      twoStepAuthCreate(authorization) {
+      return this.twoStepAuthCreateWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthDisableWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthDisable");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/disable', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA disable
+     * @function AuthApi#twoStepAuthDisable
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {TwoFactorCodeModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      twoStepAuthDisable(authorization, opts) {
+      return this.twoStepAuthDisableWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthRecoveryCodesWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthRecoveryCodes");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/recoverycodes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA recovery codes
+     * @function AuthApi#twoStepAuthRecoveryCodes
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {PasswordModel} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      twoStepAuthRecoveryCodes(authorization, opts) {
+      return this.twoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthRecoveryCodesNewWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthRecoveryCodesNew");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/recoverycodes/new', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA generate new recovery codes
+     * @function AuthApi#twoStepAuthRecoveryCodesNew
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {PasswordModel} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      twoStepAuthRecoveryCodesNew(authorization, opts) {
+      return this.twoStepAuthRecoveryCodesNewWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      twoStepAuthStatusWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthStatus");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TwoFactorStatus;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA status
+     * @function AuthApi#twoStepAuthStatus
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
+     */
+      twoStepAuthStatus(authorization) {
+      return this.twoStepAuthStatusWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      updateAuthTokenWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling updateAuthToken");
       }
 
 
@@ -901,12 +758,60 @@ export default class AuthApi {
 
     /**
      * Update auth token
-     * @function AuthApi#v10AuthTokenUpdatePost
+     * @function AuthApi#updateAuthToken
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10AuthTokenUpdatePost(authorization) {
-      return this.v10AuthTokenUpdatePostWithHttpInfo(authorization)
+      updateAuthToken(authorization) {
+      return this.updateAuthTokenWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      validatePhoneNumberWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling validatePhoneNumber");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'code': opts['code']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/phone/verify', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Verify phone number
+     * @function AuthApi#validatePhoneNumber
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.code] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      validatePhoneNumber(authorization, opts) {
+      return this.validatePhoneNumberWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

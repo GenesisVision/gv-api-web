@@ -25,11 +25,6 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @name ProgramBalanceChartElement#profit
- * @type {Number}
- */
-/**
- *
  * @name ProgramBalanceChartElement#date
  * @type {Date}
  */
@@ -69,9 +64,6 @@ export default class ProgramBalanceChartElement {
             
             
 
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
-            }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
@@ -85,7 +77,6 @@ export default class ProgramBalanceChartElement {
         return obj;
     }
 
-    profit = undefined;
     date = undefined;
     managerFunds = undefined;
     investorsFunds = undefined;

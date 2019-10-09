@@ -13,7 +13,6 @@
 
 
 import ApiClient from '../ApiClient';
-import AssetEvent from './AssetEvent';
 import ProgramTag from './ProgramTag';
 
 
@@ -39,16 +38,6 @@ import ProgramTag from './ProgramTag';
  *
  * @name ProgramFilters#customNotificationType
  * @type {Array<String>}
- */
-/**
- *
- * @name ProgramFilters#managerNotificationType
- * @type {AssetEvent}
- */
-/**
- *
- * @name ProgramFilters#investorNotificationType
- * @type {AssetEvent}
  */
 
 
@@ -85,12 +74,6 @@ export default class ProgramFilters {
             if (data.hasOwnProperty('customNotificationType')) {
                 obj['customNotificationType'] = ApiClient.convertToType(data['customNotificationType'], ['String']);
             }
-            if (data.hasOwnProperty('managerNotificationType')) {
-                obj['managerNotificationType'] = AssetEvent.constructFromObject(data['managerNotificationType']);
-            }
-            if (data.hasOwnProperty('investorNotificationType')) {
-                obj['investorNotificationType'] = AssetEvent.constructFromObject(data['investorNotificationType']);
-            }
         }
         return obj;
     }
@@ -98,8 +81,6 @@ export default class ProgramFilters {
     programTags = undefined;
     actionType = undefined;
     customNotificationType = undefined;
-    managerNotificationType = undefined;
-    investorNotificationType = undefined;
 
 
 

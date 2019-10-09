@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
 **isOwnProgram** | **Boolean** |  | [optional] 
-**canCloseProgram** | **Boolean** |  | [optional] 
 **canCloseAsset** | **Boolean** |  | [optional] 
 **isFinishing** | **Boolean** |  | [optional] 
 **canInvest** | **Boolean** |  | [optional] 

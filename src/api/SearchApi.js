@@ -34,7 +34,7 @@ export default class SearchApi {
     }
 
 
-      v10SearchGetWithHttpInfo(opts) {
+      getProgramsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -65,15 +65,15 @@ export default class SearchApi {
 
     /**
      * Program / fund / manager search
-     * @function SearchApi#v10SearchGet
+     * @function SearchApi#getPrograms
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
      * @param {String} [opts.mask] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
      */
-      v10SearchGet(opts) {
-      return this.v10SearchGetWithHttpInfo(opts)
+      getPrograms(opts) {
+      return this.getProgramsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

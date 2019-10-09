@@ -72,16 +72,6 @@ import ProgramTag from './ProgramTag';
  */
 /**
  *
- * @name Broker#isForex
- * @type {Boolean}
- */
-/**
- *
- * @name Broker#isSignalsAvailable
- * @type {Boolean}
- */
-/**
- *
  * @name Broker#tags
  * @type {Array<ProgramTag>}
  */
@@ -138,12 +128,6 @@ export default class Broker {
             if (data.hasOwnProperty('accountTypes')) {
                 obj['accountTypes'] = ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]);
             }
-            if (data.hasOwnProperty('isForex')) {
-                obj['isForex'] = ApiClient.convertToType(data['isForex'], 'Boolean');
-            }
-            if (data.hasOwnProperty('isSignalsAvailable')) {
-                obj['isSignalsAvailable'] = ApiClient.convertToType(data['isSignalsAvailable'], 'Boolean');
-            }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
             }
@@ -160,8 +144,6 @@ export default class Broker {
     leverageMin = undefined;
     leverageMax = undefined;
     accountTypes = undefined;
-    isForex = undefined;
-    isSignalsAvailable = undefined;
     tags = undefined;
 
 

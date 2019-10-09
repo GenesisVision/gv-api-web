@@ -4,34 +4,76 @@ All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10InvestorFundsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorFundsByIdInvestByAmountPost) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
-[**v10InvestorFundsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
-[**v10InvestorFundsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorFundsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorFundsByIdWithdrawByPercentPost**](InvestorApi.md#v10InvestorFundsByIdWithdrawByPercentPost) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
-[**v10InvestorFundsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorFundsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-[**v10InvestorFundsGet**](InvestorApi.md#v10InvestorFundsGet) | **GET** /v1.0/investor/funds | Dashboard funds list
-[**v10InvestorGet**](InvestorApi.md#v10InvestorGet) | **GET** /v1.0/investor | Summary dashboard info
-[**v10InvestorInvestmentsEventsGet**](InvestorApi.md#v10InvestorInvestmentsEventsGet) | **GET** /v1.0/investor/investments/events | Events
-[**v10InvestorPortfolioChartGet**](InvestorApi.md#v10InvestorPortfolioChartGet) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
-[**v10InvestorPortfolioEventsGet**](InvestorApi.md#v10InvestorPortfolioEventsGet) | **GET** /v1.0/investor/portfolio/events | Portfolio events
-[**v10InvestorProgramsByIdInvestByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdInvestByAmountPost) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
-[**v10InvestorProgramsByIdInvestInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdInvestInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
-[**v10InvestorProgramsByIdReinvestOffPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOffPost) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
-[**v10InvestorProgramsByIdReinvestOnPost**](InvestorApi.md#v10InvestorProgramsByIdReinvestOnPost) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
-[**v10InvestorProgramsByIdRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorProgramsByIdRequestsBySkipByTakeGet) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-[**v10InvestorProgramsByIdWithdrawByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/{amount} | Withdraw from investment program in GVT
-[**v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**](InvestorApi.md#v10InvestorProgramsByIdWithdrawInfoByCurrencyGet) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
-[**v10InvestorProgramsByIdWithdrawMultiByAmountPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawMultiByAmountPost) | **POST** /v1.0/investor/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
-[**v10InvestorProgramsByIdWithdrawMultiPost**](InvestorApi.md#v10InvestorProgramsByIdWithdrawMultiPost) | **POST** /v1.0/investor/programs/{id}/withdraw/multi | Withdraw from investment program in program currency
-[**v10InvestorProgramsGet**](InvestorApi.md#v10InvestorProgramsGet) | **GET** /v1.0/investor/programs | Dashboard program list
-[**v10InvestorProgramsRequestsByIdCancelPost**](InvestorApi.md#v10InvestorProgramsRequestsByIdCancelPost) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
-[**v10InvestorRequestsBySkipByTakeGet**](InvestorApi.md#v10InvestorRequestsBySkipByTakeGet) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
-[**v10InvestorSignalsGet**](InvestorApi.md#v10InvestorSignalsGet) | **GET** /v1.0/investor/signals | Dashboard signal providers list
+[**cancelRequest**](InvestorApi.md#cancelRequest) | **POST** /v1.0/investor/programs/requests/{id}/cancel | Cancel investment program request
+[**fundInvest**](InvestorApi.md#fundInvest) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
+[**fundInvestInfo**](InvestorApi.md#fundInvestInfo) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
+[**fundWithdraw**](InvestorApi.md#fundWithdraw) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
+[**fundWithdrawInfo**](InvestorApi.md#fundWithdrawInfo) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
+[**getDashboard**](InvestorApi.md#getDashboard) | **GET** /v1.0/investor | Summary dashboard info
+[**getEvents**](InvestorApi.md#getEvents) | **GET** /v1.0/investor/investments/events | Events
+[**getFunds**](InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Dashboard funds list
+[**getPortfolioChart**](InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
+[**getProgramRequests**](InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
+[**getProgramRequests_0**](InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+[**getPrograms**](InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
+[**getRequests**](InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
+[**getSignalPrograms**](InvestorApi.md#getSignalPrograms) | **GET** /v1.0/investor/signals | Dashboard signal providers list
+[**investInfo**](InvestorApi.md#investInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
+[**programInvest**](InvestorApi.md#programInvest) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
+[**programWithdraw**](InvestorApi.md#programWithdraw) | **POST** /v1.0/investor/programs/{id}/withdraw/multi | Withdraw from investment program in program currency
+[**programWithdrawInfo**](InvestorApi.md#programWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
+[**programWithdraw_0**](InvestorApi.md#programWithdraw_0) | **POST** /v1.0/investor/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
+[**reinvestOff**](InvestorApi.md#reinvestOff) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
+[**reinvestOn**](InvestorApi.md#reinvestOn) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 
 
-<a name="v10InvestorFundsByIdInvestByAmountPost"></a>
-# **v10InvestorFundsByIdInvestByAmountPost**
-> v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts)
+<a name="cancelRequest"></a>
+# **cancelRequest**
+> cancelRequest(id, authorization)
+
+Cancel investment program request
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.cancelRequest(id, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="fundInvest"></a>
+# **fundInvest**
+> fundInvest(id, amount, authorization, opts)
 
 Investing into the fund.  Invest in GVT if currency is empty
 
@@ -50,7 +92,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorFundsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
+apiInstance.fundInvest(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -80,9 +122,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorFundsByIdInvestInfoByCurrencyGet"></a>
-# **v10InvestorFundsByIdInvestInfoByCurrencyGet**
-> FundInvestInfo v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization)
+<a name="fundInvestInfo"></a>
+# **fundInvestInfo**
+> FundInvestInfo fundInvestInfo(id, currency, authorization)
 
 Data for investing into the fund
 
@@ -98,7 +140,7 @@ let currency = "currency_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.fundInvestInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -127,59 +169,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorFundsByIdRequestsBySkipByTakeGet"></a>
-# **v10InvestorFundsByIdRequestsBySkipByTakeGet**
-> ProgramRequests v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
-
-Get program/fund requests
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let skip = 56; // Number | 
-
-let take = 56; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorFundsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **skip** | **Number**|  | 
- **take** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramRequests**](ProgramRequests.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorFundsByIdWithdrawByPercentPost"></a>
-# **v10InvestorFundsByIdWithdrawByPercentPost**
-> v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts)
+<a name="fundWithdraw"></a>
+# **fundWithdraw**
+> fundWithdraw(id, percent, authorization, opts)
 
 Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
 
@@ -198,7 +190,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorFundsByIdWithdrawByPercentPost(id, percent, authorization, opts).then(() => {
+apiInstance.fundWithdraw(id, percent, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -228,9 +220,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorFundsByIdWithdrawInfoByCurrencyGet"></a>
-# **v10InvestorFundsByIdWithdrawInfoByCurrencyGet**
-> FundWithdrawInfo v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
+<a name="fundWithdrawInfo"></a>
+# **fundWithdrawInfo**
+> FundWithdrawInfo fundWithdrawInfo(id, currency, authorization)
 
 Data for withdrawal from fund
 
@@ -246,7 +238,7 @@ let currency = "currency_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorFundsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
+apiInstance.fundWithdrawInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -275,74 +267,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorFundsGet"></a>
-# **v10InvestorFundsGet**
-> FundsList v10InvestorFundsGet(authorization, opts)
-
-Dashboard funds list
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'sorting': "sorting_example", // String | 
-  'currency': "currency_example", // String | 
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartPointsCount': 56, // Number | 
-  'currencySecondary': "currencySecondary_example", // String | 
-  'actionStatus': "actionStatus_example", // String | 
-  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
-  'isHideInList': true, // Boolean | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10InvestorFundsGet(authorization, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **sorting** | **String**|  | [optional] 
- **currency** | **String**|  | [optional] 
- **from** | **Date**|  | [optional] 
- **to** | **Date**|  | [optional] 
- **chartPointsCount** | **Number**|  | [optional] 
- **currencySecondary** | **String**|  | [optional] 
- **actionStatus** | **String**|  | [optional] 
- **dashboardActionStatus** | **String**|  | [optional] 
- **isHideInList** | **Boolean**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
-
-### Return type
-
-[**FundsList**](FundsList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorGet"></a>
-# **v10InvestorGet**
-> DashboardSummary v10InvestorGet(authorization, opts)
+<a name="getDashboard"></a>
+# **getDashboard**
+> DashboardSummary getDashboard(authorization, opts)
 
 Summary dashboard info
 
@@ -364,7 +291,7 @@ let opts = {
   'requestsSkip': 56, // Number | 
   'requestsTake': 56 // Number | 
 };
-apiInstance.v10InvestorGet(authorization, opts).then((data) => {
+apiInstance.getDashboard(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -399,9 +326,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorInvestmentsEventsGet"></a>
-# **v10InvestorInvestmentsEventsGet**
-> InvestmentEventViewModels v10InvestorInvestmentsEventsGet(authorization, opts)
+<a name="getEvents"></a>
+# **getEvents**
+> InvestmentEventViewModels getEvents(authorization, opts)
 
 Events
 
@@ -423,7 +350,7 @@ let opts = {
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorInvestmentsEventsGet(authorization, opts).then((data) => {
+apiInstance.getEvents(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -458,9 +385,74 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorPortfolioChartGet"></a>
-# **v10InvestorPortfolioChartGet**
-> DashboardChartValue v10InvestorPortfolioChartGet(authorization, opts)
+<a name="getFunds"></a>
+# **getFunds**
+> FundsListOld getFunds(authorization, opts)
+
+Dashboard funds list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'currency': "currency_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.getFunds(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**FundsListOld**](FundsListOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getPortfolioChart"></a>
+# **getPortfolioChart**
+> DashboardChartValue getPortfolioChart(authorization, opts)
 
 Portfolio charts
 
@@ -479,7 +471,7 @@ let opts = {
   'balancePoints': 56, // Number | 
   'programsPoints': 56 // Number | 
 };
-apiInstance.v10InvestorPortfolioChartGet(authorization, opts).then((data) => {
+apiInstance.getPortfolioChart(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -511,11 +503,111 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorPortfolioEventsGet"></a>
-# **v10InvestorPortfolioEventsGet**
-> DashboardPortfolioEvents v10InvestorPortfolioEventsGet(authorization, opts)
+<a name="getProgramRequests"></a>
+# **getProgramRequests**
+> ProgramRequestsOld getProgramRequests(id, skip, take, authorization)
 
-Portfolio events
+Get program/fund requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getProgramRequests(id, skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequestsOld**](ProgramRequestsOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getProgramRequests_0"></a>
+# **getProgramRequests_0**
+> ProgramRequestsOld getProgramRequests_0(id, skip, take, authorization)
+
+Get program/fund requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getProgramRequests_0(id, skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequestsOld**](ProgramRequestsOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getPrograms"></a>
+# **getPrograms**
+> ProgramsListOld getPrograms(authorization, opts)
+
+Dashboard program list
 
 ### Example
 ```javascript
@@ -526,15 +618,19 @@ let apiInstance = new CoreApiV10.InvestorApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'assetId': "assetId_example", // String | 
+  'sorting': "sorting_example", // String | 
+  'currency': "currency_example", // String | 
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'type': "type_example", // String | 
-  'assetType': "assetType_example", // String | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
-apiInstance.v10InvestorPortfolioEventsGet(authorization, opts).then((data) => {
+apiInstance.getPrograms(authorization, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -547,17 +643,21 @@ apiInstance.v10InvestorPortfolioEventsGet(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **assetId** | [**String**](.md)|  | [optional] 
+ **sorting** | **String**|  | [optional] 
+ **currency** | **String**|  | [optional] 
  **from** | **Date**|  | [optional] 
  **to** | **Date**|  | [optional] 
- **type** | **String**|  | [optional] 
- **assetType** | **String**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**DashboardPortfolioEvents**](DashboardPortfolioEvents.md)
+[**ProgramsListOld**](ProgramsListOld.md)
 
 ### Authorization
 
@@ -568,9 +668,166 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorProgramsByIdInvestByAmountPost"></a>
-# **v10InvestorProgramsByIdInvestByAmountPost**
-> v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts)
+<a name="getRequests"></a>
+# **getRequests**
+> ProgramRequestsOld getRequests(skip, take, authorization)
+
+Get all requests
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let skip = 56; // Number | 
+
+let take = 56; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getRequests(skip, take, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**|  | 
+ **take** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramRequestsOld**](ProgramRequestsOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getSignalPrograms"></a>
+# **getSignalPrograms**
+> SignalsList getSignalPrograms(authorization, opts)
+
+Dashboard signal providers list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'sorting': "sorting_example", // String | 
+  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'currencySecondary': "currencySecondary_example", // String | 
+  'actionStatus': "actionStatus_example", // String | 
+  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
+  'isHideInList': true, // Boolean | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.getSignalPrograms(authorization, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **sorting** | **String**|  | [optional] 
+ **from** | **Date**|  | [optional] 
+ **to** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **currencySecondary** | **String**|  | [optional] 
+ **actionStatus** | **String**|  | [optional] 
+ **dashboardActionStatus** | **String**|  | [optional] 
+ **isHideInList** | **Boolean**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**SignalsList**](SignalsList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="investInfo"></a>
+# **investInfo**
+> ProgramInvestInfoOld investInfo(id, currency, authorization)
+
+Data for investing into the program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.investInfo(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramInvestInfoOld**](ProgramInvestInfoOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="programInvest"></a>
+# **programInvest**
+> programInvest(id, amount, authorization, opts)
 
 Investing into the program.  Invest in GVT if currency is empty
 
@@ -589,7 +846,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.v10InvestorProgramsByIdInvestByAmountPost(id, amount, authorization, opts).then(() => {
+apiInstance.programInvest(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -619,339 +876,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorProgramsByIdInvestInfoByCurrencyGet"></a>
-# **v10InvestorProgramsByIdInvestInfoByCurrencyGet**
-> ProgramInvestInfo v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization)
-
-Data for investing into the program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdInvestInfoByCurrencyGet(id, currency, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramInvestInfo**](ProgramInvestInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdReinvestOffPost"></a>
-# **v10InvestorProgramsByIdReinvestOffPost**
-> v10InvestorProgramsByIdReinvestOffPost(id, authorization)
-
-Disable reinvesting
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdReinvestOffPost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdReinvestOnPost"></a>
-# **v10InvestorProgramsByIdReinvestOnPost**
-> v10InvestorProgramsByIdReinvestOnPost(id, authorization)
-
-Enable reinvesting
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdReinvestOnPost(id, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdRequestsBySkipByTakeGet"></a>
-# **v10InvestorProgramsByIdRequestsBySkipByTakeGet**
-> ProgramRequests v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization)
-
-Get program/fund requests
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let skip = 56; // Number | 
-
-let take = 56; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdRequestsBySkipByTakeGet(id, skip, take, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **skip** | **Number**|  | 
- **take** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramRequests**](ProgramRequests.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdWithdrawByAmountPost"></a>
-# **v10InvestorProgramsByIdWithdrawByAmountPost**
-> v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization)
-
-Withdraw from investment program in GVT
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let amount = 1.2; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdWithdrawByAmountPost(id, amount, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **amount** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdWithdrawInfoByCurrencyGet"></a>
-# **v10InvestorProgramsByIdWithdrawInfoByCurrencyGet**
-> ProgramWithdrawInfo v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization)
-
-Data for withdrawal from investment program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10InvestorProgramsByIdWithdrawInfoByCurrencyGet(id, currency, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramWithdrawInfo**](ProgramWithdrawInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdWithdrawMultiByAmountPost"></a>
-# **v10InvestorProgramsByIdWithdrawMultiByAmountPost**
-> v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts)
-
-Withdraw from investment program in program currency
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let amount = 1.2; // Number | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'withdrawAll': false // Boolean | 
-};
-apiInstance.v10InvestorProgramsByIdWithdrawMultiByAmountPost(id, amount, authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **amount** | **Number**|  | 
- **authorization** | **String**| JWT access token | 
- **withdrawAll** | **Boolean**|  | [optional] [default to false]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorProgramsByIdWithdrawMultiPost"></a>
-# **v10InvestorProgramsByIdWithdrawMultiPost**
-> v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, opts)
+<a name="programWithdraw"></a>
+# **programWithdraw**
+> programWithdraw(id, authorization, opts)
 
 Withdraw from investment program in program currency
 
@@ -969,7 +896,7 @@ let opts = {
   'amount': 1.2, // Number | 
   'withdrawAll': false // Boolean | 
 };
-apiInstance.v10InvestorProgramsByIdWithdrawMultiPost(id, authorization, opts).then(() => {
+apiInstance.programWithdraw(id, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -999,11 +926,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorProgramsGet"></a>
-# **v10InvestorProgramsGet**
-> ProgramsList v10InvestorProgramsGet(authorization, opts)
+<a name="programWithdrawInfo"></a>
+# **programWithdrawInfo**
+> ProgramWithdrawInfo programWithdrawInfo(id, currency, authorization)
 
-Dashboard program list
+Data for withdrawal from investment program
 
 ### Example
 ```javascript
@@ -1011,22 +938,13 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.InvestorApi();
 
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'sorting': "sorting_example", // String | 
-  'currency': "currency_example", // String | 
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartPointsCount': 56, // Number | 
-  'currencySecondary': "currencySecondary_example", // String | 
-  'actionStatus': "actionStatus_example", // String | 
-  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
-  'isHideInList': true, // Boolean | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10InvestorProgramsGet(authorization, opts).then((data) => {
+apiInstance.programWithdrawInfo(id, currency, authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1038,22 +956,13 @@ apiInstance.v10InvestorProgramsGet(authorization, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
  **authorization** | **String**| JWT access token | 
- **sorting** | **String**|  | [optional] 
- **currency** | **String**|  | [optional] 
- **from** | **Date**|  | [optional] 
- **to** | **Date**|  | [optional] 
- **chartPointsCount** | **Number**|  | [optional] 
- **currencySecondary** | **String**|  | [optional] 
- **actionStatus** | **String**|  | [optional] 
- **dashboardActionStatus** | **String**|  | [optional] 
- **isHideInList** | **Boolean**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
 
 ### Return type
 
-[**ProgramsList**](ProgramsList.md)
+[**ProgramWithdrawInfo**](ProgramWithdrawInfo.md)
 
 ### Authorization
 
@@ -1064,11 +973,62 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorProgramsRequestsByIdCancelPost"></a>
-# **v10InvestorProgramsRequestsByIdCancelPost**
-> v10InvestorProgramsRequestsByIdCancelPost(id, authorization)
+<a name="programWithdraw_0"></a>
+# **programWithdraw_0**
+> programWithdraw_0(id, amount, authorization, opts)
 
-Cancel investment program request
+Withdraw from investment program in program currency
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let amount = 1.2; // Number | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'withdrawAll': false // Boolean | 
+};
+apiInstance.programWithdraw_0(id, amount, authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **amount** | **Number**|  | 
+ **authorization** | **String**| JWT access token | 
+ **withdrawAll** | **Boolean**|  | [optional] [default to false]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="reinvestOff"></a>
+# **reinvestOff**
+> reinvestOff(id, authorization)
+
+Disable reinvesting
 
 ### Example
 ```javascript
@@ -1080,7 +1040,7 @@ let id = "id_example"; // String |
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorProgramsRequestsByIdCancelPost(id, authorization).then(() => {
+apiInstance.reinvestOff(id, authorization).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1108,11 +1068,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10InvestorRequestsBySkipByTakeGet"></a>
-# **v10InvestorRequestsBySkipByTakeGet**
-> ProgramRequests v10InvestorRequestsBySkipByTakeGet(skip, take, authorization)
+<a name="reinvestOn"></a>
+# **reinvestOn**
+> reinvestOn(id, authorization)
 
-Get all requests
+Enable reinvesting
 
 ### Example
 ```javascript
@@ -1120,14 +1080,12 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.InvestorApi();
 
-let skip = 56; // Number | 
-
-let take = 56; // Number | 
+let id = "id_example"; // String | 
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.reinvestOn(id, authorization).then(() => {
+  console.log('API called successfully.');
 }, (error) => {
   console.error(error);
 });
@@ -1138,76 +1096,12 @@ apiInstance.v10InvestorRequestsBySkipByTakeGet(skip, take, authorization).then((
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **Number**|  | 
- **take** | **Number**|  | 
+ **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
 
 ### Return type
 
-[**ProgramRequests**](ProgramRequests.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10InvestorSignalsGet"></a>
-# **v10InvestorSignalsGet**
-> SignalsList v10InvestorSignalsGet(authorization, opts)
-
-Dashboard signal providers list
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'sorting': "sorting_example", // String | 
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'chartPointsCount': 56, // Number | 
-  'currencySecondary': "currencySecondary_example", // String | 
-  'actionStatus': "actionStatus_example", // String | 
-  'dashboardActionStatus': "dashboardActionStatus_example", // String | 
-  'isHideInList': true, // Boolean | 
-  'skip': 56, // Number | 
-  'take': 56 // Number | 
-};
-apiInstance.v10InvestorSignalsGet(authorization, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **sorting** | **String**|  | [optional] 
- **from** | **Date**|  | [optional] 
- **to** | **Date**|  | [optional] 
- **chartPointsCount** | **Number**|  | [optional] 
- **currencySecondary** | **String**|  | [optional] 
- **actionStatus** | **String**|  | [optional] 
- **dashboardActionStatus** | **String**|  | [optional] 
- **isHideInList** | **Boolean**|  | [optional] 
- **skip** | **Number**|  | [optional] 
- **take** | **Number**|  | [optional] 
-
-### Return type
-
-[**SignalsList**](SignalsList.md)
+null (empty response body)
 
 ### Authorization
 

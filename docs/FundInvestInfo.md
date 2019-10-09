@@ -4,8 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **String** |  | [optional] 
-**availableInWallet** | **Number** |  | [optional] 
-**minInvestmentAmount** | **Number** |  | [optional] 
 **programCurrencyMinInvestment** | **Number** |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **gvCommission** | **Number** |  | [optional] 

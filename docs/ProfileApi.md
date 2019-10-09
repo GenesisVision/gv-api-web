@@ -4,191 +4,24 @@ All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v10ProfileAvatarRemovePost**](ProfileApi.md#v10ProfileAvatarRemovePost) | **POST** /v1.0/profile/avatar/remove | Remove avatar
-[**v10ProfileAvatarUpdateByFileIdPost**](ProfileApi.md#v10ProfileAvatarUpdateByFileIdPost) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
-[**v10ProfileGet**](ProfileApi.md#v10ProfileGet) | **GET** /v1.0/profile | Get full profile
-[**v10ProfileHeaderGet**](ProfileApi.md#v10ProfileHeaderGet) | **GET** /v1.0/profile/header | Get header profile
-[**v10ProfileKeysAddPost**](ProfileApi.md#v10ProfileKeysAddPost) | **POST** /v1.0/profile/keys/add | Add external exchange key
-[**v10ProfileKeysDeletePost**](ProfileApi.md#v10ProfileKeysDeletePost) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
-[**v10ProfileKeysGet**](ProfileApi.md#v10ProfileKeysGet) | **GET** /v1.0/profile/keys | Get external exchange keys
-[**v10ProfilePersonalUpdatePost**](ProfileApi.md#v10ProfilePersonalUpdatePost) | **POST** /v1.0/profile/personal/update | Update user personal details
-[**v10ProfilePushTokenPost**](ProfileApi.md#v10ProfilePushTokenPost) | **POST** /v1.0/profile/push/token | 
-[**v10ProfileSociallinksGet**](ProfileApi.md#v10ProfileSociallinksGet) | **GET** /v1.0/profile/sociallinks | Get social links
-[**v10ProfileSociallinksUpdatePost**](ProfileApi.md#v10ProfileSociallinksUpdatePost) | **POST** /v1.0/profile/sociallinks/update | Add or update social links
-[**v10ProfileUpdatePost**](ProfileApi.md#v10ProfileUpdatePost) | **POST** /v1.0/profile/update | Update profile
-[**v10ProfileVerificationTokenPost**](ProfileApi.md#v10ProfileVerificationTokenPost) | **POST** /v1.0/profile/verification/token | 
+[**addExternalKey**](ProfileApi.md#addExternalKey) | **POST** /v1.0/profile/keys/add | Add external exchange key
+[**deleteExternalKey**](ProfileApi.md#deleteExternalKey) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
+[**getExternalKey**](ProfileApi.md#getExternalKey) | **GET** /v1.0/profile/keys | Get external exchange keys
+[**getSocialLinks**](ProfileApi.md#getSocialLinks) | **GET** /v1.0/profile/sociallinks | Get social links
+[**profileFull**](ProfileApi.md#profileFull) | **GET** /v1.0/profile | Get full profile
+[**profileHeader**](ProfileApi.md#profileHeader) | **GET** /v1.0/profile/header | Get header profile
+[**removeAvatar**](ProfileApi.md#removeAvatar) | **POST** /v1.0/profile/avatar/remove | Remove avatar
+[**updateAvatar**](ProfileApi.md#updateAvatar) | **POST** /v1.0/profile/avatar/update/{fileId} | Update avatar
+[**updateFcmToken**](ProfileApi.md#updateFcmToken) | **POST** /v1.0/profile/push/token | 
+[**updatePersonalDetails**](ProfileApi.md#updatePersonalDetails) | **POST** /v1.0/profile/personal/update | Update user personal details
+[**updateProfile**](ProfileApi.md#updateProfile) | **POST** /v1.0/profile/update | Update profile
+[**updateSocialLinks**](ProfileApi.md#updateSocialLinks) | **POST** /v1.0/profile/sociallinks/update | Add or update social links
+[**verificationToken**](ProfileApi.md#verificationToken) | **POST** /v1.0/profile/verification/token | 
 
 
-<a name="v10ProfileAvatarRemovePost"></a>
-# **v10ProfileAvatarRemovePost**
-> v10ProfileAvatarRemovePost(authorization)
-
-Remove avatar
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProfileApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ProfileAvatarRemovePost(authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProfileAvatarUpdateByFileIdPost"></a>
-# **v10ProfileAvatarUpdateByFileIdPost**
-> v10ProfileAvatarUpdateByFileIdPost(fileId, authorization)
-
-Update avatar
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProfileApi();
-
-let fileId = "fileId_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ProfileAvatarUpdateByFileIdPost(fileId, authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fileId** | **String**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProfileGet"></a>
-# **v10ProfileGet**
-> ProfileFullViewModel v10ProfileGet(authorization)
-
-Get full profile
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProfileApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ProfileGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProfileFullViewModel**](ProfileFullViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProfileHeaderGet"></a>
-# **v10ProfileHeaderGet**
-> ProfileHeaderViewModel v10ProfileHeaderGet(authorization)
-
-Get header profile
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProfileApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ProfileHeaderGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProfileHeaderViewModel**](ProfileHeaderViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProfileKeysAddPost"></a>
-# **v10ProfileKeysAddPost**
-> v10ProfileKeysAddPost(authorization, opts)
+<a name="addExternalKey"></a>
+# **addExternalKey**
+> addExternalKey(authorization, opts)
 
 Add external exchange key
 
@@ -203,7 +36,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApiV10.ExternalKeyAddViewModel() // ExternalKeyAddViewModel | 
 };
-apiInstance.v10ProfileKeysAddPost(authorization, opts).then(() => {
+apiInstance.addExternalKey(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -231,9 +64,9 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfileKeysDeletePost"></a>
-# **v10ProfileKeysDeletePost**
-> v10ProfileKeysDeletePost(authorization, opts)
+<a name="deleteExternalKey"></a>
+# **deleteExternalKey**
+> deleteExternalKey(authorization, opts)
 
 Delete external exchange key
 
@@ -248,7 +81,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApiV10.IdModel() // IdModel | 
 };
-apiInstance.v10ProfileKeysDeletePost(authorization, opts).then(() => {
+apiInstance.deleteExternalKey(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -276,9 +109,9 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfileKeysGet"></a>
-# **v10ProfileKeysGet**
-> ExternalKeysViewModel v10ProfileKeysGet(authorization)
+<a name="getExternalKey"></a>
+# **getExternalKey**
+> ExternalKeysViewModel getExternalKey(authorization)
 
 Get external exchange keys
 
@@ -290,7 +123,7 @@ let apiInstance = new CoreApiV10.ProfileApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileKeysGet(authorization).then((data) => {
+apiInstance.getExternalKey(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -317,11 +150,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfilePersonalUpdatePost"></a>
-# **v10ProfilePersonalUpdatePost**
-> v10ProfilePersonalUpdatePost(authorization, opts)
+<a name="getSocialLinks"></a>
+# **getSocialLinks**
+> SocialLinksViewModel getSocialLinks(authorization)
 
-Update user personal details
+Get social links
 
 ### Example
 ```javascript
@@ -331,10 +164,130 @@ let apiInstance = new CoreApiV10.ProfileApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'model': new CoreApiV10.UpdatePersonalDetailViewModel() // UpdatePersonalDetailViewModel | 
-};
-apiInstance.v10ProfilePersonalUpdatePost(authorization, opts).then(() => {
+apiInstance.getSocialLinks(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**SocialLinksViewModel**](SocialLinksViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="profileFull"></a>
+# **profileFull**
+> ProfileFullViewModel profileFull(authorization)
+
+Get full profile
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.profileFull(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProfileFullViewModel**](ProfileFullViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="profileHeader"></a>
+# **profileHeader**
+> ProfileHeaderViewModel profileHeader(authorization)
+
+Get header profile
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.profileHeader(authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProfileHeaderViewModel**](ProfileHeaderViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="removeAvatar"></a>
+# **removeAvatar**
+> removeAvatar(authorization)
+
+Remove avatar
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.removeAvatar(authorization).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -347,7 +300,6 @@ apiInstance.v10ProfilePersonalUpdatePost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **model** | [**UpdatePersonalDetailViewModel**](UpdatePersonalDetailViewModel.md)|  | [optional] 
 
 ### Return type
 
@@ -359,12 +311,56 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfilePushTokenPost"></a>
-# **v10ProfilePushTokenPost**
-> v10ProfilePushTokenPost(authorization, opts)
+<a name="updateAvatar"></a>
+# **updateAvatar**
+> updateAvatar(fileId, authorization)
+
+Update avatar
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let fileId = "fileId_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.updateAvatar(fileId, authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="updateFcmToken"></a>
+# **updateFcmToken**
+> updateFcmToken(authorization, opts)
 
 
 
@@ -379,7 +375,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'token': new CoreApiV10.FcmTokenViewModel() // FcmTokenViewModel | 
 };
-apiInstance.v10ProfilePushTokenPost(authorization, opts).then(() => {
+apiInstance.updateFcmToken(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -407,52 +403,11 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfileSociallinksGet"></a>
-# **v10ProfileSociallinksGet**
-> SocialLinksViewModel v10ProfileSociallinksGet(authorization)
+<a name="updatePersonalDetails"></a>
+# **updatePersonalDetails**
+> updatePersonalDetails(authorization, opts)
 
-Get social links
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ProfileApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.v10ProfileSociallinksGet(authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**SocialLinksViewModel**](SocialLinksViewModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="v10ProfileSociallinksUpdatePost"></a>
-# **v10ProfileSociallinksUpdatePost**
-> v10ProfileSociallinksUpdatePost(authorization, opts)
-
-Add or update social links
+Update user personal details
 
 ### Example
 ```javascript
@@ -463,9 +418,9 @@ let apiInstance = new CoreApiV10.ProfileApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.UpdateSocialLinkViewModel() // UpdateSocialLinkViewModel | 
+  'model': new CoreApiV10.UpdatePersonalDetailViewModel() // UpdatePersonalDetailViewModel | 
 };
-apiInstance.v10ProfileSociallinksUpdatePost(authorization, opts).then(() => {
+apiInstance.updatePersonalDetails(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -478,7 +433,7 @@ apiInstance.v10ProfileSociallinksUpdatePost(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **model** | [**UpdateSocialLinkViewModel**](UpdateSocialLinkViewModel.md)|  | [optional] 
+ **model** | [**UpdatePersonalDetailViewModel**](UpdatePersonalDetailViewModel.md)|  | [optional] 
 
 ### Return type
 
@@ -493,9 +448,9 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfileUpdatePost"></a>
-# **v10ProfileUpdatePost**
-> v10ProfileUpdatePost(authorization, opts)
+<a name="updateProfile"></a>
+# **updateProfile**
+> updateProfile(authorization, opts)
 
 Update profile
 
@@ -510,7 +465,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'model': new CoreApiV10.UpdateProfileViewModel() // UpdateProfileViewModel | 
 };
-apiInstance.v10ProfileUpdatePost(authorization, opts).then(() => {
+apiInstance.updateProfile(authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -538,9 +493,54 @@ No authorization required
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="v10ProfileVerificationTokenPost"></a>
-# **v10ProfileVerificationTokenPost**
-> &#39;String&#39; v10ProfileVerificationTokenPost(authorization)
+<a name="updateSocialLinks"></a>
+# **updateSocialLinks**
+> updateSocialLinks(authorization, opts)
+
+Add or update social links
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'model': new CoreApiV10.UpdateSocialLinkViewModel() // UpdateSocialLinkViewModel | 
+};
+apiInstance.updateSocialLinks(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **model** | [**UpdateSocialLinkViewModel**](UpdateSocialLinkViewModel.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="verificationToken"></a>
+# **verificationToken**
+> &#39;String&#39; verificationToken(authorization)
 
 
 
@@ -552,7 +552,7 @@ let apiInstance = new CoreApiV10.ProfileApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-apiInstance.v10ProfileVerificationTokenPost(authorization).then((data) => {
+apiInstance.verificationToken(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

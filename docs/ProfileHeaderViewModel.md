@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
-**userType** | **String** |  | [optional] 
 **countryCode** | **String** |  | [optional] 
 **notificationsCount** | **Number** |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
@@ -15,23 +14,5 @@ Name | Type | Description | Notes
 **allowForex** | **Boolean** |  | [optional] 
 **isTwoFactorEnabled** | **Boolean** |  | [optional] 
 **isNewUser** | **Boolean** |  | [optional] 
-**totalBalanceGvt** | **Number** |  | [optional] 
-**investedGvt** | **Number** |  | [optional] 
-**availableGvt** | **Number** |  | [optional] 
-**totalBalance** | **Number** |  | [optional] 
-**invested** | **Number** |  | [optional] 
-**available** | **Number** |  | [optional] 
-**pending** | **Number** |  | [optional] 
-
-
-<a name="UserTypeEnum"></a>
-## Enum: UserTypeEnum
-
-
-* `Investor` (value: `"Investor"`)
-
-* `Manager` (value: `"Manager"`)
-
-
 
 

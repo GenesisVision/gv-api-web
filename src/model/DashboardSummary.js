@@ -14,9 +14,8 @@
 
 import ApiClient from '../ApiClient';
 import DashboardChartValue from './DashboardChartValue';
-import DashboardPortfolioEvents from './DashboardPortfolioEvents';
 import ProfileHeaderViewModel from './ProfileHeaderViewModel';
-import ProgramRequests from './ProgramRequests';
+import ProgramRequestsOld from './ProgramRequestsOld';
 
 
 
@@ -31,11 +30,6 @@ import ProgramRequests from './ProgramRequests';
  *
  * @name DashboardSummary#chart
  * @type {DashboardChartValue}
- */
-/**
- *
- * @name DashboardSummary#events
- * @type {DashboardPortfolioEvents}
  */
 /**
  *
@@ -60,7 +54,7 @@ import ProgramRequests from './ProgramRequests';
 /**
  *
  * @name DashboardSummary#requests
- * @type {ProgramRequests}
+ * @type {ProgramRequestsOld}
  */
 
 
@@ -91,9 +85,6 @@ export default class DashboardSummary {
             if (data.hasOwnProperty('chart')) {
                 obj['chart'] = DashboardChartValue.constructFromObject(data['chart']);
             }
-            if (data.hasOwnProperty('events')) {
-                obj['events'] = DashboardPortfolioEvents.constructFromObject(data['events']);
-            }
             if (data.hasOwnProperty('profileHeader')) {
                 obj['profileHeader'] = ProfileHeaderViewModel.constructFromObject(data['profileHeader']);
             }
@@ -107,14 +98,13 @@ export default class DashboardSummary {
                 obj['signalsCount'] = ApiClient.convertToType(data['signalsCount'], 'Number');
             }
             if (data.hasOwnProperty('requests')) {
-                obj['requests'] = ProgramRequests.constructFromObject(data['requests']);
+                obj['requests'] = ProgramRequestsOld.constructFromObject(data['requests']);
             }
         }
         return obj;
     }
 
     chart = undefined;
-    events = undefined;
     profileHeader = undefined;
     programsCount = undefined;
     fundsCount = undefined;

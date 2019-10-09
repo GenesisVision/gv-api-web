@@ -38,169 +38,13 @@ export default class PlatformApi {
     }
 
 
-      v10PlatformDatePostWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/date', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Server date
-     * @function PlatformApi#v10PlatformDatePost
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      v10PlatformDatePost() {
-      return this.v10PlatformDatePostWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10PlatformInfoGetWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = PlatformInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/info', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Platform info
-     * @function PlatformApi#v10PlatformInfoGet
-     * @return {CancelablePromise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
-     */
-      v10PlatformInfoGet() {
-      return this.v10PlatformInfoGetWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10PlatformLevelsGetWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'currency': opts['currency']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramsLevelsInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/levels', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Investment programs levels
-     * @function PlatformApi#v10PlatformLevelsGet
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
-     * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
-     */
-      v10PlatformLevelsGet(opts) {
-      return this.v10PlatformLevelsGetWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10PlatformLevelsParametersGetWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'currency': opts['currency']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = LevelsParamsInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/levels/parameters', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Investment programs levels parameters
-     * @function PlatformApi#v10PlatformLevelsParametersGet
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 104)
-     * @return {CancelablePromise<LevelsParamsInfo>} a Promise, with an object containing data of type LevelsParamsInfo and HTTP response
-     */
-      v10PlatformLevelsParametersGet(opts) {
-      return this.v10PlatformLevelsParametersGetWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10PlatformRiskcontrolGetWithHttpInfo(route, opts) {
+      getCaptchaModelWithHttpInfo(route, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'route' is set
       if (route === undefined || route === null) {
-        throw new Error("Missing the required parameter 'route' when calling v10PlatformRiskcontrolGet");
+        throw new Error("Missing the required parameter 'route' when calling getCaptchaModel");
       }
 
 
@@ -229,22 +73,63 @@ export default class PlatformApi {
     }
 
     /**
-     * Platform captcha details.
-     * @function PlatformApi#v10PlatformRiskcontrolGet
+     * Platform captcha details
+     * @function PlatformApi#getCaptchaModel
      * @param {String} route 
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.client] 
      * @param {String} [opts.version] 
      * @return {CancelablePromise<CaptchaDetails>} a Promise, with an object containing data of type CaptchaDetails and HTTP response
      */
-      v10PlatformRiskcontrolGet(route, opts) {
-      return this.v10PlatformRiskcontrolGetWithHttpInfo(route, opts)
+      getCaptchaModel(route, opts) {
+      return this.getCaptchaModelWithHttpInfo(route, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10PlatformStatisticGetWithHttpInfo() {
+      getLevelsParamsWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'currency': opts['currency']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = LevelsParamsInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/levels/parameters', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Investment programs levels parameters
+     * @function PlatformApi#getLevelsParams
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 104)
+     * @return {CancelablePromise<LevelsParamsInfo>} a Promise, with an object containing data of type LevelsParamsInfo and HTTP response
+     */
+      getLevelsParams(opts) {
+      return this.getLevelsParamsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getPlatformStatisticWithHttpInfo() {
       let postBody = null;
 
 
@@ -271,11 +156,126 @@ export default class PlatformApi {
 
     /**
      * Platform statistic
-     * @function PlatformApi#v10PlatformStatisticGet
+     * @function PlatformApi#getPlatformStatistic
      * @return {CancelablePromise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
      */
-      v10PlatformStatisticGet() {
-      return this.v10PlatformStatisticGetWithHttpInfo()
+      getPlatformStatistic() {
+      return this.getPlatformStatisticWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getPlatformStatusWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = PlatformInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/info', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Platform info
+     * @function PlatformApi#getPlatformStatus
+     * @return {CancelablePromise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
+     */
+      getPlatformStatus() {
+      return this.getPlatformStatusWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getProgramsLevelsWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'currency': opts['currency']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramsLevelsInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/levels', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Investment programs levels
+     * @function PlatformApi#getProgramsLevels
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
+     * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
+     */
+      getProgramsLevels(opts) {
+      return this.getProgramsLevelsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      platformDateWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/date', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Server date
+     * @function PlatformApi#platformDate
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     */
+      platformDate() {
+      return this.platformDateWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

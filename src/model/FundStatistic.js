@@ -26,16 +26,6 @@ import AmountWithCurrency from './AmountWithCurrency';
 
 /**
  *
- * @name FundStatistic#balanceGVT
- * @type {AmountWithCurrency}
- */
-/**
- *
- * @name FundStatistic#balanceSecondary
- * @type {AmountWithCurrency}
- */
-/**
- *
  * @name FundStatistic#balance
  * @type {AmountWithCurrency}
  */
@@ -100,12 +90,6 @@ export default class FundStatistic {
             
             
 
-            if (data.hasOwnProperty('balanceGVT')) {
-                obj['balanceGVT'] = AmountWithCurrency.constructFromObject(data['balanceGVT']);
-            }
-            if (data.hasOwnProperty('balanceSecondary')) {
-                obj['balanceSecondary'] = AmountWithCurrency.constructFromObject(data['balanceSecondary']);
-            }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
             }
@@ -134,8 +118,6 @@ export default class FundStatistic {
         return obj;
     }
 
-    balanceGVT = undefined;
-    balanceSecondary = undefined;
     balance = undefined;
     profitPercent = undefined;
     drawdownPercent = undefined;

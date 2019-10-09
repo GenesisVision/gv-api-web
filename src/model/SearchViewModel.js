@@ -13,9 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
-import FundsList from './FundsList';
+import FundsListOld from './FundsListOld';
 import ManagersList from './ManagersList';
-import ProgramsList from './ProgramsList';
+import ProgramsListOld from './ProgramsListOld';
 
 
 
@@ -29,12 +29,12 @@ import ProgramsList from './ProgramsList';
 /**
  *
  * @name SearchViewModel#programs
- * @type {ProgramsList}
+ * @type {ProgramsListOld}
  */
 /**
  *
  * @name SearchViewModel#funds
- * @type {FundsList}
+ * @type {FundsListOld}
  */
 /**
  *
@@ -68,10 +68,10 @@ export default class SearchViewModel {
             
 
             if (data.hasOwnProperty('programs')) {
-                obj['programs'] = ProgramsList.constructFromObject(data['programs']);
+                obj['programs'] = ProgramsListOld.constructFromObject(data['programs']);
             }
             if (data.hasOwnProperty('funds')) {
-                obj['funds'] = FundsList.constructFromObject(data['funds']);
+                obj['funds'] = FundsListOld.constructFromObject(data['funds']);
             }
             if (data.hasOwnProperty('managers')) {
                 obj['managers'] = ManagersList.constructFromObject(data['managers']);

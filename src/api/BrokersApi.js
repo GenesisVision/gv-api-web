@@ -35,12 +35,49 @@ export default class BrokersApi {
     }
 
 
-      v10BrokersByProgramIdGetWithHttpInfo(programId) {
+      getBrokersWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = BrokersInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/brokers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get all trade servers
+     * @function BrokersApi#getBrokers
+     * @return {CancelablePromise<BrokersInfo>} a Promise, with an object containing data of type BrokersInfo and HTTP response
+     */
+      getBrokers() {
+      return this.getBrokersWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getBrokersForProgramWithHttpInfo(programId) {
       let postBody = null;
 
       // verify the required parameter 'programId' is set
       if (programId === undefined || programId === null) {
-        throw new Error("Missing the required parameter 'programId' when calling v10BrokersByProgramIdGet");
+        throw new Error("Missing the required parameter 'programId' when calling getBrokersForProgram");
       }
 
 
@@ -68,49 +105,12 @@ export default class BrokersApi {
 
     /**
      * Get trade servers for program
-     * @function BrokersApi#v10BrokersByProgramIdGet
+     * @function BrokersApi#getBrokersForProgram
      * @param {String} programId 
      * @return {CancelablePromise<BrokersProgramInfo>} a Promise, with an object containing data of type BrokersProgramInfo and HTTP response
      */
-      v10BrokersByProgramIdGet(programId) {
-      return this.v10BrokersByProgramIdGetWithHttpInfo(programId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10BrokersGetWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = BrokersInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/brokers', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get all trade servers
-     * @function BrokersApi#v10BrokersGet
-     * @return {CancelablePromise<BrokersInfo>} a Promise, with an object containing data of type BrokersInfo and HTTP response
-     */
-      v10BrokersGet() {
-      return this.v10BrokersGetWithHttpInfo()
+      getBrokersForProgram(programId) {
+      return this.getBrokersForProgramWithHttpInfo(programId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -26,31 +26,6 @@ import FundEquityChartElement from './FundEquityChartElement';
 
 /**
  *
- * @name FundProfitChart#totalUsdProfit
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#timeframeUsdProfit
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#rebalances
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#totalGvtProfit
- * @type {Number}
- */
-/**
- *
- * @name FundProfitChart#timeframeGvtProfit
- * @type {Number}
- */
-/**
- *
  * @name FundProfitChart#creationDate
  * @type {Date}
  */
@@ -130,21 +105,6 @@ export default class FundProfitChart {
             
             
 
-            if (data.hasOwnProperty('totalUsdProfit')) {
-                obj['totalUsdProfit'] = ApiClient.convertToType(data['totalUsdProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeUsdProfit')) {
-                obj['timeframeUsdProfit'] = ApiClient.convertToType(data['timeframeUsdProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('rebalances')) {
-                obj['rebalances'] = ApiClient.convertToType(data['rebalances'], 'Number');
-            }
-            if (data.hasOwnProperty('totalGvtProfit')) {
-                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeGvtProfit')) {
-                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
             }
@@ -182,11 +142,6 @@ export default class FundProfitChart {
         return obj;
     }
 
-    totalUsdProfit = undefined;
-    timeframeUsdProfit = undefined;
-    rebalances = undefined;
-    totalGvtProfit = undefined;
-    timeframeGvtProfit = undefined;
     creationDate = undefined;
     profitPercent = undefined;
     equityChart = undefined;

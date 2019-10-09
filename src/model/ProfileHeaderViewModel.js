@@ -45,11 +45,6 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name ProfileHeaderViewModel#userType
- * @type ProfileHeaderViewModelUserTypeEnum
- */
-/**
- *
  * @name ProfileHeaderViewModel#countryCode
  * @type {String}
  */
@@ -82,41 +77,6 @@ import ApiClient from '../ApiClient';
  *
  * @name ProfileHeaderViewModel#isNewUser
  * @type {Boolean}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalanceGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#investedGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#availableGvt
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#totalBalance
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#invested
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#available
- * @type {Number}
- */
-/**
- *
- * @name ProfileHeaderViewModel#pending
- * @type {Number}
  */
 
 
@@ -156,9 +116,6 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('avatar')) {
                 obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
-            if (data.hasOwnProperty('userType')) {
-                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
-            }
             if (data.hasOwnProperty('countryCode')) {
                 obj['countryCode'] = ApiClient.convertToType(data['countryCode'], 'String');
             }
@@ -180,27 +137,6 @@ export default class ProfileHeaderViewModel {
             if (data.hasOwnProperty('isNewUser')) {
                 obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'Boolean');
             }
-            if (data.hasOwnProperty('totalBalanceGvt')) {
-                obj['totalBalanceGvt'] = ApiClient.convertToType(data['totalBalanceGvt'], 'Number');
-            }
-            if (data.hasOwnProperty('investedGvt')) {
-                obj['investedGvt'] = ApiClient.convertToType(data['investedGvt'], 'Number');
-            }
-            if (data.hasOwnProperty('availableGvt')) {
-                obj['availableGvt'] = ApiClient.convertToType(data['availableGvt'], 'Number');
-            }
-            if (data.hasOwnProperty('totalBalance')) {
-                obj['totalBalance'] = ApiClient.convertToType(data['totalBalance'], 'Number');
-            }
-            if (data.hasOwnProperty('invested')) {
-                obj['invested'] = ApiClient.convertToType(data['invested'], 'Number');
-            }
-            if (data.hasOwnProperty('available')) {
-                obj['available'] = ApiClient.convertToType(data['available'], 'Number');
-            }
-            if (data.hasOwnProperty('pending')) {
-                obj['pending'] = ApiClient.convertToType(data['pending'], 'Number');
-            }
         }
         return obj;
     }
@@ -209,7 +145,6 @@ export default class ProfileHeaderViewModel {
     name = undefined;
     email = undefined;
     avatar = undefined;
-    userType = undefined;
     countryCode = undefined;
     notificationsCount = undefined;
     favoritesCount = undefined;
@@ -217,25 +152,11 @@ export default class ProfileHeaderViewModel {
     allowForex = undefined;
     isTwoFactorEnabled = undefined;
     isNewUser = undefined;
-    totalBalanceGvt = undefined;
-    investedGvt = undefined;
-    availableGvt = undefined;
-    totalBalance = undefined;
-    invested = undefined;
-    available = undefined;
-    pending = undefined;
 
 
 
 
 
-
-    static UserTypeEnum = {
-    
-        "Investor": "Investor",
-    
-        "Manager": "Manager"    
-    };
 
 
 
@@ -243,11 +164,6 @@ export default class ProfileHeaderViewModel {
 
 
 
-
-/**
- * @typedef ProfileHeaderViewModelUserTypeEnum 
- * @type {("Investor"|"Manager")}
- */
 
 
 

@@ -30,16 +30,6 @@ import ApiClient from '../ApiClient';
  */
 /**
  *
- * @name FundInvestInfo#availableInWallet
- * @type {Number}
- */
-/**
- *
- * @name FundInvestInfo#minInvestmentAmount
- * @type {Number}
- */
-/**
- *
  * @name FundInvestInfo#programCurrencyMinInvestment
  * @type {Number}
  */
@@ -92,12 +82,6 @@ export default class FundInvestInfo {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
-            if (data.hasOwnProperty('availableInWallet')) {
-                obj['availableInWallet'] = ApiClient.convertToType(data['availableInWallet'], 'Number');
-            }
-            if (data.hasOwnProperty('minInvestmentAmount')) {
-                obj['minInvestmentAmount'] = ApiClient.convertToType(data['minInvestmentAmount'], 'Number');
-            }
             if (data.hasOwnProperty('programCurrencyMinInvestment')) {
                 obj['programCurrencyMinInvestment'] = ApiClient.convertToType(data['programCurrencyMinInvestment'], 'Number');
             }
@@ -118,8 +102,6 @@ export default class FundInvestInfo {
     }
 
     title = undefined;
-    availableInWallet = undefined;
-    minInvestmentAmount = undefined;
     programCurrencyMinInvestment = undefined;
     entryFee = undefined;
     gvCommission = undefined;

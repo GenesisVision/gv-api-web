@@ -10,8 +10,5 @@ Name | Type | Description | Notes
 **drawdownPercent** | **Number** |  | [optional] 
 **investorsCount** | **Number** |  | [optional] 
 **tradesCount** | **Number** |  | [optional] 
-**balanceBase** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
-**balanceGVT** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
-**balanceSecondary** | [**AmountWithCurrency**](AmountWithCurrency.md) |  | [optional] 
 
 

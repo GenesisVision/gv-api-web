@@ -25,21 +25,6 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @name ManagerFinancialStatistic#deposit
- * @type {Number}
- */
-/**
- *
- * @name ManagerFinancialStatistic#withdraw
- * @type {Number}
- */
-/**
- *
- * @name ManagerFinancialStatistic#commissionRebate
- * @type {Number}
- */
-/**
- *
  * @name ManagerFinancialStatistic#successFee
  * @type {Number}
  */
@@ -84,15 +69,6 @@ export default class ManagerFinancialStatistic {
             
             
 
-            if (data.hasOwnProperty('deposit')) {
-                obj['deposit'] = ApiClient.convertToType(data['deposit'], 'Number');
-            }
-            if (data.hasOwnProperty('withdraw')) {
-                obj['withdraw'] = ApiClient.convertToType(data['withdraw'], 'Number');
-            }
-            if (data.hasOwnProperty('commissionRebate')) {
-                obj['commissionRebate'] = ApiClient.convertToType(data['commissionRebate'], 'Number');
-            }
             if (data.hasOwnProperty('successFee')) {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
@@ -109,9 +85,6 @@ export default class ManagerFinancialStatistic {
         return obj;
     }
 
-    deposit = undefined;
-    withdraw = undefined;
-    commissionRebate = undefined;
     successFee = undefined;
     entryFee = undefined;
     profit = undefined;

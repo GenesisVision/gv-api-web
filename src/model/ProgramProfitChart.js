@@ -82,31 +82,6 @@ import PeriodDate from './PeriodDate';
  */
 /**
  *
- * @name ProgramProfitChart#pnLChart
- * @type {Array<ChartSimple>}
- */
-/**
- *
- * @name ProgramProfitChart#totalProgramCurrencyProfit
- * @type {Number}
- */
-/**
- *
- * @name ProgramProfitChart#timeframeProgramCurrencyProfit
- * @type {Number}
- */
-/**
- *
- * @name ProgramProfitChart#totalGvtProfit
- * @type {Number}
- */
-/**
- *
- * @name ProgramProfitChart#timeframeGvtProfit
- * @type {Number}
- */
-/**
- *
  * @name ProgramProfitChart#balance
  * @type {Number}
  */
@@ -204,21 +179,6 @@ export default class ProgramProfitChart {
             if (data.hasOwnProperty('tradingVolume')) {
                 obj['tradingVolume'] = ApiClient.convertToType(data['tradingVolume'], 'Number');
             }
-            if (data.hasOwnProperty('pnLChart')) {
-                obj['pnLChart'] = ApiClient.convertToType(data['pnLChart'], [ChartSimple]);
-            }
-            if (data.hasOwnProperty('totalProgramCurrencyProfit')) {
-                obj['totalProgramCurrencyProfit'] = ApiClient.convertToType(data['totalProgramCurrencyProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeProgramCurrencyProfit')) {
-                obj['timeframeProgramCurrencyProfit'] = ApiClient.convertToType(data['timeframeProgramCurrencyProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('totalGvtProfit')) {
-                obj['totalGvtProfit'] = ApiClient.convertToType(data['totalGvtProfit'], 'Number');
-            }
-            if (data.hasOwnProperty('timeframeGvtProfit')) {
-                obj['timeframeGvtProfit'] = ApiClient.convertToType(data['timeframeGvtProfit'], 'Number');
-            }
             if (data.hasOwnProperty('balance')) {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
@@ -258,11 +218,6 @@ export default class ProgramProfitChart {
     lastPeriodStarts = undefined;
     lastPeriodEnds = undefined;
     tradingVolume = undefined;
-    pnLChart = undefined;
-    totalProgramCurrencyProfit = undefined;
-    timeframeProgramCurrencyProfit = undefined;
-    totalGvtProfit = undefined;
-    timeframeGvtProfit = undefined;
     balance = undefined;
     investors = undefined;
     profitChangePercent = undefined;

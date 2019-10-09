@@ -38,158 +38,13 @@ export default class NotificationsApi {
     }
 
 
-      v10NotificationsByIdReadPostWithHttpInfo(id, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsByIdReadPost");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsByIdReadPost");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/notifications/{id}/read', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Read notification
-     * @function NotificationsApi#v10NotificationsByIdReadPost
-     * @param {String} id 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      v10NotificationsByIdReadPost(id, authorization) {
-      return this.v10NotificationsByIdReadPostWithHttpInfo(id, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10NotificationsGetWithHttpInfo(authorization, opts) {
+      addNotificationsSettingsWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'skip': opts['skip'],
-        'take': opts['take']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = NotificationList;
-
-      return this.apiClient.callApi(
-        '/v1.0/notifications', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * User notifications
-     * @function NotificationsApi#v10NotificationsGet
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {Number} [opts.skip] 
-     * @param {Number} [opts.take] 
-     * @return {CancelablePromise<NotificationList>} a Promise, with an object containing data of type NotificationList and HTTP response
-     */
-      v10NotificationsGet(authorization, opts) {
-      return this.v10NotificationsGetWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10NotificationsNewGetWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsNewGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'Number';
-
-      return this.apiClient.callApi(
-        '/v1.0/notifications/new', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Unread notifications count
-     * @function NotificationsApi#v10NotificationsNewGet
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
-     */
-      v10NotificationsNewGet(authorization) {
-      return this.v10NotificationsNewGetWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10NotificationsSettingsAddPostWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsAddPost");
+        throw new Error("Missing the required parameter 'authorization' when calling addNotificationsSettings");
       }
 
 
@@ -222,7 +77,7 @@ export default class NotificationsApi {
 
     /**
      * Add new setting
-     * @function NotificationsApi#v10NotificationsSettingsAddPost
+     * @function NotificationsApi#addNotificationsSettings
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.assetId] 
@@ -232,29 +87,29 @@ export default class NotificationsApi {
      * @param {Number} [opts.conditionAmount] 
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10NotificationsSettingsAddPost(authorization, opts) {
-      return this.v10NotificationsSettingsAddPostWithHttpInfo(authorization, opts)
+      addNotificationsSettings(authorization, opts) {
+      return this.addNotificationsSettingsWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization) {
+      enableDisableSettingsWithHttpInfo(id, enable, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsByIdByEnablePost");
+        throw new Error("Missing the required parameter 'id' when calling enableDisableSettings");
       }
 
       // verify the required parameter 'enable' is set
       if (enable === undefined || enable === null) {
-        throw new Error("Missing the required parameter 'enable' when calling v10NotificationsSettingsByIdByEnablePost");
+        throw new Error("Missing the required parameter 'enable' when calling enableDisableSettings");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsByIdByEnablePost");
+        throw new Error("Missing the required parameter 'authorization' when calling enableDisableSettings");
       }
 
 
@@ -284,30 +139,124 @@ export default class NotificationsApi {
 
     /**
      * Enable/disable setting
-     * @function NotificationsApi#v10NotificationsSettingsByIdByEnablePost
+     * @function NotificationsApi#enableDisableSettings
      * @param {String} id 
      * @param {Boolean} enable 
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      v10NotificationsSettingsByIdByEnablePost(id, enable, authorization) {
-      return this.v10NotificationsSettingsByIdByEnablePostWithHttpInfo(id, enable, authorization)
+      enableDisableSettings(id, enable, authorization) {
+      return this.enableDisableSettingsWithHttpInfo(id, enable, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization) {
+      getNewNotificationsCountWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getNewNotificationsCount");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Number';
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/new', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Unread notifications count
+     * @function NotificationsApi#getNewNotificationsCount
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<'Number'>} a Promise, with an object containing data of type 'Number' and HTTP response
+     */
+      getNewNotificationsCount(authorization) {
+      return this.getNewNotificationsCountWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getNotificationsWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getNotifications");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'skip': opts['skip'],
+        'take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = NotificationList;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * User notifications
+     * @function NotificationsApi#getNotifications
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<NotificationList>} a Promise, with an object containing data of type NotificationList and HTTP response
+     */
+      getNotifications(authorization, opts) {
+      return this.getNotificationsWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getNotificationsFundSettingsWithHttpInfo(id, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsFundsByIdGet");
+        throw new Error("Missing the required parameter 'id' when calling getNotificationsFundSettings");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsFundsByIdGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getNotificationsFundSettings");
       }
 
 
@@ -336,73 +285,29 @@ export default class NotificationsApi {
 
     /**
      * User settings for fund
-     * @function NotificationsApi#v10NotificationsSettingsFundsByIdGet
+     * @function NotificationsApi#getNotificationsFundSettings
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<FundNotificationSettingList>} a Promise, with an object containing data of type FundNotificationSettingList and HTTP response
      */
-      v10NotificationsSettingsFundsByIdGet(id, authorization) {
-      return this.v10NotificationsSettingsFundsByIdGetWithHttpInfo(id, authorization)
+      getNotificationsFundSettings(id, authorization) {
+      return this.getNotificationsFundSettingsWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10NotificationsSettingsGetWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsGet");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = NotificationSettingList;
-
-      return this.apiClient.callApi(
-        '/v1.0/notifications/settings', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * User settings
-     * @function NotificationsApi#v10NotificationsSettingsGet
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<NotificationSettingList>} a Promise, with an object containing data of type NotificationSettingList and HTTP response
-     */
-      v10NotificationsSettingsGet(authorization) {
-      return this.v10NotificationsSettingsGetWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      v10NotificationsSettingsManagersByIdGetWithHttpInfo(id, authorization) {
+      getNotificationsManagerSettingsWithHttpInfo(id, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsManagersByIdGet");
+        throw new Error("Missing the required parameter 'id' when calling getNotificationsManagerSettings");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsManagersByIdGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getNotificationsManagerSettings");
       }
 
 
@@ -431,29 +336,29 @@ export default class NotificationsApi {
 
     /**
      * User settings for manager
-     * @function NotificationsApi#v10NotificationsSettingsManagersByIdGet
+     * @function NotificationsApi#getNotificationsManagerSettings
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<ManagerNotificationSettingList>} a Promise, with an object containing data of type ManagerNotificationSettingList and HTTP response
      */
-      v10NotificationsSettingsManagersByIdGet(id, authorization) {
-      return this.v10NotificationsSettingsManagersByIdGetWithHttpInfo(id, authorization)
+      getNotificationsManagerSettings(id, authorization) {
+      return this.getNotificationsManagerSettingsWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10NotificationsSettingsProgramsByIdGetWithHttpInfo(id, authorization) {
+      getNotificationsProgramSettingsWithHttpInfo(id, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsProgramsByIdGet");
+        throw new Error("Missing the required parameter 'id' when calling getNotificationsProgramSettings");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsProgramsByIdGet");
+        throw new Error("Missing the required parameter 'authorization' when calling getNotificationsProgramSettings");
       }
 
 
@@ -482,29 +387,124 @@ export default class NotificationsApi {
 
     /**
      * User settings for program
-     * @function NotificationsApi#v10NotificationsSettingsProgramsByIdGet
+     * @function NotificationsApi#getNotificationsProgramSettings
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<ProgramNotificationSettingList>} a Promise, with an object containing data of type ProgramNotificationSettingList and HTTP response
      */
-      v10NotificationsSettingsProgramsByIdGet(id, authorization) {
-      return this.v10NotificationsSettingsProgramsByIdGetWithHttpInfo(id, authorization)
+      getNotificationsProgramSettings(id, authorization) {
+      return this.getNotificationsProgramSettingsWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      v10NotificationsSettingsRemoveByIdPostWithHttpInfo(id, authorization) {
+      getNotificationsSettingsWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getNotificationsSettings");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = NotificationSettingList;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * User settings
+     * @function NotificationsApi#getNotificationsSettings
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<NotificationSettingList>} a Promise, with an object containing data of type NotificationSettingList and HTTP response
+     */
+      getNotificationsSettings(authorization) {
+      return this.getNotificationsSettingsWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      readNotificationWithHttpInfo(id, authorization) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling v10NotificationsSettingsRemoveByIdPost");
+        throw new Error("Missing the required parameter 'id' when calling readNotification");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling v10NotificationsSettingsRemoveByIdPost");
+        throw new Error("Missing the required parameter 'authorization' when calling readNotification");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/{id}/read', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Read notification
+     * @function NotificationsApi#readNotification
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      readNotification(id, authorization) {
+      return this.readNotificationWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      removeNotificationsSettingsWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling removeNotificationsSettings");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling removeNotificationsSettings");
       }
 
 
@@ -533,13 +533,13 @@ export default class NotificationsApi {
 
     /**
      * Remove setting
-     * @function NotificationsApi#v10NotificationsSettingsRemoveByIdPost
+     * @function NotificationsApi#removeNotificationsSettings
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      v10NotificationsSettingsRemoveByIdPost(id, authorization) {
-      return this.v10NotificationsSettingsRemoveByIdPostWithHttpInfo(id, authorization)
+      removeNotificationsSettings(id, authorization) {
+      return this.removeNotificationsSettingsWithHttpInfo(id, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

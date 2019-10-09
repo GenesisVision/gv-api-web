@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**gvtBalance** | **Number** |  | [optional] 
-**programCurrencyBalance** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
 **programCurrency** | **String** |  | [optional] 
 **balanceChart** | [**[ProgramBalanceChartElement]**](ProgramBalanceChartElement.md) |  | [optional] 
