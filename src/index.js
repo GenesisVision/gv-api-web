@@ -39,19 +39,19 @@ import DashboardChartValue from './model/DashboardChartValue';
 import DashboardProgramDetails from './model/DashboardProgramDetails';
 import DashboardSummary from './model/DashboardSummary';
 import DetachFromSignalProvider from './model/DetachFromSignalProvider';
-import Enums from './model/Enums';
+import EnumsOld from './model/EnumsOld';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
-import EventFilters from './model/EventFilters';
-import EventInvestorItemFilters from './model/EventInvestorItemFilters';
-import EventItemFilters from './model/EventItemFilters';
+import EventFiltersOld from './model/EventFiltersOld';
+import EventInvestorItemFiltersOld from './model/EventInvestorItemFiltersOld';
+import EventItemFiltersOld from './model/EventItemFiltersOld';
 import ExternalKeyAddViewModel from './model/ExternalKeyAddViewModel';
 import ExternalKeyViewModel from './model/ExternalKeyViewModel';
 import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import FeeDetails from './model/FeeDetails';
-import FilterModel from './model/FilterModel';
+import FilterModelOld from './model/FilterModelOld';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
 import FundAssetPart from './model/FundAssetPart';
@@ -65,7 +65,7 @@ import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundDetailsOld from './model/FundDetailsOld';
 import FundEquityChartElement from './model/FundEquityChartElement';
 import FundFacet from './model/FundFacet';
-import FundFilters from './model/FundFilters';
+import FundFiltersOld from './model/FundFiltersOld';
 import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChart from './model/FundProfitChart';
@@ -99,7 +99,7 @@ import ManagersList from './model/ManagersList';
 import MigrationRequest from './model/MigrationRequest';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
-import MultiWalletFilters from './model/MultiWalletFilters';
+import MultiWalletFiltersOld from './model/MultiWalletFiltersOld';
 import MultiWalletTransaction from './model/MultiWalletTransaction';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
 import NewFundRequest from './model/NewFundRequest';
@@ -122,9 +122,9 @@ import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
 import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
-import PlatformCurrency from './model/PlatformCurrency';
-import PlatformInfo from './model/PlatformInfo';
-import PlatformStatistic from './model/PlatformStatistic';
+import PlatformCurrencyOld from './model/PlatformCurrencyOld';
+import PlatformInfoOld from './model/PlatformInfoOld';
+import PlatformStatisticOld from './model/PlatformStatisticOld';
 import PowDetails from './model/PowDetails';
 import PowResult from './model/PowResult';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
@@ -136,7 +136,7 @@ import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsOld from './model/ProgramDetailsOld';
 import ProgramFacet from './model/ProgramFacet';
-import ProgramFilters from './model/ProgramFilters';
+import ProgramFiltersOld from './model/ProgramFiltersOld';
 import ProgramInvestInfoOld from './model/ProgramInvestInfoOld';
 import ProgramLevelInfo from './model/ProgramLevelInfo';
 import ProgramMinimumDepositOld from './model/ProgramMinimumDepositOld';
@@ -153,7 +153,7 @@ import ProgramTag from './model/ProgramTag';
 import ProgramTransactionDetails from './model/ProgramTransactionDetails';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
-import ProgramsInfo from './model/ProgramsInfo';
+import ProgramsInfoOld from './model/ProgramsInfoOld';
 import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
 import ProgramsListOld from './model/ProgramsListOld';
 import RateItem from './model/RateItem';
@@ -386,10 +386,10 @@ export {
     DetachFromSignalProvider,
 
     /**
-     * @name index#Enums
-     * @type {Enums}
+     * @name index#EnumsOld
+     * @type {EnumsOld}
      */
-    Enums,
+    EnumsOld,
 
     /**
      * @name index#ErrorMessage
@@ -404,22 +404,22 @@ export {
     ErrorViewModel,
 
     /**
-     * @name index#EventFilters
-     * @type {EventFilters}
+     * @name index#EventFiltersOld
+     * @type {EventFiltersOld}
      */
-    EventFilters,
+    EventFiltersOld,
 
     /**
-     * @name index#EventInvestorItemFilters
-     * @type {EventInvestorItemFilters}
+     * @name index#EventInvestorItemFiltersOld
+     * @type {EventInvestorItemFiltersOld}
      */
-    EventInvestorItemFilters,
+    EventInvestorItemFiltersOld,
 
     /**
-     * @name index#EventItemFilters
-     * @type {EventItemFilters}
+     * @name index#EventItemFiltersOld
+     * @type {EventItemFiltersOld}
      */
-    EventItemFilters,
+    EventItemFiltersOld,
 
     /**
      * @name index#ExternalKeyAddViewModel
@@ -458,10 +458,10 @@ export {
     FeeDetails,
 
     /**
-     * @name index#FilterModel
-     * @type {FilterModel}
+     * @name index#FilterModelOld
+     * @type {FilterModelOld}
      */
-    FilterModel,
+    FilterModelOld,
 
     /**
      * @name index#ForgotPasswordViewModel
@@ -542,10 +542,10 @@ export {
     FundFacet,
 
     /**
-     * @name index#FundFilters
-     * @type {FundFilters}
+     * @name index#FundFiltersOld
+     * @type {FundFiltersOld}
      */
-    FundFilters,
+    FundFiltersOld,
 
     /**
      * @name index#FundInvestInfo
@@ -746,10 +746,10 @@ export {
     MultiWalletExternalTransactionsViewModel,
 
     /**
-     * @name index#MultiWalletFilters
-     * @type {MultiWalletFilters}
+     * @name index#MultiWalletFiltersOld
+     * @type {MultiWalletFiltersOld}
      */
-    MultiWalletFilters,
+    MultiWalletFiltersOld,
 
     /**
      * @name index#MultiWalletTransaction
@@ -884,22 +884,22 @@ export {
     PlatformAssets,
 
     /**
-     * @name index#PlatformCurrency
-     * @type {PlatformCurrency}
+     * @name index#PlatformCurrencyOld
+     * @type {PlatformCurrencyOld}
      */
-    PlatformCurrency,
+    PlatformCurrencyOld,
 
     /**
-     * @name index#PlatformInfo
-     * @type {PlatformInfo}
+     * @name index#PlatformInfoOld
+     * @type {PlatformInfoOld}
      */
-    PlatformInfo,
+    PlatformInfoOld,
 
     /**
-     * @name index#PlatformStatistic
-     * @type {PlatformStatistic}
+     * @name index#PlatformStatisticOld
+     * @type {PlatformStatisticOld}
      */
-    PlatformStatistic,
+    PlatformStatisticOld,
 
     /**
      * @name index#PowDetails
@@ -968,10 +968,10 @@ export {
     ProgramFacet,
 
     /**
-     * @name index#ProgramFilters
-     * @type {ProgramFilters}
+     * @name index#ProgramFiltersOld
+     * @type {ProgramFiltersOld}
      */
-    ProgramFilters,
+    ProgramFiltersOld,
 
     /**
      * @name index#ProgramInvestInfoOld
@@ -1070,10 +1070,10 @@ export {
     ProgramWithdrawInfo,
 
     /**
-     * @name index#ProgramsInfo
-     * @type {ProgramsInfo}
+     * @name index#ProgramsInfoOld
+     * @type {ProgramsInfoOld}
      */
-    ProgramsInfo,
+    ProgramsInfoOld,
 
     /**
      * @name index#ProgramsLevelsInfo

@@ -138,7 +138,7 @@ No authorization required
 
 <a name="getPlatformStatistic"></a>
 # **getPlatformStatistic**
-> PlatformStatistic getPlatformStatistic()
+> PlatformStatisticOld getPlatformStatistic()
 
 Platform statistic
 
@@ -160,7 +160,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PlatformStatistic**](PlatformStatistic.md)
+[**PlatformStatisticOld**](PlatformStatisticOld.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ No authorization required
 
 <a name="getPlatformStatus"></a>
 # **getPlatformStatus**
-> PlatformInfo getPlatformStatus()
+> PlatformInfoOld getPlatformStatus()
 
 Platform info
 
@@ -195,7 +195,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PlatformInfo**](PlatformInfo.md)
+[**PlatformInfoOld**](PlatformInfoOld.md)
 
 ### Authorization
 

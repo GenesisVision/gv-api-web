@@ -380,8 +380,8 @@ export declare class PlatformApi {
         currency?: string;
     }): CancelablePromise<LevelsParamsInfo>;
     getPlatformDate(): CancelablePromise<string>;
-    getPlatformStatistic(): CancelablePromise<PlatformStatistic>;
-    getPlatformStatus(): CancelablePromise<PlatformInfo>;
+    getPlatformStatistic(): CancelablePromise<PlatformStatisticOld>;
+    getPlatformStatus(): CancelablePromise<PlatformInfoOld>;
     getProgramsLevels(opts?: {
         currency?: string;
     }): CancelablePromise<ProgramsLevelsInfo>;
@@ -660,19 +660,19 @@ export declare interface index {
     DashboardProgramDetails: DashboardProgramDetails;
     DashboardSummary: DashboardSummary;
     DetachFromSignalProvider: DetachFromSignalProvider;
-    Enums: Enums;
+    EnumsOld: EnumsOld;
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
-    EventFilters: EventFilters;
-    EventInvestorItemFilters: EventInvestorItemFilters;
-    EventItemFilters: EventItemFilters;
+    EventFiltersOld: EventFiltersOld;
+    EventInvestorItemFiltersOld: EventInvestorItemFiltersOld;
+    EventItemFiltersOld: EventItemFiltersOld;
     ExternalKeyAddViewModel: ExternalKeyAddViewModel;
     ExternalKeyViewModel: ExternalKeyViewModel;
     ExternalKeysViewModel: ExternalKeysViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
     FcmTokenViewModel: FcmTokenViewModel;
     FeeDetails: FeeDetails;
-    FilterModel: FilterModel;
+    FilterModelOld: FilterModelOld;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
     FundAssetPart: FundAssetPart;
@@ -686,7 +686,7 @@ export declare interface index {
     FundDetailsOld: FundDetailsOld;
     FundEquityChartElement: FundEquityChartElement;
     FundFacet: FundFacet;
-    FundFilters: FundFilters;
+    FundFiltersOld: FundFiltersOld;
     FundInvestInfo: FundInvestInfo;
     FundNotificationSettingList: FundNotificationSettingList;
     FundProfitChart: FundProfitChart;
@@ -720,7 +720,7 @@ export declare interface index {
     MigrationRequest: MigrationRequest;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
-    MultiWalletFilters: MultiWalletFilters;
+    MultiWalletFiltersOld: MultiWalletFiltersOld;
     MultiWalletTransaction: MultiWalletTransaction;
     MultiWalletTransactionsViewModel: MultiWalletTransactionsViewModel;
     NewFundRequest: NewFundRequest;
@@ -743,9 +743,9 @@ export declare interface index {
     PersonalSignalDetailsFull: PersonalSignalDetailsFull;
     PlatformAsset: PlatformAsset;
     PlatformAssets: PlatformAssets;
-    PlatformCurrency: PlatformCurrency;
-    PlatformInfo: PlatformInfo;
-    PlatformStatistic: PlatformStatistic;
+    PlatformCurrencyOld: PlatformCurrencyOld;
+    PlatformInfoOld: PlatformInfoOld;
+    PlatformStatisticOld: PlatformStatisticOld;
     PowDetails: PowDetails;
     PowResult: PowResult;
     ProfileFullViewModel: ProfileFullViewModel;
@@ -757,7 +757,7 @@ export declare interface index {
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsOld: ProgramDetailsOld;
     ProgramFacet: ProgramFacet;
-    ProgramFilters: ProgramFilters;
+    ProgramFiltersOld: ProgramFiltersOld;
     ProgramInvestInfoOld: ProgramInvestInfoOld;
     ProgramLevelInfo: ProgramLevelInfo;
     ProgramMinimumDepositOld: ProgramMinimumDepositOld;
@@ -774,7 +774,7 @@ export declare interface index {
     ProgramTransactionDetails: ProgramTransactionDetails;
     ProgramUpdate: ProgramUpdate;
     ProgramWithdrawInfo: ProgramWithdrawInfo;
-    ProgramsInfo: ProgramsInfo;
+    ProgramsInfoOld: ProgramsInfoOld;
     ProgramsLevelsInfo: ProgramsLevelsInfo;
     ProgramsListOld: ProgramsListOld;
     RateItem: RateItem;
@@ -1146,6 +1146,14 @@ export declare interface Enums {
     assetTypes: string[];
 }
 
+export declare interface EnumsOld {
+    multiWallet: MultiWalletFiltersOld;
+    program: ProgramFiltersOld;
+    fund: FundFiltersOld;
+    event: EventFiltersOld;
+    assetTypes: string[];
+}
+
 export declare interface ErrorMessage {
     message: string;
     property: string;
@@ -1163,6 +1171,11 @@ export declare interface EventFilters {
     investor: EventInvestorItemFilters;
 }
 
+export declare interface EventFiltersOld {
+    manager: EventItemFiltersOld;
+    investor: EventInvestorItemFiltersOld;
+}
+
 export declare interface EventInvestorItemFilters {
     signalProgramDetails: FilterModel[];
     programDetails: FilterModel[];
@@ -1170,10 +1183,23 @@ export declare interface EventInvestorItemFilters {
     allAssets: FilterModel[];
 }
 
+export declare interface EventInvestorItemFiltersOld {
+    signalProgramDetails: FilterModelOld[];
+    programDetails: FilterModelOld[];
+    fundDetails: FilterModelOld[];
+    allAssets: FilterModelOld[];
+}
+
 export declare interface EventItemFilters {
     programDetails: FilterModel[];
     fundDetails: FilterModel[];
     allAssets: FilterModel[];
+}
+
+export declare interface EventItemFiltersOld {
+    programDetails: FilterModelOld[];
+    fundDetails: FilterModelOld[];
+    allAssets: FilterModelOld[];
 }
 
 export declare interface ExternalKeyAddViewModel {
@@ -1219,6 +1245,11 @@ export declare interface FeeDetails {
 }
 
 export declare interface FilterModel {
+    key: string;
+    title: string;
+}
+
+export declare interface FilterModelOld {
     key: string;
     title: string;
 }
@@ -1378,6 +1409,10 @@ export declare interface FundFacet {
 }
 
 export declare interface FundFilters {
+    assets: PlatformAsset[];
+}
+
+export declare interface FundFiltersOld {
     assets: PlatformAsset[];
 }
 
@@ -1726,6 +1761,11 @@ export declare interface MultiWalletFilters {
     externalTransactionType: string[];
 }
 
+export declare interface MultiWalletFiltersOld {
+    transactionType: string[];
+    externalTransactionType: string[];
+}
+
 export declare type MultiWalletTransactionCurrencyFromEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type MultiWalletTransactionCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -2047,6 +2087,12 @@ export declare interface PlatformCurrency {
     color: string;
 }
 
+export declare interface PlatformCurrencyOld {
+    name: string;
+    rateToGvt: number;
+    color: string;
+}
+
 export declare interface PlatformInfo {
     iOSVersion: IOsAppVersion;
     androidVersion: AndroidAppVersion;
@@ -2059,7 +2105,28 @@ export declare interface PlatformInfo {
     enums: Enums;
 }
 
+export declare interface PlatformInfoOld {
+    iOSVersion: IOsAppVersion;
+    androidVersion: AndroidAppVersion;
+    programsFacets: ProgramFacet[];
+    fundsFacets: FundFacet[];
+    programsInfo: ProgramsInfoOld;
+    currencies: string[];
+    programCurrencies: string[];
+    platformCurrencies: PlatformCurrencyOld[];
+    enums: EnumsOld;
+}
+
 export declare interface PlatformStatistic {
+    managers: number;
+    investors: number;
+    profitWeek: number;
+    investmentAmount: number;
+    totalInvestorsProfit: number;
+    totalProfit: number;
+}
+
+export declare interface PlatformStatisticOld {
     managers: number;
     investors: number;
     profitWeek: number;
@@ -2347,6 +2414,12 @@ export declare interface ProgramFilters {
     customNotificationType: string[];
 }
 
+export declare interface ProgramFiltersOld {
+    programTags: ProgramTag[];
+    actionType: string[];
+    customNotificationType: string[];
+}
+
 export declare interface ProgramInfo {
     title: string;
 }
@@ -2612,6 +2685,23 @@ export declare interface ProgramWithdrawInfo {
 }
 
 export declare interface ProgramsInfo {
+    managerProgramInvestment: number;
+    managerProgramInvestmentUSD: number;
+    managerProgramInvestmentUSDT: number;
+    managerProgramInvestmentBTC: number;
+    managerProgramInvestmentETH: number;
+    managerMaxEntryFee: number;
+    managerMaxSuccessFee: number;
+    managerFundInvestment: number;
+    managerMaxExitFee: number;
+    managerMaxSignalVolumeFee: number;
+    managerMinSignalVolumeFee: number;
+    managerMaxSignalSuccessFee: number;
+    managerMinSignalSuccessFee: number;
+    periods: number[];
+}
+
+export declare interface ProgramsInfoOld {
     managerProgramInvestment: number;
     managerProgramInvestmentUSD: number;
     managerProgramInvestmentUSDT: number;

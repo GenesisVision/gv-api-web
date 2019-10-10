@@ -16,8 +16,8 @@ import ApiClient from "../ApiClient";
 import CaptchaDetails from '../model/CaptchaDetails';
 import ErrorViewModel from '../model/ErrorViewModel';
 import LevelsParamsInfo from '../model/LevelsParamsInfo';
-import PlatformInfo from '../model/PlatformInfo';
-import PlatformStatistic from '../model/PlatformStatistic';
+import PlatformInfoOld from '../model/PlatformInfoOld';
+import PlatformStatisticOld from '../model/PlatformStatisticOld';
 import ProgramsLevelsInfo from '../model/ProgramsLevelsInfo';
 
 /**
@@ -182,7 +182,7 @@ export default class PlatformApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = PlatformStatistic;
+      let returnType = PlatformStatisticOld;
 
       return this.apiClient.callApi(
         '/v1.0/platform/statistic', 'GET',
@@ -194,7 +194,7 @@ export default class PlatformApi {
     /**
      * Platform statistic
      * @function PlatformApi#getPlatformStatistic
-     * @return {CancelablePromise<PlatformStatistic>} a Promise, with an object containing data of type PlatformStatistic and HTTP response
+     * @return {CancelablePromise<PlatformStatisticOld>} a Promise, with an object containing data of type PlatformStatisticOld and HTTP response
      */
       getPlatformStatistic() {
       return this.getPlatformStatisticWithHttpInfo()
@@ -219,7 +219,7 @@ export default class PlatformApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = PlatformInfo;
+      let returnType = PlatformInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/platform/info', 'GET',
@@ -231,7 +231,7 @@ export default class PlatformApi {
     /**
      * Platform info
      * @function PlatformApi#getPlatformStatus
-     * @return {CancelablePromise<PlatformInfo>} a Promise, with an object containing data of type PlatformInfo and HTTP response
+     * @return {CancelablePromise<PlatformInfoOld>} a Promise, with an object containing data of type PlatformInfoOld and HTTP response
      */
       getPlatformStatus() {
       return this.getPlatformStatusWithHttpInfo()
