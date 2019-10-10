@@ -19,7 +19,6 @@ Method | HTTP request | Description
 [**getFundInvestInfo**](ManagerApi.md#getFundInvestInfo) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**getFundInvestment**](ManagerApi.md#getFundInvestment) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
 [**getFundWithdrawInfo**](ManagerApi.md#getFundWithdrawInfo) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-[**getInvestInfo**](ManagerApi.md#getInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**getLevelsCalculator**](ManagerApi.md#getLevelsCalculator) | **GET** /v1.0/manager/programs/{id}/levels/info | Get program data for levels calculator
 [**getManagerAssets**](ManagerApi.md#getManagerAssets) | **GET** /v1.0/manager/assets | Manager assets list
 [**getManagerDetails**](ManagerApi.md#getManagerDetails) | **GET** /v1.0/manager/{id}/details | Manager details
@@ -27,13 +26,14 @@ Method | HTTP request | Description
 [**getManagerProfile**](ManagerApi.md#getManagerProfile) | **GET** /v1.0/manager/{id} | Manager profile
 [**getManagerPrograms**](ManagerApi.md#getManagerPrograms) | **GET** /v1.0/manager/programs | Manager programs
 [**getProgram2FA**](ManagerApi.md#getProgram2FA) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
+[**getProgramInvestInfo**](ManagerApi.md#getProgramInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**getProgramInvestment**](ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
 [**getProgramRequests**](ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**getProgramRequests_0**](ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**getProgramWithdrawInfo**](ManagerApi.md#getProgramWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**getRequests**](ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
-[**investInfoProgram**](ManagerApi.md#investInfoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**investIntoFund**](ManagerApi.md#investIntoFund) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit.  Invest in GVT if currency is empty
+[**investIntoProgram**](ManagerApi.md#investIntoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**updateFundAssets**](ManagerApi.md#updateFundAssets) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
 [**updateInvestmentProgram**](ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
 [**updateInvestmentProgram_0**](ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
@@ -740,53 +740,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="getInvestInfo"></a>
-# **getInvestInfo**
-> ProgramInvestInfoOld getInvestInfo(id, currency, authorization)
-
-Data for investing into the program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.ManagerApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.getInvestInfo(id, currency, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramInvestInfoOld**](ProgramInvestInfoOld.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
 <a name="getLevelsCalculator"></a>
 # **getLevelsCalculator**
 > ProgramLevelInfo getLevelsCalculator(id, authorization)
@@ -1129,6 +1082,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
+<a name="getProgramInvestInfo"></a>
+# **getProgramInvestInfo**
+> ProgramInvestInfoOld getProgramInvestInfo(id, currency, authorization)
+
+Data for investing into the program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ManagerApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getProgramInvestInfo(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramInvestInfoOld**](ProgramInvestInfoOld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
 <a name="getProgramInvestment"></a>
 # **getProgramInvestment**
 > ProgramMinimumDepositOld getProgramInvestment(authorization, opts)
@@ -1372,11 +1372,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="investInfoProgram"></a>
-# **investInfoProgram**
-> investInfoProgram(id, amount, authorization, opts)
+<a name="investIntoFund"></a>
+# **investIntoFund**
+> investIntoFund(id, amount, authorization, opts)
 
-Deposit  Invest in GVT if currency is empty
+Deposit.  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -1393,7 +1393,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.investInfoProgram(id, amount, authorization, opts).then(() => {
+apiInstance.investIntoFund(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1423,11 +1423,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="investIntoFund"></a>
-# **investIntoFund**
-> investIntoFund(id, amount, authorization, opts)
+<a name="investIntoProgram"></a>
+# **investIntoProgram**
+> investIntoProgram(id, amount, authorization, opts)
 
-Deposit.  Invest in GVT if currency is empty
+Deposit  Invest in GVT if currency is empty
 
 ### Example
 ```javascript
@@ -1444,7 +1444,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.investIntoFund(id, amount, authorization, opts).then(() => {
+apiInstance.investIntoProgram(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

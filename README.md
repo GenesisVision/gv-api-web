@@ -162,7 +162,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**getFundInvestInfo**](docs/ManagerApi.md#getFundInvestInfo) | **GET** /v1.0/manager/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.ManagerApi* | [**getFundInvestment**](docs/ManagerApi.md#getFundInvestment) | **GET** /v1.0/manager/funds/investment/amount | Get GVT investment to create fund
 *CoreApiV10.ManagerApi* | [**getFundWithdrawInfo**](docs/ManagerApi.md#getFundWithdrawInfo) | **GET** /v1.0/manager/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
-*CoreApiV10.ManagerApi* | [**getInvestInfo**](docs/ManagerApi.md#getInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.ManagerApi* | [**getLevelsCalculator**](docs/ManagerApi.md#getLevelsCalculator) | **GET** /v1.0/manager/programs/{id}/levels/info | Get program data for levels calculator
 *CoreApiV10.ManagerApi* | [**getManagerAssets**](docs/ManagerApi.md#getManagerAssets) | **GET** /v1.0/manager/assets | Manager assets list
 *CoreApiV10.ManagerApi* | [**getManagerDetails**](docs/ManagerApi.md#getManagerDetails) | **GET** /v1.0/manager/{id}/details | Manager details
@@ -170,13 +169,14 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**getManagerProfile**](docs/ManagerApi.md#getManagerProfile) | **GET** /v1.0/manager/{id} | Manager profile
 *CoreApiV10.ManagerApi* | [**getManagerPrograms**](docs/ManagerApi.md#getManagerPrograms) | **GET** /v1.0/manager/programs | Manager programs
 *CoreApiV10.ManagerApi* | [**getProgram2FA**](docs/ManagerApi.md#getProgram2FA) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
+*CoreApiV10.ManagerApi* | [**getProgramInvestInfo**](docs/ManagerApi.md#getProgramInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.ManagerApi* | [**getProgramInvestment**](docs/ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
 *CoreApiV10.ManagerApi* | [**getProgramRequests**](docs/ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagerApi* | [**getProgramRequests_0**](docs/ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagerApi* | [**getProgramWithdrawInfo**](docs/ManagerApi.md#getProgramWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.ManagerApi* | [**getRequests**](docs/ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
-*CoreApiV10.ManagerApi* | [**investInfoProgram**](docs/ManagerApi.md#investInfoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**investIntoFund**](docs/ManagerApi.md#investIntoFund) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit.  Invest in GVT if currency is empty
+*CoreApiV10.ManagerApi* | [**investIntoProgram**](docs/ManagerApi.md#investIntoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**updateFundAssets**](docs/ManagerApi.md#updateFundAssets) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
 *CoreApiV10.ManagerApi* | [**updateInvestmentProgram**](docs/ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
 *CoreApiV10.ManagerApi* | [**updateInvestmentProgram_0**](docs/ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details

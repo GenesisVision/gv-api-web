@@ -273,7 +273,6 @@ export declare class ManagerApi {
     getFundInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<FundInvestInfo>;
     getFundInvestment(authorization: string): CancelablePromise<number>;
     getFundWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ManagerFundWithdrawInfo>;
-    getInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfoOld>;
     getLevelsCalculator(id: string, authorization: string): CancelablePromise<ProgramLevelInfo>;
     getManagerAssets(authorization: string): CancelablePromise<ManagerAssets>;
     getManagerDetails(id: string): CancelablePromise<ManagerProfileDetails>;
@@ -307,6 +306,7 @@ export declare class ManagerApi {
     getProgram2FA(authorization: string, opts?: {
         programId?: string;
     }): CancelablePromise<TwoFactorAuthenticator>;
+    getProgramInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfoOld>;
     getProgramInvestment(authorization: string, opts?: {
         brokerTradingAccount?: string;
     }): CancelablePromise<ProgramMinimumDepositOld>;
@@ -316,10 +316,10 @@ export declare class ManagerApi {
     getRequests(skip: number, take: number, authorization: string, opts?: {
         assetType?: string;
     }): CancelablePromise<ProgramRequestsOld>;
-    investInfoProgram(id: string, amount: number, authorization: string, opts?: {
+    investIntoFund(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
     }): CancelablePromise<any>;
-    investIntoFund(id: string, amount: number, authorization: string, opts?: {
+    investIntoProgram(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
     }): CancelablePromise<any>;
     updateFundAssets(id: string, authorization: string, opts?: {
