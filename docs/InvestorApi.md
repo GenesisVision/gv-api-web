@@ -10,16 +10,16 @@ Method | HTTP request | Description
 [**getFundInvestInfo**](InvestorApi.md#getFundInvestInfo) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 [**getFundWithdrawInfo**](InvestorApi.md#getFundWithdrawInfo) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 [**getFunds**](InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Dashboard funds list
-[**getInvestInfo**](InvestorApi.md#getInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**getPortfolioChart**](InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
+[**getProgramInvestInfo**](InvestorApi.md#getProgramInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**getProgramRequests**](InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 [**getProgramRequests_0**](InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
 [**getProgramWithdrawInfo**](InvestorApi.md#getProgramWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**getPrograms**](InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
 [**getRequests**](InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 [**getSignalPrograms**](InvestorApi.md#getSignalPrograms) | **GET** /v1.0/investor/signals | Dashboard signal providers list
-[**investInfoFund**](InvestorApi.md#investInfoFund) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
-[**investInfoProgram**](InvestorApi.md#investInfoProgram) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
+[**investIntoFund**](InvestorApi.md#investIntoFund) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
+[**investIntoProgram**](InvestorApi.md#investIntoProgram) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
 [**switchReinvestOff**](InvestorApi.md#switchReinvestOff) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 [**switchReinvestOn**](InvestorApi.md#switchReinvestOn) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 [**withdrawFromFund**](InvestorApi.md#withdrawFromFund) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty
@@ -348,53 +348,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="getInvestInfo"></a>
-# **getInvestInfo**
-> ProgramInvestInfoOld getInvestInfo(id, currency, authorization)
-
-Data for investing into the program
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.InvestorApi();
-
-let id = "id_example"; // String | 
-
-let currency = "currency_example"; // String | 
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.getInvestInfo(id, currency, authorization).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **currency** | **String**|  | 
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-[**ProgramInvestInfoOld**](ProgramInvestInfoOld.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
 <a name="getPortfolioChart"></a>
 # **getPortfolioChart**
 > DashboardChartValue getPortfolioChart(authorization, opts)
@@ -438,6 +391,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DashboardChartValue**](DashboardChartValue.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getProgramInvestInfo"></a>
+# **getProgramInvestInfo**
+> ProgramInvestInfoOld getProgramInvestInfo(id, currency, authorization)
+
+Data for investing into the program
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.InvestorApi();
+
+let id = "id_example"; // String | 
+
+let currency = "currency_example"; // String | 
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.getProgramInvestInfo(id, currency, authorization).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **currency** | **String**|  | 
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+[**ProgramInvestInfoOld**](ProgramInvestInfoOld.md)
 
 ### Authorization
 
@@ -770,9 +770,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="investInfoFund"></a>
-# **investInfoFund**
-> investInfoFund(id, amount, authorization, opts)
+<a name="investIntoFund"></a>
+# **investIntoFund**
+> investIntoFund(id, amount, authorization, opts)
 
 Investing into the fund.  Invest in GVT if currency is empty
 
@@ -791,7 +791,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.investInfoFund(id, amount, authorization, opts).then(() => {
+apiInstance.investIntoFund(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -821,9 +821,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="investInfoProgram"></a>
-# **investInfoProgram**
-> investInfoProgram(id, amount, authorization, opts)
+<a name="investIntoProgram"></a>
+# **investIntoProgram**
+> investIntoProgram(id, amount, authorization, opts)
 
 Investing into the program.  Invest in GVT if currency is empty
 
@@ -842,7 +842,7 @@ let authorization = "authorization_example"; // String | JWT access token
 let opts = { 
   'currency': "100" // String | 
 };
-apiInstance.investInfoProgram(id, amount, authorization, opts).then(() => {
+apiInstance.investIntoProgram(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

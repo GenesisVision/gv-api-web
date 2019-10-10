@@ -132,16 +132,16 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**getFundInvestInfo**](docs/InvestorApi.md#getFundInvestInfo) | **GET** /v1.0/investor/funds/{id}/invest/info/{currency} | Data for investing into the fund
 *CoreApiV10.InvestorApi* | [**getFundWithdrawInfo**](docs/InvestorApi.md#getFundWithdrawInfo) | **GET** /v1.0/investor/funds/{id}/withdraw/info/{currency} | Data for withdrawal from fund
 *CoreApiV10.InvestorApi* | [**getFunds**](docs/InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Dashboard funds list
-*CoreApiV10.InvestorApi* | [**getInvestInfo**](docs/InvestorApi.md#getInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.InvestorApi* | [**getPortfolioChart**](docs/InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
+*CoreApiV10.InvestorApi* | [**getProgramInvestInfo**](docs/InvestorApi.md#getProgramInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.InvestorApi* | [**getProgramRequests**](docs/InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 *CoreApiV10.InvestorApi* | [**getProgramRequests_0**](docs/InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
 *CoreApiV10.InvestorApi* | [**getProgramWithdrawInfo**](docs/InvestorApi.md#getProgramWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.InvestorApi* | [**getPrograms**](docs/InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**getRequests**](docs/InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
 *CoreApiV10.InvestorApi* | [**getSignalPrograms**](docs/InvestorApi.md#getSignalPrograms) | **GET** /v1.0/investor/signals | Dashboard signal providers list
-*CoreApiV10.InvestorApi* | [**investInfoFund**](docs/InvestorApi.md#investInfoFund) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
-*CoreApiV10.InvestorApi* | [**investInfoProgram**](docs/InvestorApi.md#investInfoProgram) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
+*CoreApiV10.InvestorApi* | [**investIntoFund**](docs/InvestorApi.md#investIntoFund) | **POST** /v1.0/investor/funds/{id}/invest/{amount} | Investing into the fund.  Invest in GVT if currency is empty
+*CoreApiV10.InvestorApi* | [**investIntoProgram**](docs/InvestorApi.md#investIntoProgram) | **POST** /v1.0/investor/programs/{id}/invest/{amount} | Investing into the program.  Invest in GVT if currency is empty
 *CoreApiV10.InvestorApi* | [**switchReinvestOff**](docs/InvestorApi.md#switchReinvestOff) | **POST** /v1.0/investor/programs/{id}/reinvest/off | Disable reinvesting
 *CoreApiV10.InvestorApi* | [**switchReinvestOn**](docs/InvestorApi.md#switchReinvestOn) | **POST** /v1.0/investor/programs/{id}/reinvest/on | Enable reinvesting
 *CoreApiV10.InvestorApi* | [**withdrawFromFund**](docs/InvestorApi.md#withdrawFromFund) | **POST** /v1.0/investor/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of investor total money.  Withdraw in GVT if currency is empty

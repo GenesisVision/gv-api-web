@@ -173,7 +173,6 @@ export declare class InvestorApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsListOld>;
-    getInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfoOld>;
     getPortfolioChart(authorization: string, opts?: {
         currency?: string;
         from?: Date;
@@ -181,6 +180,7 @@ export declare class InvestorApi {
         balancePoints?: number;
         programsPoints?: number;
     }): CancelablePromise<DashboardChartValue>;
+    getProgramInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfoOld>;
     getProgramRequests(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
     getProgramRequests_0(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
     getProgramWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramWithdrawInfo>;
@@ -210,10 +210,10 @@ export declare class InvestorApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalsList>;
-    investInfoFund(id: string, amount: number, authorization: string, opts?: {
+    investIntoFund(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
     }): CancelablePromise<any>;
-    investInfoProgram(id: string, amount: number, authorization: string, opts?: {
+    investIntoProgram(id: string, amount: number, authorization: string, opts?: {
         currency?: string;
     }): CancelablePromise<any>;
     switchReinvestOff(id: string, authorization: string): CancelablePromise<any>;
