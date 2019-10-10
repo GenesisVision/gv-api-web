@@ -138,7 +138,7 @@ No authorization required
 
 <a name="getFundBalanceChart"></a>
 # **getFundBalanceChart**
-> FundBalanceChart getFundBalanceChart(id, opts)
+> FundBalanceChartOld getFundBalanceChart(id, opts)
 
 Fund balance chart
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FundBalanceChart**](FundBalanceChart.md)
+[**FundBalanceChartOld**](FundBalanceChartOld.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ No authorization required
 
 <a name="getFundProfitChart"></a>
 # **getFundProfitChart**
-> FundProfitChart getFundProfitChart(id, opts)
+> FundProfitChartOld getFundProfitChart(id, opts)
 
 Fund profit chart
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FundProfitChart**](FundProfitChart.md)
+[**FundProfitChartOld**](FundProfitChartOld.md)
 
 ### Authorization
 

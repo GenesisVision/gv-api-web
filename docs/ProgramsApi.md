@@ -242,7 +242,7 @@ No authorization required
 
 <a name="getProgramBalanceChart"></a>
 # **getProgramBalanceChart**
-> ProgramBalanceChart getProgramBalanceChart(id, opts)
+> ProgramBalanceChartOld getProgramBalanceChart(id, opts)
 
 Program balance chart
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProgramBalanceChart**](ProgramBalanceChart.md)
+[**ProgramBalanceChartOld**](ProgramBalanceChartOld.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ No authorization required
 
 <a name="getProgramProfitChart"></a>
 # **getProgramProfitChart**
-> ProgramProfitChart getProgramProfitChart(id, opts)
+> ProgramProfitChartOld getProgramProfitChart(id, opts)
 
 Program profit chart
 
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProgramProfitChart**](ProgramProfitChart.md)
+[**ProgramProfitChartOld**](ProgramProfitChartOld.md)
 
 ### Authorization
 

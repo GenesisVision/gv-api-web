@@ -15,9 +15,9 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetsListInfo from '../model/FundAssetsListInfo';
-import FundBalanceChart from '../model/FundBalanceChart';
+import FundBalanceChartOld from '../model/FundBalanceChartOld';
 import FundDetailsFull from '../model/FundDetailsFull';
-import FundProfitChart from '../model/FundProfitChart';
+import FundProfitChartOld from '../model/FundProfitChartOld';
 import FundSets from '../model/FundSets';
 import FundsListOld from '../model/FundsListOld';
 import PlatformAssets from '../model/PlatformAssets';
@@ -200,7 +200,7 @@ export default class FundsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundBalanceChart;
+      let returnType = FundBalanceChartOld;
 
       return this.apiClient.callApi(
         '/v1.0/funds/{id}/charts/balance', 'GET',
@@ -218,7 +218,7 @@ export default class FundsApi {
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
      * @param {String} [opts.currency] 
-     * @return {CancelablePromise<FundBalanceChart>} a Promise, with an object containing data of type FundBalanceChart and HTTP response
+     * @return {CancelablePromise<FundBalanceChartOld>} a Promise, with an object containing data of type FundBalanceChartOld and HTTP response
      */
       getFundBalanceChart(id, opts) {
       return this.getFundBalanceChartWithHttpInfo(id, opts)
@@ -305,7 +305,7 @@ export default class FundsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundProfitChart;
+      let returnType = FundProfitChartOld;
 
       return this.apiClient.callApi(
         '/v1.0/funds/{id}/charts/profit', 'GET',
@@ -324,7 +324,7 @@ export default class FundsApi {
      * @param {Number} [opts.maxPointCount] 
      * @param {String} [opts.currency] 
      * @param {Number} [opts.chartAssetsCount]  (default to 3)
-     * @return {CancelablePromise<FundProfitChart>} a Promise, with an object containing data of type FundProfitChart and HTTP response
+     * @return {CancelablePromise<FundProfitChartOld>} a Promise, with an object containing data of type FundProfitChartOld and HTTP response
      */
       getFundProfitChart(id, opts) {
       return this.getFundProfitChartWithHttpInfo(id, opts)

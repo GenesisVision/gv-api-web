@@ -20,7 +20,7 @@ import AssetDetails from './model/AssetDetails';
 import AssetsValue from './model/AssetsValue';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
-import BalanceChartElement from './model/BalanceChartElement';
+import BalanceChartElementOld from './model/BalanceChartElementOld';
 import Broker from './model/Broker';
 import BrokerAccountType from './model/BrokerAccountType';
 import BrokerDetails from './model/BrokerDetails';
@@ -59,16 +59,16 @@ import FundAssetPartWithIcon from './model/FundAssetPartWithIcon';
 import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
 import FundAssetsState from './model/FundAssetsState';
-import FundBalanceChart from './model/FundBalanceChart';
+import FundBalanceChartOld from './model/FundBalanceChartOld';
 import FundDetailsFull from './model/FundDetailsFull';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundDetailsOld from './model/FundDetailsOld';
-import FundEquityChartElement from './model/FundEquityChartElement';
+import FundEquityChartElementOld from './model/FundEquityChartElementOld';
 import FundFacet from './model/FundFacet';
 import FundFiltersOld from './model/FundFiltersOld';
 import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
-import FundProfitChart from './model/FundProfitChart';
+import FundProfitChartOld from './model/FundProfitChartOld';
 import FundSets from './model/FundSets';
 import FundStatistic from './model/FundStatistic';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
@@ -130,8 +130,8 @@ import PowResult from './model/PowResult';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
-import ProgramBalanceChart from './model/ProgramBalanceChart';
-import ProgramBalanceChartElement from './model/ProgramBalanceChartElement';
+import ProgramBalanceChartElementOld from './model/ProgramBalanceChartElementOld';
+import ProgramBalanceChartOld from './model/ProgramBalanceChartOld';
 import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsOld from './model/ProgramDetailsOld';
@@ -143,7 +143,7 @@ import ProgramMinimumDepositOld from './model/ProgramMinimumDepositOld';
 import ProgramNotificationSettingList from './model/ProgramNotificationSettingList';
 import ProgramPeriodViewModel from './model/ProgramPeriodViewModel';
 import ProgramPeriodsViewModel from './model/ProgramPeriodsViewModel';
-import ProgramProfitChart from './model/ProgramProfitChart';
+import ProgramProfitChartOld from './model/ProgramProfitChartOld';
 import ProgramPwdUpdate from './model/ProgramPwdUpdate';
 import ProgramRequestOld from './model/ProgramRequestOld';
 import ProgramRequestsOld from './model/ProgramRequestsOld';
@@ -272,10 +272,10 @@ export {
     AttachToSignalProviderInfo,
 
     /**
-     * @name index#BalanceChartElement
-     * @type {BalanceChartElement}
+     * @name index#BalanceChartElementOld
+     * @type {BalanceChartElementOld}
      */
-    BalanceChartElement,
+    BalanceChartElementOld,
 
     /**
      * @name index#Broker
@@ -506,10 +506,10 @@ export {
     FundAssetsState,
 
     /**
-     * @name index#FundBalanceChart
-     * @type {FundBalanceChart}
+     * @name index#FundBalanceChartOld
+     * @type {FundBalanceChartOld}
      */
-    FundBalanceChart,
+    FundBalanceChartOld,
 
     /**
      * @name index#FundDetailsFull
@@ -530,10 +530,10 @@ export {
     FundDetailsOld,
 
     /**
-     * @name index#FundEquityChartElement
-     * @type {FundEquityChartElement}
+     * @name index#FundEquityChartElementOld
+     * @type {FundEquityChartElementOld}
      */
-    FundEquityChartElement,
+    FundEquityChartElementOld,
 
     /**
      * @name index#FundFacet
@@ -560,10 +560,10 @@ export {
     FundNotificationSettingList,
 
     /**
-     * @name index#FundProfitChart
-     * @type {FundProfitChart}
+     * @name index#FundProfitChartOld
+     * @type {FundProfitChartOld}
      */
-    FundProfitChart,
+    FundProfitChartOld,
 
     /**
      * @name index#FundSets
@@ -932,16 +932,16 @@ export {
     ProfilePublic,
 
     /**
-     * @name index#ProgramBalanceChart
-     * @type {ProgramBalanceChart}
+     * @name index#ProgramBalanceChartElementOld
+     * @type {ProgramBalanceChartElementOld}
      */
-    ProgramBalanceChart,
+    ProgramBalanceChartElementOld,
 
     /**
-     * @name index#ProgramBalanceChartElement
-     * @type {ProgramBalanceChartElement}
+     * @name index#ProgramBalanceChartOld
+     * @type {ProgramBalanceChartOld}
      */
-    ProgramBalanceChartElement,
+    ProgramBalanceChartOld,
 
     /**
      * @name index#ProgramDetailsFullOld
@@ -1010,10 +1010,10 @@ export {
     ProgramPeriodsViewModel,
 
     /**
-     * @name index#ProgramProfitChart
-     * @type {ProgramProfitChart}
+     * @name index#ProgramProfitChartOld
+     * @type {ProgramProfitChartOld}
      */
-    ProgramProfitChart,
+    ProgramProfitChartOld,
 
     /**
      * @name index#ProgramPwdUpdate

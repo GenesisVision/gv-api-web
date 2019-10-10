@@ -14,10 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import ProgramBalanceChart from '../model/ProgramBalanceChart';
+import ProgramBalanceChartOld from '../model/ProgramBalanceChartOld';
 import ProgramDetailsFullOld from '../model/ProgramDetailsFullOld';
 import ProgramPeriodsViewModel from '../model/ProgramPeriodsViewModel';
-import ProgramProfitChart from '../model/ProgramProfitChart';
+import ProgramProfitChartOld from '../model/ProgramProfitChartOld';
 import ProgramSets from '../model/ProgramSets';
 import ProgramsListOld from '../model/ProgramsListOld';
 import SignalProviderSubscribers from '../model/SignalProviderSubscribers';
@@ -308,7 +308,7 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramBalanceChart;
+      let returnType = ProgramBalanceChartOld;
 
       return this.apiClient.callApi(
         '/v1.0/programs/{id}/charts/balance', 'GET',
@@ -326,7 +326,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
      * @param {String} [opts.currency] 
-     * @return {CancelablePromise<ProgramBalanceChart>} a Promise, with an object containing data of type ProgramBalanceChart and HTTP response
+     * @return {CancelablePromise<ProgramBalanceChartOld>} a Promise, with an object containing data of type ProgramBalanceChartOld and HTTP response
      */
       getProgramBalanceChart(id, opts) {
       return this.getProgramBalanceChartWithHttpInfo(id, opts)
@@ -532,7 +532,7 @@ export default class ProgramsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramProfitChart;
+      let returnType = ProgramProfitChartOld;
 
       return this.apiClient.callApi(
         '/v1.0/programs/{id}/charts/profit', 'GET',
@@ -550,7 +550,7 @@ export default class ProgramsApi {
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.maxPointCount] 
      * @param {String} [opts.currency] 
-     * @return {CancelablePromise<ProgramProfitChart>} a Promise, with an object containing data of type ProgramProfitChart and HTTP response
+     * @return {CancelablePromise<ProgramProfitChartOld>} a Promise, with an object containing data of type ProgramProfitChartOld and HTTP response
      */
       getProgramProfitChart(id, opts) {
       return this.getProgramProfitChartWithHttpInfo(id, opts)

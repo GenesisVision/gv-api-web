@@ -90,7 +90,7 @@ export declare class FundsApi {
         dateTo?: Date;
         maxPointCount?: number;
         currency?: string;
-    }): CancelablePromise<FundBalanceChart>;
+    }): CancelablePromise<FundBalanceChartOld>;
     getFundDetails(id: string, opts?: {
         authorization?: string;
         currency?: string;
@@ -101,7 +101,7 @@ export declare class FundsApi {
         maxPointCount?: number;
         currency?: string;
         chartAssetsCount?: number;
-    }): CancelablePromise<FundProfitChart>;
+    }): CancelablePromise<FundProfitChartOld>;
     getFunds(opts?: {
         authorization?: string;
         sorting?: string;
@@ -452,7 +452,7 @@ export declare class ProgramsApi {
         dateTo?: Date;
         maxPointCount?: number;
         currency?: string;
-    }): CancelablePromise<ProgramBalanceChart>;
+    }): CancelablePromise<ProgramBalanceChartOld>;
     getProgramDetails(id: string, opts?: {
         authorization?: string;
         currencySecondary?: string;
@@ -480,7 +480,7 @@ export declare class ProgramsApi {
         dateTo?: Date;
         maxPointCount?: number;
         currency?: string;
-    }): CancelablePromise<ProgramProfitChart>;
+    }): CancelablePromise<ProgramProfitChartOld>;
     getProgramSets(authorization: string): CancelablePromise<ProgramSets>;
     getProgramSubscribers(id: string, authorization: string, opts?: {
         status?: string;
@@ -641,7 +641,7 @@ export declare interface index {
     AssetsValue: AssetsValue;
     AttachToSignalProvider: AttachToSignalProvider;
     AttachToSignalProviderInfo: AttachToSignalProviderInfo;
-    BalanceChartElement: BalanceChartElement;
+    BalanceChartElementOld: BalanceChartElementOld;
     Broker: Broker;
     BrokerAccountType: BrokerAccountType;
     BrokerDetails: BrokerDetails;
@@ -680,16 +680,16 @@ export declare interface index {
     FundAssetPercent: FundAssetPercent;
     FundAssetsListInfo: FundAssetsListInfo;
     FundAssetsState: FundAssetsState;
-    FundBalanceChart: FundBalanceChart;
+    FundBalanceChartOld: FundBalanceChartOld;
     FundDetailsFull: FundDetailsFull;
     FundDetailsListStatistic: FundDetailsListStatistic;
     FundDetailsOld: FundDetailsOld;
-    FundEquityChartElement: FundEquityChartElement;
+    FundEquityChartElementOld: FundEquityChartElementOld;
     FundFacet: FundFacet;
     FundFiltersOld: FundFiltersOld;
     FundInvestInfo: FundInvestInfo;
     FundNotificationSettingList: FundNotificationSettingList;
-    FundProfitChart: FundProfitChart;
+    FundProfitChartOld: FundProfitChartOld;
     FundSets: FundSets;
     FundStatistic: FundStatistic;
     FundWithdrawInfo: FundWithdrawInfo;
@@ -751,8 +751,8 @@ export declare interface index {
     ProfileFullViewModel: ProfileFullViewModel;
     ProfileHeaderViewModel: ProfileHeaderViewModel;
     ProfilePublic: ProfilePublic;
-    ProgramBalanceChart: ProgramBalanceChart;
-    ProgramBalanceChartElement: ProgramBalanceChartElement;
+    ProgramBalanceChartElementOld: ProgramBalanceChartElementOld;
+    ProgramBalanceChartOld: ProgramBalanceChartOld;
     ProgramDetailsFullOld: ProgramDetailsFullOld;
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsOld: ProgramDetailsOld;
@@ -764,7 +764,7 @@ export declare interface index {
     ProgramNotificationSettingList: ProgramNotificationSettingList;
     ProgramPeriodViewModel: ProgramPeriodViewModel;
     ProgramPeriodsViewModel: ProgramPeriodsViewModel;
-    ProgramProfitChart: ProgramProfitChart;
+    ProgramProfitChartOld: ProgramProfitChartOld;
     ProgramPwdUpdate: ProgramPwdUpdate;
     ProgramRequestOld: ProgramRequestOld;
     ProgramRequestsOld: ProgramRequestsOld;
@@ -932,6 +932,12 @@ export declare interface AttachToSignalProviderInfo {
 }
 
 export declare interface BalanceChartElement {
+    date: Date;
+    managerFunds: number;
+    investorsFunds: number;
+}
+
+export declare interface BalanceChartElementOld {
     date: Date;
     managerFunds: number;
     investorsFunds: number;
@@ -1317,6 +1323,11 @@ export declare interface FundBalanceChart {
     balanceChart: BalanceChartElement[];
 }
 
+export declare interface FundBalanceChartOld {
+    balance: number;
+    balanceChart: BalanceChartElementOld[];
+}
+
 export declare type FundDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
 export declare interface FundDetails {
@@ -1391,6 +1402,12 @@ export declare interface FundEquityChartElement {
     date: Date;
 }
 
+export declare interface FundEquityChartElementOld {
+    assetsState: FundAssetsState;
+    value: number;
+    date: Date;
+}
+
 export declare type FundFacetSortingEnum = "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewAsc" | "ByNewDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc";
 
 export declare type FundFacetSortTypeEnum = "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp" | "MostReliable";
@@ -1447,6 +1464,20 @@ export declare interface FundProfitChart {
     creationDate: Date;
     profitPercent: number;
     equityChart: FundEquityChartElement[];
+    balance: number;
+    investors: number;
+    profitChangePercent: number;
+    sharpeRatio: number;
+    sortinoRatio: number;
+    calmarRatio: number;
+    maxDrawdown: number;
+    rate: number;
+}
+
+export declare interface FundProfitChartOld {
+    creationDate: Date;
+    profitPercent: number;
+    equityChart: FundEquityChartElementOld[];
     balance: number;
     investors: number;
     profitChangePercent: number;
@@ -2208,6 +2239,20 @@ export declare interface ProgramBalanceChartElement {
     investorsFunds: number;
 }
 
+export declare interface ProgramBalanceChartElementOld {
+    date: Date;
+    managerFunds: number;
+    investorsFunds: number;
+}
+
+export declare type ProgramBalanceChartOldProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface ProgramBalanceChartOld {
+    balance: number;
+    programCurrency: ProgramBalanceChartOldProgramCurrencyEnum;
+    balanceChart: ProgramBalanceChartElementOld[];
+}
+
 export declare type ProgramDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type ProgramDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
@@ -2514,6 +2559,30 @@ export declare interface ProgramProfitChart {
     totalProfit: number;
     timeframeProfit: number;
     programCurrency: ProgramProfitChartProgramCurrencyEnum;
+    trades: number;
+    successTradesPercent: number;
+    profitFactor: number;
+    periods: PeriodDate[];
+    lastPeriodStarts: Date;
+    lastPeriodEnds: Date;
+    tradingVolume: number;
+    balance: number;
+    investors: number;
+    profitChangePercent: number;
+    sharpeRatio: number;
+    sortinoRatio: number;
+    calmarRatio: number;
+    maxDrawdown: number;
+    rate: number;
+}
+
+export declare type ProgramProfitChartOldProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface ProgramProfitChartOld {
+    equityChart: ChartSimple[];
+    totalProfit: number;
+    timeframeProfit: number;
+    programCurrency: ProgramProfitChartOldProgramCurrencyEnum;
     trades: number;
     successTradesPercent: number;
     profitFactor: number;
