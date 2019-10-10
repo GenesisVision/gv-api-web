@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**cancelWithdrawalRequest**](WalletApi.md#cancelWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 [**confirmWithdrawalRequestByCode**](WalletApi.md#confirmWithdrawalRequestByCode) | **POST** /v1.0/wallet/withdraw/request/confirm | 
 [**createWithdrawalRequest**](WalletApi.md#createWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/new | 
-[**disablePayFeesWithGvt**](WalletApi.md#disablePayFeesWithGvt) | **POST** /v1.0/wallet/paygvtfee/off | Disable paying platform fees with GVT
-[**enablePayFeesWithGvt**](WalletApi.md#enablePayFeesWithGvt) | **POST** /v1.0/wallet/paygvtfee/on | Enable paying platform fees with GVT
 [**getGMCommissionData**](WalletApi.md#getGMCommissionData) | **GET** /v1.0/wallet/fee/gvtholding | GenesisMarkets commission data
 [**getMultiWalletTransactions**](WalletApi.md#getMultiWalletTransactions) | **GET** /v1.0/wallet/multi/transactions | Multi wallet transactions
 [**getTransactionDetails**](WalletApi.md#getTransactionDetails) | **GET** /v1.0/wallet/transaction/{id} | Get transaction details
@@ -16,8 +14,10 @@ Method | HTTP request | Description
 [**getWalletExternalTransactions**](WalletApi.md#getWalletExternalTransactions) | **GET** /v1.0/wallet/multi/transactions/external | Wallet pending transactions
 [**getWalletMultiAvailable**](WalletApi.md#getWalletMultiAvailable) | **GET** /v1.0/wallet/multi/{currency}/available | Multi wallet available
 [**getWalletMultiSummary**](WalletApi.md#getWalletMultiSummary) | **GET** /v1.0/wallet/multi/{currency} | Multi wallet summary
-[**internalTransfer**](WalletApi.md#internalTransfer) | **POST** /v1.0/wallet/transfer | Transfer money
 [**resendWithdrawalRequestEmail**](WalletApi.md#resendWithdrawalRequestEmail) | **POST** /v1.0/wallet/withdraw/request/resend/{txId} | 
+[**switchPayFeeInGvtOff**](WalletApi.md#switchPayFeeInGvtOff) | **POST** /v1.0/wallet/paygvtfee/off | Disable paying platform fees with GVT
+[**switchPayFeeInGvtOn**](WalletApi.md#switchPayFeeInGvtOn) | **POST** /v1.0/wallet/paygvtfee/on | Enable paying platform fees with GVT
+[**transfer**](WalletApi.md#transfer) | **POST** /v1.0/wallet/transfer | Transfer money
 [**updateDepositWallets**](WalletApi.md#updateDepositWallets) | **POST** /v1.0/wallet/deposit/update | Update deposit wallets
 
 
@@ -152,88 +152,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-<a name="disablePayFeesWithGvt"></a>
-# **disablePayFeesWithGvt**
-> disablePayFeesWithGvt(authorization)
-
-Disable paying platform fees with GVT
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.disablePayFeesWithGvt(authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="enablePayFeesWithGvt"></a>
-# **enablePayFeesWithGvt**
-> enablePayFeesWithGvt(authorization)
-
-Enable paying platform fees with GVT
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-apiInstance.enablePayFeesWithGvt(authorization).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="getGMCommissionData"></a>
@@ -560,51 +478,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="internalTransfer"></a>
-# **internalTransfer**
-> internalTransfer(authorization, opts)
-
-Transfer money
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.WalletApi();
-
-let authorization = "authorization_example"; // String | JWT access token
-
-let opts = { 
-  'request': new CoreApiV10.InternalTransferRequest() // InternalTransferRequest | 
-};
-apiInstance.internalTransfer(authorization, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| JWT access token | 
- **request** | [**InternalTransferRequest**](InternalTransferRequest.md)|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
 <a name="resendWithdrawalRequestEmail"></a>
 # **resendWithdrawalRequestEmail**
 > resendWithdrawalRequestEmail(txId, authorization)
@@ -647,6 +520,133 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="switchPayFeeInGvtOff"></a>
+# **switchPayFeeInGvtOff**
+> switchPayFeeInGvtOff(authorization)
+
+Disable paying platform fees with GVT
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.switchPayFeeInGvtOff(authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="switchPayFeeInGvtOn"></a>
+# **switchPayFeeInGvtOn**
+> switchPayFeeInGvtOn(authorization)
+
+Enable paying platform fees with GVT
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+apiInstance.switchPayFeeInGvtOn(authorization).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="transfer"></a>
+# **transfer**
+> transfer(authorization, opts)
+
+Transfer money
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.WalletApi();
+
+let authorization = "authorization_example"; // String | JWT access token
+
+let opts = { 
+  'request': new CoreApiV10.InternalTransferRequest() // InternalTransferRequest | 
+};
+apiInstance.transfer(authorization, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**| JWT access token | 
+ **request** | [**InternalTransferRequest**](InternalTransferRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 <a name="updateDepositWallets"></a>

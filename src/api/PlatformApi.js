@@ -129,6 +129,43 @@ export default class PlatformApi {
         });
     }
 
+      getPlatformDateWithHttpInfo() {
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/platform/date', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Server date
+     * @function PlatformApi#getPlatformDate
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     */
+      getPlatformDate() {
+      return this.getPlatformDateWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       getPlatformStatisticWithHttpInfo() {
       let postBody = null;
 
@@ -239,43 +276,6 @@ export default class PlatformApi {
      */
       getProgramsLevels(opts) {
       return this.getProgramsLevelsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      platformDateWithHttpInfo() {
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/platform/date', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Server date
-     * @function PlatformApi#platformDate
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      platformDate() {
-      return this.platformDateWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

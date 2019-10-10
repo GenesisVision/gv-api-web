@@ -94,64 +94,6 @@ export default class NotificationsApi {
         });
     }
 
-      enableDisableSettingsWithHttpInfo(id, enable, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling enableDisableSettings");
-      }
-
-      // verify the required parameter 'enable' is set
-      if (enable === undefined || enable === null) {
-        throw new Error("Missing the required parameter 'enable' when calling enableDisableSettings");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling enableDisableSettings");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'enable': enable
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/notifications/settings/{id}/{enable}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Enable/disable setting
-     * @function NotificationsApi#enableDisableSettings
-     * @param {String} id 
-     * @param {Boolean} enable 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      enableDisableSettings(id, enable, authorization) {
-      return this.enableDisableSettingsWithHttpInfo(id, enable, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
       getNewNotificationsCountWithHttpInfo(authorization) {
       let postBody = null;
 
@@ -540,6 +482,64 @@ export default class NotificationsApi {
      */
       removeNotificationsSettings(id, authorization) {
       return this.removeNotificationsSettingsWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      toggleNotificationSettingsWithHttpInfo(id, enable, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling toggleNotificationSettings");
+      }
+
+      // verify the required parameter 'enable' is set
+      if (enable === undefined || enable === null) {
+        throw new Error("Missing the required parameter 'enable' when calling toggleNotificationSettings");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling toggleNotificationSettings");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'enable': enable
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/v1.0/notifications/settings/{id}/{enable}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Enable/disable setting
+     * @function NotificationsApi#toggleNotificationSettings
+     * @param {String} id 
+     * @param {Boolean} enable 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
+     */
+      toggleNotificationSettings(id, enable, authorization) {
+      return this.toggleNotificationSettingsWithHttpInfo(id, enable, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

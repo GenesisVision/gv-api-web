@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCaptchaModel**](PlatformApi.md#getCaptchaModel) | **GET** /v1.0/platform/riskcontrol | Platform captcha details
 [**getLevelsParams**](PlatformApi.md#getLevelsParams) | **GET** /v1.0/platform/levels/parameters | Investment programs levels parameters
+[**getPlatformDate**](PlatformApi.md#getPlatformDate) | **POST** /v1.0/platform/date | Server date
 [**getPlatformStatistic**](PlatformApi.md#getPlatformStatistic) | **GET** /v1.0/platform/statistic | Platform statistic
 [**getPlatformStatus**](PlatformApi.md#getPlatformStatus) | **GET** /v1.0/platform/info | Platform info
 [**getProgramsLevels**](PlatformApi.md#getProgramsLevels) | **GET** /v1.0/platform/levels | Investment programs levels
-[**platformDate**](PlatformApi.md#platformDate) | **POST** /v1.0/platform/date | Server date
 
 
 <a name="getCaptchaModel"></a>
@@ -91,6 +91,41 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LevelsParamsInfo**](LevelsParamsInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getPlatformDate"></a>
+# **getPlatformDate**
+> &#39;String&#39; getPlatformDate()
+
+Server date
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.PlatformApi();
+apiInstance.getPlatformDate().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**&#39;String&#39;**
 
 ### Authorization
 
@@ -203,41 +238,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProgramsLevelsInfo**](ProgramsLevelsInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-<a name="platformDate"></a>
-# **platformDate**
-> &#39;String&#39; platformDate()
-
-Server date
-
-### Example
-```javascript
-import CoreApiV10 from 'core_api_v10';
-
-let apiInstance = new CoreApiV10.PlatformApi();
-apiInstance.platformDate().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**&#39;String&#39;**
 
 ### Authorization
 

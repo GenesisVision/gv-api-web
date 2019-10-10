@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import ChangePasswordViewModel from '../model/ChangePasswordViewModel';
 import ErrorViewModel from '../model/ErrorViewModel';
 import ForgotPasswordViewModel from '../model/ForgotPasswordViewModel';
+import LoginViewModel from '../model/LoginViewModel';
 import PasswordModel from '../model/PasswordModel';
 import RecoveryCodesViewModel from '../model/RecoveryCodesViewModel';
 import RegisterViewModel from '../model/RegisterViewModel';
@@ -44,33 +45,14 @@ export default class AuthApi {
     }
 
 
-      authorizeWithHttpInfo(password, email, opts) {
+      authorizeWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'password' is set
-      if (password === undefined || password === null) {
-        throw new Error("Missing the required parameter 'password' when calling authorize");
-      }
-
-      // verify the required parameter 'email' is set
-      if (email === undefined || email === null) {
-        throw new Error("Missing the required parameter 'email' when calling authorize");
-      }
+      let postBody = opts['model'];
 
 
       let pathParams = {
       };
       let queryParams = {
-        'Password': password,
-        'RememberMe': opts['rememberMe'],
-        'TwoFactorCode': opts['twoFactorCode'],
-        'RecoveryCode': opts['recoveryCode'],
-        'Client': opts['client'],
-        'Email': email,
-        'CaptchaCheckResult.Id': opts['captchaCheckResultId'],
-        'CaptchaCheckResult.Pow.Prefix': opts['captchaCheckResultPowPrefix'],
-        'CaptchaCheckResult.GeeTest': opts['captchaCheckResultGeeTest']
       };
       let headerParams = {
       };
@@ -78,7 +60,7 @@ export default class AuthApi {
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = 'String';
 
@@ -92,20 +74,12 @@ export default class AuthApi {
     /**
      * Authorize
      * @function AuthApi#authorize
-     * @param {String} password 
-     * @param {String} email 
      * @param {Object} [opts] Optional parameters
-     * @param {Boolean} [opts.rememberMe] 
-     * @param {String} [opts.twoFactorCode] 
-     * @param {String} [opts.recoveryCode] 
-     * @param {String} [opts.client] 
-     * @param {String} [opts.captchaCheckResultId] 
-     * @param {String} [opts.captchaCheckResultPowPrefix] 
-     * @param {{String: String}} [opts.captchaCheckResultGeeTest] 
+     * @param {LoginViewModel} [opts.model] 
      * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      authorize(password, email, opts) {
-      return this.authorizeWithHttpInfo(password, email, opts)
+      authorize(opts) {
+      return this.authorizeWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -201,6 +175,191 @@ export default class AuthApi {
         });
     }
 
+      confirmTwoStepAuthWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling confirmTwoStepAuth");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/confirm', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA confirm
+     * @function AuthApi#confirmTwoStepAuth
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      confirmTwoStepAuth(authorization, opts) {
+      return this.confirmTwoStepAuthWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      createTwoStepAuthWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling createTwoStepAuth");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TwoFactorAuthenticator;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/create', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA create
+     * @function AuthApi#createTwoStepAuth
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
+     */
+      createTwoStepAuth(authorization) {
+      return this.createTwoStepAuthWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      createTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling createTwoStepAuthRecoveryCodes");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/recoverycodes/new', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA generate new recovery codes
+     * @function AuthApi#createTwoStepAuthRecoveryCodes
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {PasswordModel} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      createTwoStepAuthRecoveryCodes(authorization, opts) {
+      return this.createTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      disableTwoStepAuthWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling disableTwoStepAuth");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/disable', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA disable
+     * @function AuthApi#disableTwoStepAuth
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {TwoFactorCodeModel} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      disableTwoStepAuth(authorization, opts) {
+      return this.disableTwoStepAuthWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       forgotPasswordWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['model'];
@@ -236,6 +395,97 @@ export default class AuthApi {
      */
       forgotPassword(opts) {
       return this.forgotPasswordWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getTwoStepAuthRecoveryCodes");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = RecoveryCodesViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa/recoverycodes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA recovery codes
+     * @function AuthApi#getTwoStepAuthRecoveryCodes
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {PasswordModel} [opts.model] 
+     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
+     */
+      getTwoStepAuthRecoveryCodes(authorization, opts) {
+      return this.getTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getTwoStepAuthStatusWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getTwoStepAuthStatus");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = TwoFactorStatus;
+
+      return this.apiClient.callApi(
+        '/v1.0/auth/2fa', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * 2FA status
+     * @function AuthApi#getTwoStepAuthStatus
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
+     */
+      getTwoStepAuthStatus(authorization) {
+      return this.getTwoStepAuthStatusWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -444,282 +694,6 @@ export default class AuthApi {
      */
       resetPassword(opts) {
       return this.resetPasswordWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthConfirmWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthConfirm");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/confirm', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA confirm
-     * @function AuthApi#twoStepAuthConfirm
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {TwoFactorAuthenticatorConfirm} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      twoStepAuthConfirm(authorization, opts) {
-      return this.twoStepAuthConfirmWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthCreateWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthCreate");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TwoFactorAuthenticator;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/create', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA create
-     * @function AuthApi#twoStepAuthCreate
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<TwoFactorAuthenticator>} a Promise, with an object containing data of type TwoFactorAuthenticator and HTTP response
-     */
-      twoStepAuthCreate(authorization) {
-      return this.twoStepAuthCreateWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthDisableWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthDisable");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/disable', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA disable
-     * @function AuthApi#twoStepAuthDisable
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {TwoFactorCodeModel} [opts.model] 
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      twoStepAuthDisable(authorization, opts) {
-      return this.twoStepAuthDisableWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthRecoveryCodesWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthRecoveryCodes");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/recoverycodes', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA recovery codes
-     * @function AuthApi#twoStepAuthRecoveryCodes
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {PasswordModel} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      twoStepAuthRecoveryCodes(authorization, opts) {
-      return this.twoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthRecoveryCodesNewWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['model'];
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthRecoveryCodesNew");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RecoveryCodesViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa/recoverycodes/new', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA generate new recovery codes
-     * @function AuthApi#twoStepAuthRecoveryCodesNew
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {PasswordModel} [opts.model] 
-     * @return {CancelablePromise<RecoveryCodesViewModel>} a Promise, with an object containing data of type RecoveryCodesViewModel and HTTP response
-     */
-      twoStepAuthRecoveryCodesNew(authorization, opts) {
-      return this.twoStepAuthRecoveryCodesNewWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      twoStepAuthStatusWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling twoStepAuthStatus");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TwoFactorStatus;
-
-      return this.apiClient.callApi(
-        '/v1.0/auth/2fa', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * 2FA status
-     * @function AuthApi#twoStepAuthStatus
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<TwoFactorStatus>} a Promise, with an object containing data of type TwoFactorStatus and HTTP response
-     */
-      twoStepAuthStatus(authorization) {
-      return this.twoStepAuthStatusWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -181,6 +181,94 @@ export default class ProfileApi {
         });
     }
 
+      getProfileFullWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getProfileFull");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileFullViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get full profile
+     * @function ProfileApi#getProfileFull
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ProfileFullViewModel>} a Promise, with an object containing data of type ProfileFullViewModel and HTTP response
+     */
+      getProfileFull(authorization) {
+      return this.getProfileFullWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getProfileHeaderWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getProfileHeader");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProfileHeaderViewModel;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/header', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get header profile
+     * @function ProfileApi#getProfileHeader
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ProfileHeaderViewModel>} a Promise, with an object containing data of type ProfileHeaderViewModel and HTTP response
+     */
+      getProfileHeader(authorization) {
+      return this.getProfileHeaderWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       getSocialLinksWithHttpInfo(authorization) {
       let postBody = null;
 
@@ -225,12 +313,12 @@ export default class ProfileApi {
         });
     }
 
-      profileFullWithHttpInfo(authorization) {
+      getVerificationTokenWithHttpInfo(authorization) {
       let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling profileFull");
+        throw new Error("Missing the required parameter 'authorization' when calling getVerificationToken");
       }
 
 
@@ -247,67 +335,22 @@ export default class ProfileApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfileFullViewModel;
+      let returnType = 'String';
 
       return this.apiClient.callApi(
-        '/v1.0/profile', 'GET',
+        '/v1.0/profile/verification/token', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Get full profile
-     * @function ProfileApi#profileFull
+     * @function ProfileApi#getVerificationToken
      * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ProfileFullViewModel>} a Promise, with an object containing data of type ProfileFullViewModel and HTTP response
+     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
      */
-      profileFull(authorization) {
-      return this.profileFullWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      profileHeaderWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling profileHeader");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProfileHeaderViewModel;
-
-      return this.apiClient.callApi(
-        '/v1.0/profile/header', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get header profile
-     * @function ProfileApi#profileHeader
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ProfileHeaderViewModel>} a Promise, with an object containing data of type ProfileHeaderViewModel and HTTP response
-     */
-      profileHeader(authorization) {
-      return this.profileHeaderWithHttpInfo(authorization)
+      getVerificationToken(authorization) {
+      return this.getVerificationTokenWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -590,49 +633,6 @@ export default class ProfileApi {
      */
       updateSocialLinks(authorization, opts) {
       return this.updateSocialLinksWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      verificationTokenWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling verificationToken");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/v1.0/profile/verification/token', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * @function ProfileApi#verificationToken
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<'String'>} a Promise, with an object containing data of type 'String' and HTTP response
-     */
-      verificationToken(authorization) {
-      return this.verificationTokenWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

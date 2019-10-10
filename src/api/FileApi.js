@@ -34,12 +34,12 @@ export default class FileApi {
     }
 
 
-      getWithHttpInfo(id) {
+      getFileWithHttpInfo(id) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling get");
+        throw new Error("Missing the required parameter 'id' when calling getFile");
       }
 
 
@@ -67,40 +67,40 @@ export default class FileApi {
 
     /**
      * Download file
-     * @function FileApi#get
+     * @function FileApi#getFile
      * @param {String} id 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      get(id) {
-      return this.getWithHttpInfo(id)
+      getFile(id) {
+      return this.getFileWithHttpInfo(id)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      uploadFileWithHttpInfo(opts) {
+      uploadFileWithHttpInfo(uploadedFile, opts) {
       opts = opts || {};
       let postBody = null;
+
+      // verify the required parameter 'uploadedFile' is set
+      if (uploadedFile === undefined || uploadedFile === null) {
+        throw new Error("Missing the required parameter 'uploadedFile' when calling uploadFile");
+      }
 
 
       let pathParams = {
       };
       let queryParams = {
-        'ContentType': opts['contentType'],
-        'ContentDisposition': opts['contentDisposition'],
-        'Headers': opts['headers'],
-        'Length': opts['length'],
-        'Name': opts['name'],
-        'FileName': opts['fileName']
       };
       let headerParams = {
         'Authorization': opts['authorization']
       };
       let formParams = {
+        'uploadedFile': uploadedFile
       };
 
       let authNames = [];
-      let contentTypes = [];
+      let contentTypes = ['multipart/form-data'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = UploadResult;
 
@@ -114,18 +114,13 @@ export default class FileApi {
     /**
      * Upload file
      * @function FileApi#uploadFile
+     * @param {File} uploadedFile Upload File
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
-     * @param {String} [opts.contentType] 
-     * @param {String} [opts.contentDisposition] 
-     * @param {{String: String}} [opts.headers] 
-     * @param {Number} [opts.length] 
-     * @param {String} [opts.name] 
-     * @param {String} [opts.fileName] 
      * @return {CancelablePromise<UploadResult>} a Promise, with an object containing data of type UploadResult and HTTP response
      */
-      uploadFile(opts) {
-      return this.uploadFileWithHttpInfo(opts)
+      uploadFile(uploadedFile, opts) {
+      return this.uploadFileWithHttpInfo(uploadedFile, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

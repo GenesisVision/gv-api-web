@@ -83,6 +83,7 @@ import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
 import LevelInfo from './model/LevelInfo';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
+import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerFinancialStatistic from './model/ManagerFinancialStatistic';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
@@ -647,6 +648,12 @@ export {
      * @type {LevelsParamsInfo}
      */
     LevelsParamsInfo,
+
+    /**
+     * @name index#LoginViewModel
+     * @type {LoginViewModel}
+     */
+    LoginViewModel,
 
     /**
      * @name index#ManagerAssets

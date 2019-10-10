@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get**](FileApi.md#get) | **GET** /v1.0/file/{id} | Download file
+[**getFile**](FileApi.md#getFile) | **GET** /v1.0/file/{id} | Download file
 [**uploadFile**](FileApi.md#uploadFile) | **POST** /v1.0/file/upload | Upload file
 
 
-<a name="get"></a>
-# **get**
-> get(id)
+<a name="getFile"></a>
+# **getFile**
+> getFile(id)
 
 Download file
 
@@ -22,7 +22,7 @@ let apiInstance = new CoreApiV10.FileApi();
 
 let id = "id_example"; // String | 
 
-apiInstance.get(id).then(() => {
+apiInstance.getFile(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -51,7 +51,7 @@ No authorization required
 
 <a name="uploadFile"></a>
 # **uploadFile**
-> UploadResult uploadFile(opts)
+> UploadResult uploadFile(uploadedFile, opts)
 
 Upload file
 
@@ -61,16 +61,12 @@ import CoreApiV10 from 'core_api_v10';
 
 let apiInstance = new CoreApiV10.FileApi();
 
+let uploadedFile = "/path/to/file.txt"; // File | Upload File
+
 let opts = { 
-  'authorization': "authorization_example", // String | 
-  'contentType': "contentType_example", // String | 
-  'contentDisposition': "contentDisposition_example", // String | 
-  'headers': {key: "headers_example"}, // {String: String} | 
-  'length': 789, // Number | 
-  'name': "name_example", // String | 
-  'fileName': "fileName_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
-apiInstance.uploadFile(opts).then((data) => {
+apiInstance.uploadFile(uploadedFile, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -82,13 +78,8 @@ apiInstance.uploadFile(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **uploadedFile** | **File**| Upload File | 
  **authorization** | **String**|  | [optional] 
- **contentType** | **String**|  | [optional] 
- **contentDisposition** | **String**|  | [optional] 
- **headers** | [**{String: String}**](String.md)|  | [optional] 
- **length** | **Number**|  | [optional] 
- **name** | **String**|  | [optional] 
- **fileName** | **String**|  | [optional] 
 
 ### Return type
 
@@ -100,6 +91,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: text/plain, application/json, text/json
 

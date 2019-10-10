@@ -610,246 +610,6 @@ export default class ManagerApi {
         });
     }
 
-      fundInvestWithHttpInfo(id, amount, authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling fundInvest");
-      }
-
-      // verify the required parameter 'amount' is set
-      if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling fundInvest");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling fundInvest");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'amount': amount
-      };
-      let queryParams = {
-        'currency': opts['currency']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/invest/{amount}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Deposit.  Invest in GVT if currency is empty
-     * @function ManagerApi#fundInvest
-     * @param {String} id 
-     * @param {Number} amount 
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      fundInvest(id, amount, authorization, opts) {
-      return this.fundInvestWithHttpInfo(id, amount, authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      fundInvestInfoWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling fundInvestInfo");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling fundInvestInfo");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling fundInvestInfo");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundInvestInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/invest/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for investing into the fund
-     * @function ManagerApi#fundInvestInfo
-     * @param {String} id 
-     * @param {String} currency 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
-     */
-      fundInvestInfo(id, currency, authorization) {
-      return this.fundInvestInfoWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      fundWithdrawWithHttpInfo(id, percent, authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling fundWithdraw");
-      }
-
-      // verify the required parameter 'percent' is set
-      if (percent === undefined || percent === null) {
-        throw new Error("Missing the required parameter 'percent' when calling fundWithdraw");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling fundWithdraw");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'percent': percent
-      };
-      let queryParams = {
-        'currency': opts['currency']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/withdraw/{percent}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
-     * @function ManagerApi#fundWithdraw
-     * @param {String} id 
-     * @param {Number} percent 
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
-     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
-     */
-      fundWithdraw(id, percent, authorization, opts) {
-      return this.fundWithdrawWithHttpInfo(id, percent, authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      fundWithdrawInfoWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling fundWithdrawInfo");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling fundWithdrawInfo");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling fundWithdrawInfo");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerFundWithdrawInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/withdraw/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for withdrawal from fund
-     * @function ManagerApi#fundWithdrawInfo
-     * @param {String} id 
-     * @param {String} currency 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
-     */
-      fundWithdrawInfo(id, currency, authorization) {
-      return this.fundWithdrawInfoWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
       getEventsWithHttpInfo(authorization, opts) {
       opts = opts || {};
       let postBody = null;
@@ -912,6 +672,64 @@ export default class ManagerApi {
         });
     }
 
+      getFundInvestInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getFundInvestInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling getFundInvestInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getFundInvestInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundInvestInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/funds/{id}/invest/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for investing into the fund
+     * @function ManagerApi#getFundInvestInfo
+     * @param {String} id 
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<FundInvestInfo>} a Promise, with an object containing data of type FundInvestInfo and HTTP response
+     */
+      getFundInvestInfo(id, currency, authorization) {
+      return this.getFundInvestInfoWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       getFundInvestmentWithHttpInfo(authorization) {
       let postBody = null;
 
@@ -951,6 +769,122 @@ export default class ManagerApi {
      */
       getFundInvestment(authorization) {
       return this.getFundInvestmentWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getFundWithdrawInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getFundWithdrawInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling getFundWithdrawInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getFundWithdrawInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerFundWithdrawInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/funds/{id}/withdraw/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for withdrawal from fund
+     * @function ManagerApi#getFundWithdrawInfo
+     * @param {String} id 
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
+     */
+      getFundWithdrawInfo(id, currency, authorization) {
+      return this.getFundWithdrawInfoWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getInvestInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getInvestInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling getInvestInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getInvestInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramInvestInfoOld;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/{id}/invest/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for investing into the program
+     * @function ManagerApi#getInvestInfo
+     * @param {String} id 
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ProgramInvestInfoOld>} a Promise, with an object containing data of type ProgramInvestInfoOld and HTTP response
+     */
+      getInvestInfo(id, currency, authorization) {
+      return this.getInvestInfoWithHttpInfo(id, currency, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1002,6 +936,274 @@ export default class ManagerApi {
      */
       getLevelsCalculator(id, authorization) {
       return this.getLevelsCalculatorWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerAssetsWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getManagerAssets");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerAssets;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/assets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager assets list
+     * @function ManagerApi#getManagerAssets
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
+     */
+      getManagerAssets(authorization) {
+      return this.getManagerAssetsWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerDetailsWithHttpInfo(id) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getManagerDetails");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProfileDetails;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/{id}/details', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager details
+     * @function ManagerApi#getManagerDetails
+     * @param {String} id 
+     * @return {CancelablePromise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
+     */
+      getManagerDetails(id) {
+      return this.getManagerDetailsWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerFundsWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getManagerFunds");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Sorting': opts['sorting'],
+        'Currency': opts['currency'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'ActionStatus': opts['actionStatus'],
+        'DashboardActionStatus': opts['dashboardActionStatus'],
+        'IsHideInList': opts['isHideInList'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = FundsListOld;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/funds', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager funds
+     * @function ManagerApi#getManagerFunds
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {String} [opts.currency] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {String} [opts.actionStatus] 
+     * @param {String} [opts.dashboardActionStatus] 
+     * @param {Boolean} [opts.isHideInList] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<FundsListOld>} a Promise, with an object containing data of type FundsListOld and HTTP response
+     */
+      getManagerFunds(authorization, opts) {
+      return this.getManagerFundsWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerProfileWithHttpInfo(id) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getManagerProfile");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProfile;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager profile
+     * @function ManagerApi#getManagerProfile
+     * @param {String} id 
+     * @return {CancelablePromise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
+     */
+      getManagerProfile(id) {
+      return this.getManagerProfileWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerProgramsWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getManagerPrograms");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Sorting': opts['sorting'],
+        'Currency': opts['currency'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'CurrencySecondary': opts['currencySecondary'],
+        'ActionStatus': opts['actionStatus'],
+        'DashboardActionStatus': opts['dashboardActionStatus'],
+        'IsHideInList': opts['isHideInList'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ProgramsListOld;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Manager programs
+     * @function ManagerApi#getManagerPrograms
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.sorting] 
+     * @param {String} [opts.currency] 
+     * @param {Date} [opts.from] 
+     * @param {Date} [opts.to] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.currencySecondary] 
+     * @param {String} [opts.actionStatus] 
+     * @param {String} [opts.dashboardActionStatus] 
+     * @param {Boolean} [opts.isHideInList] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<ProgramsListOld>} a Promise, with an object containing data of type ProgramsListOld and HTTP response
+     */
+      getManagerPrograms(authorization, opts) {
+      return this.getManagerProgramsWithHttpInfo(authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1233,6 +1435,64 @@ export default class ManagerApi {
         });
     }
 
+      getProgramWithdrawInfoWithHttpInfo(id, currency, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getProgramWithdrawInfo");
+      }
+
+      // verify the required parameter 'currency' is set
+      if (currency === undefined || currency === null) {
+        throw new Error("Missing the required parameter 'currency' when calling getProgramWithdrawInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getProgramWithdrawInfo");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'currency': currency
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ManagerProgramWithdrawInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/{id}/withdraw/info/{currency}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Data for withdrawal from investment program
+     * @function ManagerApi#getProgramWithdrawInfo
+     * @param {String} id 
+     * @param {String} currency 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
+     */
+      getProgramWithdrawInfo(id, currency, authorization) {
+      return this.getProgramWithdrawInfoWithHttpInfo(id, currency, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
       getRequestsWithHttpInfo(skip, take, authorization, opts) {
       opts = opts || {};
       let postBody = null;
@@ -1295,349 +1555,23 @@ export default class ManagerApi {
         });
     }
 
-      investInfoWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling investInfo");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling investInfo");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling investInfo");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramInvestInfoOld;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/programs/{id}/invest/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for investing into the program
-     * @function ManagerApi#investInfo
-     * @param {String} id 
-     * @param {String} currency 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ProgramInvestInfoOld>} a Promise, with an object containing data of type ProgramInvestInfoOld and HTTP response
-     */
-      investInfo(id, currency, authorization) {
-      return this.investInfoWithHttpInfo(id, currency, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      managerAssetsWithHttpInfo(authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling managerAssets");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerAssets;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/assets', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Manager assets list
-     * @function ManagerApi#managerAssets
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ManagerAssets>} a Promise, with an object containing data of type ManagerAssets and HTTP response
-     */
-      managerAssets(authorization) {
-      return this.managerAssetsWithHttpInfo(authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      managerDetailsWithHttpInfo(id) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling managerDetails");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProfileDetails;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/{id}/details', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Manager details
-     * @function ManagerApi#managerDetails
-     * @param {String} id 
-     * @return {CancelablePromise<ManagerProfileDetails>} a Promise, with an object containing data of type ManagerProfileDetails and HTTP response
-     */
-      managerDetails(id) {
-      return this.managerDetailsWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      managerFundsWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling managerFunds");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'Sorting': opts['sorting'],
-        'Currency': opts['currency'],
-        'From': opts['from'],
-        'To': opts['to'],
-        'ChartPointsCount': opts['chartPointsCount'],
-        'CurrencySecondary': opts['currencySecondary'],
-        'ActionStatus': opts['actionStatus'],
-        'DashboardActionStatus': opts['dashboardActionStatus'],
-        'IsHideInList': opts['isHideInList'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundsListOld;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/funds', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Manager funds
-     * @function ManagerApi#managerFunds
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.sorting] 
-     * @param {String} [opts.currency] 
-     * @param {Date} [opts.from] 
-     * @param {Date} [opts.to] 
-     * @param {Number} [opts.chartPointsCount] 
-     * @param {String} [opts.currencySecondary] 
-     * @param {String} [opts.actionStatus] 
-     * @param {String} [opts.dashboardActionStatus] 
-     * @param {Boolean} [opts.isHideInList] 
-     * @param {Number} [opts.skip] 
-     * @param {Number} [opts.take] 
-     * @return {CancelablePromise<FundsListOld>} a Promise, with an object containing data of type FundsListOld and HTTP response
-     */
-      managerFunds(authorization, opts) {
-      return this.managerFundsWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      managerProfileWithHttpInfo(id) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling managerProfile");
-      }
-
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProfile;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Manager profile
-     * @function ManagerApi#managerProfile
-     * @param {String} id 
-     * @return {CancelablePromise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
-     */
-      managerProfile(id) {
-      return this.managerProfileWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      managerProgramsWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling managerPrograms");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'Sorting': opts['sorting'],
-        'Currency': opts['currency'],
-        'From': opts['from'],
-        'To': opts['to'],
-        'ChartPointsCount': opts['chartPointsCount'],
-        'CurrencySecondary': opts['currencySecondary'],
-        'ActionStatus': opts['actionStatus'],
-        'DashboardActionStatus': opts['dashboardActionStatus'],
-        'IsHideInList': opts['isHideInList'],
-        'Skip': opts['skip'],
-        'Take': opts['take']
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramsListOld;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/programs', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Manager programs
-     * @function ManagerApi#managerPrograms
-     * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.sorting] 
-     * @param {String} [opts.currency] 
-     * @param {Date} [opts.from] 
-     * @param {Date} [opts.to] 
-     * @param {Number} [opts.chartPointsCount] 
-     * @param {String} [opts.currencySecondary] 
-     * @param {String} [opts.actionStatus] 
-     * @param {String} [opts.dashboardActionStatus] 
-     * @param {Boolean} [opts.isHideInList] 
-     * @param {Number} [opts.skip] 
-     * @param {Number} [opts.take] 
-     * @return {CancelablePromise<ProgramsListOld>} a Promise, with an object containing data of type ProgramsListOld and HTTP response
-     */
-      managerPrograms(authorization, opts) {
-      return this.managerProgramsWithHttpInfo(authorization, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      programInvestWithHttpInfo(id, amount, authorization, opts) {
+      investInfoProgramWithHttpInfo(id, amount, authorization, opts) {
       opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling programInvest");
+        throw new Error("Missing the required parameter 'id' when calling investInfoProgram");
       }
 
       // verify the required parameter 'amount' is set
       if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling programInvest");
+        throw new Error("Missing the required parameter 'amount' when calling investInfoProgram");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling programInvest");
+        throw new Error("Missing the required parameter 'authorization' when calling investInfoProgram");
       }
 
 
@@ -1668,7 +1602,7 @@ export default class ManagerApi {
 
     /**
      * Deposit  Invest in GVT if currency is empty
-     * @function ManagerApi#programInvest
+     * @function ManagerApi#investInfoProgram
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
@@ -1676,29 +1610,30 @@ export default class ManagerApi {
      * @param {String} [opts.currency]  (default to 100)
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      programInvest(id, amount, authorization, opts) {
-      return this.programInvestWithHttpInfo(id, amount, authorization, opts)
+      investInfoProgram(id, amount, authorization, opts) {
+      return this.investInfoProgramWithHttpInfo(id, amount, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
     }
 
-      programWithdrawWithHttpInfo(id, amount, authorization) {
+      investIntoFundWithHttpInfo(id, amount, authorization, opts) {
+      opts = opts || {};
       let postBody = null;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling programWithdraw");
+        throw new Error("Missing the required parameter 'id' when calling investIntoFund");
       }
 
       // verify the required parameter 'amount' is set
       if (amount === undefined || amount === null) {
-        throw new Error("Missing the required parameter 'amount' when calling programWithdraw");
+        throw new Error("Missing the required parameter 'amount' when calling investIntoFund");
       }
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling programWithdraw");
+        throw new Error("Missing the required parameter 'authorization' when calling investIntoFund");
       }
 
 
@@ -1707,6 +1642,7 @@ export default class ManagerApi {
         'amount': amount
       };
       let queryParams = {
+        'currency': opts['currency']
       };
       let headerParams = {
         'Authorization': authorization
@@ -1720,80 +1656,24 @@ export default class ManagerApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/programs/{id}/withdraw/multi/{amount}', 'POST',
+        '/v1.0/manager/funds/{id}/invest/{amount}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Withdraw from investment program in program currency
-     * @function ManagerApi#programWithdraw
+     * Deposit.  Invest in GVT if currency is empty
+     * @function ManagerApi#investIntoFund
      * @param {String} id 
      * @param {Number} amount 
      * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
-      programWithdraw(id, amount, authorization) {
-      return this.programWithdrawWithHttpInfo(id, amount, authorization)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-      programWithdrawInfoWithHttpInfo(id, currency, authorization) {
-      let postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling programWithdrawInfo");
-      }
-
-      // verify the required parameter 'currency' is set
-      if (currency === undefined || currency === null) {
-        throw new Error("Missing the required parameter 'currency' when calling programWithdrawInfo");
-      }
-
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling programWithdrawInfo");
-      }
-
-
-      let pathParams = {
-        'id': id,
-        'currency': currency
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Authorization': authorization
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProgramWithdrawInfo;
-
-      return this.apiClient.callApi(
-        '/v1.0/manager/programs/{id}/withdraw/info/{currency}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Data for withdrawal from investment program
-     * @function ManagerApi#programWithdrawInfo
-     * @param {String} id 
-     * @param {String} currency 
-     * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
-     */
-      programWithdrawInfo(id, currency, authorization) {
-      return this.programWithdrawInfoWithHttpInfo(id, currency, authorization)
+      investIntoFund(id, amount, authorization, opts) {
+      return this.investIntoFundWithHttpInfo(id, amount, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -2060,6 +1940,126 @@ export default class ManagerApi {
      */
       updateProgramSignalSettings_0(authorization, opts) {
       return this.updateProgramSignalSettings_0WithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      withdrawFromFundWithHttpInfo(id, percent, authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling withdrawFromFund");
+      }
+
+      // verify the required parameter 'percent' is set
+      if (percent === undefined || percent === null) {
+        throw new Error("Missing the required parameter 'percent' when calling withdrawFromFund");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling withdrawFromFund");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'percent': percent
+      };
+      let queryParams = {
+        'currency': opts['currency']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/funds/{id}/withdraw/{percent}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
+     * @function ManagerApi#withdrawFromFund
+     * @param {String} id 
+     * @param {Number} percent 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency]  (default to 100)
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      withdrawFromFund(id, percent, authorization, opts) {
+      return this.withdrawFromFundWithHttpInfo(id, percent, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      withdrawFromProgramWithHttpInfo(id, amount, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling withdrawFromProgram");
+      }
+
+      // verify the required parameter 'amount' is set
+      if (amount === undefined || amount === null) {
+        throw new Error("Missing the required parameter 'amount' when calling withdrawFromProgram");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling withdrawFromProgram");
+      }
+
+
+      let pathParams = {
+        'id': id,
+        'amount': amount
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/manager/programs/{id}/withdraw/multi/{amount}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Withdraw from investment program in program currency
+     * @function ManagerApi#withdrawFromProgram
+     * @param {String} id 
+     * @param {Number} amount 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      withdrawFromProgram(id, amount, authorization) {
+      return this.withdrawFromProgramWithHttpInfo(id, amount, authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
