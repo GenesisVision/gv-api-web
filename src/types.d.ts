@@ -961,6 +961,8 @@ export declare interface Broker {
     leverageMin: number;
     leverageMax: number;
     accountTypes: BrokerAccountType[];
+    isForex: boolean;
+    isSignalsAvailable: boolean;
     tags: ProgramTag[];
 }
 
