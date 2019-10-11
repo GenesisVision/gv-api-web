@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**addExternalKey**](ProfileApi.md#addExternalKey) | **POST** /v1.0/profile/keys/add | Add external exchange key
 [**deleteExternalKey**](ProfileApi.md#deleteExternalKey) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
 [**getExternalKey**](ProfileApi.md#getExternalKey) | **GET** /v1.0/profile/keys | Get external exchange keys
+[**getManagerProfile**](ProfileApi.md#getManagerProfile) | **GET** /v1.0/profile/{id}/public | Public profile
 [**getProfileFull**](ProfileApi.md#getProfileFull) | **GET** /v1.0/profile | Get full profile
 [**getProfileHeader**](ProfileApi.md#getProfileHeader) | **GET** /v1.0/profile/header | Get header profile
 [**getSocialLinks**](ProfileApi.md#getSocialLinks) | **GET** /v1.0/profile/sociallinks | Get social links
@@ -140,6 +141,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExternalKeysViewModel**](ExternalKeysViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getManagerProfile"></a>
+# **getManagerProfile**
+> PublicProfile getManagerProfile(id)
+
+Public profile
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.ProfileApi();
+
+let id = "id_example"; // String | 
+
+apiInstance.getManagerProfile(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+
+### Return type
+
+[**PublicProfile**](PublicProfile.md)
 
 ### Authorization
 

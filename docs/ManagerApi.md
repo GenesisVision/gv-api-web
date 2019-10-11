@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelChangeBroker**](ManagerApi.md#cancelChangeBroker) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
-[**cancelRequest**](ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
-[**cancelRequest_0**](ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+[**cancelRequest**](ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+[**cancelRequest_0**](ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 [**changeBroker**](ManagerApi.md#changeBroker) | **POST** /v1.0/manager/programs/broker/change | Change broker in existing program
 [**changeProgramPassword**](ManagerApi.md#changeProgramPassword) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 [**closeCurrentPeriod**](ManagerApi.md#closeCurrentPeriod) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
@@ -28,15 +28,15 @@ Method | HTTP request | Description
 [**getProgram2FA**](ManagerApi.md#getProgram2FA) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
 [**getProgramInvestInfo**](ManagerApi.md#getProgramInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 [**getProgramInvestment**](ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
-[**getProgramRequests**](ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
-[**getProgramRequests_0**](ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+[**getProgramRequests**](ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+[**getProgramRequests_0**](ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 [**getProgramWithdrawInfo**](ManagerApi.md#getProgramWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**getRequests**](ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 [**investIntoFund**](ManagerApi.md#investIntoFund) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit.  Invest in GVT if currency is empty
 [**investIntoProgram**](ManagerApi.md#investIntoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 [**updateFundAssets**](ManagerApi.md#updateFundAssets) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
-[**updateInvestmentProgram**](ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
-[**updateInvestmentProgram_0**](ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
+[**updateInvestmentProgram**](ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
+[**updateInvestmentProgram_0**](ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
 [**updateProgramSignalSettings**](ManagerApi.md#updateProgramSignalSettings) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
 [**updateProgramSignalSettings_0**](ManagerApi.md#updateProgramSignalSettings_0) | **POST** /v1.0/manager/signal/edit | Make manager&#39;s program signal provider
 [**withdrawFromFund**](ManagerApi.md#withdrawFromFund) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
@@ -933,7 +933,7 @@ No authorization required
 
 <a name="getManagerProfile"></a>
 # **getManagerProfile**
-> ManagerProfile getManagerProfile(id)
+> PublicProfile getManagerProfile(id)
 
 Manager profile
 
@@ -961,7 +961,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerProfile**](ManagerProfile.md)
+[**PublicProfile**](PublicProfile.md)
 
 ### Authorization
 

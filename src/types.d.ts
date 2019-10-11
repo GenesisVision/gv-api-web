@@ -289,7 +289,7 @@ export declare class ManagerApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<FundsListOld>;
-    getManagerProfile(id: string): CancelablePromise<ManagerProfile>;
+    getManagerProfile(id: string): CancelablePromise<PublicProfile>;
     getManagerPrograms(authorization: string, opts?: {
         sorting?: string;
         currency?: string;
@@ -396,6 +396,7 @@ export declare class ProfileApi {
         model?: IdModel;
     }): CancelablePromise<any>;
     getExternalKey(authorization: string): CancelablePromise<ExternalKeysViewModel>;
+    getManagerProfile(id: string): CancelablePromise<PublicProfile>;
     getProfileFull(authorization: string): CancelablePromise<ProfileFullViewModel>;
     getProfileHeader(authorization: string): CancelablePromise<ProfileHeaderViewModel>;
     getSocialLinks(authorization: string): CancelablePromise<SocialLinksViewModel>;
@@ -710,7 +711,6 @@ export declare interface index {
     ManagerFundWithdrawInfo: ManagerFundWithdrawInfo;
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
-    ManagerProfile: ManagerProfile;
     ManagerProfileDetails: ManagerProfileDetails;
     ManagerProgramCreateResult: ManagerProgramCreateResult;
     ManagerProgramWithdrawInfo: ManagerProgramWithdrawInfo;
@@ -777,6 +777,7 @@ export declare interface index {
     ProgramsInfoOld: ProgramsInfoOld;
     ProgramsLevelsInfo: ProgramsLevelsInfo;
     ProgramsListOld: ProgramsListOld;
+    PublicProfile: PublicProfile;
     RateItem: RateItem;
     RatesModel: RatesModel;
     RatesModelRates: RatesModelRates;
@@ -1755,7 +1756,7 @@ export declare interface ManagerProfile {
 }
 
 export declare interface ManagerProfileDetails {
-    managerProfile: ManagerProfile;
+    managerProfile: PublicProfile;
     overview: ManagerOverview;
     programsCount: number;
     fundsCount: number;
@@ -1794,7 +1795,7 @@ export declare interface ManagerSimpleProgram {
 }
 
 export declare interface ManagersList {
-    managers: ManagerProfile[];
+    managers: PublicProfile[];
     total: number;
 }
 
@@ -2837,6 +2838,17 @@ export declare interface ProgramsList {
 export declare interface ProgramsListOld {
     programs: ProgramDetailsOld[];
     total: number;
+}
+
+export declare interface PublicProfile {
+    id: string;
+    username: string;
+    about: string;
+    avatar: string;
+    regDate: Date;
+    assets: string[];
+    url: string;
+    socialLinks: SocialLinkViewModel[];
 }
 
 export declare type RateItemCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";

@@ -20,6 +20,7 @@ import FcmTokenViewModel from '../model/FcmTokenViewModel';
 import IdModel from '../model/IdModel';
 import ProfileFullViewModel from '../model/ProfileFullViewModel';
 import ProfileHeaderViewModel from '../model/ProfileHeaderViewModel';
+import PublicProfile from '../model/PublicProfile';
 import SocialLinksViewModel from '../model/SocialLinksViewModel';
 import UpdatePersonalDetailViewModel from '../model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from '../model/UpdateProfileViewModel';
@@ -176,6 +177,50 @@ export default class ProfileApi {
      */
       getExternalKey(authorization) {
       return this.getExternalKeyWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getManagerProfileWithHttpInfo(id) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getManagerProfile");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = PublicProfile;
+
+      return this.apiClient.callApi(
+        '/v1.0/profile/{id}/public', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Public profile
+     * @function ProfileApi#getManagerProfile
+     * @param {String} id 
+     * @return {CancelablePromise<PublicProfile>} a Promise, with an object containing data of type PublicProfile and HTTP response
+     */
+      getManagerProfile(id) {
+      return this.getManagerProfileWithHttpInfo(id)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -560,7 +560,7 @@ export default class InvestorApi {
       let returnType = ProgramRequestsOld;
 
       return this.apiClient.callApi(
-        '/v1.0/investor/programs/{id}/requests/{skip}/{take}', 'GET',
+        '/v1.0/investor/funds/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -625,7 +625,7 @@ export default class InvestorApi {
       let returnType = ProgramRequestsOld;
 
       return this.apiClient.callApi(
-        '/v1.0/investor/funds/{id}/requests/{skip}/{take}', 'GET',
+        '/v1.0/investor/programs/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

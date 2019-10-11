@@ -21,7 +21,6 @@ import FundsListOld from '../model/FundsListOld';
 import InvestmentEventViewModels from '../model/InvestmentEventViewModels';
 import ManagerAssets from '../model/ManagerAssets';
 import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
-import ManagerProfile from '../model/ManagerProfile';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
@@ -34,6 +33,7 @@ import ProgramPwdUpdate from '../model/ProgramPwdUpdate';
 import ProgramRequestsOld from '../model/ProgramRequestsOld';
 import ProgramUpdate from '../model/ProgramUpdate';
 import ProgramsListOld from '../model/ProgramsListOld';
+import PublicProfile from '../model/PublicProfile';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
 
 /**
@@ -133,7 +133,7 @@ export default class ManagerApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/programs/requests/{id}/cancel', 'POST',
+        '/v1.0/manager/funds/requests/{id}/cancel', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -184,7 +184,7 @@ export default class ManagerApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/funds/requests/{id}/cancel', 'POST',
+        '/v1.0/manager/programs/requests/{id}/cancel', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -1061,7 +1061,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProfile;
+      let returnType = PublicProfile;
 
       return this.apiClient.callApi(
         '/v1.0/manager/{id}', 'GET',
@@ -1074,7 +1074,7 @@ export default class ManagerApi {
      * Manager profile
      * @function ManagerApi#getManagerProfile
      * @param {String} id 
-     * @return {CancelablePromise<ManagerProfile>} a Promise, with an object containing data of type ManagerProfile and HTTP response
+     * @return {CancelablePromise<PublicProfile>} a Promise, with an object containing data of type PublicProfile and HTTP response
      */
       getManagerProfile(id) {
       return this.getManagerProfileWithHttpInfo(id)
@@ -1348,7 +1348,7 @@ export default class ManagerApi {
       let returnType = ProgramRequestsOld;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/programs/{id}/requests/{skip}/{take}', 'GET',
+        '/v1.0/manager/funds/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -1413,7 +1413,7 @@ export default class ManagerApi {
       let returnType = ProgramRequestsOld;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/requests/{skip}/{take}', 'GET',
+        '/v1.0/manager/programs/{id}/requests/{skip}/{take}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -1765,7 +1765,7 @@ export default class ManagerApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/programs/{id}/update', 'POST',
+        '/v1.0/manager/funds/{id}/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -1819,7 +1819,7 @@ export default class ManagerApi {
       let returnType = null;
 
       return this.apiClient.callApi(
-        '/v1.0/manager/funds/{id}/update', 'POST',
+        '/v1.0/manager/programs/{id}/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

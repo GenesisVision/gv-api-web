@@ -89,7 +89,6 @@ import ManagerFinancialStatistic from './model/ManagerFinancialStatistic';
 import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
-import ManagerProfile from './model/ManagerProfile';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
@@ -156,6 +155,7 @@ import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
 import ProgramsInfoOld from './model/ProgramsInfoOld';
 import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
 import ProgramsListOld from './model/ProgramsListOld';
+import PublicProfile from './model/PublicProfile';
 import RateItem from './model/RateItem';
 import RatesModel from './model/RatesModel';
 import RatesModelRates from './model/RatesModelRates';
@@ -686,12 +686,6 @@ export {
     ManagerOverview,
 
     /**
-     * @name index#ManagerProfile
-     * @type {ManagerProfile}
-     */
-    ManagerProfile,
-
-    /**
      * @name index#ManagerProfileDetails
      * @type {ManagerProfileDetails}
      */
@@ -1086,6 +1080,12 @@ export {
      * @type {ProgramsListOld}
      */
     ProgramsListOld,
+
+    /**
+     * @name index#PublicProfile
+     * @type {PublicProfile}
+     */
+    PublicProfile,
 
     /**
      * @name index#RateItem

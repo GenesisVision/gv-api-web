@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**managerProfile** | [**ManagerProfile**](ManagerProfile.md) |  | [optional] 
+**managerProfile** | [**PublicProfile**](PublicProfile.md) |  | [optional] 
 **overview** | [**ManagerOverview**](ManagerOverview.md) |  | [optional] 
 **programsCount** | **Number** |  | [optional] 
 **fundsCount** | **Number** |  | [optional] 

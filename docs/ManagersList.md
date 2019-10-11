@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**managers** | [**[ManagerProfile]**](ManagerProfile.md) |  | [optional] 
+**managers** | [**[PublicProfile]**](PublicProfile.md) |  | [optional] 
 **total** | **Number** |  | [optional] 
 
 

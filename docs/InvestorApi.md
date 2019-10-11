@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**getFunds**](InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Dashboard funds list
 [**getPortfolioChart**](InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 [**getProgramInvestInfo**](InvestorApi.md#getProgramInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
-[**getProgramRequests**](InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-[**getProgramRequests_0**](InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+[**getProgramRequests**](InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+[**getProgramRequests_0**](InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 [**getProgramWithdrawInfo**](InvestorApi.md#getProgramWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 [**getPrograms**](InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
 [**getRequests**](InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests

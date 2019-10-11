@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import ManagerProfile from './ManagerProfile';
+import PublicProfile from './PublicProfile';
 
 
 
@@ -27,7 +27,7 @@ import ManagerProfile from './ManagerProfile';
 /**
  *
  * @name ManagersList#managers
- * @type {Array<ManagerProfile>}
+ * @type {Array<PublicProfile>}
  */
 /**
  *
@@ -61,7 +61,7 @@ export default class ManagersList {
             
 
             if (data.hasOwnProperty('managers')) {
-                obj['managers'] = ApiClient.convertToType(data['managers'], [ManagerProfile]);
+                obj['managers'] = ApiClient.convertToType(data['managers'], [PublicProfile]);
             }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');

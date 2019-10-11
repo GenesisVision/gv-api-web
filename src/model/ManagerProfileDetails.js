@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ManagerOverview from './ManagerOverview';
-import ManagerProfile from './ManagerProfile';
+import PublicProfile from './PublicProfile';
 
 
 
@@ -28,7 +28,7 @@ import ManagerProfile from './ManagerProfile';
 /**
  *
  * @name ManagerProfileDetails#managerProfile
- * @type {ManagerProfile}
+ * @type {PublicProfile}
  */
 /**
  *
@@ -72,7 +72,7 @@ export default class ManagerProfileDetails {
             
 
             if (data.hasOwnProperty('managerProfile')) {
-                obj['managerProfile'] = ManagerProfile.constructFromObject(data['managerProfile']);
+                obj['managerProfile'] = PublicProfile.constructFromObject(data['managerProfile']);
             }
             if (data.hasOwnProperty('overview')) {
                 obj['overview'] = ManagerOverview.constructFromObject(data['overview']);

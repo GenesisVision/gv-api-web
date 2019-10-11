@@ -134,8 +134,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**getFunds**](docs/InvestorApi.md#getFunds) | **GET** /v1.0/investor/funds | Dashboard funds list
 *CoreApiV10.InvestorApi* | [**getPortfolioChart**](docs/InvestorApi.md#getPortfolioChart) | **GET** /v1.0/investor/portfolio/chart | Portfolio charts
 *CoreApiV10.InvestorApi* | [**getProgramInvestInfo**](docs/InvestorApi.md#getProgramInvestInfo) | **GET** /v1.0/investor/programs/{id}/invest/info/{currency} | Data for investing into the program
-*CoreApiV10.InvestorApi* | [**getProgramRequests**](docs/InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
-*CoreApiV10.InvestorApi* | [**getProgramRequests_0**](docs/InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+*CoreApiV10.InvestorApi* | [**getProgramRequests**](docs/InvestorApi.md#getProgramRequests) | **GET** /v1.0/investor/funds/{id}/requests/{skip}/{take} | Get program/fund requests
+*CoreApiV10.InvestorApi* | [**getProgramRequests_0**](docs/InvestorApi.md#getProgramRequests_0) | **GET** /v1.0/investor/programs/{id}/requests/{skip}/{take} | Get program/fund requests
 *CoreApiV10.InvestorApi* | [**getProgramWithdrawInfo**](docs/InvestorApi.md#getProgramWithdrawInfo) | **GET** /v1.0/investor/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.InvestorApi* | [**getPrograms**](docs/InvestorApi.md#getPrograms) | **GET** /v1.0/investor/programs | Dashboard program list
 *CoreApiV10.InvestorApi* | [**getRequests**](docs/InvestorApi.md#getRequests) | **GET** /v1.0/investor/requests/{skip}/{take} | Get all requests
@@ -148,8 +148,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.InvestorApi* | [**withdrawFromProgram**](docs/InvestorApi.md#withdrawFromProgram) | **POST** /v1.0/investor/programs/{id}/withdraw/multi | Withdraw from investment program in program currency
 *CoreApiV10.InvestorApi* | [**withdrawFromProgram_0**](docs/InvestorApi.md#withdrawFromProgram_0) | **POST** /v1.0/investor/programs/{id}/withdraw/multi/{amount} | Withdraw from investment program in program currency
 *CoreApiV10.ManagerApi* | [**cancelChangeBroker**](docs/ManagerApi.md#cancelChangeBroker) | **POST** /v1.0/manager/programs/broker/change/cancel | Cancel changing broker in existing program
-*CoreApiV10.ManagerApi* | [**cancelRequest**](docs/ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
-*CoreApiV10.ManagerApi* | [**cancelRequest_0**](docs/ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.ManagerApi* | [**cancelRequest**](docs/ManagerApi.md#cancelRequest) | **POST** /v1.0/manager/funds/requests/{id}/cancel | Cancel investment program/fund request
+*CoreApiV10.ManagerApi* | [**cancelRequest_0**](docs/ManagerApi.md#cancelRequest_0) | **POST** /v1.0/manager/programs/requests/{id}/cancel | Cancel investment program/fund request
 *CoreApiV10.ManagerApi* | [**changeBroker**](docs/ManagerApi.md#changeBroker) | **POST** /v1.0/manager/programs/broker/change | Change broker in existing program
 *CoreApiV10.ManagerApi* | [**changeProgramPassword**](docs/ManagerApi.md#changeProgramPassword) | **POST** /v1.0/manager/programs/{id}/password/change | Change program password
 *CoreApiV10.ManagerApi* | [**closeCurrentPeriod**](docs/ManagerApi.md#closeCurrentPeriod) | **POST** /v1.0/manager/programs/{id}/period/close | Close current period
@@ -171,15 +171,15 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ManagerApi* | [**getProgram2FA**](docs/ManagerApi.md#getProgram2FA) | **GET** /v1.0/manager/programs/2fa/get | Get 2FA for program if needed
 *CoreApiV10.ManagerApi* | [**getProgramInvestInfo**](docs/ManagerApi.md#getProgramInvestInfo) | **GET** /v1.0/manager/programs/{id}/invest/info/{currency} | Data for investing into the program
 *CoreApiV10.ManagerApi* | [**getProgramInvestment**](docs/ManagerApi.md#getProgramInvestment) | **GET** /v1.0/manager/programs/investment/amount | Get investment amount to create program
-*CoreApiV10.ManagerApi* | [**getProgramRequests**](docs/ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
-*CoreApiV10.ManagerApi* | [**getProgramRequests_0**](docs/ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+*CoreApiV10.ManagerApi* | [**getProgramRequests**](docs/ManagerApi.md#getProgramRequests) | **GET** /v1.0/manager/funds/{id}/requests/{skip}/{take} | Get investment program/fund requests
+*CoreApiV10.ManagerApi* | [**getProgramRequests_0**](docs/ManagerApi.md#getProgramRequests_0) | **GET** /v1.0/manager/programs/{id}/requests/{skip}/{take} | Get investment program/fund requests
 *CoreApiV10.ManagerApi* | [**getProgramWithdrawInfo**](docs/ManagerApi.md#getProgramWithdrawInfo) | **GET** /v1.0/manager/programs/{id}/withdraw/info/{currency} | Data for withdrawal from investment program
 *CoreApiV10.ManagerApi* | [**getRequests**](docs/ManagerApi.md#getRequests) | **GET** /v1.0/manager/requests/{skip}/{take} | Get all requests
 *CoreApiV10.ManagerApi* | [**investIntoFund**](docs/ManagerApi.md#investIntoFund) | **POST** /v1.0/manager/funds/{id}/invest/{amount} | Deposit.  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**investIntoProgram**](docs/ManagerApi.md#investIntoProgram) | **POST** /v1.0/manager/programs/{id}/invest/{amount} | Deposit  Invest in GVT if currency is empty
 *CoreApiV10.ManagerApi* | [**updateFundAssets**](docs/ManagerApi.md#updateFundAssets) | **POST** /v1.0/manager/funds/{id}/assets/update | Update fund assets parts
-*CoreApiV10.ManagerApi* | [**updateInvestmentProgram**](docs/ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
-*CoreApiV10.ManagerApi* | [**updateInvestmentProgram_0**](docs/ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
+*CoreApiV10.ManagerApi* | [**updateInvestmentProgram**](docs/ManagerApi.md#updateInvestmentProgram) | **POST** /v1.0/manager/funds/{id}/update | Update investment program/fund details
+*CoreApiV10.ManagerApi* | [**updateInvestmentProgram_0**](docs/ManagerApi.md#updateInvestmentProgram_0) | **POST** /v1.0/manager/programs/{id}/update | Update investment program/fund details
 *CoreApiV10.ManagerApi* | [**updateProgramSignalSettings**](docs/ManagerApi.md#updateProgramSignalSettings) | **POST** /v1.0/manager/signal/create | Make manager&#39;s program signal provider
 *CoreApiV10.ManagerApi* | [**updateProgramSignalSettings_0**](docs/ManagerApi.md#updateProgramSignalSettings_0) | **POST** /v1.0/manager/signal/edit | Make manager&#39;s program signal provider
 *CoreApiV10.ManagerApi* | [**withdrawFromFund**](docs/ManagerApi.md#withdrawFromFund) | **POST** /v1.0/manager/funds/{id}/withdraw/{percent} | Withdraw from fund. Percent is % of manager total money.  Withdraw in GVT if currency is empty
@@ -203,6 +203,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.ProfileApi* | [**addExternalKey**](docs/ProfileApi.md#addExternalKey) | **POST** /v1.0/profile/keys/add | Add external exchange key
 *CoreApiV10.ProfileApi* | [**deleteExternalKey**](docs/ProfileApi.md#deleteExternalKey) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
 *CoreApiV10.ProfileApi* | [**getExternalKey**](docs/ProfileApi.md#getExternalKey) | **GET** /v1.0/profile/keys | Get external exchange keys
+*CoreApiV10.ProfileApi* | [**getManagerProfile**](docs/ProfileApi.md#getManagerProfile) | **GET** /v1.0/profile/{id}/public | Public profile
 *CoreApiV10.ProfileApi* | [**getProfileFull**](docs/ProfileApi.md#getProfileFull) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**getProfileHeader**](docs/ProfileApi.md#getProfileHeader) | **GET** /v1.0/profile/header | Get header profile
 *CoreApiV10.ProfileApi* | [**getSocialLinks**](docs/ProfileApi.md#getSocialLinks) | **GET** /v1.0/profile/sociallinks | Get social links
@@ -335,7 +336,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ManagerFundWithdrawInfo](docs/ManagerFundWithdrawInfo.md)
  - [CoreApiV10.ManagerNotificationSettingList](docs/ManagerNotificationSettingList.md)
  - [CoreApiV10.ManagerOverview](docs/ManagerOverview.md)
- - [CoreApiV10.ManagerProfile](docs/ManagerProfile.md)
  - [CoreApiV10.ManagerProfileDetails](docs/ManagerProfileDetails.md)
  - [CoreApiV10.ManagerProgramCreateResult](docs/ManagerProgramCreateResult.md)
  - [CoreApiV10.ManagerProgramWithdrawInfo](docs/ManagerProgramWithdrawInfo.md)
@@ -402,6 +402,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramsInfoOld](docs/ProgramsInfoOld.md)
  - [CoreApiV10.ProgramsLevelsInfo](docs/ProgramsLevelsInfo.md)
  - [CoreApiV10.ProgramsListOld](docs/ProgramsListOld.md)
+ - [CoreApiV10.PublicProfile](docs/PublicProfile.md)
  - [CoreApiV10.RateItem](docs/RateItem.md)
  - [CoreApiV10.RatesModel](docs/RatesModel.md)
  - [CoreApiV10.RatesModelRates](docs/RatesModelRates.md)
