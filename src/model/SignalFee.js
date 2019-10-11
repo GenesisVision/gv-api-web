@@ -125,7 +125,9 @@ export default class SignalFee {
     
         "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
     
-        "GvSignalSuccessFee": "GvSignalSuccessFee"    
+        "GvSignalSuccessFee": "GvSignalSuccessFee",
+    
+        "GvFundTrade": "GvFundTrade"    
     };
 
     static CurrencyEnum = {
@@ -166,7 +168,7 @@ export default class SignalFee {
 
 /**
  * @typedef SignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee")}
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee"|"GvFundTrade")}
  */
 
 /**

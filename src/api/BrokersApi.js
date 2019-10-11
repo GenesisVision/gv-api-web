@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import BrokersInfo from '../model/BrokersInfo';
-import BrokersProgramInfo from '../model/BrokersProgramInfo';
+import BrokersInfoOld from '../model/BrokersInfoOld';
+import BrokersProgramInfoOld from '../model/BrokersProgramInfoOld';
 import ErrorViewModel from '../model/ErrorViewModel';
 
 /**
@@ -51,7 +51,7 @@ export default class BrokersApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = BrokersInfo;
+      let returnType = BrokersInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/brokers', 'GET',
@@ -63,7 +63,7 @@ export default class BrokersApi {
     /**
      * Get all trade servers
      * @function BrokersApi#getBrokers
-     * @return {CancelablePromise<BrokersInfo>} a Promise, with an object containing data of type BrokersInfo and HTTP response
+     * @return {CancelablePromise<BrokersInfoOld>} a Promise, with an object containing data of type BrokersInfoOld and HTTP response
      */
       getBrokers() {
       return this.getBrokersWithHttpInfo()
@@ -94,7 +94,7 @@ export default class BrokersApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = BrokersProgramInfo;
+      let returnType = BrokersProgramInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/brokers/{programId}', 'GET',
@@ -107,7 +107,7 @@ export default class BrokersApi {
      * Get trade servers for program
      * @function BrokersApi#getBrokersForProgram
      * @param {String} programId 
-     * @return {CancelablePromise<BrokersProgramInfo>} a Promise, with an object containing data of type BrokersProgramInfo and HTTP response
+     * @return {CancelablePromise<BrokersProgramInfoOld>} a Promise, with an object containing data of type BrokersProgramInfoOld and HTTP response
      */
       getBrokersForProgram(programId) {
       return this.getBrokersForProgramWithHttpInfo(programId)

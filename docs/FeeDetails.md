@@ -44,6 +44,8 @@ Name | Type | Description | Notes
 
 * `GvSignalSuccessFee` (value: `"GvSignalSuccessFee"`)
 
+* `GvFundTrade` (value: `"GvFundTrade"`)
+
 
 
 

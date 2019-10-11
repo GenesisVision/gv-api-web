@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getBrokers"></a>
 # **getBrokers**
-> BrokersInfo getBrokers()
+> BrokersInfoOld getBrokers()
 
 Get all trade servers
 
@@ -32,7 +32,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BrokersInfo**](BrokersInfo.md)
+[**BrokersInfoOld**](BrokersInfoOld.md)
 
 ### Authorization
 
@@ -45,7 +45,7 @@ No authorization required
 
 <a name="getBrokersForProgram"></a>
 # **getBrokersForProgram**
-> BrokersProgramInfo getBrokersForProgram(programId)
+> BrokersProgramInfoOld getBrokersForProgram(programId)
 
 Get trade servers for program
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BrokersProgramInfo**](BrokersProgramInfo.md)
+[**BrokersProgramInfoOld**](BrokersProgramInfoOld.md)
 
 ### Authorization
 

@@ -21,11 +21,11 @@ import AssetsValue from './model/AssetsValue';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElementOld from './model/BalanceChartElementOld';
-import Broker from './model/Broker';
-import BrokerAccountType from './model/BrokerAccountType';
+import BrokerAccountTypeOld from './model/BrokerAccountTypeOld';
 import BrokerDetails from './model/BrokerDetails';
-import BrokersInfo from './model/BrokersInfo';
-import BrokersProgramInfo from './model/BrokersProgramInfo';
+import BrokerOld from './model/BrokerOld';
+import BrokersInfoOld from './model/BrokersInfoOld';
+import BrokersProgramInfoOld from './model/BrokersProgramInfoOld';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
 import CaptchaDetails from './model/CaptchaDetails';
 import ChangeBrokerProgramRequest from './model/ChangeBrokerProgramRequest';
@@ -278,16 +278,10 @@ export {
     BalanceChartElementOld,
 
     /**
-     * @name index#Broker
-     * @type {Broker}
+     * @name index#BrokerAccountTypeOld
+     * @type {BrokerAccountTypeOld}
      */
-    Broker,
-
-    /**
-     * @name index#BrokerAccountType
-     * @type {BrokerAccountType}
-     */
-    BrokerAccountType,
+    BrokerAccountTypeOld,
 
     /**
      * @name index#BrokerDetails
@@ -296,16 +290,22 @@ export {
     BrokerDetails,
 
     /**
-     * @name index#BrokersInfo
-     * @type {BrokersInfo}
+     * @name index#BrokerOld
+     * @type {BrokerOld}
      */
-    BrokersInfo,
+    BrokerOld,
 
     /**
-     * @name index#BrokersProgramInfo
-     * @type {BrokersProgramInfo}
+     * @name index#BrokersInfoOld
+     * @type {BrokersInfoOld}
      */
-    BrokersProgramInfo,
+    BrokersInfoOld,
+
+    /**
+     * @name index#BrokersProgramInfoOld
+     * @type {BrokersProgramInfoOld}
+     */
+    BrokersProgramInfoOld,
 
     /**
      * @name index#CaptchaCheckResult

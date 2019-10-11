@@ -68,8 +68,8 @@ export declare class AuthApi {
 
 export declare class BrokersApi {
     constructor(apiClient: ApiClient): BrokersApi;
-    getBrokers(): CancelablePromise<BrokersInfo>;
-    getBrokersForProgram(programId: string): CancelablePromise<BrokersProgramInfo>;
+    getBrokers(): CancelablePromise<BrokersInfoOld>;
+    getBrokersForProgram(programId: string): CancelablePromise<BrokersProgramInfoOld>;
 }
 
 export declare class FileApi {
@@ -642,11 +642,11 @@ export declare interface index {
     AttachToSignalProvider: AttachToSignalProvider;
     AttachToSignalProviderInfo: AttachToSignalProviderInfo;
     BalanceChartElementOld: BalanceChartElementOld;
-    Broker: Broker;
-    BrokerAccountType: BrokerAccountType;
+    BrokerAccountTypeOld: BrokerAccountTypeOld;
     BrokerDetails: BrokerDetails;
-    BrokersInfo: BrokersInfo;
-    BrokersProgramInfo: BrokersProgramInfo;
+    BrokerOld: BrokerOld;
+    BrokersInfoOld: BrokersInfoOld;
+    BrokersProgramInfoOld: BrokersProgramInfoOld;
     CaptchaCheckResult: CaptchaCheckResult;
     CaptchaDetails: CaptchaDetails;
     ChangeBrokerProgramRequest: ChangeBrokerProgramRequest;
@@ -986,6 +986,20 @@ export declare interface BrokerAccountType {
     isSignalsAvailable: boolean;
 }
 
+export declare type BrokerAccountTypeOldTypeEnum = "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX" | "Huobi" | "Exante" | "BinanceExchange";
+
+export declare interface BrokerAccountTypeOld {
+    id: string;
+    name: string;
+    description: string;
+    type: BrokerAccountTypeOldTypeEnum;
+    leverages: number[];
+    currencies: string[];
+    minimumDepositsAmount: any;
+    isForex: boolean;
+    isSignalsAvailable: boolean;
+}
+
 export declare interface BrokerDetails {
     logo: string;
     name: string;
@@ -999,12 +1013,36 @@ export declare interface BrokerDetails {
     showCommissionRebateSometime: boolean;
 }
 
+export declare interface BrokerOld {
+    name: string;
+    description: string;
+    logo: string;
+    terms: string;
+    assets: string;
+    fee: number;
+    leverageMin: number;
+    leverageMax: number;
+    accountTypes: BrokerAccountTypeOld[];
+    isForex: boolean;
+    isSignalsAvailable: boolean;
+    tags: ProgramTag[];
+}
+
 export declare interface BrokersInfo {
     brokers: Broker[];
 }
 
+export declare interface BrokersInfoOld {
+    brokers: BrokerOld[];
+}
+
 export declare interface BrokersProgramInfo {
     brokers: Broker[];
+    currentAccountTypeId: string;
+}
+
+export declare interface BrokersProgramInfoOld {
+    brokers: BrokerOld[];
     currentAccountTypeId: string;
 }
 
@@ -1238,7 +1276,7 @@ export declare interface FcmTokenViewModel {
     token: string;
 }
 
-export declare type FeeDetailsTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
+export declare type FeeDetailsTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
 
 export declare type FeeDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
@@ -1763,7 +1801,7 @@ export declare interface ManagersList {
 export declare interface MigrationRequest {
     dateCreate: Date;
     newLeverage: number;
-    newBroker: Broker;
+    newBroker: BrokerOld;
 }
 
 export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -1953,7 +1991,7 @@ export declare interface OrderProgramData {
 
 export declare type OrderSignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type OrderSignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
+export declare type OrderSignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
 
 export declare interface OrderSignalFee {
     amount: number;
@@ -2944,7 +2982,7 @@ export declare interface SignalDetails {
     chart: ChartSimple[];
 }
 
-export declare type SignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee";
+export declare type SignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
 
 export declare type SignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 

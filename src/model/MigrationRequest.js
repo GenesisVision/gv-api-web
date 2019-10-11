@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import Broker from './Broker';
+import BrokerOld from './BrokerOld';
 
 
 
@@ -37,7 +37,7 @@ import Broker from './Broker';
 /**
  *
  * @name MigrationRequest#newBroker
- * @type {Broker}
+ * @type {BrokerOld}
  */
 
 
@@ -72,7 +72,7 @@ export default class MigrationRequest {
                 obj['newLeverage'] = ApiClient.convertToType(data['newLeverage'], 'Number');
             }
             if (data.hasOwnProperty('newBroker')) {
-                obj['newBroker'] = Broker.constructFromObject(data['newBroker']);
+                obj['newBroker'] = BrokerOld.constructFromObject(data['newBroker']);
             }
         }
         return obj;

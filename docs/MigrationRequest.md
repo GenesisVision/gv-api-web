@@ -5,6 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dateCreate** | **Date** |  | [optional] 
 **newLeverage** | **Number** |  | [optional] 
-**newBroker** | [**Broker**](Broker.md) |  | [optional] 
+**newBroker** | [**BrokerOld**](BrokerOld.md) |  | [optional] 
 
 
