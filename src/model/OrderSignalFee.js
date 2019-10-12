@@ -129,6 +129,8 @@ export default class OrderSignalFee {
     
         "GvGmGvtHolderFee": "GvGmGvtHolderFee",
     
+        "GvGmRegularFee": "GvGmRegularFee",
+    
         "ManagerProgramEntry": "ManagerProgramEntry",
     
         "ManagerProgramSuccess": "ManagerProgramSuccess",
@@ -164,7 +166,7 @@ export default class OrderSignalFee {
 
 /**
  * @typedef OrderSignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee"|"GvFundTrade")}
+ * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"GvGmRegularFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee"|"GvFundTrade")}
  */
 
 

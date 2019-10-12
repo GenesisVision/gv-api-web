@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 
 * `GvGmGvtHolderFee` (value: `"GvGmGvtHolderFee"`)
 
+* `GvGmRegularFee` (value: `"GvGmRegularFee"`)
+
 * `ManagerProgramEntry` (value: `"ManagerProgramEntry"`)
 
 * `ManagerProgramSuccess` (value: `"ManagerProgramSuccess"`)
