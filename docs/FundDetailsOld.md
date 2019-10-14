@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **topFundAssets** | [**[FundAssetPercent]**](FundAssetPercent.md) |  | [optional] 
 **statistic** | [**FundDetailsListStatistic**](FundDetailsListStatistic.md) |  | [optional] 
 **personalDetails** | [**PersonalFundDetailsFull**](PersonalFundDetailsFull.md) | Fields for authorized user | [optional] 
-**dashboardAssetsDetails** | [**DashboardProgramDetails**](DashboardProgramDetails.md) | Fields for dashboard | [optional] 
+**dashboardAssetsDetails** | [**DashboardProgramDetailsOld**](DashboardProgramDetailsOld.md) | Fields for dashboard | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 

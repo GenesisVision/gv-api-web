@@ -14,8 +14,8 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import DashboardProgramDetails from './DashboardProgramDetails';
-import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
+import DashboardProgramDetailsOld from './DashboardProgramDetailsOld';
+import PersonalProgramDetailsFullOld from './PersonalProgramDetailsFullOld';
 import ProfilePublic from './ProfilePublic';
 import ProgramDetailsListStatistic from './ProgramDetailsListStatistic';
 import ProgramTag from './ProgramTag';
@@ -77,7 +77,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsOld#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
+ * @type {DashboardProgramDetailsOld}
  */
 /**
  *
@@ -87,7 +87,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsOld#personalDetails
- * @type {PersonalProgramDetailsFull}
+ * @type {PersonalProgramDetailsFullOld}
  */
 /**
  *
@@ -198,13 +198,13 @@ export default class ProgramDetailsOld {
                 obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'Number');
             }
             if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
+                obj['dashboardAssetsDetails'] = DashboardProgramDetailsOld.constructFromObject(data['dashboardAssetsDetails']);
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
             }
             if (data.hasOwnProperty('personalDetails')) {
-                obj['personalDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalDetails']);
+                obj['personalDetails'] = PersonalProgramDetailsFullOld.constructFromObject(data['personalDetails']);
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);

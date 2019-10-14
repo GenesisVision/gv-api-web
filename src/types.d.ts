@@ -661,7 +661,7 @@ export declare interface index {
     AttachToSignalProviderInfo: AttachToSignalProviderInfo;
     BalanceChartElementOld: BalanceChartElementOld;
     BrokerAccountTypeOld: BrokerAccountTypeOld;
-    BrokerDetails: BrokerDetails;
+    BrokerDetailsOld: BrokerDetailsOld;
     BrokerOld: BrokerOld;
     BrokersInfoOld: BrokersInfoOld;
     BrokersProgramInfoOld: BrokersProgramInfoOld;
@@ -675,7 +675,7 @@ export declare interface index {
     CopyTradingAccountsList: CopyTradingAccountsList;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
     DashboardChartValue: DashboardChartValue;
-    DashboardProgramDetails: DashboardProgramDetails;
+    DashboardProgramDetailsOld: DashboardProgramDetailsOld;
     DashboardSummary: DashboardSummary;
     DetachFromSignalProvider: DetachFromSignalProvider;
     EnumsOld: EnumsOld;
@@ -735,7 +735,7 @@ export declare interface index {
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
     ManagersList: ManagersList;
-    MigrationRequest: MigrationRequest;
+    MigrationRequestOld: MigrationRequestOld;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
     MultiWalletFiltersOld: MultiWalletFiltersOld;
@@ -757,7 +757,7 @@ export declare interface index {
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
     PersonalFundDetailsFull: PersonalFundDetailsFull;
-    PersonalProgramDetailsFull: PersonalProgramDetailsFull;
+    PersonalProgramDetailsFullOld: PersonalProgramDetailsFullOld;
     PersonalSignalDetailsFull: PersonalSignalDetailsFull;
     PlatformAsset: PlatformAsset;
     PlatformAssets: PlatformAssets;
@@ -1036,6 +1036,19 @@ export declare interface BrokerDetails {
     showCommissionRebateSometime: boolean;
 }
 
+export declare interface BrokerDetailsOld {
+    logo: string;
+    name: string;
+    isForex: boolean;
+    showSwaps: boolean;
+    showTickets: boolean;
+    showCommissionRebate: boolean;
+    isForexSometime: boolean;
+    showSwapsSometime: boolean;
+    showTicketsSometime: boolean;
+    showCommissionRebateSometime: boolean;
+}
+
 export declare interface BrokerOld {
     name: string;
     description: string;
@@ -1187,6 +1200,10 @@ export declare interface DashboardPortfolioEvents {
 }
 
 export declare interface DashboardProgramDetails {
+    share: number;
+}
+
+export declare interface DashboardProgramDetailsOld {
     share: number;
 }
 
@@ -1444,7 +1461,7 @@ export declare interface FundDetailsOld {
     topFundAssets: FundAssetPercent[];
     statistic: FundDetailsListStatistic;
     personalDetails: PersonalFundDetailsFull;
-    dashboardAssetsDetails: DashboardProgramDetails;
+    dashboardAssetsDetails: DashboardProgramDetailsOld;
     id: string;
     logo: string;
     url: string;
@@ -1832,6 +1849,12 @@ export declare interface MigrationRequest {
     newBroker: BrokerOld;
 }
 
+export declare interface MigrationRequestOld {
+    dateCreate: Date;
+    newLeverage: number;
+    newBroker: BrokerOld;
+}
+
 export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type MultiWalletExternalTransactionTypeEnum = "All" | "Deposit" | "Withdrawal";
@@ -2150,6 +2173,37 @@ export declare interface PersonalProgramDetailsFull {
     status: PersonalProgramDetailsFullStatusEnum;
 }
 
+export declare type PersonalProgramDetailsFullOldStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
+
+export declare interface PersonalProgramDetailsFullOld {
+    isReinvest: boolean;
+    gvtValue: number;
+    showTwoFactorButton: boolean;
+    signalSubscription: SignalSubscription;
+    login: string;
+    notificationAvailableToInvestId: string;
+    canMakeSignalProvider: boolean;
+    canChangePassword: boolean;
+    migration: MigrationRequestOld;
+    successFeePersonal: number;
+    isFavorite: boolean;
+    isInvested: boolean;
+    isOwnProgram: boolean;
+    canCloseAsset: boolean;
+    isFinishing: boolean;
+    canInvest: boolean;
+    canWithdraw: boolean;
+    canClosePeriod: boolean;
+    hasNotifications: boolean;
+    value: number;
+    profit: number;
+    invested: number;
+    pendingInput: number;
+    pendingOutput: number;
+    pendingOutputIsWithdrawAll: boolean;
+    status: PersonalProgramDetailsFullOldStatusEnum;
+}
+
 export declare type PersonalSignalDetailsFullStatusEnum = "Active" | "Ended";
 
 export declare interface PersonalSignalDetailsFull {
@@ -2439,9 +2493,9 @@ export declare interface ProgramDetailsFullOld {
     availableInvestmentBase: number;
     availableInvestmentLimit: number;
     totalAvailableInvestment: number;
-    brokerDetails: BrokerDetails;
+    brokerDetails: BrokerDetailsOld;
     statistic: ProgramStatistic;
-    personalProgramDetails: PersonalProgramDetailsFull;
+    personalProgramDetails: PersonalProgramDetailsFullOld;
     tags: ProgramTag[];
     id: string;
     logo: string;
@@ -2479,9 +2533,9 @@ export declare interface ProgramDetailsOld {
     periodEnds: Date;
     availableInvestmentInCurrency: number;
     availableInvestmentLimit: number;
-    dashboardAssetsDetails: DashboardProgramDetails;
+    dashboardAssetsDetails: DashboardProgramDetailsOld;
     statistic: ProgramDetailsListStatistic;
-    personalDetails: PersonalProgramDetailsFull;
+    personalDetails: PersonalProgramDetailsFullOld;
     tags: ProgramTag[];
     id: string;
     logo: string;

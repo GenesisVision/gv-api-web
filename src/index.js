@@ -22,7 +22,7 @@ import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElementOld from './model/BalanceChartElementOld';
 import BrokerAccountTypeOld from './model/BrokerAccountTypeOld';
-import BrokerDetails from './model/BrokerDetails';
+import BrokerDetailsOld from './model/BrokerDetailsOld';
 import BrokerOld from './model/BrokerOld';
 import BrokersInfoOld from './model/BrokersInfoOld';
 import BrokersProgramInfoOld from './model/BrokersProgramInfoOld';
@@ -36,7 +36,7 @@ import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
 import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import DashboardChartValue from './model/DashboardChartValue';
-import DashboardProgramDetails from './model/DashboardProgramDetails';
+import DashboardProgramDetailsOld from './model/DashboardProgramDetailsOld';
 import DashboardSummary from './model/DashboardSummary';
 import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import EnumsOld from './model/EnumsOld';
@@ -96,7 +96,7 @@ import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersList from './model/ManagersList';
-import MigrationRequest from './model/MigrationRequest';
+import MigrationRequestOld from './model/MigrationRequestOld';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
 import MultiWalletFiltersOld from './model/MultiWalletFiltersOld';
@@ -118,7 +118,7 @@ import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
-import PersonalProgramDetailsFull from './model/PersonalProgramDetailsFull';
+import PersonalProgramDetailsFullOld from './model/PersonalProgramDetailsFullOld';
 import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
 import PlatformAssets from './model/PlatformAssets';
@@ -289,10 +289,10 @@ export {
     BrokerAccountTypeOld,
 
     /**
-     * @name index#BrokerDetails
-     * @type {BrokerDetails}
+     * @name index#BrokerDetailsOld
+     * @type {BrokerDetailsOld}
      */
-    BrokerDetails,
+    BrokerDetailsOld,
 
     /**
      * @name index#BrokerOld
@@ -373,10 +373,10 @@ export {
     DashboardChartValue,
 
     /**
-     * @name index#DashboardProgramDetails
-     * @type {DashboardProgramDetails}
+     * @name index#DashboardProgramDetailsOld
+     * @type {DashboardProgramDetailsOld}
      */
-    DashboardProgramDetails,
+    DashboardProgramDetailsOld,
 
     /**
      * @name index#DashboardSummary
@@ -733,10 +733,10 @@ export {
     ManagersList,
 
     /**
-     * @name index#MigrationRequest
-     * @type {MigrationRequest}
+     * @name index#MigrationRequestOld
+     * @type {MigrationRequestOld}
      */
-    MigrationRequest,
+    MigrationRequestOld,
 
     /**
      * @name index#MultiWalletExternalTransaction
@@ -865,10 +865,10 @@ export {
     PersonalFundDetailsFull,
 
     /**
-     * @name index#PersonalProgramDetailsFull
-     * @type {PersonalProgramDetailsFull}
+     * @name index#PersonalProgramDetailsFullOld
+     * @type {PersonalProgramDetailsFullOld}
      */
-    PersonalProgramDetailsFull,
+    PersonalProgramDetailsFullOld,
 
     /**
      * @name index#PersonalSignalDetailsFull

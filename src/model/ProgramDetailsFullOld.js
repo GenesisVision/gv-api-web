@@ -13,8 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
-import BrokerDetails from './BrokerDetails';
-import PersonalProgramDetailsFull from './PersonalProgramDetailsFull';
+import BrokerDetailsOld from './BrokerDetailsOld';
+import PersonalProgramDetailsFullOld from './PersonalProgramDetailsFullOld';
 import ProfilePublic from './ProfilePublic';
 import ProgramStatistic from './ProgramStatistic';
 import ProgramTag from './ProgramTag';
@@ -161,7 +161,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsFullOld#brokerDetails
- * @type {BrokerDetails}
+ * @type {BrokerDetailsOld}
  */
 /**
  *
@@ -171,7 +171,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsFullOld#personalProgramDetails
- * @type {PersonalProgramDetailsFull}
+ * @type {PersonalProgramDetailsFullOld}
  */
 /**
  *
@@ -333,13 +333,13 @@ export default class ProgramDetailsFullOld {
                 obj['totalAvailableInvestment'] = ApiClient.convertToType(data['totalAvailableInvestment'], 'Number');
             }
             if (data.hasOwnProperty('brokerDetails')) {
-                obj['brokerDetails'] = BrokerDetails.constructFromObject(data['brokerDetails']);
+                obj['brokerDetails'] = BrokerDetailsOld.constructFromObject(data['brokerDetails']);
             }
             if (data.hasOwnProperty('statistic')) {
                 obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
             }
             if (data.hasOwnProperty('personalProgramDetails')) {
-                obj['personalProgramDetails'] = PersonalProgramDetailsFull.constructFromObject(data['personalProgramDetails']);
+                obj['personalProgramDetails'] = PersonalProgramDetailsFullOld.constructFromObject(data['personalProgramDetails']);
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);

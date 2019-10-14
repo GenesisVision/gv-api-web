@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
-import DashboardProgramDetails from './DashboardProgramDetails';
+import DashboardProgramDetailsOld from './DashboardProgramDetailsOld';
 import FundAssetPercent from './FundAssetPercent';
 import FundDetailsListStatistic from './FundDetailsListStatistic';
 import PersonalFundDetailsFull from './PersonalFundDetailsFull';
@@ -52,7 +52,7 @@ import ProfilePublic from './ProfilePublic';
 /**
  *
  * @name FundDetailsOld#dashboardAssetsDetails
- * @type {DashboardProgramDetails}
+ * @type {DashboardProgramDetailsOld}
  */
 /**
  *
@@ -143,7 +143,7 @@ export default class FundDetailsOld {
                 obj['personalDetails'] = PersonalFundDetailsFull.constructFromObject(data['personalDetails']);
             }
             if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetails.constructFromObject(data['dashboardAssetsDetails']);
+                obj['dashboardAssetsDetails'] = DashboardProgramDetailsOld.constructFromObject(data['dashboardAssetsDetails']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
