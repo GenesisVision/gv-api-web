@@ -370,6 +370,23 @@ export declare class NotificationsApi {
     toggleNotificationSettings(id: string, enable: boolean, authorization: string): CancelablePromise<string>;
 }
 
+export declare class PartnershipApi {
+    constructor(apiClient: ApiClient): PartnershipApi;
+    getReferrals(authorization: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelReferralFriend>;
+    getRewardsHistory(authorization: string, opts?: {
+        currency?: string;
+        dateFrom?: Date;
+        dateTo?: Date;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<RewardsHistoryViewModel>;
+}
+
 export declare class PlatformApi {
     constructor(apiClient: ApiClient): PlatformApi;
     getCaptchaModel(route: string, opts?: {
@@ -703,6 +720,7 @@ export declare interface index {
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
     InvestmentEventViewModel: InvestmentEventViewModel;
     InvestmentEventViewModels: InvestmentEventViewModels;
+    ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
     LevelInfo: LevelInfo;
     LevelsParamsInfo: LevelsParamsInfo;
     LoginViewModel: LoginViewModel;
@@ -785,9 +803,12 @@ export declare interface index {
     ReallocationsViewModel: ReallocationsViewModel;
     RecoveryCode: RecoveryCode;
     RecoveryCodesViewModel: RecoveryCodesViewModel;
+    ReferralFriend: ReferralFriend;
     RegisterViewModel: RegisterViewModel;
     ResendConfirmationViewModel: ResendConfirmationViewModel;
     ResetPasswordViewModel: ResetPasswordViewModel;
+    RewardDetails: RewardDetails;
+    RewardsHistoryViewModel: RewardsHistoryViewModel;
     SearchViewModel: SearchViewModel;
     SignalDataMaster: SignalDataMaster;
     SignalDetails: SignalDetails;
@@ -829,6 +850,7 @@ export declare interface index {
     InvestorApi: InvestorApi;
     ManagerApi: ManagerApi;
     NotificationsApi: NotificationsApi;
+    PartnershipApi: PartnershipApi;
     PlatformApi: PlatformApi;
     ProfileApi: ProfileApi;
     ProgramsApi: ProgramsApi;
@@ -1625,6 +1647,11 @@ export declare interface InvestorsFinancialStatistic {
     deposit: number;
     withdraw: number;
     profitWithdraw: number;
+}
+
+export declare interface ItemsViewModelReferralFriend {
+    items: ReferralFriend[];
+    total: number;
 }
 
 export declare interface LevelInfo {
@@ -2898,6 +2925,11 @@ export declare interface RecoveryCodesViewModel {
     authToken: string;
 }
 
+export declare interface ReferralFriend {
+    registerDate: Date;
+    emailMask: string;
+}
+
 export declare interface RegisterInvestorViewModel {
     password: string;
     confirmPassword: string;
@@ -2937,6 +2969,20 @@ export declare interface ResetPasswordViewModel {
     code: string;
     password: string;
     confirmPassword: string;
+}
+
+export declare type RewardDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface RewardDetails {
+    date: Date;
+    currency: RewardDetailsCurrencyEnum;
+    amount: number;
+}
+
+export declare interface RewardsHistoryViewModel {
+    amountTotal: number;
+    items: RewardDetails[];
+    total: number;
 }
 
 export declare interface SearchViewModel {

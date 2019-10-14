@@ -81,6 +81,7 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
+import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
 import LevelInfo from './model/LevelInfo';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
@@ -163,9 +164,12 @@ import ReallocationModel from './model/ReallocationModel';
 import ReallocationsViewModel from './model/ReallocationsViewModel';
 import RecoveryCode from './model/RecoveryCode';
 import RecoveryCodesViewModel from './model/RecoveryCodesViewModel';
+import ReferralFriend from './model/ReferralFriend';
 import RegisterViewModel from './model/RegisterViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
+import RewardDetails from './model/RewardDetails';
+import RewardsHistoryViewModel from './model/RewardsHistoryViewModel';
 import SearchViewModel from './model/SearchViewModel';
 import SignalDataMaster from './model/SignalDataMaster';
 import SignalDetails from './model/SignalDetails';
@@ -207,6 +211,7 @@ import FundsApi from './api/FundsApi';
 import InvestorApi from './api/InvestorApi';
 import ManagerApi from './api/ManagerApi';
 import NotificationsApi from './api/NotificationsApi';
+import PartnershipApi from './api/PartnershipApi';
 import PlatformApi from './api/PlatformApi';
 import ProfileApi from './api/ProfileApi';
 import ProgramsApi from './api/ProgramsApi';
@@ -636,6 +641,12 @@ export {
      * @type {InvestmentEventViewModels}
      */
     InvestmentEventViewModels,
+
+    /**
+     * @name index#ItemsViewModelReferralFriend
+     * @type {ItemsViewModelReferralFriend}
+     */
+    ItemsViewModelReferralFriend,
 
     /**
      * @name index#LevelInfo
@@ -1130,6 +1141,12 @@ export {
     RecoveryCodesViewModel,
 
     /**
+     * @name index#ReferralFriend
+     * @type {ReferralFriend}
+     */
+    ReferralFriend,
+
+    /**
      * @name index#RegisterViewModel
      * @type {RegisterViewModel}
      */
@@ -1146,6 +1163,18 @@ export {
      * @type {ResetPasswordViewModel}
      */
     ResetPasswordViewModel,
+
+    /**
+     * @name index#RewardDetails
+     * @type {RewardDetails}
+     */
+    RewardDetails,
+
+    /**
+     * @name index#RewardsHistoryViewModel
+     * @type {RewardsHistoryViewModel}
+     */
+    RewardsHistoryViewModel,
 
     /**
      * @name index#SearchViewModel
@@ -1392,6 +1421,12 @@ export {
     * @type {NotificationsApi}
     */
     NotificationsApi,
+
+    /**
+    * @name index#PartnershipApi
+    * @type {PartnershipApi}
+    */
+    PartnershipApi,
 
     /**
     * @name index#PlatformApi

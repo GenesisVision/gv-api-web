@@ -194,6 +194,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**readNotification**](docs/NotificationsApi.md#readNotification) | **POST** /v1.0/notifications/{id}/read | Read notification
 *CoreApiV10.NotificationsApi* | [**removeNotificationsSettings**](docs/NotificationsApi.md#removeNotificationsSettings) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.NotificationsApi* | [**toggleNotificationSettings**](docs/NotificationsApi.md#toggleNotificationSettings) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
+*CoreApiV10.PartnershipApi* | [**getReferrals**](docs/PartnershipApi.md#getReferrals) | **GET** /v1.0/partnership/referrals | Get agent friends (referrals and second level referrals).
+*CoreApiV10.PartnershipApi* | [**getRewardsHistory**](docs/PartnershipApi.md#getRewardsHistory) | **GET** /v1.0/partnership/rewards/history | Get history of agent rewards.
 *CoreApiV10.PlatformApi* | [**getCaptchaModel**](docs/PlatformApi.md#getCaptchaModel) | **GET** /v1.0/platform/riskcontrol | Platform captcha details
 *CoreApiV10.PlatformApi* | [**getLevelsParams**](docs/PlatformApi.md#getLevelsParams) | **GET** /v1.0/platform/levels/parameters | Investment programs levels parameters
 *CoreApiV10.PlatformApi* | [**getPlatformDate**](docs/PlatformApi.md#getPlatformDate) | **POST** /v1.0/platform/date | Server date
@@ -328,6 +330,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.InvestmentEventItemViewModel](docs/InvestmentEventItemViewModel.md)
  - [CoreApiV10.InvestmentEventViewModel](docs/InvestmentEventViewModel.md)
  - [CoreApiV10.InvestmentEventViewModels](docs/InvestmentEventViewModels.md)
+ - [CoreApiV10.ItemsViewModelReferralFriend](docs/ItemsViewModelReferralFriend.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelsParamsInfo](docs/LevelsParamsInfo.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
@@ -410,9 +413,12 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ReallocationsViewModel](docs/ReallocationsViewModel.md)
  - [CoreApiV10.RecoveryCode](docs/RecoveryCode.md)
  - [CoreApiV10.RecoveryCodesViewModel](docs/RecoveryCodesViewModel.md)
+ - [CoreApiV10.ReferralFriend](docs/ReferralFriend.md)
  - [CoreApiV10.RegisterViewModel](docs/RegisterViewModel.md)
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
+ - [CoreApiV10.RewardDetails](docs/RewardDetails.md)
+ - [CoreApiV10.RewardsHistoryViewModel](docs/RewardsHistoryViewModel.md)
  - [CoreApiV10.SearchViewModel](docs/SearchViewModel.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
