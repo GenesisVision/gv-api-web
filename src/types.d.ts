@@ -565,7 +565,7 @@ export declare class SearchApi {
         authorization?: string;
         mask?: string;
         take?: number;
-    }): CancelablePromise<SearchViewModel>;
+    }): CancelablePromise<SearchViewModelOld>;
 }
 
 export declare class SignalApi {
@@ -734,7 +734,7 @@ export declare interface index {
     ManagerProgramWithdrawInfo: ManagerProgramWithdrawInfo;
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
-    ManagersList: ManagersList;
+    ManagersListOld: ManagersListOld;
     MigrationRequestOld: MigrationRequestOld;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
@@ -809,7 +809,7 @@ export declare interface index {
     ResetPasswordViewModel: ResetPasswordViewModel;
     RewardDetails: RewardDetails;
     RewardsHistoryViewModel: RewardsHistoryViewModel;
-    SearchViewModel: SearchViewModel;
+    SearchViewModelOld: SearchViewModelOld;
     SignalDataMaster: SignalDataMaster;
     SignalDetails: SignalDetails;
     SignalFee: SignalFee;
@@ -1871,6 +1871,11 @@ export declare interface ManagerSimpleProgram {
 }
 
 export declare interface ManagersList {
+    managers: PublicProfile[];
+    total: number;
+}
+
+export declare interface ManagersListOld {
     managers: PublicProfile[];
     total: number;
 }
@@ -3101,6 +3106,12 @@ export declare interface SearchViewModel {
     programs: ProgramsListOld;
     funds: FundsListOld;
     managers: ManagersList;
+}
+
+export declare interface SearchViewModelOld {
+    programs: ProgramsListOld;
+    funds: FundsListOld;
+    managers: ManagersListOld;
 }
 
 export declare type SignalAccountDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";

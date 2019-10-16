@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
-import SearchViewModel from '../model/SearchViewModel';
+import SearchViewModelOld from '../model/SearchViewModelOld';
 
 /**
 * Search service.
@@ -54,7 +54,7 @@ export default class SearchApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = SearchViewModel;
+      let returnType = SearchViewModelOld;
 
       return this.apiClient.callApi(
         '/v1.0/search', 'GET',
@@ -70,7 +70,7 @@ export default class SearchApi {
      * @param {String} [opts.authorization] 
      * @param {String} [opts.mask] 
      * @param {Number} [opts.take] 
-     * @return {CancelablePromise<SearchViewModel>} a Promise, with an object containing data of type SearchViewModel and HTTP response
+     * @return {CancelablePromise<SearchViewModelOld>} a Promise, with an object containing data of type SearchViewModelOld and HTTP response
      */
       search(opts) {
       return this.searchWithHttpInfo(opts)

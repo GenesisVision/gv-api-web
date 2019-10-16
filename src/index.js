@@ -95,7 +95,7 @@ import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
-import ManagersList from './model/ManagersList';
+import ManagersListOld from './model/ManagersListOld';
 import MigrationRequestOld from './model/MigrationRequestOld';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
@@ -170,7 +170,7 @@ import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import RewardDetails from './model/RewardDetails';
 import RewardsHistoryViewModel from './model/RewardsHistoryViewModel';
-import SearchViewModel from './model/SearchViewModel';
+import SearchViewModelOld from './model/SearchViewModelOld';
 import SignalDataMaster from './model/SignalDataMaster';
 import SignalDetails from './model/SignalDetails';
 import SignalFee from './model/SignalFee';
@@ -727,10 +727,10 @@ export {
     ManagerSimpleProgram,
 
     /**
-     * @name index#ManagersList
-     * @type {ManagersList}
+     * @name index#ManagersListOld
+     * @type {ManagersListOld}
      */
-    ManagersList,
+    ManagersListOld,
 
     /**
      * @name index#MigrationRequestOld
@@ -1177,10 +1177,10 @@ export {
     RewardsHistoryViewModel,
 
     /**
-     * @name index#SearchViewModel
-     * @type {SearchViewModel}
+     * @name index#SearchViewModelOld
+     * @type {SearchViewModelOld}
      */
-    SearchViewModel,
+    SearchViewModelOld,
 
     /**
      * @name index#SignalDataMaster

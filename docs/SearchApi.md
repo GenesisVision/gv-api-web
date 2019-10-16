@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="search"></a>
 # **search**
-> SearchViewModel search(opts)
+> SearchViewModelOld search(opts)
 
 Program / fund / manager search
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchViewModel**](SearchViewModel.md)
+[**SearchViewModelOld**](SearchViewModelOld.md)
 
 ### Authorization
 
