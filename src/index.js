@@ -60,7 +60,7 @@ import FundAssetPercent from './model/FundAssetPercent';
 import FundAssetsListInfo from './model/FundAssetsListInfo';
 import FundAssetsState from './model/FundAssetsState';
 import FundBalanceChartOld from './model/FundBalanceChartOld';
-import FundDetailsFull from './model/FundDetailsFull';
+import FundDetailsFullOld from './model/FundDetailsFullOld';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundDetailsOld from './model/FundDetailsOld';
 import FundEquityChartElementOld from './model/FundEquityChartElementOld';
@@ -70,7 +70,7 @@ import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChartOld from './model/FundProfitChartOld';
 import FundSets from './model/FundSets';
-import FundStatistic from './model/FundStatistic';
+import FundStatisticOld from './model/FundStatisticOld';
 import FundWithdrawInfo from './model/FundWithdrawInfo';
 import FundsListOld from './model/FundsListOld';
 import GeeTestDetails from './model/GeeTestDetails';
@@ -117,7 +117,7 @@ import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
-import PersonalFundDetailsFull from './model/PersonalFundDetailsFull';
+import PersonalFundDetailsFullOld from './model/PersonalFundDetailsFullOld';
 import PersonalProgramDetailsFullOld from './model/PersonalProgramDetailsFullOld';
 import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
 import PlatformAsset from './model/PlatformAsset';
@@ -517,10 +517,10 @@ export {
     FundBalanceChartOld,
 
     /**
-     * @name index#FundDetailsFull
-     * @type {FundDetailsFull}
+     * @name index#FundDetailsFullOld
+     * @type {FundDetailsFullOld}
      */
-    FundDetailsFull,
+    FundDetailsFullOld,
 
     /**
      * @name index#FundDetailsListStatistic
@@ -577,10 +577,10 @@ export {
     FundSets,
 
     /**
-     * @name index#FundStatistic
-     * @type {FundStatistic}
+     * @name index#FundStatisticOld
+     * @type {FundStatisticOld}
      */
-    FundStatistic,
+    FundStatisticOld,
 
     /**
      * @name index#FundWithdrawInfo
@@ -859,10 +859,10 @@ export {
     PeriodDate,
 
     /**
-     * @name index#PersonalFundDetailsFull
-     * @type {PersonalFundDetailsFull}
+     * @name index#PersonalFundDetailsFullOld
+     * @type {PersonalFundDetailsFullOld}
      */
-    PersonalFundDetailsFull,
+    PersonalFundDetailsFullOld,
 
     /**
      * @name index#PersonalProgramDetailsFullOld

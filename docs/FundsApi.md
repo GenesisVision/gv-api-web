@@ -189,7 +189,7 @@ No authorization required
 
 <a name="getFundDetails"></a>
 # **getFundDetails**
-> FundDetailsFull getFundDetails(id, opts)
+> FundDetailsFullOld getFundDetails(id, opts)
 
 Funds details
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FundDetailsFull**](FundDetailsFull.md)
+[**FundDetailsFullOld**](FundDetailsFullOld.md)
 
 ### Authorization
 

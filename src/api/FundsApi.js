@@ -16,7 +16,7 @@ import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetsListInfo from '../model/FundAssetsListInfo';
 import FundBalanceChartOld from '../model/FundBalanceChartOld';
-import FundDetailsFull from '../model/FundDetailsFull';
+import FundDetailsFullOld from '../model/FundDetailsFullOld';
 import FundProfitChartOld from '../model/FundProfitChartOld';
 import FundSets from '../model/FundSets';
 import FundsListOld from '../model/FundsListOld';
@@ -252,7 +252,7 @@ export default class FundsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundDetailsFull;
+      let returnType = FundDetailsFullOld;
 
       return this.apiClient.callApi(
         '/v1.0/funds/{id}', 'GET',
@@ -268,7 +268,7 @@ export default class FundsApi {
      * @param {Object} [opts] Optional parameters
      * @param {String} [opts.authorization] 
      * @param {String} [opts.currency] 
-     * @return {CancelablePromise<FundDetailsFull>} a Promise, with an object containing data of type FundDetailsFull and HTTP response
+     * @return {CancelablePromise<FundDetailsFullOld>} a Promise, with an object containing data of type FundDetailsFullOld and HTTP response
      */
       getFundDetails(id, opts) {
       return this.getFundDetailsWithHttpInfo(id, opts)

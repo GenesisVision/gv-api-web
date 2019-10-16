@@ -13,10 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
-import ChartSimple from './ChartSimple';
-import DashboardProgramDetailsOld from './DashboardProgramDetailsOld';
-import FundAssetPercent from './FundAssetPercent';
-import FundDetailsListStatistic from './FundDetailsListStatistic';
+import FundAssetPartWithIcon from './FundAssetPartWithIcon';
+import FundStatisticOld from './FundStatisticOld';
 import PersonalFundDetailsFullOld from './PersonalFundDetailsFullOld';
 import ProfilePublic from './ProfilePublic';
 
@@ -26,90 +24,95 @@ import ProfilePublic from './ProfilePublic';
 
 /**
  *
- * @interface FundDetailsOld
+ * @interface FundDetailsFullOld
  */
 
 /**
  *
- * @name FundDetailsOld#totalAssetsCount
+ * @name FundDetailsFullOld#entryFee
  * @type {Number}
  */
 /**
  *
- * @name FundDetailsOld#topFundAssets
- * @type {Array<FundAssetPercent>}
+ * @name FundDetailsFullOld#exitFee
+ * @type {Number}
  */
 /**
  *
- * @name FundDetailsOld#statistic
- * @type {FundDetailsListStatistic}
+ * @name FundDetailsFullOld#managementFee
+ * @type {Number}
  */
 /**
  *
- * @name FundDetailsOld#personalDetails
+ * @name FundDetailsFullOld#currentAssets
+ * @type {Array<FundAssetPartWithIcon>}
+ */
+/**
+ *
+ * @name FundDetailsFullOld#statistic
+ * @type {FundStatisticOld}
+ */
+/**
+ *
+ * @name FundDetailsFullOld#personalFundDetails
  * @type {PersonalFundDetailsFullOld}
  */
 /**
  *
- * @name FundDetailsOld#dashboardAssetsDetails
- * @type {DashboardProgramDetailsOld}
- */
-/**
- *
- * @name FundDetailsOld#id
+ * @name FundDetailsFullOld#id
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#logo
+ * @name FundDetailsFullOld#logo
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#url
+ * @name FundDetailsFullOld#url
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#color
+ * @name FundDetailsFullOld#color
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#title
+ * @name FundDetailsFullOld#description
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#description
+ * @name FundDetailsFullOld#title
  * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#status
- * @type FundDetailsOldStatusEnum
+ * @name FundDetailsFullOld#ipfsHash
+ * @type {String}
  */
 /**
  *
- * @name FundDetailsOld#creationDate
+ * @name FundDetailsFullOld#creationDate
  * @type {Date}
  */
 /**
  *
- * @name FundDetailsOld#manager
- * @type {ProfilePublic}
+ * @name FundDetailsFullOld#status
+ * @type FundDetailsFullOldStatusEnum
  */
 /**
  *
- * @name FundDetailsOld#chart
- * @type {Array<ChartSimple>}
+ * @name FundDetailsFullOld#manager
+ * @type {ProfilePublic}
  */
 
 
 
 
 
-export default class FundDetailsOld {
+export default class FundDetailsFullOld {
 
     constructor() {
         
@@ -124,26 +127,29 @@ export default class FundDetailsOld {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new FundDetailsOld();
+            obj = obj || new FundDetailsFullOld();
 
             
             
             
 
-            if (data.hasOwnProperty('totalAssetsCount')) {
-                obj['totalAssetsCount'] = ApiClient.convertToType(data['totalAssetsCount'], 'Number');
+            if (data.hasOwnProperty('entryFee')) {
+                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
             }
-            if (data.hasOwnProperty('topFundAssets')) {
-                obj['topFundAssets'] = ApiClient.convertToType(data['topFundAssets'], [FundAssetPercent]);
+            if (data.hasOwnProperty('exitFee')) {
+                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
+            }
+            if (data.hasOwnProperty('managementFee')) {
+                obj['managementFee'] = ApiClient.convertToType(data['managementFee'], 'Number');
+            }
+            if (data.hasOwnProperty('currentAssets')) {
+                obj['currentAssets'] = ApiClient.convertToType(data['currentAssets'], [FundAssetPartWithIcon]);
             }
             if (data.hasOwnProperty('statistic')) {
-                obj['statistic'] = FundDetailsListStatistic.constructFromObject(data['statistic']);
+                obj['statistic'] = FundStatisticOld.constructFromObject(data['statistic']);
             }
-            if (data.hasOwnProperty('personalDetails')) {
-                obj['personalDetails'] = PersonalFundDetailsFullOld.constructFromObject(data['personalDetails']);
-            }
-            if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetailsOld.constructFromObject(data['dashboardAssetsDetails']);
+            if (data.hasOwnProperty('personalFundDetails')) {
+                obj['personalFundDetails'] = PersonalFundDetailsFullOld.constructFromObject(data['personalFundDetails']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -157,43 +163,44 @@ export default class FundDetailsOld {
             if (data.hasOwnProperty('color')) {
                 obj['color'] = ApiClient.convertToType(data['color'], 'String');
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('ipfsHash')) {
+                obj['ipfsHash'] = ApiClient.convertToType(data['ipfsHash'], 'String');
             }
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
             }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
             }
         }
         return obj;
     }
 
-    totalAssetsCount = undefined;
-    topFundAssets = undefined;
+    entryFee = undefined;
+    exitFee = undefined;
+    managementFee = undefined;
+    currentAssets = undefined;
     statistic = undefined;
-    personalDetails = undefined;
-    dashboardAssetsDetails = undefined;
+    personalFundDetails = undefined;
     id = undefined;
     logo = undefined;
     url = undefined;
     color = undefined;
-    title = undefined;
     description = undefined;
-    status = undefined;
+    title = undefined;
+    ipfsHash = undefined;
     creationDate = undefined;
+    status = undefined;
     manager = undefined;
-    chart = undefined;
 
 
 
@@ -225,7 +232,7 @@ export default class FundDetailsOld {
 
 
 /**
- * @typedef FundDetailsOldStatusEnum 
+ * @typedef FundDetailsFullOldStatusEnum 
  * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
  */
 

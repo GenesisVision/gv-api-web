@@ -1,23 +1,24 @@
-# CoreApiV10.FundDetailsOld
+# CoreApiV10.FundDetailsFullOld
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalAssetsCount** | **Number** |  | [optional] 
-**topFundAssets** | [**[FundAssetPercent]**](FundAssetPercent.md) |  | [optional] 
-**statistic** | [**FundDetailsListStatistic**](FundDetailsListStatistic.md) |  | [optional] 
-**personalDetails** | [**PersonalFundDetailsFullOld**](PersonalFundDetailsFullOld.md) | Fields for authorized user | [optional] 
-**dashboardAssetsDetails** | [**DashboardProgramDetailsOld**](DashboardProgramDetailsOld.md) | Fields for dashboard | [optional] 
+**entryFee** | **Number** |  | [optional] 
+**exitFee** | **Number** |  | [optional] 
+**managementFee** | **Number** |  | [optional] 
+**currentAssets** | [**[FundAssetPartWithIcon]**](FundAssetPartWithIcon.md) |  | [optional] 
+**statistic** | [**FundStatisticOld**](FundStatisticOld.md) |  | [optional] 
+**personalFundDetails** | [**PersonalFundDetailsFullOld**](PersonalFundDetailsFullOld.md) | Fields for authorized user | [optional] 
 **id** | **String** |  | [optional] 
 **logo** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
-**title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**ipfsHash** | **String** |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
+**status** | **String** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
-**chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>

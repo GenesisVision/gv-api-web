@@ -94,7 +94,7 @@ export declare class FundsApi {
     getFundDetails(id: string, opts?: {
         authorization?: string;
         currency?: string;
-    }): CancelablePromise<FundDetailsFull>;
+    }): CancelablePromise<FundDetailsFullOld>;
     getFundProfitChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -699,7 +699,7 @@ export declare interface index {
     FundAssetsListInfo: FundAssetsListInfo;
     FundAssetsState: FundAssetsState;
     FundBalanceChartOld: FundBalanceChartOld;
-    FundDetailsFull: FundDetailsFull;
+    FundDetailsFullOld: FundDetailsFullOld;
     FundDetailsListStatistic: FundDetailsListStatistic;
     FundDetailsOld: FundDetailsOld;
     FundEquityChartElementOld: FundEquityChartElementOld;
@@ -709,7 +709,7 @@ export declare interface index {
     FundNotificationSettingList: FundNotificationSettingList;
     FundProfitChartOld: FundProfitChartOld;
     FundSets: FundSets;
-    FundStatistic: FundStatistic;
+    FundStatisticOld: FundStatisticOld;
     FundWithdrawInfo: FundWithdrawInfo;
     FundsListOld: FundsListOld;
     GeeTestDetails: GeeTestDetails;
@@ -756,7 +756,7 @@ export declare interface index {
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
-    PersonalFundDetailsFull: PersonalFundDetailsFull;
+    PersonalFundDetailsFullOld: PersonalFundDetailsFullOld;
     PersonalProgramDetailsFullOld: PersonalProgramDetailsFullOld;
     PersonalSignalDetailsFull: PersonalSignalDetailsFull;
     PlatformAsset: PlatformAsset;
@@ -1447,6 +1447,27 @@ export declare interface FundDetailsFull {
     manager: ProfilePublic;
 }
 
+export declare type FundDetailsFullOldStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+
+export declare interface FundDetailsFullOld {
+    entryFee: number;
+    exitFee: number;
+    managementFee: number;
+    currentAssets: FundAssetPartWithIcon[];
+    statistic: FundStatisticOld;
+    personalFundDetails: PersonalFundDetailsFullOld;
+    id: string;
+    logo: string;
+    url: string;
+    color: string;
+    description: string;
+    title: string;
+    ipfsHash: string;
+    creationDate: Date;
+    status: FundDetailsFullOldStatusEnum;
+    manager: ProfilePublic;
+}
+
 export declare interface FundDetailsListStatistic {
     balance: AmountWithCurrency;
     profitPercent: number;
@@ -1460,7 +1481,7 @@ export declare interface FundDetailsOld {
     totalAssetsCount: number;
     topFundAssets: FundAssetPercent[];
     statistic: FundDetailsListStatistic;
-    personalDetails: PersonalFundDetailsFull;
+    personalDetails: PersonalFundDetailsFullOld;
     dashboardAssetsDetails: DashboardProgramDetailsOld;
     id: string;
     logo: string;
@@ -1572,6 +1593,17 @@ export declare interface FundSets {
 }
 
 export declare interface FundStatistic {
+    balance: AmountWithCurrency;
+    profitPercent: number;
+    drawdownPercent: number;
+    investorsCount: number;
+    startDate: Date;
+    startBalance: number;
+    investedAmount: number;
+    rebalancingCount: number;
+}
+
+export declare interface FundStatisticOld {
     balance: AmountWithCurrency;
     profitPercent: number;
     drawdownPercent: number;
@@ -2140,6 +2172,32 @@ export declare interface PersonalFundDetailsFull {
     pendingOutput: number;
     pendingOutputIsWithdrawAll: boolean;
     status: PersonalFundDetailsFullStatusEnum;
+}
+
+export declare type PersonalFundDetailsFullOldStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
+
+export declare interface PersonalFundDetailsFullOld {
+    withdrawPercent: number;
+    canReallocate: boolean;
+    availableReallocationPercents: number;
+    nextReallocationPercents: Date;
+    exitFeePersonal: number;
+    isFavorite: boolean;
+    isInvested: boolean;
+    isOwnProgram: boolean;
+    canCloseAsset: boolean;
+    isFinishing: boolean;
+    canInvest: boolean;
+    canWithdraw: boolean;
+    canClosePeriod: boolean;
+    hasNotifications: boolean;
+    value: number;
+    profit: number;
+    invested: number;
+    pendingInput: number;
+    pendingOutput: number;
+    pendingOutputIsWithdrawAll: boolean;
+    status: PersonalFundDetailsFullOldStatusEnum;
 }
 
 export declare type PersonalProgramDetailsFullStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
