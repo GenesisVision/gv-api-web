@@ -71,7 +71,7 @@ import FundNotificationSettingList from './model/FundNotificationSettingList';
 import FundProfitChartOld from './model/FundProfitChartOld';
 import FundSets from './model/FundSets';
 import FundStatisticOld from './model/FundStatisticOld';
-import FundWithdrawInfo from './model/FundWithdrawInfo';
+import FundWithdrawInfoOld from './model/FundWithdrawInfoOld';
 import FundsListOld from './model/FundsListOld';
 import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
@@ -87,12 +87,12 @@ import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
 import ManagerAssets from './model/ManagerAssets';
 import ManagerFinancialStatistic from './model/ManagerFinancialStatistic';
-import ManagerFundWithdrawInfo from './model/ManagerFundWithdrawInfo';
+import ManagerFundWithdrawInfoOld from './model/ManagerFundWithdrawInfoOld';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
 import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
-import ManagerProgramWithdrawInfo from './model/ManagerProgramWithdrawInfo';
+import ManagerProgramWithdrawInfoOld from './model/ManagerProgramWithdrawInfoOld';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersListOld from './model/ManagersListOld';
@@ -152,7 +152,7 @@ import ProgramStatistic from './model/ProgramStatistic';
 import ProgramTag from './model/ProgramTag';
 import ProgramTransactionDetails from './model/ProgramTransactionDetails';
 import ProgramUpdate from './model/ProgramUpdate';
-import ProgramWithdrawInfo from './model/ProgramWithdrawInfo';
+import ProgramWithdrawInfoOld from './model/ProgramWithdrawInfoOld';
 import ProgramsInfoOld from './model/ProgramsInfoOld';
 import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
 import ProgramsListOld from './model/ProgramsListOld';
@@ -583,10 +583,10 @@ export {
     FundStatisticOld,
 
     /**
-     * @name index#FundWithdrawInfo
-     * @type {FundWithdrawInfo}
+     * @name index#FundWithdrawInfoOld
+     * @type {FundWithdrawInfoOld}
      */
-    FundWithdrawInfo,
+    FundWithdrawInfoOld,
 
     /**
      * @name index#FundsListOld
@@ -679,10 +679,10 @@ export {
     ManagerFinancialStatistic,
 
     /**
-     * @name index#ManagerFundWithdrawInfo
-     * @type {ManagerFundWithdrawInfo}
+     * @name index#ManagerFundWithdrawInfoOld
+     * @type {ManagerFundWithdrawInfoOld}
      */
-    ManagerFundWithdrawInfo,
+    ManagerFundWithdrawInfoOld,
 
     /**
      * @name index#ManagerNotificationSettingList
@@ -709,10 +709,10 @@ export {
     ManagerProgramCreateResult,
 
     /**
-     * @name index#ManagerProgramWithdrawInfo
-     * @type {ManagerProgramWithdrawInfo}
+     * @name index#ManagerProgramWithdrawInfoOld
+     * @type {ManagerProgramWithdrawInfoOld}
      */
-    ManagerProgramWithdrawInfo,
+    ManagerProgramWithdrawInfoOld,
 
     /**
      * @name index#ManagerSimpleFund
@@ -1069,10 +1069,10 @@ export {
     ProgramUpdate,
 
     /**
-     * @name index#ProgramWithdrawInfo
-     * @type {ProgramWithdrawInfo}
+     * @name index#ProgramWithdrawInfoOld
+     * @type {ProgramWithdrawInfoOld}
      */
-    ProgramWithdrawInfo,
+    ProgramWithdrawInfoOld,
 
     /**
      * @name index#ProgramsInfoOld

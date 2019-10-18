@@ -20,10 +20,10 @@ import FundInvestInfo from '../model/FundInvestInfo';
 import FundsListOld from '../model/FundsListOld';
 import InvestmentEventViewModels from '../model/InvestmentEventViewModels';
 import ManagerAssets from '../model/ManagerAssets';
-import ManagerFundWithdrawInfo from '../model/ManagerFundWithdrawInfo';
+import ManagerFundWithdrawInfoOld from '../model/ManagerFundWithdrawInfoOld';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
-import ManagerProgramWithdrawInfo from '../model/ManagerProgramWithdrawInfo';
+import ManagerProgramWithdrawInfoOld from '../model/ManagerProgramWithdrawInfoOld';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
 import ProgramInvestInfoOld from '../model/ProgramInvestInfoOld';
@@ -808,7 +808,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerFundWithdrawInfo;
+      let returnType = ManagerFundWithdrawInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/manager/funds/{id}/withdraw/info/{currency}', 'GET',
@@ -823,7 +823,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ManagerFundWithdrawInfo>} a Promise, with an object containing data of type ManagerFundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerFundWithdrawInfoOld>} a Promise, with an object containing data of type ManagerFundWithdrawInfoOld and HTTP response
      */
       getFundWithdrawInfo(id, currency, authorization) {
       return this.getFundWithdrawInfoWithHttpInfo(id, currency, authorization)
@@ -1469,7 +1469,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProgramWithdrawInfo;
+      let returnType = ManagerProgramWithdrawInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs/{id}/withdraw/info/{currency}', 'GET',
@@ -1484,7 +1484,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ManagerProgramWithdrawInfo>} a Promise, with an object containing data of type ManagerProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ManagerProgramWithdrawInfoOld>} a Promise, with an object containing data of type ManagerProgramWithdrawInfoOld and HTTP response
      */
       getProgramWithdrawInfo(id, currency, authorization) {
       return this.getProgramWithdrawInfoWithHttpInfo(id, currency, authorization)

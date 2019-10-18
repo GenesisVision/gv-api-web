@@ -159,7 +159,7 @@ export declare class InvestorApi {
         take?: number;
     }): CancelablePromise<InvestmentEventViewModels>;
     getFundInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<FundInvestInfo>;
-    getFundWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<FundWithdrawInfo>;
+    getFundWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<FundWithdrawInfoOld>;
     getFunds(authorization: string, opts?: {
         sorting?: string;
         currency?: string;
@@ -183,7 +183,7 @@ export declare class InvestorApi {
     getProgramInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramInvestInfoOld>;
     getProgramRequests(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
     getProgramRequests_0(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
-    getProgramWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramWithdrawInfo>;
+    getProgramWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ProgramWithdrawInfoOld>;
     getPrograms(authorization: string, opts?: {
         sorting?: string;
         currency?: string;
@@ -272,7 +272,7 @@ export declare class ManagerApi {
     }): CancelablePromise<InvestmentEventViewModels>;
     getFundInvestInfo(id: string, currency: string, authorization: string): CancelablePromise<FundInvestInfo>;
     getFundInvestment(authorization: string): CancelablePromise<number>;
-    getFundWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ManagerFundWithdrawInfo>;
+    getFundWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ManagerFundWithdrawInfoOld>;
     getLevelsCalculator(id: string, authorization: string): CancelablePromise<ProgramLevelInfo>;
     getManagerAssets(authorization: string): CancelablePromise<ManagerAssets>;
     getManagerDetails(id: string): CancelablePromise<ManagerProfileDetails>;
@@ -312,7 +312,7 @@ export declare class ManagerApi {
     }): CancelablePromise<ProgramMinimumDepositOld>;
     getProgramRequests(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
     getProgramRequests_0(id: string, skip: number, take: number, authorization: string): CancelablePromise<ProgramRequestsOld>;
-    getProgramWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ManagerProgramWithdrawInfo>;
+    getProgramWithdrawInfo(id: string, currency: string, authorization: string): CancelablePromise<ManagerProgramWithdrawInfoOld>;
     getRequests(skip: number, take: number, authorization: string, opts?: {
         assetType?: string;
     }): CancelablePromise<ProgramRequestsOld>;
@@ -710,7 +710,7 @@ export declare interface index {
     FundProfitChartOld: FundProfitChartOld;
     FundSets: FundSets;
     FundStatisticOld: FundStatisticOld;
-    FundWithdrawInfo: FundWithdrawInfo;
+    FundWithdrawInfoOld: FundWithdrawInfoOld;
     FundsListOld: FundsListOld;
     GeeTestDetails: GeeTestDetails;
     GeeTestResult: GeeTestResult;
@@ -726,12 +726,12 @@ export declare interface index {
     LoginViewModel: LoginViewModel;
     ManagerAssets: ManagerAssets;
     ManagerFinancialStatistic: ManagerFinancialStatistic;
-    ManagerFundWithdrawInfo: ManagerFundWithdrawInfo;
+    ManagerFundWithdrawInfoOld: ManagerFundWithdrawInfoOld;
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
     ManagerProfileDetails: ManagerProfileDetails;
     ManagerProgramCreateResult: ManagerProgramCreateResult;
-    ManagerProgramWithdrawInfo: ManagerProgramWithdrawInfo;
+    ManagerProgramWithdrawInfoOld: ManagerProgramWithdrawInfoOld;
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
     ManagersListOld: ManagersListOld;
@@ -791,7 +791,7 @@ export declare interface index {
     ProgramTag: ProgramTag;
     ProgramTransactionDetails: ProgramTransactionDetails;
     ProgramUpdate: ProgramUpdate;
-    ProgramWithdrawInfo: ProgramWithdrawInfo;
+    ProgramWithdrawInfoOld: ProgramWithdrawInfoOld;
     ProgramsInfoOld: ProgramsInfoOld;
     ProgramsLevelsInfo: ProgramsLevelsInfo;
     ProgramsListOld: ProgramsListOld;
@@ -1621,6 +1621,13 @@ export declare interface FundWithdrawInfo {
     rate: number;
 }
 
+export declare interface FundWithdrawInfoOld {
+    exitFee: number;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
+}
+
 export declare interface FundsList {
     funds: FundDetails[];
     total: number;
@@ -1780,6 +1787,14 @@ export declare interface ManagerFundWithdrawInfo {
     rate: number;
 }
 
+export declare interface ManagerFundWithdrawInfoOld {
+    withheldInvestment: number;
+    exitFee: number;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
+}
+
 export declare interface ManagerNotificationSettingList {
     managerId: string;
     url: string;
@@ -1845,6 +1860,14 @@ export declare interface ManagerProgramCreateResult {
 }
 
 export declare interface ManagerProgramWithdrawInfo {
+    withheldInvestment: number;
+    periodEnds: Date;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
+}
+
+export declare interface ManagerProgramWithdrawInfoOld {
     withheldInvestment: number;
     periodEnds: Date;
     title: string;
@@ -2930,6 +2953,13 @@ export declare interface ProgramUpdate {
 }
 
 export declare interface ProgramWithdrawInfo {
+    periodEnds: Date;
+    title: string;
+    availableToWithdraw: number;
+    rate: number;
+}
+
+export declare interface ProgramWithdrawInfoOld {
     periodEnds: Date;
     title: string;
     availableToWithdraw: number;

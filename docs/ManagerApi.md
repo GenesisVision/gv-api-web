@@ -695,7 +695,7 @@ No authorization required
 
 <a name="getFundWithdrawInfo"></a>
 # **getFundWithdrawInfo**
-> ManagerFundWithdrawInfo getFundWithdrawInfo(id, currency, authorization)
+> ManagerFundWithdrawInfoOld getFundWithdrawInfo(id, currency, authorization)
 
 Data for withdrawal from fund
 
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerFundWithdrawInfo**](ManagerFundWithdrawInfo.md)
+[**ManagerFundWithdrawInfoOld**](ManagerFundWithdrawInfoOld.md)
 
 ### Authorization
 
@@ -1276,7 +1276,7 @@ No authorization required
 
 <a name="getProgramWithdrawInfo"></a>
 # **getProgramWithdrawInfo**
-> ManagerProgramWithdrawInfo getProgramWithdrawInfo(id, currency, authorization)
+> ManagerProgramWithdrawInfoOld getProgramWithdrawInfo(id, currency, authorization)
 
 Data for withdrawal from investment program
 
@@ -1310,7 +1310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerProgramWithdrawInfo**](ManagerProgramWithdrawInfo.md)
+[**ManagerProgramWithdrawInfoOld**](ManagerProgramWithdrawInfoOld.md)
 
 ### Authorization
 

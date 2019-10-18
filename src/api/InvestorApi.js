@@ -17,12 +17,12 @@ import DashboardChartValue from '../model/DashboardChartValue';
 import DashboardSummary from '../model/DashboardSummary';
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundInvestInfo from '../model/FundInvestInfo';
-import FundWithdrawInfo from '../model/FundWithdrawInfo';
+import FundWithdrawInfoOld from '../model/FundWithdrawInfoOld';
 import FundsListOld from '../model/FundsListOld';
 import InvestmentEventViewModels from '../model/InvestmentEventViewModels';
 import ProgramInvestInfoOld from '../model/ProgramInvestInfoOld';
 import ProgramRequestsOld from '../model/ProgramRequestsOld';
-import ProgramWithdrawInfo from '../model/ProgramWithdrawInfo';
+import ProgramWithdrawInfoOld from '../model/ProgramWithdrawInfoOld';
 import ProgramsListOld from '../model/ProgramsListOld';
 import SignalsList from '../model/SignalsList';
 
@@ -311,7 +311,7 @@ export default class InvestorApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = FundWithdrawInfo;
+      let returnType = FundWithdrawInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/investor/funds/{id}/withdraw/info/{currency}', 'GET',
@@ -326,7 +326,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {CancelablePromise<FundWithdrawInfo>} a Promise, with an object containing data of type FundWithdrawInfo and HTTP response
+     * @return {CancelablePromise<FundWithdrawInfoOld>} a Promise, with an object containing data of type FundWithdrawInfoOld and HTTP response
      */
       getFundWithdrawInfo(id, currency, authorization) {
       return this.getFundWithdrawInfoWithHttpInfo(id, currency, authorization)
@@ -681,7 +681,7 @@ export default class InvestorApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramWithdrawInfo;
+      let returnType = ProgramWithdrawInfoOld;
 
       return this.apiClient.callApi(
         '/v1.0/investor/programs/{id}/withdraw/info/{currency}', 'GET',
@@ -696,7 +696,7 @@ export default class InvestorApi {
      * @param {String} id 
      * @param {String} currency 
      * @param {String} authorization JWT access token
-     * @return {CancelablePromise<ProgramWithdrawInfo>} a Promise, with an object containing data of type ProgramWithdrawInfo and HTTP response
+     * @return {CancelablePromise<ProgramWithdrawInfoOld>} a Promise, with an object containing data of type ProgramWithdrawInfoOld and HTTP response
      */
       getProgramWithdrawInfo(id, currency, authorization) {
       return this.getProgramWithdrawInfoWithHttpInfo(id, currency, authorization)
