@@ -604,6 +604,18 @@ export declare class SignalApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalTradingEvents>;
+    getSignals(opts?: {
+        authorization?: string;
+        tags?: string[];
+        statisticDateFrom?: Date;
+        statisticDateTo?: Date;
+        chartPointsCount?: number;
+        chartCurrency?: string;
+        facetId?: string;
+        mask?: string;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelCopyTradingAccountInfo>;
     getSlaveAttachInfo(id: string, authorization: string): CancelablePromise<AttachToSignalProviderInfo>;
     updateSubscriptionSettings(id: string, authorization: string, opts?: {
         model?: AttachToSignalProvider;
@@ -720,6 +732,7 @@ export declare interface index {
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
     InvestmentEventViewModel: InvestmentEventViewModel;
     InvestmentEventViewModels: InvestmentEventViewModels;
+    ItemsViewModelCopyTradingAccountInfo: ItemsViewModelCopyTradingAccountInfo;
     ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
     LevelInfo: LevelInfo;
     LevelsParamsInfo: LevelsParamsInfo;
@@ -756,6 +769,7 @@ export declare interface index {
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
+    PersonalCopyTradingAccountInfo: PersonalCopyTradingAccountInfo;
     PersonalFundDetailsFullOld: PersonalFundDetailsFullOld;
     PersonalProgramDetailsFullOld: PersonalProgramDetailsFullOld;
     PersonalSignalDetailsFull: PersonalSignalDetailsFull;
@@ -1137,6 +1151,7 @@ export declare interface CopyTradingAccountInfo {
     freeMargin: number;
     marginLevel: number;
     available: number;
+    personalInfo: PersonalCopyTradingAccountInfo;
 }
 
 export declare interface CopyTradingAccountsList {
@@ -1705,6 +1720,11 @@ export declare interface InvestorsFinancialStatistic {
     profitWithdraw: number;
 }
 
+export declare interface ItemsViewModelCopyTradingAccountInfo {
+    items: CopyTradingAccountInfo[];
+    total: number;
+}
+
 export declare interface ItemsViewModelReferralFriend {
     items: ReferralFriend[];
     total: number;
@@ -2174,6 +2194,11 @@ export declare interface PasswordModel {
 export declare interface PeriodDate {
     dateFrom: Date;
     dateTo: Date;
+}
+
+export declare interface PersonalCopyTradingAccountInfo {
+    isOwnSignal: boolean;
+    isFavorite: boolean;
 }
 
 export declare type PersonalFundDetailsFullStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";

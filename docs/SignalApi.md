@@ -7,10 +7,11 @@ Method | HTTP request | Description
 [**attachSlaveToMaster**](SignalApi.md#attachSlaveToMaster) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 [**closeTrade**](SignalApi.md#closeTrade) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**detachSlaveFromMaster**](SignalApi.md#detachSlaveFromMaster) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-[**getCopytradingAccounts**](SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/accounts | Get copytrading accounts
+[**getCopytradingAccounts**](SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/slaves | Get copytrading slaves accounts
 [**getOpenSignalTrades**](SignalApi.md#getOpenSignalTrades) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 [**getSignalTrades**](SignalApi.md#getSignalTrades) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**getSignalTradingLog**](SignalApi.md#getSignalTradingLog) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
+[**getSignals**](SignalApi.md#getSignals) | **GET** /v1.0/signal | Get copytrading masters list
 [**getSlaveAttachInfo**](SignalApi.md#getSlaveAttachInfo) | **GET** /v1.0/signal/attach/{id}/info | Get subscribe to programs signals info
 [**updateSubscriptionSettings**](SignalApi.md#updateSubscriptionSettings) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 
@@ -163,7 +164,7 @@ No authorization required
 # **getCopytradingAccounts**
 > CopyTradingAccountsList getCopytradingAccounts(authorization)
 
-Get copytrading accounts
+Get copytrading slaves accounts
 
 ### Example
 ```javascript
@@ -355,6 +356,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SignalTradingEvents**](SignalTradingEvents.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+<a name="getSignals"></a>
+# **getSignals**
+> ItemsViewModelCopyTradingAccountInfo getSignals(opts)
+
+Get copytrading masters list
+
+### Example
+```javascript
+import CoreApiV10 from 'core_api_v10';
+
+let apiInstance = new CoreApiV10.SignalApi();
+
+let opts = { 
+  'authorization': "authorization_example", // String | 
+  'tags': ["tags_example"], // [String] | 
+  'statisticDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'statisticDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'chartPointsCount': 56, // Number | 
+  'chartCurrency': "chartCurrency_example", // String | 
+  'facetId': "facetId_example", // String | 
+  'mask': "mask_example", // String | 
+  'skip': 56, // Number | 
+  'take': 56 // Number | 
+};
+apiInstance.getSignals(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **tags** | [**[String]**](String.md)|  | [optional] 
+ **statisticDateFrom** | **Date**|  | [optional] 
+ **statisticDateTo** | **Date**|  | [optional] 
+ **chartPointsCount** | **Number**|  | [optional] 
+ **chartCurrency** | **String**|  | [optional] 
+ **facetId** | **String**|  | [optional] 
+ **mask** | **String**|  | [optional] 
+ **skip** | **Number**|  | [optional] 
+ **take** | **Number**|  | [optional] 
+
+### Return type
+
+[**ItemsViewModelCopyTradingAccountInfo**](ItemsViewModelCopyTradingAccountInfo.md)
 
 ### Authorization
 

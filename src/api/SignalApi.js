@@ -18,6 +18,7 @@ import AttachToSignalProviderInfo from '../model/AttachToSignalProviderInfo';
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
 import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
+import ItemsViewModelCopyTradingAccountInfo from '../model/ItemsViewModelCopyTradingAccountInfo';
 import SignalTradingEvents from '../model/SignalTradingEvents';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
 
@@ -227,14 +228,14 @@ export default class SignalApi {
       let returnType = CopyTradingAccountsList;
 
       return this.apiClient.callApi(
-        '/v1.0/signal/accounts', 'GET',
+        '/v1.0/signal/slaves', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Get copytrading accounts
+     * Get copytrading slaves accounts
      * @function SignalApi#getCopytradingAccounts
      * @param {String} authorization JWT access token
      * @return {CancelablePromise<CopyTradingAccountsList>} a Promise, with an object containing data of type CopyTradingAccountsList and HTTP response
@@ -415,6 +416,65 @@ export default class SignalApi {
      */
       getSignalTradingLog(authorization, opts) {
       return this.getSignalTradingLogWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getSignalsWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Tags': this.apiClient.buildCollectionParam(opts['tags'], 'multi'),
+        'StatisticDateFrom': opts['statisticDateFrom'],
+        'StatisticDateTo': opts['statisticDateTo'],
+        'ChartPointsCount': opts['chartPointsCount'],
+        'ChartCurrency': opts['chartCurrency'],
+        'FacetId': opts['facetId'],
+        'Mask': opts['mask'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': opts['authorization']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ItemsViewModelCopyTradingAccountInfo;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get copytrading masters list
+     * @function SignalApi#getSignals
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.authorization] 
+     * @param {Array<String>} [opts.tags] 
+     * @param {Date} [opts.statisticDateFrom] 
+     * @param {Date} [opts.statisticDateTo] 
+     * @param {Number} [opts.chartPointsCount] 
+     * @param {String} [opts.chartCurrency] 
+     * @param {String} [opts.facetId] 
+     * @param {String} [opts.mask] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<ItemsViewModelCopyTradingAccountInfo>} a Promise, with an object containing data of type ItemsViewModelCopyTradingAccountInfo and HTTP response
+     */
+      getSignals(opts) {
+      return this.getSignalsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

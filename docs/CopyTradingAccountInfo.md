@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **freeMargin** | **Number** |  | [optional] 
 **marginLevel** | **Number** |  | [optional] 
 **available** | **Number** |  | [optional] 
+**personalInfo** | [**PersonalCopyTradingAccountInfo**](PersonalCopyTradingAccountInfo.md) |  | [optional] 
 
 
 <a name="CurrencyEnum"></a>

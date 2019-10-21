@@ -81,6 +81,7 @@ import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
+import ItemsViewModelCopyTradingAccountInfo from './model/ItemsViewModelCopyTradingAccountInfo';
 import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
 import LevelInfo from './model/LevelInfo';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
@@ -117,6 +118,7 @@ import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
+import PersonalCopyTradingAccountInfo from './model/PersonalCopyTradingAccountInfo';
 import PersonalFundDetailsFullOld from './model/PersonalFundDetailsFullOld';
 import PersonalProgramDetailsFullOld from './model/PersonalProgramDetailsFullOld';
 import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
@@ -643,6 +645,12 @@ export {
     InvestmentEventViewModels,
 
     /**
+     * @name index#ItemsViewModelCopyTradingAccountInfo
+     * @type {ItemsViewModelCopyTradingAccountInfo}
+     */
+    ItemsViewModelCopyTradingAccountInfo,
+
+    /**
      * @name index#ItemsViewModelReferralFriend
      * @type {ItemsViewModelReferralFriend}
      */
@@ -857,6 +865,12 @@ export {
      * @type {PeriodDate}
      */
     PeriodDate,
+
+    /**
+     * @name index#PersonalCopyTradingAccountInfo
+     * @type {PersonalCopyTradingAccountInfo}
+     */
+    PersonalCopyTradingAccountInfo,
 
     /**
      * @name index#PersonalFundDetailsFullOld
