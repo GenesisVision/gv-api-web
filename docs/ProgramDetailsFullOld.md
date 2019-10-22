@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currency** | **String** |  | [optional] 
+**currency** | [**Currency**](Currency.md) |  | [optional] 
 **level** | **Number** |  | [optional] 
 **levelProgress** | **Number** |  | [optional] 
 **periodDuration** | **Number** |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **genesisRatio** | **Number** |  | [optional] 
 **investmentScale** | **Number** |  | [optional] 
 **volumeScale** | **Number** |  | [optional] 
-**tradesDelay** | **String** |  | [optional] 
+**tradesDelay** | [**TradesDelay**](TradesDelay.md) |  | [optional] 
 **availableInvestmentBase** | **Number** | In account currency | [optional] 
 **availableInvestmentLimit** | **Number** |  | [optional] 
 **totalAvailableInvestment** | **Number** |  | [optional] 
@@ -41,80 +41,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **ipfsHash** | **String** |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**InvestmentProgramStatus**](InvestmentProgramStatus.md) |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
-
-
-<a name="CurrencyEnum"></a>
-## Enum: CurrencyEnum
-
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `XRP` (value: `"XRP"`)
-
-* `BCH` (value: `"BCH"`)
-
-* `LTC` (value: `"LTC"`)
-
-* `DOGE` (value: `"DOGE"`)
-
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="TradesDelayEnum"></a>
-## Enum: TradesDelayEnum
-
-
-* `None` (value: `"None"`)
-
-* `FiveMinutes` (value: `"FiveMinutes"`)
-
-* `FifteenMinutes` (value: `"FifteenMinutes"`)
-
-* `ThirtyMinutes` (value: `"ThirtyMinutes"`)
-
-* `OneHour` (value: `"OneHour"`)
-
-* `SixHours` (value: `"SixHours"`)
-
-
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `None` (value: `"None"`)
-
-* `Pending` (value: `"Pending"`)
-
-* `ErrorCreating` (value: `"ErrorCreating"`)
-
-* `Active` (value: `"Active"`)
-
-* `Closed` (value: `"Closed"`)
-
-* `Archived` (value: `"Archived"`)
-
-* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
-
-
 
 

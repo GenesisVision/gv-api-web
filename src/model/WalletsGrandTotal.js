@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name WalletsGrandTotal#currency
- * @type WalletsGrandTotalCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -51,7 +52,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name WalletsGrandTotal#currencyCcy
- * @type WalletsGrandTotalCurrencyCcyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -100,7 +101,7 @@ export default class WalletsGrandTotal {
             
 
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('available')) {
                 obj['available'] = ApiClient.convertToType(data['available'], 'Number');
@@ -115,7 +116,7 @@ export default class WalletsGrandTotal {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
             if (data.hasOwnProperty('currencyCcy')) {
-                obj['currencyCcy'] = ApiClient.convertToType(data['currencyCcy'], 'String');
+                obj['currencyCcy'] = Currency.constructFromObject(data['currencyCcy']);
             }
             if (data.hasOwnProperty('availableCcy')) {
                 obj['availableCcy'] = ApiClient.convertToType(data['availableCcy'], 'Number');
@@ -149,80 +150,12 @@ export default class WalletsGrandTotal {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static CurrencyCcyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef WalletsGrandTotalCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef WalletsGrandTotalCurrencyCcyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

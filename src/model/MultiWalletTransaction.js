@@ -13,6 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import MultiWalletTransactionStatus from './MultiWalletTransactionStatus';
+import MultiWalletTransactionType from './MultiWalletTransactionType';
 
 
 
@@ -31,7 +34,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name MultiWalletTransaction#currencyFrom
- * @type MultiWalletTransactionCurrencyFromEnum
+ * @type {Currency}
  */
 /**
  *
@@ -41,7 +44,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name MultiWalletTransaction#type
- * @type MultiWalletTransactionTypeEnum
+ * @type {MultiWalletTransactionType}
  */
 /**
  *
@@ -51,7 +54,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name MultiWalletTransaction#status
- * @type MultiWalletTransactionStatusEnum
+ * @type {MultiWalletTransactionStatus}
  */
 /**
  *
@@ -108,19 +111,19 @@ export default class MultiWalletTransaction {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('currencyFrom')) {
-                obj['currencyFrom'] = ApiClient.convertToType(data['currencyFrom'], 'String');
+                obj['currencyFrom'] = Currency.constructFromObject(data['currencyFrom']);
             }
             if (data.hasOwnProperty('currencyTo')) {
                 obj['currencyTo'] = ApiClient.convertToType(data['currencyTo'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = MultiWalletTransactionType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = MultiWalletTransactionStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('logoFrom')) {
                 obj['logoFrom'] = ApiClient.convertToType(data['logoFrom'], 'String');
@@ -158,35 +161,6 @@ export default class MultiWalletTransaction {
 
 
 
-    static CurrencyFromEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
     static CurrencyToEnum = {
     
         "Undefined": "Undefined",
@@ -216,46 +190,6 @@ export default class MultiWalletTransaction {
         "EUR": "EUR"    
     };
 
-    static TypeEnum = {
-    
-        "All": "All",
-    
-        "Investment": "Investment",
-    
-        "Converting": "Converting",
-    
-        "Withdrawal": "Withdrawal",
-    
-        "Close": "Close",
-    
-        "Open": "Open",
-    
-        "Fee": "Fee",
-    
-        "Profits": "Profits",
-    
-        "SubscribeSignal": "SubscribeSignal",
-    
-        "ReceiveSignal": "ReceiveSignal",
-    
-        "DepositSignal": "DepositSignal",
-    
-        "WithdrawalSignal": "WithdrawalSignal",
-    
-        "Platform": "Platform"    
-    };
-
-    static StatusEnum = {
-    
-        "Done": "Done",
-    
-        "Pending": "Pending",
-    
-        "Canceled": "Canceled",
-    
-        "Error": "Error"    
-    };
-
 
 
 }
@@ -264,23 +198,8 @@ export default class MultiWalletTransaction {
 
 
 /**
- * @typedef MultiWalletTransactionCurrencyFromEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
  * @typedef MultiWalletTransactionCurrencyToEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef MultiWalletTransactionTypeEnum 
- * @type {("All"|"Investment"|"Converting"|"Withdrawal"|"Close"|"Open"|"Fee"|"Profits"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal"|"WithdrawalSignal"|"Platform")}
- */
-
-/**
- * @typedef MultiWalletTransactionStatusEnum 
- * @type {("Done"|"Pending"|"Canceled"|"Error")}
  */
 
 

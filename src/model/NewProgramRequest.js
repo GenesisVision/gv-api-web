@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name NewProgramRequest#currency
- * @type NewProgramRequestCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -135,7 +136,7 @@ export default class NewProgramRequest {
             
 
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('periodLength')) {
                 obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'Number');
@@ -212,35 +213,6 @@ export default class NewProgramRequest {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
     static TradesDelayEnum = {
     
         "None": "None",
@@ -262,11 +234,6 @@ export default class NewProgramRequest {
 
 
 
-
-/**
- * @typedef NewProgramRequestCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 /**
  * @typedef NewProgramRequestTradesDelayEnum 

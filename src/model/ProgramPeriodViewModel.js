@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ManagerFinancialStatistic from './ManagerFinancialStatistic';
+import PeriodStatus from './PeriodStatus';
 
 
 
@@ -42,7 +43,7 @@ import ManagerFinancialStatistic from './ManagerFinancialStatistic';
 /**
  *
  * @name ProgramPeriodViewModel#status
- * @type ProgramPeriodViewModelStatusEnum
+ * @type {PeriodStatus}
  */
 /**
  *
@@ -140,7 +141,7 @@ export default class ProgramPeriodViewModel {
                 obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = PeriodStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('number')) {
                 obj['number'] = ApiClient.convertToType(data['number'], 'Number');
@@ -204,26 +205,12 @@ export default class ProgramPeriodViewModel {
 
 
 
-    static StatusEnum = {
-    
-        "Planned": "Planned",
-    
-        "InProccess": "InProccess",
-    
-        "Closed": "Closed"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramPeriodViewModelStatusEnum 
- * @type {("Planned"|"InProccess"|"Closed")}
- */
 
 
 

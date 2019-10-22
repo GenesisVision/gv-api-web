@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SignalSubscriberStatus from './SignalSubscriberStatus';
 import SignalSubscription from './SignalSubscription';
 
 
@@ -62,7 +63,7 @@ import SignalSubscription from './SignalSubscription';
 /**
  *
  * @name PersonalSignalDetailsFull#status
- * @type PersonalSignalDetailsFullStatusEnum
+ * @type {SignalSubscriberStatus}
  */
 /**
  *
@@ -117,7 +118,7 @@ export default class PersonalSignalDetailsFull {
                 obj['isInvested'] = ApiClient.convertToType(data['isInvested'], 'Boolean');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = SignalSubscriberStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('signalSettingsId')) {
                 obj['signalSettingsId'] = ApiClient.convertToType(data['signalSettingsId'], 'String');
@@ -141,24 +142,12 @@ export default class PersonalSignalDetailsFull {
 
 
 
-    static StatusEnum = {
-    
-        "Active": "Active",
-    
-        "Ended": "Ended"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef PersonalSignalDetailsFullStatusEnum 
- * @type {("Active"|"Ended")}
- */
 
 
 

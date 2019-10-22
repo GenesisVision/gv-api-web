@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | [optional] 
+**type** | [**AssetFilterType**](AssetFilterType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **avatar** | **String** |  | [optional] 
@@ -11,20 +11,5 @@ Name | Type | Description | Notes
 **value** | **Number** |  | [optional] 
 **changePercent** | **Number** |  | [optional] 
 **changeValue** | **Number** |  | [optional] 
-
-
-<a name="TypeEnum"></a>
-## Enum: TypeEnum
-
-
-* `All` (value: `"All"`)
-
-* `Program` (value: `"Program"`)
-
-* `Fund` (value: `"Fund"`)
-
-* `Signal` (value: `"Signal"`)
-
-
 
 

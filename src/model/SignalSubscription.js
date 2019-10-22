@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SubscriptionMode from './SubscriptionMode';
 
 
 
@@ -36,7 +37,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name SignalSubscription#mode
- * @type SignalSubscriptionModeEnum
+ * @type {SubscriptionMode}
  */
 /**
  *
@@ -101,7 +102,7 @@ export default class SignalSubscription {
                 obj['hasActiveSubscription'] = ApiClient.convertToType(data['hasActiveSubscription'], 'Boolean');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = SubscriptionMode.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('percent')) {
                 obj['percent'] = ApiClient.convertToType(data['percent'], 'Number');
@@ -140,15 +141,6 @@ export default class SignalSubscription {
 
 
 
-    static ModeEnum = {
-    
-        "ByBalance": "ByBalance",
-    
-        "Percent": "Percent",
-    
-        "Fixed": "Fixed"    
-    };
-
     static FixedCurrencyEnum = {
     
         "Undefined": "Undefined",
@@ -184,11 +176,6 @@ export default class SignalSubscription {
 
 
 
-
-/**
- * @typedef SignalSubscriptionModeEnum 
- * @type {("ByBalance"|"Percent"|"Fixed")}
- */
 
 /**
  * @typedef SignalSubscriptionFixedCurrencyEnum 

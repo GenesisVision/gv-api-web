@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import FeeType from './FeeType';
 
 
 
@@ -31,12 +33,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name OrderSignalFee#currency
- * @type OrderSignalFeeCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
  * @name OrderSignalFee#type
- * @type OrderSignalFeeTypeEnum
+ * @type {FeeType}
  */
 
 
@@ -68,10 +70,10 @@ export default class OrderSignalFee {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = FeeType.constructFromObject(data['type']);
             }
         }
         return obj;
@@ -86,88 +88,12 @@ export default class OrderSignalFee {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static TypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GvProgramEntry": "GvProgramEntry",
-    
-        "GvProgramSuccess": "GvProgramSuccess",
-    
-        "GvProgramSuccessSum": "GvProgramSuccessSum",
-    
-        "GvFundEntry": "GvFundEntry",
-    
-        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
-    
-        "GvGmRegularFee": "GvGmRegularFee",
-    
-        "ManagerProgramEntry": "ManagerProgramEntry",
-    
-        "ManagerProgramSuccess": "ManagerProgramSuccess",
-    
-        "ManagerProgramSuccessSum": "ManagerProgramSuccessSum",
-    
-        "ManagerFundEntry": "ManagerFundEntry",
-    
-        "ManagerFundExit": "ManagerFundExit",
-    
-        "GvWithdrawal": "GvWithdrawal",
-    
-        "ManagerSignalMasterSuccessFee": "ManagerSignalMasterSuccessFee",
-    
-        "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
-    
-        "GvSignalSuccessFee": "GvSignalSuccessFee",
-    
-        "GvFundTrade": "GvFundTrade"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef OrderSignalFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef OrderSignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"GvGmRegularFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee"|"GvFundTrade")}
- */
 
 
 

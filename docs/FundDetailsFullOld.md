@@ -17,28 +17,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **ipfsHash** | **String** |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**InvestmentProgramStatus**](InvestmentProgramStatus.md) |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `None` (value: `"None"`)
-
-* `Pending` (value: `"Pending"`)
-
-* `ErrorCreating` (value: `"ErrorCreating"`)
-
-* `Active` (value: `"Active"`)
-
-* `Closed` (value: `"Closed"`)
-
-* `Archived` (value: `"Archived"`)
-
-* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
-
-
 
 

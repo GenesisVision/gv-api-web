@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import OrderModel from './OrderModel';
+import TradesDelay from './TradesDelay';
 
 
 
@@ -42,7 +43,7 @@ import OrderModel from './OrderModel';
 /**
  *
  * @name TradesViewModel#tradesDelay
- * @type TradesViewModelTradesDelayEnum
+ * @type {TradesDelay}
  */
 /**
  *
@@ -85,7 +86,7 @@ export default class TradesViewModel {
                 obj['trades'] = ApiClient.convertToType(data['trades'], [OrderModel]);
             }
             if (data.hasOwnProperty('tradesDelay')) {
-                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+                obj['tradesDelay'] = TradesDelay.constructFromObject(data['tradesDelay']);
             }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
@@ -105,32 +106,12 @@ export default class TradesViewModel {
 
 
 
-    static TradesDelayEnum = {
-    
-        "None": "None",
-    
-        "FiveMinutes": "FiveMinutes",
-    
-        "FifteenMinutes": "FifteenMinutes",
-    
-        "ThirtyMinutes": "ThirtyMinutes",
-    
-        "OneHour": "OneHour",
-    
-        "SixHours": "SixHours"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef TradesViewModelTradesDelayEnum 
- * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
- */
 
 
 

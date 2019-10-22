@@ -13,6 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
+import FacetSortType from './FacetSortType';
+import FundsFilterSorting from './FundsFilterSorting';
+import Timeframe from './Timeframe';
 
 
 
@@ -26,7 +29,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name FundFacet#sorting
- * @type FundFacetSortingEnum
+ * @type {FundsFilterSorting}
  */
 /**
  *
@@ -56,12 +59,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name FundFacet#sortType
- * @type FundFacetSortTypeEnum
+ * @type {FacetSortType}
  */
 /**
  *
  * @name FundFacet#timeframe
- * @type FundFacetTimeframeEnum
+ * @type {Timeframe}
  */
 
 
@@ -90,7 +93,7 @@ export default class FundFacet {
             
 
             if (data.hasOwnProperty('sorting')) {
-                obj['sorting'] = ApiClient.convertToType(data['sorting'], 'String');
+                obj['sorting'] = FundsFilterSorting.constructFromObject(data['sorting']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -108,10 +111,10 @@ export default class FundFacet {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('sortType')) {
-                obj['sortType'] = ApiClient.convertToType(data['sortType'], 'String');
+                obj['sortType'] = FacetSortType.constructFromObject(data['sortType']);
             }
             if (data.hasOwnProperty('timeframe')) {
-                obj['timeframe'] = ApiClient.convertToType(data['timeframe'], 'String');
+                obj['timeframe'] = Timeframe.constructFromObject(data['timeframe']);
             }
         }
         return obj;
@@ -131,84 +134,12 @@ export default class FundFacet {
 
 
 
-    static SortingEnum = {
-    
-        "ByProfitAsc": "ByProfitAsc",
-    
-        "ByProfitDesc": "ByProfitDesc",
-    
-        "ByDrawdownAsc": "ByDrawdownAsc",
-    
-        "ByDrawdownDesc": "ByDrawdownDesc",
-    
-        "ByInvestorsAsc": "ByInvestorsAsc",
-    
-        "ByInvestorsDesc": "ByInvestorsDesc",
-    
-        "ByNewAsc": "ByNewAsc",
-    
-        "ByNewDesc": "ByNewDesc",
-    
-        "ByTitleAsc": "ByTitleAsc",
-    
-        "ByTitleDesc": "ByTitleDesc",
-    
-        "ByBalanceAsc": "ByBalanceAsc",
-    
-        "ByBalanceDesc": "ByBalanceDesc"    
-    };
-
-    static SortTypeEnum = {
-    
-        "New": "New",
-    
-        "Top": "Top",
-    
-        "WeeklyTop": "WeeklyTop",
-    
-        "Popular": "Popular",
-    
-        "ToLevelUp": "ToLevelUp",
-    
-        "MostReliable": "MostReliable"    
-    };
-
-    static TimeframeEnum = {
-    
-        "Day": "Day",
-    
-        "Week": "Week",
-    
-        "Month": "Month",
-    
-        "ThreeMonths": "ThreeMonths",
-    
-        "Year": "Year",
-    
-        "AllTime": "AllTime"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef FundFacetSortingEnum 
- * @type {("ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewAsc"|"ByNewDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc")}
- */
-
-/**
- * @typedef FundFacetSortTypeEnum 
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp"|"MostReliable")}
- */
-
-/**
- * @typedef FundFacetTimeframeEnum 
- * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
- */
 
 
 

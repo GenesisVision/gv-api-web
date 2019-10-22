@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 import PersonalCopyTradingAccountInfo from './PersonalCopyTradingAccountInfo';
 
 
@@ -32,7 +33,7 @@ import PersonalCopyTradingAccountInfo from './PersonalCopyTradingAccountInfo';
 /**
  *
  * @name CopyTradingAccountInfo#currency
- * @type CopyTradingAccountInfoCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -104,7 +105,7 @@ export default class CopyTradingAccountInfo {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
@@ -150,46 +151,12 @@ export default class CopyTradingAccountInfo {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef CopyTradingAccountInfoCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

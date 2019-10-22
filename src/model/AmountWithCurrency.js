@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 
 
 
@@ -31,7 +32,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name AmountWithCurrency#currency
- * @type AmountWithCurrencyCurrencyEnum
+ * @type {Currency}
  */
 
 
@@ -63,7 +64,7 @@ export default class AmountWithCurrency {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
         }
         return obj;
@@ -77,46 +78,12 @@ export default class AmountWithCurrency {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef AmountWithCurrencyCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

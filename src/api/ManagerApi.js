@@ -1607,7 +1607,7 @@ export default class ManagerApi {
      * @param {Number} amount 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       investIntoFund(id, amount, authorization, opts) {
@@ -1669,7 +1669,7 @@ export default class ManagerApi {
      * @param {Number} amount 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       investIntoProgram(id, amount, authorization, opts) {
@@ -1997,7 +1997,7 @@ export default class ManagerApi {
      * @param {Number} percent 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       withdrawFromFund(id, percent, authorization, opts) {

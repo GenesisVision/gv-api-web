@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import TransferRequestType from './TransferRequestType';
 
 
 
@@ -31,7 +32,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name InternalTransferRequest#sourceType
- * @type InternalTransferRequestSourceTypeEnum
+ * @type {TransferRequestType}
  */
 /**
  *
@@ -41,7 +42,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name InternalTransferRequest#destinationType
- * @type InternalTransferRequestDestinationTypeEnum
+ * @type {TransferRequestType}
  */
 /**
  *
@@ -83,13 +84,13 @@ export default class InternalTransferRequest {
                 obj['sourceId'] = ApiClient.convertToType(data['sourceId'], 'String');
             }
             if (data.hasOwnProperty('sourceType')) {
-                obj['sourceType'] = ApiClient.convertToType(data['sourceType'], 'String');
+                obj['sourceType'] = TransferRequestType.constructFromObject(data['sourceType']);
             }
             if (data.hasOwnProperty('destinationId')) {
                 obj['destinationId'] = ApiClient.convertToType(data['destinationId'], 'String');
             }
             if (data.hasOwnProperty('destinationType')) {
-                obj['destinationType'] = ApiClient.convertToType(data['destinationType'], 'String');
+                obj['destinationType'] = TransferRequestType.constructFromObject(data['destinationType']);
             }
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
@@ -113,60 +114,12 @@ export default class InternalTransferRequest {
 
 
 
-    static SourceTypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "Wallet": "Wallet",
-    
-        "CopyTradingAccount": "CopyTradingAccount",
-    
-        "GenesisVisionPlatform": "GenesisVisionPlatform",
-    
-        "SignalProviderSettings": "SignalProviderSettings",
-    
-        "Program": "Program",
-    
-        "Fund": "Fund",
-    
-        "PaymentTransaction": "PaymentTransaction"    
-    };
-
-    static DestinationTypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "Wallet": "Wallet",
-    
-        "CopyTradingAccount": "CopyTradingAccount",
-    
-        "GenesisVisionPlatform": "GenesisVisionPlatform",
-    
-        "SignalProviderSettings": "SignalProviderSettings",
-    
-        "Program": "Program",
-    
-        "Fund": "Fund",
-    
-        "PaymentTransaction": "PaymentTransaction"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef InternalTransferRequestSourceTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalProviderSettings"|"Program"|"Fund"|"PaymentTransaction")}
- */
-
-/**
- * @typedef InternalTransferRequestDestinationTypeEnum 
- * @type {("Undefined"|"Wallet"|"CopyTradingAccount"|"GenesisVisionPlatform"|"SignalProviderSettings"|"Program"|"Fund"|"PaymentTransaction")}
- */
 
 
 

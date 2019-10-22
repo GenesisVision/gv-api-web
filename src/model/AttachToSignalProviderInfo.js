@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 
 
 
@@ -46,7 +47,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name AttachToSignalProviderInfo#minDepositCurrency
- * @type AttachToSignalProviderInfoMinDepositCurrencyEnum
+ * @type {Currency}
  */
 
 
@@ -87,7 +88,7 @@ export default class AttachToSignalProviderInfo {
                 obj['minDeposit'] = ApiClient.convertToType(data['minDeposit'], 'Number');
             }
             if (data.hasOwnProperty('minDepositCurrency')) {
-                obj['minDepositCurrency'] = ApiClient.convertToType(data['minDepositCurrency'], 'String');
+                obj['minDepositCurrency'] = Currency.constructFromObject(data['minDepositCurrency']);
             }
         }
         return obj;
@@ -104,46 +105,12 @@ export default class AttachToSignalProviderInfo {
 
 
 
-    static MinDepositCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef AttachToSignalProviderInfoMinDepositCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

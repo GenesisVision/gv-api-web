@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import BrokerTradeServerType from './BrokerTradeServerType';
 
 
 
@@ -41,7 +42,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name BrokerAccountTypeOld#type
- * @type BrokerAccountTypeOldTypeEnum
+ * @type {BrokerTradeServerType}
  */
 /**
  *
@@ -104,7 +105,7 @@ export default class BrokerAccountTypeOld {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = BrokerTradeServerType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('leverages')) {
                 obj['leverages'] = ApiClient.convertToType(data['leverages'], ['Number']);
@@ -140,42 +141,12 @@ export default class BrokerAccountTypeOld {
 
 
 
-    static TypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "MetaTrader4": "MetaTrader4",
-    
-        "MetaTrader5": "MetaTrader5",
-    
-        "NinjaTrader": "NinjaTrader",
-    
-        "cTrader": "cTrader",
-    
-        "Rumus": "Rumus",
-    
-        "Metastock": "Metastock",
-    
-        "IDEX": "IDEX",
-    
-        "Huobi": "Huobi",
-    
-        "Exante": "Exante",
-    
-        "BinanceExchange": "BinanceExchange"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef BrokerAccountTypeOldTypeEnum 
- * @type {("Undefined"|"MetaTrader4"|"MetaTrader5"|"NinjaTrader"|"cTrader"|"Rumus"|"Metastock"|"IDEX"|"Huobi"|"Exante"|"BinanceExchange")}
- */
 
 
 

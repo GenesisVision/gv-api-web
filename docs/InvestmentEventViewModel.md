@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **assetDetails** | [**AssetDetails**](AssetDetails.md) |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**changeState** | **String** |  | [optional] 
+**changeState** | [**ChangeState**](ChangeState.md) |  | [optional] 
 **extendedInfo** | [**[InvestmentEventItemViewModel]**](InvestmentEventItemViewModel.md) |  | [optional] 
 **feesInfo** | [**[FeeDetails]**](FeeDetails.md) |  | [optional] 
 **totalFeesAmount** | **Number** |  | [optional] 
@@ -45,19 +45,6 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="ChangeStateEnum"></a>
-## Enum: ChangeStateEnum
-
-
-* `NotChanged` (value: `"NotChanged"`)
-
-* `Increased` (value: `"Increased"`)
-
-* `Decreased` (value: `"Decreased"`)
 
 
 

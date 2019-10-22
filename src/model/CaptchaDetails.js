@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import CaptchaType from './CaptchaType';
 import GeeTestDetails from './GeeTestDetails';
 import PowDetails from './PowDetails';
 
@@ -28,7 +29,7 @@ import PowDetails from './PowDetails';
 /**
  *
  * @name CaptchaDetails#captchaType
- * @type CaptchaDetailsCaptchaTypeEnum
+ * @type {CaptchaType}
  */
 /**
  *
@@ -77,7 +78,7 @@ export default class CaptchaDetails {
             
 
             if (data.hasOwnProperty('captchaType')) {
-                obj['captchaType'] = ApiClient.convertToType(data['captchaType'], 'String');
+                obj['captchaType'] = CaptchaType.constructFromObject(data['captchaType']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -106,26 +107,12 @@ export default class CaptchaDetails {
 
 
 
-    static CaptchaTypeEnum = {
-    
-        "None": "None",
-    
-        "Pow": "Pow",
-    
-        "GeeTest": "GeeTest"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef CaptchaDetailsCaptchaTypeEnum 
- * @type {("None"|"Pow"|"GeeTest")}
- */
 
 
 

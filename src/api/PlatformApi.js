@@ -119,7 +119,7 @@ export default class PlatformApi {
      * Investment programs levels parameters
      * @function PlatformApi#getLevelsParams
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 104)
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<LevelsParamsInfo>} a Promise, with an object containing data of type LevelsParamsInfo and HTTP response
      */
       getLevelsParams(opts) {
@@ -271,7 +271,7 @@ export default class PlatformApi {
      * Investment programs levels
      * @function PlatformApi#getProgramsLevels
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency]  (default to 100)
+     * @param {String} [opts.currency] 
      * @return {CancelablePromise<ProgramsLevelsInfo>} a Promise, with an object containing data of type ProgramsLevelsInfo and HTTP response
      */
       getProgramsLevels(opts) {

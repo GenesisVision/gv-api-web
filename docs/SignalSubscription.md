@@ -5,26 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hasSignalAccount** | **Boolean** |  | [optional] 
 **hasActiveSubscription** | **Boolean** |  | [optional] 
-**mode** | **String** |  | [optional] 
+**mode** | [**SubscriptionMode**](SubscriptionMode.md) |  | [optional] 
 **percent** | **Number** |  | [optional] 
 **openTolerancePercent** | **Number** |  | [optional] 
 **fixedVolume** | **Number** |  | [optional] 
 **fixedCurrency** | **String** |  | [optional] 
 **totalProfit** | **Number** |  | [optional] 
 **totalVolume** | **Number** |  | [optional] 
-
-
-<a name="ModeEnum"></a>
-## Enum: ModeEnum
-
-
-* `ByBalance` (value: `"ByBalance"`)
-
-* `Percent` (value: `"Percent"`)
-
-* `Fixed` (value: `"Fixed"`)
-
-
 
 
 <a name="FixedCurrencyEnum"></a>

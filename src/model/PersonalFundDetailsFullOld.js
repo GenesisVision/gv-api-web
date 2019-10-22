@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import AssetInvestmentStatus from './AssetInvestmentStatus';
 
 
 
@@ -126,7 +127,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name PersonalFundDetailsFullOld#status
- * @type PersonalFundDetailsFullOldStatusEnum
+ * @type {AssetInvestmentStatus}
  */
 
 
@@ -215,7 +216,7 @@ export default class PersonalFundDetailsFullOld {
                 obj['pendingOutputIsWithdrawAll'] = ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'Boolean');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = AssetInvestmentStatus.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -248,30 +249,12 @@ export default class PersonalFundDetailsFullOld {
 
 
 
-    static StatusEnum = {
-    
-        "Pending": "Pending",
-    
-        "Active": "Active",
-    
-        "Investing": "Investing",
-    
-        "Withdrawing": "Withdrawing",
-    
-        "Ended": "Ended"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef PersonalFundDetailsFullOldStatusEnum 
- * @type {("Pending"|"Active"|"Investing"|"Withdrawing"|"Ended")}
- */
 
 
 

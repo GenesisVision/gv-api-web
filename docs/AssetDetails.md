@@ -8,21 +8,6 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
-**assetType** | **String** |  | [optional] 
-
-
-<a name="AssetTypeEnum"></a>
-## Enum: AssetTypeEnum
-
-
-* `None` (value: `"None"`)
-
-* `Programs` (value: `"Programs"`)
-
-* `Funds` (value: `"Funds"`)
-
-* `Signals` (value: `"Signals"`)
-
-
+**assetType** | [**AssetType**](AssetType.md) |  | [optional] 
 
 

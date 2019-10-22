@@ -14,6 +14,8 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import Currency from './Currency';
+import InvestmentProgramStatus from './InvestmentProgramStatus';
 import PersonalSignalDetailsFull from './PersonalSignalDetailsFull';
 import ProfilePublic from './ProfilePublic';
 import ProgramTag from './ProgramTag';
@@ -35,7 +37,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name SignalDetails#currency
- * @type SignalDetailsCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -90,7 +92,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name SignalDetails#status
- * @type SignalDetailsStatusEnum
+ * @type {InvestmentProgramStatus}
  */
 /**
  *
@@ -137,7 +139,7 @@ export default class SignalDetails {
                 obj['personalDetails'] = PersonalSignalDetailsFull.constructFromObject(data['personalDetails']);
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
@@ -170,7 +172,7 @@ export default class SignalDetails {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvestmentProgramStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
@@ -207,68 +209,12 @@ export default class SignalDetails {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static StatusEnum = {
-    
-        "None": "None",
-    
-        "Pending": "Pending",
-    
-        "ErrorCreating": "ErrorCreating",
-    
-        "Active": "Active",
-    
-        "Closed": "Closed",
-    
-        "Archived": "Archived",
-    
-        "ClosedDueToInactivity": "ClosedDueToInactivity"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef SignalDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef SignalDetailsStatusEnum 
- * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
- */
 
 
 

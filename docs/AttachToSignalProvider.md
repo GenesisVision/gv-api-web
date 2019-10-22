@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **initialDepositCurrency** | **String** |  | [optional] 
 **initialDepositAmount** | **Number** |  | [optional] 
-**mode** | **String** |  | [optional] 
+**mode** | [**SubscriptionMode**](SubscriptionMode.md) |  | [optional] 
 **percent** | **Number** |  | [optional] 
 **openTolerancePercent** | **Number** |  | [optional] 
 **fixedVolume** | **Number** |  | [optional] 
@@ -41,19 +41,6 @@ Name | Type | Description | Notes
 * `USD` (value: `"USD"`)
 
 * `EUR` (value: `"EUR"`)
-
-
-
-
-<a name="ModeEnum"></a>
-## Enum: ModeEnum
-
-
-* `ByBalance` (value: `"ByBalance"`)
-
-* `Percent` (value: `"Percent"`)
-
-* `Fixed` (value: `"Fixed"`)
 
 
 

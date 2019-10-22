@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SignalDetachMode from './SignalDetachMode';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name DetachFromSignalProvider#mode
- * @type DetachFromSignalProviderModeEnum
+ * @type {SignalDetachMode}
  */
 
 
@@ -55,7 +56,7 @@ export default class DetachFromSignalProvider {
             
 
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = SignalDetachMode.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -68,26 +69,12 @@ export default class DetachFromSignalProvider {
 
 
 
-    static ModeEnum = {
-    
-        "None": "None",
-    
-        "ProviderCloseOnly": "ProviderCloseOnly",
-    
-        "CloseAllImmediately": "CloseAllImmediately"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef DetachFromSignalProviderModeEnum 
- * @type {("None"|"ProviderCloseOnly"|"CloseAllImmediately")}
- */
 
 
 

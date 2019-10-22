@@ -14,6 +14,8 @@
 
 import ApiClient from '../ApiClient';
 import OrderModelSignalData from './OrderModelSignalData';
+import TradeDirectionType from './TradeDirectionType';
+import TradeEntryType from './TradeEntryType';
 
 
 
@@ -57,7 +59,7 @@ import OrderModelSignalData from './OrderModelSignalData';
 /**
  *
  * @name OrderModel#direction
- * @type OrderModelDirectionEnum
+ * @type {TradeDirectionType}
  */
 /**
  *
@@ -77,7 +79,7 @@ import OrderModelSignalData from './OrderModelSignalData';
 /**
  *
  * @name OrderModel#entry
- * @type OrderModelEntryEnum
+ * @type {TradeEntryType}
  */
 /**
  *
@@ -159,7 +161,7 @@ export default class OrderModel {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
             if (data.hasOwnProperty('direction')) {
-                obj['direction'] = ApiClient.convertToType(data['direction'], 'String');
+                obj['direction'] = TradeDirectionType.constructFromObject(data['direction']);
             }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
@@ -171,7 +173,7 @@ export default class OrderModel {
                 obj['priceCurrent'] = ApiClient.convertToType(data['priceCurrent'], 'Number');
             }
             if (data.hasOwnProperty('entry')) {
-                obj['entry'] = ApiClient.convertToType(data['entry'], 'String');
+                obj['entry'] = TradeEntryType.constructFromObject(data['entry']);
             }
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
@@ -222,48 +224,12 @@ export default class OrderModel {
 
 
 
-    static DirectionEnum = {
-    
-        "Buy": "Buy",
-    
-        "Sell": "Sell",
-    
-        "Balance": "Balance",
-    
-        "Credit": "Credit",
-    
-        "Undefined": "Undefined",
-    
-        "ManualBalancing": "ManualBalancing"    
-    };
-
-    static EntryEnum = {
-    
-        "In": "In",
-    
-        "Out": "Out",
-    
-        "InOut": "InOut",
-    
-        "OutBy": "OutBy"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef OrderModelDirectionEnum 
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined"|"ManualBalancing")}
- */
-
-/**
- * @typedef OrderModelEntryEnum 
- * @type {("In"|"Out"|"InOut"|"OutBy")}
- */
 
 
 

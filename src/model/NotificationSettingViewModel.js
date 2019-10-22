@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import NotificationSettingConditionType from './NotificationSettingConditionType';
+import NotificationType from './NotificationType';
 
 
 
@@ -46,12 +48,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name NotificationSettingViewModel#type
- * @type NotificationSettingViewModelTypeEnum
+ * @type {NotificationType}
  */
 /**
  *
  * @name NotificationSettingViewModel#conditionType
- * @type NotificationSettingViewModelConditionTypeEnum
+ * @type {NotificationSettingConditionType}
  */
 /**
  *
@@ -97,10 +99,10 @@ export default class NotificationSettingViewModel {
                 obj['managerId'] = ApiClient.convertToType(data['managerId'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = NotificationType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('conditionType')) {
-                obj['conditionType'] = ApiClient.convertToType(data['conditionType'], 'String');
+                obj['conditionType'] = NotificationSettingConditionType.constructFromObject(data['conditionType']);
             }
             if (data.hasOwnProperty('conditionAmount')) {
                 obj['conditionAmount'] = ApiClient.convertToType(data['conditionAmount'], 'Number');
@@ -122,78 +124,12 @@ export default class NotificationSettingViewModel {
 
 
 
-    static TypeEnum = {
-    
-        "PlatformNewsAndUpdates": "PlatformNewsAndUpdates",
-    
-        "PlatformEmergency": "PlatformEmergency",
-    
-        "PlatformOther": "PlatformOther",
-    
-        "ProfileUpdated": "ProfileUpdated",
-    
-        "ProfilePwdUpdated": "ProfilePwdUpdated",
-    
-        "ProfileVerification": "ProfileVerification",
-    
-        "Profile2FA": "Profile2FA",
-    
-        "ProfileSecurity": "ProfileSecurity",
-    
-        "TradingAccountPwdUpdated": "TradingAccountPwdUpdated",
-    
-        "ProgramNewsAndUpdates": "ProgramNewsAndUpdates",
-    
-        "ProgramEndOfPeriod": "ProgramEndOfPeriod",
-    
-        "ProgramCondition": "ProgramCondition",
-    
-        "ProgramExceedInvestmentLimit": "ProgramExceedInvestmentLimit",
-    
-        "FundNewsAndUpdates": "FundNewsAndUpdates",
-    
-        "FundEndOfPeriod": "FundEndOfPeriod",
-    
-        "FundRebalancing": "FundRebalancing",
-    
-        "ManagerNewProgram": "ManagerNewProgram",
-    
-        "ManagerNewFund": "ManagerNewFund",
-    
-        "ManagerNewExternalSignalAccount": "ManagerNewExternalSignalAccount",
-    
-        "Signals": "Signals",
-    
-        "ExternalSignals": "ExternalSignals"    
-    };
-
-    static ConditionTypeEnum = {
-    
-        "Empty": "Empty",
-    
-        "Profit": "Profit",
-    
-        "Level": "Level",
-    
-        "AvailableToInvest": "AvailableToInvest"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef NotificationSettingViewModelTypeEnum 
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"ProgramExceedInvestmentLimit"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"ManagerNewFund"|"ManagerNewExternalSignalAccount"|"Signals"|"ExternalSignals")}
- */
-
-/**
- * @typedef NotificationSettingViewModelConditionTypeEnum 
- * @type {("Empty"|"Profit"|"Level"|"AvailableToInvest")}
- */
 
 
 

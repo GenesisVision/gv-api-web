@@ -13,6 +13,10 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import InvestmentProgramType from './InvestmentProgramType';
+import InvestmentRequestStatus from './InvestmentRequestStatus';
+import InvestmentRequestType from './InvestmentRequestType';
 
 
 
@@ -71,7 +75,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramRequestOld#currency
- * @type ProgramRequestOldCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -81,12 +85,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramRequestOld#type
- * @type ProgramRequestOldTypeEnum
+ * @type {InvestmentRequestType}
  */
 /**
  *
  * @name ProgramRequestOld#status
- * @type ProgramRequestOldStatusEnum
+ * @type {InvestmentRequestStatus}
  */
 /**
  *
@@ -111,7 +115,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramRequestOld#programType
- * @type ProgramRequestOldProgramTypeEnum
+ * @type {InvestmentProgramType}
  */
 
 
@@ -167,16 +171,16 @@ export default class ProgramRequestOld {
                 obj['successFee'] = ApiClient.convertToType(data['successFee'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('fundWithdrawPercent')) {
                 obj['fundWithdrawPercent'] = ApiClient.convertToType(data['fundWithdrawPercent'], 'Number');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = InvestmentRequestType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvestmentRequestStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
@@ -191,7 +195,7 @@ export default class ProgramRequestOld {
                 obj['canCancelRequest'] = ApiClient.convertToType(data['canCancelRequest'], 'Boolean');
             }
             if (data.hasOwnProperty('programType')) {
-                obj['programType'] = ApiClient.convertToType(data['programType'], 'String');
+                obj['programType'] = InvestmentProgramType.constructFromObject(data['programType']);
             }
         }
         return obj;
@@ -221,84 +225,12 @@ export default class ProgramRequestOld {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static TypeEnum = {
-    
-        "Invest": "Invest",
-    
-        "Withdrawal": "Withdrawal"    
-    };
-
-    static StatusEnum = {
-    
-        "New": "New",
-    
-        "Executed": "Executed",
-    
-        "Cancelled": "Cancelled"    
-    };
-
-    static ProgramTypeEnum = {
-    
-        "Program": "Program",
-    
-        "Fund": "Fund"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramRequestOldCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef ProgramRequestOldTypeEnum 
- * @type {("Invest"|"Withdrawal")}
- */
-
-/**
- * @typedef ProgramRequestOldStatusEnum 
- * @type {("New"|"Executed"|"Cancelled")}
- */
-
-/**
- * @typedef ProgramRequestOldProgramTypeEnum 
- * @type {("Program"|"Fund")}
- */
 
 
 

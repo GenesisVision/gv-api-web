@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **equityChart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
 **totalProfit** | **Number** |  | [optional] 
 **timeframeProfit** | **Number** |  | [optional] 
-**programCurrency** | **String** |  | [optional] 
+**programCurrency** | [**Currency**](Currency.md) |  | [optional] 
 **trades** | **Number** |  | [optional] 
 **successTradesPercent** | **Number** |  | [optional] 
 **profitFactor** | **Number** |  | [optional] 
@@ -22,38 +22,5 @@ Name | Type | Description | Notes
 **calmarRatio** | **Number** |  | [optional] 
 **maxDrawdown** | **Number** |  | [optional] 
 **rate** | **Number** |  | [optional] 
-
-
-<a name="ProgramCurrencyEnum"></a>
-## Enum: ProgramCurrencyEnum
-
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `XRP` (value: `"XRP"`)
-
-* `BCH` (value: `"BCH"`)
-
-* `LTC` (value: `"LTC"`)
-
-* `DOGE` (value: `"DOGE"`)
-
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
 
 

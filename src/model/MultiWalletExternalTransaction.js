@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import MultiWalletExternalTransactionType from './MultiWalletExternalTransactionType';
 
 
 
@@ -31,7 +33,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name MultiWalletExternalTransaction#currency
- * @type MultiWalletExternalTransactionCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -51,7 +53,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name MultiWalletExternalTransaction#type
- * @type MultiWalletExternalTransactionTypeEnum
+ * @type {MultiWalletExternalTransactionType}
  */
 /**
  *
@@ -98,7 +100,7 @@ export default class MultiWalletExternalTransaction {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
@@ -110,7 +112,7 @@ export default class MultiWalletExternalTransaction {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = MultiWalletExternalTransactionType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -140,60 +142,12 @@ export default class MultiWalletExternalTransaction {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static TypeEnum = {
-    
-        "All": "All",
-    
-        "Deposit": "Deposit",
-    
-        "Withdrawal": "Withdrawal"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef MultiWalletExternalTransactionCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef MultiWalletExternalTransactionTypeEnum 
- * @type {("All"|"Deposit"|"Withdrawal")}
- */
 
 
 

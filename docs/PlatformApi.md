@@ -72,7 +72,7 @@ import CoreApiV10 from 'core_api_v10';
 let apiInstance = new CoreApiV10.PlatformApi();
 
 let opts = { 
-  'currency': "104" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.getLevelsParams(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -86,7 +86,7 @@ apiInstance.getLevelsParams(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currency** | **String**|  | [optional] [default to 104]
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 
@@ -219,7 +219,7 @@ import CoreApiV10 from 'core_api_v10';
 let apiInstance = new CoreApiV10.PlatformApi();
 
 let opts = { 
-  'currency': "100" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.getProgramsLevels(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -233,7 +233,7 @@ apiInstance.getProgramsLevels(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currency** | **String**|  | [optional] [default to 100]
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 

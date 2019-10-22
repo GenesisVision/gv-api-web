@@ -13,9 +13,12 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 import FeeDetails from './FeeDetails';
 import OrderModelSignalData from './OrderModelSignalData';
 import OrderSignalProgramInfo from './OrderSignalProgramInfo';
+import TradeDirectionType from './TradeDirectionType';
+import TradeEntryType from './TradeEntryType';
 
 
 
@@ -49,7 +52,7 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
 /**
  *
  * @name OrderSignalModel#currency
- * @type OrderSignalModelCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -84,7 +87,7 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
 /**
  *
  * @name OrderSignalModel#direction
- * @type OrderSignalModelDirectionEnum
+ * @type {TradeDirectionType}
  */
 /**
  *
@@ -104,7 +107,7 @@ import OrderSignalProgramInfo from './OrderSignalProgramInfo';
 /**
  *
  * @name OrderSignalModel#entry
- * @type OrderSignalModelEntryEnum
+ * @type {TradeEntryType}
  */
 /**
  *
@@ -180,7 +183,7 @@ export default class OrderSignalModel {
                 obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -201,7 +204,7 @@ export default class OrderSignalModel {
                 obj['profit'] = ApiClient.convertToType(data['profit'], 'Number');
             }
             if (data.hasOwnProperty('direction')) {
-                obj['direction'] = ApiClient.convertToType(data['direction'], 'String');
+                obj['direction'] = TradeDirectionType.constructFromObject(data['direction']);
             }
             if (data.hasOwnProperty('date')) {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
@@ -213,7 +216,7 @@ export default class OrderSignalModel {
                 obj['priceCurrent'] = ApiClient.convertToType(data['priceCurrent'], 'Number');
             }
             if (data.hasOwnProperty('entry')) {
-                obj['entry'] = ApiClient.convertToType(data['entry'], 'String');
+                obj['entry'] = TradeEntryType.constructFromObject(data['entry']);
             }
             if (data.hasOwnProperty('baseVolume')) {
                 obj['baseVolume'] = ApiClient.convertToType(data['baseVolume'], 'Number');
@@ -269,82 +272,12 @@ export default class OrderSignalModel {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static DirectionEnum = {
-    
-        "Buy": "Buy",
-    
-        "Sell": "Sell",
-    
-        "Balance": "Balance",
-    
-        "Credit": "Credit",
-    
-        "Undefined": "Undefined",
-    
-        "ManualBalancing": "ManualBalancing"    
-    };
-
-    static EntryEnum = {
-    
-        "In": "In",
-    
-        "Out": "Out",
-    
-        "InOut": "InOut",
-    
-        "OutBy": "OutBy"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef OrderSignalModelCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef OrderSignalModelDirectionEnum 
- * @type {("Buy"|"Sell"|"Balance"|"Credit"|"Undefined"|"ManualBalancing")}
- */
-
-/**
- * @typedef OrderSignalModelEntryEnum 
- * @type {("In"|"Out"|"InOut"|"OutBy")}
- */
 
 
 

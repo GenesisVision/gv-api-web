@@ -14,9 +14,12 @@
 
 import ApiClient from '../ApiClient';
 import ConvertingDetails from './ConvertingDetails';
+import Currency from './Currency';
 import ExternalTransactionDetails from './ExternalTransactionDetails';
+import MultiWalletTransactionStatus from './MultiWalletTransactionStatus';
 import ProgramTransactionDetails from './ProgramTransactionDetails';
 import SignalFee from './SignalFee';
+import TransactionDetailsType from './TransactionDetailsType';
 
 
 
@@ -30,7 +33,7 @@ import SignalFee from './SignalFee';
 /**
  *
  * @name TransactionDetails#type
- * @type TransactionDetailsTypeEnum
+ * @type {TransactionDetailsType}
  */
 /**
  *
@@ -50,7 +53,7 @@ import SignalFee from './SignalFee';
 /**
  *
  * @name TransactionDetails#status
- * @type TransactionDetailsStatusEnum
+ * @type {MultiWalletTransactionStatus}
  */
 /**
  *
@@ -60,7 +63,7 @@ import SignalFee from './SignalFee';
 /**
  *
  * @name TransactionDetails#currency
- * @type TransactionDetailsCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -119,7 +122,7 @@ export default class TransactionDetails {
             
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = TransactionDetailsType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('programDetails')) {
                 obj['programDetails'] = ProgramTransactionDetails.constructFromObject(data['programDetails']);
@@ -131,13 +134,13 @@ export default class TransactionDetails {
                 obj['externalTransactionDetails'] = ExternalTransactionDetails.constructFromObject(data['externalTransactionDetails']);
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = MultiWalletTransactionStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('signalFees')) {
                 obj['signalFees'] = ApiClient.convertToType(data['signalFees'], [SignalFee]);
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('currencyName')) {
                 obj['currencyName'] = ApiClient.convertToType(data['currencyName'], 'String');
@@ -180,77 +183,6 @@ export default class TransactionDetails {
 
 
 
-    static TypeEnum = {
-    
-        "Investing": "Investing",
-    
-        "Withdrawal": "Withdrawal",
-    
-        "ExternalWithdrawal": "ExternalWithdrawal",
-    
-        "ExternalDeposit": "ExternalDeposit",
-    
-        "Converting": "Converting",
-    
-        "Open": "Open",
-    
-        "Close": "Close",
-    
-        "Profit": "Profit",
-    
-        "PlatformFee": "PlatformFee",
-    
-        "SubscribeSignal": "SubscribeSignal",
-    
-        "ReceiveSignal": "ReceiveSignal",
-    
-        "DepositSignal": "DepositSignal",
-    
-        "WithdrawalSignal": "WithdrawalSignal",
-    
-        "Platform": "Platform"    
-    };
-
-    static StatusEnum = {
-    
-        "Done": "Done",
-    
-        "Pending": "Pending",
-    
-        "Canceled": "Canceled",
-    
-        "Error": "Error"    
-    };
-
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
     static GvCommissionCurrencyEnum = {
     
         "Undefined": "Undefined",
@@ -286,21 +218,6 @@ export default class TransactionDetails {
 
 
 
-
-/**
- * @typedef TransactionDetailsTypeEnum 
- * @type {("Investing"|"Withdrawal"|"ExternalWithdrawal"|"ExternalDeposit"|"Converting"|"Open"|"Close"|"Profit"|"PlatformFee"|"SubscribeSignal"|"ReceiveSignal"|"DepositSignal"|"WithdrawalSignal"|"Platform")}
- */
-
-/**
- * @typedef TransactionDetailsStatusEnum 
- * @type {("Done"|"Pending"|"Canceled"|"Error")}
- */
-
-/**
- * @typedef TransactionDetailsCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 

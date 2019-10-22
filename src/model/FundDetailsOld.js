@@ -17,6 +17,7 @@ import ChartSimple from './ChartSimple';
 import DashboardProgramDetailsOld from './DashboardProgramDetailsOld';
 import FundAssetPercent from './FundAssetPercent';
 import FundDetailsListStatistic from './FundDetailsListStatistic';
+import InvestmentProgramStatus from './InvestmentProgramStatus';
 import PersonalFundDetailsFullOld from './PersonalFundDetailsFullOld';
 import ProfilePublic from './ProfilePublic';
 
@@ -87,7 +88,7 @@ import ProfilePublic from './ProfilePublic';
 /**
  *
  * @name FundDetailsOld#status
- * @type FundDetailsOldStatusEnum
+ * @type {InvestmentProgramStatus}
  */
 /**
  *
@@ -164,7 +165,7 @@ export default class FundDetailsOld {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvestmentProgramStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('creationDate')) {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
@@ -200,34 +201,12 @@ export default class FundDetailsOld {
 
 
 
-    static StatusEnum = {
-    
-        "None": "None",
-    
-        "Pending": "Pending",
-    
-        "ErrorCreating": "ErrorCreating",
-    
-        "Active": "Active",
-    
-        "Closed": "Closed",
-    
-        "Archived": "Archived",
-    
-        "ClosedDueToInactivity": "ClosedDueToInactivity"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef FundDetailsOldStatusEnum 
- * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
- */
 
 
 

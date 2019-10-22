@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 import ProgramBalanceChartElementOld from './ProgramBalanceChartElementOld';
 
 
@@ -32,7 +33,7 @@ import ProgramBalanceChartElementOld from './ProgramBalanceChartElementOld';
 /**
  *
  * @name ProgramBalanceChartOld#programCurrency
- * @type ProgramBalanceChartOldProgramCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -69,7 +70,7 @@ export default class ProgramBalanceChartOld {
                 obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
             }
             if (data.hasOwnProperty('programCurrency')) {
-                obj['programCurrency'] = ApiClient.convertToType(data['programCurrency'], 'String');
+                obj['programCurrency'] = Currency.constructFromObject(data['programCurrency']);
             }
             if (data.hasOwnProperty('balanceChart')) {
                 obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElementOld]);
@@ -87,46 +88,12 @@ export default class ProgramBalanceChartOld {
 
 
 
-    static ProgramCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramBalanceChartOldProgramCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

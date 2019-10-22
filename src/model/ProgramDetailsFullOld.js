@@ -14,10 +14,13 @@
 
 import ApiClient from '../ApiClient';
 import BrokerDetailsOld from './BrokerDetailsOld';
+import Currency from './Currency';
+import InvestmentProgramStatus from './InvestmentProgramStatus';
 import PersonalProgramDetailsFullOld from './PersonalProgramDetailsFullOld';
 import ProfilePublic from './ProfilePublic';
 import ProgramStatistic from './ProgramStatistic';
 import ProgramTag from './ProgramTag';
+import TradesDelay from './TradesDelay';
 
 
 
@@ -31,7 +34,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsFullOld#currency
- * @type ProgramDetailsFullOldCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -141,7 +144,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsFullOld#tradesDelay
- * @type ProgramDetailsFullOldTradesDelayEnum
+ * @type {TradesDelay}
  */
 /**
  *
@@ -221,7 +224,7 @@ import ProgramTag from './ProgramTag';
 /**
  *
  * @name ProgramDetailsFullOld#status
- * @type ProgramDetailsFullOldStatusEnum
+ * @type {InvestmentProgramStatus}
  */
 /**
  *
@@ -255,7 +258,7 @@ export default class ProgramDetailsFullOld {
             
 
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
             if (data.hasOwnProperty('level')) {
                 obj['level'] = ApiClient.convertToType(data['level'], 'Number');
@@ -321,7 +324,7 @@ export default class ProgramDetailsFullOld {
                 obj['volumeScale'] = ApiClient.convertToType(data['volumeScale'], 'Number');
             }
             if (data.hasOwnProperty('tradesDelay')) {
-                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'String');
+                obj['tradesDelay'] = TradesDelay.constructFromObject(data['tradesDelay']);
             }
             if (data.hasOwnProperty('availableInvestmentBase')) {
                 obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'Number');
@@ -369,7 +372,7 @@ export default class ProgramDetailsFullOld {
                 obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvestmentProgramStatus.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('manager')) {
                 obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
@@ -424,88 +427,12 @@ export default class ProgramDetailsFullOld {
 
 
 
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static TradesDelayEnum = {
-    
-        "None": "None",
-    
-        "FiveMinutes": "FiveMinutes",
-    
-        "FifteenMinutes": "FifteenMinutes",
-    
-        "ThirtyMinutes": "ThirtyMinutes",
-    
-        "OneHour": "OneHour",
-    
-        "SixHours": "SixHours"    
-    };
-
-    static StatusEnum = {
-    
-        "None": "None",
-    
-        "Pending": "Pending",
-    
-        "ErrorCreating": "ErrorCreating",
-    
-        "Active": "Active",
-    
-        "Closed": "Closed",
-    
-        "Archived": "Archived",
-    
-        "ClosedDueToInactivity": "ClosedDueToInactivity"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramDetailsFullOldCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef ProgramDetailsFullOldTradesDelayEnum 
- * @type {("None"|"FiveMinutes"|"FifteenMinutes"|"ThirtyMinutes"|"OneHour"|"SixHours")}
- */
-
-/**
- * @typedef ProgramDetailsFullOldStatusEnum 
- * @type {("None"|"Pending"|"ErrorCreating"|"Active"|"Closed"|"Archived"|"ClosedDueToInactivity")}
- */
 
 
 

@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import FeeType from './FeeType';
 
 
 
@@ -31,7 +33,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name SignalFee#type
- * @type SignalFeeTypeEnum
+ * @type {FeeType}
  */
 /**
  *
@@ -41,7 +43,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name SignalFee#currency
- * @type SignalFeeCurrencyEnum
+ * @type {Currency}
  */
 
 
@@ -73,13 +75,13 @@ export default class SignalFee {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = FeeType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
             if (data.hasOwnProperty('currency')) {
-                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+                obj['currency'] = Currency.constructFromObject(data['currency']);
             }
         }
         return obj;
@@ -95,88 +97,12 @@ export default class SignalFee {
 
 
 
-    static TypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GvProgramEntry": "GvProgramEntry",
-    
-        "GvProgramSuccess": "GvProgramSuccess",
-    
-        "GvProgramSuccessSum": "GvProgramSuccessSum",
-    
-        "GvFundEntry": "GvFundEntry",
-    
-        "GvGmGvtHolderFee": "GvGmGvtHolderFee",
-    
-        "GvGmRegularFee": "GvGmRegularFee",
-    
-        "ManagerProgramEntry": "ManagerProgramEntry",
-    
-        "ManagerProgramSuccess": "ManagerProgramSuccess",
-    
-        "ManagerProgramSuccessSum": "ManagerProgramSuccessSum",
-    
-        "ManagerFundEntry": "ManagerFundEntry",
-    
-        "ManagerFundExit": "ManagerFundExit",
-    
-        "GvWithdrawal": "GvWithdrawal",
-    
-        "ManagerSignalMasterSuccessFee": "ManagerSignalMasterSuccessFee",
-    
-        "ManagerSignalMasterVolumeFee": "ManagerSignalMasterVolumeFee",
-    
-        "GvSignalSuccessFee": "GvSignalSuccessFee",
-    
-        "GvFundTrade": "GvFundTrade"    
-    };
-
-    static CurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef SignalFeeTypeEnum 
- * @type {("Undefined"|"GvProgramEntry"|"GvProgramSuccess"|"GvProgramSuccessSum"|"GvFundEntry"|"GvGmGvtHolderFee"|"GvGmRegularFee"|"ManagerProgramEntry"|"ManagerProgramSuccess"|"ManagerProgramSuccessSum"|"ManagerFundEntry"|"ManagerFundExit"|"GvWithdrawal"|"ManagerSignalMasterSuccessFee"|"ManagerSignalMasterVolumeFee"|"GvSignalSuccessFee"|"GvFundTrade")}
- */
-
-/**
- * @typedef SignalFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

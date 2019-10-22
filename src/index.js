@@ -17,6 +17,9 @@ import AmountWithCurrency from './model/AmountWithCurrency';
 import AndroidAppVersion from './model/AndroidAppVersion';
 import AndroidVersion from './model/AndroidVersion';
 import AssetDetails from './model/AssetDetails';
+import AssetFilterType from './model/AssetFilterType';
+import AssetInvestmentStatus from './model/AssetInvestmentStatus';
+import AssetType from './model/AssetType';
 import AssetsValue from './model/AssetsValue';
 import AttachToSignalProvider from './model/AttachToSignalProvider';
 import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
@@ -24,22 +27,27 @@ import BalanceChartElementOld from './model/BalanceChartElementOld';
 import BrokerAccountTypeOld from './model/BrokerAccountTypeOld';
 import BrokerDetailsOld from './model/BrokerDetailsOld';
 import BrokerOld from './model/BrokerOld';
+import BrokerTradeServerType from './model/BrokerTradeServerType';
 import BrokersInfoOld from './model/BrokersInfoOld';
 import BrokersProgramInfoOld from './model/BrokersProgramInfoOld';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
 import CaptchaDetails from './model/CaptchaDetails';
+import CaptchaType from './model/CaptchaType';
 import ChangeBrokerProgramRequest from './model/ChangeBrokerProgramRequest';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
+import ChangeState from './model/ChangeState';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
 import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
 import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
+import Currency from './model/Currency';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardProgramDetailsOld from './model/DashboardProgramDetailsOld';
 import DashboardSummary from './model/DashboardSummary';
 import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import EnumsOld from './model/EnumsOld';
+import ErrorCodes from './model/ErrorCodes';
 import ErrorMessage from './model/ErrorMessage';
 import ErrorViewModel from './model/ErrorViewModel';
 import EventFiltersOld from './model/EventFiltersOld';
@@ -49,8 +57,10 @@ import ExternalKeyAddViewModel from './model/ExternalKeyAddViewModel';
 import ExternalKeyViewModel from './model/ExternalKeyViewModel';
 import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
+import FacetSortType from './model/FacetSortType';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
 import FeeDetails from './model/FeeDetails';
+import FeeType from './model/FeeType';
 import FilterModelOld from './model/FilterModelOld';
 import ForgotPasswordViewModel from './model/ForgotPasswordViewModel';
 import FundAssetInfo from './model/FundAssetInfo';
@@ -72,6 +82,7 @@ import FundProfitChartOld from './model/FundProfitChartOld';
 import FundSets from './model/FundSets';
 import FundStatisticOld from './model/FundStatisticOld';
 import FundWithdrawInfoOld from './model/FundWithdrawInfoOld';
+import FundsFilterSorting from './model/FundsFilterSorting';
 import FundsListOld from './model/FundsListOld';
 import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
@@ -79,8 +90,14 @@ import IOsAppVersion from './model/IOsAppVersion';
 import IdModel from './model/IdModel';
 import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
+import InvestmentEventLocation from './model/InvestmentEventLocation';
+import InvestmentEventType from './model/InvestmentEventType';
 import InvestmentEventViewModel from './model/InvestmentEventViewModel';
 import InvestmentEventViewModels from './model/InvestmentEventViewModels';
+import InvestmentProgramStatus from './model/InvestmentProgramStatus';
+import InvestmentProgramType from './model/InvestmentProgramType';
+import InvestmentRequestStatus from './model/InvestmentRequestStatus';
+import InvestmentRequestType from './model/InvestmentRequestType';
 import ItemsViewModelCopyTradingAccountInfo from './model/ItemsViewModelCopyTradingAccountInfo';
 import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
 import LevelInfo from './model/LevelInfo';
@@ -98,15 +115,20 @@ import ManagerSimpleProgram from './model/ManagerSimpleProgram';
 import ManagersListOld from './model/ManagersListOld';
 import MigrationRequestOld from './model/MigrationRequestOld';
 import MultiWalletExternalTransaction from './model/MultiWalletExternalTransaction';
+import MultiWalletExternalTransactionType from './model/MultiWalletExternalTransactionType';
 import MultiWalletExternalTransactionsViewModel from './model/MultiWalletExternalTransactionsViewModel';
 import MultiWalletFiltersOld from './model/MultiWalletFiltersOld';
 import MultiWalletTransaction from './model/MultiWalletTransaction';
+import MultiWalletTransactionStatus from './model/MultiWalletTransactionStatus';
+import MultiWalletTransactionType from './model/MultiWalletTransactionType';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
 import NewFundRequest from './model/NewFundRequest';
 import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
+import NotificationSettingConditionType from './model/NotificationSettingConditionType';
 import NotificationSettingList from './model/NotificationSettingList';
 import NotificationSettingViewModel from './model/NotificationSettingViewModel';
+import NotificationType from './model/NotificationType';
 import NotificationViewModel from './model/NotificationViewModel';
 import OrderModel from './model/OrderModel';
 import OrderModelSignalData from './model/OrderModelSignalData';
@@ -117,6 +139,7 @@ import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
+import PeriodStatus from './model/PeriodStatus';
 import PersonalCopyTradingAccountInfo from './model/PersonalCopyTradingAccountInfo';
 import PersonalFundDetailsFullOld from './model/PersonalFundDetailsFullOld';
 import PersonalProgramDetailsFullOld from './model/PersonalProgramDetailsFullOld';
@@ -155,6 +178,7 @@ import ProgramTag from './model/ProgramTag';
 import ProgramTransactionDetails from './model/ProgramTransactionDetails';
 import ProgramUpdate from './model/ProgramUpdate';
 import ProgramWithdrawInfoOld from './model/ProgramWithdrawInfoOld';
+import ProgramsFilterSorting from './model/ProgramsFilterSorting';
 import ProgramsInfoOld from './model/ProgramsInfoOld';
 import ProgramsLevelsInfo from './model/ProgramsLevelsInfo';
 import ProgramsListOld from './model/ProgramsListOld';
@@ -173,20 +197,31 @@ import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import RewardDetails from './model/RewardDetails';
 import RewardsHistoryViewModel from './model/RewardsHistoryViewModel';
 import SearchViewModelOld from './model/SearchViewModelOld';
+import SecureAlgorithm from './model/SecureAlgorithm';
 import SignalDataMaster from './model/SignalDataMaster';
+import SignalDetachMode from './model/SignalDetachMode';
 import SignalDetails from './model/SignalDetails';
 import SignalFee from './model/SignalFee';
 import SignalProviderSubscribers from './model/SignalProviderSubscribers';
 import SignalSubscriber from './model/SignalSubscriber';
+import SignalSubscriberStatus from './model/SignalSubscriberStatus';
 import SignalSubscription from './model/SignalSubscription';
 import SignalTradingEvent from './model/SignalTradingEvent';
 import SignalTradingEvents from './model/SignalTradingEvents';
 import SignalsList from './model/SignalsList';
+import SocialLinkType from './model/SocialLinkType';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
 import SocialLinksViewModel from './model/SocialLinksViewModel';
+import SubscriptionMode from './model/SubscriptionMode';
+import Timeframe from './model/Timeframe';
+import TradeDirectionType from './model/TradeDirectionType';
+import TradeEntryType from './model/TradeEntryType';
+import TradesDelay from './model/TradesDelay';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
 import TransactionDetails from './model/TransactionDetails';
+import TransactionDetailsType from './model/TransactionDetailsType';
+import TransferRequestType from './model/TransferRequestType';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
 import TwoFactorCodeModel from './model/TwoFactorCodeModel';
@@ -196,6 +231,7 @@ import UpdateProfileViewModel from './model/UpdateProfileViewModel';
 import UpdateSocialLinkViewModel from './model/UpdateSocialLinkViewModel';
 import UploadResult from './model/UploadResult';
 import UserCommissionData from './model/UserCommissionData';
+import UserVerificationStatus from './model/UserVerificationStatus';
 import ValueChartBar from './model/ValueChartBar';
 import WalletBaseData from './model/WalletBaseData';
 import WalletData from './model/WalletData';
@@ -261,6 +297,24 @@ export {
     AssetDetails,
 
     /**
+     * @name index#AssetFilterType
+     * @type {AssetFilterType}
+     */
+    AssetFilterType,
+
+    /**
+     * @name index#AssetInvestmentStatus
+     * @type {AssetInvestmentStatus}
+     */
+    AssetInvestmentStatus,
+
+    /**
+     * @name index#AssetType
+     * @type {AssetType}
+     */
+    AssetType,
+
+    /**
      * @name index#AssetsValue
      * @type {AssetsValue}
      */
@@ -303,6 +357,12 @@ export {
     BrokerOld,
 
     /**
+     * @name index#BrokerTradeServerType
+     * @type {BrokerTradeServerType}
+     */
+    BrokerTradeServerType,
+
+    /**
      * @name index#BrokersInfoOld
      * @type {BrokersInfoOld}
      */
@@ -327,6 +387,12 @@ export {
     CaptchaDetails,
 
     /**
+     * @name index#CaptchaType
+     * @type {CaptchaType}
+     */
+    CaptchaType,
+
+    /**
      * @name index#ChangeBrokerProgramRequest
      * @type {ChangeBrokerProgramRequest}
      */
@@ -337,6 +403,12 @@ export {
      * @type {ChangePasswordViewModel}
      */
     ChangePasswordViewModel,
+
+    /**
+     * @name index#ChangeState
+     * @type {ChangeState}
+     */
+    ChangeState,
 
     /**
      * @name index#ChartSimple
@@ -369,6 +441,12 @@ export {
     CreateWithdrawalRequestModel,
 
     /**
+     * @name index#Currency
+     * @type {Currency}
+     */
+    Currency,
+
+    /**
      * @name index#DashboardChartValue
      * @type {DashboardChartValue}
      */
@@ -397,6 +475,12 @@ export {
      * @type {EnumsOld}
      */
     EnumsOld,
+
+    /**
+     * @name index#ErrorCodes
+     * @type {ErrorCodes}
+     */
+    ErrorCodes,
 
     /**
      * @name index#ErrorMessage
@@ -453,6 +537,12 @@ export {
     ExternalTransactionDetails,
 
     /**
+     * @name index#FacetSortType
+     * @type {FacetSortType}
+     */
+    FacetSortType,
+
+    /**
      * @name index#FcmTokenViewModel
      * @type {FcmTokenViewModel}
      */
@@ -463,6 +553,12 @@ export {
      * @type {FeeDetails}
      */
     FeeDetails,
+
+    /**
+     * @name index#FeeType
+     * @type {FeeType}
+     */
+    FeeType,
 
     /**
      * @name index#FilterModelOld
@@ -591,6 +687,12 @@ export {
     FundWithdrawInfoOld,
 
     /**
+     * @name index#FundsFilterSorting
+     * @type {FundsFilterSorting}
+     */
+    FundsFilterSorting,
+
+    /**
      * @name index#FundsListOld
      * @type {FundsListOld}
      */
@@ -633,6 +735,18 @@ export {
     InvestmentEventItemViewModel,
 
     /**
+     * @name index#InvestmentEventLocation
+     * @type {InvestmentEventLocation}
+     */
+    InvestmentEventLocation,
+
+    /**
+     * @name index#InvestmentEventType
+     * @type {InvestmentEventType}
+     */
+    InvestmentEventType,
+
+    /**
      * @name index#InvestmentEventViewModel
      * @type {InvestmentEventViewModel}
      */
@@ -643,6 +757,30 @@ export {
      * @type {InvestmentEventViewModels}
      */
     InvestmentEventViewModels,
+
+    /**
+     * @name index#InvestmentProgramStatus
+     * @type {InvestmentProgramStatus}
+     */
+    InvestmentProgramStatus,
+
+    /**
+     * @name index#InvestmentProgramType
+     * @type {InvestmentProgramType}
+     */
+    InvestmentProgramType,
+
+    /**
+     * @name index#InvestmentRequestStatus
+     * @type {InvestmentRequestStatus}
+     */
+    InvestmentRequestStatus,
+
+    /**
+     * @name index#InvestmentRequestType
+     * @type {InvestmentRequestType}
+     */
+    InvestmentRequestType,
 
     /**
      * @name index#ItemsViewModelCopyTradingAccountInfo
@@ -747,6 +885,12 @@ export {
     MultiWalletExternalTransaction,
 
     /**
+     * @name index#MultiWalletExternalTransactionType
+     * @type {MultiWalletExternalTransactionType}
+     */
+    MultiWalletExternalTransactionType,
+
+    /**
      * @name index#MultiWalletExternalTransactionsViewModel
      * @type {MultiWalletExternalTransactionsViewModel}
      */
@@ -763,6 +907,18 @@ export {
      * @type {MultiWalletTransaction}
      */
     MultiWalletTransaction,
+
+    /**
+     * @name index#MultiWalletTransactionStatus
+     * @type {MultiWalletTransactionStatus}
+     */
+    MultiWalletTransactionStatus,
+
+    /**
+     * @name index#MultiWalletTransactionType
+     * @type {MultiWalletTransactionType}
+     */
+    MultiWalletTransactionType,
 
     /**
      * @name index#MultiWalletTransactionsViewModel
@@ -789,6 +945,12 @@ export {
     NotificationList,
 
     /**
+     * @name index#NotificationSettingConditionType
+     * @type {NotificationSettingConditionType}
+     */
+    NotificationSettingConditionType,
+
+    /**
      * @name index#NotificationSettingList
      * @type {NotificationSettingList}
      */
@@ -799,6 +961,12 @@ export {
      * @type {NotificationSettingViewModel}
      */
     NotificationSettingViewModel,
+
+    /**
+     * @name index#NotificationType
+     * @type {NotificationType}
+     */
+    NotificationType,
 
     /**
      * @name index#NotificationViewModel
@@ -859,6 +1027,12 @@ export {
      * @type {PeriodDate}
      */
     PeriodDate,
+
+    /**
+     * @name index#PeriodStatus
+     * @type {PeriodStatus}
+     */
+    PeriodStatus,
 
     /**
      * @name index#PersonalCopyTradingAccountInfo
@@ -1089,6 +1263,12 @@ export {
     ProgramWithdrawInfoOld,
 
     /**
+     * @name index#ProgramsFilterSorting
+     * @type {ProgramsFilterSorting}
+     */
+    ProgramsFilterSorting,
+
+    /**
      * @name index#ProgramsInfoOld
      * @type {ProgramsInfoOld}
      */
@@ -1197,10 +1377,22 @@ export {
     SearchViewModelOld,
 
     /**
+     * @name index#SecureAlgorithm
+     * @type {SecureAlgorithm}
+     */
+    SecureAlgorithm,
+
+    /**
      * @name index#SignalDataMaster
      * @type {SignalDataMaster}
      */
     SignalDataMaster,
+
+    /**
+     * @name index#SignalDetachMode
+     * @type {SignalDetachMode}
+     */
+    SignalDetachMode,
 
     /**
      * @name index#SignalDetails
@@ -1227,6 +1419,12 @@ export {
     SignalSubscriber,
 
     /**
+     * @name index#SignalSubscriberStatus
+     * @type {SignalSubscriberStatus}
+     */
+    SignalSubscriberStatus,
+
+    /**
      * @name index#SignalSubscription
      * @type {SignalSubscription}
      */
@@ -1251,6 +1449,12 @@ export {
     SignalsList,
 
     /**
+     * @name index#SocialLinkType
+     * @type {SocialLinkType}
+     */
+    SocialLinkType,
+
+    /**
      * @name index#SocialLinkViewModel
      * @type {SocialLinkViewModel}
      */
@@ -1261,6 +1465,36 @@ export {
      * @type {SocialLinksViewModel}
      */
     SocialLinksViewModel,
+
+    /**
+     * @name index#SubscriptionMode
+     * @type {SubscriptionMode}
+     */
+    SubscriptionMode,
+
+    /**
+     * @name index#Timeframe
+     * @type {Timeframe}
+     */
+    Timeframe,
+
+    /**
+     * @name index#TradeDirectionType
+     * @type {TradeDirectionType}
+     */
+    TradeDirectionType,
+
+    /**
+     * @name index#TradeEntryType
+     * @type {TradeEntryType}
+     */
+    TradeEntryType,
+
+    /**
+     * @name index#TradesDelay
+     * @type {TradesDelay}
+     */
+    TradesDelay,
 
     /**
      * @name index#TradesSignalViewModel
@@ -1279,6 +1513,18 @@ export {
      * @type {TransactionDetails}
      */
     TransactionDetails,
+
+    /**
+     * @name index#TransactionDetailsType
+     * @type {TransactionDetailsType}
+     */
+    TransactionDetailsType,
+
+    /**
+     * @name index#TransferRequestType
+     * @type {TransferRequestType}
+     */
+    TransferRequestType,
 
     /**
      * @name index#TwoFactorAuthenticator
@@ -1333,6 +1579,12 @@ export {
      * @type {UserCommissionData}
      */
     UserCommissionData,
+
+    /**
+     * @name index#UserVerificationStatus
+     * @type {UserVerificationStatus}
+     */
+    UserVerificationStatus,
 
     /**
      * @name index#ValueChartBar

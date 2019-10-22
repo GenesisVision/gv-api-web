@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SecureAlgorithm from './SecureAlgorithm';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name PowDetails#secureAlgorithm
- * @type PowDetailsSecureAlgorithmEnum
+ * @type {SecureAlgorithm}
  */
 /**
  *
@@ -65,7 +66,7 @@ export default class PowDetails {
             
 
             if (data.hasOwnProperty('secureAlgorithm')) {
-                obj['secureAlgorithm'] = ApiClient.convertToType(data['secureAlgorithm'], 'String');
+                obj['secureAlgorithm'] = SecureAlgorithm.constructFromObject(data['secureAlgorithm']);
             }
             if (data.hasOwnProperty('difficulty')) {
                 obj['difficulty'] = ApiClient.convertToType(data['difficulty'], 'Number');
@@ -86,22 +87,12 @@ export default class PowDetails {
 
 
 
-    static SecureAlgorithmEnum = {
-    
-        "Sha256": "Sha256"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef PowDetailsSecureAlgorithmEnum 
- * @type {("Sha256")}
- */
 
 
 

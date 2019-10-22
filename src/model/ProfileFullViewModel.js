@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import UserVerificationStatus from './UserVerificationStatus';
 
 
 
@@ -116,7 +117,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProfileFullViewModel#verificationStatus
- * @type ProfileFullViewModelVerificationStatusEnum
+ * @type {UserVerificationStatus}
  */
 
 
@@ -199,7 +200,7 @@ export default class ProfileFullViewModel {
                 obj['refUrl'] = ApiClient.convertToType(data['refUrl'], 'String');
             }
             if (data.hasOwnProperty('verificationStatus')) {
-                obj['verificationStatus'] = ApiClient.convertToType(data['verificationStatus'], 'String');
+                obj['verificationStatus'] = UserVerificationStatus.constructFromObject(data['verificationStatus']);
             }
         }
         return obj;
@@ -230,28 +231,12 @@ export default class ProfileFullViewModel {
 
 
 
-    static VerificationStatusEnum = {
-    
-        "NotVerified": "NotVerified",
-    
-        "Verified": "Verified",
-    
-        "UnderReview": "UnderReview",
-    
-        "Rejected": "Rejected"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProfileFullViewModelVerificationStatusEnum 
- * @type {("NotVerified"|"Verified"|"UnderReview"|"Rejected")}
- */
 
 
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **dateFrom** | **Date** |  | [optional] 
 **dateTo** | **Date** |  | [optional] 
 **periodLength** | **Number** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**PeriodStatus**](PeriodStatus.md) |  | [optional] 
 **_number** | **Number** |  | [optional] 
 **profit** | **Number** |  | [optional] 
 **balance** | **Number** |  | [optional] 
@@ -19,18 +19,5 @@ Name | Type | Description | Notes
 **investorsProfitWithdraw** | **Number** |  | [optional] 
 **platformSuccessFee** | **Number** |  | [optional] 
 **managerStatistic** | [**ManagerFinancialStatistic**](ManagerFinancialStatistic.md) |  | [optional] 
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Planned` (value: `"Planned"`)
-
-* `InProccess` (value: `"InProccess"`)
-
-* `Closed` (value: `"Closed"`)
-
-
 
 

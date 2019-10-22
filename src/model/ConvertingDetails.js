@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ConvertingDetails#currencyTo
- * @type ConvertingDetailsCurrencyToEnum
+ * @type {Currency}
  */
 /**
  *
@@ -75,7 +76,7 @@ export default class ConvertingDetails {
             
 
             if (data.hasOwnProperty('currencyTo')) {
-                obj['currencyTo'] = ApiClient.convertToType(data['currencyTo'], 'String');
+                obj['currencyTo'] = Currency.constructFromObject(data['currencyTo']);
             }
             if (data.hasOwnProperty('currencyToName')) {
                 obj['currencyToName'] = ApiClient.convertToType(data['currencyToName'], 'String');
@@ -104,46 +105,12 @@ export default class ConvertingDetails {
 
 
 
-    static CurrencyToEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ConvertingDetailsCurrencyToEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

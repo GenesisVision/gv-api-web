@@ -789,7 +789,7 @@ let amount = 1.2; // Number |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'currency': "100" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.investIntoFund(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -806,7 +806,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **currency** | **String**|  | [optional] [default to 100]
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 
@@ -840,7 +840,7 @@ let amount = 1.2; // Number |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'currency': "100" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.investIntoProgram(id, amount, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -857,7 +857,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **amount** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **currency** | **String**|  | [optional] [default to 100]
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 
@@ -979,7 +979,7 @@ let percent = 1.2; // Number |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'currency': "100" // String | 
+  'currency': "currency_example" // String | 
 };
 apiInstance.withdrawFromFund(id, percent, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -996,7 +996,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)|  | 
  **percent** | **Number**|  | 
  **authorization** | **String**| JWT access token | 
- **currency** | **String**|  | [optional] [default to 100]
+ **currency** | **String**|  | [optional] 
 
 ### Return type
 

@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SocialLinkType from './SocialLinkType';
 
 
 
@@ -46,7 +47,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name SocialLinkViewModel#type
- * @type SocialLinkViewModelTypeEnum
+ * @type {SocialLinkType}
  */
 
 
@@ -87,7 +88,7 @@ export default class SocialLinkViewModel {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = SocialLinkType.constructFromObject(data['type']);
             }
         }
         return obj;
@@ -104,36 +105,12 @@ export default class SocialLinkViewModel {
 
 
 
-    static TypeEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "Twitter": "Twitter",
-    
-        "Telegram": "Telegram",
-    
-        "Facebook": "Facebook",
-    
-        "LinkedIn": "LinkedIn",
-    
-        "Youtube": "Youtube",
-    
-        "WeChat": "WeChat",
-    
-        "Email": "Email"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef SocialLinkViewModelTypeEnum 
- * @type {("Undefined"|"Twitter"|"Telegram"|"Facebook"|"LinkedIn"|"Youtube"|"WeChat"|"Email")}
- */
 
 
 

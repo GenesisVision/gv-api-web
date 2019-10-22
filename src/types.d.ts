@@ -668,6 +668,9 @@ export declare interface index {
     AndroidAppVersion: AndroidAppVersion;
     AndroidVersion: AndroidVersion;
     AssetDetails: AssetDetails;
+    AssetFilterType: AssetFilterType;
+    AssetInvestmentStatus: AssetInvestmentStatus;
+    AssetType: AssetType;
     AssetsValue: AssetsValue;
     AttachToSignalProvider: AttachToSignalProvider;
     AttachToSignalProviderInfo: AttachToSignalProviderInfo;
@@ -675,22 +678,27 @@ export declare interface index {
     BrokerAccountTypeOld: BrokerAccountTypeOld;
     BrokerDetailsOld: BrokerDetailsOld;
     BrokerOld: BrokerOld;
+    BrokerTradeServerType: BrokerTradeServerType;
     BrokersInfoOld: BrokersInfoOld;
     BrokersProgramInfoOld: BrokersProgramInfoOld;
     CaptchaCheckResult: CaptchaCheckResult;
     CaptchaDetails: CaptchaDetails;
+    CaptchaType: CaptchaType;
     ChangeBrokerProgramRequest: ChangeBrokerProgramRequest;
     ChangePasswordViewModel: ChangePasswordViewModel;
+    ChangeState: ChangeState;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
     CopyTradingAccountInfo: CopyTradingAccountInfo;
     CopyTradingAccountsList: CopyTradingAccountsList;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
+    Currency: Currency;
     DashboardChartValue: DashboardChartValue;
     DashboardProgramDetailsOld: DashboardProgramDetailsOld;
     DashboardSummary: DashboardSummary;
     DetachFromSignalProvider: DetachFromSignalProvider;
     EnumsOld: EnumsOld;
+    ErrorCodes: ErrorCodes;
     ErrorMessage: ErrorMessage;
     ErrorViewModel: ErrorViewModel;
     EventFiltersOld: EventFiltersOld;
@@ -700,8 +708,10 @@ export declare interface index {
     ExternalKeyViewModel: ExternalKeyViewModel;
     ExternalKeysViewModel: ExternalKeysViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
+    FacetSortType: FacetSortType;
     FcmTokenViewModel: FcmTokenViewModel;
     FeeDetails: FeeDetails;
+    FeeType: FeeType;
     FilterModelOld: FilterModelOld;
     ForgotPasswordViewModel: ForgotPasswordViewModel;
     FundAssetInfo: FundAssetInfo;
@@ -723,6 +733,7 @@ export declare interface index {
     FundSets: FundSets;
     FundStatisticOld: FundStatisticOld;
     FundWithdrawInfoOld: FundWithdrawInfoOld;
+    FundsFilterSorting: FundsFilterSorting;
     FundsListOld: FundsListOld;
     GeeTestDetails: GeeTestDetails;
     GeeTestResult: GeeTestResult;
@@ -730,8 +741,14 @@ export declare interface index {
     IdModel: IdModel;
     InternalTransferRequest: InternalTransferRequest;
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
+    InvestmentEventLocation: InvestmentEventLocation;
+    InvestmentEventType: InvestmentEventType;
     InvestmentEventViewModel: InvestmentEventViewModel;
     InvestmentEventViewModels: InvestmentEventViewModels;
+    InvestmentProgramStatus: InvestmentProgramStatus;
+    InvestmentProgramType: InvestmentProgramType;
+    InvestmentRequestStatus: InvestmentRequestStatus;
+    InvestmentRequestType: InvestmentRequestType;
     ItemsViewModelCopyTradingAccountInfo: ItemsViewModelCopyTradingAccountInfo;
     ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
     LevelInfo: LevelInfo;
@@ -749,15 +766,20 @@ export declare interface index {
     ManagersListOld: ManagersListOld;
     MigrationRequestOld: MigrationRequestOld;
     MultiWalletExternalTransaction: MultiWalletExternalTransaction;
+    MultiWalletExternalTransactionType: MultiWalletExternalTransactionType;
     MultiWalletExternalTransactionsViewModel: MultiWalletExternalTransactionsViewModel;
     MultiWalletFiltersOld: MultiWalletFiltersOld;
     MultiWalletTransaction: MultiWalletTransaction;
+    MultiWalletTransactionStatus: MultiWalletTransactionStatus;
+    MultiWalletTransactionType: MultiWalletTransactionType;
     MultiWalletTransactionsViewModel: MultiWalletTransactionsViewModel;
     NewFundRequest: NewFundRequest;
     NewProgramRequest: NewProgramRequest;
     NotificationList: NotificationList;
+    NotificationSettingConditionType: NotificationSettingConditionType;
     NotificationSettingList: NotificationSettingList;
     NotificationSettingViewModel: NotificationSettingViewModel;
+    NotificationType: NotificationType;
     NotificationViewModel: NotificationViewModel;
     OrderModel: OrderModel;
     OrderModelSignalData: OrderModelSignalData;
@@ -768,6 +790,7 @@ export declare interface index {
     OtherAssetsValue: OtherAssetsValue;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
+    PeriodStatus: PeriodStatus;
     PersonalCopyTradingAccountInfo: PersonalCopyTradingAccountInfo;
     PersonalFundDetailsFullOld: PersonalFundDetailsFullOld;
     PersonalProgramDetailsFullOld: PersonalProgramDetailsFullOld;
@@ -806,6 +829,7 @@ export declare interface index {
     ProgramTransactionDetails: ProgramTransactionDetails;
     ProgramUpdate: ProgramUpdate;
     ProgramWithdrawInfoOld: ProgramWithdrawInfoOld;
+    ProgramsFilterSorting: ProgramsFilterSorting;
     ProgramsInfoOld: ProgramsInfoOld;
     ProgramsLevelsInfo: ProgramsLevelsInfo;
     ProgramsListOld: ProgramsListOld;
@@ -824,20 +848,31 @@ export declare interface index {
     RewardDetails: RewardDetails;
     RewardsHistoryViewModel: RewardsHistoryViewModel;
     SearchViewModelOld: SearchViewModelOld;
+    SecureAlgorithm: SecureAlgorithm;
     SignalDataMaster: SignalDataMaster;
+    SignalDetachMode: SignalDetachMode;
     SignalDetails: SignalDetails;
     SignalFee: SignalFee;
     SignalProviderSubscribers: SignalProviderSubscribers;
     SignalSubscriber: SignalSubscriber;
+    SignalSubscriberStatus: SignalSubscriberStatus;
     SignalSubscription: SignalSubscription;
     SignalTradingEvent: SignalTradingEvent;
     SignalTradingEvents: SignalTradingEvents;
     SignalsList: SignalsList;
+    SocialLinkType: SocialLinkType;
     SocialLinkViewModel: SocialLinkViewModel;
     SocialLinksViewModel: SocialLinksViewModel;
+    SubscriptionMode: SubscriptionMode;
+    Timeframe: Timeframe;
+    TradeDirectionType: TradeDirectionType;
+    TradeEntryType: TradeEntryType;
+    TradesDelay: TradesDelay;
     TradesSignalViewModel: TradesSignalViewModel;
     TradesViewModel: TradesViewModel;
     TransactionDetails: TransactionDetails;
+    TransactionDetailsType: TransactionDetailsType;
+    TransferRequestType: TransferRequestType;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
     TwoFactorAuthenticatorConfirm: TwoFactorAuthenticatorConfirm;
     TwoFactorCodeModel: TwoFactorCodeModel;
@@ -847,6 +882,7 @@ export declare interface index {
     UpdateSocialLinkViewModel: UpdateSocialLinkViewModel;
     UploadResult: UploadResult;
     UserCommissionData: UserCommissionData;
+    UserVerificationStatus: UserVerificationStatus;
     ValueChartBar: ValueChartBar;
     WalletBaseData: WalletBaseData;
     WalletData: WalletData;
@@ -874,11 +910,9 @@ export declare interface index {
     WalletApi: WalletApi;
 }
 
-export declare type AmountWithCurrencyCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface AmountWithCurrency {
     amount: number;
-    currency: AmountWithCurrencyCurrencyEnum;
+    currency: Currency;
 }
 
 export declare interface AndroidAppVersion {
@@ -891,21 +925,29 @@ export declare interface AndroidVersion {
     versionName: string;
 }
 
-export declare type AssetDetailsAssetTypeEnum = "None" | "Programs" | "Funds" | "Signals";
-
 export declare interface AssetDetails {
     id: string;
     logo: string;
     color: string;
     title: string;
     url: string;
-    assetType: AssetDetailsAssetTypeEnum;
+    assetType: AssetType;
 }
 
 export declare interface AssetEvent {
     programs: string[];
     funds: string[];
 }
+
+export declare interface AssetFilterType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface AssetInvestmentStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare type AssetSelectionTypeEnum = "Program" | "Fund";
 
@@ -916,10 +958,13 @@ export declare interface AssetSelection {
     type: AssetSelectionTypeEnum;
 }
 
-export declare type AssetsValueTypeEnum = "All" | "Program" | "Fund" | "Signal";
+export declare interface AssetType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface AssetsValue {
-    type: AssetsValueTypeEnum;
+    type: AssetFilterType;
     id: string;
     title: string;
     avatar: string;
@@ -944,28 +989,24 @@ export declare interface AttachToExternalSignalProviderExt {
 
 export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type AttachToSignalProviderModeEnum = "ByBalance" | "Percent" | "Fixed";
-
 export declare type AttachToSignalProviderFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToSignalProvider {
     initialDepositCurrency: AttachToSignalProviderInitialDepositCurrencyEnum;
     initialDepositAmount: number;
-    mode: AttachToSignalProviderModeEnum;
+    mode: SubscriptionMode;
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
     fixedCurrency: AttachToSignalProviderFixedCurrencyEnum;
 }
 
-export declare type AttachToSignalProviderInfoMinDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface AttachToSignalProviderInfo {
     hasSignalAccount: boolean;
     hasActiveSubscription: boolean;
     volumeFee: number;
     minDeposit: number;
-    minDepositCurrency: AttachToSignalProviderInfoMinDepositCurrencyEnum;
+    minDepositCurrency: Currency;
 }
 
 export declare interface BalanceChartElement {
@@ -1023,13 +1064,11 @@ export declare interface BrokerAccountType {
     isSignalsAvailable: boolean;
 }
 
-export declare type BrokerAccountTypeOldTypeEnum = "Undefined" | "MetaTrader4" | "MetaTrader5" | "NinjaTrader" | "cTrader" | "Rumus" | "Metastock" | "IDEX" | "Huobi" | "Exante" | "BinanceExchange";
-
 export declare interface BrokerAccountTypeOld {
     id: string;
     name: string;
     description: string;
-    type: BrokerAccountTypeOldTypeEnum;
+    type: BrokerTradeServerType;
     leverages: number[];
     currencies: string[];
     minimumDepositsAmount: any;
@@ -1078,6 +1117,11 @@ export declare interface BrokerOld {
     tags: ProgramTag[];
 }
 
+export declare interface BrokerTradeServerType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface BrokersInfo {
     brokers: Broker[];
 }
@@ -1102,15 +1146,18 @@ export declare interface CaptchaCheckResult {
     geeTest: GeeTestResult;
 }
 
-export declare type CaptchaDetailsCaptchaTypeEnum = "None" | "Pow" | "GeeTest";
-
 export declare interface CaptchaDetails {
-    captchaType: CaptchaDetailsCaptchaTypeEnum;
+    captchaType: CaptchaType;
     id: string;
     route: string;
     pow: PowDetails;
     geeTest: GeeTestDetails;
 }
+
+export declare interface CaptchaType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface ChangeBrokerProgramRequest {
     programId: string;
@@ -1124,26 +1171,27 @@ export declare interface ChangePasswordViewModel {
     confirmPassword: string;
 }
 
+export declare interface ChangeState {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface ChartSimple {
     value: number;
     date: Date;
 }
 
-export declare type ConvertingDetailsCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface ConvertingDetails {
-    currencyTo: ConvertingDetailsCurrencyToEnum;
+    currencyTo: Currency;
     currencyToName: string;
     amountTo: number;
     rateValue: number;
     currencyToLogo: string;
 }
 
-export declare type CopyTradingAccountInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface CopyTradingAccountInfo {
     id: string;
-    currency: CopyTradingAccountInfoCurrencyEnum;
+    currency: Currency;
     logo: string;
     title: string;
     balance: number;
@@ -1159,14 +1207,17 @@ export declare interface CopyTradingAccountsList {
     total: number;
 }
 
-export declare type CreateWithdrawalRequestModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface CreateWithdrawalRequestModel {
     amount: number;
-    currency: CreateWithdrawalRequestModelCurrencyEnum;
+    currency: Currency;
     address: string;
     twoFactorCode: string;
 }
+
+export declare interface Currency {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface DashboardChartValue {
     investedProgramsInfo: ValueChartBar[];
@@ -1231,10 +1282,8 @@ export declare interface DashboardSummary {
     requests: ProgramRequestsOld;
 }
 
-export declare type DetachFromSignalProviderModeEnum = "None" | "ProviderCloseOnly" | "CloseAllImmediately";
-
 export declare interface DetachFromSignalProvider {
-    mode: DetachFromSignalProviderModeEnum;
+    mode: SignalDetachMode;
 }
 
 export declare interface Enums {
@@ -1253,16 +1302,19 @@ export declare interface EnumsOld {
     assetTypes: string[];
 }
 
+export declare interface ErrorCodes {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface ErrorMessage {
     message: string;
     property: string;
 }
 
-export declare type ErrorViewModelCodeEnum = "InternalServerError" | "ValidationError" | "RequiresTwoFactor" | "WrongCaptcha";
-
 export declare interface ErrorViewModel {
     errors: ErrorMessage[];
-    code: ErrorViewModelCodeEnum;
+    code: ErrorCodes;
 }
 
 export declare interface EventFilters {
@@ -1327,21 +1379,27 @@ export declare interface ExternalTransactionDetails {
     isEnableActions: boolean;
 }
 
+export declare interface FacetSortType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface FcmTokenViewModel {
     token: string;
 }
 
-export declare type FeeDetailsTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "GvGmRegularFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
-
-export declare type FeeDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface FeeDetails {
     title: string;
     description: string;
-    type: FeeDetailsTypeEnum;
+    type: FeeType;
     amount: number;
-    currency: FeeDetailsCurrencyEnum;
+    currency: Currency;
 }
+
+export declare interface FeeType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface FilterModel {
     key: string;
@@ -1462,8 +1520,6 @@ export declare interface FundDetailsFull {
     manager: ProfilePublic;
 }
 
-export declare type FundDetailsFullOldStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
-
 export declare interface FundDetailsFullOld {
     entryFee: number;
     exitFee: number;
@@ -1479,7 +1535,7 @@ export declare interface FundDetailsFullOld {
     title: string;
     ipfsHash: string;
     creationDate: Date;
-    status: FundDetailsFullOldStatusEnum;
+    status: InvestmentProgramStatus;
     manager: ProfilePublic;
 }
 
@@ -1489,8 +1545,6 @@ export declare interface FundDetailsListStatistic {
     drawdownPercent: number;
     investorsCount: number;
 }
-
-export declare type FundDetailsOldStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
 export declare interface FundDetailsOld {
     totalAssetsCount: number;
@@ -1504,7 +1558,7 @@ export declare interface FundDetailsOld {
     color: string;
     title: string;
     description: string;
-    status: FundDetailsOldStatusEnum;
+    status: InvestmentProgramStatus;
     creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
@@ -1522,21 +1576,15 @@ export declare interface FundEquityChartElementOld {
     date: Date;
 }
 
-export declare type FundFacetSortingEnum = "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewAsc" | "ByNewDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc";
-
-export declare type FundFacetSortTypeEnum = "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp" | "MostReliable";
-
-export declare type FundFacetTimeframeEnum = "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
-
 export declare interface FundFacet {
-    sorting: FundFacetSortingEnum;
+    sorting: FundsFilterSorting;
     id: string;
     title: string;
     description: string;
     logo: string;
     url: string;
-    sortType: FundFacetSortTypeEnum;
-    timeframe: FundFacetTimeframeEnum;
+    sortType: FacetSortType;
+    timeframe: Timeframe;
 }
 
 export declare interface FundFilters {
@@ -1643,6 +1691,11 @@ export declare interface FundWithdrawInfoOld {
     rate: number;
 }
 
+export declare interface FundsFilterSorting {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface FundsList {
     funds: FundDetails[];
     total: number;
@@ -1668,30 +1721,32 @@ export declare interface IdModel {
     id: string;
 }
 
-export declare type InternalTransferRequestSourceTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund" | "PaymentTransaction";
-
-export declare type InternalTransferRequestDestinationTypeEnum = "Undefined" | "Wallet" | "CopyTradingAccount" | "GenesisVisionPlatform" | "SignalProviderSettings" | "Program" | "Fund" | "PaymentTransaction";
-
 export declare interface InternalTransferRequest {
     sourceId: string;
-    sourceType: InternalTransferRequestSourceTypeEnum;
+    sourceType: TransferRequestType;
     destinationId: string;
-    destinationType: InternalTransferRequestDestinationTypeEnum;
+    destinationType: TransferRequestType;
     amount: number;
     transferAll: boolean;
 }
 
-export declare type InvestmentEventItemViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface InvestmentEventItemViewModel {
     title: string;
     amount: number;
-    currency: InvestmentEventItemViewModelCurrencyEnum;
+    currency: Currency;
 }
 
-export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+export declare interface InvestmentEventLocation {
+}
 
-export declare type InvestmentEventViewModelChangeStateEnum = "NotChanged" | "Increased" | "Decreased";
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface InvestmentEventType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
@@ -1702,7 +1757,7 @@ export declare interface InvestmentEventViewModel {
     assetDetails: AssetDetails;
     amount: number;
     currency: InvestmentEventViewModelCurrencyEnum;
-    changeState: InvestmentEventViewModelChangeStateEnum;
+    changeState: ChangeState;
     extendedInfo: InvestmentEventItemViewModel[];
     feesInfo: FeeDetails[];
     totalFeesAmount: number;
@@ -1713,6 +1768,26 @@ export declare interface InvestmentEventViewModels {
     events: InvestmentEventViewModel[];
     total: number;
 }
+
+export declare interface InvestmentProgramStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface InvestmentProgramType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface InvestmentRequestStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface InvestmentRequestType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface InvestorsFinancialStatistic {
     deposit: number;
@@ -1935,21 +2010,22 @@ export declare interface MigrationRequestOld {
     newBroker: BrokerOld;
 }
 
-export declare type MultiWalletExternalTransactionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type MultiWalletExternalTransactionTypeEnum = "All" | "Deposit" | "Withdrawal";
-
 export declare interface MultiWalletExternalTransaction {
     id: string;
-    currency: MultiWalletExternalTransactionCurrencyEnum;
+    currency: Currency;
     logo: string;
     date: Date;
     amount: number;
-    type: MultiWalletExternalTransactionTypeEnum;
+    type: MultiWalletExternalTransactionType;
     status: string;
     isEnableActions: boolean;
     statusUrl: string;
 }
+
+export declare interface MultiWalletExternalTransactionType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface MultiWalletExternalTransactionsViewModel {
     transactions: MultiWalletExternalTransaction[];
@@ -1966,27 +2042,31 @@ export declare interface MultiWalletFiltersOld {
     externalTransactionType: string[];
 }
 
-export declare type MultiWalletTransactionCurrencyFromEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare type MultiWalletTransactionCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type MultiWalletTransactionTypeEnum = "All" | "Investment" | "Converting" | "Withdrawal" | "Close" | "Open" | "Fee" | "Profits" | "SubscribeSignal" | "ReceiveSignal" | "DepositSignal" | "WithdrawalSignal" | "Platform";
-
-export declare type MultiWalletTransactionStatusEnum = "Done" | "Pending" | "Canceled" | "Error";
 
 export declare interface MultiWalletTransaction {
     id: string;
-    currencyFrom: MultiWalletTransactionCurrencyFromEnum;
+    currencyFrom: Currency;
     currencyTo: MultiWalletTransactionCurrencyToEnum;
-    type: MultiWalletTransactionTypeEnum;
+    type: MultiWalletTransactionType;
     date: Date;
-    status: MultiWalletTransactionStatusEnum;
+    status: MultiWalletTransactionStatus;
     logoFrom: string;
     logoTo: string;
     description: string;
     amount: number;
     amountTo: number;
 }
+
+export declare interface MultiWalletTransactionStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface MultiWalletTransactionType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface MultiWalletTransactionsViewModel {
     transactions: MultiWalletTransaction[];
@@ -2013,12 +2093,10 @@ export declare interface NewFundRequest {
     logo: string;
 }
 
-export declare type NewProgramRequestCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare type NewProgramRequestTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
 
 export declare interface NewProgramRequest {
-    currency: NewProgramRequestCurrencyEnum;
+    currency: Currency;
     periodLength: number;
     successFee: number;
     stopOutLevel: number;
@@ -2042,6 +2120,11 @@ export declare interface NotificationList {
     total: number;
 }
 
+export declare interface NotificationSettingConditionType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface NotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
     settingsProgram: ProgramNotificationSettingList[];
@@ -2049,41 +2132,34 @@ export declare interface NotificationSettingList {
     settingsManager: ManagerNotificationSettingList[];
 }
 
-export declare type NotificationSettingViewModelTypeEnum = "PlatformNewsAndUpdates" | "PlatformEmergency" | "PlatformOther" | "ProfileUpdated" | "ProfilePwdUpdated" | "ProfileVerification" | "Profile2FA" | "ProfileSecurity" | "TradingAccountPwdUpdated" | "ProgramNewsAndUpdates" | "ProgramEndOfPeriod" | "ProgramCondition" | "ProgramExceedInvestmentLimit" | "FundNewsAndUpdates" | "FundEndOfPeriod" | "FundRebalancing" | "ManagerNewProgram" | "ManagerNewFund" | "ManagerNewExternalSignalAccount" | "Signals" | "ExternalSignals";
-
-export declare type NotificationSettingViewModelConditionTypeEnum = "Empty" | "Profit" | "Level" | "AvailableToInvest";
-
 export declare interface NotificationSettingViewModel {
     id: string;
     isEnabled: boolean;
     assetId: string;
     managerId: string;
-    type: NotificationSettingViewModelTypeEnum;
-    conditionType: NotificationSettingViewModelConditionTypeEnum;
+    type: NotificationType;
+    conditionType: NotificationSettingConditionType;
     conditionAmount: number;
 }
 
-export declare type NotificationViewModelTypeEnum = "PlatformNewsAndUpdates" | "PlatformEmergency" | "PlatformOther" | "ProfileUpdated" | "ProfilePwdUpdated" | "ProfileVerification" | "Profile2FA" | "ProfileSecurity" | "TradingAccountPwdUpdated" | "ProgramNewsAndUpdates" | "ProgramEndOfPeriod" | "ProgramCondition" | "ProgramExceedInvestmentLimit" | "FundNewsAndUpdates" | "FundEndOfPeriod" | "FundRebalancing" | "ManagerNewProgram" | "ManagerNewFund" | "ManagerNewExternalSignalAccount" | "Signals" | "ExternalSignals";
+export declare interface NotificationType {
+}
 
-export declare type NotificationViewModelAssetTypeEnum = "Program" | "Fund";
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface NotificationViewModel {
     id: string;
     text: string;
     date: Date;
-    type: NotificationViewModelTypeEnum;
+    type: NotificationType;
     assetId: string;
     managerId: string;
     logo: string;
     url: string;
     color: string;
     isUnread: boolean;
-    assetType: NotificationViewModelAssetTypeEnum;
+    assetType: InvestmentProgramType;
 }
-
-export declare type OrderModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined" | "ManualBalancing";
-
-export declare type OrderModelEntryEnum = "In" | "Out" | "InOut" | "OutBy";
 
 export declare interface OrderModel {
     id: string;
@@ -2092,11 +2168,11 @@ export declare interface OrderModel {
     symbol: string;
     volume: number;
     profit: number;
-    direction: OrderModelDirectionEnum;
+    direction: TradeDirectionType;
     date: Date;
     price: number;
     priceCurrent: number;
-    entry: OrderModelEntryEnum;
+    entry: TradeEntryType;
     baseVolume: number;
     originalCommission: number;
     originalCommissionCurrency: string;
@@ -2119,39 +2195,29 @@ export declare interface OrderProgramData {
     logo: string;
 }
 
-export declare type OrderSignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type OrderSignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "GvGmRegularFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
-
 export declare interface OrderSignalFee {
     amount: number;
-    currency: OrderSignalFeeCurrencyEnum;
-    type: OrderSignalFeeTypeEnum;
+    currency: Currency;
+    type: FeeType;
 }
-
-export declare type OrderSignalModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type OrderSignalModelDirectionEnum = "Buy" | "Sell" | "Balance" | "Credit" | "Undefined" | "ManualBalancing";
-
-export declare type OrderSignalModelEntryEnum = "In" | "Out" | "InOut" | "OutBy";
 
 export declare interface OrderSignalModel {
     providers: OrderSignalProgramInfo[];
     totalCommission: number;
     totalCommissionByType: FeeDetails[];
     tradingAccountId: string;
-    currency: OrderSignalModelCurrencyEnum;
+    currency: Currency;
     id: string;
     login: string;
     ticket: string;
     symbol: string;
     volume: number;
     profit: number;
-    direction: OrderSignalModelDirectionEnum;
+    direction: TradeDirectionType;
     date: Date;
     price: number;
     priceCurrent: number;
-    entry: OrderSignalModelEntryEnum;
+    entry: TradeEntryType;
     baseVolume: number;
     originalCommission: number;
     originalCommissionCurrency: string;
@@ -2195,6 +2261,11 @@ export declare interface PeriodDate {
     dateTo: Date;
 }
 
+export declare interface PeriodStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface PersonalCopyTradingAccountInfo {
     isOwnSignal: boolean;
     isFavorite: boolean;
@@ -2226,8 +2297,6 @@ export declare interface PersonalFundDetailsFull {
     status: PersonalFundDetailsFullStatusEnum;
 }
 
-export declare type PersonalFundDetailsFullOldStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
-
 export declare interface PersonalFundDetailsFullOld {
     withdrawPercent: number;
     canReallocate: boolean;
@@ -2249,7 +2318,7 @@ export declare interface PersonalFundDetailsFullOld {
     pendingInput: number;
     pendingOutput: number;
     pendingOutputIsWithdrawAll: boolean;
-    status: PersonalFundDetailsFullOldStatusEnum;
+    status: AssetInvestmentStatus;
 }
 
 export declare type PersonalProgramDetailsFullStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
@@ -2283,8 +2352,6 @@ export declare interface PersonalProgramDetailsFull {
     status: PersonalProgramDetailsFullStatusEnum;
 }
 
-export declare type PersonalProgramDetailsFullOldStatusEnum = "Pending" | "Active" | "Investing" | "Withdrawing" | "Ended";
-
 export declare interface PersonalProgramDetailsFullOld {
     isReinvest: boolean;
     gvtValue: number;
@@ -2311,10 +2378,8 @@ export declare interface PersonalProgramDetailsFullOld {
     pendingInput: number;
     pendingOutput: number;
     pendingOutputIsWithdrawAll: boolean;
-    status: PersonalProgramDetailsFullOldStatusEnum;
+    status: AssetInvestmentStatus;
 }
-
-export declare type PersonalSignalDetailsFullStatusEnum = "Active" | "Ended";
 
 export declare interface PersonalSignalDetailsFull {
     subscriptionDate: Date;
@@ -2324,7 +2389,7 @@ export declare interface PersonalSignalDetailsFull {
     volume: number;
     isFavorite: boolean;
     isInvested: boolean;
-    status: PersonalSignalDetailsFullStatusEnum;
+    status: SignalSubscriberStatus;
     signalSettingsId: string;
 }
 
@@ -2396,10 +2461,8 @@ export declare interface PlatformStatisticOld {
     totalProfit: number;
 }
 
-export declare type PowDetailsSecureAlgorithmEnum = "Sha256";
-
 export declare interface PowDetails {
-    secureAlgorithm: PowDetailsSecureAlgorithmEnum;
+    secureAlgorithm: SecureAlgorithm;
     difficulty: number;
     nonce: string;
 }
@@ -2407,8 +2470,6 @@ export declare interface PowDetails {
 export declare interface PowResult {
     prefix: string;
 }
-
-export declare type ProfileFullViewModelVerificationStatusEnum = "NotVerified" | "Verified" | "UnderReview" | "Rejected";
 
 export declare interface ProfileFullViewModel {
     id: string;
@@ -2429,7 +2490,7 @@ export declare interface ProfileFullViewModel {
     index: string;
     citizenship: string;
     refUrl: string;
-    verificationStatus: ProfileFullViewModelVerificationStatusEnum;
+    verificationStatus: UserVerificationStatus;
 }
 
 export declare interface ProfileHeaderViewModel {
@@ -2475,11 +2536,9 @@ export declare interface ProgramBalanceChartElementOld {
     investorsFunds: number;
 }
 
-export declare type ProgramBalanceChartOldProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface ProgramBalanceChartOld {
     balance: number;
-    programCurrency: ProgramBalanceChartOldProgramCurrencyEnum;
+    programCurrency: Currency;
     balanceChart: ProgramBalanceChartElementOld[];
 }
 
@@ -2576,14 +2635,8 @@ export declare interface ProgramDetailsFull {
     manager: ProfilePublic;
 }
 
-export declare type ProgramDetailsFullOldCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type ProgramDetailsFullOldTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
-
-export declare type ProgramDetailsFullOldStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
-
 export declare interface ProgramDetailsFullOld {
-    currency: ProgramDetailsFullOldCurrencyEnum;
+    currency: Currency;
     level: number;
     levelProgress: number;
     periodDuration: number;
@@ -2605,7 +2658,7 @@ export declare interface ProgramDetailsFullOld {
     genesisRatio: number;
     investmentScale: number;
     volumeScale: number;
-    tradesDelay: ProgramDetailsFullOldTradesDelayEnum;
+    tradesDelay: TradesDelay;
     availableInvestmentBase: number;
     availableInvestmentLimit: number;
     totalAvailableInvestment: number;
@@ -2621,7 +2674,7 @@ export declare interface ProgramDetailsFullOld {
     title: string;
     ipfsHash: string;
     creationDate: Date;
-    status: ProgramDetailsFullOldStatusEnum;
+    status: InvestmentProgramStatus;
     manager: ProfilePublic;
 }
 
@@ -2635,12 +2688,8 @@ export declare interface ProgramDetailsListStatistic {
     tradesCount: number;
 }
 
-export declare type ProgramDetailsOldCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type ProgramDetailsOldStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
-
 export declare interface ProgramDetailsOld {
-    currency: ProgramDetailsOldCurrencyEnum;
+    currency: Currency;
     level: number;
     levelProgress: number;
     periodDuration: number;
@@ -2659,7 +2708,7 @@ export declare interface ProgramDetailsOld {
     color: string;
     title: string;
     description: string;
-    status: ProgramDetailsOldStatusEnum;
+    status: InvestmentProgramStatus;
     creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
@@ -2672,21 +2721,15 @@ export declare interface ProgramDetailsRating {
     topPercent: number;
 }
 
-export declare type ProgramFacetSortingEnum = "ByLevelAsc" | "ByLevelDesc" | "ByProfitAsc" | "ByProfitDesc" | "ByDrawdownAsc" | "ByDrawdownDesc" | "ByTradesAsc" | "ByTradesDesc" | "ByInvestorsAsc" | "ByInvestorsDesc" | "ByNewDesc" | "ByNewAsc" | "ByEndOfPeriodAsc" | "ByEndOfPeriodDesc" | "ByTitleAsc" | "ByTitleDesc" | "ByBalanceAsc" | "ByBalanceDesc" | "ByCurrDesc" | "ByCurrAsc" | "ByLevelProgressDesc" | "ByLevelProgressAsc";
-
-export declare type ProgramFacetSortTypeEnum = "New" | "Top" | "WeeklyTop" | "Popular" | "ToLevelUp" | "MostReliable";
-
-export declare type ProgramFacetTimeframeEnum = "Day" | "Week" | "Month" | "ThreeMonths" | "Year" | "AllTime";
-
 export declare interface ProgramFacet {
-    sorting: ProgramFacetSortingEnum;
+    sorting: ProgramsFilterSorting;
     id: string;
     title: string;
     description: string;
     logo: string;
     url: string;
-    sortType: ProgramFacetSortTypeEnum;
-    timeframe: ProgramFacetTimeframeEnum;
+    sortType: FacetSortType;
+    timeframe: Timeframe;
 }
 
 export declare interface ProgramFilters {
@@ -2762,13 +2805,11 @@ export declare interface ProgramNotificationSettingList {
     settingsGeneral: NotificationSettingViewModel[];
 }
 
-export declare type ProgramPeriodViewModelStatusEnum = "Planned" | "InProccess" | "Closed";
-
 export declare interface ProgramPeriodViewModel {
     dateFrom: Date;
     dateTo: Date;
     periodLength: number;
-    status: ProgramPeriodViewModelStatusEnum;
+    status: PeriodStatus;
     number: number;
     profit: number;
     balance: number;
@@ -2812,13 +2853,11 @@ export declare interface ProgramProfitChart {
     rate: number;
 }
 
-export declare type ProgramProfitChartOldProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface ProgramProfitChartOld {
     equityChart: ChartSimple[];
     totalProfit: number;
     timeframeProfit: number;
-    programCurrency: ProgramProfitChartOldProgramCurrencyEnum;
+    programCurrency: Currency;
     trades: number;
     successTradesPercent: number;
     profitFactor: number;
@@ -2870,14 +2909,6 @@ export declare interface ProgramRequest {
     programType: ProgramRequestProgramTypeEnum;
 }
 
-export declare type ProgramRequestOldCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type ProgramRequestOldTypeEnum = "Invest" | "Withdrawal";
-
-export declare type ProgramRequestOldStatusEnum = "New" | "Executed" | "Cancelled";
-
-export declare type ProgramRequestOldProgramTypeEnum = "Program" | "Fund";
-
 export declare interface ProgramRequestOld {
     id: string;
     programId: string;
@@ -2888,15 +2919,15 @@ export declare interface ProgramRequestOld {
     entryFee: number;
     exitFee: number;
     successFee: number;
-    currency: ProgramRequestOldCurrencyEnum;
+    currency: Currency;
     fundWithdrawPercent: number;
-    type: ProgramRequestOldTypeEnum;
-    status: ProgramRequestOldStatusEnum;
+    type: InvestmentRequestType;
+    status: InvestmentRequestStatus;
     logo: string;
     title: string;
     color: string;
     canCancelRequest: boolean;
-    programType: ProgramRequestOldProgramTypeEnum;
+    programType: InvestmentProgramType;
 }
 
 export declare interface ProgramRequests {
@@ -2916,10 +2947,6 @@ export declare interface ProgramSets {
     favoritesCount: number;
 }
 
-export declare type ProgramStatisticStartCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type ProgramStatisticInvestedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface ProgramStatistic {
     balanceBase: AmountWithCurrency;
     balanceGVT: AmountWithCurrency;
@@ -2932,9 +2959,9 @@ export declare interface ProgramStatistic {
     hasNotifications: boolean;
     startDate: Date;
     startBalance: number;
-    startCurrency: ProgramStatisticStartCurrencyEnum;
+    startCurrency: Currency;
     investedAmount: number;
-    investedCurrency: ProgramStatisticInvestedCurrencyEnum;
+    investedCurrency: Currency;
     tradesCount: number;
     tradesSuccessCount: number;
     profitFactorPercent: number;
@@ -2946,15 +2973,11 @@ export declare interface ProgramTag {
     color: string;
 }
 
-export declare type ProgramTransactionDetailsProgramTypeEnum = "Program" | "Fund";
-
-export declare type ProgramTransactionDetailsSuccessFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface ProgramTransactionDetails {
     id: string;
     managerName: string;
-    programType: ProgramTransactionDetailsProgramTypeEnum;
-    successFeeCurrency: ProgramTransactionDetailsSuccessFeeCurrencyEnum;
+    programType: InvestmentProgramType;
+    successFeeCurrency: Currency;
     logo: string;
     title: string;
     entryFee: number;
@@ -2995,6 +3018,11 @@ export declare interface ProgramWithdrawInfoOld {
     availableToWithdraw: number;
     rate: number;
 }
+
+export declare interface ProgramsFilterSorting {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface ProgramsInfo {
     managerProgramInvestment: number;
@@ -3055,10 +3083,8 @@ export declare interface PublicProfile {
     socialLinks: SocialLinkViewModel[];
 }
 
-export declare type RateItemCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface RateItem {
-    currency: RateItemCurrencyEnum;
+    currency: Currency;
     rate: number;
 }
 
@@ -3148,11 +3174,9 @@ export declare interface ResetPasswordViewModel {
     confirmPassword: string;
 }
 
-export declare type RewardDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface RewardDetails {
     date: Date;
-    currency: RewardDetailsCurrencyEnum;
+    currency: Currency;
     amount: number;
 }
 
@@ -3173,6 +3197,11 @@ export declare interface SearchViewModelOld {
     funds: FundsListOld;
     managers: ManagersListOld;
 }
+
+export declare interface SecureAlgorithm {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare type SignalAccountDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
 
@@ -3200,13 +3229,14 @@ export declare interface SignalDataMaster {
     share: number;
 }
 
-export declare type SignalDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+export declare interface SignalDetachMode {
+}
 
-export declare type SignalDetailsStatusEnum = "None" | "Pending" | "ErrorCreating" | "Active" | "Closed" | "Archived" | "ClosedDueToInactivity";
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface SignalDetails {
     personalDetails: PersonalSignalDetailsFull;
-    currency: SignalDetailsCurrencyEnum;
+    currency: Currency;
     level: number;
     levelProgress: number;
     tags: ProgramTag[];
@@ -3217,35 +3247,23 @@ export declare interface SignalDetails {
     color: string;
     title: string;
     description: string;
-    status: SignalDetailsStatusEnum;
+    status: InvestmentProgramStatus;
     creationDate: Date;
     manager: ProfilePublic;
     chart: ChartSimple[];
 }
 
-export declare type SignalFeeTypeEnum = "Undefined" | "GvProgramEntry" | "GvProgramSuccess" | "GvProgramSuccessSum" | "GvFundEntry" | "GvGmGvtHolderFee" | "GvGmRegularFee" | "ManagerProgramEntry" | "ManagerProgramSuccess" | "ManagerProgramSuccessSum" | "ManagerFundEntry" | "ManagerFundExit" | "GvWithdrawal" | "ManagerSignalMasterSuccessFee" | "ManagerSignalMasterVolumeFee" | "GvSignalSuccessFee" | "GvFundTrade";
-
-export declare type SignalFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface SignalFee {
     title: string;
-    type: SignalFeeTypeEnum;
+    type: FeeType;
     value: number;
-    currency: SignalFeeCurrencyEnum;
+    currency: Currency;
 }
 
 export declare interface SignalProviderSubscribers {
     subscribers: SignalSubscriber[];
     total: number;
 }
-
-export declare type SignalSubscriberStatusEnum = "Active" | "Ended";
-
-export declare type SignalSubscriberTotalCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type SignalSubscriberTotalSuccessFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type SignalSubscriberTotalVolumeFeeCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalSubscriber {
     number: number;
@@ -3254,23 +3272,26 @@ export declare interface SignalSubscriber {
     volume: number;
     subscriptionDate: Date;
     unsubscriptionDate: Date;
-    status: SignalSubscriberStatusEnum;
+    status: SignalSubscriberStatus;
     totalCommissionAmount: number;
-    totalCommissionCurrency: SignalSubscriberTotalCommissionCurrencyEnum;
+    totalCommissionCurrency: Currency;
     totalSuccessFeeAmount: number;
-    totalSuccessFeeCurrency: SignalSubscriberTotalSuccessFeeCurrencyEnum;
+    totalSuccessFeeCurrency: Currency;
     totalVolumeFeeAmount: number;
-    totalVolumeFeeCurrency: SignalSubscriberTotalVolumeFeeCurrencyEnum;
+    totalVolumeFeeCurrency: Currency;
 }
 
-export declare type SignalSubscriptionModeEnum = "ByBalance" | "Percent" | "Fixed";
+export declare interface SignalSubscriberStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare type SignalSubscriptionFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalSubscription {
     hasSignalAccount: boolean;
     hasActiveSubscription: boolean;
-    mode: SignalSubscriptionModeEnum;
+    mode: SubscriptionMode;
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
@@ -3294,19 +3315,32 @@ export declare interface SignalsList {
     total: number;
 }
 
-export declare type SocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
+export declare interface SocialLinkType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface SocialLinkViewModel {
     url: string;
     logo: string;
     name: string;
     value: string;
-    type: SocialLinkViewModelTypeEnum;
+    type: SocialLinkType;
 }
 
 export declare interface SocialLinksViewModel {
     socialLinks: SocialLinkViewModel[];
 }
+
+export declare interface SubscriptionMode {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface Timeframe {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare type TotalCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
@@ -3319,6 +3353,21 @@ export declare interface TotalCommission {
     title: string;
 }
 
+export declare interface TradeDirectionType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface TradeEntryType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface TradesDelay {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface TradesSignalViewModel {
     showSwaps: boolean;
     showTickets: boolean;
@@ -3326,32 +3375,24 @@ export declare interface TradesSignalViewModel {
     total: number;
 }
 
-export declare type TradesViewModelTradesDelayEnum = "None" | "FiveMinutes" | "FifteenMinutes" | "ThirtyMinutes" | "OneHour" | "SixHours";
-
 export declare interface TradesViewModel {
     showSwaps: boolean;
     showTickets: boolean;
     trades: OrderModel[];
-    tradesDelay: TradesViewModelTradesDelayEnum;
+    tradesDelay: TradesDelay;
     total: number;
 }
-
-export declare type TransactionDetailsTypeEnum = "Investing" | "Withdrawal" | "ExternalWithdrawal" | "ExternalDeposit" | "Converting" | "Open" | "Close" | "Profit" | "PlatformFee" | "SubscribeSignal" | "ReceiveSignal" | "DepositSignal" | "WithdrawalSignal" | "Platform";
-
-export declare type TransactionDetailsStatusEnum = "Done" | "Pending" | "Canceled" | "Error";
-
-export declare type TransactionDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare type TransactionDetailsGvCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface TransactionDetails {
-    type: TransactionDetailsTypeEnum;
+    type: TransactionDetailsType;
     programDetails: ProgramTransactionDetails;
     convertingDetails: ConvertingDetails;
     externalTransactionDetails: ExternalTransactionDetails;
-    status: TransactionDetailsStatusEnum;
+    status: MultiWalletTransactionStatus;
     signalFees: SignalFee[];
-    currency: TransactionDetailsCurrencyEnum;
+    currency: Currency;
     currencyName: string;
     currencyLogo: string;
     gvCommission: number;
@@ -3359,6 +3400,16 @@ export declare interface TransactionDetails {
     gvCommissionPercent: number;
     amount: number;
 }
+
+export declare interface TransactionDetailsType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
+export declare interface TransferRequestType {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface TwoFactorAuthenticator {
     sharedKey: string;
@@ -3400,10 +3451,8 @@ export declare interface UpdateProfileViewModel {
     about: string;
 }
 
-export declare type UpdateSocialLinkViewModelTypeEnum = "Undefined" | "Twitter" | "Telegram" | "Facebook" | "LinkedIn" | "Youtube" | "WeChat" | "Email";
-
 export declare interface UpdateSocialLinkViewModel {
-    type: UpdateSocialLinkViewModelTypeEnum;
+    type: SocialLinkType;
     value: string;
 }
 
@@ -3419,6 +3468,11 @@ export declare interface UserCommissionData {
     regularDiscount: number;
 }
 
+export declare interface UserVerificationStatus {
+}
+
+export declare function constructFromObject(data: any): module:model/AssetFilterType;
+
 export declare interface ValueChartBar {
     value: number;
     date: Date;
@@ -3426,20 +3480,14 @@ export declare interface ValueChartBar {
     otherAssetsValue: OtherAssetsValue;
 }
 
-export declare type WalletBaseDataCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface WalletBaseData {
     id: string;
     title: string;
     logo: string;
-    currency: WalletBaseDataCurrencyEnum;
+    currency: Currency;
     available: number;
     rate: number;
 }
-
-export declare type WalletDataCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type WalletDataCurrencyCcyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface WalletData {
     id: string;
@@ -3450,22 +3498,20 @@ export declare interface WalletData {
     isWithdrawalEnabled: boolean;
     withdrawalCommission: number;
     depositAddress: string;
-    currency: WalletDataCurrencyEnum;
+    currency: Currency;
     available: number;
     invested: number;
     pending: number;
     total: number;
-    currencyCcy: WalletDataCurrencyCcyEnum;
+    currencyCcy: Currency;
     availableCcy: number;
     investedCcy: number;
     pendingCcy: number;
     totalCcy: number;
 }
 
-export declare type WalletDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface WalletDeposit {
-    currency: WalletDepositCurrencyEnum;
+    currency: Currency;
     depositAddress: string;
 }
 
@@ -3540,10 +3586,8 @@ export declare interface WalletTransactionsViewModel {
     total: number;
 }
 
-export declare type WalletWithdrawalInfoCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface WalletWithdrawalInfo {
-    currency: WalletWithdrawalInfoCurrencyEnum;
+    currency: Currency;
     description: string;
     logo: string;
     commission: number;
@@ -3551,17 +3595,13 @@ export declare interface WalletWithdrawalInfo {
     availableToWithdrawal: number;
 }
 
-export declare type WalletsGrandTotalCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
-export declare type WalletsGrandTotalCurrencyCcyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare interface WalletsGrandTotal {
-    currency: WalletsGrandTotalCurrencyEnum;
+    currency: Currency;
     available: number;
     invested: number;
     pending: number;
     total: number;
-    currencyCcy: WalletsGrandTotalCurrencyCcyEnum;
+    currencyCcy: Currency;
     availableCcy: number;
     investedCcy: number;
     pendingCcy: number;

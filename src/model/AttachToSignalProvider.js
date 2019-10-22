@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import SubscriptionMode from './SubscriptionMode';
 
 
 
@@ -36,7 +37,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name AttachToSignalProvider#mode
- * @type AttachToSignalProviderModeEnum
+ * @type {SubscriptionMode}
  */
 /**
  *
@@ -91,7 +92,7 @@ export default class AttachToSignalProvider {
                 obj['initialDepositAmount'] = ApiClient.convertToType(data['initialDepositAmount'], 'Number');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = SubscriptionMode.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('percent')) {
                 obj['percent'] = ApiClient.convertToType(data['percent'], 'Number');
@@ -151,15 +152,6 @@ export default class AttachToSignalProvider {
         "EUR": "EUR"    
     };
 
-    static ModeEnum = {
-    
-        "ByBalance": "ByBalance",
-    
-        "Percent": "Percent",
-    
-        "Fixed": "Fixed"    
-    };
-
     static FixedCurrencyEnum = {
     
         "Undefined": "Undefined",
@@ -199,11 +191,6 @@ export default class AttachToSignalProvider {
 /**
  * @typedef AttachToSignalProviderInitialDepositCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef AttachToSignalProviderModeEnum 
- * @type {("ByBalance"|"Percent"|"Fixed")}
  */
 
 /**

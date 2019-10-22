@@ -14,30 +14,9 @@ Name | Type | Description | Notes
 **color** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**InvestmentProgramStatus**](InvestmentProgramStatus.md) |  | [optional] 
 **creationDate** | **Date** |  | [optional] 
 **manager** | [**ProfilePublic**](ProfilePublic.md) |  | [optional] 
 **chart** | [**[ChartSimple]**](ChartSimple.md) |  | [optional] 
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `None` (value: `"None"`)
-
-* `Pending` (value: `"Pending"`)
-
-* `ErrorCreating` (value: `"ErrorCreating"`)
-
-* `Active` (value: `"Active"`)
-
-* `Closed` (value: `"Closed"`)
-
-* `Archived` (value: `"Archived"`)
-
-* `ClosedDueToInactivity` (value: `"ClosedDueToInactivity"`)
-
-
 
 

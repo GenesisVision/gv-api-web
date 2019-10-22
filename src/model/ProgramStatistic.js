@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import AmountWithCurrency from './AmountWithCurrency';
+import Currency from './Currency';
 
 
 
@@ -82,7 +83,7 @@ import AmountWithCurrency from './AmountWithCurrency';
 /**
  *
  * @name ProgramStatistic#startCurrency
- * @type ProgramStatisticStartCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -92,7 +93,7 @@ import AmountWithCurrency from './AmountWithCurrency';
 /**
  *
  * @name ProgramStatistic#investedCurrency
- * @type ProgramStatisticInvestedCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -174,13 +175,13 @@ export default class ProgramStatistic {
                 obj['startBalance'] = ApiClient.convertToType(data['startBalance'], 'Number');
             }
             if (data.hasOwnProperty('startCurrency')) {
-                obj['startCurrency'] = ApiClient.convertToType(data['startCurrency'], 'String');
+                obj['startCurrency'] = Currency.constructFromObject(data['startCurrency']);
             }
             if (data.hasOwnProperty('investedAmount')) {
                 obj['investedAmount'] = ApiClient.convertToType(data['investedAmount'], 'Number');
             }
             if (data.hasOwnProperty('investedCurrency')) {
-                obj['investedCurrency'] = ApiClient.convertToType(data['investedCurrency'], 'String');
+                obj['investedCurrency'] = Currency.constructFromObject(data['investedCurrency']);
             }
             if (data.hasOwnProperty('tradesCount')) {
                 obj['tradesCount'] = ApiClient.convertToType(data['tradesCount'], 'Number');
@@ -222,80 +223,12 @@ export default class ProgramStatistic {
 
 
 
-    static StartCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
-    static InvestedCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramStatisticStartCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
-
-/**
- * @typedef ProgramStatisticInvestedCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

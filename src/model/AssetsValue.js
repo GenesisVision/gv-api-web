@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import AssetFilterType from './AssetFilterType';
 
 
 
@@ -26,7 +27,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name AssetsValue#type
- * @type AssetsValueTypeEnum
+ * @type {AssetFilterType}
  */
 /**
  *
@@ -90,7 +91,7 @@ export default class AssetsValue {
             
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = AssetFilterType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -131,28 +132,12 @@ export default class AssetsValue {
 
 
 
-    static TypeEnum = {
-    
-        "All": "All",
-    
-        "Program": "Program",
-    
-        "Fund": "Fund",
-    
-        "Signal": "Signal"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef AssetsValueTypeEnum 
- * @type {("All"|"Program"|"Fund"|"Signal")}
- */
 
 
 

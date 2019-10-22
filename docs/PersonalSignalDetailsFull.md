@@ -10,18 +10,7 @@ Name | Type | Description | Notes
 **volume** | **Number** |  | [optional] 
 **isFavorite** | **Boolean** |  | [optional] 
 **isInvested** | **Boolean** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**SignalSubscriberStatus**](SignalSubscriberStatus.md) |  | [optional] 
 **signalSettingsId** | **String** |  | [optional] 
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Active` (value: `"Active"`)
-
-* `Ended` (value: `"Ended"`)
-
-
 
 

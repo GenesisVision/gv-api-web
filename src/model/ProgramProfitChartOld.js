@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import ChartSimple from './ChartSimple';
+import Currency from './Currency';
 import PeriodDate from './PeriodDate';
 
 
@@ -43,7 +44,7 @@ import PeriodDate from './PeriodDate';
 /**
  *
  * @name ProgramProfitChartOld#programCurrency
- * @type ProgramProfitChartOldProgramCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -156,7 +157,7 @@ export default class ProgramProfitChartOld {
                 obj['timeframeProfit'] = ApiClient.convertToType(data['timeframeProfit'], 'Number');
             }
             if (data.hasOwnProperty('programCurrency')) {
-                obj['programCurrency'] = ApiClient.convertToType(data['programCurrency'], 'String');
+                obj['programCurrency'] = Currency.constructFromObject(data['programCurrency']);
             }
             if (data.hasOwnProperty('trades')) {
                 obj['trades'] = ApiClient.convertToType(data['trades'], 'Number');
@@ -232,46 +233,12 @@ export default class ProgramProfitChartOld {
 
 
 
-    static ProgramCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramProfitChartOldProgramCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

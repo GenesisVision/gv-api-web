@@ -13,6 +13,9 @@
 
 
 import ApiClient from '../ApiClient';
+import FacetSortType from './FacetSortType';
+import ProgramsFilterSorting from './ProgramsFilterSorting';
+import Timeframe from './Timeframe';
 
 
 
@@ -26,7 +29,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramFacet#sorting
- * @type ProgramFacetSortingEnum
+ * @type {ProgramsFilterSorting}
  */
 /**
  *
@@ -56,12 +59,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramFacet#sortType
- * @type ProgramFacetSortTypeEnum
+ * @type {FacetSortType}
  */
 /**
  *
  * @name ProgramFacet#timeframe
- * @type ProgramFacetTimeframeEnum
+ * @type {Timeframe}
  */
 
 
@@ -90,7 +93,7 @@ export default class ProgramFacet {
             
 
             if (data.hasOwnProperty('sorting')) {
-                obj['sorting'] = ApiClient.convertToType(data['sorting'], 'String');
+                obj['sorting'] = ProgramsFilterSorting.constructFromObject(data['sorting']);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -108,10 +111,10 @@ export default class ProgramFacet {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('sortType')) {
-                obj['sortType'] = ApiClient.convertToType(data['sortType'], 'String');
+                obj['sortType'] = FacetSortType.constructFromObject(data['sortType']);
             }
             if (data.hasOwnProperty('timeframe')) {
-                obj['timeframe'] = ApiClient.convertToType(data['timeframe'], 'String');
+                obj['timeframe'] = Timeframe.constructFromObject(data['timeframe']);
             }
         }
         return obj;
@@ -131,104 +134,12 @@ export default class ProgramFacet {
 
 
 
-    static SortingEnum = {
-    
-        "ByLevelAsc": "ByLevelAsc",
-    
-        "ByLevelDesc": "ByLevelDesc",
-    
-        "ByProfitAsc": "ByProfitAsc",
-    
-        "ByProfitDesc": "ByProfitDesc",
-    
-        "ByDrawdownAsc": "ByDrawdownAsc",
-    
-        "ByDrawdownDesc": "ByDrawdownDesc",
-    
-        "ByTradesAsc": "ByTradesAsc",
-    
-        "ByTradesDesc": "ByTradesDesc",
-    
-        "ByInvestorsAsc": "ByInvestorsAsc",
-    
-        "ByInvestorsDesc": "ByInvestorsDesc",
-    
-        "ByNewDesc": "ByNewDesc",
-    
-        "ByNewAsc": "ByNewAsc",
-    
-        "ByEndOfPeriodAsc": "ByEndOfPeriodAsc",
-    
-        "ByEndOfPeriodDesc": "ByEndOfPeriodDesc",
-    
-        "ByTitleAsc": "ByTitleAsc",
-    
-        "ByTitleDesc": "ByTitleDesc",
-    
-        "ByBalanceAsc": "ByBalanceAsc",
-    
-        "ByBalanceDesc": "ByBalanceDesc",
-    
-        "ByCurrDesc": "ByCurrDesc",
-    
-        "ByCurrAsc": "ByCurrAsc",
-    
-        "ByLevelProgressDesc": "ByLevelProgressDesc",
-    
-        "ByLevelProgressAsc": "ByLevelProgressAsc"    
-    };
-
-    static SortTypeEnum = {
-    
-        "New": "New",
-    
-        "Top": "Top",
-    
-        "WeeklyTop": "WeeklyTop",
-    
-        "Popular": "Popular",
-    
-        "ToLevelUp": "ToLevelUp",
-    
-        "MostReliable": "MostReliable"    
-    };
-
-    static TimeframeEnum = {
-    
-        "Day": "Day",
-    
-        "Week": "Week",
-    
-        "Month": "Month",
-    
-        "ThreeMonths": "ThreeMonths",
-    
-        "Year": "Year",
-    
-        "AllTime": "AllTime"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramFacetSortingEnum 
- * @type {("ByLevelAsc"|"ByLevelDesc"|"ByProfitAsc"|"ByProfitDesc"|"ByDrawdownAsc"|"ByDrawdownDesc"|"ByTradesAsc"|"ByTradesDesc"|"ByInvestorsAsc"|"ByInvestorsDesc"|"ByNewDesc"|"ByNewAsc"|"ByEndOfPeriodAsc"|"ByEndOfPeriodDesc"|"ByTitleAsc"|"ByTitleDesc"|"ByBalanceAsc"|"ByBalanceDesc"|"ByCurrDesc"|"ByCurrAsc"|"ByLevelProgressDesc"|"ByLevelProgressAsc")}
- */
-
-/**
- * @typedef ProgramFacetSortTypeEnum 
- * @type {("New"|"Top"|"WeeklyTop"|"Popular"|"ToLevelUp"|"MostReliable")}
- */
-
-/**
- * @typedef ProgramFacetTimeframeEnum 
- * @type {("Day"|"Week"|"Month"|"ThreeMonths"|"Year"|"AllTime")}
- */
 
 
 

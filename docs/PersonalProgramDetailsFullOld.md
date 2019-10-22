@@ -28,23 +28,6 @@ Name | Type | Description | Notes
 **pendingInput** | **Number** |  | [optional] 
 **pendingOutput** | **Number** |  | [optional] 
 **pendingOutputIsWithdrawAll** | **Boolean** |  | [optional] 
-**status** | **String** |  | [optional] 
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Pending` (value: `"Pending"`)
-
-* `Active` (value: `"Active"`)
-
-* `Investing` (value: `"Investing"`)
-
-* `Withdrawing` (value: `"Withdrawing"`)
-
-* `Ended` (value: `"Ended"`)
-
-
+**status** | [**AssetInvestmentStatus**](AssetInvestmentStatus.md) |  | [optional] 
 
 

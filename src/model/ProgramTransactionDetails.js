@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import Currency from './Currency';
+import InvestmentProgramType from './InvestmentProgramType';
 
 
 
@@ -36,12 +38,12 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name ProgramTransactionDetails#programType
- * @type ProgramTransactionDetailsProgramTypeEnum
+ * @type {InvestmentProgramType}
  */
 /**
  *
  * @name ProgramTransactionDetails#successFeeCurrency
- * @type ProgramTransactionDetailsSuccessFeeCurrencyEnum
+ * @type {Currency}
  */
 /**
  *
@@ -131,10 +133,10 @@ export default class ProgramTransactionDetails {
                 obj['managerName'] = ApiClient.convertToType(data['managerName'], 'String');
             }
             if (data.hasOwnProperty('programType')) {
-                obj['programType'] = ApiClient.convertToType(data['programType'], 'String');
+                obj['programType'] = InvestmentProgramType.constructFromObject(data['programType']);
             }
             if (data.hasOwnProperty('successFeeCurrency')) {
-                obj['successFeeCurrency'] = ApiClient.convertToType(data['successFeeCurrency'], 'String');
+                obj['successFeeCurrency'] = Currency.constructFromObject(data['successFeeCurrency']);
             }
             if (data.hasOwnProperty('logo')) {
                 obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
@@ -194,58 +196,12 @@ export default class ProgramTransactionDetails {
 
 
 
-    static ProgramTypeEnum = {
-    
-        "Program": "Program",
-    
-        "Fund": "Fund"    
-    };
-
-    static SuccessFeeCurrencyEnum = {
-    
-        "Undefined": "Undefined",
-    
-        "GVT": "GVT",
-    
-        "ETH": "ETH",
-    
-        "BTC": "BTC",
-    
-        "ADA": "ADA",
-    
-        "USDT": "USDT",
-    
-        "XRP": "XRP",
-    
-        "BCH": "BCH",
-    
-        "LTC": "LTC",
-    
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ProgramTransactionDetailsProgramTypeEnum 
- * @type {("Program"|"Fund")}
- */
-
-/**
- * @typedef ProgramTransactionDetailsSuccessFeeCurrencyEnum 
- * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
- */
 
 
 

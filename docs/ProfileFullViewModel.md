@@ -21,21 +21,6 @@ Name | Type | Description | Notes
 **index** | **String** |  | [optional] 
 **citizenship** | **String** |  | [optional] 
 **refUrl** | **String** |  | [optional] 
-**verificationStatus** | **String** |  | [optional] 
-
-
-<a name="VerificationStatusEnum"></a>
-## Enum: VerificationStatusEnum
-
-
-* `NotVerified` (value: `"NotVerified"`)
-
-* `Verified` (value: `"Verified"`)
-
-* `UnderReview` (value: `"UnderReview"`)
-
-* `Rejected` (value: `"Rejected"`)
-
-
+**verificationStatus** | [**UserVerificationStatus**](UserVerificationStatus.md) |  | [optional] 
 
 

@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import ErrorCodes from './ErrorCodes';
 import ErrorMessage from './ErrorMessage';
 
 
@@ -32,7 +33,7 @@ import ErrorMessage from './ErrorMessage';
 /**
  *
  * @name ErrorViewModel#code
- * @type ErrorViewModelCodeEnum
+ * @type {ErrorCodes}
  */
 
 
@@ -64,7 +65,7 @@ export default class ErrorViewModel {
                 obj['errors'] = ApiClient.convertToType(data['errors'], [ErrorMessage]);
             }
             if (data.hasOwnProperty('code')) {
-                obj['code'] = ApiClient.convertToType(data['code'], 'String');
+                obj['code'] = ErrorCodes.constructFromObject(data['code']);
             }
         }
         return obj;
@@ -78,28 +79,12 @@ export default class ErrorViewModel {
 
 
 
-    static CodeEnum = {
-    
-        "InternalServerError": "InternalServerError",
-    
-        "ValidationError": "ValidationError",
-    
-        "RequiresTwoFactor": "RequiresTwoFactor",
-    
-        "WrongCaptcha": "WrongCaptcha"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef ErrorViewModelCodeEnum 
- * @type {("InternalServerError"|"ValidationError"|"RequiresTwoFactor"|"WrongCaptcha")}
- */
 
 
 

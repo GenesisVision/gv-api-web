@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**currency** | **String** |  | [optional] 
+**currency** | [**Currency**](Currency.md) |  | [optional] 
 **logo** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **balance** | **Number** |  | [optional] 
@@ -13,38 +13,5 @@ Name | Type | Description | Notes
 **marginLevel** | **Number** |  | [optional] 
 **available** | **Number** |  | [optional] 
 **personalInfo** | [**PersonalCopyTradingAccountInfo**](PersonalCopyTradingAccountInfo.md) |  | [optional] 
-
-
-<a name="CurrencyEnum"></a>
-## Enum: CurrencyEnum
-
-
-* `Undefined` (value: `"Undefined"`)
-
-* `GVT` (value: `"GVT"`)
-
-* `ETH` (value: `"ETH"`)
-
-* `BTC` (value: `"BTC"`)
-
-* `ADA` (value: `"ADA"`)
-
-* `USDT` (value: `"USDT"`)
-
-* `XRP` (value: `"XRP"`)
-
-* `BCH` (value: `"BCH"`)
-
-* `LTC` (value: `"LTC"`)
-
-* `DOGE` (value: `"DOGE"`)
-
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
-
 
 

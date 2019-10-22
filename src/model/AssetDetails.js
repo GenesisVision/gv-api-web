@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import AssetType from './AssetType';
 
 
 
@@ -51,7 +52,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name AssetDetails#assetType
- * @type AssetDetailsAssetTypeEnum
+ * @type {AssetType}
  */
 
 
@@ -95,7 +96,7 @@ export default class AssetDetails {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('assetType')) {
-                obj['assetType'] = ApiClient.convertToType(data['assetType'], 'String');
+                obj['assetType'] = AssetType.constructFromObject(data['assetType']);
             }
         }
         return obj;
@@ -113,28 +114,12 @@ export default class AssetDetails {
 
 
 
-    static AssetTypeEnum = {
-    
-        "None": "None",
-    
-        "Programs": "Programs",
-    
-        "Funds": "Funds",
-    
-        "Signals": "Signals"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef AssetDetailsAssetTypeEnum 
- * @type {("None"|"Programs"|"Funds"|"Signals")}
- */
 
 
 

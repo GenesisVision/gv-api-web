@@ -13,6 +13,8 @@
 
 
 import ApiClient from '../ApiClient';
+import InvestmentProgramType from './InvestmentProgramType';
+import NotificationType from './NotificationType';
 
 
 
@@ -41,7 +43,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name NotificationViewModel#type
- * @type NotificationViewModelTypeEnum
+ * @type {NotificationType}
  */
 /**
  *
@@ -76,7 +78,7 @@ import ApiClient from '../ApiClient';
 /**
  *
  * @name NotificationViewModel#assetType
- * @type NotificationViewModelAssetTypeEnum
+ * @type {InvestmentProgramType}
  */
 
 
@@ -114,7 +116,7 @@ export default class NotificationViewModel {
                 obj['date'] = ApiClient.convertToType(data['date'], 'Date');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = NotificationType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('assetId')) {
                 obj['assetId'] = ApiClient.convertToType(data['assetId'], 'String');
@@ -135,7 +137,7 @@ export default class NotificationViewModel {
                 obj['isUnread'] = ApiClient.convertToType(data['isUnread'], 'Boolean');
             }
             if (data.hasOwnProperty('assetType')) {
-                obj['assetType'] = ApiClient.convertToType(data['assetType'], 'String');
+                obj['assetType'] = InvestmentProgramType.constructFromObject(data['assetType']);
             }
         }
         return obj;
@@ -158,74 +160,12 @@ export default class NotificationViewModel {
 
 
 
-    static TypeEnum = {
-    
-        "PlatformNewsAndUpdates": "PlatformNewsAndUpdates",
-    
-        "PlatformEmergency": "PlatformEmergency",
-    
-        "PlatformOther": "PlatformOther",
-    
-        "ProfileUpdated": "ProfileUpdated",
-    
-        "ProfilePwdUpdated": "ProfilePwdUpdated",
-    
-        "ProfileVerification": "ProfileVerification",
-    
-        "Profile2FA": "Profile2FA",
-    
-        "ProfileSecurity": "ProfileSecurity",
-    
-        "TradingAccountPwdUpdated": "TradingAccountPwdUpdated",
-    
-        "ProgramNewsAndUpdates": "ProgramNewsAndUpdates",
-    
-        "ProgramEndOfPeriod": "ProgramEndOfPeriod",
-    
-        "ProgramCondition": "ProgramCondition",
-    
-        "ProgramExceedInvestmentLimit": "ProgramExceedInvestmentLimit",
-    
-        "FundNewsAndUpdates": "FundNewsAndUpdates",
-    
-        "FundEndOfPeriod": "FundEndOfPeriod",
-    
-        "FundRebalancing": "FundRebalancing",
-    
-        "ManagerNewProgram": "ManagerNewProgram",
-    
-        "ManagerNewFund": "ManagerNewFund",
-    
-        "ManagerNewExternalSignalAccount": "ManagerNewExternalSignalAccount",
-    
-        "Signals": "Signals",
-    
-        "ExternalSignals": "ExternalSignals"    
-    };
-
-    static AssetTypeEnum = {
-    
-        "Program": "Program",
-    
-        "Fund": "Fund"    
-    };
-
 
 
 }
 
 
 
-
-/**
- * @typedef NotificationViewModelTypeEnum 
- * @type {("PlatformNewsAndUpdates"|"PlatformEmergency"|"PlatformOther"|"ProfileUpdated"|"ProfilePwdUpdated"|"ProfileVerification"|"Profile2FA"|"ProfileSecurity"|"TradingAccountPwdUpdated"|"ProgramNewsAndUpdates"|"ProgramEndOfPeriod"|"ProgramCondition"|"ProgramExceedInvestmentLimit"|"FundNewsAndUpdates"|"FundEndOfPeriod"|"FundRebalancing"|"ManagerNewProgram"|"ManagerNewFund"|"ManagerNewExternalSignalAccount"|"Signals"|"ExternalSignals")}
- */
-
-/**
- * @typedef NotificationViewModelAssetTypeEnum 
- * @type {("Program"|"Fund")}
- */
 
 
 
