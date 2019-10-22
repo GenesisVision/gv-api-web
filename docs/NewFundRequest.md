@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exitFee** | **Number** |  | [optional] 
-**managementFee** | **Number** |  | [optional] 
 **assets** | [**[FundAssetPart]**](FundAssetPart.md) |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 

@@ -22,10 +22,10 @@ import InvestmentEventViewModels from '../model/InvestmentEventViewModels';
 import ManagerAssets from '../model/ManagerAssets';
 import ManagerFundWithdrawInfoOld from '../model/ManagerFundWithdrawInfoOld';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
-import ManagerProgramCreateResult from '../model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfoOld from '../model/ManagerProgramWithdrawInfoOld';
 import NewFundRequest from '../model/NewFundRequest';
 import NewProgramRequest from '../model/NewProgramRequest';
+import ProgramCreateResult from '../model/ProgramCreateResult';
 import ProgramInvestInfoOld from '../model/ProgramInvestInfoOld';
 import ProgramLevelInfo from '../model/ProgramLevelInfo';
 import ProgramMinimumDepositOld from '../model/ProgramMinimumDepositOld';
@@ -586,7 +586,7 @@ export default class ManagerApi {
       let authNames = [];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ManagerProgramCreateResult;
+      let returnType = ProgramCreateResult;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs/create', 'POST',
@@ -601,7 +601,7 @@ export default class ManagerApi {
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
      * @param {NewProgramRequest} [opts.request] 
-     * @return {CancelablePromise<ManagerProgramCreateResult>} a Promise, with an object containing data of type ManagerProgramCreateResult and HTTP response
+     * @return {CancelablePromise<ProgramCreateResult>} a Promise, with an object containing data of type ProgramCreateResult and HTTP response
      */
       createProgram(authorization, opts) {
       return this.createProgramWithHttpInfo(authorization, opts)

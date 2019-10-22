@@ -92,7 +92,6 @@ import ManagerFundWithdrawInfoOld from './model/ManagerFundWithdrawInfoOld';
 import ManagerNotificationSettingList from './model/ManagerNotificationSettingList';
 import ManagerOverview from './model/ManagerOverview';
 import ManagerProfileDetails from './model/ManagerProfileDetails';
-import ManagerProgramCreateResult from './model/ManagerProgramCreateResult';
 import ManagerProgramWithdrawInfoOld from './model/ManagerProgramWithdrawInfoOld';
 import ManagerSimpleFund from './model/ManagerSimpleFund';
 import ManagerSimpleProgram from './model/ManagerSimpleProgram';
@@ -134,6 +133,7 @@ import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
 import ProgramBalanceChartElementOld from './model/ProgramBalanceChartElementOld';
 import ProgramBalanceChartOld from './model/ProgramBalanceChartOld';
+import ProgramCreateResult from './model/ProgramCreateResult';
 import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsOld from './model/ProgramDetailsOld';
@@ -711,12 +711,6 @@ export {
     ManagerProfileDetails,
 
     /**
-     * @name index#ManagerProgramCreateResult
-     * @type {ManagerProgramCreateResult}
-     */
-    ManagerProgramCreateResult,
-
-    /**
      * @name index#ManagerProgramWithdrawInfoOld
      * @type {ManagerProgramWithdrawInfoOld}
      */
@@ -961,6 +955,12 @@ export {
      * @type {ProgramBalanceChartOld}
      */
     ProgramBalanceChartOld,
+
+    /**
+     * @name index#ProgramCreateResult
+     * @type {ProgramCreateResult}
+     */
+    ProgramCreateResult,
 
     /**
      * @name index#ProgramDetailsFullOld

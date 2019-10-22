@@ -31,11 +31,6 @@ import FundAssetPart from './FundAssetPart';
  */
 /**
  *
- * @name NewFundRequest#managementFee
- * @type {Number}
- */
-/**
- *
  * @name NewFundRequest#assets
  * @type {Array<FundAssetPart>}
  */
@@ -98,9 +93,6 @@ export default class NewFundRequest {
             if (data.hasOwnProperty('exitFee')) {
                 obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
             }
-            if (data.hasOwnProperty('managementFee')) {
-                obj['managementFee'] = ApiClient.convertToType(data['managementFee'], 'Number');
-            }
             if (data.hasOwnProperty('assets')) {
                 obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPart]);
             }
@@ -127,7 +119,6 @@ export default class NewFundRequest {
     }
 
     exitFee = undefined;
-    managementFee = undefined;
     assets = undefined;
     entryFee = undefined;
     depositAmount = undefined;

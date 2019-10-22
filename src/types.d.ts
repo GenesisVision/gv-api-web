@@ -259,7 +259,7 @@ export declare class ManagerApi {
     }): CancelablePromise<any>;
     createProgram(authorization: string, opts?: {
         request?: NewProgramRequest;
-    }): CancelablePromise<ManagerProgramCreateResult>;
+    }): CancelablePromise<ProgramCreateResult>;
     getEvents(authorization: string, opts?: {
         eventLocation?: string;
         assetId?: string;
@@ -743,7 +743,6 @@ export declare interface index {
     ManagerNotificationSettingList: ManagerNotificationSettingList;
     ManagerOverview: ManagerOverview;
     ManagerProfileDetails: ManagerProfileDetails;
-    ManagerProgramCreateResult: ManagerProgramCreateResult;
     ManagerProgramWithdrawInfoOld: ManagerProgramWithdrawInfoOld;
     ManagerSimpleFund: ManagerSimpleFund;
     ManagerSimpleProgram: ManagerSimpleProgram;
@@ -785,6 +784,7 @@ export declare interface index {
     ProfilePublic: ProfilePublic;
     ProgramBalanceChartElementOld: ProgramBalanceChartElementOld;
     ProgramBalanceChartOld: ProgramBalanceChartOld;
+    ProgramCreateResult: ProgramCreateResult;
     ProgramDetailsFullOld: ProgramDetailsFullOld;
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsOld: ProgramDetailsOld;
@@ -2004,7 +2004,6 @@ export declare interface NewExternalSignalAccountRequest {
 
 export declare interface NewFundRequest {
     exitFee: number;
-    managementFee: number;
     assets: FundAssetPart[];
     entryFee: number;
     depositAmount: number;
@@ -2482,6 +2481,12 @@ export declare interface ProgramBalanceChartOld {
     balance: number;
     programCurrency: ProgramBalanceChartOldProgramCurrencyEnum;
     balanceChart: ProgramBalanceChartElementOld[];
+}
+
+export declare interface ProgramCreateResult {
+    programId: string;
+    twoFactorRequired: boolean;
+    twoFactor: TwoFactorAuthenticator;
 }
 
 export declare type ProgramDetailsCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";

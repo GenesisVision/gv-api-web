@@ -503,7 +503,7 @@ No authorization required
 
 <a name="createProgram"></a>
 # **createProgram**
-> ManagerProgramCreateResult createProgram(authorization, opts)
+> ProgramCreateResult createProgram(authorization, opts)
 
 Create an investment program
 
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagerProgramCreateResult**](ManagerProgramCreateResult.md)
+[**ProgramCreateResult**](ProgramCreateResult.md)
 
 ### Authorization
 
