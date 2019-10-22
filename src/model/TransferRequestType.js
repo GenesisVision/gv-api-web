@@ -102,6 +102,13 @@ export default class TransferRequestType {
         FundRequest = "FundRequest";
 
     
+        /**
+         * value: "ExternalCommonAccount"
+         * @const
+         */
+        ExternalCommonAccount = "ExternalCommonAccount";
+
+    
 
     /**
     * Returns a <code>TransferRequestType</code> enum value from a Javascript object name.

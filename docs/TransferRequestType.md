@@ -23,4 +23,6 @@
 
 * `FundRequest` (value: `"FundRequest"`)
 
+* `ExternalCommonAccount` (value: `"ExternalCommonAccount"`)
+
 
