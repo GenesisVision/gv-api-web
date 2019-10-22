@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**attachSlaveToMaster**](SignalApi.md#attachSlaveToMaster) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 [**closeTrade**](SignalApi.md#closeTrade) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 [**detachSlaveFromMaster**](SignalApi.md#detachSlaveFromMaster) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-[**getCopytradingAccounts**](SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/slaves | Get copytrading slaves accounts
+[**getCopytradingAccounts**](SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/accounts | Get copytrading slaves accounts
 [**getOpenSignalTrades**](SignalApi.md#getOpenSignalTrades) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 [**getSignalTrades**](SignalApi.md#getSignalTrades) | **GET** /v1.0/signal/trades | Get investors signals trades history
 [**getSignalTradingLog**](SignalApi.md#getSignalTradingLog) | **GET** /v1.0/signal/trades/log | Get investors signals trading log

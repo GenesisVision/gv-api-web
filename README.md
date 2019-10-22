@@ -237,7 +237,7 @@ Class | Method | HTTP request | Description
 *CoreApiV10.SignalApi* | [**attachSlaveToMaster**](docs/SignalApi.md#attachSlaveToMaster) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
 *CoreApiV10.SignalApi* | [**closeTrade**](docs/SignalApi.md#closeTrade) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
 *CoreApiV10.SignalApi* | [**detachSlaveFromMaster**](docs/SignalApi.md#detachSlaveFromMaster) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-*CoreApiV10.SignalApi* | [**getCopytradingAccounts**](docs/SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/slaves | Get copytrading slaves accounts
+*CoreApiV10.SignalApi* | [**getCopytradingAccounts**](docs/SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/accounts | Get copytrading slaves accounts
 *CoreApiV10.SignalApi* | [**getOpenSignalTrades**](docs/SignalApi.md#getOpenSignalTrades) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.SignalApi* | [**getSignalTrades**](docs/SignalApi.md#getSignalTrades) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**getSignalTradingLog**](docs/SignalApi.md#getSignalTradingLog) | **GET** /v1.0/signal/trades/log | Get investors signals trading log

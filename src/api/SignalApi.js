@@ -228,7 +228,7 @@ export default class SignalApi {
       let returnType = CopyTradingAccountsList;
 
       return this.apiClient.callApi(
-        '/v1.0/signal/slaves', 'GET',
+        '/v1.0/signal/accounts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
