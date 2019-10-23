@@ -22,14 +22,6 @@ Name | Type | Description | Notes
 ## Enum: GvCommissionCurrencyEnum
 
 
-* `DOGE` (value: `"DOGE"`)
-
-* `BNB` (value: `"BNB"`)
-
-* `USD` (value: `"USD"`)
-
-* `EUR` (value: `"EUR"`)
-
 * `Undefined` (value: `"Undefined"`)
 
 * `GVT` (value: `"GVT"`)
@@ -47,6 +39,14 @@ Name | Type | Description | Notes
 * `BCH` (value: `"BCH"`)
 
 * `LTC` (value: `"LTC"`)
+
+* `DOGE` (value: `"DOGE"`)
+
+* `BNB` (value: `"BNB"`)
+
+* `USD` (value: `"USD"`)
+
+* `EUR` (value: `"EUR"`)
 
 
 

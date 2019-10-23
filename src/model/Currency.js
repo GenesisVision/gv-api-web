@@ -33,34 +33,6 @@ import ApiClient from '../ApiClient';
 export default class Currency {
     
         /**
-         * value: "DOGE"
-         * @const
-         */
-        DOGE = "DOGE";
-
-    
-        /**
-         * value: "BNB"
-         * @const
-         */
-        BNB = "BNB";
-
-    
-        /**
-         * value: "USD"
-         * @const
-         */
-        USD = "USD";
-
-    
-        /**
-         * value: "EUR"
-         * @const
-         */
-        EUR = "EUR";
-
-    
-        /**
          * value: "Undefined"
          * @const
          */
@@ -121,6 +93,34 @@ export default class Currency {
          * @const
          */
         LTC = "LTC";
+
+    
+        /**
+         * value: "DOGE"
+         * @const
+         */
+        DOGE = "DOGE";
+
+    
+        /**
+         * value: "BNB"
+         * @const
+         */
+        BNB = "BNB";
+
+    
+        /**
+         * value: "USD"
+         * @const
+         */
+        USD = "USD";
+
+    
+        /**
+         * value: "EUR"
+         * @const
+         */
+        EUR = "EUR";
 
     
 

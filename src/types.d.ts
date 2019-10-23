@@ -987,9 +987,9 @@ export declare interface AttachToExternalSignalProviderExt {
     fixedCurrency: AttachToExternalSignalProviderExtFixedCurrencyEnum;
 }
 
-export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type AttachToSignalProviderFixedCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type AttachToSignalProviderFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToSignalProvider {
     initialDepositCurrency: AttachToSignalProviderInitialDepositCurrencyEnum;
@@ -1746,9 +1746,9 @@ export declare interface InvestmentEventType {
 
 export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
-export declare type InvestmentEventViewModelCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type InvestmentEventViewModelCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
-export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type InvestmentEventViewModelTotalFeesCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface InvestmentEventViewModel {
     title: string;
@@ -2042,7 +2042,7 @@ export declare interface MultiWalletFiltersOld {
     externalTransactionType: string[];
 }
 
-export declare type MultiWalletTransactionCurrencyToEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type MultiWalletTransactionCurrencyToEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface MultiWalletTransaction {
     id: string;
@@ -3286,7 +3286,7 @@ export declare interface SignalSubscriberStatus {
 
 export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
-export declare type SignalSubscriptionFixedCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type SignalSubscriptionFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface SignalSubscription {
     hasSignalAccount: boolean;
@@ -3383,7 +3383,7 @@ export declare interface TradesViewModel {
     total: number;
 }
 
-export declare type TransactionDetailsGvCommissionCurrencyEnum = "DOGE" | "BNB" | "USD" | "EUR" | "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC";
+export declare type TransactionDetailsGvCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface TransactionDetails {
     type: TransactionDetailsType;

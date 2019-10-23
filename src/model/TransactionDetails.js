@@ -185,14 +185,6 @@ export default class TransactionDetails {
 
     static GvCommissionCurrencyEnum = {
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -209,7 +201,15 @@ export default class TransactionDetails {
     
         "BCH": "BCH",
     
-        "LTC": "LTC"    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
     };
 
 
@@ -221,7 +221,7 @@ export default class TransactionDetails {
 
 /**
  * @typedef TransactionDetailsGvCommissionCurrencyEnum 
- * @type {("DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 

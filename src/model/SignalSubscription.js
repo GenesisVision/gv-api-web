@@ -143,14 +143,6 @@ export default class SignalSubscription {
 
     static FixedCurrencyEnum = {
     
-        "DOGE": "DOGE",
-    
-        "BNB": "BNB",
-    
-        "USD": "USD",
-    
-        "EUR": "EUR",
-    
         "Undefined": "Undefined",
     
         "GVT": "GVT",
@@ -167,7 +159,15 @@ export default class SignalSubscription {
     
         "BCH": "BCH",
     
-        "LTC": "LTC"    
+        "LTC": "LTC",
+    
+        "DOGE": "DOGE",
+    
+        "BNB": "BNB",
+    
+        "USD": "USD",
+    
+        "EUR": "EUR"    
     };
 
 
@@ -179,7 +179,7 @@ export default class SignalSubscription {
 
 /**
  * @typedef SignalSubscriptionFixedCurrencyEnum 
- * @type {("DOGE"|"BNB"|"USD"|"EUR"|"Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC")}
+ * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 
 
