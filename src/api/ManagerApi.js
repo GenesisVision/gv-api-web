@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ChangeBrokerProgramRequest from '../model/ChangeBrokerProgramRequest';
+import ChangeBrokerProgramRequestOld from '../model/ChangeBrokerProgramRequestOld';
 import ErrorViewModel from '../model/ErrorViewModel';
 import FundAssetPart from '../model/FundAssetPart';
 import FundInvestInfo from '../model/FundInvestInfo';
@@ -241,7 +241,7 @@ export default class ManagerApi {
      * @function ManagerApi#changeBroker
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {ChangeBrokerProgramRequest} [opts.request] 
+     * @param {ChangeBrokerProgramRequestOld} [opts.request] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       changeBroker(authorization, opts) {

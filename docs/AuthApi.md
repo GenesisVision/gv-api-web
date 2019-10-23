@@ -300,7 +300,7 @@ let apiInstance = new CoreApiV10.AuthApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.TwoFactorCodeModel() // TwoFactorCodeModel | 
+  'model': new CoreApiV10.TwoFactorCodeWithPassword() // TwoFactorCodeWithPassword | 
 };
 apiInstance.disableTwoStepAuth(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -315,7 +315,7 @@ apiInstance.disableTwoStepAuth(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **model** | [**TwoFactorCodeModel**](TwoFactorCodeModel.md)|  | [optional] 
+ **model** | [**TwoFactorCodeWithPassword**](TwoFactorCodeWithPassword.md)|  | [optional] 
 
 ### Return type
 

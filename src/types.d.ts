@@ -40,7 +40,7 @@ export declare class AuthApi {
         model?: PasswordModel;
     }): CancelablePromise<RecoveryCodesViewModel>;
     disableTwoStepAuth(authorization: string, opts?: {
-        model?: TwoFactorCodeModel;
+        model?: TwoFactorCodeWithPassword;
     }): CancelablePromise<any>;
     forgotPassword(opts?: {
         model?: ForgotPasswordViewModel;
@@ -238,7 +238,7 @@ export declare class ManagerApi {
     cancelRequest(id: string, authorization: string): CancelablePromise<any>;
     cancelRequest_0(id: string, authorization: string): CancelablePromise<any>;
     changeBroker(authorization: string, opts?: {
-        request?: ChangeBrokerProgramRequest;
+        request?: ChangeBrokerProgramRequestOld;
     }): CancelablePromise<any>;
     changeProgramPassword(id: string, authorization: string, opts?: {
         model?: ProgramPwdUpdate;
@@ -692,7 +692,7 @@ export declare interface index {
     CaptchaCheckResult: CaptchaCheckResult;
     CaptchaDetails: CaptchaDetails;
     CaptchaType: CaptchaType;
-    ChangeBrokerProgramRequest: ChangeBrokerProgramRequest;
+    ChangeBrokerProgramRequestOld: ChangeBrokerProgramRequestOld;
     ChangePasswordViewModel: ChangePasswordViewModel;
     ChangeState: ChangeState;
     ChartSimple: ChartSimple;
@@ -884,7 +884,7 @@ export declare interface index {
     TransferRequestType: TransferRequestType;
     TwoFactorAuthenticator: TwoFactorAuthenticator;
     TwoFactorAuthenticatorConfirm: TwoFactorAuthenticatorConfirm;
-    TwoFactorCodeModel: TwoFactorCodeModel;
+    TwoFactorCodeWithPassword: TwoFactorCodeWithPassword;
     TwoFactorStatus: TwoFactorStatus;
     UpdatePersonalDetailViewModel: UpdatePersonalDetailViewModel;
     UpdateProfileViewModel: UpdateProfileViewModel;
@@ -1169,6 +1169,12 @@ export declare interface CaptchaType {
 export declare function constructFromObject(data: any): module:model/AssetFilterType;
 
 export declare interface ChangeBrokerProgramRequest {
+    programId: string;
+    newBrokerAccountTypeId: string;
+    newLeverage: number;
+}
+
+export declare interface ChangeBrokerProgramRequestOld {
     programId: string;
     newBrokerAccountTypeId: string;
     newLeverage: number;
@@ -3443,6 +3449,11 @@ export declare interface TwoFactorAuthenticatorConfirm {
 }
 
 export declare interface TwoFactorCodeModel {
+    twoFactorCode: string;
+    password: string;
+}
+
+export declare interface TwoFactorCodeWithPassword {
     twoFactorCode: string;
     password: string;
 }

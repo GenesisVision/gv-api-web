@@ -24,7 +24,7 @@ import ResendConfirmationViewModel from '../model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from '../model/ResetPasswordViewModel';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from '../model/TwoFactorAuthenticatorConfirm';
-import TwoFactorCodeModel from '../model/TwoFactorCodeModel';
+import TwoFactorCodeWithPassword from '../model/TwoFactorCodeWithPassword';
 import TwoFactorStatus from '../model/TwoFactorStatus';
 
 /**
@@ -350,7 +350,7 @@ export default class AuthApi {
      * @function AuthApi#disableTwoStepAuth
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {TwoFactorCodeModel} [opts.model] 
+     * @param {TwoFactorCodeWithPassword} [opts.model] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       disableTwoStepAuth(authorization, opts) {

@@ -33,7 +33,7 @@ import BrokersProgramInfoOld from './model/BrokersProgramInfoOld';
 import CaptchaCheckResult from './model/CaptchaCheckResult';
 import CaptchaDetails from './model/CaptchaDetails';
 import CaptchaType from './model/CaptchaType';
-import ChangeBrokerProgramRequest from './model/ChangeBrokerProgramRequest';
+import ChangeBrokerProgramRequestOld from './model/ChangeBrokerProgramRequestOld';
 import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChangeState from './model/ChangeState';
 import ChartSimple from './model/ChartSimple';
@@ -225,7 +225,7 @@ import TransactionDetailsType from './model/TransactionDetailsType';
 import TransferRequestType from './model/TransferRequestType';
 import TwoFactorAuthenticator from './model/TwoFactorAuthenticator';
 import TwoFactorAuthenticatorConfirm from './model/TwoFactorAuthenticatorConfirm';
-import TwoFactorCodeModel from './model/TwoFactorCodeModel';
+import TwoFactorCodeWithPassword from './model/TwoFactorCodeWithPassword';
 import TwoFactorStatus from './model/TwoFactorStatus';
 import UpdatePersonalDetailViewModel from './model/UpdatePersonalDetailViewModel';
 import UpdateProfileViewModel from './model/UpdateProfileViewModel';
@@ -394,10 +394,10 @@ export {
     CaptchaType,
 
     /**
-     * @name index#ChangeBrokerProgramRequest
-     * @type {ChangeBrokerProgramRequest}
+     * @name index#ChangeBrokerProgramRequestOld
+     * @type {ChangeBrokerProgramRequestOld}
      */
-    ChangeBrokerProgramRequest,
+    ChangeBrokerProgramRequestOld,
 
     /**
      * @name index#ChangePasswordViewModel
@@ -1546,10 +1546,10 @@ export {
     TwoFactorAuthenticatorConfirm,
 
     /**
-     * @name index#TwoFactorCodeModel
-     * @type {TwoFactorCodeModel}
+     * @name index#TwoFactorCodeWithPassword
+     * @type {TwoFactorCodeWithPassword}
      */
-    TwoFactorCodeModel,
+    TwoFactorCodeWithPassword,
 
     /**
      * @name index#TwoFactorStatus

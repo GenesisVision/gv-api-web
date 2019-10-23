@@ -191,7 +191,7 @@ let apiInstance = new CoreApiV10.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'request': new CoreApiV10.ChangeBrokerProgramRequest() // ChangeBrokerProgramRequest | 
+  'request': new CoreApiV10.ChangeBrokerProgramRequestOld() // ChangeBrokerProgramRequestOld | 
 };
 apiInstance.changeBroker(authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -206,7 +206,7 @@ apiInstance.changeBroker(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **request** | [**ChangeBrokerProgramRequest**](ChangeBrokerProgramRequest.md)|  | [optional] 
+ **request** | [**ChangeBrokerProgramRequestOld**](ChangeBrokerProgramRequestOld.md)|  | [optional] 
 
 ### Return type
 
