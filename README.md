@@ -194,6 +194,8 @@ Class | Method | HTTP request | Description
 *CoreApiV10.NotificationsApi* | [**readNotification**](docs/NotificationsApi.md#readNotification) | **POST** /v1.0/notifications/{id}/read | Read notification
 *CoreApiV10.NotificationsApi* | [**removeNotificationsSettings**](docs/NotificationsApi.md#removeNotificationsSettings) | **POST** /v1.0/notifications/settings/remove/{id} | Remove setting
 *CoreApiV10.NotificationsApi* | [**toggleNotificationSettings**](docs/NotificationsApi.md#toggleNotificationSettings) | **POST** /v1.0/notifications/settings/{id}/{enable} | Enable/disable setting
+*CoreApiV10.PartnershipApi* | [**exportHistory**](docs/PartnershipApi.md#exportHistory) | **GET** /v1.0/partnership/rewards/history/export | Export rewards history.
+*CoreApiV10.PartnershipApi* | [**getDetails**](docs/PartnershipApi.md#getDetails) | **GET** /v1.0/partnership/details | Get partnership details.
 *CoreApiV10.PartnershipApi* | [**getReferrals**](docs/PartnershipApi.md#getReferrals) | **GET** /v1.0/partnership/referrals | Get agent friends (referrals and second level referrals).
 *CoreApiV10.PartnershipApi* | [**getRewardsHistory**](docs/PartnershipApi.md#getRewardsHistory) | **GET** /v1.0/partnership/rewards/history | Get history of agent rewards.
 *CoreApiV10.PlatformApi* | [**getCaptchaModel**](docs/PlatformApi.md#getCaptchaModel) | **GET** /v1.0/platform/riskcontrol | Platform captcha details
@@ -350,6 +352,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.InvestmentRequestType](docs/InvestmentRequestType.md)
  - [CoreApiV10.ItemsViewModelCopyTradingAccountInfo](docs/ItemsViewModelCopyTradingAccountInfo.md)
  - [CoreApiV10.ItemsViewModelReferralFriend](docs/ItemsViewModelReferralFriend.md)
+ - [CoreApiV10.ItemsViewModelRewardDetails](docs/ItemsViewModelRewardDetails.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
  - [CoreApiV10.LevelsParamsInfo](docs/LevelsParamsInfo.md)
  - [CoreApiV10.LoginViewModel](docs/LoginViewModel.md)
@@ -387,6 +390,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.OrderSignalModel](docs/OrderSignalModel.md)
  - [CoreApiV10.OrderSignalProgramInfo](docs/OrderSignalProgramInfo.md)
  - [CoreApiV10.OtherAssetsValue](docs/OtherAssetsValue.md)
+ - [CoreApiV10.PartnershipDetails](docs/PartnershipDetails.md)
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
  - [CoreApiV10.PeriodStatus](docs/PeriodStatus.md)
@@ -445,7 +449,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ResendConfirmationViewModel](docs/ResendConfirmationViewModel.md)
  - [CoreApiV10.ResetPasswordViewModel](docs/ResetPasswordViewModel.md)
  - [CoreApiV10.RewardDetails](docs/RewardDetails.md)
- - [CoreApiV10.RewardsHistoryViewModel](docs/RewardsHistoryViewModel.md)
  - [CoreApiV10.SearchViewModelOld](docs/SearchViewModelOld.md)
  - [CoreApiV10.SecureAlgorithm](docs/SecureAlgorithm.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)

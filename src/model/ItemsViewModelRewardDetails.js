@@ -13,6 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
+import RewardDetails from './RewardDetails';
 
 
 
@@ -20,25 +21,25 @@ import ApiClient from '../ApiClient';
 
 /**
  *
- * @interface ReferralFriend
+ * @interface ItemsViewModelRewardDetails
  */
 
 /**
  *
- * @name ReferralFriend#date
- * @type {Date}
+ * @name ItemsViewModelRewardDetails#items
+ * @type {Array<RewardDetails>}
  */
 /**
  *
- * @name ReferralFriend#emailMask
- * @type {String}
+ * @name ItemsViewModelRewardDetails#total
+ * @type {Number}
  */
 
 
 
 
 
-export default class ReferralFriend {
+export default class ItemsViewModelRewardDetails {
 
     constructor() {
         
@@ -53,24 +54,24 @@ export default class ReferralFriend {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ReferralFriend();
+            obj = obj || new ItemsViewModelRewardDetails();
 
             
             
             
 
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], [RewardDetails]);
             }
-            if (data.hasOwnProperty('emailMask')) {
-                obj['emailMask'] = ApiClient.convertToType(data['emailMask'], 'String');
+            if (data.hasOwnProperty('total')) {
+                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
         }
         return obj;
     }
 
-    date = undefined;
-    emailMask = undefined;
+    items = undefined;
+    total = undefined;
 
 
 

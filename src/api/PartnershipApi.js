@@ -15,7 +15,8 @@
 import ApiClient from "../ApiClient";
 import ErrorViewModel from '../model/ErrorViewModel';
 import ItemsViewModelReferralFriend from '../model/ItemsViewModelReferralFriend';
-import RewardsHistoryViewModel from '../model/RewardsHistoryViewModel';
+import ItemsViewModelRewardDetails from '../model/ItemsViewModelRewardDetails';
+import PartnershipDetails from '../model/PartnershipDetails';
 
 /**
 * Partnership service.
@@ -34,6 +35,108 @@ export default class PartnershipApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+      exportHistoryWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling exportHistory");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'Skip': opts['skip'],
+        'Take': opts['take']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/v1.0/partnership/rewards/history/export', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Export rewards history.
+     * @function PartnershipApi#exportHistory
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {Date} [opts.dateFrom] 
+     * @param {Date} [opts.dateTo] 
+     * @param {Number} [opts.skip] 
+     * @param {Number} [opts.take] 
+     * @return {CancelablePromise<'Blob'>} a Promise, with an object containing data of type 'Blob' and HTTP response
+     */
+      exportHistory(authorization, opts) {
+      return this.exportHistoryWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getDetailsWithHttpInfo(authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getDetails");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'currency': opts['currency']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = PartnershipDetails;
+
+      return this.apiClient.callApi(
+        '/v1.0/partnership/details', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get partnership details.
+     * @function PartnershipApi#getDetails
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.currency] 
+     * @return {CancelablePromise<PartnershipDetails>} a Promise, with an object containing data of type PartnershipDetails and HTTP response
+     */
+      getDetails(authorization, opts) {
+      return this.getDetailsWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
       getReferralsWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -102,7 +205,6 @@ export default class PartnershipApi {
       let pathParams = {
       };
       let queryParams = {
-        'currency': opts['currency'],
         'DateFrom': opts['dateFrom'],
         'DateTo': opts['dateTo'],
         'Skip': opts['skip'],
@@ -117,7 +219,7 @@ export default class PartnershipApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = RewardsHistoryViewModel;
+      let returnType = ItemsViewModelRewardDetails;
 
       return this.apiClient.callApi(
         '/v1.0/partnership/rewards/history', 'GET',
@@ -131,12 +233,11 @@ export default class PartnershipApi {
      * @function PartnershipApi#getRewardsHistory
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.currency] 
      * @param {Date} [opts.dateFrom] 
      * @param {Date} [opts.dateTo] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {CancelablePromise<RewardsHistoryViewModel>} a Promise, with an object containing data of type RewardsHistoryViewModel and HTTP response
+     * @return {CancelablePromise<ItemsViewModelRewardDetails>} a Promise, with an object containing data of type ItemsViewModelRewardDetails and HTTP response
      */
       getRewardsHistory(authorization, opts) {
       return this.getRewardsHistoryWithHttpInfo(authorization, opts)

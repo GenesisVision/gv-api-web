@@ -372,6 +372,15 @@ export declare class NotificationsApi {
 
 export declare class PartnershipApi {
     constructor(apiClient: ApiClient): PartnershipApi;
+    exportHistory(authorization: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<Blob>;
+    getDetails(authorization: string, opts?: {
+        currency?: string;
+    }): CancelablePromise<PartnershipDetails>;
     getReferrals(authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -379,12 +388,11 @@ export declare class PartnershipApi {
         take?: number;
     }): CancelablePromise<ItemsViewModelReferralFriend>;
     getRewardsHistory(authorization: string, opts?: {
-        currency?: string;
         dateFrom?: Date;
         dateTo?: Date;
         skip?: number;
         take?: number;
-    }): CancelablePromise<RewardsHistoryViewModel>;
+    }): CancelablePromise<ItemsViewModelRewardDetails>;
 }
 
 export declare class PlatformApi {
@@ -751,6 +759,7 @@ export declare interface index {
     InvestmentRequestType: InvestmentRequestType;
     ItemsViewModelCopyTradingAccountInfo: ItemsViewModelCopyTradingAccountInfo;
     ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
+    ItemsViewModelRewardDetails: ItemsViewModelRewardDetails;
     LevelInfo: LevelInfo;
     LevelsParamsInfo: LevelsParamsInfo;
     LoginViewModel: LoginViewModel;
@@ -788,6 +797,7 @@ export declare interface index {
     OrderSignalModel: OrderSignalModel;
     OrderSignalProgramInfo: OrderSignalProgramInfo;
     OtherAssetsValue: OtherAssetsValue;
+    PartnershipDetails: PartnershipDetails;
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
     PeriodStatus: PeriodStatus;
@@ -846,7 +856,6 @@ export declare interface index {
     ResendConfirmationViewModel: ResendConfirmationViewModel;
     ResetPasswordViewModel: ResetPasswordViewModel;
     RewardDetails: RewardDetails;
-    RewardsHistoryViewModel: RewardsHistoryViewModel;
     SearchViewModelOld: SearchViewModelOld;
     SecureAlgorithm: SecureAlgorithm;
     SignalDataMaster: SignalDataMaster;
@@ -1805,6 +1814,11 @@ export declare interface ItemsViewModelReferralFriend {
     total: number;
 }
 
+export declare interface ItemsViewModelRewardDetails {
+    items: RewardDetails[];
+    total: number;
+}
+
 export declare interface LevelInfo {
     level: number;
     investmentLimit: number;
@@ -2250,6 +2264,12 @@ export declare interface OtherAssetsValue {
     value: number;
     changePercent: number;
     changeValue: number;
+}
+
+export declare interface PartnershipDetails {
+    totalReferralsL1: number;
+    totalReferralsL2: number;
+    totalAmount: number;
 }
 
 export declare interface PasswordModel {
@@ -3129,7 +3149,7 @@ export declare interface RecoveryCodesViewModel {
 }
 
 export declare interface ReferralFriend {
-    registerDate: Date;
+    date: Date;
     emailMask: string;
 }
 

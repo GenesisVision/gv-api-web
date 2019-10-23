@@ -100,6 +100,7 @@ import InvestmentRequestStatus from './model/InvestmentRequestStatus';
 import InvestmentRequestType from './model/InvestmentRequestType';
 import ItemsViewModelCopyTradingAccountInfo from './model/ItemsViewModelCopyTradingAccountInfo';
 import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
+import ItemsViewModelRewardDetails from './model/ItemsViewModelRewardDetails';
 import LevelInfo from './model/LevelInfo';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
@@ -137,6 +138,7 @@ import OrderSignalFee from './model/OrderSignalFee';
 import OrderSignalModel from './model/OrderSignalModel';
 import OrderSignalProgramInfo from './model/OrderSignalProgramInfo';
 import OtherAssetsValue from './model/OtherAssetsValue';
+import PartnershipDetails from './model/PartnershipDetails';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PeriodStatus from './model/PeriodStatus';
@@ -195,7 +197,6 @@ import RegisterViewModel from './model/RegisterViewModel';
 import ResendConfirmationViewModel from './model/ResendConfirmationViewModel';
 import ResetPasswordViewModel from './model/ResetPasswordViewModel';
 import RewardDetails from './model/RewardDetails';
-import RewardsHistoryViewModel from './model/RewardsHistoryViewModel';
 import SearchViewModelOld from './model/SearchViewModelOld';
 import SecureAlgorithm from './model/SecureAlgorithm';
 import SignalDataMaster from './model/SignalDataMaster';
@@ -795,6 +796,12 @@ export {
     ItemsViewModelReferralFriend,
 
     /**
+     * @name index#ItemsViewModelRewardDetails
+     * @type {ItemsViewModelRewardDetails}
+     */
+    ItemsViewModelRewardDetails,
+
+    /**
      * @name index#LevelInfo
      * @type {LevelInfo}
      */
@@ -1015,6 +1022,12 @@ export {
      * @type {OtherAssetsValue}
      */
     OtherAssetsValue,
+
+    /**
+     * @name index#PartnershipDetails
+     * @type {PartnershipDetails}
+     */
+    PartnershipDetails,
 
     /**
      * @name index#PasswordModel
@@ -1363,12 +1376,6 @@ export {
      * @type {RewardDetails}
      */
     RewardDetails,
-
-    /**
-     * @name index#RewardsHistoryViewModel
-     * @type {RewardsHistoryViewModel}
-     */
-    RewardsHistoryViewModel,
 
     /**
      * @name index#SearchViewModelOld

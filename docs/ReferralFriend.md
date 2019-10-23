@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**registerDate** | **Date** |  | [optional] 
+**_date** | **Date** |  | [optional] 
 **emailMask** | **String** |  | [optional] 
 
 
