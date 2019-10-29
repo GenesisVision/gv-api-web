@@ -15,8 +15,10 @@ import { PlatformAsset } from './platformAsset';
 import ApiClient from "../ApiClient";
 
 export class FundAssetPlatformInfo { 
-    public facets?: [FundFacet];
-    public assets?: [PlatformAsset];
+    public 'facets'?: [FundFacet];
+    public 'assets'?: [PlatformAsset];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundAssetPlatformInfo = new FundAssetPlatformInfo()): FundAssetPlatformInfo {
         if (data) {
@@ -32,5 +34,7 @@ export class FundAssetPlatformInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

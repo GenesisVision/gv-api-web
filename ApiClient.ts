@@ -82,7 +82,7 @@ export default class ApiClient {
      * @param param The actual parameter.
      * @returns {String} The string representation of <code>param</code>.
      */
-    paramToString(param: Date | number | string) {
+    paramToString(param: Date | number | string | boolean) {
         if (param === undefined || param === null) {
             return '';
         }
@@ -100,7 +100,7 @@ export default class ApiClient {
      * @param {Object} pathParams The parameter values to append.
      * @returns {String} The encoded path with parameter values substituted.
      */
-    buildUrl(path: string, pathParams: { [key: string]: Date | string | number }): string {
+    buildUrl(path: string, pathParams: { [key: string]: Date | string | number | boolean }): string {
         if (!path.match(/^\//)) {
             path = '/' + path;
         }
@@ -245,7 +245,7 @@ export default class ApiClient {
         MULTI: 'multi'
     };
 
-    buildCollectionParam(param?: string[], collectionFormat?: string): string | null | string[] {
+    buildCollectionParam(param?: any[], collectionFormat?: string): string | null | string[] {
         if (param === null || param === undefined) {
             return null;
         }
@@ -353,7 +353,7 @@ export default class ApiClient {
      * constructor for a complex type.
      * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
      */
-    callApi<T>(path: string, httpMethod: "GET" | "POST" | "PUT" | "DELETE", pathParams: { [key: string]: number | string | Date },
+    callApi<T>(path: string, httpMethod: "GET" | "POST" | "PUT" | "DELETE", pathParams: { [key: string]: number | string | Date | boolean },
                queryParams: { [key: string]: any }, headerParams: { [key: string]: any },
                formParams: { [key: string]: any }, bodyParam: string | Object | null | undefined, authNames: string[], contentTypes: string[],
                accepts: string[],

@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class PersonalCopyTradingAccountInfo { 
-    public isOwnSignal?: boolean;
-    public isFavorite?: boolean;
+    public 'isOwnSignal'?: boolean;
+    public 'isFavorite'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PersonalCopyTradingAccountInfo = new PersonalCopyTradingAccountInfo()): PersonalCopyTradingAccountInfo {
         if (data) {
@@ -30,5 +32,7 @@ export class PersonalCopyTradingAccountInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

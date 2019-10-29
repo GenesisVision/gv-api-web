@@ -14,9 +14,11 @@ import { SecureAlgorithm } from './secureAlgorithm';
 import ApiClient from "../ApiClient";
 
 export class PowDetails { 
-    public secureAlgorithm?: SecureAlgorithm;
-    public difficulty?: number;
-    public nonce?: string;
+    public 'secureAlgorithm'?: SecureAlgorithm;
+    public 'difficulty'?: number;
+    public 'nonce'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PowDetails = new PowDetails()): PowDetails {
         if (data) {
@@ -35,5 +37,7 @@ export class PowDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

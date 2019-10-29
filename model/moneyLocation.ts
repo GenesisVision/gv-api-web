@@ -14,8 +14,10 @@ import { MoneyLocationType } from './moneyLocationType';
 import ApiClient from "../ApiClient";
 
 export class MoneyLocation { 
-    public type?: MoneyLocationType;
-    public percent?: number;
+    public 'type'?: MoneyLocationType;
+    public 'percent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: MoneyLocation = new MoneyLocation()): MoneyLocation {
         if (data) {
@@ -31,5 +33,7 @@ export class MoneyLocation {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

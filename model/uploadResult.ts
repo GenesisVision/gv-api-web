@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class UploadResult { 
-    public id?: string;
+    public 'id'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: UploadResult = new UploadResult()): UploadResult {
         if (data) {
@@ -26,5 +28,7 @@ export class UploadResult {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

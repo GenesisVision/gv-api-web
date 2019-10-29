@@ -14,12 +14,14 @@ import { SocialLinkViewModel } from './socialLinkViewModel';
 import ApiClient from "../ApiClient";
 
 export class ProfilePublic { 
-    public id?: string;
-    public username?: string;
-    public avatar?: string;
-    public registrationDate?: Date;
-    public url?: string;
-    public socialLinks?: [SocialLinkViewModel];
+    public 'id'?: string;
+    public 'username'?: string;
+    public 'avatar'?: string;
+    public 'registrationDate'?: Date;
+    public 'url'?: string;
+    public 'socialLinks'?: [SocialLinkViewModel];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProfilePublic = new ProfilePublic()): ProfilePublic {
         if (data) {
@@ -47,5 +49,7 @@ export class ProfilePublic {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

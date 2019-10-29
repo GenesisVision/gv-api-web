@@ -15,10 +15,12 @@ import { InvestmentEventViewModels } from './investmentEventViewModels';
 import ApiClient from "../ApiClient";
 
 export class DashboardTradingDetails { 
-    public equity?: number;
-    public assetsUnderManagement?: number;
-    public profits?: DashboardProfits;
-    public events?: InvestmentEventViewModels;
+    public 'equity'?: number;
+    public 'assetsUnderManagement'?: number;
+    public 'profits'?: DashboardProfits;
+    public 'events'?: InvestmentEventViewModels;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardTradingDetails = new DashboardTradingDetails()): DashboardTradingDetails {
         if (data) {
@@ -40,5 +42,7 @@ export class DashboardTradingDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,16 +13,18 @@
 import ApiClient from "../ApiClient";
 
 export class BrokerDetails { 
-    public logo?: string;
-    public name?: string;
-    public isKycRequired?: boolean;
-    public showSwaps?: boolean;
-    public showTickets?: boolean;
-    public showCommissionRebate?: boolean;
-    public isKycRequiredSometime?: boolean;
-    public showSwapsSometime?: boolean;
-    public showTicketsSometime?: boolean;
-    public showCommissionRebateSometime?: boolean;
+    public 'logo'?: string;
+    public 'name'?: string;
+    public 'isKycRequired'?: boolean;
+    public 'showSwaps'?: boolean;
+    public 'showTickets'?: boolean;
+    public 'showCommissionRebate'?: boolean;
+    public 'isKycRequiredSometime'?: boolean;
+    public 'showSwapsSometime'?: boolean;
+    public 'showTicketsSometime'?: boolean;
+    public 'showCommissionRebateSometime'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: BrokerDetails = new BrokerDetails()): BrokerDetails {
         if (data) {
@@ -62,5 +64,7 @@ export class BrokerDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

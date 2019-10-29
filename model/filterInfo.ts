@@ -14,9 +14,11 @@ import { FilterItemInfo } from './filterItemInfo';
 import ApiClient from "../ApiClient";
 
 export class FilterInfo { 
-    public walletTransactions?: [FilterItemInfo];
-    public walletExternalTransactions?: [FilterItemInfo];
-    public events?: [FilterItemInfo];
+    public 'walletTransactions'?: [FilterItemInfo];
+    public 'walletExternalTransactions'?: [FilterItemInfo];
+    public 'events'?: [FilterItemInfo];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FilterInfo = new FilterInfo()): FilterInfo {
         if (data) {
@@ -35,5 +37,7 @@ export class FilterInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

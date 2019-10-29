@@ -16,20 +16,22 @@ import { ProfilePublic } from './profilePublic';
 import ApiClient from "../ApiClient";
 
 export class FundDetailsFull { 
-    public id?: string;
-    public logo?: string;
-    public url?: string;
-    public color?: string;
-    public title?: string;
-    public description?: string;
-    public creationDate?: Date;
-    public entryFeeSelected?: number;
-    public entryFeeCurrent?: number;
-    public exitFeeSelected?: number;
-    public exitFeeCurrent?: number;
-    public assetsStructure?: [FundAssetInfo];
-    public personalDetails?: PersonalFundDetails;
-    public manager?: ProfilePublic;
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'creationDate'?: Date;
+    public 'entryFeeSelected'?: number;
+    public 'entryFeeCurrent'?: number;
+    public 'exitFeeSelected'?: number;
+    public 'exitFeeCurrent'?: number;
+    public 'assetsStructure'?: [FundAssetInfo];
+    public 'personalDetails'?: PersonalFundDetails;
+    public 'manager'?: ProfilePublic;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundDetailsFull = new FundDetailsFull()): FundDetailsFull {
         if (data) {
@@ -81,5 +83,7 @@ export class FundDetailsFull {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

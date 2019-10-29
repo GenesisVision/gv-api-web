@@ -14,8 +14,10 @@ import { PublicProfile } from './publicProfile';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelPublicProfile { 
-    public items?: [PublicProfile];
-    public total?: number;
+    public 'items'?: [PublicProfile];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelPublicProfile = new ItemsViewModelPublicProfile()): ItemsViewModelPublicProfile {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelPublicProfile {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

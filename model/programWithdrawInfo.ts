@@ -13,11 +13,13 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramWithdrawInfo { 
-    public periodEnds?: Date;
-    public title?: string;
-    public availableToWithdraw?: number;
-    public isOwner?: boolean;
-    public withheldInvestment?: number;
+    public 'periodEnds'?: Date;
+    public 'title'?: string;
+    public 'availableToWithdraw'?: number;
+    public 'isOwner'?: boolean;
+    public 'withheldInvestment'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramWithdrawInfo = new ProgramWithdrawInfo()): ProgramWithdrawInfo {
         if (data) {
@@ -42,5 +44,7 @@ export class ProgramWithdrawInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

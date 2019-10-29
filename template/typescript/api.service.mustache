@@ -14,7 +14,7 @@ export class {{classname}} {
 
   public {{nickname}}({{#allParams}}{{#required}}{{paramName}}: {{{dataType}}}{{#hasMore}}, {{/hasMore}}{{/required}}{{/allParams}}{{#hasOptionalParams}}opts?: { {{#allParams}}{{^required}}
     {{paramName}}?: {{{dataType}}}{{#hasMore}}, {{/hasMore}}{{/required}}{{/allParams}}
-  }{{/hasOptionalParams}}): CancelablePromise<{{#returnType}}{{{returnType}}}{{#isResponseTypeFile}}|undefined{{/isResponseTypeFile}}{{/returnType}}{{^returnType}}{}{{/returnType}}>{
+  }{{/hasOptionalParams}}): CancelablePromise<{{#returnType}}{{{returnType}}}{{#isResponseTypeFile}}|undefined{{/isResponseTypeFile}}{{/returnType}}{{^returnType}}null{{/returnType}}>{
     return this.{{nickname}}WithHttpInfo({{#allParams}}{{#required}}{{paramName}}{{#hasMore}}, {{/hasMore}}{{/required}}{{/allParams}}{{#hasOptionalParams}}opts{{/hasOptionalParams}})
       .then(function(response_and_data) {
         return response_and_data.data;

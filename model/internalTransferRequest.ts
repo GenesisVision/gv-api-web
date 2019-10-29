@@ -14,12 +14,14 @@ import { TransferRequestType } from './transferRequestType';
 import ApiClient from "../ApiClient";
 
 export class InternalTransferRequest { 
-    public sourceId?: string;
-    public sourceType?: TransferRequestType;
-    public destinationId?: string;
-    public destinationType?: TransferRequestType;
-    public amount?: number;
-    public transferAll?: boolean;
+    public 'sourceId'?: string;
+    public 'sourceType'?: TransferRequestType;
+    public 'destinationId'?: string;
+    public 'destinationType'?: TransferRequestType;
+    public 'amount'?: number;
+    public 'transferAll'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: InternalTransferRequest = new InternalTransferRequest()): InternalTransferRequest {
         if (data) {
@@ -47,5 +49,7 @@ export class InternalTransferRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

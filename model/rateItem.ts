@@ -14,8 +14,10 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class RateItem { 
-    public currency?: Currency;
-    public rate?: number;
+    public 'currency'?: Currency;
+    public 'rate'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RateItem = new RateItem()): RateItem {
         if (data) {
@@ -31,5 +33,7 @@ export class RateItem {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

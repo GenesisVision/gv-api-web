@@ -13,11 +13,13 @@
 import ApiClient from "../ApiClient";
 
 export class FundAssetInfo { 
-    public asset?: string;
-    public symbol?: string;
-    public icon?: string;
-    public target?: number;
-    public current?: number;
+    public 'asset'?: string;
+    public 'symbol'?: string;
+    public 'icon'?: string;
+    public 'target'?: number;
+    public 'current'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundAssetInfo = new FundAssetInfo()): FundAssetInfo {
         if (data) {
@@ -42,5 +44,7 @@ export class FundAssetInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

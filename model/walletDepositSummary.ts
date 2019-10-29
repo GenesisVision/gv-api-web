@@ -14,7 +14,9 @@ import { WalletDeposit } from './walletDeposit';
 import ApiClient from "../ApiClient";
 
 export class WalletDepositSummary { 
-    public wallets?: [WalletDeposit];
+    public 'wallets'?: [WalletDeposit];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletDepositSummary = new WalletDepositSummary()): WalletDepositSummary {
         if (data) {
@@ -27,5 +29,7 @@ export class WalletDepositSummary {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

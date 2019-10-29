@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class PersonalProgramDetailsList { 
-    public isOwnProgram?: boolean;
-    public isFavorite?: boolean;
+    public 'isOwnProgram'?: boolean;
+    public 'isFavorite'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PersonalProgramDetailsList = new PersonalProgramDetailsList()): PersonalProgramDetailsList {
         if (data) {
@@ -30,5 +32,7 @@ export class PersonalProgramDetailsList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

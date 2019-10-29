@@ -14,9 +14,11 @@ import { TwoFactorAuthenticator } from './twoFactorAuthenticator';
 import ApiClient from "../ApiClient";
 
 export class ProgramCreateResult { 
-    public programId?: string;
-    public twoFactorRequired?: boolean;
-    public twoFactor?: TwoFactorAuthenticator;
+    public 'programId'?: string;
+    public 'twoFactorRequired'?: boolean;
+    public 'twoFactor'?: TwoFactorAuthenticator;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramCreateResult = new ProgramCreateResult()): ProgramCreateResult {
         if (data) {
@@ -35,5 +37,7 @@ export class ProgramCreateResult {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

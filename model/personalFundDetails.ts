@@ -14,22 +14,24 @@ import { AssetInvestmentStatus } from './assetInvestmentStatus';
 import ApiClient from "../ApiClient";
 
 export class PersonalFundDetails { 
-    public isOwnProgram?: boolean;
-    public isFavorite?: boolean;
-    public isInvested?: boolean;
-    public canClose?: boolean;
-    public canReallocate?: boolean;
-    public canInvest?: boolean;
-    public canWithdraw?: boolean;
-    public hasNotifications?: boolean;
-    public value?: number;
-    public status?: AssetInvestmentStatus;
-    public pendingInput?: number;
-    public pendingOutput?: number;
-    public withdrawPercent?: number;
-    public availableReallocationPercents?: number;
-    public nextReallocationPercents?: Date;
-    public exitFeePersonal?: number;
+    public 'isOwnProgram'?: boolean;
+    public 'isFavorite'?: boolean;
+    public 'isInvested'?: boolean;
+    public 'canClose'?: boolean;
+    public 'canReallocate'?: boolean;
+    public 'canInvest'?: boolean;
+    public 'canWithdraw'?: boolean;
+    public 'hasNotifications'?: boolean;
+    public 'value'?: number;
+    public 'status'?: AssetInvestmentStatus;
+    public 'pendingInput'?: number;
+    public 'pendingOutput'?: number;
+    public 'withdrawPercent'?: number;
+    public 'availableReallocationPercents'?: number;
+    public 'nextReallocationPercents'?: Date;
+    public 'exitFeePersonal'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PersonalFundDetails = new PersonalFundDetails()): PersonalFundDetails {
         if (data) {
@@ -87,5 +89,7 @@ export class PersonalFundDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

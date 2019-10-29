@@ -14,7 +14,9 @@ import { RatesModelRates } from './ratesModelRates';
 import ApiClient from "../ApiClient";
 
 export class RatesModel { 
-    public rates?: RatesModelRates;
+    public 'rates'?: RatesModelRates;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RatesModel = new RatesModel()): RatesModel {
         if (data) {
@@ -27,5 +29,7 @@ export class RatesModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

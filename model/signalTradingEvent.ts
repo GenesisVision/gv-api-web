@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class SignalTradingEvent { 
-    public date?: Date;
-    public message?: string;
+    public 'date'?: Date;
+    public 'message'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalTradingEvent = new SignalTradingEvent()): SignalTradingEvent {
         if (data) {
@@ -30,5 +32,7 @@ export class SignalTradingEvent {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

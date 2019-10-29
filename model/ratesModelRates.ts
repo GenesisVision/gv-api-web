@@ -14,19 +14,21 @@ import { RateItem } from './rateItem';
 import ApiClient from "../ApiClient";
 
 export class RatesModelRates { 
-    public undefined?: [RateItem];
-    public GVT?: [RateItem];
-    public ETH?: [RateItem];
-    public BTC?: [RateItem];
-    public ADA?: [RateItem];
-    public USDT?: [RateItem];
-    public XRP?: [RateItem];
-    public BCH?: [RateItem];
-    public LTC?: [RateItem];
-    public DOGE?: [RateItem];
-    public BNB?: [RateItem];
-    public USD?: [RateItem];
-    public EUR?: [RateItem];
+    public 'Undefined'?: [RateItem];
+    public 'GVT'?: [RateItem];
+    public 'ETH'?: [RateItem];
+    public 'BTC'?: [RateItem];
+    public 'ADA'?: [RateItem];
+    public 'USDT'?: [RateItem];
+    public 'XRP'?: [RateItem];
+    public 'BCH'?: [RateItem];
+    public 'LTC'?: [RateItem];
+    public 'DOGE'?: [RateItem];
+    public 'BNB'?: [RateItem];
+    public 'USD'?: [RateItem];
+    public 'EUR'?: [RateItem];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RatesModelRates = new RatesModelRates()): RatesModelRates {
         if (data) {
@@ -75,5 +77,7 @@ export class RatesModelRates {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

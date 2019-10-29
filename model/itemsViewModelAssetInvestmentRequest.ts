@@ -14,8 +14,10 @@ import { AssetInvestmentRequest } from './assetInvestmentRequest';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelAssetInvestmentRequest { 
-    public items?: [AssetInvestmentRequest];
-    public total?: number;
+    public 'items'?: [AssetInvestmentRequest];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelAssetInvestmentRequest = new ItemsViewModelAssetInvestmentRequest()): ItemsViewModelAssetInvestmentRequest {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelAssetInvestmentRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

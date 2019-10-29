@@ -278,7 +278,7 @@ export class AuthService {
 
   public disableTwoStepAuth(authorization: string, opts?: { 
     model?: TwoFactorCodeWithPassword
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.disableTwoStepAuthWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -320,7 +320,7 @@ export class AuthService {
 
   public forgotPassword(opts?: { 
     model?: ForgotPasswordViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.forgotPasswordWithHttpInfo(opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -475,7 +475,7 @@ export class AuthService {
 
   public register(opts?: { 
     model?: RegisterViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.registerWithHttpInfo(opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -550,7 +550,7 @@ export class AuthService {
 
   public resendConfirmationLink(opts?: { 
     model?: ResendConfirmationViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.resendConfirmationLinkWithHttpInfo(opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -662,7 +662,7 @@ export class AuthService {
 
   public validatePhoneNumber(authorization: string, opts?: { 
     code?: string
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.validatePhoneNumberWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

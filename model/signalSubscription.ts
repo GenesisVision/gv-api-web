@@ -14,15 +14,17 @@ import { SubscriptionMode } from './subscriptionMode';
 import ApiClient from "../ApiClient";
 
 export class SignalSubscription { 
-    public hasSignalAccount?: boolean;
-    public hasActiveSubscription?: boolean;
-    public mode?: SubscriptionMode;
-    public percent?: number;
-    public openTolerancePercent?: number;
-    public fixedVolume?: number;
-    public fixedCurrency?: SignalSubscription.FixedCurrencyEnum;
-    public totalProfit?: number;
-    public totalVolume?: number;
+    public 'hasSignalAccount'?: boolean;
+    public 'hasActiveSubscription'?: boolean;
+    public 'mode'?: SubscriptionMode;
+    public 'percent'?: number;
+    public 'openTolerancePercent'?: number;
+    public 'fixedVolume'?: number;
+    public 'fixedCurrency'?: SignalSubscription.FixedCurrencyEnum;
+    public 'totalProfit'?: number;
+    public 'totalVolume'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalSubscription = new SignalSubscription()): SignalSubscription {
         if (data) {
@@ -62,5 +64,7 @@ export class SignalSubscription {
 export namespace SignalSubscription {
     export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 }
+
+//modelGenericEnums.mustache
 
 

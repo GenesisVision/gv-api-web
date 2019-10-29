@@ -19,29 +19,31 @@ import { TradeEntryType } from './tradeEntryType';
 import ApiClient from "../ApiClient";
 
 export class OrderSignalModel { 
-    public providers?: [OrderSignalProgramInfo];
-    public totalCommission?: number;
-    public totalCommissionByType?: [FeeDetails];
-    public tradingAccountId?: string;
-    public currency?: Currency;
-    public id?: string;
-    public login?: string;
-    public ticket?: string;
-    public symbol?: string;
-    public volume?: number;
-    public profit?: number;
-    public direction?: TradeDirectionType;
-    public date?: Date;
-    public price?: number;
-    public priceCurrent?: number;
-    public entry?: TradeEntryType;
-    public baseVolume?: number;
-    public originalCommission?: number;
-    public originalCommissionCurrency?: string;
-    public commission?: number;
-    public swap?: number;
-    public showOriginalCommission?: boolean;
-    public signalData?: OrderModelSignalData;
+    public 'providers'?: [OrderSignalProgramInfo];
+    public 'totalCommission'?: number;
+    public 'totalCommissionByType'?: [FeeDetails];
+    public 'tradingAccountId'?: string;
+    public 'currency'?: Currency;
+    public 'id'?: string;
+    public 'login'?: string;
+    public 'ticket'?: string;
+    public 'symbol'?: string;
+    public 'volume'?: number;
+    public 'profit'?: number;
+    public 'direction'?: TradeDirectionType;
+    public 'date'?: Date;
+    public 'price'?: number;
+    public 'priceCurrent'?: number;
+    public 'entry'?: TradeEntryType;
+    public 'baseVolume'?: number;
+    public 'originalCommission'?: number;
+    public 'originalCommissionCurrency'?: string;
+    public 'commission'?: number;
+    public 'swap'?: number;
+    public 'showOriginalCommission'?: boolean;
+    public 'signalData'?: OrderModelSignalData;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: OrderSignalModel = new OrderSignalModel()): OrderSignalModel {
         if (data) {
@@ -120,5 +122,7 @@ export class OrderSignalModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

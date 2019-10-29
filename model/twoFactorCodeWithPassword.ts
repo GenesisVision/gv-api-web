@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class TwoFactorCodeWithPassword { 
-    public twoFactorCode?: string;
-    public password?: string;
+    public 'twoFactorCode': string;
+    public 'password': string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TwoFactorCodeWithPassword = new TwoFactorCodeWithPassword()): TwoFactorCodeWithPassword {
         if (data) {
@@ -30,5 +32,7 @@ export class TwoFactorCodeWithPassword {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

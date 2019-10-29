@@ -13,14 +13,16 @@
 import ApiClient from "../ApiClient";
 
 export class FundChartStatistic { 
-    public profitPercent?: number;
-    public creationDate?: Date;
-    public balance?: number;
-    public investors?: number;
-    public sharpeRatio?: number;
-    public sortinoRatio?: number;
-    public calmarRatio?: number;
-    public maxDrawdown?: number;
+    public 'profitPercent'?: number;
+    public 'creationDate'?: Date;
+    public 'balance'?: number;
+    public 'investors'?: number;
+    public 'sharpeRatio'?: number;
+    public 'sortinoRatio'?: number;
+    public 'calmarRatio'?: number;
+    public 'maxDrawdown'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundChartStatistic = new FundChartStatistic()): FundChartStatistic {
         if (data) {
@@ -54,5 +56,7 @@ export class FundChartStatistic {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

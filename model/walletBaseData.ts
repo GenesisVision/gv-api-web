@@ -14,12 +14,14 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class WalletBaseData { 
-    public id?: string;
-    public title?: string;
-    public logo?: string;
-    public currency?: Currency;
-    public available?: number;
-    public rate?: number;
+    public 'id'?: string;
+    public 'title'?: string;
+    public 'logo'?: string;
+    public 'currency'?: Currency;
+    public 'available'?: number;
+    public 'rate'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletBaseData = new WalletBaseData()): WalletBaseData {
         if (data) {
@@ -47,5 +49,7 @@ export class WalletBaseData {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

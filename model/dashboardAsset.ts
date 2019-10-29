@@ -13,9 +13,11 @@
 import ApiClient from "../ApiClient";
 
 export class DashboardAsset { 
-    public asset?: string;
-    public color?: string;
-    public percent?: number;
+    public 'asset'?: string;
+    public 'color'?: string;
+    public 'percent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardAsset = new DashboardAsset()): DashboardAsset {
         if (data) {
@@ -34,5 +36,7 @@ export class DashboardAsset {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

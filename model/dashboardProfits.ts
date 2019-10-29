@@ -14,9 +14,11 @@ import { DashboardTimeframeProfit } from './dashboardTimeframeProfit';
 import ApiClient from "../ApiClient";
 
 export class DashboardProfits { 
-    public dayProfit?: DashboardTimeframeProfit;
-    public weekProfit?: DashboardTimeframeProfit;
-    public monthProfit?: DashboardTimeframeProfit;
+    public 'dayProfit'?: DashboardTimeframeProfit;
+    public 'weekProfit'?: DashboardTimeframeProfit;
+    public 'monthProfit'?: DashboardTimeframeProfit;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardProfits = new DashboardProfits()): DashboardProfits {
         if (data) {
@@ -35,5 +37,7 @@ export class DashboardProfits {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

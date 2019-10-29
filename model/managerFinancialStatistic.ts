@@ -13,10 +13,12 @@
 import ApiClient from "../ApiClient";
 
 export class ManagerFinancialStatistic { 
-    public successFee?: number;
-    public entryFee?: number;
-    public profit?: number;
-    public balance?: number;
+    public 'successFee'?: number;
+    public 'entryFee'?: number;
+    public 'profit'?: number;
+    public 'balance'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ManagerFinancialStatistic = new ManagerFinancialStatistic()): ManagerFinancialStatistic {
         if (data) {
@@ -38,5 +40,7 @@ export class ManagerFinancialStatistic {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

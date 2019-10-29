@@ -14,8 +14,10 @@ import { InvestmentEventViewModel } from './investmentEventViewModel';
 import ApiClient from "../ApiClient";
 
 export class InvestmentEventViewModels { 
-    public events?: [InvestmentEventViewModel];
-    public total?: number;
+    public 'events'?: [InvestmentEventViewModel];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: InvestmentEventViewModels = new InvestmentEventViewModels()): InvestmentEventViewModels {
         if (data) {
@@ -31,5 +33,7 @@ export class InvestmentEventViewModels {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

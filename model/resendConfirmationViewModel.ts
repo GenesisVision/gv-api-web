@@ -14,8 +14,10 @@ import { CaptchaCheckResult } from './captchaCheckResult';
 import ApiClient from "../ApiClient";
 
 export class ResendConfirmationViewModel { 
-    public email?: string;
-    public captchaCheckResult?: CaptchaCheckResult;
+    public 'email': string;
+    public 'captchaCheckResult'?: CaptchaCheckResult;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ResendConfirmationViewModel = new ResendConfirmationViewModel()): ResendConfirmationViewModel {
         if (data) {
@@ -31,5 +33,7 @@ export class ResendConfirmationViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

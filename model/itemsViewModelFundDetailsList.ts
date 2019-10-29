@@ -14,8 +14,10 @@ import { FundDetailsList } from './fundDetailsList';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelFundDetailsList { 
-    public items?: [FundDetailsList];
-    public total?: number;
+    public 'items'?: [FundDetailsList];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelFundDetailsList = new ItemsViewModelFundDetailsList()): ItemsViewModelFundDetailsList {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelFundDetailsList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -14,14 +14,16 @@ import { FundAssetPart } from './fundAssetPart';
 import ApiClient from "../ApiClient";
 
 export class NewFundRequest { 
-    public exitFee?: number;
-    public assets?: [FundAssetPart];
-    public entryFee?: number;
-    public depositAmount?: number;
-    public depositWalletId?: string;
-    public title?: string;
-    public description?: string;
-    public logo?: string;
+    public 'exitFee'?: number;
+    public 'assets'?: [FundAssetPart];
+    public 'entryFee'?: number;
+    public 'depositAmount'?: number;
+    public 'depositWalletId'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NewFundRequest = new NewFundRequest()): NewFundRequest {
         if (data) {
@@ -55,5 +57,7 @@ export class NewFundRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,9 +13,11 @@
 import ApiClient from "../ApiClient";
 
 export class PartnershipDetails { 
-    public totalReferralsL1?: number;
-    public totalReferralsL2?: number;
-    public totalAmount?: number;
+    public 'totalReferralsL1'?: number;
+    public 'totalReferralsL2'?: number;
+    public 'totalAmount'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PartnershipDetails = new PartnershipDetails()): PartnershipDetails {
         if (data) {
@@ -34,5 +36,7 @@ export class PartnershipDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

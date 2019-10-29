@@ -14,7 +14,9 @@ import { SignalDataMaster } from './signalDataMaster';
 import ApiClient from "../ApiClient";
 
 export class OrderModelSignalData { 
-    public masters?: [SignalDataMaster];
+    public 'masters'?: [SignalDataMaster];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: OrderModelSignalData = new OrderModelSignalData()): OrderModelSignalData {
         if (data) {
@@ -27,5 +29,7 @@ export class OrderModelSignalData {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

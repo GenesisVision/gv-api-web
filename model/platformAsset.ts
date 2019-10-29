@@ -13,13 +13,15 @@
 import ApiClient from "../ApiClient";
 
 export class PlatformAsset { 
-    public id?: string;
-    public name?: string;
-    public asset?: string;
-    public description?: string;
-    public icon?: string;
-    public color?: string;
-    public mandatoryFundPercent?: number;
+    public 'id'?: string;
+    public 'name'?: string;
+    public 'asset'?: string;
+    public 'description'?: string;
+    public 'icon'?: string;
+    public 'color'?: string;
+    public 'mandatoryFundPercent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PlatformAsset = new PlatformAsset()): PlatformAsset {
         if (data) {
@@ -50,5 +52,7 @@ export class PlatformAsset {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

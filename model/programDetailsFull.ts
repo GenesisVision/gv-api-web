@@ -19,43 +19,45 @@ import { TradesDelay } from './tradesDelay';
 import ApiClient from "../ApiClient";
 
 export class ProgramDetailsFull { 
-    public id?: string;
-    public logo?: string;
-    public url?: string;
-    public color?: string;
-    public title?: string;
-    public description?: string;
-    public creationDate?: Date;
-    public currency?: Currency;
-    public level?: number;
-    public levelProgress?: number;
-    public periodDuration?: number;
-    public periodStarts?: Date;
-    public periodEnds?: Date;
-    public tradesDelay?: TradesDelay;
-    public login?: string;
-    public ageDays?: number;
-    public leverageMin?: number;
-    public leverageMax?: number;
-    public genesisRatio?: number;
-    public investmentScale?: number;
-    public volumeScale?: number;
-    public isSignalProgram?: boolean;
-    public signalSuccessFee?: number;
-    public signalVolumeFee?: number;
-    public entryFeeSelected?: number;
-    public entryFeeCurrent?: number;
-    public successFeeSelected?: number;
-    public successFeeCurrent?: number;
-    public stopOutLevelSelected?: number;
-    public stopOutLevelCurrent?: number;
-    public availableInvestmentBase?: number;
-    public availableInvestmentLimit?: number;
-    public totalAvailableInvestment?: number;
-    public manager?: ProfilePublic;
-    public brokerDetails?: BrokerDetails;
-    public personalDetails?: PersonalProgramDetails;
-    public tags?: [ProgramTag];
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'creationDate'?: Date;
+    public 'currency'?: Currency;
+    public 'level'?: number;
+    public 'levelProgress'?: number;
+    public 'periodDuration'?: number;
+    public 'periodStarts'?: Date;
+    public 'periodEnds'?: Date;
+    public 'tradesDelay'?: TradesDelay;
+    public 'login'?: string;
+    public 'ageDays'?: number;
+    public 'leverageMin'?: number;
+    public 'leverageMax'?: number;
+    public 'genesisRatio'?: number;
+    public 'investmentScale'?: number;
+    public 'volumeScale'?: number;
+    public 'isSignalProgram'?: boolean;
+    public 'signalSuccessFee'?: number;
+    public 'signalVolumeFee'?: number;
+    public 'entryFeeSelected'?: number;
+    public 'entryFeeCurrent'?: number;
+    public 'successFeeSelected'?: number;
+    public 'successFeeCurrent'?: number;
+    public 'stopOutLevelSelected'?: number;
+    public 'stopOutLevelCurrent'?: number;
+    public 'availableInvestmentBase'?: number;
+    public 'availableInvestmentLimit'?: number;
+    public 'totalAvailableInvestment'?: number;
+    public 'manager'?: ProfilePublic;
+    public 'brokerDetails'?: BrokerDetails;
+    public 'personalDetails'?: PersonalProgramDetails;
+    public 'tags'?: [ProgramTag];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramDetailsFull = new ProgramDetailsFull()): ProgramDetailsFull {
         if (data) {
@@ -176,5 +178,7 @@ export class ProgramDetailsFull {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -31,7 +31,7 @@ export class AssetsService {
     this.apiClient = apiClient || ApiClient.instance;
   }
 
-  public cancelChangeBroker(id: string, authorization: string): CancelablePromise<{}>{
+  public cancelChangeBroker(id: string, authorization: string): CancelablePromise<null>{
     return this.cancelChangeBrokerWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -76,7 +76,7 @@ export class AssetsService {
 
   public changeBroker(id: string, authorization: string, opts?: { 
     request?: ChangeBrokerProgramRequest
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.changeBrokerWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -123,7 +123,7 @@ export class AssetsService {
 
   public changeProgramPassword(id: string, authorization: string, opts?: { 
     model?: ProgramPwdUpdate
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.changeProgramPasswordWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -168,7 +168,7 @@ export class AssetsService {
 
   }
 
-  public closeCurrentPeriod(id: string, authorization: string): CancelablePromise<{}>{
+  public closeCurrentPeriod(id: string, authorization: string): CancelablePromise<null>{
     return this.closeCurrentPeriodWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -213,7 +213,7 @@ export class AssetsService {
 
   public closeFund(id: string, authorization: string, opts?: { 
     model?: TwoFactorCodeModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.closeFundWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -260,7 +260,7 @@ export class AssetsService {
 
   public closeInvestmentProgram(id: string, authorization: string, opts?: { 
     model?: TwoFactorCodeModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.closeInvestmentProgramWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -307,7 +307,7 @@ export class AssetsService {
 
   public confirmProgram2FA(id: string, authorization: string, opts?: { 
     model?: TwoFactorCodeModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.confirmProgram2FAWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -354,7 +354,7 @@ export class AssetsService {
 
   public createFund(authorization: string, opts?: { 
     request?: NewFundRequest
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.createFundWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -520,7 +520,7 @@ export class AssetsService {
 
   public updateAsset(id: string, authorization: string, opts?: { 
     model?: ProgramUpdate
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateAssetWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -567,7 +567,7 @@ export class AssetsService {
 
   public updateAsset_1(id: string, authorization: string, opts?: { 
     model?: ProgramUpdate
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateAsset_1WithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -614,7 +614,7 @@ export class AssetsService {
 
   public updateFundAssets(id: string, authorization: string, opts?: { 
     assets?: [FundAssetPart]
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateFundAssetsWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -663,7 +663,7 @@ export class AssetsService {
     programId?: string, 
     volumeFee?: number, 
     successFee?: number
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateProgramSignalSettingsWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -712,7 +712,7 @@ export class AssetsService {
     programId?: string, 
     volumeFee?: number, 
     successFee?: number
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateProgramSignalSettings_2WithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

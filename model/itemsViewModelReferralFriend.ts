@@ -14,8 +14,10 @@ import { ReferralFriend } from './referralFriend';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelReferralFriend { 
-    public items?: [ReferralFriend];
-    public total?: number;
+    public 'items'?: [ReferralFriend];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelReferralFriend = new ItemsViewModelReferralFriend()): ItemsViewModelReferralFriend {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelReferralFriend {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

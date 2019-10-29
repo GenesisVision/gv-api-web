@@ -14,16 +14,18 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class WalletsGrandTotal { 
-    public currency?: Currency;
-    public available?: number;
-    public invested?: number;
-    public pending?: number;
-    public total?: number;
-    public currencyCcy?: Currency;
-    public availableCcy?: number;
-    public investedCcy?: number;
-    public pendingCcy?: number;
-    public totalCcy?: number;
+    public 'currency'?: Currency;
+    public 'available'?: number;
+    public 'invested'?: number;
+    public 'pending'?: number;
+    public 'total'?: number;
+    public 'currencyCcy'?: Currency;
+    public 'availableCcy'?: number;
+    public 'investedCcy'?: number;
+    public 'pendingCcy'?: number;
+    public 'totalCcy'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletsGrandTotal = new WalletsGrandTotal()): WalletsGrandTotal {
         if (data) {
@@ -63,5 +65,7 @@ export class WalletsGrandTotal {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

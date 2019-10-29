@@ -16,9 +16,11 @@ import { ItemsViewModelPublicProfile } from './itemsViewModelPublicProfile';
 import ApiClient from "../ApiClient";
 
 export class SearchViewModel { 
-    public programs?: ItemsViewModelProgramDetailsList;
-    public funds?: ItemsViewModelFundDetailsList;
-    public managers?: ItemsViewModelPublicProfile;
+    public 'programs'?: ItemsViewModelProgramDetailsList;
+    public 'funds'?: ItemsViewModelFundDetailsList;
+    public 'managers'?: ItemsViewModelPublicProfile;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SearchViewModel = new SearchViewModel()): SearchViewModel {
         if (data) {
@@ -37,5 +39,7 @@ export class SearchViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

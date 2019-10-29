@@ -16,14 +16,16 @@ import { ProfilePublic } from './profilePublic';
 import ApiClient from "../ApiClient";
 
 export class OrderSignalProgramInfo { 
-    public manager?: ProfilePublic;
-    public program?: OrderProgramData;
-    public programId?: string;
-    public volume?: number;
-    public priceOpenAvg?: number;
-    public profit?: number;
-    public firstOrderDate?: Date;
-    public fees?: [OrderSignalFee];
+    public 'manager'?: ProfilePublic;
+    public 'program'?: OrderProgramData;
+    public 'programId'?: string;
+    public 'volume'?: number;
+    public 'priceOpenAvg'?: number;
+    public 'profit'?: number;
+    public 'firstOrderDate'?: Date;
+    public 'fees'?: [OrderSignalFee];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: OrderSignalProgramInfo = new OrderSignalProgramInfo()): OrderSignalProgramInfo {
         if (data) {
@@ -57,5 +59,7 @@ export class OrderSignalProgramInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

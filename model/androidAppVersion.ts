@@ -14,8 +14,10 @@ import { AndroidVersion } from './androidVersion';
 import ApiClient from "../ApiClient";
 
 export class AndroidAppVersion { 
-    public minVersion?: AndroidVersion;
-    public lastVersion?: AndroidVersion;
+    public 'minVersion'?: AndroidVersion;
+    public 'lastVersion'?: AndroidVersion;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AndroidAppVersion = new AndroidAppVersion()): AndroidAppVersion {
         if (data) {
@@ -31,5 +33,7 @@ export class AndroidAppVersion {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

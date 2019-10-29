@@ -13,12 +13,14 @@
 import ApiClient from "../ApiClient";
 
 export class NewExternalSignalAccountRequest { 
-    public externalKeyId?: string;
-    public volumeFee?: number;
-    public monthlySubscriptionFee?: number;
-    public title?: string;
-    public description?: string;
-    public logo?: string;
+    public 'externalKeyId'?: string;
+    public 'volumeFee'?: number;
+    public 'monthlySubscriptionFee'?: number;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NewExternalSignalAccountRequest = new NewExternalSignalAccountRequest()): NewExternalSignalAccountRequest {
         if (data) {
@@ -46,5 +48,7 @@ export class NewExternalSignalAccountRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

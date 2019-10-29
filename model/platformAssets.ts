@@ -14,7 +14,9 @@ import { PlatformAsset } from './platformAsset';
 import ApiClient from "../ApiClient";
 
 export class PlatformAssets { 
-    public assets?: [PlatformAsset];
+    public 'assets'?: [PlatformAsset];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PlatformAssets = new PlatformAssets()): PlatformAssets {
         if (data) {
@@ -27,5 +29,7 @@ export class PlatformAssets {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

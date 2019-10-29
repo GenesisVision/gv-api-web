@@ -15,8 +15,10 @@ import { SimpleChartPoint } from './simpleChartPoint';
 import ApiClient from "../ApiClient";
 
 export class SimpleChart { 
-    public currency?: Currency;
-    public chart?: [SimpleChartPoint];
+    public 'currency'?: Currency;
+    public 'chart'?: [SimpleChartPoint];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SimpleChart = new SimpleChart()): SimpleChart {
         if (data) {
@@ -32,5 +34,7 @@ export class SimpleChart {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

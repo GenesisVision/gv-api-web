@@ -16,14 +16,16 @@ import { Timeframe } from './timeframe';
 import ApiClient from "../ApiClient";
 
 export class ProgramFacet { 
-    public sorting?: ProgramsFilterSorting;
-    public id?: string;
-    public title?: string;
-    public description?: string;
-    public logo?: string;
-    public url?: string;
-    public sortType?: FacetSortType;
-    public timeframe?: Timeframe;
+    public 'sorting'?: ProgramsFilterSorting;
+    public 'id'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'sortType'?: FacetSortType;
+    public 'timeframe'?: Timeframe;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramFacet = new ProgramFacet()): ProgramFacet {
         if (data) {
@@ -57,5 +59,7 @@ export class ProgramFacet {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

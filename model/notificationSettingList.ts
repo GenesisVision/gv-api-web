@@ -17,10 +17,12 @@ import { ProgramNotificationSettingList } from './programNotificationSettingList
 import ApiClient from "../ApiClient";
 
 export class NotificationSettingList { 
-    public settingsGeneral?: [NotificationSettingViewModel];
-    public settingsProgram?: [ProgramNotificationSettingList];
-    public settingsFund?: [FundNotificationSettingList];
-    public settingsManager?: [ManagerNotificationSettingList];
+    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    public 'settingsProgram'?: [ProgramNotificationSettingList];
+    public 'settingsFund'?: [FundNotificationSettingList];
+    public 'settingsManager'?: [ManagerNotificationSettingList];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NotificationSettingList = new NotificationSettingList()): NotificationSettingList {
         if (data) {
@@ -42,5 +44,7 @@ export class NotificationSettingList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

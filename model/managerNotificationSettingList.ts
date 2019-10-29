@@ -14,12 +14,14 @@ import { NotificationSettingViewModel } from './notificationSettingViewModel';
 import ApiClient from "../ApiClient";
 
 export class ManagerNotificationSettingList { 
-    public managerId?: string;
-    public url?: string;
-    public username?: string;
-    public avatar?: string;
-    public about?: string;
-    public settingsGeneral?: [NotificationSettingViewModel];
+    public 'managerId'?: string;
+    public 'url'?: string;
+    public 'username'?: string;
+    public 'avatar'?: string;
+    public 'about'?: string;
+    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ManagerNotificationSettingList = new ManagerNotificationSettingList()): ManagerNotificationSettingList {
         if (data) {
@@ -47,5 +49,7 @@ export class ManagerNotificationSettingList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

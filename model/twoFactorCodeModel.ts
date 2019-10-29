@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class TwoFactorCodeModel { 
-    public twoFactorCode?: string;
+    public 'twoFactorCode'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TwoFactorCodeModel = new TwoFactorCodeModel()): TwoFactorCodeModel {
         if (data) {
@@ -26,5 +28,7 @@ export class TwoFactorCodeModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

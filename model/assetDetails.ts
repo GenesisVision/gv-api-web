@@ -14,12 +14,14 @@ import { AssetType } from './assetType';
 import ApiClient from "../ApiClient";
 
 export class AssetDetails { 
-    public id?: string;
-    public logo?: string;
-    public color?: string;
-    public title?: string;
-    public url?: string;
-    public assetType?: AssetType;
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'url'?: string;
+    public 'assetType'?: AssetType;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AssetDetails = new AssetDetails()): AssetDetails {
         if (data) {
@@ -47,5 +49,7 @@ export class AssetDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

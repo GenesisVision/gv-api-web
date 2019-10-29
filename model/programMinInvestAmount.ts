@@ -15,9 +15,11 @@ import { BrokerTradeServerType } from './brokerTradeServerType';
 import ApiClient from "../ApiClient";
 
 export class ProgramMinInvestAmount { 
-    public serverType?: BrokerTradeServerType;
-    public minInvestAmountOwnProgram?: [AmountWithCurrency];
-    public minInvestAmountSomeoneProgram?: [AmountWithCurrency];
+    public 'serverType'?: BrokerTradeServerType;
+    public 'minInvestAmountOwnProgram'?: [AmountWithCurrency];
+    public 'minInvestAmountSomeoneProgram'?: [AmountWithCurrency];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramMinInvestAmount = new ProgramMinInvestAmount()): ProgramMinInvestAmount {
         if (data) {
@@ -36,5 +38,7 @@ export class ProgramMinInvestAmount {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

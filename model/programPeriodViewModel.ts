@@ -15,22 +15,24 @@ import { PeriodStatus } from './periodStatus';
 import ApiClient from "../ApiClient";
 
 export class ProgramPeriodViewModel { 
-    public dateFrom?: Date;
-    public dateTo?: Date;
-    public periodLength?: number;
-    public status?: PeriodStatus;
-    public number?: number;
-    public profit?: number;
-    public balance?: number;
-    public investors?: number;
-    public managerDeposit?: number;
-    public managerWithdraw?: number;
-    public managerCommissionRebate?: number;
-    public investorsDeposit?: number;
-    public investorsWithdraw?: number;
-    public investorsProfitWithdraw?: number;
-    public platformSuccessFee?: number;
-    public managerStatistic?: ManagerFinancialStatistic;
+    public 'dateFrom'?: Date;
+    public 'dateTo'?: Date;
+    public 'periodLength'?: number;
+    public 'status'?: PeriodStatus;
+    public 'number'?: number;
+    public 'profit'?: number;
+    public 'balance'?: number;
+    public 'investors'?: number;
+    public 'managerDeposit'?: number;
+    public 'managerWithdraw'?: number;
+    public 'managerCommissionRebate'?: number;
+    public 'investorsDeposit'?: number;
+    public 'investorsWithdraw'?: number;
+    public 'investorsProfitWithdraw'?: number;
+    public 'platformSuccessFee'?: number;
+    public 'managerStatistic'?: ManagerFinancialStatistic;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramPeriodViewModel = new ProgramPeriodViewModel()): ProgramPeriodViewModel {
         if (data) {
@@ -88,5 +90,7 @@ export class ProgramPeriodViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

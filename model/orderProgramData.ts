@@ -13,12 +13,14 @@
 import ApiClient from "../ApiClient";
 
 export class OrderProgramData { 
-    public title?: string;
-    public level?: number;
-    public levelProgress?: number;
-    public color?: string;
-    public url?: string;
-    public logo?: string;
+    public 'title'?: string;
+    public 'level'?: number;
+    public 'levelProgress'?: number;
+    public 'color'?: string;
+    public 'url'?: string;
+    public 'logo'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: OrderProgramData = new OrderProgramData()): OrderProgramData {
         if (data) {
@@ -46,5 +48,7 @@ export class OrderProgramData {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

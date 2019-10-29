@@ -14,8 +14,10 @@ import { ReallocationModel } from './reallocationModel';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelReallocationModel { 
-    public items?: [ReallocationModel];
-    public total?: number;
+    public 'items'?: [ReallocationModel];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelReallocationModel = new ItemsViewModelReallocationModel()): ItemsViewModelReallocationModel {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelReallocationModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class ErrorMessage { 
-    public message?: string;
-    public property?: string;
+    public 'message'?: string;
+    public 'property'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ErrorMessage = new ErrorMessage()): ErrorMessage {
         if (data) {
@@ -30,5 +32,7 @@ export class ErrorMessage {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

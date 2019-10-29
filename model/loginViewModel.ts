@@ -14,13 +14,15 @@ import { CaptchaCheckResult } from './captchaCheckResult';
 import ApiClient from "../ApiClient";
 
 export class LoginViewModel { 
-    public password?: string;
-    public rememberMe?: boolean;
-    public twoFactorCode?: string;
-    public recoveryCode?: string;
-    public client?: string;
-    public email?: string;
-    public captchaCheckResult?: CaptchaCheckResult;
+    public 'password': string;
+    public 'rememberMe'?: boolean;
+    public 'twoFactorCode'?: string;
+    public 'recoveryCode'?: string;
+    public 'client'?: string;
+    public 'email': string;
+    public 'captchaCheckResult'?: CaptchaCheckResult;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: LoginViewModel = new LoginViewModel()): LoginViewModel {
         if (data) {
@@ -51,5 +53,7 @@ export class LoginViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

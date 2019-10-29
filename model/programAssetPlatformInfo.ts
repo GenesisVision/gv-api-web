@@ -16,10 +16,12 @@ import { ProgramTag } from './programTag';
 import ApiClient from "../ApiClient";
 
 export class ProgramAssetPlatformInfo { 
-    public facets?: [ProgramFacet];
-    public tags?: [ProgramTag];
-    public availableProgramCurrencies?: [string];
-    public minInvestAmounts?: [ProgramMinInvestAmount];
+    public 'facets'?: [ProgramFacet];
+    public 'tags'?: [ProgramTag];
+    public 'availableProgramCurrencies'?: [string];
+    public 'minInvestAmounts'?: [ProgramMinInvestAmount];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramAssetPlatformInfo = new ProgramAssetPlatformInfo()): ProgramAssetPlatformInfo {
         if (data) {
@@ -41,5 +43,7 @@ export class ProgramAssetPlatformInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

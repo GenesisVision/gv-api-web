@@ -25,7 +25,7 @@ export class InvestmentsService {
     this.apiClient = apiClient || ApiClient.instance;
   }
 
-  public cancelRequest(id: string, authorization: string): CancelablePromise<{}>{
+  public cancelRequest(id: string, authorization: string): CancelablePromise<null>{
     return this.cancelRequestWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -263,7 +263,7 @@ export class InvestmentsService {
   public investIntoFund(id: string, authorization: string, opts?: { 
     amount?: number, 
     walletId?: string
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.investIntoFundWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -314,7 +314,7 @@ export class InvestmentsService {
   public investIntoProgram(id: string, authorization: string, opts?: { 
     amount?: number, 
     walletId?: string
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.investIntoProgramWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -362,7 +362,7 @@ export class InvestmentsService {
 
   }
 
-  public switchReinvestOff(id: string, authorization: string): CancelablePromise<{}>{
+  public switchReinvestOff(id: string, authorization: string): CancelablePromise<null>{
     return this.switchReinvestOffWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -405,7 +405,7 @@ export class InvestmentsService {
 
   }
 
-  public switchReinvestOn(id: string, authorization: string): CancelablePromise<{}>{
+  public switchReinvestOn(id: string, authorization: string): CancelablePromise<null>{
     return this.switchReinvestOnWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -451,7 +451,7 @@ export class InvestmentsService {
   public withdrawFromFund(id: string, authorization: string, opts?: { 
     percent?: number, 
     currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR'
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.withdrawFromFundWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -502,7 +502,7 @@ export class InvestmentsService {
   public withdrawFromProgram(id: string, authorization: string, opts?: { 
     amount?: number, 
     withdrawAll?: boolean
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.withdrawFromProgramWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

@@ -14,11 +14,13 @@ import { DashboardProfits } from './dashboardProfits';
 import ApiClient from "../ApiClient";
 
 export class DashboardSummary { 
-    public total?: number;
-    public invested?: number;
-    public pending?: number;
-    public available?: number;
-    public profits?: DashboardProfits;
+    public 'total'?: number;
+    public 'invested'?: number;
+    public 'pending'?: number;
+    public 'available'?: number;
+    public 'profits'?: DashboardProfits;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardSummary = new DashboardSummary()): DashboardSummary {
         if (data) {
@@ -43,5 +45,7 @@ export class DashboardSummary {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

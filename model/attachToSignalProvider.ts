@@ -14,13 +14,15 @@ import { SubscriptionMode } from './subscriptionMode';
 import ApiClient from "../ApiClient";
 
 export class AttachToSignalProvider { 
-    public initialDepositCurrency?: AttachToSignalProvider.InitialDepositCurrencyEnum;
-    public initialDepositAmount?: number;
-    public mode?: SubscriptionMode;
-    public percent?: number;
-    public openTolerancePercent?: number;
-    public fixedVolume?: number;
-    public fixedCurrency?: AttachToSignalProvider.FixedCurrencyEnum;
+    public 'initialDepositCurrency'?: AttachToSignalProvider.InitialDepositCurrencyEnum;
+    public 'initialDepositAmount'?: number;
+    public 'mode'?: SubscriptionMode;
+    public 'percent'?: number;
+    public 'openTolerancePercent'?: number;
+    public 'fixedVolume'?: number;
+    public 'fixedCurrency'?: AttachToSignalProvider.FixedCurrencyEnum;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AttachToSignalProvider = new AttachToSignalProvider()): AttachToSignalProvider {
         if (data) {
@@ -55,5 +57,7 @@ export namespace AttachToSignalProvider {
     export type InitialDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 }
+
+//modelGenericEnums.mustache
 
 

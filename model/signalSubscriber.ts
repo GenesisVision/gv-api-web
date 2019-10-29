@@ -15,19 +15,21 @@ import { SignalSubscriberStatus } from './signalSubscriberStatus';
 import ApiClient from "../ApiClient";
 
 export class SignalSubscriber { 
-    public number?: number;
-    public trades?: number;
-    public profit?: number;
-    public volume?: number;
-    public subscriptionDate?: Date;
-    public unsubscriptionDate?: Date;
-    public status?: SignalSubscriberStatus;
-    public totalCommissionAmount?: number;
-    public totalCommissionCurrency?: Currency;
-    public totalSuccessFeeAmount?: number;
-    public totalSuccessFeeCurrency?: Currency;
-    public totalVolumeFeeAmount?: number;
-    public totalVolumeFeeCurrency?: Currency;
+    public 'number'?: number;
+    public 'trades'?: number;
+    public 'profit'?: number;
+    public 'volume'?: number;
+    public 'subscriptionDate'?: Date;
+    public 'unsubscriptionDate'?: Date;
+    public 'status'?: SignalSubscriberStatus;
+    public 'totalCommissionAmount'?: number;
+    public 'totalCommissionCurrency'?: Currency;
+    public 'totalSuccessFeeAmount'?: number;
+    public 'totalSuccessFeeCurrency'?: Currency;
+    public 'totalVolumeFeeAmount'?: number;
+    public 'totalVolumeFeeCurrency'?: Currency;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalSubscriber = new SignalSubscriber()): SignalSubscriber {
         if (data) {
@@ -76,5 +78,7 @@ export class SignalSubscriber {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -15,17 +15,19 @@ import { NotificationType } from './notificationType';
 import ApiClient from "../ApiClient";
 
 export class NotificationViewModel { 
-    public id?: string;
-    public text?: string;
-    public date?: Date;
-    public type?: NotificationType;
-    public assetId?: string;
-    public managerId?: string;
-    public logo?: string;
-    public url?: string;
-    public color?: string;
-    public isUnread?: boolean;
-    public assetType?: InvestmentProgramType;
+    public 'id'?: string;
+    public 'text'?: string;
+    public 'date'?: Date;
+    public 'type'?: NotificationType;
+    public 'assetId'?: string;
+    public 'managerId'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'color'?: string;
+    public 'isUnread'?: boolean;
+    public 'assetType'?: InvestmentProgramType;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NotificationViewModel = new NotificationViewModel()): NotificationViewModel {
         if (data) {
@@ -68,5 +70,7 @@ export class NotificationViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -14,7 +14,9 @@ import { MoneyLocation } from './moneyLocation';
 import ApiClient from "../ApiClient";
 
 export class DashboardPortfolio { 
-    public distribution?: [MoneyLocation];
+    public 'distribution'?: [MoneyLocation];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardPortfolio = new DashboardPortfolio()): DashboardPortfolio {
         if (data) {
@@ -27,5 +29,7 @@ export class DashboardPortfolio {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

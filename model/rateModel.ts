@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class RateModel { 
-    public rate?: number;
+    public 'rate'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RateModel = new RateModel()): RateModel {
         if (data) {
@@ -26,5 +28,7 @@ export class RateModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

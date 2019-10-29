@@ -15,9 +15,11 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class ProgramBalanceChart { 
-    public balance?: number;
-    public programCurrency?: Currency;
-    public chart?: [BalanceChartPoint];
+    public 'balance'?: number;
+    public 'programCurrency'?: Currency;
+    public 'chart'?: [BalanceChartPoint];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramBalanceChart = new ProgramBalanceChart()): ProgramBalanceChart {
         if (data) {
@@ -36,5 +38,7 @@ export class ProgramBalanceChart {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

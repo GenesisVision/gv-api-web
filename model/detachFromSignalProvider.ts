@@ -14,7 +14,9 @@ import { SignalDetachMode } from './signalDetachMode';
 import ApiClient from "../ApiClient";
 
 export class DetachFromSignalProvider { 
-    public mode?: SignalDetachMode;
+    public 'mode'?: SignalDetachMode;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DetachFromSignalProvider = new DetachFromSignalProvider()): DetachFromSignalProvider {
         if (data) {
@@ -27,5 +29,7 @@ export class DetachFromSignalProvider {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

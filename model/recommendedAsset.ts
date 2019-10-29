@@ -15,13 +15,15 @@ import { ProfitChart } from './profitChart';
 import ApiClient from "../ApiClient";
 
 export class RecommendedAsset { 
-    public chart?: ProfitChart;
-    public id?: string;
-    public logo?: string;
-    public color?: string;
-    public title?: string;
-    public url?: string;
-    public assetType?: AssetType;
+    public 'chart'?: ProfitChart;
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'url'?: string;
+    public 'assetType'?: AssetType;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RecommendedAsset = new RecommendedAsset()): RecommendedAsset {
         if (data) {
@@ -52,5 +54,7 @@ export class RecommendedAsset {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

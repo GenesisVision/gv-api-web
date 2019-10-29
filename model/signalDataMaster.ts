@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class SignalDataMaster { 
-    public login?: string;
-    public share?: number;
+    public 'login'?: string;
+    public 'share'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalDataMaster = new SignalDataMaster()): SignalDataMaster {
         if (data) {
@@ -30,5 +32,7 @@ export class SignalDataMaster {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

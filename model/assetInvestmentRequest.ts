@@ -19,16 +19,18 @@ import { ProgramAssetInvestmentRequest } from './programAssetInvestmentRequest';
 import ApiClient from "../ApiClient";
 
 export class AssetInvestmentRequest { 
-    public id?: string;
-    public date?: Date;
-    public amount?: number;
-    public currency?: Currency;
-    public type?: InvestmentRequestType;
-    public status?: InvestmentRequestStatus;
-    public canCancelRequest?: boolean;
-    public assetDetails?: AssetDetails;
-    public fundRequestDetails?: FundAssetInvestmentRequest;
-    public programRequestDetails?: ProgramAssetInvestmentRequest;
+    public 'id'?: string;
+    public 'date'?: Date;
+    public 'amount'?: number;
+    public 'currency'?: Currency;
+    public 'type'?: InvestmentRequestType;
+    public 'status'?: InvestmentRequestStatus;
+    public 'canCancelRequest'?: boolean;
+    public 'assetDetails'?: AssetDetails;
+    public 'fundRequestDetails'?: FundAssetInvestmentRequest;
+    public 'programRequestDetails'?: ProgramAssetInvestmentRequest;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AssetInvestmentRequest = new AssetInvestmentRequest()): AssetInvestmentRequest {
         if (data) {
@@ -68,5 +70,7 @@ export class AssetInvestmentRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

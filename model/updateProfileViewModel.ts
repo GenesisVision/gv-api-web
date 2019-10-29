@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class UpdateProfileViewModel { 
-    public userName?: string;
-    public about?: string;
+    public 'userName'?: string;
+    public 'about'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: UpdateProfileViewModel = new UpdateProfileViewModel()): UpdateProfileViewModel {
         if (data) {
@@ -30,5 +32,7 @@ export class UpdateProfileViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -35,7 +35,7 @@ export class ProfileService {
 
   public addExternalKey(authorization: string, opts?: { 
     model?: ExternalKeyAddViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.addExternalKeyWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -77,7 +77,7 @@ export class ProfileService {
 
   public deleteExternalKey(authorization: string, opts?: { 
     model?: IdModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.deleteExternalKeyWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -345,7 +345,7 @@ export class ProfileService {
 
   }
 
-  public removeAvatar(authorization: string): CancelablePromise<{}>{
+  public removeAvatar(authorization: string): CancelablePromise<null>{
     return this.removeAvatarWithHttpInfo(authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -383,7 +383,7 @@ export class ProfileService {
 
   }
 
-  public updateAvatar(fileId: string, authorization: string): CancelablePromise<{}>{
+  public updateAvatar(fileId: string, authorization: string): CancelablePromise<null>{
     return this.updateAvatarWithHttpInfo(fileId, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -428,7 +428,7 @@ export class ProfileService {
 
   public updateFcmToken(authorization: string, opts?: { 
     token?: FcmTokenViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateFcmTokenWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -470,7 +470,7 @@ export class ProfileService {
 
   public updatePersonalDetails(authorization: string, opts?: { 
     model?: UpdatePersonalDetailViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updatePersonalDetailsWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -512,7 +512,7 @@ export class ProfileService {
 
   public updateProfile(authorization: string, opts?: { 
     model?: UpdateProfileViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateProfileWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -554,7 +554,7 @@ export class ProfileService {
 
   public updateSocialLinks(authorization: string, opts?: { 
     model?: UpdateSocialLinkViewModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateSocialLinksWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

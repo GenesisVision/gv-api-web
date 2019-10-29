@@ -14,8 +14,10 @@ import { SignalSubscriber } from './signalSubscriber';
 import ApiClient from "../ApiClient";
 
 export class SignalProviderSubscribers { 
-    public subscribers?: [SignalSubscriber];
-    public total?: number;
+    public 'subscribers'?: [SignalSubscriber];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalProviderSubscribers = new SignalProviderSubscribers()): SignalProviderSubscribers {
         if (data) {
@@ -31,5 +33,7 @@ export class SignalProviderSubscribers {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -16,28 +16,30 @@ import { SignalSubscription } from './signalSubscription';
 import ApiClient from "../ApiClient";
 
 export class PersonalProgramDetails { 
-    public isOwnProgram?: boolean;
-    public isFavorite?: boolean;
-    public isReinvest?: boolean;
-    public isInvested?: boolean;
-    public canClose?: boolean;
-    public canClosePeriod?: boolean;
-    public canInvest?: boolean;
-    public canWithdraw?: boolean;
-    public canMakeSignalProvider?: boolean;
-    public canChangePassword?: boolean;
-    public hasNotifications?: boolean;
-    public showTwoFactorButton?: boolean;
-    public value?: number;
-    public profit?: number;
-    public invested?: number;
-    public pendingInput?: number;
-    public pendingOutput?: number;
-    public pendingOutputIsWithdrawAll?: boolean;
-    public status?: AssetInvestmentStatus;
-    public successFeePersonal?: number;
-    public migration?: MigrationRequest;
-    public signalSubscription?: SignalSubscription;
+    public 'isOwnProgram'?: boolean;
+    public 'isFavorite'?: boolean;
+    public 'isReinvest'?: boolean;
+    public 'isInvested'?: boolean;
+    public 'canClose'?: boolean;
+    public 'canClosePeriod'?: boolean;
+    public 'canInvest'?: boolean;
+    public 'canWithdraw'?: boolean;
+    public 'canMakeSignalProvider'?: boolean;
+    public 'canChangePassword'?: boolean;
+    public 'hasNotifications'?: boolean;
+    public 'showTwoFactorButton'?: boolean;
+    public 'value'?: number;
+    public 'profit'?: number;
+    public 'invested'?: number;
+    public 'pendingInput'?: number;
+    public 'pendingOutput'?: number;
+    public 'pendingOutputIsWithdrawAll'?: boolean;
+    public 'status'?: AssetInvestmentStatus;
+    public 'successFeePersonal'?: number;
+    public 'migration'?: MigrationRequest;
+    public 'signalSubscription'?: SignalSubscription;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PersonalProgramDetails = new PersonalProgramDetails()): PersonalProgramDetails {
         if (data) {
@@ -113,5 +115,7 @@ export class PersonalProgramDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

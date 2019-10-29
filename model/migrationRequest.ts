@@ -14,9 +14,11 @@ import { Broker } from './broker';
 import ApiClient from "../ApiClient";
 
 export class MigrationRequest { 
-    public dateCreate?: Date;
-    public newLeverage?: number;
-    public newBroker?: Broker;
+    public 'dateCreate'?: Date;
+    public 'newLeverage'?: number;
+    public 'newBroker'?: Broker;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: MigrationRequest = new MigrationRequest()): MigrationRequest {
         if (data) {
@@ -35,5 +37,7 @@ export class MigrationRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

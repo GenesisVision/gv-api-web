@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class ReferralFriend { 
-    public date?: Date;
-    public emailMask?: string;
+    public 'date'?: Date;
+    public 'emailMask'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ReferralFriend = new ReferralFriend()): ReferralFriend {
         if (data) {
@@ -30,5 +32,7 @@ export class ReferralFriend {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

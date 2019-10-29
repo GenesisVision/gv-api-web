@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramPwdUpdate { 
-    public password?: string;
-    public twoFactorCode?: string;
+    public 'password'?: string;
+    public 'twoFactorCode'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramPwdUpdate = new ProgramPwdUpdate()): ProgramPwdUpdate {
         if (data) {
@@ -30,5 +32,7 @@ export class ProgramPwdUpdate {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

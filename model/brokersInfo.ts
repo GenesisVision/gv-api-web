@@ -14,7 +14,9 @@ import { Broker } from './broker';
 import ApiClient from "../ApiClient";
 
 export class BrokersInfo { 
-    public brokers?: [Broker];
+    public 'brokers'?: [Broker];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: BrokersInfo = new BrokersInfo()): BrokersInfo {
         if (data) {
@@ -27,5 +29,7 @@ export class BrokersInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

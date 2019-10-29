@@ -14,8 +14,10 @@ import { FundAssetPartWithIcon } from './fundAssetPartWithIcon';
 import ApiClient from "../ApiClient";
 
 export class ReallocationModel { 
-    public date?: Date;
-    public parts?: [FundAssetPartWithIcon];
+    public 'date'?: Date;
+    public 'parts'?: [FundAssetPartWithIcon];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ReallocationModel = new ReallocationModel()): ReallocationModel {
         if (data) {
@@ -31,5 +33,7 @@ export class ReallocationModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,11 +13,13 @@
 import ApiClient from "../ApiClient";
 
 export class FundWithdrawInfo { 
-    public exitFee?: number;
-    public title?: string;
-    public availableToWithdraw?: number;
-    public isOwner?: boolean;
-    public withheldInvestment?: number;
+    public 'exitFee'?: number;
+    public 'title'?: string;
+    public 'availableToWithdraw'?: number;
+    public 'isOwner'?: boolean;
+    public 'withheldInvestment'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundWithdrawInfo = new FundWithdrawInfo()): FundWithdrawInfo {
         if (data) {
@@ -42,5 +44,7 @@ export class FundWithdrawInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

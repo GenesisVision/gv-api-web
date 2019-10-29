@@ -14,12 +14,14 @@ import { NotificationSettingViewModel } from './notificationSettingViewModel';
 import ApiClient from "../ApiClient";
 
 export class FundNotificationSettingList { 
-    public assetId?: string;
-    public title?: string;
-    public url?: string;
-    public logo?: string;
-    public color?: string;
-    public settingsGeneral?: [NotificationSettingViewModel];
+    public 'assetId'?: string;
+    public 'title'?: string;
+    public 'url'?: string;
+    public 'logo'?: string;
+    public 'color'?: string;
+    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundNotificationSettingList = new FundNotificationSettingList()): FundNotificationSettingList {
         if (data) {
@@ -47,5 +49,7 @@ export class FundNotificationSettingList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

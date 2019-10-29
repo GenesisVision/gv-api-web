@@ -14,11 +14,13 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class AttachToSignalProviderInfo { 
-    public hasSignalAccount?: boolean;
-    public hasActiveSubscription?: boolean;
-    public volumeFee?: number;
-    public minDeposit?: number;
-    public minDepositCurrency?: Currency;
+    public 'hasSignalAccount'?: boolean;
+    public 'hasActiveSubscription'?: boolean;
+    public 'volumeFee'?: number;
+    public 'minDeposit'?: number;
+    public 'minDepositCurrency'?: Currency;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AttachToSignalProviderInfo = new AttachToSignalProviderInfo()): AttachToSignalProviderInfo {
         if (data) {
@@ -43,5 +45,7 @@ export class AttachToSignalProviderInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

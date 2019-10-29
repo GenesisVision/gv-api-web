@@ -13,19 +13,21 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramChartStatistic { 
-    public profit?: number;
-    public tradingVolume?: number;
-    public trades?: number;
-    public successTradesPercent?: number;
-    public profitFactor?: number;
-    public lastPeriodStarts?: Date;
-    public lastPeriodEnds?: Date;
-    public balance?: number;
-    public investors?: number;
-    public sharpeRatio?: number;
-    public sortinoRatio?: number;
-    public calmarRatio?: number;
-    public maxDrawdown?: number;
+    public 'profit'?: number;
+    public 'tradingVolume'?: number;
+    public 'trades'?: number;
+    public 'successTradesPercent'?: number;
+    public 'profitFactor'?: number;
+    public 'lastPeriodStarts'?: Date;
+    public 'lastPeriodEnds'?: Date;
+    public 'balance'?: number;
+    public 'investors'?: number;
+    public 'sharpeRatio'?: number;
+    public 'sortinoRatio'?: number;
+    public 'calmarRatio'?: number;
+    public 'maxDrawdown'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramChartStatistic = new ProgramChartStatistic()): ProgramChartStatistic {
         if (data) {
@@ -74,5 +76,7 @@ export class ProgramChartStatistic {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

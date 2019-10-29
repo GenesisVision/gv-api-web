@@ -14,8 +14,10 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class WalletDeposit { 
-    public currency?: Currency;
-    public depositAddress?: string;
+    public 'currency'?: Currency;
+    public 'depositAddress'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletDeposit = new WalletDeposit()): WalletDeposit {
         if (data) {
@@ -31,5 +33,7 @@ export class WalletDeposit {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

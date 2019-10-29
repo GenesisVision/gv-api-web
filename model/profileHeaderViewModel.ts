@@ -13,17 +13,19 @@
 import ApiClient from "../ApiClient";
 
 export class ProfileHeaderViewModel { 
-    public id?: string;
-    public name?: string;
-    public email?: string;
-    public avatar?: string;
-    public countryCode?: string;
-    public notificationsCount?: number;
-    public favoritesCount?: number;
-    public kycConfirmed?: boolean;
-    public allowForex?: boolean;
-    public isTwoFactorEnabled?: boolean;
-    public isNewUser?: boolean;
+    public 'id'?: string;
+    public 'name'?: string;
+    public 'email'?: string;
+    public 'avatar'?: string;
+    public 'countryCode'?: string;
+    public 'notificationsCount'?: number;
+    public 'favoritesCount'?: number;
+    public 'kycConfirmed'?: boolean;
+    public 'allowForex'?: boolean;
+    public 'isTwoFactorEnabled'?: boolean;
+    public 'isNewUser'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProfileHeaderViewModel = new ProfileHeaderViewModel()): ProfileHeaderViewModel {
         if (data) {
@@ -66,5 +68,7 @@ export class ProfileHeaderViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -15,8 +15,10 @@ import { ErrorMessage } from './errorMessage';
 import ApiClient from "../ApiClient";
 
 export class ErrorViewModel { 
-    public errors?: [ErrorMessage];
-    public code?: ErrorCodes;
+    public 'errors'?: [ErrorMessage];
+    public 'code'?: ErrorCodes;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ErrorViewModel = new ErrorViewModel()): ErrorViewModel {
         if (data) {
@@ -32,5 +34,7 @@ export class ErrorViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

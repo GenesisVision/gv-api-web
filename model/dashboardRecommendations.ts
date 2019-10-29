@@ -14,7 +14,9 @@ import { RecommendedAsset } from './recommendedAsset';
 import ApiClient from "../ApiClient";
 
 export class DashboardRecommendations { 
-    public assets?: [RecommendedAsset];
+    public 'assets'?: [RecommendedAsset];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardRecommendations = new DashboardRecommendations()): DashboardRecommendations {
         if (data) {
@@ -27,5 +29,7 @@ export class DashboardRecommendations {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

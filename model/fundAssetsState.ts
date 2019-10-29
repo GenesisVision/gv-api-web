@@ -14,8 +14,10 @@ import { FundAssetPartWithIcon } from './fundAssetPartWithIcon';
 import ApiClient from "../ApiClient";
 
 export class FundAssetsState { 
-    public assets?: [FundAssetPartWithIcon];
-    public otherPercent?: number;
+    public 'assets'?: [FundAssetPartWithIcon];
+    public 'otherPercent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundAssetsState = new FundAssetsState()): FundAssetsState {
         if (data) {
@@ -31,5 +33,7 @@ export class FundAssetsState {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

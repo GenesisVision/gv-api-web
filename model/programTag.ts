@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramTag { 
-    public name?: string;
-    public color?: string;
+    public 'name'?: string;
+    public 'color'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramTag = new ProgramTag()): ProgramTag {
         if (data) {
@@ -30,5 +32,7 @@ export class ProgramTag {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

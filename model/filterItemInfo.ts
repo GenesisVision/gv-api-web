@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class FilterItemInfo { 
-    public key?: string;
-    public title?: string;
+    public 'key'?: string;
+    public 'title'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FilterItemInfo = new FilterItemInfo()): FilterItemInfo {
         if (data) {
@@ -30,5 +32,7 @@ export class FilterItemInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

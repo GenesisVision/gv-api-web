@@ -15,11 +15,13 @@ import { TradesDelay } from './tradesDelay';
 import ApiClient from "../ApiClient";
 
 export class TradesViewModel { 
-    public showSwaps?: boolean;
-    public showTickets?: boolean;
-    public trades?: [OrderModel];
-    public tradesDelay?: TradesDelay;
-    public total?: number;
+    public 'showSwaps'?: boolean;
+    public 'showTickets'?: boolean;
+    public 'trades'?: [OrderModel];
+    public 'tradesDelay'?: TradesDelay;
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TradesViewModel = new TradesViewModel()): TradesViewModel {
         if (data) {
@@ -44,5 +46,7 @@ export class TradesViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

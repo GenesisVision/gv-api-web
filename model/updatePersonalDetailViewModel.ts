@@ -13,18 +13,20 @@
 import ApiClient from "../ApiClient";
 
 export class UpdatePersonalDetailViewModel { 
-    public firstName?: string;
-    public middleName?: string;
-    public lastName?: string;
-    public birthday?: Date;
-    public citizenship?: string;
-    public gender?: boolean;
-    public documentId?: string;
-    public phoneNumber?: string;
-    public country?: string;
-    public city?: string;
-    public address?: string;
-    public index?: string;
+    public 'firstName'?: string;
+    public 'middleName'?: string;
+    public 'lastName'?: string;
+    public 'birthday'?: Date;
+    public 'citizenship'?: string;
+    public 'gender'?: boolean;
+    public 'documentId'?: string;
+    public 'phoneNumber'?: string;
+    public 'country'?: string;
+    public 'city'?: string;
+    public 'address'?: string;
+    public 'index'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: UpdatePersonalDetailViewModel = new UpdatePersonalDetailViewModel()): UpdatePersonalDetailViewModel {
         if (data) {
@@ -70,5 +72,7 @@ export class UpdatePersonalDetailViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

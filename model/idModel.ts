@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class IdModel { 
-    public id?: string;
+    public 'id'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: IdModel = new IdModel()): IdModel {
         if (data) {
@@ -26,5 +28,7 @@ export class IdModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

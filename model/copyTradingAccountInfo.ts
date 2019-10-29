@@ -15,16 +15,18 @@ import { PersonalCopyTradingAccountInfo } from './personalCopyTradingAccountInfo
 import ApiClient from "../ApiClient";
 
 export class CopyTradingAccountInfo { 
-    public id?: string;
-    public currency?: Currency;
-    public logo?: string;
-    public title?: string;
-    public balance?: number;
-    public equity?: number;
-    public freeMargin?: number;
-    public marginLevel?: number;
-    public available?: number;
-    public personalInfo?: PersonalCopyTradingAccountInfo;
+    public 'id'?: string;
+    public 'currency'?: Currency;
+    public 'logo'?: string;
+    public 'title'?: string;
+    public 'balance'?: number;
+    public 'equity'?: number;
+    public 'freeMargin'?: number;
+    public 'marginLevel'?: number;
+    public 'available'?: number;
+    public 'personalInfo'?: PersonalCopyTradingAccountInfo;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: CopyTradingAccountInfo = new CopyTradingAccountInfo()): CopyTradingAccountInfo {
         if (data) {
@@ -64,5 +66,7 @@ export class CopyTradingAccountInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

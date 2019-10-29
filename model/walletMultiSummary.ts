@@ -15,9 +15,11 @@ import { WalletsGrandTotal } from './walletsGrandTotal';
 import ApiClient from "../ApiClient";
 
 export class WalletMultiSummary { 
-    public grandTotal?: WalletsGrandTotal;
-    public wallets?: [WalletData];
-    public payFeesWithGvt?: boolean;
+    public 'grandTotal'?: WalletsGrandTotal;
+    public 'wallets'?: [WalletData];
+    public 'payFeesWithGvt'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletMultiSummary = new WalletMultiSummary()): WalletMultiSummary {
         if (data) {
@@ -36,5 +38,7 @@ export class WalletMultiSummary {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

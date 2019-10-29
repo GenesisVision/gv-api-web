@@ -14,7 +14,9 @@ import { LevelInfo } from './levelInfo';
 import ApiClient from "../ApiClient";
 
 export class ProgramsLevelsInfo { 
-    public levels?: [LevelInfo];
+    public 'levels'?: [LevelInfo];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramsLevelsInfo = new ProgramsLevelsInfo()): ProgramsLevelsInfo {
         if (data) {
@@ -27,5 +29,7 @@ export class ProgramsLevelsInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

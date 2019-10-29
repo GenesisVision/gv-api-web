@@ -14,24 +14,26 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class WalletData { 
-    public id?: string;
-    public title?: string;
-    public logo?: string;
-    public rateToGVT?: number;
-    public isDepositEnabled?: boolean;
-    public isWithdrawalEnabled?: boolean;
-    public withdrawalCommission?: number;
-    public depositAddress?: string;
-    public currency?: Currency;
-    public available?: number;
-    public invested?: number;
-    public pending?: number;
-    public total?: number;
-    public currencyCcy?: Currency;
-    public availableCcy?: number;
-    public investedCcy?: number;
-    public pendingCcy?: number;
-    public totalCcy?: number;
+    public 'id'?: string;
+    public 'title'?: string;
+    public 'logo'?: string;
+    public 'rateToGVT'?: number;
+    public 'isDepositEnabled'?: boolean;
+    public 'isWithdrawalEnabled'?: boolean;
+    public 'withdrawalCommission'?: number;
+    public 'depositAddress'?: string;
+    public 'currency'?: Currency;
+    public 'available'?: number;
+    public 'invested'?: number;
+    public 'pending'?: number;
+    public 'total'?: number;
+    public 'currencyCcy'?: Currency;
+    public 'availableCcy'?: number;
+    public 'investedCcy'?: number;
+    public 'pendingCcy'?: number;
+    public 'totalCcy'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletData = new WalletData()): WalletData {
         if (data) {
@@ -95,5 +97,7 @@ export class WalletData {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -14,10 +14,12 @@ import { OrderSignalModel } from './orderSignalModel';
 import ApiClient from "../ApiClient";
 
 export class TradesSignalViewModel { 
-    public showSwaps?: boolean;
-    public showTickets?: boolean;
-    public trades?: [OrderSignalModel];
-    public total?: number;
+    public 'showSwaps'?: boolean;
+    public 'showTickets'?: boolean;
+    public 'trades'?: [OrderSignalModel];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TradesSignalViewModel = new TradesSignalViewModel()): TradesSignalViewModel {
         if (data) {
@@ -39,5 +41,7 @@ export class TradesSignalViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

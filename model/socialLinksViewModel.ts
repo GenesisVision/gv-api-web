@@ -14,7 +14,9 @@ import { SocialLinkViewModel } from './socialLinkViewModel';
 import ApiClient from "../ApiClient";
 
 export class SocialLinksViewModel { 
-    public socialLinks?: [SocialLinkViewModel];
+    public 'socialLinks'?: [SocialLinkViewModel];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SocialLinksViewModel = new SocialLinksViewModel()): SocialLinksViewModel {
         if (data) {
@@ -27,5 +29,7 @@ export class SocialLinksViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -14,8 +14,10 @@ import { RecoveryCode } from './recoveryCode';
 import ApiClient from "../ApiClient";
 
 export class RecoveryCodesViewModel { 
-    public codes?: [RecoveryCode];
-    public authToken?: string;
+    public 'codes'?: [RecoveryCode];
+    public 'authToken'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RecoveryCodesViewModel = new RecoveryCodesViewModel()): RecoveryCodesViewModel {
         if (data) {
@@ -31,5 +33,7 @@ export class RecoveryCodesViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

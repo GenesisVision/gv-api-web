@@ -16,9 +16,11 @@ import { SimpleChart } from './simpleChart';
 import ApiClient from "../ApiClient";
 
 export class FundProfitCharts { 
-    public statistic?: FundChartStatistic;
-    public charts?: [SimpleChart];
-    public assets?: [FundAssetsState];
+    public 'statistic'?: FundChartStatistic;
+    public 'charts'?: [SimpleChart];
+    public 'assets'?: [FundAssetsState];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundProfitCharts = new FundProfitCharts()): FundProfitCharts {
         if (data) {
@@ -37,5 +39,7 @@ export class FundProfitCharts {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

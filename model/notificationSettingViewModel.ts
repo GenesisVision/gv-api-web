@@ -15,13 +15,15 @@ import { NotificationType } from './notificationType';
 import ApiClient from "../ApiClient";
 
 export class NotificationSettingViewModel { 
-    public id?: string;
-    public isEnabled?: boolean;
-    public assetId?: string;
-    public managerId?: string;
-    public type?: NotificationType;
-    public conditionType?: NotificationSettingConditionType;
-    public conditionAmount?: number;
+    public 'id'?: string;
+    public 'isEnabled'?: boolean;
+    public 'assetId'?: string;
+    public 'managerId'?: string;
+    public 'type'?: NotificationType;
+    public 'conditionType'?: NotificationSettingConditionType;
+    public 'conditionAmount'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NotificationSettingViewModel = new NotificationSettingViewModel()): NotificationSettingViewModel {
         if (data) {
@@ -52,5 +54,7 @@ export class NotificationSettingViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

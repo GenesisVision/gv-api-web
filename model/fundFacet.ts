@@ -16,14 +16,16 @@ import { Timeframe } from './timeframe';
 import ApiClient from "../ApiClient";
 
 export class FundFacet { 
-    public sorting?: FundsFilterSorting;
-    public id?: string;
-    public title?: string;
-    public description?: string;
-    public logo?: string;
-    public url?: string;
-    public sortType?: FacetSortType;
-    public timeframe?: Timeframe;
+    public 'sorting'?: FundsFilterSorting;
+    public 'id'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'sortType'?: FacetSortType;
+    public 'timeframe'?: Timeframe;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundFacet = new FundFacet()): FundFacet {
         if (data) {
@@ -57,5 +59,7 @@ export class FundFacet {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

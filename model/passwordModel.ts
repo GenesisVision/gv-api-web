@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class PasswordModel { 
-    public password?: string;
+    public 'password': string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PasswordModel = new PasswordModel()): PasswordModel {
         if (data) {
@@ -26,5 +28,7 @@ export class PasswordModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

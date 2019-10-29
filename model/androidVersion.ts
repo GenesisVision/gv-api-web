@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class AndroidVersion { 
-    public versionCode?: string;
-    public versionName?: string;
+    public 'versionCode'?: string;
+    public 'versionName'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AndroidVersion = new AndroidVersion()): AndroidVersion {
         if (data) {
@@ -30,5 +32,7 @@ export class AndroidVersion {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

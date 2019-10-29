@@ -13,15 +13,17 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramUpdate { 
-    public title?: string;
-    public description?: string;
-    public logo?: string;
-    public entryFee?: number;
-    public exitFee?: number;
-    public successFee?: number;
-    public stopOutLevel?: number;
-    public investmentLimit?: number;
-    public tradesDelay?: ProgramUpdate.TradesDelayEnum;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    public 'entryFee'?: number;
+    public 'exitFee'?: number;
+    public 'successFee'?: number;
+    public 'stopOutLevel'?: number;
+    public 'investmentLimit'?: number;
+    public 'tradesDelay'?: ProgramUpdate.TradesDelayEnum;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramUpdate = new ProgramUpdate()): ProgramUpdate {
         if (data) {
@@ -61,5 +63,7 @@ export class ProgramUpdate {
 export namespace ProgramUpdate {
     export type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
 }
+
+//modelGenericEnums.mustache
 
 

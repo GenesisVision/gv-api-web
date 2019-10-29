@@ -29,7 +29,7 @@ export class ProgramsService {
     this.apiClient = apiClient || ApiClient.instance;
   }
 
-  public addToFavorites(id: string, authorization: string): CancelablePromise<{}>{
+  public addToFavorites(id: string, authorization: string): CancelablePromise<null>{
     return this.addToFavoritesWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -727,7 +727,7 @@ export class ProgramsService {
 
   }
 
-  public removeFromFavorites(id: string, authorization: string): CancelablePromise<{}>{
+  public removeFromFavorites(id: string, authorization: string): CancelablePromise<null>{
     return this.removeFromFavoritesWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;

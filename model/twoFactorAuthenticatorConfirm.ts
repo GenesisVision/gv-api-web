@@ -13,9 +13,11 @@
 import ApiClient from "../ApiClient";
 
 export class TwoFactorAuthenticatorConfirm { 
-    public code?: string;
-    public sharedKey?: string;
-    public password?: string;
+    public 'code': string;
+    public 'sharedKey': string;
+    public 'password': string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TwoFactorAuthenticatorConfirm = new TwoFactorAuthenticatorConfirm()): TwoFactorAuthenticatorConfirm {
         if (data) {
@@ -34,5 +36,7 @@ export class TwoFactorAuthenticatorConfirm {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

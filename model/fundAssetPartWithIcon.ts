@@ -13,11 +13,13 @@
 import ApiClient from "../ApiClient";
 
 export class FundAssetPartWithIcon { 
-    public icon?: string;
-    public color?: string;
-    public name?: string;
-    public asset?: string;
-    public percent?: number;
+    public 'icon'?: string;
+    public 'color'?: string;
+    public 'name'?: string;
+    public 'asset'?: string;
+    public 'percent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundAssetPartWithIcon = new FundAssetPartWithIcon()): FundAssetPartWithIcon {
         if (data) {
@@ -42,5 +44,7 @@ export class FundAssetPartWithIcon {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

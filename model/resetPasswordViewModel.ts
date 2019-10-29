@@ -13,10 +13,12 @@
 import ApiClient from "../ApiClient";
 
 export class ResetPasswordViewModel { 
-    public userId?: string;
-    public code?: string;
-    public password?: string;
-    public confirmPassword?: string;
+    public 'userId': string;
+    public 'code': string;
+    public 'password': string;
+    public 'confirmPassword'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ResetPasswordViewModel = new ResetPasswordViewModel()): ResetPasswordViewModel {
         if (data) {
@@ -38,5 +40,7 @@ export class ResetPasswordViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -15,8 +15,10 @@ import { IOsAppVersion } from './iOsAppVersion';
 import ApiClient from "../ApiClient";
 
 export class AppVersion { 
-    public iOS?: IOsAppVersion;
-    public android?: AndroidAppVersion;
+    public 'iOS'?: IOsAppVersion;
+    public 'android'?: AndroidAppVersion;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AppVersion = new AppVersion()): AppVersion {
         if (data) {
@@ -32,5 +34,7 @@ export class AppVersion {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

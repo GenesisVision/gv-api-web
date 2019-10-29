@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class IOsAppVersion { 
-    public minVersion?: string;
-    public lastVersion?: string;
+    public 'minVersion'?: string;
+    public 'lastVersion'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: IOsAppVersion = new IOsAppVersion()): IOsAppVersion {
         if (data) {
@@ -30,5 +32,7 @@ export class IOsAppVersion {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

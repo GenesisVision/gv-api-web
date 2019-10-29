@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class SimpleChartPoint { 
-    public date?: Date;
-    public value?: number;
+    public 'date'?: Date;
+    public 'value'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SimpleChartPoint = new SimpleChartPoint()): SimpleChartPoint {
         if (data) {
@@ -30,5 +32,7 @@ export class SimpleChartPoint {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

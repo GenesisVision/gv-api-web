@@ -15,9 +15,11 @@ import { FeeType } from './feeType';
 import ApiClient from "../ApiClient";
 
 export class OrderSignalFee { 
-    public amount?: number;
-    public currency?: Currency;
-    public type?: FeeType;
+    public 'amount'?: number;
+    public 'currency'?: Currency;
+    public 'type'?: FeeType;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: OrderSignalFee = new OrderSignalFee()): OrderSignalFee {
         if (data) {
@@ -36,5 +38,7 @@ export class OrderSignalFee {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

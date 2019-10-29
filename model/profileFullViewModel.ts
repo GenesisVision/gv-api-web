@@ -14,25 +14,27 @@ import { UserVerificationStatus } from './userVerificationStatus';
 import ApiClient from "../ApiClient";
 
 export class ProfileFullViewModel { 
-    public id?: string;
-    public email?: string;
-    public firstName?: string;
-    public middleName?: string;
-    public lastName?: string;
-    public country?: string;
-    public city?: string;
-    public address?: string;
-    public phone?: string;
-    public phoneNumberConfirmed?: boolean;
-    public birthday?: Date;
-    public gender?: boolean;
-    public avatar?: string;
-    public about?: string;
-    public userName?: string;
-    public index?: string;
-    public citizenship?: string;
-    public refUrl?: string;
-    public verificationStatus?: UserVerificationStatus;
+    public 'id'?: string;
+    public 'email'?: string;
+    public 'firstName'?: string;
+    public 'middleName'?: string;
+    public 'lastName'?: string;
+    public 'country'?: string;
+    public 'city'?: string;
+    public 'address'?: string;
+    public 'phone'?: string;
+    public 'phoneNumberConfirmed'?: boolean;
+    public 'birthday'?: Date;
+    public 'gender'?: boolean;
+    public 'avatar'?: string;
+    public 'about'?: string;
+    public 'userName'?: string;
+    public 'index'?: string;
+    public 'citizenship'?: string;
+    public 'refUrl'?: string;
+    public 'verificationStatus'?: UserVerificationStatus;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProfileFullViewModel = new ProfileFullViewModel()): ProfileFullViewModel {
         if (data) {
@@ -99,5 +101,7 @@ export class ProfileFullViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

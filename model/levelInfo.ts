@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class LevelInfo { 
-    public level?: number;
-    public investmentLimit?: number;
+    public 'level'?: number;
+    public 'investmentLimit'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: LevelInfo = new LevelInfo()): LevelInfo {
         if (data) {
@@ -30,5 +32,7 @@ export class LevelInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

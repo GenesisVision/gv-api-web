@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class FcmTokenViewModel { 
-    public token?: string;
+    public 'token': string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FcmTokenViewModel = new FcmTokenViewModel()): FcmTokenViewModel {
         if (data) {
@@ -26,5 +28,7 @@ export class FcmTokenViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

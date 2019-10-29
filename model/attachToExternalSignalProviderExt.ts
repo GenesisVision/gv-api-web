@@ -14,12 +14,14 @@ import { SubscriptionMode } from './subscriptionMode';
 import ApiClient from "../ApiClient";
 
 export class AttachToExternalSignalProviderExt { 
-    public externalKeyId?: string;
-    public mode?: SubscriptionMode;
-    public percent?: number;
-    public openTolerancePercent?: number;
-    public fixedVolume?: number;
-    public fixedCurrency?: AttachToExternalSignalProviderExt.FixedCurrencyEnum;
+    public 'externalKeyId'?: string;
+    public 'mode'?: SubscriptionMode;
+    public 'percent'?: number;
+    public 'openTolerancePercent'?: number;
+    public 'fixedVolume'?: number;
+    public 'fixedCurrency'?: AttachToExternalSignalProviderExt.FixedCurrencyEnum;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: AttachToExternalSignalProviderExt = new AttachToExternalSignalProviderExt()): AttachToExternalSignalProviderExt {
         if (data) {
@@ -50,5 +52,7 @@ export class AttachToExternalSignalProviderExt {
 export namespace AttachToExternalSignalProviderExt {
     export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 }
+
+//modelGenericEnums.mustache
 
 

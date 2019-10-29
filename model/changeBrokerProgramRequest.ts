@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class ChangeBrokerProgramRequest { 
-    public newBrokerAccountTypeId?: string;
-    public newLeverage?: number;
+    public 'newBrokerAccountTypeId'?: string;
+    public 'newLeverage'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ChangeBrokerProgramRequest = new ChangeBrokerProgramRequest()): ChangeBrokerProgramRequest {
         if (data) {
@@ -30,5 +32,7 @@ export class ChangeBrokerProgramRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

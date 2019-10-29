@@ -13,9 +13,11 @@
 import ApiClient from "../ApiClient";
 
 export class BalanceChartPoint { 
-    public date?: Date;
-    public managerFunds?: number;
-    public investorsFunds?: number;
+    public 'date'?: Date;
+    public 'managerFunds'?: number;
+    public 'investorsFunds'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: BalanceChartPoint = new BalanceChartPoint()): BalanceChartPoint {
         if (data) {
@@ -34,5 +36,7 @@ export class BalanceChartPoint {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

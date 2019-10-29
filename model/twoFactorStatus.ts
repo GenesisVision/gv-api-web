@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class TwoFactorStatus { 
-    public twoFactorEnabled?: boolean;
+    public 'twoFactorEnabled'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: TwoFactorStatus = new TwoFactorStatus()): TwoFactorStatus {
         if (data) {
@@ -26,5 +28,7 @@ export class TwoFactorStatus {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class RecoveryCode { 
-    public code?: string;
-    public isActive?: boolean;
+    public 'code'?: string;
+    public 'isActive'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: RecoveryCode = new RecoveryCode()): RecoveryCode {
         if (data) {
@@ -30,5 +32,7 @@ export class RecoveryCode {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

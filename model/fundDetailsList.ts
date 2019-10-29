@@ -16,17 +16,19 @@ import { ProfitChart } from './profitChart';
 import ApiClient from "../ApiClient";
 
 export class FundDetailsList { 
-    public id?: string;
-    public logo?: string;
-    public url?: string;
-    public color?: string;
-    public title?: string;
-    public description?: string;
-    public creationDate?: Date;
-    public totalAssetsCount?: number;
-    public topFundAssets?: [FundAssetPercent];
-    public chart?: ProfitChart;
-    public personalDetails?: PersonalFundDetailsList;
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'description'?: string;
+    public 'creationDate'?: Date;
+    public 'totalAssetsCount'?: number;
+    public 'topFundAssets'?: [FundAssetPercent];
+    public 'chart'?: ProfitChart;
+    public 'personalDetails'?: PersonalFundDetailsList;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundDetailsList = new FundDetailsList()): FundDetailsList {
         if (data) {
@@ -69,5 +71,7 @@ export class FundDetailsList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

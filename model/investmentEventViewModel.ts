@@ -17,17 +17,19 @@ import { InvestmentEventItemViewModel } from './investmentEventItemViewModel';
 import ApiClient from "../ApiClient";
 
 export class InvestmentEventViewModel { 
-    public title?: string;
-    public icon?: string;
-    public date?: Date;
-    public assetDetails?: AssetDetails;
-    public amount?: number;
-    public currency?: InvestmentEventViewModel.CurrencyEnum;
-    public changeState?: ChangeState;
-    public extendedInfo?: [InvestmentEventItemViewModel];
-    public feesInfo?: [FeeDetails];
-    public totalFeesAmount?: number;
-    public totalFeesCurrency?: InvestmentEventViewModel.TotalFeesCurrencyEnum;
+    public 'title'?: string;
+    public 'icon'?: string;
+    public 'date'?: Date;
+    public 'assetDetails'?: AssetDetails;
+    public 'amount'?: number;
+    public 'currency'?: InvestmentEventViewModel.CurrencyEnum;
+    public 'changeState'?: ChangeState;
+    public 'extendedInfo'?: [InvestmentEventItemViewModel];
+    public 'feesInfo'?: [FeeDetails];
+    public 'totalFeesAmount'?: number;
+    public 'totalFeesCurrency'?: InvestmentEventViewModel.TotalFeesCurrencyEnum;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: InvestmentEventViewModel = new InvestmentEventViewModel()): InvestmentEventViewModel {
         if (data) {
@@ -74,5 +76,7 @@ export namespace InvestmentEventViewModel {
     export type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     export type TotalFeesCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 }
+
+//modelGenericEnums.mustache
 
 

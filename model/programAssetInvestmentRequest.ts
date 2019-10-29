@@ -13,9 +13,11 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramAssetInvestmentRequest { 
-    public isWithdrawAll?: boolean;
-    public successFee?: number;
-    public entryFee?: number;
+    public 'isWithdrawAll'?: boolean;
+    public 'successFee'?: number;
+    public 'entryFee'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramAssetInvestmentRequest = new ProgramAssetInvestmentRequest()): ProgramAssetInvestmentRequest {
         if (data) {
@@ -34,5 +36,7 @@ export class ProgramAssetInvestmentRequest {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

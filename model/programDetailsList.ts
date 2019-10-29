@@ -17,20 +17,22 @@ import { ProgramTag } from './programTag';
 import ApiClient from "../ApiClient";
 
 export class ProgramDetailsList { 
-    public id?: string;
-    public logo?: string;
-    public url?: string;
-    public color?: string;
-    public title?: string;
-    public creationDate?: Date;
-    public currency?: Currency;
-    public level?: number;
-    public levelProgress?: number;
-    public periodDuration?: number;
-    public availableToInvest?: number;
-    public personalDetails?: PersonalProgramDetailsList;
-    public tags?: [ProgramTag];
-    public chart?: ProfitChart;
+    public 'id'?: string;
+    public 'logo'?: string;
+    public 'url'?: string;
+    public 'color'?: string;
+    public 'title'?: string;
+    public 'creationDate'?: Date;
+    public 'currency'?: Currency;
+    public 'level'?: number;
+    public 'levelProgress'?: number;
+    public 'periodDuration'?: number;
+    public 'availableToInvest'?: number;
+    public 'personalDetails'?: PersonalProgramDetailsList;
+    public 'tags'?: [ProgramTag];
+    public 'chart'?: ProfitChart;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramDetailsList = new ProgramDetailsList()): ProgramDetailsList {
         if (data) {
@@ -82,5 +84,7 @@ export class ProgramDetailsList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

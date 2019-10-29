@@ -14,8 +14,10 @@ import { CopyTradingAccountInfo } from './copyTradingAccountInfo';
 import ApiClient from "../ApiClient";
 
 export class CopyTradingAccountsList { 
-    public accounts?: [CopyTradingAccountInfo];
-    public total?: number;
+    public 'accounts'?: [CopyTradingAccountInfo];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: CopyTradingAccountsList = new CopyTradingAccountsList()): CopyTradingAccountsList {
         if (data) {
@@ -31,5 +33,7 @@ export class CopyTradingAccountsList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

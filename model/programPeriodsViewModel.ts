@@ -14,8 +14,10 @@ import { ProgramPeriodViewModel } from './programPeriodViewModel';
 import ApiClient from "../ApiClient";
 
 export class ProgramPeriodsViewModel { 
-    public periods?: [ProgramPeriodViewModel];
-    public total?: number;
+    public 'periods'?: [ProgramPeriodViewModel];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramPeriodsViewModel = new ProgramPeriodsViewModel()): ProgramPeriodsViewModel {
         if (data) {
@@ -31,5 +33,7 @@ export class ProgramPeriodsViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

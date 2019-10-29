@@ -14,8 +14,10 @@ import { SignalTradingEvent } from './signalTradingEvent';
 import ApiClient from "../ApiClient";
 
 export class SignalTradingEvents { 
-    public events?: [SignalTradingEvent];
-    public total?: number;
+    public 'events'?: [SignalTradingEvent];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: SignalTradingEvents = new SignalTradingEvents()): SignalTradingEvents {
         if (data) {
@@ -31,5 +33,7 @@ export class SignalTradingEvents {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,7 +13,9 @@
 import ApiClient from "../ApiClient";
 
 export class PowResult { 
-    public prefix?: string;
+    public 'prefix'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PowResult = new PowResult()): PowResult {
         if (data) {
@@ -26,5 +28,7 @@ export class PowResult {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

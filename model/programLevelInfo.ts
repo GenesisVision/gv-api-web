@@ -13,15 +13,17 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramLevelInfo { 
-    public isKycPassed?: boolean;
-    public level?: number;
-    public levelProgressPercent?: number;
-    public genesisRatio?: number;
-    public programAge?: number;
-    public weightedVolumeScale?: number;
-    public managerBalance?: number;
-    public investmentScale?: number;
-    public totalAvailableToInvest?: number;
+    public 'isKycPassed'?: boolean;
+    public 'level'?: number;
+    public 'levelProgressPercent'?: number;
+    public 'genesisRatio'?: number;
+    public 'programAge'?: number;
+    public 'weightedVolumeScale'?: number;
+    public 'managerBalance'?: number;
+    public 'investmentScale'?: number;
+    public 'totalAvailableToInvest'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramLevelInfo = new ProgramLevelInfo()): ProgramLevelInfo {
         if (data) {
@@ -58,5 +60,7 @@ export class ProgramLevelInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

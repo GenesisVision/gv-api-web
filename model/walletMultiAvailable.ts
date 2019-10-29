@@ -14,7 +14,9 @@ import { WalletBaseData } from './walletBaseData';
 import ApiClient from "../ApiClient";
 
 export class WalletMultiAvailable { 
-    public wallets?: [WalletBaseData];
+    public 'wallets'?: [WalletBaseData];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: WalletMultiAvailable = new WalletMultiAvailable()): WalletMultiAvailable {
         if (data) {
@@ -27,5 +29,7 @@ export class WalletMultiAvailable {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,19 +13,21 @@
 import ApiClient from "../ApiClient";
 
 export class LevelsParamsInfo { 
-    public minAvailableToInvest?: number;
-    public maxAvailableToInvest?: number;
-    public unverifiedAvailableToInvest?: number;
-    public genesisRatioMin?: number;
-    public genesisRatioMax?: number;
-    public genesisRatioHighRisk?: number;
-    public volumeScaleMin?: number;
-    public volumeScaleMax?: number;
-    public programAgeMax?: number;
-    public ageByVolumeMax?: number;
-    public investmentScaleMin?: number;
-    public investmentScaleMax?: number;
-    public investmentScaleHighRisk?: number;
+    public 'minAvailableToInvest'?: number;
+    public 'maxAvailableToInvest'?: number;
+    public 'unverifiedAvailableToInvest'?: number;
+    public 'genesisRatioMin'?: number;
+    public 'genesisRatioMax'?: number;
+    public 'genesisRatioHighRisk'?: number;
+    public 'volumeScaleMin'?: number;
+    public 'volumeScaleMax'?: number;
+    public 'programAgeMax'?: number;
+    public 'ageByVolumeMax'?: number;
+    public 'investmentScaleMin'?: number;
+    public 'investmentScaleMax'?: number;
+    public 'investmentScaleHighRisk'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: LevelsParamsInfo = new LevelsParamsInfo()): LevelsParamsInfo {
         if (data) {
@@ -74,5 +76,7 @@ export class LevelsParamsInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,6 +13,8 @@
 import ApiClient from "../ApiClient";
 
 export class GeeTestDetails { 
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: GeeTestDetails = new GeeTestDetails()): GeeTestDetails {
         if (data) {
@@ -22,5 +24,7 @@ export class GeeTestDetails {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

@@ -13,11 +13,13 @@
 import ApiClient from "../ApiClient";
 
 export class UserCommissionData { 
-    public isPayingCommissionInGvt?: boolean;
-    public gvtHolderTradingFee?: number;
-    public gvtHolderDiscount?: number;
-    public regularTradingFee?: number;
-    public regularDiscount?: number;
+    public 'isPayingCommissionInGvt'?: boolean;
+    public 'gvtHolderTradingFee'?: number;
+    public 'gvtHolderDiscount'?: number;
+    public 'regularTradingFee'?: number;
+    public 'regularDiscount'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: UserCommissionData = new UserCommissionData()): UserCommissionData {
         if (data) {
@@ -42,5 +44,7 @@ export class UserCommissionData {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

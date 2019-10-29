@@ -13,8 +13,10 @@
 import ApiClient from "../ApiClient";
 
 export class DashboardTimeframeProfit { 
-    public profit?: number;
-    public profitPercent?: number;
+    public 'profit'?: number;
+    public 'profitPercent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardTimeframeProfit = new DashboardTimeframeProfit()): DashboardTimeframeProfit {
         if (data) {
@@ -30,5 +32,7 @@ export class DashboardTimeframeProfit {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

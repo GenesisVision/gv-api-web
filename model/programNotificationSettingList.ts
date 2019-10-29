@@ -14,15 +14,17 @@ import { NotificationSettingViewModel } from './notificationSettingViewModel';
 import ApiClient from "../ApiClient";
 
 export class ProgramNotificationSettingList { 
-    public level?: number;
-    public levelProgress?: number;
-    public settingsCustom?: [NotificationSettingViewModel];
-    public assetId?: string;
-    public title?: string;
-    public url?: string;
-    public logo?: string;
-    public color?: string;
-    public settingsGeneral?: [NotificationSettingViewModel];
+    public 'level'?: number;
+    public 'levelProgress'?: number;
+    public 'settingsCustom'?: [NotificationSettingViewModel];
+    public 'assetId'?: string;
+    public 'title'?: string;
+    public 'url'?: string;
+    public 'logo'?: string;
+    public 'color'?: string;
+    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramNotificationSettingList = new ProgramNotificationSettingList()): ProgramNotificationSettingList {
         if (data) {
@@ -59,5 +61,7 @@ export class ProgramNotificationSettingList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

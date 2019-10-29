@@ -14,8 +14,10 @@ import { DashboardAsset } from './dashboardAsset';
 import ApiClient from "../ApiClient";
 
 export class DashboardAssets { 
-    public assets?: [DashboardAsset];
-    public othersPercent?: number;
+    public 'assets'?: [DashboardAsset];
+    public 'othersPercent'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: DashboardAssets = new DashboardAssets()): DashboardAssets {
         if (data) {
@@ -31,5 +33,7 @@ export class DashboardAssets {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

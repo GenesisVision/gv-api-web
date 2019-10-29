@@ -333,7 +333,7 @@ export class NotificationsService {
 
   }
 
-  public readNotification(id: string, authorization: string): CancelablePromise<{}>{
+  public readNotification(id: string, authorization: string): CancelablePromise<null>{
     return this.readNotificationWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -376,7 +376,7 @@ export class NotificationsService {
 
   }
 
-  public removeNotificationsSettings(id: string, authorization: string): CancelablePromise<{}>{
+  public removeNotificationsSettings(id: string, authorization: string): CancelablePromise<null>{
     return this.removeNotificationsSettingsWithHttpInfo(id, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;

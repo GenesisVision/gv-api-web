@@ -14,8 +14,10 @@ import { CaptchaCheckResult } from './captchaCheckResult';
 import ApiClient from "../ApiClient";
 
 export class ForgotPasswordViewModel { 
-    public email?: string;
-    public captchaCheckResult?: CaptchaCheckResult;
+    public 'email': string;
+    public 'captchaCheckResult'?: CaptchaCheckResult;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ForgotPasswordViewModel = new ForgotPasswordViewModel()): ForgotPasswordViewModel {
         if (data) {
@@ -31,5 +33,7 @@ export class ForgotPasswordViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

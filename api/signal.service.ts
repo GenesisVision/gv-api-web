@@ -35,7 +35,7 @@ export class SignalService {
 
   public attachSlaveCommonToMaster(id: string, authorization: string, opts?: { 
     model?: AttachToExternalSignalProviderCommon
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.attachSlaveCommonToMasterWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -82,7 +82,7 @@ export class SignalService {
 
   public attachSlaveToMaster(id: string, authorization: string, opts?: { 
     model?: AttachToSignalProvider
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.attachSlaveToMasterWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -129,7 +129,7 @@ export class SignalService {
 
   public attachSlaveToMaster_1(id: string, authorization: string, opts?: { 
     model?: AttachToExternalSignalProviderExt
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.attachSlaveToMaster_1WithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -176,7 +176,7 @@ export class SignalService {
 
   public closeTrade(id: string, authorization: string, opts?: { 
     programId?: string
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.closeTradeWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -266,7 +266,7 @@ export class SignalService {
 
   public detachSlaveFromMaster(id: string, authorization: string, opts?: { 
     model?: DetachFromSignalProvider
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.detachSlaveFromMasterWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -685,7 +685,7 @@ export class SignalService {
 
   public updateSubscriptionSettings(id: string, authorization: string, opts?: { 
     model?: AttachToSignalProvider
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.updateSubscriptionSettingsWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

@@ -15,16 +15,18 @@ import { ProgramTag } from './programTag';
 import ApiClient from "../ApiClient";
 
 export class Broker { 
-    public name?: string;
-    public description?: string;
-    public logo?: string;
-    public terms?: string;
-    public assets?: string;
-    public fee?: number;
-    public leverageMin?: number;
-    public leverageMax?: number;
-    public accountTypes?: [BrokerAccountType];
-    public tags?: [ProgramTag];
+    public 'name'?: string;
+    public 'description'?: string;
+    public 'logo'?: string;
+    public 'terms'?: string;
+    public 'assets'?: string;
+    public 'fee'?: number;
+    public 'leverageMin'?: number;
+    public 'leverageMax'?: number;
+    public 'accountTypes'?: [BrokerAccountType];
+    public 'tags'?: [ProgramTag];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: Broker = new Broker()): Broker {
         if (data) {
@@ -64,5 +66,7 @@ export class Broker {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

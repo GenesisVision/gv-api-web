@@ -14,8 +14,10 @@ import { CopyTradingAccountInfo } from './copyTradingAccountInfo';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelCopyTradingAccountInfo { 
-    public items?: [CopyTradingAccountInfo];
-    public total?: number;
+    public 'items'?: [CopyTradingAccountInfo];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ItemsViewModelCopyTradingAccountInfo = new ItemsViewModelCopyTradingAccountInfo()): ItemsViewModelCopyTradingAccountInfo {
         if (data) {
@@ -31,5 +33,7 @@ export class ItemsViewModelCopyTradingAccountInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

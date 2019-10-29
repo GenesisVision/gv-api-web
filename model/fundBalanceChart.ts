@@ -14,8 +14,10 @@ import { BalanceChartPoint } from './balanceChartPoint';
 import ApiClient from "../ApiClient";
 
 export class FundBalanceChart { 
-    public balance?: number;
-    public chart?: [BalanceChartPoint];
+    public 'balance'?: number;
+    public 'chart'?: [BalanceChartPoint];
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: FundBalanceChart = new FundBalanceChart()): FundBalanceChart {
         if (data) {
@@ -31,5 +33,7 @@ export class FundBalanceChart {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

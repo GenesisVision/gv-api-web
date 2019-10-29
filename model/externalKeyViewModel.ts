@@ -13,10 +13,12 @@
 import ApiClient from "../ApiClient";
 
 export class ExternalKeyViewModel { 
-    public id?: string;
-    public title?: string;
-    public dateAdd?: Date;
-    public exchangeName?: string;
+    public 'id'?: string;
+    public 'title'?: string;
+    public 'dateAdd'?: Date;
+    public 'exchangeName'?: string;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: ExternalKeyViewModel = new ExternalKeyViewModel()): ExternalKeyViewModel {
         if (data) {
@@ -38,5 +40,7 @@ export class ExternalKeyViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

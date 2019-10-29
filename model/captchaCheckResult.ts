@@ -15,9 +15,11 @@ import { PowResult } from './powResult';
 import ApiClient from "../ApiClient";
 
 export class CaptchaCheckResult { 
-    public id?: string;
-    public pow?: PowResult;
-    public geeTest?: GeeTestResult;
+    public 'id'?: string;
+    public 'pow'?: PowResult;
+    public 'geeTest'?: GeeTestResult;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: CaptchaCheckResult = new CaptchaCheckResult()): CaptchaCheckResult {
         if (data) {
@@ -36,5 +38,7 @@ export class CaptchaCheckResult {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

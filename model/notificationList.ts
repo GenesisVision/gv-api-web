@@ -14,8 +14,10 @@ import { NotificationViewModel } from './notificationViewModel';
 import ApiClient from "../ApiClient";
 
 export class NotificationList { 
-    public notifications?: [NotificationViewModel];
-    public total?: number;
+    public 'notifications'?: [NotificationViewModel];
+    public 'total'?: number;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: NotificationList = new NotificationList()): NotificationList {
         if (data) {
@@ -31,5 +33,7 @@ export class NotificationList {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

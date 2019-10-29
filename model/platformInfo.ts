@@ -16,9 +16,11 @@ import { FilterInfo } from './filterInfo';
 import ApiClient from "../ApiClient";
 
 export class PlatformInfo { 
-    public appVersionInfo?: AppVersion;
-    public filters?: FilterInfo;
-    public assetInfo?: AssetPlatformInfo;
+    public 'appVersionInfo'?: AppVersion;
+    public 'filters'?: FilterInfo;
+    public 'assetInfo'?: AssetPlatformInfo;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: PlatformInfo = new PlatformInfo()): PlatformInfo {
         if (data) {
@@ -37,5 +39,7 @@ export class PlatformInfo {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

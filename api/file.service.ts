@@ -23,7 +23,7 @@ export class FileService {
     this.apiClient = apiClient || ApiClient.instance;
   }
 
-  public getFile(id: string): CancelablePromise<{}>{
+  public getFile(id: string): CancelablePromise<null>{
     return this.getFileWithHttpInfo(id)
       .then(function(response_and_data) {
         return response_and_data.data;

@@ -71,7 +71,7 @@ export class DashboardService {
 
   }
 
-  public getChart(authorization: string): CancelablePromise<{}>{
+  public getChart(authorization: string): CancelablePromise<null>{
     return this.getChartWithHttpInfo(authorization)
       .then(function(response_and_data) {
         return response_and_data.data;

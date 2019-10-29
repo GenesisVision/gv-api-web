@@ -14,9 +14,11 @@ import { Currency } from './currency';
 import ApiClient from "../ApiClient";
 
 export class InvestmentEventItemViewModel { 
-    public title?: string;
-    public amount?: number;
-    public currency?: Currency;
+    public 'title'?: string;
+    public 'amount'?: number;
+    public 'currency'?: Currency;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: InvestmentEventItemViewModel = new InvestmentEventItemViewModel()): InvestmentEventItemViewModel {
         if (data) {
@@ -35,5 +37,7 @@ export class InvestmentEventItemViewModel {
 }
 
 
+
+//modelGenericEnums.mustache
 
 

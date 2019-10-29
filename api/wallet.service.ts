@@ -29,7 +29,7 @@ export class WalletService {
     this.apiClient = apiClient || ApiClient.instance;
   }
 
-  public cancelWithdrawalRequest(txId: string, authorization: string): CancelablePromise<{}>{
+  public cancelWithdrawalRequest(txId: string, authorization: string): CancelablePromise<null>{
     return this.cancelWithdrawalRequestWithHttpInfo(txId, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -75,7 +75,7 @@ export class WalletService {
   public confirmWithdrawalRequestByCode(opts?: { 
     requestId?: string, 
     code?: string
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.confirmWithdrawalRequestByCodeWithHttpInfo(opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -115,7 +115,7 @@ export class WalletService {
 
   public createWithdrawalRequest(authorization: string, opts?: { 
     model?: CreateWithdrawalRequestModel
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.createWithdrawalRequestWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -317,7 +317,7 @@ export class WalletService {
 
   }
 
-  public resendWithdrawalRequestEmail(txId: string, authorization: string): CancelablePromise<{}>{
+  public resendWithdrawalRequestEmail(txId: string, authorization: string): CancelablePromise<null>{
     return this.resendWithdrawalRequestEmailWithHttpInfo(txId, authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -360,7 +360,7 @@ export class WalletService {
 
   }
 
-  public switchPayFeeInGvtOff(authorization: string): CancelablePromise<{}>{
+  public switchPayFeeInGvtOff(authorization: string): CancelablePromise<null>{
     return this.switchPayFeeInGvtOffWithHttpInfo(authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -398,7 +398,7 @@ export class WalletService {
 
   }
 
-  public switchPayFeeInGvtOn(authorization: string): CancelablePromise<{}>{
+  public switchPayFeeInGvtOn(authorization: string): CancelablePromise<null>{
     return this.switchPayFeeInGvtOnWithHttpInfo(authorization)
       .then(function(response_and_data) {
         return response_and_data.data;
@@ -438,7 +438,7 @@ export class WalletService {
 
   public transfer(authorization: string, opts?: { 
     request?: InternalTransferRequest
-  }): CancelablePromise<{}>{
+  }): CancelablePromise<null>{
     return this.transferWithHttpInfo(authorization, opts)
       .then(function(response_and_data) {
         return response_and_data.data;

@@ -14,15 +14,17 @@ import { BrokerTradeServerType } from './brokerTradeServerType';
 import ApiClient from "../ApiClient";
 
 export class BrokerAccountType { 
-    public id?: string;
-    public name?: string;
-    public description?: string;
-    public type?: BrokerTradeServerType;
-    public leverages?: [number];
-    public currencies?: [string];
-    public minimumDepositsAmount?: {String: number};
-    public isKycRequired?: boolean;
-    public isSignalsAvailable?: boolean;
+    public 'id'?: string;
+    public 'name'?: string;
+    public 'description'?: string;
+    public 'type'?: BrokerTradeServerType;
+    public 'leverages'?: [number];
+    public 'currencies'?: [string];
+    public 'minimumDepositsAmount'?: {String: number};
+    public 'isKycRequired'?: boolean;
+    public 'isSignalsAvailable'?: boolean;
+    constructor() {
+    }
 
     static constructFromObject(data: {[key: string]: any}, obj: BrokerAccountType = new BrokerAccountType()): BrokerAccountType {
         if (data) {
@@ -59,5 +61,7 @@ export class BrokerAccountType {
 }
 
 
+
+//modelGenericEnums.mustache
 
 
