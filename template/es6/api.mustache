@@ -52,10 +52,10 @@ export default class <classname> {
       let accepts = [<#produces>'<& mediaType>'<#hasMore>, </hasMore></produces>];
       let returnType = <#returnType><&returnType></returnType><^returnType>null</returnType>;
 
-      return this.apiClient.callApi(
-        '<&path>', '<httpMethod>',
+      return this.apiClient.callApi<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}null{{/returnType}}>(
+        '{{{path}}}', '{{{httpMethod}}}',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType<^usePromises>, callback</usePromises>
+        authNames, contentTypes, accepts, returnType
       );
     }
 <#usePromises>

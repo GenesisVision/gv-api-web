@@ -1,0 +1,11 @@
+{{#hasEnums}}
+
+export namespace {{classname}} {
+{{#vars}}
+    {{#isEnum}}
+    export type {{enumName}} = {{#allowableValues}}{{#enumVars}}{{{value}}}{{^-last}} | {{/-last}}{{/enumVars}}{{/allowableValues}};
+    {{/isEnum}}
+{{/vars}}
+}{{/hasEnums}}
+
+//modelGenericEnums.mustache

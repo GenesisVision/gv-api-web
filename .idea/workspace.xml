@@ -2,252 +2,182 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="remove pow">
-      <change beforePath="$PROJECT_DIR$/distribution/ApiClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/AuthApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/BrokersApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/FileApi.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/ApiClient_interface.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/README.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/api.module.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/api.service.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/apiInterface.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/apis.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/configuration.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/encoder.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/index.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/licenseInfo.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/model.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelAlias.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelEnum.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelGenericAdditionalProperties.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelGenericEnums.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/modelTaggedUnion.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/models.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/ng-package.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/package.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/rxjs-operators.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/tsconfig.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/typings.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/typescript/variables.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.swagger-codegen/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/.swagger-codegen/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bash/generate.js" beforeDir="false" afterPath="$PROJECT_DIR$/bash/generate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/distribution/api/FundsApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/InvestorApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ManagerApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/NotificationsApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/PlatformApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ProfileApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/ProgramsApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/RateApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/SearchApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/SignalApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/api/WalletApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AmountWithCurrency.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AndroidAppVersion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AndroidVersion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AssetSelection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AssetsValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/AttachToSignalProviderInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BalanceChartElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BlockchainInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/Broker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BrokerAccountType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/BrokersInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/CaptchaCheckResult.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/CaptchaDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ChangePasswordViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ChartSimple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ConvertingDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/CopyTradingAccountInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/CopyTradingAccountsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/CreateWithdrawalRequestModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardChartValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardPortfolioEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardProgramDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/DashboardSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/Enums.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ErrorMessage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ErrorViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ExternalTransactionDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FcmTokenViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ForgotPasswordViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetPart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetPartWithIcon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetPercent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundAssetsListInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundBalanceChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetailsFull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundDetailsListStatistic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundFacet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundInvestInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundNotificationSettingList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundProfitChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundSets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundStatistic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundWithdrawInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/FundsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/GeeTestDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/GeeTestResult.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/IOsAppVersion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/InternalTransferRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LevelInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LevelUpSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/LoginViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerAssets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerFundWithdrawInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerNotificationSettingList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerOverview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerPortfolioEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProfileDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProgramCreateResult.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerProgramWithdrawInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerSimpleFund.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagerSimpleProgram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ManagersList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletExternalTransaction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletExternalTransactionsViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletFilters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletTransaction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/MultiWalletTransactionsViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NewFundRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NewProgramRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationSettingList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationSettingViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/NotificationViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/OrderModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/OrderProgramData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/OrderSignalModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/OrderSignalProgramInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/OtherAssetsValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PasswordModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PeriodDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PersonalFundDetailsFull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PersonalProgramDetailsFull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PersonalSignalDetailsFull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformAsset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformAssets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformCurrency.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PlatformStatistic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PowDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/PowResult.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProfileFullViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProfileHeaderViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProfilePublic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramBalanceChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramBalanceChartElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetailsFull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetailsListStatistic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramDetailsRating.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramFacet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramFilters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramInvestInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramMinimumDeposit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramNotificationSettingList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramPeriodViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramPeriodsViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramProfitChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramPwdUpdate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramRequest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramRequests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramSets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramStatistic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramTag.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramTransactionDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramUpdate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramWithdrawInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsLevelsInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ProgramsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RateItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RatesModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RatesModelRates.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RecoveryCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RecoveryCodesViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RegisterInvestorViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/RegisterManagerViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ResendConfirmationViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ResetPasswordViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/SearchViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/SignalDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/SignalSubscription.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/SignalsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TradesSignalViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TradesViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TransactionDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TwoFactorAuthenticator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TwoFactorAuthenticatorConfirm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TwoFactorCodeModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/TwoFactorStatus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/UpdatePersonalDetailViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/UpdateProfileViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/UploadResult.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/UserCommissionData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/ValueChartBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletBaseData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletMultiAvailable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletMultiSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletTransaction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletTransactionsViewModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletWithdrawalInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletsGrandTotal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WalletsInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WithdrawalInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/model/WithdrawalSummary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribution/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/SocialLinkViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution/model/UpdateSocialLinkViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AmountWithCurrency.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AndroidAppVersion.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AndroidVersion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetEvent.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetFilterType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetInvestmentStatus.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AssetSelection.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AssetType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AssetsValue.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AttachToExternalSignalProviderExt.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AttachToSignalProvider.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AttachToSignalProviderInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/AuthApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BalanceChartElement.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BalanceChartElementOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BinanceKey.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BlockchainInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Broker.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BrokerAccountType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokerAccountTypeOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokerDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokerDetailsOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokerOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokerTradeServerType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BrokersApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/BrokersInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokersInfoOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokersProgramInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BrokersProgramInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CaptchaCheckResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CaptchaDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CaptchaType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ChangeBrokerProgramRequest.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ChangeBrokerProgramRequestOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ChangePasswordViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ChangeState.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ChartSimple.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ConvertingDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CopyTradingAccountInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CopyTradingAccountsList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/CreateWithdrawalRequestModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Currency.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardChartValue.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardPortfolioEvent.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardPortfolioEvents.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardProgramDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DashboardProgramDetailsOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/DashboardSummary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DetachFromSignalProvider.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Enums.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EnumsOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ErrorCodes.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ErrorMessage.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ErrorViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventFiltersOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventInvestorItemFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventInvestorItemFiltersOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventItemFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventItemFiltersOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ExternalKeyAddViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ExternalKeyViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ExternalKeysViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ExternalTransactionDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FacetSortType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FcmTokenViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FeeDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FeeType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FileApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FilterModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FilterModelOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FinancialStatistic.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ForgotPasswordViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundAssetInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundAssetPart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundAssetPartDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundAssetPartWithIcon.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundAssetPercent.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundAssetsListInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundAssetsState.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundBalanceChart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundBalanceChartOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundDetailsFull.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundDetailsFullOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundDetailsListStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundDetailsOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundEquityChartElement.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundEquityChartElementOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundFacet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundFiltersOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundInvestInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundMandatoryAsset.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundMandatoryAssets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundNotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundProfitChart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundProfitChartOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundSets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundStatisticOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundWithdrawInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundWithdrawInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundsApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundsFilterSorting.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/FundsList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FundsListOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/GeeTestDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/GeeTestResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/IOsAppVersion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/IdModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/InternalTransferRequest.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentEventItemViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentEventLocation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentEventType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentEventViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentEventViewModels.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentProgramStatus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentProgramType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentRequestStatus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestmentRequestType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/InvestorApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/InvestorsFinancialStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ItemsViewModelCopyTradingAccountInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ItemsViewModelReferralFriend.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ItemsViewModelRewardDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LevelUpSummary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LevelsParamsInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/LoginViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerAssets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerDashboard.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerEvent.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerFinancialStatistic.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerFundWithdrawInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerFundWithdrawInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerNotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerOverview.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerPortfolioEvent.md" beforeDir="false" />
@@ -256,100 +186,176 @@
       <change beforePath="$PROJECT_DIR$/docs/ManagerProfileDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerProgramCreateResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerProgramWithdrawInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagerProgramWithdrawInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerSimpleFund.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagerSimpleProgram.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ManagersList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ManagersListOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MigrationRequest.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MigrationRequestOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransaction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransactionType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletExternalTransactionsViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletFiltersOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletTransaction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletTransactionStatus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MultiWalletTransactionType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/MultiWalletTransactionsViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NewExternalSignalAccountRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NewFundRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NewProgramRequest.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NotificationSettingConditionType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationSettingViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NotificationType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/NotificationsApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderModelSignalData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderProgramData.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderSignalFee.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderSignalModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OrderSignalProgramInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OrderTradingFee.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/OtherAssetsValue.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PartnershipApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PartnershipDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PasswordModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PeriodDate.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PeriodStatus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PersonalCopyTradingAccountInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PersonalFundDetailsFull.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PersonalFundDetailsFullOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PersonalProgramDetailsFull.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PersonalProgramDetailsFullOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PersonalSignalDetailsFull.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformAsset.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformAssets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformCurrency.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PlatformCurrencyOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PlatformInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/PlatformStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PlatformStatisticOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PoWDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PoWResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileFullViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfileHeaderViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProfilePublic.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramBalanceChart.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramBalanceChartElement.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramBalanceChartElementOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramBalanceChartOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramCreateResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsFull.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsFullOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsListStatistic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramDetailsRating.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramFacet.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramFilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramFiltersOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramInvestInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramInvestInfoOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramLevelInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramMinimumDeposit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramMinimumDepositOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramNotificationSettingList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramPeriodViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramPeriodsViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramProfitChart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramProfitChartOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramPwdUpdate.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramRequest.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramRequestOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramRequests.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramRequestsOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramSets.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramStatistic.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramTag.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramTransactionDetails.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramUpdate.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramWithdrawInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramWithdrawInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramsApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramsFilterSorting.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramsInfo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramsInfoOld.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramsLevelsInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ProgramsList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProgramsListOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PublicProfile.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RateApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RateItem.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RatesModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RatesModelRates.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ReallocationModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ReallocationsViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RecoveryCode.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RecoveryCodesViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ReferralFriend.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RegisterInvestorViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/RegisterManagerViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RegisterViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ResendConfirmationViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ResetPasswordViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RewardDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RewardsHistoryViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SearchApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SearchViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SearchViewModelOld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SecureAlgorithm.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalAccountDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalAccountsList.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalDataMaster.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalDetachMode.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalFee.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalProviderSubscribers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalSubscriber.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalSubscriberStatus.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalSubscription.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalTradingEvent.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SignalTradingEvents.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/SignalsList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SocialLinkType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SocialLinkViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SocialLinksViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SubscriptionMode.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Timeframe.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TotalCommission.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TradeDirectionType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TradeEntryType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TradesDelay.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TradesSignalViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TradesViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TransactionDetails.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TransactionDetailsType.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TransferRequestType.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TwoFactorAuthenticator.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TwoFactorAuthenticatorConfirm.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TwoFactorCodeModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TwoFactorCodeWithPassword.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/TwoFactorStatus.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UpdatePersonalDetailViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UpdateProfileViewModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UpdateSocialLinkViewModel.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UploadResult.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/UserCommissionData.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserVerificationStatus.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/ValueChartBar.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletBaseData.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletData.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletDeposit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WalletDepositSummary.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletMultiAvailable.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WalletMultiSummary.md" beforeDir="false" />
@@ -361,7 +367,10 @@
       <change beforePath="$PROJECT_DIR$/docs/WalletsInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WithdrawalInfo.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/WithdrawalSummary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/git_push.sh.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/ApiClient.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/AuthApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/BrokersApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/FileApi.js" beforeDir="false" />
@@ -369,6 +378,7 @@
       <change beforePath="$PROJECT_DIR$/src/api/InvestorApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ManagerApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/NotificationsApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/PartnershipApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/PlatformApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ProfileApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ProgramsApi.js" beforeDir="false" />
@@ -380,61 +390,136 @@
       <change beforePath="$PROJECT_DIR$/src/model/AmountWithCurrency.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AndroidAppVersion.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AndroidVersion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetEvent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetFilterType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetInvestmentStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AssetSelection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssetType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AssetsValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AttachToExternalSignalProviderExt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AttachToSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AttachToSignalProviderInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BalanceChartElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BalanceChartElementOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BinanceKey.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BlockchainInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Broker.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BrokerAccountType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerAccountTypeOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerDetailsOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokerTradeServerType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BrokersInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokersInfoOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokersProgramInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BrokersProgramInfoOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CaptchaCheckResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CaptchaDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CaptchaType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ChangeBrokerProgramRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ChangeBrokerProgramRequestOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ChangePasswordViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ChangeState.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ChartSimple.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ConvertingDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CopyTradingAccountInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CopyTradingAccountsList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CreateWithdrawalRequestModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Currency.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardChartValue.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardPortfolioEvent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardPortfolioEvents.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardProgramDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DashboardProgramDetailsOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DashboardSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DetachFromSignalProvider.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EnumsOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ErrorCodes.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ErrorMessage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ErrorViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventFiltersOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventInvestorItemFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventInvestorItemFiltersOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventItemFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventItemFiltersOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ExternalKeyAddViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ExternalKeyViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ExternalKeysViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ExternalTransactionDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FacetSortType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FcmTokenViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FeeDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FeeType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FilterModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FilterModelOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FinancialStatistic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ForgotPasswordViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundAssetInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundAssetPart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundAssetPartDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundAssetPartWithIcon.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundAssetPercent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundAssetsListInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundAssetsState.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundBalanceChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundBalanceChartOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundDetailsFull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundDetailsFullOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundDetailsListStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundDetailsOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundEquityChartElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundEquityChartElementOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundFacet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundFiltersOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundInvestInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundMandatoryAsset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundMandatoryAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundProfitChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundProfitChartOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundSets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundStatisticOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundWithdrawInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundWithdrawInfoOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundsFilterSorting.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FundsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FundsListOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GeeTestDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GeeTestResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/IOsAppVersion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/IdModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/InternalTransferRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentEventItemViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentEventLocation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentEventType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentEventViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentEventViewModels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentProgramStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentProgramType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentRequestStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestmentRequestType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvestorsFinancialStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ItemsViewModelCopyTradingAccountInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ItemsViewModelReferralFriend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ItemsViewModelRewardDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LevelUpSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LevelsParamsInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LoginViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerDashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerEvent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerFinancialStatistic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerFundWithdrawInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerFundWithdrawInfoOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerOverview.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerPortfolioEvent.js" beforeDir="false" />
@@ -443,92 +528,167 @@
       <change beforePath="$PROJECT_DIR$/src/model/ManagerProfileDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerProgramCreateResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerProgramWithdrawInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagerProgramWithdrawInfoOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerSimpleFund.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagerSimpleProgram.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ManagersList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ManagersListOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MigrationRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MigrationRequestOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransaction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransactionType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletExternalTransactionsViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletFiltersOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransaction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransactionStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransactionType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MultiWalletTransactionsViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NewExternalSignalAccountRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NewFundRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NewProgramRequest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NotificationList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NotificationSettingConditionType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NotificationSettingViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/NotificationType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NotificationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderModelSignalData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderProgramData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderSignalFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderSignalModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OrderSignalProgramInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OrderTradingFee.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/OtherAssetsValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PartnershipDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PasswordModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PeriodDate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PeriodStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PersonalCopyTradingAccountInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PersonalFundDetailsFull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PersonalFundDetailsFullOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PersonalProgramDetailsFull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PersonalProgramDetailsFullOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PersonalSignalDetailsFull.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformAsset.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformAssets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformCurrency.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlatformCurrencyOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlatformInfoOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/PlatformStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlatformStatisticOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PowDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PowResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfileFullViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfileHeaderViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProfilePublic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramBalanceChart.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramBalanceChartElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramBalanceChartElementOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramBalanceChartOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramCreateResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsFull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsFullOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsListStatistic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramDetailsRating.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramFacet.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramFiltersOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramInvestInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramInvestInfoOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramLevelInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramMinimumDeposit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramMinimumDepositOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramNotificationSettingList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramPeriodViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramPeriodsViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramProfitChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramProfitChartOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramPwdUpdate.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramRequestOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramRequests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramRequestsOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramSets.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramStatistic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramTag.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramTransactionDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramUpdate.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramWithdrawInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramWithdrawInfoOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsFilterSorting.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramsInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsInfoOld.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramsLevelsInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ProgramsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProgramsListOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PublicProfile.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RateItem.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RatesModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RatesModelRates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ReallocationModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ReallocationsViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RecoveryCode.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RecoveryCodesViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ReferralFriend.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RegisterInvestorViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RegisterManagerViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RegisterViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ResendConfirmationViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ResetPasswordViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RewardDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RewardsHistoryViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SearchViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SearchViewModelOld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SecureAlgorithm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalAccountDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalAccountsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalDataMaster.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalDetachMode.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalFee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalProviderSubscribers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalSubscriber.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalSubscriberStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalSubscription.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalTradingEvent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SignalTradingEvents.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SignalsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SocialLinkType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SocialLinkViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SocialLinksViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SubscriptionMode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Timeframe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TotalCommission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradeDirectionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradeEntryType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TradesDelay.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TradesSignalViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TradesViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TransactionDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TransactionDetailsType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TransferRequestType.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TwoFactorAuthenticator.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TwoFactorAuthenticatorConfirm.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TwoFactorCodeModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TwoFactorCodeWithPassword.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TwoFactorStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UpdatePersonalDetailViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UpdateProfileViewModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UpdateSocialLinkViewModel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UploadResult.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UserCommissionData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UserVerificationStatus.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ValueChartBar.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WalletBaseData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WalletData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletDeposit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WalletDepositSummary.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WalletInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WalletMultiAvailable.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WalletMultiSummary.js" beforeDir="false" />
@@ -540,6 +700,9 @@
       <change beforePath="$PROJECT_DIR$/src/model/WalletsInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WithdrawalInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WithdrawalSummary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-codegen-cli.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-codegen-cli.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/es6/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/es6/api.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/AuthApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/BrokersApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/FileApi.spec.js" beforeDir="false" />
@@ -547,6 +710,7 @@
       <change beforePath="$PROJECT_DIR$/test/api/InvestorApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/ManagerApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/NotificationsApi.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/PartnershipApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/PlatformApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/ProfileApi.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/ProgramsApi.spec.js" beforeDir="false" />
@@ -557,61 +721,136 @@
       <change beforePath="$PROJECT_DIR$/test/model/AmountWithCurrency.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AndroidAppVersion.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AndroidVersion.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetEvent.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetFilterType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetInvestmentStatus.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AssetSelection.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AssetType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AssetsValue.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AttachToExternalSignalProviderExt.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/AttachToSignalProvider.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/AttachToSignalProviderInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BalanceChartElement.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BalanceChartElementOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BinanceKey.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BlockchainInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/Broker.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BrokerAccountType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokerAccountTypeOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokerDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokerDetailsOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokerOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokerTradeServerType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/BrokersInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokersInfoOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokersProgramInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/BrokersProgramInfoOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CaptchaCheckResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CaptchaDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/CaptchaType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ChangeBrokerProgramRequest.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ChangeBrokerProgramRequestOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ChangePasswordViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ChangeState.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ChartSimple.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ConvertingDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CopyTradingAccountInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CopyTradingAccountsList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CreateWithdrawalRequestModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/Currency.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardChartValue.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardPortfolioEvent.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardPortfolioEvents.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardProgramDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/DashboardProgramDetailsOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/DashboardSummary.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/DetachFromSignalProvider.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/Enums.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EnumsOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ErrorCodes.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ErrorMessage.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ErrorViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventFiltersOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventInvestorItemFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventInvestorItemFiltersOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventItemFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/EventItemFiltersOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ExternalKeyAddViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ExternalKeyViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ExternalKeysViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ExternalTransactionDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FacetSortType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FcmTokenViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FeeDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FeeType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FilterModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FilterModelOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FinancialStatistic.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ForgotPasswordViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundAssetInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundAssetPart.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundAssetPartDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundAssetPartWithIcon.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundAssetPercent.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundAssetsListInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundAssetsState.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundBalanceChart.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundBalanceChartOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundDetailsFull.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundDetailsFullOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundDetailsListStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundDetailsOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundEquityChartElement.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundEquityChartElementOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundFacet.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundFiltersOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundInvestInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundMandatoryAsset.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundMandatoryAssets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundNotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundProfitChart.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundProfitChartOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundSets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundStatisticOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundWithdrawInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundWithdrawInfoOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundsFilterSorting.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/FundsList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/FundsListOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/GeeTestDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/GeeTestResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/IOsAppVersion.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/IdModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/InternalTransferRequest.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentEventItemViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentEventLocation.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentEventType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentEventViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentEventViewModels.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentProgramStatus.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentProgramType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentRequestStatus.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestmentRequestType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/InvestorsFinancialStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ItemsViewModelCopyTradingAccountInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ItemsViewModelReferralFriend.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ItemsViewModelRewardDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LevelUpSummary.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/LevelsParamsInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LoginViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerAssets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerDashboard.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagerEvent.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagerFinancialStatistic.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerFundWithdrawInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagerFundWithdrawInfoOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerNotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerOverview.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerPortfolioEvent.spec.js" beforeDir="false" />
@@ -620,92 +859,167 @@
       <change beforePath="$PROJECT_DIR$/test/model/ManagerProfileDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerProgramCreateResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerProgramWithdrawInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagerProgramWithdrawInfoOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerSimpleFund.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagerSimpleProgram.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ManagersList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ManagersListOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MigrationRequest.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MigrationRequestOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletExternalTransaction.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MultiWalletExternalTransactionType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletExternalTransactionsViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MultiWalletFiltersOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletTransaction.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MultiWalletTransactionStatus.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/MultiWalletTransactionType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/MultiWalletTransactionsViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/NewExternalSignalAccountRequest.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NewFundRequest.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NewProgramRequest.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NotificationList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/NotificationSettingConditionType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NotificationSettingViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/NotificationType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/NotificationViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderModelSignalData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderProgramData.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderSignalFee.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderSignalModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OrderSignalProgramInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/OrderTradingFee.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/OtherAssetsValue.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PartnershipDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PasswordModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PeriodDate.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PeriodStatus.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PersonalCopyTradingAccountInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PersonalFundDetailsFull.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PersonalFundDetailsFullOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PersonalProgramDetailsFull.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PersonalProgramDetailsFullOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PersonalSignalDetailsFull.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformAsset.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformAssets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformCurrency.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PlatformCurrencyOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PlatformInfoOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/PlatformStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PlatformStatisticOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PowDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PowResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfileFullViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfileHeaderViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProfilePublic.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramBalanceChart.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramBalanceChartElement.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramBalanceChartElementOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramBalanceChartOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramCreateResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramDetailsFull.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramDetailsFullOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramDetailsListStatistic.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramDetailsOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramDetailsRating.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramFacet.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramFilters.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramFiltersOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramInvestInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramInvestInfoOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramLevelInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramMinimumDeposit.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramMinimumDepositOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramNotificationSettingList.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramPeriodViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramPeriodsViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramProfitChart.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramProfitChartOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramPwdUpdate.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramRequest.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramRequestOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramRequests.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramRequestsOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramSets.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramStatistic.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramTag.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramTransactionDetails.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramUpdate.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramWithdrawInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramWithdrawInfoOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramsFilterSorting.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramsInfo.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramsInfoOld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramsLevelsInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ProgramsList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ProgramsListOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PublicProfile.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RateItem.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RatesModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RatesModelRates.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ReallocationModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ReallocationsViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RecoveryCode.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RecoveryCodesViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ReferralFriend.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RegisterInvestorViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/RegisterManagerViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/RegisterViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ResendConfirmationViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ResetPasswordViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/RewardDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/RewardsHistoryViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SearchViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SearchViewModelOld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SecureAlgorithm.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalAccountDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalAccountsList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalDataMaster.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalDetachMode.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalFee.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalProviderSubscribers.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalSubscriber.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalSubscriberStatus.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalSubscription.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalTradingEvent.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SignalTradingEvents.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/SignalsList.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SocialLinkType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SocialLinkViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SocialLinksViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/SubscriptionMode.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/Timeframe.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TotalCommission.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TradeDirectionType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TradeEntryType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TradesDelay.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TradesSignalViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TradesViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TransactionDetails.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TransactionDetailsType.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TransferRequestType.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TwoFactorAuthenticator.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TwoFactorAuthenticatorConfirm.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TwoFactorCodeModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/TwoFactorCodeWithPassword.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/TwoFactorStatus.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UpdatePersonalDetailViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UpdateProfileViewModel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/UpdateSocialLinkViewModel.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UploadResult.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/UserCommissionData.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/UserVerificationStatus.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/ValueChartBar.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WalletBaseData.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WalletData.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/WalletDeposit.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/WalletDepositSummary.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WalletInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WalletMultiAvailable.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WalletMultiSummary.spec.js" beforeDir="false" />
@@ -718,232 +1032,53 @@
       <change beforePath="$PROJECT_DIR$/test/model/WithdrawalInfo.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/WithdrawalSummary.spec.js" beforeDir="false" />
     </list>
-    <list id="9beb2a50-8b3d-479b-9f19-0f71cf9cbd52" name="Revert: remove pow" comment="">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
+    <list id="9beb2a50-8b3d-479b-9f19-0f71cf9cbd52" name="Revert: remove pow" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/partial_model_generic.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mocha.opts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.babelrc">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/model.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/model_interface.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/es6/partial_model_inner_enum.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="31" selection-start-column="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>\{\[(.*)\]\}</find>
-      <find>{Arra</find>
-      <find>{[</find>
-      <find>[]</find>
-      <find>TradesViewModel</find>
-      <find>AmountWithCurrency</find>
-      <find>ApiClient</find>
-      <find>Array</find>
-      <find>Array.</find>
-      <find>Object.</find>
-      <find>@name</find>
-      <find>basePath</find>
-      <find>module:{{#invokerPackage}}{{invokerPackage}}/{{/invokerPackage}}</find>
-      <find>instance</find>
-      <find>static</find>
-      <find>parseDate</find>
-      <find>callApi</find>
-      <find>|</find>
-      <find>enum</find>
-      <find>@enum</find>
-      <find>applyAuthToRequest</find>
-      <find>deserialize</find>
-      <find>CollectionFormatEnum</find>
-      <find>boolean</find>
-      <find>isJsonMime</find>
-      <find>eclare</find>
-      <find>index</find>
-      <find>declare</find>
-      <find>v10ProgramsGet</find>
-      <find>v10InvestorFundsGet</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>\{Array\&lt;$1\&gt;\}</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/distribution</dir>
-      <dir>$PROJECT_DIR$/template/typescript</dir>
-      <dir>$PROJECT_DIR$/template/es6</dir>
-      <dir>$PROJECT_DIR$/src/api</dir>
-      <dir>$PROJECT_DIR$/src</dir>
-      <dir>$PROJECT_DIR$/src/model</dir>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/index.ts" />
-        <option value="$PROJECT_DIR$/template/typescript/modelEnum.mustache" />
-        <option value="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" />
-        <option value="$PROJECT_DIR$/template/es6/model.mustache" />
-        <option value="$PROJECT_DIR$/src/model/AssetSelection.js" />
-        <option value="$PROJECT_DIR$/src/model/Broker.js" />
-        <option value="$PROJECT_DIR$/template/es6/partial_model_generic.mustache" />
-        <option value="$PROJECT_DIR$/template/es6/api_interface.mustache" />
-        <option value="$PROJECT_DIR$/src/api/AuthApi.js" />
-        <option value="$PROJECT_DIR$/src/api/BrokersApi.js" />
-        <option value="$PROJECT_DIR$/src/model/TwoFactorAuthenticatorConfirm.js" />
-        <option value="$PROJECT_DIR$/distribution/model/AndroidAppVersion.js" />
-        <option value="$PROJECT_DIR$/template/es6/partial_model_inner_enum.mustache" />
-        <option value="$PROJECT_DIR$/src/model/ProgramStatistic.js" />
-        <option value="$PROJECT_DIR$/template/es6/model_interface.mustache" />
-        <option value="$PROJECT_DIR$/template/typescript/api.mustache" />
-        <option value="$PROJECT_DIR$/api.ts" />
-        <option value="$PROJECT_DIR$/replace.bash" />
-        <option value="$PROJECT_DIR$/src/model/FundAssetsListInfo.js" />
-        <option value="$PROJECT_DIR$/replace" />
-        <option value="$PROJECT_DIR$/out/types.d.ts" />
-        <option value="$PROJECT_DIR$/src/model/DashboardChartValue.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/template/es6/ApiClient_interface.mustache" />
-        <option value="$PROJECT_DIR$/src/ApiClient.js" />
-        <option value="$PROJECT_DIR$/template/es6/ApiClient.mustache" />
-        <option value="$PROJECT_DIR$/types.d.ts" />
-        <option value="$PROJECT_DIR$/add_exports" />
-        <option value="$PROJECT_DIR$/template/es6/index.mustache" />
-        <option value="$PROJECT_DIR$/template/es6/package.mustache" />
-        <option value="$PROJECT_DIR$/distribution/types.d.ts" />
-        <option value="$PROJECT_DIR$/src/model/AndroidVersion.js" />
-        <option value="$PROJECT_DIR$/src/api/InvestorApi.js" />
-        <option value="$PROJECT_DIR$/template/es6/api.mustache" />
-        <option value="$PROJECT_DIR$/distribution/model/PoWDetails.js" />
-        <option value="$PROJECT_DIR$/distribution/model/PoWResult.js" />
-        <option value="$PROJECT_DIR$/distribution/model/PowDetails.js" />
-        <option value="$PROJECT_DIR$/distribution/model/PowResult.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-      </list>
-    </option>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="46" />
-    <option name="y" value="46" />
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
+  <component name="ProjectId" id="1SpKo3XZPEox3tAvZr5pVwcOcma" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <autoscrollFromSource ProjectPane="true" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="gv-api-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gv-api-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bash" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/template" />
+      <recent name="$PROJECT_DIR$/bash" />
       <recent name="$PROJECT_DIR$/template/typescript" />
     </key>
   </component>
@@ -958,6 +1093,23 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="generate-api" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="generate-api" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.generate-api" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -992,6 +1144,7 @@
       <workItem from="1544625888343" duration="6661000" />
       <workItem from="1554741877261" duration="839000" />
       <workItem from="1554892019888" duration="346000" />
+      <workItem from="1572255269836" duration="32071000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -1112,7 +1265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555495666890</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="ts cancelable promise">
+      <created>1572362136619</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572362136619</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -1122,34 +1282,6 @@
         <username>e.grebenshikov@genesis.vision</username>
       </YouTrack>
     </servers>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66666000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18203737" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961586" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40981856" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1173,20 +1305,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -1220,284 +1339,7 @@
     <MESSAGE value="fix double export" />
     <MESSAGE value="update api" />
     <MESSAGE value="remove pow" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove pow" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api.ts" />
-    <entry file="file://$PROJECT_DIR$/distribution/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9872" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/typescript/api.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1389">
-          <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/types.d.ts" />
-    <entry file="file://$PROJECT_DIR$/swagger.json" />
-    <entry file="file://$PROJECT_DIR$/template/es6/api_interface.mustache" />
-    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
-          <folding>
-            <element signature="e#341#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="164" column="28" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
-          <folding>
-            <element signature="e#341#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/ApiClient_interface.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/DashboardChartValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/model_interface.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/AuthApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-          <folding>
-            <element signature="e#341#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/README.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yarn.lock" />
-    <entry file="file://$PROJECT_DIR$/src/model/AmountWithCurrency.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/AssetSelection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/FundAssetsListInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Broker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-          <folding>
-            <element signature="e#341#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/types.d.ts" />
-    <entry file="file://$PROJECT_DIR$/template/es6/ApiClient.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/gitignore.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/replace" />
-    <entry file="file://$PROJECT_DIR$/add_exports" />
-    <entry file="file://$PROJECT_DIR$/bash/replace" />
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/index.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/package.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/AndroidVersion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/ProgramsApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="430" column="20" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/InvestorApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="386" column="37" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/types.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cancelable-promise/CancelablePromise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bash/replace.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/.babelrc.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/enumClass.mustache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bash/add_exports.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/model/AssetsValue.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/model/PlatformInfo.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/model/ProfileFullViewModel.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/FundAssetPart.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/api.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/model/PowResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distribution/model/PowDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="25" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/PowDetails.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/PowResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/es6/partial_model_generic.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mocha.opts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <MESSAGE value="ts cancelable promise" />
+    <option name="LAST_COMMIT_MESSAGE" value="ts cancelable promise" />
   </component>
 </project>

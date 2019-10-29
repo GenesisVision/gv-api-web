@@ -1,0 +1,23 @@
+import ApiClient from "../ApiClient";
+
+export class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{ {{>modelGenericAdditionalProperties}}
+    {{#vars}}
+    public {{name}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{datatype}}}{{/isEnum}};
+    {{/vars}}
+    constructor() {
+        {{#vars}}{{{required}}}{{/vars}}
+    }
+
+    static constructFromObject(data: {[key: string]: any}, obj: {{classname}} = new {{classname}}()): {{classname}} {
+        if (data) {
+            {{#vars}}
+            if (data.hasOwnProperty('{{baseName}}')) {
+                obj['{{baseName}}']{{{defaultValueWithParam}}}
+            }
+            {{/vars}}
+        }
+        return obj;
+    }
+}
+
+{{>modelGenericEnums}}
