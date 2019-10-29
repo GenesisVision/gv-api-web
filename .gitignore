@@ -1,11 +1,5 @@
-# editor
-.idea
-
 wwwroot/*.js
 node_modules
 typings
-
 .env
-.babelrc
-.travis.yml
-git_push.sh
+.idea
