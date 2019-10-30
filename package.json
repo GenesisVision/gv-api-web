@@ -8,10 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate-api": "node bash/generate",
-    "generate-tsd": "node bash/replace.js && jsdoc -t ../../node_modules/tsd-jsdoc/dist -r ./src -d ./src && node bash/add_exports.js",
-    "build": "npm run generate-tsd",
-    "test": "mocha --require babel-core/register --recursive",
-    "test:promise": "mocha --require babel-core/register ./cancelable-promise/*.js"
+    "build": "npm run generate-api"
   },
   "browser": {
     "fs": false
@@ -23,17 +20,6 @@
     "dotenv": "^8.0.0"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "expect.js": "~0.3.1",
-    "mocha": "^5.2.0",
-    "shelljs": "^0.8.3",
-    "sinon": "1.17.3",
     "typescript": "^3.6.4"
   }
 }

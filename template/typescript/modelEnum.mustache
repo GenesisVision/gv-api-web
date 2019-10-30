@@ -1,6 +1,0 @@
-import { GenericFabric, fabric } from "../constructFromObject";
-export type {{classname}} = {{#allowableValues}}{{#enumVars}}{{{value}}}{{^-last}} | {{/-last}}{{/enumVars}}{{/allowableValues}};
-
-export const {{classname}} = {
-  constructFromObject: fabric as GenericFabric<{{classname}}>
-};
