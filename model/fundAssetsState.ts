@@ -33,7 +33,6 @@ export class FundAssetsState {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

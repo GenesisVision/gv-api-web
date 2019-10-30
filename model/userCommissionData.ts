@@ -44,7 +44,6 @@ export class UserCommissionData {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -32,7 +32,6 @@ export class SimpleChartPoint {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

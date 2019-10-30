@@ -70,7 +70,6 @@ export class AssetInvestmentRequest {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

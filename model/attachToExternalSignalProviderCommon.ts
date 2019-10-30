@@ -14,13 +14,13 @@ import { SubscriptionMode } from './subscriptionMode';
 import ApiClient from "../ApiClient";
 
 export class AttachToExternalSignalProviderCommon { 
-    public 'initialDepositCurrency'?: AttachToExternalSignalProviderCommon.InitialDepositCurrencyEnum;
+    public 'initialDepositCurrency'?: InitialDepositCurrencyEnum;
     public 'initialDepositAmount'?: number;
     public 'mode'?: SubscriptionMode;
     public 'percent'?: number;
     public 'openTolerancePercent'?: number;
     public 'fixedVolume'?: number;
-    public 'fixedCurrency'?: AttachToExternalSignalProviderCommon.FixedCurrencyEnum;
+    public 'fixedCurrency'?: FixedCurrencyEnum;
     constructor() {
     }
 
@@ -53,10 +53,9 @@ export class AttachToExternalSignalProviderCommon {
 }
 
 
-export namespace AttachToExternalSignalProviderCommon {
-    export type InitialDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-    export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-}
+type InitialDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+
 
 //modelGenericEnums.mustache
 

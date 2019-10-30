@@ -49,7 +49,6 @@ export class ManagerNotificationSettingList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

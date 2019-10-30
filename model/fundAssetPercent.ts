@@ -40,7 +40,6 @@ export class FundAssetPercent {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

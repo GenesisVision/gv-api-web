@@ -34,7 +34,6 @@ export class AppVersion {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

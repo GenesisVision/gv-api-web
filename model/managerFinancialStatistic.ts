@@ -40,7 +40,6 @@ export class ManagerFinancialStatistic {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

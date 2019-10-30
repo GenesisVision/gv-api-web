@@ -36,7 +36,6 @@ export class TwoFactorAuthenticatorConfirm {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

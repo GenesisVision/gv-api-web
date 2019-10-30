@@ -83,7 +83,6 @@ export class FundDetailsFull {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

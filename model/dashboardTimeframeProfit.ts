@@ -32,7 +32,6 @@ export class DashboardTimeframeProfit {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

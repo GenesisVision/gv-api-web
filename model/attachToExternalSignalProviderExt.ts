@@ -19,7 +19,7 @@ export class AttachToExternalSignalProviderExt {
     public 'percent'?: number;
     public 'openTolerancePercent'?: number;
     public 'fixedVolume'?: number;
-    public 'fixedCurrency'?: AttachToExternalSignalProviderExt.FixedCurrencyEnum;
+    public 'fixedCurrency'?: FixedCurrencyEnum;
     constructor() {
     }
 
@@ -49,9 +49,8 @@ export class AttachToExternalSignalProviderExt {
 }
 
 
-export namespace AttachToExternalSignalProviderExt {
-    export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-}
+type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+
 
 //modelGenericEnums.mustache
 

@@ -45,7 +45,6 @@ export class SocialLinkViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

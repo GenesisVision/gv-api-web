@@ -122,7 +122,6 @@ export class OrderSignalModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

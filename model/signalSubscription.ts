@@ -20,7 +20,7 @@ export class SignalSubscription {
     public 'percent'?: number;
     public 'openTolerancePercent'?: number;
     public 'fixedVolume'?: number;
-    public 'fixedCurrency'?: SignalSubscription.FixedCurrencyEnum;
+    public 'fixedCurrency'?: FixedCurrencyEnum;
     public 'totalProfit'?: number;
     public 'totalVolume'?: number;
     constructor() {
@@ -61,9 +61,8 @@ export class SignalSubscription {
 }
 
 
-export namespace SignalSubscription {
-    export type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-}
+type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+
 
 //modelGenericEnums.mustache
 

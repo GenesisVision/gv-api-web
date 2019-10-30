@@ -32,7 +32,6 @@ export class LevelInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

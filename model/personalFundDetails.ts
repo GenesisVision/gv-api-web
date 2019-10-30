@@ -89,7 +89,6 @@ export class PersonalFundDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

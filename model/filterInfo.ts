@@ -37,7 +37,6 @@ export class FilterInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

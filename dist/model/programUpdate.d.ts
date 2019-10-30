@@ -7,12 +7,11 @@ export declare class ProgramUpdate {
     'successFee'?: number;
     'stopOutLevel'?: number;
     'investmentLimit'?: number;
-    'tradesDelay'?: ProgramUpdate.TradesDelayEnum;
+    'tradesDelay'?: TradesDelayEnum;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;
     }, obj?: ProgramUpdate): ProgramUpdate;
 }
-export declare namespace ProgramUpdate {
-    type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
-}
+declare type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
+export {};

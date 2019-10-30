@@ -49,7 +49,6 @@ export class WalletBaseData {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

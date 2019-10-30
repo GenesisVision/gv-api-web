@@ -61,7 +61,6 @@ export class ProgramNotificationSettingList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -32,7 +32,6 @@ export class SignalTradingEvent {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

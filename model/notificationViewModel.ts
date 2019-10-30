@@ -70,7 +70,6 @@ export class NotificationViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

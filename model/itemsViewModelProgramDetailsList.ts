@@ -33,7 +33,6 @@ export class ItemsViewModelProgramDetailsList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

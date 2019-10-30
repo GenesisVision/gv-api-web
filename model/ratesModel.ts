@@ -29,7 +29,6 @@ export class RatesModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

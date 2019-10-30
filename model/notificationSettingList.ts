@@ -44,7 +44,6 @@ export class NotificationSettingList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -37,7 +37,6 @@ export class InvestmentEventItemViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

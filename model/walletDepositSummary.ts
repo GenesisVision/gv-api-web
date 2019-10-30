@@ -29,7 +29,6 @@ export class WalletDepositSummary {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

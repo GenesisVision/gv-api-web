@@ -32,7 +32,6 @@ export class PersonalProgramDetailsList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

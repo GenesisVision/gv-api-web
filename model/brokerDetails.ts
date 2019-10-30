@@ -64,7 +64,6 @@ export class BrokerDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

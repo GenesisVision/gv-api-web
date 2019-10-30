@@ -33,7 +33,6 @@ export class ItemsViewModelAssetInvestmentRequest {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

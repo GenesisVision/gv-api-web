@@ -37,7 +37,6 @@ export class ProfitChart {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

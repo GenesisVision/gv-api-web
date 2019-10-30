@@ -36,7 +36,6 @@ export class ChangePasswordViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

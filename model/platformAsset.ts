@@ -52,7 +52,6 @@ export class PlatformAsset {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

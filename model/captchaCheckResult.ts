@@ -38,7 +38,6 @@ export class CaptchaCheckResult {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

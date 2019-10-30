@@ -28,7 +28,6 @@ export class RateModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

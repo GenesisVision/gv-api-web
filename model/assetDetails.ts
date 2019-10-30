@@ -49,7 +49,6 @@ export class AssetDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

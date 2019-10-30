@@ -49,7 +49,6 @@ export class InternalTransferRequest {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

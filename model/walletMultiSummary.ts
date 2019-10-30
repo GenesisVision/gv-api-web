@@ -38,7 +38,6 @@ export class WalletMultiSummary {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -44,7 +44,6 @@ export class FundAssetInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

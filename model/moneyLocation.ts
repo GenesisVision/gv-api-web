@@ -33,7 +33,6 @@ export class MoneyLocation {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

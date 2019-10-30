@@ -33,7 +33,6 @@ export class CopyTradingAccountsList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

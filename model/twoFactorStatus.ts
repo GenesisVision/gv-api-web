@@ -28,7 +28,6 @@ export class TwoFactorStatus {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

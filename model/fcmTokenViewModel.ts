@@ -28,7 +28,6 @@ export class FcmTokenViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

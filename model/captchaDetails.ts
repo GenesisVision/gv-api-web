@@ -47,7 +47,6 @@ export class CaptchaDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

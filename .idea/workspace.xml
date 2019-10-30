@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="add dist">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ApiClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/assets.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/assets.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dashboard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/dashboard.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/file.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/file.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/funds.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/funds.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/notifications.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/notifications.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/profile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/profile.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/programs.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/programs.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/signal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/signal.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/wallet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/wallet.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bash/generate.js" beforeDir="false" afterPath="$PROJECT_DIR$/bash/generate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/amountWithCurrency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/amountWithCurrency.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/androidAppVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/androidAppVersion.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/androidVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/androidVersion.ts" afterDir="false" />
@@ -195,11 +179,8 @@
       <change beforePath="$PROJECT_DIR$/model/walletWithdrawalInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletWithdrawalInfo.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/walletsGrandTotal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletsGrandTotal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/withdrawalSummary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/withdrawalSummary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/typescript/ApiClient.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/ApiClient.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/typescript/README.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/README.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/typescript/api.service.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/api.service.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/typescript/modelGenericEnums.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/modelGenericEnums.mustache" afterDir="false" />
     </list>
     <list id="9beb2a50-8b3d-479b-9f19-0f71cf9cbd52" name="Revert: remove pow" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -316,6 +297,7 @@
       <workItem from="1572255269836" duration="32441000" />
       <workItem from="1572363457920" duration="308000" />
       <workItem from="1572365375196" duration="1940000" />
+      <workItem from="1572415534510" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -471,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572382959009</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add dist">
+      <created>1572383528768</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1572383528768</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />

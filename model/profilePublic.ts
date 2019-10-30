@@ -49,7 +49,6 @@ export class ProfilePublic {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

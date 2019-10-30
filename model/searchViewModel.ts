@@ -39,7 +39,6 @@ export class SearchViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

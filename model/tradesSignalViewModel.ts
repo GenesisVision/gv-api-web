@@ -41,7 +41,6 @@ export class TradesSignalViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

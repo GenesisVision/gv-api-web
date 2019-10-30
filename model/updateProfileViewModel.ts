@@ -32,7 +32,6 @@ export class UpdateProfileViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

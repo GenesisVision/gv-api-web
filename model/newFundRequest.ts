@@ -57,7 +57,6 @@ export class NewFundRequest {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

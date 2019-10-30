@@ -32,7 +32,6 @@ export class IOsAppVersion {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

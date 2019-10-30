@@ -32,7 +32,6 @@ export class PersonalCopyTradingAccountInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

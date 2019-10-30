@@ -8,18 +8,17 @@ export declare class InvestmentEventViewModel {
     'date'?: Date;
     'assetDetails'?: AssetDetails;
     'amount'?: number;
-    'currency'?: InvestmentEventViewModel.CurrencyEnum;
+    'currency'?: CurrencyEnum;
     'changeState'?: ChangeState;
     'extendedInfo'?: [InvestmentEventItemViewModel];
     'feesInfo'?: [FeeDetails];
     'totalFeesAmount'?: number;
-    'totalFeesCurrency'?: InvestmentEventViewModel.TotalFeesCurrencyEnum;
+    'totalFeesCurrency'?: TotalFeesCurrencyEnum;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;
     }, obj?: InvestmentEventViewModel): InvestmentEventViewModel;
 }
-export declare namespace InvestmentEventViewModel {
-    type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-    type TotalFeesCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-}
+declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+declare type TotalFeesCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+export {};

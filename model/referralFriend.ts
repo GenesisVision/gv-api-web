@@ -32,7 +32,6 @@ export class ReferralFriend {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

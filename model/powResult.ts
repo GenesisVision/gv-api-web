@@ -28,7 +28,6 @@ export class PowResult {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

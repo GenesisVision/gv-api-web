@@ -101,7 +101,6 @@ export class ProfileFullViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

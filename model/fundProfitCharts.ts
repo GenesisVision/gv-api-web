@@ -39,7 +39,6 @@ export class FundProfitCharts {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

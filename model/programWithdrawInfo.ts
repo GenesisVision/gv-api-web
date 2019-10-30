@@ -44,7 +44,6 @@ export class ProgramWithdrawInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

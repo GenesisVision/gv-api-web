@@ -49,7 +49,6 @@ export class WalletWithdrawalInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

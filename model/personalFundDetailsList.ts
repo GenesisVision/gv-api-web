@@ -32,7 +32,6 @@ export class PersonalFundDetailsList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

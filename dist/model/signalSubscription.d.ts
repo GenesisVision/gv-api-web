@@ -6,7 +6,7 @@ export declare class SignalSubscription {
     'percent'?: number;
     'openTolerancePercent'?: number;
     'fixedVolume'?: number;
-    'fixedCurrency'?: SignalSubscription.FixedCurrencyEnum;
+    'fixedCurrency'?: FixedCurrencyEnum;
     'totalProfit'?: number;
     'totalVolume'?: number;
     constructor();
@@ -14,6 +14,5 @@ export declare class SignalSubscription {
         [key: string]: any;
     }, obj?: SignalSubscription): SignalSubscription;
 }
-export declare namespace SignalSubscription {
-    type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-}
+declare type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+export {};

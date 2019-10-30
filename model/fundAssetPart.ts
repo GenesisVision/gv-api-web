@@ -32,7 +32,6 @@ export class FundAssetPart {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

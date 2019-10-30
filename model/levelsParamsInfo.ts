@@ -76,7 +76,6 @@ export class LevelsParamsInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

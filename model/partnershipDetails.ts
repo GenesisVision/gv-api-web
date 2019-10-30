@@ -36,7 +36,6 @@ export class PartnershipDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

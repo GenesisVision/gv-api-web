@@ -33,7 +33,6 @@ export class ResendConfirmationViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

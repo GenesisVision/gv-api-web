@@ -59,7 +59,6 @@ export class OrderSignalProgramInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

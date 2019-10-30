@@ -37,7 +37,6 @@ export class PowDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -28,7 +28,6 @@ export class IdModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

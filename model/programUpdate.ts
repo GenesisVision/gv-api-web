@@ -21,7 +21,7 @@ export class ProgramUpdate {
     public 'successFee'?: number;
     public 'stopOutLevel'?: number;
     public 'investmentLimit'?: number;
-    public 'tradesDelay'?: ProgramUpdate.TradesDelayEnum;
+    public 'tradesDelay'?: TradesDelayEnum;
     constructor() {
     }
 
@@ -60,9 +60,8 @@ export class ProgramUpdate {
 }
 
 
-export namespace ProgramUpdate {
-    export type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
-}
+type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
+
 
 //modelGenericEnums.mustache
 

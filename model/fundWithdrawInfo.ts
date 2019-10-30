@@ -44,7 +44,6 @@ export class FundWithdrawInfo {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

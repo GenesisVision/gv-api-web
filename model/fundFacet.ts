@@ -59,7 +59,6 @@ export class FundFacet {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

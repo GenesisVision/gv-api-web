@@ -24,7 +24,6 @@ export class GeeTestResult {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

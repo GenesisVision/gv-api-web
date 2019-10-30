@@ -33,7 +33,6 @@ export class AndroidAppVersion {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -38,7 +38,6 @@ export class OrderSignalFee {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

@@ -37,7 +37,6 @@ export class RewardDetails {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

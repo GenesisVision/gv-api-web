@@ -33,7 +33,6 @@ export class NotificationList {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

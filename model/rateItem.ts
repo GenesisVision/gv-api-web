@@ -33,7 +33,6 @@ export class RateItem {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

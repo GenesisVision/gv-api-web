@@ -36,7 +36,6 @@ export class FundAssetInvestmentRequest {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

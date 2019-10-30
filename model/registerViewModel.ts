@@ -53,7 +53,6 @@ export class RegisterViewModel {
 }
 
 
-
 //modelGenericEnums.mustache
 
 

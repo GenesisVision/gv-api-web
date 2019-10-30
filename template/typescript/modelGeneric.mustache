@@ -2,7 +2,7 @@ import ApiClient from "../ApiClient";
 
 export class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{ {{>modelGenericAdditionalProperties}}
     {{#vars}}
-    public '{{baseName}}'{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{datatype}}}{{/isEnum}};
+    public '{{baseName}}'{{^required}}?{{/required}}: {{#isEnum}}{{{enumName}}}{{/isEnum}}{{^isEnum}}{{{datatype}}}{{/isEnum}};
     {{/vars}}
     constructor() {
     }

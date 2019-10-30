@@ -32,7 +32,6 @@ export class SignalDataMaster {
 }
 
 
-
 //modelGenericEnums.mustache
 
 
