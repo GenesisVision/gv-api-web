@@ -1,0 +1,20 @@
+export declare class ProgramsInfoOld {
+    'managerProgramInvestment'?: number;
+    'managerProgramInvestmentUSD'?: number;
+    'managerProgramInvestmentUSDT'?: number;
+    'managerProgramInvestmentBTC'?: number;
+    'managerProgramInvestmentETH'?: number;
+    'managerMaxEntryFee'?: number;
+    'managerMaxSuccessFee'?: number;
+    'managerFundInvestment'?: number;
+    'managerMaxExitFee'?: number;
+    'managerMaxSignalVolumeFee'?: number;
+    'managerMinSignalVolumeFee'?: number;
+    'managerMaxSignalSuccessFee'?: number;
+    'managerMinSignalSuccessFee'?: number;
+    'periods'?: [number];
+    constructor();
+    static constructFromObject(data: {
+        [key: string]: any;
+    }, obj?: ProgramsInfoOld): ProgramsInfoOld;
+}
