@@ -2,185 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f4ef8aa-d814-4448-a087-ac8cce2ee112" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/amountWithCurrency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/amountWithCurrency.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/androidAppVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/androidAppVersion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/androidVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/androidVersion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/appVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/appVersion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/assetDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/assetDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/assetInvestmentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/assetInvestmentRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/assetPlatformInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/assetPlatformInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/attachToExternalSignalProviderCommon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/attachToExternalSignalProviderCommon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/attachToExternalSignalProviderExt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/attachToExternalSignalProviderExt.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/attachToSignalProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/attachToSignalProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/attachToSignalProviderInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/attachToSignalProviderInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/balanceChartPoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/balanceChartPoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/broker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/broker.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/brokerAccountType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/brokerAccountType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/brokerDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/brokerDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/brokersInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/brokersInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/brokersProgramInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/brokersProgramInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/captchaCheckResult.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/captchaCheckResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/captchaDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/captchaDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/changeBrokerProgramRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/changeBrokerProgramRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/changePasswordViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/changePasswordViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/copyTradingAccountInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/copyTradingAccountInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/copyTradingAccountsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/copyTradingAccountsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/createWithdrawalRequestModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/createWithdrawalRequestModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardAsset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardAsset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardAssets.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardAssets.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardInvestingDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardInvestingDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardPortfolio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardPortfolio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardProfits.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardProfits.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardRecommendations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardRecommendations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardSummary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardSummary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardTimeframeProfit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardTimeframeProfit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dashboardTradingDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/dashboardTradingDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/detachFromSignalProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/detachFromSignalProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/errorMessage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/errorMessage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/errorViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/errorViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/externalKeyAddViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/externalKeyAddViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/externalKeyViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/externalKeyViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/externalKeysViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/externalKeysViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fcmTokenViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fcmTokenViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/feeDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/feeDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/filterInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/filterInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/filterItemInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/filterItemInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/forgotPasswordViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/forgotPasswordViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetInvestmentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetInvestmentRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetPart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetPart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetPartWithIcon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetPartWithIcon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetPercent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetPercent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetPlatformInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetPlatformInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundAssetsState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundAssetsState.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundBalanceChart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundBalanceChart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundChartStatistic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundChartStatistic.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundDetailsFull.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundDetailsFull.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundFacet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundFacet.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundNotificationSettingList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundNotificationSettingList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundProfitCharts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundProfitCharts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/fundWithdrawInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/fundWithdrawInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/geeTestDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/geeTestDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/geeTestResult.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/geeTestResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/iOsAppVersion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/iOsAppVersion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/idModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/idModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/internalTransferRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/internalTransferRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/investmentEventItemViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/investmentEventItemViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/investmentEventViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/investmentEventViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/investmentEventViewModels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/investmentEventViewModels.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelAssetInvestmentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelAssetInvestmentRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelCopyTradingAccountInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelCopyTradingAccountInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelFundDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelFundDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelProgramDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelProgramDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelPublicProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelPublicProfile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelReallocationModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelReallocationModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelReferralFriend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelReferralFriend.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/itemsViewModelRewardDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/itemsViewModelRewardDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/levelInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/levelInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/levelsParamsInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/levelsParamsInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/loginViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/loginViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/managerFinancialStatistic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/managerFinancialStatistic.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/managerNotificationSettingList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/managerNotificationSettingList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/migrationRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/migrationRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/moneyLocation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/moneyLocation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/newExternalSignalAccountRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/newExternalSignalAccountRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/newFundRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/newFundRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/notificationList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/notificationList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/notificationSettingList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/notificationSettingList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/notificationSettingViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/notificationSettingViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/notificationViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/notificationViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderModelSignalData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderModelSignalData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderProgramData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderProgramData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderSignalFee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderSignalFee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderSignalModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderSignalModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/orderSignalProgramInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/orderSignalProgramInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/partnershipDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/partnershipDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/passwordModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/passwordModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/personalCopyTradingAccountInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/personalCopyTradingAccountInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/personalFundDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/personalFundDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/personalFundDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/personalFundDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/personalProgramDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/personalProgramDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/personalProgramDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/personalProgramDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/platformAsset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/platformAsset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/platformAssets.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/platformAssets.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/platformInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/platformInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/powDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/powDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/powResult.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/powResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/profileFullViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/profileFullViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/profileHeaderViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/profileHeaderViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/profilePublic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/profilePublic.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/profitChart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/profitChart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programAssetInvestmentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programAssetInvestmentRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programAssetPlatformInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programAssetPlatformInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programBalanceChart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programBalanceChart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programChartStatistic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programChartStatistic.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programCreateResult.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programCreateResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programDetailsFull.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programDetailsFull.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programDetailsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programDetailsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programFacet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programFacet.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programLevelInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programLevelInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programMinInvestAmount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programMinInvestAmount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programNotificationSettingList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programNotificationSettingList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programPeriodViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programPeriodViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programPeriodsViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programPeriodsViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programProfitCharts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programProfitCharts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programPwdUpdate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programPwdUpdate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programTag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programTag.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programUpdate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programUpdate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programWithdrawInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programWithdrawInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/programsLevelsInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/programsLevelsInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/publicProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/publicProfile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/rateItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/rateItem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/rateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/rateModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ratesModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/ratesModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ratesModelRates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/ratesModelRates.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/reallocationModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/reallocationModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/recommendedAsset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/recommendedAsset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/recoveryCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/recoveryCode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/recoveryCodesViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/recoveryCodesViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/referralFriend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/referralFriend.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/registerViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/registerViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resendConfirmationViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/resendConfirmationViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/resetPasswordViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/resetPasswordViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/rewardDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/rewardDetails.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/searchViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/searchViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalDataMaster.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalDataMaster.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalProviderSubscribers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalProviderSubscribers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalSubscriber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalSubscriber.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalSubscription.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalSubscription.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalTradingEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalTradingEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/signalTradingEvents.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/signalTradingEvents.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/simpleChart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/simpleChart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/simpleChartPoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/simpleChartPoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/socialLinkViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/socialLinkViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/socialLinksViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/socialLinksViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/tradesSignalViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/tradesSignalViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/tradesViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/tradesViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/twoFactorAuthenticator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/twoFactorAuthenticator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/twoFactorAuthenticatorConfirm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/twoFactorAuthenticatorConfirm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/twoFactorCodeModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/twoFactorCodeModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/twoFactorCodeWithPassword.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/twoFactorCodeWithPassword.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/twoFactorStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/twoFactorStatus.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/updatePersonalDetailViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/updatePersonalDetailViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/updateProfileViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/updateProfileViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/updateSocialLinkViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/updateSocialLinkViewModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/uploadResult.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/uploadResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/userCommissionData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/userCommissionData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletBaseData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletBaseData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletDeposit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletDeposit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletDepositSummary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletDepositSummary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletMultiAvailable.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletMultiAvailable.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletMultiSummary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletMultiSummary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletWithdrawalInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletWithdrawalInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/walletsGrandTotal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/walletsGrandTotal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/withdrawalSummary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/model/withdrawalSummary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/modelGeneric.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/typescript/modelGenericEnums.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/template/typescript/modelGenericEnums.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <list id="9beb2a50-8b3d-479b-9f19-0f71cf9cbd52" name="Revert: remove pow" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -297,7 +119,7 @@
       <workItem from="1572255269836" duration="32441000" />
       <workItem from="1572363457920" duration="308000" />
       <workItem from="1572365375196" duration="1940000" />
-      <workItem from="1572415534510" duration="408000" />
+      <workItem from="1572415534510" duration="508000" />
     </task>
     <task id="LOCAL-00001" summary="add declare for namespace">
       <created>1544454145601</created>
@@ -460,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572383528768</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add namespace error">
+      <created>1572416077891</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1572416077891</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <option name="clearContext" value="false" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
@@ -530,6 +359,7 @@
     <MESSAGE value="generate new api" />
     <MESSAGE value="remove pow" />
     <MESSAGE value="add dist" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dist" />
+    <MESSAGE value="add namespace error" />
+    <option name="LAST_COMMIT_MESSAGE" value="add namespace error" />
   </component>
 </project>
