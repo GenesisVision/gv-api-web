@@ -14,9 +14,9 @@ import { FilterModelOld } from './filterModelOld';
 import ApiClient from "../ApiClient";
 
 export class EventItemFiltersOld { 
-    public 'programDetails'?: [FilterModelOld];
-    public 'fundDetails'?: [FilterModelOld];
-    public 'allAssets'?: [FilterModelOld];
+    public 'programDetails'?: Array<FilterModelOld>;
+    public 'fundDetails'?: Array<FilterModelOld>;
+    public 'allAssets'?: Array<FilterModelOld>;
     constructor() {
     }
 

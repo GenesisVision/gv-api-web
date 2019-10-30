@@ -1,6 +1,6 @@
 import { ReallocationModel } from './reallocationModel';
 export declare class ReallocationsViewModel {
-    'reallocations'?: [ReallocationModel];
+    'reallocations'?: Array<ReallocationModel>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

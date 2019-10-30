@@ -7,7 +7,7 @@ export declare class FundDetailsFullOld {
     'entryFee'?: number;
     'exitFee'?: number;
     'managementFee'?: number;
-    'currentAssets'?: [FundAssetPartWithIcon];
+    'currentAssets'?: Array<FundAssetPartWithIcon>;
     'statistic'?: FundStatisticOld;
     'personalFundDetails'?: PersonalFundDetailsFullOld;
     'id'?: string;

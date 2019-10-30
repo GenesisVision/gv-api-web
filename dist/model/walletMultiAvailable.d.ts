@@ -1,6 +1,6 @@
 import { WalletBaseData } from './walletBaseData';
 export declare class WalletMultiAvailable {
-    'wallets'?: [WalletBaseData];
+    'wallets'?: Array<WalletBaseData>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

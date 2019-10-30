@@ -14,7 +14,7 @@ import { RecoveryCode } from './recoveryCode';
 import ApiClient from "../ApiClient";
 
 export class RecoveryCodesViewModel { 
-    public 'codes'?: [RecoveryCode];
+    public 'codes'?: Array<RecoveryCode>;
     public 'authToken'?: string;
     constructor() {
     }

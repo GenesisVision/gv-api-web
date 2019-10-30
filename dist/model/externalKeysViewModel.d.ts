@@ -1,6 +1,6 @@
 import { ExternalKeyViewModel } from './externalKeyViewModel';
 export declare class ExternalKeysViewModel {
-    'keys'?: [ExternalKeyViewModel];
+    'keys'?: Array<ExternalKeyViewModel>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

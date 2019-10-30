@@ -14,7 +14,7 @@ import { MultiWalletExternalTransaction } from './multiWalletExternalTransaction
 import ApiClient from "../ApiClient";
 
 export class MultiWalletExternalTransactionsViewModel { 
-    public 'transactions'?: [MultiWalletExternalTransaction];
+    public 'transactions'?: Array<MultiWalletExternalTransaction>;
     public 'total'?: number;
     constructor() {
     }

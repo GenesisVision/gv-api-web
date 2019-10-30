@@ -1,6 +1,6 @@
 import { BrokerOld } from './brokerOld';
 export declare class BrokersProgramInfoOld {
-    'brokers'?: [BrokerOld];
+    'brokers'?: Array<BrokerOld>;
     'currentAccountTypeId'?: string;
     constructor();
     static constructFromObject(data: {

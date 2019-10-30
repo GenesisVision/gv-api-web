@@ -1,6 +1,6 @@
 import { ReferralFriend } from './referralFriend';
 export declare class ItemsViewModelReferralFriend {
-    'items'?: [ReferralFriend];
+    'items'?: Array<ReferralFriend>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

@@ -1,6 +1,6 @@
 import { ProgramDetailsOld } from './programDetailsOld';
 export declare class ProgramsListOld {
-    'programs'?: [ProgramDetailsOld];
+    'programs'?: Array<ProgramDetailsOld>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

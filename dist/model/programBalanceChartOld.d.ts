@@ -3,7 +3,7 @@ import { ProgramBalanceChartElementOld } from './programBalanceChartElementOld';
 export declare class ProgramBalanceChartOld {
     'balance'?: number;
     'programCurrency'?: Currency;
-    'balanceChart'?: [ProgramBalanceChartElementOld];
+    'balanceChart'?: Array<ProgramBalanceChartElementOld>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

@@ -14,7 +14,7 @@ import { ReferralFriend } from './referralFriend';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelReferralFriend { 
-    public 'items'?: [ReferralFriend];
+    public 'items'?: Array<ReferralFriend>;
     public 'total'?: number;
     constructor() {
     }

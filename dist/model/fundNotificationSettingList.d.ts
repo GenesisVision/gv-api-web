@@ -5,7 +5,7 @@ export declare class FundNotificationSettingList {
     'url'?: string;
     'logo'?: string;
     'color'?: string;
-    'settingsGeneral'?: [NotificationSettingViewModel];
+    'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

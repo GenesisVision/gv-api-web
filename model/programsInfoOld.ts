@@ -26,7 +26,7 @@ export class ProgramsInfoOld {
     public 'managerMinSignalVolumeFee'?: number;
     public 'managerMaxSignalSuccessFee'?: number;
     public 'managerMinSignalSuccessFee'?: number;
-    public 'periods'?: [number];
+    public 'periods'?: Array<number>;
     constructor() {
     }
 

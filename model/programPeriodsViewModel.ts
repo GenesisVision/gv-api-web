@@ -14,7 +14,7 @@ import { ProgramPeriodViewModel } from './programPeriodViewModel';
 import ApiClient from "../ApiClient";
 
 export class ProgramPeriodsViewModel { 
-    public 'periods'?: [ProgramPeriodViewModel];
+    public 'periods'?: Array<ProgramPeriodViewModel>;
     public 'total'?: number;
     constructor() {
     }

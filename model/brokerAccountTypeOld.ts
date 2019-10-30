@@ -18,9 +18,9 @@ export class BrokerAccountTypeOld {
     public 'name'?: string;
     public 'description'?: string;
     public 'type'?: BrokerTradeServerType;
-    public 'leverages'?: [number];
-    public 'currencies'?: [string];
-    public 'minimumDepositsAmount'?: {String: number};
+    public 'leverages'?: Array<number>;
+    public 'currencies'?: Array<string>;
+    public 'minimumDepositsAmount'?: { [key: string]: number; };
     public 'isForex'?: boolean;
     public 'isSignalsAvailable'?: boolean;
     constructor() {
@@ -47,7 +47,7 @@ export class BrokerAccountTypeOld {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['string']);
             }
             if (data.hasOwnProperty('minimumDepositsAmount')) {
-                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], {String: 'number'});
+                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], {'string': 'number'});
             }
             if (data.hasOwnProperty('isForex')) {
                 obj['isForex'] = ApiClient.convertToType(data['isForex'], 'boolean');

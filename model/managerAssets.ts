@@ -15,8 +15,8 @@ import { ManagerSimpleProgram } from './managerSimpleProgram';
 import ApiClient from "../ApiClient";
 
 export class ManagerAssets { 
-    public 'programs'?: [ManagerSimpleProgram];
-    public 'funds'?: [ManagerSimpleFund];
+    public 'programs'?: Array<ManagerSimpleProgram>;
+    public 'funds'?: Array<ManagerSimpleFund>;
     constructor() {
     }
 

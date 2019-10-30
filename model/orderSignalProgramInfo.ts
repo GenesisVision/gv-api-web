@@ -23,7 +23,7 @@ export class OrderSignalProgramInfo {
     public 'priceOpenAvg'?: number;
     public 'profit'?: number;
     public 'firstOrderDate'?: Date;
-    public 'fees'?: [OrderSignalFee];
+    public 'fees'?: Array<OrderSignalFee>;
     constructor() {
     }
 

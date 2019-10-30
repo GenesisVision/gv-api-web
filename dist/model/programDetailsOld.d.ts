@@ -19,7 +19,7 @@ export declare class ProgramDetailsOld {
     'dashboardAssetsDetails'?: DashboardProgramDetailsOld;
     'statistic'?: ProgramDetailsListStatistic;
     'personalDetails'?: PersonalProgramDetailsFullOld;
-    'tags'?: [ProgramTag];
+    'tags'?: Array<ProgramTag>;
     'id'?: string;
     'logo'?: string;
     'url'?: string;
@@ -29,7 +29,7 @@ export declare class ProgramDetailsOld {
     'status'?: InvestmentProgramStatus;
     'creationDate'?: Date;
     'manager'?: ProfilePublic;
-    'chart'?: [ChartSimple];
+    'chart'?: Array<ChartSimple>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

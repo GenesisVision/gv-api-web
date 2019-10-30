@@ -11,7 +11,7 @@ export declare class TransactionDetails {
     'convertingDetails'?: ConvertingDetails;
     'externalTransactionDetails'?: ExternalTransactionDetails;
     'status'?: MultiWalletTransactionStatus;
-    'signalFees'?: [SignalFee];
+    'signalFees'?: Array<SignalFee>;
     'currency'?: Currency;
     'currencyName'?: string;
     'currencyLogo'?: string;

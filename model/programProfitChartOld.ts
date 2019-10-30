@@ -16,14 +16,14 @@ import { PeriodDate } from './periodDate';
 import ApiClient from "../ApiClient";
 
 export class ProgramProfitChartOld { 
-    public 'equityChart'?: [ChartSimple];
+    public 'equityChart'?: Array<ChartSimple>;
     public 'totalProfit'?: number;
     public 'timeframeProfit'?: number;
     public 'programCurrency'?: Currency;
     public 'trades'?: number;
     public 'successTradesPercent'?: number;
     public 'profitFactor'?: number;
-    public 'periods'?: [PeriodDate];
+    public 'periods'?: Array<PeriodDate>;
     public 'lastPeriodStarts'?: Date;
     public 'lastPeriodEnds'?: Date;
     public 'tradingVolume'?: number;

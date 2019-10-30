@@ -2,7 +2,7 @@ import { FundEquityChartElementOld } from './fundEquityChartElementOld';
 export declare class FundProfitChartOld {
     'creationDate'?: Date;
     'profitPercent'?: number;
-    'equityChart'?: [FundEquityChartElementOld];
+    'equityChart'?: Array<FundEquityChartElementOld>;
     'balance'?: number;
     'investors'?: number;
     'profitChangePercent'?: number;

@@ -14,7 +14,7 @@ import { ExternalKeyViewModel } from './externalKeyViewModel';
 import ApiClient from "../ApiClient";
 
 export class ExternalKeysViewModel { 
-    public 'keys'?: [ExternalKeyViewModel];
+    public 'keys'?: Array<ExternalKeyViewModel>;
     public 'total'?: number;
     constructor() {
     }

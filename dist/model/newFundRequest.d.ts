@@ -1,7 +1,7 @@
 import { FundAssetPart } from './fundAssetPart';
 export declare class NewFundRequest {
     'exitFee'?: number;
-    'assets'?: [FundAssetPart];
+    'assets'?: Array<FundAssetPart>;
     'entryFee'?: number;
     'depositAmount'?: number;
     'depositWalletId'?: string;

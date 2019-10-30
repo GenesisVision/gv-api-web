@@ -14,7 +14,7 @@ import { ReallocationModel } from './reallocationModel';
 import ApiClient from "../ApiClient";
 
 export class ReallocationsViewModel { 
-    public 'reallocations'?: [ReallocationModel];
+    public 'reallocations'?: Array<ReallocationModel>;
     public 'total'?: number;
     constructor() {
     }

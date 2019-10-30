@@ -5,7 +5,7 @@ export declare class ProfilePublic {
     'avatar'?: string;
     'registrationDate'?: Date;
     'url'?: string;
-    'socialLinks'?: [SocialLinkViewModel];
+    'socialLinks'?: Array<SocialLinkViewModel>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

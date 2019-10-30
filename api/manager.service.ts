@@ -1479,7 +1479,7 @@ export class ManagerService {
   }
 
   public updateFundAssets(id: string, authorization: string, opts?: { 
-    assets?: [FundAssetPart]
+    assets?: Array<FundAssetPart>
   }): CancelablePromise<null>{
     return this.updateFundAssetsWithHttpInfo(id, authorization, opts)
       .then(function(response_and_data) {
@@ -1488,7 +1488,7 @@ export class ManagerService {
   }
 
   private updateFundAssetsWithHttpInfo(id: string, authorization: string, opts: { 
-    assets?: [FundAssetPart]
+    assets?: Array<FundAssetPart>
   } = {}){
     let postBody = opts["assets"];
     

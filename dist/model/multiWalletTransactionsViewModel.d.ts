@@ -1,6 +1,6 @@
 import { MultiWalletTransaction } from './multiWalletTransaction';
 export declare class MultiWalletTransactionsViewModel {
-    'transactions'?: [MultiWalletTransaction];
+    'transactions'?: Array<MultiWalletTransaction>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

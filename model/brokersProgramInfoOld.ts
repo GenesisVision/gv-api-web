@@ -14,7 +14,7 @@ import { BrokerOld } from './brokerOld';
 import ApiClient from "../ApiClient";
 
 export class BrokersProgramInfoOld { 
-    public 'brokers'?: [BrokerOld];
+    public 'brokers'?: Array<BrokerOld>;
     public 'currentAccountTypeId'?: string;
     constructor() {
     }

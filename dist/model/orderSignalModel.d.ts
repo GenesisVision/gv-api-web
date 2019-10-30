@@ -5,9 +5,9 @@ import { OrderSignalProgramInfo } from './orderSignalProgramInfo';
 import { TradeDirectionType } from './tradeDirectionType';
 import { TradeEntryType } from './tradeEntryType';
 export declare class OrderSignalModel {
-    'providers'?: [OrderSignalProgramInfo];
+    'providers'?: Array<OrderSignalProgramInfo>;
     'totalCommission'?: number;
-    'totalCommissionByType'?: [FeeDetails];
+    'totalCommissionByType'?: Array<FeeDetails>;
     'tradingAccountId'?: string;
     'currency'?: Currency;
     'id'?: string;

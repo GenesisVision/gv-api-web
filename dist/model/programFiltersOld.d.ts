@@ -1,8 +1,8 @@
 import { ProgramTag } from './programTag';
 export declare class ProgramFiltersOld {
-    'programTags'?: [ProgramTag];
-    'actionType'?: [string];
-    'customNotificationType'?: [string];
+    'programTags'?: Array<ProgramTag>;
+    'actionType'?: Array<string>;
+    'customNotificationType'?: Array<string>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

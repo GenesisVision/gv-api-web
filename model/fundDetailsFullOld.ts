@@ -21,7 +21,7 @@ export class FundDetailsFullOld {
     public 'entryFee'?: number;
     public 'exitFee'?: number;
     public 'managementFee'?: number;
-    public 'currentAssets'?: [FundAssetPartWithIcon];
+    public 'currentAssets'?: Array<FundAssetPartWithIcon>;
     public 'statistic'?: FundStatisticOld;
     public 'personalFundDetails'?: PersonalFundDetailsFullOld;
     public 'id'?: string;

@@ -14,7 +14,7 @@ import { ProgramRequestOld } from './programRequestOld';
 import ApiClient from "../ApiClient";
 
 export class ProgramRequestsOld { 
-    public 'requests'?: [ProgramRequestOld];
+    public 'requests'?: Array<ProgramRequestOld>;
     public 'total'?: number;
     public 'totalValue'?: number;
     constructor() {

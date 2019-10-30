@@ -15,8 +15,8 @@ import { ValueChartBar } from './valueChartBar';
 import ApiClient from "../ApiClient";
 
 export class DashboardChartValue { 
-    public 'investedProgramsInfo'?: [ValueChartBar];
-    public 'balanceChart'?: [ChartSimple];
+    public 'investedProgramsInfo'?: Array<ValueChartBar>;
+    public 'balanceChart'?: Array<ChartSimple>;
     public 'value'?: number;
     public 'valueCurrency'?: number;
     public 'changePercent'?: number;

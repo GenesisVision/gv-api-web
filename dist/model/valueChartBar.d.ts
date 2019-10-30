@@ -3,7 +3,7 @@ import { OtherAssetsValue } from './otherAssetsValue';
 export declare class ValueChartBar {
     'value'?: number;
     'date'?: Date;
-    'topAssets'?: [AssetsValue];
+    'topAssets'?: Array<AssetsValue>;
     'otherAssetsValue'?: OtherAssetsValue;
     constructor();
     static constructFromObject(data: {

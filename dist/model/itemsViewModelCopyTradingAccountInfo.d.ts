@@ -1,6 +1,6 @@
 import { CopyTradingAccountInfo } from './copyTradingAccountInfo';
 export declare class ItemsViewModelCopyTradingAccountInfo {
-    'items'?: [CopyTradingAccountInfo];
+    'items'?: Array<CopyTradingAccountInfo>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

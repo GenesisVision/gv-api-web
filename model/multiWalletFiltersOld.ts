@@ -13,8 +13,8 @@
 import ApiClient from "../ApiClient";
 
 export class MultiWalletFiltersOld { 
-    public 'transactionType'?: [string];
-    public 'externalTransactionType'?: [string];
+    public 'transactionType'?: Array<string>;
+    public 'externalTransactionType'?: Array<string>;
     constructor() {
     }
 

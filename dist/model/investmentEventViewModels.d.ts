@@ -1,6 +1,6 @@
 import { InvestmentEventViewModel } from './investmentEventViewModel';
 export declare class InvestmentEventViewModels {
-    'events'?: [InvestmentEventViewModel];
+    'events'?: Array<InvestmentEventViewModel>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

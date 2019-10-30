@@ -15,7 +15,7 @@ import ApiClient from "../ApiClient";
 
 export class ReallocationModel { 
     public 'date'?: Date;
-    public 'parts'?: [FundAssetPartWithIcon];
+    public 'parts'?: Array<FundAssetPartWithIcon>;
     constructor() {
     }
 

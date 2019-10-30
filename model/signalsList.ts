@@ -14,7 +14,7 @@ import { SignalDetails } from './signalDetails';
 import ApiClient from "../ApiClient";
 
 export class SignalsList { 
-    public 'programs'?: [SignalDetails];
+    public 'programs'?: Array<SignalDetails>;
     public 'total'?: number;
     constructor() {
     }

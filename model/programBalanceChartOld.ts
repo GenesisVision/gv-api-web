@@ -17,7 +17,7 @@ import ApiClient from "../ApiClient";
 export class ProgramBalanceChartOld { 
     public 'balance'?: number;
     public 'programCurrency'?: Currency;
-    public 'balanceChart'?: [ProgramBalanceChartElementOld];
+    public 'balanceChart'?: Array<ProgramBalanceChartElementOld>;
     constructor() {
     }
 

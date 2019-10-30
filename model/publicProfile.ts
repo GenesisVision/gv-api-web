@@ -19,9 +19,9 @@ export class PublicProfile {
     public 'about'?: string;
     public 'avatar'?: string;
     public 'regDate'?: Date;
-    public 'assets'?: [string];
+    public 'assets'?: Array<string>;
     public 'url'?: string;
-    public 'socialLinks'?: [SocialLinkViewModel];
+    public 'socialLinks'?: Array<SocialLinkViewModel>;
     constructor() {
     }
 

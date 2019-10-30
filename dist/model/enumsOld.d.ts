@@ -7,7 +7,7 @@ export declare class EnumsOld {
     'program'?: ProgramFiltersOld;
     'fund'?: FundFiltersOld;
     'event'?: EventFiltersOld;
-    'assetTypes'?: [string];
+    'assetTypes'?: Array<string>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

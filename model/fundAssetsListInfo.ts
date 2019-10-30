@@ -14,7 +14,7 @@ import { FundAssetInfo } from './fundAssetInfo';
 import ApiClient from "../ApiClient";
 
 export class FundAssetsListInfo { 
-    public 'assets'?: [FundAssetInfo];
+    public 'assets'?: Array<FundAssetInfo>;
     constructor() {
     }
 

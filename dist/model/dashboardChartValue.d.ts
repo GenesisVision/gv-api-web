@@ -1,8 +1,8 @@
 import { ChartSimple } from './chartSimple';
 import { ValueChartBar } from './valueChartBar';
 export declare class DashboardChartValue {
-    'investedProgramsInfo'?: [ValueChartBar];
-    'balanceChart'?: [ChartSimple];
+    'investedProgramsInfo'?: Array<ValueChartBar>;
+    'balanceChart'?: Array<ChartSimple>;
     'value'?: number;
     'valueCurrency'?: number;
     'changePercent'?: number;

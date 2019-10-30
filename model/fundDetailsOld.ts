@@ -21,7 +21,7 @@ import ApiClient from "../ApiClient";
 
 export class FundDetailsOld { 
     public 'totalAssetsCount'?: number;
-    public 'topFundAssets'?: [FundAssetPercent];
+    public 'topFundAssets'?: Array<FundAssetPercent>;
     public 'statistic'?: FundDetailsListStatistic;
     public 'personalDetails'?: PersonalFundDetailsFullOld;
     public 'dashboardAssetsDetails'?: DashboardProgramDetailsOld;
@@ -34,7 +34,7 @@ export class FundDetailsOld {
     public 'status'?: InvestmentProgramStatus;
     public 'creationDate'?: Date;
     public 'manager'?: ProfilePublic;
-    public 'chart'?: [ChartSimple];
+    public 'chart'?: Array<ChartSimple>;
     constructor() {
     }
 

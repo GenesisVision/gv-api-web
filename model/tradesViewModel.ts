@@ -17,7 +17,7 @@ import ApiClient from "../ApiClient";
 export class TradesViewModel { 
     public 'showSwaps'?: boolean;
     public 'showTickets'?: boolean;
-    public 'trades'?: [OrderModel];
+    public 'trades'?: Array<OrderModel>;
     public 'tradesDelay'?: TradesDelay;
     public 'total'?: number;
     constructor() {

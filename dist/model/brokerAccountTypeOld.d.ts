@@ -4,10 +4,10 @@ export declare class BrokerAccountTypeOld {
     'name'?: string;
     'description'?: string;
     'type'?: BrokerTradeServerType;
-    'leverages'?: [number];
-    'currencies'?: [string];
+    'leverages'?: Array<number>;
+    'currencies'?: Array<string>;
     'minimumDepositsAmount'?: {
-        String: number;
+        [key: string]: number;
     };
     'isForex'?: boolean;
     'isSignalsAvailable'?: boolean;

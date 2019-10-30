@@ -1,6 +1,6 @@
 import { PublicProfile } from './publicProfile';
 export declare class ManagersListOld {
-    'managers'?: [PublicProfile];
+    'managers'?: Array<PublicProfile>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

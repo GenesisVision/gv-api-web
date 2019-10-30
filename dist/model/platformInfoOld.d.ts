@@ -8,12 +8,12 @@ import { ProgramsInfoOld } from './programsInfoOld';
 export declare class PlatformInfoOld {
     'iOSVersion'?: IOsAppVersion;
     'androidVersion'?: AndroidAppVersion;
-    'programsFacets'?: [ProgramFacet];
-    'fundsFacets'?: [FundFacet];
+    'programsFacets'?: Array<ProgramFacet>;
+    'fundsFacets'?: Array<FundFacet>;
     'programsInfo'?: ProgramsInfoOld;
-    'currencies'?: [string];
-    'programCurrencies'?: [string];
-    'platformCurrencies'?: [PlatformCurrencyOld];
+    'currencies'?: Array<string>;
+    'programCurrencies'?: Array<string>;
+    'platformCurrencies'?: Array<PlatformCurrencyOld>;
     'enums'?: EnumsOld;
     constructor();
     static constructFromObject(data: {

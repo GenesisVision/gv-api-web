@@ -16,7 +16,7 @@ import ApiClient from "../ApiClient";
 
 export class WalletMultiSummary { 
     public 'grandTotal'?: WalletsGrandTotal;
-    public 'wallets'?: [WalletData];
+    public 'wallets'?: Array<WalletData>;
     public 'payFeesWithGvt'?: boolean;
     constructor() {
     }

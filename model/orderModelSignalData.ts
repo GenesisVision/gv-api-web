@@ -14,7 +14,7 @@ import { SignalDataMaster } from './signalDataMaster';
 import ApiClient from "../ApiClient";
 
 export class OrderModelSignalData { 
-    public 'masters'?: [SignalDataMaster];
+    public 'masters'?: Array<SignalDataMaster>;
     constructor() {
     }
 

@@ -9,7 +9,7 @@ export declare class SignalDetails {
     'currency'?: Currency;
     'level'?: number;
     'levelProgress'?: number;
-    'tags'?: [ProgramTag];
+    'tags'?: Array<ProgramTag>;
     'subscribers'?: number;
     'id'?: string;
     'logo'?: string;
@@ -20,7 +20,7 @@ export declare class SignalDetails {
     'status'?: InvestmentProgramStatus;
     'creationDate'?: Date;
     'manager'?: ProfilePublic;
-    'chart'?: [ChartSimple];
+    'chart'?: Array<ChartSimple>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

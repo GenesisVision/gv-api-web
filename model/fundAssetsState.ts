@@ -14,7 +14,7 @@ import { FundAssetPartWithIcon } from './fundAssetPartWithIcon';
 import ApiClient from "../ApiClient";
 
 export class FundAssetsState { 
-    public 'assets'?: [FundAssetPartWithIcon];
+    public 'assets'?: Array<FundAssetPartWithIcon>;
     public 'otherPercent'?: number;
     constructor() {
     }

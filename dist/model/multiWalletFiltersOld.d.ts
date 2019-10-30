@@ -1,6 +1,6 @@
 export declare class MultiWalletFiltersOld {
-    'transactionType'?: [string];
-    'externalTransactionType'?: [string];
+    'transactionType'?: Array<string>;
+    'externalTransactionType'?: Array<string>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

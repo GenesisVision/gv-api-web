@@ -1,7 +1,7 @@
 import { FundAssetPartWithIcon } from './fundAssetPartWithIcon';
 export declare class ReallocationModel {
     'date'?: Date;
-    'parts'?: [FundAssetPartWithIcon];
+    'parts'?: Array<FundAssetPartWithIcon>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

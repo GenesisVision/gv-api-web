@@ -145,7 +145,7 @@ export declare class ManagerService {
     }): CancelablePromise<null>;
     private investIntoProgramWithHttpInfo;
     updateFundAssets(id: string, authorization: string, opts?: {
-        assets?: [FundAssetPart];
+        assets?: Array<FundAssetPart>;
     }): CancelablePromise<null>;
     private updateFundAssetsWithHttpInfo;
     updateInvestmentProgram(id: string, authorization: string, opts?: {

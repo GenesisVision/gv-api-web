@@ -14,7 +14,7 @@ import { ProgramFacet } from './programFacet';
 import ApiClient from "../ApiClient";
 
 export class ProgramSets { 
-    public 'sets'?: [ProgramFacet];
+    public 'sets'?: Array<ProgramFacet>;
     public 'favoritesCount'?: number;
     constructor() {
     }

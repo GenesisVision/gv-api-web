@@ -36,7 +36,7 @@ export declare class ProgramDetailsFullOld {
     'brokerDetails'?: BrokerDetailsOld;
     'statistic'?: ProgramStatistic;
     'personalProgramDetails'?: PersonalProgramDetailsFullOld;
-    'tags'?: [ProgramTag];
+    'tags'?: Array<ProgramTag>;
     'id'?: string;
     'logo'?: string;
     'url'?: string;

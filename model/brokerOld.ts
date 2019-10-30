@@ -23,10 +23,10 @@ export class BrokerOld {
     public 'fee'?: number;
     public 'leverageMin'?: number;
     public 'leverageMax'?: number;
-    public 'accountTypes'?: [BrokerAccountTypeOld];
+    public 'accountTypes'?: Array<BrokerAccountTypeOld>;
     public 'isForex'?: boolean;
     public 'isSignalsAvailable'?: boolean;
-    public 'tags'?: [ProgramTag];
+    public 'tags'?: Array<ProgramTag>;
     constructor() {
     }
 

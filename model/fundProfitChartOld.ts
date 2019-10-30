@@ -16,7 +16,7 @@ import ApiClient from "../ApiClient";
 export class FundProfitChartOld { 
     public 'creationDate'?: Date;
     public 'profitPercent'?: number;
-    public 'equityChart'?: [FundEquityChartElementOld];
+    public 'equityChart'?: Array<FundEquityChartElementOld>;
     public 'balance'?: number;
     public 'investors'?: number;
     public 'profitChangePercent'?: number;

@@ -1,7 +1,7 @@
 import { WalletWithdrawalInfo } from './walletWithdrawalInfo';
 export declare class WithdrawalSummary {
     'availableToWithdrawal'?: number;
-    'wallets'?: [WalletWithdrawalInfo];
+    'wallets'?: Array<WalletWithdrawalInfo>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

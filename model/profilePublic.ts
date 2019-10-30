@@ -19,7 +19,7 @@ export class ProfilePublic {
     public 'avatar'?: string;
     public 'registrationDate'?: Date;
     public 'url'?: string;
-    public 'socialLinks'?: [SocialLinkViewModel];
+    public 'socialLinks'?: Array<SocialLinkViewModel>;
     constructor() {
     }
 

@@ -21,7 +21,7 @@ export class EnumsOld {
     public 'program'?: ProgramFiltersOld;
     public 'fund'?: FundFiltersOld;
     public 'event'?: EventFiltersOld;
-    public 'assetTypes'?: [string];
+    public 'assetTypes'?: Array<string>;
     constructor() {
     }
 

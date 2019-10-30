@@ -13,14 +13,14 @@
 import ApiClient from "../ApiClient";
 
 export class ProgramMinimumDepositOld { 
-    public 'minimumDepositsAmount'?: {String: number};
+    public 'minimumDepositsAmount'?: { [key: string]: number; };
     constructor() {
     }
 
     static constructFromObject(data: {[key: string]: any}, obj: ProgramMinimumDepositOld = new ProgramMinimumDepositOld()): ProgramMinimumDepositOld {
         if (data) {
             if (data.hasOwnProperty('minimumDepositsAmount')) {
-                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], {String: 'number'});
+                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], {'string': 'number'});
             }
         }
         return obj;

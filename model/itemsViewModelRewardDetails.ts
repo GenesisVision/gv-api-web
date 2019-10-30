@@ -14,7 +14,7 @@ import { RewardDetails } from './rewardDetails';
 import ApiClient from "../ApiClient";
 
 export class ItemsViewModelRewardDetails { 
-    public 'items'?: [RewardDetails];
+    public 'items'?: Array<RewardDetails>;
     public 'total'?: number;
     constructor() {
     }

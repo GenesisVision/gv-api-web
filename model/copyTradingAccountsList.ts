@@ -14,7 +14,7 @@ import { CopyTradingAccountInfo } from './copyTradingAccountInfo';
 import ApiClient from "../ApiClient";
 
 export class CopyTradingAccountsList { 
-    public 'accounts'?: [CopyTradingAccountInfo];
+    public 'accounts'?: Array<CopyTradingAccountInfo>;
     public 'total'?: number;
     constructor() {
     }

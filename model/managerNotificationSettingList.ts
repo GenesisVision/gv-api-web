@@ -19,7 +19,7 @@ export class ManagerNotificationSettingList {
     public 'username'?: string;
     public 'avatar'?: string;
     public 'about'?: string;
-    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    public 'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor() {
     }
 

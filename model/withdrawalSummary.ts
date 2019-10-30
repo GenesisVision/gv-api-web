@@ -15,7 +15,7 @@ import ApiClient from "../ApiClient";
 
 export class WithdrawalSummary { 
     public 'availableToWithdrawal'?: number;
-    public 'wallets'?: [WalletWithdrawalInfo];
+    public 'wallets'?: Array<WalletWithdrawalInfo>;
     constructor() {
     }
 

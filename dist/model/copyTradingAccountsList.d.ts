@@ -1,6 +1,6 @@
 import { CopyTradingAccountInfo } from './copyTradingAccountInfo';
 export declare class CopyTradingAccountsList {
-    'accounts'?: [CopyTradingAccountInfo];
+    'accounts'?: Array<CopyTradingAccountInfo>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

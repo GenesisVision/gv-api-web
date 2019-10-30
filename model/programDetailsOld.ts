@@ -33,7 +33,7 @@ export class ProgramDetailsOld {
     public 'dashboardAssetsDetails'?: DashboardProgramDetailsOld;
     public 'statistic'?: ProgramDetailsListStatistic;
     public 'personalDetails'?: PersonalProgramDetailsFullOld;
-    public 'tags'?: [ProgramTag];
+    public 'tags'?: Array<ProgramTag>;
     public 'id'?: string;
     public 'logo'?: string;
     public 'url'?: string;
@@ -43,7 +43,7 @@ export class ProgramDetailsOld {
     public 'status'?: InvestmentProgramStatus;
     public 'creationDate'?: Date;
     public 'manager'?: ProfilePublic;
-    public 'chart'?: [ChartSimple];
+    public 'chart'?: Array<ChartSimple>;
     constructor() {
     }
 

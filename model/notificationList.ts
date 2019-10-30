@@ -14,7 +14,7 @@ import { NotificationViewModel } from './notificationViewModel';
 import ApiClient from "../ApiClient";
 
 export class NotificationList { 
-    public 'notifications'?: [NotificationViewModel];
+    public 'notifications'?: Array<NotificationViewModel>;
     public 'total'?: number;
     constructor() {
     }

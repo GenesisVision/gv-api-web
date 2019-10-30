@@ -2,13 +2,13 @@ import { NotificationSettingViewModel } from './notificationSettingViewModel';
 export declare class ProgramNotificationSettingList {
     'level'?: number;
     'levelProgress'?: number;
-    'settingsCustom'?: [NotificationSettingViewModel];
+    'settingsCustom'?: Array<NotificationSettingViewModel>;
     'assetId'?: string;
     'title'?: string;
     'url'?: string;
     'logo'?: string;
     'color'?: string;
-    'settingsGeneral'?: [NotificationSettingViewModel];
+    'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

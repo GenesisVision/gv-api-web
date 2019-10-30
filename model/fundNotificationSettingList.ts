@@ -19,7 +19,7 @@ export class FundNotificationSettingList {
     public 'url'?: string;
     public 'logo'?: string;
     public 'color'?: string;
-    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    public 'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor() {
     }
 

@@ -5,7 +5,7 @@ export declare class ManagerNotificationSettingList {
     'username'?: string;
     'avatar'?: string;
     'about'?: string;
-    'settingsGeneral'?: [NotificationSettingViewModel];
+    'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

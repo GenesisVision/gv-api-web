@@ -7,7 +7,7 @@ import { PersonalFundDetailsFullOld } from './personalFundDetailsFullOld';
 import { ProfilePublic } from './profilePublic';
 export declare class FundDetailsOld {
     'totalAssetsCount'?: number;
-    'topFundAssets'?: [FundAssetPercent];
+    'topFundAssets'?: Array<FundAssetPercent>;
     'statistic'?: FundDetailsListStatistic;
     'personalDetails'?: PersonalFundDetailsFullOld;
     'dashboardAssetsDetails'?: DashboardProgramDetailsOld;
@@ -20,7 +20,7 @@ export declare class FundDetailsOld {
     'status'?: InvestmentProgramStatus;
     'creationDate'?: Date;
     'manager'?: ProfilePublic;
-    'chart'?: [ChartSimple];
+    'chart'?: Array<ChartSimple>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

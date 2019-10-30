@@ -24,8 +24,8 @@ export class InvestmentEventViewModel {
     public 'amount'?: number;
     public 'currency'?: CurrencyEnum;
     public 'changeState'?: ChangeState;
-    public 'extendedInfo'?: [InvestmentEventItemViewModel];
-    public 'feesInfo'?: [FeeDetails];
+    public 'extendedInfo'?: Array<InvestmentEventItemViewModel>;
+    public 'feesInfo'?: Array<FeeDetails>;
     public 'totalFeesAmount'?: number;
     public 'totalFeesCurrency'?: TotalFeesCurrencyEnum;
     constructor() {

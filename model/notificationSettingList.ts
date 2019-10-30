@@ -17,10 +17,10 @@ import { ProgramNotificationSettingList } from './programNotificationSettingList
 import ApiClient from "../ApiClient";
 
 export class NotificationSettingList { 
-    public 'settingsGeneral'?: [NotificationSettingViewModel];
-    public 'settingsProgram'?: [ProgramNotificationSettingList];
-    public 'settingsFund'?: [FundNotificationSettingList];
-    public 'settingsManager'?: [ManagerNotificationSettingList];
+    public 'settingsGeneral'?: Array<NotificationSettingViewModel>;
+    public 'settingsProgram'?: Array<ProgramNotificationSettingList>;
+    public 'settingsFund'?: Array<FundNotificationSettingList>;
+    public 'settingsManager'?: Array<ManagerNotificationSettingList>;
     constructor() {
     }
 

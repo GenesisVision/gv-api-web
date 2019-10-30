@@ -19,9 +19,9 @@ import { TradeEntryType } from './tradeEntryType';
 import ApiClient from "../ApiClient";
 
 export class OrderSignalModel { 
-    public 'providers'?: [OrderSignalProgramInfo];
+    public 'providers'?: Array<OrderSignalProgramInfo>;
     public 'totalCommission'?: number;
-    public 'totalCommissionByType'?: [FeeDetails];
+    public 'totalCommissionByType'?: Array<FeeDetails>;
     public 'tradingAccountId'?: string;
     public 'currency'?: Currency;
     public 'id'?: string;

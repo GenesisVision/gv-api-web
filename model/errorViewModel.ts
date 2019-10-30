@@ -15,7 +15,7 @@ import { ErrorMessage } from './errorMessage';
 import ApiClient from "../ApiClient";
 
 export class ErrorViewModel { 
-    public 'errors'?: [ErrorMessage];
+    public 'errors'?: Array<ErrorMessage>;
     public 'code'?: ErrorCodes;
     constructor() {
     }

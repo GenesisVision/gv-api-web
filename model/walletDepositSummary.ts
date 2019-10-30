@@ -14,7 +14,7 @@ import { WalletDeposit } from './walletDeposit';
 import ApiClient from "../ApiClient";
 
 export class WalletDepositSummary { 
-    public 'wallets'?: [WalletDeposit];
+    public 'wallets'?: Array<WalletDeposit>;
     constructor() {
     }
 

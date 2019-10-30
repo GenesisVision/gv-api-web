@@ -3,7 +3,7 @@ import { TradesDelay } from './tradesDelay';
 export declare class TradesViewModel {
     'showSwaps'?: boolean;
     'showTickets'?: boolean;
-    'trades'?: [OrderModel];
+    'trades'?: Array<OrderModel>;
     'tradesDelay'?: TradesDelay;
     'total'?: number;
     constructor();

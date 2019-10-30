@@ -14,7 +14,7 @@ import { WalletBaseData } from './walletBaseData';
 import ApiClient from "../ApiClient";
 
 export class WalletMultiAvailable { 
-    public 'wallets'?: [WalletBaseData];
+    public 'wallets'?: Array<WalletBaseData>;
     constructor() {
     }
 

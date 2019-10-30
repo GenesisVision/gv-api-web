@@ -50,7 +50,7 @@ export class ProgramDetailsFullOld {
     public 'brokerDetails'?: BrokerDetailsOld;
     public 'statistic'?: ProgramStatistic;
     public 'personalProgramDetails'?: PersonalProgramDetailsFullOld;
-    public 'tags'?: [ProgramTag];
+    public 'tags'?: Array<ProgramTag>;
     public 'id'?: string;
     public 'logo'?: string;
     public 'url'?: string;

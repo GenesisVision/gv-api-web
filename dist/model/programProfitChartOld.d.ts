@@ -2,14 +2,14 @@ import { ChartSimple } from './chartSimple';
 import { Currency } from './currency';
 import { PeriodDate } from './periodDate';
 export declare class ProgramProfitChartOld {
-    'equityChart'?: [ChartSimple];
+    'equityChart'?: Array<ChartSimple>;
     'totalProfit'?: number;
     'timeframeProfit'?: number;
     'programCurrency'?: Currency;
     'trades'?: number;
     'successTradesPercent'?: number;
     'profitFactor'?: number;
-    'periods'?: [PeriodDate];
+    'periods'?: Array<PeriodDate>;
     'lastPeriodStarts'?: Date;
     'lastPeriodEnds'?: Date;
     'tradingVolume'?: number;

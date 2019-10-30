@@ -1,6 +1,6 @@
 import { ProgramRequestOld } from './programRequestOld';
 export declare class ProgramRequestsOld {
-    'requests'?: [ProgramRequestOld];
+    'requests'?: Array<ProgramRequestOld>;
     'total'?: number;
     'totalValue'?: number;
     constructor();

@@ -1,6 +1,6 @@
 import { RewardDetails } from './rewardDetails';
 export declare class ItemsViewModelRewardDetails {
-    'items'?: [RewardDetails];
+    'items'?: Array<RewardDetails>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

@@ -15,7 +15,7 @@ import ApiClient from "../ApiClient";
 
 export class NewFundRequest { 
     public 'exitFee'?: number;
-    public 'assets'?: [FundAssetPart];
+    public 'assets'?: Array<FundAssetPart>;
     public 'entryFee'?: number;
     public 'depositAmount'?: number;
     public 'depositWalletId'?: string;

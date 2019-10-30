@@ -14,7 +14,7 @@ import { PublicProfile } from './publicProfile';
 import ApiClient from "../ApiClient";
 
 export class ManagersListOld { 
-    public 'managers'?: [PublicProfile];
+    public 'managers'?: Array<PublicProfile>;
     public 'total'?: number;
     constructor() {
     }

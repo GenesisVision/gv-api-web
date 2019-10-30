@@ -1,6 +1,6 @@
 import { SignalTradingEvent } from './signalTradingEvent';
 export declare class SignalTradingEvents {
-    'events'?: [SignalTradingEvent];
+    'events'?: Array<SignalTradingEvent>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

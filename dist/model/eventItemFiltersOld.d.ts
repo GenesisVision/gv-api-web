@@ -1,8 +1,8 @@
 import { FilterModelOld } from './filterModelOld';
 export declare class EventItemFiltersOld {
-    'programDetails'?: [FilterModelOld];
-    'fundDetails'?: [FilterModelOld];
-    'allAssets'?: [FilterModelOld];
+    'programDetails'?: Array<FilterModelOld>;
+    'fundDetails'?: Array<FilterModelOld>;
+    'allAssets'?: Array<FilterModelOld>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

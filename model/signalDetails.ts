@@ -23,7 +23,7 @@ export class SignalDetails {
     public 'currency'?: Currency;
     public 'level'?: number;
     public 'levelProgress'?: number;
-    public 'tags'?: [ProgramTag];
+    public 'tags'?: Array<ProgramTag>;
     public 'subscribers'?: number;
     public 'id'?: string;
     public 'logo'?: string;
@@ -34,7 +34,7 @@ export class SignalDetails {
     public 'status'?: InvestmentProgramStatus;
     public 'creationDate'?: Date;
     public 'manager'?: ProfilePublic;
-    public 'chart'?: [ChartSimple];
+    public 'chart'?: Array<ChartSimple>;
     constructor() {
     }
 

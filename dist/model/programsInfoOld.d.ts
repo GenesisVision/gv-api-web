@@ -12,7 +12,7 @@ export declare class ProgramsInfoOld {
     'managerMinSignalVolumeFee'?: number;
     'managerMaxSignalSuccessFee'?: number;
     'managerMinSignalSuccessFee'?: number;
-    'periods'?: [number];
+    'periods'?: Array<number>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

@@ -14,7 +14,7 @@ import { SignalTradingEvent } from './signalTradingEvent';
 import ApiClient from "../ApiClient";
 
 export class SignalTradingEvents { 
-    public 'events'?: [SignalTradingEvent];
+    public 'events'?: Array<SignalTradingEvent>;
     public 'total'?: number;
     constructor() {
     }

@@ -14,7 +14,7 @@ import { InvestmentEventViewModel } from './investmentEventViewModel';
 import ApiClient from "../ApiClient";
 
 export class InvestmentEventViewModels { 
-    public 'events'?: [InvestmentEventViewModel];
+    public 'events'?: Array<InvestmentEventViewModel>;
     public 'total'?: number;
     constructor() {
     }

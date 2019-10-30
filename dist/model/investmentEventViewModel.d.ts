@@ -10,8 +10,8 @@ export declare class InvestmentEventViewModel {
     'amount'?: number;
     'currency'?: CurrencyEnum;
     'changeState'?: ChangeState;
-    'extendedInfo'?: [InvestmentEventItemViewModel];
-    'feesInfo'?: [FeeDetails];
+    'extendedInfo'?: Array<InvestmentEventItemViewModel>;
+    'feesInfo'?: Array<FeeDetails>;
     'totalFeesAmount'?: number;
     'totalFeesCurrency'?: TotalFeesCurrencyEnum;
     constructor();

@@ -14,7 +14,7 @@ import { SocialLinkViewModel } from './socialLinkViewModel';
 import ApiClient from "../ApiClient";
 
 export class SocialLinksViewModel { 
-    public 'socialLinks'?: [SocialLinkViewModel];
+    public 'socialLinks'?: Array<SocialLinkViewModel>;
     constructor() {
     }
 

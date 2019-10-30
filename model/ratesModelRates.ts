@@ -14,19 +14,19 @@ import { RateItem } from './rateItem';
 import ApiClient from "../ApiClient";
 
 export class RatesModelRates { 
-    public 'Undefined'?: [RateItem];
-    public 'GVT'?: [RateItem];
-    public 'ETH'?: [RateItem];
-    public 'BTC'?: [RateItem];
-    public 'ADA'?: [RateItem];
-    public 'USDT'?: [RateItem];
-    public 'XRP'?: [RateItem];
-    public 'BCH'?: [RateItem];
-    public 'LTC'?: [RateItem];
-    public 'DOGE'?: [RateItem];
-    public 'BNB'?: [RateItem];
-    public 'USD'?: [RateItem];
-    public 'EUR'?: [RateItem];
+    public 'Undefined'?: Array<RateItem>;
+    public 'GVT'?: Array<RateItem>;
+    public 'ETH'?: Array<RateItem>;
+    public 'BTC'?: Array<RateItem>;
+    public 'ADA'?: Array<RateItem>;
+    public 'USDT'?: Array<RateItem>;
+    public 'XRP'?: Array<RateItem>;
+    public 'BCH'?: Array<RateItem>;
+    public 'LTC'?: Array<RateItem>;
+    public 'DOGE'?: Array<RateItem>;
+    public 'BNB'?: Array<RateItem>;
+    public 'USD'?: Array<RateItem>;
+    public 'EUR'?: Array<RateItem>;
     constructor() {
     }
 

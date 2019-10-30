@@ -24,7 +24,7 @@ export class BrokerAccountTypeOld {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], ['string']);
             }
             if (data.hasOwnProperty('minimumDepositsAmount')) {
-                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], { String: 'number' });
+                obj['minimumDepositsAmount'] = ApiClient.convertToType(data['minimumDepositsAmount'], { 'string': 'number' });
             }
             if (data.hasOwnProperty('isForex')) {
                 obj['isForex'] = ApiClient.convertToType(data['isForex'], 'boolean');

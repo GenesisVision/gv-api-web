@@ -1,6 +1,6 @@
 import { ProgramPeriodViewModel } from './programPeriodViewModel';
 export declare class ProgramPeriodsViewModel {
-    'periods'?: [ProgramPeriodViewModel];
+    'periods'?: Array<ProgramPeriodViewModel>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

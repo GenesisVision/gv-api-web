@@ -9,10 +9,10 @@ export declare class BrokerOld {
     'fee'?: number;
     'leverageMin'?: number;
     'leverageMax'?: number;
-    'accountTypes'?: [BrokerAccountTypeOld];
+    'accountTypes'?: Array<BrokerAccountTypeOld>;
     'isForex'?: boolean;
     'isSignalsAvailable'?: boolean;
-    'tags'?: [ProgramTag];
+    'tags'?: Array<ProgramTag>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

@@ -14,7 +14,7 @@ import { FundDetailsOld } from './fundDetailsOld';
 import ApiClient from "../ApiClient";
 
 export class FundsListOld { 
-    public 'funds'?: [FundDetailsOld];
+    public 'funds'?: Array<FundDetailsOld>;
     public 'total'?: number;
     constructor() {
     }

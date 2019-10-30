@@ -14,10 +14,10 @@ import { FilterModelOld } from './filterModelOld';
 import ApiClient from "../ApiClient";
 
 export class EventInvestorItemFiltersOld { 
-    public 'signalProgramDetails'?: [FilterModelOld];
-    public 'programDetails'?: [FilterModelOld];
-    public 'fundDetails'?: [FilterModelOld];
-    public 'allAssets'?: [FilterModelOld];
+    public 'signalProgramDetails'?: Array<FilterModelOld>;
+    public 'programDetails'?: Array<FilterModelOld>;
+    public 'fundDetails'?: Array<FilterModelOld>;
+    public 'allAssets'?: Array<FilterModelOld>;
     constructor() {
     }
 

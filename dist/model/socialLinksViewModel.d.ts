@@ -1,6 +1,6 @@
 import { SocialLinkViewModel } from './socialLinkViewModel';
 export declare class SocialLinksViewModel {
-    'socialLinks'?: [SocialLinkViewModel];
+    'socialLinks'?: Array<SocialLinkViewModel>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

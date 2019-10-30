@@ -17,7 +17,7 @@ import ApiClient from "../ApiClient";
 export class ValueChartBar { 
     public 'value'?: number;
     public 'date'?: Date;
-    public 'topAssets'?: [AssetsValue];
+    public 'topAssets'?: Array<AssetsValue>;
     public 'otherAssetsValue'?: OtherAssetsValue;
     constructor() {
     }

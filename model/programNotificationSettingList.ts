@@ -16,13 +16,13 @@ import ApiClient from "../ApiClient";
 export class ProgramNotificationSettingList { 
     public 'level'?: number;
     public 'levelProgress'?: number;
-    public 'settingsCustom'?: [NotificationSettingViewModel];
+    public 'settingsCustom'?: Array<NotificationSettingViewModel>;
     public 'assetId'?: string;
     public 'title'?: string;
     public 'url'?: string;
     public 'logo'?: string;
     public 'color'?: string;
-    public 'settingsGeneral'?: [NotificationSettingViewModel];
+    public 'settingsGeneral'?: Array<NotificationSettingViewModel>;
     constructor() {
     }
 

@@ -14,7 +14,7 @@ import { PlatformAsset } from './platformAsset';
 import ApiClient from "../ApiClient";
 
 export class PlatformAssets { 
-    public 'assets'?: [PlatformAsset];
+    public 'assets'?: Array<PlatformAsset>;
     constructor() {
     }
 

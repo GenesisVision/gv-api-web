@@ -1,6 +1,6 @@
 import { SignalSubscriber } from './signalSubscriber';
 export declare class SignalProviderSubscribers {
-    'subscribers'?: [SignalSubscriber];
+    'subscribers'?: Array<SignalSubscriber>;
     'total'?: number;
     constructor();
     static constructFromObject(data: {

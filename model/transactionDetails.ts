@@ -25,7 +25,7 @@ export class TransactionDetails {
     public 'convertingDetails'?: ConvertingDetails;
     public 'externalTransactionDetails'?: ExternalTransactionDetails;
     public 'status'?: MultiWalletTransactionStatus;
-    public 'signalFees'?: [SignalFee];
+    public 'signalFees'?: Array<SignalFee>;
     public 'currency'?: Currency;
     public 'currencyName'?: string;
     public 'currencyLogo'?: string;

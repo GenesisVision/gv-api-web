@@ -9,7 +9,7 @@ export declare class OrderSignalProgramInfo {
     'priceOpenAvg'?: number;
     'profit'?: number;
     'firstOrderDate'?: Date;
-    'fees'?: [OrderSignalFee];
+    'fees'?: Array<OrderSignalFee>;
     constructor();
     static constructFromObject(data: {
         [key: string]: any;

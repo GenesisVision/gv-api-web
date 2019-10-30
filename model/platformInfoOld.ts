@@ -22,12 +22,12 @@ import ApiClient from "../ApiClient";
 export class PlatformInfoOld { 
     public 'iOSVersion'?: IOsAppVersion;
     public 'androidVersion'?: AndroidAppVersion;
-    public 'programsFacets'?: [ProgramFacet];
-    public 'fundsFacets'?: [FundFacet];
+    public 'programsFacets'?: Array<ProgramFacet>;
+    public 'fundsFacets'?: Array<FundFacet>;
     public 'programsInfo'?: ProgramsInfoOld;
-    public 'currencies'?: [string];
-    public 'programCurrencies'?: [string];
-    public 'platformCurrencies'?: [PlatformCurrencyOld];
+    public 'currencies'?: Array<string>;
+    public 'programCurrencies'?: Array<string>;
+    public 'platformCurrencies'?: Array<PlatformCurrencyOld>;
     public 'enums'?: EnumsOld;
     constructor() {
     }

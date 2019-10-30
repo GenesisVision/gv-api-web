@@ -14,7 +14,7 @@ import { LevelInfo } from './levelInfo';
 import ApiClient from "../ApiClient";
 
 export class ProgramsLevelsInfo { 
-    public 'levels'?: [LevelInfo];
+    public 'levels'?: Array<LevelInfo>;
     constructor() {
     }
 

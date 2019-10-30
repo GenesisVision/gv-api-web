@@ -14,9 +14,9 @@ import { ProgramTag } from './programTag';
 import ApiClient from "../ApiClient";
 
 export class ProgramFiltersOld { 
-    public 'programTags'?: [ProgramTag];
-    public 'actionType'?: [string];
-    public 'customNotificationType'?: [string];
+    public 'programTags'?: Array<ProgramTag>;
+    public 'actionType'?: Array<string>;
+    public 'customNotificationType'?: Array<string>;
     constructor() {
     }
 

@@ -14,7 +14,7 @@ import { FundFacet } from './fundFacet';
 import ApiClient from "../ApiClient";
 
 export class FundSets { 
-    public 'sets'?: [FundFacet];
+    public 'sets'?: Array<FundFacet>;
     public 'favoritesCount'?: number;
     constructor() {
     }
