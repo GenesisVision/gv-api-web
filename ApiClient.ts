@@ -245,7 +245,7 @@ export default class ApiClient {
         MULTI: 'multi'
     };
 
-    buildCollectionParam(param?: any[], collectionFormat?: string): string | null | string[] {
+    buildCollectionParam(param?: Array<any>, collectionFormat?: string): string | null | string[] {
         if (param === null || param === undefined) {
             return null;
         }
