@@ -8,7 +8,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate-api": "node bash/generate",
-    "build": "npm run generate-api"
+    "build": "npm run generate-api",
+    "compile": "tsc"
   },
   "browser": {
     "fs": false

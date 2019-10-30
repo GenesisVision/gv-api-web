@@ -1,5 +1,12 @@
 wwwroot/*.js
 node_modules
-typings
-.env
 .idea
+
+.env
+
+# generated
+/api
+/model
+/ApiClient.ts
+/constructFromObject
+/index.ts
