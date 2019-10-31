@@ -6,12 +6,12 @@ const handleCallback = (resolve: any, reject: any, callback: any, r: any) => {
   }
 };
 
-export default class CancelablePromise<T> {
+export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T>{
   private state: {
     canceled: boolean
   };
 
-  private _promise: PromiseLike<any>;
+  private _promise: Promise<any>;
   private _onCancel?: () => void;
 
   static all<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(values: [T1 | PromiseLike<T1>, T2 | PromiseLike<T2>, T3 | PromiseLike<T3>, T4 | PromiseLike<T4>, T5 | PromiseLike<T5>, T6 | PromiseLike<T6>, T7 | PromiseLike<T7>, T8 | PromiseLike<T8>, T9 | PromiseLike<T9>, T10 | PromiseLike<T10>]): CancelablePromise<[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]>;
@@ -51,7 +51,7 @@ export default class CancelablePromise<T> {
     });
   }
 
-  static resolve<T>(value: T | PromiseLike<T>): CancelablePromise<T> {
+  resolve<T>(value: T | PromiseLike<T>): CancelablePromise<T> {
     return new CancelablePromise((y, n) => {
       Promise.resolve(value).then(y, n);
     });
@@ -64,6 +64,7 @@ export default class CancelablePromise<T> {
       canceled: false
     }
   ) {
+    const r = super(executor);
     this._promise = new Promise(executor);
     this._onCancel = onCancel;
     this.state = state;
@@ -94,7 +95,7 @@ export default class CancelablePromise<T> {
     );
   }
 
-  finally(onfinally?: () => {}) {
+  finally(onfinally?: () => void) {
     const _finally = (data: any) => {
       if (typeof onfinally === "function") {
         onfinally();

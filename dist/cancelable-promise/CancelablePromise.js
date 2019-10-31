@@ -6,10 +6,11 @@ const handleCallback = (resolve, reject, callback, r) => {
         reject(e);
     }
 };
-export default class CancelablePromise {
+export default class CancelablePromise extends Promise {
     constructor(executor, onCancel, state = {
         canceled: false
     }) {
+        const r = super(executor);
         this._promise = new Promise(executor);
         this._onCancel = onCancel;
         this.state = state;
@@ -35,7 +36,7 @@ export default class CancelablePromise {
             Promise.reject(value).then(y, n);
         });
     }
-    static resolve(value) {
+    resolve(value) {
         return new CancelablePromise((y, n) => {
             Promise.resolve(value).then(y, n);
         });

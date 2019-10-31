@@ -1,4 +1,4 @@
-export default class CancelablePromise<T> {
+export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T> {
     private state;
     private _promise;
     private _onCancel?;
@@ -15,12 +15,12 @@ export default class CancelablePromise<T> {
     static race<T>(values: T[]): CancelablePromise<T extends PromiseLike<infer U> ? U : T>;
     static race<T>(values: Iterable<T>): CancelablePromise<T extends PromiseLike<infer U> ? U : T>;
     static reject<T = never>(value?: any): CancelablePromise<T>;
-    static resolve<T>(value: T | PromiseLike<T>): CancelablePromise<T>;
+    resolve<T>(value: T | PromiseLike<T>): CancelablePromise<T>;
     constructor(executor: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void, onCancel?: () => void, state?: {
         canceled: boolean;
     });
     then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): CancelablePromise<TResult1 | TResult2>;
-    finally(onfinally?: () => {}): CancelablePromise<any>;
+    finally(onfinally?: () => void): CancelablePromise<any>;
     catch(error: any): CancelablePromise<T>;
     cancel(): this | undefined;
 }
