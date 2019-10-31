@@ -8,5 +8,5 @@ node_modules
 /api
 /model
 ApiClient.ts
-constructFromObject
+constructFromObject.ts
 index.ts
