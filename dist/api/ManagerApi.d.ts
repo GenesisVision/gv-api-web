@@ -10,16 +10,15 @@ import { ManagerFundWithdrawInfoOld } from "../model/ManagerFundWithdrawInfoOld"
 import { ManagerProfileDetails } from "../model/ManagerProfileDetails";
 import { ManagerProgramWithdrawInfoOld } from "../model/ManagerProgramWithdrawInfoOld";
 import { NewFundRequest } from "../model/NewFundRequest";
-import { NewProgramRequest } from "../model/NewProgramRequest";
-import { ProgramCreateResult } from "../model/ProgramCreateResult";
 import { ProgramInvestInfoOld } from "../model/ProgramInvestInfoOld";
 import { ProgramLevelInfo } from "../model/ProgramLevelInfo";
 import { ProgramMinimumDepositOld } from "../model/ProgramMinimumDepositOld";
-import { ProgramPwdUpdate } from "../model/ProgramPwdUpdate";
 import { ProgramRequestsOld } from "../model/ProgramRequestsOld";
 import { ProgramUpdate } from "../model/ProgramUpdate";
 import { ProgramsListOld } from "../model/ProgramsListOld";
 import { PublicProfile } from "../model/PublicProfile";
+import { TradingAccountCreateResult } from "../model/TradingAccountCreateResult";
+import { TradingAccountPwdUpdate } from "../model/TradingAccountPwdUpdate";
 import { TwoFactorAuthenticator } from "../model/TwoFactorAuthenticator";
 export declare class ManagerApi {
     private apiClient;
@@ -37,7 +36,7 @@ export declare class ManagerApi {
     }): CancelablePromise<null>;
     private changeBrokerWithHttpInfo;
     changeProgramPassword(id: string, authorization: string, opts?: {
-        model?: ProgramPwdUpdate;
+        model?: TradingAccountPwdUpdate;
     }): CancelablePromise<null>;
     private changeProgramPasswordWithHttpInfo;
     closeCurrentPeriod(id: string, authorization: string): CancelablePromise<null>;
@@ -59,9 +58,7 @@ export declare class ManagerApi {
         request?: NewFundRequest;
     }): CancelablePromise<null>;
     private createFundWithHttpInfo;
-    createProgram(authorization: string, opts?: {
-        request?: NewProgramRequest;
-    }): CancelablePromise<ProgramCreateResult>;
+    createProgram(authorization: string): CancelablePromise<TradingAccountCreateResult>;
     private createProgramWithHttpInfo;
     getEvents(authorization: string, opts?: {
         eventLocation?: 'Asset' | 'Dashboard' | 'EventsAll';
@@ -157,13 +154,13 @@ export declare class ManagerApi {
     }): CancelablePromise<null>;
     private updateInvestmentProgram_3WithHttpInfo;
     updateProgramSignalSettings(authorization: string, opts?: {
-        programId?: string;
+        assetId?: string;
         volumeFee?: number;
         successFee?: number;
     }): CancelablePromise<null>;
     private updateProgramSignalSettingsWithHttpInfo;
     updateProgramSignalSettings_4(authorization: string, opts?: {
-        programId?: string;
+        assetId?: string;
         volumeFee?: number;
         successFee?: number;
     }): CancelablePromise<null>;

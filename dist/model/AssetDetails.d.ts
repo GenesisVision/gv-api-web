@@ -1,4 +1,5 @@
 import { AssetType } from './AssetType';
+import { ProgramAssetDetails } from './ProgramAssetDetails';
 export declare class AssetDetails {
     'id': string;
     'logo': string;
@@ -6,7 +7,7 @@ export declare class AssetDetails {
     'title': string;
     'url': string;
     'assetType': AssetType;
-    'levelProgress': number;
+    'programDetails': ProgramAssetDetails;
     constructor(data: {
         [key: string]: any;
     });

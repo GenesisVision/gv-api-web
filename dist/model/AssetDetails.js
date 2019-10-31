@@ -1,4 +1,5 @@
 import { AssetType } from './AssetType';
+import { ProgramAssetDetails } from './ProgramAssetDetails';
 import ApiClient from "../ApiClient";
 export class AssetDetails {
     constructor(data) {
@@ -8,7 +9,7 @@ export class AssetDetails {
         this['title'] = data['title'];
         this['url'] = data['url'];
         this['assetType'] = data['assetType'];
-        this['levelProgress'] = data['levelProgress'];
+        this['programDetails'] = data['programDetails'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -19,7 +20,7 @@ export class AssetDetails {
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
                 'assetType': AssetType.constructFromObject(data['assetType']),
-                'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+                'programDetails': ProgramAssetDetails.constructFromObject(data['programDetails']),
             });
         }
     }

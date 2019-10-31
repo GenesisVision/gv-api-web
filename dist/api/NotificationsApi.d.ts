@@ -11,7 +11,7 @@ export declare class NotificationsApi {
     addNotificationsSettings(authorization: string, opts?: {
         assetId?: string;
         managerId?: string;
-        type?: 'PlatformNewsAndUpdates' | 'PlatformEmergency' | 'PlatformOther' | 'ProfileUpdated' | 'ProfilePwdUpdated' | 'ProfileVerification' | 'Profile2FA' | 'ProfileSecurity' | 'TradingAccountPwdUpdated' | 'ProgramNewsAndUpdates' | 'ProgramEndOfPeriod' | 'ProgramCondition' | 'ProgramExceedInvestmentLimit' | 'FundNewsAndUpdates' | 'FundEndOfPeriod' | 'FundRebalancing' | 'ManagerNewProgram' | 'ManagerNewFund' | 'ManagerNewExternalSignalAccount' | 'Signals' | 'ExternalSignals';
+        type?: 'PlatformNewsAndUpdates' | 'PlatformEmergency' | 'PlatformOther' | 'ProfileUpdated' | 'ProfilePwdUpdated' | 'ProfileVerification' | 'Profile2FA' | 'ProfileSecurity' | 'TradingAccountPwdUpdated' | 'ProgramNewsAndUpdates' | 'ProgramEndOfPeriod' | 'ProgramCondition' | 'ProgramExceedInvestmentLimit' | 'FundNewsAndUpdates' | 'FundEndOfPeriod' | 'FundRebalancing' | 'ManagerNewProgram' | 'ManagerNewFund' | 'ManagerNewExternalSignalAccount' | 'ManagerNewSignalProvider' | 'Signals' | 'ExternalSignals';
         conditionType?: 'Empty' | 'Profit' | 'Level' | 'AvailableToInvest';
         conditionAmount?: number;
     }): CancelablePromise<string>;

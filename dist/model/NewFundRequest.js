@@ -2,9 +2,9 @@ import { FundAssetPart } from './FundAssetPart';
 import ApiClient from "../ApiClient";
 export class NewFundRequest {
     constructor(data) {
-        this['exitFee'] = data['exitFee'];
         this['assets'] = data['assets'];
         this['entryFee'] = data['entryFee'];
+        this['exitFee'] = data['exitFee'];
         this['depositAmount'] = data['depositAmount'];
         this['depositWalletId'] = data['depositWalletId'];
         this['title'] = data['title'];
@@ -14,9 +14,9 @@ export class NewFundRequest {
     static constructFromObject(data) {
         if (data) {
             return new NewFundRequest({
-                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
                 'assets': ApiClient.convertToType(data['assets'], [FundAssetPart]),
                 'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
                 'depositAmount': ApiClient.convertToType(data['depositAmount'], 'number'),
                 'depositWalletId': ApiClient.convertToType(data['depositWalletId'], 'string'),
                 'title': ApiClient.convertToType(data['title'], 'string'),

@@ -6,13 +6,13 @@ import { ManagerAssets } from "../model/ManagerAssets";
 import { ManagerFundWithdrawInfoOld } from "../model/ManagerFundWithdrawInfoOld";
 import { ManagerProfileDetails } from "../model/ManagerProfileDetails";
 import { ManagerProgramWithdrawInfoOld } from "../model/ManagerProgramWithdrawInfoOld";
-import { ProgramCreateResult } from "../model/ProgramCreateResult";
 import { ProgramInvestInfoOld } from "../model/ProgramInvestInfoOld";
 import { ProgramLevelInfo } from "../model/ProgramLevelInfo";
 import { ProgramMinimumDepositOld } from "../model/ProgramMinimumDepositOld";
 import { ProgramRequestsOld } from "../model/ProgramRequestsOld";
 import { ProgramsListOld } from "../model/ProgramsListOld";
 import { PublicProfile } from "../model/PublicProfile";
+import { TradingAccountCreateResult } from "../model/TradingAccountCreateResult";
 import { TwoFactorAuthenticator } from "../model/TwoFactorAuthenticator";
 export class ManagerApi {
     constructor(apiClient) {
@@ -287,14 +287,14 @@ export class ManagerApi {
         let returnType = null;
         return this.apiClient.callApi('/v1.0/manager/funds/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    createProgram(authorization, opts) {
-        return this.createProgramWithHttpInfo(authorization, opts)
+    createProgram(authorization) {
+        return this.createProgramWithHttpInfo(authorization)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    createProgramWithHttpInfo(authorization, opts = {}) {
-        let postBody = opts["request"];
+    createProgramWithHttpInfo(authorization) {
+        let postBody = null;
         if (authorization === undefined || authorization === null) {
             throw new Error("Missing the required parameter \"authorization\" when calling createProgram");
         }
@@ -305,9 +305,9 @@ export class ManagerApi {
         };
         let formParams = {};
         let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramCreateResult;
+        let returnType = TradingAccountCreateResult;
         return this.apiClient.callApi('/v1.0/manager/programs/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getEvents(authorization, opts) {
@@ -981,7 +981,7 @@ export class ManagerApi {
         }
         let pathParams = {};
         let queryParams = {
-            "ProgramId": opts["programId"],
+            "AssetId": opts["assetId"],
             "VolumeFee": opts["volumeFee"],
             "SuccessFee": opts["successFee"]
         };
@@ -1008,7 +1008,7 @@ export class ManagerApi {
         }
         let pathParams = {};
         let queryParams = {
-            "ProgramId": opts["programId"],
+            "AssetId": opts["assetId"],
             "VolumeFee": opts["volumeFee"],
             "SuccessFee": opts["successFee"]
         };
