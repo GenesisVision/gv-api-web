@@ -7,6 +7,6 @@ node_modules
 # generated
 /api
 /model
-/ApiClient.ts
-/constructFromObject
-/index.ts
+ApiClient.ts
+constructFromObject
+index.ts
