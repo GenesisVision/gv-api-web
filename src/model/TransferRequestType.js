@@ -47,10 +47,10 @@ export default class TransferRequestType {
 
     
         /**
-         * value: "CopyTradingAccount"
+         * value: "TradingAccount"
          * @const
          */
-        CopyTradingAccount = "CopyTradingAccount";
+        TradingAccount = "TradingAccount";
 
     
         /**
@@ -107,6 +107,13 @@ export default class TransferRequestType {
          * @const
          */
         ExternalCommonAccount = "ExternalCommonAccount";
+
+    
+        /**
+         * value: "PendingTradingAccount"
+         * @const
+         */
+        PendingTradingAccount = "PendingTradingAccount";
 
     
 

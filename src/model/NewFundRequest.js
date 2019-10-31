@@ -26,17 +26,17 @@ import FundAssetPart from './FundAssetPart';
 
 /**
  *
- * @name NewFundRequest#exitFee
- * @type {Number}
- */
-/**
- *
  * @name NewFundRequest#assets
  * @type {Array<FundAssetPart>}
  */
 /**
  *
  * @name NewFundRequest#entryFee
+ * @type {Number}
+ */
+/**
+ *
+ * @name NewFundRequest#exitFee
  * @type {Number}
  */
 /**
@@ -90,14 +90,14 @@ export default class NewFundRequest {
             
             
 
-            if (data.hasOwnProperty('exitFee')) {
-                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
-            }
             if (data.hasOwnProperty('assets')) {
                 obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPart]);
             }
             if (data.hasOwnProperty('entryFee')) {
                 obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'Number');
+            }
+            if (data.hasOwnProperty('exitFee')) {
+                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'Number');
             }
             if (data.hasOwnProperty('depositAmount')) {
                 obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'Number');
@@ -118,9 +118,9 @@ export default class NewFundRequest {
         return obj;
     }
 
-    exitFee = undefined;
     assets = undefined;
     entryFee = undefined;
+    exitFee = undefined;
     depositAmount = undefined;
     depositWalletId = undefined;
     title = undefined;

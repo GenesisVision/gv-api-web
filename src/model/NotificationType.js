@@ -166,6 +166,13 @@ export default class NotificationType {
 
     
         /**
+         * value: "ManagerNewSignalProvider"
+         * @const
+         */
+        ManagerNewSignalProvider = "ManagerNewSignalProvider";
+
+    
+        /**
          * value: "Signals"
          * @const
          */

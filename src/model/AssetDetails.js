@@ -14,6 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import AssetType from './AssetType';
+import ProgramAssetDetails from './ProgramAssetDetails';
 
 
 
@@ -56,8 +57,8 @@ import AssetType from './AssetType';
  */
 /**
  *
- * @name AssetDetails#levelProgress
- * @type {Number}
+ * @name AssetDetails#programDetails
+ * @type {ProgramAssetDetails}
  */
 
 
@@ -103,8 +104,8 @@ export default class AssetDetails {
             if (data.hasOwnProperty('assetType')) {
                 obj['assetType'] = AssetType.constructFromObject(data['assetType']);
             }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            if (data.hasOwnProperty('programDetails')) {
+                obj['programDetails'] = ProgramAssetDetails.constructFromObject(data['programDetails']);
             }
         }
         return obj;
@@ -116,7 +117,7 @@ export default class AssetDetails {
     title = undefined;
     url = undefined;
     assetType = undefined;
-    levelProgress = undefined;
+    programDetails = undefined;
 
 
 

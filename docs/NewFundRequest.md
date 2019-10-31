@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**exitFee** | **Number** |  | [optional] 
 **assets** | [**[FundAssetPart]**](FundAssetPart.md) |  | [optional] 
 **entryFee** | **Number** |  | [optional] 
+**exitFee** | **Number** |  | [optional] 
 **depositAmount** | **Number** |  | [optional] 
 **depositWalletId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 

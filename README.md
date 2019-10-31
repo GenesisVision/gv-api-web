@@ -236,16 +236,9 @@ Class | Method | HTTP request | Description
 *CoreApiV10.RateApi* | [**getRateExchange**](docs/RateApi.md#getRateExchange) | **GET** /v1.0/rate/{exchange}/{from}/{to} | Get rate by exchange
 *CoreApiV10.RateApi* | [**getRates**](docs/RateApi.md#getRates) | **GET** /v1.0/rate | Get rates
 *CoreApiV10.SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /v1.0/search | Program / fund / manager search
-*CoreApiV10.SignalApi* | [**attachSlaveToMaster**](docs/SignalApi.md#attachSlaveToMaster) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
-*CoreApiV10.SignalApi* | [**closeTrade**](docs/SignalApi.md#closeTrade) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
-*CoreApiV10.SignalApi* | [**detachSlaveFromMaster**](docs/SignalApi.md#detachSlaveFromMaster) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
-*CoreApiV10.SignalApi* | [**getCopytradingAccounts**](docs/SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/accounts | Get copytrading slaves accounts
 *CoreApiV10.SignalApi* | [**getOpenSignalTrades**](docs/SignalApi.md#getOpenSignalTrades) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.SignalApi* | [**getSignalTrades**](docs/SignalApi.md#getSignalTrades) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**getSignalTradingLog**](docs/SignalApi.md#getSignalTradingLog) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
-*CoreApiV10.SignalApi* | [**getSignals**](docs/SignalApi.md#getSignals) | **GET** /v1.0/signal | Get copytrading masters list
-*CoreApiV10.SignalApi* | [**getSlaveAttachInfo**](docs/SignalApi.md#getSlaveAttachInfo) | **GET** /v1.0/signal/attach/{id}/info | Get subscribe to programs signals info
-*CoreApiV10.SignalApi* | [**updateSubscriptionSettings**](docs/SignalApi.md#updateSubscriptionSettings) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**cancelWithdrawalRequest**](docs/WalletApi.md#cancelWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 *CoreApiV10.WalletApi* | [**confirmWithdrawalRequestByCode**](docs/WalletApi.md#confirmWithdrawalRequestByCode) | **POST** /v1.0/wallet/withdraw/request/confirm | 
 *CoreApiV10.WalletApi* | [**createWithdrawalRequest**](docs/WalletApi.md#createWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/new | 
@@ -273,8 +266,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AssetInvestmentStatus](docs/AssetInvestmentStatus.md)
  - [CoreApiV10.AssetType](docs/AssetType.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
- - [CoreApiV10.AttachToSignalProvider](docs/AttachToSignalProvider.md)
- - [CoreApiV10.AttachToSignalProviderInfo](docs/AttachToSignalProviderInfo.md)
  - [CoreApiV10.BalanceChartElementOld](docs/BalanceChartElementOld.md)
  - [CoreApiV10.BrokerAccountTypeOld](docs/BrokerAccountTypeOld.md)
  - [CoreApiV10.BrokerDetailsOld](docs/BrokerDetailsOld.md)
@@ -290,14 +281,11 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ChangeState](docs/ChangeState.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.ConvertingDetails](docs/ConvertingDetails.md)
- - [CoreApiV10.CopyTradingAccountInfo](docs/CopyTradingAccountInfo.md)
- - [CoreApiV10.CopyTradingAccountsList](docs/CopyTradingAccountsList.md)
  - [CoreApiV10.CreateWithdrawalRequestModel](docs/CreateWithdrawalRequestModel.md)
  - [CoreApiV10.Currency](docs/Currency.md)
  - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
  - [CoreApiV10.DashboardProgramDetailsOld](docs/DashboardProgramDetailsOld.md)
  - [CoreApiV10.DashboardSummary](docs/DashboardSummary.md)
- - [CoreApiV10.DetachFromSignalProvider](docs/DetachFromSignalProvider.md)
  - [CoreApiV10.EnumsOld](docs/EnumsOld.md)
  - [CoreApiV10.ErrorCodes](docs/ErrorCodes.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
@@ -350,7 +338,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.InvestmentProgramType](docs/InvestmentProgramType.md)
  - [CoreApiV10.InvestmentRequestStatus](docs/InvestmentRequestStatus.md)
  - [CoreApiV10.InvestmentRequestType](docs/InvestmentRequestType.md)
- - [CoreApiV10.ItemsViewModelCopyTradingAccountInfo](docs/ItemsViewModelCopyTradingAccountInfo.md)
  - [CoreApiV10.ItemsViewModelReferralFriend](docs/ItemsViewModelReferralFriend.md)
  - [CoreApiV10.ItemsViewModelRewardDetails](docs/ItemsViewModelRewardDetails.md)
  - [CoreApiV10.LevelInfo](docs/LevelInfo.md)
@@ -376,7 +363,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.MultiWalletTransactionType](docs/MultiWalletTransactionType.md)
  - [CoreApiV10.MultiWalletTransactionsViewModel](docs/MultiWalletTransactionsViewModel.md)
  - [CoreApiV10.NewFundRequest](docs/NewFundRequest.md)
- - [CoreApiV10.NewProgramRequest](docs/NewProgramRequest.md)
  - [CoreApiV10.NotificationList](docs/NotificationList.md)
  - [CoreApiV10.NotificationSettingConditionType](docs/NotificationSettingConditionType.md)
  - [CoreApiV10.NotificationSettingList](docs/NotificationSettingList.md)
@@ -394,7 +380,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.PasswordModel](docs/PasswordModel.md)
  - [CoreApiV10.PeriodDate](docs/PeriodDate.md)
  - [CoreApiV10.PeriodStatus](docs/PeriodStatus.md)
- - [CoreApiV10.PersonalCopyTradingAccountInfo](docs/PersonalCopyTradingAccountInfo.md)
  - [CoreApiV10.PersonalFundDetailsFullOld](docs/PersonalFundDetailsFullOld.md)
  - [CoreApiV10.PersonalProgramDetailsFullOld](docs/PersonalProgramDetailsFullOld.md)
  - [CoreApiV10.PersonalSignalDetailsFull](docs/PersonalSignalDetailsFull.md)
@@ -408,9 +393,9 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProfileFullViewModel](docs/ProfileFullViewModel.md)
  - [CoreApiV10.ProfileHeaderViewModel](docs/ProfileHeaderViewModel.md)
  - [CoreApiV10.ProfilePublic](docs/ProfilePublic.md)
+ - [CoreApiV10.ProgramAssetDetails](docs/ProgramAssetDetails.md)
  - [CoreApiV10.ProgramBalanceChartElementOld](docs/ProgramBalanceChartElementOld.md)
  - [CoreApiV10.ProgramBalanceChartOld](docs/ProgramBalanceChartOld.md)
- - [CoreApiV10.ProgramCreateResult](docs/ProgramCreateResult.md)
  - [CoreApiV10.ProgramDetailsFullOld](docs/ProgramDetailsFullOld.md)
  - [CoreApiV10.ProgramDetailsListStatistic](docs/ProgramDetailsListStatistic.md)
  - [CoreApiV10.ProgramDetailsOld](docs/ProgramDetailsOld.md)
@@ -423,7 +408,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ProgramPeriodViewModel](docs/ProgramPeriodViewModel.md)
  - [CoreApiV10.ProgramPeriodsViewModel](docs/ProgramPeriodsViewModel.md)
  - [CoreApiV10.ProgramProfitChartOld](docs/ProgramProfitChartOld.md)
- - [CoreApiV10.ProgramPwdUpdate](docs/ProgramPwdUpdate.md)
  - [CoreApiV10.ProgramRequestOld](docs/ProgramRequestOld.md)
  - [CoreApiV10.ProgramRequestsOld](docs/ProgramRequestsOld.md)
  - [CoreApiV10.ProgramSets](docs/ProgramSets.md)
@@ -452,7 +436,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SearchViewModelOld](docs/SearchViewModelOld.md)
  - [CoreApiV10.SecureAlgorithm](docs/SecureAlgorithm.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)
- - [CoreApiV10.SignalDetachMode](docs/SignalDetachMode.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalFee](docs/SignalFee.md)
  - [CoreApiV10.SignalProviderSubscribers](docs/SignalProviderSubscribers.md)
@@ -472,6 +455,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.TradesDelay](docs/TradesDelay.md)
  - [CoreApiV10.TradesSignalViewModel](docs/TradesSignalViewModel.md)
  - [CoreApiV10.TradesViewModel](docs/TradesViewModel.md)
+ - [CoreApiV10.TradingAccountCreateResult](docs/TradingAccountCreateResult.md)
+ - [CoreApiV10.TradingAccountPwdUpdate](docs/TradingAccountPwdUpdate.md)
  - [CoreApiV10.TransactionDetails](docs/TransactionDetails.md)
  - [CoreApiV10.TransactionDetailsType](docs/TransactionDetailsType.md)
  - [CoreApiV10.TransferRequestType](docs/TransferRequestType.md)

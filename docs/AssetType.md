@@ -11,6 +11,8 @@
 
 * `Signals` (value: `"Signals"`)
 
+* `TradingAccounts` (value: `"TradingAccounts"`)
+
 * `External` (value: `"External"`)
 
 

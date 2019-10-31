@@ -7,7 +7,7 @@
 
 * `Wallet` (value: `"Wallet"`)
 
-* `CopyTradingAccount` (value: `"CopyTradingAccount"`)
+* `TradingAccount` (value: `"TradingAccount"`)
 
 * `GenesisVisionPlatform` (value: `"GenesisVisionPlatform"`)
 
@@ -24,5 +24,7 @@
 * `FundRequest` (value: `"FundRequest"`)
 
 * `ExternalCommonAccount` (value: `"ExternalCommonAccount"`)
+
+* `PendingTradingAccount` (value: `"PendingTradingAccount"`)
 
 

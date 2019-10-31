@@ -241,7 +241,7 @@ export declare class ManagerApi {
         request?: ChangeBrokerProgramRequestOld;
     }): CancelablePromise<any>;
     changeProgramPassword(id: string, authorization: string, opts?: {
-        model?: ProgramPwdUpdate;
+        model?: TradingAccountPwdUpdate;
     }): CancelablePromise<any>;
     closeCurrentPeriod(id: string, authorization: string): CancelablePromise<any>;
     closeFund(id: string, authorization: string, opts?: {
@@ -257,9 +257,7 @@ export declare class ManagerApi {
     createFund(authorization: string, opts?: {
         request?: NewFundRequest;
     }): CancelablePromise<any>;
-    createProgram(authorization: string, opts?: {
-        request?: NewProgramRequest;
-    }): CancelablePromise<ProgramCreateResult>;
+    createProgram(authorization: string): CancelablePromise<TradingAccountCreateResult>;
     getEvents(authorization: string, opts?: {
         eventLocation?: string;
         assetId?: string;
@@ -332,12 +330,12 @@ export declare class ManagerApi {
         model?: ProgramUpdate;
     }): CancelablePromise<any>;
     updateProgramSignalSettings(authorization: string, opts?: {
-        programId?: string;
+        assetId?: string;
         volumeFee?: number;
         successFee?: number;
     }): CancelablePromise<any>;
     updateProgramSignalSettings_0(authorization: string, opts?: {
-        programId?: string;
+        assetId?: string;
         volumeFee?: number;
         successFee?: number;
     }): CancelablePromise<any>;
@@ -578,16 +576,6 @@ export declare class SearchApi {
 
 export declare class SignalApi {
     constructor(apiClient: ApiClient): SignalApi;
-    attachSlaveToMaster(id: string, authorization: string, opts?: {
-        model?: AttachToSignalProvider;
-    }): CancelablePromise<any>;
-    closeTrade(id: string, authorization: string, opts?: {
-        programId?: string;
-    }): CancelablePromise<any>;
-    detachSlaveFromMaster(id: string, authorization: string, opts?: {
-        model?: DetachFromSignalProvider;
-    }): CancelablePromise<any>;
-    getCopytradingAccounts(authorization: string): CancelablePromise<CopyTradingAccountsList>;
     getOpenSignalTrades(authorization: string, opts?: {
         sorting?: string;
         symbol?: string;
@@ -612,22 +600,6 @@ export declare class SignalApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalTradingEvents>;
-    getSignals(opts?: {
-        authorization?: string;
-        tags?: string[];
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
-        chartPointsCount?: number;
-        chartCurrency?: string;
-        facetId?: string;
-        mask?: string;
-        skip?: number;
-        take?: number;
-    }): CancelablePromise<ItemsViewModelCopyTradingAccountInfo>;
-    getSlaveAttachInfo(id: string, authorization: string): CancelablePromise<AttachToSignalProviderInfo>;
-    updateSubscriptionSettings(id: string, authorization: string, opts?: {
-        model?: AttachToSignalProvider;
-    }): CancelablePromise<any>;
 }
 
 export declare class WalletApi {
@@ -680,8 +652,6 @@ export declare interface index {
     AssetInvestmentStatus: AssetInvestmentStatus;
     AssetType: AssetType;
     AssetsValue: AssetsValue;
-    AttachToSignalProvider: AttachToSignalProvider;
-    AttachToSignalProviderInfo: AttachToSignalProviderInfo;
     BalanceChartElementOld: BalanceChartElementOld;
     BrokerAccountTypeOld: BrokerAccountTypeOld;
     BrokerDetailsOld: BrokerDetailsOld;
@@ -697,14 +667,11 @@ export declare interface index {
     ChangeState: ChangeState;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
-    CopyTradingAccountInfo: CopyTradingAccountInfo;
-    CopyTradingAccountsList: CopyTradingAccountsList;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
     Currency: Currency;
     DashboardChartValue: DashboardChartValue;
     DashboardProgramDetailsOld: DashboardProgramDetailsOld;
     DashboardSummary: DashboardSummary;
-    DetachFromSignalProvider: DetachFromSignalProvider;
     EnumsOld: EnumsOld;
     ErrorCodes: ErrorCodes;
     ErrorMessage: ErrorMessage;
@@ -757,7 +724,6 @@ export declare interface index {
     InvestmentProgramType: InvestmentProgramType;
     InvestmentRequestStatus: InvestmentRequestStatus;
     InvestmentRequestType: InvestmentRequestType;
-    ItemsViewModelCopyTradingAccountInfo: ItemsViewModelCopyTradingAccountInfo;
     ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
     ItemsViewModelRewardDetails: ItemsViewModelRewardDetails;
     LevelInfo: LevelInfo;
@@ -783,7 +749,6 @@ export declare interface index {
     MultiWalletTransactionType: MultiWalletTransactionType;
     MultiWalletTransactionsViewModel: MultiWalletTransactionsViewModel;
     NewFundRequest: NewFundRequest;
-    NewProgramRequest: NewProgramRequest;
     NotificationList: NotificationList;
     NotificationSettingConditionType: NotificationSettingConditionType;
     NotificationSettingList: NotificationSettingList;
@@ -801,7 +766,6 @@ export declare interface index {
     PasswordModel: PasswordModel;
     PeriodDate: PeriodDate;
     PeriodStatus: PeriodStatus;
-    PersonalCopyTradingAccountInfo: PersonalCopyTradingAccountInfo;
     PersonalFundDetailsFullOld: PersonalFundDetailsFullOld;
     PersonalProgramDetailsFullOld: PersonalProgramDetailsFullOld;
     PersonalSignalDetailsFull: PersonalSignalDetailsFull;
@@ -815,9 +779,9 @@ export declare interface index {
     ProfileFullViewModel: ProfileFullViewModel;
     ProfileHeaderViewModel: ProfileHeaderViewModel;
     ProfilePublic: ProfilePublic;
+    ProgramAssetDetails: ProgramAssetDetails;
     ProgramBalanceChartElementOld: ProgramBalanceChartElementOld;
     ProgramBalanceChartOld: ProgramBalanceChartOld;
-    ProgramCreateResult: ProgramCreateResult;
     ProgramDetailsFullOld: ProgramDetailsFullOld;
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsOld: ProgramDetailsOld;
@@ -830,7 +794,6 @@ export declare interface index {
     ProgramPeriodViewModel: ProgramPeriodViewModel;
     ProgramPeriodsViewModel: ProgramPeriodsViewModel;
     ProgramProfitChartOld: ProgramProfitChartOld;
-    ProgramPwdUpdate: ProgramPwdUpdate;
     ProgramRequestOld: ProgramRequestOld;
     ProgramRequestsOld: ProgramRequestsOld;
     ProgramSets: ProgramSets;
@@ -859,7 +822,6 @@ export declare interface index {
     SearchViewModelOld: SearchViewModelOld;
     SecureAlgorithm: SecureAlgorithm;
     SignalDataMaster: SignalDataMaster;
-    SignalDetachMode: SignalDetachMode;
     SignalDetails: SignalDetails;
     SignalFee: SignalFee;
     SignalProviderSubscribers: SignalProviderSubscribers;
@@ -879,6 +841,8 @@ export declare interface index {
     TradesDelay: TradesDelay;
     TradesSignalViewModel: TradesSignalViewModel;
     TradesViewModel: TradesViewModel;
+    TradingAccountCreateResult: TradingAccountCreateResult;
+    TradingAccountPwdUpdate: TradingAccountPwdUpdate;
     TransactionDetails: TransactionDetails;
     TransactionDetailsType: TransactionDetailsType;
     TransferRequestType: TransferRequestType;
@@ -941,7 +905,7 @@ export declare interface AssetDetails {
     title: string;
     url: string;
     assetType: AssetType;
-    levelProgress: number;
+    programDetails: ProgramAssetDetails;
 }
 
 export declare interface AssetEvent {
@@ -2104,9 +2068,9 @@ export declare interface NewExternalSignalAccountRequest {
 }
 
 export declare interface NewFundRequest {
-    exitFee: number;
     assets: FundAssetPart[];
     entryFee: number;
+    exitFee: number;
     depositAmount: number;
     depositWalletId: string;
     title: string;
@@ -2541,6 +2505,11 @@ export declare interface ProfilePublic {
     registrationDate: Date;
     url: string;
     socialLinks: SocialLinkViewModel[];
+}
+
+export declare interface ProgramAssetDetails {
+    level: number;
+    levelProgress: number;
 }
 
 export declare type ProgramBalanceChartProgramCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
@@ -3408,6 +3377,17 @@ export declare interface TradesViewModel {
     trades: OrderModel[];
     tradesDelay: TradesDelay;
     total: number;
+}
+
+export declare interface TradingAccountCreateResult {
+    id: string;
+    twoFactorRequired: boolean;
+    twoFactor: TwoFactorAuthenticator;
+}
+
+export declare interface TradingAccountPwdUpdate {
+    password: string;
+    twoFactorCode: string;
 }
 
 export declare type TransactionDetailsGvCommissionCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";

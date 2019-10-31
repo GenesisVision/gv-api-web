@@ -61,6 +61,13 @@ export default class AssetType {
 
     
         /**
+         * value: "TradingAccounts"
+         * @const
+         */
+        TradingAccounts = "TradingAccounts";
+
+    
+        /**
          * value: "External"
          * @const
          */

@@ -41,6 +41,8 @@
 
 * `ManagerNewExternalSignalAccount` (value: `"ManagerNewExternalSignalAccount"`)
 
+* `ManagerNewSignalProvider` (value: `"ManagerNewSignalProvider"`)
+
 * `Signals` (value: `"Signals"`)
 
 * `ExternalSignals` (value: `"ExternalSignals"`)

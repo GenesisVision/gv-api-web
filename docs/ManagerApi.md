@@ -238,7 +238,7 @@ let id = "id_example"; // String |
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'model': new CoreApiV10.ProgramPwdUpdate() // ProgramPwdUpdate | 
+  'model': new CoreApiV10.TradingAccountPwdUpdate() // TradingAccountPwdUpdate | 
 };
 apiInstance.changeProgramPassword(id, authorization, opts).then(() => {
   console.log('API called successfully.');
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)|  | 
  **authorization** | **String**| JWT access token | 
- **model** | [**ProgramPwdUpdate**](ProgramPwdUpdate.md)|  | [optional] 
+ **model** | [**TradingAccountPwdUpdate**](TradingAccountPwdUpdate.md)|  | [optional] 
 
 ### Return type
 
@@ -503,7 +503,7 @@ No authorization required
 
 <a name="createProgram"></a>
 # **createProgram**
-> ProgramCreateResult createProgram(authorization, opts)
+> TradingAccountCreateResult createProgram(authorization)
 
 Create an investment program
 
@@ -515,10 +515,7 @@ let apiInstance = new CoreApiV10.ManagerApi();
 
 let authorization = "authorization_example"; // String | JWT access token
 
-let opts = { 
-  'request': new CoreApiV10.NewProgramRequest() // NewProgramRequest | 
-};
-apiInstance.createProgram(authorization, opts).then((data) => {
+apiInstance.createProgram(authorization).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -531,11 +528,10 @@ apiInstance.createProgram(authorization, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **request** | [**NewProgramRequest**](NewProgramRequest.md)|  | [optional] 
 
 ### Return type
 
-[**ProgramCreateResult**](ProgramCreateResult.md)
+[**TradingAccountCreateResult**](TradingAccountCreateResult.md)
 
 ### Authorization
 
@@ -543,7 +539,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 <a name="getEvents"></a>
@@ -1633,7 +1629,7 @@ let apiInstance = new CoreApiV10.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'programId': "programId_example", // String | 
+  'assetId': "assetId_example", // String | 
   'volumeFee': 1.2, // Number | 
   'successFee': 1.2 // Number | 
 };
@@ -1650,7 +1646,7 @@ apiInstance.updateProgramSignalSettings(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **programId** | [**String**](.md)|  | [optional] 
+ **assetId** | [**String**](.md)|  | [optional] 
  **volumeFee** | **Number**|  | [optional] 
  **successFee** | **Number**|  | [optional] 
 
@@ -1682,7 +1678,7 @@ let apiInstance = new CoreApiV10.ManagerApi();
 let authorization = "authorization_example"; // String | JWT access token
 
 let opts = { 
-  'programId': "programId_example", // String | 
+  'assetId': "assetId_example", // String | 
   'volumeFee': 1.2, // Number | 
   'successFee': 1.2 // Number | 
 };
@@ -1699,7 +1695,7 @@ apiInstance.updateProgramSignalSettings_0(authorization, opts).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| JWT access token | 
- **programId** | [**String**](.md)|  | [optional] 
+ **assetId** | [**String**](.md)|  | [optional] 
  **volumeFee** | **Number**|  | [optional] 
  **successFee** | **Number**|  | [optional] 
 

@@ -24,16 +24,15 @@ import ManagerFundWithdrawInfoOld from '../model/ManagerFundWithdrawInfoOld';
 import ManagerProfileDetails from '../model/ManagerProfileDetails';
 import ManagerProgramWithdrawInfoOld from '../model/ManagerProgramWithdrawInfoOld';
 import NewFundRequest from '../model/NewFundRequest';
-import NewProgramRequest from '../model/NewProgramRequest';
-import ProgramCreateResult from '../model/ProgramCreateResult';
 import ProgramInvestInfoOld from '../model/ProgramInvestInfoOld';
 import ProgramLevelInfo from '../model/ProgramLevelInfo';
 import ProgramMinimumDepositOld from '../model/ProgramMinimumDepositOld';
-import ProgramPwdUpdate from '../model/ProgramPwdUpdate';
 import ProgramRequestsOld from '../model/ProgramRequestsOld';
 import ProgramUpdate from '../model/ProgramUpdate';
 import ProgramsListOld from '../model/ProgramsListOld';
 import PublicProfile from '../model/PublicProfile';
+import TradingAccountCreateResult from '../model/TradingAccountCreateResult';
+import TradingAccountPwdUpdate from '../model/TradingAccountPwdUpdate';
 import TwoFactorAuthenticator from '../model/TwoFactorAuthenticator';
 
 /**
@@ -295,7 +294,7 @@ export default class ManagerApi {
      * @param {String} id 
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {ProgramPwdUpdate} [opts.model] 
+     * @param {TradingAccountPwdUpdate} [opts.model] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
      */
       changeProgramPassword(id, authorization, opts) {
@@ -563,9 +562,8 @@ export default class ManagerApi {
         });
     }
 
-      createProgramWithHttpInfo(authorization, opts) {
-      opts = opts || {};
-      let postBody = opts['request'];
+      createProgramWithHttpInfo(authorization) {
+      let postBody = null;
 
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
@@ -584,9 +582,9 @@ export default class ManagerApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProgramCreateResult;
+      let returnType = TradingAccountCreateResult;
 
       return this.apiClient.callApi(
         '/v1.0/manager/programs/create', 'POST',
@@ -599,12 +597,10 @@ export default class ManagerApi {
      * Create an investment program
      * @function ManagerApi#createProgram
      * @param {String} authorization JWT access token
-     * @param {Object} [opts] Optional parameters
-     * @param {NewProgramRequest} [opts.request] 
-     * @return {CancelablePromise<ProgramCreateResult>} a Promise, with an object containing data of type ProgramCreateResult and HTTP response
+     * @return {CancelablePromise<TradingAccountCreateResult>} a Promise, with an object containing data of type TradingAccountCreateResult and HTTP response
      */
-      createProgram(authorization, opts) {
-      return this.createProgramWithHttpInfo(authorization, opts)
+      createProgram(authorization) {
+      return this.createProgramWithHttpInfo(authorization)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1854,7 +1850,7 @@ export default class ManagerApi {
       let pathParams = {
       };
       let queryParams = {
-        'ProgramId': opts['programId'],
+        'AssetId': opts['assetId'],
         'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
@@ -1881,7 +1877,7 @@ export default class ManagerApi {
      * @function ManagerApi#updateProgramSignalSettings
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.programId] 
+     * @param {String} [opts.assetId] 
      * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
@@ -1906,7 +1902,7 @@ export default class ManagerApi {
       let pathParams = {
       };
       let queryParams = {
-        'ProgramId': opts['programId'],
+        'AssetId': opts['assetId'],
         'VolumeFee': opts['volumeFee'],
         'SuccessFee': opts['successFee']
       };
@@ -1933,7 +1929,7 @@ export default class ManagerApi {
      * @function ManagerApi#updateProgramSignalSettings_0
      * @param {String} authorization JWT access token
      * @param {Object} [opts] Optional parameters
-     * @param {String} [opts.programId] 
+     * @param {String} [opts.assetId] 
      * @param {Number} [opts.volumeFee] 
      * @param {Number} [opts.successFee] 
      * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response

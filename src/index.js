@@ -21,8 +21,6 @@ import AssetFilterType from './model/AssetFilterType';
 import AssetInvestmentStatus from './model/AssetInvestmentStatus';
 import AssetType from './model/AssetType';
 import AssetsValue from './model/AssetsValue';
-import AttachToSignalProvider from './model/AttachToSignalProvider';
-import AttachToSignalProviderInfo from './model/AttachToSignalProviderInfo';
 import BalanceChartElementOld from './model/BalanceChartElementOld';
 import BrokerAccountTypeOld from './model/BrokerAccountTypeOld';
 import BrokerDetailsOld from './model/BrokerDetailsOld';
@@ -38,14 +36,11 @@ import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChangeState from './model/ChangeState';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
-import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
-import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import Currency from './model/Currency';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardProgramDetailsOld from './model/DashboardProgramDetailsOld';
 import DashboardSummary from './model/DashboardSummary';
-import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import EnumsOld from './model/EnumsOld';
 import ErrorCodes from './model/ErrorCodes';
 import ErrorMessage from './model/ErrorMessage';
@@ -98,7 +93,6 @@ import InvestmentProgramStatus from './model/InvestmentProgramStatus';
 import InvestmentProgramType from './model/InvestmentProgramType';
 import InvestmentRequestStatus from './model/InvestmentRequestStatus';
 import InvestmentRequestType from './model/InvestmentRequestType';
-import ItemsViewModelCopyTradingAccountInfo from './model/ItemsViewModelCopyTradingAccountInfo';
 import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
 import ItemsViewModelRewardDetails from './model/ItemsViewModelRewardDetails';
 import LevelInfo from './model/LevelInfo';
@@ -124,7 +118,6 @@ import MultiWalletTransactionStatus from './model/MultiWalletTransactionStatus';
 import MultiWalletTransactionType from './model/MultiWalletTransactionType';
 import MultiWalletTransactionsViewModel from './model/MultiWalletTransactionsViewModel';
 import NewFundRequest from './model/NewFundRequest';
-import NewProgramRequest from './model/NewProgramRequest';
 import NotificationList from './model/NotificationList';
 import NotificationSettingConditionType from './model/NotificationSettingConditionType';
 import NotificationSettingList from './model/NotificationSettingList';
@@ -142,7 +135,6 @@ import PartnershipDetails from './model/PartnershipDetails';
 import PasswordModel from './model/PasswordModel';
 import PeriodDate from './model/PeriodDate';
 import PeriodStatus from './model/PeriodStatus';
-import PersonalCopyTradingAccountInfo from './model/PersonalCopyTradingAccountInfo';
 import PersonalFundDetailsFullOld from './model/PersonalFundDetailsFullOld';
 import PersonalProgramDetailsFullOld from './model/PersonalProgramDetailsFullOld';
 import PersonalSignalDetailsFull from './model/PersonalSignalDetailsFull';
@@ -156,9 +148,9 @@ import PowResult from './model/PowResult';
 import ProfileFullViewModel from './model/ProfileFullViewModel';
 import ProfileHeaderViewModel from './model/ProfileHeaderViewModel';
 import ProfilePublic from './model/ProfilePublic';
+import ProgramAssetDetails from './model/ProgramAssetDetails';
 import ProgramBalanceChartElementOld from './model/ProgramBalanceChartElementOld';
 import ProgramBalanceChartOld from './model/ProgramBalanceChartOld';
-import ProgramCreateResult from './model/ProgramCreateResult';
 import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsOld from './model/ProgramDetailsOld';
@@ -171,7 +163,6 @@ import ProgramNotificationSettingList from './model/ProgramNotificationSettingLi
 import ProgramPeriodViewModel from './model/ProgramPeriodViewModel';
 import ProgramPeriodsViewModel from './model/ProgramPeriodsViewModel';
 import ProgramProfitChartOld from './model/ProgramProfitChartOld';
-import ProgramPwdUpdate from './model/ProgramPwdUpdate';
 import ProgramRequestOld from './model/ProgramRequestOld';
 import ProgramRequestsOld from './model/ProgramRequestsOld';
 import ProgramSets from './model/ProgramSets';
@@ -200,7 +191,6 @@ import RewardDetails from './model/RewardDetails';
 import SearchViewModelOld from './model/SearchViewModelOld';
 import SecureAlgorithm from './model/SecureAlgorithm';
 import SignalDataMaster from './model/SignalDataMaster';
-import SignalDetachMode from './model/SignalDetachMode';
 import SignalDetails from './model/SignalDetails';
 import SignalFee from './model/SignalFee';
 import SignalProviderSubscribers from './model/SignalProviderSubscribers';
@@ -220,6 +210,8 @@ import TradeEntryType from './model/TradeEntryType';
 import TradesDelay from './model/TradesDelay';
 import TradesSignalViewModel from './model/TradesSignalViewModel';
 import TradesViewModel from './model/TradesViewModel';
+import TradingAccountCreateResult from './model/TradingAccountCreateResult';
+import TradingAccountPwdUpdate from './model/TradingAccountPwdUpdate';
 import TransactionDetails from './model/TransactionDetails';
 import TransactionDetailsType from './model/TransactionDetailsType';
 import TransferRequestType from './model/TransferRequestType';
@@ -322,18 +314,6 @@ export {
     AssetsValue,
 
     /**
-     * @name index#AttachToSignalProvider
-     * @type {AttachToSignalProvider}
-     */
-    AttachToSignalProvider,
-
-    /**
-     * @name index#AttachToSignalProviderInfo
-     * @type {AttachToSignalProviderInfo}
-     */
-    AttachToSignalProviderInfo,
-
-    /**
      * @name index#BalanceChartElementOld
      * @type {BalanceChartElementOld}
      */
@@ -424,18 +404,6 @@ export {
     ConvertingDetails,
 
     /**
-     * @name index#CopyTradingAccountInfo
-     * @type {CopyTradingAccountInfo}
-     */
-    CopyTradingAccountInfo,
-
-    /**
-     * @name index#CopyTradingAccountsList
-     * @type {CopyTradingAccountsList}
-     */
-    CopyTradingAccountsList,
-
-    /**
      * @name index#CreateWithdrawalRequestModel
      * @type {CreateWithdrawalRequestModel}
      */
@@ -464,12 +432,6 @@ export {
      * @type {DashboardSummary}
      */
     DashboardSummary,
-
-    /**
-     * @name index#DetachFromSignalProvider
-     * @type {DetachFromSignalProvider}
-     */
-    DetachFromSignalProvider,
 
     /**
      * @name index#EnumsOld
@@ -784,12 +746,6 @@ export {
     InvestmentRequestType,
 
     /**
-     * @name index#ItemsViewModelCopyTradingAccountInfo
-     * @type {ItemsViewModelCopyTradingAccountInfo}
-     */
-    ItemsViewModelCopyTradingAccountInfo,
-
-    /**
      * @name index#ItemsViewModelReferralFriend
      * @type {ItemsViewModelReferralFriend}
      */
@@ -940,12 +896,6 @@ export {
     NewFundRequest,
 
     /**
-     * @name index#NewProgramRequest
-     * @type {NewProgramRequest}
-     */
-    NewProgramRequest,
-
-    /**
      * @name index#NotificationList
      * @type {NotificationList}
      */
@@ -1048,12 +998,6 @@ export {
     PeriodStatus,
 
     /**
-     * @name index#PersonalCopyTradingAccountInfo
-     * @type {PersonalCopyTradingAccountInfo}
-     */
-    PersonalCopyTradingAccountInfo,
-
-    /**
      * @name index#PersonalFundDetailsFullOld
      * @type {PersonalFundDetailsFullOld}
      */
@@ -1132,6 +1076,12 @@ export {
     ProfilePublic,
 
     /**
+     * @name index#ProgramAssetDetails
+     * @type {ProgramAssetDetails}
+     */
+    ProgramAssetDetails,
+
+    /**
      * @name index#ProgramBalanceChartElementOld
      * @type {ProgramBalanceChartElementOld}
      */
@@ -1142,12 +1092,6 @@ export {
      * @type {ProgramBalanceChartOld}
      */
     ProgramBalanceChartOld,
-
-    /**
-     * @name index#ProgramCreateResult
-     * @type {ProgramCreateResult}
-     */
-    ProgramCreateResult,
 
     /**
      * @name index#ProgramDetailsFullOld
@@ -1220,12 +1164,6 @@ export {
      * @type {ProgramProfitChartOld}
      */
     ProgramProfitChartOld,
-
-    /**
-     * @name index#ProgramPwdUpdate
-     * @type {ProgramPwdUpdate}
-     */
-    ProgramPwdUpdate,
 
     /**
      * @name index#ProgramRequestOld
@@ -1396,12 +1334,6 @@ export {
     SignalDataMaster,
 
     /**
-     * @name index#SignalDetachMode
-     * @type {SignalDetachMode}
-     */
-    SignalDetachMode,
-
-    /**
      * @name index#SignalDetails
      * @type {SignalDetails}
      */
@@ -1514,6 +1446,18 @@ export {
      * @type {TradesViewModel}
      */
     TradesViewModel,
+
+    /**
+     * @name index#TradingAccountCreateResult
+     * @type {TradingAccountCreateResult}
+     */
+    TradingAccountCreateResult,
+
+    /**
+     * @name index#TradingAccountPwdUpdate
+     * @type {TradingAccountPwdUpdate}
+     */
+    TradingAccountPwdUpdate,
 
     /**
      * @name index#TransactionDetails
