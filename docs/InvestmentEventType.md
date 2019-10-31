@@ -5,6 +5,8 @@
 
 * `All` (value: `"All"`)
 
+* `AssetStarted` (value: `"AssetStarted"`)
+
 * `AssetFinished` (value: `"AssetFinished"`)
 
 * `AssetPeriodStarted` (value: `"AssetPeriodStarted"`)
@@ -15,7 +17,21 @@
 
 * `AssetBrokerChanged` (value: `"AssetBrokerChanged"`)
 
-* `AssetEnterInvestment` (value: `"AssetEnterInvestment"`)
+* `AssetInvestByInvestor` (value: `"AssetInvestByInvestor"`)
+
+* `AssetWithdrawalByInvestor` (value: `"AssetWithdrawalByInvestor"`)
+
+* `AssetInvestByManager` (value: `"AssetInvestByManager"`)
+
+* `AssetWithdrawalByManager` (value: `"AssetWithdrawalByManager"`)
+
+* `AssetPeriodProcessed` (value: `"AssetPeriodProcessed"`)
+
+* `AssetReallocation` (value: `"AssetReallocation"`)
+
+* `AssetSubscribeByInvestor` (value: `"AssetSubscribeByInvestor"`)
+
+* `AssetUnsubscribeByInvestor` (value: `"AssetUnsubscribeByInvestor"`)
 
 * `AssetTradeOpen` (value: `"AssetTradeOpen"`)
 
@@ -23,22 +39,6 @@
 
 * `AssetSubscriptionEdit` (value: `"AssetSubscriptionEdit"`)
 
-* `AssetInvestByInvestor` (value: `"AssetInvestByInvestor"`)
-
-* `AssetWithdrawalByInvestor` (value: `"AssetWithdrawalByInvestor"`)
-
-* `AssetReallocation` (value: `"AssetReallocation"`)
-
-* `AssetStarted` (value: `"AssetStarted"`)
-
-* `AssetPeriodProcessed` (value: `"AssetPeriodProcessed"`)
-
-* `AssetInvestByManager` (value: `"AssetInvestByManager"`)
-
-* `AssetWithdrawalByManager` (value: `"AssetWithdrawalByManager"`)
-
-* `AssetSubscribeByInvestor` (value: `"AssetSubscribeByInvestor"`)
-
-* `AssetUnsubscribeByInvestor` (value: `"AssetUnsubscribeByInvestor"`)
+* `AssetEnterInvestment` (value: `"AssetEnterInvestment"`)
 
 

@@ -40,6 +40,13 @@ export default class InvestmentEventType {
 
     
         /**
+         * value: "AssetStarted"
+         * @const
+         */
+        AssetStarted = "AssetStarted";
+
+    
+        /**
          * value: "AssetFinished"
          * @const
          */
@@ -75,10 +82,59 @@ export default class InvestmentEventType {
 
     
         /**
-         * value: "AssetEnterInvestment"
+         * value: "AssetInvestByInvestor"
          * @const
          */
-        AssetEnterInvestment = "AssetEnterInvestment";
+        AssetInvestByInvestor = "AssetInvestByInvestor";
+
+    
+        /**
+         * value: "AssetWithdrawalByInvestor"
+         * @const
+         */
+        AssetWithdrawalByInvestor = "AssetWithdrawalByInvestor";
+
+    
+        /**
+         * value: "AssetInvestByManager"
+         * @const
+         */
+        AssetInvestByManager = "AssetInvestByManager";
+
+    
+        /**
+         * value: "AssetWithdrawalByManager"
+         * @const
+         */
+        AssetWithdrawalByManager = "AssetWithdrawalByManager";
+
+    
+        /**
+         * value: "AssetPeriodProcessed"
+         * @const
+         */
+        AssetPeriodProcessed = "AssetPeriodProcessed";
+
+    
+        /**
+         * value: "AssetReallocation"
+         * @const
+         */
+        AssetReallocation = "AssetReallocation";
+
+    
+        /**
+         * value: "AssetSubscribeByInvestor"
+         * @const
+         */
+        AssetSubscribeByInvestor = "AssetSubscribeByInvestor";
+
+    
+        /**
+         * value: "AssetUnsubscribeByInvestor"
+         * @const
+         */
+        AssetUnsubscribeByInvestor = "AssetUnsubscribeByInvestor";
 
     
         /**
@@ -103,66 +159,10 @@ export default class InvestmentEventType {
 
     
         /**
-         * value: "AssetInvestByInvestor"
+         * value: "AssetEnterInvestment"
          * @const
          */
-        AssetInvestByInvestor = "AssetInvestByInvestor";
-
-    
-        /**
-         * value: "AssetWithdrawalByInvestor"
-         * @const
-         */
-        AssetWithdrawalByInvestor = "AssetWithdrawalByInvestor";
-
-    
-        /**
-         * value: "AssetReallocation"
-         * @const
-         */
-        AssetReallocation = "AssetReallocation";
-
-    
-        /**
-         * value: "AssetStarted"
-         * @const
-         */
-        AssetStarted = "AssetStarted";
-
-    
-        /**
-         * value: "AssetPeriodProcessed"
-         * @const
-         */
-        AssetPeriodProcessed = "AssetPeriodProcessed";
-
-    
-        /**
-         * value: "AssetInvestByManager"
-         * @const
-         */
-        AssetInvestByManager = "AssetInvestByManager";
-
-    
-        /**
-         * value: "AssetWithdrawalByManager"
-         * @const
-         */
-        AssetWithdrawalByManager = "AssetWithdrawalByManager";
-
-    
-        /**
-         * value: "AssetSubscribeByInvestor"
-         * @const
-         */
-        AssetSubscribeByInvestor = "AssetSubscribeByInvestor";
-
-    
-        /**
-         * value: "AssetUnsubscribeByInvestor"
-         * @const
-         */
-        AssetUnsubscribeByInvestor = "AssetUnsubscribeByInvestor";
+        AssetEnterInvestment = "AssetEnterInvestment";
 
     
 
