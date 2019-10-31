@@ -64,7 +64,7 @@ export default class CancelablePromise<T> extends Promise<T> implements PromiseL
       canceled: false
     }
   ) {
-    const r = super(executor);
+    super(() => {});
     this._promise = new Promise(executor);
     this._onCancel = onCancel;
     this.state = state;

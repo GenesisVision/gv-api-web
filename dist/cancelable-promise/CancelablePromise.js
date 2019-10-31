@@ -10,7 +10,7 @@ export default class CancelablePromise extends Promise {
     constructor(executor, onCancel, state = {
         canceled: false
     }) {
-        const r = super(executor);
+        super(() => { });
         this._promise = new Promise(executor);
         this._onCancel = onCancel;
         this.state = state;
