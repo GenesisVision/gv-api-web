@@ -6,5 +6,5 @@ export declare class AndroidVersion {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AndroidVersion;
+    }): AndroidVersion | undefined;
 }

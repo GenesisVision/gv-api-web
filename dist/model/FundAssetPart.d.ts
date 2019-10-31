@@ -6,5 +6,5 @@ export declare class FundAssetPart {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundAssetPart;
+    }): FundAssetPart | undefined;
 }

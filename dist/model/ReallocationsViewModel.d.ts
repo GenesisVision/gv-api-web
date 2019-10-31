@@ -7,5 +7,5 @@ export declare class ReallocationsViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ReallocationsViewModel;
+    }): ReallocationsViewModel | undefined;
 }

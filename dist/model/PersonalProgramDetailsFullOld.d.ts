@@ -33,5 +33,5 @@ export declare class PersonalProgramDetailsFullOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PersonalProgramDetailsFullOld;
+    }): PersonalProgramDetailsFullOld | undefined;
 }

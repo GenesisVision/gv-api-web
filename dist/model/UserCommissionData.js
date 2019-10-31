@@ -8,12 +8,14 @@ export class UserCommissionData {
         this['regularDiscount'] = data['regularDiscount'];
     }
     static constructFromObject(data) {
-        return new UserCommissionData({
-            'isPayingCommissionInGvt': ApiClient.convertToType(data['isPayingCommissionInGvt'], 'boolean'),
-            'gvtHolderTradingFee': ApiClient.convertToType(data['gvtHolderTradingFee'], 'number'),
-            'gvtHolderDiscount': ApiClient.convertToType(data['gvtHolderDiscount'], 'number'),
-            'regularTradingFee': ApiClient.convertToType(data['regularTradingFee'], 'number'),
-            'regularDiscount': ApiClient.convertToType(data['regularDiscount'], 'number'),
-        });
+        if (data) {
+            return new UserCommissionData({
+                'isPayingCommissionInGvt': ApiClient.convertToType(data['isPayingCommissionInGvt'], 'boolean'),
+                'gvtHolderTradingFee': ApiClient.convertToType(data['gvtHolderTradingFee'], 'number'),
+                'gvtHolderDiscount': ApiClient.convertToType(data['gvtHolderDiscount'], 'number'),
+                'regularTradingFee': ApiClient.convertToType(data['regularTradingFee'], 'number'),
+                'regularDiscount': ApiClient.convertToType(data['regularDiscount'], 'number'),
+            });
+        }
     }
 }

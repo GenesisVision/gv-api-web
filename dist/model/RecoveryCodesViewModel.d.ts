@@ -7,5 +7,5 @@ export declare class RecoveryCodesViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): RecoveryCodesViewModel;
+    }): RecoveryCodesViewModel | undefined;
 }

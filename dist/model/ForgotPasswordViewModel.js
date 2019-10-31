@@ -6,9 +6,11 @@ export class ForgotPasswordViewModel {
         this['captchaCheckResult'] = data['captchaCheckResult'];
     }
     static constructFromObject(data) {
-        return new ForgotPasswordViewModel({
-            'email': ApiClient.convertToType(data['email'], 'string'),
-            'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
-        });
+        if (data) {
+            return new ForgotPasswordViewModel({
+                'email': ApiClient.convertToType(data['email'], 'string'),
+                'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
+            });
+        }
     }
 }

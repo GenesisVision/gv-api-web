@@ -11,5 +11,5 @@ export declare class TradesViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TradesViewModel;
+    }): TradesViewModel | undefined;
 }

@@ -6,10 +6,12 @@ export class TwoFactorAuthenticatorConfirm {
         this['password'] = data['password'];
     }
     static constructFromObject(data) {
-        return new TwoFactorAuthenticatorConfirm({
-            'code': ApiClient.convertToType(data['code'], 'string'),
-            'sharedKey': ApiClient.convertToType(data['sharedKey'], 'string'),
-            'password': ApiClient.convertToType(data['password'], 'string'),
-        });
+        if (data) {
+            return new TwoFactorAuthenticatorConfirm({
+                'code': ApiClient.convertToType(data['code'], 'string'),
+                'sharedKey': ApiClient.convertToType(data['sharedKey'], 'string'),
+                'password': ApiClient.convertToType(data['password'], 'string'),
+            });
+        }
     }
 }

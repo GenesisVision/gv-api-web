@@ -5,8 +5,10 @@ export class OrderModelSignalData {
         this['masters'] = data['masters'];
     }
     static constructFromObject(data) {
-        return new OrderModelSignalData({
-            'masters': ApiClient.convertToType(data['masters'], [SignalDataMaster]),
-        });
+        if (data) {
+            return new OrderModelSignalData({
+                'masters': ApiClient.convertToType(data['masters'], [SignalDataMaster]),
+            });
+        }
     }
 }

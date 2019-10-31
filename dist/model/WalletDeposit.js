@@ -6,9 +6,11 @@ export class WalletDeposit {
         this['depositAddress'] = data['depositAddress'];
     }
     static constructFromObject(data) {
-        return new WalletDeposit({
-            'currency': Currency.constructFromObject(data['currency']),
-            'depositAddress': ApiClient.convertToType(data['depositAddress'], 'string'),
-        });
+        if (data) {
+            return new WalletDeposit({
+                'currency': Currency.constructFromObject(data['currency']),
+                'depositAddress': ApiClient.convertToType(data['depositAddress'], 'string'),
+            });
+        }
     }
 }

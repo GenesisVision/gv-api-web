@@ -6,10 +6,12 @@ export class ChangeBrokerProgramRequestOld {
         this['newLeverage'] = data['newLeverage'];
     }
     static constructFromObject(data) {
-        return new ChangeBrokerProgramRequestOld({
-            'programId': ApiClient.convertToType(data['programId'], 'string'),
-            'newBrokerAccountTypeId': ApiClient.convertToType(data['newBrokerAccountTypeId'], 'string'),
-            'newLeverage': ApiClient.convertToType(data['newLeverage'], 'number'),
-        });
+        if (data) {
+            return new ChangeBrokerProgramRequestOld({
+                'programId': ApiClient.convertToType(data['programId'], 'string'),
+                'newBrokerAccountTypeId': ApiClient.convertToType(data['newBrokerAccountTypeId'], 'string'),
+                'newLeverage': ApiClient.convertToType(data['newLeverage'], 'number'),
+            });
+        }
     }
 }

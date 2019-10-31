@@ -15,5 +15,5 @@ export declare class PersonalSignalDetailsFull {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PersonalSignalDetailsFull;
+    }): PersonalSignalDetailsFull | undefined;
 }

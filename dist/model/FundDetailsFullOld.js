@@ -24,23 +24,25 @@ export class FundDetailsFullOld {
         this['manager'] = data['manager'];
     }
     static constructFromObject(data) {
-        return new FundDetailsFullOld({
-            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
-            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
-            'managementFee': ApiClient.convertToType(data['managementFee'], 'number'),
-            'currentAssets': ApiClient.convertToType(data['currentAssets'], [FundAssetPartWithIcon]),
-            'statistic': FundStatisticOld.constructFromObject(data['statistic']),
-            'personalFundDetails': PersonalFundDetailsFullOld.constructFromObject(data['personalFundDetails']),
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'ipfsHash': ApiClient.convertToType(data['ipfsHash'], 'string'),
-            'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
-            'status': InvestmentProgramStatus.constructFromObject(data['status']),
-            'manager': ProfilePublic.constructFromObject(data['manager']),
-        });
+        if (data) {
+            return new FundDetailsFullOld({
+                'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+                'managementFee': ApiClient.convertToType(data['managementFee'], 'number'),
+                'currentAssets': ApiClient.convertToType(data['currentAssets'], [FundAssetPartWithIcon]),
+                'statistic': FundStatisticOld.constructFromObject(data['statistic']),
+                'personalFundDetails': PersonalFundDetailsFullOld.constructFromObject(data['personalFundDetails']),
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'ipfsHash': ApiClient.convertToType(data['ipfsHash'], 'string'),
+                'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+                'status': InvestmentProgramStatus.constructFromObject(data['status']),
+                'manager': ProfilePublic.constructFromObject(data['manager']),
+            });
+        }
     }
 }

@@ -7,5 +7,5 @@ export declare class UpdateSocialLinkViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): UpdateSocialLinkViewModel;
+    }): UpdateSocialLinkViewModel | undefined;
 }

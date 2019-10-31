@@ -9,5 +9,5 @@ export declare class TradesSignalViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TradesSignalViewModel;
+    }): TradesSignalViewModel | undefined;
 }

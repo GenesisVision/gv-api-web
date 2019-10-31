@@ -6,9 +6,11 @@ export class ReallocationModel {
         this['parts'] = data['parts'];
     }
     static constructFromObject(data) {
-        return new ReallocationModel({
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'parts': ApiClient.convertToType(data['parts'], [FundAssetPartWithIcon]),
-        });
+        if (data) {
+            return new ReallocationModel({
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'parts': ApiClient.convertToType(data['parts'], [FundAssetPartWithIcon]),
+            });
+        }
     }
 }

@@ -11,5 +11,5 @@ export declare class FundNotificationSettingList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundNotificationSettingList;
+    }): FundNotificationSettingList | undefined;
 }

@@ -7,5 +7,5 @@ export declare class FundBalanceChartOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundBalanceChartOld;
+    }): FundBalanceChartOld | undefined;
 }

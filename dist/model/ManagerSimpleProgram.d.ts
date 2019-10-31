@@ -11,5 +11,5 @@ export declare class ManagerSimpleProgram {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerSimpleProgram;
+    }): ManagerSimpleProgram | undefined;
 }

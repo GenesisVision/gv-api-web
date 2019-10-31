@@ -7,10 +7,12 @@ export class FundEquityChartElementOld {
         this['date'] = data['date'];
     }
     static constructFromObject(data) {
-        return new FundEquityChartElementOld({
-            'assetsState': FundAssetsState.constructFromObject(data['assetsState']),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-        });
+        if (data) {
+            return new FundEquityChartElementOld({
+                'assetsState': FundAssetsState.constructFromObject(data['assetsState']),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+            });
+        }
     }
 }

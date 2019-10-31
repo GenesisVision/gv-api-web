@@ -6,5 +6,5 @@ export declare class ProgramsLevelsInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramsLevelsInfo;
+    }): ProgramsLevelsInfo | undefined;
 }

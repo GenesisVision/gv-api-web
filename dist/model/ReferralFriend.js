@@ -5,9 +5,11 @@ export class ReferralFriend {
         this['emailMask'] = data['emailMask'];
     }
     static constructFromObject(data) {
-        return new ReferralFriend({
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'emailMask': ApiClient.convertToType(data['emailMask'], 'string'),
-        });
+        if (data) {
+            return new ReferralFriend({
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'emailMask': ApiClient.convertToType(data['emailMask'], 'string'),
+            });
+        }
     }
 }

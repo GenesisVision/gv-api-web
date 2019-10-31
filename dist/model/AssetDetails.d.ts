@@ -6,10 +6,11 @@ export declare class AssetDetails {
     'title': string;
     'url': string;
     'assetType': AssetType;
+    'levelProgress': number;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AssetDetails;
+    }): AssetDetails | undefined;
 }

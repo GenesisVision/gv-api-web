@@ -18,5 +18,5 @@ export declare class BrokerOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): BrokerOld;
+    }): BrokerOld | undefined;
 }

@@ -6,9 +6,11 @@ export class SignalTradingEvents {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new SignalTradingEvents({
-            'events': ApiClient.convertToType(data['events'], [SignalTradingEvent]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new SignalTradingEvents({
+                'events': ApiClient.convertToType(data['events'], [SignalTradingEvent]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

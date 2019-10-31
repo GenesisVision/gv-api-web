@@ -26,5 +26,5 @@ export declare class PersonalFundDetailsFullOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PersonalFundDetailsFullOld;
+    }): PersonalFundDetailsFullOld | undefined;
 }

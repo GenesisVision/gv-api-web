@@ -13,17 +13,19 @@ export class BrokerDetailsOld {
         this['showCommissionRebateSometime'] = data['showCommissionRebateSometime'];
     }
     static constructFromObject(data) {
-        return new BrokerDetailsOld({
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'isForex': ApiClient.convertToType(data['isForex'], 'boolean'),
-            'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
-            'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
-            'showCommissionRebate': ApiClient.convertToType(data['showCommissionRebate'], 'boolean'),
-            'isForexSometime': ApiClient.convertToType(data['isForexSometime'], 'boolean'),
-            'showSwapsSometime': ApiClient.convertToType(data['showSwapsSometime'], 'boolean'),
-            'showTicketsSometime': ApiClient.convertToType(data['showTicketsSometime'], 'boolean'),
-            'showCommissionRebateSometime': ApiClient.convertToType(data['showCommissionRebateSometime'], 'boolean'),
-        });
+        if (data) {
+            return new BrokerDetailsOld({
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'isForex': ApiClient.convertToType(data['isForex'], 'boolean'),
+                'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
+                'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
+                'showCommissionRebate': ApiClient.convertToType(data['showCommissionRebate'], 'boolean'),
+                'isForexSometime': ApiClient.convertToType(data['isForexSometime'], 'boolean'),
+                'showSwapsSometime': ApiClient.convertToType(data['showSwapsSometime'], 'boolean'),
+                'showTicketsSometime': ApiClient.convertToType(data['showTicketsSometime'], 'boolean'),
+                'showCommissionRebateSometime': ApiClient.convertToType(data['showCommissionRebateSometime'], 'boolean'),
+            });
+        }
     }
 }

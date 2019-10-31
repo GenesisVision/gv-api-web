@@ -24,7 +24,7 @@ export declare class TransactionDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TransactionDetails;
+    }): TransactionDetails | undefined;
 }
 declare type GvCommissionCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export {};

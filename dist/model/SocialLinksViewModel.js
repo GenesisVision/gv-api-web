@@ -5,8 +5,10 @@ export class SocialLinksViewModel {
         this['socialLinks'] = data['socialLinks'];
     }
     static constructFromObject(data) {
-        return new SocialLinksViewModel({
-            'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
-        });
+        if (data) {
+            return new SocialLinksViewModel({
+                'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
+            });
+        }
     }
 }

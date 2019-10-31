@@ -7,5 +7,5 @@ export declare class PartnershipDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PartnershipDetails;
+    }): PartnershipDetails | undefined;
 }

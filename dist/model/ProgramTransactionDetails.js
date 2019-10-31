@@ -20,22 +20,24 @@ export class ProgramTransactionDetails {
         this['color'] = data['color'];
     }
     static constructFromObject(data) {
-        return new ProgramTransactionDetails({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'managerName': ApiClient.convertToType(data['managerName'], 'string'),
-            'programType': InvestmentProgramType.constructFromObject(data['programType']),
-            'successFeeCurrency': Currency.constructFromObject(data['successFeeCurrency']),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
-            'entryFeePercent': ApiClient.convertToType(data['entryFeePercent'], 'number'),
-            'successFee': ApiClient.convertToType(data['successFee'], 'number'),
-            'successFeePercent': ApiClient.convertToType(data['successFeePercent'], 'number'),
-            'level': ApiClient.convertToType(data['level'], 'number'),
-            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
-            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
-            'exitFeePercent': ApiClient.convertToType(data['exitFeePercent'], 'number'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-        });
+        if (data) {
+            return new ProgramTransactionDetails({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'managerName': ApiClient.convertToType(data['managerName'], 'string'),
+                'programType': InvestmentProgramType.constructFromObject(data['programType']),
+                'successFeeCurrency': Currency.constructFromObject(data['successFeeCurrency']),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'entryFeePercent': ApiClient.convertToType(data['entryFeePercent'], 'number'),
+                'successFee': ApiClient.convertToType(data['successFee'], 'number'),
+                'successFeePercent': ApiClient.convertToType(data['successFeePercent'], 'number'),
+                'level': ApiClient.convertToType(data['level'], 'number'),
+                'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+                'exitFeePercent': ApiClient.convertToType(data['exitFeePercent'], 'number'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+            });
+        }
     }
 }

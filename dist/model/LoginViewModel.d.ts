@@ -12,5 +12,5 @@ export declare class LoginViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): LoginViewModel;
+    }): LoginViewModel | undefined;
 }

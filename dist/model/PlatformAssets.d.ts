@@ -6,5 +6,5 @@ export declare class PlatformAssets {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PlatformAssets;
+    }): PlatformAssets | undefined;
 }

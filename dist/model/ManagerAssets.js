@@ -7,9 +7,11 @@ export class ManagerAssets {
         this['funds'] = data['funds'];
     }
     static constructFromObject(data) {
-        return new ManagerAssets({
-            'programs': ApiClient.convertToType(data['programs'], [ManagerSimpleProgram]),
-            'funds': ApiClient.convertToType(data['funds'], [ManagerSimpleFund]),
-        });
+        if (data) {
+            return new ManagerAssets({
+                'programs': ApiClient.convertToType(data['programs'], [ManagerSimpleProgram]),
+                'funds': ApiClient.convertToType(data['funds'], [ManagerSimpleFund]),
+            });
+        }
     }
 }

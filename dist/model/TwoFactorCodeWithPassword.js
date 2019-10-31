@@ -5,9 +5,11 @@ export class TwoFactorCodeWithPassword {
         this['password'] = data['password'];
     }
     static constructFromObject(data) {
-        return new TwoFactorCodeWithPassword({
-            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
-            'password': ApiClient.convertToType(data['password'], 'string'),
-        });
+        if (data) {
+            return new TwoFactorCodeWithPassword({
+                'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+                'password': ApiClient.convertToType(data['password'], 'string'),
+            });
+        }
     }
 }

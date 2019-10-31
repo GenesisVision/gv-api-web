@@ -33,5 +33,5 @@ export declare class OrderSignalModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OrderSignalModel;
+    }): OrderSignalModel | undefined;
 }

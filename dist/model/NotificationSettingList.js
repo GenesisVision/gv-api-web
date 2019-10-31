@@ -11,11 +11,13 @@ export class NotificationSettingList {
         this['settingsManager'] = data['settingsManager'];
     }
     static constructFromObject(data) {
-        return new NotificationSettingList({
-            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
-            'settingsProgram': ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]),
-            'settingsFund': ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]),
-            'settingsManager': ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]),
-        });
+        if (data) {
+            return new NotificationSettingList({
+                'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+                'settingsProgram': ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]),
+                'settingsFund': ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]),
+                'settingsManager': ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]),
+            });
+        }
     }
 }

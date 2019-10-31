@@ -6,9 +6,11 @@ export class ItemsViewModelRewardDetails {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ItemsViewModelRewardDetails({
-            'items': ApiClient.convertToType(data['items'], [RewardDetails]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ItemsViewModelRewardDetails({
+                'items': ApiClient.convertToType(data['items'], [RewardDetails]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

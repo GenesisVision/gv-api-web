@@ -5,9 +5,11 @@ export class ProgramTag {
         this['color'] = data['color'];
     }
     static constructFromObject(data) {
-        return new ProgramTag({
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-        });
+        if (data) {
+            return new ProgramTag({
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+            });
+        }
     }
 }

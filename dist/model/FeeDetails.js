@@ -10,12 +10,14 @@ export class FeeDetails {
         this['currency'] = data['currency'];
     }
     static constructFromObject(data) {
-        return new FeeDetails({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'type': FeeType.constructFromObject(data['type']),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-        });
+        if (data) {
+            return new FeeDetails({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'type': FeeType.constructFromObject(data['type']),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+            });
+        }
     }
 }

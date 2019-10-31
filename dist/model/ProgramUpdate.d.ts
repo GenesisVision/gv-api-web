@@ -13,7 +13,7 @@ export declare class ProgramUpdate {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramUpdate;
+    }): ProgramUpdate | undefined;
 }
 declare type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
 export {};

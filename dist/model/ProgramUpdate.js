@@ -12,16 +12,18 @@ export class ProgramUpdate {
         this['tradesDelay'] = data['tradesDelay'];
     }
     static constructFromObject(data) {
-        return new ProgramUpdate({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
-            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
-            'successFee': ApiClient.convertToType(data['successFee'], 'number'),
-            'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
-            'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
-            'tradesDelay': ApiClient.convertToType(data['tradesDelay'], 'string'),
-        });
+        if (data) {
+            return new ProgramUpdate({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+                'successFee': ApiClient.convertToType(data['successFee'], 'number'),
+                'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
+                'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
+                'tradesDelay': ApiClient.convertToType(data['tradesDelay'], 'string'),
+            });
+        }
     }
 }

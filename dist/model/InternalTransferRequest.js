@@ -10,13 +10,15 @@ export class InternalTransferRequest {
         this['transferAll'] = data['transferAll'];
     }
     static constructFromObject(data) {
-        return new InternalTransferRequest({
-            'sourceId': ApiClient.convertToType(data['sourceId'], 'string'),
-            'sourceType': TransferRequestType.constructFromObject(data['sourceType']),
-            'destinationId': ApiClient.convertToType(data['destinationId'], 'string'),
-            'destinationType': TransferRequestType.constructFromObject(data['destinationType']),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'transferAll': ApiClient.convertToType(data['transferAll'], 'boolean'),
-        });
+        if (data) {
+            return new InternalTransferRequest({
+                'sourceId': ApiClient.convertToType(data['sourceId'], 'string'),
+                'sourceType': TransferRequestType.constructFromObject(data['sourceType']),
+                'destinationId': ApiClient.convertToType(data['destinationId'], 'string'),
+                'destinationType': TransferRequestType.constructFromObject(data['destinationType']),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'transferAll': ApiClient.convertToType(data['transferAll'], 'boolean'),
+            });
+        }
     }
 }

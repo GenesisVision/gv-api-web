@@ -6,9 +6,11 @@ export class FundBalanceChartOld {
         this['balanceChart'] = data['balanceChart'];
     }
     static constructFromObject(data) {
-        return new FundBalanceChartOld({
-            'balance': ApiClient.convertToType(data['balance'], 'number'),
-            'balanceChart': ApiClient.convertToType(data['balanceChart'], [BalanceChartElementOld]),
-        });
+        if (data) {
+            return new FundBalanceChartOld({
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'balanceChart': ApiClient.convertToType(data['balanceChart'], [BalanceChartElementOld]),
+            });
+        }
     }
 }

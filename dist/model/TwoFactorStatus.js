@@ -4,8 +4,10 @@ export class TwoFactorStatus {
         this['twoFactorEnabled'] = data['twoFactorEnabled'];
     }
     static constructFromObject(data) {
-        return new TwoFactorStatus({
-            'twoFactorEnabled': ApiClient.convertToType(data['twoFactorEnabled'], 'boolean'),
-        });
+        if (data) {
+            return new TwoFactorStatus({
+                'twoFactorEnabled': ApiClient.convertToType(data['twoFactorEnabled'], 'boolean'),
+            });
+        }
     }
 }

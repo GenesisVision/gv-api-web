@@ -52,5 +52,5 @@ export declare class ProgramDetailsFullOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramDetailsFullOld;
+    }): ProgramDetailsFullOld | undefined;
 }

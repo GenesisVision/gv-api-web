@@ -7,5 +7,5 @@ export declare class ProgramBalanceChartElementOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramBalanceChartElementOld;
+    }): ProgramBalanceChartElementOld | undefined;
 }

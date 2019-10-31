@@ -5,9 +5,11 @@ export class IOsAppVersion {
         this['lastVersion'] = data['lastVersion'];
     }
     static constructFromObject(data) {
-        return new IOsAppVersion({
-            'minVersion': ApiClient.convertToType(data['minVersion'], 'string'),
-            'lastVersion': ApiClient.convertToType(data['lastVersion'], 'string'),
-        });
+        if (data) {
+            return new IOsAppVersion({
+                'minVersion': ApiClient.convertToType(data['minVersion'], 'string'),
+                'lastVersion': ApiClient.convertToType(data['lastVersion'], 'string'),
+            });
+        }
     }
 }

@@ -7,10 +7,12 @@ export class InvestmentEventItemViewModel {
         this['currency'] = data['currency'];
     }
     static constructFromObject(data) {
-        return new InvestmentEventItemViewModel({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-        });
+        if (data) {
+            return new InvestmentEventItemViewModel({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+            });
+        }
     }
 }

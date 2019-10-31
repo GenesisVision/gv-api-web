@@ -8,11 +8,13 @@ export class CreateWithdrawalRequestModel {
         this['twoFactorCode'] = data['twoFactorCode'];
     }
     static constructFromObject(data) {
-        return new CreateWithdrawalRequestModel({
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-            'address': ApiClient.convertToType(data['address'], 'string'),
-            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
-        });
+        if (data) {
+            return new CreateWithdrawalRequestModel({
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+                'address': ApiClient.convertToType(data['address'], 'string'),
+                'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+            });
+        }
     }
 }

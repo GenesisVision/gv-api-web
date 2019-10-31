@@ -23,5 +23,5 @@ export declare class WalletData {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletData;
+    }): WalletData | undefined;
 }

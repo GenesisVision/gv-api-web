@@ -20,5 +20,5 @@ export declare class PlatformInfoOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PlatformInfoOld;
+    }): PlatformInfoOld | undefined;
 }

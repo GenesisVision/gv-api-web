@@ -9,5 +9,5 @@ export declare class ProgramBalanceChartOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramBalanceChartOld;
+    }): ProgramBalanceChartOld | undefined;
 }

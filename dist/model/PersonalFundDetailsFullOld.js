@@ -25,28 +25,30 @@ export class PersonalFundDetailsFullOld {
         this['status'] = data['status'];
     }
     static constructFromObject(data) {
-        return new PersonalFundDetailsFullOld({
-            'withdrawPercent': ApiClient.convertToType(data['withdrawPercent'], 'number'),
-            'canReallocate': ApiClient.convertToType(data['canReallocate'], 'boolean'),
-            'availableReallocationPercents': ApiClient.convertToType(data['availableReallocationPercents'], 'number'),
-            'nextReallocationPercents': ApiClient.convertToType(data['nextReallocationPercents'], 'Date'),
-            'exitFeePersonal': ApiClient.convertToType(data['exitFeePersonal'], 'number'),
-            'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
-            'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
-            'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
-            'canCloseAsset': ApiClient.convertToType(data['canCloseAsset'], 'boolean'),
-            'isFinishing': ApiClient.convertToType(data['isFinishing'], 'boolean'),
-            'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
-            'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
-            'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
-            'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'invested': ApiClient.convertToType(data['invested'], 'number'),
-            'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
-            'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
-            'pendingOutputIsWithdrawAll': ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'boolean'),
-            'status': AssetInvestmentStatus.constructFromObject(data['status']),
-        });
+        if (data) {
+            return new PersonalFundDetailsFullOld({
+                'withdrawPercent': ApiClient.convertToType(data['withdrawPercent'], 'number'),
+                'canReallocate': ApiClient.convertToType(data['canReallocate'], 'boolean'),
+                'availableReallocationPercents': ApiClient.convertToType(data['availableReallocationPercents'], 'number'),
+                'nextReallocationPercents': ApiClient.convertToType(data['nextReallocationPercents'], 'Date'),
+                'exitFeePersonal': ApiClient.convertToType(data['exitFeePersonal'], 'number'),
+                'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
+                'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
+                'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
+                'canCloseAsset': ApiClient.convertToType(data['canCloseAsset'], 'boolean'),
+                'isFinishing': ApiClient.convertToType(data['isFinishing'], 'boolean'),
+                'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
+                'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
+                'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
+                'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'invested': ApiClient.convertToType(data['invested'], 'number'),
+                'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
+                'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
+                'pendingOutputIsWithdrawAll': ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'boolean'),
+                'status': AssetInvestmentStatus.constructFromObject(data['status']),
+            });
+        }
     }
 }

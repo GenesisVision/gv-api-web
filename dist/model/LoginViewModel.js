@@ -11,14 +11,16 @@ export class LoginViewModel {
         this['captchaCheckResult'] = data['captchaCheckResult'];
     }
     static constructFromObject(data) {
-        return new LoginViewModel({
-            'password': ApiClient.convertToType(data['password'], 'string'),
-            'rememberMe': ApiClient.convertToType(data['rememberMe'], 'boolean'),
-            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
-            'recoveryCode': ApiClient.convertToType(data['recoveryCode'], 'string'),
-            'client': ApiClient.convertToType(data['client'], 'string'),
-            'email': ApiClient.convertToType(data['email'], 'string'),
-            'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
-        });
+        if (data) {
+            return new LoginViewModel({
+                'password': ApiClient.convertToType(data['password'], 'string'),
+                'rememberMe': ApiClient.convertToType(data['rememberMe'], 'boolean'),
+                'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+                'recoveryCode': ApiClient.convertToType(data['recoveryCode'], 'string'),
+                'client': ApiClient.convertToType(data['client'], 'string'),
+                'email': ApiClient.convertToType(data['email'], 'string'),
+                'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
+            });
+        }
     }
 }

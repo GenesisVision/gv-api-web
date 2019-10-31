@@ -5,8 +5,10 @@ export class ProgramsLevelsInfo {
         this['levels'] = data['levels'];
     }
     static constructFromObject(data) {
-        return new ProgramsLevelsInfo({
-            'levels': ApiClient.convertToType(data['levels'], [LevelInfo]),
-        });
+        if (data) {
+            return new ProgramsLevelsInfo({
+                'levels': ApiClient.convertToType(data['levels'], [LevelInfo]),
+            });
+        }
     }
 }

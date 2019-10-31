@@ -6,5 +6,5 @@ export declare class IOsAppVersion {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): IOsAppVersion;
+    }): IOsAppVersion | undefined;
 }

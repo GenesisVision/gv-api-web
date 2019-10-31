@@ -6,5 +6,5 @@ export declare class RecoveryCode {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): RecoveryCode;
+    }): RecoveryCode | undefined;
 }

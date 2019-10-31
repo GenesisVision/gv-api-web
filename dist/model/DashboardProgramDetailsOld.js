@@ -4,8 +4,10 @@ export class DashboardProgramDetailsOld {
         this['share'] = data['share'];
     }
     static constructFromObject(data) {
-        return new DashboardProgramDetailsOld({
-            'share': ApiClient.convertToType(data['share'], 'number'),
-        });
+        if (data) {
+            return new DashboardProgramDetailsOld({
+                'share': ApiClient.convertToType(data['share'], 'number'),
+            });
+        }
     }
 }

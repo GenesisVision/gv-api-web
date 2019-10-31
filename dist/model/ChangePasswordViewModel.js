@@ -6,10 +6,12 @@ export class ChangePasswordViewModel {
         this['confirmPassword'] = data['confirmPassword'];
     }
     static constructFromObject(data) {
-        return new ChangePasswordViewModel({
-            'oldPassword': ApiClient.convertToType(data['oldPassword'], 'string'),
-            'password': ApiClient.convertToType(data['password'], 'string'),
-            'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
-        });
+        if (data) {
+            return new ChangePasswordViewModel({
+                'oldPassword': ApiClient.convertToType(data['oldPassword'], 'string'),
+                'password': ApiClient.convertToType(data['password'], 'string'),
+                'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
+            });
+        }
     }
 }

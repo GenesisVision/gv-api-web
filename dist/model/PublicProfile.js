@@ -12,15 +12,17 @@ export class PublicProfile {
         this['socialLinks'] = data['socialLinks'];
     }
     static constructFromObject(data) {
-        return new PublicProfile({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'username': ApiClient.convertToType(data['username'], 'string'),
-            'about': ApiClient.convertToType(data['about'], 'string'),
-            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
-            'regDate': ApiClient.convertToType(data['regDate'], 'Date'),
-            'assets': ApiClient.convertToType(data['assets'], ['string']),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
-        });
+        if (data) {
+            return new PublicProfile({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'username': ApiClient.convertToType(data['username'], 'string'),
+                'about': ApiClient.convertToType(data['about'], 'string'),
+                'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+                'regDate': ApiClient.convertToType(data['regDate'], 'Date'),
+                'assets': ApiClient.convertToType(data['assets'], ['string']),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
+            });
+        }
     }
 }

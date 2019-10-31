@@ -6,5 +6,5 @@ export declare class OrderModelSignalData {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OrderModelSignalData;
+    }): OrderModelSignalData | undefined;
 }

@@ -8,5 +8,5 @@ export declare class ResetPasswordViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ResetPasswordViewModel;
+    }): ResetPasswordViewModel | undefined;
 }

@@ -5,9 +5,11 @@ export class ChartSimple {
         this['date'] = data['date'];
     }
     static constructFromObject(data) {
-        return new ChartSimple({
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-        });
+        if (data) {
+            return new ChartSimple({
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+            });
+        }
     }
 }

@@ -6,9 +6,11 @@ export class FundsListOld {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new FundsListOld({
-            'funds': ApiClient.convertToType(data['funds'], [FundDetailsOld]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new FundsListOld({
+                'funds': ApiClient.convertToType(data['funds'], [FundDetailsOld]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

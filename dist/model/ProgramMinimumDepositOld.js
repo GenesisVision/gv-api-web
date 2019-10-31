@@ -4,8 +4,10 @@ export class ProgramMinimumDepositOld {
         this['minimumDepositsAmount'] = data['minimumDepositsAmount'];
     }
     static constructFromObject(data) {
-        return new ProgramMinimumDepositOld({
-            'minimumDepositsAmount': ApiClient.convertToType(data['minimumDepositsAmount'], { 'string': 'number' }),
-        });
+        if (data) {
+            return new ProgramMinimumDepositOld({
+                'minimumDepositsAmount': ApiClient.convertToType(data['minimumDepositsAmount'], { 'string': 'number' }),
+            });
+        }
     }
 }

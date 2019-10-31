@@ -9,5 +9,5 @@ export declare class FundDetailsListStatistic {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundDetailsListStatistic;
+    }): FundDetailsListStatistic | undefined;
 }

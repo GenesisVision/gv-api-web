@@ -10,13 +10,15 @@ export class WalletWithdrawalInfo {
         this['availableToWithdrawal'] = data['availableToWithdrawal'];
     }
     static constructFromObject(data) {
-        return new WalletWithdrawalInfo({
-            'currency': Currency.constructFromObject(data['currency']),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'commission': ApiClient.convertToType(data['commission'], 'number'),
-            'rateToGvt': ApiClient.convertToType(data['rateToGvt'], 'number'),
-            'availableToWithdrawal': ApiClient.convertToType(data['availableToWithdrawal'], 'number'),
-        });
+        if (data) {
+            return new WalletWithdrawalInfo({
+                'currency': Currency.constructFromObject(data['currency']),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'commission': ApiClient.convertToType(data['commission'], 'number'),
+                'rateToGvt': ApiClient.convertToType(data['rateToGvt'], 'number'),
+                'availableToWithdrawal': ApiClient.convertToType(data['availableToWithdrawal'], 'number'),
+            });
+        }
     }
 }

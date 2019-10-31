@@ -7,5 +7,5 @@ export declare class AmountWithCurrency {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AmountWithCurrency;
+    }): AmountWithCurrency | undefined;
 }

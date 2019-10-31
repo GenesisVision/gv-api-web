@@ -6,9 +6,11 @@ export class SignalsList {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new SignalsList({
-            'programs': ApiClient.convertToType(data['programs'], [SignalDetails]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new SignalsList({
+                'programs': ApiClient.convertToType(data['programs'], [SignalDetails]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

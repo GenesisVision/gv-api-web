@@ -11,5 +11,5 @@ export declare class PlatformAsset {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PlatformAsset;
+    }): PlatformAsset | undefined;
 }

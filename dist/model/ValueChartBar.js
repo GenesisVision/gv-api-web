@@ -9,11 +9,13 @@ export class ValueChartBar {
         this['otherAssetsValue'] = data['otherAssetsValue'];
     }
     static constructFromObject(data) {
-        return new ValueChartBar({
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'topAssets': ApiClient.convertToType(data['topAssets'], [AssetsValue]),
-            'otherAssetsValue': OtherAssetsValue.constructFromObject(data['otherAssetsValue']),
-        });
+        if (data) {
+            return new ValueChartBar({
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'topAssets': ApiClient.convertToType(data['topAssets'], [AssetsValue]),
+                'otherAssetsValue': OtherAssetsValue.constructFromObject(data['otherAssetsValue']),
+            });
+        }
     }
 }

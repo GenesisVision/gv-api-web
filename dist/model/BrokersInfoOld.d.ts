@@ -6,5 +6,5 @@ export declare class BrokersInfoOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): BrokersInfoOld;
+    }): BrokersInfoOld | undefined;
 }

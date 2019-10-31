@@ -9,5 +9,5 @@ export declare class EventInvestorItemFiltersOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): EventInvestorItemFiltersOld;
+    }): EventInvestorItemFiltersOld | undefined;
 }

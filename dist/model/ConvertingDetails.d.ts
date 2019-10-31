@@ -10,5 +10,5 @@ export declare class ConvertingDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ConvertingDetails;
+    }): ConvertingDetails | undefined;
 }

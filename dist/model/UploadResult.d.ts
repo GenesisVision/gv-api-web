@@ -5,5 +5,5 @@ export declare class UploadResult {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): UploadResult;
+    }): UploadResult | undefined;
 }

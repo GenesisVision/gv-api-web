@@ -13,5 +13,5 @@ export declare class EnumsOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): EnumsOld;
+    }): EnumsOld | undefined;
 }

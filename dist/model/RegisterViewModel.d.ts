@@ -12,5 +12,5 @@ export declare class RegisterViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): RegisterViewModel;
+    }): RegisterViewModel | undefined;
 }

@@ -6,9 +6,11 @@ export class CopyTradingAccountsList {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new CopyTradingAccountsList({
-            'accounts': ApiClient.convertToType(data['accounts'], [CopyTradingAccountInfo]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new CopyTradingAccountsList({
+                'accounts': ApiClient.convertToType(data['accounts'], [CopyTradingAccountInfo]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

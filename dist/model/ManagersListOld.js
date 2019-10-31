@@ -6,9 +6,11 @@ export class ManagersListOld {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ManagersListOld({
-            'managers': ApiClient.convertToType(data['managers'], [PublicProfile]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ManagersListOld({
+                'managers': ApiClient.convertToType(data['managers'], [PublicProfile]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

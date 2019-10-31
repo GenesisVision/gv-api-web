@@ -26,5 +26,5 @@ export declare class ProgramRequestOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramRequestOld;
+    }): ProgramRequestOld | undefined;
 }

@@ -17,5 +17,5 @@ export declare class NotificationViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): NotificationViewModel;
+    }): NotificationViewModel | undefined;
 }

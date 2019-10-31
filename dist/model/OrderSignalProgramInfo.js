@@ -14,15 +14,17 @@ export class OrderSignalProgramInfo {
         this['fees'] = data['fees'];
     }
     static constructFromObject(data) {
-        return new OrderSignalProgramInfo({
-            'manager': ProfilePublic.constructFromObject(data['manager']),
-            'program': OrderProgramData.constructFromObject(data['program']),
-            'programId': ApiClient.convertToType(data['programId'], 'string'),
-            'volume': ApiClient.convertToType(data['volume'], 'number'),
-            'priceOpenAvg': ApiClient.convertToType(data['priceOpenAvg'], 'number'),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'firstOrderDate': ApiClient.convertToType(data['firstOrderDate'], 'Date'),
-            'fees': ApiClient.convertToType(data['fees'], [OrderSignalFee]),
-        });
+        if (data) {
+            return new OrderSignalProgramInfo({
+                'manager': ProfilePublic.constructFromObject(data['manager']),
+                'program': OrderProgramData.constructFromObject(data['program']),
+                'programId': ApiClient.convertToType(data['programId'], 'string'),
+                'volume': ApiClient.convertToType(data['volume'], 'number'),
+                'priceOpenAvg': ApiClient.convertToType(data['priceOpenAvg'], 'number'),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'firstOrderDate': ApiClient.convertToType(data['firstOrderDate'], 'Date'),
+                'fees': ApiClient.convertToType(data['fees'], [OrderSignalFee]),
+            });
+        }
     }
 }

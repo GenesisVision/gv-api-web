@@ -5,5 +5,5 @@ export declare class FcmTokenViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FcmTokenViewModel;
+    }): FcmTokenViewModel | undefined;
 }

@@ -9,12 +9,14 @@ export class SocialLinkViewModel {
         this['type'] = data['type'];
     }
     static constructFromObject(data) {
-        return new SocialLinkViewModel({
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'value': ApiClient.convertToType(data['value'], 'string'),
-            'type': SocialLinkType.constructFromObject(data['type']),
-        });
+        if (data) {
+            return new SocialLinkViewModel({
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'value': ApiClient.convertToType(data['value'], 'string'),
+                'type': SocialLinkType.constructFromObject(data['type']),
+            });
+        }
     }
 }

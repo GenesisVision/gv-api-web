@@ -14,18 +14,20 @@ export class ProfileHeaderViewModel {
         this['isNewUser'] = data['isNewUser'];
     }
     static constructFromObject(data) {
-        return new ProfileHeaderViewModel({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'email': ApiClient.convertToType(data['email'], 'string'),
-            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
-            'countryCode': ApiClient.convertToType(data['countryCode'], 'string'),
-            'notificationsCount': ApiClient.convertToType(data['notificationsCount'], 'number'),
-            'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
-            'kycConfirmed': ApiClient.convertToType(data['kycConfirmed'], 'boolean'),
-            'allowForex': ApiClient.convertToType(data['allowForex'], 'boolean'),
-            'isTwoFactorEnabled': ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean'),
-            'isNewUser': ApiClient.convertToType(data['isNewUser'], 'boolean'),
-        });
+        if (data) {
+            return new ProfileHeaderViewModel({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'email': ApiClient.convertToType(data['email'], 'string'),
+                'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+                'countryCode': ApiClient.convertToType(data['countryCode'], 'string'),
+                'notificationsCount': ApiClient.convertToType(data['notificationsCount'], 'number'),
+                'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
+                'kycConfirmed': ApiClient.convertToType(data['kycConfirmed'], 'boolean'),
+                'allowForex': ApiClient.convertToType(data['allowForex'], 'boolean'),
+                'isTwoFactorEnabled': ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean'),
+                'isNewUser': ApiClient.convertToType(data['isNewUser'], 'boolean'),
+            });
+        }
     }
 }

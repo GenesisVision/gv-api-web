@@ -12,13 +12,15 @@ export class DashboardSummary {
         this['requests'] = data['requests'];
     }
     static constructFromObject(data) {
-        return new DashboardSummary({
-            'chart': DashboardChartValue.constructFromObject(data['chart']),
-            'profileHeader': ProfileHeaderViewModel.constructFromObject(data['profileHeader']),
-            'programsCount': ApiClient.convertToType(data['programsCount'], 'number'),
-            'fundsCount': ApiClient.convertToType(data['fundsCount'], 'number'),
-            'signalsCount': ApiClient.convertToType(data['signalsCount'], 'number'),
-            'requests': ProgramRequestsOld.constructFromObject(data['requests']),
-        });
+        if (data) {
+            return new DashboardSummary({
+                'chart': DashboardChartValue.constructFromObject(data['chart']),
+                'profileHeader': ProfileHeaderViewModel.constructFromObject(data['profileHeader']),
+                'programsCount': ApiClient.convertToType(data['programsCount'], 'number'),
+                'fundsCount': ApiClient.convertToType(data['fundsCount'], 'number'),
+                'signalsCount': ApiClient.convertToType(data['signalsCount'], 'number'),
+                'requests': ProgramRequestsOld.constructFromObject(data['requests']),
+            });
+        }
     }
 }

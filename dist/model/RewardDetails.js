@@ -7,10 +7,12 @@ export class RewardDetails {
         this['amount'] = data['amount'];
     }
     static constructFromObject(data) {
-        return new RewardDetails({
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'currency': Currency.constructFromObject(data['currency']),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-        });
+        if (data) {
+            return new RewardDetails({
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'currency': Currency.constructFromObject(data['currency']),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+            });
+        }
     }
 }

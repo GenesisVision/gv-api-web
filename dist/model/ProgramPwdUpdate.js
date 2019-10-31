@@ -5,9 +5,11 @@ export class ProgramPwdUpdate {
         this['twoFactorCode'] = data['twoFactorCode'];
     }
     static constructFromObject(data) {
-        return new ProgramPwdUpdate({
-            'password': ApiClient.convertToType(data['password'], 'string'),
-            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
-        });
+        if (data) {
+            return new ProgramPwdUpdate({
+                'password': ApiClient.convertToType(data['password'], 'string'),
+                'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+            });
+        }
     }
 }

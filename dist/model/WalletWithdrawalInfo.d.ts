@@ -11,5 +11,5 @@ export declare class WalletWithdrawalInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletWithdrawalInfo;
+    }): WalletWithdrawalInfo | undefined;
 }

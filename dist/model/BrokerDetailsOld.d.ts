@@ -14,5 +14,5 @@ export declare class BrokerDetailsOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): BrokerDetailsOld;
+    }): BrokerDetailsOld | undefined;
 }

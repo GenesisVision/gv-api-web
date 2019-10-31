@@ -6,5 +6,5 @@ export declare class TwoFactorAuthenticator {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TwoFactorAuthenticator;
+    }): TwoFactorAuthenticator | undefined;
 }

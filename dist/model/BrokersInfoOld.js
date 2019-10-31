@@ -5,8 +5,10 @@ export class BrokersInfoOld {
         this['brokers'] = data['brokers'];
     }
     static constructFromObject(data) {
-        return new BrokersInfoOld({
-            'brokers': ApiClient.convertToType(data['brokers'], [BrokerOld]),
-        });
+        if (data) {
+            return new BrokersInfoOld({
+                'brokers': ApiClient.convertToType(data['brokers'], [BrokerOld]),
+            });
+        }
     }
 }

@@ -8,11 +8,13 @@ export class FundDetailsListStatistic {
         this['investorsCount'] = data['investorsCount'];
     }
     static constructFromObject(data) {
-        return new FundDetailsListStatistic({
-            'balance': AmountWithCurrency.constructFromObject(data['balance']),
-            'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
-            'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
-            'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
-        });
+        if (data) {
+            return new FundDetailsListStatistic({
+                'balance': AmountWithCurrency.constructFromObject(data['balance']),
+                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
+                'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
+                'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
+            });
+        }
     }
 }

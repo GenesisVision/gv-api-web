@@ -8,5 +8,5 @@ export declare class MigrationRequestOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): MigrationRequestOld;
+    }): MigrationRequestOld | undefined;
 }

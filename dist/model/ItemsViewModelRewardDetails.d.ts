@@ -7,5 +7,5 @@ export declare class ItemsViewModelRewardDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ItemsViewModelRewardDetails;
+    }): ItemsViewModelRewardDetails | undefined;
 }

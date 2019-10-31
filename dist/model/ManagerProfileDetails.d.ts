@@ -10,5 +10,5 @@ export declare class ManagerProfileDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerProfileDetails;
+    }): ManagerProfileDetails | undefined;
 }

@@ -7,9 +7,11 @@ export class ErrorViewModel {
         this['code'] = data['code'];
     }
     static constructFromObject(data) {
-        return new ErrorViewModel({
-            'errors': ApiClient.convertToType(data['errors'], [ErrorMessage]),
-            'code': ErrorCodes.constructFromObject(data['code']),
-        });
+        if (data) {
+            return new ErrorViewModel({
+                'errors': ApiClient.convertToType(data['errors'], [ErrorMessage]),
+                'code': ErrorCodes.constructFromObject(data['code']),
+            });
+        }
     }
 }

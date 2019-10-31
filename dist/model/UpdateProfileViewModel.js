@@ -5,9 +5,11 @@ export class UpdateProfileViewModel {
         this['about'] = data['about'];
     }
     static constructFromObject(data) {
-        return new UpdateProfileViewModel({
-            'userName': ApiClient.convertToType(data['userName'], 'string'),
-            'about': ApiClient.convertToType(data['about'], 'string'),
-        });
+        if (data) {
+            return new UpdateProfileViewModel({
+                'userName': ApiClient.convertToType(data['userName'], 'string'),
+                'about': ApiClient.convertToType(data['about'], 'string'),
+            });
+        }
     }
 }

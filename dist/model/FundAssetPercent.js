@@ -7,11 +7,13 @@ export class FundAssetPercent {
         this['icon'] = data['icon'];
     }
     static constructFromObject(data) {
-        return new FundAssetPercent({
-            'asset': ApiClient.convertToType(data['asset'], 'string'),
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'percent': ApiClient.convertToType(data['percent'], 'number'),
-            'icon': ApiClient.convertToType(data['icon'], 'string'),
-        });
+        if (data) {
+            return new FundAssetPercent({
+                'asset': ApiClient.convertToType(data['asset'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'percent': ApiClient.convertToType(data['percent'], 'number'),
+                'icon': ApiClient.convertToType(data['icon'], 'string'),
+            });
+        }
     }
 }

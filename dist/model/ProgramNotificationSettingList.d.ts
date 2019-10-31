@@ -14,5 +14,5 @@ export declare class ProgramNotificationSettingList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramNotificationSettingList;
+    }): ProgramNotificationSettingList | undefined;
 }

@@ -24,5 +24,5 @@ export declare class ProgramStatistic {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramStatistic;
+    }): ProgramStatistic | undefined;
 }

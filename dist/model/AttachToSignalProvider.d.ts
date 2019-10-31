@@ -12,7 +12,7 @@ export declare class AttachToSignalProvider {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AttachToSignalProvider;
+    }): AttachToSignalProvider | undefined;
 }
 declare type InitialDepositCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 declare type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';

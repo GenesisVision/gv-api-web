@@ -7,5 +7,5 @@ export declare class ItemsViewModelCopyTradingAccountInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ItemsViewModelCopyTradingAccountInfo;
+    }): ItemsViewModelCopyTradingAccountInfo | undefined;
 }

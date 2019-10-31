@@ -5,8 +5,10 @@ export class PlatformAssets {
         this['assets'] = data['assets'];
     }
     static constructFromObject(data) {
-        return new PlatformAssets({
-            'assets': ApiClient.convertToType(data['assets'], [PlatformAsset]),
-        });
+        if (data) {
+            return new PlatformAssets({
+                'assets': ApiClient.convertToType(data['assets'], [PlatformAsset]),
+            });
+        }
     }
 }

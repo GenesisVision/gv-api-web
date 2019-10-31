@@ -10,14 +10,16 @@ export class PlatformAsset {
         this['mandatoryFundPercent'] = data['mandatoryFundPercent'];
     }
     static constructFromObject(data) {
-        return new PlatformAsset({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'asset': ApiClient.convertToType(data['asset'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'icon': ApiClient.convertToType(data['icon'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'mandatoryFundPercent': ApiClient.convertToType(data['mandatoryFundPercent'], 'number'),
-        });
+        if (data) {
+            return new PlatformAsset({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'asset': ApiClient.convertToType(data['asset'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'icon': ApiClient.convertToType(data['icon'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'mandatoryFundPercent': ApiClient.convertToType(data['mandatoryFundPercent'], 'number'),
+            });
+        }
     }
 }

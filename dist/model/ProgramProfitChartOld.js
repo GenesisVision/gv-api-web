@@ -25,26 +25,28 @@ export class ProgramProfitChartOld {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new ProgramProfitChartOld({
-            'equityChart': ApiClient.convertToType(data['equityChart'], [ChartSimple]),
-            'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
-            'timeframeProfit': ApiClient.convertToType(data['timeframeProfit'], 'number'),
-            'programCurrency': Currency.constructFromObject(data['programCurrency']),
-            'trades': ApiClient.convertToType(data['trades'], 'number'),
-            'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),
-            'profitFactor': ApiClient.convertToType(data['profitFactor'], 'number'),
-            'periods': ApiClient.convertToType(data['periods'], [PeriodDate]),
-            'lastPeriodStarts': ApiClient.convertToType(data['lastPeriodStarts'], 'Date'),
-            'lastPeriodEnds': ApiClient.convertToType(data['lastPeriodEnds'], 'Date'),
-            'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
-            'balance': ApiClient.convertToType(data['balance'], 'number'),
-            'investors': ApiClient.convertToType(data['investors'], 'number'),
-            'profitChangePercent': ApiClient.convertToType(data['profitChangePercent'], 'number'),
-            'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
-            'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),
-            'calmarRatio': ApiClient.convertToType(data['calmarRatio'], 'number'),
-            'maxDrawdown': ApiClient.convertToType(data['maxDrawdown'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new ProgramProfitChartOld({
+                'equityChart': ApiClient.convertToType(data['equityChart'], [ChartSimple]),
+                'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
+                'timeframeProfit': ApiClient.convertToType(data['timeframeProfit'], 'number'),
+                'programCurrency': Currency.constructFromObject(data['programCurrency']),
+                'trades': ApiClient.convertToType(data['trades'], 'number'),
+                'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),
+                'profitFactor': ApiClient.convertToType(data['profitFactor'], 'number'),
+                'periods': ApiClient.convertToType(data['periods'], [PeriodDate]),
+                'lastPeriodStarts': ApiClient.convertToType(data['lastPeriodStarts'], 'Date'),
+                'lastPeriodEnds': ApiClient.convertToType(data['lastPeriodEnds'], 'Date'),
+                'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'investors': ApiClient.convertToType(data['investors'], 'number'),
+                'profitChangePercent': ApiClient.convertToType(data['profitChangePercent'], 'number'),
+                'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
+                'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),
+                'calmarRatio': ApiClient.convertToType(data['calmarRatio'], 'number'),
+                'maxDrawdown': ApiClient.convertToType(data['maxDrawdown'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

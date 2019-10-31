@@ -7,5 +7,5 @@ export declare class ItemsViewModelReferralFriend {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ItemsViewModelReferralFriend;
+    }): ItemsViewModelReferralFriend | undefined;
 }

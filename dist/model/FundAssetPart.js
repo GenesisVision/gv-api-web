@@ -5,9 +5,11 @@ export class FundAssetPart {
         this['percent'] = data['percent'];
     }
     static constructFromObject(data) {
-        return new FundAssetPart({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'percent': ApiClient.convertToType(data['percent'], 'number'),
-        });
+        if (data) {
+            return new FundAssetPart({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'percent': ApiClient.convertToType(data['percent'], 'number'),
+            });
+        }
     }
 }

@@ -8,5 +8,5 @@ export declare class FundWithdrawInfoOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundWithdrawInfoOld;
+    }): FundWithdrawInfoOld | undefined;
 }

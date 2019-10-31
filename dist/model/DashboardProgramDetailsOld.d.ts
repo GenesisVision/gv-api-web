@@ -5,5 +5,5 @@ export declare class DashboardProgramDetailsOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): DashboardProgramDetailsOld;
+    }): DashboardProgramDetailsOld | undefined;
 }

@@ -19,5 +19,5 @@ export declare class SignalSubscriber {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalSubscriber;
+    }): SignalSubscriber | undefined;
 }

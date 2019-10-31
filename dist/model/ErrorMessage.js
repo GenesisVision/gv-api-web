@@ -5,9 +5,11 @@ export class ErrorMessage {
         this['property'] = data['property'];
     }
     static constructFromObject(data) {
-        return new ErrorMessage({
-            'message': ApiClient.convertToType(data['message'], 'string'),
-            'property': ApiClient.convertToType(data['property'], 'string'),
-        });
+        if (data) {
+            return new ErrorMessage({
+                'message': ApiClient.convertToType(data['message'], 'string'),
+                'property': ApiClient.convertToType(data['property'], 'string'),
+            });
+        }
     }
 }

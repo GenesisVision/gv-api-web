@@ -25,5 +25,5 @@ export declare class OrderModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OrderModel;
+    }): OrderModel | undefined;
 }

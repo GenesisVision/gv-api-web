@@ -16,20 +16,22 @@ export class LevelsParamsInfo {
         this['investmentScaleHighRisk'] = data['investmentScaleHighRisk'];
     }
     static constructFromObject(data) {
-        return new LevelsParamsInfo({
-            'minAvailableToInvest': ApiClient.convertToType(data['minAvailableToInvest'], 'number'),
-            'maxAvailableToInvest': ApiClient.convertToType(data['maxAvailableToInvest'], 'number'),
-            'unverifiedAvailableToInvest': ApiClient.convertToType(data['unverifiedAvailableToInvest'], 'number'),
-            'genesisRatioMin': ApiClient.convertToType(data['genesisRatioMin'], 'number'),
-            'genesisRatioMax': ApiClient.convertToType(data['genesisRatioMax'], 'number'),
-            'genesisRatioHighRisk': ApiClient.convertToType(data['genesisRatioHighRisk'], 'number'),
-            'volumeScaleMin': ApiClient.convertToType(data['volumeScaleMin'], 'number'),
-            'volumeScaleMax': ApiClient.convertToType(data['volumeScaleMax'], 'number'),
-            'programAgeMax': ApiClient.convertToType(data['programAgeMax'], 'number'),
-            'ageByVolumeMax': ApiClient.convertToType(data['ageByVolumeMax'], 'number'),
-            'investmentScaleMin': ApiClient.convertToType(data['investmentScaleMin'], 'number'),
-            'investmentScaleMax': ApiClient.convertToType(data['investmentScaleMax'], 'number'),
-            'investmentScaleHighRisk': ApiClient.convertToType(data['investmentScaleHighRisk'], 'number'),
-        });
+        if (data) {
+            return new LevelsParamsInfo({
+                'minAvailableToInvest': ApiClient.convertToType(data['minAvailableToInvest'], 'number'),
+                'maxAvailableToInvest': ApiClient.convertToType(data['maxAvailableToInvest'], 'number'),
+                'unverifiedAvailableToInvest': ApiClient.convertToType(data['unverifiedAvailableToInvest'], 'number'),
+                'genesisRatioMin': ApiClient.convertToType(data['genesisRatioMin'], 'number'),
+                'genesisRatioMax': ApiClient.convertToType(data['genesisRatioMax'], 'number'),
+                'genesisRatioHighRisk': ApiClient.convertToType(data['genesisRatioHighRisk'], 'number'),
+                'volumeScaleMin': ApiClient.convertToType(data['volumeScaleMin'], 'number'),
+                'volumeScaleMax': ApiClient.convertToType(data['volumeScaleMax'], 'number'),
+                'programAgeMax': ApiClient.convertToType(data['programAgeMax'], 'number'),
+                'ageByVolumeMax': ApiClient.convertToType(data['ageByVolumeMax'], 'number'),
+                'investmentScaleMin': ApiClient.convertToType(data['investmentScaleMin'], 'number'),
+                'investmentScaleMax': ApiClient.convertToType(data['investmentScaleMax'], 'number'),
+                'investmentScaleHighRisk': ApiClient.convertToType(data['investmentScaleHighRisk'], 'number'),
+            });
+        }
     }
 }

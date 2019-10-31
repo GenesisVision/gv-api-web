@@ -10,12 +10,14 @@ export class TradesViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new TradesViewModel({
-            'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
-            'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
-            'trades': ApiClient.convertToType(data['trades'], [OrderModel]),
-            'tradesDelay': TradesDelay.constructFromObject(data['tradesDelay']),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new TradesViewModel({
+                'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
+                'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
+                'trades': ApiClient.convertToType(data['trades'], [OrderModel]),
+                'tradesDelay': TradesDelay.constructFromObject(data['tradesDelay']),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

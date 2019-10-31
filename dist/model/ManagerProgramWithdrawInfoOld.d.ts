@@ -9,5 +9,5 @@ export declare class ManagerProgramWithdrawInfoOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerProgramWithdrawInfoOld;
+    }): ManagerProgramWithdrawInfoOld | undefined;
 }

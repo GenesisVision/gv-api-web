@@ -7,5 +7,5 @@ export declare class WithdrawalSummary {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WithdrawalSummary;
+    }): WithdrawalSummary | undefined;
 }

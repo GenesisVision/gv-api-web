@@ -6,9 +6,11 @@ export class ProgramsListOld {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ProgramsListOld({
-            'programs': ApiClient.convertToType(data['programs'], [ProgramDetailsOld]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ProgramsListOld({
+                'programs': ApiClient.convertToType(data['programs'], [ProgramDetailsOld]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

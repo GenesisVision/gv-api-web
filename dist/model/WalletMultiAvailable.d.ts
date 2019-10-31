@@ -6,5 +6,5 @@ export declare class WalletMultiAvailable {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletMultiAvailable;
+    }): WalletMultiAvailable | undefined;
 }

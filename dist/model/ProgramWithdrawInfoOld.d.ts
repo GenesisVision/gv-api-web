@@ -8,5 +8,5 @@ export declare class ProgramWithdrawInfoOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramWithdrawInfoOld;
+    }): ProgramWithdrawInfoOld | undefined;
 }

@@ -24,25 +24,27 @@ export class OrderModel {
         this['signalData'] = data['signalData'];
     }
     static constructFromObject(data) {
-        return new OrderModel({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'login': ApiClient.convertToType(data['login'], 'string'),
-            'ticket': ApiClient.convertToType(data['ticket'], 'string'),
-            'symbol': ApiClient.convertToType(data['symbol'], 'string'),
-            'volume': ApiClient.convertToType(data['volume'], 'number'),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'direction': TradeDirectionType.constructFromObject(data['direction']),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'price': ApiClient.convertToType(data['price'], 'number'),
-            'priceCurrent': ApiClient.convertToType(data['priceCurrent'], 'number'),
-            'entry': TradeEntryType.constructFromObject(data['entry']),
-            'baseVolume': ApiClient.convertToType(data['baseVolume'], 'number'),
-            'originalCommission': ApiClient.convertToType(data['originalCommission'], 'number'),
-            'originalCommissionCurrency': ApiClient.convertToType(data['originalCommissionCurrency'], 'string'),
-            'commission': ApiClient.convertToType(data['commission'], 'number'),
-            'swap': ApiClient.convertToType(data['swap'], 'number'),
-            'showOriginalCommission': ApiClient.convertToType(data['showOriginalCommission'], 'boolean'),
-            'signalData': OrderModelSignalData.constructFromObject(data['signalData']),
-        });
+        if (data) {
+            return new OrderModel({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'login': ApiClient.convertToType(data['login'], 'string'),
+                'ticket': ApiClient.convertToType(data['ticket'], 'string'),
+                'symbol': ApiClient.convertToType(data['symbol'], 'string'),
+                'volume': ApiClient.convertToType(data['volume'], 'number'),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'direction': TradeDirectionType.constructFromObject(data['direction']),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'price': ApiClient.convertToType(data['price'], 'number'),
+                'priceCurrent': ApiClient.convertToType(data['priceCurrent'], 'number'),
+                'entry': TradeEntryType.constructFromObject(data['entry']),
+                'baseVolume': ApiClient.convertToType(data['baseVolume'], 'number'),
+                'originalCommission': ApiClient.convertToType(data['originalCommission'], 'number'),
+                'originalCommissionCurrency': ApiClient.convertToType(data['originalCommissionCurrency'], 'string'),
+                'commission': ApiClient.convertToType(data['commission'], 'number'),
+                'swap': ApiClient.convertToType(data['swap'], 'number'),
+                'showOriginalCommission': ApiClient.convertToType(data['showOriginalCommission'], 'boolean'),
+                'signalData': OrderModelSignalData.constructFromObject(data['signalData']),
+            });
+        }
     }
 }

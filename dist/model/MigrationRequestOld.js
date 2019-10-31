@@ -7,10 +7,12 @@ export class MigrationRequestOld {
         this['newBroker'] = data['newBroker'];
     }
     static constructFromObject(data) {
-        return new MigrationRequestOld({
-            'dateCreate': ApiClient.convertToType(data['dateCreate'], 'Date'),
-            'newLeverage': ApiClient.convertToType(data['newLeverage'], 'number'),
-            'newBroker': BrokerOld.constructFromObject(data['newBroker']),
-        });
+        if (data) {
+            return new MigrationRequestOld({
+                'dateCreate': ApiClient.convertToType(data['dateCreate'], 'Date'),
+                'newLeverage': ApiClient.convertToType(data['newLeverage'], 'number'),
+                'newBroker': BrokerOld.constructFromObject(data['newBroker']),
+            });
+        }
     }
 }

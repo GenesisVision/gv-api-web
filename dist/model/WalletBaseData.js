@@ -10,13 +10,15 @@ export class WalletBaseData {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new WalletBaseData({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'currency': Currency.constructFromObject(data['currency']),
-            'available': ApiClient.convertToType(data['available'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new WalletBaseData({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'currency': Currency.constructFromObject(data['currency']),
+                'available': ApiClient.convertToType(data['available'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

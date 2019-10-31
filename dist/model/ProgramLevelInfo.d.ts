@@ -13,5 +13,5 @@ export declare class ProgramLevelInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramLevelInfo;
+    }): ProgramLevelInfo | undefined;
 }

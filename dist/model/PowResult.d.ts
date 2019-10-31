@@ -5,5 +5,5 @@ export declare class PowResult {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PowResult;
+    }): PowResult | undefined;
 }

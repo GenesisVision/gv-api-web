@@ -6,9 +6,11 @@ export class WithdrawalSummary {
         this['wallets'] = data['wallets'];
     }
     static constructFromObject(data) {
-        return new WithdrawalSummary({
-            'availableToWithdrawal': ApiClient.convertToType(data['availableToWithdrawal'], 'number'),
-            'wallets': ApiClient.convertToType(data['wallets'], [WalletWithdrawalInfo]),
-        });
+        if (data) {
+            return new WithdrawalSummary({
+                'availableToWithdrawal': ApiClient.convertToType(data['availableToWithdrawal'], 'number'),
+                'wallets': ApiClient.convertToType(data['wallets'], [WalletWithdrawalInfo]),
+            });
+        }
     }
 }

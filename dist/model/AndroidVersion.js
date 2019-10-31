@@ -5,9 +5,11 @@ export class AndroidVersion {
         this['versionName'] = data['versionName'];
     }
     static constructFromObject(data) {
-        return new AndroidVersion({
-            'versionCode': ApiClient.convertToType(data['versionCode'], 'string'),
-            'versionName': ApiClient.convertToType(data['versionName'], 'string'),
-        });
+        if (data) {
+            return new AndroidVersion({
+                'versionCode': ApiClient.convertToType(data['versionCode'], 'string'),
+                'versionName': ApiClient.convertToType(data['versionName'], 'string'),
+            });
+        }
     }
 }

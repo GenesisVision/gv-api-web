@@ -6,9 +6,11 @@ export class UpdateSocialLinkViewModel {
         this['value'] = data['value'];
     }
     static constructFromObject(data) {
-        return new UpdateSocialLinkViewModel({
-            'type': SocialLinkType.constructFromObject(data['type']),
-            'value': ApiClient.convertToType(data['value'], 'string'),
-        });
+        if (data) {
+            return new UpdateSocialLinkViewModel({
+                'type': SocialLinkType.constructFromObject(data['type']),
+                'value': ApiClient.convertToType(data['value'], 'string'),
+            });
+        }
     }
 }

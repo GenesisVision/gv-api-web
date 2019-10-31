@@ -9,5 +9,5 @@ export declare class CaptchaCheckResult {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): CaptchaCheckResult;
+    }): CaptchaCheckResult | undefined;
 }

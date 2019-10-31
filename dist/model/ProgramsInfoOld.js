@@ -17,21 +17,23 @@ export class ProgramsInfoOld {
         this['periods'] = data['periods'];
     }
     static constructFromObject(data) {
-        return new ProgramsInfoOld({
-            'managerProgramInvestment': ApiClient.convertToType(data['managerProgramInvestment'], 'number'),
-            'managerProgramInvestmentUSD': ApiClient.convertToType(data['managerProgramInvestmentUSD'], 'number'),
-            'managerProgramInvestmentUSDT': ApiClient.convertToType(data['managerProgramInvestmentUSDT'], 'number'),
-            'managerProgramInvestmentBTC': ApiClient.convertToType(data['managerProgramInvestmentBTC'], 'number'),
-            'managerProgramInvestmentETH': ApiClient.convertToType(data['managerProgramInvestmentETH'], 'number'),
-            'managerMaxEntryFee': ApiClient.convertToType(data['managerMaxEntryFee'], 'number'),
-            'managerMaxSuccessFee': ApiClient.convertToType(data['managerMaxSuccessFee'], 'number'),
-            'managerFundInvestment': ApiClient.convertToType(data['managerFundInvestment'], 'number'),
-            'managerMaxExitFee': ApiClient.convertToType(data['managerMaxExitFee'], 'number'),
-            'managerMaxSignalVolumeFee': ApiClient.convertToType(data['managerMaxSignalVolumeFee'], 'number'),
-            'managerMinSignalVolumeFee': ApiClient.convertToType(data['managerMinSignalVolumeFee'], 'number'),
-            'managerMaxSignalSuccessFee': ApiClient.convertToType(data['managerMaxSignalSuccessFee'], 'number'),
-            'managerMinSignalSuccessFee': ApiClient.convertToType(data['managerMinSignalSuccessFee'], 'number'),
-            'periods': ApiClient.convertToType(data['periods'], ['number']),
-        });
+        if (data) {
+            return new ProgramsInfoOld({
+                'managerProgramInvestment': ApiClient.convertToType(data['managerProgramInvestment'], 'number'),
+                'managerProgramInvestmentUSD': ApiClient.convertToType(data['managerProgramInvestmentUSD'], 'number'),
+                'managerProgramInvestmentUSDT': ApiClient.convertToType(data['managerProgramInvestmentUSDT'], 'number'),
+                'managerProgramInvestmentBTC': ApiClient.convertToType(data['managerProgramInvestmentBTC'], 'number'),
+                'managerProgramInvestmentETH': ApiClient.convertToType(data['managerProgramInvestmentETH'], 'number'),
+                'managerMaxEntryFee': ApiClient.convertToType(data['managerMaxEntryFee'], 'number'),
+                'managerMaxSuccessFee': ApiClient.convertToType(data['managerMaxSuccessFee'], 'number'),
+                'managerFundInvestment': ApiClient.convertToType(data['managerFundInvestment'], 'number'),
+                'managerMaxExitFee': ApiClient.convertToType(data['managerMaxExitFee'], 'number'),
+                'managerMaxSignalVolumeFee': ApiClient.convertToType(data['managerMaxSignalVolumeFee'], 'number'),
+                'managerMinSignalVolumeFee': ApiClient.convertToType(data['managerMinSignalVolumeFee'], 'number'),
+                'managerMaxSignalSuccessFee': ApiClient.convertToType(data['managerMaxSignalSuccessFee'], 'number'),
+                'managerMinSignalSuccessFee': ApiClient.convertToType(data['managerMinSignalSuccessFee'], 'number'),
+                'periods': ApiClient.convertToType(data['periods'], ['number']),
+            });
+        }
     }
 }

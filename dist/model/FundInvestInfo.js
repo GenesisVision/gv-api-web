@@ -9,13 +9,15 @@ export class FundInvestInfo {
         this['isOwnProgram'] = data['isOwnProgram'];
     }
     static constructFromObject(data) {
-        return new FundInvestInfo({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'programCurrencyMinInvestment': ApiClient.convertToType(data['programCurrencyMinInvestment'], 'number'),
-            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
-            'gvCommission': ApiClient.convertToType(data['gvCommission'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-            'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
-        });
+        if (data) {
+            return new FundInvestInfo({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'programCurrencyMinInvestment': ApiClient.convertToType(data['programCurrencyMinInvestment'], 'number'),
+                'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'gvCommission': ApiClient.convertToType(data['gvCommission'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+                'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
+            });
+        }
     }
 }

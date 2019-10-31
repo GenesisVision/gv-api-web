@@ -6,5 +6,5 @@ export declare class ErrorMessage {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ErrorMessage;
+    }): ErrorMessage | undefined;
 }

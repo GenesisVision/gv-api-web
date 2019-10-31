@@ -8,15 +8,19 @@ export class AssetDetails {
         this['title'] = data['title'];
         this['url'] = data['url'];
         this['assetType'] = data['assetType'];
+        this['levelProgress'] = data['levelProgress'];
     }
     static constructFromObject(data) {
-        return new AssetDetails({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'assetType': AssetType.constructFromObject(data['assetType']),
-        });
+        if (data) {
+            return new AssetDetails({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'assetType': AssetType.constructFromObject(data['assetType']),
+                'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            });
+        }
     }
 }

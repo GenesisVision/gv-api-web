@@ -7,11 +7,13 @@ export class ProgramWithdrawInfoOld {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new ProgramWithdrawInfoOld({
-            'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new ProgramWithdrawInfoOld({
+                'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

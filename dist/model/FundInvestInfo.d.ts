@@ -10,5 +10,5 @@ export declare class FundInvestInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundInvestInfo;
+    }): FundInvestInfo | undefined;
 }

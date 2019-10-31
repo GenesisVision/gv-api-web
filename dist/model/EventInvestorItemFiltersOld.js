@@ -8,11 +8,13 @@ export class EventInvestorItemFiltersOld {
         this['allAssets'] = data['allAssets'];
     }
     static constructFromObject(data) {
-        return new EventInvestorItemFiltersOld({
-            'signalProgramDetails': ApiClient.convertToType(data['signalProgramDetails'], [FilterModelOld]),
-            'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModelOld]),
-            'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModelOld]),
-            'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModelOld]),
-        });
+        if (data) {
+            return new EventInvestorItemFiltersOld({
+                'signalProgramDetails': ApiClient.convertToType(data['signalProgramDetails'], [FilterModelOld]),
+                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModelOld]),
+                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModelOld]),
+                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModelOld]),
+            });
+        }
     }
 }

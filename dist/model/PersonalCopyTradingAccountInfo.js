@@ -5,9 +5,11 @@ export class PersonalCopyTradingAccountInfo {
         this['isFavorite'] = data['isFavorite'];
     }
     static constructFromObject(data) {
-        return new PersonalCopyTradingAccountInfo({
-            'isOwnSignal': ApiClient.convertToType(data['isOwnSignal'], 'boolean'),
-            'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
-        });
+        if (data) {
+            return new PersonalCopyTradingAccountInfo({
+                'isOwnSignal': ApiClient.convertToType(data['isOwnSignal'], 'boolean'),
+                'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
+            });
+        }
     }
 }

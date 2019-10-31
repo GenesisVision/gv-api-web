@@ -6,9 +6,11 @@ export class InvestmentEventViewModels {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new InvestmentEventViewModels({
-            'events': ApiClient.convertToType(data['events'], [InvestmentEventViewModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new InvestmentEventViewModels({
+                'events': ApiClient.convertToType(data['events'], [InvestmentEventViewModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

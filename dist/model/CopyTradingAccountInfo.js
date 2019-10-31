@@ -15,17 +15,19 @@ export class CopyTradingAccountInfo {
         this['personalInfo'] = data['personalInfo'];
     }
     static constructFromObject(data) {
-        return new CopyTradingAccountInfo({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'currency': Currency.constructFromObject(data['currency']),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'balance': ApiClient.convertToType(data['balance'], 'number'),
-            'equity': ApiClient.convertToType(data['equity'], 'number'),
-            'freeMargin': ApiClient.convertToType(data['freeMargin'], 'number'),
-            'marginLevel': ApiClient.convertToType(data['marginLevel'], 'number'),
-            'available': ApiClient.convertToType(data['available'], 'number'),
-            'personalInfo': PersonalCopyTradingAccountInfo.constructFromObject(data['personalInfo']),
-        });
+        if (data) {
+            return new CopyTradingAccountInfo({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'currency': Currency.constructFromObject(data['currency']),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'equity': ApiClient.convertToType(data['equity'], 'number'),
+                'freeMargin': ApiClient.convertToType(data['freeMargin'], 'number'),
+                'marginLevel': ApiClient.convertToType(data['marginLevel'], 'number'),
+                'available': ApiClient.convertToType(data['available'], 'number'),
+                'personalInfo': PersonalCopyTradingAccountInfo.constructFromObject(data['personalInfo']),
+            });
+        }
     }
 }

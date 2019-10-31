@@ -6,5 +6,5 @@ export declare class FilterModelOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FilterModelOld;
+    }): FilterModelOld | undefined;
 }

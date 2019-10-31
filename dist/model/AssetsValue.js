@@ -12,15 +12,17 @@ export class AssetsValue {
         this['changeValue'] = data['changeValue'];
     }
     static constructFromObject(data) {
-        return new AssetsValue({
-            'type': AssetFilterType.constructFromObject(data['type']),
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
-            'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
-        });
+        if (data) {
+            return new AssetsValue({
+                'type': AssetFilterType.constructFromObject(data['type']),
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
+                'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
+            });
+        }
     }
 }

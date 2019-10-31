@@ -7,11 +7,13 @@ export class ExternalTransactionDetails {
         this['isEnableActions'] = data['isEnableActions'];
     }
     static constructFromObject(data) {
-        return new ExternalTransactionDetails({
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'descriptionUrl': ApiClient.convertToType(data['descriptionUrl'], 'string'),
-            'fromAddress': ApiClient.convertToType(data['fromAddress'], 'string'),
-            'isEnableActions': ApiClient.convertToType(data['isEnableActions'], 'boolean'),
-        });
+        if (data) {
+            return new ExternalTransactionDetails({
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'descriptionUrl': ApiClient.convertToType(data['descriptionUrl'], 'string'),
+                'fromAddress': ApiClient.convertToType(data['fromAddress'], 'string'),
+                'isEnableActions': ApiClient.convertToType(data['isEnableActions'], 'boolean'),
+            });
+        }
     }
 }

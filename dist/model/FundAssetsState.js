@@ -6,9 +6,11 @@ export class FundAssetsState {
         this['otherPercent'] = data['otherPercent'];
     }
     static constructFromObject(data) {
-        return new FundAssetsState({
-            'assets': ApiClient.convertToType(data['assets'], [FundAssetPartWithIcon]),
-            'otherPercent': ApiClient.convertToType(data['otherPercent'], 'number'),
-        });
+        if (data) {
+            return new FundAssetsState({
+                'assets': ApiClient.convertToType(data['assets'], [FundAssetPartWithIcon]),
+                'otherPercent': ApiClient.convertToType(data['otherPercent'], 'number'),
+            });
+        }
     }
 }

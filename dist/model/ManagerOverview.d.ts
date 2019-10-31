@@ -4,5 +4,5 @@ export declare class ManagerOverview {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerOverview;
+    }): ManagerOverview | undefined;
 }

@@ -6,9 +6,11 @@ export class RecoveryCodesViewModel {
         this['authToken'] = data['authToken'];
     }
     static constructFromObject(data) {
-        return new RecoveryCodesViewModel({
-            'codes': ApiClient.convertToType(data['codes'], [RecoveryCode]),
-            'authToken': ApiClient.convertToType(data['authToken'], 'string'),
-        });
+        if (data) {
+            return new RecoveryCodesViewModel({
+                'codes': ApiClient.convertToType(data['codes'], [RecoveryCode]),
+                'authToken': ApiClient.convertToType(data['authToken'], 'string'),
+            });
+        }
     }
 }

@@ -13,16 +13,18 @@ export class ProgramNotificationSettingList {
         this['settingsGeneral'] = data['settingsGeneral'];
     }
     static constructFromObject(data) {
-        return new ProgramNotificationSettingList({
-            'level': ApiClient.convertToType(data['level'], 'number'),
-            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
-            'settingsCustom': ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]),
-            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
-        });
+        if (data) {
+            return new ProgramNotificationSettingList({
+                'level': ApiClient.convertToType(data['level'], 'number'),
+                'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+                'settingsCustom': ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]),
+                'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+            });
+        }
     }
 }

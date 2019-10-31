@@ -6,9 +6,11 @@ export class ExternalKeysViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ExternalKeysViewModel({
-            'keys': ApiClient.convertToType(data['keys'], [ExternalKeyViewModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ExternalKeysViewModel({
+                'keys': ApiClient.convertToType(data['keys'], [ExternalKeyViewModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

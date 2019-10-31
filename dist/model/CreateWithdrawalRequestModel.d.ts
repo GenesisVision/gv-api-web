@@ -9,5 +9,5 @@ export declare class CreateWithdrawalRequestModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): CreateWithdrawalRequestModel;
+    }): CreateWithdrawalRequestModel | undefined;
 }

@@ -6,9 +6,11 @@ export class ProgramPeriodsViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ProgramPeriodsViewModel({
-            'periods': ApiClient.convertToType(data['periods'], [ProgramPeriodViewModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ProgramPeriodsViewModel({
+                'periods': ApiClient.convertToType(data['periods'], [ProgramPeriodViewModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

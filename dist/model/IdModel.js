@@ -4,8 +4,10 @@ export class IdModel {
         this['id'] = data['id'];
     }
     static constructFromObject(data) {
-        return new IdModel({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-        });
+        if (data) {
+            return new IdModel({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+            });
+        }
     }
 }

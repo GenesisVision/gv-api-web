@@ -26,5 +26,5 @@ export declare class ProgramProfitChartOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramProfitChartOld;
+    }): ProgramProfitChartOld | undefined;
 }

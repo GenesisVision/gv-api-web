@@ -6,10 +6,12 @@ export class ProgramBalanceChartElementOld {
         this['investorsFunds'] = data['investorsFunds'];
     }
     static constructFromObject(data) {
-        return new ProgramBalanceChartElementOld({
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'managerFunds': ApiClient.convertToType(data['managerFunds'], 'number'),
-            'investorsFunds': ApiClient.convertToType(data['investorsFunds'], 'number'),
-        });
+        if (data) {
+            return new ProgramBalanceChartElementOld({
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'managerFunds': ApiClient.convertToType(data['managerFunds'], 'number'),
+                'investorsFunds': ApiClient.convertToType(data['investorsFunds'], 'number'),
+            });
+        }
     }
 }

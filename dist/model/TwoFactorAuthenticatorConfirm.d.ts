@@ -7,5 +7,5 @@ export declare class TwoFactorAuthenticatorConfirm {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TwoFactorAuthenticatorConfirm;
+    }): TwoFactorAuthenticatorConfirm | undefined;
 }

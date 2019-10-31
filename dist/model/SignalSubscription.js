@@ -13,16 +13,18 @@ export class SignalSubscription {
         this['totalVolume'] = data['totalVolume'];
     }
     static constructFromObject(data) {
-        return new SignalSubscription({
-            'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
-            'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
-            'mode': SubscriptionMode.constructFromObject(data['mode']),
-            'percent': ApiClient.convertToType(data['percent'], 'number'),
-            'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
-            'fixedVolume': ApiClient.convertToType(data['fixedVolume'], 'number'),
-            'fixedCurrency': ApiClient.convertToType(data['fixedCurrency'], 'string'),
-            'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
-            'totalVolume': ApiClient.convertToType(data['totalVolume'], 'number'),
-        });
+        if (data) {
+            return new SignalSubscription({
+                'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
+                'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
+                'mode': SubscriptionMode.constructFromObject(data['mode']),
+                'percent': ApiClient.convertToType(data['percent'], 'number'),
+                'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
+                'fixedVolume': ApiClient.convertToType(data['fixedVolume'], 'number'),
+                'fixedCurrency': ApiClient.convertToType(data['fixedCurrency'], 'string'),
+                'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
+                'totalVolume': ApiClient.convertToType(data['totalVolume'], 'number'),
+            });
+        }
     }
 }

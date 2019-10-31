@@ -5,8 +5,10 @@ export class FundFiltersOld {
         this['assets'] = data['assets'];
     }
     static constructFromObject(data) {
-        return new FundFiltersOld({
-            'assets': ApiClient.convertToType(data['assets'], [PlatformAsset]),
-        });
+        if (data) {
+            return new FundFiltersOld({
+                'assets': ApiClient.convertToType(data['assets'], [PlatformAsset]),
+            });
+        }
     }
 }

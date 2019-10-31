@@ -7,11 +7,13 @@ export class OtherAssetsValue {
         this['changeValue'] = data['changeValue'];
     }
     static constructFromObject(data) {
-        return new OtherAssetsValue({
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
-            'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
-        });
+        if (data) {
+            return new OtherAssetsValue({
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
+                'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
+            });
+        }
     }
 }

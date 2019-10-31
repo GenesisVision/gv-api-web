@@ -7,5 +7,5 @@ export declare class ProgramSets {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramSets;
+    }): ProgramSets | undefined;
 }

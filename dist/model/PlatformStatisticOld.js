@@ -9,13 +9,15 @@ export class PlatformStatisticOld {
         this['totalProfit'] = data['totalProfit'];
     }
     static constructFromObject(data) {
-        return new PlatformStatisticOld({
-            'managers': ApiClient.convertToType(data['managers'], 'number'),
-            'investors': ApiClient.convertToType(data['investors'], 'number'),
-            'profitWeek': ApiClient.convertToType(data['profitWeek'], 'number'),
-            'investmentAmount': ApiClient.convertToType(data['investmentAmount'], 'number'),
-            'totalInvestorsProfit': ApiClient.convertToType(data['totalInvestorsProfit'], 'number'),
-            'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
-        });
+        if (data) {
+            return new PlatformStatisticOld({
+                'managers': ApiClient.convertToType(data['managers'], 'number'),
+                'investors': ApiClient.convertToType(data['investors'], 'number'),
+                'profitWeek': ApiClient.convertToType(data['profitWeek'], 'number'),
+                'investmentAmount': ApiClient.convertToType(data['investmentAmount'], 'number'),
+                'totalInvestorsProfit': ApiClient.convertToType(data['totalInvestorsProfit'], 'number'),
+                'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
+            });
+        }
     }
 }

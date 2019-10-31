@@ -15,5 +15,5 @@ export declare class ProfileHeaderViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProfileHeaderViewModel;
+    }): ProfileHeaderViewModel | undefined;
 }

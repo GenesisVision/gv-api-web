@@ -8,5 +8,5 @@ export declare class OtherAssetsValue {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OtherAssetsValue;
+    }): OtherAssetsValue | undefined;
 }

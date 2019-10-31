@@ -8,5 +8,5 @@ export declare class EventFiltersOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): EventFiltersOld;
+    }): EventFiltersOld | undefined;
 }

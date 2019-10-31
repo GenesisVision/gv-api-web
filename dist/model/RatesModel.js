@@ -4,8 +4,10 @@ export class RatesModel {
         this['rates'] = data['rates'];
     }
     static constructFromObject(data) {
-        return new RatesModel({
-            'rates': RatesModelRates.constructFromObject(data['rates']),
-        });
+        if (data) {
+            return new RatesModel({
+                'rates': RatesModelRates.constructFromObject(data['rates']),
+            });
+        }
     }
 }

@@ -9,12 +9,14 @@ export class AttachToSignalProviderInfo {
         this['minDepositCurrency'] = data['minDepositCurrency'];
     }
     static constructFromObject(data) {
-        return new AttachToSignalProviderInfo({
-            'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
-            'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
-            'volumeFee': ApiClient.convertToType(data['volumeFee'], 'number'),
-            'minDeposit': ApiClient.convertToType(data['minDeposit'], 'number'),
-            'minDepositCurrency': Currency.constructFromObject(data['minDepositCurrency']),
-        });
+        if (data) {
+            return new AttachToSignalProviderInfo({
+                'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
+                'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
+                'volumeFee': ApiClient.convertToType(data['volumeFee'], 'number'),
+                'minDeposit': ApiClient.convertToType(data['minDeposit'], 'number'),
+                'minDepositCurrency': Currency.constructFromObject(data['minDepositCurrency']),
+            });
+        }
     }
 }

@@ -8,10 +8,12 @@ export class ProgramBalanceChartOld {
         this['balanceChart'] = data['balanceChart'];
     }
     static constructFromObject(data) {
-        return new ProgramBalanceChartOld({
-            'balance': ApiClient.convertToType(data['balance'], 'number'),
-            'programCurrency': Currency.constructFromObject(data['programCurrency']),
-            'balanceChart': ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElementOld]),
-        });
+        if (data) {
+            return new ProgramBalanceChartOld({
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'programCurrency': Currency.constructFromObject(data['programCurrency']),
+                'balanceChart': ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElementOld]),
+            });
+        }
     }
 }

@@ -17,18 +17,20 @@ export class MultiWalletTransaction {
         this['amountTo'] = data['amountTo'];
     }
     static constructFromObject(data) {
-        return new MultiWalletTransaction({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'currencyFrom': Currency.constructFromObject(data['currencyFrom']),
-            'currencyTo': ApiClient.convertToType(data['currencyTo'], 'string'),
-            'type': MultiWalletTransactionType.constructFromObject(data['type']),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
-            'logoFrom': ApiClient.convertToType(data['logoFrom'], 'string'),
-            'logoTo': ApiClient.convertToType(data['logoTo'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'amountTo': ApiClient.convertToType(data['amountTo'], 'number'),
-        });
+        if (data) {
+            return new MultiWalletTransaction({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'currencyFrom': Currency.constructFromObject(data['currencyFrom']),
+                'currencyTo': ApiClient.convertToType(data['currencyTo'], 'string'),
+                'type': MultiWalletTransactionType.constructFromObject(data['type']),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
+                'logoFrom': ApiClient.convertToType(data['logoFrom'], 'string'),
+                'logoTo': ApiClient.convertToType(data['logoTo'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'amountTo': ApiClient.convertToType(data['amountTo'], 'number'),
+            });
+        }
     }
 }

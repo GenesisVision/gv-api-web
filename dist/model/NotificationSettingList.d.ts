@@ -12,5 +12,5 @@ export declare class NotificationSettingList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): NotificationSettingList;
+    }): NotificationSettingList | undefined;
 }

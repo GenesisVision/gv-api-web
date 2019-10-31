@@ -15,5 +15,5 @@ export declare class MultiWalletExternalTransaction {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): MultiWalletExternalTransaction;
+    }): MultiWalletExternalTransaction | undefined;
 }

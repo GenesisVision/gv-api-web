@@ -8,12 +8,14 @@ export class ManagerProgramWithdrawInfoOld {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new ManagerProgramWithdrawInfoOld({
-            'withheldInvestment': ApiClient.convertToType(data['withheldInvestment'], 'number'),
-            'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new ManagerProgramWithdrawInfoOld({
+                'withheldInvestment': ApiClient.convertToType(data['withheldInvestment'], 'number'),
+                'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

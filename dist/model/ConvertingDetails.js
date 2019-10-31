@@ -9,12 +9,14 @@ export class ConvertingDetails {
         this['currencyToLogo'] = data['currencyToLogo'];
     }
     static constructFromObject(data) {
-        return new ConvertingDetails({
-            'currencyTo': Currency.constructFromObject(data['currencyTo']),
-            'currencyToName': ApiClient.convertToType(data['currencyToName'], 'string'),
-            'amountTo': ApiClient.convertToType(data['amountTo'], 'number'),
-            'rateValue': ApiClient.convertToType(data['rateValue'], 'number'),
-            'currencyToLogo': ApiClient.convertToType(data['currencyToLogo'], 'string'),
-        });
+        if (data) {
+            return new ConvertingDetails({
+                'currencyTo': Currency.constructFromObject(data['currencyTo']),
+                'currencyToName': ApiClient.convertToType(data['currencyToName'], 'string'),
+                'amountTo': ApiClient.convertToType(data['amountTo'], 'number'),
+                'rateValue': ApiClient.convertToType(data['rateValue'], 'number'),
+                'currencyToLogo': ApiClient.convertToType(data['currencyToLogo'], 'string'),
+            });
+        }
     }
 }

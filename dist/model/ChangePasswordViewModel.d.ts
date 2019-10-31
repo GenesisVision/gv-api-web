@@ -7,5 +7,5 @@ export declare class ChangePasswordViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ChangePasswordViewModel;
+    }): ChangePasswordViewModel | undefined;
 }

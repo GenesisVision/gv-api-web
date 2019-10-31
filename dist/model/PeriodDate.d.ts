@@ -6,5 +6,5 @@ export declare class PeriodDate {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PeriodDate;
+    }): PeriodDate | undefined;
 }

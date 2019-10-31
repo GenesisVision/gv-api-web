@@ -4,8 +4,10 @@ export class UploadResult {
         this['id'] = data['id'];
     }
     static constructFromObject(data) {
-        return new UploadResult({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-        });
+        if (data) {
+            return new UploadResult({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+            });
+        }
     }
 }

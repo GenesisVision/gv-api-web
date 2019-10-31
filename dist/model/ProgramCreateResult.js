@@ -7,10 +7,12 @@ export class ProgramCreateResult {
         this['twoFactor'] = data['twoFactor'];
     }
     static constructFromObject(data) {
-        return new ProgramCreateResult({
-            'programId': ApiClient.convertToType(data['programId'], 'string'),
-            'twoFactorRequired': ApiClient.convertToType(data['twoFactorRequired'], 'boolean'),
-            'twoFactor': TwoFactorAuthenticator.constructFromObject(data['twoFactor']),
-        });
+        if (data) {
+            return new ProgramCreateResult({
+                'programId': ApiClient.convertToType(data['programId'], 'string'),
+                'twoFactorRequired': ApiClient.convertToType(data['twoFactorRequired'], 'boolean'),
+                'twoFactor': TwoFactorAuthenticator.constructFromObject(data['twoFactor']),
+            });
+        }
     }
 }

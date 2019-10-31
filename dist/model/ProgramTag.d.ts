@@ -6,5 +6,5 @@ export declare class ProgramTag {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramTag;
+    }): ProgramTag | undefined;
 }

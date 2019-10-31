@@ -10,13 +10,15 @@ export class ProfilePublic {
         this['socialLinks'] = data['socialLinks'];
     }
     static constructFromObject(data) {
-        return new ProfilePublic({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'username': ApiClient.convertToType(data['username'], 'string'),
-            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
-            'registrationDate': ApiClient.convertToType(data['registrationDate'], 'Date'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
-        });
+        if (data) {
+            return new ProfilePublic({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'username': ApiClient.convertToType(data['username'], 'string'),
+                'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+                'registrationDate': ApiClient.convertToType(data['registrationDate'], 'Date'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
+            });
+        }
     }
 }

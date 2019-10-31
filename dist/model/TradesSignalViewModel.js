@@ -8,11 +8,13 @@ export class TradesSignalViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new TradesSignalViewModel({
-            'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
-            'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
-            'trades': ApiClient.convertToType(data['trades'], [OrderSignalModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new TradesSignalViewModel({
+                'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
+                'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
+                'trades': ApiClient.convertToType(data['trades'], [OrderSignalModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

@@ -9,5 +9,5 @@ export declare class WalletMultiSummary {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletMultiSummary;
+    }): WalletMultiSummary | undefined;
 }

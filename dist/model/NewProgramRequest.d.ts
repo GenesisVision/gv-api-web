@@ -22,7 +22,7 @@ export declare class NewProgramRequest {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): NewProgramRequest;
+    }): NewProgramRequest | undefined;
 }
 declare type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
 export {};

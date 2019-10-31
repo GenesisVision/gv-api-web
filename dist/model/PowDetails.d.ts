@@ -8,5 +8,5 @@ export declare class PowDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PowDetails;
+    }): PowDetails | undefined;
 }

@@ -10,5 +10,5 @@ export declare class SocialLinkViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SocialLinkViewModel;
+    }): SocialLinkViewModel | undefined;
 }

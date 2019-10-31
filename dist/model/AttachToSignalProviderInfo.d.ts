@@ -10,5 +10,5 @@ export declare class AttachToSignalProviderInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AttachToSignalProviderInfo;
+    }): AttachToSignalProviderInfo | undefined;
 }

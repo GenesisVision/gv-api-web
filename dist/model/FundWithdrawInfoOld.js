@@ -7,11 +7,13 @@ export class FundWithdrawInfoOld {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new FundWithdrawInfoOld({
-            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new FundWithdrawInfoOld({
+                'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

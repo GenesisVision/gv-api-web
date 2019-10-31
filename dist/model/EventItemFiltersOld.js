@@ -7,10 +7,12 @@ export class EventItemFiltersOld {
         this['allAssets'] = data['allAssets'];
     }
     static constructFromObject(data) {
-        return new EventItemFiltersOld({
-            'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModelOld]),
-            'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModelOld]),
-            'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModelOld]),
-        });
+        if (data) {
+            return new EventItemFiltersOld({
+                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModelOld]),
+                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModelOld]),
+                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModelOld]),
+            });
+        }
     }
 }

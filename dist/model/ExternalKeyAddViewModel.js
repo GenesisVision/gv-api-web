@@ -7,11 +7,13 @@ export class ExternalKeyAddViewModel {
         this['secret'] = data['secret'];
     }
     static constructFromObject(data) {
-        return new ExternalKeyAddViewModel({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'exchangeId': ApiClient.convertToType(data['exchangeId'], 'string'),
-            'key': ApiClient.convertToType(data['key'], 'string'),
-            'secret': ApiClient.convertToType(data['secret'], 'string'),
-        });
+        if (data) {
+            return new ExternalKeyAddViewModel({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'exchangeId': ApiClient.convertToType(data['exchangeId'], 'string'),
+                'key': ApiClient.convertToType(data['key'], 'string'),
+                'secret': ApiClient.convertToType(data['secret'], 'string'),
+            });
+        }
     }
 }

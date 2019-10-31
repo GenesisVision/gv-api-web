@@ -11,5 +11,5 @@ export declare class FeeDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FeeDetails;
+    }): FeeDetails | undefined;
 }

@@ -10,5 +10,5 @@ export declare class SignalFee {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalFee;
+    }): SignalFee | undefined;
 }

@@ -9,5 +9,5 @@ export declare class UserCommissionData {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): UserCommissionData;
+    }): UserCommissionData | undefined;
 }

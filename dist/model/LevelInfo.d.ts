@@ -6,5 +6,5 @@ export declare class LevelInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): LevelInfo;
+    }): LevelInfo | undefined;
 }

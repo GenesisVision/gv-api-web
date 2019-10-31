@@ -6,9 +6,11 @@ export class NotificationList {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new NotificationList({
-            'notifications': ApiClient.convertToType(data['notifications'], [NotificationViewModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new NotificationList({
+                'notifications': ApiClient.convertToType(data['notifications'], [NotificationViewModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

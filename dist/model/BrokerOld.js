@@ -17,19 +17,21 @@ export class BrokerOld {
         this['tags'] = data['tags'];
     }
     static constructFromObject(data) {
-        return new BrokerOld({
-            'name': ApiClient.convertToType(data['name'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'terms': ApiClient.convertToType(data['terms'], 'string'),
-            'assets': ApiClient.convertToType(data['assets'], 'string'),
-            'fee': ApiClient.convertToType(data['fee'], 'number'),
-            'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
-            'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
-            'accountTypes': ApiClient.convertToType(data['accountTypes'], [BrokerAccountTypeOld]),
-            'isForex': ApiClient.convertToType(data['isForex'], 'boolean'),
-            'isSignalsAvailable': ApiClient.convertToType(data['isSignalsAvailable'], 'boolean'),
-            'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
-        });
+        if (data) {
+            return new BrokerOld({
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'terms': ApiClient.convertToType(data['terms'], 'string'),
+                'assets': ApiClient.convertToType(data['assets'], 'string'),
+                'fee': ApiClient.convertToType(data['fee'], 'number'),
+                'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
+                'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
+                'accountTypes': ApiClient.convertToType(data['accountTypes'], [BrokerAccountTypeOld]),
+                'isForex': ApiClient.convertToType(data['isForex'], 'boolean'),
+                'isSignalsAvailable': ApiClient.convertToType(data['isSignalsAvailable'], 'boolean'),
+                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+            });
+        }
     }
 }

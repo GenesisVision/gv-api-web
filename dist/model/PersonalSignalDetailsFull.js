@@ -14,16 +14,18 @@ export class PersonalSignalDetailsFull {
         this['signalSettingsId'] = data['signalSettingsId'];
     }
     static constructFromObject(data) {
-        return new PersonalSignalDetailsFull({
-            'subscriptionDate': ApiClient.convertToType(data['subscriptionDate'], 'Date'),
-            'tradesCount': ApiClient.convertToType(data['tradesCount'], 'number'),
-            'signalSubscription': SignalSubscription.constructFromObject(data['signalSubscription']),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'volume': ApiClient.convertToType(data['volume'], 'number'),
-            'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
-            'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
-            'status': SignalSubscriberStatus.constructFromObject(data['status']),
-            'signalSettingsId': ApiClient.convertToType(data['signalSettingsId'], 'string'),
-        });
+        if (data) {
+            return new PersonalSignalDetailsFull({
+                'subscriptionDate': ApiClient.convertToType(data['subscriptionDate'], 'Date'),
+                'tradesCount': ApiClient.convertToType(data['tradesCount'], 'number'),
+                'signalSubscription': SignalSubscription.constructFromObject(data['signalSubscription']),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'volume': ApiClient.convertToType(data['volume'], 'number'),
+                'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
+                'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
+                'status': SignalSubscriberStatus.constructFromObject(data['status']),
+                'signalSettingsId': ApiClient.convertToType(data['signalSettingsId'], 'string'),
+            });
+        }
     }
 }

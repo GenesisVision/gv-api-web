@@ -13,5 +13,5 @@ export declare class DashboardSummary {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): DashboardSummary;
+    }): DashboardSummary | undefined;
 }

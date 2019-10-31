@@ -12,12 +12,14 @@ export class EnumsOld {
         this['assetTypes'] = data['assetTypes'];
     }
     static constructFromObject(data) {
-        return new EnumsOld({
-            'multiWallet': MultiWalletFiltersOld.constructFromObject(data['multiWallet']),
-            'program': ProgramFiltersOld.constructFromObject(data['program']),
-            'fund': FundFiltersOld.constructFromObject(data['fund']),
-            'event': EventFiltersOld.constructFromObject(data['event']),
-            'assetTypes': ApiClient.convertToType(data['assetTypes'], ['string']),
-        });
+        if (data) {
+            return new EnumsOld({
+                'multiWallet': MultiWalletFiltersOld.constructFromObject(data['multiWallet']),
+                'program': ProgramFiltersOld.constructFromObject(data['program']),
+                'fund': FundFiltersOld.constructFromObject(data['fund']),
+                'event': EventFiltersOld.constructFromObject(data['event']),
+                'assetTypes': ApiClient.convertToType(data['assetTypes'], ['string']),
+            });
+        }
     }
 }

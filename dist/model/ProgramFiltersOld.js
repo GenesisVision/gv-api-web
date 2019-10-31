@@ -7,10 +7,12 @@ export class ProgramFiltersOld {
         this['customNotificationType'] = data['customNotificationType'];
     }
     static constructFromObject(data) {
-        return new ProgramFiltersOld({
-            'programTags': ApiClient.convertToType(data['programTags'], [ProgramTag]),
-            'actionType': ApiClient.convertToType(data['actionType'], ['string']),
-            'customNotificationType': ApiClient.convertToType(data['customNotificationType'], ['string']),
-        });
+        if (data) {
+            return new ProgramFiltersOld({
+                'programTags': ApiClient.convertToType(data['programTags'], [ProgramTag]),
+                'actionType': ApiClient.convertToType(data['actionType'], ['string']),
+                'customNotificationType': ApiClient.convertToType(data['customNotificationType'], ['string']),
+            });
+        }
     }
 }

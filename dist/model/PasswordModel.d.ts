@@ -5,5 +5,5 @@ export declare class PasswordModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PasswordModel;
+    }): PasswordModel | undefined;
 }

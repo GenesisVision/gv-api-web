@@ -6,9 +6,11 @@ export class AmountWithCurrency {
         this['currency'] = data['currency'];
     }
     static constructFromObject(data) {
-        return new AmountWithCurrency({
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-        });
+        if (data) {
+            return new AmountWithCurrency({
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+            });
+        }
     }
 }

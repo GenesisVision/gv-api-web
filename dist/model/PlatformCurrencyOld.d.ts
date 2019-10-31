@@ -7,5 +7,5 @@ export declare class PlatformCurrencyOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PlatformCurrencyOld;
+    }): PlatformCurrencyOld | undefined;
 }

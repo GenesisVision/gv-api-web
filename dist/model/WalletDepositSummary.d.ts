@@ -6,5 +6,5 @@ export declare class WalletDepositSummary {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletDepositSummary;
+    }): WalletDepositSummary | undefined;
 }

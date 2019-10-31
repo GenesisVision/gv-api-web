@@ -14,5 +14,5 @@ export declare class DashboardChartValue {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): DashboardChartValue;
+    }): DashboardChartValue | undefined;
 }

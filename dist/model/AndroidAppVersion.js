@@ -5,9 +5,11 @@ export class AndroidAppVersion {
         this['lastVersion'] = data['lastVersion'];
     }
     static constructFromObject(data) {
-        return new AndroidAppVersion({
-            'minVersion': AndroidVersion.constructFromObject(data['minVersion']),
-            'lastVersion': AndroidVersion.constructFromObject(data['lastVersion']),
-        });
+        if (data) {
+            return new AndroidAppVersion({
+                'minVersion': AndroidVersion.constructFromObject(data['minVersion']),
+                'lastVersion': AndroidVersion.constructFromObject(data['lastVersion']),
+            });
+        }
     }
 }

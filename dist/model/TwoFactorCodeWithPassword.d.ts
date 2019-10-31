@@ -6,5 +6,5 @@ export declare class TwoFactorCodeWithPassword {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TwoFactorCodeWithPassword;
+    }): TwoFactorCodeWithPassword | undefined;
 }

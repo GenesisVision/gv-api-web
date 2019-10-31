@@ -6,5 +6,5 @@ export declare class ReferralFriend {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ReferralFriend;
+    }): ReferralFriend | undefined;
 }

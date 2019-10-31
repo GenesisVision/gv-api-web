@@ -13,5 +13,5 @@ export declare class NewFundRequest {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): NewFundRequest;
+    }): NewFundRequest | undefined;
 }

@@ -6,9 +6,11 @@ export class ItemsViewModelCopyTradingAccountInfo {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ItemsViewModelCopyTradingAccountInfo({
-            'items': ApiClient.convertToType(data['items'], [CopyTradingAccountInfo]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ItemsViewModelCopyTradingAccountInfo({
+                'items': ApiClient.convertToType(data['items'], [CopyTradingAccountInfo]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

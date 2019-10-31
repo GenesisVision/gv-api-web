@@ -13,15 +13,17 @@ export class DashboardChartValue {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new DashboardChartValue({
-            'investedProgramsInfo': ApiClient.convertToType(data['investedProgramsInfo'], [ValueChartBar]),
-            'balanceChart': ApiClient.convertToType(data['balanceChart'], [ChartSimple]),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'valueCurrency': ApiClient.convertToType(data['valueCurrency'], 'number'),
-            'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
-            'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
-            'changeValueCurrency': ApiClient.convertToType(data['changeValueCurrency'], 'number'),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new DashboardChartValue({
+                'investedProgramsInfo': ApiClient.convertToType(data['investedProgramsInfo'], [ValueChartBar]),
+                'balanceChart': ApiClient.convertToType(data['balanceChart'], [ChartSimple]),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'valueCurrency': ApiClient.convertToType(data['valueCurrency'], 'number'),
+                'changePercent': ApiClient.convertToType(data['changePercent'], 'number'),
+                'changeValue': ApiClient.convertToType(data['changeValue'], 'number'),
+                'changeValueCurrency': ApiClient.convertToType(data['changeValueCurrency'], 'number'),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

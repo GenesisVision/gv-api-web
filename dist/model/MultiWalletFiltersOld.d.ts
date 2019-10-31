@@ -6,5 +6,5 @@ export declare class MultiWalletFiltersOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): MultiWalletFiltersOld;
+    }): MultiWalletFiltersOld | undefined;
 }

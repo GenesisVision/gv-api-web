@@ -7,5 +7,5 @@ export declare class MultiWalletExternalTransactionsViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): MultiWalletExternalTransactionsViewModel;
+    }): MultiWalletExternalTransactionsViewModel | undefined;
 }

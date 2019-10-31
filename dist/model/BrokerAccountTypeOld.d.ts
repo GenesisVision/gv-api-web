@@ -16,5 +16,5 @@ export declare class BrokerAccountTypeOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): BrokerAccountTypeOld;
+    }): BrokerAccountTypeOld | undefined;
 }

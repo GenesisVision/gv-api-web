@@ -11,5 +11,5 @@ export declare class InternalTransferRequest {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): InternalTransferRequest;
+    }): InternalTransferRequest | undefined;
 }

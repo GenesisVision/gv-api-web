@@ -13,5 +13,5 @@ export declare class PublicProfile {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): PublicProfile;
+    }): PublicProfile | undefined;
 }

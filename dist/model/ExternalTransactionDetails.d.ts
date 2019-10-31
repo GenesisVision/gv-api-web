@@ -8,5 +8,5 @@ export declare class ExternalTransactionDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ExternalTransactionDetails;
+    }): ExternalTransactionDetails | undefined;
 }

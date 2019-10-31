@@ -4,8 +4,10 @@ export class DetachFromSignalProvider {
         this['mode'] = data['mode'];
     }
     static constructFromObject(data) {
-        return new DetachFromSignalProvider({
-            'mode': SignalDetachMode.constructFromObject(data['mode']),
-        });
+        if (data) {
+            return new DetachFromSignalProvider({
+                'mode': SignalDetachMode.constructFromObject(data['mode']),
+            });
+        }
     }
 }

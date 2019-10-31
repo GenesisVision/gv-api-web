@@ -4,5 +4,5 @@ export declare class GeeTestDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): GeeTestDetails;
+    }): GeeTestDetails | undefined;
 }

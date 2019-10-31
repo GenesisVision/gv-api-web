@@ -6,9 +6,11 @@ export class ItemsViewModelReferralFriend {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ItemsViewModelReferralFriend({
-            'items': ApiClient.convertToType(data['items'], [ReferralFriend]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ItemsViewModelReferralFriend({
+                'items': ApiClient.convertToType(data['items'], [ReferralFriend]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

@@ -6,5 +6,5 @@ export declare class DetachFromSignalProvider {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): DetachFromSignalProvider;
+    }): DetachFromSignalProvider | undefined;
 }

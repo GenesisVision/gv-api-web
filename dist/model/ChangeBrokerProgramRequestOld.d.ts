@@ -7,5 +7,5 @@ export declare class ChangeBrokerProgramRequestOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ChangeBrokerProgramRequestOld;
+    }): ChangeBrokerProgramRequestOld | undefined;
 }

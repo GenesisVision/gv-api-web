@@ -32,33 +32,35 @@ export class PersonalProgramDetailsFullOld {
         this['status'] = data['status'];
     }
     static constructFromObject(data) {
-        return new PersonalProgramDetailsFullOld({
-            'isReinvest': ApiClient.convertToType(data['isReinvest'], 'boolean'),
-            'gvtValue': ApiClient.convertToType(data['gvtValue'], 'number'),
-            'showTwoFactorButton': ApiClient.convertToType(data['showTwoFactorButton'], 'boolean'),
-            'signalSubscription': SignalSubscription.constructFromObject(data['signalSubscription']),
-            'login': ApiClient.convertToType(data['login'], 'string'),
-            'notificationAvailableToInvestId': ApiClient.convertToType(data['notificationAvailableToInvestId'], 'string'),
-            'canMakeSignalProvider': ApiClient.convertToType(data['canMakeSignalProvider'], 'boolean'),
-            'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
-            'migration': MigrationRequestOld.constructFromObject(data['migration']),
-            'successFeePersonal': ApiClient.convertToType(data['successFeePersonal'], 'number'),
-            'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
-            'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
-            'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
-            'canCloseAsset': ApiClient.convertToType(data['canCloseAsset'], 'boolean'),
-            'isFinishing': ApiClient.convertToType(data['isFinishing'], 'boolean'),
-            'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
-            'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
-            'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
-            'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'invested': ApiClient.convertToType(data['invested'], 'number'),
-            'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
-            'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
-            'pendingOutputIsWithdrawAll': ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'boolean'),
-            'status': AssetInvestmentStatus.constructFromObject(data['status']),
-        });
+        if (data) {
+            return new PersonalProgramDetailsFullOld({
+                'isReinvest': ApiClient.convertToType(data['isReinvest'], 'boolean'),
+                'gvtValue': ApiClient.convertToType(data['gvtValue'], 'number'),
+                'showTwoFactorButton': ApiClient.convertToType(data['showTwoFactorButton'], 'boolean'),
+                'signalSubscription': SignalSubscription.constructFromObject(data['signalSubscription']),
+                'login': ApiClient.convertToType(data['login'], 'string'),
+                'notificationAvailableToInvestId': ApiClient.convertToType(data['notificationAvailableToInvestId'], 'string'),
+                'canMakeSignalProvider': ApiClient.convertToType(data['canMakeSignalProvider'], 'boolean'),
+                'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
+                'migration': MigrationRequestOld.constructFromObject(data['migration']),
+                'successFeePersonal': ApiClient.convertToType(data['successFeePersonal'], 'number'),
+                'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
+                'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
+                'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
+                'canCloseAsset': ApiClient.convertToType(data['canCloseAsset'], 'boolean'),
+                'isFinishing': ApiClient.convertToType(data['isFinishing'], 'boolean'),
+                'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
+                'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
+                'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
+                'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'invested': ApiClient.convertToType(data['invested'], 'number'),
+                'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
+                'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
+                'pendingOutputIsWithdrawAll': ApiClient.convertToType(data['pendingOutputIsWithdrawAll'], 'boolean'),
+                'status': AssetInvestmentStatus.constructFromObject(data['status']),
+            });
+        }
     }
 }

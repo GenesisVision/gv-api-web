@@ -25,23 +25,25 @@ export class SignalDetails {
         this['chart'] = data['chart'];
     }
     static constructFromObject(data) {
-        return new SignalDetails({
-            'personalDetails': PersonalSignalDetailsFull.constructFromObject(data['personalDetails']),
-            'currency': Currency.constructFromObject(data['currency']),
-            'level': ApiClient.convertToType(data['level'], 'number'),
-            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
-            'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
-            'subscribers': ApiClient.convertToType(data['subscribers'], 'number'),
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'description': ApiClient.convertToType(data['description'], 'string'),
-            'status': InvestmentProgramStatus.constructFromObject(data['status']),
-            'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
-            'manager': ProfilePublic.constructFromObject(data['manager']),
-            'chart': ApiClient.convertToType(data['chart'], [ChartSimple]),
-        });
+        if (data) {
+            return new SignalDetails({
+                'personalDetails': PersonalSignalDetailsFull.constructFromObject(data['personalDetails']),
+                'currency': Currency.constructFromObject(data['currency']),
+                'level': ApiClient.convertToType(data['level'], 'number'),
+                'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'subscribers': ApiClient.convertToType(data['subscribers'], 'number'),
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
+                'status': InvestmentProgramStatus.constructFromObject(data['status']),
+                'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+                'manager': ProfilePublic.constructFromObject(data['manager']),
+                'chart': ApiClient.convertToType(data['chart'], [ChartSimple]),
+            });
+        }
     }
 }

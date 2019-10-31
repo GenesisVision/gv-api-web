@@ -6,5 +6,5 @@ export declare class ChartSimple {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ChartSimple;
+    }): ChartSimple | undefined;
 }

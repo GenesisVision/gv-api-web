@@ -8,10 +8,12 @@ export class OrderSignalFee {
         this['type'] = data['type'];
     }
     static constructFromObject(data) {
-        return new OrderSignalFee({
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-            'type': FeeType.constructFromObject(data['type']),
-        });
+        if (data) {
+            return new OrderSignalFee({
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+                'type': FeeType.constructFromObject(data['type']),
+            });
+        }
     }
 }

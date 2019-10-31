@@ -8,5 +8,5 @@ export declare class ProgramCreateResult {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramCreateResult;
+    }): ProgramCreateResult | undefined;
 }

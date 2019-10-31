@@ -5,9 +5,11 @@ export class PeriodDate {
         this['dateTo'] = data['dateTo'];
     }
     static constructFromObject(data) {
-        return new PeriodDate({
-            'dateFrom': ApiClient.convertToType(data['dateFrom'], 'Date'),
-            'dateTo': ApiClient.convertToType(data['dateTo'], 'Date'),
-        });
+        if (data) {
+            return new PeriodDate({
+                'dateFrom': ApiClient.convertToType(data['dateFrom'], 'Date'),
+                'dateTo': ApiClient.convertToType(data['dateTo'], 'Date'),
+            });
+        }
     }
 }

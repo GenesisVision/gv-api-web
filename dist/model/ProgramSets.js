@@ -6,9 +6,11 @@ export class ProgramSets {
         this['favoritesCount'] = data['favoritesCount'];
     }
     static constructFromObject(data) {
-        return new ProgramSets({
-            'sets': ApiClient.convertToType(data['sets'], [ProgramFacet]),
-            'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
-        });
+        if (data) {
+            return new ProgramSets({
+                'sets': ApiClient.convertToType(data['sets'], [ProgramFacet]),
+                'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
+            });
+        }
     }
 }

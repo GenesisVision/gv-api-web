@@ -14,7 +14,7 @@ export declare class SignalSubscription {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalSubscription;
+    }): SignalSubscription | undefined;
 }
 declare type FixedCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export {};

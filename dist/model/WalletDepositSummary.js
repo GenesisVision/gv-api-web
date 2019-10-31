@@ -5,8 +5,10 @@ export class WalletDepositSummary {
         this['wallets'] = data['wallets'];
     }
     static constructFromObject(data) {
-        return new WalletDepositSummary({
-            'wallets': ApiClient.convertToType(data['wallets'], [WalletDeposit]),
-        });
+        if (data) {
+            return new WalletDepositSummary({
+                'wallets': ApiClient.convertToType(data['wallets'], [WalletDeposit]),
+            });
+        }
     }
 }

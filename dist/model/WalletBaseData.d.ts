@@ -11,5 +11,5 @@ export declare class WalletBaseData {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletBaseData;
+    }): WalletBaseData | undefined;
 }

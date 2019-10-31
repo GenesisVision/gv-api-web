@@ -7,5 +7,5 @@ export declare class ExternalKeysViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ExternalKeysViewModel;
+    }): ExternalKeysViewModel | undefined;
 }

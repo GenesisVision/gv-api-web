@@ -10,5 +10,5 @@ export declare class SearchViewModelOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SearchViewModelOld;
+    }): SearchViewModelOld | undefined;
 }

@@ -19,7 +19,7 @@ export declare class InvestmentEventViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): InvestmentEventViewModel;
+    }): InvestmentEventViewModel | undefined;
 }
 declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 declare type TotalFeesCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';

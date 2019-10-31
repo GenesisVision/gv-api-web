@@ -18,5 +18,5 @@ export declare class RatesModelRates {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): RatesModelRates;
+    }): RatesModelRates | undefined;
 }

@@ -16,5 +16,5 @@ export declare class CopyTradingAccountInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): CopyTradingAccountInfo;
+    }): CopyTradingAccountInfo | undefined;
 }

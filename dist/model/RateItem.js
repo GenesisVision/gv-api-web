@@ -6,9 +6,11 @@ export class RateItem {
         this['rate'] = data['rate'];
     }
     static constructFromObject(data) {
-        return new RateItem({
-            'currency': Currency.constructFromObject(data['currency']),
-            'rate': ApiClient.convertToType(data['rate'], 'number'),
-        });
+        if (data) {
+            return new RateItem({
+                'currency': Currency.constructFromObject(data['currency']),
+                'rate': ApiClient.convertToType(data['rate'], 'number'),
+            });
+        }
     }
 }

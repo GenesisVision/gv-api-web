@@ -6,5 +6,5 @@ export declare class ProgramPwdUpdate {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramPwdUpdate;
+    }): ProgramPwdUpdate | undefined;
 }

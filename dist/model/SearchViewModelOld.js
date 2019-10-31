@@ -8,10 +8,12 @@ export class SearchViewModelOld {
         this['managers'] = data['managers'];
     }
     static constructFromObject(data) {
-        return new SearchViewModelOld({
-            'programs': ProgramsListOld.constructFromObject(data['programs']),
-            'funds': FundsListOld.constructFromObject(data['funds']),
-            'managers': ManagersListOld.constructFromObject(data['managers']),
-        });
+        if (data) {
+            return new SearchViewModelOld({
+                'programs': ProgramsListOld.constructFromObject(data['programs']),
+                'funds': FundsListOld.constructFromObject(data['funds']),
+                'managers': ManagersListOld.constructFromObject(data['managers']),
+            });
+        }
     }
 }

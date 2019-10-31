@@ -22,5 +22,5 @@ export declare class ProgramPeriodViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramPeriodViewModel;
+    }): ProgramPeriodViewModel | undefined;
 }

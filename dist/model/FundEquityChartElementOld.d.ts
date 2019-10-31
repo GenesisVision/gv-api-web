@@ -8,5 +8,5 @@ export declare class FundEquityChartElementOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundEquityChartElementOld;
+    }): FundEquityChartElementOld | undefined;
 }

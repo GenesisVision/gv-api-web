@@ -5,5 +5,5 @@ export declare class TwoFactorStatus {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TwoFactorStatus;
+    }): TwoFactorStatus | undefined;
 }

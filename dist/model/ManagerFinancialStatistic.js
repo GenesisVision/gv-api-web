@@ -7,11 +7,13 @@ export class ManagerFinancialStatistic {
         this['balance'] = data['balance'];
     }
     static constructFromObject(data) {
-        return new ManagerFinancialStatistic({
-            'successFee': ApiClient.convertToType(data['successFee'], 'number'),
-            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
-            'profit': ApiClient.convertToType(data['profit'], 'number'),
-            'balance': ApiClient.convertToType(data['balance'], 'number'),
-        });
+        if (data) {
+            return new ManagerFinancialStatistic({
+                'successFee': ApiClient.convertToType(data['successFee'], 'number'),
+                'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+            });
+        }
     }
 }

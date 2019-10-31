@@ -6,9 +6,11 @@ export class BrokersProgramInfoOld {
         this['currentAccountTypeId'] = data['currentAccountTypeId'];
     }
     static constructFromObject(data) {
-        return new BrokersProgramInfoOld({
-            'brokers': ApiClient.convertToType(data['brokers'], [BrokerOld]),
-            'currentAccountTypeId': ApiClient.convertToType(data['currentAccountTypeId'], 'string'),
-        });
+        if (data) {
+            return new BrokersProgramInfoOld({
+                'brokers': ApiClient.convertToType(data['brokers'], [BrokerOld]),
+                'currentAccountTypeId': ApiClient.convertToType(data['currentAccountTypeId'], 'string'),
+            });
+        }
     }
 }

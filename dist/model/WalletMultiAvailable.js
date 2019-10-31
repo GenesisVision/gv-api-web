@@ -5,8 +5,10 @@ export class WalletMultiAvailable {
         this['wallets'] = data['wallets'];
     }
     static constructFromObject(data) {
-        return new WalletMultiAvailable({
-            'wallets': ApiClient.convertToType(data['wallets'], [WalletBaseData]),
-        });
+        if (data) {
+            return new WalletMultiAvailable({
+                'wallets': ApiClient.convertToType(data['wallets'], [WalletBaseData]),
+            });
+        }
     }
 }

@@ -18,7 +18,7 @@ export declare class MultiWalletTransaction {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): MultiWalletTransaction;
+    }): MultiWalletTransaction | undefined;
 }
 declare type CurrencyToEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export {};

@@ -15,5 +15,5 @@ export declare class ProgramFacet {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramFacet;
+    }): ProgramFacet | undefined;
 }

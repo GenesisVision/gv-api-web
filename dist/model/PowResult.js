@@ -4,8 +4,10 @@ export class PowResult {
         this['prefix'] = data['prefix'];
     }
     static constructFromObject(data) {
-        return new PowResult({
-            'prefix': ApiClient.convertToType(data['prefix'], 'string'),
-        });
+        if (data) {
+            return new PowResult({
+                'prefix': ApiClient.convertToType(data['prefix'], 'string'),
+            });
+        }
     }
 }

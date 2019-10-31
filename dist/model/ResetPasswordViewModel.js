@@ -7,11 +7,13 @@ export class ResetPasswordViewModel {
         this['confirmPassword'] = data['confirmPassword'];
     }
     static constructFromObject(data) {
-        return new ResetPasswordViewModel({
-            'userId': ApiClient.convertToType(data['userId'], 'string'),
-            'code': ApiClient.convertToType(data['code'], 'string'),
-            'password': ApiClient.convertToType(data['password'], 'string'),
-            'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
-        });
+        if (data) {
+            return new ResetPasswordViewModel({
+                'userId': ApiClient.convertToType(data['userId'], 'string'),
+                'code': ApiClient.convertToType(data['code'], 'string'),
+                'password': ApiClient.convertToType(data['password'], 'string'),
+                'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
+            });
+        }
     }
 }

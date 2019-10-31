@@ -10,5 +10,5 @@ export declare class OrderProgramData {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OrderProgramData;
+    }): OrderProgramData | undefined;
 }

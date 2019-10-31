@@ -11,5 +11,5 @@ export declare class ManagerNotificationSettingList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerNotificationSettingList;
+    }): ManagerNotificationSettingList | undefined;
 }

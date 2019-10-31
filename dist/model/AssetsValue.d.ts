@@ -13,5 +13,5 @@ export declare class AssetsValue {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): AssetsValue;
+    }): AssetsValue | undefined;
 }

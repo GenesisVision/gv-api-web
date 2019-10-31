@@ -7,5 +7,5 @@ export declare class ProgramMinimumDepositOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramMinimumDepositOld;
+    }): ProgramMinimumDepositOld | undefined;
 }

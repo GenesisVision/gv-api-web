@@ -10,5 +10,5 @@ export declare class ValueChartBar {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ValueChartBar;
+    }): ValueChartBar | undefined;
 }

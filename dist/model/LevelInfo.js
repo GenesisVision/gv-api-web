@@ -5,9 +5,11 @@ export class LevelInfo {
         this['investmentLimit'] = data['investmentLimit'];
     }
     static constructFromObject(data) {
-        return new LevelInfo({
-            'level': ApiClient.convertToType(data['level'], 'number'),
-            'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
-        });
+        if (data) {
+            return new LevelInfo({
+                'level': ApiClient.convertToType(data['level'], 'number'),
+                'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
+            });
+        }
     }
 }

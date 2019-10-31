@@ -11,12 +11,14 @@ export class CaptchaDetails {
         this['geeTest'] = data['geeTest'];
     }
     static constructFromObject(data) {
-        return new CaptchaDetails({
-            'captchaType': CaptchaType.constructFromObject(data['captchaType']),
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'route': ApiClient.convertToType(data['route'], 'string'),
-            'pow': PowDetails.constructFromObject(data['pow']),
-            'geeTest': GeeTestDetails.constructFromObject(data['geeTest']),
-        });
+        if (data) {
+            return new CaptchaDetails({
+                'captchaType': CaptchaType.constructFromObject(data['captchaType']),
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'route': ApiClient.convertToType(data['route'], 'string'),
+                'pow': PowDetails.constructFromObject(data['pow']),
+                'geeTest': GeeTestDetails.constructFromObject(data['geeTest']),
+            });
+        }
     }
 }

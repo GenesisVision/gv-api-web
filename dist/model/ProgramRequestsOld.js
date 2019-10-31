@@ -7,10 +7,12 @@ export class ProgramRequestsOld {
         this['totalValue'] = data['totalValue'];
     }
     static constructFromObject(data) {
-        return new ProgramRequestsOld({
-            'requests': ApiClient.convertToType(data['requests'], [ProgramRequestOld]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-            'totalValue': ApiClient.convertToType(data['totalValue'], 'number'),
-        });
+        if (data) {
+            return new ProgramRequestsOld({
+                'requests': ApiClient.convertToType(data['requests'], [ProgramRequestOld]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+                'totalValue': ApiClient.convertToType(data['totalValue'], 'number'),
+            });
+        }
     }
 }

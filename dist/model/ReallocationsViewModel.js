@@ -6,9 +6,11 @@ export class ReallocationsViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new ReallocationsViewModel({
-            'reallocations': ApiClient.convertToType(data['reallocations'], [ReallocationModel]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new ReallocationsViewModel({
+                'reallocations': ApiClient.convertToType(data['reallocations'], [ReallocationModel]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

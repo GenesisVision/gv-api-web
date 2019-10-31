@@ -6,9 +6,11 @@ export class EventFiltersOld {
         this['investor'] = data['investor'];
     }
     static constructFromObject(data) {
-        return new EventFiltersOld({
-            'manager': EventItemFiltersOld.constructFromObject(data['manager']),
-            'investor': EventInvestorItemFiltersOld.constructFromObject(data['investor']),
-        });
+        if (data) {
+            return new EventFiltersOld({
+                'manager': EventItemFiltersOld.constructFromObject(data['manager']),
+                'investor': EventInvestorItemFiltersOld.constructFromObject(data['investor']),
+            });
+        }
     }
 }

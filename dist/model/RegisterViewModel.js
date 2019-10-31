@@ -11,14 +11,16 @@ export class RegisterViewModel {
         this['captchaCheckResult'] = data['captchaCheckResult'];
     }
     static constructFromObject(data) {
-        return new RegisterViewModel({
-            'password': ApiClient.convertToType(data['password'], 'string'),
-            'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
-            'userName': ApiClient.convertToType(data['userName'], 'string'),
-            'refCode': ApiClient.convertToType(data['refCode'], 'string'),
-            'isAuto': ApiClient.convertToType(data['isAuto'], 'boolean'),
-            'email': ApiClient.convertToType(data['email'], 'string'),
-            'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
-        });
+        if (data) {
+            return new RegisterViewModel({
+                'password': ApiClient.convertToType(data['password'], 'string'),
+                'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
+                'userName': ApiClient.convertToType(data['userName'], 'string'),
+                'refCode': ApiClient.convertToType(data['refCode'], 'string'),
+                'isAuto': ApiClient.convertToType(data['isAuto'], 'boolean'),
+                'email': ApiClient.convertToType(data['email'], 'string'),
+                'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
+            });
+        }
     }
 }

@@ -6,5 +6,5 @@ export declare class SignalDataMaster {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalDataMaster;
+    }): SignalDataMaster | undefined;
 }

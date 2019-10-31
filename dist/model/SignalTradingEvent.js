@@ -5,9 +5,11 @@ export class SignalTradingEvent {
         this['message'] = data['message'];
     }
     static constructFromObject(data) {
-        return new SignalTradingEvent({
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'message': ApiClient.convertToType(data['message'], 'string'),
-        });
+        if (data) {
+            return new SignalTradingEvent({
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'message': ApiClient.convertToType(data['message'], 'string'),
+            });
+        }
     }
 }

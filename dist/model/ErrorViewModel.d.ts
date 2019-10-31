@@ -8,5 +8,5 @@ export declare class ErrorViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ErrorViewModel;
+    }): ErrorViewModel | undefined;
 }

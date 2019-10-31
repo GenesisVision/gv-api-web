@@ -6,5 +6,5 @@ export declare class SignalTradingEvent {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalTradingEvent;
+    }): SignalTradingEvent | undefined;
 }

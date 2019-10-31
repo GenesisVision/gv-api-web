@@ -16,5 +16,5 @@ export declare class UpdatePersonalDetailViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): UpdatePersonalDetailViewModel;
+    }): UpdatePersonalDetailViewModel | undefined;
 }

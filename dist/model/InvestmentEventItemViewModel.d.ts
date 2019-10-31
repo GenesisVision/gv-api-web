@@ -8,5 +8,5 @@ export declare class InvestmentEventItemViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): InvestmentEventItemViewModel;
+    }): InvestmentEventItemViewModel | undefined;
 }

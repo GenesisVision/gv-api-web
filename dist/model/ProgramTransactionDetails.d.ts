@@ -21,5 +21,5 @@ export declare class ProgramTransactionDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramTransactionDetails;
+    }): ProgramTransactionDetails | undefined;
 }

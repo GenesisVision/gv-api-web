@@ -8,5 +8,5 @@ export declare class ManagerAssets {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagerAssets;
+    }): ManagerAssets | undefined;
 }

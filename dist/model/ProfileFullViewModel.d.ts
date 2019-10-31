@@ -24,5 +24,5 @@ export declare class ProfileFullViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProfileFullViewModel;
+    }): ProfileFullViewModel | undefined;
 }

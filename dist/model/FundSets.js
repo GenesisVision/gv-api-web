@@ -6,9 +6,11 @@ export class FundSets {
         this['favoritesCount'] = data['favoritesCount'];
     }
     static constructFromObject(data) {
-        return new FundSets({
-            'sets': ApiClient.convertToType(data['sets'], [FundFacet]),
-            'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
-        });
+        if (data) {
+            return new FundSets({
+                'sets': ApiClient.convertToType(data['sets'], [FundFacet]),
+                'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
+            });
+        }
     }
 }

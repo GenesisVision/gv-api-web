@@ -16,18 +16,20 @@ export class NotificationViewModel {
         this['assetType'] = data['assetType'];
     }
     static constructFromObject(data) {
-        return new NotificationViewModel({
-            'id': ApiClient.convertToType(data['id'], 'string'),
-            'text': ApiClient.convertToType(data['text'], 'string'),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'type': NotificationType.constructFromObject(data['type']),
-            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
-            'managerId': ApiClient.convertToType(data['managerId'], 'string'),
-            'logo': ApiClient.convertToType(data['logo'], 'string'),
-            'url': ApiClient.convertToType(data['url'], 'string'),
-            'color': ApiClient.convertToType(data['color'], 'string'),
-            'isUnread': ApiClient.convertToType(data['isUnread'], 'boolean'),
-            'assetType': InvestmentProgramType.constructFromObject(data['assetType']),
-        });
+        if (data) {
+            return new NotificationViewModel({
+                'id': ApiClient.convertToType(data['id'], 'string'),
+                'text': ApiClient.convertToType(data['text'], 'string'),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'type': NotificationType.constructFromObject(data['type']),
+                'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+                'managerId': ApiClient.convertToType(data['managerId'], 'string'),
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'isUnread': ApiClient.convertToType(data['isUnread'], 'boolean'),
+                'assetType': InvestmentProgramType.constructFromObject(data['assetType']),
+            });
+        }
     }
 }

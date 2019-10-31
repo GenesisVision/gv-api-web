@@ -9,5 +9,5 @@ export declare class OrderSignalFee {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): OrderSignalFee;
+    }): OrderSignalFee | undefined;
 }

@@ -9,11 +9,13 @@ export class SignalFee {
         this['currency'] = data['currency'];
     }
     static constructFromObject(data) {
-        return new SignalFee({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'type': FeeType.constructFromObject(data['type']),
-            'value': ApiClient.convertToType(data['value'], 'number'),
-            'currency': Currency.constructFromObject(data['currency']),
-        });
+        if (data) {
+            return new SignalFee({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'type': FeeType.constructFromObject(data['type']),
+                'value': ApiClient.convertToType(data['value'], 'number'),
+                'currency': Currency.constructFromObject(data['currency']),
+            });
+        }
     }
 }

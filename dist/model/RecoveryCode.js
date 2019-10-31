@@ -5,9 +5,11 @@ export class RecoveryCode {
         this['isActive'] = data['isActive'];
     }
     static constructFromObject(data) {
-        return new RecoveryCode({
-            'code': ApiClient.convertToType(data['code'], 'string'),
-            'isActive': ApiClient.convertToType(data['isActive'], 'boolean'),
-        });
+        if (data) {
+            return new RecoveryCode({
+                'code': ApiClient.convertToType(data['code'], 'string'),
+                'isActive': ApiClient.convertToType(data['isActive'], 'boolean'),
+            });
+        }
     }
 }

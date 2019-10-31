@@ -7,5 +7,5 @@ export declare class ReallocationModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ReallocationModel;
+    }): ReallocationModel | undefined;
 }

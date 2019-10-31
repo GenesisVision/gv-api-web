@@ -7,5 +7,5 @@ export declare class ResendConfirmationViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ResendConfirmationViewModel;
+    }): ResendConfirmationViewModel | undefined;
 }

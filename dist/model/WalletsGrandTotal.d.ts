@@ -15,5 +15,5 @@ export declare class WalletsGrandTotal {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletsGrandTotal;
+    }): WalletsGrandTotal | undefined;
 }

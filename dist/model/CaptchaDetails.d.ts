@@ -12,5 +12,5 @@ export declare class CaptchaDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): CaptchaDetails;
+    }): CaptchaDetails | undefined;
 }

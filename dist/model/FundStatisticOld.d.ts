@@ -13,5 +13,5 @@ export declare class FundStatisticOld {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundStatisticOld;
+    }): FundStatisticOld | undefined;
 }

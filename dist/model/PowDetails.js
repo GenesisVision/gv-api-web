@@ -7,10 +7,12 @@ export class PowDetails {
         this['nonce'] = data['nonce'];
     }
     static constructFromObject(data) {
-        return new PowDetails({
-            'secureAlgorithm': SecureAlgorithm.constructFromObject(data['secureAlgorithm']),
-            'difficulty': ApiClient.convertToType(data['difficulty'], 'number'),
-            'nonce': ApiClient.convertToType(data['nonce'], 'string'),
-        });
+        if (data) {
+            return new PowDetails({
+                'secureAlgorithm': SecureAlgorithm.constructFromObject(data['secureAlgorithm']),
+                'difficulty': ApiClient.convertToType(data['difficulty'], 'number'),
+                'nonce': ApiClient.convertToType(data['nonce'], 'string'),
+            });
+        }
     }
 }

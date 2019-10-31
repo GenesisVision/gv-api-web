@@ -8,10 +8,12 @@ export class WalletMultiSummary {
         this['payFeesWithGvt'] = data['payFeesWithGvt'];
     }
     static constructFromObject(data) {
-        return new WalletMultiSummary({
-            'grandTotal': WalletsGrandTotal.constructFromObject(data['grandTotal']),
-            'wallets': ApiClient.convertToType(data['wallets'], [WalletData]),
-            'payFeesWithGvt': ApiClient.convertToType(data['payFeesWithGvt'], 'boolean'),
-        });
+        if (data) {
+            return new WalletMultiSummary({
+                'grandTotal': WalletsGrandTotal.constructFromObject(data['grandTotal']),
+                'wallets': ApiClient.convertToType(data['wallets'], [WalletData]),
+                'payFeesWithGvt': ApiClient.convertToType(data['payFeesWithGvt'], 'boolean'),
+            });
+        }
     }
 }

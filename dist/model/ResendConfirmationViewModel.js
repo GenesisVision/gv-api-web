@@ -6,9 +6,11 @@ export class ResendConfirmationViewModel {
         this['captchaCheckResult'] = data['captchaCheckResult'];
     }
     static constructFromObject(data) {
-        return new ResendConfirmationViewModel({
-            'email': ApiClient.convertToType(data['email'], 'string'),
-            'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
-        });
+        if (data) {
+            return new ResendConfirmationViewModel({
+                'email': ApiClient.convertToType(data['email'], 'string'),
+                'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
+            });
+        }
     }
 }

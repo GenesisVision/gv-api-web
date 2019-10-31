@@ -17,5 +17,5 @@ export declare class LevelsParamsInfo {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): LevelsParamsInfo;
+    }): LevelsParamsInfo | undefined;
 }

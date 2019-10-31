@@ -6,9 +6,11 @@ export class MultiWalletExternalTransactionsViewModel {
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
-        return new MultiWalletExternalTransactionsViewModel({
-            'transactions': ApiClient.convertToType(data['transactions'], [MultiWalletExternalTransaction]),
-            'total': ApiClient.convertToType(data['total'], 'number'),
-        });
+        if (data) {
+            return new MultiWalletExternalTransactionsViewModel({
+                'transactions': ApiClient.convertToType(data['transactions'], [MultiWalletExternalTransaction]),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+            });
+        }
     }
 }

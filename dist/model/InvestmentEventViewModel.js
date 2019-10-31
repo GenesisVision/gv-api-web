@@ -18,18 +18,20 @@ export class InvestmentEventViewModel {
         this['totalFeesCurrency'] = data['totalFeesCurrency'];
     }
     static constructFromObject(data) {
-        return new InvestmentEventViewModel({
-            'title': ApiClient.convertToType(data['title'], 'string'),
-            'icon': ApiClient.convertToType(data['icon'], 'string'),
-            'date': ApiClient.convertToType(data['date'], 'Date'),
-            'assetDetails': AssetDetails.constructFromObject(data['assetDetails']),
-            'amount': ApiClient.convertToType(data['amount'], 'number'),
-            'currency': ApiClient.convertToType(data['currency'], 'string'),
-            'changeState': ChangeState.constructFromObject(data['changeState']),
-            'extendedInfo': ApiClient.convertToType(data['extendedInfo'], [InvestmentEventItemViewModel]),
-            'feesInfo': ApiClient.convertToType(data['feesInfo'], [FeeDetails]),
-            'totalFeesAmount': ApiClient.convertToType(data['totalFeesAmount'], 'number'),
-            'totalFeesCurrency': ApiClient.convertToType(data['totalFeesCurrency'], 'string'),
-        });
+        if (data) {
+            return new InvestmentEventViewModel({
+                'title': ApiClient.convertToType(data['title'], 'string'),
+                'icon': ApiClient.convertToType(data['icon'], 'string'),
+                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'assetDetails': AssetDetails.constructFromObject(data['assetDetails']),
+                'amount': ApiClient.convertToType(data['amount'], 'number'),
+                'currency': ApiClient.convertToType(data['currency'], 'string'),
+                'changeState': ChangeState.constructFromObject(data['changeState']),
+                'extendedInfo': ApiClient.convertToType(data['extendedInfo'], [InvestmentEventItemViewModel]),
+                'feesInfo': ApiClient.convertToType(data['feesInfo'], [FeeDetails]),
+                'totalFeesAmount': ApiClient.convertToType(data['totalFeesAmount'], 'number'),
+                'totalFeesCurrency': ApiClient.convertToType(data['totalFeesCurrency'], 'string'),
+            });
+        }
     }
 }

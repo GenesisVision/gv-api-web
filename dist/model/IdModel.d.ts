@@ -5,5 +5,5 @@ export declare class IdModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): IdModel;
+    }): IdModel | undefined;
 }

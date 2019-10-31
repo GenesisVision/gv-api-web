@@ -12,15 +12,17 @@ export class FundStatisticOld {
         this['rebalancingCount'] = data['rebalancingCount'];
     }
     static constructFromObject(data) {
-        return new FundStatisticOld({
-            'balance': AmountWithCurrency.constructFromObject(data['balance']),
-            'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
-            'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
-            'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
-            'startDate': ApiClient.convertToType(data['startDate'], 'Date'),
-            'startBalance': ApiClient.convertToType(data['startBalance'], 'number'),
-            'investedAmount': ApiClient.convertToType(data['investedAmount'], 'number'),
-            'rebalancingCount': ApiClient.convertToType(data['rebalancingCount'], 'number'),
-        });
+        if (data) {
+            return new FundStatisticOld({
+                'balance': AmountWithCurrency.constructFromObject(data['balance']),
+                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
+                'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
+                'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
+                'startDate': ApiClient.convertToType(data['startDate'], 'Date'),
+                'startBalance': ApiClient.convertToType(data['startBalance'], 'number'),
+                'investedAmount': ApiClient.convertToType(data['investedAmount'], 'number'),
+                'rebalancingCount': ApiClient.convertToType(data['rebalancingCount'], 'number'),
+            });
+        }
     }
 }
