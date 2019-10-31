@@ -625,6 +625,8 @@ export default class ManagerApi {
         'To': opts['to'],
         'EventType': opts['eventType'],
         'AssetType': opts['assetType'],
+        'AssetsIds': this.apiClient.buildCollectionParam(opts['assetsIds'], 'multi'),
+        'ForceFilterByIds': opts['forceFilterByIds'],
         'Skip': opts['skip'],
         'Take': opts['take']
       };
@@ -657,6 +659,8 @@ export default class ManagerApi {
      * @param {Date} [opts.to] 
      * @param {String} [opts.eventType] 
      * @param {String} [opts.assetType] 
+     * @param {Array<String>} [opts.assetsIds] 
+     * @param {Boolean} [opts.forceFilterByIds] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
      * @return {CancelablePromise<InvestmentEventViewModels>} a Promise, with an object containing data of type InvestmentEventViewModels and HTTP response

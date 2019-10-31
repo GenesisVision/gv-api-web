@@ -151,6 +151,8 @@ let opts = {
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'eventType': "eventType_example", // String | 
   'assetType': "assetType_example", // String | 
+  'assetsIds': ["assetsIds_example"], // [String] | 
+  'forceFilterByIds': true, // Boolean | 
   'skip': 56, // Number | 
   'take': 56 // Number | 
 };
@@ -173,6 +175,8 @@ Name | Type | Description  | Notes
  **to** | **Date**|  | [optional] 
  **eventType** | **String**|  | [optional] 
  **assetType** | **String**|  | [optional] 
+ **assetsIds** | [**[String]**](String.md)|  | [optional] 
+ **forceFilterByIds** | **Boolean**|  | [optional] 
  **skip** | **Number**|  | [optional] 
  **take** | **Number**|  | [optional] 
 

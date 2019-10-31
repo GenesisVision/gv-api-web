@@ -155,6 +155,8 @@ export declare class InvestorApi {
         to?: Date;
         eventType?: string;
         assetType?: string;
+        assetsIds?: string[];
+        forceFilterByIds?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<InvestmentEventViewModels>;
@@ -265,6 +267,8 @@ export declare class ManagerApi {
         to?: Date;
         eventType?: string;
         assetType?: string;
+        assetsIds?: string[];
+        forceFilterByIds?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<InvestmentEventViewModels>;
