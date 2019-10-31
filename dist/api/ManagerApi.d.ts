@@ -67,6 +67,8 @@ export declare class ManagerApi {
         to?: Date;
         eventType?: 'All' | 'AssetStarted' | 'AssetFinished' | 'AssetPeriodStarted' | 'AssetPeriodEnded' | 'AssetPeriodEndedDueToStopOut' | 'AssetBrokerChanged' | 'AssetInvestByInvestor' | 'AssetWithdrawalByInvestor' | 'AssetInvestByManager' | 'AssetWithdrawalByManager' | 'AssetPeriodProcessed' | 'AssetReallocation' | 'AssetSubscribeByInvestor' | 'AssetUnsubscribeByInvestor' | 'AssetTradeOpen' | 'AssetTradeClosed' | 'AssetSubscriptionEdit' | 'AssetEnterInvestment';
         assetType?: 'All' | 'Program' | 'Fund' | 'Signal';
+        assetsIds?: Array<string>;
+        forceFilterByIds?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<InvestmentEventViewModels>;

@@ -1,6 +1,6 @@
 import { TwoFactorAuthenticator } from './TwoFactorAuthenticator';
-export declare class ProgramCreateResult {
-    'programId': string;
+export declare class TradingAccountCreateResult {
+    'id': string;
     'twoFactorRequired': boolean;
     'twoFactor': TwoFactorAuthenticator;
     constructor(data: {
@@ -8,5 +8,5 @@ export declare class ProgramCreateResult {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramCreateResult | undefined;
+    }): TradingAccountCreateResult | undefined;
 }

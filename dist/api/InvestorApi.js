@@ -93,6 +93,8 @@ export class InvestorApi {
             "To": opts["to"],
             "EventType": opts["eventType"],
             "AssetType": opts["assetType"],
+            "AssetsIds": this.apiClient.buildCollectionParam(opts["assetsIds"], "multi"),
+            "ForceFilterByIds": opts["forceFilterByIds"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };

@@ -1,4 +1,4 @@
-export declare class ProgramPwdUpdate {
+export declare class TradingAccountPwdUpdate {
     'password': string;
     'twoFactorCode': string;
     constructor(data: {
@@ -6,5 +6,5 @@ export declare class ProgramPwdUpdate {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramPwdUpdate | undefined;
+    }): TradingAccountPwdUpdate | undefined;
 }

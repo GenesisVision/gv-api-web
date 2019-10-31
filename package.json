@@ -1,15 +1,16 @@
 {
   "name": "gv-api-web",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "npm run clean && npm run generate-api && npm run compile",
     "generate-api": "node bash/generate",
-    "build": "npm run generate-api",
-    "compile": "tsc"
+    "compile": "tsc",
+    "clean": "node bash/clean"
   },
   "browser": {
     "fs": false
