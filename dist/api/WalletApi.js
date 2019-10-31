@@ -1,7 +1,5 @@
 import ApiClient from "../ApiClient";
-import { MultiWalletExternalTransactionsViewModel } from "../model/MultiWalletExternalTransactionsViewModel";
-import { MultiWalletTransactionsViewModel } from "../model/MultiWalletTransactionsViewModel";
-import { TransactionDetails } from "../model/TransactionDetails";
+import { TransactionsViewModel } from "../model/TransactionsViewModel";
 import { UserCommissionData } from "../model/UserCommissionData";
 import { WalletDepositSummary } from "../model/WalletDepositSummary";
 import { WalletMultiAvailable } from "../model/WalletMultiAvailable";
@@ -37,7 +35,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/withdraw/request/cancel/{txId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/withdraw/request/cancel/{txId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     confirmWithdrawalRequestByCode(opts) {
         return this.confirmWithdrawalRequestByCodeWithHttpInfo(opts)
@@ -58,7 +56,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/withdraw/request/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/withdraw/request/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     createWithdrawalRequest(authorization, opts) {
         return this.createWithdrawalRequestWithHttpInfo(authorization, opts)
@@ -81,7 +79,7 @@ export class WalletApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/withdraw/request/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/withdraw/request/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getGMCommissionData(authorization) {
         return this.getGMCommissionDataWithHttpInfo(authorization)
@@ -104,25 +102,24 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = UserCommissionData;
-        return this.apiClient.callApi('/v1.0/wallet/fee/gvtholding', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/fee/gvtholding', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getMultiWalletTransactions(authorization, opts) {
-        return this.getMultiWalletTransactionsWithHttpInfo(authorization, opts)
+    getTransactions(authorization, opts) {
+        return this.getTransactionsWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getMultiWalletTransactionsWithHttpInfo(authorization, opts = {}) {
+    getTransactionsWithHttpInfo(authorization, opts = {}) {
         let postBody = null;
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getMultiWalletTransactions");
+            throw new Error("Missing the required parameter \"authorization\" when calling getTransactions");
         }
         let pathParams = {};
         let queryParams = {
-            "From": opts["from"],
-            "To": opts["to"],
-            "Type": opts["type"],
-            "Currency": opts["currency"],
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "TransactionFilterType": opts["transactionFilterType"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -133,36 +130,8 @@ export class WalletApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = MultiWalletTransactionsViewModel;
-        return this.apiClient.callApi('/v1.0/wallet/multi/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getTransactionDetails(id, authorization) {
-        return this.getTransactionDetailsWithHttpInfo(id, authorization)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getTransactionDetailsWithHttpInfo(id, authorization) {
-        let postBody = null;
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getTransactionDetails");
-        }
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getTransactionDetails");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TransactionDetails;
-        return this.apiClient.callApi('/v1.0/wallet/transaction/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = TransactionsViewModel;
+        return this.apiClient.callApi('/v2.0/wallet/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getUserWithdrawalSummary(authorization) {
         return this.getUserWithdrawalSummaryWithHttpInfo(authorization)
@@ -185,51 +154,21 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = WithdrawalSummary;
-        return this.apiClient.callApi('/v1.0/wallet/withdraw/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/withdraw/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getWalletExternalTransactions(authorization, opts) {
-        return this.getWalletExternalTransactionsWithHttpInfo(authorization, opts)
+    getWalletAvailable(currency, authorization) {
+        return this.getWalletAvailableWithHttpInfo(currency, authorization)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getWalletExternalTransactionsWithHttpInfo(authorization, opts = {}) {
-        let postBody = null;
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getWalletExternalTransactions");
-        }
-        let pathParams = {};
-        let queryParams = {
-            "From": opts["from"],
-            "To": opts["to"],
-            "Type": opts["type"],
-            "Currency": opts["currency"],
-            "Skip": opts["skip"],
-            "Take": opts["take"]
-        };
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = MultiWalletExternalTransactionsViewModel;
-        return this.apiClient.callApi('/v1.0/wallet/multi/transactions/external', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getWalletMultiAvailable(currency, authorization) {
-        return this.getWalletMultiAvailableWithHttpInfo(currency, authorization)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getWalletMultiAvailableWithHttpInfo(currency, authorization) {
+    getWalletAvailableWithHttpInfo(currency, authorization) {
         let postBody = null;
         if (currency === undefined || currency === null) {
-            throw new Error("Missing the required parameter \"currency\" when calling getWalletMultiAvailable");
+            throw new Error("Missing the required parameter \"currency\" when calling getWalletAvailable");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getWalletMultiAvailable");
+            throw new Error("Missing the required parameter \"authorization\" when calling getWalletAvailable");
         }
         let pathParams = {
             "currency": currency
@@ -243,21 +182,21 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = WalletMultiAvailable;
-        return this.apiClient.callApi('/v1.0/wallet/multi/{currency}/available', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/{currency}/available', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getWalletMultiSummary(currency, authorization) {
-        return this.getWalletMultiSummaryWithHttpInfo(currency, authorization)
+    getWalletSummary(currency, authorization) {
+        return this.getWalletSummaryWithHttpInfo(currency, authorization)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getWalletMultiSummaryWithHttpInfo(currency, authorization) {
+    getWalletSummaryWithHttpInfo(currency, authorization) {
         let postBody = null;
         if (currency === undefined || currency === null) {
-            throw new Error("Missing the required parameter \"currency\" when calling getWalletMultiSummary");
+            throw new Error("Missing the required parameter \"currency\" when calling getWalletSummary");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getWalletMultiSummary");
+            throw new Error("Missing the required parameter \"authorization\" when calling getWalletSummary");
         }
         let pathParams = {
             "currency": currency
@@ -271,7 +210,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = WalletMultiSummary;
-        return this.apiClient.callApi('/v1.0/wallet/multi/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     resendWithdrawalRequestEmail(txId, authorization) {
         return this.resendWithdrawalRequestEmailWithHttpInfo(txId, authorization)
@@ -299,7 +238,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/withdraw/request/resend/{txId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/withdraw/request/resend/{txId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     switchPayFeeInGvtOff(authorization) {
         return this.switchPayFeeInGvtOffWithHttpInfo(authorization)
@@ -322,7 +261,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/paygvtfee/off', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/paygvtfee/off', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     switchPayFeeInGvtOn(authorization) {
         return this.switchPayFeeInGvtOnWithHttpInfo(authorization)
@@ -345,7 +284,7 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/paygvtfee/on', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/paygvtfee/on', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     transfer(authorization, opts) {
         return this.transferWithHttpInfo(authorization, opts)
@@ -368,7 +307,7 @@ export class WalletApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/wallet/transfer', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/transfer', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     updateDepositWallets(authorization) {
         return this.updateDepositWalletsWithHttpInfo(authorization)
@@ -391,6 +330,6 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = WalletDepositSummary;
-        return this.apiClient.callApi('/v1.0/wallet/deposit/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/deposit/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

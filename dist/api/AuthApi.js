@@ -22,7 +22,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/signin', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/signin', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     changePassword(authorization, opts) {
         return this.changePasswordWithHttpInfo(authorization, opts)
@@ -45,7 +45,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/password/change', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/password/change', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     confirmEmail(opts) {
         return this.confirmEmailWithHttpInfo(opts)
@@ -66,7 +66,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/signup/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/signup/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     confirmTwoStepAuth(authorization, opts) {
         return this.confirmTwoStepAuthWithHttpInfo(authorization, opts)
@@ -89,7 +89,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = RecoveryCodesViewModel;
-        return this.apiClient.callApi('/v1.0/auth/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     createTwoStepAuth(authorization) {
         return this.createTwoStepAuthWithHttpInfo(authorization)
@@ -112,7 +112,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = TwoFactorAuthenticator;
-        return this.apiClient.callApi('/v1.0/auth/2fa/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     createTwoStepAuthRecoveryCodes(authorization, opts) {
         return this.createTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
@@ -135,7 +135,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = RecoveryCodesViewModel;
-        return this.apiClient.callApi('/v1.0/auth/2fa/recoverycodes/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa/recoverycodes/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     disableTwoStepAuth(authorization, opts) {
         return this.disableTwoStepAuthWithHttpInfo(authorization, opts)
@@ -158,7 +158,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/auth/2fa/disable', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa/disable', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     forgotPassword(opts) {
         return this.forgotPasswordWithHttpInfo(opts)
@@ -176,7 +176,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/auth/password/forgot', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/password/forgot', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTwoStepAuthRecoveryCodes(authorization, opts) {
         return this.getTwoStepAuthRecoveryCodesWithHttpInfo(authorization, opts)
@@ -199,7 +199,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = RecoveryCodesViewModel;
-        return this.apiClient.callApi('/v1.0/auth/2fa/recoverycodes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa/recoverycodes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTwoStepAuthStatus(authorization) {
         return this.getTwoStepAuthStatusWithHttpInfo(authorization)
@@ -222,7 +222,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = TwoFactorStatus;
-        return this.apiClient.callApi('/v1.0/auth/2fa', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/2fa', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     logoutFromAnotherDevices(authorization) {
         return this.logoutFromAnotherDevicesWithHttpInfo(authorization)
@@ -245,7 +245,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/token/devices/logout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/token/devices/logout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     register(opts) {
         return this.registerWithHttpInfo(opts)
@@ -263,7 +263,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/auth/signup', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/signup', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     requestPhoneNumberVerificationCode(authorization) {
         return this.requestPhoneNumberVerificationCodeWithHttpInfo(authorization)
@@ -286,7 +286,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'number';
-        return this.apiClient.callApi('/v1.0/auth/phone/code', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/phone/code', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     resendConfirmationLink(opts) {
         return this.resendConfirmationLinkWithHttpInfo(opts)
@@ -304,7 +304,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/auth/resendconfirmationlink', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/resendconfirmationlink', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     resetPassword(opts) {
         return this.resetPasswordWithHttpInfo(opts)
@@ -322,7 +322,7 @@ export class AuthApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/password/reset', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/password/reset', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     updateAuthToken(authorization) {
         return this.updateAuthTokenWithHttpInfo(authorization)
@@ -345,7 +345,7 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/auth/token/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/token/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     validatePhoneNumber(authorization, opts) {
         return this.validatePhoneNumberWithHttpInfo(authorization, opts)
@@ -370,6 +370,6 @@ export class AuthApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/auth/phone/verify', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/auth/phone/verify', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

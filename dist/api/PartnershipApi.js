@@ -32,7 +32,7 @@ export class PartnershipApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'Blob';
-        return this.apiClient.callApi('/v1.0/partnership/rewards/history/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/partnership/rewards/history/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getDetails(authorization, opts) {
         return this.getDetailsWithHttpInfo(authorization, opts)
@@ -57,7 +57,7 @@ export class PartnershipApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = PartnershipDetails;
-        return this.apiClient.callApi('/v1.0/partnership/details', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/partnership/details', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getReferrals(authorization, opts) {
         return this.getReferralsWithHttpInfo(authorization, opts)
@@ -85,7 +85,7 @@ export class PartnershipApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ItemsViewModelReferralFriend;
-        return this.apiClient.callApi('/v1.0/partnership/referrals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/partnership/referrals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getRewardsHistory(authorization, opts) {
         return this.getRewardsHistoryWithHttpInfo(authorization, opts)
@@ -113,6 +113,6 @@ export class PartnershipApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ItemsViewModelRewardDetails;
-        return this.apiClient.callApi('/v1.0/partnership/rewards/history', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/partnership/rewards/history', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

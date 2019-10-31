@@ -1,0 +1,31 @@
+import ApiClient from "../ApiClient";
+export class BrokerDetails {
+    constructor(data) {
+        this['logo'] = data['logo'];
+        this['name'] = data['name'];
+        this['isKycRequired'] = data['isKycRequired'];
+        this['showSwaps'] = data['showSwaps'];
+        this['showTickets'] = data['showTickets'];
+        this['showCommissionRebate'] = data['showCommissionRebate'];
+        this['isKycRequiredSometime'] = data['isKycRequiredSometime'];
+        this['showSwapsSometime'] = data['showSwapsSometime'];
+        this['showTicketsSometime'] = data['showTicketsSometime'];
+        this['showCommissionRebateSometime'] = data['showCommissionRebateSometime'];
+    }
+    static constructFromObject(data) {
+        if (data) {
+            return new BrokerDetails({
+                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'name': ApiClient.convertToType(data['name'], 'string'),
+                'isKycRequired': ApiClient.convertToType(data['isKycRequired'], 'boolean'),
+                'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
+                'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
+                'showCommissionRebate': ApiClient.convertToType(data['showCommissionRebate'], 'boolean'),
+                'isKycRequiredSometime': ApiClient.convertToType(data['isKycRequiredSometime'], 'boolean'),
+                'showSwapsSometime': ApiClient.convertToType(data['showSwapsSometime'], 'boolean'),
+                'showTicketsSometime': ApiClient.convertToType(data['showTicketsSometime'], 'boolean'),
+                'showCommissionRebateSometime': ApiClient.convertToType(data['showCommissionRebateSometime'], 'boolean'),
+            });
+        }
+    }
+}

@@ -35,7 +35,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/notifications/settings/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNewNotificationsCount(authorization) {
         return this.getNewNotificationsCountWithHttpInfo(authorization)
@@ -58,7 +58,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'number';
-        return this.apiClient.callApi('/v1.0/notifications/new', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/new', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNotifications(authorization, opts) {
         return this.getNotificationsWithHttpInfo(authorization, opts)
@@ -84,7 +84,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = NotificationList;
-        return this.apiClient.callApi('/v1.0/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNotificationsFundSettings(id, authorization) {
         return this.getNotificationsFundSettingsWithHttpInfo(id, authorization)
@@ -112,7 +112,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = FundNotificationSettingList;
-        return this.apiClient.callApi('/v1.0/notifications/settings/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNotificationsManagerSettings(id, authorization) {
         return this.getNotificationsManagerSettingsWithHttpInfo(id, authorization)
@@ -140,7 +140,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ManagerNotificationSettingList;
-        return this.apiClient.callApi('/v1.0/notifications/settings/managers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/managers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNotificationsProgramSettings(id, authorization) {
         return this.getNotificationsProgramSettingsWithHttpInfo(id, authorization)
@@ -168,7 +168,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ProgramNotificationSettingList;
-        return this.apiClient.callApi('/v1.0/notifications/settings/programs/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/programs/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getNotificationsSettings(authorization) {
         return this.getNotificationsSettingsWithHttpInfo(authorization)
@@ -191,7 +191,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = NotificationSettingList;
-        return this.apiClient.callApi('/v1.0/notifications/settings', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     readNotification(id, authorization) {
         return this.readNotificationWithHttpInfo(id, authorization)
@@ -219,7 +219,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/notifications/{id}/read', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/{id}/read', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     removeNotificationsSettings(id, authorization) {
         return this.removeNotificationsSettingsWithHttpInfo(id, authorization)
@@ -247,7 +247,7 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/notifications/settings/remove/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/remove/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     toggleNotificationSettings(id, enable, authorization) {
         return this.toggleNotificationSettingsWithHttpInfo(id, enable, authorization)
@@ -279,6 +279,6 @@ export class NotificationsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
-        return this.apiClient.callApi('/v1.0/notifications/settings/{id}/{enable}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/notifications/settings/{id}/{enable}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

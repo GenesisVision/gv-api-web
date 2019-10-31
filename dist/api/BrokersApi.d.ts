@@ -1,12 +1,12 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { BrokersInfoOld } from "../model/BrokersInfoOld";
-import { BrokersProgramInfoOld } from "../model/BrokersProgramInfoOld";
+import { BrokersInfo } from "../model/BrokersInfo";
+import { BrokersProgramInfo } from "../model/BrokersProgramInfo";
 export declare class BrokersApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getBrokers(): CancelablePromise<BrokersInfoOld>;
+    getBrokers(): CancelablePromise<BrokersInfo>;
     private getBrokersWithHttpInfo;
-    getBrokersForProgram(programId: string): CancelablePromise<BrokersProgramInfoOld>;
+    getBrokersForProgram(programId: string): CancelablePromise<BrokersProgramInfo>;
     private getBrokersForProgramWithHttpInfo;
 }
