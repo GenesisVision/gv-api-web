@@ -6,13 +6,15 @@ const handleCallback = (resolve: any, reject: any, callback: any, r: any) => {
   }
 };
 
-export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T>{
+export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T> {
   private state: {
     canceled: boolean
   };
 
   private _promise: Promise<any>;
   private _onCancel?: () => void;
+
+  private  static  __promise__: any;
 
   static all<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(values: [T1 | PromiseLike<T1>, T2 | PromiseLike<T2>, T3 | PromiseLike<T3>, T4 | PromiseLike<T4>, T5 | PromiseLike<T5>, T6 | PromiseLike<T6>, T7 | PromiseLike<T7>, T8 | PromiseLike<T8>, T9 | PromiseLike<T9>, T10 | PromiseLike<T10>]): CancelablePromise<[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]>;
   static all<T1, T2, T3, T4, T5, T6, T7, T8, T9>(values: [T1 | PromiseLike<T1>, T2 | PromiseLike<T2>, T3 | PromiseLike<T3>, T4 | PromiseLike<T4>, T5 | PromiseLike<T5>, T6 | PromiseLike<T6>, T7 | PromiseLike<T7>, T8 | PromiseLike<T8>, T9 | PromiseLike<T9>]): CancelablePromise<[T1, T2, T3, T4, T5, T6, T7, T8, T9]>;
@@ -64,8 +66,8 @@ export default class CancelablePromise<T> extends Promise<T> implements PromiseL
       canceled: false
     }
   ) {
-    super(() => {});
-    this._promise = new Promise(executor);
+    CancelablePromise.__promise__ = super(executor);
+    this._promise = CancelablePromise.__promise__;
     this._onCancel = onCancel;
     this.state = state;
   }
