@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **assetType** | [**AssetType**](AssetType.md) |  | [optional] 
+**levelProgress** | **Number** |  | [optional] 
 
 

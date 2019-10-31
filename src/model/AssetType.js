@@ -60,6 +60,13 @@ export default class AssetType {
         Signals = "Signals";
 
     
+        /**
+         * value: "External"
+         * @const
+         */
+        External = "External";
+
+    
 
     /**
     * Returns a <code>AssetType</code> enum value from a Javascript object name.

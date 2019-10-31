@@ -54,6 +54,11 @@ import AssetType from './AssetType';
  * @name AssetDetails#assetType
  * @type {AssetType}
  */
+/**
+ *
+ * @name AssetDetails#levelProgress
+ * @type {Number}
+ */
 
 
 
@@ -98,6 +103,9 @@ export default class AssetDetails {
             if (data.hasOwnProperty('assetType')) {
                 obj['assetType'] = AssetType.constructFromObject(data['assetType']);
             }
+            if (data.hasOwnProperty('levelProgress')) {
+                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'Number');
+            }
         }
         return obj;
     }
@@ -108,6 +116,7 @@ export default class AssetDetails {
     title = undefined;
     url = undefined;
     assetType = undefined;
+    levelProgress = undefined;
 
 
 

@@ -941,6 +941,7 @@ export declare interface AssetDetails {
     title: string;
     url: string;
     assetType: AssetType;
+    levelProgress: number;
 }
 
 export declare interface AssetEvent {

@@ -11,4 +11,6 @@
 
 * `Signals` (value: `"Signals"`)
 
+* `External` (value: `"External"`)
+
 
