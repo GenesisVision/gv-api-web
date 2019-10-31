@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class AndroidVersion {
-    static constructFromObject(data, obj = new AndroidVersion()) {
-        if (data) {
-            if (data.hasOwnProperty('versionCode')) {
-                obj['versionCode'] = ApiClient.convertToType(data['versionCode'], 'string');
-            }
-            if (data.hasOwnProperty('versionName')) {
-                obj['versionName'] = ApiClient.convertToType(data['versionName'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['versionCode'] = data['versionCode'];
+        this['versionName'] = data['versionName'];
+    }
+    static constructFromObject(data) {
+        return new AndroidVersion({
+            'versionCode': ApiClient.convertToType(data['versionCode'], 'string'),
+            'versionName': ApiClient.convertToType(data['versionName'], 'string'),
+        });
     }
 }

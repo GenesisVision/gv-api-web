@@ -1,15 +1,14 @@
 import { CopyTradingAccountInfo } from './CopyTradingAccountInfo';
 import ApiClient from "../ApiClient";
 export class CopyTradingAccountsList {
-    static constructFromObject(data, obj = new CopyTradingAccountsList()) {
-        if (data) {
-            if (data.hasOwnProperty('accounts')) {
-                obj['accounts'] = ApiClient.convertToType(data['accounts'], [CopyTradingAccountInfo]);
-            }
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['accounts'] = data['accounts'];
+        this['total'] = data['total'];
+    }
+    static constructFromObject(data) {
+        return new CopyTradingAccountsList({
+            'accounts': ApiClient.convertToType(data['accounts'], [CopyTradingAccountInfo]),
+            'total': ApiClient.convertToType(data['total'], 'number'),
+        });
     }
 }

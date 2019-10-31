@@ -1,17 +1,15 @@
 import ApiClient from "../ApiClient";
 export class ChangePasswordViewModel {
-    static constructFromObject(data, obj = new ChangePasswordViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('oldPassword')) {
-                obj['oldPassword'] = ApiClient.convertToType(data['oldPassword'], 'string');
-            }
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'string');
-            }
-            if (data.hasOwnProperty('confirmPassword')) {
-                obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['oldPassword'] = data['oldPassword'];
+        this['password'] = data['password'];
+        this['confirmPassword'] = data['confirmPassword'];
+    }
+    static constructFromObject(data) {
+        return new ChangePasswordViewModel({
+            'oldPassword': ApiClient.convertToType(data['oldPassword'], 'string'),
+            'password': ApiClient.convertToType(data['password'], 'string'),
+            'confirmPassword': ApiClient.convertToType(data['confirmPassword'], 'string'),
+        });
     }
 }

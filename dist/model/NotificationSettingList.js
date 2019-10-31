@@ -4,21 +4,18 @@ import { NotificationSettingViewModel } from './NotificationSettingViewModel';
 import { ProgramNotificationSettingList } from './ProgramNotificationSettingList';
 import ApiClient from "../ApiClient";
 export class NotificationSettingList {
-    static constructFromObject(data, obj = new NotificationSettingList()) {
-        if (data) {
-            if (data.hasOwnProperty('settingsGeneral')) {
-                obj['settingsGeneral'] = ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]);
-            }
-            if (data.hasOwnProperty('settingsProgram')) {
-                obj['settingsProgram'] = ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]);
-            }
-            if (data.hasOwnProperty('settingsFund')) {
-                obj['settingsFund'] = ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]);
-            }
-            if (data.hasOwnProperty('settingsManager')) {
-                obj['settingsManager'] = ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['settingsGeneral'] = data['settingsGeneral'];
+        this['settingsProgram'] = data['settingsProgram'];
+        this['settingsFund'] = data['settingsFund'];
+        this['settingsManager'] = data['settingsManager'];
+    }
+    static constructFromObject(data) {
+        return new NotificationSettingList({
+            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+            'settingsProgram': ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]),
+            'settingsFund': ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]),
+            'settingsManager': ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]),
+        });
     }
 }

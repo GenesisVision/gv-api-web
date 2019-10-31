@@ -1,14 +1,13 @@
 import { AndroidVersion } from './AndroidVersion';
 export class AndroidAppVersion {
-    static constructFromObject(data, obj = new AndroidAppVersion()) {
-        if (data) {
-            if (data.hasOwnProperty('minVersion')) {
-                obj['minVersion'] = AndroidVersion.constructFromObject(data['minVersion']);
-            }
-            if (data.hasOwnProperty('lastVersion')) {
-                obj['lastVersion'] = AndroidVersion.constructFromObject(data['lastVersion']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['minVersion'] = data['minVersion'];
+        this['lastVersion'] = data['lastVersion'];
+    }
+    static constructFromObject(data) {
+        return new AndroidAppVersion({
+            'minVersion': AndroidVersion.constructFromObject(data['minVersion']),
+            'lastVersion': AndroidVersion.constructFromObject(data['lastVersion']),
+        });
     }
 }

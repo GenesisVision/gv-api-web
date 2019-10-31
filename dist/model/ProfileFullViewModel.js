@@ -1,66 +1,48 @@
 import { UserVerificationStatus } from './UserVerificationStatus';
 import ApiClient from "../ApiClient";
 export class ProfileFullViewModel {
-    static constructFromObject(data, obj = new ProfileFullViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'string');
-            }
-            if (data.hasOwnProperty('firstName')) {
-                obj['firstName'] = ApiClient.convertToType(data['firstName'], 'string');
-            }
-            if (data.hasOwnProperty('middleName')) {
-                obj['middleName'] = ApiClient.convertToType(data['middleName'], 'string');
-            }
-            if (data.hasOwnProperty('lastName')) {
-                obj['lastName'] = ApiClient.convertToType(data['lastName'], 'string');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'string');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'string');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'string');
-            }
-            if (data.hasOwnProperty('phone')) {
-                obj['phone'] = ApiClient.convertToType(data['phone'], 'string');
-            }
-            if (data.hasOwnProperty('phoneNumberConfirmed')) {
-                obj['phoneNumberConfirmed'] = ApiClient.convertToType(data['phoneNumberConfirmed'], 'boolean');
-            }
-            if (data.hasOwnProperty('birthday')) {
-                obj['birthday'] = ApiClient.convertToType(data['birthday'], 'Date');
-            }
-            if (data.hasOwnProperty('gender')) {
-                obj['gender'] = ApiClient.convertToType(data['gender'], 'boolean');
-            }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'string');
-            }
-            if (data.hasOwnProperty('about')) {
-                obj['about'] = ApiClient.convertToType(data['about'], 'string');
-            }
-            if (data.hasOwnProperty('userName')) {
-                obj['userName'] = ApiClient.convertToType(data['userName'], 'string');
-            }
-            if (data.hasOwnProperty('index')) {
-                obj['index'] = ApiClient.convertToType(data['index'], 'string');
-            }
-            if (data.hasOwnProperty('citizenship')) {
-                obj['citizenship'] = ApiClient.convertToType(data['citizenship'], 'string');
-            }
-            if (data.hasOwnProperty('refUrl')) {
-                obj['refUrl'] = ApiClient.convertToType(data['refUrl'], 'string');
-            }
-            if (data.hasOwnProperty('verificationStatus')) {
-                obj['verificationStatus'] = UserVerificationStatus.constructFromObject(data['verificationStatus']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['email'] = data['email'];
+        this['firstName'] = data['firstName'];
+        this['middleName'] = data['middleName'];
+        this['lastName'] = data['lastName'];
+        this['country'] = data['country'];
+        this['city'] = data['city'];
+        this['address'] = data['address'];
+        this['phone'] = data['phone'];
+        this['phoneNumberConfirmed'] = data['phoneNumberConfirmed'];
+        this['birthday'] = data['birthday'];
+        this['gender'] = data['gender'];
+        this['avatar'] = data['avatar'];
+        this['about'] = data['about'];
+        this['userName'] = data['userName'];
+        this['index'] = data['index'];
+        this['citizenship'] = data['citizenship'];
+        this['refUrl'] = data['refUrl'];
+        this['verificationStatus'] = data['verificationStatus'];
+    }
+    static constructFromObject(data) {
+        return new ProfileFullViewModel({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'email': ApiClient.convertToType(data['email'], 'string'),
+            'firstName': ApiClient.convertToType(data['firstName'], 'string'),
+            'middleName': ApiClient.convertToType(data['middleName'], 'string'),
+            'lastName': ApiClient.convertToType(data['lastName'], 'string'),
+            'country': ApiClient.convertToType(data['country'], 'string'),
+            'city': ApiClient.convertToType(data['city'], 'string'),
+            'address': ApiClient.convertToType(data['address'], 'string'),
+            'phone': ApiClient.convertToType(data['phone'], 'string'),
+            'phoneNumberConfirmed': ApiClient.convertToType(data['phoneNumberConfirmed'], 'boolean'),
+            'birthday': ApiClient.convertToType(data['birthday'], 'Date'),
+            'gender': ApiClient.convertToType(data['gender'], 'boolean'),
+            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+            'about': ApiClient.convertToType(data['about'], 'string'),
+            'userName': ApiClient.convertToType(data['userName'], 'string'),
+            'index': ApiClient.convertToType(data['index'], 'string'),
+            'citizenship': ApiClient.convertToType(data['citizenship'], 'string'),
+            'refUrl': ApiClient.convertToType(data['refUrl'], 'string'),
+            'verificationStatus': UserVerificationStatus.constructFromObject(data['verificationStatus']),
+        });
     }
 }

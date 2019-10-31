@@ -1,11 +1,14 @@
 import { ManagerOverview } from './ManagerOverview';
 import { PublicProfile } from './PublicProfile';
 export declare class ManagerProfileDetails {
-    'managerProfile'?: PublicProfile;
-    'overview'?: ManagerOverview;
-    'programsCount'?: number;
-    'fundsCount'?: number;
+    'managerProfile': PublicProfile;
+    'overview': ManagerOverview;
+    'programsCount': number;
+    'fundsCount': number;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ManagerProfileDetails): ManagerProfileDetails;
+    }): ManagerProfileDetails;
 }

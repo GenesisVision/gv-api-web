@@ -1,35 +1,27 @@
 import ApiClient from "../ApiClient";
 export class ProgramLevelInfo {
-    static constructFromObject(data, obj = new ProgramLevelInfo()) {
-        if (data) {
-            if (data.hasOwnProperty('isKycPassed')) {
-                obj['isKycPassed'] = ApiClient.convertToType(data['isKycPassed'], 'boolean');
-            }
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgressPercent')) {
-                obj['levelProgressPercent'] = ApiClient.convertToType(data['levelProgressPercent'], 'number');
-            }
-            if (data.hasOwnProperty('genesisRatio')) {
-                obj['genesisRatio'] = ApiClient.convertToType(data['genesisRatio'], 'number');
-            }
-            if (data.hasOwnProperty('programAge')) {
-                obj['programAge'] = ApiClient.convertToType(data['programAge'], 'number');
-            }
-            if (data.hasOwnProperty('weightedVolumeScale')) {
-                obj['weightedVolumeScale'] = ApiClient.convertToType(data['weightedVolumeScale'], 'number');
-            }
-            if (data.hasOwnProperty('managerBalance')) {
-                obj['managerBalance'] = ApiClient.convertToType(data['managerBalance'], 'number');
-            }
-            if (data.hasOwnProperty('investmentScale')) {
-                obj['investmentScale'] = ApiClient.convertToType(data['investmentScale'], 'number');
-            }
-            if (data.hasOwnProperty('totalAvailableToInvest')) {
-                obj['totalAvailableToInvest'] = ApiClient.convertToType(data['totalAvailableToInvest'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['isKycPassed'] = data['isKycPassed'];
+        this['level'] = data['level'];
+        this['levelProgressPercent'] = data['levelProgressPercent'];
+        this['genesisRatio'] = data['genesisRatio'];
+        this['programAge'] = data['programAge'];
+        this['weightedVolumeScale'] = data['weightedVolumeScale'];
+        this['managerBalance'] = data['managerBalance'];
+        this['investmentScale'] = data['investmentScale'];
+        this['totalAvailableToInvest'] = data['totalAvailableToInvest'];
+    }
+    static constructFromObject(data) {
+        return new ProgramLevelInfo({
+            'isKycPassed': ApiClient.convertToType(data['isKycPassed'], 'boolean'),
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgressPercent': ApiClient.convertToType(data['levelProgressPercent'], 'number'),
+            'genesisRatio': ApiClient.convertToType(data['genesisRatio'], 'number'),
+            'programAge': ApiClient.convertToType(data['programAge'], 'number'),
+            'weightedVolumeScale': ApiClient.convertToType(data['weightedVolumeScale'], 'number'),
+            'managerBalance': ApiClient.convertToType(data['managerBalance'], 'number'),
+            'investmentScale': ApiClient.convertToType(data['investmentScale'], 'number'),
+            'totalAvailableToInvest': ApiClient.convertToType(data['totalAvailableToInvest'], 'number'),
+        });
     }
 }

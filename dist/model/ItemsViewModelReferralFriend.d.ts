@@ -1,8 +1,11 @@
 import { ReferralFriend } from './ReferralFriend';
 export declare class ItemsViewModelReferralFriend {
-    'items'?: Array<ReferralFriend>;
-    'total'?: number;
+    'items': Array<ReferralFriend>;
+    'total': number;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ItemsViewModelReferralFriend): ItemsViewModelReferralFriend;
+    }): ItemsViewModelReferralFriend;
 }

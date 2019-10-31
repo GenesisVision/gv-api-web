@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class FundAssetPart {
-    static constructFromObject(data, obj = new FundAssetPart()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('percent')) {
-                obj['percent'] = ApiClient.convertToType(data['percent'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['percent'] = data['percent'];
+    }
+    static constructFromObject(data) {
+        return new FundAssetPart({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'percent': ApiClient.convertToType(data['percent'], 'number'),
+        });
     }
 }

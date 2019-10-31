@@ -1,36 +1,28 @@
 import { NotificationSettingViewModel } from './NotificationSettingViewModel';
 import ApiClient from "../ApiClient";
 export class ProgramNotificationSettingList {
-    static constructFromObject(data, obj = new ProgramNotificationSettingList()) {
-        if (data) {
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'number');
-            }
-            if (data.hasOwnProperty('settingsCustom')) {
-                obj['settingsCustom'] = ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]);
-            }
-            if (data.hasOwnProperty('assetId')) {
-                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('settingsGeneral')) {
-                obj['settingsGeneral'] = ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['level'] = data['level'];
+        this['levelProgress'] = data['levelProgress'];
+        this['settingsCustom'] = data['settingsCustom'];
+        this['assetId'] = data['assetId'];
+        this['title'] = data['title'];
+        this['url'] = data['url'];
+        this['logo'] = data['logo'];
+        this['color'] = data['color'];
+        this['settingsGeneral'] = data['settingsGeneral'];
+    }
+    static constructFromObject(data) {
+        return new ProgramNotificationSettingList({
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            'settingsCustom': ApiClient.convertToType(data['settingsCustom'], [NotificationSettingViewModel]),
+            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+        });
     }
 }

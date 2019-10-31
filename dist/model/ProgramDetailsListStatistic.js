@@ -1,30 +1,24 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
 import ApiClient from "../ApiClient";
 export class ProgramDetailsListStatistic {
-    static constructFromObject(data, obj = new ProgramDetailsListStatistic()) {
-        if (data) {
-            if (data.hasOwnProperty('balance')) {
-                obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
-            }
-            if (data.hasOwnProperty('currentValue')) {
-                obj['currentValue'] = ApiClient.convertToType(data['currentValue'], 'number');
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'number');
-            }
-            if (data.hasOwnProperty('profitValue')) {
-                obj['profitValue'] = ApiClient.convertToType(data['profitValue'], 'number');
-            }
-            if (data.hasOwnProperty('drawdownPercent')) {
-                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'number');
-            }
-            if (data.hasOwnProperty('investorsCount')) {
-                obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'number');
-            }
-            if (data.hasOwnProperty('tradesCount')) {
-                obj['tradesCount'] = ApiClient.convertToType(data['tradesCount'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['balance'] = data['balance'];
+        this['currentValue'] = data['currentValue'];
+        this['profitPercent'] = data['profitPercent'];
+        this['profitValue'] = data['profitValue'];
+        this['drawdownPercent'] = data['drawdownPercent'];
+        this['investorsCount'] = data['investorsCount'];
+        this['tradesCount'] = data['tradesCount'];
+    }
+    static constructFromObject(data) {
+        return new ProgramDetailsListStatistic({
+            'balance': AmountWithCurrency.constructFromObject(data['balance']),
+            'currentValue': ApiClient.convertToType(data['currentValue'], 'number'),
+            'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
+            'profitValue': ApiClient.convertToType(data['profitValue'], 'number'),
+            'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
+            'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
+            'tradesCount': ApiClient.convertToType(data['tradesCount'], 'number'),
+        });
     }
 }

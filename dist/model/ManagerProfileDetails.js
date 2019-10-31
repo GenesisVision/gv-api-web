@@ -2,21 +2,18 @@ import { ManagerOverview } from './ManagerOverview';
 import { PublicProfile } from './PublicProfile';
 import ApiClient from "../ApiClient";
 export class ManagerProfileDetails {
-    static constructFromObject(data, obj = new ManagerProfileDetails()) {
-        if (data) {
-            if (data.hasOwnProperty('managerProfile')) {
-                obj['managerProfile'] = PublicProfile.constructFromObject(data['managerProfile']);
-            }
-            if (data.hasOwnProperty('overview')) {
-                obj['overview'] = ManagerOverview.constructFromObject(data['overview']);
-            }
-            if (data.hasOwnProperty('programsCount')) {
-                obj['programsCount'] = ApiClient.convertToType(data['programsCount'], 'number');
-            }
-            if (data.hasOwnProperty('fundsCount')) {
-                obj['fundsCount'] = ApiClient.convertToType(data['fundsCount'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['managerProfile'] = data['managerProfile'];
+        this['overview'] = data['overview'];
+        this['programsCount'] = data['programsCount'];
+        this['fundsCount'] = data['fundsCount'];
+    }
+    static constructFromObject(data) {
+        return new ManagerProfileDetails({
+            'managerProfile': PublicProfile.constructFromObject(data['managerProfile']),
+            'overview': ManagerOverview.constructFromObject(data['overview']),
+            'programsCount': ApiClient.convertToType(data['programsCount'], 'number'),
+            'fundsCount': ApiClient.convertToType(data['fundsCount'], 'number'),
+        });
     }
 }

@@ -2,24 +2,20 @@ import { Currency } from './Currency';
 import { FeeType } from './FeeType';
 import ApiClient from "../ApiClient";
 export class FeeDetails {
-    static constructFromObject(data, obj = new FeeDetails()) {
-        if (data) {
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = FeeType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('amount')) {
-                obj['amount'] = ApiClient.convertToType(data['amount'], 'number');
-            }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['type'] = data['type'];
+        this['amount'] = data['amount'];
+        this['currency'] = data['currency'];
+    }
+    static constructFromObject(data) {
+        return new FeeDetails({
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'type': FeeType.constructFromObject(data['type']),
+            'amount': ApiClient.convertToType(data['amount'], 'number'),
+            'currency': Currency.constructFromObject(data['currency']),
+        });
     }
 }

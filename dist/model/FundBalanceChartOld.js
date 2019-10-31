@@ -1,15 +1,14 @@
 import { BalanceChartElementOld } from './BalanceChartElementOld';
 import ApiClient from "../ApiClient";
 export class FundBalanceChartOld {
-    static constructFromObject(data, obj = new FundBalanceChartOld()) {
-        if (data) {
-            if (data.hasOwnProperty('balance')) {
-                obj['balance'] = ApiClient.convertToType(data['balance'], 'number');
-            }
-            if (data.hasOwnProperty('balanceChart')) {
-                obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [BalanceChartElementOld]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['balance'] = data['balance'];
+        this['balanceChart'] = data['balanceChart'];
+    }
+    static constructFromObject(data) {
+        return new FundBalanceChartOld({
+            'balance': ApiClient.convertToType(data['balance'], 'number'),
+            'balanceChart': ApiClient.convertToType(data['balanceChart'], [BalanceChartElementOld]),
+        });
     }
 }

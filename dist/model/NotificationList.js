@@ -1,15 +1,14 @@
 import { NotificationViewModel } from './NotificationViewModel';
 import ApiClient from "../ApiClient";
 export class NotificationList {
-    static constructFromObject(data, obj = new NotificationList()) {
-        if (data) {
-            if (data.hasOwnProperty('notifications')) {
-                obj['notifications'] = ApiClient.convertToType(data['notifications'], [NotificationViewModel]);
-            }
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['notifications'] = data['notifications'];
+        this['total'] = data['total'];
+    }
+    static constructFromObject(data) {
+        return new NotificationList({
+            'notifications': ApiClient.convertToType(data['notifications'], [NotificationViewModel]),
+            'total': ApiClient.convertToType(data['total'], 'number'),
+        });
     }
 }

@@ -3,33 +3,26 @@ import { OrderSignalFee } from './OrderSignalFee';
 import { ProfilePublic } from './ProfilePublic';
 import ApiClient from "../ApiClient";
 export class OrderSignalProgramInfo {
-    static constructFromObject(data, obj = new OrderSignalProgramInfo()) {
-        if (data) {
-            if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
-            if (data.hasOwnProperty('program')) {
-                obj['program'] = OrderProgramData.constructFromObject(data['program']);
-            }
-            if (data.hasOwnProperty('programId')) {
-                obj['programId'] = ApiClient.convertToType(data['programId'], 'string');
-            }
-            if (data.hasOwnProperty('volume')) {
-                obj['volume'] = ApiClient.convertToType(data['volume'], 'number');
-            }
-            if (data.hasOwnProperty('priceOpenAvg')) {
-                obj['priceOpenAvg'] = ApiClient.convertToType(data['priceOpenAvg'], 'number');
-            }
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'number');
-            }
-            if (data.hasOwnProperty('firstOrderDate')) {
-                obj['firstOrderDate'] = ApiClient.convertToType(data['firstOrderDate'], 'Date');
-            }
-            if (data.hasOwnProperty('fees')) {
-                obj['fees'] = ApiClient.convertToType(data['fees'], [OrderSignalFee]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['manager'] = data['manager'];
+        this['program'] = data['program'];
+        this['programId'] = data['programId'];
+        this['volume'] = data['volume'];
+        this['priceOpenAvg'] = data['priceOpenAvg'];
+        this['profit'] = data['profit'];
+        this['firstOrderDate'] = data['firstOrderDate'];
+        this['fees'] = data['fees'];
+    }
+    static constructFromObject(data) {
+        return new OrderSignalProgramInfo({
+            'manager': ProfilePublic.constructFromObject(data['manager']),
+            'program': OrderProgramData.constructFromObject(data['program']),
+            'programId': ApiClient.convertToType(data['programId'], 'string'),
+            'volume': ApiClient.convertToType(data['volume'], 'number'),
+            'priceOpenAvg': ApiClient.convertToType(data['priceOpenAvg'], 'number'),
+            'profit': ApiClient.convertToType(data['profit'], 'number'),
+            'firstOrderDate': ApiClient.convertToType(data['firstOrderDate'], 'Date'),
+            'fees': ApiClient.convertToType(data['fees'], [OrderSignalFee]),
+        });
     }
 }

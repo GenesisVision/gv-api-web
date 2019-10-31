@@ -2,30 +2,24 @@ import { NotificationSettingConditionType } from './NotificationSettingCondition
 import { NotificationType } from './NotificationType';
 import ApiClient from "../ApiClient";
 export class NotificationSettingViewModel {
-    static constructFromObject(data, obj = new NotificationSettingViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('isEnabled')) {
-                obj['isEnabled'] = ApiClient.convertToType(data['isEnabled'], 'boolean');
-            }
-            if (data.hasOwnProperty('assetId')) {
-                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'string');
-            }
-            if (data.hasOwnProperty('managerId')) {
-                obj['managerId'] = ApiClient.convertToType(data['managerId'], 'string');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = NotificationType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('conditionType')) {
-                obj['conditionType'] = NotificationSettingConditionType.constructFromObject(data['conditionType']);
-            }
-            if (data.hasOwnProperty('conditionAmount')) {
-                obj['conditionAmount'] = ApiClient.convertToType(data['conditionAmount'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['isEnabled'] = data['isEnabled'];
+        this['assetId'] = data['assetId'];
+        this['managerId'] = data['managerId'];
+        this['type'] = data['type'];
+        this['conditionType'] = data['conditionType'];
+        this['conditionAmount'] = data['conditionAmount'];
+    }
+    static constructFromObject(data) {
+        return new NotificationSettingViewModel({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'isEnabled': ApiClient.convertToType(data['isEnabled'], 'boolean'),
+            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+            'managerId': ApiClient.convertToType(data['managerId'], 'string'),
+            'type': NotificationType.constructFromObject(data['type']),
+            'conditionType': NotificationSettingConditionType.constructFromObject(data['conditionType']),
+            'conditionAmount': ApiClient.convertToType(data['conditionAmount'], 'number'),
+        });
     }
 }

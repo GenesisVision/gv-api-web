@@ -2,42 +2,32 @@ import { InvestmentProgramType } from './InvestmentProgramType';
 import { NotificationType } from './NotificationType';
 import ApiClient from "../ApiClient";
 export class NotificationViewModel {
-    static constructFromObject(data, obj = new NotificationViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'string');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = NotificationType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('assetId')) {
-                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'string');
-            }
-            if (data.hasOwnProperty('managerId')) {
-                obj['managerId'] = ApiClient.convertToType(data['managerId'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('isUnread')) {
-                obj['isUnread'] = ApiClient.convertToType(data['isUnread'], 'boolean');
-            }
-            if (data.hasOwnProperty('assetType')) {
-                obj['assetType'] = InvestmentProgramType.constructFromObject(data['assetType']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['text'] = data['text'];
+        this['date'] = data['date'];
+        this['type'] = data['type'];
+        this['assetId'] = data['assetId'];
+        this['managerId'] = data['managerId'];
+        this['logo'] = data['logo'];
+        this['url'] = data['url'];
+        this['color'] = data['color'];
+        this['isUnread'] = data['isUnread'];
+        this['assetType'] = data['assetType'];
+    }
+    static constructFromObject(data) {
+        return new NotificationViewModel({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'text': ApiClient.convertToType(data['text'], 'string'),
+            'date': ApiClient.convertToType(data['date'], 'Date'),
+            'type': NotificationType.constructFromObject(data['type']),
+            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+            'managerId': ApiClient.convertToType(data['managerId'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'isUnread': ApiClient.convertToType(data['isUnread'], 'boolean'),
+            'assetType': InvestmentProgramType.constructFromObject(data['assetType']),
+        });
     }
 }

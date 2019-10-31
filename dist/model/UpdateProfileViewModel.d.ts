@@ -1,7 +1,10 @@
 export declare class UpdateProfileViewModel {
-    'userName'?: string;
-    'about'?: string;
+    'userName': string;
+    'about': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: UpdateProfileViewModel): UpdateProfileViewModel;
+    }): UpdateProfileViewModel;
 }

@@ -1,7 +1,10 @@
 import { SignalDataMaster } from './SignalDataMaster';
 export declare class OrderModelSignalData {
-    'masters'?: Array<SignalDataMaster>;
+    'masters': Array<SignalDataMaster>;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: OrderModelSignalData): OrderModelSignalData;
+    }): OrderModelSignalData;
 }

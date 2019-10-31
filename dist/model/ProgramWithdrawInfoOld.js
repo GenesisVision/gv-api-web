@@ -1,20 +1,17 @@
 import ApiClient from "../ApiClient";
 export class ProgramWithdrawInfoOld {
-    static constructFromObject(data, obj = new ProgramWithdrawInfoOld()) {
-        if (data) {
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('availableToWithdraw')) {
-                obj['availableToWithdraw'] = ApiClient.convertToType(data['availableToWithdraw'], 'number');
-            }
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['periodEnds'] = data['periodEnds'];
+        this['title'] = data['title'];
+        this['availableToWithdraw'] = data['availableToWithdraw'];
+        this['rate'] = data['rate'];
+    }
+    static constructFromObject(data) {
+        return new ProgramWithdrawInfoOld({
+            'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'availableToWithdraw': ApiClient.convertToType(data['availableToWithdraw'], 'number'),
+            'rate': ApiClient.convertToType(data['rate'], 'number'),
+        });
     }
 }

@@ -1,29 +1,23 @@
 import ApiClient from "../ApiClient";
 export class ManagerSimpleProgram {
-    static constructFromObject(data, obj = new ManagerSimpleProgram()) {
-        if (data) {
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'number');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['level'] = data['level'];
+        this['levelProgress'] = data['levelProgress'];
+        this['id'] = data['id'];
+        this['title'] = data['title'];
+        this['color'] = data['color'];
+        this['logo'] = data['logo'];
+        this['url'] = data['url'];
+    }
+    static constructFromObject(data) {
+        return new ManagerSimpleProgram({
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+        });
     }
 }

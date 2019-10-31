@@ -1,15 +1,14 @@
 import { PublicProfile } from './PublicProfile';
 import ApiClient from "../ApiClient";
 export class ManagersListOld {
-    static constructFromObject(data, obj = new ManagersListOld()) {
-        if (data) {
-            if (data.hasOwnProperty('managers')) {
-                obj['managers'] = ApiClient.convertToType(data['managers'], [PublicProfile]);
-            }
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['managers'] = data['managers'];
+        this['total'] = data['total'];
+    }
+    static constructFromObject(data) {
+        return new ManagersListOld({
+            'managers': ApiClient.convertToType(data['managers'], [PublicProfile]),
+            'total': ApiClient.convertToType(data['total'], 'number'),
+        });
     }
 }

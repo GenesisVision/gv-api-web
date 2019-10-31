@@ -2,21 +2,18 @@ import { Currency } from './Currency';
 import { FeeType } from './FeeType';
 import ApiClient from "../ApiClient";
 export class SignalFee {
-    static constructFromObject(data, obj = new SignalFee()) {
-        if (data) {
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = FeeType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'number');
-            }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['title'] = data['title'];
+        this['type'] = data['type'];
+        this['value'] = data['value'];
+        this['currency'] = data['currency'];
+    }
+    static constructFromObject(data) {
+        return new SignalFee({
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'type': FeeType.constructFromObject(data['type']),
+            'value': ApiClient.convertToType(data['value'], 'number'),
+            'currency': Currency.constructFromObject(data['currency']),
+        });
     }
 }

@@ -1,26 +1,21 @@
 import ApiClient from "../ApiClient";
 export class OrderProgramData {
-    static constructFromObject(data, obj = new OrderProgramData()) {
-        if (data) {
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'number');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['title'] = data['title'];
+        this['level'] = data['level'];
+        this['levelProgress'] = data['levelProgress'];
+        this['color'] = data['color'];
+        this['url'] = data['url'];
+        this['logo'] = data['logo'];
+    }
+    static constructFromObject(data) {
+        return new OrderProgramData({
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+        });
     }
 }

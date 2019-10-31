@@ -1,8 +1,11 @@
 export declare class ChangeBrokerProgramRequestOld {
-    'programId'?: string;
-    'newBrokerAccountTypeId'?: string;
-    'newLeverage'?: number;
+    'programId': string;
+    'newBrokerAccountTypeId': string;
+    'newLeverage': number;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ChangeBrokerProgramRequestOld): ChangeBrokerProgramRequestOld;
+    }): ChangeBrokerProgramRequestOld;
 }

@@ -1,21 +1,18 @@
 import { FilterModelOld } from './FilterModelOld';
 import ApiClient from "../ApiClient";
 export class EventInvestorItemFiltersOld {
-    static constructFromObject(data, obj = new EventInvestorItemFiltersOld()) {
-        if (data) {
-            if (data.hasOwnProperty('signalProgramDetails')) {
-                obj['signalProgramDetails'] = ApiClient.convertToType(data['signalProgramDetails'], [FilterModelOld]);
-            }
-            if (data.hasOwnProperty('programDetails')) {
-                obj['programDetails'] = ApiClient.convertToType(data['programDetails'], [FilterModelOld]);
-            }
-            if (data.hasOwnProperty('fundDetails')) {
-                obj['fundDetails'] = ApiClient.convertToType(data['fundDetails'], [FilterModelOld]);
-            }
-            if (data.hasOwnProperty('allAssets')) {
-                obj['allAssets'] = ApiClient.convertToType(data['allAssets'], [FilterModelOld]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['signalProgramDetails'] = data['signalProgramDetails'];
+        this['programDetails'] = data['programDetails'];
+        this['fundDetails'] = data['fundDetails'];
+        this['allAssets'] = data['allAssets'];
+    }
+    static constructFromObject(data) {
+        return new EventInvestorItemFiltersOld({
+            'signalProgramDetails': ApiClient.convertToType(data['signalProgramDetails'], [FilterModelOld]),
+            'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModelOld]),
+            'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModelOld]),
+            'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModelOld]),
+        });
     }
 }

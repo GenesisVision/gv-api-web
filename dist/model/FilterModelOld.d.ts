@@ -1,7 +1,10 @@
 export declare class FilterModelOld {
-    'key'?: string;
-    'title'?: string;
+    'key': string;
+    'title': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: FilterModelOld): FilterModelOld;
+    }): FilterModelOld;
 }

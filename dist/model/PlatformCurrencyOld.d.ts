@@ -1,8 +1,11 @@
 export declare class PlatformCurrencyOld {
-    'name'?: string;
-    'rateToGvt'?: number;
-    'color'?: string;
+    'name': string;
+    'rateToGvt': number;
+    'color': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: PlatformCurrencyOld): PlatformCurrencyOld;
+    }): PlatformCurrencyOld;
 }

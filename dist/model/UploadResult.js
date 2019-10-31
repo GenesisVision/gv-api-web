@@ -1,11 +1,11 @@
 import ApiClient from "../ApiClient";
 export class UploadResult {
-    static constructFromObject(data, obj = new UploadResult()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+    }
+    static constructFromObject(data) {
+        return new UploadResult({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+        });
     }
 }

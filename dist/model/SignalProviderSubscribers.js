@@ -1,15 +1,14 @@
 import { SignalSubscriber } from './SignalSubscriber';
 import ApiClient from "../ApiClient";
 export class SignalProviderSubscribers {
-    static constructFromObject(data, obj = new SignalProviderSubscribers()) {
-        if (data) {
-            if (data.hasOwnProperty('subscribers')) {
-                obj['subscribers'] = ApiClient.convertToType(data['subscribers'], [SignalSubscriber]);
-            }
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['subscribers'] = data['subscribers'];
+        this['total'] = data['total'];
+    }
+    static constructFromObject(data) {
+        return new SignalProviderSubscribers({
+            'subscribers': ApiClient.convertToType(data['subscribers'], [SignalSubscriber]),
+            'total': ApiClient.convertToType(data['total'], 'number'),
+        });
     }
 }

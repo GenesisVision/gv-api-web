@@ -1,30 +1,24 @@
 import { CaptchaCheckResult } from './CaptchaCheckResult';
 import ApiClient from "../ApiClient";
 export class LoginViewModel {
-    static constructFromObject(data, obj = new LoginViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'string');
-            }
-            if (data.hasOwnProperty('rememberMe')) {
-                obj['rememberMe'] = ApiClient.convertToType(data['rememberMe'], 'boolean');
-            }
-            if (data.hasOwnProperty('twoFactorCode')) {
-                obj['twoFactorCode'] = ApiClient.convertToType(data['twoFactorCode'], 'string');
-            }
-            if (data.hasOwnProperty('recoveryCode')) {
-                obj['recoveryCode'] = ApiClient.convertToType(data['recoveryCode'], 'string');
-            }
-            if (data.hasOwnProperty('client')) {
-                obj['client'] = ApiClient.convertToType(data['client'], 'string');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'string');
-            }
-            if (data.hasOwnProperty('captchaCheckResult')) {
-                obj['captchaCheckResult'] = CaptchaCheckResult.constructFromObject(data['captchaCheckResult']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['password'] = data['password'];
+        this['rememberMe'] = data['rememberMe'];
+        this['twoFactorCode'] = data['twoFactorCode'];
+        this['recoveryCode'] = data['recoveryCode'];
+        this['client'] = data['client'];
+        this['email'] = data['email'];
+        this['captchaCheckResult'] = data['captchaCheckResult'];
+    }
+    static constructFromObject(data) {
+        return new LoginViewModel({
+            'password': ApiClient.convertToType(data['password'], 'string'),
+            'rememberMe': ApiClient.convertToType(data['rememberMe'], 'boolean'),
+            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+            'recoveryCode': ApiClient.convertToType(data['recoveryCode'], 'string'),
+            'client': ApiClient.convertToType(data['client'], 'string'),
+            'email': ApiClient.convertToType(data['email'], 'string'),
+            'captchaCheckResult': CaptchaCheckResult.constructFromObject(data['captchaCheckResult']),
+        });
     }
 }

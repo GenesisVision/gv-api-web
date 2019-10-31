@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class SignalDataMaster {
-    static constructFromObject(data, obj = new SignalDataMaster()) {
-        if (data) {
-            if (data.hasOwnProperty('login')) {
-                obj['login'] = ApiClient.convertToType(data['login'], 'string');
-            }
-            if (data.hasOwnProperty('share')) {
-                obj['share'] = ApiClient.convertToType(data['share'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['login'] = data['login'];
+        this['share'] = data['share'];
+    }
+    static constructFromObject(data) {
+        return new SignalDataMaster({
+            'login': ApiClient.convertToType(data['login'], 'string'),
+            'share': ApiClient.convertToType(data['share'], 'number'),
+        });
     }
 }

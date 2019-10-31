@@ -2,18 +2,16 @@ import { Currency } from './Currency';
 import { ProgramBalanceChartElementOld } from './ProgramBalanceChartElementOld';
 import ApiClient from "../ApiClient";
 export class ProgramBalanceChartOld {
-    static constructFromObject(data, obj = new ProgramBalanceChartOld()) {
-        if (data) {
-            if (data.hasOwnProperty('balance')) {
-                obj['balance'] = ApiClient.convertToType(data['balance'], 'number');
-            }
-            if (data.hasOwnProperty('programCurrency')) {
-                obj['programCurrency'] = Currency.constructFromObject(data['programCurrency']);
-            }
-            if (data.hasOwnProperty('balanceChart')) {
-                obj['balanceChart'] = ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElementOld]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['balance'] = data['balance'];
+        this['programCurrency'] = data['programCurrency'];
+        this['balanceChart'] = data['balanceChart'];
+    }
+    static constructFromObject(data) {
+        return new ProgramBalanceChartOld({
+            'balance': ApiClient.convertToType(data['balance'], 'number'),
+            'programCurrency': Currency.constructFromObject(data['programCurrency']),
+            'balanceChart': ApiClient.convertToType(data['balanceChart'], [ProgramBalanceChartElementOld]),
+        });
     }
 }

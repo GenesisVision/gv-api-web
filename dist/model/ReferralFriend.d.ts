@@ -1,7 +1,10 @@
 export declare class ReferralFriend {
-    'date'?: Date;
-    'emailMask'?: string;
+    'date': Date;
+    'emailMask': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ReferralFriend): ReferralFriend;
+    }): ReferralFriend;
 }

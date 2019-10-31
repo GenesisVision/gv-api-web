@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class ProgramTag {
-    static constructFromObject(data, obj = new ProgramTag()) {
-        if (data) {
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['name'] = data['name'];
+        this['color'] = data['color'];
+    }
+    static constructFromObject(data) {
+        return new ProgramTag({
+            'name': ApiClient.convertToType(data['name'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+        });
     }
 }

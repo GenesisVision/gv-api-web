@@ -1,44 +1,33 @@
 import ApiClient from "../ApiClient";
 export class UpdatePersonalDetailViewModel {
-    static constructFromObject(data, obj = new UpdatePersonalDetailViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('firstName')) {
-                obj['firstName'] = ApiClient.convertToType(data['firstName'], 'string');
-            }
-            if (data.hasOwnProperty('middleName')) {
-                obj['middleName'] = ApiClient.convertToType(data['middleName'], 'string');
-            }
-            if (data.hasOwnProperty('lastName')) {
-                obj['lastName'] = ApiClient.convertToType(data['lastName'], 'string');
-            }
-            if (data.hasOwnProperty('birthday')) {
-                obj['birthday'] = ApiClient.convertToType(data['birthday'], 'Date');
-            }
-            if (data.hasOwnProperty('citizenship')) {
-                obj['citizenship'] = ApiClient.convertToType(data['citizenship'], 'string');
-            }
-            if (data.hasOwnProperty('gender')) {
-                obj['gender'] = ApiClient.convertToType(data['gender'], 'boolean');
-            }
-            if (data.hasOwnProperty('documentId')) {
-                obj['documentId'] = ApiClient.convertToType(data['documentId'], 'string');
-            }
-            if (data.hasOwnProperty('phoneNumber')) {
-                obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'string');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'string');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'string');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'string');
-            }
-            if (data.hasOwnProperty('index')) {
-                obj['index'] = ApiClient.convertToType(data['index'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['firstName'] = data['firstName'];
+        this['middleName'] = data['middleName'];
+        this['lastName'] = data['lastName'];
+        this['birthday'] = data['birthday'];
+        this['citizenship'] = data['citizenship'];
+        this['gender'] = data['gender'];
+        this['documentId'] = data['documentId'];
+        this['phoneNumber'] = data['phoneNumber'];
+        this['country'] = data['country'];
+        this['city'] = data['city'];
+        this['address'] = data['address'];
+        this['index'] = data['index'];
+    }
+    static constructFromObject(data) {
+        return new UpdatePersonalDetailViewModel({
+            'firstName': ApiClient.convertToType(data['firstName'], 'string'),
+            'middleName': ApiClient.convertToType(data['middleName'], 'string'),
+            'lastName': ApiClient.convertToType(data['lastName'], 'string'),
+            'birthday': ApiClient.convertToType(data['birthday'], 'Date'),
+            'citizenship': ApiClient.convertToType(data['citizenship'], 'string'),
+            'gender': ApiClient.convertToType(data['gender'], 'boolean'),
+            'documentId': ApiClient.convertToType(data['documentId'], 'string'),
+            'phoneNumber': ApiClient.convertToType(data['phoneNumber'], 'string'),
+            'country': ApiClient.convertToType(data['country'], 'string'),
+            'city': ApiClient.convertToType(data['city'], 'string'),
+            'address': ApiClient.convertToType(data['address'], 'string'),
+            'index': ApiClient.convertToType(data['index'], 'string'),
+        });
     }
 }

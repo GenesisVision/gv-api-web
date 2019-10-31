@@ -1,8 +1,11 @@
 import { RecoveryCode } from './RecoveryCode';
 export declare class RecoveryCodesViewModel {
-    'codes'?: Array<RecoveryCode>;
-    'authToken'?: string;
+    'codes': Array<RecoveryCode>;
+    'authToken': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: RecoveryCodesViewModel): RecoveryCodesViewModel;
+    }): RecoveryCodesViewModel;
 }

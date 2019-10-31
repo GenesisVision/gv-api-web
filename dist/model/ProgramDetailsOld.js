@@ -8,78 +8,56 @@ import { ProgramDetailsListStatistic } from './ProgramDetailsListStatistic';
 import { ProgramTag } from './ProgramTag';
 import ApiClient from "../ApiClient";
 export class ProgramDetailsOld {
-    static constructFromObject(data, obj = new ProgramDetailsOld()) {
-        if (data) {
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'number');
-            }
-            if (data.hasOwnProperty('periodDuration')) {
-                obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'number');
-            }
-            if (data.hasOwnProperty('stopOutLevel')) {
-                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'number');
-            }
-            if (data.hasOwnProperty('periodStarts')) {
-                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
-            if (data.hasOwnProperty('availableInvestmentInCurrency')) {
-                obj['availableInvestmentInCurrency'] = ApiClient.convertToType(data['availableInvestmentInCurrency'], 'number');
-            }
-            if (data.hasOwnProperty('availableInvestmentLimit')) {
-                obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'number');
-            }
-            if (data.hasOwnProperty('dashboardAssetsDetails')) {
-                obj['dashboardAssetsDetails'] = DashboardProgramDetailsOld.constructFromObject(data['dashboardAssetsDetails']);
-            }
-            if (data.hasOwnProperty('statistic')) {
-                obj['statistic'] = ProgramDetailsListStatistic.constructFromObject(data['statistic']);
-            }
-            if (data.hasOwnProperty('personalDetails')) {
-                obj['personalDetails'] = PersonalProgramDetailsFullOld.constructFromObject(data['personalDetails']);
-            }
-            if (data.hasOwnProperty('tags')) {
-                obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = InvestmentProgramStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('creationDate')) {
-                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
-            }
-            if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
-            if (data.hasOwnProperty('chart')) {
-                obj['chart'] = ApiClient.convertToType(data['chart'], [ChartSimple]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['currency'] = data['currency'];
+        this['level'] = data['level'];
+        this['levelProgress'] = data['levelProgress'];
+        this['periodDuration'] = data['periodDuration'];
+        this['stopOutLevel'] = data['stopOutLevel'];
+        this['periodStarts'] = data['periodStarts'];
+        this['periodEnds'] = data['periodEnds'];
+        this['availableInvestmentInCurrency'] = data['availableInvestmentInCurrency'];
+        this['availableInvestmentLimit'] = data['availableInvestmentLimit'];
+        this['dashboardAssetsDetails'] = data['dashboardAssetsDetails'];
+        this['statistic'] = data['statistic'];
+        this['personalDetails'] = data['personalDetails'];
+        this['tags'] = data['tags'];
+        this['id'] = data['id'];
+        this['logo'] = data['logo'];
+        this['url'] = data['url'];
+        this['color'] = data['color'];
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['status'] = data['status'];
+        this['creationDate'] = data['creationDate'];
+        this['manager'] = data['manager'];
+        this['chart'] = data['chart'];
+    }
+    static constructFromObject(data) {
+        return new ProgramDetailsOld({
+            'currency': Currency.constructFromObject(data['currency']),
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            'periodDuration': ApiClient.convertToType(data['periodDuration'], 'number'),
+            'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
+            'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
+            'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+            'availableInvestmentInCurrency': ApiClient.convertToType(data['availableInvestmentInCurrency'], 'number'),
+            'availableInvestmentLimit': ApiClient.convertToType(data['availableInvestmentLimit'], 'number'),
+            'dashboardAssetsDetails': DashboardProgramDetailsOld.constructFromObject(data['dashboardAssetsDetails']),
+            'statistic': ProgramDetailsListStatistic.constructFromObject(data['statistic']),
+            'personalDetails': PersonalProgramDetailsFullOld.constructFromObject(data['personalDetails']),
+            'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'status': InvestmentProgramStatus.constructFromObject(data['status']),
+            'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+            'manager': ProfilePublic.constructFromObject(data['manager']),
+            'chart': ApiClient.convertToType(data['chart'], [ChartSimple]),
+        });
     }
 }

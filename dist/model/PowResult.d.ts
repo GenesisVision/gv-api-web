@@ -1,6 +1,9 @@
 export declare class PowResult {
-    'prefix'?: string;
+    'prefix': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: PowResult): PowResult;
+    }): PowResult;
 }

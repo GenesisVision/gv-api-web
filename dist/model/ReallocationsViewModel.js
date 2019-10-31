@@ -1,15 +1,14 @@
 import { ReallocationModel } from './ReallocationModel';
 import ApiClient from "../ApiClient";
 export class ReallocationsViewModel {
-    static constructFromObject(data, obj = new ReallocationsViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('reallocations')) {
-                obj['reallocations'] = ApiClient.convertToType(data['reallocations'], [ReallocationModel]);
-            }
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['reallocations'] = data['reallocations'];
+        this['total'] = data['total'];
+    }
+    static constructFromObject(data) {
+        return new ReallocationsViewModel({
+            'reallocations': ApiClient.convertToType(data['reallocations'], [ReallocationModel]),
+            'total': ApiClient.convertToType(data['total'], 'number'),
+        });
     }
 }

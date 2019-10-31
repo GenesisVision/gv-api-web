@@ -1,41 +1,31 @@
 import ApiClient from "../ApiClient";
 export class ProfileHeaderViewModel {
-    static constructFromObject(data, obj = new ProfileHeaderViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'string');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'string');
-            }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'string');
-            }
-            if (data.hasOwnProperty('countryCode')) {
-                obj['countryCode'] = ApiClient.convertToType(data['countryCode'], 'string');
-            }
-            if (data.hasOwnProperty('notificationsCount')) {
-                obj['notificationsCount'] = ApiClient.convertToType(data['notificationsCount'], 'number');
-            }
-            if (data.hasOwnProperty('favoritesCount')) {
-                obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'number');
-            }
-            if (data.hasOwnProperty('kycConfirmed')) {
-                obj['kycConfirmed'] = ApiClient.convertToType(data['kycConfirmed'], 'boolean');
-            }
-            if (data.hasOwnProperty('allowForex')) {
-                obj['allowForex'] = ApiClient.convertToType(data['allowForex'], 'boolean');
-            }
-            if (data.hasOwnProperty('isTwoFactorEnabled')) {
-                obj['isTwoFactorEnabled'] = ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean');
-            }
-            if (data.hasOwnProperty('isNewUser')) {
-                obj['isNewUser'] = ApiClient.convertToType(data['isNewUser'], 'boolean');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['name'] = data['name'];
+        this['email'] = data['email'];
+        this['avatar'] = data['avatar'];
+        this['countryCode'] = data['countryCode'];
+        this['notificationsCount'] = data['notificationsCount'];
+        this['favoritesCount'] = data['favoritesCount'];
+        this['kycConfirmed'] = data['kycConfirmed'];
+        this['allowForex'] = data['allowForex'];
+        this['isTwoFactorEnabled'] = data['isTwoFactorEnabled'];
+        this['isNewUser'] = data['isNewUser'];
+    }
+    static constructFromObject(data) {
+        return new ProfileHeaderViewModel({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'name': ApiClient.convertToType(data['name'], 'string'),
+            'email': ApiClient.convertToType(data['email'], 'string'),
+            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+            'countryCode': ApiClient.convertToType(data['countryCode'], 'string'),
+            'notificationsCount': ApiClient.convertToType(data['notificationsCount'], 'number'),
+            'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
+            'kycConfirmed': ApiClient.convertToType(data['kycConfirmed'], 'boolean'),
+            'allowForex': ApiClient.convertToType(data['allowForex'], 'boolean'),
+            'isTwoFactorEnabled': ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean'),
+            'isNewUser': ApiClient.convertToType(data['isNewUser'], 'boolean'),
+        });
     }
 }

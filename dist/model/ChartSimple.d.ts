@@ -1,7 +1,10 @@
 export declare class ChartSimple {
-    'value'?: number;
-    'date'?: Date;
+    'value': number;
+    'date': Date;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ChartSimple): ChartSimple;
+    }): ChartSimple;
 }

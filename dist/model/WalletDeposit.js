@@ -1,15 +1,14 @@
 import { Currency } from './Currency';
 import ApiClient from "../ApiClient";
 export class WalletDeposit {
-    static constructFromObject(data, obj = new WalletDeposit()) {
-        if (data) {
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('depositAddress')) {
-                obj['depositAddress'] = ApiClient.convertToType(data['depositAddress'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['currency'] = data['currency'];
+        this['depositAddress'] = data['depositAddress'];
+    }
+    static constructFromObject(data) {
+        return new WalletDeposit({
+            'currency': Currency.constructFromObject(data['currency']),
+            'depositAddress': ApiClient.convertToType(data['depositAddress'], 'string'),
+        });
     }
 }

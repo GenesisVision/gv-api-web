@@ -1,21 +1,18 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
 import ApiClient from "../ApiClient";
 export class FundDetailsListStatistic {
-    static constructFromObject(data, obj = new FundDetailsListStatistic()) {
-        if (data) {
-            if (data.hasOwnProperty('balance')) {
-                obj['balance'] = AmountWithCurrency.constructFromObject(data['balance']);
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'number');
-            }
-            if (data.hasOwnProperty('drawdownPercent')) {
-                obj['drawdownPercent'] = ApiClient.convertToType(data['drawdownPercent'], 'number');
-            }
-            if (data.hasOwnProperty('investorsCount')) {
-                obj['investorsCount'] = ApiClient.convertToType(data['investorsCount'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['balance'] = data['balance'];
+        this['profitPercent'] = data['profitPercent'];
+        this['drawdownPercent'] = data['drawdownPercent'];
+        this['investorsCount'] = data['investorsCount'];
+    }
+    static constructFromObject(data) {
+        return new FundDetailsListStatistic({
+            'balance': AmountWithCurrency.constructFromObject(data['balance']),
+            'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
+            'drawdownPercent': ApiClient.convertToType(data['drawdownPercent'], 'number'),
+            'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
+        });
     }
 }

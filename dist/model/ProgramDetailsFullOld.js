@@ -8,129 +8,90 @@ import { ProgramTag } from './ProgramTag';
 import { TradesDelay } from './TradesDelay';
 import ApiClient from "../ApiClient";
 export class ProgramDetailsFullOld {
-    static constructFromObject(data, obj = new ProgramDetailsFullOld()) {
-        if (data) {
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('levelProgress')) {
-                obj['levelProgress'] = ApiClient.convertToType(data['levelProgress'], 'number');
-            }
-            if (data.hasOwnProperty('periodDuration')) {
-                obj['periodDuration'] = ApiClient.convertToType(data['periodDuration'], 'number');
-            }
-            if (data.hasOwnProperty('periodStarts')) {
-                obj['periodStarts'] = ApiClient.convertToType(data['periodStarts'], 'Date');
-            }
-            if (data.hasOwnProperty('periodEnds')) {
-                obj['periodEnds'] = ApiClient.convertToType(data['periodEnds'], 'Date');
-            }
-            if (data.hasOwnProperty('entryFeeSelected')) {
-                obj['entryFeeSelected'] = ApiClient.convertToType(data['entryFeeSelected'], 'number');
-            }
-            if (data.hasOwnProperty('entryFeeCurrent')) {
-                obj['entryFeeCurrent'] = ApiClient.convertToType(data['entryFeeCurrent'], 'number');
-            }
-            if (data.hasOwnProperty('successFeeSelected')) {
-                obj['successFeeSelected'] = ApiClient.convertToType(data['successFeeSelected'], 'number');
-            }
-            if (data.hasOwnProperty('successFeeCurrent')) {
-                obj['successFeeCurrent'] = ApiClient.convertToType(data['successFeeCurrent'], 'number');
-            }
-            if (data.hasOwnProperty('stopOutLevelSelected')) {
-                obj['stopOutLevelSelected'] = ApiClient.convertToType(data['stopOutLevelSelected'], 'number');
-            }
-            if (data.hasOwnProperty('stopOutLevelCurrent')) {
-                obj['stopOutLevelCurrent'] = ApiClient.convertToType(data['stopOutLevelCurrent'], 'number');
-            }
-            if (data.hasOwnProperty('isReinvesting')) {
-                obj['isReinvesting'] = ApiClient.convertToType(data['isReinvesting'], 'boolean');
-            }
-            if (data.hasOwnProperty('isSignalProgram')) {
-                obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'boolean');
-            }
-            if (data.hasOwnProperty('signalSuccessFee')) {
-                obj['signalSuccessFee'] = ApiClient.convertToType(data['signalSuccessFee'], 'number');
-            }
-            if (data.hasOwnProperty('signalVolumeFee')) {
-                obj['signalVolumeFee'] = ApiClient.convertToType(data['signalVolumeFee'], 'number');
-            }
-            if (data.hasOwnProperty('leverageMin')) {
-                obj['leverageMin'] = ApiClient.convertToType(data['leverageMin'], 'number');
-            }
-            if (data.hasOwnProperty('leverageMax')) {
-                obj['leverageMax'] = ApiClient.convertToType(data['leverageMax'], 'number');
-            }
-            if (data.hasOwnProperty('ageDays')) {
-                obj['ageDays'] = ApiClient.convertToType(data['ageDays'], 'number');
-            }
-            if (data.hasOwnProperty('genesisRatio')) {
-                obj['genesisRatio'] = ApiClient.convertToType(data['genesisRatio'], 'number');
-            }
-            if (data.hasOwnProperty('investmentScale')) {
-                obj['investmentScale'] = ApiClient.convertToType(data['investmentScale'], 'number');
-            }
-            if (data.hasOwnProperty('volumeScale')) {
-                obj['volumeScale'] = ApiClient.convertToType(data['volumeScale'], 'number');
-            }
-            if (data.hasOwnProperty('tradesDelay')) {
-                obj['tradesDelay'] = TradesDelay.constructFromObject(data['tradesDelay']);
-            }
-            if (data.hasOwnProperty('availableInvestmentBase')) {
-                obj['availableInvestmentBase'] = ApiClient.convertToType(data['availableInvestmentBase'], 'number');
-            }
-            if (data.hasOwnProperty('availableInvestmentLimit')) {
-                obj['availableInvestmentLimit'] = ApiClient.convertToType(data['availableInvestmentLimit'], 'number');
-            }
-            if (data.hasOwnProperty('totalAvailableInvestment')) {
-                obj['totalAvailableInvestment'] = ApiClient.convertToType(data['totalAvailableInvestment'], 'number');
-            }
-            if (data.hasOwnProperty('brokerDetails')) {
-                obj['brokerDetails'] = BrokerDetailsOld.constructFromObject(data['brokerDetails']);
-            }
-            if (data.hasOwnProperty('statistic')) {
-                obj['statistic'] = ProgramStatistic.constructFromObject(data['statistic']);
-            }
-            if (data.hasOwnProperty('personalProgramDetails')) {
-                obj['personalProgramDetails'] = PersonalProgramDetailsFullOld.constructFromObject(data['personalProgramDetails']);
-            }
-            if (data.hasOwnProperty('tags')) {
-                obj['tags'] = ApiClient.convertToType(data['tags'], [ProgramTag]);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('ipfsHash')) {
-                obj['ipfsHash'] = ApiClient.convertToType(data['ipfsHash'], 'string');
-            }
-            if (data.hasOwnProperty('creationDate')) {
-                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = InvestmentProgramStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('manager')) {
-                obj['manager'] = ProfilePublic.constructFromObject(data['manager']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['currency'] = data['currency'];
+        this['level'] = data['level'];
+        this['levelProgress'] = data['levelProgress'];
+        this['periodDuration'] = data['periodDuration'];
+        this['periodStarts'] = data['periodStarts'];
+        this['periodEnds'] = data['periodEnds'];
+        this['entryFeeSelected'] = data['entryFeeSelected'];
+        this['entryFeeCurrent'] = data['entryFeeCurrent'];
+        this['successFeeSelected'] = data['successFeeSelected'];
+        this['successFeeCurrent'] = data['successFeeCurrent'];
+        this['stopOutLevelSelected'] = data['stopOutLevelSelected'];
+        this['stopOutLevelCurrent'] = data['stopOutLevelCurrent'];
+        this['isReinvesting'] = data['isReinvesting'];
+        this['isSignalProgram'] = data['isSignalProgram'];
+        this['signalSuccessFee'] = data['signalSuccessFee'];
+        this['signalVolumeFee'] = data['signalVolumeFee'];
+        this['leverageMin'] = data['leverageMin'];
+        this['leverageMax'] = data['leverageMax'];
+        this['ageDays'] = data['ageDays'];
+        this['genesisRatio'] = data['genesisRatio'];
+        this['investmentScale'] = data['investmentScale'];
+        this['volumeScale'] = data['volumeScale'];
+        this['tradesDelay'] = data['tradesDelay'];
+        this['availableInvestmentBase'] = data['availableInvestmentBase'];
+        this['availableInvestmentLimit'] = data['availableInvestmentLimit'];
+        this['totalAvailableInvestment'] = data['totalAvailableInvestment'];
+        this['brokerDetails'] = data['brokerDetails'];
+        this['statistic'] = data['statistic'];
+        this['personalProgramDetails'] = data['personalProgramDetails'];
+        this['tags'] = data['tags'];
+        this['id'] = data['id'];
+        this['logo'] = data['logo'];
+        this['url'] = data['url'];
+        this['color'] = data['color'];
+        this['description'] = data['description'];
+        this['title'] = data['title'];
+        this['ipfsHash'] = data['ipfsHash'];
+        this['creationDate'] = data['creationDate'];
+        this['status'] = data['status'];
+        this['manager'] = data['manager'];
+    }
+    static constructFromObject(data) {
+        return new ProgramDetailsFullOld({
+            'currency': Currency.constructFromObject(data['currency']),
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
+            'periodDuration': ApiClient.convertToType(data['periodDuration'], 'number'),
+            'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
+            'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+            'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
+            'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
+            'successFeeSelected': ApiClient.convertToType(data['successFeeSelected'], 'number'),
+            'successFeeCurrent': ApiClient.convertToType(data['successFeeCurrent'], 'number'),
+            'stopOutLevelSelected': ApiClient.convertToType(data['stopOutLevelSelected'], 'number'),
+            'stopOutLevelCurrent': ApiClient.convertToType(data['stopOutLevelCurrent'], 'number'),
+            'isReinvesting': ApiClient.convertToType(data['isReinvesting'], 'boolean'),
+            'isSignalProgram': ApiClient.convertToType(data['isSignalProgram'], 'boolean'),
+            'signalSuccessFee': ApiClient.convertToType(data['signalSuccessFee'], 'number'),
+            'signalVolumeFee': ApiClient.convertToType(data['signalVolumeFee'], 'number'),
+            'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
+            'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
+            'ageDays': ApiClient.convertToType(data['ageDays'], 'number'),
+            'genesisRatio': ApiClient.convertToType(data['genesisRatio'], 'number'),
+            'investmentScale': ApiClient.convertToType(data['investmentScale'], 'number'),
+            'volumeScale': ApiClient.convertToType(data['volumeScale'], 'number'),
+            'tradesDelay': TradesDelay.constructFromObject(data['tradesDelay']),
+            'availableInvestmentBase': ApiClient.convertToType(data['availableInvestmentBase'], 'number'),
+            'availableInvestmentLimit': ApiClient.convertToType(data['availableInvestmentLimit'], 'number'),
+            'totalAvailableInvestment': ApiClient.convertToType(data['totalAvailableInvestment'], 'number'),
+            'brokerDetails': BrokerDetailsOld.constructFromObject(data['brokerDetails']),
+            'statistic': ProgramStatistic.constructFromObject(data['statistic']),
+            'personalProgramDetails': PersonalProgramDetailsFullOld.constructFromObject(data['personalProgramDetails']),
+            'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'ipfsHash': ApiClient.convertToType(data['ipfsHash'], 'string'),
+            'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+            'status': InvestmentProgramStatus.constructFromObject(data['status']),
+            'manager': ProfilePublic.constructFromObject(data['manager']),
+        });
     }
 }

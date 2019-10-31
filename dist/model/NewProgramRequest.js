@@ -1,60 +1,44 @@
 import { Currency } from './Currency';
 import ApiClient from "../ApiClient";
 export class NewProgramRequest {
-    static constructFromObject(data, obj = new NewProgramRequest()) {
-        if (data) {
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('periodLength')) {
-                obj['periodLength'] = ApiClient.convertToType(data['periodLength'], 'number');
-            }
-            if (data.hasOwnProperty('successFee')) {
-                obj['successFee'] = ApiClient.convertToType(data['successFee'], 'number');
-            }
-            if (data.hasOwnProperty('stopOutLevel')) {
-                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'number');
-            }
-            if (data.hasOwnProperty('leverage')) {
-                obj['leverage'] = ApiClient.convertToType(data['leverage'], 'number');
-            }
-            if (data.hasOwnProperty('brokerAccountTypeId')) {
-                obj['brokerAccountTypeId'] = ApiClient.convertToType(data['brokerAccountTypeId'], 'string');
-            }
-            if (data.hasOwnProperty('signalSuccessFee')) {
-                obj['signalSuccessFee'] = ApiClient.convertToType(data['signalSuccessFee'], 'number');
-            }
-            if (data.hasOwnProperty('signalVolumeFee')) {
-                obj['signalVolumeFee'] = ApiClient.convertToType(data['signalVolumeFee'], 'number');
-            }
-            if (data.hasOwnProperty('isSignalProgram')) {
-                obj['isSignalProgram'] = ApiClient.convertToType(data['isSignalProgram'], 'boolean');
-            }
-            if (data.hasOwnProperty('investmentLimit')) {
-                obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'number');
-            }
-            if (data.hasOwnProperty('tradesDelay')) {
-                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'string');
-            }
-            if (data.hasOwnProperty('entryFee')) {
-                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'number');
-            }
-            if (data.hasOwnProperty('depositAmount')) {
-                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'number');
-            }
-            if (data.hasOwnProperty('depositWalletId')) {
-                obj['depositWalletId'] = ApiClient.convertToType(data['depositWalletId'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['currency'] = data['currency'];
+        this['periodLength'] = data['periodLength'];
+        this['successFee'] = data['successFee'];
+        this['stopOutLevel'] = data['stopOutLevel'];
+        this['leverage'] = data['leverage'];
+        this['brokerAccountTypeId'] = data['brokerAccountTypeId'];
+        this['signalSuccessFee'] = data['signalSuccessFee'];
+        this['signalVolumeFee'] = data['signalVolumeFee'];
+        this['isSignalProgram'] = data['isSignalProgram'];
+        this['investmentLimit'] = data['investmentLimit'];
+        this['tradesDelay'] = data['tradesDelay'];
+        this['entryFee'] = data['entryFee'];
+        this['depositAmount'] = data['depositAmount'];
+        this['depositWalletId'] = data['depositWalletId'];
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['logo'] = data['logo'];
+    }
+    static constructFromObject(data) {
+        return new NewProgramRequest({
+            'currency': Currency.constructFromObject(data['currency']),
+            'periodLength': ApiClient.convertToType(data['periodLength'], 'number'),
+            'successFee': ApiClient.convertToType(data['successFee'], 'number'),
+            'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
+            'leverage': ApiClient.convertToType(data['leverage'], 'number'),
+            'brokerAccountTypeId': ApiClient.convertToType(data['brokerAccountTypeId'], 'string'),
+            'signalSuccessFee': ApiClient.convertToType(data['signalSuccessFee'], 'number'),
+            'signalVolumeFee': ApiClient.convertToType(data['signalVolumeFee'], 'number'),
+            'isSignalProgram': ApiClient.convertToType(data['isSignalProgram'], 'boolean'),
+            'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
+            'tradesDelay': ApiClient.convertToType(data['tradesDelay'], 'string'),
+            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+            'depositAmount': ApiClient.convertToType(data['depositAmount'], 'number'),
+            'depositWalletId': ApiClient.convertToType(data['depositWalletId'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+        });
     }
 }

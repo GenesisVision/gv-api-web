@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class FilterModelOld {
-    static constructFromObject(data, obj = new FilterModelOld()) {
-        if (data) {
-            if (data.hasOwnProperty('key')) {
-                obj['key'] = ApiClient.convertToType(data['key'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['key'] = data['key'];
+        this['title'] = data['title'];
+    }
+    static constructFromObject(data) {
+        return new FilterModelOld({
+            'key': ApiClient.convertToType(data['key'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+        });
     }
 }

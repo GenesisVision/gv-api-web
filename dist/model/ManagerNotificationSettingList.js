@@ -1,27 +1,22 @@
 import { NotificationSettingViewModel } from './NotificationSettingViewModel';
 import ApiClient from "../ApiClient";
 export class ManagerNotificationSettingList {
-    static constructFromObject(data, obj = new ManagerNotificationSettingList()) {
-        if (data) {
-            if (data.hasOwnProperty('managerId')) {
-                obj['managerId'] = ApiClient.convertToType(data['managerId'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('username')) {
-                obj['username'] = ApiClient.convertToType(data['username'], 'string');
-            }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'string');
-            }
-            if (data.hasOwnProperty('about')) {
-                obj['about'] = ApiClient.convertToType(data['about'], 'string');
-            }
-            if (data.hasOwnProperty('settingsGeneral')) {
-                obj['settingsGeneral'] = ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['managerId'] = data['managerId'];
+        this['url'] = data['url'];
+        this['username'] = data['username'];
+        this['avatar'] = data['avatar'];
+        this['about'] = data['about'];
+        this['settingsGeneral'] = data['settingsGeneral'];
+    }
+    static constructFromObject(data) {
+        return new ManagerNotificationSettingList({
+            'managerId': ApiClient.convertToType(data['managerId'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'username': ApiClient.convertToType(data['username'], 'string'),
+            'avatar': ApiClient.convertToType(data['avatar'], 'string'),
+            'about': ApiClient.convertToType(data['about'], 'string'),
+            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+        });
     }
 }

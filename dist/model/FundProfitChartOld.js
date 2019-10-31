@@ -1,42 +1,32 @@
 import { FundEquityChartElementOld } from './FundEquityChartElementOld';
 import ApiClient from "../ApiClient";
 export class FundProfitChartOld {
-    static constructFromObject(data, obj = new FundProfitChartOld()) {
-        if (data) {
-            if (data.hasOwnProperty('creationDate')) {
-                obj['creationDate'] = ApiClient.convertToType(data['creationDate'], 'Date');
-            }
-            if (data.hasOwnProperty('profitPercent')) {
-                obj['profitPercent'] = ApiClient.convertToType(data['profitPercent'], 'number');
-            }
-            if (data.hasOwnProperty('equityChart')) {
-                obj['equityChart'] = ApiClient.convertToType(data['equityChart'], [FundEquityChartElementOld]);
-            }
-            if (data.hasOwnProperty('balance')) {
-                obj['balance'] = ApiClient.convertToType(data['balance'], 'number');
-            }
-            if (data.hasOwnProperty('investors')) {
-                obj['investors'] = ApiClient.convertToType(data['investors'], 'number');
-            }
-            if (data.hasOwnProperty('profitChangePercent')) {
-                obj['profitChangePercent'] = ApiClient.convertToType(data['profitChangePercent'], 'number');
-            }
-            if (data.hasOwnProperty('sharpeRatio')) {
-                obj['sharpeRatio'] = ApiClient.convertToType(data['sharpeRatio'], 'number');
-            }
-            if (data.hasOwnProperty('sortinoRatio')) {
-                obj['sortinoRatio'] = ApiClient.convertToType(data['sortinoRatio'], 'number');
-            }
-            if (data.hasOwnProperty('calmarRatio')) {
-                obj['calmarRatio'] = ApiClient.convertToType(data['calmarRatio'], 'number');
-            }
-            if (data.hasOwnProperty('maxDrawdown')) {
-                obj['maxDrawdown'] = ApiClient.convertToType(data['maxDrawdown'], 'number');
-            }
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['creationDate'] = data['creationDate'];
+        this['profitPercent'] = data['profitPercent'];
+        this['equityChart'] = data['equityChart'];
+        this['balance'] = data['balance'];
+        this['investors'] = data['investors'];
+        this['profitChangePercent'] = data['profitChangePercent'];
+        this['sharpeRatio'] = data['sharpeRatio'];
+        this['sortinoRatio'] = data['sortinoRatio'];
+        this['calmarRatio'] = data['calmarRatio'];
+        this['maxDrawdown'] = data['maxDrawdown'];
+        this['rate'] = data['rate'];
+    }
+    static constructFromObject(data) {
+        return new FundProfitChartOld({
+            'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+            'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
+            'equityChart': ApiClient.convertToType(data['equityChart'], [FundEquityChartElementOld]),
+            'balance': ApiClient.convertToType(data['balance'], 'number'),
+            'investors': ApiClient.convertToType(data['investors'], 'number'),
+            'profitChangePercent': ApiClient.convertToType(data['profitChangePercent'], 'number'),
+            'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
+            'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),
+            'calmarRatio': ApiClient.convertToType(data['calmarRatio'], 'number'),
+            'maxDrawdown': ApiClient.convertToType(data['maxDrawdown'], 'number'),
+            'rate': ApiClient.convertToType(data['rate'], 'number'),
+        });
     }
 }

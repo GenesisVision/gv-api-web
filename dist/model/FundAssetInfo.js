@@ -1,23 +1,19 @@
 import ApiClient from "../ApiClient";
 export class FundAssetInfo {
-    static constructFromObject(data, obj = new FundAssetInfo()) {
-        if (data) {
-            if (data.hasOwnProperty('asset')) {
-                obj['asset'] = ApiClient.convertToType(data['asset'], 'string');
-            }
-            if (data.hasOwnProperty('symbol')) {
-                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'string');
-            }
-            if (data.hasOwnProperty('icon')) {
-                obj['icon'] = ApiClient.convertToType(data['icon'], 'string');
-            }
-            if (data.hasOwnProperty('target')) {
-                obj['target'] = ApiClient.convertToType(data['target'], 'number');
-            }
-            if (data.hasOwnProperty('current')) {
-                obj['current'] = ApiClient.convertToType(data['current'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['asset'] = data['asset'];
+        this['symbol'] = data['symbol'];
+        this['icon'] = data['icon'];
+        this['target'] = data['target'];
+        this['current'] = data['current'];
+    }
+    static constructFromObject(data) {
+        return new FundAssetInfo({
+            'asset': ApiClient.convertToType(data['asset'], 'string'),
+            'symbol': ApiClient.convertToType(data['symbol'], 'string'),
+            'icon': ApiClient.convertToType(data['icon'], 'string'),
+            'target': ApiClient.convertToType(data['target'], 'number'),
+            'current': ApiClient.convertToType(data['current'], 'number'),
+        });
     }
 }

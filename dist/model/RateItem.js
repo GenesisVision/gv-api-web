@@ -1,15 +1,14 @@
 import { Currency } from './Currency';
 import ApiClient from "../ApiClient";
 export class RateItem {
-    static constructFromObject(data, obj = new RateItem()) {
-        if (data) {
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['currency'] = data['currency'];
+        this['rate'] = data['rate'];
+    }
+    static constructFromObject(data) {
+        return new RateItem({
+            'currency': Currency.constructFromObject(data['currency']),
+            'rate': ApiClient.convertToType(data['rate'], 'number'),
+        });
     }
 }

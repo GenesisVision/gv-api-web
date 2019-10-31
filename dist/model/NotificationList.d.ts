@@ -1,8 +1,11 @@
 import { NotificationViewModel } from './NotificationViewModel';
 export declare class NotificationList {
-    'notifications'?: Array<NotificationViewModel>;
-    'total'?: number;
+    'notifications': Array<NotificationViewModel>;
+    'total': number;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: NotificationList): NotificationList;
+    }): NotificationList;
 }

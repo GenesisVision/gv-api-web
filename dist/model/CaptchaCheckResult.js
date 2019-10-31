@@ -2,18 +2,16 @@ import { GeeTestResult } from './GeeTestResult';
 import { PowResult } from './PowResult';
 import ApiClient from "../ApiClient";
 export class CaptchaCheckResult {
-    static constructFromObject(data, obj = new CaptchaCheckResult()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('pow')) {
-                obj['pow'] = PowResult.constructFromObject(data['pow']);
-            }
-            if (data.hasOwnProperty('geeTest')) {
-                obj['geeTest'] = GeeTestResult.constructFromObject(data['geeTest']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['pow'] = data['pow'];
+        this['geeTest'] = data['geeTest'];
+    }
+    static constructFromObject(data) {
+        return new CaptchaCheckResult({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'pow': PowResult.constructFromObject(data['pow']),
+            'geeTest': GeeTestResult.constructFromObject(data['geeTest']),
+        });
     }
 }

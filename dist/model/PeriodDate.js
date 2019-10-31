@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class PeriodDate {
-    static constructFromObject(data, obj = new PeriodDate()) {
-        if (data) {
-            if (data.hasOwnProperty('dateFrom')) {
-                obj['dateFrom'] = ApiClient.convertToType(data['dateFrom'], 'Date');
-            }
-            if (data.hasOwnProperty('dateTo')) {
-                obj['dateTo'] = ApiClient.convertToType(data['dateTo'], 'Date');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['dateFrom'] = data['dateFrom'];
+        this['dateTo'] = data['dateTo'];
+    }
+    static constructFromObject(data) {
+        return new PeriodDate({
+            'dateFrom': ApiClient.convertToType(data['dateFrom'], 'Date'),
+            'dateTo': ApiClient.convertToType(data['dateTo'], 'Date'),
+        });
     }
 }

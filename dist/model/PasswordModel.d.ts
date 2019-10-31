@@ -1,6 +1,9 @@
 export declare class PasswordModel {
-    'password'?: string;
+    'password': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: PasswordModel): PasswordModel;
+    }): PasswordModel;
 }

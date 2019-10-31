@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class ProgramPwdUpdate {
-    static constructFromObject(data, obj = new ProgramPwdUpdate()) {
-        if (data) {
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'string');
-            }
-            if (data.hasOwnProperty('twoFactorCode')) {
-                obj['twoFactorCode'] = ApiClient.convertToType(data['twoFactorCode'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['password'] = data['password'];
+        this['twoFactorCode'] = data['twoFactorCode'];
+    }
+    static constructFromObject(data) {
+        return new ProgramPwdUpdate({
+            'password': ApiClient.convertToType(data['password'], 'string'),
+            'twoFactorCode': ApiClient.convertToType(data['twoFactorCode'], 'string'),
+        });
     }
 }

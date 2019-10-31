@@ -1,7 +1,10 @@
 import { PlatformAsset } from './PlatformAsset';
 export declare class PlatformAssets {
-    'assets'?: Array<PlatformAsset>;
+    'assets': Array<PlatformAsset>;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: PlatformAssets): PlatformAssets;
+    }): PlatformAssets;
 }

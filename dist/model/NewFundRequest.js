@@ -1,33 +1,26 @@
 import { FundAssetPart } from './FundAssetPart';
 import ApiClient from "../ApiClient";
 export class NewFundRequest {
-    static constructFromObject(data, obj = new NewFundRequest()) {
-        if (data) {
-            if (data.hasOwnProperty('exitFee')) {
-                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'number');
-            }
-            if (data.hasOwnProperty('assets')) {
-                obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPart]);
-            }
-            if (data.hasOwnProperty('entryFee')) {
-                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'number');
-            }
-            if (data.hasOwnProperty('depositAmount')) {
-                obj['depositAmount'] = ApiClient.convertToType(data['depositAmount'], 'number');
-            }
-            if (data.hasOwnProperty('depositWalletId')) {
-                obj['depositWalletId'] = ApiClient.convertToType(data['depositWalletId'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['exitFee'] = data['exitFee'];
+        this['assets'] = data['assets'];
+        this['entryFee'] = data['entryFee'];
+        this['depositAmount'] = data['depositAmount'];
+        this['depositWalletId'] = data['depositWalletId'];
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['logo'] = data['logo'];
+    }
+    static constructFromObject(data) {
+        return new NewFundRequest({
+            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+            'assets': ApiClient.convertToType(data['assets'], [FundAssetPart]),
+            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+            'depositAmount': ApiClient.convertToType(data['depositAmount'], 'number'),
+            'depositWalletId': ApiClient.convertToType(data['depositWalletId'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+        });
     }
 }

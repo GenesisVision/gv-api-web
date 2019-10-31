@@ -1,8 +1,11 @@
 export declare class ProgramMinimumDepositOld {
-    'minimumDepositsAmount'?: {
+    'minimumDepositsAmount': {
         [key: string]: number;
     };
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: ProgramMinimumDepositOld): ProgramMinimumDepositOld;
+    }): ProgramMinimumDepositOld;
 }

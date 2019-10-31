@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class ReferralFriend {
-    static constructFromObject(data, obj = new ReferralFriend()) {
-        if (data) {
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-            if (data.hasOwnProperty('emailMask')) {
-                obj['emailMask'] = ApiClient.convertToType(data['emailMask'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['date'] = data['date'];
+        this['emailMask'] = data['emailMask'];
+    }
+    static constructFromObject(data) {
+        return new ReferralFriend({
+            'date': ApiClient.convertToType(data['date'], 'Date'),
+            'emailMask': ApiClient.convertToType(data['emailMask'], 'string'),
+        });
     }
 }

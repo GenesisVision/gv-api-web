@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class ErrorMessage {
-    static constructFromObject(data, obj = new ErrorMessage()) {
-        if (data) {
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'string');
-            }
-            if (data.hasOwnProperty('property')) {
-                obj['property'] = ApiClient.convertToType(data['property'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['message'] = data['message'];
+        this['property'] = data['property'];
+    }
+    static constructFromObject(data) {
+        return new ErrorMessage({
+            'message': ApiClient.convertToType(data['message'], 'string'),
+            'property': ApiClient.convertToType(data['property'], 'string'),
+        });
     }
 }

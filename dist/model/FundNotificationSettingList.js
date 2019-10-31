@@ -1,27 +1,22 @@
 import { NotificationSettingViewModel } from './NotificationSettingViewModel';
 import ApiClient from "../ApiClient";
 export class FundNotificationSettingList {
-    static constructFromObject(data, obj = new FundNotificationSettingList()) {
-        if (data) {
-            if (data.hasOwnProperty('assetId')) {
-                obj['assetId'] = ApiClient.convertToType(data['assetId'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'string');
-            }
-            if (data.hasOwnProperty('settingsGeneral')) {
-                obj['settingsGeneral'] = ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['assetId'] = data['assetId'];
+        this['title'] = data['title'];
+        this['url'] = data['url'];
+        this['logo'] = data['logo'];
+        this['color'] = data['color'];
+        this['settingsGeneral'] = data['settingsGeneral'];
+    }
+    static constructFromObject(data) {
+        return new FundNotificationSettingList({
+            'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'color': ApiClient.convertToType(data['color'], 'string'),
+            'settingsGeneral': ApiClient.convertToType(data['settingsGeneral'], [NotificationSettingViewModel]),
+        });
     }
 }

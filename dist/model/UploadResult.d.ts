@@ -1,6 +1,9 @@
 export declare class UploadResult {
-    'id'?: string;
+    'id': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: UploadResult): UploadResult;
+    }): UploadResult;
 }

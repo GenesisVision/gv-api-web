@@ -1,7 +1,10 @@
 export declare class TwoFactorCodeWithPassword {
-    'twoFactorCode'?: string;
-    'password'?: string;
+    'twoFactorCode': string;
+    'password': string;
+    constructor(data: {
+        [key: string]: any;
+    });
     static constructFromObject(data: {
         [key: string]: any;
-    }, obj?: TwoFactorCodeWithPassword): TwoFactorCodeWithPassword;
+    }): TwoFactorCodeWithPassword;
 }

@@ -2,48 +2,36 @@ import { Currency } from './Currency';
 import { SignalSubscriberStatus } from './SignalSubscriberStatus';
 import ApiClient from "../ApiClient";
 export class SignalSubscriber {
-    static constructFromObject(data, obj = new SignalSubscriber()) {
-        if (data) {
-            if (data.hasOwnProperty('number')) {
-                obj['number'] = ApiClient.convertToType(data['number'], 'number');
-            }
-            if (data.hasOwnProperty('trades')) {
-                obj['trades'] = ApiClient.convertToType(data['trades'], 'number');
-            }
-            if (data.hasOwnProperty('profit')) {
-                obj['profit'] = ApiClient.convertToType(data['profit'], 'number');
-            }
-            if (data.hasOwnProperty('volume')) {
-                obj['volume'] = ApiClient.convertToType(data['volume'], 'number');
-            }
-            if (data.hasOwnProperty('subscriptionDate')) {
-                obj['subscriptionDate'] = ApiClient.convertToType(data['subscriptionDate'], 'Date');
-            }
-            if (data.hasOwnProperty('unsubscriptionDate')) {
-                obj['unsubscriptionDate'] = ApiClient.convertToType(data['unsubscriptionDate'], 'Date');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = SignalSubscriberStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('totalCommissionAmount')) {
-                obj['totalCommissionAmount'] = ApiClient.convertToType(data['totalCommissionAmount'], 'number');
-            }
-            if (data.hasOwnProperty('totalCommissionCurrency')) {
-                obj['totalCommissionCurrency'] = Currency.constructFromObject(data['totalCommissionCurrency']);
-            }
-            if (data.hasOwnProperty('totalSuccessFeeAmount')) {
-                obj['totalSuccessFeeAmount'] = ApiClient.convertToType(data['totalSuccessFeeAmount'], 'number');
-            }
-            if (data.hasOwnProperty('totalSuccessFeeCurrency')) {
-                obj['totalSuccessFeeCurrency'] = Currency.constructFromObject(data['totalSuccessFeeCurrency']);
-            }
-            if (data.hasOwnProperty('totalVolumeFeeAmount')) {
-                obj['totalVolumeFeeAmount'] = ApiClient.convertToType(data['totalVolumeFeeAmount'], 'number');
-            }
-            if (data.hasOwnProperty('totalVolumeFeeCurrency')) {
-                obj['totalVolumeFeeCurrency'] = Currency.constructFromObject(data['totalVolumeFeeCurrency']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['number'] = data['number'];
+        this['trades'] = data['trades'];
+        this['profit'] = data['profit'];
+        this['volume'] = data['volume'];
+        this['subscriptionDate'] = data['subscriptionDate'];
+        this['unsubscriptionDate'] = data['unsubscriptionDate'];
+        this['status'] = data['status'];
+        this['totalCommissionAmount'] = data['totalCommissionAmount'];
+        this['totalCommissionCurrency'] = data['totalCommissionCurrency'];
+        this['totalSuccessFeeAmount'] = data['totalSuccessFeeAmount'];
+        this['totalSuccessFeeCurrency'] = data['totalSuccessFeeCurrency'];
+        this['totalVolumeFeeAmount'] = data['totalVolumeFeeAmount'];
+        this['totalVolumeFeeCurrency'] = data['totalVolumeFeeCurrency'];
+    }
+    static constructFromObject(data) {
+        return new SignalSubscriber({
+            'number': ApiClient.convertToType(data['number'], 'number'),
+            'trades': ApiClient.convertToType(data['trades'], 'number'),
+            'profit': ApiClient.convertToType(data['profit'], 'number'),
+            'volume': ApiClient.convertToType(data['volume'], 'number'),
+            'subscriptionDate': ApiClient.convertToType(data['subscriptionDate'], 'Date'),
+            'unsubscriptionDate': ApiClient.convertToType(data['unsubscriptionDate'], 'Date'),
+            'status': SignalSubscriberStatus.constructFromObject(data['status']),
+            'totalCommissionAmount': ApiClient.convertToType(data['totalCommissionAmount'], 'number'),
+            'totalCommissionCurrency': Currency.constructFromObject(data['totalCommissionCurrency']),
+            'totalSuccessFeeAmount': ApiClient.convertToType(data['totalSuccessFeeAmount'], 'number'),
+            'totalSuccessFeeCurrency': Currency.constructFromObject(data['totalSuccessFeeCurrency']),
+            'totalVolumeFeeAmount': ApiClient.convertToType(data['totalVolumeFeeAmount'], 'number'),
+            'totalVolumeFeeCurrency': Currency.constructFromObject(data['totalVolumeFeeCurrency']),
+        });
     }
 }

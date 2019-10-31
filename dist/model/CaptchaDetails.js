@@ -3,24 +3,20 @@ import { GeeTestDetails } from './GeeTestDetails';
 import { PowDetails } from './PowDetails';
 import ApiClient from "../ApiClient";
 export class CaptchaDetails {
-    static constructFromObject(data, obj = new CaptchaDetails()) {
-        if (data) {
-            if (data.hasOwnProperty('captchaType')) {
-                obj['captchaType'] = CaptchaType.constructFromObject(data['captchaType']);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('route')) {
-                obj['route'] = ApiClient.convertToType(data['route'], 'string');
-            }
-            if (data.hasOwnProperty('pow')) {
-                obj['pow'] = PowDetails.constructFromObject(data['pow']);
-            }
-            if (data.hasOwnProperty('geeTest')) {
-                obj['geeTest'] = GeeTestDetails.constructFromObject(data['geeTest']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['captchaType'] = data['captchaType'];
+        this['id'] = data['id'];
+        this['route'] = data['route'];
+        this['pow'] = data['pow'];
+        this['geeTest'] = data['geeTest'];
+    }
+    static constructFromObject(data) {
+        return new CaptchaDetails({
+            'captchaType': CaptchaType.constructFromObject(data['captchaType']),
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'route': ApiClient.convertToType(data['route'], 'string'),
+            'pow': PowDetails.constructFromObject(data['pow']),
+            'geeTest': GeeTestDetails.constructFromObject(data['geeTest']),
+        });
     }
 }

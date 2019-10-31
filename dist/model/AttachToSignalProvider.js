@@ -1,30 +1,24 @@
 import { SubscriptionMode } from './SubscriptionMode';
 import ApiClient from "../ApiClient";
 export class AttachToSignalProvider {
-    static constructFromObject(data, obj = new AttachToSignalProvider()) {
-        if (data) {
-            if (data.hasOwnProperty('initialDepositCurrency')) {
-                obj['initialDepositCurrency'] = ApiClient.convertToType(data['initialDepositCurrency'], 'string');
-            }
-            if (data.hasOwnProperty('initialDepositAmount')) {
-                obj['initialDepositAmount'] = ApiClient.convertToType(data['initialDepositAmount'], 'number');
-            }
-            if (data.hasOwnProperty('mode')) {
-                obj['mode'] = SubscriptionMode.constructFromObject(data['mode']);
-            }
-            if (data.hasOwnProperty('percent')) {
-                obj['percent'] = ApiClient.convertToType(data['percent'], 'number');
-            }
-            if (data.hasOwnProperty('openTolerancePercent')) {
-                obj['openTolerancePercent'] = ApiClient.convertToType(data['openTolerancePercent'], 'number');
-            }
-            if (data.hasOwnProperty('fixedVolume')) {
-                obj['fixedVolume'] = ApiClient.convertToType(data['fixedVolume'], 'number');
-            }
-            if (data.hasOwnProperty('fixedCurrency')) {
-                obj['fixedCurrency'] = ApiClient.convertToType(data['fixedCurrency'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['initialDepositCurrency'] = data['initialDepositCurrency'];
+        this['initialDepositAmount'] = data['initialDepositAmount'];
+        this['mode'] = data['mode'];
+        this['percent'] = data['percent'];
+        this['openTolerancePercent'] = data['openTolerancePercent'];
+        this['fixedVolume'] = data['fixedVolume'];
+        this['fixedCurrency'] = data['fixedCurrency'];
+    }
+    static constructFromObject(data) {
+        return new AttachToSignalProvider({
+            'initialDepositCurrency': ApiClient.convertToType(data['initialDepositCurrency'], 'string'),
+            'initialDepositAmount': ApiClient.convertToType(data['initialDepositAmount'], 'number'),
+            'mode': SubscriptionMode.constructFromObject(data['mode']),
+            'percent': ApiClient.convertToType(data['percent'], 'number'),
+            'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
+            'fixedVolume': ApiClient.convertToType(data['fixedVolume'], 'number'),
+            'fixedCurrency': ApiClient.convertToType(data['fixedCurrency'], 'string'),
+        });
     }
 }

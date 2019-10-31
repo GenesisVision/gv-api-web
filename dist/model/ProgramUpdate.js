@@ -1,35 +1,27 @@
 import ApiClient from "../ApiClient";
 export class ProgramUpdate {
-    static constructFromObject(data, obj = new ProgramUpdate()) {
-        if (data) {
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('entryFee')) {
-                obj['entryFee'] = ApiClient.convertToType(data['entryFee'], 'number');
-            }
-            if (data.hasOwnProperty('exitFee')) {
-                obj['exitFee'] = ApiClient.convertToType(data['exitFee'], 'number');
-            }
-            if (data.hasOwnProperty('successFee')) {
-                obj['successFee'] = ApiClient.convertToType(data['successFee'], 'number');
-            }
-            if (data.hasOwnProperty('stopOutLevel')) {
-                obj['stopOutLevel'] = ApiClient.convertToType(data['stopOutLevel'], 'number');
-            }
-            if (data.hasOwnProperty('investmentLimit')) {
-                obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'number');
-            }
-            if (data.hasOwnProperty('tradesDelay')) {
-                obj['tradesDelay'] = ApiClient.convertToType(data['tradesDelay'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['logo'] = data['logo'];
+        this['entryFee'] = data['entryFee'];
+        this['exitFee'] = data['exitFee'];
+        this['successFee'] = data['successFee'];
+        this['stopOutLevel'] = data['stopOutLevel'];
+        this['investmentLimit'] = data['investmentLimit'];
+        this['tradesDelay'] = data['tradesDelay'];
+    }
+    static constructFromObject(data) {
+        return new ProgramUpdate({
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'entryFee': ApiClient.convertToType(data['entryFee'], 'number'),
+            'exitFee': ApiClient.convertToType(data['exitFee'], 'number'),
+            'successFee': ApiClient.convertToType(data['successFee'], 'number'),
+            'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
+            'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
+            'tradesDelay': ApiClient.convertToType(data['tradesDelay'], 'string'),
+        });
     }
 }

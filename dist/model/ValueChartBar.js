@@ -2,21 +2,18 @@ import { AssetsValue } from './AssetsValue';
 import { OtherAssetsValue } from './OtherAssetsValue';
 import ApiClient from "../ApiClient";
 export class ValueChartBar {
-    static constructFromObject(data, obj = new ValueChartBar()) {
-        if (data) {
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'number');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-            if (data.hasOwnProperty('topAssets')) {
-                obj['topAssets'] = ApiClient.convertToType(data['topAssets'], [AssetsValue]);
-            }
-            if (data.hasOwnProperty('otherAssetsValue')) {
-                obj['otherAssetsValue'] = OtherAssetsValue.constructFromObject(data['otherAssetsValue']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['value'] = data['value'];
+        this['date'] = data['date'];
+        this['topAssets'] = data['topAssets'];
+        this['otherAssetsValue'] = data['otherAssetsValue'];
+    }
+    static constructFromObject(data) {
+        return new ValueChartBar({
+            'value': ApiClient.convertToType(data['value'], 'number'),
+            'date': ApiClient.convertToType(data['date'], 'Date'),
+            'topAssets': ApiClient.convertToType(data['topAssets'], [AssetsValue]),
+            'otherAssetsValue': OtherAssetsValue.constructFromObject(data['otherAssetsValue']),
+        });
     }
 }

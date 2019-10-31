@@ -1,27 +1,22 @@
 import { Currency } from './Currency';
 import ApiClient from "../ApiClient";
 export class WalletBaseData {
-    static constructFromObject(data, obj = new WalletBaseData()) {
-        if (data) {
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('available')) {
-                obj['available'] = ApiClient.convertToType(data['available'], 'number');
-            }
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['id'] = data['id'];
+        this['title'] = data['title'];
+        this['logo'] = data['logo'];
+        this['currency'] = data['currency'];
+        this['available'] = data['available'];
+        this['rate'] = data['rate'];
+    }
+    static constructFromObject(data) {
+        return new WalletBaseData({
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'currency': Currency.constructFromObject(data['currency']),
+            'available': ApiClient.convertToType(data['available'], 'number'),
+            'rate': ApiClient.convertToType(data['rate'], 'number'),
+        });
     }
 }

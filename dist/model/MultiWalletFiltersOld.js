@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class MultiWalletFiltersOld {
-    static constructFromObject(data, obj = new MultiWalletFiltersOld()) {
-        if (data) {
-            if (data.hasOwnProperty('transactionType')) {
-                obj['transactionType'] = ApiClient.convertToType(data['transactionType'], ['string']);
-            }
-            if (data.hasOwnProperty('externalTransactionType')) {
-                obj['externalTransactionType'] = ApiClient.convertToType(data['externalTransactionType'], ['string']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['transactionType'] = data['transactionType'];
+        this['externalTransactionType'] = data['externalTransactionType'];
+    }
+    static constructFromObject(data) {
+        return new MultiWalletFiltersOld({
+            'transactionType': ApiClient.convertToType(data['transactionType'], ['string']),
+            'externalTransactionType': ApiClient.convertToType(data['externalTransactionType'], ['string']),
+        });
     }
 }

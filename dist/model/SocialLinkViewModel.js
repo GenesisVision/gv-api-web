@@ -1,24 +1,20 @@
 import { SocialLinkType } from './SocialLinkType';
 import ApiClient from "../ApiClient";
 export class SocialLinkViewModel {
-    static constructFromObject(data, obj = new SocialLinkViewModel()) {
-        if (data) {
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'string');
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'string');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = SocialLinkType.constructFromObject(data['type']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['url'] = data['url'];
+        this['logo'] = data['logo'];
+        this['name'] = data['name'];
+        this['value'] = data['value'];
+        this['type'] = data['type'];
+    }
+    static constructFromObject(data) {
+        return new SocialLinkViewModel({
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'name': ApiClient.convertToType(data['name'], 'string'),
+            'value': ApiClient.convertToType(data['value'], 'string'),
+            'type': SocialLinkType.constructFromObject(data['type']),
+        });
     }
 }

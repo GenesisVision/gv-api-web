@@ -7,48 +7,36 @@ import { SignalFee } from './SignalFee';
 import { TransactionDetailsType } from './TransactionDetailsType';
 import ApiClient from "../ApiClient";
 export class TransactionDetails {
-    static constructFromObject(data, obj = new TransactionDetails()) {
-        if (data) {
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = TransactionDetailsType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('programDetails')) {
-                obj['programDetails'] = ProgramTransactionDetails.constructFromObject(data['programDetails']);
-            }
-            if (data.hasOwnProperty('convertingDetails')) {
-                obj['convertingDetails'] = ConvertingDetails.constructFromObject(data['convertingDetails']);
-            }
-            if (data.hasOwnProperty('externalTransactionDetails')) {
-                obj['externalTransactionDetails'] = ExternalTransactionDetails.constructFromObject(data['externalTransactionDetails']);
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = MultiWalletTransactionStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('signalFees')) {
-                obj['signalFees'] = ApiClient.convertToType(data['signalFees'], [SignalFee]);
-            }
-            if (data.hasOwnProperty('currency')) {
-                obj['currency'] = Currency.constructFromObject(data['currency']);
-            }
-            if (data.hasOwnProperty('currencyName')) {
-                obj['currencyName'] = ApiClient.convertToType(data['currencyName'], 'string');
-            }
-            if (data.hasOwnProperty('currencyLogo')) {
-                obj['currencyLogo'] = ApiClient.convertToType(data['currencyLogo'], 'string');
-            }
-            if (data.hasOwnProperty('gvCommission')) {
-                obj['gvCommission'] = ApiClient.convertToType(data['gvCommission'], 'number');
-            }
-            if (data.hasOwnProperty('gvCommissionCurrency')) {
-                obj['gvCommissionCurrency'] = ApiClient.convertToType(data['gvCommissionCurrency'], 'string');
-            }
-            if (data.hasOwnProperty('gvCommissionPercent')) {
-                obj['gvCommissionPercent'] = ApiClient.convertToType(data['gvCommissionPercent'], 'number');
-            }
-            if (data.hasOwnProperty('amount')) {
-                obj['amount'] = ApiClient.convertToType(data['amount'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['type'] = data['type'];
+        this['programDetails'] = data['programDetails'];
+        this['convertingDetails'] = data['convertingDetails'];
+        this['externalTransactionDetails'] = data['externalTransactionDetails'];
+        this['status'] = data['status'];
+        this['signalFees'] = data['signalFees'];
+        this['currency'] = data['currency'];
+        this['currencyName'] = data['currencyName'];
+        this['currencyLogo'] = data['currencyLogo'];
+        this['gvCommission'] = data['gvCommission'];
+        this['gvCommissionCurrency'] = data['gvCommissionCurrency'];
+        this['gvCommissionPercent'] = data['gvCommissionPercent'];
+        this['amount'] = data['amount'];
+    }
+    static constructFromObject(data) {
+        return new TransactionDetails({
+            'type': TransactionDetailsType.constructFromObject(data['type']),
+            'programDetails': ProgramTransactionDetails.constructFromObject(data['programDetails']),
+            'convertingDetails': ConvertingDetails.constructFromObject(data['convertingDetails']),
+            'externalTransactionDetails': ExternalTransactionDetails.constructFromObject(data['externalTransactionDetails']),
+            'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
+            'signalFees': ApiClient.convertToType(data['signalFees'], [SignalFee]),
+            'currency': Currency.constructFromObject(data['currency']),
+            'currencyName': ApiClient.convertToType(data['currencyName'], 'string'),
+            'currencyLogo': ApiClient.convertToType(data['currencyLogo'], 'string'),
+            'gvCommission': ApiClient.convertToType(data['gvCommission'], 'number'),
+            'gvCommissionCurrency': ApiClient.convertToType(data['gvCommissionCurrency'], 'string'),
+            'gvCommissionPercent': ApiClient.convertToType(data['gvCommissionPercent'], 'number'),
+            'amount': ApiClient.convertToType(data['amount'], 'number'),
+        });
     }
 }

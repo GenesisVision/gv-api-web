@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class LevelInfo {
-    static constructFromObject(data, obj = new LevelInfo()) {
-        if (data) {
-            if (data.hasOwnProperty('level')) {
-                obj['level'] = ApiClient.convertToType(data['level'], 'number');
-            }
-            if (data.hasOwnProperty('investmentLimit')) {
-                obj['investmentLimit'] = ApiClient.convertToType(data['investmentLimit'], 'number');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['level'] = data['level'];
+        this['investmentLimit'] = data['investmentLimit'];
+    }
+    static constructFromObject(data) {
+        return new LevelInfo({
+            'level': ApiClient.convertToType(data['level'], 'number'),
+            'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),
+        });
     }
 }

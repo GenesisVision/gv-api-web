@@ -3,33 +3,26 @@ import { ProgramsFilterSorting } from './ProgramsFilterSorting';
 import { Timeframe } from './Timeframe';
 import ApiClient from "../ApiClient";
 export class ProgramFacet {
-    static constructFromObject(data, obj = new ProgramFacet()) {
-        if (data) {
-            if (data.hasOwnProperty('sorting')) {
-                obj['sorting'] = ProgramsFilterSorting.constructFromObject(data['sorting']);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'string');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'string');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'string');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'string');
-            }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'string');
-            }
-            if (data.hasOwnProperty('sortType')) {
-                obj['sortType'] = FacetSortType.constructFromObject(data['sortType']);
-            }
-            if (data.hasOwnProperty('timeframe')) {
-                obj['timeframe'] = Timeframe.constructFromObject(data['timeframe']);
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['sorting'] = data['sorting'];
+        this['id'] = data['id'];
+        this['title'] = data['title'];
+        this['description'] = data['description'];
+        this['logo'] = data['logo'];
+        this['url'] = data['url'];
+        this['sortType'] = data['sortType'];
+        this['timeframe'] = data['timeframe'];
+    }
+    static constructFromObject(data) {
+        return new ProgramFacet({
+            'sorting': ProgramsFilterSorting.constructFromObject(data['sorting']),
+            'id': ApiClient.convertToType(data['id'], 'string'),
+            'title': ApiClient.convertToType(data['title'], 'string'),
+            'description': ApiClient.convertToType(data['description'], 'string'),
+            'logo': ApiClient.convertToType(data['logo'], 'string'),
+            'url': ApiClient.convertToType(data['url'], 'string'),
+            'sortType': FacetSortType.constructFromObject(data['sortType']),
+            'timeframe': Timeframe.constructFromObject(data['timeframe']),
+        });
     }
 }

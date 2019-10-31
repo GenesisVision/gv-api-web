@@ -1,14 +1,13 @@
 import ApiClient from "../ApiClient";
 export class SignalTradingEvent {
-    static constructFromObject(data, obj = new SignalTradingEvent()) {
-        if (data) {
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'string');
-            }
-        }
-        return obj;
+    constructor(data) {
+        this['date'] = data['date'];
+        this['message'] = data['message'];
+    }
+    static constructFromObject(data) {
+        return new SignalTradingEvent({
+            'date': ApiClient.convertToType(data['date'], 'Date'),
+            'message': ApiClient.convertToType(data['message'], 'string'),
+        });
     }
 }
