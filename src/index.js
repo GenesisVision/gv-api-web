@@ -21,6 +21,8 @@ import AssetFilterType from './model/AssetFilterType';
 import AssetInvestmentStatus from './model/AssetInvestmentStatus';
 import AssetType from './model/AssetType';
 import AssetsValue from './model/AssetsValue';
+import AttachToSignalProvider from './model/AttachToSignalProvider';
+import AttachToSignalProviderSettings from './model/AttachToSignalProviderSettings';
 import BalanceChartElementOld from './model/BalanceChartElementOld';
 import BrokerAccountTypeOld from './model/BrokerAccountTypeOld';
 import BrokerDetailsOld from './model/BrokerDetailsOld';
@@ -36,11 +38,14 @@ import ChangePasswordViewModel from './model/ChangePasswordViewModel';
 import ChangeState from './model/ChangeState';
 import ChartSimple from './model/ChartSimple';
 import ConvertingDetails from './model/ConvertingDetails';
+import CopyTradingAccountInfo from './model/CopyTradingAccountInfo';
+import CopyTradingAccountsList from './model/CopyTradingAccountsList';
 import CreateWithdrawalRequestModel from './model/CreateWithdrawalRequestModel';
 import Currency from './model/Currency';
 import DashboardChartValue from './model/DashboardChartValue';
 import DashboardProgramDetailsOld from './model/DashboardProgramDetailsOld';
 import DashboardSummary from './model/DashboardSummary';
+import DetachFromSignalProvider from './model/DetachFromSignalProvider';
 import EnumsOld from './model/EnumsOld';
 import ErrorCodes from './model/ErrorCodes';
 import ErrorMessage from './model/ErrorMessage';
@@ -191,6 +196,7 @@ import RewardDetails from './model/RewardDetails';
 import SearchViewModelOld from './model/SearchViewModelOld';
 import SecureAlgorithm from './model/SecureAlgorithm';
 import SignalDataMaster from './model/SignalDataMaster';
+import SignalDetachMode from './model/SignalDetachMode';
 import SignalDetails from './model/SignalDetails';
 import SignalFee from './model/SignalFee';
 import SignalProviderSubscribers from './model/SignalProviderSubscribers';
@@ -314,6 +320,18 @@ export {
     AssetsValue,
 
     /**
+     * @name index#AttachToSignalProvider
+     * @type {AttachToSignalProvider}
+     */
+    AttachToSignalProvider,
+
+    /**
+     * @name index#AttachToSignalProviderSettings
+     * @type {AttachToSignalProviderSettings}
+     */
+    AttachToSignalProviderSettings,
+
+    /**
      * @name index#BalanceChartElementOld
      * @type {BalanceChartElementOld}
      */
@@ -404,6 +422,18 @@ export {
     ConvertingDetails,
 
     /**
+     * @name index#CopyTradingAccountInfo
+     * @type {CopyTradingAccountInfo}
+     */
+    CopyTradingAccountInfo,
+
+    /**
+     * @name index#CopyTradingAccountsList
+     * @type {CopyTradingAccountsList}
+     */
+    CopyTradingAccountsList,
+
+    /**
      * @name index#CreateWithdrawalRequestModel
      * @type {CreateWithdrawalRequestModel}
      */
@@ -432,6 +462,12 @@ export {
      * @type {DashboardSummary}
      */
     DashboardSummary,
+
+    /**
+     * @name index#DetachFromSignalProvider
+     * @type {DetachFromSignalProvider}
+     */
+    DetachFromSignalProvider,
 
     /**
      * @name index#EnumsOld
@@ -1332,6 +1368,12 @@ export {
      * @type {SignalDataMaster}
      */
     SignalDataMaster,
+
+    /**
+     * @name index#SignalDetachMode
+     * @type {SignalDetachMode}
+     */
+    SignalDetachMode,
 
     /**
      * @name index#SignalDetails

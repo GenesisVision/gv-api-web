@@ -21,45 +21,40 @@ import SubscriptionMode from './SubscriptionMode';
 
 /**
  *
- * @interface AttachToSignalProvider
+ * @interface AttachToSignalProviderSettings
  */
 
 /**
  *
- * @name AttachToSignalProvider#tradingAccountId
- * @type {String}
- */
-/**
- *
- * @name AttachToSignalProvider#mode
+ * @name AttachToSignalProviderSettings#mode
  * @type {SubscriptionMode}
  */
 /**
  *
- * @name AttachToSignalProvider#percent
+ * @name AttachToSignalProviderSettings#percent
  * @type {Number}
  */
 /**
  *
- * @name AttachToSignalProvider#openTolerancePercent
+ * @name AttachToSignalProviderSettings#openTolerancePercent
  * @type {Number}
  */
 /**
  *
- * @name AttachToSignalProvider#fixedVolume
+ * @name AttachToSignalProviderSettings#fixedVolume
  * @type {Number}
  */
 /**
  *
- * @name AttachToSignalProvider#fixedCurrency
- * @type AttachToSignalProviderFixedCurrencyEnum
+ * @name AttachToSignalProviderSettings#fixedCurrency
+ * @type AttachToSignalProviderSettingsFixedCurrencyEnum
  */
 
 
 
 
 
-export default class AttachToSignalProvider {
+export default class AttachToSignalProviderSettings {
 
     constructor() {
         
@@ -74,15 +69,12 @@ export default class AttachToSignalProvider {
 
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AttachToSignalProvider();
+            obj = obj || new AttachToSignalProviderSettings();
 
             
             
             
 
-            if (data.hasOwnProperty('tradingAccountId')) {
-                obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');
-            }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = SubscriptionMode.constructFromObject(data['mode']);
             }
@@ -102,7 +94,6 @@ export default class AttachToSignalProvider {
         return obj;
     }
 
-    tradingAccountId = undefined;
     mode = undefined;
     percent = undefined;
     openTolerancePercent = undefined;
@@ -151,7 +142,7 @@ export default class AttachToSignalProvider {
 
 
 /**
- * @typedef AttachToSignalProviderFixedCurrencyEnum 
+ * @typedef AttachToSignalProviderSettingsFixedCurrencyEnum 
  * @type {("Undefined"|"GVT"|"ETH"|"BTC"|"ADA"|"USDT"|"XRP"|"BCH"|"LTC"|"DOGE"|"BNB"|"USD"|"EUR")}
  */
 

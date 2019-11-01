@@ -236,9 +236,15 @@ Class | Method | HTTP request | Description
 *CoreApiV10.RateApi* | [**getRateExchange**](docs/RateApi.md#getRateExchange) | **GET** /v1.0/rate/{exchange}/{from}/{to} | Get rate by exchange
 *CoreApiV10.RateApi* | [**getRates**](docs/RateApi.md#getRates) | **GET** /v1.0/rate | Get rates
 *CoreApiV10.SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /v1.0/search | Program / fund / manager search
+*CoreApiV10.SignalApi* | [**attachSlaveToMaster**](docs/SignalApi.md#attachSlaveToMaster) | **POST** /v1.0/signal/attach/{id} | Subscribe to programs signals
+*CoreApiV10.SignalApi* | [**closeTrade**](docs/SignalApi.md#closeTrade) | **POST** /v1.0/signal/trades/{id}/close | Close signal trade
+*CoreApiV10.SignalApi* | [**detachSlaveFromMaster**](docs/SignalApi.md#detachSlaveFromMaster) | **POST** /v1.0/signal/detach/{id} | Unsubscribe from program signals
+*CoreApiV10.SignalApi* | [**getCopytradingAccounts**](docs/SignalApi.md#getCopytradingAccounts) | **GET** /v1.0/signal/accounts | Get copytrading slaves accounts
 *CoreApiV10.SignalApi* | [**getOpenSignalTrades**](docs/SignalApi.md#getOpenSignalTrades) | **GET** /v1.0/signal/trades/open | Get investors signals open trades
 *CoreApiV10.SignalApi* | [**getSignalTrades**](docs/SignalApi.md#getSignalTrades) | **GET** /v1.0/signal/trades | Get investors signals trades history
 *CoreApiV10.SignalApi* | [**getSignalTradingLog**](docs/SignalApi.md#getSignalTradingLog) | **GET** /v1.0/signal/trades/log | Get investors signals trading log
+*CoreApiV10.SignalApi* | [**getSlaveAttachInfo**](docs/SignalApi.md#getSlaveAttachInfo) | **GET** /v1.0/signal/attach/{id}/info | Get subscribe to programs signals info
+*CoreApiV10.SignalApi* | [**updateSubscriptionSettings**](docs/SignalApi.md#updateSubscriptionSettings) | **POST** /v1.0/signal/{id}/update | Update signal subscription settings
 *CoreApiV10.WalletApi* | [**cancelWithdrawalRequest**](docs/WalletApi.md#cancelWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/cancel/{txId} | 
 *CoreApiV10.WalletApi* | [**confirmWithdrawalRequestByCode**](docs/WalletApi.md#confirmWithdrawalRequestByCode) | **POST** /v1.0/wallet/withdraw/request/confirm | 
 *CoreApiV10.WalletApi* | [**createWithdrawalRequest**](docs/WalletApi.md#createWithdrawalRequest) | **POST** /v1.0/wallet/withdraw/request/new | 
@@ -266,6 +272,8 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.AssetInvestmentStatus](docs/AssetInvestmentStatus.md)
  - [CoreApiV10.AssetType](docs/AssetType.md)
  - [CoreApiV10.AssetsValue](docs/AssetsValue.md)
+ - [CoreApiV10.AttachToSignalProvider](docs/AttachToSignalProvider.md)
+ - [CoreApiV10.AttachToSignalProviderSettings](docs/AttachToSignalProviderSettings.md)
  - [CoreApiV10.BalanceChartElementOld](docs/BalanceChartElementOld.md)
  - [CoreApiV10.BrokerAccountTypeOld](docs/BrokerAccountTypeOld.md)
  - [CoreApiV10.BrokerDetailsOld](docs/BrokerDetailsOld.md)
@@ -281,11 +289,14 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.ChangeState](docs/ChangeState.md)
  - [CoreApiV10.ChartSimple](docs/ChartSimple.md)
  - [CoreApiV10.ConvertingDetails](docs/ConvertingDetails.md)
+ - [CoreApiV10.CopyTradingAccountInfo](docs/CopyTradingAccountInfo.md)
+ - [CoreApiV10.CopyTradingAccountsList](docs/CopyTradingAccountsList.md)
  - [CoreApiV10.CreateWithdrawalRequestModel](docs/CreateWithdrawalRequestModel.md)
  - [CoreApiV10.Currency](docs/Currency.md)
  - [CoreApiV10.DashboardChartValue](docs/DashboardChartValue.md)
  - [CoreApiV10.DashboardProgramDetailsOld](docs/DashboardProgramDetailsOld.md)
  - [CoreApiV10.DashboardSummary](docs/DashboardSummary.md)
+ - [CoreApiV10.DetachFromSignalProvider](docs/DetachFromSignalProvider.md)
  - [CoreApiV10.EnumsOld](docs/EnumsOld.md)
  - [CoreApiV10.ErrorCodes](docs/ErrorCodes.md)
  - [CoreApiV10.ErrorMessage](docs/ErrorMessage.md)
@@ -436,6 +447,7 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.SearchViewModelOld](docs/SearchViewModelOld.md)
  - [CoreApiV10.SecureAlgorithm](docs/SecureAlgorithm.md)
  - [CoreApiV10.SignalDataMaster](docs/SignalDataMaster.md)
+ - [CoreApiV10.SignalDetachMode](docs/SignalDetachMode.md)
  - [CoreApiV10.SignalDetails](docs/SignalDetails.md)
  - [CoreApiV10.SignalFee](docs/SignalFee.md)
  - [CoreApiV10.SignalProviderSubscribers](docs/SignalProviderSubscribers.md)

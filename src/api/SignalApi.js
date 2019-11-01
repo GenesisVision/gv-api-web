@@ -13,6 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import AttachToSignalProvider from '../model/AttachToSignalProvider';
+import AttachToSignalProviderSettings from '../model/AttachToSignalProviderSettings';
+import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
+import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
 import SignalTradingEvents from '../model/SignalTradingEvents';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
@@ -34,6 +38,213 @@ export default class SignalApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+      attachSlaveToMasterWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling attachSlaveToMaster");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling attachSlaveToMaster");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/attach/{id}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Subscribe to programs signals
+     * @function SignalApi#attachSlaveToMaster
+     * @param {String} id Program Id
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {AttachToSignalProviderSettings} [opts.model] Subscription settings
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      attachSlaveToMaster(id, authorization, opts) {
+      return this.attachSlaveToMasterWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      closeTradeWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling closeTrade");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling closeTrade");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'programId': opts['programId']
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/trades/{id}/close', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Close signal trade
+     * @function SignalApi#closeTrade
+     * @param {String} id Trade id
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {String} [opts.programId] Provider program id
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      closeTrade(id, authorization, opts) {
+      return this.closeTradeWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      detachSlaveFromMasterWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling detachSlaveFromMaster");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling detachSlaveFromMaster");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/detach/{id}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Unsubscribe from program signals
+     * @function SignalApi#detachSlaveFromMaster
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {DetachFromSignalProvider} [opts.model] 
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      detachSlaveFromMaster(id, authorization, opts) {
+      return this.detachSlaveFromMasterWithHttpInfo(id, authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getCopytradingAccountsWithHttpInfo(authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getCopytradingAccounts");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = CopyTradingAccountsList;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/accounts', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get copytrading slaves accounts
+     * @function SignalApi#getCopytradingAccounts
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<CopyTradingAccountsList>} a Promise, with an object containing data of type CopyTradingAccountsList and HTTP response
+     */
+      getCopytradingAccounts(authorization) {
+      return this.getCopytradingAccountsWithHttpInfo(authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
       getOpenSignalTradesWithHttpInfo(authorization, opts) {
       opts = opts || {};
@@ -204,6 +415,111 @@ export default class SignalApi {
      */
       getSignalTradingLog(authorization, opts) {
       return this.getSignalTradingLogWithHttpInfo(authorization, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      getSlaveAttachInfoWithHttpInfo(id, authorization) {
+      let postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getSlaveAttachInfo");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling getSlaveAttachInfo");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/attach/{id}/info', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get subscribe to programs signals info
+     * @function SignalApi#getSlaveAttachInfo
+     * @param {String} id 
+     * @param {String} authorization JWT access token
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      getSlaveAttachInfo(id, authorization) {
+      return this.getSlaveAttachInfoWithHttpInfo(id, authorization)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+      updateSubscriptionSettingsWithHttpInfo(id, authorization, opts) {
+      opts = opts || {};
+      let postBody = opts['model'];
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling updateSubscriptionSettings");
+      }
+
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling updateSubscriptionSettings");
+      }
+
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': authorization
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/v1.0/signal/{id}/update', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Update signal subscription settings
+     * @function SignalApi#updateSubscriptionSettings
+     * @param {String} id Program id
+     * @param {String} authorization JWT access token
+     * @param {Object} [opts] Optional parameters
+     * @param {AttachToSignalProvider} [opts.model] Subscription settings
+     * @return {CancelablePromise<any>} a Promise, with an object containing HTTP response
+     */
+      updateSubscriptionSettings(id, authorization, opts) {
+      return this.updateSubscriptionSettingsWithHttpInfo(id, authorization, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

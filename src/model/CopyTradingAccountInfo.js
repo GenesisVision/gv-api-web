@@ -14,7 +14,6 @@
 
 import ApiClient from '../ApiClient';
 import Currency from './Currency';
-import PersonalCopyTradingAccountInfo from './PersonalCopyTradingAccountInfo';
 
 
 
@@ -70,11 +69,6 @@ import PersonalCopyTradingAccountInfo from './PersonalCopyTradingAccountInfo';
  * @name CopyTradingAccountInfo#available
  * @type {Number}
  */
-/**
- *
- * @name CopyTradingAccountInfo#personalInfo
- * @type {PersonalCopyTradingAccountInfo}
- */
 
 
 
@@ -128,9 +122,6 @@ export default class CopyTradingAccountInfo {
             if (data.hasOwnProperty('available')) {
                 obj['available'] = ApiClient.convertToType(data['available'], 'Number');
             }
-            if (data.hasOwnProperty('personalInfo')) {
-                obj['personalInfo'] = PersonalCopyTradingAccountInfo.constructFromObject(data['personalInfo']);
-            }
         }
         return obj;
     }
@@ -144,7 +135,6 @@ export default class CopyTradingAccountInfo {
     freeMargin = undefined;
     marginLevel = undefined;
     available = undefined;
-    personalInfo = undefined;
 
 
 

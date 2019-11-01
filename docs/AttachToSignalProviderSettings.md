@@ -1,9 +1,8 @@
-# CoreApiV10.AttachToSignalProvider
+# CoreApiV10.AttachToSignalProviderSettings
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tradingAccountId** | **String** |  | [optional] 
 **mode** | [**SubscriptionMode**](SubscriptionMode.md) |  | [optional] 
 **percent** | **Number** |  | [optional] 
 **openTolerancePercent** | **Number** |  | [optional] 

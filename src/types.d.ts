@@ -580,6 +580,16 @@ export declare class SearchApi {
 
 export declare class SignalApi {
     constructor(apiClient: ApiClient): SignalApi;
+    attachSlaveToMaster(id: string, authorization: string, opts?: {
+        model?: AttachToSignalProviderSettings;
+    }): CancelablePromise<any>;
+    closeTrade(id: string, authorization: string, opts?: {
+        programId?: string;
+    }): CancelablePromise<any>;
+    detachSlaveFromMaster(id: string, authorization: string, opts?: {
+        model?: DetachFromSignalProvider;
+    }): CancelablePromise<any>;
+    getCopytradingAccounts(authorization: string): CancelablePromise<CopyTradingAccountsList>;
     getOpenSignalTrades(authorization: string, opts?: {
         sorting?: string;
         symbol?: string;
@@ -604,6 +614,10 @@ export declare class SignalApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<SignalTradingEvents>;
+    getSlaveAttachInfo(id: string, authorization: string): CancelablePromise<any>;
+    updateSubscriptionSettings(id: string, authorization: string, opts?: {
+        model?: AttachToSignalProvider;
+    }): CancelablePromise<any>;
 }
 
 export declare class WalletApi {
@@ -656,6 +670,8 @@ export declare interface index {
     AssetInvestmentStatus: AssetInvestmentStatus;
     AssetType: AssetType;
     AssetsValue: AssetsValue;
+    AttachToSignalProvider: AttachToSignalProvider;
+    AttachToSignalProviderSettings: AttachToSignalProviderSettings;
     BalanceChartElementOld: BalanceChartElementOld;
     BrokerAccountTypeOld: BrokerAccountTypeOld;
     BrokerDetailsOld: BrokerDetailsOld;
@@ -671,11 +687,14 @@ export declare interface index {
     ChangeState: ChangeState;
     ChartSimple: ChartSimple;
     ConvertingDetails: ConvertingDetails;
+    CopyTradingAccountInfo: CopyTradingAccountInfo;
+    CopyTradingAccountsList: CopyTradingAccountsList;
     CreateWithdrawalRequestModel: CreateWithdrawalRequestModel;
     Currency: Currency;
     DashboardChartValue: DashboardChartValue;
     DashboardProgramDetailsOld: DashboardProgramDetailsOld;
     DashboardSummary: DashboardSummary;
+    DetachFromSignalProvider: DetachFromSignalProvider;
     EnumsOld: EnumsOld;
     ErrorCodes: ErrorCodes;
     ErrorMessage: ErrorMessage;
@@ -826,6 +845,7 @@ export declare interface index {
     SearchViewModelOld: SearchViewModelOld;
     SecureAlgorithm: SecureAlgorithm;
     SignalDataMaster: SignalDataMaster;
+    SignalDetachMode: SignalDetachMode;
     SignalDetails: SignalDetails;
     SignalFee: SignalFee;
     SignalProviderSubscribers: SignalProviderSubscribers;
@@ -965,13 +985,10 @@ export declare interface AttachToExternalSignalProviderExt {
     fixedCurrency: AttachToExternalSignalProviderExtFixedCurrencyEnum;
 }
 
-export declare type AttachToSignalProviderInitialDepositCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
-
 export declare type AttachToSignalProviderFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
 
 export declare interface AttachToSignalProvider {
-    initialDepositCurrency: AttachToSignalProviderInitialDepositCurrencyEnum;
-    initialDepositAmount: number;
+    tradingAccountId: string;
     mode: SubscriptionMode;
     percent: number;
     openTolerancePercent: number;
@@ -985,6 +1002,16 @@ export declare interface AttachToSignalProviderInfo {
     volumeFee: number;
     minDeposit: number;
     minDepositCurrency: Currency;
+}
+
+export declare type AttachToSignalProviderSettingsFixedCurrencyEnum = "Undefined" | "GVT" | "ETH" | "BTC" | "ADA" | "USDT" | "XRP" | "BCH" | "LTC" | "DOGE" | "BNB" | "USD" | "EUR";
+
+export declare interface AttachToSignalProviderSettings {
+    mode: SubscriptionMode;
+    percent: number;
+    openTolerancePercent: number;
+    fixedVolume: number;
+    fixedCurrency: AttachToSignalProviderSettingsFixedCurrencyEnum;
 }
 
 export declare interface BalanceChartElement {
@@ -1183,7 +1210,6 @@ export declare interface CopyTradingAccountInfo {
     freeMargin: number;
     marginLevel: number;
     available: number;
-    personalInfo: PersonalCopyTradingAccountInfo;
 }
 
 export declare interface CopyTradingAccountsList {
@@ -1267,6 +1293,7 @@ export declare interface DashboardSummary {
 }
 
 export declare interface DetachFromSignalProvider {
+    tradingAccountId: string;
     mode: SignalDetachMode;
 }
 

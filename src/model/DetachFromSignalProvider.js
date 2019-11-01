@@ -26,6 +26,11 @@ import SignalDetachMode from './SignalDetachMode';
 
 /**
  *
+ * @name DetachFromSignalProvider#tradingAccountId
+ * @type {String}
+ */
+/**
+ *
  * @name DetachFromSignalProvider#mode
  * @type {SignalDetachMode}
  */
@@ -55,6 +60,9 @@ export default class DetachFromSignalProvider {
             
             
 
+            if (data.hasOwnProperty('tradingAccountId')) {
+                obj['tradingAccountId'] = ApiClient.convertToType(data['tradingAccountId'], 'String');
+            }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = SignalDetachMode.constructFromObject(data['mode']);
             }
@@ -62,6 +70,7 @@ export default class DetachFromSignalProvider {
         return obj;
     }
 
+    tradingAccountId = undefined;
     mode = undefined;
 
 
