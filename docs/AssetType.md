@@ -9,10 +9,6 @@
 
 * `Funds` (value: `"Funds"`)
 
-* `Signals` (value: `"Signals"`)
-
-* `TradingAccounts` (value: `"TradingAccounts"`)
-
-* `External` (value: `"External"`)
+* `CopyTrading` (value: `"CopyTrading"`)
 
 

@@ -54,24 +54,10 @@ export default class AssetType {
 
     
         /**
-         * value: "Signals"
+         * value: "CopyTrading"
          * @const
          */
-        Signals = "Signals";
-
-    
-        /**
-         * value: "TradingAccounts"
-         * @const
-         */
-        TradingAccounts = "TradingAccounts";
-
-    
-        /**
-         * value: "External"
-         * @const
-         */
-        External = "External";
+        CopyTrading = "CopyTrading";
 
     
 
