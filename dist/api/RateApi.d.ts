@@ -1,13 +1,12 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { RateModel } from "../model/RateModel";
 import { RatesModel } from "../model/RatesModel";
 export declare class RateApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getRate(from: string, to: string): CancelablePromise<RateModel>;
+    getRate(from: string, to: string): CancelablePromise<number>;
     private getRateWithHttpInfo;
-    getRateExchange(exchange: string, from: string, to: string): CancelablePromise<RateModel>;
+    getRateExchange(exchange: string, from: string, to: string): CancelablePromise<number>;
     private getRateExchangeWithHttpInfo;
     getRates(opts?: {
         from?: Array<string>;

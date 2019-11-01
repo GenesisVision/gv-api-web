@@ -25,7 +25,7 @@ export class FileApi {
         let contentTypes = [];
         let accepts = [];
         let returnType = null;
-        return this.apiClient.callApi('/v2.0/file/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v1.0/file/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     uploadFile(uploadedFile, opts) {
         return this.uploadFileWithHttpInfo(uploadedFile, opts)
@@ -50,6 +50,6 @@ export class FileApi {
         let contentTypes = ["multipart/form-data"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = UploadResult;
-        return this.apiClient.callApi('/v2.0/file/upload', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v1.0/file/upload', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

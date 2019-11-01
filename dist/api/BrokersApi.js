@@ -1,6 +1,6 @@
 import ApiClient from "../ApiClient";
-import { BrokersInfo } from "../model/BrokersInfo";
-import { BrokersProgramInfo } from "../model/BrokersProgramInfo";
+import { BrokersInfoOld } from "../model/BrokersInfoOld";
+import { BrokersProgramInfoOld } from "../model/BrokersProgramInfoOld";
 export class BrokersApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -20,8 +20,8 @@ export class BrokersApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = BrokersInfo;
-        return this.apiClient.callApi('/v2.0/brokers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = BrokersInfoOld;
+        return this.apiClient.callApi('/v1.0/brokers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getBrokersForProgram(programId) {
         return this.getBrokersForProgramWithHttpInfo(programId)
@@ -43,7 +43,7 @@ export class BrokersApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = BrokersProgramInfo;
-        return this.apiClient.callApi('/v2.0/brokers/{programId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = BrokersProgramInfoOld;
+        return this.apiClient.callApi('/v1.0/brokers/{programId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

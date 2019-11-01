@@ -1,5 +1,4 @@
 import ApiClient from "../ApiClient";
-import { RateModel } from "../model/RateModel";
 import { RatesModel } from "../model/RatesModel";
 export class RateApi {
     constructor(apiClient) {
@@ -29,8 +28,8 @@ export class RateApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = RateModel;
-        return this.apiClient.callApi('/v2.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = 'number';
+        return this.apiClient.callApi('/v1.0/rate/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getRateExchange(exchange, from, to) {
         return this.getRateExchangeWithHttpInfo(exchange, from, to)
@@ -60,8 +59,8 @@ export class RateApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = RateModel;
-        return this.apiClient.callApi('/v2.0/rate/{exchange}/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = 'number';
+        return this.apiClient.callApi('/v1.0/rate/{exchange}/{from}/{to}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getRates(opts) {
         return this.getRatesWithHttpInfo(opts)
@@ -82,6 +81,6 @@ export class RateApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = RatesModel;
-        return this.apiClient.callApi('/v2.0/rate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v1.0/rate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

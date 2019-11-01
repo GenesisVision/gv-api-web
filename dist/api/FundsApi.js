@@ -1,9 +1,12 @@
 import ApiClient from "../ApiClient";
-import { FundBalanceChart } from "../model/FundBalanceChart";
-import { FundDetailsFull } from "../model/FundDetailsFull";
-import { FundProfitCharts } from "../model/FundProfitCharts";
-import { ItemsViewModelFundDetailsList } from "../model/ItemsViewModelFundDetailsList";
-import { ItemsViewModelReallocationModel } from "../model/ItemsViewModelReallocationModel";
+import { FundAssetsListInfo } from "../model/FundAssetsListInfo";
+import { FundBalanceChartOld } from "../model/FundBalanceChartOld";
+import { FundDetailsFullOld } from "../model/FundDetailsFullOld";
+import { FundProfitChartOld } from "../model/FundProfitChartOld";
+import { FundSets } from "../model/FundSets";
+import { FundsListOld } from "../model/FundsListOld";
+import { PlatformAssets } from "../model/PlatformAssets";
+import { ReallocationsViewModel } from "../model/ReallocationsViewModel";
 export class FundsApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -34,7 +37,48 @@ export class FundsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v2.0/funds/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v1.0/funds/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getAllAssets() {
+        return this.getAllAssetsWithHttpInfo()
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getAllAssetsWithHttpInfo() {
+        let postBody = null;
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = PlatformAssets;
+        return this.apiClient.callApi('/v1.0/funds/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getFundAssets(id) {
+        return this.getFundAssetsWithHttpInfo(id)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getFundAssetsWithHttpInfo(id) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getFundAssets");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = FundAssetsListInfo;
+        return this.apiClient.callApi('/v1.0/funds/{id}/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFundBalanceChart(id, opts) {
         return this.getFundBalanceChartWithHttpInfo(id, opts)
@@ -61,8 +105,8 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FundBalanceChart;
-        return this.apiClient.callApi('/v2.0/funds/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = FundBalanceChartOld;
+        return this.apiClient.callApi('/v1.0/funds/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFundDetails(id, opts) {
         return this.getFundDetailsWithHttpInfo(id, opts)
@@ -88,8 +132,8 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FundDetailsFull;
-        return this.apiClient.callApi('/v2.0/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = FundDetailsFullOld;
+        return this.apiClient.callApi('/v1.0/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFundProfitChart(id, opts) {
         return this.getFundProfitChartWithHttpInfo(id, opts)
@@ -110,7 +154,6 @@ export class FundsApi {
             "DateTo": opts["dateTo"],
             "MaxPointCount": opts["maxPointCount"],
             "Currency": opts["currency"],
-            "currencies": this.apiClient.buildCollectionParam(opts["currencies"], "multi"),
             "chartAssetsCount": opts["chartAssetsCount"]
         };
         let headerParams = {};
@@ -118,8 +161,8 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FundProfitCharts;
-        return this.apiClient.callApi('/v2.0/funds/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = FundProfitChartOld;
+        return this.apiClient.callApi('/v1.0/funds/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFunds(opts) {
         return this.getFundsWithHttpInfo(opts)
@@ -131,14 +174,24 @@ export class FundsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
-            "ShowIn": opts["showIn"],
+            "Sorting": opts["sorting"],
+            "CurrencySecondary": opts["currencySecondary"],
+            "Currency": opts["currency"],
             "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
             "StatisticDateFrom": opts["statisticDateFrom"],
             "StatisticDateTo": opts["statisticDateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
-            "FacetId": opts["facetId"],
             "Mask": opts["mask"],
-            "ShowFavorites": opts["showFavorites"],
+            "FacetId": opts["facetId"],
+            "IsFavorite": opts["isFavorite"],
+            "IsEnabled": opts["isEnabled"],
+            "HasInvestorsForAll": opts["hasInvestorsForAll"],
+            "HasInvestorsForClosed": opts["hasInvestorsForClosed"],
+            "Ids": this.apiClient.buildCollectionParam(opts["ids"], "multi"),
+            "ForceUseIdsList": opts["forceUseIdsList"],
+            "ManagerId": opts["managerId"],
+            "ProgramManagerId": opts["programManagerId"],
+            "Status": this.apiClient.buildCollectionParam(opts["status"], "multi"),
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -149,19 +202,42 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ItemsViewModelFundDetailsList;
-        return this.apiClient.callApi('/v2.0/funds', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = FundsListOld;
+        return this.apiClient.callApi('/v1.0/funds', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getReallocatingHistory(id, opts) {
-        return this.getReallocatingHistoryWithHttpInfo(id, opts)
+    getProgramSets(authorization) {
+        return this.getProgramSetsWithHttpInfo(authorization)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getReallocatingHistoryWithHttpInfo(id, opts = {}) {
+    getProgramSetsWithHttpInfo(authorization) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getProgramSets");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = FundSets;
+        return this.apiClient.callApi('/v1.0/funds/sets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getReallocationsHistory(id, opts) {
+        return this.getReallocationsHistoryWithHttpInfo(id, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getReallocationsHistoryWithHttpInfo(id, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getReallocatingHistory");
+            throw new Error("Missing the required parameter \"id\" when calling getReallocationsHistory");
         }
         let pathParams = {
             "id": id
@@ -177,8 +253,8 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ItemsViewModelReallocationModel;
-        return this.apiClient.callApi('/v2.0/funds/{id}/reallocations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = ReallocationsViewModel;
+        return this.apiClient.callApi('/v1.0/funds/{id}/reallocations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     removeFromFavorites(id, authorization) {
         return this.removeFromFavoritesWithHttpInfo(id, authorization)
@@ -206,6 +282,6 @@ export class FundsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v2.0/funds/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v1.0/funds/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

@@ -1,10 +1,13 @@
-import { DashboardProfits } from './DashboardProfits';
+import { DashboardChartValue } from './DashboardChartValue';
+import { ProfileHeaderViewModel } from './ProfileHeaderViewModel';
+import { ProgramRequestsOld } from './ProgramRequestsOld';
 export declare class DashboardSummary {
-    'total': number;
-    'invested': number;
-    'pending': number;
-    'available': number;
-    'profits': DashboardProfits;
+    'chart': DashboardChartValue;
+    'profileHeader': ProfileHeaderViewModel;
+    'programsCount': number;
+    'fundsCount': number;
+    'signalsCount': number;
+    'requests': ProgramRequestsOld;
     constructor(data: {
         [key: string]: any;
     });

@@ -1,10 +1,11 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
-import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
-import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
+import { ProgramBalanceChartOld } from "../model/ProgramBalanceChartOld";
+import { ProgramDetailsFullOld } from "../model/ProgramDetailsFullOld";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
-import { ProgramProfitCharts } from "../model/ProgramProfitCharts";
+import { ProgramProfitChartOld } from "../model/ProgramProfitChartOld";
+import { ProgramSets } from "../model/ProgramSets";
+import { ProgramsListOld } from "../model/ProgramsListOld";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
 import { TradesViewModel } from "../model/TradesViewModel";
 export declare class ProgramsApi {
@@ -32,7 +33,7 @@ export declare class ProgramsApi {
         take?: number;
     }): CancelablePromise<Blob>;
     private exportProgramPeriodsFinStatisticWithHttpInfo;
-    exportProgramTrades(id: string, opts?: {
+    exportTrades(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         symbol?: string;
@@ -42,17 +43,18 @@ export declare class ProgramsApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<Blob>;
-    private exportProgramTradesWithHttpInfo;
+    private exportTradesWithHttpInfo;
     getProgramBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-    }): CancelablePromise<ProgramBalanceChart>;
+    }): CancelablePromise<ProgramBalanceChartOld>;
     private getProgramBalanceChartWithHttpInfo;
     getProgramDetails(id: string, opts?: {
         authorization?: string;
-    }): CancelablePromise<ProgramDetailsFull>;
+        currencySecondary?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+    }): CancelablePromise<ProgramDetailsFullOld>;
     private getProgramDetailsWithHttpInfo;
     getProgramOpenTrades(id: string, opts?: {
         sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';
@@ -79,9 +81,10 @@ export declare class ProgramsApi {
         dateTo?: Date;
         maxPointCount?: number;
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-        currencies?: Array<Object>;
-    }): CancelablePromise<ProgramProfitCharts>;
+    }): CancelablePromise<ProgramProfitChartOld>;
     private getProgramProfitChartWithHttpInfo;
+    getProgramSets(authorization: string): CancelablePromise<ProgramSets>;
+    private getProgramSetsWithHttpInfo;
     getProgramSubscribers(id: string, authorization: string, opts?: {
         status?: 'All' | 'Active';
         skip?: number;
@@ -101,20 +104,35 @@ export declare class ProgramsApi {
     private getProgramTradesWithHttpInfo;
     getPrograms(opts?: {
         authorization?: string;
-        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-        tags?: Array<string>;
-        programCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         levelMin?: number;
         levelMax?: number;
+        levelsSet?: Array<number>;
+        profitAvgMin?: number;
+        profitAvgMax?: number;
+        sorting?: 'ByLevelAsc' | 'ByLevelDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByTradesAsc' | 'ByTradesDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByNewDesc' | 'ByNewAsc' | 'ByEndOfPeriodAsc' | 'ByEndOfPeriodDesc' | 'ByTitleAsc' | 'ByTitleDesc' | 'ByBalanceAsc' | 'ByBalanceDesc' | 'ByCurrDesc' | 'ByCurrAsc' | 'ByLevelProgressDesc' | 'ByLevelProgressAsc';
+        programCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currencySecondary?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        levelUpFrom?: number;
+        tags?: Array<string>;
+        isSignal?: boolean;
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;
-        facetId?: string;
         mask?: string;
-        showFavorites?: boolean;
+        facetId?: string;
+        isFavorite?: boolean;
+        isEnabled?: boolean;
+        hasInvestorsForAll?: boolean;
+        hasInvestorsForClosed?: boolean;
+        ids?: Array<string>;
+        forceUseIdsList?: boolean;
+        managerId?: string;
+        programManagerId?: string;
+        status?: Array<Object>;
         skip?: number;
         take?: number;
-    }): CancelablePromise<ItemsViewModelProgramDetailsList>;
+    }): CancelablePromise<ProgramsListOld>;
     private getProgramsWithHttpInfo;
     removeFromFavorites(id: string, authorization: string): CancelablePromise<null>;
     private removeFromFavoritesWithHttpInfo;
