@@ -1,6 +1,6 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { SearchViewModelOld } from "../model/SearchViewModelOld";
+import { SearchViewModel } from "../model/SearchViewModel";
 export declare class SearchApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -8,6 +8,6 @@ export declare class SearchApi {
         authorization?: string;
         mask?: string;
         take?: number;
-    }): CancelablePromise<SearchViewModelOld>;
+    }): CancelablePromise<SearchViewModel>;
     private searchWithHttpInfo;
 }

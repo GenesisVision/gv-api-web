@@ -1,10 +1,9 @@
 import ApiClient from "../ApiClient";
-import { ProgramBalanceChartOld } from "../model/ProgramBalanceChartOld";
-import { ProgramDetailsFullOld } from "../model/ProgramDetailsFullOld";
+import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
+import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
+import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
-import { ProgramProfitChartOld } from "../model/ProgramProfitChartOld";
-import { ProgramSets } from "../model/ProgramSets";
-import { ProgramsListOld } from "../model/ProgramsListOld";
+import { ProgramProfitCharts } from "../model/ProgramProfitCharts";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
 import { TradesViewModel } from "../model/TradesViewModel";
 export class ProgramsApi {
@@ -37,7 +36,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/programs/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     exportProgramPeriods(id, opts) {
         return this.exportProgramPeriodsWithHttpInfo(id, opts)
@@ -68,7 +67,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'Blob';
-        return this.apiClient.callApi('/v1.0/programs/{id}/periods/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/periods/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     exportProgramPeriodsFinStatistic(id, authorization, opts) {
         return this.exportProgramPeriodsFinStatisticWithHttpInfo(id, authorization, opts)
@@ -104,18 +103,18 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'Blob';
-        return this.apiClient.callApi('/v1.0/programs/{id}/periods/export/statistic', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/periods/export/statistic', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    exportTrades(id, opts) {
-        return this.exportTradesWithHttpInfo(id, opts)
+    exportProgramTrades(id, opts) {
+        return this.exportProgramTradesWithHttpInfo(id, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    exportTradesWithHttpInfo(id, opts = {}) {
+    exportProgramTradesWithHttpInfo(id, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling exportTrades");
+            throw new Error("Missing the required parameter \"id\" when calling exportProgramTrades");
         }
         let pathParams = {
             "id": id
@@ -136,7 +135,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'Blob';
-        return this.apiClient.callApi('/v1.0/programs/{id}/trades/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/trades/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramBalanceChart(id, opts) {
         return this.getProgramBalanceChartWithHttpInfo(id, opts)
@@ -163,8 +162,8 @@ export class ProgramsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramBalanceChartOld;
-        return this.apiClient.callApi('/v1.0/programs/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = ProgramBalanceChart;
+        return this.apiClient.callApi('/v2.0/programs/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramDetails(id, opts) {
         return this.getProgramDetailsWithHttpInfo(id, opts)
@@ -180,9 +179,7 @@ export class ProgramsApi {
         let pathParams = {
             "id": id
         };
-        let queryParams = {
-            "currencySecondary": opts["currencySecondary"]
-        };
+        let queryParams = {};
         let headerParams = {
             "Authorization": opts["authorization"]
         };
@@ -190,8 +187,8 @@ export class ProgramsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramDetailsFullOld;
-        return this.apiClient.callApi('/v1.0/programs/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = ProgramDetailsFull;
+        return this.apiClient.callApi('/v2.0/programs/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramOpenTrades(id, opts) {
         return this.getProgramOpenTradesWithHttpInfo(id, opts)
@@ -221,7 +218,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = TradesViewModel;
-        return this.apiClient.callApi('/v1.0/programs/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramPeriods(id, opts) {
         return this.getProgramPeriodsWithHttpInfo(id, opts)
@@ -254,7 +251,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ProgramPeriodsViewModel;
-        return this.apiClient.callApi('/v1.0/programs/{id}/periods', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/periods', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramProfitChart(id, opts) {
         return this.getProgramProfitChartWithHttpInfo(id, opts)
@@ -274,38 +271,16 @@ export class ProgramsApi {
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
             "MaxPointCount": opts["maxPointCount"],
-            "Currency": opts["currency"]
+            "Currency": opts["currency"],
+            "currencies": this.apiClient.buildCollectionParam(opts["currencies"], "multi")
         };
         let headerParams = {};
         let formParams = {};
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramProfitChartOld;
-        return this.apiClient.callApi('/v1.0/programs/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getProgramSets(authorization) {
-        return this.getProgramSetsWithHttpInfo(authorization)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getProgramSetsWithHttpInfo(authorization) {
-        let postBody = null;
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getProgramSets");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramSets;
-        return this.apiClient.callApi('/v1.0/programs/sets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = ProgramProfitCharts;
+        return this.apiClient.callApi('/v2.0/programs/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramSubscribers(id, authorization, opts) {
         return this.getProgramSubscribersWithHttpInfo(id, authorization, opts)
@@ -337,7 +312,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = SignalProviderSubscribers;
-        return this.apiClient.callApi('/v1.0/programs/{id}/subscribers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/subscribers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramTrades(id, opts) {
         return this.getProgramTradesWithHttpInfo(id, opts)
@@ -369,7 +344,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = TradesViewModel;
-        return this.apiClient.callApi('/v1.0/programs/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getPrograms(opts) {
         return this.getProgramsWithHttpInfo(opts)
@@ -381,32 +356,17 @@ export class ProgramsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
+            "ShowIn": opts["showIn"],
+            "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
+            "ProgramCurrency": opts["programCurrency"],
             "LevelMin": opts["levelMin"],
             "LevelMax": opts["levelMax"],
-            "LevelsSet": this.apiClient.buildCollectionParam(opts["levelsSet"], "multi"),
-            "ProfitAvgMin": opts["profitAvgMin"],
-            "ProfitAvgMax": opts["profitAvgMax"],
-            "Sorting": opts["sorting"],
-            "ProgramCurrency": opts["programCurrency"],
-            "CurrencySecondary": opts["currencySecondary"],
-            "Currency": opts["currency"],
-            "LevelUpFrom": opts["levelUpFrom"],
-            "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
-            "IsSignal": opts["isSignal"],
             "StatisticDateFrom": opts["statisticDateFrom"],
             "StatisticDateTo": opts["statisticDateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
-            "Mask": opts["mask"],
             "FacetId": opts["facetId"],
-            "IsFavorite": opts["isFavorite"],
-            "IsEnabled": opts["isEnabled"],
-            "HasInvestorsForAll": opts["hasInvestorsForAll"],
-            "HasInvestorsForClosed": opts["hasInvestorsForClosed"],
-            "Ids": this.apiClient.buildCollectionParam(opts["ids"], "multi"),
-            "ForceUseIdsList": opts["forceUseIdsList"],
-            "ManagerId": opts["managerId"],
-            "ProgramManagerId": opts["programManagerId"],
-            "Status": this.apiClient.buildCollectionParam(opts["status"], "multi"),
+            "Mask": opts["mask"],
+            "ShowFavorites": opts["showFavorites"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -417,8 +377,8 @@ export class ProgramsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramsListOld;
-        return this.apiClient.callApi('/v1.0/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        let returnType = ItemsViewModelProgramDetailsList;
+        return this.apiClient.callApi('/v2.0/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     removeFromFavorites(id, authorization) {
         return this.removeFromFavoritesWithHttpInfo(id, authorization)
@@ -446,6 +406,6 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v1.0/programs/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

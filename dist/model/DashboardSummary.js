@@ -1,25 +1,21 @@
-import { DashboardChartValue } from './DashboardChartValue';
-import { ProfileHeaderViewModel } from './ProfileHeaderViewModel';
-import { ProgramRequestsOld } from './ProgramRequestsOld';
+import { DashboardProfits } from './DashboardProfits';
 import ApiClient from "../ApiClient";
 export class DashboardSummary {
     constructor(data) {
-        this['chart'] = data['chart'];
-        this['profileHeader'] = data['profileHeader'];
-        this['programsCount'] = data['programsCount'];
-        this['fundsCount'] = data['fundsCount'];
-        this['signalsCount'] = data['signalsCount'];
-        this['requests'] = data['requests'];
+        this['total'] = data['total'];
+        this['invested'] = data['invested'];
+        this['pending'] = data['pending'];
+        this['available'] = data['available'];
+        this['profits'] = data['profits'];
     }
     static constructFromObject(data) {
         if (data) {
             return new DashboardSummary({
-                'chart': DashboardChartValue.constructFromObject(data['chart']),
-                'profileHeader': ProfileHeaderViewModel.constructFromObject(data['profileHeader']),
-                'programsCount': ApiClient.convertToType(data['programsCount'], 'number'),
-                'fundsCount': ApiClient.convertToType(data['fundsCount'], 'number'),
-                'signalsCount': ApiClient.convertToType(data['signalsCount'], 'number'),
-                'requests': ProgramRequestsOld.constructFromObject(data['requests']),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+                'invested': ApiClient.convertToType(data['invested'], 'number'),
+                'pending': ApiClient.convertToType(data['pending'], 'number'),
+                'available': ApiClient.convertToType(data['available'], 'number'),
+                'profits': DashboardProfits.constructFromObject(data['profits']),
             });
         }
     }
