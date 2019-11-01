@@ -1,3 +1,4 @@
+import { AmountWithCurrency } from './AmountWithCurrency';
 import { Currency } from './Currency';
 import { PersonalProgramDetailsList } from './PersonalProgramDetailsList';
 import { ProfitChart } from './ProfitChart';
@@ -14,9 +15,13 @@ export declare class ProgramDetailsList {
     'levelProgress': number;
     'periodDuration': number;
     'availableToInvest': number;
+    'investorsCount': number;
+    'periodStarts': Date;
+    'periodEnds': Date;
     'personalDetails': PersonalProgramDetailsList;
     'tags': Array<ProgramTag>;
     'chart': ProfitChart;
+    'balance': AmountWithCurrency;
     constructor(data: {
         [key: string]: any;
     });

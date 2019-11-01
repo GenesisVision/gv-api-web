@@ -1,5 +1,4 @@
 import { Currency } from './Currency';
-import { PersonalCopyTradingAccountInfo } from './PersonalCopyTradingAccountInfo';
 import ApiClient from "../ApiClient";
 export class CopyTradingAccountInfo {
     constructor(data) {
@@ -12,7 +11,6 @@ export class CopyTradingAccountInfo {
         this['freeMargin'] = data['freeMargin'];
         this['marginLevel'] = data['marginLevel'];
         this['available'] = data['available'];
-        this['personalInfo'] = data['personalInfo'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -26,7 +24,6 @@ export class CopyTradingAccountInfo {
                 'freeMargin': ApiClient.convertToType(data['freeMargin'], 'number'),
                 'marginLevel': ApiClient.convertToType(data['marginLevel'], 'number'),
                 'available': ApiClient.convertToType(data['available'], 'number'),
-                'personalInfo': PersonalCopyTradingAccountInfo.constructFromObject(data['personalInfo']),
             });
         }
     }

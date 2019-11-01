@@ -1,5 +1,4 @@
 import { Currency } from './Currency';
-import { PersonalCopyTradingAccountInfo } from './PersonalCopyTradingAccountInfo';
 export declare class CopyTradingAccountInfo {
     'id': string;
     'currency': Currency;
@@ -10,7 +9,6 @@ export declare class CopyTradingAccountInfo {
     'freeMargin': number;
     'marginLevel': number;
     'available': number;
-    'personalInfo': PersonalCopyTradingAccountInfo;
     constructor(data: {
         [key: string]: any;
     });

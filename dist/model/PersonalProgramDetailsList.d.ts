@@ -1,5 +1,5 @@
 export declare class PersonalProgramDetailsList {
-    'isOwnProgram': boolean;
+    'isOwnAsset': boolean;
     'isFavorite': boolean;
     constructor(data: {
         [key: string]: any;

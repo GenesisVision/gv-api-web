@@ -1,3 +1,4 @@
+import { AmountWithCurrency } from './AmountWithCurrency';
 import { FundAssetPercent } from './FundAssetPercent';
 import { PersonalFundDetailsList } from './PersonalFundDetailsList';
 import { ProfitChart } from './ProfitChart';
@@ -11,10 +12,12 @@ export class FundDetailsList {
         this['title'] = data['title'];
         this['description'] = data['description'];
         this['creationDate'] = data['creationDate'];
+        this['investorsCount'] = data['investorsCount'];
         this['totalAssetsCount'] = data['totalAssetsCount'];
         this['topFundAssets'] = data['topFundAssets'];
         this['chart'] = data['chart'];
         this['personalDetails'] = data['personalDetails'];
+        this['balance'] = data['balance'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -26,10 +29,12 @@ export class FundDetailsList {
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+                'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
                 'totalAssetsCount': ApiClient.convertToType(data['totalAssetsCount'], 'number'),
                 'topFundAssets': ApiClient.convertToType(data['topFundAssets'], [FundAssetPercent]),
                 'chart': ProfitChart.constructFromObject(data['chart']),
                 'personalDetails': PersonalFundDetailsList.constructFromObject(data['personalDetails']),
+                'balance': AmountWithCurrency.constructFromObject(data['balance']),
             });
         }
     }

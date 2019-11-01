@@ -2,7 +2,7 @@ import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { MigrationRequest } from './MigrationRequest';
 import { SignalSubscription } from './SignalSubscription';
 export declare class PersonalProgramDetails {
-    'isOwnProgram': boolean;
+    'isOwnAsset': boolean;
     'isFavorite': boolean;
     'isReinvest': boolean;
     'isInvested': boolean;

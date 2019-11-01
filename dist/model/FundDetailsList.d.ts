@@ -1,3 +1,4 @@
+import { AmountWithCurrency } from './AmountWithCurrency';
 import { FundAssetPercent } from './FundAssetPercent';
 import { PersonalFundDetailsList } from './PersonalFundDetailsList';
 import { ProfitChart } from './ProfitChart';
@@ -9,10 +10,12 @@ export declare class FundDetailsList {
     'title': string;
     'description': string;
     'creationDate': Date;
+    'investorsCount': number;
     'totalAssetsCount': number;
     'topFundAssets': Array<FundAssetPercent>;
     'chart': ProfitChart;
     'personalDetails': PersonalFundDetailsList;
+    'balance': AmountWithCurrency;
     constructor(data: {
         [key: string]: any;
     });

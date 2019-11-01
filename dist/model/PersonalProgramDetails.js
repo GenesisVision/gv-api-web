@@ -4,7 +4,7 @@ import { SignalSubscription } from './SignalSubscription';
 import ApiClient from "../ApiClient";
 export class PersonalProgramDetails {
     constructor(data) {
-        this['isOwnProgram'] = data['isOwnProgram'];
+        this['isOwnAsset'] = data['isOwnAsset'];
         this['isFavorite'] = data['isFavorite'];
         this['isReinvest'] = data['isReinvest'];
         this['isInvested'] = data['isInvested'];
@@ -30,7 +30,7 @@ export class PersonalProgramDetails {
     static constructFromObject(data) {
         if (data) {
             return new PersonalProgramDetails({
-                'isOwnProgram': ApiClient.convertToType(data['isOwnProgram'], 'boolean'),
+                'isOwnAsset': ApiClient.convertToType(data['isOwnAsset'], 'boolean'),
                 'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
                 'isReinvest': ApiClient.convertToType(data['isReinvest'], 'boolean'),
                 'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),

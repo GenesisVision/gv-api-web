@@ -1,5 +1,5 @@
 export declare class PersonalFundDetailsList {
-    'isOwnProgram': boolean;
+    'isOwnAsset': boolean;
     'isFavorite': boolean;
     constructor(data: {
         [key: string]: any;
