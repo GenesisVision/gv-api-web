@@ -1,14 +1,14 @@
 import { TransactionViewModel } from './TransactionViewModel';
 import ApiClient from "../ApiClient";
-export class TransactionsViewModel {
+export class ItemsViewModelTransactionViewModel {
     constructor(data) {
-        this['transactions'] = data['transactions'];
+        this['items'] = data['items'];
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
         if (data) {
-            return new TransactionsViewModel({
-                'transactions': ApiClient.convertToType(data['transactions'], [TransactionViewModel]),
+            return new ItemsViewModelTransactionViewModel({
+                'items': ApiClient.convertToType(data['items'], [TransactionViewModel]),
                 'total': ApiClient.convertToType(data['total'], 'number'),
             });
         }

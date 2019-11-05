@@ -11,6 +11,7 @@ export class FundDetailsFull {
         this['title'] = data['title'];
         this['description'] = data['description'];
         this['creationDate'] = data['creationDate'];
+        this['status'] = data['status'];
         this['entryFeeSelected'] = data['entryFeeSelected'];
         this['entryFeeCurrent'] = data['entryFeeCurrent'];
         this['exitFeeSelected'] = data['exitFeeSelected'];
@@ -29,6 +30,7 @@ export class FundDetailsFull {
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+                'status': ApiClient.convertToType(data['status'], 'string'),
                 'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
                 'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
                 'exitFeeSelected': ApiClient.convertToType(data['exitFeeSelected'], 'number'),

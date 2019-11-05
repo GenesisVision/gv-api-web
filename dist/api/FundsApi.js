@@ -131,13 +131,14 @@ export class FundsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
-            "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
             "ShowIn": opts["showIn"],
+            "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
             "StatisticDateFrom": opts["statisticDateFrom"],
             "StatisticDateTo": opts["statisticDateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
             "FacetId": opts["facetId"],
             "Mask": opts["mask"],
+            "ShowFavorites": opts["showFavorites"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };

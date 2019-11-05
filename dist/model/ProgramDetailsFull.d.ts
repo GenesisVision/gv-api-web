@@ -20,6 +20,7 @@ export declare class ProgramDetailsFull {
     'periodStarts': Date;
     'periodEnds': Date;
     'tradesDelay': TradesDelay;
+    'status': string;
     'login': string;
     'ageDays': number;
     'leverageMin': number;

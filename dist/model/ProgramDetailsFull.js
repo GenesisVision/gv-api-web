@@ -22,6 +22,7 @@ export class ProgramDetailsFull {
         this['periodStarts'] = data['periodStarts'];
         this['periodEnds'] = data['periodEnds'];
         this['tradesDelay'] = data['tradesDelay'];
+        this['status'] = data['status'];
         this['login'] = data['login'];
         this['ageDays'] = data['ageDays'];
         this['leverageMin'] = data['leverageMin'];
@@ -61,6 +62,7 @@ export class ProgramDetailsFull {
                 'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
                 'tradesDelay': TradesDelay.constructFromObject(data['tradesDelay']),
+                'status': ApiClient.convertToType(data['status'], 'string'),
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'ageDays': ApiClient.convertToType(data['ageDays'], 'number'),
                 'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),

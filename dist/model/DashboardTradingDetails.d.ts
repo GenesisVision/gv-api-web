@@ -1,10 +1,10 @@
 import { DashboardProfits } from './DashboardProfits';
-import { InvestmentEventViewModels } from './InvestmentEventViewModels';
+import { ItemsViewModelInvestmentEventViewModel } from './ItemsViewModelInvestmentEventViewModel';
 export declare class DashboardTradingDetails {
     'equity': number;
     'assetsUnderManagement': number;
     'profits': DashboardProfits;
-    'events': InvestmentEventViewModels;
+    'events': ItemsViewModelInvestmentEventViewModel;
     constructor(data: {
         [key: string]: any;
     });

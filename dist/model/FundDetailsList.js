@@ -1,6 +1,7 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
 import { FundAssetPercent } from './FundAssetPercent';
 import { PersonalFundDetailsList } from './PersonalFundDetailsList';
+import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import ApiClient from "../ApiClient";
 export class FundDetailsList {
@@ -13,8 +14,10 @@ export class FundDetailsList {
         this['description'] = data['description'];
         this['creationDate'] = data['creationDate'];
         this['investorsCount'] = data['investorsCount'];
+        this['status'] = data['status'];
         this['totalAssetsCount'] = data['totalAssetsCount'];
         this['topFundAssets'] = data['topFundAssets'];
+        this['owner'] = data['owner'];
         this['chart'] = data['chart'];
         this['personalDetails'] = data['personalDetails'];
         this['balance'] = data['balance'];
@@ -30,8 +33,10 @@ export class FundDetailsList {
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
                 'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
+                'status': ApiClient.convertToType(data['status'], 'string'),
                 'totalAssetsCount': ApiClient.convertToType(data['totalAssetsCount'], 'number'),
                 'topFundAssets': ApiClient.convertToType(data['topFundAssets'], [FundAssetPercent]),
+                'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'chart': ProfitChart.constructFromObject(data['chart']),
                 'personalDetails': PersonalFundDetailsList.constructFromObject(data['personalDetails']),
                 'balance': AmountWithCurrency.constructFromObject(data['balance']),

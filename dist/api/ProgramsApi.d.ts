@@ -101,16 +101,17 @@ export declare class ProgramsApi {
     private getProgramTradesWithHttpInfo;
     getPrograms(opts?: {
         authorization?: string;
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         tags?: Array<string>;
         programCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         levelMin?: number;
         levelMax?: number;
-        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;
+        showFavorites?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelProgramDetailsList>;

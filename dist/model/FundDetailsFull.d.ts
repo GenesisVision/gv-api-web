@@ -9,6 +9,7 @@ export declare class FundDetailsFull {
     'title': string;
     'description': string;
     'creationDate': Date;
+    'status': string;
     'entryFeeSelected': number;
     'entryFeeCurrent': number;
     'exitFeeSelected': number;

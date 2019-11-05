@@ -1,6 +1,7 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
 import { Currency } from './Currency';
 import { PersonalProgramDetailsList } from './PersonalProgramDetailsList';
+import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import { ProgramTag } from './ProgramTag';
 import ApiClient from "../ApiClient";
@@ -20,6 +21,8 @@ export class ProgramDetailsList {
         this['investorsCount'] = data['investorsCount'];
         this['periodStarts'] = data['periodStarts'];
         this['periodEnds'] = data['periodEnds'];
+        this['status'] = data['status'];
+        this['owner'] = data['owner'];
         this['personalDetails'] = data['personalDetails'];
         this['tags'] = data['tags'];
         this['chart'] = data['chart'];
@@ -42,6 +45,8 @@ export class ProgramDetailsList {
                 'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
                 'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
+                'status': ApiClient.convertToType(data['status'], 'string'),
+                'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'personalDetails': PersonalProgramDetailsList.constructFromObject(data['personalDetails']),
                 'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
                 'chart': ProfitChart.constructFromObject(data['chart']),

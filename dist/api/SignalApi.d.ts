@@ -3,6 +3,7 @@ import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AttachToExternalSignalProviderCommon } from "../model/AttachToExternalSignalProviderCommon";
 import { AttachToExternalSignalProviderExt } from "../model/AttachToExternalSignalProviderExt";
 import { AttachToSignalProvider } from "../model/AttachToSignalProvider";
+import { DetachFromExternalSignalProvider } from "../model/DetachFromExternalSignalProvider";
 import { DetachFromSignalProvider } from "../model/DetachFromSignalProvider";
 import { NewExternalSignalAccountRequest } from "../model/NewExternalSignalAccountRequest";
 import { SignalTradingEvents } from "../model/SignalTradingEvents";
@@ -34,6 +35,10 @@ export declare class SignalApi {
         model?: DetachFromSignalProvider;
     }): CancelablePromise<null>;
     private detachSlaveFromMasterWithHttpInfo;
+    detachSlaveFromMaster_2(id: string, authorization: string, opts?: {
+        model?: DetachFromExternalSignalProvider;
+    }): CancelablePromise<null>;
+    private detachSlaveFromMaster_2WithHttpInfo;
     getExternalSignalTradingLog(authorization: string, opts?: {
         accountId?: string;
         accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';

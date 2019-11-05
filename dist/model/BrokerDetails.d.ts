@@ -1,6 +1,8 @@
+import { BrokerTradeServerType } from './BrokerTradeServerType';
 export declare class BrokerDetails {
     'logo': string;
     'name': string;
+    'type': BrokerTradeServerType;
     'isKycRequired': boolean;
     'showSwaps': boolean;
     'showTickets': boolean;

@@ -15,12 +15,12 @@ export class CopytradingApi {
         let pathParams = {};
         let queryParams = {
             "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
-            "ShowIn": opts["showIn"],
             "StatisticDateFrom": opts["statisticDateFrom"],
             "StatisticDateTo": opts["statisticDateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
             "FacetId": opts["facetId"],
             "Mask": opts["mask"],
+            "ShowFavorites": opts["showFavorites"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };

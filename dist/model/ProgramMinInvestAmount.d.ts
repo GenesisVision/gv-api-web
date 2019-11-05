@@ -2,8 +2,8 @@ import { AmountWithCurrency } from './AmountWithCurrency';
 import { BrokerTradeServerType } from './BrokerTradeServerType';
 export declare class ProgramMinInvestAmount {
     'serverType': BrokerTradeServerType;
-    'minInvestAmountOwnProgram': Array<AmountWithCurrency>;
-    'minInvestAmountSomeoneProgram': Array<AmountWithCurrency>;
+    'minDepositCreateAsset': Array<AmountWithCurrency>;
+    'minInvestAmountIntoProgram': Array<AmountWithCurrency>;
     constructor(data: {
         [key: string]: any;
     });

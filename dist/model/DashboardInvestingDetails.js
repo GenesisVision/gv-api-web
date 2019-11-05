@@ -1,5 +1,5 @@
 import { DashboardProfits } from './DashboardProfits';
-import { InvestmentEventViewModels } from './InvestmentEventViewModels';
+import { ItemsViewModelInvestmentEventViewModel } from './ItemsViewModelInvestmentEventViewModel';
 import ApiClient from "../ApiClient";
 export class DashboardInvestingDetails {
     constructor(data) {
@@ -16,7 +16,7 @@ export class DashboardInvestingDetails {
                 'programsCount': ApiClient.convertToType(data['programsCount'], 'number'),
                 'fundsCount': ApiClient.convertToType(data['fundsCount'], 'number'),
                 'profits': DashboardProfits.constructFromObject(data['profits']),
-                'events': InvestmentEventViewModels.constructFromObject(data['events']),
+                'events': ItemsViewModelInvestmentEventViewModel.constructFromObject(data['events']),
             });
         }
     }

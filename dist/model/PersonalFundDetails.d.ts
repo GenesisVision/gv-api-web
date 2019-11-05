@@ -1,12 +1,12 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
+import { FundOwnerActions } from './FundOwnerActions';
 export declare class PersonalFundDetails {
     'isOwnAsset': boolean;
     'isFavorite': boolean;
     'isInvested': boolean;
-    'canClose': boolean;
-    'canReallocate': boolean;
     'canInvest': boolean;
     'canWithdraw': boolean;
+    'ownerActions': FundOwnerActions;
     'hasNotifications': boolean;
     'value': number;
     'status': AssetInvestmentStatus;

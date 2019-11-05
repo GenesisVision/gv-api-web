@@ -1,6 +1,7 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { MigrationRequest } from './MigrationRequest';
 import { SignalSubscription } from './SignalSubscription';
+import { TradingAccountOwnerActions } from './TradingAccountOwnerActions';
 import ApiClient from "../ApiClient";
 export class PersonalProgramDetails {
     constructor(data) {
@@ -8,12 +9,9 @@ export class PersonalProgramDetails {
         this['isFavorite'] = data['isFavorite'];
         this['isReinvest'] = data['isReinvest'];
         this['isInvested'] = data['isInvested'];
-        this['canClose'] = data['canClose'];
-        this['canClosePeriod'] = data['canClosePeriod'];
         this['canInvest'] = data['canInvest'];
         this['canWithdraw'] = data['canWithdraw'];
-        this['canMakeSignalProvider'] = data['canMakeSignalProvider'];
-        this['canChangePassword'] = data['canChangePassword'];
+        this['ownerActions'] = data['ownerActions'];
         this['hasNotifications'] = data['hasNotifications'];
         this['showTwoFactorButton'] = data['showTwoFactorButton'];
         this['value'] = data['value'];
@@ -34,12 +32,9 @@ export class PersonalProgramDetails {
                 'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
                 'isReinvest': ApiClient.convertToType(data['isReinvest'], 'boolean'),
                 'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
-                'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
-                'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
                 'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
                 'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
-                'canMakeSignalProvider': ApiClient.convertToType(data['canMakeSignalProvider'], 'boolean'),
-                'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
+                'ownerActions': TradingAccountOwnerActions.constructFromObject(data['ownerActions']),
                 'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
                 'showTwoFactorButton': ApiClient.convertToType(data['showTwoFactorButton'], 'boolean'),
                 'value': ApiClient.convertToType(data['value'], 'number'),

@@ -170,6 +170,34 @@ export class SignalApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    detachSlaveFromMaster_2(id, authorization, opts) {
+        return this.detachSlaveFromMaster_2WithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    detachSlaveFromMaster_2WithHttpInfo(id, authorization, opts = {}) {
+        let postBody = opts["model"];
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling detachSlaveFromMaster_0");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling detachSlaveFromMaster_0");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/signal/external/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getExternalSignalTradingLog(authorization, opts) {
         return this.getExternalSignalTradingLogWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {

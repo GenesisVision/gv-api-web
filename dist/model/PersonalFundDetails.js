@@ -1,14 +1,14 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
+import { FundOwnerActions } from './FundOwnerActions';
 import ApiClient from "../ApiClient";
 export class PersonalFundDetails {
     constructor(data) {
         this['isOwnAsset'] = data['isOwnAsset'];
         this['isFavorite'] = data['isFavorite'];
         this['isInvested'] = data['isInvested'];
-        this['canClose'] = data['canClose'];
-        this['canReallocate'] = data['canReallocate'];
         this['canInvest'] = data['canInvest'];
         this['canWithdraw'] = data['canWithdraw'];
+        this['ownerActions'] = data['ownerActions'];
         this['hasNotifications'] = data['hasNotifications'];
         this['value'] = data['value'];
         this['status'] = data['status'];
@@ -25,10 +25,9 @@ export class PersonalFundDetails {
                 'isOwnAsset': ApiClient.convertToType(data['isOwnAsset'], 'boolean'),
                 'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
                 'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
-                'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
-                'canReallocate': ApiClient.convertToType(data['canReallocate'], 'boolean'),
                 'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),
                 'canWithdraw': ApiClient.convertToType(data['canWithdraw'], 'boolean'),
+                'ownerActions': FundOwnerActions.constructFromObject(data['ownerActions']),
                 'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
                 'value': ApiClient.convertToType(data['value'], 'number'),
                 'status': AssetInvestmentStatus.constructFromObject(data['status']),

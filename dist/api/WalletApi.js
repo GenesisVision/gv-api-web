@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { TransactionsViewModel } from "../model/TransactionsViewModel";
+import { ItemsViewModelTransactionViewModel } from "../model/ItemsViewModelTransactionViewModel";
 import { UserCommissionData } from "../model/UserCommissionData";
 import { WalletDepositSummary } from "../model/WalletDepositSummary";
 import { WalletMultiAvailable } from "../model/WalletMultiAvailable";
@@ -119,7 +119,7 @@ export class WalletApi {
         let queryParams = {
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
-            "TransactionFilterType": opts["transactionFilterType"],
+            "TransactionFilter": opts["transactionFilter"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -130,7 +130,7 @@ export class WalletApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TransactionsViewModel;
+        let returnType = ItemsViewModelTransactionViewModel;
         return this.apiClient.callApi('/v2.0/wallet/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getUserWithdrawalSummary(authorization) {

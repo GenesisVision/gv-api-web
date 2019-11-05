@@ -356,16 +356,17 @@ export class ProgramsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
+            "ShowIn": opts["showIn"],
             "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
             "ProgramCurrency": opts["programCurrency"],
             "LevelMin": opts["levelMin"],
             "LevelMax": opts["levelMax"],
-            "ShowIn": opts["showIn"],
             "StatisticDateFrom": opts["statisticDateFrom"],
             "StatisticDateTo": opts["statisticDateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
             "FacetId": opts["facetId"],
             "Mask": opts["mask"],
+            "ShowFavorites": opts["showFavorites"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };

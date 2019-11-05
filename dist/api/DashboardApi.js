@@ -1,24 +1,79 @@
 import ApiClient from "../ApiClient";
 import { DashboardAssets } from "../model/DashboardAssets";
+import { DashboardChart } from "../model/DashboardChart";
+import { DashboardChartAssets } from "../model/DashboardChartAssets";
 import { DashboardInvestingDetails } from "../model/DashboardInvestingDetails";
 import { DashboardPortfolio } from "../model/DashboardPortfolio";
 import { DashboardRecommendations } from "../model/DashboardRecommendations";
 import { DashboardSummary } from "../model/DashboardSummary";
 import { DashboardTradingDetails } from "../model/DashboardTradingDetails";
+import { ItemsViewModelDashboardTradingAsset } from "../model/ItemsViewModelDashboardTradingAsset";
 export class DashboardApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
-    getAssets(authorization, opts) {
-        return this.getAssetsWithHttpInfo(authorization, opts)
+    getChart(authorization, opts) {
+        return this.getChartWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getAssetsWithHttpInfo(authorization, opts = {}) {
+    getChartWithHttpInfo(authorization, opts = {}) {
         let postBody = null;
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getAssets");
+            throw new Error("Missing the required parameter \"authorization\" when calling getChart");
+        }
+        let pathParams = {};
+        let queryParams = {
+            "StatisticDateFrom": opts["statisticDateFrom"],
+            "StatisticDateTo": opts["statisticDateTo"],
+            "ChartPointsCount": opts["chartPointsCount"],
+            "ShowIn": opts["showIn"],
+            "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi")
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = DashboardChart;
+        return this.apiClient.callApi('/v2.0/dashboard/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getChartAssets(authorization) {
+        return this.getChartAssetsWithHttpInfo(authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getChartAssetsWithHttpInfo(authorization) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getChartAssets");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = DashboardChartAssets;
+        return this.apiClient.callApi('/v2.0/dashboard/chart/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getHoldings(authorization, opts) {
+        return this.getHoldingsWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getHoldingsWithHttpInfo(authorization, opts = {}) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getHoldings");
         }
         let pathParams = {};
         let queryParams = {
@@ -32,30 +87,7 @@ export class DashboardApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = DashboardAssets;
-        return this.apiClient.callApi('/v2.0/dashboard/assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getChart(authorization) {
-        return this.getChartWithHttpInfo(authorization)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getChartWithHttpInfo(authorization) {
-        let postBody = null;
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getChart");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/dashboard/chart', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/dashboard/holdings', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getInvestingDetails(authorization, opts) {
         return this.getInvestingDetailsWithHttpInfo(authorization, opts)
@@ -105,6 +137,34 @@ export class DashboardApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = DashboardPortfolio;
         return this.apiClient.callApi('/v2.0/dashboard/portfolio', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getPublicTradingAssets(authorization, opts) {
+        return this.getPublicTradingAssetsWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getPublicTradingAssetsWithHttpInfo(authorization, opts = {}) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getPublicTradingAssets");
+        }
+        let pathParams = {};
+        let queryParams = {
+            "StatisticDateFrom": opts["statisticDateFrom"],
+            "StatisticDateTo": opts["statisticDateTo"],
+            "ChartPointsCount": opts["chartPointsCount"],
+            "ShowIn": opts["showIn"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelDashboardTradingAsset;
+        return this.apiClient.callApi('/v2.0/dashboard/trading/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getRecommendations(authorization, opts) {
         return this.getRecommendationsWithHttpInfo(authorization, opts)

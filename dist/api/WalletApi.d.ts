@@ -2,7 +2,7 @@ import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { CreateWithdrawalRequestModel } from "../model/CreateWithdrawalRequestModel";
 import { InternalTransferRequest } from "../model/InternalTransferRequest";
-import { TransactionsViewModel } from "../model/TransactionsViewModel";
+import { ItemsViewModelTransactionViewModel } from "../model/ItemsViewModelTransactionViewModel";
 import { UserCommissionData } from "../model/UserCommissionData";
 import { WalletDepositSummary } from "../model/WalletDepositSummary";
 import { WalletMultiAvailable } from "../model/WalletMultiAvailable";
@@ -27,10 +27,10 @@ export declare class WalletApi {
     getTransactions(authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
-        transactionFilterType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Programs' | 'Funds' | 'Signals' | 'TradingAccounts' | 'AgentRewards' | 'Externals' | 'Platform';
+        transactionFilter?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Programs' | 'Funds' | 'Signals' | 'TradingAccounts' | 'AgentRewards' | 'ExternalWithdrawal' | 'ExternalDeposit' | 'Platform';
         skip?: number;
         take?: number;
-    }): CancelablePromise<TransactionsViewModel>;
+    }): CancelablePromise<ItemsViewModelTransactionViewModel>;
     private getTransactionsWithHttpInfo;
     getUserWithdrawalSummary(authorization: string): CancelablePromise<WithdrawalSummary>;
     private getUserWithdrawalSummaryWithHttpInfo;

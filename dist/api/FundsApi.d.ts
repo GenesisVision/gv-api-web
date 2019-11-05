@@ -33,13 +33,14 @@ export declare class FundsApi {
     private getFundProfitChartWithHttpInfo;
     getFunds(opts?: {
         authorization?: string;
-        assets?: Array<string>;
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        assets?: Array<string>;
         statisticDateFrom?: Date;
         statisticDateTo?: Date;
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;
+        showFavorites?: boolean;
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelFundDetailsList>;
