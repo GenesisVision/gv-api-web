@@ -416,13 +416,6 @@ export declare class PlatformApi {
 
 export declare class ProfileApi {
     constructor(apiClient: ApiClient): ProfileApi;
-    addExternalKey(authorization: string, opts?: {
-        model?: ExternalKeyAddViewModel;
-    }): CancelablePromise<any>;
-    deleteExternalKey(authorization: string, opts?: {
-        model?: IdModel;
-    }): CancelablePromise<any>;
-    getExternalKey(authorization: string): CancelablePromise<ExternalKeysViewModel>;
     getManagerProfile(id: string): CancelablePromise<PublicProfile>;
     getProfileFull(authorization: string): CancelablePromise<ProfileFullViewModel>;
     getProfileHeader(authorization: string): CancelablePromise<ProfileHeaderViewModel>;
@@ -702,9 +695,6 @@ export declare interface index {
     EventFiltersOld: EventFiltersOld;
     EventInvestorItemFiltersOld: EventInvestorItemFiltersOld;
     EventItemFiltersOld: EventItemFiltersOld;
-    ExternalKeyAddViewModel: ExternalKeyAddViewModel;
-    ExternalKeyViewModel: ExternalKeyViewModel;
-    ExternalKeysViewModel: ExternalKeysViewModel;
     ExternalTransactionDetails: ExternalTransactionDetails;
     FacetSortType: FacetSortType;
     FcmTokenViewModel: FcmTokenViewModel;
@@ -736,7 +726,6 @@ export declare interface index {
     GeeTestDetails: GeeTestDetails;
     GeeTestResult: GeeTestResult;
     IOsAppVersion: IOsAppVersion;
-    IdModel: IdModel;
     InternalTransferRequest: InternalTransferRequest;
     InvestmentEventItemViewModel: InvestmentEventItemViewModel;
     InvestmentEventLocation: InvestmentEventLocation;

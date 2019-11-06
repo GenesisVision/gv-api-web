@@ -53,9 +53,6 @@ import ErrorViewModel from './model/ErrorViewModel';
 import EventFiltersOld from './model/EventFiltersOld';
 import EventInvestorItemFiltersOld from './model/EventInvestorItemFiltersOld';
 import EventItemFiltersOld from './model/EventItemFiltersOld';
-import ExternalKeyAddViewModel from './model/ExternalKeyAddViewModel';
-import ExternalKeyViewModel from './model/ExternalKeyViewModel';
-import ExternalKeysViewModel from './model/ExternalKeysViewModel';
 import ExternalTransactionDetails from './model/ExternalTransactionDetails';
 import FacetSortType from './model/FacetSortType';
 import FcmTokenViewModel from './model/FcmTokenViewModel';
@@ -87,7 +84,6 @@ import FundsListOld from './model/FundsListOld';
 import GeeTestDetails from './model/GeeTestDetails';
 import GeeTestResult from './model/GeeTestResult';
 import IOsAppVersion from './model/IOsAppVersion';
-import IdModel from './model/IdModel';
 import InternalTransferRequest from './model/InternalTransferRequest';
 import InvestmentEventItemViewModel from './model/InvestmentEventItemViewModel';
 import InvestmentEventLocation from './model/InvestmentEventLocation';
@@ -512,24 +508,6 @@ export {
     EventItemFiltersOld,
 
     /**
-     * @name index#ExternalKeyAddViewModel
-     * @type {ExternalKeyAddViewModel}
-     */
-    ExternalKeyAddViewModel,
-
-    /**
-     * @name index#ExternalKeyViewModel
-     * @type {ExternalKeyViewModel}
-     */
-    ExternalKeyViewModel,
-
-    /**
-     * @name index#ExternalKeysViewModel
-     * @type {ExternalKeysViewModel}
-     */
-    ExternalKeysViewModel,
-
-    /**
      * @name index#ExternalTransactionDetails
      * @type {ExternalTransactionDetails}
      */
@@ -714,12 +692,6 @@ export {
      * @type {IOsAppVersion}
      */
     IOsAppVersion,
-
-    /**
-     * @name index#IdModel
-     * @type {IdModel}
-     */
-    IdModel,
 
     /**
      * @name index#InternalTransferRequest

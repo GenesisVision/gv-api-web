@@ -204,9 +204,6 @@ Class | Method | HTTP request | Description
 *CoreApiV10.PlatformApi* | [**getPlatformStatistic**](docs/PlatformApi.md#getPlatformStatistic) | **GET** /v1.0/platform/statistic | Platform statistic
 *CoreApiV10.PlatformApi* | [**getPlatformStatus**](docs/PlatformApi.md#getPlatformStatus) | **GET** /v1.0/platform/info | Platform info
 *CoreApiV10.PlatformApi* | [**getProgramsLevels**](docs/PlatformApi.md#getProgramsLevels) | **GET** /v1.0/platform/levels | Investment programs levels
-*CoreApiV10.ProfileApi* | [**addExternalKey**](docs/ProfileApi.md#addExternalKey) | **POST** /v1.0/profile/keys/add | Add external exchange key
-*CoreApiV10.ProfileApi* | [**deleteExternalKey**](docs/ProfileApi.md#deleteExternalKey) | **POST** /v1.0/profile/keys/delete | Delete external exchange key
-*CoreApiV10.ProfileApi* | [**getExternalKey**](docs/ProfileApi.md#getExternalKey) | **GET** /v1.0/profile/keys | Get external exchange keys
 *CoreApiV10.ProfileApi* | [**getManagerProfile**](docs/ProfileApi.md#getManagerProfile) | **GET** /v1.0/profile/{id}/public | Public profile
 *CoreApiV10.ProfileApi* | [**getProfileFull**](docs/ProfileApi.md#getProfileFull) | **GET** /v1.0/profile | Get full profile
 *CoreApiV10.ProfileApi* | [**getProfileHeader**](docs/ProfileApi.md#getProfileHeader) | **GET** /v1.0/profile/header | Get header profile
@@ -304,9 +301,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.EventFiltersOld](docs/EventFiltersOld.md)
  - [CoreApiV10.EventInvestorItemFiltersOld](docs/EventInvestorItemFiltersOld.md)
  - [CoreApiV10.EventItemFiltersOld](docs/EventItemFiltersOld.md)
- - [CoreApiV10.ExternalKeyAddViewModel](docs/ExternalKeyAddViewModel.md)
- - [CoreApiV10.ExternalKeyViewModel](docs/ExternalKeyViewModel.md)
- - [CoreApiV10.ExternalKeysViewModel](docs/ExternalKeysViewModel.md)
  - [CoreApiV10.ExternalTransactionDetails](docs/ExternalTransactionDetails.md)
  - [CoreApiV10.FacetSortType](docs/FacetSortType.md)
  - [CoreApiV10.FcmTokenViewModel](docs/FcmTokenViewModel.md)
@@ -338,7 +332,6 @@ Class | Method | HTTP request | Description
  - [CoreApiV10.GeeTestDetails](docs/GeeTestDetails.md)
  - [CoreApiV10.GeeTestResult](docs/GeeTestResult.md)
  - [CoreApiV10.IOsAppVersion](docs/IOsAppVersion.md)
- - [CoreApiV10.IdModel](docs/IdModel.md)
  - [CoreApiV10.InternalTransferRequest](docs/InternalTransferRequest.md)
  - [CoreApiV10.InvestmentEventItemViewModel](docs/InvestmentEventItemViewModel.md)
  - [CoreApiV10.InvestmentEventLocation](docs/InvestmentEventLocation.md)
