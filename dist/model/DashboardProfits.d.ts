@@ -1,8 +1,8 @@
 import { DashboardTimeframeProfit } from './DashboardTimeframeProfit';
 export declare class DashboardProfits {
-    'dayProfit': DashboardTimeframeProfit;
-    'weekProfit': DashboardTimeframeProfit;
-    'monthProfit': DashboardTimeframeProfit;
+    'day': DashboardTimeframeProfit;
+    'week': DashboardTimeframeProfit;
+    'month': DashboardTimeframeProfit;
     constructor(data: {
         [key: string]: any;
     });

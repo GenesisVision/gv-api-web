@@ -1,16 +1,16 @@
 import { DashboardTimeframeProfit } from './DashboardTimeframeProfit';
 export class DashboardProfits {
     constructor(data) {
-        this['dayProfit'] = data['dayProfit'];
-        this['weekProfit'] = data['weekProfit'];
-        this['monthProfit'] = data['monthProfit'];
+        this['day'] = data['day'];
+        this['week'] = data['week'];
+        this['month'] = data['month'];
     }
     static constructFromObject(data) {
         if (data) {
             return new DashboardProfits({
-                'dayProfit': DashboardTimeframeProfit.constructFromObject(data['dayProfit']),
-                'weekProfit': DashboardTimeframeProfit.constructFromObject(data['weekProfit']),
-                'monthProfit': DashboardTimeframeProfit.constructFromObject(data['monthProfit']),
+                'day': DashboardTimeframeProfit.constructFromObject(data['day']),
+                'week': DashboardTimeframeProfit.constructFromObject(data['week']),
+                'month': DashboardTimeframeProfit.constructFromObject(data['month']),
             });
         }
     }

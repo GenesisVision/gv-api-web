@@ -1,11 +1,11 @@
 import { SignalTradingEvent } from './SignalTradingEvent';
-export declare class SignalTradingEvents {
-    'events': Array<SignalTradingEvent>;
+export declare class ItemsViewModelSignalTradingEvent {
+    'items': Array<SignalTradingEvent>;
     'total': number;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SignalTradingEvents | undefined;
+    }): ItemsViewModelSignalTradingEvent | undefined;
 }

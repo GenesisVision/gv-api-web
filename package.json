@@ -1,6 +1,6 @@
 {
   "name": "gv-api-web",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "genesis.vision-api-web",
   "license": "Unlicense",
   "main": "dist/index.js",
@@ -22,6 +22,7 @@
     "dotenv": "^8.0.0"
   },
   "devDependencies": {
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "shelljs": "^0.8.3"
   }
 }

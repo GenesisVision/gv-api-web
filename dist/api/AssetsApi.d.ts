@@ -6,6 +6,7 @@ import { FundAssetPart } from "../model/FundAssetPart";
 import { MakeSignalProviderProgram } from "../model/MakeSignalProviderProgram";
 import { MakeTradingAccountProgram } from "../model/MakeTradingAccountProgram";
 import { MakeTradingAccountSignalProvider } from "../model/MakeTradingAccountSignalProvider";
+import { NewExternalTradingAccountRequest } from "../model/NewExternalTradingAccountRequest";
 import { NewFundRequest } from "../model/NewFundRequest";
 import { NewTradingAccountRequest } from "../model/NewTradingAccountRequest";
 import { ProgramLevelInfo } from "../model/ProgramLevelInfo";
@@ -23,10 +24,10 @@ export declare class AssetsApi {
         request?: ChangeBrokerProgramRequest;
     }): CancelablePromise<null>;
     private changeBrokerWithHttpInfo;
-    changeProgramPassword(id: string, authorization: string, opts?: {
+    changeTradingAccountPassword(id: string, authorization: string, opts?: {
         model?: TradingAccountPwdUpdate;
     }): CancelablePromise<null>;
-    private changeProgramPasswordWithHttpInfo;
+    private changeTradingAccountPasswordWithHttpInfo;
     closeCurrentPeriod(id: string, authorization: string): CancelablePromise<null>;
     private closeCurrentPeriodWithHttpInfo;
     closeFund(id: string, authorization: string, opts?: {
@@ -41,6 +42,10 @@ export declare class AssetsApi {
         model?: TwoFactorCodeModel;
     }): CancelablePromise<null>;
     private confirmProgram2FAWithHttpInfo;
+    createExternalTradingAccount(authorization: string, opts?: {
+        request?: NewExternalTradingAccountRequest;
+    }): CancelablePromise<TradingAccountCreateResult>;
+    private createExternalTradingAccountWithHttpInfo;
     createFund(authorization: string, opts?: {
         request?: NewFundRequest;
     }): CancelablePromise<null>;

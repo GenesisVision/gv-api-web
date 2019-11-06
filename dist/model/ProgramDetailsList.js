@@ -10,6 +10,7 @@ export class ProgramDetailsList {
         this['id'] = data['id'];
         this['logo'] = data['logo'];
         this['url'] = data['url'];
+        this['description'] = data['description'];
         this['color'] = data['color'];
         this['title'] = data['title'];
         this['creationDate'] = data['creationDate'];
@@ -34,6 +35,7 @@ export class ProgramDetailsList {
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
+                'description': ApiClient.convertToType(data['description'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),

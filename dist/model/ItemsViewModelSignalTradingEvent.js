@@ -1,14 +1,14 @@
 import { SignalTradingEvent } from './SignalTradingEvent';
 import ApiClient from "../ApiClient";
-export class SignalTradingEvents {
+export class ItemsViewModelSignalTradingEvent {
     constructor(data) {
-        this['events'] = data['events'];
+        this['items'] = data['items'];
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
         if (data) {
-            return new SignalTradingEvents({
-                'events': ApiClient.convertToType(data['events'], [SignalTradingEvent]),
+            return new ItemsViewModelSignalTradingEvent({
+                'items': ApiClient.convertToType(data['items'], [SignalTradingEvent]),
                 'total': ApiClient.convertToType(data['total'], 'number'),
             });
         }

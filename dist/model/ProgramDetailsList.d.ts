@@ -8,6 +8,7 @@ export declare class ProgramDetailsList {
     'id': string;
     'logo': string;
     'url': string;
+    'description': string;
     'color': string;
     'title': string;
     'creationDate': Date;

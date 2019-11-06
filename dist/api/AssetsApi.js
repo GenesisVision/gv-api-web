@@ -62,19 +62,19 @@ export class AssetsApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/assets/programs/{id}/broker/change', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    changeProgramPassword(id, authorization, opts) {
-        return this.changeProgramPasswordWithHttpInfo(id, authorization, opts)
+    changeTradingAccountPassword(id, authorization, opts) {
+        return this.changeTradingAccountPasswordWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    changeProgramPasswordWithHttpInfo(id, authorization, opts = {}) {
+    changeTradingAccountPasswordWithHttpInfo(id, authorization, opts = {}) {
         let postBody = opts["model"];
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling changeProgramPassword");
+            throw new Error("Missing the required parameter \"id\" when calling changeTradingAccountPassword");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling changeProgramPassword");
+            throw new Error("Missing the required parameter \"authorization\" when calling changeTradingAccountPassword");
         }
         let pathParams = {
             "id": id
@@ -201,6 +201,29 @@ export class AssetsApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
         return this.apiClient.callApi('/v2.0/assets/programs/{id}/2fa/confirm', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    createExternalTradingAccount(authorization, opts) {
+        return this.createExternalTradingAccountWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    createExternalTradingAccountWithHttpInfo(authorization, opts = {}) {
+        let postBody = opts["request"];
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling createExternalTradingAccount");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = TradingAccountCreateResult;
+        return this.apiClient.callApi('/v2.0/assets/tradingaccounts/external/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     createFund(authorization, opts) {
         return this.createFundWithHttpInfo(authorization, opts)

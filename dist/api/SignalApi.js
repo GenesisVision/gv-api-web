@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
-import { SignalTradingEvents } from "../model/SignalTradingEvents";
+import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
+import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export class SignalApi {
     constructor(apiClient) {
@@ -223,7 +224,7 @@ export class SignalApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = SignalTradingEvents;
+        let returnType = ItemsViewModelExternalSignalTradingEvent;
         return this.apiClient.callApi('/v2.0/signal/external/trades/log', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getOpenSignalTrades(authorization, opts) {
@@ -313,7 +314,7 @@ export class SignalApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = SignalTradingEvents;
+        let returnType = ItemsViewModelSignalTradingEvent;
         return this.apiClient.callApi('/v2.0/signal/trades/log', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getSubscriberAccountsForAsset(id, authorization) {

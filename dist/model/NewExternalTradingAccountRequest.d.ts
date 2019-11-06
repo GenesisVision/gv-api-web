@@ -1,6 +1,5 @@
-export declare class ExternalKeyAddViewModel {
-    'title': string;
-    'exchangeId': string;
+export declare class NewExternalTradingAccountRequest {
+    'brokerAccountTypeId': string;
     'key': string;
     'secret': string;
     constructor(data: {
@@ -8,5 +7,5 @@ export declare class ExternalKeyAddViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ExternalKeyAddViewModel | undefined;
+    }): NewExternalTradingAccountRequest | undefined;
 }

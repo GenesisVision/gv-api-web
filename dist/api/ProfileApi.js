@@ -1,5 +1,4 @@
 import ApiClient from "../ApiClient";
-import { ExternalKeysViewModel } from "../model/ExternalKeysViewModel";
 import { ProfileFullViewModel } from "../model/ProfileFullViewModel";
 import { ProfileHeaderViewModel } from "../model/ProfileHeaderViewModel";
 import { PublicProfile } from "../model/PublicProfile";
@@ -7,75 +6,6 @@ import { SocialLinksViewModel } from "../model/SocialLinksViewModel";
 export class ProfileApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
-    }
-    addExternalKey(authorization, opts) {
-        return this.addExternalKeyWithHttpInfo(authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    addExternalKeyWithHttpInfo(authorization, opts = {}) {
-        let postBody = opts["model"];
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling addExternalKey");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/profile/keys/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    deleteExternalKey(authorization, opts) {
-        return this.deleteExternalKeyWithHttpInfo(authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    deleteExternalKeyWithHttpInfo(authorization, opts = {}) {
-        let postBody = opts["model"];
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling deleteExternalKey");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/profile/keys/delete', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getExternalKey(authorization) {
-        return this.getExternalKeyWithHttpInfo(authorization)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getExternalKeyWithHttpInfo(authorization) {
-        let postBody = null;
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getExternalKey");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ExternalKeysViewModel;
-        return this.apiClient.callApi('/v2.0/profile/keys', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getManagerProfile(id) {
         return this.getManagerProfileWithHttpInfo(id)

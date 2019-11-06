@@ -1,16 +1,14 @@
 import ApiClient from "../ApiClient";
-export class ExternalKeyAddViewModel {
+export class NewExternalTradingAccountRequest {
     constructor(data) {
-        this['title'] = data['title'];
-        this['exchangeId'] = data['exchangeId'];
+        this['brokerAccountTypeId'] = data['brokerAccountTypeId'];
         this['key'] = data['key'];
         this['secret'] = data['secret'];
     }
     static constructFromObject(data) {
         if (data) {
-            return new ExternalKeyAddViewModel({
-                'title': ApiClient.convertToType(data['title'], 'string'),
-                'exchangeId': ApiClient.convertToType(data['exchangeId'], 'string'),
+            return new NewExternalTradingAccountRequest({
+                'brokerAccountTypeId': ApiClient.convertToType(data['brokerAccountTypeId'], 'string'),
                 'key': ApiClient.convertToType(data['key'], 'string'),
                 'secret': ApiClient.convertToType(data['secret'], 'string'),
             });

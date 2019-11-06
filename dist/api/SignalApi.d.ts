@@ -5,8 +5,9 @@ import { AttachToExternalSignalProviderExt } from "../model/AttachToExternalSign
 import { AttachToSignalProvider } from "../model/AttachToSignalProvider";
 import { DetachFromExternalSignalProvider } from "../model/DetachFromExternalSignalProvider";
 import { DetachFromSignalProvider } from "../model/DetachFromSignalProvider";
+import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
+import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
 import { NewExternalSignalAccountRequest } from "../model/NewExternalSignalAccountRequest";
-import { SignalTradingEvents } from "../model/SignalTradingEvents";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export declare class SignalApi {
     private apiClient;
@@ -44,7 +45,7 @@ export declare class SignalApi {
         accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         skip?: number;
         take?: number;
-    }): CancelablePromise<SignalTradingEvents>;
+    }): CancelablePromise<ItemsViewModelExternalSignalTradingEvent>;
     private getExternalSignalTradingLogWithHttpInfo;
     getOpenSignalTrades(authorization: string, opts?: {
         sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';
@@ -71,7 +72,7 @@ export declare class SignalApi {
         accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         skip?: number;
         take?: number;
-    }): CancelablePromise<SignalTradingEvents>;
+    }): CancelablePromise<ItemsViewModelSignalTradingEvent>;
     private getSignalTradingLogWithHttpInfo;
     getSubscriberAccountsForAsset(id: string, authorization: string): CancelablePromise<null>;
     private getSubscriberAccountsForAssetWithHttpInfo;

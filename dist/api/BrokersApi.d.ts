@@ -7,6 +7,8 @@ export declare class BrokersApi {
     constructor(apiClient?: ApiClient);
     getBrokers(): CancelablePromise<BrokersInfo>;
     private getBrokersWithHttpInfo;
+    getBrokersExternal(): CancelablePromise<BrokersInfo>;
+    private getBrokersExternalWithHttpInfo;
     getBrokersForProgram(programId: string): CancelablePromise<BrokersProgramInfo>;
     private getBrokersForProgramWithHttpInfo;
 }
