@@ -96,6 +96,7 @@ import InvestmentRequestStatus from './model/InvestmentRequestStatus';
 import InvestmentRequestType from './model/InvestmentRequestType';
 import ItemsViewModelReferralFriend from './model/ItemsViewModelReferralFriend';
 import ItemsViewModelRewardDetails from './model/ItemsViewModelRewardDetails';
+import ItemsViewModelSignalTradingEvent from './model/ItemsViewModelSignalTradingEvent';
 import LevelInfo from './model/LevelInfo';
 import LevelsParamsInfo from './model/LevelsParamsInfo';
 import LoginViewModel from './model/LoginViewModel';
@@ -200,7 +201,6 @@ import SignalSubscriber from './model/SignalSubscriber';
 import SignalSubscriberStatus from './model/SignalSubscriberStatus';
 import SignalSubscription from './model/SignalSubscription';
 import SignalTradingEvent from './model/SignalTradingEvent';
-import SignalTradingEvents from './model/SignalTradingEvents';
 import SignalsList from './model/SignalsList';
 import SocialLinkType from './model/SocialLinkType';
 import SocialLinkViewModel from './model/SocialLinkViewModel';
@@ -764,6 +764,12 @@ export {
      * @type {ItemsViewModelRewardDetails}
      */
     ItemsViewModelRewardDetails,
+
+    /**
+     * @name index#ItemsViewModelSignalTradingEvent
+     * @type {ItemsViewModelSignalTradingEvent}
+     */
+    ItemsViewModelSignalTradingEvent,
 
     /**
      * @name index#LevelInfo
@@ -1388,12 +1394,6 @@ export {
      * @type {SignalTradingEvent}
      */
     SignalTradingEvent,
-
-    /**
-     * @name index#SignalTradingEvents
-     * @type {SignalTradingEvents}
-     */
-    SignalTradingEvents,
 
     /**
      * @name index#SignalsList

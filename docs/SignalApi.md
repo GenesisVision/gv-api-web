@@ -316,7 +316,7 @@ No authorization required
 
 <a name="getSignalTradingLog"></a>
 # **getSignalTradingLog**
-> SignalTradingEvents getSignalTradingLog(authorization, opts)
+> ItemsViewModelSignalTradingEvent getSignalTradingLog(authorization, opts)
 
 Get investors signals trading log
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignalTradingEvents**](SignalTradingEvents.md)
+[**ItemsViewModelSignalTradingEvent**](ItemsViewModelSignalTradingEvent.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ import AttachToSignalProviderSettings from '../model/AttachToSignalProviderSetti
 import CopyTradingAccountsList from '../model/CopyTradingAccountsList';
 import DetachFromSignalProvider from '../model/DetachFromSignalProvider';
 import ErrorViewModel from '../model/ErrorViewModel';
-import SignalTradingEvents from '../model/SignalTradingEvents';
+import ItemsViewModelSignalTradingEvent from '../model/ItemsViewModelSignalTradingEvent';
 import TradesSignalViewModel from '../model/TradesSignalViewModel';
 
 /**
@@ -393,7 +393,7 @@ export default class SignalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = SignalTradingEvents;
+      let returnType = ItemsViewModelSignalTradingEvent;
 
       return this.apiClient.callApi(
         '/v1.0/signal/trades/log', 'GET',
@@ -411,7 +411,7 @@ export default class SignalApi {
      * @param {String} [opts.accountCurrency] 
      * @param {Number} [opts.skip] 
      * @param {Number} [opts.take] 
-     * @return {CancelablePromise<SignalTradingEvents>} a Promise, with an object containing data of type SignalTradingEvents and HTTP response
+     * @return {CancelablePromise<ItemsViewModelSignalTradingEvent>} a Promise, with an object containing data of type ItemsViewModelSignalTradingEvent and HTTP response
      */
       getSignalTradingLog(authorization, opts) {
       return this.getSignalTradingLogWithHttpInfo(authorization, opts)

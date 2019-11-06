@@ -606,7 +606,7 @@ export declare class SignalApi {
         accountCurrency?: string;
         skip?: number;
         take?: number;
-    }): CancelablePromise<SignalTradingEvents>;
+    }): CancelablePromise<ItemsViewModelSignalTradingEvent>;
     getSlaveAttachInfo(id: string, authorization: string): CancelablePromise<any>;
     updateSubscriptionSettings(id: string, authorization: string, opts?: {
         model?: AttachToSignalProvider;
@@ -738,6 +738,7 @@ export declare interface index {
     InvestmentRequestType: InvestmentRequestType;
     ItemsViewModelReferralFriend: ItemsViewModelReferralFriend;
     ItemsViewModelRewardDetails: ItemsViewModelRewardDetails;
+    ItemsViewModelSignalTradingEvent: ItemsViewModelSignalTradingEvent;
     LevelInfo: LevelInfo;
     LevelsParamsInfo: LevelsParamsInfo;
     LoginViewModel: LoginViewModel;
@@ -842,7 +843,6 @@ export declare interface index {
     SignalSubscriberStatus: SignalSubscriberStatus;
     SignalSubscription: SignalSubscription;
     SignalTradingEvent: SignalTradingEvent;
-    SignalTradingEvents: SignalTradingEvents;
     SignalsList: SignalsList;
     SocialLinkType: SocialLinkType;
     SocialLinkViewModel: SocialLinkViewModel;
@@ -1807,6 +1807,11 @@ export declare interface ItemsViewModelReferralFriend {
 
 export declare interface ItemsViewModelRewardDetails {
     items: RewardDetails[];
+    total: number;
+}
+
+export declare interface ItemsViewModelSignalTradingEvent {
+    items: SignalTradingEvent[];
     total: number;
 }
 
