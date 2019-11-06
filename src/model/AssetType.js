@@ -40,24 +40,24 @@ export default class AssetType {
 
     
         /**
-         * value: "Programs"
+         * value: "Program"
          * @const
          */
-        Programs = "Programs";
+        Program = "Program";
 
     
         /**
-         * value: "Funds"
+         * value: "Fund"
          * @const
          */
-        Funds = "Funds";
+        Fund = "Fund";
 
     
         /**
-         * value: "CopyTrading"
+         * value: "Follow"
          * @const
          */
-        CopyTrading = "CopyTrading";
+        Follow = "Follow";
 
     
 

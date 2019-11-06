@@ -5,10 +5,10 @@
 
 * `None` (value: `"None"`)
 
-* `Programs` (value: `"Programs"`)
+* `Program` (value: `"Program"`)
 
-* `Funds` (value: `"Funds"`)
+* `Fund` (value: `"Fund"`)
 
-* `CopyTrading` (value: `"CopyTrading"`)
+* `Follow` (value: `"Follow"`)
 
 
