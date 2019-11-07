@@ -13,11 +13,11 @@ export declare class DashboardApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
     getChart(authorization: string, opts?: {
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
+        assets?: Array<string>;
+        dateFrom?: Date;
+        dateTo?: Date;
         chartPointsCount?: number;
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-        assets?: Array<string>;
     }): CancelablePromise<DashboardChart>;
     private getChartWithHttpInfo;
     getChartAssets(authorization: string): CancelablePromise<DashboardChartAssets>;
@@ -34,8 +34,8 @@ export declare class DashboardApi {
     getPortfolio(authorization: string): CancelablePromise<DashboardPortfolio>;
     private getPortfolioWithHttpInfo;
     getPublicTradingAssets(authorization: string, opts?: {
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
+        dateFrom?: Date;
+        dateTo?: Date;
         chartPointsCount?: number;
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<ItemsViewModelDashboardTradingAsset>;

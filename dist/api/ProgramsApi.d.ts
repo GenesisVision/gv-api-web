@@ -106,8 +106,8 @@ export declare class ProgramsApi {
         programCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         levelMin?: number;
         levelMax?: number;
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
+        dateFrom?: Date;
+        dateTo?: Date;
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;

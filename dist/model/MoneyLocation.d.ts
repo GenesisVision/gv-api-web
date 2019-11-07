@@ -1,7 +1,8 @@
 import { MoneyLocationType } from './MoneyLocationType';
 export declare class MoneyLocation {
-    'type': MoneyLocationType;
+    'name': MoneyLocationType;
     'percent': number;
+    'color': string;
     constructor(data: {
         [key: string]: any;
     });

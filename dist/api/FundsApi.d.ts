@@ -35,8 +35,8 @@ export declare class FundsApi {
         authorization?: string;
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         assets?: Array<string>;
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
+        dateFrom?: Date;
+        dateTo?: Date;
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;

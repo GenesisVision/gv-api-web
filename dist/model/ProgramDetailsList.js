@@ -26,7 +26,7 @@ export class ProgramDetailsList {
         this['owner'] = data['owner'];
         this['personalDetails'] = data['personalDetails'];
         this['tags'] = data['tags'];
-        this['chart'] = data['chart'];
+        this['statistic'] = data['statistic'];
         this['balance'] = data['balance'];
     }
     static constructFromObject(data) {
@@ -51,7 +51,7 @@ export class ProgramDetailsList {
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'personalDetails': PersonalProgramDetailsList.constructFromObject(data['personalDetails']),
                 'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
-                'chart': ProfitChart.constructFromObject(data['chart']),
+                'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'balance': AmountWithCurrency.constructFromObject(data['balance']),
             });
         }

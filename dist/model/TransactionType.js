@@ -1,4 +1,4 @@
 import { fabric } from "../constructFromObject";
-export const TransactionFilter = {
+export const TransactionType = {
     constructFromObject: fabric
 };

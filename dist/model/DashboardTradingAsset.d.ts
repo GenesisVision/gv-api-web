@@ -6,7 +6,7 @@ import { ProfitChart } from './ProfitChart';
 export declare class DashboardTradingAsset {
     'id': string;
     'assetType': DashboardAssetType;
-    'chart': ProfitChart;
+    'statistic': ProfitChart;
     'publicInfo': DashboardTradingAssetPublicDetails;
     'broker': DashboardTradingAssetBrokerDetails;
     'actions': DashboardTradingAssetActions;

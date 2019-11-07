@@ -133,8 +133,8 @@ export class FundsApi {
         let queryParams = {
             "ShowIn": opts["showIn"],
             "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
-            "StatisticDateFrom": opts["statisticDateFrom"],
-            "StatisticDateTo": opts["statisticDateTo"],
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
             "FacetId": opts["facetId"],
             "Mask": opts["mask"],

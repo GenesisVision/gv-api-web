@@ -1,9 +1,9 @@
 import { Currency } from './Currency';
 export declare class AmountItem {
-    'title': string;
     'amount': number;
     'currency': Currency;
     'color': string;
+    'title': string;
     constructor(data: {
         [key: string]: any;
     });

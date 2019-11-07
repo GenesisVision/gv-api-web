@@ -1,14 +1,14 @@
 import ApiClient from "../ApiClient";
-export class TransactionDetail {
+export class TransactionDetailItem {
     constructor(data) {
-        this['title'] = data['title'];
         this['details'] = data['details'];
+        this['title'] = data['title'];
     }
     static constructFromObject(data) {
         if (data) {
-            return new TransactionDetail({
-                'title': ApiClient.convertToType(data['title'], 'string'),
+            return new TransactionDetailItem({
                 'details': ApiClient.convertToType(data['details'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
             });
         }
     }

@@ -120,29 +120,6 @@ export class SignalApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/trades/{id}/close', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    createExternalSignalAccount(authorization, opts) {
-        return this.createExternalSignalAccountWithHttpInfo(authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    createExternalSignalAccountWithHttpInfo(authorization, opts = {}) {
-        let postBody = opts["request"];
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling createExternalSignalAccount");
-        }
-        let pathParams = {};
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/signal/external/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
     detachSlaveFromMaster(id, authorization, opts) {
         return this.detachSlaveFromMasterWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {

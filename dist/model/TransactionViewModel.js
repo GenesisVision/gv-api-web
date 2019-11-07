@@ -1,8 +1,8 @@
 import { AmountRowCell } from './AmountRowCell';
 import { ExternalDetails } from './ExternalDetails';
-import { ManagedAssetDetails } from './ManagedAssetDetails';
+import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
-import { TransactionDetail } from './TransactionDetail';
+import { TransactionDetailItem } from './TransactionDetailItem';
 import { TransactionDetailsActions } from './TransactionDetailsActions';
 import { WalletRowCell } from './WalletRowCell';
 import ApiClient from "../ApiClient";
@@ -28,9 +28,9 @@ export class TransactionViewModel {
                 'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'amount': AmountRowCell.constructFromObject(data['amount']),
-                'asset': ManagedAssetDetails.constructFromObject(data['asset']),
+                'asset': ManagerAssetDetails.constructFromObject(data['asset']),
                 'external': ExternalDetails.constructFromObject(data['external']),
-                'details': ApiClient.convertToType(data['details'], [TransactionDetail]),
+                'details': ApiClient.convertToType(data['details'], [TransactionDetailItem]),
                 'actions': TransactionDetailsActions.constructFromObject(data['actions']),
             });
         }

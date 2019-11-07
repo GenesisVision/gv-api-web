@@ -1,8 +1,8 @@
 import { AmountRowCell } from './AmountRowCell';
 import { ExternalDetails } from './ExternalDetails';
-import { ManagedAssetDetails } from './ManagedAssetDetails';
+import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
-import { TransactionDetail } from './TransactionDetail';
+import { TransactionDetailItem } from './TransactionDetailItem';
 import { TransactionDetailsActions } from './TransactionDetailsActions';
 import { WalletRowCell } from './WalletRowCell';
 export declare class TransactionViewModel {
@@ -12,9 +12,9 @@ export declare class TransactionViewModel {
     'status': MultiWalletTransactionStatus;
     'description': string;
     'amount': AmountRowCell;
-    'asset': ManagedAssetDetails;
+    'asset': ManagerAssetDetails;
     'external': ExternalDetails;
-    'details': Array<TransactionDetail>;
+    'details': Array<TransactionDetailItem>;
     'actions': TransactionDetailsActions;
     constructor(data: {
         [key: string]: any;

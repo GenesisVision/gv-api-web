@@ -1,6 +1,6 @@
 import { AssetType } from './AssetType';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
-export declare class ManagedAssetDetails {
+export declare class ManagerAssetDetails {
     'description': string;
     'manager': string;
     'id': string;
@@ -15,5 +15,5 @@ export declare class ManagedAssetDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ManagedAssetDetails | undefined;
+    }): ManagerAssetDetails | undefined;
 }

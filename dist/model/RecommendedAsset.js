@@ -1,10 +1,12 @@
 import { AssetType } from './AssetType';
+import { Currency } from './Currency';
 import { ProfitChart } from './ProfitChart';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 import ApiClient from "../ApiClient";
 export class RecommendedAsset {
     constructor(data) {
-        this['chart'] = data['chart'];
+        this['currency'] = data['currency'];
+        this['statistic'] = data['statistic'];
         this['id'] = data['id'];
         this['logo'] = data['logo'];
         this['color'] = data['color'];
@@ -16,7 +18,8 @@ export class RecommendedAsset {
     static constructFromObject(data) {
         if (data) {
             return new RecommendedAsset({
-                'chart': ProfitChart.constructFromObject(data['chart']),
+                'currency': Currency.constructFromObject(data['currency']),
+                'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),

@@ -119,7 +119,7 @@ export class WalletApi {
         let queryParams = {
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
-            "TransactionFilter": opts["transactionFilter"],
+            "TransactionType": opts["transactionType"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };

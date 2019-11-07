@@ -7,8 +7,8 @@ export declare class CopytradingApi {
     getSignalAssets(opts?: {
         authorization?: string;
         tags?: Array<string>;
-        statisticDateFrom?: Date;
-        statisticDateTo?: Date;
+        dateFrom?: Date;
+        dateTo?: Date;
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;

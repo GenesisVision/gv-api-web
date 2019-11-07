@@ -1,7 +1,7 @@
 import { AssetType } from './AssetType';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 import ApiClient from "../ApiClient";
-export class ManagedAssetDetails {
+export class ManagerAssetDetails {
     constructor(data) {
         this['description'] = data['description'];
         this['manager'] = data['manager'];
@@ -15,7 +15,7 @@ export class ManagedAssetDetails {
     }
     static constructFromObject(data) {
         if (data) {
-            return new ManagedAssetDetails({
+            return new ManagerAssetDetails({
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'manager': ApiClient.convertToType(data['manager'], 'string'),
                 'id': ApiClient.convertToType(data['id'], 'string'),

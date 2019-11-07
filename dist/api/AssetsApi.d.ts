@@ -66,6 +66,10 @@ export declare class AssetsApi {
         request?: MakeTradingAccountSignalProvider;
     }): CancelablePromise<null>;
     private makeAccountSignalProviderWithHttpInfo;
+    makeExternalAccountSignalProvider(authorization: string, opts?: {
+        request?: MakeTradingAccountSignalProvider;
+    }): CancelablePromise<null>;
+    private makeExternalAccountSignalProviderWithHttpInfo;
     makeSignalProviderProgram(authorization: string, opts?: {
         request?: MakeSignalProviderProgram;
     }): CancelablePromise<null>;

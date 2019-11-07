@@ -25,11 +25,11 @@ export class DashboardApi {
         }
         let pathParams = {};
         let queryParams = {
-            "StatisticDateFrom": opts["statisticDateFrom"],
-            "StatisticDateTo": opts["statisticDateTo"],
+            "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
-            "ShowIn": opts["showIn"],
-            "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi")
+            "ShowIn": opts["showIn"]
         };
         let headerParams = {
             "Authorization": authorization
@@ -151,8 +151,8 @@ export class DashboardApi {
         }
         let pathParams = {};
         let queryParams = {
-            "StatisticDateFrom": opts["statisticDateFrom"],
-            "StatisticDateTo": opts["statisticDateTo"],
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
             "ShowIn": opts["showIn"]
         };

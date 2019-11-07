@@ -373,6 +373,29 @@ export class AssetsApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/assets/signal/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    makeExternalAccountSignalProvider(authorization, opts) {
+        return this.makeExternalAccountSignalProviderWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    makeExternalAccountSignalProviderWithHttpInfo(authorization, opts = {}) {
+        let postBody = opts["request"];
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling makeExternalAccountSignalProvider");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/assets/tradingaccounts/external/fromaccount/create', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     makeSignalProviderProgram(authorization, opts) {
         return this.makeSignalProviderProgramWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {

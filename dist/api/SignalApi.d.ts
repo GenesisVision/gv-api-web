@@ -7,7 +7,6 @@ import { DetachFromExternalSignalProvider } from "../model/DetachFromExternalSig
 import { DetachFromSignalProvider } from "../model/DetachFromSignalProvider";
 import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
 import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
-import { NewExternalSignalAccountRequest } from "../model/NewExternalSignalAccountRequest";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export declare class SignalApi {
     private apiClient;
@@ -28,10 +27,6 @@ export declare class SignalApi {
         assetId?: string;
     }): CancelablePromise<null>;
     private closeTradeWithHttpInfo;
-    createExternalSignalAccount(authorization: string, opts?: {
-        request?: NewExternalSignalAccountRequest;
-    }): CancelablePromise<null>;
-    private createExternalSignalAccountWithHttpInfo;
     detachSlaveFromMaster(id: string, authorization: string, opts?: {
         model?: DetachFromSignalProvider;
     }): CancelablePromise<null>;

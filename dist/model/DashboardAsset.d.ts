@@ -1,5 +1,5 @@
 export declare class DashboardAsset {
-    'asset': string;
+    'name': string;
     'color': string;
     'percent': number;
     constructor(data: {

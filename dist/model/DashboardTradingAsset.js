@@ -8,7 +8,7 @@ export class DashboardTradingAsset {
     constructor(data) {
         this['id'] = data['id'];
         this['assetType'] = data['assetType'];
-        this['chart'] = data['chart'];
+        this['statistic'] = data['statistic'];
         this['publicInfo'] = data['publicInfo'];
         this['broker'] = data['broker'];
         this['actions'] = data['actions'];
@@ -18,7 +18,7 @@ export class DashboardTradingAsset {
             return new DashboardTradingAsset({
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'assetType': DashboardAssetType.constructFromObject(data['assetType']),
-                'chart': ProfitChart.constructFromObject(data['chart']),
+                'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'publicInfo': DashboardTradingAssetPublicDetails.constructFromObject(data['publicInfo']),
                 'broker': DashboardTradingAssetBrokerDetails.constructFromObject(data['broker']),
                 'actions': DashboardTradingAssetActions.constructFromObject(data['actions']),

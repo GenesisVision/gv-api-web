@@ -1,9 +1,9 @@
 export declare class ExternalDetails {
-    'title': string;
     'id': string;
     'logo': string;
     'hash': string;
     'addressUrl': string;
+    'title': string;
     constructor(data: {
         [key: string]: any;
     });

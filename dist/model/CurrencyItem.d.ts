@@ -1,8 +1,8 @@
 import { Currency } from './Currency';
 export declare class CurrencyItem {
-    'title': string;
     'logo': string;
     'currency': Currency;
+    'title': string;
     constructor(data: {
         [key: string]: any;
     });

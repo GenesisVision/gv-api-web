@@ -24,7 +24,7 @@ export declare class ProgramDetailsList {
     'owner': ProfilePublicShort;
     'personalDetails': PersonalProgramDetailsList;
     'tags': Array<ProgramTag>;
-    'chart': ProfitChart;
+    'statistic': ProfitChart;
     'balance': AmountWithCurrency;
     constructor(data: {
         [key: string]: any;

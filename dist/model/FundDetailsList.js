@@ -18,7 +18,7 @@ export class FundDetailsList {
         this['totalAssetsCount'] = data['totalAssetsCount'];
         this['topFundAssets'] = data['topFundAssets'];
         this['owner'] = data['owner'];
-        this['chart'] = data['chart'];
+        this['statistic'] = data['statistic'];
         this['personalDetails'] = data['personalDetails'];
         this['balance'] = data['balance'];
     }
@@ -37,7 +37,7 @@ export class FundDetailsList {
                 'totalAssetsCount': ApiClient.convertToType(data['totalAssetsCount'], 'number'),
                 'topFundAssets': ApiClient.convertToType(data['topFundAssets'], [FundAssetPercent]),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
-                'chart': ProfitChart.constructFromObject(data['chart']),
+                'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'personalDetails': PersonalFundDetailsList.constructFromObject(data['personalDetails']),
                 'balance': AmountWithCurrency.constructFromObject(data['balance']),
             });

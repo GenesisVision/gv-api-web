@@ -16,7 +16,7 @@ export declare class FundDetailsList {
     'totalAssetsCount': number;
     'topFundAssets': Array<FundAssetPercent>;
     'owner': ProfilePublicShort;
-    'chart': ProfitChart;
+    'statistic': ProfitChart;
     'personalDetails': PersonalFundDetailsList;
     'balance': AmountWithCurrency;
     constructor(data: {
