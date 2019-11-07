@@ -1,4 +1,4 @@
 import { fabric } from "../constructFromObject";
-export const DashboardAssetType = {
+export const DashboardAssetStatus = {
     constructFromObject: fabric
 };

@@ -33,11 +33,24 @@ export declare class DashboardApi {
     private getInvestingDetailsWithHttpInfo;
     getPortfolio(authorization: string): CancelablePromise<DashboardPortfolio>;
     private getPortfolioWithHttpInfo;
+    getPrivateTradingAssets(authorization: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        chartPointsCount?: number;
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        status?: 'All' | 'Active';
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelDashboardTradingAsset>;
+    private getPrivateTradingAssetsWithHttpInfo;
     getPublicTradingAssets(authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        status?: 'All' | 'Active';
+        skip?: number;
+        take?: number;
     }): CancelablePromise<ItemsViewModelDashboardTradingAsset>;
     private getPublicTradingAssetsWithHttpInfo;
     getRecommendations(authorization: string, opts?: {

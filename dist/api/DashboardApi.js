@@ -138,6 +138,37 @@ export class DashboardApi {
         let returnType = DashboardPortfolio;
         return this.apiClient.callApi('/v2.0/dashboard/portfolio', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getPrivateTradingAssets(authorization, opts) {
+        return this.getPrivateTradingAssetsWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getPrivateTradingAssetsWithHttpInfo(authorization, opts = {}) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getPrivateTradingAssets");
+        }
+        let pathParams = {};
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "ChartPointsCount": opts["chartPointsCount"],
+            "ShowIn": opts["showIn"],
+            "Status": opts["status"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelDashboardTradingAsset;
+        return this.apiClient.callApi('/v2.0/dashboard/trading/private', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getPublicTradingAssets(authorization, opts) {
         return this.getPublicTradingAssetsWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {
@@ -154,7 +185,10 @@ export class DashboardApi {
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
-            "ShowIn": opts["showIn"]
+            "ShowIn": opts["showIn"],
+            "Status": opts["status"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
         };
         let headerParams = {
             "Authorization": authorization
