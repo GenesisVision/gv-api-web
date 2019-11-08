@@ -1,6 +1,7 @@
 import { Currency } from './Currency';
 import { PersonalCopyTradingAccountInfo } from './PersonalCopyTradingAccountInfo';
 import { ProfilePublicShort } from './ProfilePublicShort';
+import { ProfitChart } from './ProfitChart';
 import { ProgramTag } from './ProgramTag';
 import ApiClient from "../ApiClient";
 export class CopyTradingDetailsList {
@@ -14,7 +15,10 @@ export class CopyTradingDetailsList {
         this['subscribersCount'] = data['subscribersCount'];
         this['tradesCount'] = data['tradesCount'];
         this['status'] = data['status'];
+        this['url'] = data['url'];
+        this['color'] = data['color'];
         this['owner'] = data['owner'];
+        this['statistic'] = data['statistic'];
         this['personalDetails'] = data['personalDetails'];
         this['tags'] = data['tags'];
     }
@@ -30,7 +34,10 @@ export class CopyTradingDetailsList {
                 'subscribersCount': ApiClient.convertToType(data['subscribersCount'], 'number'),
                 'tradesCount': ApiClient.convertToType(data['tradesCount'], 'number'),
                 'status': ApiClient.convertToType(data['status'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
+                'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'personalDetails': PersonalCopyTradingAccountInfo.constructFromObject(data['personalDetails']),
                 'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
             });

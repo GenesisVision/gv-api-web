@@ -1,11 +1,12 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { ItemsViewModelCopyTradingAccountInfo } from "../model/ItemsViewModelCopyTradingAccountInfo";
-export declare class CopytradingApi {
+import { ItemsViewModelCopyTradingDetailsList } from "../model/ItemsViewModelCopyTradingDetailsList";
+export declare class FollowApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getSignalAssets(opts?: {
+    getFollowAssets(opts?: {
         authorization?: string;
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         tags?: Array<string>;
         dateFrom?: Date;
         dateTo?: Date;
@@ -15,6 +16,6 @@ export declare class CopytradingApi {
         showFavorites?: boolean;
         skip?: number;
         take?: number;
-    }): CancelablePromise<ItemsViewModelCopyTradingAccountInfo>;
-    private getSignalAssetsWithHttpInfo;
+    }): CancelablePromise<ItemsViewModelCopyTradingDetailsList>;
+    private getFollowAssetsWithHttpInfo;
 }
