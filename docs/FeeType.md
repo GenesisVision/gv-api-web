@@ -35,6 +35,8 @@
 
 * `GvSignalSuccessFee` (value: `"GvSignalSuccessFee"`)
 
+* `GvSignalVolumeFee` (value: `"GvSignalVolumeFee"`)
+
 * `GvFundTrade` (value: `"GvFundTrade"`)
 
 

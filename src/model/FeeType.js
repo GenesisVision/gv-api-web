@@ -145,6 +145,13 @@ export default class FeeType {
 
     
         /**
+         * value: "GvSignalVolumeFee"
+         * @const
+         */
+        GvSignalVolumeFee = "GvSignalVolumeFee";
+
+    
+        /**
          * value: "GvFundTrade"
          * @const
          */
