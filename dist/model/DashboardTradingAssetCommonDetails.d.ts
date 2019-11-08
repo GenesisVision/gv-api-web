@@ -3,6 +3,7 @@ export declare class DashboardTradingAssetCommonDetails {
     'balance': number;
     'login': string;
     'currency': CurrencyEnum;
+    'leverage': number;
     constructor(data: {
         [key: string]: any;
     });

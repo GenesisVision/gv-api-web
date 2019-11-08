@@ -5,6 +5,7 @@ export class DashboardTradingAssetCommonDetails {
         this['balance'] = data['balance'];
         this['login'] = data['login'];
         this['currency'] = data['currency'];
+        this['leverage'] = data['leverage'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -13,6 +14,7 @@ export class DashboardTradingAssetCommonDetails {
                 'balance': ApiClient.convertToType(data['balance'], 'number'),
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'currency': ApiClient.convertToType(data['currency'], 'string'),
+                'leverage': ApiClient.convertToType(data['leverage'], 'number'),
             });
         }
     }

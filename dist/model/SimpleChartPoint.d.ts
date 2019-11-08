@@ -1,5 +1,5 @@
 export declare class SimpleChartPoint {
-    'date': Date;
+    'date': number;
     'value': number;
     constructor(data: {
         [key: string]: any;

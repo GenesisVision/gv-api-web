@@ -7,7 +7,7 @@ export class SimpleChartPoint {
     static constructFromObject(data) {
         if (data) {
             return new SimpleChartPoint({
-                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'date': ApiClient.convertToType(data['date'], 'number'),
                 'value': ApiClient.convertToType(data['value'], 'number'),
             });
         }

@@ -8,7 +8,7 @@ export class BalanceChartPoint {
     static constructFromObject(data) {
         if (data) {
             return new BalanceChartPoint({
-                'date': ApiClient.convertToType(data['date'], 'Date'),
+                'date': ApiClient.convertToType(data['date'], 'number'),
                 'managerFunds': ApiClient.convertToType(data['managerFunds'], 'number'),
                 'investorsFunds': ApiClient.convertToType(data['investorsFunds'], 'number'),
             });

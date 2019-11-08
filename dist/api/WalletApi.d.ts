@@ -27,7 +27,7 @@ export declare class WalletApi {
     getTransactions(authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
-        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Programs' | 'Funds' | 'Signals' | 'TradingAccounts' | 'AgentRewards' | 'ExternalWithdrawal' | 'ExternalDeposit' | 'Platform';
+        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward' | 'ExternalWithdrawal' | 'ExternalDeposit' | 'Platform';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
