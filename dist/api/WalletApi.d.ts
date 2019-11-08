@@ -24,14 +24,22 @@ export declare class WalletApi {
     private createWithdrawalRequestWithHttpInfo;
     getGMCommissionData(authorization: string): CancelablePromise<UserCommissionData>;
     private getGMCommissionDataWithHttpInfo;
-    getTransactions(authorization: string, opts?: {
+    getTransactionsExternal(authorization: string, opts?: {
+        transactionType?: 'All' | 'Withdrawal' | 'Deposit' | 'Platform';
         dateFrom?: Date;
         dateTo?: Date;
-        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward' | 'ExternalWithdrawal' | 'ExternalDeposit' | 'Platform';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
-    private getTransactionsWithHttpInfo;
+    private getTransactionsExternalWithHttpInfo;
+    getTransactionsInternal(authorization: string, opts?: {
+        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward' | 'Platform';
+        dateFrom?: Date;
+        dateTo?: Date;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelTransactionViewModel>;
+    private getTransactionsInternalWithHttpInfo;
     getUserWithdrawalSummary(authorization: string): CancelablePromise<WithdrawalSummary>;
     private getUserWithdrawalSummaryWithHttpInfo;
     getWalletAvailable(currency: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;

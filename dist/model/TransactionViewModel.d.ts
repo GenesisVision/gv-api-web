@@ -1,5 +1,4 @@
 import { AmountRowCell } from './AmountRowCell';
-import { ExternalDetails } from './ExternalDetails';
 import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
 import { TransactionDetailItem } from './TransactionDetailItem';
@@ -13,7 +12,6 @@ export declare class TransactionViewModel {
     'description': string;
     'amount': AmountRowCell;
     'asset': ManagerAssetDetails;
-    'external': ExternalDetails;
     'details': Array<TransactionDetailItem>;
     'actions': TransactionDetailsActions;
     constructor(data: {

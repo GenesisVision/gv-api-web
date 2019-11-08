@@ -1,5 +1,4 @@
 import { AmountRowCell } from './AmountRowCell';
-import { ExternalDetails } from './ExternalDetails';
 import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
 import { TransactionDetailItem } from './TransactionDetailItem';
@@ -15,7 +14,6 @@ export class TransactionViewModel {
         this['description'] = data['description'];
         this['amount'] = data['amount'];
         this['asset'] = data['asset'];
-        this['external'] = data['external'];
         this['details'] = data['details'];
         this['actions'] = data['actions'];
     }
@@ -29,7 +27,6 @@ export class TransactionViewModel {
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'amount': AmountRowCell.constructFromObject(data['amount']),
                 'asset': ManagerAssetDetails.constructFromObject(data['asset']),
-                'external': ExternalDetails.constructFromObject(data['external']),
                 'details': ApiClient.convertToType(data['details'], [TransactionDetailItem]),
                 'actions': TransactionDetailsActions.constructFromObject(data['actions']),
             });

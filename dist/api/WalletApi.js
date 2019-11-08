@@ -104,22 +104,22 @@ export class WalletApi {
         let returnType = UserCommissionData;
         return this.apiClient.callApi('/v2.0/wallet/fee/gvtholding', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getTransactions(authorization, opts) {
-        return this.getTransactionsWithHttpInfo(authorization, opts)
+    getTransactionsExternal(authorization, opts) {
+        return this.getTransactionsExternalWithHttpInfo(authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getTransactionsWithHttpInfo(authorization, opts = {}) {
+    getTransactionsExternalWithHttpInfo(authorization, opts = {}) {
         let postBody = null;
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getTransactions");
+            throw new Error("Missing the required parameter \"authorization\" when calling getTransactionsExternal");
         }
         let pathParams = {};
         let queryParams = {
+            "TransactionType": opts["transactionType"],
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
-            "TransactionType": opts["transactionType"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -131,7 +131,36 @@ export class WalletApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ItemsViewModelTransactionViewModel;
-        return this.apiClient.callApi('/v2.0/wallet/transactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/wallet/transactions/external', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getTransactionsInternal(authorization, opts) {
+        return this.getTransactionsInternalWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getTransactionsInternalWithHttpInfo(authorization, opts = {}) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getTransactionsInternal");
+        }
+        let pathParams = {};
+        let queryParams = {
+            "TransactionType": opts["transactionType"],
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelTransactionViewModel;
+        return this.apiClient.callApi('/v2.0/wallet/transactions/internal', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getUserWithdrawalSummary(authorization) {
         return this.getUserWithdrawalSummaryWithHttpInfo(authorization)
