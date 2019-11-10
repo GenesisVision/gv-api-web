@@ -5,6 +5,7 @@ export declare class DashboardTradingAssetActions {
     'canChangePassword': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateTradingAccount': boolean;
+    'canMakeSignalProviderFromPrivateExternalTradingAccount': boolean;
     'canMakeProgramFromSignalProvider': boolean;
     'canMakeSignalProviderFromProgram': boolean;
     'canEditSignalProviderSettings': boolean;
