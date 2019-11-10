@@ -10,3 +10,4 @@ node_modules
 ApiClient.ts
 constructFromObject.ts
 index.ts
+/dist/model/
