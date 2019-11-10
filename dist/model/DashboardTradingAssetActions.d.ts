@@ -3,6 +3,11 @@ export declare class DashboardTradingAssetActions {
     'canAddRequestWithdraw': boolean;
     'canTransferMoney': boolean;
     'canChangePassword': boolean;
+    'canMakeProgramFromPrivateTradingAccount': boolean;
+    'canMakeSignalProviderFromPrivateTradingAccount': boolean;
+    'canMakeProgramFromSignalProvider': boolean;
+    'canMakeSignalProviderFromProgram': boolean;
+    'canEditSignalProviderSettings': boolean;
     constructor(data: {
         [key: string]: any;
     });

@@ -3,8 +3,8 @@ export declare class TradingAccountOwnerActions {
     'canClosePeriod': boolean;
     'canChangePassword': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
-    'canMakePublicAccountFromPrivateTradingAccount': boolean;
-    'canMakeProgramFromPublicTradingAccount': boolean;
+    'canMakeSignalProviderFromPrivateTradingAccount': boolean;
+    'canMakeProgramFromSignalProvider': boolean;
     'canMakeSignalProviderFromProgram': boolean;
     'canEditSignalProviderSettings': boolean;
     constructor(data: {
