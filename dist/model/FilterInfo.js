@@ -7,7 +7,7 @@ export class FilterInfo {
         this['events'] = data['events'];
         this['programs'] = data['programs'];
         this['funds'] = data['funds'];
-        this['copyTrading'] = data['copyTrading'];
+        this['follow'] = data['follow'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -17,7 +17,7 @@ export class FilterInfo {
                 'events': ApiClient.convertToType(data['events'], [FilterItemInfo]),
                 'programs': ApiClient.convertToType(data['programs'], [FilterItemInfo]),
                 'funds': ApiClient.convertToType(data['funds'], [FilterItemInfo]),
-                'copyTrading': ApiClient.convertToType(data['copyTrading'], [FilterItemInfo]),
+                'follow': ApiClient.convertToType(data['follow'], [FilterItemInfo]),
             });
         }
     }

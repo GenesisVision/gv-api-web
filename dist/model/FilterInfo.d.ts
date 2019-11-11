@@ -5,7 +5,7 @@ export declare class FilterInfo {
     'events': Array<FilterItemInfo>;
     'programs': Array<FilterItemInfo>;
     'funds': Array<FilterItemInfo>;
-    'copyTrading': Array<FilterItemInfo>;
+    'follow': Array<FilterItemInfo>;
     constructor(data: {
         [key: string]: any;
     });

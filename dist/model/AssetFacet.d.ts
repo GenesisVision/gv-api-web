@@ -1,8 +1,6 @@
 import { FacetSortType } from './FacetSortType';
-import { ProgramsFilterSorting } from './ProgramsFilterSorting';
 import { Timeframe } from './Timeframe';
-export declare class ProgramFacet {
-    'sorting': ProgramsFilterSorting;
+export declare class AssetFacet {
     'id': string;
     'title': string;
     'description': string;
@@ -10,10 +8,11 @@ export declare class ProgramFacet {
     'url': string;
     'sortType': FacetSortType;
     'timeframe': Timeframe;
+    'sorting': string;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramFacet | undefined;
+    }): AssetFacet | undefined;
 }

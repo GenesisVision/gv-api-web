@@ -1,5 +1,6 @@
 import { FundAssetPartWithIcon } from './FundAssetPartWithIcon';
 export declare class FundAssetsState {
+    'date': number;
     'assets': Array<FundAssetPartWithIcon>;
     'otherPercent': number;
     constructor(data: {

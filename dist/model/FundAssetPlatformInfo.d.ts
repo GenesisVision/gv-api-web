@@ -1,9 +1,9 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
+import { AssetFacet } from './AssetFacet';
 import { FundCreateAssetPlatformInfo } from './FundCreateAssetPlatformInfo';
-import { FundFacet } from './FundFacet';
 import { PlatformAsset } from './PlatformAsset';
 export declare class FundAssetPlatformInfo {
-    'facets': Array<FundFacet>;
+    'facets': Array<AssetFacet>;
     'assets': Array<PlatformAsset>;
     'minInvestAmountIntoFund': Array<AmountWithCurrency>;
     'createFundInfo': FundCreateAssetPlatformInfo;

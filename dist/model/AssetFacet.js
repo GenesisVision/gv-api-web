@@ -1,10 +1,8 @@
 import { FacetSortType } from './FacetSortType';
-import { FundsFilterSorting } from './FundsFilterSorting';
 import { Timeframe } from './Timeframe';
 import ApiClient from "../ApiClient";
-export class FundFacet {
+export class AssetFacet {
     constructor(data) {
-        this['sorting'] = data['sorting'];
         this['id'] = data['id'];
         this['title'] = data['title'];
         this['description'] = data['description'];
@@ -12,11 +10,11 @@ export class FundFacet {
         this['url'] = data['url'];
         this['sortType'] = data['sortType'];
         this['timeframe'] = data['timeframe'];
+        this['sorting'] = data['sorting'];
     }
     static constructFromObject(data) {
         if (data) {
-            return new FundFacet({
-                'sorting': FundsFilterSorting.constructFromObject(data['sorting']),
+            return new AssetFacet({
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'description': ApiClient.convertToType(data['description'], 'string'),
@@ -24,6 +22,7 @@ export class FundFacet {
                 'url': ApiClient.convertToType(data['url'], 'string'),
                 'sortType': FacetSortType.constructFromObject(data['sortType']),
                 'timeframe': Timeframe.constructFromObject(data['timeframe']),
+                'sorting': ApiClient.convertToType(data['sorting'], 'string'),
             });
         }
     }

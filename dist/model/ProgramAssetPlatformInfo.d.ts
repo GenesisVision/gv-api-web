@@ -1,9 +1,9 @@
+import { AssetFacet } from './AssetFacet';
 import { ProgramCreateAssetPlatformInfo } from './ProgramCreateAssetPlatformInfo';
-import { ProgramFacet } from './ProgramFacet';
 import { ProgramMinInvestAmount } from './ProgramMinInvestAmount';
 import { ProgramTag } from './ProgramTag';
 export declare class ProgramAssetPlatformInfo {
-    'facets': Array<ProgramFacet>;
+    'facets': Array<AssetFacet>;
     'tags': Array<ProgramTag>;
     'availableProgramCurrencies': Array<string>;
     'minInvestAmounts': Array<ProgramMinInvestAmount>;
