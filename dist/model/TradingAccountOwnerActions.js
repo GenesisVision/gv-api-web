@@ -5,8 +5,9 @@ export class TradingAccountOwnerActions {
         this['canClosePeriod'] = data['canClosePeriod'];
         this['canChangePassword'] = data['canChangePassword'];
         this['canMakeProgramFromPrivateTradingAccount'] = data['canMakeProgramFromPrivateTradingAccount'];
-        this['canMakePublicAccountFromPrivateTradingAccount'] = data['canMakePublicAccountFromPrivateTradingAccount'];
-        this['canMakeProgramFromPublicTradingAccount'] = data['canMakeProgramFromPublicTradingAccount'];
+        this['canMakeSignalProviderFromPrivateTradingAccount'] = data['canMakeSignalProviderFromPrivateTradingAccount'];
+        this['canMakeSignalProviderFromPrivateExternalTradingAccount'] = data['canMakeSignalProviderFromPrivateExternalTradingAccount'];
+        this['canMakeProgramFromSignalProvider'] = data['canMakeProgramFromSignalProvider'];
         this['canMakeSignalProviderFromProgram'] = data['canMakeSignalProviderFromProgram'];
         this['canEditSignalProviderSettings'] = data['canEditSignalProviderSettings'];
     }
@@ -17,8 +18,9 @@ export class TradingAccountOwnerActions {
                 'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
                 'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
                 'canMakeProgramFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeProgramFromPrivateTradingAccount'], 'boolean'),
-                'canMakePublicAccountFromPrivateTradingAccount': ApiClient.convertToType(data['canMakePublicAccountFromPrivateTradingAccount'], 'boolean'),
-                'canMakeProgramFromPublicTradingAccount': ApiClient.convertToType(data['canMakeProgramFromPublicTradingAccount'], 'boolean'),
+                'canMakeSignalProviderFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateTradingAccount'], 'boolean'),
+                'canMakeSignalProviderFromPrivateExternalTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateExternalTradingAccount'], 'boolean'),
+                'canMakeProgramFromSignalProvider': ApiClient.convertToType(data['canMakeProgramFromSignalProvider'], 'boolean'),
                 'canMakeSignalProviderFromProgram': ApiClient.convertToType(data['canMakeSignalProviderFromProgram'], 'boolean'),
                 'canEditSignalProviderSettings': ApiClient.convertToType(data['canEditSignalProviderSettings'], 'boolean'),
             });
