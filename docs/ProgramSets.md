@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sets** | [**[ProgramFacet]**](ProgramFacet.md) |  | [optional] 
+**sets** | [**[ProgramFacetOld]**](ProgramFacetOld.md) |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 
 

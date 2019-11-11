@@ -71,7 +71,7 @@ import FundDetailsFullOld from './model/FundDetailsFullOld';
 import FundDetailsListStatistic from './model/FundDetailsListStatistic';
 import FundDetailsOld from './model/FundDetailsOld';
 import FundEquityChartElementOld from './model/FundEquityChartElementOld';
-import FundFacet from './model/FundFacet';
+import FundFacetOld from './model/FundFacetOld';
 import FundFiltersOld from './model/FundFiltersOld';
 import FundInvestInfo from './model/FundInvestInfo';
 import FundNotificationSettingList from './model/FundNotificationSettingList';
@@ -156,7 +156,7 @@ import ProgramBalanceChartOld from './model/ProgramBalanceChartOld';
 import ProgramDetailsFullOld from './model/ProgramDetailsFullOld';
 import ProgramDetailsListStatistic from './model/ProgramDetailsListStatistic';
 import ProgramDetailsOld from './model/ProgramDetailsOld';
-import ProgramFacet from './model/ProgramFacet';
+import ProgramFacetOld from './model/ProgramFacetOld';
 import ProgramFiltersOld from './model/ProgramFiltersOld';
 import ProgramInvestInfoOld from './model/ProgramInvestInfoOld';
 import ProgramLevelInfo from './model/ProgramLevelInfo';
@@ -616,10 +616,10 @@ export {
     FundEquityChartElementOld,
 
     /**
-     * @name index#FundFacet
-     * @type {FundFacet}
+     * @name index#FundFacetOld
+     * @type {FundFacetOld}
      */
-    FundFacet,
+    FundFacetOld,
 
     /**
      * @name index#FundFiltersOld
@@ -1126,10 +1126,10 @@ export {
     ProgramDetailsOld,
 
     /**
-     * @name index#ProgramFacet
-     * @type {ProgramFacet}
+     * @name index#ProgramFacetOld
+     * @type {ProgramFacetOld}
      */
-    ProgramFacet,
+    ProgramFacetOld,
 
     /**
      * @name index#ProgramFiltersOld

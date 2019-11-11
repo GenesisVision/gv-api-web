@@ -26,6 +26,11 @@ import FundAssetPartWithIcon from './FundAssetPartWithIcon';
 
 /**
  *
+ * @name FundAssetsState#date
+ * @type {Number}
+ */
+/**
+ *
  * @name FundAssetsState#assets
  * @type {Array<FundAssetPartWithIcon>}
  */
@@ -60,6 +65,9 @@ export default class FundAssetsState {
             
             
 
+            if (data.hasOwnProperty('date')) {
+                obj['date'] = ApiClient.convertToType(data['date'], 'Number');
+            }
             if (data.hasOwnProperty('assets')) {
                 obj['assets'] = ApiClient.convertToType(data['assets'], [FundAssetPartWithIcon]);
             }
@@ -70,6 +78,7 @@ export default class FundAssetsState {
         return obj;
     }
 
+    date = undefined;
     assets = undefined;
     otherPercent = undefined;
 

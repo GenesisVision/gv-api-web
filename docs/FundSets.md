@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sets** | [**[FundFacet]**](FundFacet.md) |  | [optional] 
+**sets** | [**[FundFacetOld]**](FundFacetOld.md) |  | [optional] 
 **favoritesCount** | **Number** |  | [optional] 
 
 

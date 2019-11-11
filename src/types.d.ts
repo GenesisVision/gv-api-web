@@ -713,7 +713,7 @@ export declare interface index {
     FundDetailsListStatistic: FundDetailsListStatistic;
     FundDetailsOld: FundDetailsOld;
     FundEquityChartElementOld: FundEquityChartElementOld;
-    FundFacet: FundFacet;
+    FundFacetOld: FundFacetOld;
     FundFiltersOld: FundFiltersOld;
     FundInvestInfo: FundInvestInfo;
     FundNotificationSettingList: FundNotificationSettingList;
@@ -798,7 +798,7 @@ export declare interface index {
     ProgramDetailsFullOld: ProgramDetailsFullOld;
     ProgramDetailsListStatistic: ProgramDetailsListStatistic;
     ProgramDetailsOld: ProgramDetailsOld;
-    ProgramFacet: ProgramFacet;
+    ProgramFacetOld: ProgramFacetOld;
     ProgramFiltersOld: ProgramFiltersOld;
     ProgramInvestInfoOld: ProgramInvestInfoOld;
     ProgramLevelInfo: ProgramLevelInfo;
@@ -1465,6 +1465,7 @@ export declare interface FundAssetsListInfo {
 }
 
 export declare interface FundAssetsState {
+    date: number;
     assets: FundAssetPartWithIcon[];
     otherPercent: number;
 }
@@ -1587,6 +1588,17 @@ export declare interface FundFacet {
     timeframe: Timeframe;
 }
 
+export declare interface FundFacetOld {
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: FacetSortType;
+    timeframe: Timeframe;
+    sorting: FundsFilterSorting;
+}
+
 export declare interface FundFilters {
     assets: PlatformAsset[];
 }
@@ -1651,7 +1663,7 @@ export declare interface FundProfitChartOld {
 }
 
 export declare interface FundSets {
-    sets: FundFacet[];
+    sets: FundFacetOld[];
     favoritesCount: number;
 }
 
@@ -2450,8 +2462,8 @@ export declare interface PlatformInfo {
 export declare interface PlatformInfoOld {
     iOSVersion: IOsAppVersion;
     androidVersion: AndroidAppVersion;
-    programsFacets: ProgramFacet[];
-    fundsFacets: FundFacet[];
+    programsFacets: ProgramFacetOld[];
+    fundsFacets: FundFacetOld[];
     programsInfo: ProgramsInfoOld;
     currencies: string[];
     programCurrencies: string[];
@@ -2753,6 +2765,17 @@ export declare interface ProgramFacet {
     timeframe: Timeframe;
 }
 
+export declare interface ProgramFacetOld {
+    id: string;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+    sortType: FacetSortType;
+    timeframe: Timeframe;
+    sorting: ProgramsFilterSorting;
+}
+
 export declare interface ProgramFilters {
     programTags: ProgramTag[];
     actionType: string[];
@@ -2964,7 +2987,7 @@ export declare interface ProgramRequestsOld {
 }
 
 export declare interface ProgramSets {
-    sets: ProgramFacet[];
+    sets: ProgramFacetOld[];
     favoritesCount: number;
 }
 

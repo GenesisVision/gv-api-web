@@ -13,7 +13,7 @@
 
 
 import ApiClient from '../ApiClient';
-import FundFacet from './FundFacet';
+import FundFacetOld from './FundFacetOld';
 
 
 
@@ -27,7 +27,7 @@ import FundFacet from './FundFacet';
 /**
  *
  * @name FundSets#sets
- * @type {Array<FundFacet>}
+ * @type {Array<FundFacetOld>}
  */
 /**
  *
@@ -61,7 +61,7 @@ export default class FundSets {
             
 
             if (data.hasOwnProperty('sets')) {
-                obj['sets'] = ApiClient.convertToType(data['sets'], [FundFacet]);
+                obj['sets'] = ApiClient.convertToType(data['sets'], [FundFacetOld]);
             }
             if (data.hasOwnProperty('favoritesCount')) {
                 obj['favoritesCount'] = ApiClient.convertToType(data['favoritesCount'], 'Number');

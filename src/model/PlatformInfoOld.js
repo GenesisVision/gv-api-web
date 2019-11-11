@@ -15,10 +15,10 @@
 import ApiClient from '../ApiClient';
 import AndroidAppVersion from './AndroidAppVersion';
 import EnumsOld from './EnumsOld';
-import FundFacet from './FundFacet';
+import FundFacetOld from './FundFacetOld';
 import IOsAppVersion from './IOsAppVersion';
 import PlatformCurrencyOld from './PlatformCurrencyOld';
-import ProgramFacet from './ProgramFacet';
+import ProgramFacetOld from './ProgramFacetOld';
 import ProgramsInfoOld from './ProgramsInfoOld';
 
 
@@ -43,12 +43,12 @@ import ProgramsInfoOld from './ProgramsInfoOld';
 /**
  *
  * @name PlatformInfoOld#programsFacets
- * @type {Array<ProgramFacet>}
+ * @type {Array<ProgramFacetOld>}
  */
 /**
  *
  * @name PlatformInfoOld#fundsFacets
- * @type {Array<FundFacet>}
+ * @type {Array<FundFacetOld>}
  */
 /**
  *
@@ -108,10 +108,10 @@ export default class PlatformInfoOld {
                 obj['androidVersion'] = AndroidAppVersion.constructFromObject(data['androidVersion']);
             }
             if (data.hasOwnProperty('programsFacets')) {
-                obj['programsFacets'] = ApiClient.convertToType(data['programsFacets'], [ProgramFacet]);
+                obj['programsFacets'] = ApiClient.convertToType(data['programsFacets'], [ProgramFacetOld]);
             }
             if (data.hasOwnProperty('fundsFacets')) {
-                obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [FundFacet]);
+                obj['fundsFacets'] = ApiClient.convertToType(data['fundsFacets'], [FundFacetOld]);
             }
             if (data.hasOwnProperty('programsInfo')) {
                 obj['programsInfo'] = ProgramsInfoOld.constructFromObject(data['programsInfo']);
