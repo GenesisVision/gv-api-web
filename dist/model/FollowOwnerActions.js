@@ -2,6 +2,7 @@ import ApiClient from "../ApiClient";
 export class FollowOwnerActions {
     constructor(data) {
         this['canClose'] = data['canClose'];
+        this['canChangePassword'] = data['canChangePassword'];
         this['canMakeProgramFromPrivateTradingAccount'] = data['canMakeProgramFromPrivateTradingAccount'];
         this['canMakeSignalProviderFromPrivateTradingAccount'] = data['canMakeSignalProviderFromPrivateTradingAccount'];
         this['canMakeSignalProviderFromPrivateExternalTradingAccount'] = data['canMakeSignalProviderFromPrivateExternalTradingAccount'];
@@ -13,6 +14,7 @@ export class FollowOwnerActions {
         if (data) {
             return new FollowOwnerActions({
                 'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
+                'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
                 'canMakeProgramFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeProgramFromPrivateTradingAccount'], 'boolean'),
                 'canMakeSignalProviderFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateTradingAccount'], 'boolean'),
                 'canMakeSignalProviderFromPrivateExternalTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateExternalTradingAccount'], 'boolean'),

@@ -1,5 +1,6 @@
 export declare class FollowOwnerActions {
     'canClose': boolean;
+    'canChangePassword': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateExternalTradingAccount': boolean;
