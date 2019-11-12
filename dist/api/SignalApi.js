@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
 import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
+import { ItemsViewModelTradingAccountDetails } from "../model/ItemsViewModelTradingAccountDetails";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export class SignalApi {
     constructor(apiClient) {
@@ -319,7 +320,7 @@ export class SignalApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
+        let returnType = ItemsViewModelTradingAccountDetails;
         return this.apiClient.callApi('/v2.0/signal/attach/{id}/accounts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     updateSubscriptionSettings(id, authorization, opts) {

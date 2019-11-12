@@ -1,7 +1,7 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { MigrationRequest } from './MigrationRequest';
+import { ProgramOwnerActions } from './ProgramOwnerActions';
 import { SignalSubscription } from './SignalSubscription';
-import { TradingAccountOwnerActions } from './TradingAccountOwnerActions';
 export declare class PersonalProgramDetails {
     'isOwnAsset': boolean;
     'isFavorite': boolean;
@@ -9,7 +9,7 @@ export declare class PersonalProgramDetails {
     'isInvested': boolean;
     'canInvest': boolean;
     'canWithdraw': boolean;
-    'ownerActions': TradingAccountOwnerActions;
+    'ownerActions': ProgramOwnerActions;
     'hasNotifications': boolean;
     'showTwoFactorButton': boolean;
     'value': number;

@@ -1,4 +1,4 @@
-import { ItemsViewModelCopyTradingDetailsList } from './ItemsViewModelCopyTradingDetailsList';
+import { ItemsViewModelFollowDetailsList } from './ItemsViewModelFollowDetailsList';
 import { ItemsViewModelFundDetailsList } from './ItemsViewModelFundDetailsList';
 import { ItemsViewModelProgramDetailsList } from './ItemsViewModelProgramDetailsList';
 import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
@@ -14,7 +14,7 @@ export class SearchViewModel {
             return new SearchViewModel({
                 'programs': ItemsViewModelProgramDetailsList.constructFromObject(data['programs']),
                 'funds': ItemsViewModelFundDetailsList.constructFromObject(data['funds']),
-                'copyTrading': ItemsViewModelCopyTradingDetailsList.constructFromObject(data['copyTrading']),
+                'copyTrading': ItemsViewModelFollowDetailsList.constructFromObject(data['copyTrading']),
                 'managers': ItemsViewModelPublicProfile.constructFromObject(data['managers']),
             });
         }

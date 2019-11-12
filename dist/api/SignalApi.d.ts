@@ -7,6 +7,7 @@ import { DetachFromExternalSignalProvider } from "../model/DetachFromExternalSig
 import { DetachFromSignalProvider } from "../model/DetachFromSignalProvider";
 import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
 import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
+import { ItemsViewModelTradingAccountDetails } from "../model/ItemsViewModelTradingAccountDetails";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export declare class SignalApi {
     private apiClient;
@@ -69,7 +70,7 @@ export declare class SignalApi {
         take?: number;
     }): CancelablePromise<ItemsViewModelSignalTradingEvent>;
     private getSignalTradingLogWithHttpInfo;
-    getSubscriberAccountsForAsset(id: string, authorization: string): CancelablePromise<null>;
+    getSubscriberAccountsForAsset(id: string, authorization: string): CancelablePromise<ItemsViewModelTradingAccountDetails>;
     private getSubscriberAccountsForAssetWithHttpInfo;
     updateSubscriptionSettings(id: string, authorization: string, opts?: {
         model?: AttachToSignalProvider;
