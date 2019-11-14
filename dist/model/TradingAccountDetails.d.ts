@@ -1,8 +1,8 @@
-import { Currency } from './Currency';
 export declare class TradingAccountDetails {
     'id': string;
-    'currency': Currency;
+    'currency': CurrencyEnum;
     'login': string;
+    'apiKey': string;
     constructor(data: {
         [key: string]: any;
     });
@@ -10,3 +10,5 @@ export declare class TradingAccountDetails {
         [key: string]: any;
     }): TradingAccountDetails | undefined;
 }
+declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+export {};

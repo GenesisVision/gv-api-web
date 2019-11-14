@@ -145,6 +145,52 @@ export class ProfileApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/profile/avatar/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    switchPublicInvestorOff(authorization) {
+        return this.switchPublicInvestorOffWithHttpInfo(authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    switchPublicInvestorOffWithHttpInfo(authorization) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling switchPublicInvestorOff");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/profile/investor/public/off', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    switchPublicInvestorOn(authorization) {
+        return this.switchPublicInvestorOnWithHttpInfo(authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    switchPublicInvestorOnWithHttpInfo(authorization) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling switchPublicInvestorOn");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/profile/investor/public/on', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     updateAvatar(fileId, authorization) {
         return this.updateAvatarWithHttpInfo(fileId, authorization)
             .then(function (response_and_data) {

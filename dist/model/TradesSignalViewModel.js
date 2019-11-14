@@ -4,7 +4,7 @@ export class TradesSignalViewModel {
     constructor(data) {
         this['showSwaps'] = data['showSwaps'];
         this['showTickets'] = data['showTickets'];
-        this['trades'] = data['trades'];
+        this['items'] = data['items'];
         this['total'] = data['total'];
     }
     static constructFromObject(data) {
@@ -12,7 +12,7 @@ export class TradesSignalViewModel {
             return new TradesSignalViewModel({
                 'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
                 'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
-                'trades': ApiClient.convertToType(data['trades'], [OrderSignalModel]),
+                'items': ApiClient.convertToType(data['items'], [OrderSignalModel]),
                 'total': ApiClient.convertToType(data['total'], 'number'),
             });
         }

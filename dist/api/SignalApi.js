@@ -1,5 +1,4 @@
 import ApiClient from "../ApiClient";
-import { ItemsViewModelExternalSignalTradingEvent } from "../model/ItemsViewModelExternalSignalTradingEvent";
 import { ItemsViewModelSignalTradingEvent } from "../model/ItemsViewModelSignalTradingEvent";
 import { ItemsViewModelTradingAccountDetails } from "../model/ItemsViewModelTradingAccountDetails";
 import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
@@ -176,34 +175,6 @@ export class SignalApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/external/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getExternalSignalTradingLog(authorization, opts) {
-        return this.getExternalSignalTradingLogWithHttpInfo(authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getExternalSignalTradingLogWithHttpInfo(authorization, opts = {}) {
-        let postBody = null;
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getExternalSignalTradingLog");
-        }
-        let pathParams = {};
-        let queryParams = {
-            "AccountId": opts["accountId"],
-            "AccountCurrency": opts["accountCurrency"],
-            "Skip": opts["skip"],
-            "Take": opts["take"]
-        };
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ItemsViewModelExternalSignalTradingEvent;
-        return this.apiClient.callApi('/v2.0/signal/external/trades/log', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getOpenSignalTrades(authorization, opts) {
         return this.getOpenSignalTradesWithHttpInfo(authorization, opts)

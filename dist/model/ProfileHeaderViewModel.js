@@ -7,11 +7,11 @@ export class ProfileHeaderViewModel {
         this['avatar'] = data['avatar'];
         this['countryCode'] = data['countryCode'];
         this['notificationsCount'] = data['notificationsCount'];
-        this['favoritesCount'] = data['favoritesCount'];
-        this['kycConfirmed'] = data['kycConfirmed'];
-        this['allowForex'] = data['allowForex'];
+        this['isKycConfirmed'] = data['isKycConfirmed'];
+        this['isForexAllowed'] = data['isForexAllowed'];
         this['isTwoFactorEnabled'] = data['isTwoFactorEnabled'];
         this['isNewUser'] = data['isNewUser'];
+        this['isPublicInvestor'] = data['isPublicInvestor'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -22,11 +22,11 @@ export class ProfileHeaderViewModel {
                 'avatar': ApiClient.convertToType(data['avatar'], 'string'),
                 'countryCode': ApiClient.convertToType(data['countryCode'], 'string'),
                 'notificationsCount': ApiClient.convertToType(data['notificationsCount'], 'number'),
-                'favoritesCount': ApiClient.convertToType(data['favoritesCount'], 'number'),
-                'kycConfirmed': ApiClient.convertToType(data['kycConfirmed'], 'boolean'),
-                'allowForex': ApiClient.convertToType(data['allowForex'], 'boolean'),
+                'isKycConfirmed': ApiClient.convertToType(data['isKycConfirmed'], 'boolean'),
+                'isForexAllowed': ApiClient.convertToType(data['isForexAllowed'], 'boolean'),
                 'isTwoFactorEnabled': ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean'),
                 'isNewUser': ApiClient.convertToType(data['isNewUser'], 'boolean'),
+                'isPublicInvestor': ApiClient.convertToType(data['isPublicInvestor'], 'boolean'),
             });
         }
     }

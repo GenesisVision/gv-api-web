@@ -5,11 +5,11 @@ export declare class ProfileHeaderViewModel {
     'avatar': string;
     'countryCode': string;
     'notificationsCount': number;
-    'favoritesCount': number;
-    'kycConfirmed': boolean;
-    'allowForex': boolean;
+    'isKycConfirmed': boolean;
+    'isForexAllowed': boolean;
     'isTwoFactorEnabled': boolean;
     'isNewUser': boolean;
+    'isPublicInvestor': boolean;
     constructor(data: {
         [key: string]: any;
     });

@@ -1,4 +1,5 @@
 export declare class FundCreateAssetPlatformInfo {
+    'maxEntryFee': number;
     'maxExitFee': number;
     constructor(data: {
         [key: string]: any;

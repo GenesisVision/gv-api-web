@@ -21,6 +21,7 @@ export class ProfileFullViewModel {
         this['citizenship'] = data['citizenship'];
         this['refUrl'] = data['refUrl'];
         this['verificationStatus'] = data['verificationStatus'];
+        this['isPublicInvestor'] = data['isPublicInvestor'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -44,6 +45,7 @@ export class ProfileFullViewModel {
                 'citizenship': ApiClient.convertToType(data['citizenship'], 'string'),
                 'refUrl': ApiClient.convertToType(data['refUrl'], 'string'),
                 'verificationStatus': UserVerificationStatus.constructFromObject(data['verificationStatus']),
+                'isPublicInvestor': ApiClient.convertToType(data['isPublicInvestor'], 'boolean'),
             });
         }
     }

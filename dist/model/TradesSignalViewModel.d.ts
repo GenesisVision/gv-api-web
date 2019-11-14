@@ -2,7 +2,7 @@ import { OrderSignalModel } from './OrderSignalModel';
 export declare class TradesSignalViewModel {
     'showSwaps': boolean;
     'showTickets': boolean;
-    'trades': Array<OrderSignalModel>;
+    'items': Array<OrderSignalModel>;
     'total': number;
     constructor(data: {
         [key: string]: any;

@@ -19,6 +19,7 @@ export declare class ProfileFullViewModel {
     'citizenship': string;
     'refUrl': string;
     'verificationStatus': UserVerificationStatus;
+    'isPublicInvestor': boolean;
     constructor(data: {
         [key: string]: any;
     });

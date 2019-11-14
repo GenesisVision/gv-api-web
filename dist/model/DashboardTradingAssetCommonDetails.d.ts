@@ -1,4 +1,6 @@
+import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 export declare class DashboardTradingAssetCommonDetails {
+    'status': DashboardTradingAssetStatus;
     'creationDate': Date;
     'balance': number;
     'login': string;
