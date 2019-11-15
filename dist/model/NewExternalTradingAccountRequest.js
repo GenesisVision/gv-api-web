@@ -2,7 +2,6 @@ import ApiClient from "../ApiClient";
 export class NewExternalTradingAccountRequest {
     constructor(data) {
         this['brokerAccountTypeId'] = data['brokerAccountTypeId'];
-        this['keyTitle'] = data['keyTitle'];
         this['key'] = data['key'];
         this['secret'] = data['secret'];
     }
@@ -10,7 +9,6 @@ export class NewExternalTradingAccountRequest {
         if (data) {
             return new NewExternalTradingAccountRequest({
                 'brokerAccountTypeId': ApiClient.convertToType(data['brokerAccountTypeId'], 'string'),
-                'keyTitle': ApiClient.convertToType(data['keyTitle'], 'string'),
                 'key': ApiClient.convertToType(data['key'], 'string'),
                 'secret': ApiClient.convertToType(data['secret'], 'string'),
             });

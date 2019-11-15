@@ -6,19 +6,19 @@ export class SignalApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
-    attachSlaveCommonToMaster(id, authorization, opts) {
-        return this.attachSlaveCommonToMasterWithHttpInfo(id, authorization, opts)
+    attachSlaveToMasterExternalCommonAccount(id, authorization, opts) {
+        return this.attachSlaveToMasterExternalCommonAccountWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    attachSlaveCommonToMasterWithHttpInfo(id, authorization, opts = {}) {
+    attachSlaveToMasterExternalCommonAccountWithHttpInfo(id, authorization, opts = {}) {
         let postBody = opts["model"];
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling attachSlaveCommonToMaster");
+            throw new Error("Missing the required parameter \"id\" when calling attachSlaveToMasterExternalCommonAccount");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveCommonToMaster");
+            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveToMasterExternalCommonAccount");
         }
         let pathParams = {
             "id": id
@@ -34,47 +34,19 @@ export class SignalApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/external/attach/{id}/common', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    attachSlaveToMaster(id, authorization, opts) {
-        return this.attachSlaveToMasterWithHttpInfo(id, authorization, opts)
+    attachSlaveToMasterExternalPrivateAccount(id, authorization, opts) {
+        return this.attachSlaveToMasterExternalPrivateAccountWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    attachSlaveToMasterWithHttpInfo(id, authorization, opts = {}) {
+    attachSlaveToMasterExternalPrivateAccountWithHttpInfo(id, authorization, opts = {}) {
         let postBody = opts["model"];
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling attachSlaveToMaster");
+            throw new Error("Missing the required parameter \"id\" when calling attachSlaveToMasterExternalPrivateAccount");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveToMaster");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/signal/attach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    attachSlaveToMaster_1(id, authorization, opts) {
-        return this.attachSlaveToMaster_1WithHttpInfo(id, authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    attachSlaveToMaster_1WithHttpInfo(id, authorization, opts = {}) {
-        let postBody = opts["model"];
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling attachSlaveToMaster_0");
-        }
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveToMaster_0");
+            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveToMasterExternalPrivateAccount");
         }
         let pathParams = {
             "id": id
@@ -90,19 +62,47 @@ export class SignalApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/external/attach/{id}/private', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    closeTrade(id, authorization, opts) {
-        return this.closeTradeWithHttpInfo(id, authorization, opts)
+    attachSlaveToMasterInternal(id, authorization, opts) {
+        return this.attachSlaveToMasterInternalWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    closeTradeWithHttpInfo(id, authorization, opts = {}) {
-        let postBody = null;
+    attachSlaveToMasterInternalWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = opts["model"];
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling closeTrade");
+            throw new Error("Missing the required parameter \"id\" when calling attachSlaveToMasterInternal");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling closeTrade");
+            throw new Error("Missing the required parameter \"authorization\" when calling attachSlaveToMasterInternal");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/signal/attach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    closeTradeInternal(id, authorization, opts) {
+        return this.closeTradeInternalWithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    closeTradeInternalWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling closeTradeInternal");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling closeTradeInternal");
         }
         let pathParams = {
             "id": id
@@ -120,47 +120,19 @@ export class SignalApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/trades/{id}/close', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    detachSlaveFromMaster(id, authorization, opts) {
-        return this.detachSlaveFromMasterWithHttpInfo(id, authorization, opts)
+    detachSlaveFromMasterExternal(id, authorization, opts) {
+        return this.detachSlaveFromMasterExternalWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    detachSlaveFromMasterWithHttpInfo(id, authorization, opts = {}) {
+    detachSlaveFromMasterExternalWithHttpInfo(id, authorization, opts = {}) {
         let postBody = opts["model"];
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling detachSlaveFromMaster");
+            throw new Error("Missing the required parameter \"id\" when calling detachSlaveFromMasterExternal");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling detachSlaveFromMaster");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/signal/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    detachSlaveFromMaster_2(id, authorization, opts) {
-        return this.detachSlaveFromMaster_2WithHttpInfo(id, authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    detachSlaveFromMaster_2WithHttpInfo(id, authorization, opts = {}) {
-        let postBody = opts["model"];
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling detachSlaveFromMaster_0");
-        }
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling detachSlaveFromMaster_0");
+            throw new Error("Missing the required parameter \"authorization\" when calling detachSlaveFromMasterExternal");
         }
         let pathParams = {
             "id": id
@@ -175,6 +147,34 @@ export class SignalApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/external/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    detachSlaveFromMasterInternal(id, authorization, opts) {
+        return this.detachSlaveFromMasterInternalWithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    detachSlaveFromMasterInternalWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = opts["model"];
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling detachSlaveFromMasterInternal");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling detachSlaveFromMasterInternal");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/signal/detach/{id}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getOpenSignalTrades(authorization, opts) {
         return this.getOpenSignalTradesWithHttpInfo(authorization, opts)
