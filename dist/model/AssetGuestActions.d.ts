@@ -1,6 +1,7 @@
 export declare class AssetGuestActions {
-    'canSubscribeInternalSignal': boolean;
-    'canSubscribeExternalSignal': boolean;
+    'canSubscribeToInternalSignal': boolean;
+    'canSubscribeToExternalSignalPrivateAccount': boolean;
+    'canSubscribeToExternalSignalCommonAccount': boolean;
     constructor(data: {
         [key: string]: any;
     });

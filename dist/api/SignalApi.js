@@ -88,7 +88,7 @@ export class SignalApi {
         let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
-        return this.apiClient.callApi('/v2.0/signal/external/attach/{id}/external', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/signal/external/attach/{id}/private', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     closeTrade(id, authorization, opts) {
         return this.closeTradeWithHttpInfo(id, authorization, opts)

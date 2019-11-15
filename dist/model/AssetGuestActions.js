@@ -1,14 +1,16 @@
 import ApiClient from "../ApiClient";
 export class AssetGuestActions {
     constructor(data) {
-        this['canSubscribeInternalSignal'] = data['canSubscribeInternalSignal'];
-        this['canSubscribeExternalSignal'] = data['canSubscribeExternalSignal'];
+        this['canSubscribeToInternalSignal'] = data['canSubscribeToInternalSignal'];
+        this['canSubscribeToExternalSignalPrivateAccount'] = data['canSubscribeToExternalSignalPrivateAccount'];
+        this['canSubscribeToExternalSignalCommonAccount'] = data['canSubscribeToExternalSignalCommonAccount'];
     }
     static constructFromObject(data) {
         if (data) {
             return new AssetGuestActions({
-                'canSubscribeInternalSignal': ApiClient.convertToType(data['canSubscribeInternalSignal'], 'boolean'),
-                'canSubscribeExternalSignal': ApiClient.convertToType(data['canSubscribeExternalSignal'], 'boolean'),
+                'canSubscribeToInternalSignal': ApiClient.convertToType(data['canSubscribeToInternalSignal'], 'boolean'),
+                'canSubscribeToExternalSignalPrivateAccount': ApiClient.convertToType(data['canSubscribeToExternalSignalPrivateAccount'], 'boolean'),
+                'canSubscribeToExternalSignalCommonAccount': ApiClient.convertToType(data['canSubscribeToExternalSignalCommonAccount'], 'boolean'),
             });
         }
     }
