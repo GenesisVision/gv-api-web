@@ -3,9 +3,6 @@ export declare class FilterInfo {
     'walletTransactions': Array<FilterItemInfo>;
     'walletExternalTransactions': Array<FilterItemInfo>;
     'events': Array<FilterItemInfo>;
-    'programs': Array<FilterItemInfo>;
-    'funds': Array<FilterItemInfo>;
-    'follow': Array<FilterItemInfo>;
     constructor(data: {
         [key: string]: any;
     });

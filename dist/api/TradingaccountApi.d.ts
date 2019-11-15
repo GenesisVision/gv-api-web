@@ -1,7 +1,7 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
-import { FollowDetailsFull } from "../model/FollowDetailsFull";
-import { TradesViewModelOld } from "../model/TradesViewModelOld";
+import { PrivateTradingAccountFull } from "../model/PrivateTradingAccountFull";
+import { TradesViewModel } from "../model/TradesViewModel";
 export declare class TradingaccountApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -12,9 +12,9 @@ export declare class TradingaccountApi {
         accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         skip?: number;
         take?: number;
-    }): CancelablePromise<TradesViewModelOld>;
+    }): CancelablePromise<TradesViewModel>;
     private getProgramOpenTradesWithHttpInfo;
-    getTradingAccountDetails(id: string, authorization: string): CancelablePromise<FollowDetailsFull>;
+    getTradingAccountDetails(id: string, authorization: string): CancelablePromise<PrivateTradingAccountFull>;
     private getTradingAccountDetailsWithHttpInfo;
     getTradingAccountTrades(id: string, authorization: string, opts?: {
         dateFrom?: Date;
@@ -25,6 +25,6 @@ export declare class TradingaccountApi {
         accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         skip?: number;
         take?: number;
-    }): CancelablePromise<TradesViewModelOld>;
+    }): CancelablePromise<TradesViewModel>;
     private getTradingAccountTradesWithHttpInfo;
 }

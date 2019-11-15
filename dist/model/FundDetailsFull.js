@@ -18,7 +18,7 @@ export class FundDetailsFull {
         this['exitFeeCurrent'] = data['exitFeeCurrent'];
         this['assetsStructure'] = data['assetsStructure'];
         this['personalDetails'] = data['personalDetails'];
-        this['manager'] = data['manager'];
+        this['owner'] = data['owner'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -37,7 +37,7 @@ export class FundDetailsFull {
                 'exitFeeCurrent': ApiClient.convertToType(data['exitFeeCurrent'], 'number'),
                 'assetsStructure': ApiClient.convertToType(data['assetsStructure'], [FundAssetInfo]),
                 'personalDetails': PersonalFundDetails.constructFromObject(data['personalDetails']),
-                'manager': ProfilePublic.constructFromObject(data['manager']),
+                'owner': ProfilePublic.constructFromObject(data['owner']),
             });
         }
     }

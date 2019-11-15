@@ -1,8 +1,10 @@
+import { AssetDetails } from './AssetDetails';
 export declare class TradingAccountDetails {
     'id': string;
     'currency': CurrencyEnum;
     'login': string;
     'apiKey': string;
+    'asset': AssetDetails;
     constructor(data: {
         [key: string]: any;
     });

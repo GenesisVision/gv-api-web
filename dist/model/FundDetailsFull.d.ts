@@ -16,7 +16,7 @@ export declare class FundDetailsFull {
     'exitFeeCurrent': number;
     'assetsStructure': Array<FundAssetInfo>;
     'personalDetails': PersonalFundDetails;
-    'manager': ProfilePublic;
+    'owner': ProfilePublic;
     constructor(data: {
         [key: string]: any;
     });

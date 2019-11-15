@@ -39,7 +39,7 @@ export class ProgramDetailsFull {
         this['availableInvestmentBase'] = data['availableInvestmentBase'];
         this['availableInvestmentLimit'] = data['availableInvestmentLimit'];
         this['totalAvailableInvestment'] = data['totalAvailableInvestment'];
-        this['manager'] = data['manager'];
+        this['owner'] = data['owner'];
         this['brokerDetails'] = data['brokerDetails'];
         this['signalSettings'] = data['signalSettings'];
         this['personalDetails'] = data['personalDetails'];
@@ -79,7 +79,7 @@ export class ProgramDetailsFull {
                 'availableInvestmentBase': ApiClient.convertToType(data['availableInvestmentBase'], 'number'),
                 'availableInvestmentLimit': ApiClient.convertToType(data['availableInvestmentLimit'], 'number'),
                 'totalAvailableInvestment': ApiClient.convertToType(data['totalAvailableInvestment'], 'number'),
-                'manager': ProfilePublic.constructFromObject(data['manager']),
+                'owner': ProfilePublic.constructFromObject(data['owner']),
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
                 'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
                 'personalDetails': PersonalProgramDetails.constructFromObject(data['personalDetails']),

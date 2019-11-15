@@ -37,7 +37,7 @@ export declare class ProgramDetailsFull {
     'availableInvestmentBase': number;
     'availableInvestmentLimit': number;
     'totalAvailableInvestment': number;
-    'manager': ProfilePublic;
+    'owner': ProfilePublic;
     'brokerDetails': BrokerDetails;
     'signalSettings': AssetSignalSettings;
     'personalDetails': PersonalProgramDetails;

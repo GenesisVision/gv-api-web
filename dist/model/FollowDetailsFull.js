@@ -1,6 +1,5 @@
 import { AssetSignalSettings } from './AssetSignalSettings';
 import { BrokerDetails } from './BrokerDetails';
-import { Currency } from './Currency';
 import { PersonalFollowDetailsFull } from './PersonalFollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
 import { ProgramTag } from './ProgramTag';
@@ -32,7 +31,7 @@ export class FollowDetailsFull {
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
-                'currency': Currency.constructFromObject(data['currency']),
+                'currency': ApiClient.convertToType(data['currency'], 'string'),
                 'subscribersCount': ApiClient.convertToType(data['subscribersCount'], 'number'),
                 'tradesCount': ApiClient.convertToType(data['tradesCount'], 'number'),
                 'status': ApiClient.convertToType(data['status'], 'string'),

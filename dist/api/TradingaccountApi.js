@@ -1,6 +1,6 @@
 import ApiClient from "../ApiClient";
-import { FollowDetailsFull } from "../model/FollowDetailsFull";
-import { TradesViewModelOld } from "../model/TradesViewModelOld";
+import { PrivateTradingAccountFull } from "../model/PrivateTradingAccountFull";
+import { TradesViewModel } from "../model/TradesViewModel";
 export class TradingaccountApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -37,7 +37,7 @@ export class TradingaccountApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TradesViewModelOld;
+        let returnType = TradesViewModel;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTradingAccountDetails(id, authorization) {
@@ -65,7 +65,7 @@ export class TradingaccountApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FollowDetailsFull;
+        let returnType = PrivateTradingAccountFull;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTradingAccountTrades(id, authorization, opts) {
@@ -102,7 +102,7 @@ export class TradingaccountApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TradesViewModelOld;
+        let returnType = TradesViewModel;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

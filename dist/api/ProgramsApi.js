@@ -356,6 +356,7 @@ export class ProgramsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
+            "Sorting": opts["sorting"],
             "ShowIn": opts["showIn"],
             "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
             "ProgramCurrency": opts["programCurrency"],

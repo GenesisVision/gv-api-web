@@ -1,3 +1,4 @@
+import { AssetDetails } from './AssetDetails';
 import ApiClient from "../ApiClient";
 export class TradingAccountDetails {
     constructor(data) {
@@ -5,6 +6,7 @@ export class TradingAccountDetails {
         this['currency'] = data['currency'];
         this['login'] = data['login'];
         this['apiKey'] = data['apiKey'];
+        this['asset'] = data['asset'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -13,6 +15,7 @@ export class TradingAccountDetails {
                 'currency': ApiClient.convertToType(data['currency'], 'string'),
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'apiKey': ApiClient.convertToType(data['apiKey'], 'string'),
+                'asset': AssetDetails.constructFromObject(data['asset']),
             });
         }
     }

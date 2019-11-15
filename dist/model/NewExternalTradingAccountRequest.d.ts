@@ -1,5 +1,6 @@
 export declare class NewExternalTradingAccountRequest {
     'brokerAccountTypeId': string;
+    'keyTitle': string;
     'key': string;
     'secret': string;
     constructor(data: {

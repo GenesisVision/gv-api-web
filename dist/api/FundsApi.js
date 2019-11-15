@@ -131,6 +131,7 @@ export class FundsApi {
         let postBody = null;
         let pathParams = {};
         let queryParams = {
+            "Sorting": opts["sorting"],
             "ShowIn": opts["showIn"],
             "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
             "DateFrom": opts["dateFrom"],
