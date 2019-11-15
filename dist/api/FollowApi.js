@@ -48,6 +48,7 @@ export class FollowApi {
             "ChartPointsCount": opts["chartPointsCount"],
             "FacetId": opts["facetId"],
             "Mask": opts["mask"],
+            "OwnerId": opts["ownerId"],
             "ShowFavorites": opts["showFavorites"],
             "Skip": opts["skip"],
             "Take": opts["take"]

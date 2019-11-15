@@ -2,6 +2,7 @@ import { BrokerTradeServerType } from './BrokerTradeServerType';
 import ApiClient from "../ApiClient";
 export class BrokerDetails {
     constructor(data) {
+        this['id'] = data['id'];
         this['logo'] = data['logo'];
         this['name'] = data['name'];
         this['type'] = data['type'];
@@ -17,6 +18,7 @@ export class BrokerDetails {
     static constructFromObject(data) {
         if (data) {
             return new BrokerDetails({
+                'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'name': ApiClient.convertToType(data['name'], 'string'),
                 'type': BrokerTradeServerType.constructFromObject(data['type']),

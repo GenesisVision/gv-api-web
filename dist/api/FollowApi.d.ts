@@ -19,6 +19,7 @@ export declare class FollowApi {
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;
+        ownerId?: string;
         showFavorites?: boolean;
         skip?: number;
         take?: number;

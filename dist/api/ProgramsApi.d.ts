@@ -112,6 +112,7 @@ export declare class ProgramsApi {
         chartPointsCount?: number;
         facetId?: string;
         mask?: string;
+        ownerId?: string;
         showFavorites?: boolean;
         skip?: number;
         take?: number;

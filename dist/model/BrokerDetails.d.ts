@@ -1,5 +1,6 @@
 import { BrokerTradeServerType } from './BrokerTradeServerType';
 export declare class BrokerDetails {
+    'id': string;
     'logo': string;
     'name': string;
     'type': BrokerTradeServerType;
