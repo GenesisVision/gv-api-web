@@ -1,3 +1,4 @@
+export * from './AbsoluteProfitChart';
 export * from './AmountItem';
 export * from './AmountRowCell';
 export * from './AmountWithCurrency';

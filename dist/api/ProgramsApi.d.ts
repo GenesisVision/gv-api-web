@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
+import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
 import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
@@ -43,6 +44,13 @@ export declare class ProgramsApi {
         take?: number;
     }): CancelablePromise<Blob>;
     private exportProgramTradesWithHttpInfo;
+    getProgramAbsoluteProfitChart(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+    }): CancelablePromise<AbsoluteProfitChart>;
+    private getProgramAbsoluteProfitChartWithHttpInfo;
     getProgramBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -74,14 +82,14 @@ export declare class ProgramsApi {
         take?: number;
     }): CancelablePromise<ProgramPeriodsViewModel>;
     private getProgramPeriodsWithHttpInfo;
-    getProgramProfitChart(id: string, opts?: {
+    getProgramProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         currencies?: Array<Object>;
     }): CancelablePromise<ProgramProfitCharts>;
-    private getProgramProfitChartWithHttpInfo;
+    private getProgramProfitPercentChartsWithHttpInfo;
     getProgramSubscribers(id: string, authorization: string, opts?: {
         status?: 'All' | 'Active';
         skip?: number;

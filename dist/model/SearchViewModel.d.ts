@@ -5,7 +5,7 @@ import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
 export declare class SearchViewModel {
     'programs': ItemsViewModelProgramDetailsList;
     'funds': ItemsViewModelFundDetailsList;
-    'copyTrading': ItemsViewModelFollowDetailsList;
+    'follow': ItemsViewModelFollowDetailsList;
     'managers': ItemsViewModelPublicProfile;
     constructor(data: {
         [key: string]: any;

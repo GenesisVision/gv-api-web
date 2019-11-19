@@ -1,13 +1,17 @@
 import { BrokerDetails } from './BrokerDetails';
+import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountOwnerActions } from './PrivateTradingAccountOwnerActions';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 export declare class PrivateTradingAccountFull {
     'id': string;
     'creationDate': Date;
     'currency': CurrencyEnum;
+    'leverage': number;
+    'apiKey': string;
     'login': string;
     'balance': number;
     'type': PrivateTradingAccountType;
+    'status': DashboardTradingAssetStatus;
     'brokerDetails': BrokerDetails;
     'ownerActions': PrivateTradingAccountOwnerActions;
     constructor(data: {

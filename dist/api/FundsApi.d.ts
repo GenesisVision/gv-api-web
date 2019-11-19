@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
+import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
 import { FundProfitCharts } from "../model/FundProfitCharts";
@@ -10,6 +11,13 @@ export declare class FundsApi {
     constructor(apiClient?: ApiClient);
     addToFavorites(id: string, authorization: string): CancelablePromise<null>;
     private addToFavoritesWithHttpInfo;
+    getFundAbsoluteProfitChart(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+    }): CancelablePromise<AbsoluteProfitChart>;
+    private getFundAbsoluteProfitChartWithHttpInfo;
     getFundBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -22,7 +30,7 @@ export declare class FundsApi {
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<FundDetailsFull>;
     private getFundDetailsWithHttpInfo;
-    getFundProfitChart(id: string, opts?: {
+    getFundProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
@@ -30,7 +38,7 @@ export declare class FundsApi {
         currencies?: Array<Object>;
         chartAssetsCount?: number;
     }): CancelablePromise<FundProfitCharts>;
-    private getFundProfitChartWithHttpInfo;
+    private getFundProfitPercentChartsWithHttpInfo;
     getFunds(opts?: {
         authorization?: string;
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc';

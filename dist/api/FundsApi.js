@@ -1,4 +1,5 @@
 import ApiClient from "../ApiClient";
+import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
 import { FundProfitCharts } from "../model/FundProfitCharts";
@@ -35,6 +36,34 @@ export class FundsApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
         return this.apiClient.callApi('/v2.0/funds/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getFundAbsoluteProfitChart(id, opts) {
+        return this.getFundAbsoluteProfitChartWithHttpInfo(id, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getFundAbsoluteProfitChartWithHttpInfo(id, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getFundAbsoluteProfitChart");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "MaxPointCount": opts["maxPointCount"],
+            "Currency": opts["currency"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = AbsoluteProfitChart;
+        return this.apiClient.callApi('/v2.0/funds/{id}/charts/profit/absolute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFundBalanceChart(id, opts) {
         return this.getFundBalanceChartWithHttpInfo(id, opts)
@@ -91,16 +120,16 @@ export class FundsApi {
         let returnType = FundDetailsFull;
         return this.apiClient.callApi('/v2.0/funds/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getFundProfitChart(id, opts) {
-        return this.getFundProfitChartWithHttpInfo(id, opts)
+    getFundProfitPercentCharts(id, opts) {
+        return this.getFundProfitPercentChartsWithHttpInfo(id, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getFundProfitChartWithHttpInfo(id, opts = {}) {
+    getFundProfitPercentChartsWithHttpInfo(id, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getFundProfitChart");
+            throw new Error("Missing the required parameter \"id\" when calling getFundProfitPercentCharts");
         }
         let pathParams = {
             "id": id
@@ -119,7 +148,7 @@ export class FundsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = FundProfitCharts;
-        return this.apiClient.callApi('/v2.0/funds/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/funds/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFunds(opts) {
         return this.getFundsWithHttpInfo(opts)

@@ -1,4 +1,5 @@
 import ApiClient from "../ApiClient";
+import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
 import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
@@ -137,6 +138,34 @@ export class ProgramsApi {
         let returnType = 'Blob';
         return this.apiClient.callApi('/v2.0/programs/{id}/trades/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getProgramAbsoluteProfitChart(id, opts) {
+        return this.getProgramAbsoluteProfitChartWithHttpInfo(id, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getProgramAbsoluteProfitChartWithHttpInfo(id, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getProgramAbsoluteProfitChart");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "MaxPointCount": opts["maxPointCount"],
+            "Currency": opts["currency"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = AbsoluteProfitChart;
+        return this.apiClient.callApi('/v2.0/programs/{id}/charts/profit/absolute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getProgramBalanceChart(id, opts) {
         return this.getProgramBalanceChartWithHttpInfo(id, opts)
             .then(function (response_and_data) {
@@ -253,16 +282,16 @@ export class ProgramsApi {
         let returnType = ProgramPeriodsViewModel;
         return this.apiClient.callApi('/v2.0/programs/{id}/periods', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getProgramProfitChart(id, opts) {
-        return this.getProgramProfitChartWithHttpInfo(id, opts)
+    getProgramProfitPercentCharts(id, opts) {
+        return this.getProgramProfitPercentChartsWithHttpInfo(id, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getProgramProfitChartWithHttpInfo(id, opts = {}) {
+    getProgramProfitPercentChartsWithHttpInfo(id, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getProgramProfitChart");
+            throw new Error("Missing the required parameter \"id\" when calling getProgramProfitPercentCharts");
         }
         let pathParams = {
             "id": id
@@ -280,7 +309,7 @@ export class ProgramsApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ProgramProfitCharts;
-        return this.apiClient.callApi('/v2.0/programs/{id}/charts/profit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/programs/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramSubscribers(id, authorization, opts) {
         return this.getProgramSubscribersWithHttpInfo(id, authorization, opts)
