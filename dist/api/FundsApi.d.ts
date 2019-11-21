@@ -3,7 +3,7 @@ import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
-import { FundProfitCharts } from "../model/FundProfitCharts";
+import { FundProfitPercentCharts } from "../model/FundProfitPercentCharts";
 import { ItemsViewModelFundDetailsList } from "../model/ItemsViewModelFundDetailsList";
 import { ItemsViewModelReallocationModel } from "../model/ItemsViewModelReallocationModel";
 export declare class FundsApi {
@@ -37,11 +37,11 @@ export declare class FundsApi {
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         currencies?: Array<Object>;
         chartAssetsCount?: number;
-    }): CancelablePromise<FundProfitCharts>;
+    }): CancelablePromise<FundProfitPercentCharts>;
     private getFundProfitPercentChartsWithHttpInfo;
     getFunds(opts?: {
         authorization?: string;
-        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc';
+        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByValueAsc' | 'ByValueDesc';
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         assets?: Array<string>;
         dateFrom?: Date;

@@ -5,7 +5,7 @@ import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgram
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
 import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
-import { ProgramProfitCharts } from "../model/ProgramProfitCharts";
+import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
 import { TradesViewModel } from "../model/TradesViewModel";
 export declare class ProgramsApi {
@@ -88,7 +88,7 @@ export declare class ProgramsApi {
         maxPointCount?: number;
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         currencies?: Array<Object>;
-    }): CancelablePromise<ProgramProfitCharts>;
+    }): CancelablePromise<ProgramProfitPercentCharts>;
     private getProgramProfitPercentChartsWithHttpInfo;
     getProgramSubscribers(id: string, authorization: string, opts?: {
         status?: 'All' | 'Active';
@@ -109,7 +109,7 @@ export declare class ProgramsApi {
     private getProgramTradesWithHttpInfo;
     getPrograms(opts?: {
         authorization?: string;
-        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'ByEquityAsc' | 'ByEquityDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPeriodAsc' | 'ByPeriodDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByLevelProgressAsc' | 'ByLevelProgressDesc' | 'ByLevelAsc' | 'ByLevelDesc';
+        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'ByEquityAsc' | 'ByEquityDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPeriodAsc' | 'ByPeriodDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByLevelProgressAsc' | 'ByLevelProgressDesc' | 'ByLevelAsc' | 'ByLevelDesc' | 'ByValueAsc' | 'ByValueDesc';
         showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         tags?: Array<string>;
         programCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';

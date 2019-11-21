@@ -1,14 +1,12 @@
 import ApiClient from "../ApiClient";
-export class ProgramChartStatistic {
+export class FollowChartStatistic {
     constructor(data) {
-        this['investors'] = data['investors'];
+        this['subscribers'] = data['subscribers'];
         this['profit'] = data['profit'];
         this['tradingVolume'] = data['tradingVolume'];
         this['trades'] = data['trades'];
         this['successTradesPercent'] = data['successTradesPercent'];
         this['profitFactor'] = data['profitFactor'];
-        this['lastPeriodStarts'] = data['lastPeriodStarts'];
-        this['lastPeriodEnds'] = data['lastPeriodEnds'];
         this['balance'] = data['balance'];
         this['sharpeRatio'] = data['sharpeRatio'];
         this['sortinoRatio'] = data['sortinoRatio'];
@@ -17,15 +15,13 @@ export class ProgramChartStatistic {
     }
     static constructFromObject(data) {
         if (data) {
-            return new ProgramChartStatistic({
-                'investors': ApiClient.convertToType(data['investors'], 'number'),
+            return new FollowChartStatistic({
+                'subscribers': ApiClient.convertToType(data['subscribers'], 'number'),
                 'profit': ApiClient.convertToType(data['profit'], 'number'),
                 'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
                 'trades': ApiClient.convertToType(data['trades'], 'number'),
                 'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),
                 'profitFactor': ApiClient.convertToType(data['profitFactor'], 'number'),
-                'lastPeriodStarts': ApiClient.convertToType(data['lastPeriodStarts'], 'Date'),
-                'lastPeriodEnds': ApiClient.convertToType(data['lastPeriodEnds'], 'Date'),
                 'balance': ApiClient.convertToType(data['balance'], 'number'),
                 'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
                 'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),

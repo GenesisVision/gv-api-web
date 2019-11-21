@@ -1,7 +1,7 @@
 import { FundAssetsState } from './FundAssetsState';
 import { FundChartStatistic } from './FundChartStatistic';
 import { SimpleChart } from './SimpleChart';
-export declare class FundProfitCharts {
+export declare class FundProfitPercentCharts {
     'statistic': FundChartStatistic;
     'charts': Array<SimpleChart>;
     'assets': Array<FundAssetsState>;
@@ -10,5 +10,5 @@ export declare class FundProfitCharts {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundProfitCharts | undefined;
+    }): FundProfitPercentCharts | undefined;
 }

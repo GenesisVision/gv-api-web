@@ -1,9 +1,11 @@
 import ApiClient from "../ApiClient";
-export class FundChartStatistic {
+export class AccountChartStatistic {
     constructor(data) {
-        this['investors'] = data['investors'];
-        this['profitPercent'] = data['profitPercent'];
-        this['creationDate'] = data['creationDate'];
+        this['profit'] = data['profit'];
+        this['tradingVolume'] = data['tradingVolume'];
+        this['trades'] = data['trades'];
+        this['successTradesPercent'] = data['successTradesPercent'];
+        this['profitFactor'] = data['profitFactor'];
         this['balance'] = data['balance'];
         this['sharpeRatio'] = data['sharpeRatio'];
         this['sortinoRatio'] = data['sortinoRatio'];
@@ -12,10 +14,12 @@ export class FundChartStatistic {
     }
     static constructFromObject(data) {
         if (data) {
-            return new FundChartStatistic({
-                'investors': ApiClient.convertToType(data['investors'], 'number'),
-                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
-                'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
+            return new AccountChartStatistic({
+                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
+                'trades': ApiClient.convertToType(data['trades'], 'number'),
+                'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),
+                'profitFactor': ApiClient.convertToType(data['profitFactor'], 'number'),
                 'balance': ApiClient.convertToType(data['balance'], 'number'),
                 'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
                 'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),

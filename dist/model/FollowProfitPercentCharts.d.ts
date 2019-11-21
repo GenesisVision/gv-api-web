@@ -1,12 +1,12 @@
-import { ProgramChartStatistic } from './ProgramChartStatistic';
+import { FollowChartStatistic } from './FollowChartStatistic';
 import { SimpleChart } from './SimpleChart';
-export declare class ProgramProfitCharts {
-    'statistic': ProgramChartStatistic;
+export declare class FollowProfitPercentCharts {
+    'statistic': FollowChartStatistic;
     'charts': Array<SimpleChart>;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramProfitCharts | undefined;
+    }): FollowProfitPercentCharts | undefined;
 }

@@ -4,7 +4,7 @@ import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgram
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
 import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
-import { ProgramProfitCharts } from "../model/ProgramProfitCharts";
+import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
 import { TradesViewModel } from "../model/TradesViewModel";
 export class ProgramsApi {
@@ -308,7 +308,7 @@ export class ProgramsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ProgramProfitCharts;
+        let returnType = ProgramProfitPercentCharts;
         return this.apiClient.callApi('/v2.0/programs/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramSubscribers(id, authorization, opts) {

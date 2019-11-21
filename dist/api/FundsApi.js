@@ -2,7 +2,7 @@ import ApiClient from "../ApiClient";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
-import { FundProfitCharts } from "../model/FundProfitCharts";
+import { FundProfitPercentCharts } from "../model/FundProfitPercentCharts";
 import { ItemsViewModelFundDetailsList } from "../model/ItemsViewModelFundDetailsList";
 import { ItemsViewModelReallocationModel } from "../model/ItemsViewModelReallocationModel";
 export class FundsApi {
@@ -147,7 +147,7 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FundProfitCharts;
+        let returnType = FundProfitPercentCharts;
         return this.apiClient.callApi('/v2.0/funds/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFunds(opts) {
