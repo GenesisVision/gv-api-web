@@ -9,6 +9,8 @@ import { DashboardRecommendations } from "../model/DashboardRecommendations";
 import { DashboardSummary } from "../model/DashboardSummary";
 import { DashboardTradingDetails } from "../model/DashboardTradingDetails";
 import { ItemsViewModelDashboardTradingAsset } from "../model/ItemsViewModelDashboardTradingAsset";
+import { ItemsViewModelFundInvestingDetailsList } from "../model/ItemsViewModelFundInvestingDetailsList";
+import { ItemsViewModelProgramInvestingDetailsList } from "../model/ItemsViewModelProgramInvestingDetailsList";
 export declare class DashboardApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -31,6 +33,36 @@ export declare class DashboardApi {
         eventsTake?: number;
     }): CancelablePromise<DashboardInvestingDetails>;
     private getInvestingDetailsWithHttpInfo;
+    getInvestingFunds(authorization: string, opts?: {
+        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByValueAsc' | 'ByValueDesc';
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        status?: 'All' | 'Active';
+        dateFrom?: Date;
+        dateTo?: Date;
+        chartPointsCount?: number;
+        facetId?: string;
+        mask?: string;
+        ownerId?: string;
+        showFavorites?: boolean;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelFundInvestingDetailsList>;
+    private getInvestingFundsWithHttpInfo;
+    getInvestingPrograms(authorization: string, opts?: {
+        sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'ByEquityAsc' | 'ByEquityDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPeriodAsc' | 'ByPeriodDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByLevelProgressAsc' | 'ByLevelProgressDesc' | 'ByLevelAsc' | 'ByLevelDesc' | 'ByValueAsc' | 'ByValueDesc';
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        status?: 'All' | 'Active';
+        dateFrom?: Date;
+        dateTo?: Date;
+        chartPointsCount?: number;
+        facetId?: string;
+        mask?: string;
+        ownerId?: string;
+        showFavorites?: boolean;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelProgramInvestingDetailsList>;
+    private getInvestingProgramsWithHttpInfo;
     getPortfolio(authorization: string): CancelablePromise<DashboardPortfolio>;
     private getPortfolioWithHttpInfo;
     getPrivateTradingAssets(authorization: string, opts?: {

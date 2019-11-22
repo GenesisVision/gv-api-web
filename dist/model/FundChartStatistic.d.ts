@@ -1,8 +1,8 @@
 export declare class FundChartStatistic {
+    'investors': number;
     'profitPercent': number;
     'creationDate': Date;
     'balance': number;
-    'investors': number;
     'sharpeRatio': number;
     'sortinoRatio': number;
     'calmarRatio': number;

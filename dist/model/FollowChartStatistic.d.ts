@@ -1,12 +1,10 @@
-export declare class ProgramChartStatistic {
-    'investors': number;
+export declare class FollowChartStatistic {
+    'subscribers': number;
     'profit': number;
     'tradingVolume': number;
     'trades': number;
     'successTradesPercent': number;
     'profitFactor': number;
-    'lastPeriodStarts': Date;
-    'lastPeriodEnds': Date;
     'balance': number;
     'sharpeRatio': number;
     'sortinoRatio': number;
@@ -17,5 +15,5 @@ export declare class ProgramChartStatistic {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramChartStatistic | undefined;
+    }): FollowChartStatistic | undefined;
 }

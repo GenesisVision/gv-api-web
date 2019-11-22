@@ -1,10 +1,35 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
+import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
+import { AccountBalanceChart } from "../model/AccountBalanceChart";
+import { AccountProfitPercentCharts } from "../model/AccountProfitPercentCharts";
 import { PrivateTradingAccountFull } from "../model/PrivateTradingAccountFull";
 import { TradesViewModel } from "../model/TradesViewModel";
 export declare class TradingaccountApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
+    getAbsoluteProfitChart(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+    }): CancelablePromise<AbsoluteProfitChart>;
+    private getAbsoluteProfitChartWithHttpInfo;
+    getBalanceChart(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+    }): CancelablePromise<AccountBalanceChart>;
+    private getBalanceChartWithHttpInfo;
+    getProfitPercentCharts(id: string, opts?: {
+        dateFrom?: Date;
+        dateTo?: Date;
+        maxPointCount?: number;
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currencies?: Array<Object>;
+    }): CancelablePromise<AccountProfitPercentCharts>;
+    private getProfitPercentChartsWithHttpInfo;
     getProgramOpenTrades(id: string, authorization: string, opts?: {
         sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';
         symbol?: string;
