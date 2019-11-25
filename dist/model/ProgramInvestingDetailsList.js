@@ -3,7 +3,7 @@ import { Currency } from './Currency';
 import { PersonalInvestingProgramDetailsList } from './PersonalInvestingProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class ProgramInvestingDetailsList {
     constructor(data) {
@@ -44,7 +44,7 @@ export class ProgramInvestingDetailsList {
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'personalDetails': PersonalInvestingProgramDetailsList.constructFromObject(data['personalDetails']),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
                 'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'balance': AmountWithCurrency.constructFromObject(data['balance']),
             });

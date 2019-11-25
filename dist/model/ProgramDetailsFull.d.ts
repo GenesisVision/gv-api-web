@@ -3,7 +3,7 @@ import { BrokerDetails } from './BrokerDetails';
 import { Currency } from './Currency';
 import { PersonalProgramDetails } from './PersonalProgramDetails';
 import { ProfilePublic } from './ProfilePublic';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import { TradesDelay } from './TradesDelay';
 export declare class ProgramDetailsFull {
     'id': string;
@@ -41,7 +41,7 @@ export declare class ProgramDetailsFull {
     'brokerDetails': BrokerDetails;
     'signalSettings': AssetSignalSettings;
     'personalDetails': PersonalProgramDetails;
-    'tags': Array<ProgramTag>;
+    'tags': Array<Tag>;
     constructor(data: {
         [key: string]: any;
     });

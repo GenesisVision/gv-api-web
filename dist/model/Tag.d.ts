@@ -1,4 +1,4 @@
-export declare class ProgramTag {
+export declare class Tag {
     'name': string;
     'color': string;
     constructor(data: {
@@ -6,5 +6,5 @@ export declare class ProgramTag {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramTag | undefined;
+    }): Tag | undefined;
 }

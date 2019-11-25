@@ -1,5 +1,5 @@
 import { BrokerAccountType } from './BrokerAccountType';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 export declare class Broker {
     'name': string;
     'description': string;
@@ -10,7 +10,7 @@ export declare class Broker {
     'leverageMin': number;
     'leverageMax': number;
     'accountTypes': Array<BrokerAccountType>;
-    'tags': Array<ProgramTag>;
+    'tags': Array<Tag>;
     constructor(data: {
         [key: string]: any;
     });

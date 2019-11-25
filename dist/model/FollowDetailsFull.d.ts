@@ -2,7 +2,7 @@ import { AssetSignalSettings } from './AssetSignalSettings';
 import { BrokerDetails } from './BrokerDetails';
 import { PersonalFollowDetailsFull } from './PersonalFollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 export declare class FollowDetailsFull {
     'id': string;
     'title': string;
@@ -19,7 +19,7 @@ export declare class FollowDetailsFull {
     'brokerDetails': BrokerDetails;
     'owner': ProfilePublic;
     'personalDetails': PersonalFollowDetailsFull;
-    'tags': Array<ProgramTag>;
+    'tags': Array<Tag>;
     constructor(data: {
         [key: string]: any;
     });

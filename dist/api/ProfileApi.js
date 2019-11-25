@@ -1,34 +1,10 @@
 import ApiClient from "../ApiClient";
 import { ProfileFullViewModel } from "../model/ProfileFullViewModel";
 import { ProfileHeaderViewModel } from "../model/ProfileHeaderViewModel";
-import { PublicProfile } from "../model/PublicProfile";
 import { SocialLinksViewModel } from "../model/SocialLinksViewModel";
 export class ProfileApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
-    }
-    getManagerProfile(id) {
-        return this.getManagerProfileWithHttpInfo(id)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getManagerProfileWithHttpInfo(id) {
-        let postBody = null;
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getManagerProfile");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {};
-        let headerParams = {};
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = PublicProfile;
-        return this.apiClient.callApi('/v2.0/profile/{id}/public', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProfileFull(authorization) {
         return this.getProfileFullWithHttpInfo(authorization)

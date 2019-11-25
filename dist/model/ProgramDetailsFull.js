@@ -3,7 +3,7 @@ import { BrokerDetails } from './BrokerDetails';
 import { Currency } from './Currency';
 import { PersonalProgramDetails } from './PersonalProgramDetails';
 import { ProfilePublic } from './ProfilePublic';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import { TradesDelay } from './TradesDelay';
 import ApiClient from "../ApiClient";
 export class ProgramDetailsFull {
@@ -83,7 +83,7 @@ export class ProgramDetailsFull {
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
                 'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
                 'personalDetails': PersonalProgramDetails.constructFromObject(data['personalDetails']),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
     }
