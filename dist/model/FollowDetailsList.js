@@ -2,7 +2,7 @@ import { Currency } from './Currency';
 import { PersonalFollowDetailsList } from './PersonalFollowDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class FollowDetailsList {
     constructor(data) {
@@ -39,7 +39,7 @@ export class FollowDetailsList {
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'personalDetails': PersonalFollowDetailsList.constructFromObject(data['personalDetails']),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
     }

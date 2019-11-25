@@ -1,6 +1,6 @@
 import { AmountRowCell } from './AmountRowCell';
-import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
+import { TransactionAssetDetails } from './TransactionAssetDetails';
 import { TransactionDetailItem } from './TransactionDetailItem';
 import { TransactionDetailsActions } from './TransactionDetailsActions';
 import { WalletRowCell } from './WalletRowCell';
@@ -11,7 +11,7 @@ export declare class TransactionViewModel {
     'status': MultiWalletTransactionStatus;
     'description': string;
     'amount': AmountRowCell;
-    'asset': ManagerAssetDetails;
+    'asset': TransactionAssetDetails;
     'details': Array<TransactionDetailItem>;
     'actions': TransactionDetailsActions;
     constructor(data: {

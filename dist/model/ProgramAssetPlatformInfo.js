@@ -1,7 +1,7 @@
 import { AssetFacet } from './AssetFacet';
 import { ProgramCreateAssetPlatformInfo } from './ProgramCreateAssetPlatformInfo';
 import { ProgramMinInvestAmount } from './ProgramMinInvestAmount';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class ProgramAssetPlatformInfo {
     constructor(data) {
@@ -16,7 +16,7 @@ export class ProgramAssetPlatformInfo {
         if (data) {
             return new ProgramAssetPlatformInfo({
                 'facets': ApiClient.convertToType(data['facets'], [AssetFacet]),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
                 'availableProgramCurrencies': ApiClient.convertToType(data['availableProgramCurrencies'], ['string']),
                 'minInvestAmounts': ApiClient.convertToType(data['minInvestAmounts'], [ProgramMinInvestAmount]),
                 'periods': ApiClient.convertToType(data['periods'], ['number']),

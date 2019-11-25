@@ -1,6 +1,6 @@
 import { AmountRowCell } from './AmountRowCell';
-import { ManagerAssetDetails } from './ManagerAssetDetails';
 import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
+import { TransactionAssetDetails } from './TransactionAssetDetails';
 import { TransactionDetailItem } from './TransactionDetailItem';
 import { TransactionDetailsActions } from './TransactionDetailsActions';
 import { WalletRowCell } from './WalletRowCell';
@@ -26,7 +26,7 @@ export class TransactionViewModel {
                 'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'amount': AmountRowCell.constructFromObject(data['amount']),
-                'asset': ManagerAssetDetails.constructFromObject(data['asset']),
+                'asset': TransactionAssetDetails.constructFromObject(data['asset']),
                 'details': ApiClient.convertToType(data['details'], [TransactionDetailItem]),
                 'actions': TransactionDetailsActions.constructFromObject(data['actions']),
             });

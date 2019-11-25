@@ -2,7 +2,7 @@ import { AssetSignalSettings } from './AssetSignalSettings';
 import { BrokerDetails } from './BrokerDetails';
 import { PersonalFollowDetailsFull } from './PersonalFollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class FollowDetailsFull {
     constructor(data) {
@@ -41,7 +41,7 @@ export class FollowDetailsFull {
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
                 'owner': ProfilePublic.constructFromObject(data['owner']),
                 'personalDetails': PersonalFollowDetailsFull.constructFromObject(data['personalDetails']),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
     }

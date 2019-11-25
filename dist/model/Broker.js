@@ -1,5 +1,5 @@
 import { BrokerAccountType } from './BrokerAccountType';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class Broker {
     constructor(data) {
@@ -26,7 +26,7 @@ export class Broker {
                 'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
                 'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
                 'accountTypes': ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]),
-                'tags': ApiClient.convertToType(data['tags'], [ProgramTag]),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
     }

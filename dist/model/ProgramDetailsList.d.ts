@@ -3,7 +3,7 @@ import { Currency } from './Currency';
 import { PersonalProgramDetailsList } from './PersonalProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
-import { ProgramTag } from './ProgramTag';
+import { Tag } from './Tag';
 export declare class ProgramDetailsList {
     'id': string;
     'logo': string;
@@ -23,7 +23,7 @@ export declare class ProgramDetailsList {
     'status': string;
     'owner': ProfilePublicShort;
     'personalDetails': PersonalProgramDetailsList;
-    'tags': Array<ProgramTag>;
+    'tags': Array<Tag>;
     'statistic': ProfitChart;
     'balance': AmountWithCurrency;
     constructor(data: {

@@ -3,7 +3,6 @@ import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { FcmTokenViewModel } from "../model/FcmTokenViewModel";
 import { ProfileFullViewModel } from "../model/ProfileFullViewModel";
 import { ProfileHeaderViewModel } from "../model/ProfileHeaderViewModel";
-import { PublicProfile } from "../model/PublicProfile";
 import { SocialLinksViewModel } from "../model/SocialLinksViewModel";
 import { UpdatePersonalDetailViewModel } from "../model/UpdatePersonalDetailViewModel";
 import { UpdateProfileViewModel } from "../model/UpdateProfileViewModel";
@@ -11,8 +10,6 @@ import { UpdateSocialLinkViewModel } from "../model/UpdateSocialLinkViewModel";
 export declare class ProfileApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getManagerProfile(id: string): CancelablePromise<PublicProfile>;
-    private getManagerProfileWithHttpInfo;
     getProfileFull(authorization: string): CancelablePromise<ProfileFullViewModel>;
     private getProfileFullWithHttpInfo;
     getProfileHeader(authorization: string): CancelablePromise<ProfileHeaderViewModel>;
