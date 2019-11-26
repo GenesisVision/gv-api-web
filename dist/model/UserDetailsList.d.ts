@@ -3,7 +3,7 @@ import { Tag } from './Tag';
 export declare class UserDetailsList {
     'userId': string;
     'username': string;
-    'logo': string;
+    'avatar': string;
     'url': string;
     'socialLinks': Array<SocialLinkViewModel>;
     'tags': Array<Tag>;

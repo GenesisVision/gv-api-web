@@ -5,7 +5,7 @@ export class UserDetailsList {
     constructor(data) {
         this['userId'] = data['userId'];
         this['username'] = data['username'];
-        this['logo'] = data['logo'];
+        this['avatar'] = data['avatar'];
         this['url'] = data['url'];
         this['socialLinks'] = data['socialLinks'];
         this['tags'] = data['tags'];
@@ -20,7 +20,7 @@ export class UserDetailsList {
             return new UserDetailsList({
                 'userId': ApiClient.convertToType(data['userId'], 'string'),
                 'username': ApiClient.convertToType(data['username'], 'string'),
-                'logo': ApiClient.convertToType(data['logo'], 'string'),
+                'avatar': ApiClient.convertToType(data['avatar'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
                 'socialLinks': ApiClient.convertToType(data['socialLinks'], [SocialLinkViewModel]),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),

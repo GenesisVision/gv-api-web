@@ -1,6 +1,7 @@
 export declare class AssetSignalSettings {
     'signalSuccessFee': number;
     'signalVolumeFee': number;
+    'isActive': boolean;
     constructor(data: {
         [key: string]: any;
     });

@@ -7,6 +7,12 @@ export declare class UsersApi {
     constructor(apiClient?: ApiClient);
     getManagerProfile(id: string): CancelablePromise<PublicProfile>;
     private getManagerProfileWithHttpInfo;
-    getUsersList(): CancelablePromise<ItemsViewModelUserDetailsList>;
+    getUsersList(opts?: {
+        facetId?: string;
+        sorting?: 'ByNameAsc' | 'ByNameDesc' | 'ByAgeAsc' | 'ByAgeDesc' | 'ByAumAsc' | 'ByAumDesc' | 'ByFollowersAsc' | 'ByFollowersDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByProfitAsc' | 'ByProfitDesc';
+        tags?: Array<string>;
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<ItemsViewModelUserDetailsList>;
     private getUsersListWithHttpInfo;
 }

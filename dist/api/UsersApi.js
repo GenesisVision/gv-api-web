@@ -28,16 +28,22 @@ export class UsersApi {
         let returnType = PublicProfile;
         return this.apiClient.callApi('/v2.0/users/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getUsersList() {
-        return this.getUsersListWithHttpInfo()
+    getUsersList(opts) {
+        return this.getUsersListWithHttpInfo(opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getUsersListWithHttpInfo() {
+    getUsersListWithHttpInfo(opts = {}) {
         let postBody = null;
         let pathParams = {};
-        let queryParams = {};
+        let queryParams = {
+            "FacetId": opts["facetId"],
+            "Sorting": opts["sorting"],
+            "Tags": this.apiClient.buildCollectionParam(opts["tags"], "multi"),
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
         let headerParams = {};
         let formParams = {};
         let authNames = [];
