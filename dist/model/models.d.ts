@@ -165,6 +165,8 @@ export * from './PlatformCommissionInfo';
 export * from './PlatformCommonInfo';
 export * from './PlatformCurrencyInfo';
 export * from './PlatformInfo';
+export * from './PlatformUrlInfo';
+export * from './PlatformUrlType';
 export * from './PowDetails';
 export * from './PowResult';
 export * from './PrivateTradingAccountFull';
