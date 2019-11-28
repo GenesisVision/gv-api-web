@@ -1,4 +1,4 @@
 import { fabric } from "../constructFromObject";
-export const TransferRequestType = {
+export const InternalTransferRequestType = {
     constructFromObject: fabric
 };

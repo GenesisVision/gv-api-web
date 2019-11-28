@@ -13,7 +13,9 @@ export class UserDetailsList {
         this['assetsUnderManagement'] = data['assetsUnderManagement'];
         this['investorsCount'] = data['investorsCount'];
         this['followersCount'] = data['followersCount'];
-        this['profit'] = data['profit'];
+        this['totalProfit'] = data['totalProfit'];
+        this['tradingProfit'] = data['tradingProfit'];
+        this['investingProfit'] = data['investingProfit'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -28,7 +30,9 @@ export class UserDetailsList {
                 'assetsUnderManagement': ApiClient.convertToType(data['assetsUnderManagement'], 'number'),
                 'investorsCount': ApiClient.convertToType(data['investorsCount'], 'number'),
                 'followersCount': ApiClient.convertToType(data['followersCount'], 'number'),
-                'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'totalProfit': ApiClient.convertToType(data['totalProfit'], 'number'),
+                'tradingProfit': ApiClient.convertToType(data['tradingProfit'], 'number'),
+                'investingProfit': ApiClient.convertToType(data['investingProfit'], 'number'),
             });
         }
     }

@@ -11,7 +11,9 @@ export declare class UserDetailsList {
     'assetsUnderManagement': number;
     'investorsCount': number;
     'followersCount': number;
-    'profit': number;
+    'totalProfit': number;
+    'tradingProfit': number;
+    'investingProfit': number;
     constructor(data: {
         [key: string]: any;
     });

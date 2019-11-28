@@ -1,4 +1,4 @@
-import { TransferRequestType } from './TransferRequestType';
+import { InternalTransferRequestType } from './InternalTransferRequestType';
 import ApiClient from "../ApiClient";
 export class InternalTransferRequest {
     constructor(data) {
@@ -13,9 +13,9 @@ export class InternalTransferRequest {
         if (data) {
             return new InternalTransferRequest({
                 'sourceId': ApiClient.convertToType(data['sourceId'], 'string'),
-                'sourceType': TransferRequestType.constructFromObject(data['sourceType']),
+                'sourceType': InternalTransferRequestType.constructFromObject(data['sourceType']),
                 'destinationId': ApiClient.convertToType(data['destinationId'], 'string'),
-                'destinationType': TransferRequestType.constructFromObject(data['destinationType']),
+                'destinationType': InternalTransferRequestType.constructFromObject(data['destinationType']),
                 'amount': ApiClient.convertToType(data['amount'], 'number'),
                 'transferAll': ApiClient.convertToType(data['transferAll'], 'boolean'),
             });
