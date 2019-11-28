@@ -9,7 +9,7 @@ export declare class UsersApi {
     private getManagerProfileWithHttpInfo;
     getUsersList(opts?: {
         facetId?: string;
-        sorting?: 'ByNameAsc' | 'ByNameDesc' | 'ByAgeAsc' | 'ByAgeDesc' | 'ByAumAsc' | 'ByAumDesc' | 'ByFollowersAsc' | 'ByFollowersDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByProfitAsc' | 'ByProfitDesc';
+        sorting?: 'ByNameAsc' | 'ByNameDesc' | 'ByAgeAsc' | 'ByAgeDesc' | 'ByAumAsc' | 'ByAumDesc' | 'ByFollowersAsc' | 'ByFollowersDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPopularityAsc' | 'ByPopularityDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByTradingProfitAsc' | 'ByTradingProfitDesc' | 'ByInvestingProfitAsc' | 'ByInvestingProfitDesc';
         tags?: Array<string>;
         skip?: number;
         take?: number;

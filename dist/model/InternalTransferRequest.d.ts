@@ -1,9 +1,9 @@
-import { TransferRequestType } from './TransferRequestType';
+import { InternalTransferRequestType } from './InternalTransferRequestType';
 export declare class InternalTransferRequest {
     'sourceId': string;
-    'sourceType': TransferRequestType;
+    'sourceType': InternalTransferRequestType;
     'destinationId': string;
-    'destinationType': TransferRequestType;
+    'destinationType': InternalTransferRequestType;
     'amount': number;
     'transferAll': boolean;
     constructor(data: {
