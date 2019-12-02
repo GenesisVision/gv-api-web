@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
+import { AssetInfo } from "../model/AssetInfo";
 import { CaptchaDetails } from "../model/CaptchaDetails";
 import { LevelsParamsInfo } from "../model/LevelsParamsInfo";
 import { PlatformAssets } from "../model/PlatformAssets";
@@ -10,6 +11,8 @@ export declare class PlatformApi {
     constructor(apiClient?: ApiClient);
     getAllPlatformAssets(): CancelablePromise<PlatformAssets>;
     private getAllPlatformAssetsWithHttpInfo;
+    getPlatformAssetInfo(asset: string): CancelablePromise<AssetInfo>;
+    private getPlatformAssetInfoWithHttpInfo;
     getPlatformDate(): CancelablePromise<string>;
     private getPlatformDateWithHttpInfo;
     getPlatformInfo(): CancelablePromise<PlatformInfo>;
