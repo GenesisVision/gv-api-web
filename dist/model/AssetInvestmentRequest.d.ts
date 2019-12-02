@@ -1,9 +1,7 @@
-import { AssetDetails } from './AssetDetails';
+import { AssetRequestDetails } from './AssetRequestDetails';
 import { Currency } from './Currency';
-import { FundAssetInvestmentRequest } from './FundAssetInvestmentRequest';
 import { InvestmentRequestStatus } from './InvestmentRequestStatus';
 import { InvestmentRequestType } from './InvestmentRequestType';
-import { ProgramAssetInvestmentRequest } from './ProgramAssetInvestmentRequest';
 export declare class AssetInvestmentRequest {
     'id': string;
     'date': Date;
@@ -12,9 +10,7 @@ export declare class AssetInvestmentRequest {
     'type': InvestmentRequestType;
     'status': InvestmentRequestStatus;
     'canCancelRequest': boolean;
-    'assetDetails': AssetDetails;
-    'fundRequestDetails': FundAssetInvestmentRequest;
-    'programRequestDetails': ProgramAssetInvestmentRequest;
+    'assetDetails': AssetRequestDetails;
     constructor(data: {
         [key: string]: any;
     });
