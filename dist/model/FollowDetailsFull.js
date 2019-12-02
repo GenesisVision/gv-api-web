@@ -17,6 +17,7 @@ export class FollowDetailsFull {
         this['status'] = data['status'];
         this['url'] = data['url'];
         this['color'] = data['color'];
+        this['leverage'] = data['leverage'];
         this['signalSettings'] = data['signalSettings'];
         this['brokerDetails'] = data['brokerDetails'];
         this['owner'] = data['owner'];
@@ -37,6 +38,7 @@ export class FollowDetailsFull {
                 'status': ApiClient.convertToType(data['status'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),
+                'leverage': ApiClient.convertToType(data['leverage'], 'number'),
                 'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
                 'owner': ProfilePublic.constructFromObject(data['owner']),

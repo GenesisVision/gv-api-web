@@ -15,6 +15,7 @@ export declare class FollowDetailsFull {
     'status': string;
     'url': string;
     'color': string;
+    'leverage': number;
     'signalSettings': AssetSignalSettings;
     'brokerDetails': BrokerDetails;
     'owner': ProfilePublic;
