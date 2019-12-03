@@ -11,6 +11,8 @@ export class PersonalFollowDetailsFull {
         this['ownerActions'] = data['ownerActions'];
         this['guestActions'] = data['guestActions'];
         this['hasNotifications'] = data['hasNotifications'];
+        this['balance'] = data['balance'];
+        this['leverage'] = data['leverage'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -22,6 +24,8 @@ export class PersonalFollowDetailsFull {
                 'ownerActions': FollowOwnerActions.constructFromObject(data['ownerActions']),
                 'guestActions': AssetGuestActions.constructFromObject(data['guestActions']),
                 'hasNotifications': ApiClient.convertToType(data['hasNotifications'], 'boolean'),
+                'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'leverage': ApiClient.convertToType(data['leverage'], 'number'),
             });
         }
     }
