@@ -6,7 +6,6 @@ export class AmountItem {
         this['currency'] = data['currency'];
         this['color'] = data['color'];
         this['logo'] = data['logo'];
-        this['title'] = data['title'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -15,7 +14,6 @@ export class AmountItem {
                 'currency': Currency.constructFromObject(data['currency']),
                 'color': ApiClient.convertToType(data['color'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
-                'title': ApiClient.convertToType(data['title'], 'string'),
             });
         }
     }

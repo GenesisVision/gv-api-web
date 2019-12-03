@@ -9,7 +9,7 @@ export declare class EventsApi {
         assetId?: string;
         from?: Date;
         to?: Date;
-        eventType?: 'All' | 'AssetFinished' | 'AssetPeriodStarted' | 'AssetPeriodEnded' | 'AssetPeriodEndedDueToStopOut' | 'AssetBrokerChanged' | 'AssetEnterInvestment' | 'AssetTradeOpen' | 'AssetTradeClosed' | 'AssetSubscriptionEdit' | 'AssetInvestByInvestor' | 'AssetWithdrawalByInvestor' | 'AssetReallocation' | 'AssetStarted' | 'AssetPeriodProcessed' | 'AssetInvestByManager' | 'AssetWithdrawalByManager' | 'AssetSubscribeByInvestor' | 'AssetUnsubscribeByInvestor';
+        eventType?: 'All' | 'AssetStarted' | 'AssetFinished' | 'AssetPeriodStarted' | 'AssetPeriodEnded' | 'AssetPeriodEndedDueToStopOut' | 'AssetBrokerChanged' | 'AssetInvestByInvestor' | 'AssetWithdrawalByInvestor' | 'AssetInvestByManager' | 'AssetWithdrawalByManager' | 'AssetPeriodProcessed' | 'AssetReallocation' | 'AssetSubscribeByInvestor' | 'AssetUnsubscribeByInvestor' | 'AssetTradeOpen' | 'AssetTradeClosed' | 'AssetSubscriptionEdit' | 'AssetEnterInvestment';
         assetType?: 'All' | 'Program' | 'Fund' | 'Signal';
         assetsIds?: Array<string>;
         forceFilterByIds?: boolean;
