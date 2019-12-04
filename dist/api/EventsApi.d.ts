@@ -13,6 +13,7 @@ export declare class EventsApi {
         assetType?: 'All' | 'Program' | 'Fund' | 'Signal';
         assetsIds?: Array<string>;
         forceFilterByIds?: boolean;
+        eventGroup?: 'InvestmentHistory' | 'TradingHistory';
         skip?: number;
         take?: number;
     }): CancelablePromise<InvestmentEventViewModels>;

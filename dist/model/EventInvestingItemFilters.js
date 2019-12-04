@@ -1,4 +1,4 @@
-import { FilterModel } from './FilterModel';
+import { FilterItemInfo } from './FilterItemInfo';
 import ApiClient from "../ApiClient";
 export class EventInvestingItemFilters {
     constructor(data) {
@@ -9,9 +9,9 @@ export class EventInvestingItemFilters {
     static constructFromObject(data) {
         if (data) {
             return new EventInvestingItemFilters({
-                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterModel]),
-                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterModel]),
-                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterModel]),
+                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterItemInfo]),
+                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterItemInfo]),
+                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterItemInfo]),
             });
         }
     }

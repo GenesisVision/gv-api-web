@@ -1,6 +1,5 @@
 import { AppVersion } from './AppVersion';
 import { AssetPlatformInfo } from './AssetPlatformInfo';
-import { Enums } from './Enums';
 import { FilterInfo } from './FilterInfo';
 import { PlatformCommonInfo } from './PlatformCommonInfo';
 import { UsersPlatformInfo } from './UsersPlatformInfo';
@@ -11,7 +10,6 @@ export class PlatformInfo {
         this['assetInfo'] = data['assetInfo'];
         this['usersInfo'] = data['usersInfo'];
         this['commonInfo'] = data['commonInfo'];
-        this['enums'] = data['enums'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -21,7 +19,6 @@ export class PlatformInfo {
                 'assetInfo': AssetPlatformInfo.constructFromObject(data['assetInfo']),
                 'usersInfo': UsersPlatformInfo.constructFromObject(data['usersInfo']),
                 'commonInfo': PlatformCommonInfo.constructFromObject(data['commonInfo']),
-                'enums': Enums.constructFromObject(data['enums']),
             });
         }
     }

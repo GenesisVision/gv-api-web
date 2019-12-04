@@ -1,9 +1,9 @@
-import { FilterModel } from './FilterModel';
+import { FilterItemInfo } from './FilterItemInfo';
 export declare class EventTradingItemFilters {
-    'signalProgramDetails': Array<FilterModel>;
-    'allAssets': Array<FilterModel>;
-    'programDetails': Array<FilterModel>;
-    'fundDetails': Array<FilterModel>;
+    'signalProgramDetails': Array<FilterItemInfo>;
+    'allAssets': Array<FilterItemInfo>;
+    'programDetails': Array<FilterItemInfo>;
+    'fundDetails': Array<FilterItemInfo>;
     constructor(data: {
         [key: string]: any;
     });
