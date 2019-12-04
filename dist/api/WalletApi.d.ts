@@ -34,7 +34,7 @@ export declare class WalletApi {
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
     private getTransactionsExternalWithHttpInfo;
     getTransactionsInternal(authorization: string, opts?: {
-        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward' | 'Platform';
+        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward';
         dateFrom?: Date;
         dateTo?: Date;
         currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
