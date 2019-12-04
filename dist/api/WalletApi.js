@@ -120,6 +120,7 @@ export class WalletApi {
             "TransactionType": opts["transactionType"],
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
+            "Currency": opts["currency"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -149,6 +150,7 @@ export class WalletApi {
             "TransactionType": opts["transactionType"],
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
+            "Currency": opts["currency"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
