@@ -28,14 +28,16 @@ export declare class WalletApi {
         transactionType?: 'All' | 'Withdrawal' | 'Deposit' | 'Platform';
         dateFrom?: Date;
         dateTo?: Date;
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
     private getTransactionsExternalWithHttpInfo;
     getTransactionsInternal(authorization: string, opts?: {
-        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Deposit' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward' | 'Platform';
+        transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward';
         dateFrom?: Date;
         dateTo?: Date;
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;

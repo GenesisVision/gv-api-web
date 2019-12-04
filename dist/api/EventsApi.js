@@ -25,6 +25,7 @@ export class EventsApi {
             "AssetType": opts["assetType"],
             "AssetsIds": this.apiClient.buildCollectionParam(opts["assetsIds"], "multi"),
             "ForceFilterByIds": opts["forceFilterByIds"],
+            "EventGroup": opts["eventGroup"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
