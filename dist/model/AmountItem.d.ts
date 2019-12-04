@@ -3,7 +3,7 @@ export declare class AmountItem {
     'amount': number;
     'currency': Currency;
     'color': string;
-    'title': string;
+    'logo': string;
     constructor(data: {
         [key: string]: any;
     });

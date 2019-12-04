@@ -3,12 +3,10 @@ import { MultiWalletTransactionStatus } from './MultiWalletTransactionStatus';
 import { TransactionAssetDetails } from './TransactionAssetDetails';
 import { TransactionDetailItem } from './TransactionDetailItem';
 import { TransactionDetailsActions } from './TransactionDetailsActions';
-import { WalletRowCell } from './WalletRowCell';
 import ApiClient from "../ApiClient";
 export class TransactionViewModel {
     constructor(data) {
         this['id'] = data['id'];
-        this['wallet'] = data['wallet'];
         this['date'] = data['date'];
         this['status'] = data['status'];
         this['description'] = data['description'];
@@ -21,7 +19,6 @@ export class TransactionViewModel {
         if (data) {
             return new TransactionViewModel({
                 'id': ApiClient.convertToType(data['id'], 'string'),
-                'wallet': WalletRowCell.constructFromObject(data['wallet']),
                 'date': ApiClient.convertToType(data['date'], 'Date'),
                 'status': MultiWalletTransactionStatus.constructFromObject(data['status']),
                 'description': ApiClient.convertToType(data['description'], 'string'),

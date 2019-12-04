@@ -9,6 +9,8 @@ export declare class PersonalFollowDetailsFull {
     'ownerActions': FollowOwnerActions;
     'guestActions': AssetGuestActions;
     'hasNotifications': boolean;
+    'balance': number;
+    'leverage': number;
     constructor(data: {
         [key: string]: any;
     });
