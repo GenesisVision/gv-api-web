@@ -42,9 +42,9 @@ export declare class WalletApi {
     private getTransactionsInternalWithHttpInfo;
     getUserWithdrawalSummary(authorization: string): CancelablePromise<WithdrawalSummary>;
     private getUserWithdrawalSummaryWithHttpInfo;
-    getWalletAvailable(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
+    getWalletAvailable(currency: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
     private getWalletAvailableWithHttpInfo;
-    getWalletSummary(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiSummary>;
+    getWalletSummary(currency: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiSummary>;
     private getWalletSummaryWithHttpInfo;
     resendWithdrawalRequestEmail(txId: string, authorization: string): CancelablePromise<null>;
     private resendWithdrawalRequestEmailWithHttpInfo;
