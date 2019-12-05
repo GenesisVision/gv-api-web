@@ -7,6 +7,7 @@ import { Tag } from './Tag';
 import { TradesDelay } from './TradesDelay';
 export declare class ProgramDetailsFull {
     'id': string;
+    'tradingAccountId': string;
     'logo': string;
     'url': string;
     'color': string;

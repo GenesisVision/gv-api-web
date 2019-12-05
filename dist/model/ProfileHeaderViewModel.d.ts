@@ -2,6 +2,7 @@ export declare class ProfileHeaderViewModel {
     'id': string;
     'name': string;
     'email': string;
+    'url': string;
     'avatar': string;
     'countryCode': string;
     'notificationsCount': number;

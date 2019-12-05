@@ -4,6 +4,7 @@ export class ProfileHeaderViewModel {
         this['id'] = data['id'];
         this['name'] = data['name'];
         this['email'] = data['email'];
+        this['url'] = data['url'];
         this['avatar'] = data['avatar'];
         this['countryCode'] = data['countryCode'];
         this['notificationsCount'] = data['notificationsCount'];
@@ -19,6 +20,7 @@ export class ProfileHeaderViewModel {
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'name': ApiClient.convertToType(data['name'], 'string'),
                 'email': ApiClient.convertToType(data['email'], 'string'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
                 'avatar': ApiClient.convertToType(data['avatar'], 'string'),
                 'countryCode': ApiClient.convertToType(data['countryCode'], 'string'),
                 'notificationsCount': ApiClient.convertToType(data['notificationsCount'], 'number'),

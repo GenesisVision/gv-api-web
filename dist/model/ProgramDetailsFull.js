@@ -9,6 +9,7 @@ import ApiClient from "../ApiClient";
 export class ProgramDetailsFull {
     constructor(data) {
         this['id'] = data['id'];
+        this['tradingAccountId'] = data['tradingAccountId'];
         this['logo'] = data['logo'];
         this['url'] = data['url'];
         this['color'] = data['color'];
@@ -49,6 +50,7 @@ export class ProgramDetailsFull {
         if (data) {
             return new ProgramDetailsFull({
                 'id': ApiClient.convertToType(data['id'], 'string'),
+                'tradingAccountId': ApiClient.convertToType(data['tradingAccountId'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),

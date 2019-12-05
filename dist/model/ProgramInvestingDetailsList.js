@@ -1,4 +1,5 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
+import { BrokerDetails } from './BrokerDetails';
 import { Currency } from './Currency';
 import { PersonalInvestingProgramDetailsList } from './PersonalInvestingProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
@@ -21,6 +22,7 @@ export class ProgramInvestingDetailsList {
         this['periodStarts'] = data['periodStarts'];
         this['periodEnds'] = data['periodEnds'];
         this['owner'] = data['owner'];
+        this['brokerDetails'] = data['brokerDetails'];
         this['personalDetails'] = data['personalDetails'];
         this['tags'] = data['tags'];
         this['statistic'] = data['statistic'];
@@ -43,6 +45,7 @@ export class ProgramInvestingDetailsList {
                 'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
+                'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
                 'personalDetails': PersonalInvestingProgramDetailsList.constructFromObject(data['personalDetails']),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),
                 'statistic': ProfitChart.constructFromObject(data['statistic']),

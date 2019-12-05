@@ -4,7 +4,7 @@ export class DashboardSummary {
     constructor(data) {
         this['total'] = data['total'];
         this['invested'] = data['invested'];
-        this['pending'] = data['pending'];
+        this['trading'] = data['trading'];
         this['available'] = data['available'];
         this['profits'] = data['profits'];
     }
@@ -13,7 +13,7 @@ export class DashboardSummary {
             return new DashboardSummary({
                 'total': ApiClient.convertToType(data['total'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),
-                'pending': ApiClient.convertToType(data['pending'], 'number'),
+                'trading': ApiClient.convertToType(data['trading'], 'number'),
                 'available': ApiClient.convertToType(data['available'], 'number'),
                 'profits': DashboardProfits.constructFromObject(data['profits']),
             });

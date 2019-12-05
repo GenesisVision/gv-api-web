@@ -21,7 +21,7 @@ export declare class PersonalProgramDetails {
     'status': AssetInvestmentStatus;
     'successFeePersonal': number;
     'migration': MigrationRequest;
-    'signalSubscription': SignalSubscription;
+    'signalSubscriptions': Array<SignalSubscription>;
     constructor(data: {
         [key: string]: any;
     });

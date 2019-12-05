@@ -5,6 +5,7 @@ import { ProfilePublic } from './ProfilePublic';
 import { Tag } from './Tag';
 export declare class FollowDetailsFull {
     'id': string;
+    'tradingAccountId': string;
     'title': string;
     'description': string;
     'logo': string;
@@ -28,5 +29,5 @@ export declare class FollowDetailsFull {
         [key: string]: any;
     }): FollowDetailsFull | undefined;
 }
-declare type CurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export {};
