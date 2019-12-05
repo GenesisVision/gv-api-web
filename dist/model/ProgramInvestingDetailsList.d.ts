@@ -1,4 +1,5 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
+import { BrokerDetails } from './BrokerDetails';
 import { Currency } from './Currency';
 import { PersonalInvestingProgramDetailsList } from './PersonalInvestingProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
@@ -19,6 +20,7 @@ export declare class ProgramInvestingDetailsList {
     'periodStarts': Date;
     'periodEnds': Date;
     'owner': ProfilePublicShort;
+    'brokerDetails': BrokerDetails;
     'personalDetails': PersonalInvestingProgramDetailsList;
     'tags': Array<Tag>;
     'statistic': ProfitChart;
