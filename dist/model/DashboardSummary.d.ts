@@ -2,7 +2,7 @@ import { DashboardProfits } from './DashboardProfits';
 export declare class DashboardSummary {
     'total': number;
     'invested': number;
-    'pending': number;
+    'trading': number;
     'available': number;
     'profits': DashboardProfits;
     constructor(data: {
