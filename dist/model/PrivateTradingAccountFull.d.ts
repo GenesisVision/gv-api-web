@@ -2,6 +2,7 @@ import { BrokerDetails } from './BrokerDetails';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountOwnerActions } from './PrivateTradingAccountOwnerActions';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
+import { SignalSubscription } from './SignalSubscription';
 export declare class PrivateTradingAccountFull {
     'id': string;
     'creationDate': Date;
@@ -12,6 +13,7 @@ export declare class PrivateTradingAccountFull {
     'balance': number;
     'type': PrivateTradingAccountType;
     'status': DashboardTradingAssetStatus;
+    'signalSubscriptions': Array<SignalSubscription>;
     'brokerDetails': BrokerDetails;
     'ownerActions': PrivateTradingAccountOwnerActions;
     constructor(data: {
@@ -21,5 +23,5 @@ export declare class PrivateTradingAccountFull {
         [key: string]: any;
     }): PrivateTradingAccountFull | undefined;
 }
-declare type CurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
 export {};

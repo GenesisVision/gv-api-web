@@ -7,6 +7,7 @@ import ApiClient from "../ApiClient";
 export class FollowDetailsFull {
     constructor(data) {
         this['id'] = data['id'];
+        this['tradingAccountId'] = data['tradingAccountId'];
         this['title'] = data['title'];
         this['description'] = data['description'];
         this['logo'] = data['logo'];
@@ -28,6 +29,7 @@ export class FollowDetailsFull {
         if (data) {
             return new FollowDetailsFull({
                 'id': ApiClient.convertToType(data['id'], 'string'),
+                'tradingAccountId': ApiClient.convertToType(data['tradingAccountId'], 'string'),
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),

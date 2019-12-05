@@ -23,7 +23,7 @@ export class PersonalProgramDetails {
         this['status'] = data['status'];
         this['successFeePersonal'] = data['successFeePersonal'];
         this['migration'] = data['migration'];
-        this['signalSubscription'] = data['signalSubscription'];
+        this['signalSubscriptions'] = data['signalSubscriptions'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -46,7 +46,7 @@ export class PersonalProgramDetails {
                 'status': AssetInvestmentStatus.constructFromObject(data['status']),
                 'successFeePersonal': ApiClient.convertToType(data['successFeePersonal'], 'number'),
                 'migration': MigrationRequest.constructFromObject(data['migration']),
-                'signalSubscription': SignalSubscription.constructFromObject(data['signalSubscription']),
+                'signalSubscriptions': ApiClient.convertToType(data['signalSubscriptions'], [SignalSubscription]),
             });
         }
     }
