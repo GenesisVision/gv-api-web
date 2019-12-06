@@ -3,13 +3,8 @@ export declare class WalletsGrandTotal {
     'currency': Currency;
     'available': number;
     'invested': number;
-    'pending': number;
+    'trading': number;
     'total': number;
-    'currencyCcy': Currency;
-    'availableCcy': number;
-    'investedCcy': number;
-    'pendingCcy': number;
-    'totalCcy': number;
     constructor(data: {
         [key: string]: any;
     });

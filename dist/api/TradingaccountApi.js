@@ -64,6 +64,41 @@ export class TradingaccountApi {
         let returnType = AccountBalanceChart;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/charts/balance', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getOpenTrades(id, authorization, opts) {
+        return this.getOpenTradesWithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getOpenTradesWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getOpenTrades");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getOpenTrades");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "Sorting": opts["sorting"],
+            "Symbol": opts["symbol"],
+            "AccountId": opts["accountId"],
+            "AccountCurrency": opts["accountCurrency"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = TradesViewModel;
+        return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getProfitPercentCharts(id, opts) {
         return this.getProfitPercentChartsWithHttpInfo(id, opts)
             .then(function (response_and_data) {
@@ -93,26 +128,28 @@ export class TradingaccountApi {
         let returnType = AccountProfitPercentCharts;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getProgramOpenTrades(id, authorization, opts) {
-        return this.getProgramOpenTradesWithHttpInfo(id, authorization, opts)
+    getTrades(id, authorization, opts) {
+        return this.getTradesWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getProgramOpenTradesWithHttpInfo(id, authorization, opts = {}) {
+    getTradesWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getProgramOpenTrades");
+            throw new Error("Missing the required parameter \"id\" when calling getTrades");
         }
         if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getProgramOpenTrades");
+            throw new Error("Missing the required parameter \"authorization\" when calling getTrades");
         }
         let pathParams = {
             "id": id
         };
         let queryParams = {
-            "Sorting": opts["sorting"],
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
             "Symbol": opts["symbol"],
+            "Sorting": opts["sorting"],
             "AccountId": opts["accountId"],
             "AccountCurrency": opts["accountCurrency"],
             "Skip": opts["skip"],
@@ -126,7 +163,7 @@ export class TradingaccountApi {
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = TradesViewModel;
-        return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+        return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTradingAccountDetails(id, authorization) {
         return this.getTradingAccountDetailsWithHttpInfo(id, authorization)
@@ -155,42 +192,5 @@ export class TradingaccountApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = PrivateTradingAccountFull;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getTradingAccountTrades(id, authorization, opts) {
-        return this.getTradingAccountTradesWithHttpInfo(id, authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getTradingAccountTradesWithHttpInfo(id, authorization, opts = {}) {
-        let postBody = null;
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getTradingAccountTrades");
-        }
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling getTradingAccountTrades");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {
-            "DateFrom": opts["dateFrom"],
-            "DateTo": opts["dateTo"],
-            "Symbol": opts["symbol"],
-            "Sorting": opts["sorting"],
-            "AccountId": opts["accountId"],
-            "AccountCurrency": opts["accountCurrency"],
-            "Skip": opts["skip"],
-            "Take": opts["take"]
-        };
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TradesViewModel;
-        return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

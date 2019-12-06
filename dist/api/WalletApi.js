@@ -3,7 +3,7 @@ import { ItemsViewModelTransactionViewModel } from "../model/ItemsViewModelTrans
 import { UserCommissionData } from "../model/UserCommissionData";
 import { WalletDepositSummary } from "../model/WalletDepositSummary";
 import { WalletMultiAvailable } from "../model/WalletMultiAvailable";
-import { WalletMultiSummary } from "../model/WalletMultiSummary";
+import { WalletSummary } from "../model/WalletSummary";
 import { WithdrawalSummary } from "../model/WithdrawalSummary";
 export class WalletApi {
     constructor(apiClient) {
@@ -240,7 +240,7 @@ export class WalletApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = WalletMultiSummary;
+        let returnType = WalletSummary;
         return this.apiClient.callApi('/v2.0/wallet/{currency}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     resendWithdrawalRequestEmail(txId, authorization) {

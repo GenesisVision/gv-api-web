@@ -1,23 +1,18 @@
 import { Currency } from './Currency';
 export declare class WalletData {
+    'pending': number;
     'id': string;
     'title': string;
     'logo': string;
-    'rateToGVT': number;
     'isDepositEnabled': boolean;
     'isWithdrawalEnabled': boolean;
     'withdrawalCommission': number;
     'depositAddress': string;
+    'total': number;
     'currency': Currency;
     'available': number;
     'invested': number;
-    'pending': number;
-    'total': number;
-    'currencyCcy': Currency;
-    'availableCcy': number;
-    'investedCcy': number;
-    'pendingCcy': number;
-    'totalCcy': number;
+    'trading': number;
     constructor(data: {
         [key: string]: any;
     });

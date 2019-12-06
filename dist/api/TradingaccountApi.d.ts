@@ -22,6 +22,15 @@ export declare class TradingaccountApi {
         currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<AccountBalanceChart>;
     private getBalanceChartWithHttpInfo;
+    getOpenTrades(id: string, authorization: string, opts?: {
+        sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';
+        symbol?: string;
+        accountId?: string;
+        accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        skip?: number;
+        take?: number;
+    }): CancelablePromise<TradesViewModel>;
+    private getOpenTradesWithHttpInfo;
     getProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -30,18 +39,7 @@ export declare class TradingaccountApi {
         currencies?: Array<Object>;
     }): CancelablePromise<AccountProfitPercentCharts>;
     private getProfitPercentChartsWithHttpInfo;
-    getProgramOpenTrades(id: string, authorization: string, opts?: {
-        sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';
-        symbol?: string;
-        accountId?: string;
-        accountCurrency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
-        skip?: number;
-        take?: number;
-    }): CancelablePromise<TradesViewModel>;
-    private getProgramOpenTradesWithHttpInfo;
-    getTradingAccountDetails(id: string, authorization: string): CancelablePromise<PrivateTradingAccountFull>;
-    private getTradingAccountDetailsWithHttpInfo;
-    getTradingAccountTrades(id: string, authorization: string, opts?: {
+    getTrades(id: string, authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         symbol?: string;
@@ -51,5 +49,7 @@ export declare class TradingaccountApi {
         skip?: number;
         take?: number;
     }): CancelablePromise<TradesViewModel>;
-    private getTradingAccountTradesWithHttpInfo;
+    private getTradesWithHttpInfo;
+    getTradingAccountDetails(id: string, authorization: string): CancelablePromise<PrivateTradingAccountFull>;
+    private getTradingAccountDetailsWithHttpInfo;
 }
