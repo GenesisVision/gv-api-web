@@ -189,6 +189,34 @@ export class DashboardApi {
         let returnType = ItemsViewModelProgramInvestingDetailsList;
         return this.apiClient.callApi('/v2.0/dashboard/investing/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getMostProfitableAssets(authorization, opts) {
+        return this.getMostProfitableAssetsWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getMostProfitableAssetsWithHttpInfo(authorization, opts = {}) {
+        let postBody = null;
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getMostProfitableAssets");
+        }
+        let pathParams = {};
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "ChartPointsCount": opts["chartPointsCount"],
+            "ShowIn": opts["showIn"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelDashboardTradingAsset;
+        return this.apiClient.callApi('/v2.0/dashboard/trading/mostprofitable', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getPortfolio(authorization) {
         return this.getPortfolioWithHttpInfo(authorization)
             .then(function (response_and_data) {
