@@ -1,6 +1,6 @@
 import { WalletData } from './WalletData';
 import { WalletsGrandTotal } from './WalletsGrandTotal';
-export declare class WalletMultiSummary {
+export declare class WalletSummary {
     'grandTotal': WalletsGrandTotal;
     'wallets': Array<WalletData>;
     'payFeesWithGvt': boolean;
@@ -9,5 +9,5 @@ export declare class WalletMultiSummary {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): WalletMultiSummary | undefined;
+    }): WalletSummary | undefined;
 }

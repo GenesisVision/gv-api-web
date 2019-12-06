@@ -267,7 +267,7 @@ export * from './WalletData';
 export * from './WalletDeposit';
 export * from './WalletDepositSummary';
 export * from './WalletMultiAvailable';
-export * from './WalletMultiSummary';
+export * from './WalletSummary';
 export * from './WalletWithdrawalInfo';
 export * from './WalletsGrandTotal';
 export * from './WithdrawalSummary';

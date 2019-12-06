@@ -5,13 +5,8 @@ export class WalletsGrandTotal {
         this['currency'] = data['currency'];
         this['available'] = data['available'];
         this['invested'] = data['invested'];
-        this['pending'] = data['pending'];
+        this['trading'] = data['trading'];
         this['total'] = data['total'];
-        this['currencyCcy'] = data['currencyCcy'];
-        this['availableCcy'] = data['availableCcy'];
-        this['investedCcy'] = data['investedCcy'];
-        this['pendingCcy'] = data['pendingCcy'];
-        this['totalCcy'] = data['totalCcy'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -19,13 +14,8 @@ export class WalletsGrandTotal {
                 'currency': Currency.constructFromObject(data['currency']),
                 'available': ApiClient.convertToType(data['available'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),
-                'pending': ApiClient.convertToType(data['pending'], 'number'),
+                'trading': ApiClient.convertToType(data['trading'], 'number'),
                 'total': ApiClient.convertToType(data['total'], 'number'),
-                'currencyCcy': Currency.constructFromObject(data['currencyCcy']),
-                'availableCcy': ApiClient.convertToType(data['availableCcy'], 'number'),
-                'investedCcy': ApiClient.convertToType(data['investedCcy'], 'number'),
-                'pendingCcy': ApiClient.convertToType(data['pendingCcy'], 'number'),
-                'totalCcy': ApiClient.convertToType(data['totalCcy'], 'number'),
             });
         }
     }
