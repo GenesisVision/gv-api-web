@@ -7,6 +7,7 @@ import ApiClient from "../ApiClient";
 export class PrivateTradingAccountFull {
     constructor(data) {
         this['id'] = data['id'];
+        this['title'] = data['title'];
         this['creationDate'] = data['creationDate'];
         this['currency'] = data['currency'];
         this['leverage'] = data['leverage'];
@@ -23,6 +24,7 @@ export class PrivateTradingAccountFull {
         if (data) {
             return new PrivateTradingAccountFull({
                 'id': ApiClient.convertToType(data['id'], 'string'),
+                'title': ApiClient.convertToType(data['title'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
                 'currency': ApiClient.convertToType(data['currency'], 'string'),
                 'leverage': ApiClient.convertToType(data['leverage'], 'number'),

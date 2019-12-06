@@ -1,4 +1,5 @@
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
+import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 export declare class DashboardTradingAssetCommonDetails {
     'title': string;
     'status': DashboardTradingAssetStatus;
@@ -7,6 +8,7 @@ export declare class DashboardTradingAssetCommonDetails {
     'login': string;
     'currency': CurrencyEnum;
     'leverage': number;
+    'type': PrivateTradingAccountType;
     constructor(data: {
         [key: string]: any;
     });

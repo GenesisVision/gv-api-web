@@ -1,4 +1,5 @@
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
+import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 import ApiClient from "../ApiClient";
 export class DashboardTradingAssetCommonDetails {
     constructor(data) {
@@ -9,6 +10,7 @@ export class DashboardTradingAssetCommonDetails {
         this['login'] = data['login'];
         this['currency'] = data['currency'];
         this['leverage'] = data['leverage'];
+        this['type'] = data['type'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -20,6 +22,7 @@ export class DashboardTradingAssetCommonDetails {
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'currency': ApiClient.convertToType(data['currency'], 'string'),
                 'leverage': ApiClient.convertToType(data['leverage'], 'number'),
+                'type': PrivateTradingAccountType.constructFromObject(data['type']),
             });
         }
     }

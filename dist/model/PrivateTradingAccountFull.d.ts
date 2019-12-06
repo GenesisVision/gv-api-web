@@ -5,6 +5,7 @@ import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 import { SignalSubscription } from './SignalSubscription';
 export declare class PrivateTradingAccountFull {
     'id': string;
+    'title': string;
     'creationDate': Date;
     'currency': CurrencyEnum;
     'leverage': number;
