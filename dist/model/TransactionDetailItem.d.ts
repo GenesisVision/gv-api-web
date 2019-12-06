@@ -1,5 +1,6 @@
 export declare class TransactionDetailItem {
     'details': string;
+    'url': string;
     'title': string;
     constructor(data: {
         [key: string]: any;
