@@ -222,6 +222,7 @@ export * from './SignalDataMaster';
 export * from './SignalDetachMode';
 export * from './SignalProviderSubscribers';
 export * from './SignalSubscriber';
+export * from './SignalSubscriberInfo';
 export * from './SignalSubscriberStatus';
 export * from './SignalSubscription';
 export * from './SignalTradingEvent';

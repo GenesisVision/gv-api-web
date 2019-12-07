@@ -1,6 +1,8 @@
+import { SignalSubscriberInfo } from './SignalSubscriberInfo';
 import { SubscriptionMode } from './SubscriptionMode';
 export declare class SignalSubscription {
     'followAssetId': string;
+    'subscriberInfo': SignalSubscriberInfo;
     'hasSignalAccount': boolean;
     'hasActiveSubscription': boolean;
     'mode': SubscriptionMode;
@@ -17,5 +19,5 @@ export declare class SignalSubscription {
         [key: string]: any;
     }): SignalSubscription | undefined;
 }
-declare type FixedCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type FixedCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};
