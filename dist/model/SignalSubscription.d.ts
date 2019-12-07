@@ -1,5 +1,6 @@
 import { SubscriptionMode } from './SubscriptionMode';
 export declare class SignalSubscription {
+    'followAssetId': string;
     'hasSignalAccount': boolean;
     'hasActiveSubscription': boolean;
     'mode': SubscriptionMode;
