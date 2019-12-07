@@ -40,8 +40,9 @@ export declare class ProgramDetailsFull {
     'totalAvailableInvestment': number;
     'owner': ProfilePublic;
     'brokerDetails': BrokerDetails;
-    'signalSettings': AssetSignalSettings;
     'personalDetails': PersonalProgramDetails;
+    'signalSettings': AssetSignalSettings;
+    'subscribersCount': number;
     'tags': Array<Tag>;
     constructor(data: {
         [key: string]: any;

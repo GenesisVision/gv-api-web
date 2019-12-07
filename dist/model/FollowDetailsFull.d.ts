@@ -11,13 +11,13 @@ export declare class FollowDetailsFull {
     'logo': string;
     'creationDate': Date;
     'currency': CurrencyEnum;
-    'subscribersCount': number;
     'tradesCount': number;
     'status': string;
     'url': string;
     'color': string;
     'leverage': number;
     'signalSettings': AssetSignalSettings;
+    'subscribersCount': number;
     'brokerDetails': BrokerDetails;
     'owner': ProfilePublic;
     'personalDetails': PersonalFollowDetailsFull;

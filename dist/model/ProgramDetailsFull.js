@@ -42,8 +42,9 @@ export class ProgramDetailsFull {
         this['totalAvailableInvestment'] = data['totalAvailableInvestment'];
         this['owner'] = data['owner'];
         this['brokerDetails'] = data['brokerDetails'];
-        this['signalSettings'] = data['signalSettings'];
         this['personalDetails'] = data['personalDetails'];
+        this['signalSettings'] = data['signalSettings'];
+        this['subscribersCount'] = data['subscribersCount'];
         this['tags'] = data['tags'];
     }
     static constructFromObject(data) {
@@ -83,8 +84,9 @@ export class ProgramDetailsFull {
                 'totalAvailableInvestment': ApiClient.convertToType(data['totalAvailableInvestment'], 'number'),
                 'owner': ProfilePublic.constructFromObject(data['owner']),
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
-                'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
                 'personalDetails': PersonalProgramDetails.constructFromObject(data['personalDetails']),
+                'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
+                'subscribersCount': ApiClient.convertToType(data['subscribersCount'], 'number'),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
