@@ -8,6 +8,8 @@ import { ItemsViewModelFollowDetailsList } from "../model/ItemsViewModelFollowDe
 export declare class FollowApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
+    addToFavorites(id: string, authorization: string): CancelablePromise<null>;
+    private addToFavoritesWithHttpInfo;
     getAbsoluteProfitChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
@@ -50,4 +52,6 @@ export declare class FollowApi {
         currencies?: Array<Object>;
     }): CancelablePromise<FollowProfitPercentCharts>;
     private getProfitPercentChartsWithHttpInfo;
+    removeFromFavorites(id: string, authorization: string): CancelablePromise<null>;
+    private removeFromFavoritesWithHttpInfo;
 }

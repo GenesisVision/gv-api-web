@@ -8,6 +8,34 @@ export class FollowApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
+    addToFavorites(id, authorization) {
+        return this.addToFavoritesWithHttpInfo(id, authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    addToFavoritesWithHttpInfo(id, authorization) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling addToFavorites");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling addToFavorites");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/follow/{id}/favorite/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getAbsoluteProfitChart(id, opts) {
         return this.getAbsoluteProfitChartWithHttpInfo(id, opts)
             .then(function (response_and_data) {
@@ -150,5 +178,33 @@ export class FollowApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = FollowProfitPercentCharts;
         return this.apiClient.callApi('/v2.0/follow/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    removeFromFavorites(id, authorization) {
+        return this.removeFromFavoritesWithHttpInfo(id, authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    removeFromFavoritesWithHttpInfo(id, authorization) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling removeFromFavorites");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling removeFromFavorites");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/follow/{id}/favorite/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }
