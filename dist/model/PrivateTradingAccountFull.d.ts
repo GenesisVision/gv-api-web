@@ -2,7 +2,6 @@ import { BrokerDetails } from './BrokerDetails';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountOwnerActions } from './PrivateTradingAccountOwnerActions';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
-import { SignalSubscription } from './SignalSubscription';
 export declare class PrivateTradingAccountFull {
     'id': string;
     'title': string;
@@ -14,7 +13,6 @@ export declare class PrivateTradingAccountFull {
     'balance': number;
     'type': PrivateTradingAccountType;
     'status': DashboardTradingAssetStatus;
-    'signalSubscriptions': Array<SignalSubscription>;
     'brokerDetails': BrokerDetails;
     'ownerActions': PrivateTradingAccountOwnerActions;
     constructor(data: {

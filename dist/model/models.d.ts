@@ -124,6 +124,7 @@ export * from './ItemsViewModelPublicProfile';
 export * from './ItemsViewModelReallocationModel';
 export * from './ItemsViewModelReferralFriend';
 export * from './ItemsViewModelRewardDetails';
+export * from './ItemsViewModelSignalSubscription';
 export * from './ItemsViewModelSignalTradingEvent';
 export * from './ItemsViewModelTradingAccountDetails';
 export * from './ItemsViewModelTransactionViewModel';

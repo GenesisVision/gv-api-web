@@ -1,7 +1,6 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { MigrationRequest } from './MigrationRequest';
 import { ProgramOwnerActions } from './ProgramOwnerActions';
-import { SignalSubscription } from './SignalSubscription';
 export declare class PersonalProgramDetails {
     'isOwnAsset': boolean;
     'isFavorite': boolean;
@@ -21,7 +20,6 @@ export declare class PersonalProgramDetails {
     'status': AssetInvestmentStatus;
     'successFeePersonal': number;
     'migration': MigrationRequest;
-    'signalSubscriptions': Array<SignalSubscription>;
     constructor(data: {
         [key: string]: any;
     });

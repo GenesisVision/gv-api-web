@@ -5,6 +5,7 @@ import { AccountBalanceChart } from "../model/AccountBalanceChart";
 import { FollowDetailsFull } from "../model/FollowDetailsFull";
 import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsList } from "../model/ItemsViewModelFollowDetailsList";
+import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
 export declare class FollowApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -44,6 +45,10 @@ export declare class FollowApi {
         take?: number;
     }): CancelablePromise<ItemsViewModelFollowDetailsList>;
     private getFollowAssetsWithHttpInfo;
+    getFollowSubscriptionsForAsset(id: string, authorization: string): CancelablePromise<ItemsViewModelSignalSubscription>;
+    private getFollowSubscriptionsForAssetWithHttpInfo;
+    getFollowSubscriptionsForOwnAccount(id: string, authorization: string): CancelablePromise<ItemsViewModelSignalSubscription>;
+    private getFollowSubscriptionsForOwnAccountWithHttpInfo;
     getProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;

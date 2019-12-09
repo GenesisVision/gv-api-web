@@ -82,6 +82,10 @@ export declare class AssetsApi {
         model?: ProgramUpdate;
     }): CancelablePromise<null>;
     private updateAsset_1WithHttpInfo;
+    updateAsset_2(id: string, authorization: string, opts?: {
+        model?: ProgramUpdate;
+    }): CancelablePromise<null>;
+    private updateAsset_2WithHttpInfo;
     updateFundAssets(id: string, authorization: string, opts?: {
         assets?: Array<FundAssetPart>;
     }): CancelablePromise<null>;

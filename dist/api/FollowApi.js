@@ -4,6 +4,7 @@ import { AccountBalanceChart } from "../model/AccountBalanceChart";
 import { FollowDetailsFull } from "../model/FollowDetailsFull";
 import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsList } from "../model/ItemsViewModelFollowDetailsList";
+import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
 export class FollowApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -149,6 +150,62 @@ export class FollowApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = ItemsViewModelFollowDetailsList;
         return this.apiClient.callApi('/v2.0/follow', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getFollowSubscriptionsForAsset(id, authorization) {
+        return this.getFollowSubscriptionsForAssetWithHttpInfo(id, authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getFollowSubscriptionsForAssetWithHttpInfo(id, authorization) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getFollowSubscriptionsForAsset");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getFollowSubscriptionsForAsset");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelSignalSubscription;
+        return this.apiClient.callApi('/v2.0/follow/{id}/subscriptions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getFollowSubscriptionsForOwnAccount(id, authorization) {
+        return this.getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getFollowSubscriptionsForOwnAccount");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getFollowSubscriptionsForOwnAccount");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = ItemsViewModelSignalSubscription;
+        return this.apiClient.callApi('/v2.0/follow/account/own/{id}/subscriptions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProfitPercentCharts(id, opts) {
         return this.getProfitPercentChartsWithHttpInfo(id, opts)
