@@ -1,4 +1,3 @@
-import { AssetFilterType } from './AssetFilterType';
 import { PlatformCommissionInfo } from './PlatformCommissionInfo';
 import { PlatformCurrencyInfo } from './PlatformCurrencyInfo';
 import { PlatformUrlInfo } from './PlatformUrlInfo';
@@ -8,7 +7,6 @@ export class PlatformCommonInfo {
         this['platformCommission'] = data['platformCommission'];
         this['platformCurrencies'] = data['platformCurrencies'];
         this['platformUrls'] = data['platformUrls'];
-        this['platformAssets'] = data['platformAssets'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -16,7 +14,6 @@ export class PlatformCommonInfo {
                 'platformCommission': PlatformCommissionInfo.constructFromObject(data['platformCommission']),
                 'platformCurrencies': ApiClient.convertToType(data['platformCurrencies'], [PlatformCurrencyInfo]),
                 'platformUrls': ApiClient.convertToType(data['platformUrls'], [PlatformUrlInfo]),
-                'platformAssets': ApiClient.convertToType(data['platformAssets'], [AssetFilterType]),
             });
         }
     }
