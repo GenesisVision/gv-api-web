@@ -1,5 +1,5 @@
 import { GenericFabric } from "../constructFromObject";
-export declare type AssetFilterType = 'All' | 'Program' | 'Fund' | 'Signal';
+export declare type AssetFilterType = 'All' | 'Program' | 'Fund' | 'Follow';
 export declare const AssetFilterType: {
-    constructFromObject: GenericFabric<"Program" | "Fund" | "All" | "Signal">;
+    constructFromObject: GenericFabric<"Program" | "Fund" | "Follow" | "All">;
 };

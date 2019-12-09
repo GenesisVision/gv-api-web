@@ -6,6 +6,7 @@ export class FilterInfo {
         this['walletTransactions'] = data['walletTransactions'];
         this['walletExternalTransactions'] = data['walletExternalTransactions'];
         this['events'] = data['events'];
+        this['assets'] = data['assets'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -13,6 +14,7 @@ export class FilterInfo {
                 'walletTransactions': ApiClient.convertToType(data['walletTransactions'], [FilterItemInfo]),
                 'walletExternalTransactions': ApiClient.convertToType(data['walletExternalTransactions'], [FilterItemInfo]),
                 'events': EventFilters.constructFromObject(data['events']),
+                'assets': ApiClient.convertToType(data['assets'], [FilterItemInfo]),
             });
         }
     }
