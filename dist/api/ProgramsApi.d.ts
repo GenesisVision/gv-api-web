@@ -115,6 +115,7 @@ export declare class ProgramsApi {
         programCurrency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         levelMin?: number;
         levelMax?: number;
+        levelsSet?: Array<number>;
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;

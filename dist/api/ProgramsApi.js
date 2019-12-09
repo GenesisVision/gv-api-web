@@ -391,6 +391,7 @@ export class ProgramsApi {
             "ProgramCurrency": opts["programCurrency"],
             "LevelMin": opts["levelMin"],
             "LevelMax": opts["levelMax"],
+            "LevelsSet": this.apiClient.buildCollectionParam(opts["levelsSet"], "multi"),
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
