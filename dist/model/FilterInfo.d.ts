@@ -1,8 +1,9 @@
+import { EventFilters } from './EventFilters';
 import { FilterItemInfo } from './FilterItemInfo';
 export declare class FilterInfo {
     'walletTransactions': Array<FilterItemInfo>;
     'walletExternalTransactions': Array<FilterItemInfo>;
-    'events': Array<FilterItemInfo>;
+    'events': EventFilters;
     constructor(data: {
         [key: string]: any;
     });

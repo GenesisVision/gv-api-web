@@ -1,3 +1,4 @@
+import { EventFilters } from './EventFilters';
 import { FilterItemInfo } from './FilterItemInfo';
 import ApiClient from "../ApiClient";
 export class FilterInfo {
@@ -11,7 +12,7 @@ export class FilterInfo {
             return new FilterInfo({
                 'walletTransactions': ApiClient.convertToType(data['walletTransactions'], [FilterItemInfo]),
                 'walletExternalTransactions': ApiClient.convertToType(data['walletExternalTransactions'], [FilterItemInfo]),
-                'events': ApiClient.convertToType(data['events'], [FilterItemInfo]),
+                'events': EventFilters.constructFromObject(data['events']),
             });
         }
     }
