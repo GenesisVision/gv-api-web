@@ -3,6 +3,12 @@ import ApiClient from "../ApiClient";
 export class WalletData {
     constructor(data) {
         this['pending'] = data['pending'];
+        this['total'] = data['total'];
+        this['availableCcy'] = data['availableCcy'];
+        this['investedCcy'] = data['investedCcy'];
+        this['tradingCcy'] = data['tradingCcy'];
+        this['pendingCcy'] = data['pendingCcy'];
+        this['totalCcy'] = data['totalCcy'];
         this['id'] = data['id'];
         this['title'] = data['title'];
         this['logo'] = data['logo'];
@@ -10,7 +16,6 @@ export class WalletData {
         this['isWithdrawalEnabled'] = data['isWithdrawalEnabled'];
         this['withdrawalCommission'] = data['withdrawalCommission'];
         this['depositAddress'] = data['depositAddress'];
-        this['total'] = data['total'];
         this['currency'] = data['currency'];
         this['available'] = data['available'];
         this['invested'] = data['invested'];
@@ -20,6 +25,12 @@ export class WalletData {
         if (data) {
             return new WalletData({
                 'pending': ApiClient.convertToType(data['pending'], 'number'),
+                'total': ApiClient.convertToType(data['total'], 'number'),
+                'availableCcy': ApiClient.convertToType(data['availableCcy'], 'number'),
+                'investedCcy': ApiClient.convertToType(data['investedCcy'], 'number'),
+                'tradingCcy': ApiClient.convertToType(data['tradingCcy'], 'number'),
+                'pendingCcy': ApiClient.convertToType(data['pendingCcy'], 'number'),
+                'totalCcy': ApiClient.convertToType(data['totalCcy'], 'number'),
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
@@ -27,7 +38,6 @@ export class WalletData {
                 'isWithdrawalEnabled': ApiClient.convertToType(data['isWithdrawalEnabled'], 'boolean'),
                 'withdrawalCommission': ApiClient.convertToType(data['withdrawalCommission'], 'number'),
                 'depositAddress': ApiClient.convertToType(data['depositAddress'], 'string'),
-                'total': ApiClient.convertToType(data['total'], 'number'),
                 'currency': Currency.constructFromObject(data['currency']),
                 'available': ApiClient.convertToType(data['available'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),

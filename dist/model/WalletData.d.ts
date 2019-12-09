@@ -1,6 +1,12 @@
 import { Currency } from './Currency';
 export declare class WalletData {
     'pending': number;
+    'total': number;
+    'availableCcy': number;
+    'investedCcy': number;
+    'tradingCcy': number;
+    'pendingCcy': number;
+    'totalCcy': number;
     'id': string;
     'title': string;
     'logo': string;
@@ -8,7 +14,6 @@ export declare class WalletData {
     'isWithdrawalEnabled': boolean;
     'withdrawalCommission': number;
     'depositAddress': string;
-    'total': number;
     'currency': Currency;
     'available': number;
     'invested': number;
