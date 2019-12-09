@@ -2,18 +2,18 @@ import { FilterItemInfo } from './FilterItemInfo';
 import ApiClient from "../ApiClient";
 export class EventTradingItemFilters {
     constructor(data) {
-        this['signalProgramDetails'] = data['signalProgramDetails'];
-        this['allAssets'] = data['allAssets'];
-        this['programDetails'] = data['programDetails'];
-        this['fundDetails'] = data['fundDetails'];
+        this['follow'] = data['follow'];
+        this['all'] = data['all'];
+        this['program'] = data['program'];
+        this['fund'] = data['fund'];
     }
     static constructFromObject(data) {
         if (data) {
             return new EventTradingItemFilters({
-                'signalProgramDetails': ApiClient.convertToType(data['signalProgramDetails'], [FilterItemInfo]),
-                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterItemInfo]),
-                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterItemInfo]),
-                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterItemInfo]),
+                'follow': ApiClient.convertToType(data['follow'], [FilterItemInfo]),
+                'all': ApiClient.convertToType(data['all'], [FilterItemInfo]),
+                'program': ApiClient.convertToType(data['program'], [FilterItemInfo]),
+                'fund': ApiClient.convertToType(data['fund'], [FilterItemInfo]),
             });
         }
     }

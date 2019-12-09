@@ -2,13 +2,13 @@ import { EventInvestingItemFilters } from './EventInvestingItemFilters';
 import { EventTradingItemFilters } from './EventTradingItemFilters';
 export class EventFilters {
     constructor(data) {
-        this['investingHistory'] = data['investingHistory'];
+        this['investmentHistory'] = data['investmentHistory'];
         this['tradingHistory'] = data['tradingHistory'];
     }
     static constructFromObject(data) {
         if (data) {
             return new EventFilters({
-                'investingHistory': EventInvestingItemFilters.constructFromObject(data['investingHistory']),
+                'investmentHistory': EventInvestingItemFilters.constructFromObject(data['investmentHistory']),
                 'tradingHistory': EventTradingItemFilters.constructFromObject(data['tradingHistory']),
             });
         }

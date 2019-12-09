@@ -2,16 +2,16 @@ import { FilterItemInfo } from './FilterItemInfo';
 import ApiClient from "../ApiClient";
 export class EventInvestingItemFilters {
     constructor(data) {
-        this['allAssets'] = data['allAssets'];
-        this['programDetails'] = data['programDetails'];
-        this['fundDetails'] = data['fundDetails'];
+        this['all'] = data['all'];
+        this['program'] = data['program'];
+        this['fund'] = data['fund'];
     }
     static constructFromObject(data) {
         if (data) {
             return new EventInvestingItemFilters({
-                'allAssets': ApiClient.convertToType(data['allAssets'], [FilterItemInfo]),
-                'programDetails': ApiClient.convertToType(data['programDetails'], [FilterItemInfo]),
-                'fundDetails': ApiClient.convertToType(data['fundDetails'], [FilterItemInfo]),
+                'all': ApiClient.convertToType(data['all'], [FilterItemInfo]),
+                'program': ApiClient.convertToType(data['program'], [FilterItemInfo]),
+                'fund': ApiClient.convertToType(data['fund'], [FilterItemInfo]),
             });
         }
     }

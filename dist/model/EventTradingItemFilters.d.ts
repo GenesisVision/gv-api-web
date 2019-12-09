@@ -1,9 +1,9 @@
 import { FilterItemInfo } from './FilterItemInfo';
 export declare class EventTradingItemFilters {
-    'signalProgramDetails': Array<FilterItemInfo>;
-    'allAssets': Array<FilterItemInfo>;
-    'programDetails': Array<FilterItemInfo>;
-    'fundDetails': Array<FilterItemInfo>;
+    'follow': Array<FilterItemInfo>;
+    'all': Array<FilterItemInfo>;
+    'program': Array<FilterItemInfo>;
+    'fund': Array<FilterItemInfo>;
     constructor(data: {
         [key: string]: any;
     });
