@@ -20,6 +20,10 @@ export declare class ProfileApi {
     private getVerificationTokenWithHttpInfo;
     removeAvatar(authorization: string): CancelablePromise<null>;
     private removeAvatarWithHttpInfo;
+    removeFcmToken(authorization: string, opts?: {
+        token?: FcmTokenViewModel;
+    }): CancelablePromise<null>;
+    private removeFcmTokenWithHttpInfo;
     switchPublicInvestorOff(authorization: string): CancelablePromise<null>;
     private switchPublicInvestorOffWithHttpInfo;
     switchPublicInvestorOn(authorization: string): CancelablePromise<null>;
