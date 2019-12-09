@@ -1,6 +1,5 @@
 export declare class ProgramChartStatistic {
     'investors': number;
-    'profit': number;
     'tradingVolume': number;
     'trades': number;
     'successTradesPercent': number;
@@ -8,6 +7,7 @@ export declare class ProgramChartStatistic {
     'lastPeriodStarts': Date;
     'lastPeriodEnds': Date;
     'balance': number;
+    'profitPercent': number;
     'sharpeRatio': number;
     'sortinoRatio': number;
     'calmarRatio': number;

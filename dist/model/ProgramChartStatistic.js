@@ -2,7 +2,6 @@ import ApiClient from "../ApiClient";
 export class ProgramChartStatistic {
     constructor(data) {
         this['investors'] = data['investors'];
-        this['profit'] = data['profit'];
         this['tradingVolume'] = data['tradingVolume'];
         this['trades'] = data['trades'];
         this['successTradesPercent'] = data['successTradesPercent'];
@@ -10,6 +9,7 @@ export class ProgramChartStatistic {
         this['lastPeriodStarts'] = data['lastPeriodStarts'];
         this['lastPeriodEnds'] = data['lastPeriodEnds'];
         this['balance'] = data['balance'];
+        this['profitPercent'] = data['profitPercent'];
         this['sharpeRatio'] = data['sharpeRatio'];
         this['sortinoRatio'] = data['sortinoRatio'];
         this['calmarRatio'] = data['calmarRatio'];
@@ -19,7 +19,6 @@ export class ProgramChartStatistic {
         if (data) {
             return new ProgramChartStatistic({
                 'investors': ApiClient.convertToType(data['investors'], 'number'),
-                'profit': ApiClient.convertToType(data['profit'], 'number'),
                 'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
                 'trades': ApiClient.convertToType(data['trades'], 'number'),
                 'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),
@@ -27,6 +26,7 @@ export class ProgramChartStatistic {
                 'lastPeriodStarts': ApiClient.convertToType(data['lastPeriodStarts'], 'Date'),
                 'lastPeriodEnds': ApiClient.convertToType(data['lastPeriodEnds'], 'Date'),
                 'balance': ApiClient.convertToType(data['balance'], 'number'),
+                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
                 'sharpeRatio': ApiClient.convertToType(data['sharpeRatio'], 'number'),
                 'sortinoRatio': ApiClient.convertToType(data['sortinoRatio'], 'number'),
                 'calmarRatio': ApiClient.convertToType(data['calmarRatio'], 'number'),
