@@ -1,8 +1,8 @@
 import { FundAssetPartWithIcon } from './FundAssetPartWithIcon';
 export declare class FundAssetsState {
     'date': number;
+    'value': number;
     'assets': Array<FundAssetPartWithIcon>;
-    'otherPercent': number;
     constructor(data: {
         [key: string]: any;
     });
