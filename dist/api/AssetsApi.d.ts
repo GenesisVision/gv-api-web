@@ -38,6 +38,8 @@ export declare class AssetsApi {
         model?: TwoFactorCodeModel;
     }): CancelablePromise<null>;
     private closeInvestmentProgramWithHttpInfo;
+    closeTradingAccount(id: string, authorization: string): CancelablePromise<null>;
+    private closeTradingAccountWithHttpInfo;
     confirmProgram2FA(id: string, authorization: string, opts?: {
         model?: TwoFactorCodeModel;
     }): CancelablePromise<null>;

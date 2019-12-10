@@ -28,7 +28,7 @@ export declare class WalletApi {
         transactionType?: 'All' | 'Withdrawal' | 'Deposit' | 'Platform';
         dateFrom?: Date;
         dateTo?: Date;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
@@ -37,16 +37,16 @@ export declare class WalletApi {
         transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward';
         dateFrom?: Date;
         dateTo?: Date;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
     private getTransactionsInternalWithHttpInfo;
     getUserWithdrawalSummary(authorization: string): CancelablePromise<WithdrawalSummary>;
     private getUserWithdrawalSummaryWithHttpInfo;
-    getWalletAvailable(currency: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
+    getWalletAvailable(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
     private getWalletAvailableWithHttpInfo;
-    getWalletSummary(currency: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletSummary>;
+    getWalletSummary(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletSummary>;
     private getWalletSummaryWithHttpInfo;
     resendWithdrawalRequestEmail(txId: string, authorization: string): CancelablePromise<null>;
     private resendWithdrawalRequestEmailWithHttpInfo;
