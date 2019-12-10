@@ -1,12 +1,14 @@
 import { AssetType } from './AssetType';
-import { Currency } from './Currency';
 import { DashboardTradingAssetBrokerDetails } from './DashboardTradingAssetBrokerDetails';
 import { ProfitChart } from './ProfitChart';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 export declare class RecommendedAsset {
-    'currency': Currency;
+    'currency': CurrencyEnum;
     'statistic': ProfitChart;
+    'leverage': number;
     'broker': DashboardTradingAssetBrokerDetails;
+    'isExternal': boolean;
+    'hasSignalAccount': boolean;
     'id': string;
     'logo': string;
     'color': string;
@@ -21,3 +23,5 @@ export declare class RecommendedAsset {
         [key: string]: any;
     }): RecommendedAsset | undefined;
 }
+declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+export {};

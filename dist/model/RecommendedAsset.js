@@ -1,5 +1,4 @@
 import { AssetType } from './AssetType';
-import { Currency } from './Currency';
 import { DashboardTradingAssetBrokerDetails } from './DashboardTradingAssetBrokerDetails';
 import { ProfitChart } from './ProfitChart';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
@@ -8,7 +7,10 @@ export class RecommendedAsset {
     constructor(data) {
         this['currency'] = data['currency'];
         this['statistic'] = data['statistic'];
+        this['leverage'] = data['leverage'];
         this['broker'] = data['broker'];
+        this['isExternal'] = data['isExternal'];
+        this['hasSignalAccount'] = data['hasSignalAccount'];
         this['id'] = data['id'];
         this['logo'] = data['logo'];
         this['color'] = data['color'];
@@ -20,9 +22,12 @@ export class RecommendedAsset {
     static constructFromObject(data) {
         if (data) {
             return new RecommendedAsset({
-                'currency': Currency.constructFromObject(data['currency']),
+                'currency': ApiClient.convertToType(data['currency'], 'string'),
                 'statistic': ProfitChart.constructFromObject(data['statistic']),
+                'leverage': ApiClient.convertToType(data['leverage'], 'number'),
                 'broker': DashboardTradingAssetBrokerDetails.constructFromObject(data['broker']),
+                'isExternal': ApiClient.convertToType(data['isExternal'], 'boolean'),
+                'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),

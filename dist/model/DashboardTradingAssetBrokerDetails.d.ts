@@ -1,5 +1,6 @@
 import { BrokerTradeServerType } from './BrokerTradeServerType';
 export declare class DashboardTradingAssetBrokerDetails {
+    'id': string;
     'logo': string;
     'name': string;
     'type': BrokerTradeServerType;
