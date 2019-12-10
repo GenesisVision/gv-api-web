@@ -21,6 +21,7 @@ export declare class PersonalProgramDetails {
     'status': AssetInvestmentStatus;
     'successFeePersonal': number;
     'migration': MigrationRequest;
+    'subscribedAccounts': number;
     constructor(data: {
         [key: string]: any;
     });

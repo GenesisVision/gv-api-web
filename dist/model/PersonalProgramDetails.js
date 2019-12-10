@@ -23,6 +23,7 @@ export class PersonalProgramDetails {
         this['status'] = data['status'];
         this['successFeePersonal'] = data['successFeePersonal'];
         this['migration'] = data['migration'];
+        this['subscribedAccounts'] = data['subscribedAccounts'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -46,6 +47,7 @@ export class PersonalProgramDetails {
                 'status': AssetInvestmentStatus.constructFromObject(data['status']),
                 'successFeePersonal': ApiClient.convertToType(data['successFeePersonal'], 'number'),
                 'migration': MigrationRequest.constructFromObject(data['migration']),
+                'subscribedAccounts': ApiClient.convertToType(data['subscribedAccounts'], 'number'),
             });
         }
     }

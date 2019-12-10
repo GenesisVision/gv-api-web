@@ -9,6 +9,7 @@ export declare class PersonalFollowDetailsFull {
     'hasNotifications': boolean;
     'balance': number;
     'leverage': number;
+    'subscribedAccounts': number;
     constructor(data: {
         [key: string]: any;
     });
