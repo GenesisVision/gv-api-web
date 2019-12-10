@@ -29,6 +29,7 @@ export declare class ProgramDetailsFull {
     'genesisRatio': number;
     'investmentScale': number;
     'volumeScale': number;
+    'hasTrades': boolean;
     'entryFeeSelected': number;
     'entryFeeCurrent': number;
     'successFeeSelected': number;

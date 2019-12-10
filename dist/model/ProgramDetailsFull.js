@@ -31,6 +31,7 @@ export class ProgramDetailsFull {
         this['genesisRatio'] = data['genesisRatio'];
         this['investmentScale'] = data['investmentScale'];
         this['volumeScale'] = data['volumeScale'];
+        this['hasTrades'] = data['hasTrades'];
         this['entryFeeSelected'] = data['entryFeeSelected'];
         this['entryFeeCurrent'] = data['entryFeeCurrent'];
         this['successFeeSelected'] = data['successFeeSelected'];
@@ -73,6 +74,7 @@ export class ProgramDetailsFull {
                 'genesisRatio': ApiClient.convertToType(data['genesisRatio'], 'number'),
                 'investmentScale': ApiClient.convertToType(data['investmentScale'], 'number'),
                 'volumeScale': ApiClient.convertToType(data['volumeScale'], 'number'),
+                'hasTrades': ApiClient.convertToType(data['hasTrades'], 'boolean'),
                 'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
                 'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
                 'successFeeSelected': ApiClient.convertToType(data['successFeeSelected'], 'number'),
