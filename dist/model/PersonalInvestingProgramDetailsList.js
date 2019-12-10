@@ -10,6 +10,7 @@ export class PersonalInvestingProgramDetailsList {
         this['share'] = data['share'];
         this['value'] = data['value'];
         this['profit'] = data['profit'];
+        this['profitPercent'] = data['profitPercent'];
         this['invested'] = data['invested'];
         this['status'] = data['status'];
     }
@@ -24,6 +25,7 @@ export class PersonalInvestingProgramDetailsList {
                 'share': ApiClient.convertToType(data['share'], 'number'),
                 'value': ApiClient.convertToType(data['value'], 'number'),
                 'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),
                 'status': AssetInvestmentStatus.constructFromObject(data['status']),
             });

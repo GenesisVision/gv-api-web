@@ -13,6 +13,7 @@ export declare class PersonalProgramDetails {
     'showTwoFactorButton': boolean;
     'value': number;
     'profit': number;
+    'profitPercent': number;
     'invested': number;
     'pendingInput': number;
     'pendingOutput': number;

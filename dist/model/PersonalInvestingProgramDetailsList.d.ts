@@ -8,6 +8,7 @@ export declare class PersonalInvestingProgramDetailsList {
     'share': number;
     'value': number;
     'profit': number;
+    'profitPercent': number;
     'invested': number;
     'status': AssetInvestmentStatus;
     constructor(data: {

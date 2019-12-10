@@ -15,6 +15,7 @@ export class PersonalProgramDetails {
         this['showTwoFactorButton'] = data['showTwoFactorButton'];
         this['value'] = data['value'];
         this['profit'] = data['profit'];
+        this['profitPercent'] = data['profitPercent'];
         this['invested'] = data['invested'];
         this['pendingInput'] = data['pendingInput'];
         this['pendingOutput'] = data['pendingOutput'];
@@ -37,6 +38,7 @@ export class PersonalProgramDetails {
                 'showTwoFactorButton': ApiClient.convertToType(data['showTwoFactorButton'], 'boolean'),
                 'value': ApiClient.convertToType(data['value'], 'number'),
                 'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'profitPercent': ApiClient.convertToType(data['profitPercent'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),
                 'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
                 'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
