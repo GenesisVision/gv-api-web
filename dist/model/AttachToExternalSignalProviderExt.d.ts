@@ -1,6 +1,6 @@
 import { SubscriptionMode } from './SubscriptionMode';
 export declare class AttachToExternalSignalProviderExt {
-    'externalKeyId': string;
+    'tradingAccountId': string;
     'mode': SubscriptionMode;
     'percent': number;
     'openTolerancePercent': number;

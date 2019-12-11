@@ -2,7 +2,7 @@ import { SubscriptionMode } from './SubscriptionMode';
 import ApiClient from "../ApiClient";
 export class AttachToExternalSignalProviderExt {
     constructor(data) {
-        this['externalKeyId'] = data['externalKeyId'];
+        this['tradingAccountId'] = data['tradingAccountId'];
         this['mode'] = data['mode'];
         this['percent'] = data['percent'];
         this['openTolerancePercent'] = data['openTolerancePercent'];
@@ -12,7 +12,7 @@ export class AttachToExternalSignalProviderExt {
     static constructFromObject(data) {
         if (data) {
             return new AttachToExternalSignalProviderExt({
-                'externalKeyId': ApiClient.convertToType(data['externalKeyId'], 'string'),
+                'tradingAccountId': ApiClient.convertToType(data['tradingAccountId'], 'string'),
                 'mode': SubscriptionMode.constructFromObject(data['mode']),
                 'percent': ApiClient.convertToType(data['percent'], 'number'),
                 'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
