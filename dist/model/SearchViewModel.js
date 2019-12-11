@@ -6,7 +6,7 @@ export class SearchViewModel {
     constructor(data) {
         this['programs'] = data['programs'];
         this['funds'] = data['funds'];
-        this['follow'] = data['follow'];
+        this['follows'] = data['follows'];
         this['managers'] = data['managers'];
     }
     static constructFromObject(data) {
@@ -14,7 +14,7 @@ export class SearchViewModel {
             return new SearchViewModel({
                 'programs': ItemsViewModelProgramDetailsList.constructFromObject(data['programs']),
                 'funds': ItemsViewModelFundDetailsList.constructFromObject(data['funds']),
-                'follow': ItemsViewModelFollowDetailsList.constructFromObject(data['follow']),
+                'follows': ItemsViewModelFollowDetailsList.constructFromObject(data['follows']),
                 'managers': ItemsViewModelPublicProfile.constructFromObject(data['managers']),
             });
         }
