@@ -1,5 +1,5 @@
 export declare class MakeTradingAccountSignalProvider {
-    'tradingAccountId': string;
+    'id': string;
     'volumeFee': number;
     'successFee': number;
     'title': string;

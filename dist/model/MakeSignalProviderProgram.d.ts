@@ -1,5 +1,5 @@
 export declare class MakeSignalProviderProgram {
-    'assetId': string;
+    'id': string;
     'periodLength': number;
     'stopOutLevel': number;
     'investmentLimit': number;

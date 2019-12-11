@@ -1,7 +1,7 @@
 import ApiClient from "../ApiClient";
 export class MakeSignalProviderProgram {
     constructor(data) {
-        this['assetId'] = data['assetId'];
+        this['id'] = data['id'];
         this['periodLength'] = data['periodLength'];
         this['stopOutLevel'] = data['stopOutLevel'];
         this['investmentLimit'] = data['investmentLimit'];
@@ -11,7 +11,7 @@ export class MakeSignalProviderProgram {
     static constructFromObject(data) {
         if (data) {
             return new MakeSignalProviderProgram({
-                'assetId': ApiClient.convertToType(data['assetId'], 'string'),
+                'id': ApiClient.convertToType(data['id'], 'string'),
                 'periodLength': ApiClient.convertToType(data['periodLength'], 'number'),
                 'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
                 'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),

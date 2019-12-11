@@ -2,7 +2,7 @@ import { TradesDelay } from './TradesDelay';
 import ApiClient from "../ApiClient";
 export class MakeTradingAccountProgram {
     constructor(data) {
-        this['tradingAccountId'] = data['tradingAccountId'];
+        this['id'] = data['id'];
         this['periodLength'] = data['periodLength'];
         this['stopOutLevel'] = data['stopOutLevel'];
         this['investmentLimit'] = data['investmentLimit'];
@@ -16,7 +16,7 @@ export class MakeTradingAccountProgram {
     static constructFromObject(data) {
         if (data) {
             return new MakeTradingAccountProgram({
-                'tradingAccountId': ApiClient.convertToType(data['tradingAccountId'], 'string'),
+                'id': ApiClient.convertToType(data['id'], 'string'),
                 'periodLength': ApiClient.convertToType(data['periodLength'], 'number'),
                 'stopOutLevel': ApiClient.convertToType(data['stopOutLevel'], 'number'),
                 'investmentLimit': ApiClient.convertToType(data['investmentLimit'], 'number'),

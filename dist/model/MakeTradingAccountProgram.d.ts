@@ -1,6 +1,6 @@
 import { TradesDelay } from './TradesDelay';
 export declare class MakeTradingAccountProgram {
-    'tradingAccountId': string;
+    'id': string;
     'periodLength': number;
     'stopOutLevel': number;
     'investmentLimit': number;

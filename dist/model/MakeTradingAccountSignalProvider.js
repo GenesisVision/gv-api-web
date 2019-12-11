@@ -1,7 +1,7 @@
 import ApiClient from "../ApiClient";
 export class MakeTradingAccountSignalProvider {
     constructor(data) {
-        this['tradingAccountId'] = data['tradingAccountId'];
+        this['id'] = data['id'];
         this['volumeFee'] = data['volumeFee'];
         this['successFee'] = data['successFee'];
         this['title'] = data['title'];
@@ -11,7 +11,7 @@ export class MakeTradingAccountSignalProvider {
     static constructFromObject(data) {
         if (data) {
             return new MakeTradingAccountSignalProvider({
-                'tradingAccountId': ApiClient.convertToType(data['tradingAccountId'], 'string'),
+                'id': ApiClient.convertToType(data['id'], 'string'),
                 'volumeFee': ApiClient.convertToType(data['volumeFee'], 'number'),
                 'successFee': ApiClient.convertToType(data['successFee'], 'number'),
                 'title': ApiClient.convertToType(data['title'], 'string'),
