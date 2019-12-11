@@ -14,6 +14,7 @@ export class PersonalFundDetails {
         this['status'] = data['status'];
         this['pendingInput'] = data['pendingInput'];
         this['pendingOutput'] = data['pendingOutput'];
+        this['pendingInOutCurrency'] = data['pendingInOutCurrency'];
         this['withdrawPercent'] = data['withdrawPercent'];
         this['availableReallocationPercents'] = data['availableReallocationPercents'];
         this['nextReallocationPercents'] = data['nextReallocationPercents'];
@@ -33,6 +34,7 @@ export class PersonalFundDetails {
                 'status': AssetInvestmentStatus.constructFromObject(data['status']),
                 'pendingInput': ApiClient.convertToType(data['pendingInput'], 'number'),
                 'pendingOutput': ApiClient.convertToType(data['pendingOutput'], 'number'),
+                'pendingInOutCurrency': ApiClient.convertToType(data['pendingInOutCurrency'], 'string'),
                 'withdrawPercent': ApiClient.convertToType(data['withdrawPercent'], 'number'),
                 'availableReallocationPercents': ApiClient.convertToType(data['availableReallocationPercents'], 'number'),
                 'nextReallocationPercents': ApiClient.convertToType(data['nextReallocationPercents'], 'Date'),
