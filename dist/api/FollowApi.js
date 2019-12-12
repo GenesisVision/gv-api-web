@@ -1,10 +1,10 @@
 import ApiClient from "../ApiClient";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { AccountBalanceChart } from "../model/AccountBalanceChart";
-import { FollowDetailsFull } from "../model/FollowDetailsFull";
 import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsList } from "../model/ItemsViewModelFollowDetailsList";
 import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
+import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 export class FollowApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -115,7 +115,7 @@ export class FollowApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FollowDetailsFull;
+        let returnType = ProgramFollowDetailsFull;
         return this.apiClient.callApi('/v2.0/follow/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getFollowAssets(opts) {

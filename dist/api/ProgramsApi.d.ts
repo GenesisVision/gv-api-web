@@ -3,7 +3,7 @@ import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
-import { ProgramDetailsFull } from "../model/ProgramDetailsFull";
+import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
 import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
@@ -60,7 +60,7 @@ export declare class ProgramsApi {
     private getProgramBalanceChartWithHttpInfo;
     getProgramDetails(id: string, opts?: {
         authorization?: string;
-    }): CancelablePromise<ProgramDetailsFull>;
+    }): CancelablePromise<ProgramFollowDetailsFull>;
     private getProgramDetailsWithHttpInfo;
     getProgramOpenTrades(id: string, opts?: {
         sorting?: 'ByDateAsc' | 'ByDateDesc' | 'ByTicketAsc' | 'ByTicketDesc' | 'BySymbolAsc' | 'BySymbolDesc' | 'ByDirectionAsc' | 'ByDirectionDesc' | 'ByVolumeAsc' | 'ByVolumeDesc' | 'ByPriceAsc' | 'ByPriceDesc' | 'ByPriceCurrentAsc' | 'ByPriceCurrentDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByCommissionAsc' | 'ByCommissionDesc' | 'BySwapAsc' | 'BySwapDesc';

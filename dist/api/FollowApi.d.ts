@@ -2,10 +2,10 @@ import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { AccountBalanceChart } from "../model/AccountBalanceChart";
-import { FollowDetailsFull } from "../model/FollowDetailsFull";
 import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsList } from "../model/ItemsViewModelFollowDetailsList";
 import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
+import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 export declare class FollowApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -27,7 +27,7 @@ export declare class FollowApi {
     private getBalanceChartWithHttpInfo;
     getFollowAssetDetails(id: string, opts?: {
         authorization?: string;
-    }): CancelablePromise<FollowDetailsFull>;
+    }): CancelablePromise<ProgramFollowDetailsFull>;
     private getFollowAssetDetailsWithHttpInfo;
     getFollowAssets(opts?: {
         authorization?: string;
