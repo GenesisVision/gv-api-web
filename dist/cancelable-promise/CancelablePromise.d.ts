@@ -1,4 +1,4 @@
-export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T> {
+export default class CancelablePromise<T> implements PromiseLike<T> {
     private state;
     private _promise;
     private _onCancel?;
