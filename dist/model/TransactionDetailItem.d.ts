@@ -1,6 +1,7 @@
 export declare class TransactionDetailItem {
     'details': string;
     'url': string;
+    'canCopy': boolean;
     'title': string;
     constructor(data: {
         [key: string]: any;
