@@ -13,6 +13,7 @@ export class ProfileHeaderViewModel {
         this['isTwoFactorEnabled'] = data['isTwoFactorEnabled'];
         this['isNewUser'] = data['isNewUser'];
         this['isPublicInvestor'] = data['isPublicInvestor'];
+        this['isUserNameFilled'] = data['isUserNameFilled'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -29,6 +30,7 @@ export class ProfileHeaderViewModel {
                 'isTwoFactorEnabled': ApiClient.convertToType(data['isTwoFactorEnabled'], 'boolean'),
                 'isNewUser': ApiClient.convertToType(data['isNewUser'], 'boolean'),
                 'isPublicInvestor': ApiClient.convertToType(data['isPublicInvestor'], 'boolean'),
+                'isUserNameFilled': ApiClient.convertToType(data['isUserNameFilled'], 'boolean'),
             });
         }
     }

@@ -11,6 +11,7 @@ export declare class ProfileHeaderViewModel {
     'isTwoFactorEnabled': boolean;
     'isNewUser': boolean;
     'isPublicInvestor': boolean;
+    'isUserNameFilled': boolean;
     constructor(data: {
         [key: string]: any;
     });
