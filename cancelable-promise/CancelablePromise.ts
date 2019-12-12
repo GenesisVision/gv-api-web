@@ -6,7 +6,7 @@ const handleCallback = (resolve: any, reject: any, callback: any, r: any) => {
   }
 };
 
-export default class CancelablePromise<T> extends Promise<T> implements PromiseLike<T> {
+export default class CancelablePromise<T> implements PromiseLike<T> {
   private state: {
     canceled: boolean
   };
@@ -66,8 +66,7 @@ export default class CancelablePromise<T> extends Promise<T> implements PromiseL
       canceled: false
     }
   ) {
-    CancelablePromise.__promise__ = super(executor);
-    this._promise = CancelablePromise.__promise__;
+    this._promise = new Promise(executor);
     this._onCancel = onCancel;
     this.state = state;
   }
