@@ -17,7 +17,6 @@ export * from './AssetInvestmentRequest';
 export * from './AssetInvestmentStatus';
 export * from './AssetPlatformInfo';
 export * from './AssetRequestDetails';
-export * from './AssetSignalSettings';
 export * from './AssetType';
 export * from './AssetTypeExt';
 export * from './AttachToExternalSignalProviderCommon';
