@@ -3,6 +3,7 @@ import { ItemsViewModelInvestmentEventViewModel } from './ItemsViewModelInvestme
 export declare class DashboardTradingDetails {
     'equity': number;
     'assetsUnderManagement': number;
+    'total': number;
     'profits': DashboardProfits;
     'events': ItemsViewModelInvestmentEventViewModel;
     constructor(data: {

@@ -5,6 +5,7 @@ export class DashboardTradingDetails {
     constructor(data) {
         this['equity'] = data['equity'];
         this['assetsUnderManagement'] = data['assetsUnderManagement'];
+        this['total'] = data['total'];
         this['profits'] = data['profits'];
         this['events'] = data['events'];
     }
@@ -13,6 +14,7 @@ export class DashboardTradingDetails {
             return new DashboardTradingDetails({
                 'equity': ApiClient.convertToType(data['equity'], 'number'),
                 'assetsUnderManagement': ApiClient.convertToType(data['assetsUnderManagement'], 'number'),
+                'total': ApiClient.convertToType(data['total'], 'number'),
                 'profits': DashboardProfits.constructFromObject(data['profits']),
                 'events': ItemsViewModelInvestmentEventViewModel.constructFromObject(data['events']),
             });
