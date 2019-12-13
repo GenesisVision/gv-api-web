@@ -2,7 +2,7 @@ import { ItemsViewModelFollowDetailsList } from './ItemsViewModelFollowDetailsLi
 import { ItemsViewModelFundDetailsList } from './ItemsViewModelFundDetailsList';
 import { ItemsViewModelProgramDetailsList } from './ItemsViewModelProgramDetailsList';
 import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
-export declare class SearchViewModel {
+export declare class CommonPublicAssetsViewModel {
     'programs': ItemsViewModelProgramDetailsList;
     'funds': ItemsViewModelFundDetailsList;
     'follows': ItemsViewModelFollowDetailsList;
@@ -12,5 +12,5 @@ export declare class SearchViewModel {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): SearchViewModel | undefined;
+    }): CommonPublicAssetsViewModel | undefined;
 }

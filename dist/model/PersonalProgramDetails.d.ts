@@ -1,7 +1,6 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { MigrationRequest } from './MigrationRequest';
 export declare class PersonalProgramDetails {
-    'isOwnAsset': boolean;
     'isFavorite': boolean;
     'isReinvest': boolean;
     'isInvested': boolean;

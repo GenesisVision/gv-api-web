@@ -1,16 +1,16 @@
-import { AssetDetails } from './AssetDetails';
-export declare class TradingAccountDetails {
+export declare class ProgramFollowDetailsFullTradingAccountDetails {
     'id': string;
-    'currency': CurrencyEnum;
     'login': string;
-    'apiKey': string;
-    'asset': AssetDetails;
+    'currency': CurrencyEnum;
+    'leverageMin': number;
+    'leverageMax': number;
+    'balance': number;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): TradingAccountDetails | undefined;
+    }): ProgramFollowDetailsFullTradingAccountDetails | undefined;
 }
 declare type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};

@@ -3,7 +3,6 @@ import { MigrationRequest } from './MigrationRequest';
 import ApiClient from "../ApiClient";
 export class PersonalProgramDetails {
     constructor(data) {
-        this['isOwnAsset'] = data['isOwnAsset'];
         this['isFavorite'] = data['isFavorite'];
         this['isReinvest'] = data['isReinvest'];
         this['isInvested'] = data['isInvested'];
@@ -26,7 +25,6 @@ export class PersonalProgramDetails {
     static constructFromObject(data) {
         if (data) {
             return new PersonalProgramDetails({
-                'isOwnAsset': ApiClient.convertToType(data['isOwnAsset'], 'boolean'),
                 'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
                 'isReinvest': ApiClient.convertToType(data['isReinvest'], 'boolean'),
                 'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),

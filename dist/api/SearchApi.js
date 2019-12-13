@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { SearchViewModel } from "../model/SearchViewModel";
+import { CommonPublicAssetsViewModel } from "../model/CommonPublicAssetsViewModel";
 export class SearchApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -24,7 +24,7 @@ export class SearchApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = SearchViewModel;
+        let returnType = CommonPublicAssetsViewModel;
         return this.apiClient.callApi('/v2.0/search', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }

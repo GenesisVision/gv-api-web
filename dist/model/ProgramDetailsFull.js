@@ -1,10 +1,8 @@
-import { Currency } from './Currency';
 import { PersonalProgramDetails } from './PersonalProgramDetails';
 import { TradesDelay } from './TradesDelay';
 import ApiClient from "../ApiClient";
 export class ProgramDetailsFull {
     constructor(data) {
-        this['currency'] = data['currency'];
         this['level'] = data['level'];
         this['levelProgress'] = data['levelProgress'];
         this['periodDuration'] = data['periodDuration'];
@@ -12,12 +10,9 @@ export class ProgramDetailsFull {
         this['periodEnds'] = data['periodEnds'];
         this['tradesDelay'] = data['tradesDelay'];
         this['ageDays'] = data['ageDays'];
-        this['leverageMin'] = data['leverageMin'];
-        this['leverageMax'] = data['leverageMax'];
         this['genesisRatio'] = data['genesisRatio'];
         this['investmentScale'] = data['investmentScale'];
         this['volumeScale'] = data['volumeScale'];
-        this['hasTrades'] = data['hasTrades'];
         this['entryFeeSelected'] = data['entryFeeSelected'];
         this['entryFeeCurrent'] = data['entryFeeCurrent'];
         this['successFeeSelected'] = data['successFeeSelected'];
@@ -32,7 +27,6 @@ export class ProgramDetailsFull {
     static constructFromObject(data) {
         if (data) {
             return new ProgramDetailsFull({
-                'currency': Currency.constructFromObject(data['currency']),
                 'level': ApiClient.convertToType(data['level'], 'number'),
                 'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
                 'periodDuration': ApiClient.convertToType(data['periodDuration'], 'number'),
@@ -40,12 +34,9 @@ export class ProgramDetailsFull {
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
                 'tradesDelay': TradesDelay.constructFromObject(data['tradesDelay']),
                 'ageDays': ApiClient.convertToType(data['ageDays'], 'number'),
-                'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
-                'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
                 'genesisRatio': ApiClient.convertToType(data['genesisRatio'], 'number'),
                 'investmentScale': ApiClient.convertToType(data['investmentScale'], 'number'),
                 'volumeScale': ApiClient.convertToType(data['volumeScale'], 'number'),
-                'hasTrades': ApiClient.convertToType(data['hasTrades'], 'boolean'),
                 'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
                 'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
                 'successFeeSelected': ApiClient.convertToType(data['successFeeSelected'], 'number'),

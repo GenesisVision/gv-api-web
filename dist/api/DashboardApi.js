@@ -1,10 +1,10 @@
 import ApiClient from "../ApiClient";
+import { CommonPublicAssetsViewModel } from "../model/CommonPublicAssetsViewModel";
 import { DashboardAssets } from "../model/DashboardAssets";
 import { DashboardChart } from "../model/DashboardChart";
 import { DashboardChartAssets } from "../model/DashboardChartAssets";
 import { DashboardInvestingDetails } from "../model/DashboardInvestingDetails";
 import { DashboardPortfolio } from "../model/DashboardPortfolio";
-import { DashboardRecommendations } from "../model/DashboardRecommendations";
 import { DashboardSummary } from "../model/DashboardSummary";
 import { DashboardTradingDetails } from "../model/DashboardTradingDetails";
 import { ItemsViewModelDashboardTradingAsset } from "../model/ItemsViewModelDashboardTradingAsset";
@@ -315,7 +315,8 @@ export class DashboardApi {
         }
         let pathParams = {};
         let queryParams = {
-            "currency": opts["currency"]
+            "currency": opts["currency"],
+            "take": opts["take"]
         };
         let headerParams = {
             "Authorization": authorization
@@ -324,7 +325,7 @@ export class DashboardApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = DashboardRecommendations;
+        let returnType = CommonPublicAssetsViewModel;
         return this.apiClient.callApi('/v2.0/dashboard/recommendations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getSummary(authorization, opts) {

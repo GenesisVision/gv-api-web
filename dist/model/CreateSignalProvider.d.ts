@@ -1,5 +1,5 @@
 export declare class CreateSignalProvider {
-    'assetId': string;
+    'id': string;
     'volumeFee': number;
     'successFee': number;
     constructor(data: {

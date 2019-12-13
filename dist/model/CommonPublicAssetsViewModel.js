@@ -2,7 +2,7 @@ import { ItemsViewModelFollowDetailsList } from './ItemsViewModelFollowDetailsLi
 import { ItemsViewModelFundDetailsList } from './ItemsViewModelFundDetailsList';
 import { ItemsViewModelProgramDetailsList } from './ItemsViewModelProgramDetailsList';
 import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
-export class SearchViewModel {
+export class CommonPublicAssetsViewModel {
     constructor(data) {
         this['programs'] = data['programs'];
         this['funds'] = data['funds'];
@@ -11,7 +11,7 @@ export class SearchViewModel {
     }
     static constructFromObject(data) {
         if (data) {
-            return new SearchViewModel({
+            return new CommonPublicAssetsViewModel({
                 'programs': ItemsViewModelProgramDetailsList.constructFromObject(data['programs']),
                 'funds': ItemsViewModelFundDetailsList.constructFromObject(data['funds']),
                 'follows': ItemsViewModelFollowDetailsList.constructFromObject(data['follows']),
