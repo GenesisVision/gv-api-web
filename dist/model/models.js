@@ -177,6 +177,8 @@ export * from './PlatformUrlType';
 export * from './PowDetails';
 export * from './PowResult';
 export * from './PrivateTradingAccountFull';
+export * from './PrivateTradingAccountFullPublicDetails';
+export * from './PrivateTradingAccountFullTradingAccountDetails';
 export * from './PrivateTradingAccountOwnerActions';
 export * from './PrivateTradingAccountType';
 export * from './ProfileFullViewModel';

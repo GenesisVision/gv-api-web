@@ -1,16 +1,17 @@
-export declare class ProgramFollowDetailsFullTradingAccountDetails {
-    'id': string;
-    'login': string;
+import { PrivateTradingAccountType } from './PrivateTradingAccountType';
+export declare class PrivateTradingAccountFullTradingAccountDetails {
     'currency': CurrencyEnum;
-    'leverageMin': number;
-    'leverageMax': number;
+    'leverage': number;
+    'apiKey': string;
+    'login': string;
     'balance': number;
+    'type': PrivateTradingAccountType;
     constructor(data: {
         [key: string]: any;
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramFollowDetailsFullTradingAccountDetails | undefined;
+    }): PrivateTradingAccountFullTradingAccountDetails | undefined;
 }
 declare type CurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};
