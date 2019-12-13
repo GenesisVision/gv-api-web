@@ -1,8 +1,8 @@
-import { AssetSignalSettings } from './AssetSignalSettings';
 import { BrokerDetails } from './BrokerDetails';
 import { FollowDetailsFull } from './FollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
 import { ProgramDetailsFull } from './ProgramDetailsFull';
+import { ProgramFollowOwnerActions } from './ProgramFollowOwnerActions';
 import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class ProgramFollowDetailsFull {
@@ -19,11 +19,10 @@ export class ProgramFollowDetailsFull {
         this['login'] = data['login'];
         this['owner'] = data['owner'];
         this['brokerDetails'] = data['brokerDetails'];
-        this['signalSettings'] = data['signalSettings'];
-        this['subscribersCount'] = data['subscribersCount'];
         this['tags'] = data['tags'];
         this['programDetails'] = data['programDetails'];
         this['followDetails'] = data['followDetails'];
+        this['ownerActions'] = data['ownerActions'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -40,11 +39,10 @@ export class ProgramFollowDetailsFull {
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'owner': ProfilePublic.constructFromObject(data['owner']),
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
-                'signalSettings': AssetSignalSettings.constructFromObject(data['signalSettings']),
-                'subscribersCount': ApiClient.convertToType(data['subscribersCount'], 'number'),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),
                 'programDetails': ProgramDetailsFull.constructFromObject(data['programDetails']),
                 'followDetails': FollowDetailsFull.constructFromObject(data['followDetails']),
+                'ownerActions': ProgramFollowOwnerActions.constructFromObject(data['ownerActions']),
             });
         }
     }

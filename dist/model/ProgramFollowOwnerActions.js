@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-export class ProgramOwnerActions {
+export class ProgramFollowOwnerActions {
     constructor(data) {
         this['canClose'] = data['canClose'];
         this['canClosePeriod'] = data['canClosePeriod'];
@@ -13,7 +13,7 @@ export class ProgramOwnerActions {
     }
     static constructFromObject(data) {
         if (data) {
-            return new ProgramOwnerActions({
+            return new ProgramFollowOwnerActions({
                 'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
                 'canClosePeriod': ApiClient.convertToType(data['canClosePeriod'], 'boolean'),
                 'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),

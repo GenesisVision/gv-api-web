@@ -1,10 +1,7 @@
 import { AssetGuestActions } from './AssetGuestActions';
-import { FollowOwnerActions } from './FollowOwnerActions';
 export declare class PersonalFollowDetailsFull {
     'isOwnAsset': boolean;
     'isFavorite': boolean;
-    'isProgram': boolean;
-    'ownerActions': FollowOwnerActions;
     'guestActions': AssetGuestActions;
     'hasNotifications': boolean;
     'balance': number;

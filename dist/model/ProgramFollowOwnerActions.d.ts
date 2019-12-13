@@ -1,4 +1,4 @@
-export declare class ProgramOwnerActions {
+export declare class ProgramFollowOwnerActions {
     'canClose': boolean;
     'canClosePeriod': boolean;
     'canChangePassword': boolean;
@@ -13,5 +13,5 @@ export declare class ProgramOwnerActions {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramOwnerActions | undefined;
+    }): ProgramFollowOwnerActions | undefined;
 }

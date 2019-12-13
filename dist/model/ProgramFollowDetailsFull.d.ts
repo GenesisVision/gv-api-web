@@ -1,8 +1,8 @@
-import { AssetSignalSettings } from './AssetSignalSettings';
 import { BrokerDetails } from './BrokerDetails';
 import { FollowDetailsFull } from './FollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
 import { ProgramDetailsFull } from './ProgramDetailsFull';
+import { ProgramFollowOwnerActions } from './ProgramFollowOwnerActions';
 import { Tag } from './Tag';
 export declare class ProgramFollowDetailsFull {
     'id': string;
@@ -17,11 +17,10 @@ export declare class ProgramFollowDetailsFull {
     'login': string;
     'owner': ProfilePublic;
     'brokerDetails': BrokerDetails;
-    'signalSettings': AssetSignalSettings;
-    'subscribersCount': number;
     'tags': Array<Tag>;
     'programDetails': ProgramDetailsFull;
     'followDetails': FollowDetailsFull;
+    'ownerActions': ProgramFollowOwnerActions;
     constructor(data: {
         [key: string]: any;
     });
