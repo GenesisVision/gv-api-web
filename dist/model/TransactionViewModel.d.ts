@@ -6,12 +6,13 @@ import { TransactionDetailsActions } from './TransactionDetailsActions';
 export declare class TransactionViewModel {
     'id': string;
     'date': Date;
-    'status': MultiWalletTransactionStatus;
     'description': string;
     'amount': AmountRowCell;
+    'detailsTitle': string;
     'asset': TransactionAssetDetails;
     'details': Array<TransactionDetailItem>;
     'actions': TransactionDetailsActions;
+    'status': MultiWalletTransactionStatus;
     constructor(data: {
         [key: string]: any;
     });
