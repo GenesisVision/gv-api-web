@@ -1,11 +1,11 @@
-import { ItemsViewModelFollowDetailsList } from './ItemsViewModelFollowDetailsList';
-import { ItemsViewModelFundDetailsList } from './ItemsViewModelFundDetailsList';
-import { ItemsViewModelProgramDetailsList } from './ItemsViewModelProgramDetailsList';
+import { ItemsViewModelFollowDetailsListItem } from './ItemsViewModelFollowDetailsListItem';
+import { ItemsViewModelFundDetailsListItem } from './ItemsViewModelFundDetailsListItem';
+import { ItemsViewModelProgramDetailsListItem } from './ItemsViewModelProgramDetailsListItem';
 import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
 export declare class CommonPublicAssetsViewModel {
-    'programs': ItemsViewModelProgramDetailsList;
-    'funds': ItemsViewModelFundDetailsList;
-    'follows': ItemsViewModelFollowDetailsList;
+    'programs': ItemsViewModelProgramDetailsListItem;
+    'funds': ItemsViewModelFundDetailsListItem;
+    'follows': ItemsViewModelFollowDetailsListItem;
     'managers': ItemsViewModelPublicProfile;
     constructor(data: {
         [key: string]: any;

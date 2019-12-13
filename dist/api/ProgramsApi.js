@@ -1,6 +1,6 @@
 import ApiClient from "../ApiClient";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
-import { ItemsViewModelProgramDetailsList } from "../model/ItemsViewModelProgramDetailsList";
+import { ItemsViewModelProgramDetailsListItem } from "../model/ItemsViewModelProgramDetailsListItem";
 import { ProgramBalanceChart } from "../model/ProgramBalanceChart";
 import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
@@ -409,7 +409,7 @@ export class ProgramsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ItemsViewModelProgramDetailsList;
+        let returnType = ItemsViewModelProgramDetailsListItem;
         return this.apiClient.callApi('/v2.0/programs', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     removeFromFavorites(id, authorization) {

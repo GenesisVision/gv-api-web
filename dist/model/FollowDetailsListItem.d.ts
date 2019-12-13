@@ -1,20 +1,23 @@
-import { Currency } from './Currency';
 import { PersonalFollowDetailsList } from './PersonalFollowDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import { Tag } from './Tag';
-export declare class FollowDetailsList {
+export declare class FollowDetailsListItem {
     'id': string;
     'title': string;
     'description': string;
     'logo': string;
     'creationDate': Date;
-    'currency': Currency;
+    'currency': CurrencyEnum;
     'subscribersCount': number;
     'tradesCount': number;
     'status': string;
     'url': string;
     'color': string;
+    'isExternal': boolean;
+    'leverageMin': number;
+    'leverageMax': number;
+    'brokerId': string;
     'owner': ProfilePublicShort;
     'statistic': ProfitChart;
     'personalDetails': PersonalFollowDetailsList;
@@ -24,5 +27,7 @@ export declare class FollowDetailsList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FollowDetailsList | undefined;
+    }): FollowDetailsListItem | undefined;
 }
+declare type CurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+export {};

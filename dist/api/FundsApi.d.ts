@@ -4,7 +4,7 @@ import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
 import { FundProfitPercentCharts } from "../model/FundProfitPercentCharts";
-import { ItemsViewModelFundDetailsList } from "../model/ItemsViewModelFundDetailsList";
+import { ItemsViewModelFundDetailsListItem } from "../model/ItemsViewModelFundDetailsListItem";
 import { ItemsViewModelReallocationModel } from "../model/ItemsViewModelReallocationModel";
 export declare class FundsApi {
     private apiClient;
@@ -15,26 +15,26 @@ export declare class FundsApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<AbsoluteProfitChart>;
     private getFundAbsoluteProfitChartWithHttpInfo;
     getFundBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<FundBalanceChart>;
     private getFundBalanceChartWithHttpInfo;
     getFundDetails(id: string, opts?: {
         authorization?: string;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<FundDetailsFull>;
     private getFundDetailsWithHttpInfo;
     getFundProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         currencies?: Array<Object>;
         chartAssetsCount?: number;
     }): CancelablePromise<FundProfitPercentCharts>;
@@ -42,7 +42,7 @@ export declare class FundsApi {
     getFunds(opts?: {
         authorization?: string;
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByValueAsc' | 'ByValueDesc';
-        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        showIn?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         assets?: Array<string>;
         dateFrom?: Date;
         dateTo?: Date;
@@ -53,7 +53,7 @@ export declare class FundsApi {
         showFavorites?: boolean;
         skip?: number;
         take?: number;
-    }): CancelablePromise<ItemsViewModelFundDetailsList>;
+    }): CancelablePromise<ItemsViewModelFundDetailsListItem>;
     private getFundsWithHttpInfo;
     getReallocatingHistory(id: string, opts?: {
         dateFrom?: Date;

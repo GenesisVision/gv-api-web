@@ -5,7 +5,7 @@ import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
-export class ProgramDetailsList {
+export class ProgramDetailsListItem {
     constructor(data) {
         this['id'] = data['id'];
         this['logo'] = data['logo'];
@@ -23,6 +23,9 @@ export class ProgramDetailsList {
         this['periodStarts'] = data['periodStarts'];
         this['periodEnds'] = data['periodEnds'];
         this['status'] = data['status'];
+        this['entryFeeSelected'] = data['entryFeeSelected'];
+        this['entryFeeCurrent'] = data['entryFeeCurrent'];
+        this['brokerId'] = data['brokerId'];
         this['owner'] = data['owner'];
         this['personalDetails'] = data['personalDetails'];
         this['tags'] = data['tags'];
@@ -31,7 +34,7 @@ export class ProgramDetailsList {
     }
     static constructFromObject(data) {
         if (data) {
-            return new ProgramDetailsList({
+            return new ProgramDetailsListItem({
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),
@@ -48,6 +51,9 @@ export class ProgramDetailsList {
                 'periodStarts': ApiClient.convertToType(data['periodStarts'], 'Date'),
                 'periodEnds': ApiClient.convertToType(data['periodEnds'], 'Date'),
                 'status': ApiClient.convertToType(data['status'], 'string'),
+                'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
+                'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
+                'brokerId': ApiClient.convertToType(data['brokerId'], 'string'),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'personalDetails': PersonalProgramDetailsList.constructFromObject(data['personalDetails']),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),

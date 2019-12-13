@@ -4,7 +4,7 @@ import { PersonalFundDetailsList } from './PersonalFundDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import ApiClient from "../ApiClient";
-export class FundDetailsList {
+export class FundDetailsListItem {
     constructor(data) {
         this['id'] = data['id'];
         this['logo'] = data['logo'];
@@ -24,7 +24,7 @@ export class FundDetailsList {
     }
     static constructFromObject(data) {
         if (data) {
-            return new FundDetailsList({
+            return new FundDetailsListItem({
                 'id': ApiClient.convertToType(data['id'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
                 'url': ApiClient.convertToType(data['url'], 'string'),

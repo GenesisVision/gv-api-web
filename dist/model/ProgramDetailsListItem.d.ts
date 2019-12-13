@@ -4,7 +4,7 @@ import { PersonalProgramDetailsList } from './PersonalProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
 import { Tag } from './Tag';
-export declare class ProgramDetailsList {
+export declare class ProgramDetailsListItem {
     'id': string;
     'logo': string;
     'url': string;
@@ -21,6 +21,9 @@ export declare class ProgramDetailsList {
     'periodStarts': Date;
     'periodEnds': Date;
     'status': string;
+    'entryFeeSelected': number;
+    'entryFeeCurrent': number;
+    'brokerId': string;
     'owner': ProfilePublicShort;
     'personalDetails': PersonalProgramDetailsList;
     'tags': Array<Tag>;
@@ -31,5 +34,5 @@ export declare class ProgramDetailsList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramDetailsList | undefined;
+    }): ProgramDetailsListItem | undefined;
 }

@@ -3,7 +3,7 @@ import { FundAssetPercent } from './FundAssetPercent';
 import { PersonalFundDetailsList } from './PersonalFundDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
-export declare class FundDetailsList {
+export declare class FundDetailsListItem {
     'id': string;
     'logo': string;
     'url': string;
@@ -24,5 +24,5 @@ export declare class FundDetailsList {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): FundDetailsList | undefined;
+    }): FundDetailsListItem | undefined;
 }

@@ -1,6 +1,6 @@
-import { ItemsViewModelFollowDetailsList } from './ItemsViewModelFollowDetailsList';
-import { ItemsViewModelFundDetailsList } from './ItemsViewModelFundDetailsList';
-import { ItemsViewModelProgramDetailsList } from './ItemsViewModelProgramDetailsList';
+import { ItemsViewModelFollowDetailsListItem } from './ItemsViewModelFollowDetailsListItem';
+import { ItemsViewModelFundDetailsListItem } from './ItemsViewModelFundDetailsListItem';
+import { ItemsViewModelProgramDetailsListItem } from './ItemsViewModelProgramDetailsListItem';
 import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
 export class CommonPublicAssetsViewModel {
     constructor(data) {
@@ -12,9 +12,9 @@ export class CommonPublicAssetsViewModel {
     static constructFromObject(data) {
         if (data) {
             return new CommonPublicAssetsViewModel({
-                'programs': ItemsViewModelProgramDetailsList.constructFromObject(data['programs']),
-                'funds': ItemsViewModelFundDetailsList.constructFromObject(data['funds']),
-                'follows': ItemsViewModelFollowDetailsList.constructFromObject(data['follows']),
+                'programs': ItemsViewModelProgramDetailsListItem.constructFromObject(data['programs']),
+                'funds': ItemsViewModelFundDetailsListItem.constructFromObject(data['funds']),
+                'follows': ItemsViewModelFollowDetailsListItem.constructFromObject(data['follows']),
                 'managers': ItemsViewModelPublicProfile.constructFromObject(data['managers']),
             });
         }

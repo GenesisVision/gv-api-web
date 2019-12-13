@@ -3,7 +3,7 @@ import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { FundBalanceChart } from "../model/FundBalanceChart";
 import { FundDetailsFull } from "../model/FundDetailsFull";
 import { FundProfitPercentCharts } from "../model/FundProfitPercentCharts";
-import { ItemsViewModelFundDetailsList } from "../model/ItemsViewModelFundDetailsList";
+import { ItemsViewModelFundDetailsListItem } from "../model/ItemsViewModelFundDetailsListItem";
 import { ItemsViewModelReallocationModel } from "../model/ItemsViewModelReallocationModel";
 export class FundsApi {
     constructor(apiClient) {
@@ -180,7 +180,7 @@ export class FundsApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = ItemsViewModelFundDetailsList;
+        let returnType = ItemsViewModelFundDetailsListItem;
         return this.apiClient.callApi('/v2.0/funds', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getReallocatingHistory(id, opts) {
