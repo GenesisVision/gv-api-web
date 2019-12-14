@@ -22,6 +22,8 @@ export declare class WalletApi {
         model?: CreateWithdrawalRequestModel;
     }): CancelablePromise<null>;
     private createWithdrawalRequestWithHttpInfo;
+    getAccountsAvailable(currency: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
+    private getAccountsAvailableWithHttpInfo;
     getGMCommissionData(authorization: string): CancelablePromise<UserCommissionData>;
     private getGMCommissionDataWithHttpInfo;
     getTransactionsExternal(authorization: string, opts?: {

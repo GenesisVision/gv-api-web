@@ -81,6 +81,34 @@ export class WalletApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/wallet/withdraw/request/new', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getAccountsAvailable(currency, authorization) {
+        return this.getAccountsAvailableWithHttpInfo(currency, authorization)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getAccountsAvailableWithHttpInfo(currency, authorization) {
+        let postBody = null;
+        if (currency === undefined || currency === null) {
+            throw new Error("Missing the required parameter \"currency\" when calling getAccountsAvailable");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getAccountsAvailable");
+        }
+        let pathParams = {
+            "currency": currency
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = WalletMultiAvailable;
+        return this.apiClient.callApi('/v2.0/wallet/accounts/{currency}/available', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getGMCommissionData(authorization) {
         return this.getGMCommissionDataWithHttpInfo(authorization)
             .then(function (response_and_data) {
