@@ -5,6 +5,7 @@ export declare class FollowAssetPlatformInfo {
     'facets': Array<AssetFacet>;
     'tags': Array<Tag>;
     'createFollowInfo': FollowCreateAssetPlatformInfo;
+    'subscribeFixedCurrencies': Array<string>;
     constructor(data: {
         [key: string]: any;
     });
