@@ -1,7 +1,6 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
 import { FundOwnerActions } from './FundOwnerActions';
 export declare class PersonalFundDetails {
-    'isOwnAsset': boolean;
     'isFavorite': boolean;
     'isInvested': boolean;
     'canInvest': boolean;
@@ -24,5 +23,5 @@ export declare class PersonalFundDetails {
         [key: string]: any;
     }): PersonalFundDetails | undefined;
 }
-declare type PendingInOutCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type PendingInOutCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};

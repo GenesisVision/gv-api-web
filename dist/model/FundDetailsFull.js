@@ -1,3 +1,4 @@
+import { AssetPublicDetails } from './AssetPublicDetails';
 import { FundAssetInfo } from './FundAssetInfo';
 import { PersonalFundDetails } from './PersonalFundDetails';
 import { ProfilePublic } from './ProfilePublic';
@@ -5,13 +6,7 @@ import ApiClient from "../ApiClient";
 export class FundDetailsFull {
     constructor(data) {
         this['id'] = data['id'];
-        this['logo'] = data['logo'];
-        this['url'] = data['url'];
-        this['color'] = data['color'];
-        this['title'] = data['title'];
-        this['description'] = data['description'];
-        this['creationDate'] = data['creationDate'];
-        this['status'] = data['status'];
+        this['publicInfo'] = data['publicInfo'];
         this['entryFeeSelected'] = data['entryFeeSelected'];
         this['entryFeeCurrent'] = data['entryFeeCurrent'];
         this['exitFeeSelected'] = data['exitFeeSelected'];
@@ -24,13 +19,7 @@ export class FundDetailsFull {
         if (data) {
             return new FundDetailsFull({
                 'id': ApiClient.convertToType(data['id'], 'string'),
-                'logo': ApiClient.convertToType(data['logo'], 'string'),
-                'url': ApiClient.convertToType(data['url'], 'string'),
-                'color': ApiClient.convertToType(data['color'], 'string'),
-                'title': ApiClient.convertToType(data['title'], 'string'),
-                'description': ApiClient.convertToType(data['description'], 'string'),
-                'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
-                'status': ApiClient.convertToType(data['status'], 'string'),
+                'publicInfo': AssetPublicDetails.constructFromObject(data['publicInfo']),
                 'entryFeeSelected': ApiClient.convertToType(data['entryFeeSelected'], 'number'),
                 'entryFeeCurrent': ApiClient.convertToType(data['entryFeeCurrent'], 'number'),
                 'exitFeeSelected': ApiClient.convertToType(data['exitFeeSelected'], 'number'),

@@ -1,4 +1,4 @@
-export declare class ProgramFollowDetailsFullPublicDetails {
+export declare class AssetPublicDetails {
     'title': string;
     'description': string;
     'logo': string;
@@ -12,5 +12,5 @@ export declare class ProgramFollowDetailsFullPublicDetails {
     });
     static constructFromObject(data: {
         [key: string]: any;
-    }): ProgramFollowDetailsFullPublicDetails | undefined;
+    }): AssetPublicDetails | undefined;
 }

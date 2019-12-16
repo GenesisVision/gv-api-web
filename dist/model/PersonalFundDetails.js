@@ -3,7 +3,6 @@ import { FundOwnerActions } from './FundOwnerActions';
 import ApiClient from "../ApiClient";
 export class PersonalFundDetails {
     constructor(data) {
-        this['isOwnAsset'] = data['isOwnAsset'];
         this['isFavorite'] = data['isFavorite'];
         this['isInvested'] = data['isInvested'];
         this['canInvest'] = data['canInvest'];
@@ -23,7 +22,6 @@ export class PersonalFundDetails {
     static constructFromObject(data) {
         if (data) {
             return new PersonalFundDetails({
-                'isOwnAsset': ApiClient.convertToType(data['isOwnAsset'], 'boolean'),
                 'isFavorite': ApiClient.convertToType(data['isFavorite'], 'boolean'),
                 'isInvested': ApiClient.convertToType(data['isInvested'], 'boolean'),
                 'canInvest': ApiClient.convertToType(data['canInvest'], 'boolean'),

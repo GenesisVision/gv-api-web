@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-export class ProgramFollowDetailsFullPublicDetails {
+export class AssetPublicDetails {
     constructor(data) {
         this['title'] = data['title'];
         this['description'] = data['description'];
@@ -12,7 +12,7 @@ export class ProgramFollowDetailsFullPublicDetails {
     }
     static constructFromObject(data) {
         if (data) {
-            return new ProgramFollowDetailsFullPublicDetails({
+            return new AssetPublicDetails({
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'description': ApiClient.convertToType(data['description'], 'string'),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),

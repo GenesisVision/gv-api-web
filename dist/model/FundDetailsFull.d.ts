@@ -1,15 +1,10 @@
+import { AssetPublicDetails } from './AssetPublicDetails';
 import { FundAssetInfo } from './FundAssetInfo';
 import { PersonalFundDetails } from './PersonalFundDetails';
 import { ProfilePublic } from './ProfilePublic';
 export declare class FundDetailsFull {
     'id': string;
-    'logo': string;
-    'url': string;
-    'color': string;
-    'title': string;
-    'description': string;
-    'creationDate': Date;
-    'status': string;
+    'publicInfo': AssetPublicDetails;
     'entryFeeSelected': number;
     'entryFeeCurrent': number;
     'exitFeeSelected': number;

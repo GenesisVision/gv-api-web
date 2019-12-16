@@ -1,8 +1,8 @@
+import { AssetPublicDetails } from './AssetPublicDetails';
 import { BrokerDetails } from './BrokerDetails';
 import { FollowDetailsFull } from './FollowDetailsFull';
 import { ProfilePublic } from './ProfilePublic';
 import { ProgramDetailsFull } from './ProgramDetailsFull';
-import { ProgramFollowDetailsFullPublicDetails } from './ProgramFollowDetailsFullPublicDetails';
 import { ProgramFollowDetailsFullTradingAccountDetails } from './ProgramFollowDetailsFullTradingAccountDetails';
 import { ProgramFollowOwnerActions } from './ProgramFollowOwnerActions';
 import { Tag } from './Tag';
@@ -23,7 +23,7 @@ export class ProgramFollowDetailsFull {
         if (data) {
             return new ProgramFollowDetailsFull({
                 'id': ApiClient.convertToType(data['id'], 'string'),
-                'publicInfo': ProgramFollowDetailsFullPublicDetails.constructFromObject(data['publicInfo']),
+                'publicInfo': AssetPublicDetails.constructFromObject(data['publicInfo']),
                 'tradingAccountInfo': ProgramFollowDetailsFullTradingAccountDetails.constructFromObject(data['tradingAccountInfo']),
                 'owner': ProfilePublic.constructFromObject(data['owner']),
                 'brokerDetails': BrokerDetails.constructFromObject(data['brokerDetails']),
