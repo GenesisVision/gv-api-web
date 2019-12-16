@@ -1,3 +1,4 @@
+import { BrokerTradeServerType } from './BrokerTradeServerType';
 import { PersonalFollowDetailsList } from './PersonalFollowDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
@@ -20,6 +21,7 @@ export class FollowDetailsListItem {
         this['leverageMin'] = data['leverageMin'];
         this['leverageMax'] = data['leverageMax'];
         this['brokerId'] = data['brokerId'];
+        this['brokerType'] = data['brokerType'];
         this['owner'] = data['owner'];
         this['statistic'] = data['statistic'];
         this['personalDetails'] = data['personalDetails'];
@@ -43,6 +45,7 @@ export class FollowDetailsListItem {
                 'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
                 'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
                 'brokerId': ApiClient.convertToType(data['brokerId'], 'string'),
+                'brokerType': BrokerTradeServerType.constructFromObject(data['brokerType']),
                 'owner': ProfilePublicShort.constructFromObject(data['owner']),
                 'statistic': ProfitChart.constructFromObject(data['statistic']),
                 'personalDetails': PersonalFollowDetailsList.constructFromObject(data['personalDetails']),
