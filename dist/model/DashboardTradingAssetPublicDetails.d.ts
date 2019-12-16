@@ -1,3 +1,4 @@
+import { FundAssetDetails } from './FundAssetDetails';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 export declare class DashboardTradingAssetPublicDetails {
     'logo': string;
@@ -5,6 +6,7 @@ export declare class DashboardTradingAssetPublicDetails {
     'title': string;
     'url': string;
     'programDetails': ProgramAssetDetails;
+    'fundDetails': FundAssetDetails;
     constructor(data: {
         [key: string]: any;
     });

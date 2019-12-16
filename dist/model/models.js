@@ -83,6 +83,7 @@ export * from './FollowDetailsFull';
 export * from './FollowDetailsListItem';
 export * from './FollowProfitPercentCharts';
 export * from './ForgotPasswordViewModel';
+export * from './FundAssetDetails';
 export * from './FundAssetInfo';
 export * from './FundAssetPart';
 export * from './FundAssetPartWithIcon';
