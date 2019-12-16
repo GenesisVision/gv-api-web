@@ -13,6 +13,7 @@ export declare class ProgramInvestingDetailsList {
     'title': string;
     'creationDate': Date;
     'currency': Currency;
+    'availableToInvest': number;
     'level': number;
     'levelProgress': number;
     'periodDuration': number;

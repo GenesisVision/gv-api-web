@@ -15,6 +15,7 @@ export class ProgramInvestingDetailsList {
         this['title'] = data['title'];
         this['creationDate'] = data['creationDate'];
         this['currency'] = data['currency'];
+        this['availableToInvest'] = data['availableToInvest'];
         this['level'] = data['level'];
         this['levelProgress'] = data['levelProgress'];
         this['periodDuration'] = data['periodDuration'];
@@ -38,6 +39,7 @@ export class ProgramInvestingDetailsList {
                 'title': ApiClient.convertToType(data['title'], 'string'),
                 'creationDate': ApiClient.convertToType(data['creationDate'], 'Date'),
                 'currency': Currency.constructFromObject(data['currency']),
+                'availableToInvest': ApiClient.convertToType(data['availableToInvest'], 'number'),
                 'level': ApiClient.convertToType(data['level'], 'number'),
                 'levelProgress': ApiClient.convertToType(data['levelProgress'], 'number'),
                 'periodDuration': ApiClient.convertToType(data['periodDuration'], 'number'),
