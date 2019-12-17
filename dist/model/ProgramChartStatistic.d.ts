@@ -1,11 +1,11 @@
 export declare class ProgramChartStatistic {
     'investors': number;
+    'lastPeriodStarts': Date;
+    'lastPeriodEnds': Date;
     'tradingVolume': number;
     'trades': number;
     'successTradesPercent': number;
     'profitFactor': number;
-    'lastPeriodStarts': Date;
-    'lastPeriodEnds': Date;
     'balance': number;
     'profitPercent': number;
     'sharpeRatio': number;
