@@ -8,16 +8,19 @@ export class TradingaccountApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
-    getAbsoluteProfitChart(id, opts) {
-        return this.getAbsoluteProfitChartWithHttpInfo(id, opts)
+    getAbsoluteProfitChart(id, authorization, opts) {
+        return this.getAbsoluteProfitChartWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getAbsoluteProfitChartWithHttpInfo(id, opts = {}) {
+    getAbsoluteProfitChartWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getAbsoluteProfitChart");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getAbsoluteProfitChart");
         }
         let pathParams = {
             "id": id
@@ -28,7 +31,9 @@ export class TradingaccountApi {
             "MaxPointCount": opts["maxPointCount"],
             "Currency": opts["currency"]
         };
-        let headerParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
         let formParams = {};
         let authNames = [];
         let contentTypes = [];
@@ -36,16 +41,19 @@ export class TradingaccountApi {
         let returnType = AbsoluteProfitChart;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/charts/profit/absolute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getBalanceChart(id, opts) {
-        return this.getBalanceChartWithHttpInfo(id, opts)
+    getBalanceChart(id, authorization, opts) {
+        return this.getBalanceChartWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getBalanceChartWithHttpInfo(id, opts = {}) {
+    getBalanceChartWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getBalanceChart");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getBalanceChart");
         }
         let pathParams = {
             "id": id
@@ -56,7 +64,9 @@ export class TradingaccountApi {
             "MaxPointCount": opts["maxPointCount"],
             "Currency": opts["currency"]
         };
-        let headerParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
         let formParams = {};
         let authNames = [];
         let contentTypes = [];
@@ -99,16 +109,19 @@ export class TradingaccountApi {
         let returnType = TradesViewModel;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades/open', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getProfitPercentCharts(id, opts) {
-        return this.getProfitPercentChartsWithHttpInfo(id, opts)
+    getProfitPercentCharts(id, authorization, opts) {
+        return this.getProfitPercentChartsWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getProfitPercentChartsWithHttpInfo(id, opts = {}) {
+    getProfitPercentChartsWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getProfitPercentCharts");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling getProfitPercentCharts");
         }
         let pathParams = {
             "id": id
@@ -120,7 +133,9 @@ export class TradingaccountApi {
             "Currency": opts["currency"],
             "currencies": this.apiClient.buildCollectionParam(opts["currencies"], "multi")
         };
-        let headerParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
         let formParams = {};
         let authNames = [];
         let contentTypes = [];

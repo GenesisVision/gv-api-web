@@ -8,14 +8,14 @@ import { TradesViewModel } from "../model/TradesViewModel";
 export declare class TradingaccountApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getAbsoluteProfitChart(id: string, opts?: {
+    getAbsoluteProfitChart(id: string, authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
         currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<AbsoluteProfitChart>;
     private getAbsoluteProfitChartWithHttpInfo;
-    getBalanceChart(id: string, opts?: {
+    getBalanceChart(id: string, authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
@@ -31,7 +31,7 @@ export declare class TradingaccountApi {
         take?: number;
     }): CancelablePromise<TradesViewModel>;
     private getOpenTradesWithHttpInfo;
-    getProfitPercentCharts(id: string, opts?: {
+    getProfitPercentCharts(id: string, authorization: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
