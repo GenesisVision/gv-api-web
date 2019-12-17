@@ -1,6 +1,7 @@
 import { FundAssetPercent } from './FundAssetPercent';
 export declare class FundAssetDetails {
     'topFundAssets': Array<FundAssetPercent>;
+    'totalAssetsCount': number;
     constructor(data: {
         [key: string]: any;
     });
