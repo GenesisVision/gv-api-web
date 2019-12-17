@@ -6,6 +6,7 @@ export class SignalSubscription {
     constructor(data) {
         this['subscriberInfo'] = data['subscriberInfo'];
         this['asset'] = data['asset'];
+        this['status'] = data['status'];
         this['hasSignalAccount'] = data['hasSignalAccount'];
         this['hasActiveSubscription'] = data['hasActiveSubscription'];
         this['mode'] = data['mode'];
@@ -21,6 +22,7 @@ export class SignalSubscription {
             return new SignalSubscription({
                 'subscriberInfo': SignalSubscriberInfo.constructFromObject(data['subscriberInfo']),
                 'asset': AssetDetails.constructFromObject(data['asset']),
+                'status': ApiClient.convertToType(data['status'], 'string'),
                 'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
                 'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
                 'mode': SubscriptionMode.constructFromObject(data['mode']),
