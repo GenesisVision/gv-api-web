@@ -11,6 +11,7 @@ export class Broker {
         this['fee'] = data['fee'];
         this['leverageMin'] = data['leverageMin'];
         this['leverageMax'] = data['leverageMax'];
+        this['isKycRequired'] = data['isKycRequired'];
         this['accountTypes'] = data['accountTypes'];
         this['tags'] = data['tags'];
     }
@@ -25,6 +26,7 @@ export class Broker {
                 'fee': ApiClient.convertToType(data['fee'], 'number'),
                 'leverageMin': ApiClient.convertToType(data['leverageMin'], 'number'),
                 'leverageMax': ApiClient.convertToType(data['leverageMax'], 'number'),
+                'isKycRequired': ApiClient.convertToType(data['isKycRequired'], 'boolean'),
                 'accountTypes': ApiClient.convertToType(data['accountTypes'], [BrokerAccountType]),
                 'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });

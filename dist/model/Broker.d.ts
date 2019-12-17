@@ -9,6 +9,7 @@ export declare class Broker {
     'fee': number;
     'leverageMin': number;
     'leverageMax': number;
+    'isKycRequired': boolean;
     'accountTypes': Array<BrokerAccountType>;
     'tags': Array<Tag>;
     constructor(data: {
