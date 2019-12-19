@@ -7,8 +7,10 @@ export class SignalSubscription {
         this['subscriberInfo'] = data['subscriberInfo'];
         this['asset'] = data['asset'];
         this['status'] = data['status'];
+        this['subscriptionDate'] = data['subscriptionDate'];
         this['hasSignalAccount'] = data['hasSignalAccount'];
         this['hasActiveSubscription'] = data['hasActiveSubscription'];
+        this['isExternal'] = data['isExternal'];
         this['mode'] = data['mode'];
         this['percent'] = data['percent'];
         this['openTolerancePercent'] = data['openTolerancePercent'];
@@ -23,8 +25,10 @@ export class SignalSubscription {
                 'subscriberInfo': SignalSubscriberInfo.constructFromObject(data['subscriberInfo']),
                 'asset': AssetDetails.constructFromObject(data['asset']),
                 'status': ApiClient.convertToType(data['status'], 'string'),
+                'subscriptionDate': ApiClient.convertToType(data['subscriptionDate'], 'Date'),
                 'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
                 'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
+                'isExternal': ApiClient.convertToType(data['isExternal'], 'boolean'),
                 'mode': SubscriptionMode.constructFromObject(data['mode']),
                 'percent': ApiClient.convertToType(data['percent'], 'number'),
                 'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
