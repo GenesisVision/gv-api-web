@@ -316,7 +316,8 @@ export class DashboardApi {
         let pathParams = {};
         let queryParams = {
             "currency": opts["currency"],
-            "take": opts["take"]
+            "take": opts["take"],
+            "onlyFollows": opts["onlyFollows"]
         };
         let headerParams = {
             "Authorization": authorization
