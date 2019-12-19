@@ -83,6 +83,7 @@ export declare class ProgramsApi {
     }): CancelablePromise<ProgramPeriodsViewModel>;
     private getProgramPeriodsWithHttpInfo;
     getProgramProfitPercentCharts(id: string, opts?: {
+        authorization?: string;
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;

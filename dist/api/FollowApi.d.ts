@@ -2,10 +2,10 @@ import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { AccountBalanceChart } from "../model/AccountBalanceChart";
-import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsListItem } from "../model/ItemsViewModelFollowDetailsListItem";
 import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
 import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
+import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 export declare class FollowApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -50,12 +50,13 @@ export declare class FollowApi {
     getFollowSubscriptionsForOwnAccount(id: string, authorization: string): CancelablePromise<ItemsViewModelSignalSubscription>;
     private getFollowSubscriptionsForOwnAccountWithHttpInfo;
     getProfitPercentCharts(id: string, opts?: {
+        authorization?: string;
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
         currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         currencies?: Array<Object>;
-    }): CancelablePromise<FollowProfitPercentCharts>;
+    }): CancelablePromise<ProgramProfitPercentCharts>;
     private getProfitPercentChartsWithHttpInfo;
     removeFromFavorites(id: string, authorization: string): CancelablePromise<null>;
     private removeFromFavoritesWithHttpInfo;

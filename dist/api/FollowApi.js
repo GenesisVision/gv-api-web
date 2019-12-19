@@ -1,10 +1,10 @@
 import ApiClient from "../ApiClient";
 import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { AccountBalanceChart } from "../model/AccountBalanceChart";
-import { FollowProfitPercentCharts } from "../model/FollowProfitPercentCharts";
 import { ItemsViewModelFollowDetailsListItem } from "../model/ItemsViewModelFollowDetailsListItem";
 import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
 import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
+import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 export class FollowApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -228,12 +228,14 @@ export class FollowApi {
             "Currency": opts["currency"],
             "currencies": this.apiClient.buildCollectionParam(opts["currencies"], "multi")
         };
-        let headerParams = {};
+        let headerParams = {
+            "Authorization": opts["authorization"]
+        };
         let formParams = {};
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = FollowProfitPercentCharts;
+        let returnType = ProgramProfitPercentCharts;
         return this.apiClient.callApi('/v2.0/follow/{id}/charts/profit/percent', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     removeFromFavorites(id, authorization) {

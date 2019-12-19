@@ -4,6 +4,7 @@ export class ProgramChartStatistic {
         this['investors'] = data['investors'];
         this['lastPeriodStarts'] = data['lastPeriodStarts'];
         this['lastPeriodEnds'] = data['lastPeriodEnds'];
+        this['subscribers'] = data['subscribers'];
         this['tradingVolume'] = data['tradingVolume'];
         this['trades'] = data['trades'];
         this['successTradesPercent'] = data['successTradesPercent'];
@@ -21,6 +22,7 @@ export class ProgramChartStatistic {
                 'investors': ApiClient.convertToType(data['investors'], 'number'),
                 'lastPeriodStarts': ApiClient.convertToType(data['lastPeriodStarts'], 'Date'),
                 'lastPeriodEnds': ApiClient.convertToType(data['lastPeriodEnds'], 'Date'),
+                'subscribers': ApiClient.convertToType(data['subscribers'], 'number'),
                 'tradingVolume': ApiClient.convertToType(data['tradingVolume'], 'number'),
                 'trades': ApiClient.convertToType(data['trades'], 'number'),
                 'successTradesPercent': ApiClient.convertToType(data['successTradesPercent'], 'number'),

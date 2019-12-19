@@ -2,6 +2,7 @@ export declare class ProgramChartStatistic {
     'investors': number;
     'lastPeriodStarts': Date;
     'lastPeriodEnds': Date;
+    'subscribers': number;
     'tradingVolume': number;
     'trades': number;
     'successTradesPercent': number;

@@ -303,7 +303,9 @@ export class ProgramsApi {
             "Currency": opts["currency"],
             "currencies": this.apiClient.buildCollectionParam(opts["currencies"], "multi")
         };
-        let headerParams = {};
+        let headerParams = {
+            "Authorization": opts["authorization"]
+        };
         let formParams = {};
         let authNames = [];
         let contentTypes = [];
