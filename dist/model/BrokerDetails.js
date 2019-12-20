@@ -10,6 +10,7 @@ export class BrokerDetails {
         this['showSwaps'] = data['showSwaps'];
         this['showTickets'] = data['showTickets'];
         this['showCommissionRebate'] = data['showCommissionRebate'];
+        this['isSignalsAvailable'] = data['isSignalsAvailable'];
         this['isKycRequiredSometime'] = data['isKycRequiredSometime'];
         this['showSwapsSometime'] = data['showSwapsSometime'];
         this['showTicketsSometime'] = data['showTicketsSometime'];
@@ -26,6 +27,7 @@ export class BrokerDetails {
                 'showSwaps': ApiClient.convertToType(data['showSwaps'], 'boolean'),
                 'showTickets': ApiClient.convertToType(data['showTickets'], 'boolean'),
                 'showCommissionRebate': ApiClient.convertToType(data['showCommissionRebate'], 'boolean'),
+                'isSignalsAvailable': ApiClient.convertToType(data['isSignalsAvailable'], 'boolean'),
                 'isKycRequiredSometime': ApiClient.convertToType(data['isKycRequiredSometime'], 'boolean'),
                 'showSwapsSometime': ApiClient.convertToType(data['showSwapsSometime'], 'boolean'),
                 'showTicketsSometime': ApiClient.convertToType(data['showTicketsSometime'], 'boolean'),

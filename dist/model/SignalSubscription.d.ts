@@ -6,10 +6,12 @@ export declare class SignalSubscription {
     'asset': AssetDetails;
     'status': string;
     'subscriptionDate': Date;
+    'unsubscriptionDate': Date;
     'hasSignalAccount': boolean;
     'hasActiveSubscription': boolean;
     'isExternal': boolean;
     'mode': SubscriptionMode;
+    'detachMode': DetachModeEnum;
     'percent': number;
     'openTolerancePercent': number;
     'fixedVolume': number;
@@ -23,5 +25,6 @@ export declare class SignalSubscription {
         [key: string]: any;
     }): SignalSubscription | undefined;
 }
-declare type FixedCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type DetachModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
+declare type FixedCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};

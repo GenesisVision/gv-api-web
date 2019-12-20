@@ -8,10 +8,12 @@ export class SignalSubscription {
         this['asset'] = data['asset'];
         this['status'] = data['status'];
         this['subscriptionDate'] = data['subscriptionDate'];
+        this['unsubscriptionDate'] = data['unsubscriptionDate'];
         this['hasSignalAccount'] = data['hasSignalAccount'];
         this['hasActiveSubscription'] = data['hasActiveSubscription'];
         this['isExternal'] = data['isExternal'];
         this['mode'] = data['mode'];
+        this['detachMode'] = data['detachMode'];
         this['percent'] = data['percent'];
         this['openTolerancePercent'] = data['openTolerancePercent'];
         this['fixedVolume'] = data['fixedVolume'];
@@ -26,10 +28,12 @@ export class SignalSubscription {
                 'asset': AssetDetails.constructFromObject(data['asset']),
                 'status': ApiClient.convertToType(data['status'], 'string'),
                 'subscriptionDate': ApiClient.convertToType(data['subscriptionDate'], 'Date'),
+                'unsubscriptionDate': ApiClient.convertToType(data['unsubscriptionDate'], 'Date'),
                 'hasSignalAccount': ApiClient.convertToType(data['hasSignalAccount'], 'boolean'),
                 'hasActiveSubscription': ApiClient.convertToType(data['hasActiveSubscription'], 'boolean'),
                 'isExternal': ApiClient.convertToType(data['isExternal'], 'boolean'),
                 'mode': SubscriptionMode.constructFromObject(data['mode']),
+                'detachMode': ApiClient.convertToType(data['detachMode'], 'string'),
                 'percent': ApiClient.convertToType(data['percent'], 'number'),
                 'openTolerancePercent': ApiClient.convertToType(data['openTolerancePercent'], 'number'),
                 'fixedVolume': ApiClient.convertToType(data['fixedVolume'], 'number'),

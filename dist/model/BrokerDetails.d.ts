@@ -8,6 +8,7 @@ export declare class BrokerDetails {
     'showSwaps': boolean;
     'showTickets': boolean;
     'showCommissionRebate': boolean;
+    'isSignalsAvailable': boolean;
     'isKycRequiredSometime': boolean;
     'showSwapsSometime': boolean;
     'showTicketsSometime': boolean;
