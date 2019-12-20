@@ -8,6 +8,7 @@ export class PrivateTradingAccountFullTradingAccountDetails {
         this['login'] = data['login'];
         this['balance'] = data['balance'];
         this['type'] = data['type'];
+        this['subscriptions'] = data['subscriptions'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -18,6 +19,7 @@ export class PrivateTradingAccountFullTradingAccountDetails {
                 'login': ApiClient.convertToType(data['login'], 'string'),
                 'balance': ApiClient.convertToType(data['balance'], 'number'),
                 'type': PrivateTradingAccountType.constructFromObject(data['type']),
+                'subscriptions': ApiClient.convertToType(data['subscriptions'], 'number'),
             });
         }
     }
