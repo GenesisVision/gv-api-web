@@ -45,9 +45,13 @@ export declare class FollowApi {
         take?: number;
     }): CancelablePromise<ItemsViewModelFollowDetailsListItem>;
     private getFollowAssetsWithHttpInfo;
-    getFollowSubscriptionsForAsset(id: string, authorization: string): CancelablePromise<ItemsViewModelSignalSubscription>;
+    getFollowSubscriptionsForAsset(id: string, authorization: string, opts?: {
+        onlyActive?: boolean;
+    }): CancelablePromise<ItemsViewModelSignalSubscription>;
     private getFollowSubscriptionsForAssetWithHttpInfo;
-    getFollowSubscriptionsForOwnAccount(id: string, authorization: string): CancelablePromise<ItemsViewModelSignalSubscription>;
+    getFollowSubscriptionsForOwnAccount(id: string, authorization: string, opts?: {
+        onlyActive?: boolean;
+    }): CancelablePromise<ItemsViewModelSignalSubscription>;
     private getFollowSubscriptionsForOwnAccountWithHttpInfo;
     getProfitPercentCharts(id: string, opts?: {
         authorization?: string;

@@ -151,13 +151,13 @@ export class FollowApi {
         let returnType = ItemsViewModelFollowDetailsListItem;
         return this.apiClient.callApi('/v2.0/follow', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getFollowSubscriptionsForAsset(id, authorization) {
-        return this.getFollowSubscriptionsForAssetWithHttpInfo(id, authorization)
+    getFollowSubscriptionsForAsset(id, authorization, opts) {
+        return this.getFollowSubscriptionsForAssetWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getFollowSubscriptionsForAssetWithHttpInfo(id, authorization) {
+    getFollowSubscriptionsForAssetWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getFollowSubscriptionsForAsset");
@@ -168,7 +168,9 @@ export class FollowApi {
         let pathParams = {
             "id": id
         };
-        let queryParams = {};
+        let queryParams = {
+            "onlyActive": opts["onlyActive"]
+        };
         let headerParams = {
             "Authorization": authorization
         };
@@ -179,13 +181,13 @@ export class FollowApi {
         let returnType = ItemsViewModelSignalSubscription;
         return this.apiClient.callApi('/v2.0/follow/{id}/subscriptions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
-    getFollowSubscriptionsForOwnAccount(id, authorization) {
-        return this.getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization)
+    getFollowSubscriptionsForOwnAccount(id, authorization, opts) {
+        return this.getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization) {
+    getFollowSubscriptionsForOwnAccountWithHttpInfo(id, authorization, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getFollowSubscriptionsForOwnAccount");
@@ -196,7 +198,9 @@ export class FollowApi {
         let pathParams = {
             "id": id
         };
-        let queryParams = {};
+        let queryParams = {
+            "onlyActive": opts["onlyActive"]
+        };
         let headerParams = {
             "Authorization": authorization
         };
