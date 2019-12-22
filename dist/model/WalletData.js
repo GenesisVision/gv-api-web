@@ -16,6 +16,7 @@ export class WalletData {
         this['isWithdrawalEnabled'] = data['isWithdrawalEnabled'];
         this['withdrawalCommission'] = data['withdrawalCommission'];
         this['depositAddress'] = data['depositAddress'];
+        this['depositUrl'] = data['depositUrl'];
         this['currency'] = data['currency'];
         this['available'] = data['available'];
         this['invested'] = data['invested'];
@@ -38,6 +39,7 @@ export class WalletData {
                 'isWithdrawalEnabled': ApiClient.convertToType(data['isWithdrawalEnabled'], 'boolean'),
                 'withdrawalCommission': ApiClient.convertToType(data['withdrawalCommission'], 'number'),
                 'depositAddress': ApiClient.convertToType(data['depositAddress'], 'string'),
+                'depositUrl': ApiClient.convertToType(data['depositUrl'], 'string'),
                 'currency': Currency.constructFromObject(data['currency']),
                 'available': ApiClient.convertToType(data['available'], 'number'),
                 'invested': ApiClient.convertToType(data['invested'], 'number'),
