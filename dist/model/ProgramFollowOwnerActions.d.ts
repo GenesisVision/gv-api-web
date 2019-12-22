@@ -2,6 +2,7 @@ export declare class ProgramFollowOwnerActions {
     'canClose': boolean;
     'canClosePeriod': boolean;
     'canChangePassword': boolean;
+    'canTransferMoney': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateExternalTradingAccount': boolean;

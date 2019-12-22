@@ -1,3 +1,4 @@
+import { AssetTypeExt } from './AssetTypeExt';
 export declare class AssetPublicDetails {
     'title': string;
     'description': string;
@@ -7,6 +8,7 @@ export declare class AssetPublicDetails {
     'creationDate': Date;
     'status': string;
     'isOwnAsset': boolean;
+    'typeExt': AssetTypeExt;
     constructor(data: {
         [key: string]: any;
     });
