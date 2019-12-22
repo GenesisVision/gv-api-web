@@ -68,4 +68,8 @@ export declare class SignalApi {
         model?: AttachToSignalProvider;
     }): CancelablePromise<null>;
     private updateSubscriptionSettingsWithHttpInfo;
+    updateSubscriptionSettings_1(id: string, authorization: string, opts?: {
+        model?: AttachToExternalSignalProviderExt;
+    }): CancelablePromise<null>;
+    private updateSubscriptionSettings_1WithHttpInfo;
 }
