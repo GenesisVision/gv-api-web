@@ -8,6 +8,43 @@ export class TradingaccountApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
+    exportTrades(id, authorization, opts) {
+        return this.exportTradesWithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    exportTradesWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling exportTrades");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling exportTrades");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "Symbol": opts["symbol"],
+            "Sorting": opts["sorting"],
+            "AccountId": opts["accountId"],
+            "AccountCurrency": opts["accountCurrency"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = 'Blob';
+        return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getAbsoluteProfitChart(id, authorization, opts) {
         return this.getAbsoluteProfitChartWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
