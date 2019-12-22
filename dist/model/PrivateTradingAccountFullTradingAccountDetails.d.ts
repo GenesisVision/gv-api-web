@@ -7,6 +7,7 @@ export declare class PrivateTradingAccountFullTradingAccountDetails {
     'balance': number;
     'type': PrivateTradingAccountType;
     'subscriptions': number;
+    'isExternal': boolean;
     constructor(data: {
         [key: string]: any;
     });
@@ -14,5 +15,5 @@ export declare class PrivateTradingAccountFullTradingAccountDetails {
         [key: string]: any;
     }): PrivateTradingAccountFullTradingAccountDetails | undefined;
 }
-declare type CurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+declare type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};
