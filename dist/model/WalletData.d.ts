@@ -14,7 +14,7 @@ export declare class WalletData {
     'isWithdrawalEnabled': boolean;
     'withdrawalCommission': number;
     'depositAddress': string;
-    'depositUrl': string;
+    'depositUrlCoindirect': string;
     'currency': Currency;
     'available': number;
     'invested': number;
