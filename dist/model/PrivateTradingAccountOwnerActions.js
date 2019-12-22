@@ -10,6 +10,7 @@ export class PrivateTradingAccountOwnerActions {
         this['canMakeProgramFromSignalProvider'] = data['canMakeProgramFromSignalProvider'];
         this['canMakeSignalProviderFromProgram'] = data['canMakeSignalProviderFromProgram'];
         this['canEditSignalProviderSettings'] = data['canEditSignalProviderSettings'];
+        this['isEnoughMoneyToCreateProgram'] = data['isEnoughMoneyToCreateProgram'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -23,6 +24,7 @@ export class PrivateTradingAccountOwnerActions {
                 'canMakeProgramFromSignalProvider': ApiClient.convertToType(data['canMakeProgramFromSignalProvider'], 'boolean'),
                 'canMakeSignalProviderFromProgram': ApiClient.convertToType(data['canMakeSignalProviderFromProgram'], 'boolean'),
                 'canEditSignalProviderSettings': ApiClient.convertToType(data['canEditSignalProviderSettings'], 'boolean'),
+                'isEnoughMoneyToCreateProgram': ApiClient.convertToType(data['isEnoughMoneyToCreateProgram'], 'boolean'),
             });
         }
     }
