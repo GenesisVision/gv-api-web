@@ -2,7 +2,7 @@ import { DashboardProfits } from './DashboardProfits';
 import { ItemsViewModelInvestmentEventViewModel } from './ItemsViewModelInvestmentEventViewModel';
 export declare class DashboardTradingDetails {
     'equity': number;
-    'assetsUnderManagement': number;
+    'aum': number;
     'total': number;
     'profits': DashboardProfits;
     'events': ItemsViewModelInvestmentEventViewModel;
