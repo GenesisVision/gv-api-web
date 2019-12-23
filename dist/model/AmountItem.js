@@ -1,3 +1,4 @@
+import { Color } from './Color';
 import { Currency } from './Currency';
 import ApiClient from "../ApiClient";
 export class AmountItem {
@@ -12,7 +13,7 @@ export class AmountItem {
             return new AmountItem({
                 'amount': ApiClient.convertToType(data['amount'], 'number'),
                 'currency': Currency.constructFromObject(data['currency']),
-                'color': ApiClient.convertToType(data['color'], 'string'),
+                'color': Color.constructFromObject(data['color']),
                 'logo': ApiClient.convertToType(data['logo'], 'string'),
             });
         }

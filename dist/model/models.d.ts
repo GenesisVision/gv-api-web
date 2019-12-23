@@ -37,6 +37,7 @@ export * from './CaptchaType';
 export * from './ChangeBrokerProgramRequest';
 export * from './ChangePasswordViewModel';
 export * from './ChangeState';
+export * from './Color';
 export * from './CommonPublicAssetsViewModel';
 export * from './CreateSignalProvider';
 export * from './CreateWithdrawalRequestModel';
