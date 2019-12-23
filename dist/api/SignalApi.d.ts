@@ -64,12 +64,12 @@ export declare class SignalApi {
     private getSignalTradingLogWithHttpInfo;
     getSubscriberAccountsForAsset(id: string, authorization: string): CancelablePromise<ItemsViewModelTradingAccountDetails>;
     private getSubscriberAccountsForAssetWithHttpInfo;
+    updateExternalSubscriptionSettings(id: string, authorization: string, opts?: {
+        model?: AttachToExternalSignalProviderExt;
+    }): CancelablePromise<null>;
+    private updateExternalSubscriptionSettingsWithHttpInfo;
     updateSubscriptionSettings(id: string, authorization: string, opts?: {
         model?: AttachToSignalProvider;
     }): CancelablePromise<null>;
     private updateSubscriptionSettingsWithHttpInfo;
-    updateSubscriptionSettings_1(id: string, authorization: string, opts?: {
-        model?: AttachToExternalSignalProviderExt;
-    }): CancelablePromise<null>;
-    private updateSubscriptionSettings_1WithHttpInfo;
 }

@@ -294,6 +294,34 @@ export class SignalApi {
         let returnType = ItemsViewModelTradingAccountDetails;
         return this.apiClient.callApi('/v2.0/signal/attach/{id}/accounts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    updateExternalSubscriptionSettings(id, authorization, opts) {
+        return this.updateExternalSubscriptionSettingsWithHttpInfo(id, authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    updateExternalSubscriptionSettingsWithHttpInfo(id, authorization, opts = {}) {
+        let postBody = opts["model"];
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling updateExternalSubscriptionSettings");
+        }
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling updateExternalSubscriptionSettings");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/signal/external/{id}/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     updateSubscriptionSettings(id, authorization, opts) {
         return this.updateSubscriptionSettingsWithHttpInfo(id, authorization, opts)
             .then(function (response_and_data) {
@@ -321,33 +349,5 @@ export class SignalApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = null;
         return this.apiClient.callApi('/v2.0/signal/{id}/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    updateSubscriptionSettings_1(id, authorization, opts) {
-        return this.updateSubscriptionSettings_1WithHttpInfo(id, authorization, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    updateSubscriptionSettings_1WithHttpInfo(id, authorization, opts = {}) {
-        let postBody = opts["model"];
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling updateSubscriptionSettings_0");
-        }
-        if (authorization === undefined || authorization === null) {
-            throw new Error("Missing the required parameter \"authorization\" when calling updateSubscriptionSettings_0");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {};
-        let headerParams = {
-            "Authorization": authorization
-        };
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = null;
-        return this.apiClient.callApi('/v2.0/signal/external/{id}/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }
