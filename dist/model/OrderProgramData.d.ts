@@ -1,3 +1,4 @@
+import { AssetType } from './AssetType';
 export declare class OrderProgramData {
     'title': string;
     'level': number;
@@ -5,6 +6,7 @@ export declare class OrderProgramData {
     'color': string;
     'url': string;
     'logo': string;
+    'type': AssetType;
     constructor(data: {
         [key: string]: any;
     });

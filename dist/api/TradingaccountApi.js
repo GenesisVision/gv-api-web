@@ -3,6 +3,7 @@ import { AbsoluteProfitChart } from "../model/AbsoluteProfitChart";
 import { AccountBalanceChart } from "../model/AccountBalanceChart";
 import { AccountProfitPercentCharts } from "../model/AccountProfitPercentCharts";
 import { PrivateTradingAccountFull } from "../model/PrivateTradingAccountFull";
+import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 import { TradesViewModel } from "../model/TradesViewModel";
 export class TradingaccountApi {
     constructor(apiClient) {
@@ -214,7 +215,7 @@ export class TradingaccountApi {
         let authNames = [];
         let contentTypes = [];
         let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TradesViewModel;
+        let returnType = TradesSignalViewModel;
         return this.apiClient.callApi('/v2.0/tradingaccount/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getTradingAccountDetails(id, authorization) {
