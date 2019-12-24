@@ -237,7 +237,7 @@ export default class ApiClient {
         }, () => request.abort());
     }
     static parseDate(str) {
-        return new Date(str.replace(/T/i, ' '));
+        return new Date(str);
     }
     static convertToType(data, type) {
         if (data === null || data === undefined)

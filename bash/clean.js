@@ -1,3 +1,3 @@
 const shell = require("shelljs");
 
-shell.rm("-rf", "./api", "./dist", "./model", "ApiClient.ts", "constructFromObject.ts", "index.ts");
+shell.rm("-rf", "./api", "./dist", "./model", "constructFromObject.ts", "index.ts");
