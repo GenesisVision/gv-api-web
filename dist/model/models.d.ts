@@ -13,8 +13,6 @@ export * from './AssetFacet';
 export * from './AssetFilterType';
 export * from './AssetGuestActions';
 export * from './AssetInfo';
-export * from './AssetInfoLink';
-export * from './AssetInfoLinkType';
 export * from './AssetInvestmentRequest';
 export * from './AssetInvestmentStatus';
 export * from './AssetPlatformInfo';
