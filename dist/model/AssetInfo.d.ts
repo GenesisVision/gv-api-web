@@ -1,4 +1,4 @@
-import { SocialLinkViewModel } from './SocialLinkViewModel';
+import { AssetInfoLink } from './AssetInfoLink';
 import { Tag } from './Tag';
 export declare class AssetInfo {
     'name': string;
@@ -7,7 +7,7 @@ export declare class AssetInfo {
     'description': string;
     'chartSymbol': string;
     'tags': Array<Tag>;
-    'socialLinks': Array<SocialLinkViewModel>;
+    'socialLinks': Array<AssetInfoLink>;
     constructor(data: {
         [key: string]: any;
     });
