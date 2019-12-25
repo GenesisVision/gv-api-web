@@ -7,6 +7,7 @@ import { SocialLinksViewModel } from "../model/SocialLinksViewModel";
 import { UpdatePersonalDetailViewModel } from "../model/UpdatePersonalDetailViewModel";
 import { UpdateProfileViewModel } from "../model/UpdateProfileViewModel";
 import { UpdateSocialLinkViewModel } from "../model/UpdateSocialLinkViewModel";
+import { UpdateSocialLinksViewModel } from "../model/UpdateSocialLinksViewModel";
 export declare class ProfileApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -28,6 +29,10 @@ export declare class ProfileApi {
     private switchPublicInvestorOffWithHttpInfo;
     switchPublicInvestorOn(authorization: string): CancelablePromise<null>;
     private switchPublicInvestorOnWithHttpInfo;
+    updateAllSocialLinks(authorization: string, opts?: {
+        model?: UpdateSocialLinksViewModel;
+    }): CancelablePromise<null>;
+    private updateAllSocialLinksWithHttpInfo;
     updateAvatar(fileId: string, authorization: string): CancelablePromise<null>;
     private updateAvatarWithHttpInfo;
     updateFcmToken(authorization: string, opts?: {

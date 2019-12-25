@@ -190,6 +190,29 @@ export class ProfileApi {
         let returnType = null;
         return this.apiClient.callApi('/v2.0/profile/investor/public/on', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    updateAllSocialLinks(authorization, opts) {
+        return this.updateAllSocialLinksWithHttpInfo(authorization, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    updateAllSocialLinksWithHttpInfo(authorization, opts = {}) {
+        let postBody = opts["model"];
+        if (authorization === undefined || authorization === null) {
+            throw new Error("Missing the required parameter \"authorization\" when calling updateAllSocialLinks");
+        }
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {
+            "Authorization": authorization
+        };
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = ["application/json-patch+json", "application/json", "text/json", "application/_*+json"];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = null;
+        return this.apiClient.callApi('/v2.0/profile/sociallinks/all/update', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     updateAvatar(fileId, authorization) {
         return this.updateAvatarWithHttpInfo(fileId, authorization)
             .then(function (response_and_data) {

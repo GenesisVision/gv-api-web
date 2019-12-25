@@ -261,6 +261,7 @@ export * from './TwoFactorStatus';
 export * from './UpdatePersonalDetailViewModel';
 export * from './UpdateProfileViewModel';
 export * from './UpdateSocialLinkViewModel';
+export * from './UpdateSocialLinksViewModel';
 export * from './UploadResult';
 export * from './UserCommissionData';
 export * from './UserDetailsList';
