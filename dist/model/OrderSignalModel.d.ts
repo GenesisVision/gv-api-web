@@ -28,6 +28,7 @@ export declare class OrderSignalModel {
     'swap': number;
     'showOriginalCommission': boolean;
     'signalData': OrderModelSignalData;
+    'externalSignalAccountId': string;
     constructor(data: {
         [key: string]: any;
     });

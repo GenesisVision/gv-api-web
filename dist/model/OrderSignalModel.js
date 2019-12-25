@@ -30,6 +30,7 @@ export class OrderSignalModel {
         this['swap'] = data['swap'];
         this['showOriginalCommission'] = data['showOriginalCommission'];
         this['signalData'] = data['signalData'];
+        this['externalSignalAccountId'] = data['externalSignalAccountId'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -57,6 +58,7 @@ export class OrderSignalModel {
                 'swap': ApiClient.convertToType(data['swap'], 'number'),
                 'showOriginalCommission': ApiClient.convertToType(data['showOriginalCommission'], 'boolean'),
                 'signalData': OrderModelSignalData.constructFromObject(data['signalData']),
+                'externalSignalAccountId': ApiClient.convertToType(data['externalSignalAccountId'], 'string'),
             });
         }
     }
