@@ -15,14 +15,14 @@ export declare class FollowApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<AbsoluteProfitChart>;
     private getAbsoluteProfitChartWithHttpInfo;
     getBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<AccountBalanceChart>;
     private getBalanceChartWithHttpInfo;
     getFollowAssetDetails(id: string, opts?: {
@@ -32,7 +32,7 @@ export declare class FollowApi {
     getFollowAssets(opts?: {
         authorization?: string;
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySubscribersAsc' | 'BySubscribersDesc' | 'ByTradesAsc' | 'ByTradesDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc';
-        showIn?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         tags?: Array<string>;
         dateFrom?: Date;
         dateTo?: Date;
@@ -58,7 +58,7 @@ export declare class FollowApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
         currencies?: Array<Object>;
     }): CancelablePromise<ProgramProfitPercentCharts>;
     private getProfitPercentChartsWithHttpInfo;
