@@ -18,6 +18,7 @@ export class OrderSignalModel {
         this['symbol'] = data['symbol'];
         this['volume'] = data['volume'];
         this['profit'] = data['profit'];
+        this['profitCurrency'] = data['profitCurrency'];
         this['direction'] = data['direction'];
         this['date'] = data['date'];
         this['price'] = data['price'];
@@ -46,6 +47,7 @@ export class OrderSignalModel {
                 'symbol': ApiClient.convertToType(data['symbol'], 'string'),
                 'volume': ApiClient.convertToType(data['volume'], 'number'),
                 'profit': ApiClient.convertToType(data['profit'], 'number'),
+                'profitCurrency': ApiClient.convertToType(data['profitCurrency'], 'string'),
                 'direction': TradeDirectionType.constructFromObject(data['direction']),
                 'date': ApiClient.convertToType(data['date'], 'Date'),
                 'price': ApiClient.convertToType(data['price'], 'number'),

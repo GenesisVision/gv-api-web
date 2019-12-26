@@ -16,6 +16,7 @@ export declare class OrderSignalModel {
     'symbol': string;
     'volume': number;
     'profit': number;
+    'profitCurrency': string;
     'direction': TradeDirectionType;
     'date': Date;
     'price': number;

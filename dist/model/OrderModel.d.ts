@@ -8,6 +8,7 @@ export declare class OrderModel {
     'symbol': string;
     'volume': number;
     'profit': number;
+    'profitCurrency': string;
     'direction': TradeDirectionType;
     'date': Date;
     'price': number;
