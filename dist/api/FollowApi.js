@@ -5,6 +5,7 @@ import { ItemsViewModelFollowDetailsListItem } from "../model/ItemsViewModelFoll
 import { ItemsViewModelSignalSubscription } from "../model/ItemsViewModelSignalSubscription";
 import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
+import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 export class FollowApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -64,6 +65,38 @@ export class FollowApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = AbsoluteProfitChart;
         return this.apiClient.callApi('/v2.0/follow/{id}/charts/profit/absolute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getAssetTrades(id, opts) {
+        return this.getAssetTradesWithHttpInfo(id, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getAssetTradesWithHttpInfo(id, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getAssetTrades");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "Symbol": opts["symbol"],
+            "Sorting": opts["sorting"],
+            "AccountId": opts["accountId"],
+            "AccountCurrency": opts["accountCurrency"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = TradesSignalViewModel;
+        return this.apiClient.callApi('/v2.0/follow/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getBalanceChart(id, opts) {
         return this.getBalanceChartWithHttpInfo(id, opts)

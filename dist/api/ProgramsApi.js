@@ -6,6 +6,7 @@ import { ProgramFollowDetailsFull } from "../model/ProgramFollowDetailsFull";
 import { ProgramPeriodsViewModel } from "../model/ProgramPeriodsViewModel";
 import { ProgramProfitPercentCharts } from "../model/ProgramProfitPercentCharts";
 import { SignalProviderSubscribers } from "../model/SignalProviderSubscribers";
+import { TradesSignalViewModel } from "../model/TradesSignalViewModel";
 import { TradesViewModel } from "../model/TradesViewModel";
 export class ProgramsApi {
     constructor(apiClient) {
@@ -137,6 +138,38 @@ export class ProgramsApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'Blob';
         return this.apiClient.callApi('/v2.0/programs/{id}/trades/export', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getAssetTrades(id, opts) {
+        return this.getAssetTradesWithHttpInfo(id, opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getAssetTradesWithHttpInfo(id, opts = {}) {
+        let postBody = null;
+        if (id === undefined || id === null) {
+            throw new Error("Missing the required parameter \"id\" when calling getAssetTrades");
+        }
+        let pathParams = {
+            "id": id
+        };
+        let queryParams = {
+            "DateFrom": opts["dateFrom"],
+            "DateTo": opts["dateTo"],
+            "Symbol": opts["symbol"],
+            "Sorting": opts["sorting"],
+            "AccountId": opts["accountId"],
+            "AccountCurrency": opts["accountCurrency"],
+            "Skip": opts["skip"],
+            "Take": opts["take"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = TradesSignalViewModel;
+        return this.apiClient.callApi('/v2.0/programs/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramAbsoluteProfitChart(id, opts) {
         return this.getProgramAbsoluteProfitChartWithHttpInfo(id, opts)
@@ -344,38 +377,6 @@ export class ProgramsApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = SignalProviderSubscribers;
         return this.apiClient.callApi('/v2.0/programs/{id}/subscribers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
-    }
-    getProgramTrades(id, opts) {
-        return this.getProgramTradesWithHttpInfo(id, opts)
-            .then(function (response_and_data) {
-            return response_and_data.data;
-        });
-    }
-    getProgramTradesWithHttpInfo(id, opts = {}) {
-        let postBody = null;
-        if (id === undefined || id === null) {
-            throw new Error("Missing the required parameter \"id\" when calling getProgramTrades");
-        }
-        let pathParams = {
-            "id": id
-        };
-        let queryParams = {
-            "DateFrom": opts["dateFrom"],
-            "DateTo": opts["dateTo"],
-            "Symbol": opts["symbol"],
-            "Sorting": opts["sorting"],
-            "AccountId": opts["accountId"],
-            "AccountCurrency": opts["accountCurrency"],
-            "Skip": opts["skip"],
-            "Take": opts["take"]
-        };
-        let headerParams = {};
-        let formParams = {};
-        let authNames = [];
-        let contentTypes = [];
-        let accepts = ["text/plain", "application/json", "text/json"];
-        let returnType = TradesViewModel;
-        return this.apiClient.callApi('/v2.0/programs/{id}/trades', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getPrograms(opts) {
         return this.getProgramsWithHttpInfo(opts)
