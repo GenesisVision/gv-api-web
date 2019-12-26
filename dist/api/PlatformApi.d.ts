@@ -4,6 +4,7 @@ import { AssetInfo } from "../model/AssetInfo";
 import { CaptchaDetails } from "../model/CaptchaDetails";
 import { LevelsParamsInfo } from "../model/LevelsParamsInfo";
 import { PlatformAssets } from "../model/PlatformAssets";
+import { PlatformEvents } from "../model/PlatformEvents";
 import { PlatformInfo } from "../model/PlatformInfo";
 import { ProgramsLevelsInfo } from "../model/ProgramsLevelsInfo";
 export declare class PlatformApi {
@@ -15,6 +16,10 @@ export declare class PlatformApi {
     private getPlatformAssetInfoWithHttpInfo;
     getPlatformDate(): CancelablePromise<string>;
     private getPlatformDateWithHttpInfo;
+    getPlatformEvents(opts?: {
+        take?: number;
+    }): CancelablePromise<PlatformEvents>;
+    private getPlatformEventsWithHttpInfo;
     getPlatformInfo(): CancelablePromise<PlatformInfo>;
     private getPlatformInfoWithHttpInfo;
     getProgramLevels(opts?: {

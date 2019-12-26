@@ -3,6 +3,7 @@ import { AssetInfo } from "../model/AssetInfo";
 import { CaptchaDetails } from "../model/CaptchaDetails";
 import { LevelsParamsInfo } from "../model/LevelsParamsInfo";
 import { PlatformAssets } from "../model/PlatformAssets";
+import { PlatformEvents } from "../model/PlatformEvents";
 import { PlatformInfo } from "../model/PlatformInfo";
 import { ProgramsLevelsInfo } from "../model/ProgramsLevelsInfo";
 export class PlatformApi {
@@ -67,6 +68,26 @@ export class PlatformApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = 'string';
         return this.apiClient.callApi('/v2.0/platform/date', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getPlatformEvents(opts) {
+        return this.getPlatformEventsWithHttpInfo(opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getPlatformEventsWithHttpInfo(opts = {}) {
+        let postBody = null;
+        let pathParams = {};
+        let queryParams = {
+            "take": opts["take"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = PlatformEvents;
+        return this.apiClient.callApi('/v2.0/platform/events', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getPlatformInfo() {
         return this.getPlatformInfoWithHttpInfo()
