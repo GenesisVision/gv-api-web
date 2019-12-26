@@ -33,6 +33,7 @@ export class TradingaccountApi {
             "Sorting": opts["sorting"],
             "AccountId": opts["accountId"],
             "AccountCurrency": opts["accountCurrency"],
+            "IsFollow": opts["isFollow"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
@@ -205,6 +206,7 @@ export class TradingaccountApi {
             "Sorting": opts["sorting"],
             "AccountId": opts["accountId"],
             "AccountCurrency": opts["accountCurrency"],
+            "IsFollow": opts["isFollow"],
             "Skip": opts["skip"],
             "Take": opts["take"]
         };
