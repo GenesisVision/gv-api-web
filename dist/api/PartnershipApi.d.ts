@@ -14,7 +14,7 @@ export declare class PartnershipApi {
     }): CancelablePromise<Blob>;
     private exportHistoryWithHttpInfo;
     getDetails(authorization: string, opts?: {
-        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
     }): CancelablePromise<PartnershipDetails>;
     private getDetailsWithHttpInfo;
     getReferrals(authorization: string, opts?: {
