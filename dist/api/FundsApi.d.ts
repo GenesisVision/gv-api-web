@@ -15,26 +15,26 @@ export declare class FundsApi {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<AbsoluteProfitChart>;
     private getFundAbsoluteProfitChartWithHttpInfo;
     getFundBalanceChart(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<FundBalanceChart>;
     private getFundBalanceChartWithHttpInfo;
     getFundDetails(id: string, opts?: {
         authorization?: string;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<FundDetailsFull>;
     private getFundDetailsWithHttpInfo;
     getFundProfitPercentCharts(id: string, opts?: {
         dateFrom?: Date;
         dateTo?: Date;
         maxPointCount?: number;
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         currencies?: Array<Object>;
         chartAssetsCount?: number;
     }): CancelablePromise<FundProfitPercentCharts>;
@@ -42,7 +42,7 @@ export declare class FundsApi {
     getFunds(opts?: {
         authorization?: string;
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByValueAsc' | 'ByValueDesc';
-        showIn?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         assets?: Array<string>;
         dateFrom?: Date;
         dateTo?: Date;
