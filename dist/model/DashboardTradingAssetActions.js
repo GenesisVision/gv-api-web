@@ -5,6 +5,7 @@ export class DashboardTradingAssetActions {
         this['canAddRequestWithdraw'] = data['canAddRequestWithdraw'];
         this['canTransferMoney'] = data['canTransferMoney'];
         this['canChangePassword'] = data['canChangePassword'];
+        this['canClose'] = data['canClose'];
         this['canMakeProgramFromPrivateTradingAccount'] = data['canMakeProgramFromPrivateTradingAccount'];
         this['canMakeSignalProviderFromPrivateTradingAccount'] = data['canMakeSignalProviderFromPrivateTradingAccount'];
         this['canMakeSignalProviderFromPrivateExternalTradingAccount'] = data['canMakeSignalProviderFromPrivateExternalTradingAccount'];
@@ -20,6 +21,7 @@ export class DashboardTradingAssetActions {
                 'canAddRequestWithdraw': ApiClient.convertToType(data['canAddRequestWithdraw'], 'boolean'),
                 'canTransferMoney': ApiClient.convertToType(data['canTransferMoney'], 'boolean'),
                 'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
+                'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
                 'canMakeProgramFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeProgramFromPrivateTradingAccount'], 'boolean'),
                 'canMakeSignalProviderFromPrivateTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateTradingAccount'], 'boolean'),
                 'canMakeSignalProviderFromPrivateExternalTradingAccount': ApiClient.convertToType(data['canMakeSignalProviderFromPrivateExternalTradingAccount'], 'boolean'),
