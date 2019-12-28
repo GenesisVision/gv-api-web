@@ -11,6 +11,7 @@ export declare class DashboardTradingAssetActions {
     'canMakeSignalProviderFromProgram': boolean;
     'canEditSignalProviderSettings': boolean;
     'isEnoughMoneyToCreateProgram': boolean;
+    'canConfirm2FA': boolean;
     constructor(data: {
         [key: string]: any;
     });

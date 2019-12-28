@@ -10,6 +10,7 @@ export declare class ProgramFollowOwnerActions {
     'canMakeSignalProviderFromProgram': boolean;
     'canEditSignalProviderSettings': boolean;
     'isEnoughMoneyToCreateProgram': boolean;
+    'canConfirm2FA': boolean;
     constructor(data: {
         [key: string]: any;
     });
