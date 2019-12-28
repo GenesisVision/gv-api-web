@@ -1,3 +1,4 @@
+import { AssetType } from './AssetType';
 import { PlatformEventType } from './PlatformEventType';
 import ApiClient from "../ApiClient";
 export class PlatformEvent {
@@ -8,6 +9,8 @@ export class PlatformEvent {
         this['assetUrl'] = data['assetUrl'];
         this['userUrl'] = data['userUrl'];
         this['value'] = data['value'];
+        this['color'] = data['color'];
+        this['assetType'] = data['assetType'];
         this['date'] = data['date'];
         this['type'] = data['type'];
     }
@@ -20,6 +23,8 @@ export class PlatformEvent {
                 'assetUrl': ApiClient.convertToType(data['assetUrl'], 'string'),
                 'userUrl': ApiClient.convertToType(data['userUrl'], 'string'),
                 'value': ApiClient.convertToType(data['value'], 'string'),
+                'color': ApiClient.convertToType(data['color'], 'string'),
+                'assetType': AssetType.constructFromObject(data['assetType']),
                 'date': ApiClient.convertToType(data['date'], 'Date'),
                 'type': PlatformEventType.constructFromObject(data['type']),
             });

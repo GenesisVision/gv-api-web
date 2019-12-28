@@ -1,3 +1,4 @@
+import { AssetType } from './AssetType';
 import { PlatformEventType } from './PlatformEventType';
 export declare class PlatformEvent {
     'title': string;
@@ -6,6 +7,8 @@ export declare class PlatformEvent {
     'assetUrl': string;
     'userUrl': string;
     'value': string;
+    'color': string;
+    'assetType': AssetType;
     'date': Date;
     'type': PlatformEventType;
     constructor(data: {
