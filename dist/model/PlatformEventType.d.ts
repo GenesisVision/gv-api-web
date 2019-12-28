@@ -1,5 +1,5 @@
 import { GenericFabric } from "../constructFromObject";
-export declare type PlatformEventType = 'NewTradingStrategy' | 'ProgramStarted' | 'FundStarted' | 'PeriodEnded' | 'FundReallocated' | 'FollowTrade' | 'Undefined';
+export declare type PlatformEventType = 'Undefined' | 'ProgramStarted' | 'FundStarted' | 'NewTradingStrategy' | 'PeriodEnded' | 'FundReallocated' | 'FollowTrade';
 export declare const PlatformEventType: {
     constructFromObject: GenericFabric<PlatformEventType>;
 };
