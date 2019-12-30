@@ -1,11 +1,12 @@
-# editor
-.idea
-
 wwwroot/*.js
 node_modules
-typings
+.idea
 
 .env
-.babelrc
-.travis.yml
-git_push.sh
+
+# generated
+/api
+/model
+ApiClient.ts
+constructFromObject.ts
+index.ts
