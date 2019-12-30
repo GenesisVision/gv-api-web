@@ -2,6 +2,7 @@ import ApiClient from "../ApiClient";
 import CancelablePromise from "../cancelable-promise/CancelablePromise.js";
 import { AssetInfo } from "../model/AssetInfo";
 import { CaptchaDetails } from "../model/CaptchaDetails";
+import { LandingInfo } from "../model/LandingInfo";
 import { LevelsParamsInfo } from "../model/LevelsParamsInfo";
 import { PlatformAssets } from "../model/PlatformAssets";
 import { PlatformEvents } from "../model/PlatformEvents";
@@ -22,6 +23,13 @@ export declare class PlatformApi {
     private getPlatformEventsWithHttpInfo;
     getPlatformInfo(): CancelablePromise<PlatformInfo>;
     private getPlatformInfoWithHttpInfo;
+    getPlatformLandingInfo(opts?: {
+        eventsTake?: number;
+        followTake?: number;
+        programsTake?: number;
+        fundsTake?: number;
+    }): CancelablePromise<LandingInfo>;
+    private getPlatformLandingInfoWithHttpInfo;
     getProgramLevels(opts?: {
         currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<ProgramsLevelsInfo>;

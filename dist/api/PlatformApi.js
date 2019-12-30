@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { AssetInfo } from "../model/AssetInfo";
 import { CaptchaDetails } from "../model/CaptchaDetails";
+import { LandingInfo } from "../model/LandingInfo";
 import { LevelsParamsInfo } from "../model/LevelsParamsInfo";
 import { PlatformAssets } from "../model/PlatformAssets";
 import { PlatformEvents } from "../model/PlatformEvents";
@@ -106,6 +107,29 @@ export class PlatformApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = PlatformInfo;
         return this.apiClient.callApi('/v2.0/platform/info', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getPlatformLandingInfo(opts) {
+        return this.getPlatformLandingInfoWithHttpInfo(opts)
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getPlatformLandingInfoWithHttpInfo(opts = {}) {
+        let postBody = null;
+        let pathParams = {};
+        let queryParams = {
+            "eventsTake": opts["eventsTake"],
+            "followTake": opts["followTake"],
+            "programsTake": opts["programsTake"],
+            "fundsTake": opts["fundsTake"]
+        };
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = LandingInfo;
+        return this.apiClient.callApi('/v2.0/platform/landing', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
     getProgramLevels(opts) {
         return this.getProgramLevelsWithHttpInfo(opts)

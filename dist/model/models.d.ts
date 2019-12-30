@@ -129,6 +129,7 @@ export * from './ItemsViewModelSignalTradingEvent';
 export * from './ItemsViewModelTradingAccountDetails';
 export * from './ItemsViewModelTransactionViewModel';
 export * from './ItemsViewModelUserDetailsList';
+export * from './LandingInfo';
 export * from './LevelInfo';
 export * from './LevelsParamsInfo';
 export * from './LoginViewModel';
