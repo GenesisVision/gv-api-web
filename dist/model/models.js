@@ -248,6 +248,7 @@ export * from './TradesSignalViewModel';
 export * from './TradesViewModel';
 export * from './TradingAccountAssetPlatformInfo';
 export * from './TradingAccountCreateResult';
+export * from './TradingAccountDemoDeposit';
 export * from './TradingAccountDetails';
 export * from './TradingAccountMinCreateAmount';
 export * from './TradingAccountPwdUpdate';

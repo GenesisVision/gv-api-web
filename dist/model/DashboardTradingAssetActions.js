@@ -4,6 +4,7 @@ export class DashboardTradingAssetActions {
         this['canAddRequestInvest'] = data['canAddRequestInvest'];
         this['canAddRequestWithdraw'] = data['canAddRequestWithdraw'];
         this['canTransferMoney'] = data['canTransferMoney'];
+        this['canMakeDemoDeposit'] = data['canMakeDemoDeposit'];
         this['canChangePassword'] = data['canChangePassword'];
         this['canClose'] = data['canClose'];
         this['hasTerminal'] = data['hasTerminal'];
@@ -22,6 +23,7 @@ export class DashboardTradingAssetActions {
                 'canAddRequestInvest': ApiClient.convertToType(data['canAddRequestInvest'], 'boolean'),
                 'canAddRequestWithdraw': ApiClient.convertToType(data['canAddRequestWithdraw'], 'boolean'),
                 'canTransferMoney': ApiClient.convertToType(data['canTransferMoney'], 'boolean'),
+                'canMakeDemoDeposit': ApiClient.convertToType(data['canMakeDemoDeposit'], 'boolean'),
                 'canChangePassword': ApiClient.convertToType(data['canChangePassword'], 'boolean'),
                 'canClose': ApiClient.convertToType(data['canClose'], 'boolean'),
                 'hasTerminal': ApiClient.convertToType(data['hasTerminal'], 'boolean'),

@@ -2,6 +2,7 @@ export declare class DashboardTradingAssetActions {
     'canAddRequestInvest': boolean;
     'canAddRequestWithdraw': boolean;
     'canTransferMoney': boolean;
+    'canMakeDemoDeposit': boolean;
     'canChangePassword': boolean;
     'canClose': boolean;
     'hasTerminal': boolean;

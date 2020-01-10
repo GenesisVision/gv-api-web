@@ -23,6 +23,24 @@ export class BrokersApi {
         let returnType = BrokersInfo;
         return this.apiClient.callApi('/v2.0/brokers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
+    getBrokersDemo() {
+        return this.getBrokersDemoWithHttpInfo()
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getBrokersDemoWithHttpInfo() {
+        let postBody = null;
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = BrokersInfo;
+        return this.apiClient.callApi('/v2.0/brokers/demo', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
     getBrokersExternal() {
         return this.getBrokersExternalWithHttpInfo()
             .then(function (response_and_data) {

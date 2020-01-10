@@ -12,6 +12,7 @@ import { NewTradingAccountRequest } from "../model/NewTradingAccountRequest";
 import { ProgramLevelInfo } from "../model/ProgramLevelInfo";
 import { ProgramUpdate } from "../model/ProgramUpdate";
 import { TradingAccountCreateResult } from "../model/TradingAccountCreateResult";
+import { TradingAccountDemoDeposit } from "../model/TradingAccountDemoDeposit";
 import { TradingAccountPwdUpdate } from "../model/TradingAccountPwdUpdate";
 import { TwoFactorAuthenticator } from "../model/TwoFactorAuthenticator";
 import { TwoFactorCodeModel } from "../model/TwoFactorCodeModel";
@@ -68,6 +69,10 @@ export declare class AssetsApi {
         request?: MakeTradingAccountSignalProvider;
     }): CancelablePromise<null>;
     private makeAccountSignalProviderWithHttpInfo;
+    makeDemoTradingAccountDeposit(id: string, authorization: string, opts?: {
+        model?: TradingAccountDemoDeposit;
+    }): CancelablePromise<null>;
+    private makeDemoTradingAccountDepositWithHttpInfo;
     makeExternalAccountSignalProvider(authorization: string, opts?: {
         request?: MakeTradingAccountSignalProvider;
     }): CancelablePromise<null>;
