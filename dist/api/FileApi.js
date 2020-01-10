@@ -4,13 +4,13 @@ export class FileApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
     }
-    getFile(id) {
-        return this.getFileWithHttpInfo(id)
+    getFile(id, opts) {
+        return this.getFileWithHttpInfo(id, opts)
             .then(function (response_and_data) {
             return response_and_data.data;
         });
     }
-    getFileWithHttpInfo(id) {
+    getFileWithHttpInfo(id, opts = {}) {
         let postBody = null;
         if (id === undefined || id === null) {
             throw new Error("Missing the required parameter \"id\" when calling getFile");
@@ -18,7 +18,9 @@ export class FileApi {
         let pathParams = {
             "id": id
         };
-        let queryParams = {};
+        let queryParams = {
+            "quality": opts["quality"]
+        };
         let headerParams = {};
         let formParams = {};
         let authNames = [];

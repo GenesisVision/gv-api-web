@@ -4,7 +4,9 @@ import { UploadResult } from "../model/UploadResult";
 export declare class FileApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
-    getFile(id: string): CancelablePromise<null>;
+    getFile(id: string, opts?: {
+        quality?: 'Low' | 'Medium' | 'High';
+    }): CancelablePromise<null>;
     private getFileWithHttpInfo;
     uploadFile(uploadedFile: any, opts?: {
         authorization?: string;

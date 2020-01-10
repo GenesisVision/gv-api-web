@@ -102,6 +102,7 @@ export * from './FundWithdrawInfo';
 export * from './GeeTestDetails';
 export * from './GeeTestResult';
 export * from './IOsAppVersion';
+export * from './ImageQuality';
 export * from './InternalTransferRequest';
 export * from './InternalTransferRequestType';
 export * from './InvestmentEventItemViewModel';
