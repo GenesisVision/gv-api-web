@@ -31,6 +31,8 @@ export declare class NotificationsApi {
     private getNotificationsProgramSettingsWithHttpInfo;
     getNotificationsSettings(authorization: string): CancelablePromise<NotificationSettingList>;
     private getNotificationsSettingsWithHttpInfo;
+    readAllNotification(authorization: string): CancelablePromise<null>;
+    private readAllNotificationWithHttpInfo;
     readNotification(id: string, authorization: string): CancelablePromise<null>;
     private readNotificationWithHttpInfo;
     removeNotificationsSettings(id: string, authorization: string): CancelablePromise<null>;
