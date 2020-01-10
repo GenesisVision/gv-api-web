@@ -4,6 +4,7 @@ export declare class DashboardTradingAssetActions {
     'canTransferMoney': boolean;
     'canChangePassword': boolean;
     'canClose': boolean;
+    'hasTerminal': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateExternalTradingAccount': boolean;

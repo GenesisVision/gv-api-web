@@ -22,7 +22,7 @@ export declare class WalletApi {
         model?: CreateWithdrawalRequestModel;
     }): CancelablePromise<null>;
     private createWithdrawalRequestWithHttpInfo;
-    getAccountsAvailable(currency: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
+    getAccountsAvailable(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
     private getAccountsAvailableWithHttpInfo;
     getGMCommissionData(authorization: string): CancelablePromise<UserCommissionData>;
     private getGMCommissionDataWithHttpInfo;
@@ -30,7 +30,7 @@ export declare class WalletApi {
         transactionType?: 'All' | 'Withdrawal' | 'Deposit' | 'Platform';
         dateFrom?: Date;
         dateTo?: Date;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
@@ -39,16 +39,16 @@ export declare class WalletApi {
         transactionType?: 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward';
         dateFrom?: Date;
         dateTo?: Date;
-        currency?: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelTransactionViewModel>;
     private getTransactionsInternalWithHttpInfo;
     getUserWithdrawalSummary(authorization: string): CancelablePromise<WithdrawalSummary>;
     private getUserWithdrawalSummaryWithHttpInfo;
-    getWalletAvailable(currency: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
+    getWalletAvailable(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletMultiAvailable>;
     private getWalletAvailableWithHttpInfo;
-    getWalletSummary(currency: 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR', authorization: string): CancelablePromise<WalletSummary>;
+    getWalletSummary(currency: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR', authorization: string): CancelablePromise<WalletSummary>;
     private getWalletSummaryWithHttpInfo;
     resendWithdrawalRequestEmail(txId: string, authorization: string): CancelablePromise<null>;
     private resendWithdrawalRequestEmailWithHttpInfo;
