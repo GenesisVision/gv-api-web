@@ -2,6 +2,7 @@ export declare class PrivateTradingAccountOwnerActions {
     'canClose': boolean;
     'canChangePassword': boolean;
     'canTransferMoney': boolean;
+    'canMakeDemoDeposit': boolean;
     'canMakeProgramFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateTradingAccount': boolean;
     'canMakeSignalProviderFromPrivateExternalTradingAccount': boolean;
