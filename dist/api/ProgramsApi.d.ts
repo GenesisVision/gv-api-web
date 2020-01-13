@@ -120,6 +120,7 @@ export declare class ProgramsApi {
         levelMin?: number;
         levelMax?: number;
         levelsSet?: Array<number>;
+        includeWithInvestments?: boolean;
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;

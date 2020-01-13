@@ -163,6 +163,7 @@ export class FundsApi {
             "Sorting": opts["sorting"],
             "ShowIn": opts["showIn"],
             "Assets": this.apiClient.buildCollectionParam(opts["assets"], "multi"),
+            "IncludeWithInvestments": opts["includeWithInvestments"],
             "DateFrom": opts["dateFrom"],
             "DateTo": opts["dateTo"],
             "ChartPointsCount": opts["chartPointsCount"],
