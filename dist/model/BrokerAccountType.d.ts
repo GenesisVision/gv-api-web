@@ -11,7 +11,7 @@ export declare class BrokerAccountType {
     };
     'isKycRequired': boolean;
     'isSignalsAvailable': boolean;
-    'isDemo': boolean;
+    'isDepositRequired': boolean;
     constructor(data: {
         [key: string]: any;
     });
