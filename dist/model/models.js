@@ -81,6 +81,7 @@ export * from './FollowAssetPlatformInfo';
 export * from './FollowCreateAssetPlatformInfo';
 export * from './FollowDetailsFull';
 export * from './FollowDetailsListItem';
+export * from './FollowNotificationSettingList';
 export * from './ForgotPasswordViewModel';
 export * from './FundAssetDetails';
 export * from './FundAssetInfo';

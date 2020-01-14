@@ -1,3 +1,4 @@
+import { FollowNotificationSettingList } from './FollowNotificationSettingList';
 import { FundNotificationSettingList } from './FundNotificationSettingList';
 import { ManagerNotificationSettingList } from './ManagerNotificationSettingList';
 import { NotificationSettingViewModel } from './NotificationSettingViewModel';
@@ -9,6 +10,7 @@ export class NotificationSettingList {
         this['settingsProgram'] = data['settingsProgram'];
         this['settingsFund'] = data['settingsFund'];
         this['settingsManager'] = data['settingsManager'];
+        this['settingsFollow'] = data['settingsFollow'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -17,6 +19,7 @@ export class NotificationSettingList {
                 'settingsProgram': ApiClient.convertToType(data['settingsProgram'], [ProgramNotificationSettingList]),
                 'settingsFund': ApiClient.convertToType(data['settingsFund'], [FundNotificationSettingList]),
                 'settingsManager': ApiClient.convertToType(data['settingsManager'], [ManagerNotificationSettingList]),
+                'settingsFollow': ApiClient.convertToType(data['settingsFollow'], [FollowNotificationSettingList]),
             });
         }
     }
