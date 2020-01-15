@@ -2,8 +2,10 @@ import { ItemsViewModelFollowDetailsListItem } from './ItemsViewModelFollowDetai
 import { ItemsViewModelFundDetailsListItem } from './ItemsViewModelFundDetailsListItem';
 import { ItemsViewModelProgramDetailsListItem } from './ItemsViewModelProgramDetailsListItem';
 import { PlatformEvent } from './PlatformEvent';
+import { PlatformNews } from './PlatformNews';
 export declare class LandingInfo {
     'events': Array<PlatformEvent>;
+    'news': Array<PlatformNews>;
     'follows': ItemsViewModelFollowDetailsListItem;
     'programs': ItemsViewModelProgramDetailsListItem;
     'funds': ItemsViewModelFundDetailsListItem;

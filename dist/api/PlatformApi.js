@@ -121,7 +121,8 @@ export class PlatformApi {
             "eventsTake": opts["eventsTake"],
             "followTake": opts["followTake"],
             "programsTake": opts["programsTake"],
-            "fundsTake": opts["fundsTake"]
+            "fundsTake": opts["fundsTake"],
+            "newsTake": opts["newsTake"]
         };
         let headerParams = {};
         let formParams = {};

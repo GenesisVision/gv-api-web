@@ -179,6 +179,7 @@ export * from './PlatformEvent';
 export * from './PlatformEventType';
 export * from './PlatformEvents';
 export * from './PlatformInfo';
+export * from './PlatformNews';
 export * from './PlatformUrlInfo';
 export * from './PlatformUrlType';
 export * from './PowDetails';
