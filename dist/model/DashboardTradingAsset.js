@@ -6,6 +6,7 @@ import { DashboardTradingAssetCommonDetails } from './DashboardTradingAssetCommo
 import { DashboardTradingAssetPublicDetails } from './DashboardTradingAssetPublicDetails';
 import { DashboardTradingAssetSignalDetails } from './DashboardTradingAssetSignalDetails';
 import { ProfitChart } from './ProfitChart';
+import { Tag } from './Tag';
 import ApiClient from "../ApiClient";
 export class DashboardTradingAsset {
     constructor(data) {
@@ -18,6 +19,7 @@ export class DashboardTradingAsset {
         this['signalInfo'] = data['signalInfo'];
         this['broker'] = data['broker'];
         this['actions'] = data['actions'];
+        this['tags'] = data['tags'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -31,6 +33,7 @@ export class DashboardTradingAsset {
                 'signalInfo': DashboardTradingAssetSignalDetails.constructFromObject(data['signalInfo']),
                 'broker': DashboardTradingAssetBrokerDetails.constructFromObject(data['broker']),
                 'actions': DashboardTradingAssetActions.constructFromObject(data['actions']),
+                'tags': ApiClient.convertToType(data['tags'], [Tag]),
             });
         }
     }

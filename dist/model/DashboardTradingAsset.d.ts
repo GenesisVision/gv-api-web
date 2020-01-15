@@ -6,6 +6,7 @@ import { DashboardTradingAssetCommonDetails } from './DashboardTradingAssetCommo
 import { DashboardTradingAssetPublicDetails } from './DashboardTradingAssetPublicDetails';
 import { DashboardTradingAssetSignalDetails } from './DashboardTradingAssetSignalDetails';
 import { ProfitChart } from './ProfitChart';
+import { Tag } from './Tag';
 export declare class DashboardTradingAsset {
     'id': string;
     'assetType': AssetType;
@@ -16,6 +17,7 @@ export declare class DashboardTradingAsset {
     'signalInfo': DashboardTradingAssetSignalDetails;
     'broker': DashboardTradingAssetBrokerDetails;
     'actions': DashboardTradingAssetActions;
+    'tags': Array<Tag>;
     constructor(data: {
         [key: string]: any;
     });
