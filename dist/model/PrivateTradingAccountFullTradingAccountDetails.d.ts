@@ -15,5 +15,5 @@ export declare class PrivateTradingAccountFullTradingAccountDetails {
         [key: string]: any;
     }): PrivateTradingAccountFullTradingAccountDetails | undefined;
 }
-declare type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+declare type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};
