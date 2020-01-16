@@ -1,3 +1,5 @@
+import querystring from "querystring";
+
 export const buildPathString = (path: string, pathParams: { [key: string]: any }): string => {
     if (!path.match(/^\//)) {
         path = '/' + path;
@@ -25,12 +27,11 @@ export const paramToString = (param?: string | number | Date) => {
 }
 
 export const buildQueryString = (path: string, queryParams: { [key: string]: any }): string => {
+    const cleanObject = JSON.parse(JSON.stringify(queryParams));
+    const string = querystring.stringify(cleanObject);
     const url = new URL(path);
-    for (let key in queryParams) {
-        if (queryParams[key] !== undefined && queryParams[key].length !== 0) {
-            url.searchParams.append(key, queryParams[key]);
-        }
-    }
+    url.search = string;
+    
     return url.toString();
 }
 
