@@ -1,4 +1,4 @@
-import ApiClient from "../apiClient";
+import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AttachToExternalSignalProviderCommon } from '../model/AttachToExternalSignalProviderCommon';
 import { AttachToExternalSignalProviderExt } from '../model/AttachToExternalSignalProviderExt';

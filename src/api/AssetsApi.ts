@@ -1,4 +1,4 @@
-import ApiClient from "../apiClient";
+import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';

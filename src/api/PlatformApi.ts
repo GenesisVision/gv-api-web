@@ -1,4 +1,4 @@
-import ApiClient from "../apiClient";
+import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AssetInfo } from '../model/AssetInfo';
 import { CaptchaDetails } from '../model/CaptchaDetails';

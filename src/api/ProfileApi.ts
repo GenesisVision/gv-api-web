@@ -1,4 +1,4 @@
-import ApiClient from "../apiClient";
+import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FcmTokenViewModel } from '../model/FcmTokenViewModel';
