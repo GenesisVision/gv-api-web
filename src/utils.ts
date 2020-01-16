@@ -31,7 +31,7 @@ export const buildQueryString = (path: string, queryParams: { [key: string]: any
     const string = querystring.stringify(cleanObject);
     const url = new URL(path);
     url.search = string;
-    
+
     return url.toString();
 }
 
