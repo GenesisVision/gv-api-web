@@ -1,12 +1,2 @@
-wwwroot/*.js
 node_modules
-.idea
-
 .env
-
-# generated
-/api
-/model
-ApiClient.ts
-constructFromObject.ts
-index.ts

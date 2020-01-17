@@ -1,0 +1,1 @@
+export type BrokerTradeServerType = 'MetaTrader5' | 'Undefined' | 'MetaTrader4' | 'NinjaTrader' | 'cTrader' | 'Rumus' | 'Metastock' | 'IDEX' | 'Huobi' | 'Exante' | 'BinanceFollow';
