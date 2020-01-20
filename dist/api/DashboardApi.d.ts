@@ -19,7 +19,7 @@ export declare class DashboardApi {
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<DashboardChart>;
     private getChartWithHttpInfo;
     getChartAssets(authorization: string): CancelablePromise<DashboardChartAssets>;
@@ -29,13 +29,13 @@ export declare class DashboardApi {
     }): CancelablePromise<DashboardAssets>;
     private getHoldingsWithHttpInfo;
     getInvestingDetails(authorization: string, opts?: {
-        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         eventsTake?: number;
     }): CancelablePromise<DashboardInvestingDetails>;
     private getInvestingDetailsWithHttpInfo;
     getInvestingFunds(authorization: string, opts?: {
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'BySizeAsc' | 'BySizeDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByValueAsc' | 'ByValueDesc';
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         status?: 'All' | 'Active';
         dateFrom?: Date;
         dateTo?: Date;
@@ -50,7 +50,7 @@ export declare class DashboardApi {
     private getInvestingFundsWithHttpInfo;
     getInvestingPrograms(authorization: string, opts?: {
         sorting?: 'ByTitleAsc' | 'ByTitleDesc' | 'ByEquityAsc' | 'ByEquityDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPeriodAsc' | 'ByPeriodDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByLevelProgressAsc' | 'ByLevelProgressDesc' | 'ByLevelAsc' | 'ByLevelDesc' | 'ByValueAsc' | 'ByValueDesc';
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         status?: 'All' | 'Active';
         dateFrom?: Date;
         dateTo?: Date;
@@ -67,7 +67,7 @@ export declare class DashboardApi {
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<ItemsViewModelDashboardTradingAsset>;
     private getMostProfitableAssetsWithHttpInfo;
     getPortfolio(authorization: string): CancelablePromise<DashboardPortfolio>;
@@ -76,7 +76,7 @@ export declare class DashboardApi {
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         status?: 'All' | 'Active';
         skip?: number;
         take?: number;
@@ -86,24 +86,24 @@ export declare class DashboardApi {
         dateFrom?: Date;
         dateTo?: Date;
         chartPointsCount?: number;
-        showIn?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        showIn?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         status?: 'All' | 'Active';
         skip?: number;
         take?: number;
     }): CancelablePromise<ItemsViewModelDashboardTradingAsset>;
     private getPublicTradingAssetsWithHttpInfo;
     getRecommendations(authorization: string, opts?: {
-        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         take?: number;
         onlyFollows?: boolean;
     }): CancelablePromise<CommonPublicAssetsViewModel>;
     private getRecommendationsWithHttpInfo;
     getSummary(authorization: string, opts?: {
-        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<DashboardSummary>;
     private getSummaryWithHttpInfo;
     getTradingDetails(authorization: string, opts?: {
-        currency?: 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
         eventsTake?: number;
     }): CancelablePromise<DashboardTradingDetails>;
     private getTradingDetailsWithHttpInfo;
