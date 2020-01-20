@@ -9,7 +9,7 @@ export declare class InvestmentsApi {
     cancelRequest(id: string, authorization: string): CancelablePromise<null>;
     private cancelRequestWithHttpInfo;
     getFundWithdrawInfo(id: string, authorization: string, opts?: {
-        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<FundWithdrawInfo>;
     private getFundWithdrawInfoWithHttpInfo;
     getProgramWithdrawInfo(id: string, authorization: string): CancelablePromise<ProgramWithdrawInfo>;
@@ -34,7 +34,7 @@ export declare class InvestmentsApi {
     private switchReinvestOnWithHttpInfo;
     withdrawFromFund(id: string, authorization: string, opts?: {
         percent?: number;
-        currency?: 'USD' | 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<null>;
     private withdrawFromFundWithHttpInfo;
     withdrawFromProgram(id: string, authorization: string, opts?: {
