@@ -60,9 +60,9 @@ export default class EventsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,

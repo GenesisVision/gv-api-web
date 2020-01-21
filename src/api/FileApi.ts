@@ -31,9 +31,9 @@ export default class FileApi {
         quality: quality
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -66,11 +66,9 @@ export default class FileApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
     body = new FormData();
-    contentType = "multipart/form-data";
     body.append("uploadedFile", uploadedFile);
 
     return this.apiClient.fetch(query, {
@@ -78,7 +76,6 @@ export default class FileApi {
         method: "POST",
         body,
         headers: {
-            "Content-Type": contentType,
             Authorization: authorization || ""
         }
     }).then(handleErrors).then<UploadResult>((response: Response) => {

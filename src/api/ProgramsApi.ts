@@ -38,9 +38,9 @@ export default class ProgramsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -94,9 +94,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -153,9 +153,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -215,9 +215,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -276,9 +276,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -322,9 +322,9 @@ export default class ProgramsApi {
         Currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -368,9 +368,9 @@ export default class ProgramsApi {
         Currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -404,9 +404,9 @@ export default class ProgramsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -457,9 +457,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -514,9 +514,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -566,9 +566,9 @@ export default class ProgramsApi {
         currencies: currencies
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -614,9 +614,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -696,9 +696,9 @@ export default class ProgramsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -733,9 +733,9 @@ export default class ProgramsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,

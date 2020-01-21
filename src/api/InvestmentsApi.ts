@@ -32,9 +32,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -74,9 +74,9 @@ export default class InvestmentsApi {
         currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -111,9 +111,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -153,9 +153,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -200,9 +200,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -245,9 +245,9 @@ export default class InvestmentsApi {
         walletId: walletId
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -290,9 +290,9 @@ export default class InvestmentsApi {
         walletId: walletId
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -327,9 +327,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -364,9 +364,9 @@ export default class InvestmentsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -409,9 +409,9 @@ export default class InvestmentsApi {
         currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -454,9 +454,9 @@ export default class InvestmentsApi {
         withdrawAll: withdrawAll
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,

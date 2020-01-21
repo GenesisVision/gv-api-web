@@ -46,9 +46,9 @@ export default class NotificationsApi {
         ConditionAmount: conditionAmount
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -78,9 +78,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -118,9 +118,9 @@ export default class NotificationsApi {
         take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -155,9 +155,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -192,9 +192,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -229,9 +229,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -261,9 +261,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -293,9 +293,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -330,9 +330,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -367,9 +367,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -409,9 +409,9 @@ export default class NotificationsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,

@@ -35,9 +35,9 @@ export default class FundsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -82,9 +82,9 @@ export default class FundsApi {
         Currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -128,9 +128,9 @@ export default class FundsApi {
         Currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -167,9 +167,9 @@ export default class FundsApi {
         currency: currency
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -220,9 +220,9 @@ export default class FundsApi {
         chartAssetsCount: chartAssetsCount
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -289,9 +289,9 @@ export default class FundsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -336,9 +336,9 @@ export default class FundsApi {
         Take: take
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -372,9 +372,9 @@ export default class FundsApi {
     const query = buildQueryString(path, {
     })
 
-    let contentType = "application/json";
     let body = null;
 
+    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
