@@ -26,5 +26,5 @@ export declare class SignalSubscription {
     }): SignalSubscription | undefined;
 }
 declare type DetachModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
-declare type FixedCurrencyEnum = 'USDT' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
+declare type FixedCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
 export {};
