@@ -33,11 +33,11 @@ export declare class PlatformApi {
     }): CancelablePromise<LandingInfo>;
     private getPlatformLandingInfoWithHttpInfo;
     getProgramLevels(opts?: {
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<ProgramsLevelsInfo>;
     private getProgramLevelsWithHttpInfo;
     getProgramLevelsParams(opts?: {
-        currency?: 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+        currency?: 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
     }): CancelablePromise<LevelsParamsInfo>;
     private getProgramLevelsParamsWithHttpInfo;
     getRiskControlInfo(route: string, opts?: {
