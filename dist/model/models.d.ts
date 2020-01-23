@@ -238,6 +238,7 @@ export * from './SignalSubscription';
 export * from './SignalTradingEvent';
 export * from './SimpleChart';
 export * from './SimpleChartPoint';
+export * from './SiteMapInfo';
 export * from './SocialLinkType';
 export * from './SocialLinkViewModel';
 export * from './SocialLinksViewModel';

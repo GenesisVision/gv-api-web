@@ -8,6 +8,7 @@ import { PlatformAssets } from "../model/PlatformAssets";
 import { PlatformEvents } from "../model/PlatformEvents";
 import { PlatformInfo } from "../model/PlatformInfo";
 import { ProgramsLevelsInfo } from "../model/ProgramsLevelsInfo";
+import { SiteMapInfo } from "../model/SiteMapInfo";
 export declare class PlatformApi {
     private apiClient;
     constructor(apiClient?: ApiClient);
@@ -44,4 +45,6 @@ export declare class PlatformApi {
         version?: string;
     }): CancelablePromise<CaptchaDetails>;
     private getRiskControlInfoWithHttpInfo;
+    getSitemapInfo(): CancelablePromise<SiteMapInfo>;
+    private getSitemapInfoWithHttpInfo;
 }

@@ -7,6 +7,7 @@ import { PlatformAssets } from "../model/PlatformAssets";
 import { PlatformEvents } from "../model/PlatformEvents";
 import { PlatformInfo } from "../model/PlatformInfo";
 import { ProgramsLevelsInfo } from "../model/ProgramsLevelsInfo";
+import { SiteMapInfo } from "../model/SiteMapInfo";
 export class PlatformApi {
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
@@ -196,5 +197,23 @@ export class PlatformApi {
         let accepts = ["text/plain", "application/json", "text/json"];
         let returnType = CaptchaDetails;
         return this.apiClient.callApi('/v2.0/platform/riskcontrol', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
+    }
+    getSitemapInfo() {
+        return this.getSitemapInfoWithHttpInfo()
+            .then(function (response_and_data) {
+            return response_and_data.data;
+        });
+    }
+    getSitemapInfoWithHttpInfo() {
+        let postBody = null;
+        let pathParams = {};
+        let queryParams = {};
+        let headerParams = {};
+        let formParams = {};
+        let authNames = [];
+        let contentTypes = [];
+        let accepts = ["text/plain", "application/json", "text/json"];
+        let returnType = SiteMapInfo;
+        return this.apiClient.callApi('/v2.0/platform/sitemap', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType);
     }
 }
