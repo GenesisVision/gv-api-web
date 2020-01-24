@@ -9,6 +9,7 @@ import { PlatformAssets } from '../model/PlatformAssets';
 import { PlatformEvents } from '../model/PlatformEvents';
 import { PlatformInfo } from '../model/PlatformInfo';
 import { ProgramsLevelsInfo } from '../model/ProgramsLevelsInfo';
+import { SiteMapInfo } from '../model/SiteMapInfo';
 
 export default class PlatformApi {
     private apiClient: ApiClient;
@@ -299,6 +300,32 @@ export default class PlatformApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<CaptchaDetails>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getSitemapInfo = (        options: {
+        } = {},
+        init: RequestInit = {}) => {
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/sitemap", {
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<SiteMapInfo>((response: Response) => {
         return response.json();
     })
     }

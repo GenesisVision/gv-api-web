@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "querystring": "^0.2.0",
-    "dotenv": "^8.0.0"
+    "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "dotenv": "^8.0.0"
   }
 }

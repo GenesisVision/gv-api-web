@@ -237,6 +237,7 @@ export { SignalSubscription } from "./model/SignalSubscription";
 export { SignalTradingEvent } from "./model/SignalTradingEvent";
 export { SimpleChart } from "./model/SimpleChart";
 export { SimpleChartPoint } from "./model/SimpleChartPoint";
+export { SiteMapInfo } from "./model/SiteMapInfo";
 export { SocialLinkType } from "./model/SocialLinkType";
 export { SocialLinkViewModel } from "./model/SocialLinkViewModel";
 export { SocialLinksViewModel } from "./model/SocialLinksViewModel";
