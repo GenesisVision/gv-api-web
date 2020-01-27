@@ -6,6 +6,7 @@ export declare class PlatformAsset {
     'icon': string;
     'color': string;
     'mandatoryFundPercent': number;
+    'url': string;
     constructor(data: {
         [key: string]: any;
     });

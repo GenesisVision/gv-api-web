@@ -8,6 +8,7 @@ export class PlatformAsset {
         this['icon'] = data['icon'];
         this['color'] = data['color'];
         this['mandatoryFundPercent'] = data['mandatoryFundPercent'];
+        this['url'] = data['url'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -19,6 +20,7 @@ export class PlatformAsset {
                 'icon': ApiClient.convertToType(data['icon'], 'string'),
                 'color': ApiClient.convertToType(data['color'], 'string'),
                 'mandatoryFundPercent': ApiClient.convertToType(data['mandatoryFundPercent'], 'number'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
             });
         }
     }

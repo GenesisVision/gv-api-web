@@ -6,6 +6,7 @@ export class FundAssetInfo {
         this['icon'] = data['icon'];
         this['target'] = data['target'];
         this['current'] = data['current'];
+        this['url'] = data['url'];
     }
     static constructFromObject(data) {
         if (data) {
@@ -15,6 +16,7 @@ export class FundAssetInfo {
                 'icon': ApiClient.convertToType(data['icon'], 'string'),
                 'target': ApiClient.convertToType(data['target'], 'number'),
                 'current': ApiClient.convertToType(data['current'], 'number'),
+                'url': ApiClient.convertToType(data['url'], 'string'),
             });
         }
     }

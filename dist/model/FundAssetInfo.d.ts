@@ -4,6 +4,7 @@ export declare class FundAssetInfo {
     'icon': string;
     'target': number;
     'current': number;
+    'url': string;
     constructor(data: {
         [key: string]: any;
     });
