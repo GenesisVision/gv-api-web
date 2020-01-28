@@ -39,9 +39,16 @@ export const handleErrors = async (response: Response) => {
     if (response.ok) {
         return response;
     }
-    const body = await response.json();
-    return Promise.reject({
-        body,
-        statusCode: response.status
-    });
+    try {
+        const body = await response.json();
+        return Promise.reject({
+            body,
+            statusCode: response.status
+        });
+    } catch (e) {
+        return Promise.reject({
+            body: response.statusText,
+            statusCode: response.status
+        });
+    }
 }
