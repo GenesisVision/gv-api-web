@@ -22,4 +22,4 @@ export interface SignalSubscription {
 }
 
 type DetachModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
-type FixedCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'Undefined' | 'GVT' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type FixedCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
