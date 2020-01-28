@@ -6,5 +6,6 @@ export interface PlatformAsset {
     icon: string;
     color: string;
     mandatoryFundPercent: number;
+    url: string;
 }
 

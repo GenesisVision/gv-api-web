@@ -4,5 +4,6 @@ export interface FundAssetInfo {
     icon: string;
     target: number;
     current: number;
+    url: string;
 }
 
