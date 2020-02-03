@@ -5,6 +5,7 @@ export interface RegisterViewModel {
     confirmPassword: string;
     userName: string;
     refCode: string;
+    utmSource: string;
     isAuto: boolean;
     email: string;
     captchaCheckResult: CaptchaCheckResult;
