@@ -253,6 +253,7 @@ export { TradingAccountAssetPlatformInfo } from "./model/TradingAccountAssetPlat
 export { TradingAccountCreateResult } from "./model/TradingAccountCreateResult";
 export { TradingAccountDemoDeposit } from "./model/TradingAccountDemoDeposit";
 export { TradingAccountDetails } from "./model/TradingAccountDetails";
+export { TradingAccountMaxCreateAmount } from "./model/TradingAccountMaxCreateAmount";
 export { TradingAccountMinCreateAmount } from "./model/TradingAccountMinCreateAmount";
 export { TradingAccountPwdUpdate } from "./model/TradingAccountPwdUpdate";
 export { TransactionAssetDetails } from "./model/TransactionAssetDetails";
