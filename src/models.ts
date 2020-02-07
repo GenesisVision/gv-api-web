@@ -276,6 +276,7 @@ export { UserCommissionData } from "./model/UserCommissionData";
 export { UserDetailsList } from "./model/UserDetailsList";
 export { UserVerificationStatus } from "./model/UserVerificationStatus";
 export { UsersPlatformInfo } from "./model/UsersPlatformInfo";
+export { UtmSource } from "./model/UtmSource";
 export { WalletBaseData } from "./model/WalletBaseData";
 export { WalletData } from "./model/WalletData";
 export { WalletDeposit } from "./model/WalletDeposit";
