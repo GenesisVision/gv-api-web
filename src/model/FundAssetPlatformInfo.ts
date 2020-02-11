@@ -7,6 +7,7 @@ export interface FundAssetPlatformInfo {
     facets: Array<AssetFacet>;
     assets: Array<PlatformAsset>;
     minInvestAmountIntoFund: Array<AmountWithCurrency>;
+    minWithdrawAmountFromFund: Array<AmountWithCurrency>;
     createFundInfo: FundCreateAssetPlatformInfo;
 }
 
