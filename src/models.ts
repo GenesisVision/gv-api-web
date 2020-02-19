@@ -244,6 +244,7 @@ export { SocialLinksViewModel } from "./model/SocialLinksViewModel";
 export { SubscriptionMode } from "./model/SubscriptionMode";
 export { Tag } from "./model/Tag";
 export { Timeframe } from "./model/Timeframe";
+export { TradeAssetData } from "./model/TradeAssetData";
 export { TradeDirectionType } from "./model/TradeDirectionType";
 export { TradeEntryType } from "./model/TradeEntryType";
 export { TradesDelay } from "./model/TradesDelay";

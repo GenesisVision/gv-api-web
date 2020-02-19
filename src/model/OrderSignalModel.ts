@@ -2,6 +2,7 @@ import { Currency } from './Currency';
 import { FeeDetails } from './FeeDetails';
 import { OrderModelSignalData } from './OrderModelSignalData';
 import { OrderSignalProgramInfo } from './OrderSignalProgramInfo';
+import { TradeAssetData } from './TradeAssetData';
 import { TradeDirectionType } from './TradeDirectionType';
 import { TradeEntryType } from './TradeEntryType';
 
@@ -29,6 +30,7 @@ export interface OrderSignalModel {
     commission: number;
     swap: number;
     showOriginalCommission: boolean;
+    assetData: TradeAssetData;
     signalData: OrderModelSignalData;
 }
 
