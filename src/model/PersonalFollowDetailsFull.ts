@@ -5,5 +5,6 @@ export interface PersonalFollowDetailsFull {
     guestActions: AssetGuestActions;
     hasNotifications: boolean;
     subscribedAccounts: number;
+    successFeePersonal: number;
 }
 
