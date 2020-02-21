@@ -6,5 +6,6 @@ export interface PersonalFollowDetailsFull {
     hasNotifications: boolean;
     subscribedAccounts: number;
     successFeePersonal: number;
+    volumeFeePersonal: number;
 }
 
