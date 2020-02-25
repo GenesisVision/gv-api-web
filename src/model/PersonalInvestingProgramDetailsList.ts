@@ -6,6 +6,7 @@ export interface PersonalInvestingProgramDetailsList {
     isReinvest: boolean;
     canInvest: boolean;
     canWithdraw: boolean;
+    canChangeReinvest: boolean;
     share: number;
     value: number;
     profit: number;

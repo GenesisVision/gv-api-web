@@ -7,6 +7,7 @@ export interface PersonalProgramDetails {
     isInvested: boolean;
     canInvest: boolean;
     canWithdraw: boolean;
+    canChangeReinvest: boolean;
     hasNotifications: boolean;
     showTwoFactorButton: boolean;
     value: number;
