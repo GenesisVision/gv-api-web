@@ -14,6 +14,7 @@ export interface FollowDetailsListItem {
     subscribersCount: number;
     tradesCount: number;
     status: string;
+    equity: number;
     url: string;
     color: string;
     isExternal: boolean;
