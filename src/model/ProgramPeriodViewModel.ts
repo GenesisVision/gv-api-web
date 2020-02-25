@@ -8,6 +8,7 @@ export interface ProgramPeriodViewModel {
     status: PeriodStatus;
     number: number;
     profit: number;
+    profitPercent: number;
     balance: number;
     investors: number;
     managerDeposit: number;
