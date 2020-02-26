@@ -1,1 +1,1 @@
-export type PlatformEventType = 'FundStarted' | 'ProgramStarted' | 'PeriodEnded' | 'FundReallocated' | 'FollowTrade' | 'Undefined' | 'NewTradingStrategy';
+export type PlatformEventType = 'Undefined' | 'ProgramStarted' | 'FundStarted' | 'NewTradingStrategy' | 'PeriodEnded' | 'FundReallocated' | 'FollowTrade';
