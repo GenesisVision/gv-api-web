@@ -4,6 +4,7 @@ import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FundBalanceChart } from '../model/FundBalanceChart';
 import { FundDetailsFull } from '../model/FundDetailsFull';
+import { FundDetailsListItem } from '../model/FundDetailsListItem';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
 import { ItemsViewModelFundDetailsListItem } from '../model/ItemsViewModelFundDetailsListItem';
 import { ItemsViewModelReallocationModel } from '../model/ItemsViewModelReallocationModel';
@@ -302,6 +303,37 @@ export default class FundsApi {
             Authorization: authorization || ""
         }
     }).then(handleErrors).then<ItemsViewModelFundDetailsListItem>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getLastChallengeWinner = (        options: {
+            chartPointsCount?: number
+        } = {},
+        init: RequestInit = {}) => {
+        const {
+            chartPointsCount
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/challenge/winner", {
+    })
+
+    const query = buildQueryString(path, {
+        chartPointsCount: chartPointsCount
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<FundDetailsListItem>((response: Response) => {
         return response.json();
     })
     }
