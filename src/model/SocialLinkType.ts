@@ -1,1 +1,1 @@
-export type SocialLinkType = 'Undefined' | 'Twitter' | 'Telegram' | 'Facebook' | 'LinkedIn' | 'Youtube' | 'WeChat' | 'Email' | 'Website' | 'Reddit' | 'GitHub';
+export type SocialLinkType = 'Twitter' | 'Telegram' | 'Facebook' | 'Youtube' | 'WeChat' | 'Email' | 'Undefined' | 'LinkedIn' | 'Website' | 'Reddit' | 'GitHub';
