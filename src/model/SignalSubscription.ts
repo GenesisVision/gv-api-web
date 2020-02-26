@@ -19,7 +19,9 @@ export interface SignalSubscription {
     fixedCurrency: FixedCurrencyEnum;
     totalProfit: number;
     totalVolume: number;
+    successFeePersonal: number;
+    volumeFeePersonal: number;
 }
 
 type DetachModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
-type FixedCurrencyEnum = 'USD' | 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type FixedCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
