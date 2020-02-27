@@ -1,3 +1,4 @@
+import { AmountWithCurrency } from './AmountWithCurrency';
 import { BrokerTradeServerType } from './BrokerTradeServerType';
 import { PersonalFollowDetailsList } from './PersonalFollowDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
@@ -14,7 +15,6 @@ export interface FollowDetailsListItem {
     subscribersCount: number;
     tradesCount: number;
     status: string;
-    equity: number;
     url: string;
     color: string;
     isExternal: boolean;
@@ -26,6 +26,7 @@ export interface FollowDetailsListItem {
     statistic: ProfitChart;
     personalDetails: PersonalFollowDetailsList;
     tags: Array<Tag>;
+    balance: AmountWithCurrency;
 }
 
-type CurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type CurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
