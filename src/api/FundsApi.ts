@@ -308,10 +308,12 @@ export default class FundsApi {
     }
 
     getLastChallengeWinner = (        options: {
+            authorization?: string,
             chartPointsCount?: number
         } = {},
         init: RequestInit = {}) => {
         const {
+            authorization,
             chartPointsCount
         } = options;
 
@@ -332,6 +334,7 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<FundDetailsListItem>((response: Response) => {
         return response.json();
