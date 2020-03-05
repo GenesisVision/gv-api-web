@@ -8,4 +8,4 @@ export interface TradingAccountDetails {
     asset: AssetDetails;
 }
 
-type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type CurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'USD' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
