@@ -19,4 +19,4 @@ export interface PersonalFundDetails {
     exitFeePersonal: number;
 }
 
-type PendingInOutCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'GVT' | 'USD' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type PendingInOutCurrencyEnum = 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'USD' | 'EUR';
