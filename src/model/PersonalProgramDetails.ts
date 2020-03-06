@@ -4,6 +4,7 @@ import { MigrationRequest } from './MigrationRequest';
 export interface PersonalProgramDetails {
     isFavorite: boolean;
     isReinvest: boolean;
+    isAutoJoin: boolean;
     isInvested: boolean;
     canInvest: boolean;
     canWithdraw: boolean;

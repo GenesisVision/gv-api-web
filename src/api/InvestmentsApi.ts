@@ -307,6 +307,80 @@ export default class InvestmentsApi {
     })
     }
 
+    switchAutoJoinOff = (
+        id: string,
+        authorization: string,
+        options: {
+        } = {},
+        init: RequestInit = {}) => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOff.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling switchAutoJoinOff.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/off", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            "Content-Type": contentType,
+            Authorization: authorization || ""
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
+
+    switchAutoJoinOn = (
+        id: string,
+        authorization: string,
+        options: {
+        } = {},
+        init: RequestInit = {}) => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOn.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling switchAutoJoinOn.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/on", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            "Content-Type": contentType,
+            Authorization: authorization || ""
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
+
     switchReinvestOff = (
         id: string,
         authorization: string,
