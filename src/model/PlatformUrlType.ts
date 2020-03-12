@@ -1,1 +1,0 @@
-export type PlatformUrlType = 0 | 1 | 2 | 3;

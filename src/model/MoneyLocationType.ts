@@ -1,1 +1,0 @@
-export type MoneyLocationType = 0 | 1 | 2 | 3;

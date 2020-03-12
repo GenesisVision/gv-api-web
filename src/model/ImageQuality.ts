@@ -1,1 +1,0 @@
-export type ImageQuality = 0 | 1 | 2;

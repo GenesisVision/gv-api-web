@@ -1,1 +1,0 @@
-export type DashboardActionStatus = 0 | 1;

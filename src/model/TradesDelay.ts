@@ -1,1 +1,0 @@
-export type TradesDelay = 0 | 5 | 15 | 30 | 60 | 360;

@@ -1,1 +1,0 @@
-export type AssetInvestmentStatus = 0 | 1 | 2 | 3 | 4;

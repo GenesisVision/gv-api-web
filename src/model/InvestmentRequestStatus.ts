@@ -1,1 +1,0 @@
-export type InvestmentRequestStatus = 0 | 1 | 2 | 3;

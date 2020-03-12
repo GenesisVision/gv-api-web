@@ -1,1 +1,0 @@
-export type SubscriptionMode = 0 | 1 | 2;

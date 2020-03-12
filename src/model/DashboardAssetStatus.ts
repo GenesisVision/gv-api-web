@@ -1,1 +1,0 @@
-export type DashboardAssetStatus = 0 | 1;

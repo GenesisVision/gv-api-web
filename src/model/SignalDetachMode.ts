@@ -1,1 +1,0 @@
-export type SignalDetachMode = 0 | 1 | 2;

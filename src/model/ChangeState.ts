@@ -1,1 +1,0 @@
-export type ChangeState = 0 | 1 | 2;

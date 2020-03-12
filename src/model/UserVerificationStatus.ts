@@ -1,1 +1,0 @@
-export type UserVerificationStatus = 0 | 1 | 2 | 3;

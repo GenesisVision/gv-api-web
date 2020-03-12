@@ -1,1 +1,0 @@
-export type InvestmentEventLocation = 1 | 2 | 4;

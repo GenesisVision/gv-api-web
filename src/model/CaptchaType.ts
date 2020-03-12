@@ -1,1 +1,0 @@
-export type CaptchaType = 0 | 1 | 2;

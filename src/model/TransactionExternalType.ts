@@ -1,1 +1,0 @@
-export type TransactionExternalType = 0 | 1 | 2 | 4;

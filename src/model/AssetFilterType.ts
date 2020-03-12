@@ -1,1 +1,0 @@
-export type AssetFilterType = 0 | 1 | 2 | 3;
