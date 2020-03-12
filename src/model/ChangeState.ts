@@ -1,1 +1,1 @@
-export type ChangeState = 'NotChanged' | 'Increased' | 'Decreased';
+export type ChangeState = 0 | 1 | 2;

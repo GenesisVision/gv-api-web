@@ -1,1 +1,1 @@
-export type DashboardAssetStatus = 'All' | 'Active';
+export type DashboardAssetStatus = 0 | 1;

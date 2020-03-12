@@ -1,1 +1,1 @@
-export type InvestmentRequestType = 'Invest' | 'Withdrawal';
+export type InvestmentRequestType = 0 | 1;

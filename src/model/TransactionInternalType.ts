@@ -1,1 +1,1 @@
-export type TransactionInternalType = 'All' | 'Investment' | 'Withdrawal' | 'Conversion' | 'Commission' | 'Program' | 'Fund' | 'Follow' | 'TradingAccounts' | 'AgentReward';
+export type TransactionInternalType = 0 | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256;

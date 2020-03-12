@@ -1,1 +1,1 @@
-export type TransactionExternalType = 'All' | 'Withdrawal' | 'Deposit' | 'Platform';
+export type TransactionExternalType = 0 | 1 | 2 | 4;

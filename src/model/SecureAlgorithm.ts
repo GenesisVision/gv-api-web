@@ -1,1 +1,1 @@
-export type SecureAlgorithm = 'Sha256';
+export type SecureAlgorithm = 0;

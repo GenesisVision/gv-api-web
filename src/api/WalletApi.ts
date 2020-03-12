@@ -1,9 +1,12 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { CreateWithdrawalRequestModel } from '../model/CreateWithdrawalRequestModel';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { InternalTransferRequest } from '../model/InternalTransferRequest';
-import { ItemsViewModelTransactionViewModel } from '../model/ItemsViewModelTransactionViewModel';
+import { TransactionExternalType } from '../model/TransactionExternalType';
+import { TransactionInternalType } from '../model/TransactionInternalType';
+import { TransactionViewModelItemsViewModel } from '../model/TransactionViewModelItemsViewModel';
 import { UserCommissionData } from '../model/UserCommissionData';
 import { WalletDepositSummary } from '../model/WalletDepositSummary';
 import { WalletMultiAvailable } from '../model/WalletMultiAvailable';
@@ -19,15 +22,11 @@ export default class WalletApi {
 
     cancelWithdrawalRequest = (
         txId: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (txId === null || txId === undefined) {
                 throw new Error('Required parameter txId was null or undefined when calling cancelWithdrawalRequest.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling cancelWithdrawalRequest.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/cancel/{txId}", {
@@ -47,7 +46,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -88,15 +86,10 @@ export default class WalletApi {
     })
     }
 
-    createWithdrawalRequest = (
-        authorization: string,
-        options: {
+    createWithdrawalRequest = (        options: {
             body?: CreateWithdrawalRequestModel
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling createWithdrawalRequest.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/new", {
     })
@@ -114,7 +107,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -122,16 +114,12 @@ export default class WalletApi {
     }
 
     getAccountsAvailable = (
-        currency: string,
-        authorization: string,
+        currency: Currency,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getAccountsAvailable.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getAccountsAvailable.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/accounts/{currency}/available", {
@@ -151,21 +139,15 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<WalletMultiAvailable>((response: Response) => {
         return response.json();
     })
     }
 
-    getGMCommissionData = (
-        authorization: string,
-        options: {
+    getGMCommissionData = (        options: {
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getGMCommissionData.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/fee/gvtholding", {
     })
@@ -183,27 +165,21 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<UserCommissionData>((response: Response) => {
         return response.json();
     })
     }
 
-    getTransactionsExternal = (
-        authorization: string,
-        options: {
-            transactionType?: string,
+    getTransactionsExternal = (        options: {
+            transactionType?: TransactionExternalType,
             dateFrom?: Date,
             dateTo?: Date,
-            currency?: string,
+            currency?: Currency,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getTransactionsExternal.');
-                }
         const {
             transactionType,
             dateFrom,
@@ -235,27 +211,21 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelTransactionViewModel>((response: Response) => {
+    }).then(handleErrors).then<TransactionViewModelItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getTransactionsInternal = (
-        authorization: string,
-        options: {
-            transactionType?: string,
+    getTransactionsInternal = (        options: {
+            transactionType?: TransactionInternalType,
             dateFrom?: Date,
             dateTo?: Date,
-            currency?: string,
+            currency?: Currency,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getTransactionsInternal.');
-                }
         const {
             transactionType,
             dateFrom,
@@ -287,21 +257,15 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelTransactionViewModel>((response: Response) => {
+    }).then(handleErrors).then<TransactionViewModelItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getUserWithdrawalSummary = (
-        authorization: string,
-        options: {
+    getUserWithdrawalSummary = (        options: {
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getUserWithdrawalSummary.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/info", {
     })
@@ -319,7 +283,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<WithdrawalSummary>((response: Response) => {
         return response.json();
@@ -327,16 +290,12 @@ export default class WalletApi {
     }
 
     getWalletAvailable = (
-        currency: string,
-        authorization: string,
+        currency: Currency,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getWalletAvailable.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getWalletAvailable.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/{currency}/available", {
@@ -356,7 +315,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<WalletMultiAvailable>((response: Response) => {
         return response.json();
@@ -364,16 +322,12 @@ export default class WalletApi {
     }
 
     getWalletSummary = (
-        currency: string,
-        authorization: string,
+        currency: Currency,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getWalletSummary.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getWalletSummary.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/{currency}", {
@@ -393,7 +347,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<WalletSummary>((response: Response) => {
         return response.json();
@@ -402,15 +355,11 @@ export default class WalletApi {
 
     resendWithdrawalRequestEmail = (
         txId: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (txId === null || txId === undefined) {
                 throw new Error('Required parameter txId was null or undefined when calling resendWithdrawalRequestEmail.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling resendWithdrawalRequestEmail.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/resend/{txId}", {
@@ -430,21 +379,15 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    switchPayFeeInGvtOff = (
-        authorization: string,
-        options: {
+    switchPayFeeInGvtOff = (        options: {
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchPayFeeInGvtOff.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/paygvtfee/off", {
     })
@@ -462,21 +405,15 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    switchPayFeeInGvtOn = (
-        authorization: string,
-        options: {
+    switchPayFeeInGvtOn = (        options: {
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchPayFeeInGvtOn.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/paygvtfee/on", {
     })
@@ -494,22 +431,16 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    transfer = (
-        authorization: string,
-        options: {
+    transfer = (        options: {
             body?: InternalTransferRequest
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling transfer.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/transfer", {
     })
@@ -527,21 +458,15 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateDepositWallets = (
-        authorization: string,
-        options: {
+    updateDepositWallets = (        options: {
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateDepositWallets.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/deposit/update", {
     })
@@ -559,7 +484,6 @@ export default class WalletApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<WalletDepositSummary>((response: Response) => {
         return response.json();

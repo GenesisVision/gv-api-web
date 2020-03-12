@@ -1,8 +1,9 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { AssetInvestmentRequestItemsViewModel } from '../model/AssetInvestmentRequestItemsViewModel';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FundWithdrawInfo } from '../model/FundWithdrawInfo';
-import { ItemsViewModelAssetInvestmentRequest } from '../model/ItemsViewModelAssetInvestmentRequest';
 import { ProgramWithdrawInfo } from '../model/ProgramWithdrawInfo';
 
 export default class InvestmentsApi {
@@ -14,15 +15,11 @@ export default class InvestmentsApi {
 
     cancelRequest = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling cancelRequest.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling cancelRequest.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{id}/cancel", {
@@ -42,7 +39,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -51,16 +47,12 @@ export default class InvestmentsApi {
 
     getFundWithdrawInfo = (
         id: string,
-        authorization: string,
         options: {
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFundWithdrawInfo.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getFundWithdrawInfo.');
                 }
         const {
             currency
@@ -84,7 +76,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<FundWithdrawInfo>((response: Response) => {
         return response.json();
@@ -93,15 +84,11 @@ export default class InvestmentsApi {
 
     getProgramWithdrawInfo = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramWithdrawInfo.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getProgramWithdrawInfo.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/withdraw/info", {
@@ -121,7 +108,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramWithdrawInfo>((response: Response) => {
         return response.json();
@@ -131,7 +117,6 @@ export default class InvestmentsApi {
     getRequests = (
         skip: number,
         take: number,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
@@ -140,9 +125,6 @@ export default class InvestmentsApi {
                 }
                 if (take === null || take === undefined) {
                 throw new Error('Required parameter take was null or undefined when calling getRequests.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getRequests.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{skip}/{take}", {
@@ -163,9 +145,8 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelAssetInvestmentRequest>((response: Response) => {
+    }).then(handleErrors).then<AssetInvestmentRequestItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
@@ -174,7 +155,6 @@ export default class InvestmentsApi {
         id: string,
         skip: number,
         take: number,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
@@ -186,9 +166,6 @@ export default class InvestmentsApi {
                 }
                 if (take === null || take === undefined) {
                 throw new Error('Required parameter take was null or undefined when calling getRequestsByProgram.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getRequestsByProgram.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{id}/{skip}/{take}", {
@@ -210,16 +187,14 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelAssetInvestmentRequest>((response: Response) => {
+    }).then(handleErrors).then<AssetInvestmentRequestItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     investIntoFund = (
         id: string,
-        authorization: string,
         options: {
             amount?: number,
             walletId?: string
@@ -227,9 +202,6 @@ export default class InvestmentsApi {
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling investIntoFund.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling investIntoFund.');
                 }
         const {
             amount,
@@ -255,7 +227,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -264,7 +235,6 @@ export default class InvestmentsApi {
 
     investIntoProgram = (
         id: string,
-        authorization: string,
         options: {
             amount?: number,
             walletId?: string
@@ -272,9 +242,6 @@ export default class InvestmentsApi {
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling investIntoProgram.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling investIntoProgram.');
                 }
         const {
             amount,
@@ -300,7 +267,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -309,15 +275,11 @@ export default class InvestmentsApi {
 
     switchAutoJoinOff = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOff.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchAutoJoinOff.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/off", {
@@ -337,7 +299,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -346,15 +307,11 @@ export default class InvestmentsApi {
 
     switchAutoJoinOn = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOn.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchAutoJoinOn.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/on", {
@@ -374,7 +331,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -383,15 +339,11 @@ export default class InvestmentsApi {
 
     switchReinvestOff = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchReinvestOff.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchReinvestOff.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/reinvest/off", {
@@ -411,7 +363,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -420,15 +371,11 @@ export default class InvestmentsApi {
 
     switchReinvestOn = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchReinvestOn.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling switchReinvestOn.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/reinvest/on", {
@@ -448,7 +395,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -457,17 +403,13 @@ export default class InvestmentsApi {
 
     withdrawFromFund = (
         id: string,
-        authorization: string,
         options: {
             percent?: number,
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling withdrawFromFund.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling withdrawFromFund.');
                 }
         const {
             percent,
@@ -493,7 +435,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -502,7 +443,6 @@ export default class InvestmentsApi {
 
     withdrawFromProgram = (
         id: string,
-        authorization: string,
         options: {
             amount?: number,
             withdrawAll?: boolean
@@ -510,9 +450,6 @@ export default class InvestmentsApi {
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling withdrawFromProgram.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling withdrawFromProgram.');
                 }
         const {
             amount,
@@ -538,7 +475,6 @@ export default class InvestmentsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

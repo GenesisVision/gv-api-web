@@ -3,12 +3,14 @@ import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AttachToExternalSignalProviderCommon } from '../model/AttachToExternalSignalProviderCommon';
 import { AttachToExternalSignalProviderExt } from '../model/AttachToExternalSignalProviderExt';
 import { AttachToSignalProvider } from '../model/AttachToSignalProvider';
+import { Currency } from '../model/Currency';
 import { DetachFromExternalSignalProvider } from '../model/DetachFromExternalSignalProvider';
 import { DetachFromSignalProvider } from '../model/DetachFromSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ItemsViewModelSignalTradingEvent } from '../model/ItemsViewModelSignalTradingEvent';
-import { ItemsViewModelTradingAccountDetails } from '../model/ItemsViewModelTradingAccountDetails';
+import { SignalTradingEventItemsViewModel } from '../model/SignalTradingEventItemsViewModel';
+import { TradeSorting } from '../model/TradeSorting';
 import { TradesSignalViewModel } from '../model/TradesSignalViewModel';
+import { TradingAccountDetailsItemsViewModel } from '../model/TradingAccountDetailsItemsViewModel';
 
 export default class SignalApi {
     private apiClient: ApiClient;
@@ -19,16 +21,12 @@ export default class SignalApi {
 
     attachSlaveToMasterExternalCommonAccount = (
         id: string,
-        authorization: string,
         options: {
             body?: AttachToExternalSignalProviderCommon
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalCommonAccount.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling attachSlaveToMasterExternalCommonAccount.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/attach/{id}/common", {
@@ -48,7 +46,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -57,16 +54,12 @@ export default class SignalApi {
 
     attachSlaveToMasterExternalPrivateAccount = (
         id: string,
-        authorization: string,
         options: {
             body?: AttachToExternalSignalProviderExt
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalPrivateAccount.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling attachSlaveToMasterExternalPrivateAccount.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/attach/{id}/private", {
@@ -86,7 +79,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -95,16 +87,12 @@ export default class SignalApi {
 
     attachSlaveToMasterInternal = (
         id: string,
-        authorization: string,
         options: {
             body?: AttachToSignalProvider
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterInternal.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling attachSlaveToMasterInternal.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/attach/{id}", {
@@ -124,7 +112,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -133,16 +120,12 @@ export default class SignalApi {
 
     closeTradeInternal = (
         id: string,
-        authorization: string,
         options: {
             assetId?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeTradeInternal.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling closeTradeInternal.');
                 }
         const {
             assetId
@@ -166,7 +149,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -175,16 +157,12 @@ export default class SignalApi {
 
     detachSlaveFromMasterExternal = (
         id: string,
-        authorization: string,
         options: {
             body?: DetachFromExternalSignalProvider
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterExternal.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling detachSlaveFromMasterExternal.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/detach/{id}", {
@@ -204,7 +182,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -213,16 +190,12 @@ export default class SignalApi {
 
     detachSlaveFromMasterInternal = (
         id: string,
-        authorization: string,
         options: {
             body?: DetachFromSignalProvider
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterInternal.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling detachSlaveFromMasterInternal.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/detach/{id}", {
@@ -242,27 +215,21 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    getOpenSignalTrades = (
-        authorization: string,
-        options: {
-            sorting?: string,
+    getOpenSignalTrades = (        options: {
+            sorting?: TradeSorting,
             symbol?: string,
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getOpenSignalTrades.');
-                }
         const {
             sorting,
             symbol,
@@ -294,25 +261,19 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getSignalTradingLog = (
-        authorization: string,
-        options: {
+    getSignalTradingLog = (        options: {
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getSignalTradingLog.');
-                }
         const {
             accountId,
             accountCurrency,
@@ -340,24 +301,19 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelSignalTradingEvent>((response: Response) => {
+    }).then(handleErrors).then<SignalTradingEventItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     getSubscriberAccountsForAsset = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getSubscriberAccountsForAsset.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getSubscriberAccountsForAsset.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/attach/{id}/accounts", {
@@ -377,25 +333,20 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelTradingAccountDetails>((response: Response) => {
+    }).then(handleErrors).then<TradingAccountDetailsItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     updateExternalSubscriptionSettings = (
         id: string,
-        authorization: string,
         options: {
             body?: AttachToExternalSignalProviderExt
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateExternalSubscriptionSettings.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateExternalSubscriptionSettings.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/{id}/update", {
@@ -415,7 +366,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -424,16 +374,12 @@ export default class SignalApi {
 
     updateSubscriptionSettings = (
         id: string,
-        authorization: string,
         options: {
             body?: AttachToSignalProvider
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateSubscriptionSettings.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateSubscriptionSettings.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/{id}/update", {
@@ -453,7 +399,6 @@ export default class SignalApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

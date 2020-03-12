@@ -1,1 +1,1 @@
-export type InvestmentEventLocation = 'Asset' | 'Dashboard' | 'EventsAll';
+export type InvestmentEventLocation = 1 | 2 | 4;

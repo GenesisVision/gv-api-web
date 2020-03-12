@@ -1,1 +1,1 @@
-export type EventGroupType = 'InvestmentHistory' | 'TradingHistory';
+export type EventGroupType = 0 | 1;

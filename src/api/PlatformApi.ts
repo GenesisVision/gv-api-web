@@ -2,6 +2,7 @@ import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AssetInfo } from '../model/AssetInfo';
 import { CaptchaDetails } from '../model/CaptchaDetails';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { LandingInfo } from '../model/LandingInfo';
 import { LevelsParamsInfo } from '../model/LevelsParamsInfo';
@@ -203,7 +204,7 @@ export default class PlatformApi {
     }
 
     getProgramLevels = (        options: {
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
         const {
@@ -234,7 +235,7 @@ export default class PlatformApi {
     }
 
     getProgramLevelsParams = (        options: {
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
         const {

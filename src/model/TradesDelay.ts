@@ -1,1 +1,1 @@
-export type TradesDelay = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';
+export type TradesDelay = 0 | 5 | 15 | 30 | 60 | 360;

@@ -3,8 +3,10 @@ import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { AccountBalanceChart } from '../model/AccountBalanceChart';
 import { AccountProfitPercentCharts } from '../model/AccountProfitPercentCharts';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { PrivateTradingAccountFull } from '../model/PrivateTradingAccountFull';
+import { TradeSorting } from '../model/TradeSorting';
 import { TradesSignalViewModel } from '../model/TradesSignalViewModel';
 import { TradesViewModel } from '../model/TradesViewModel';
 
@@ -17,14 +19,13 @@ export default class TradingaccountApi {
 
     exportTrades = (
         id: string,
-        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             symbol?: string,
-            sorting?: string,
+            sorting?: TradeSorting,
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             isFollow?: boolean,
             skip?: number,
             take?: number
@@ -32,9 +33,6 @@ export default class TradingaccountApi {
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportTrades.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling exportTrades.');
                 }
         const {
             dateFrom,
@@ -74,7 +72,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -83,19 +80,15 @@ export default class TradingaccountApi {
 
     getAbsoluteProfitChart = (
         id: string,
-        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getAbsoluteProfitChart.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getAbsoluteProfitChart.');
                 }
         const {
             dateFrom,
@@ -125,7 +118,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
         return response.json();
@@ -134,19 +126,15 @@ export default class TradingaccountApi {
 
     getBalanceChart = (
         id: string,
-        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getBalanceChart.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getBalanceChart.');
                 }
         const {
             dateFrom,
@@ -176,7 +164,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<AccountBalanceChart>((response: Response) => {
         return response.json();
@@ -185,21 +172,17 @@ export default class TradingaccountApi {
 
     getOpenTrades = (
         id: string,
-        authorization: string,
         options: {
-            sorting?: string,
+            sorting?: TradeSorting,
             symbol?: string,
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getOpenTrades.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getOpenTrades.');
                 }
         const {
             sorting,
@@ -233,7 +216,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TradesViewModel>((response: Response) => {
         return response.json();
@@ -242,20 +224,16 @@ export default class TradingaccountApi {
 
     getProfitPercentCharts = (
         id: string,
-        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string,
-            currencies?: Array<any>
+            currency?: Currency,
+            currencies?: Array<Currency>
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getProfitPercentCharts.');
                 }
         const {
             dateFrom,
@@ -287,7 +265,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<AccountProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -296,14 +273,13 @@ export default class TradingaccountApi {
 
     getTrades = (
         id: string,
-        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             symbol?: string,
-            sorting?: string,
+            sorting?: TradeSorting,
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             isFollow?: boolean,
             skip?: number,
             take?: number
@@ -311,9 +287,6 @@ export default class TradingaccountApi {
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getTrades.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getTrades.');
                 }
         const {
             dateFrom,
@@ -353,7 +326,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
         return response.json();
@@ -362,15 +334,11 @@ export default class TradingaccountApi {
 
     getTradingAccountDetails = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getTradingAccountDetails.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getTradingAccountDetails.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}", {
@@ -390,7 +358,6 @@ export default class TradingaccountApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<PrivateTradingAccountFull>((response: Response) => {
         return response.json();

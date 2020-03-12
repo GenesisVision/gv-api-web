@@ -1,1 +1,1 @@
-export type TradeDirectionType = 'Buy' | 'Sell' | 'Balance' | 'Credit' | 'Undefined' | 'ManualBalancing';
+export type TradeDirectionType = 0 | 1 | 2 | 3 | 4 | 5;

@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ImageQuality } from '../model/ImageQuality';
 import { UploadResult } from '../model/UploadResult';
 
 export default class FileApi {
@@ -13,7 +14,7 @@ export default class FileApi {
     getFile = (
         id: string,
         options: {
-            quality?: string
+            quality?: ImageQuality
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -47,18 +48,10 @@ export default class FileApi {
     })
     }
 
-    uploadFile = (
-        uploadedFile: File,
-        options: {
-            authorization?: string
+    uploadFile = (        options: {
+            uploadedFile?: File
         } = {},
         init: RequestInit = {}) => {
-                if (uploadedFile === null || uploadedFile === undefined) {
-                throw new Error('Required parameter uploadedFile was null or undefined when calling uploadFile.');
-                }
-        const {
-            authorization
-        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/file/upload", {
     })
@@ -76,7 +69,6 @@ export default class FileApi {
         method: "POST",
         body,
         headers: {
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<UploadResult>((response: Response) => {
         return response.json();

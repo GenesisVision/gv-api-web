@@ -1,1 +1,1 @@
-export type MultiWalletTransactionStatus = 'Done' | 'Pending' | 'Canceled' | 'Error';
+export type MultiWalletTransactionStatus = 0 | 1 | 2 | 3;

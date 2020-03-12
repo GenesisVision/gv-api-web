@@ -1,1 +1,1 @@
-export type PlatformUrlType = 'Program' | 'Fund' | 'Follow' | 'User';
+export type PlatformUrlType = 0 | 1 | 2 | 3;

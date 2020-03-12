@@ -1,4 +1,5 @@
 import { AssetInvestmentStatus } from './AssetInvestmentStatus';
+import { Currency } from './Currency';
 import { FundOwnerActions } from './FundOwnerActions';
 
 export interface PersonalFundDetails {
@@ -12,11 +13,10 @@ export interface PersonalFundDetails {
     status: AssetInvestmentStatus;
     pendingInput: number;
     pendingOutput: number;
-    pendingInOutCurrency: PendingInOutCurrencyEnum;
+    pendingInOutCurrency: Currency;
     withdrawPercent: number;
     availableReallocationPercents: number;
     nextReallocationPercents: Date;
     exitFeePersonal: number;
 }
 
-type PendingInOutCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

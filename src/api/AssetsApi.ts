@@ -27,15 +27,11 @@ export default class AssetsApi {
 
     cancelChangeBroker = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling cancelChangeBroker.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling cancelChangeBroker.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change/cancel", {
@@ -55,7 +51,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -64,16 +59,12 @@ export default class AssetsApi {
 
     changeBroker = (
         id: string,
-        authorization: string,
         options: {
             body?: ChangeBrokerProgramRequest
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling changeBroker.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling changeBroker.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change", {
@@ -93,7 +84,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -102,16 +92,12 @@ export default class AssetsApi {
 
     changeTradingAccountPassword = (
         id: string,
-        authorization: string,
         options: {
             body?: TradingAccountPwdUpdate
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling changeTradingAccountPassword.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling changeTradingAccountPassword.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/password/change", {
@@ -131,7 +117,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -140,15 +125,11 @@ export default class AssetsApi {
 
     closeCurrentPeriod = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeCurrentPeriod.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling closeCurrentPeriod.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/period/close", {
@@ -168,7 +149,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -177,16 +157,12 @@ export default class AssetsApi {
 
     closeFund = (
         id: string,
-        authorization: string,
         options: {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeFund.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling closeFund.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/close", {
@@ -206,7 +182,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -215,16 +190,12 @@ export default class AssetsApi {
 
     closeInvestmentProgram = (
         id: string,
-        authorization: string,
         options: {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeInvestmentProgram.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling closeInvestmentProgram.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/close", {
@@ -244,7 +215,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -253,15 +223,11 @@ export default class AssetsApi {
 
     closeTradingAccount = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeTradingAccount.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling closeTradingAccount.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/close", {
@@ -281,7 +247,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -290,16 +255,12 @@ export default class AssetsApi {
 
     confirmProgram2FA = (
         id: string,
-        authorization: string,
         options: {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling confirmProgram2FA.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling confirmProgram2FA.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/confirm", {
@@ -319,22 +280,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    createExternalTradingAccount = (
-        authorization: string,
-        options: {
+    createExternalTradingAccount = (        options: {
             body?: NewExternalTradingAccountRequest
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling createExternalTradingAccount.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/create", {
     })
@@ -352,22 +307,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
         return response.json();
     })
     }
 
-    createFund = (
-        authorization: string,
-        options: {
+    createFund = (        options: {
             body?: NewFundRequest
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling createFund.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/create", {
     })
@@ -385,22 +334,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    createTradingAccount = (
-        authorization: string,
-        options: {
+    createTradingAccount = (        options: {
             body?: NewTradingAccountRequest
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling createTradingAccount.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/create", {
     })
@@ -418,7 +361,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
         return response.json();
@@ -427,15 +369,11 @@ export default class AssetsApi {
 
     getLevelsCalculator = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getLevelsCalculator.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getLevelsCalculator.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/levels/info", {
@@ -455,7 +393,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramLevelInfo>((response: Response) => {
         return response.json();
@@ -464,15 +401,11 @@ export default class AssetsApi {
 
     getProgram2FA = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgram2FA.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getProgram2FA.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/get", {
@@ -492,22 +425,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
         return response.json();
     })
     }
 
-    makeAccountProgram = (
-        authorization: string,
-        options: {
+    makeAccountProgram = (        options: {
             body?: MakeTradingAccountProgram
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling makeAccountProgram.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromaccount/create", {
     })
@@ -525,22 +452,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    makeAccountSignalProvider = (
-        authorization: string,
-        options: {
+    makeAccountSignalProvider = (        options: {
             body?: MakeTradingAccountSignalProvider
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling makeAccountSignalProvider.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/create", {
     })
@@ -558,7 +479,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -567,16 +487,12 @@ export default class AssetsApi {
 
     makeDemoTradingAccountDeposit = (
         id: string,
-        authorization: string,
         options: {
             body?: TradingAccountDemoDeposit
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling makeDemoTradingAccountDeposit.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling makeDemoTradingAccountDeposit.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/demo/deposit", {
@@ -596,22 +512,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    makeExternalAccountSignalProvider = (
-        authorization: string,
-        options: {
+    makeExternalAccountSignalProvider = (        options: {
             body?: MakeTradingAccountSignalProvider
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling makeExternalAccountSignalProvider.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/fromaccount/create", {
     })
@@ -629,22 +539,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    makeSignalProviderProgram = (
-        authorization: string,
-        options: {
+    makeSignalProviderProgram = (        options: {
             body?: MakeSignalProviderProgram
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling makeSignalProviderProgram.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromsignalprovider/create", {
     })
@@ -662,7 +566,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -671,16 +574,12 @@ export default class AssetsApi {
 
     updateAsset = (
         id: string,
-        authorization: string,
         options: {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateAsset.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/follow/{id}/update", {
@@ -700,7 +599,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -709,16 +607,12 @@ export default class AssetsApi {
 
     updateAsset_0 = (
         id: string,
-        authorization: string,
         options: {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset_1.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateAsset_1.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/update", {
@@ -738,7 +632,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -747,16 +640,12 @@ export default class AssetsApi {
 
     updateAsset_1 = (
         id: string,
-        authorization: string,
         options: {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset_2.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateAsset_2.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/update", {
@@ -776,7 +665,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -785,16 +673,12 @@ export default class AssetsApi {
 
     updateFundAssets = (
         id: string,
-        authorization: string,
         options: {
             body?: Array<FundAssetPart>
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateFundAssets.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateFundAssets.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/assets/update", {
@@ -814,22 +698,16 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateSignalProviderSettings = (
-        authorization: string,
-        options: {
+    updateSignalProviderSettings = (        options: {
             body?: CreateSignalProvider
         } = {},
         init: RequestInit = {}) => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling updateSignalProviderSettings.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/edit", {
     })
@@ -847,7 +725,6 @@ export default class AssetsApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

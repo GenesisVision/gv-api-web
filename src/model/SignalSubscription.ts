@@ -1,4 +1,6 @@
 import { AssetDetails } from './AssetDetails';
+import { Currency } from './Currency';
+import { SignalDetachMode } from './SignalDetachMode';
 import { SignalSubscriberInfo } from './SignalSubscriberInfo';
 import { SubscriptionMode } from './SubscriptionMode';
 
@@ -12,16 +14,14 @@ export interface SignalSubscription {
     hasActiveSubscription: boolean;
     isExternal: boolean;
     mode: SubscriptionMode;
-    detachMode: DetachModeEnum;
+    detachMode: SignalDetachMode;
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
-    fixedCurrency: FixedCurrencyEnum;
+    fixedCurrency: Currency;
     totalProfit: number;
     totalVolume: number;
     successFeePersonal: number;
     volumeFeePersonal: number;
 }
 
-type DetachModeEnum = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
-type FixedCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

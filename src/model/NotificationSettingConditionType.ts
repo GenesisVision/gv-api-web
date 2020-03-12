@@ -1,1 +1,1 @@
-export type NotificationSettingConditionType = 'Empty' | 'Profit' | 'Level' | 'AvailableToInvest';
+export type NotificationSettingConditionType = 0 | 1 | 2 | 3;

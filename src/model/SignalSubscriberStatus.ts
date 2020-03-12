@@ -1,1 +1,1 @@
-export type SignalSubscriberStatus = 'Active' | 'Ended';
+export type SignalSubscriberStatus = 0 | 1;

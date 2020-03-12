@@ -1,11 +1,11 @@
 import { DashboardProfits } from './DashboardProfits';
-import { ItemsViewModelInvestmentEventViewModel } from './ItemsViewModelInvestmentEventViewModel';
+import { InvestmentEventViewModelItemsViewModel } from './InvestmentEventViewModelItemsViewModel';
 
 export interface DashboardTradingDetails {
     equity: number;
     aum: number;
     readonly total: number;
     profits: DashboardProfits;
-    events: ItemsViewModelInvestmentEventViewModel;
+    events: InvestmentEventViewModelItemsViewModel;
 }
 

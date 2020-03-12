@@ -1,1 +1,1 @@
-export type UserVerificationStatus = 'NotVerified' | 'Verified' | 'UnderReview' | 'Rejected';
+export type UserVerificationStatus = 0 | 1 | 2 | 3;

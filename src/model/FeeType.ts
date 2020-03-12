@@ -1,1 +1,1 @@
-export type FeeType = 'Undefined' | 'GvProgramSuccess' | 'GvProgramEntry' | 'GvProgramSuccessSum' | 'GvFundEntry' | 'GvGmGvtHolderFee' | 'GvGmRegularFee' | 'ManagerProgramEntry' | 'ManagerProgramSuccess' | 'ManagerProgramSuccessSum' | 'ManagerFundEntry' | 'ManagerFundExit' | 'GvWithdrawal' | 'GvConvertingFiat' | 'ManagerSignalMasterSuccessFee' | 'ManagerSignalMasterVolumeFee' | 'GvSignalSuccessFee' | 'GvSignalVolumeFee' | 'GvFundTrade';
+export type FeeType = 0 | 10 | 11 | 12 | 50 | 80 | 90 | 100 | 101 | 102 | 150 | 151 | 200 | 210 | 250 | 251 | 252 | 253 | 300;

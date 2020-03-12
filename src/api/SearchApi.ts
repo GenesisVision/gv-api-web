@@ -11,13 +11,11 @@ export default class SearchApi {
     }
 
     search = (        options: {
-            authorization?: string,
             mask?: string,
             take?: number
         } = {},
         init: RequestInit = {}) => {
         const {
-            authorization,
             mask,
             take
         } = options;
@@ -40,7 +38,6 @@ export default class SearchApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
         return response.json();

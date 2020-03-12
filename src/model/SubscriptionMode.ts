@@ -1,1 +1,1 @@
-export type SubscriptionMode = 'ByBalance' | 'Percent' | 'Fixed';
+export type SubscriptionMode = 0 | 1 | 2;

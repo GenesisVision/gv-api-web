@@ -1,3 +1,4 @@
+import { Currency } from './Currency';
 import { SubscriptionMode } from './SubscriptionMode';
 
 export interface AttachToExternalSignalProviderExt {
@@ -6,7 +7,6 @@ export interface AttachToExternalSignalProviderExt {
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
-    fixedCurrency: FixedCurrencyEnum;
+    fixedCurrency: Currency;
 }
 
-type FixedCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

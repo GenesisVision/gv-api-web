@@ -1,1 +1,1 @@
-export type AssetInvestmentStatus = 'Pending' | 'Active' | 'Investing' | 'Withdrawing' | 'Ended';
+export type AssetInvestmentStatus = 0 | 1 | 2 | 3 | 4;

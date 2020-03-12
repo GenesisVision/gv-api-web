@@ -1,1 +1,1 @@
-export type AssetFilterType = 'All' | 'Program' | 'Fund' | 'Follow';
+export type AssetFilterType = 0 | 1 | 2 | 3;

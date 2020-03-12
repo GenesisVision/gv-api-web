@@ -1,1 +1,1 @@
-export type Timeframe = 'Day' | 'Week' | 'Month' | 'ThreeMonths' | 'Year' | 'AllTime';
+export type Timeframe = 0 | 1 | 2 | 3 | 4 | 5;

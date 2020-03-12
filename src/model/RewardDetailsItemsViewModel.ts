@@ -1,6 +1,6 @@
 import { RewardDetails } from './RewardDetails';
 
-export interface ItemsViewModelRewardDetails {
+export interface RewardDetailsItemsViewModel {
     readonly items: Array<RewardDetails>;
     readonly total: number;
 }

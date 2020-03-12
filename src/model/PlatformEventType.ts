@@ -1,1 +1,1 @@
-export type PlatformEventType = 'Undefined' | 'ProgramStarted' | 'FundStarted' | 'NewTradingStrategy' | 'PeriodEnded' | 'FundReallocated' | 'FollowTrade';
+export type PlatformEventType = 0 | 1 | 2 | 3 | 4 | 5 | 6;

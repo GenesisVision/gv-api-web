@@ -1,1 +1,1 @@
-export type Currency = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+export type Currency = 0 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 200 | 201;

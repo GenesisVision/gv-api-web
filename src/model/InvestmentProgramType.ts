@@ -1,1 +1,1 @@
-export type InvestmentProgramType = 'Program' | 'Fund';
+export type InvestmentProgramType = 0 | 1;

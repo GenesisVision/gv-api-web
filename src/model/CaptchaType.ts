@@ -1,1 +1,1 @@
-export type CaptchaType = 'None' | 'Pow' | 'GeeTest';
+export type CaptchaType = 0 | 1 | 2;

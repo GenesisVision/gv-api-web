@@ -2,11 +2,14 @@ import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { AccountBalanceChart } from '../model/AccountBalanceChart';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ItemsViewModelFollowDetailsListItem } from '../model/ItemsViewModelFollowDetailsListItem';
-import { ItemsViewModelSignalSubscription } from '../model/ItemsViewModelSignalSubscription';
+import { FollowDetailsListItemItemsViewModel } from '../model/FollowDetailsListItemItemsViewModel';
+import { FollowFilterSorting } from '../model/FollowFilterSorting';
 import { ProgramFollowDetailsFull } from '../model/ProgramFollowDetailsFull';
 import { ProgramProfitPercentCharts } from '../model/ProgramProfitPercentCharts';
+import { SignalSubscriptionItemsViewModel } from '../model/SignalSubscriptionItemsViewModel';
+import { TradeSorting } from '../model/TradeSorting';
 import { TradesSignalViewModel } from '../model/TradesSignalViewModel';
 
 export default class FollowApi {
@@ -18,15 +21,11 @@ export default class FollowApi {
 
     addToFavorites = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling addToFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/favorite/add", {
@@ -46,7 +45,6 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -59,7 +57,7 @@ export default class FollowApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -105,9 +103,9 @@ export default class FollowApi {
             dateFrom?: Date,
             dateTo?: Date,
             symbol?: string,
-            sorting?: string,
+            sorting?: TradeSorting,
             accountId?: string,
-            accountCurrency?: string,
+            accountCurrency?: Currency,
             isFollow?: boolean,
             skip?: number,
             take?: number
@@ -166,7 +164,7 @@ export default class FollowApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string
+            currency?: Currency
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -209,15 +207,11 @@ export default class FollowApi {
     getFollowAssetDetails = (
         id: string,
         options: {
-            authorization?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowAssetDetails.');
                 }
-        const {
-            authorization
-        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}", {
         id
@@ -236,7 +230,6 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramFollowDetailsFull>((response: Response) => {
         return response.json();
@@ -244,9 +237,8 @@ export default class FollowApi {
     }
 
     getFollowAssets = (        options: {
-            authorization?: string,
-            sorting?: string,
-            showIn?: string,
+            sorting?: FollowFilterSorting,
+            showIn?: Currency,
             tags?: Array<string>,
             dateFrom?: Date,
             dateTo?: Date,
@@ -260,7 +252,6 @@ export default class FollowApi {
         } = {},
         init: RequestInit = {}) => {
         const {
-            authorization,
             sorting,
             showIn,
             tags,
@@ -303,25 +294,20 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelFollowDetailsListItem>((response: Response) => {
+    }).then(handleErrors).then<FollowDetailsListItemItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     getFollowSubscriptionsForAsset = (
         id: string,
-        authorization: string,
         options: {
             onlyActive?: boolean
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForAsset.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getFollowSubscriptionsForAsset.');
                 }
         const {
             onlyActive
@@ -345,25 +331,20 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelSignalSubscription>((response: Response) => {
+    }).then(handleErrors).then<SignalSubscriptionItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     getFollowSubscriptionsForOwnAccount = (
         id: string,
-        authorization: string,
         options: {
             onlyActive?: boolean
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForOwnAccount.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getFollowSubscriptionsForOwnAccount.');
                 }
         const {
             onlyActive
@@ -387,9 +368,8 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelSignalSubscription>((response: Response) => {
+    }).then(handleErrors).then<SignalSubscriptionItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
@@ -397,19 +377,17 @@ export default class FollowApi {
     getProfitPercentCharts = (
         id: string,
         options: {
-            authorization?: string,
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: string,
-            currencies?: Array<any>
+            currency?: Currency,
+            currencies?: Array<Currency>
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
                 }
         const {
-            authorization,
             dateFrom,
             dateTo,
             maxPointCount,
@@ -439,7 +417,6 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -448,15 +425,11 @@ export default class FollowApi {
 
     removeFromFavorites = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling removeFromFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/favorite/remove", {
@@ -476,7 +449,6 @@ export default class FollowApi {
         body,
         headers: {
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

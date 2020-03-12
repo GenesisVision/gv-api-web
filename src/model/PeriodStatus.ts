@@ -1,1 +1,1 @@
-export type PeriodStatus = 'Planned' | 'InProccess' | 'Closed';
+export type PeriodStatus = 0 | 1 | 2;

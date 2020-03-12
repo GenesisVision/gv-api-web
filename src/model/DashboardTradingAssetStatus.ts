@@ -1,1 +1,1 @@
-export type DashboardTradingAssetStatus = 'Pending' | 'Active' | 'Disabled';
+export type DashboardTradingAssetStatus = 0 | 1 | 2;

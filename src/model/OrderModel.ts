@@ -20,6 +20,7 @@ export interface OrderModel {
     originalCommission: number;
     originalCommissionCurrency: string;
     commission: number;
+    commissionWithoutDiscount: number;
     swap: number;
     showOriginalCommission: boolean;
     assetData: TradeAssetData;

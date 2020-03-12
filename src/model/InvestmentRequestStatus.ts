@@ -1,1 +1,1 @@
-export type InvestmentRequestStatus = 'New' | 'Executed' | 'Cancelled' | 'Pending';
+export type InvestmentRequestStatus = 0 | 1 | 2 | 3;

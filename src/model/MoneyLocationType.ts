@@ -1,1 +1,1 @@
-export type MoneyLocationType = 'Programs' | 'Funds' | 'Trading' | 'Wallet';
+export type MoneyLocationType = 0 | 1 | 2 | 3;

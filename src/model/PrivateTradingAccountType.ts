@@ -1,1 +1,1 @@
-export type PrivateTradingAccountType = 'None' | 'TradingAccount' | 'ExternalTradingAccount';
+export type PrivateTradingAccountType = 0 | 1 | 2;

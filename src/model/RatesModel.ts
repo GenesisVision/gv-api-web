@@ -1,4 +1,6 @@
+import { RatesModelRates } from './RatesModelRates';
+
 export interface RatesModel {
-    rates: any;
+    rates: RatesModelRates;
 }
 

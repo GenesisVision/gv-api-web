@@ -1,1 +1,1 @@
-export type SignalDetachMode = 'None' | 'ProviderCloseOnly' | 'CloseAllImmediately';
+export type SignalDetachMode = 0 | 1 | 2;
