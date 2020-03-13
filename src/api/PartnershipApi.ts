@@ -1,10 +1,9 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
-import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ItemsViewModelReferralFriend } from '../model/ItemsViewModelReferralFriend';
+import { ItemsViewModelRewardDetails } from '../model/ItemsViewModelRewardDetails';
 import { PartnershipDetails } from '../model/PartnershipDetails';
-import { ReferralFriendItemsViewModel } from '../model/ReferralFriendItemsViewModel';
-import { RewardDetailsItemsViewModel } from '../model/RewardDetailsItemsViewModel';
 
 export default class PartnershipApi {
     private apiClient: ApiClient;
@@ -13,13 +12,18 @@ export default class PartnershipApi {
         this.apiClient = apiClient;
     }
 
-    exportHistory = (        options: {
+    exportHistory = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling exportHistory.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -47,16 +51,22 @@ export default class PartnershipApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
     })
     }
 
-    getDetails = (        options: {
-            currency?: Currency
+    getDetails = (
+        authorization: string,
+        options: {
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getDetails.');
+                }
         const {
             currency
         } = options;
@@ -78,19 +88,25 @@ export default class PartnershipApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<PartnershipDetails>((response: Response) => {
         return response.json();
     })
     }
 
-    getReferrals = (        options: {
+    getReferrals = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getReferrals.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -118,19 +134,25 @@ export default class PartnershipApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ReferralFriendItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelReferralFriend>((response: Response) => {
         return response.json();
     })
     }
 
-    getRewardsHistory = (        options: {
+    getRewardsHistory = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getRewardsHistory.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -158,8 +180,9 @@ export default class PartnershipApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<RewardDetailsItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelRewardDetails>((response: Response) => {
         return response.json();
     })
     }

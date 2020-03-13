@@ -1,11 +1,11 @@
 import { AssetDetails } from './AssetDetails';
-import { Currency } from './Currency';
 
 export interface TradingAccountDetails {
     id: string;
-    currency: Currency;
+    currency: CurrencyEnum;
     login: string;
     apiKey: string;
     asset: AssetDetails;
 }
 
+type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

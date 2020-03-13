@@ -1,15 +1,13 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
-import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FundBalanceChart } from '../model/FundBalanceChart';
 import { FundDetailsFull } from '../model/FundDetailsFull';
 import { FundDetailsListItem } from '../model/FundDetailsListItem';
-import { FundDetailsListItemItemsViewModel } from '../model/FundDetailsListItemItemsViewModel';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
-import { FundsFilterSorting } from '../model/FundsFilterSorting';
-import { ReallocationModelItemsViewModel } from '../model/ReallocationModelItemsViewModel';
+import { ItemsViewModelFundDetailsListItem } from '../model/ItemsViewModelFundDetailsListItem';
+import { ItemsViewModelReallocationModel } from '../model/ItemsViewModelReallocationModel';
 
 export default class FundsApi {
     private apiClient: ApiClient;
@@ -20,11 +18,15 @@ export default class FundsApi {
 
     addToFavorites = (
         id: string,
+        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling addToFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/favorite/add", {
@@ -44,6 +46,7 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -56,7 +59,7 @@ export default class FundsApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -102,7 +105,7 @@ export default class FundsApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -145,13 +148,15 @@ export default class FundsApi {
     getFundDetails = (
         id: string,
         options: {
-            currency?: Currency
+            authorization?: string,
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFundDetails.');
                 }
         const {
+            authorization,
             currency
         } = options;
 
@@ -173,6 +178,7 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<FundDetailsFull>((response: Response) => {
         return response.json();
@@ -185,8 +191,8 @@ export default class FundsApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency,
-            currencies?: Array<Currency>,
+            currency?: string,
+            currencies?: Array<any>,
             chartAssetsCount?: number
         } = {},
         init: RequestInit = {}) => {
@@ -232,8 +238,9 @@ export default class FundsApi {
     }
 
     getFunds = (        options: {
-            sorting?: FundsFilterSorting,
-            showIn?: Currency,
+            authorization?: string,
+            sorting?: string,
+            showIn?: string,
             assets?: Array<string>,
             includeWithInvestments?: boolean,
             dateFrom?: Date,
@@ -248,6 +255,7 @@ export default class FundsApi {
         } = {},
         init: RequestInit = {}) => {
         const {
+            authorization,
             sorting,
             showIn,
             assets,
@@ -292,17 +300,20 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<FundDetailsListItemItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelFundDetailsListItem>((response: Response) => {
         return response.json();
     })
     }
 
     getLastChallengeWinner = (        options: {
+            authorization?: string,
             chartPointsCount?: number
         } = {},
         init: RequestInit = {}) => {
         const {
+            authorization,
             chartPointsCount
         } = options;
 
@@ -323,6 +334,7 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<FundDetailsListItem>((response: Response) => {
         return response.json();
@@ -370,18 +382,22 @@ export default class FundsApi {
         headers: {
             "Content-Type": contentType,
         }
-    }).then(handleErrors).then<ReallocationModelItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelReallocationModel>((response: Response) => {
         return response.json();
     })
     }
 
     removeFromFavorites = (
         id: string,
+        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling removeFromFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/favorite/remove", {
@@ -401,6 +417,7 @@ export default class FundsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

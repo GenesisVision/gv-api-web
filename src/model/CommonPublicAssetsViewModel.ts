@@ -1,12 +1,12 @@
-import { FollowDetailsListItemItemsViewModel } from './FollowDetailsListItemItemsViewModel';
-import { FundDetailsListItemItemsViewModel } from './FundDetailsListItemItemsViewModel';
-import { ProgramDetailsListItemItemsViewModel } from './ProgramDetailsListItemItemsViewModel';
-import { PublicProfileItemsViewModel } from './PublicProfileItemsViewModel';
+import { ItemsViewModelFollowDetailsListItem } from './ItemsViewModelFollowDetailsListItem';
+import { ItemsViewModelFundDetailsListItem } from './ItemsViewModelFundDetailsListItem';
+import { ItemsViewModelProgramDetailsListItem } from './ItemsViewModelProgramDetailsListItem';
+import { ItemsViewModelPublicProfile } from './ItemsViewModelPublicProfile';
 
 export interface CommonPublicAssetsViewModel {
-    programs: ProgramDetailsListItemItemsViewModel;
-    funds: FundDetailsListItemItemsViewModel;
-    follows: FollowDetailsListItemItemsViewModel;
-    managers: PublicProfileItemsViewModel;
+    programs: ItemsViewModelProgramDetailsListItem;
+    funds: ItemsViewModelFundDetailsListItem;
+    follows: ItemsViewModelFollowDetailsListItem;
+    managers: ItemsViewModelPublicProfile;
 }
 

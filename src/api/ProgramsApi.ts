@@ -1,18 +1,13 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
-import { Currency } from '../model/Currency';
-import { DashboardActionStatus } from '../model/DashboardActionStatus';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { PeriodStatus } from '../model/PeriodStatus';
+import { ItemsViewModelProgramDetailsListItem } from '../model/ItemsViewModelProgramDetailsListItem';
 import { ProgramBalanceChart } from '../model/ProgramBalanceChart';
-import { ProgramDetailsListItemItemsViewModel } from '../model/ProgramDetailsListItemItemsViewModel';
 import { ProgramFollowDetailsFull } from '../model/ProgramFollowDetailsFull';
 import { ProgramPeriodsViewModel } from '../model/ProgramPeriodsViewModel';
 import { ProgramProfitPercentCharts } from '../model/ProgramProfitPercentCharts';
-import { ProgramsFilterSorting } from '../model/ProgramsFilterSorting';
 import { SignalProviderSubscribers } from '../model/SignalProviderSubscribers';
-import { TradeSorting } from '../model/TradeSorting';
 import { TradesSignalViewModel } from '../model/TradesSignalViewModel';
 import { TradesViewModel } from '../model/TradesViewModel';
 
@@ -25,11 +20,15 @@ export default class ProgramsApi {
 
     addToFavorites = (
         id: string,
+        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling addToFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/favorite/add", {
@@ -49,6 +48,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -62,7 +62,7 @@ export default class ProgramsApi {
             dateTo?: Date,
             numberMin?: number,
             numberMax?: number,
-            status?: PeriodStatus,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
@@ -112,18 +112,22 @@ export default class ProgramsApi {
 
     exportProgramPeriodsFinStatistic = (
         id: string,
+        authorization: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
             numberMin?: number,
             numberMax?: number,
-            status?: PeriodStatus,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportProgramPeriodsFinStatistic.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling exportProgramPeriodsFinStatistic.');
                 }
         const {
             dateFrom,
@@ -159,6 +163,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -171,9 +176,9 @@ export default class ProgramsApi {
             dateFrom?: Date,
             dateTo?: Date,
             symbol?: string,
-            sorting?: TradeSorting,
+            sorting?: string,
             accountId?: string,
-            accountCurrency?: Currency,
+            accountCurrency?: string,
             isFollow?: boolean,
             skip?: number,
             take?: number
@@ -232,9 +237,9 @@ export default class ProgramsApi {
             dateFrom?: Date,
             dateTo?: Date,
             symbol?: string,
-            sorting?: TradeSorting,
+            sorting?: string,
             accountId?: string,
-            accountCurrency?: Currency,
+            accountCurrency?: string,
             isFollow?: boolean,
             skip?: number,
             take?: number
@@ -293,7 +298,7 @@ export default class ProgramsApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -339,7 +344,7 @@ export default class ProgramsApi {
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency
+            currency?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
@@ -382,11 +387,15 @@ export default class ProgramsApi {
     getProgramDetails = (
         id: string,
         options: {
+            authorization?: string
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramDetails.');
                 }
+        const {
+            authorization
+        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}", {
         id
@@ -405,6 +414,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramFollowDetailsFull>((response: Response) => {
         return response.json();
@@ -414,10 +424,10 @@ export default class ProgramsApi {
     getProgramOpenTrades = (
         id: string,
         options: {
-            sorting?: TradeSorting,
+            sorting?: string,
             symbol?: string,
             accountId?: string,
-            accountCurrency?: Currency,
+            accountCurrency?: string,
             skip?: number,
             take?: number
         } = {},
@@ -466,11 +476,12 @@ export default class ProgramsApi {
     getProgramPeriods = (
         id: string,
         options: {
+            authorization?: string,
             dateFrom?: Date,
             dateTo?: Date,
             numberMin?: number,
             numberMax?: number,
-            status?: PeriodStatus,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
@@ -479,6 +490,7 @@ export default class ProgramsApi {
                 throw new Error('Required parameter id was null or undefined when calling getProgramPeriods.');
                 }
         const {
+            authorization,
             dateFrom,
             dateTo,
             numberMin,
@@ -512,6 +524,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramPeriodsViewModel>((response: Response) => {
         return response.json();
@@ -521,17 +534,19 @@ export default class ProgramsApi {
     getProgramProfitPercentCharts = (
         id: string,
         options: {
+            authorization?: string,
             dateFrom?: Date,
             dateTo?: Date,
             maxPointCount?: number,
-            currency?: Currency,
-            currencies?: Array<Currency>
+            currency?: string,
+            currencies?: Array<any>
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramProfitPercentCharts.');
                 }
         const {
+            authorization,
             dateFrom,
             dateTo,
             maxPointCount,
@@ -561,6 +576,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProgramProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -569,14 +585,18 @@ export default class ProgramsApi {
 
     getProgramSubscribers = (
         id: string,
+        authorization: string,
         options: {
-            status?: DashboardActionStatus,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramSubscribers.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getProgramSubscribers.');
                 }
         const {
             status,
@@ -604,6 +624,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<SignalProviderSubscribers>((response: Response) => {
         return response.json();
@@ -611,10 +632,11 @@ export default class ProgramsApi {
     }
 
     getPrograms = (        options: {
-            sorting?: ProgramsFilterSorting,
-            showIn?: Currency,
+            authorization?: string,
+            sorting?: string,
+            showIn?: string,
             tags?: Array<string>,
-            programCurrency?: Currency,
+            programCurrency?: string,
             levelMin?: number,
             levelMax?: number,
             levelsSet?: Array<number>,
@@ -631,6 +653,7 @@ export default class ProgramsApi {
         } = {},
         init: RequestInit = {}) => {
         const {
+            authorization,
             sorting,
             showIn,
             tags,
@@ -683,19 +706,24 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ProgramDetailsListItemItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelProgramDetailsListItem>((response: Response) => {
         return response.json();
     })
     }
 
     removeFromFavorites = (
         id: string,
+        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling removeFromFavorites.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/favorite/remove", {
@@ -715,6 +743,7 @@ export default class ProgramsApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

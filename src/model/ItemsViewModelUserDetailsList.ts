@@ -1,6 +1,6 @@
 import { UserDetailsList } from './UserDetailsList';
 
-export interface UserDetailsListItemsViewModel {
+export interface ItemsViewModelUserDetailsList {
     readonly items: Array<UserDetailsList>;
     readonly total: number;
 }

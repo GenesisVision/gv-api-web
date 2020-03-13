@@ -1,5 +1,3 @@
-import { TradesDelay } from './TradesDelay';
-
 export interface ProgramUpdate {
     title: string;
     description: string;
@@ -9,7 +7,7 @@ export interface ProgramUpdate {
     successFee: number;
     stopOutLevel: number;
     investmentLimit: number;
-    tradesDelay: TradesDelay;
-    id: string;
+    tradesDelay: TradesDelayEnum;
 }
 
+type TradesDelayEnum = 'None' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'SixHours';

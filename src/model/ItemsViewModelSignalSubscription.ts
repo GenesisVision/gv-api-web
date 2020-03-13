@@ -1,6 +1,6 @@
 import { SignalSubscription } from './SignalSubscription';
 
-export interface SignalSubscriptionItemsViewModel {
+export interface ItemsViewModelSignalSubscription {
     readonly items: Array<SignalSubscription>;
     readonly total: number;
 }

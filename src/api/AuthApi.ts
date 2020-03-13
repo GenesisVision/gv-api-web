@@ -48,10 +48,15 @@ export default class AuthApi {
     })
     }
 
-    changePassword = (        options: {
+    changePassword = (
+        authorization: string,
+        options: {
             body?: ChangePasswordViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling changePassword.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/change", {
     })
@@ -69,6 +74,7 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -109,10 +115,15 @@ export default class AuthApi {
     })
     }
 
-    confirmTwoStepAuth = (        options: {
+    confirmTwoStepAuth = (
+        authorization: string,
+        options: {
             body?: TwoFactorAuthenticatorConfirm
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling confirmTwoStepAuth.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/confirm", {
     })
@@ -130,15 +141,21 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    createTwoStepAuth = (        options: {
+    createTwoStepAuth = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling createTwoStepAuth.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/create", {
     })
@@ -156,16 +173,22 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
         return response.json();
     })
     }
 
-    createTwoStepAuthRecoveryCodes = (        options: {
+    createTwoStepAuthRecoveryCodes = (
+        authorization: string,
+        options: {
             body?: PasswordModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling createTwoStepAuthRecoveryCodes.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes/new", {
     })
@@ -183,16 +206,22 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    disableTwoStepAuth = (        options: {
+    disableTwoStepAuth = (
+        authorization: string,
+        options: {
             body?: TwoFactorCodeWithPassword
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling disableTwoStepAuth.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/disable", {
     })
@@ -210,6 +239,7 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -243,10 +273,15 @@ export default class AuthApi {
     })
     }
 
-    getTwoStepAuthRecoveryCodes = (        options: {
+    getTwoStepAuthRecoveryCodes = (
+        authorization: string,
+        options: {
             body?: PasswordModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getTwoStepAuthRecoveryCodes.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes", {
     })
@@ -264,15 +299,21 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getTwoStepAuthStatus = (        options: {
+    getTwoStepAuthStatus = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getTwoStepAuthStatus.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa", {
     })
@@ -290,15 +331,21 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<TwoFactorStatus>((response: Response) => {
         return response.json();
     })
     }
 
-    logoutFromAnotherDevices = (        options: {
+    logoutFromAnotherDevices = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling logoutFromAnotherDevices.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/devices/logout", {
     })
@@ -316,6 +363,7 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -349,9 +397,14 @@ export default class AuthApi {
     })
     }
 
-    requestPhoneNumberVerificationCode = (        options: {
+    requestPhoneNumberVerificationCode = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling requestPhoneNumberVerificationCode.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/phone/code", {
     })
@@ -369,6 +422,7 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<number>((response: Response) => {
         return response.text() as unknown as number;
@@ -429,9 +483,14 @@ export default class AuthApi {
     })
     }
 
-    updateAuthToken = (        options: {
+    updateAuthToken = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateAuthToken.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/update", {
     })
@@ -449,16 +508,22 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
     })
     }
 
-    validatePhoneNumber = (        options: {
+    validatePhoneNumber = (
+        authorization: string,
+        options: {
             code?: string
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling validatePhoneNumber.');
+                }
         const {
             code
         } = options;
@@ -480,6 +545,7 @@ export default class AuthApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

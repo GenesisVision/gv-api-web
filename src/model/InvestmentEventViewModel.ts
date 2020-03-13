@@ -1,6 +1,5 @@
 import { AssetDetails } from './AssetDetails';
 import { ChangeState } from './ChangeState';
-import { Currency } from './Currency';
 import { FeeDetails } from './FeeDetails';
 import { InvestmentEventItemViewModel } from './InvestmentEventItemViewModel';
 
@@ -10,11 +9,13 @@ export interface InvestmentEventViewModel {
     date: Date;
     assetDetails: AssetDetails;
     amount: number;
-    currency: Currency;
+    currency: CurrencyEnum;
     changeState: ChangeState;
     extendedInfo: Array<InvestmentEventItemViewModel>;
     feesInfo: Array<FeeDetails>;
     totalFeesAmount: number;
-    totalFeesCurrency: Currency;
+    totalFeesCurrency: TotalFeesCurrencyEnum;
 }
 
+type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
+type TotalFeesCurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

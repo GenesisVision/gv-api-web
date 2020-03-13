@@ -1,9 +1,8 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ItemsViewModelUserDetailsList } from '../model/ItemsViewModelUserDetailsList';
 import { PublicProfile } from '../model/PublicProfile';
-import { UserDetailsListItemsViewModel } from '../model/UserDetailsListItemsViewModel';
-import { UsersFilterSorting } from '../model/UsersFilterSorting';
 
 export default class UsersApi {
     private apiClient: ApiClient;
@@ -46,7 +45,7 @@ export default class UsersApi {
 
     getUsersList = (        options: {
             facetId?: string,
-            sorting?: UsersFilterSorting,
+            sorting?: string,
             tags?: Array<string>,
             skip?: number,
             take?: number
@@ -82,7 +81,7 @@ export default class UsersApi {
         headers: {
             "Content-Type": contentType,
         }
-    }).then(handleErrors).then<UserDetailsListItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelUserDetailsList>((response: Response) => {
         return response.json();
     })
     }

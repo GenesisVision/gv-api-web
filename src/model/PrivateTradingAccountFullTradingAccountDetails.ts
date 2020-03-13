@@ -1,8 +1,7 @@
-import { Currency } from './Currency';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 
 export interface PrivateTradingAccountFullTradingAccountDetails {
-    currency: Currency;
+    currency: CurrencyEnum;
     leverage: number;
     apiKey: string;
     login: string;
@@ -12,3 +11,4 @@ export interface PrivateTradingAccountFullTradingAccountDetails {
     isExternal: boolean;
 }
 
+type CurrencyEnum = 'USD' | 'Undefined' | 'GVT' | 'ETH' | 'BTC' | 'ADA' | 'USDT' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

@@ -1,21 +1,17 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { CommonPublicAssetsViewModel } from '../model/CommonPublicAssetsViewModel';
-import { Currency } from '../model/Currency';
-import { DashboardAssetStatus } from '../model/DashboardAssetStatus';
 import { DashboardAssets } from '../model/DashboardAssets';
 import { DashboardChart } from '../model/DashboardChart';
 import { DashboardChartAssets } from '../model/DashboardChartAssets';
 import { DashboardInvestingDetails } from '../model/DashboardInvestingDetails';
 import { DashboardPortfolio } from '../model/DashboardPortfolio';
 import { DashboardSummary } from '../model/DashboardSummary';
-import { DashboardTradingAssetItemsViewModel } from '../model/DashboardTradingAssetItemsViewModel';
 import { DashboardTradingDetails } from '../model/DashboardTradingDetails';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { FundInvestingDetailsListItemsViewModel } from '../model/FundInvestingDetailsListItemsViewModel';
-import { FundsFilterSorting } from '../model/FundsFilterSorting';
-import { ProgramInvestingDetailsListItemsViewModel } from '../model/ProgramInvestingDetailsListItemsViewModel';
-import { ProgramsFilterSorting } from '../model/ProgramsFilterSorting';
+import { ItemsViewModelDashboardTradingAsset } from '../model/ItemsViewModelDashboardTradingAsset';
+import { ItemsViewModelFundInvestingDetailsList } from '../model/ItemsViewModelFundInvestingDetailsList';
+import { ItemsViewModelProgramInvestingDetailsList } from '../model/ItemsViewModelProgramInvestingDetailsList';
 
 export default class DashboardApi {
     private apiClient: ApiClient;
@@ -24,14 +20,19 @@ export default class DashboardApi {
         this.apiClient = apiClient;
     }
 
-    getChart = (        options: {
+    getChart = (
+        authorization: string,
+        options: {
             assets?: Array<string>,
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency
+            showIn?: string
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getChart.');
+                }
         const {
             assets,
             dateFrom,
@@ -61,15 +62,21 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardChart>((response: Response) => {
         return response.json();
     })
     }
 
-    getChartAssets = (        options: {
+    getChartAssets = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getChartAssets.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart/assets", {
     })
@@ -87,47 +94,22 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardChartAssets>((response: Response) => {
         return response.json();
     })
     }
 
-    getDashboardSummary = (        options: {
-            currency?: Currency
-        } = {},
-        init: RequestInit = {}) => {
-        const {
-            currency
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/summary", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "GET",
-        body,
-        headers: {
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardSummary>((response: Response) => {
-        return response.json();
-    })
-    }
-
-    getHoldings = (        options: {
+    getHoldings = (
+        authorization: string,
+        options: {
             topAssetsCount?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getHoldings.');
+                }
         const {
             topAssetsCount
         } = options;
@@ -149,17 +131,23 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardAssets>((response: Response) => {
         return response.json();
     })
     }
 
-    getInvestingDetails = (        options: {
-            currency?: Currency,
+    getInvestingDetails = (
+        authorization: string,
+        options: {
+            currency?: string,
             eventsTake?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getInvestingDetails.');
+                }
         const {
             currency,
             eventsTake
@@ -183,16 +171,19 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardInvestingDetails>((response: Response) => {
         return response.json();
     })
     }
 
-    getInvestingFunds = (        options: {
-            sorting?: FundsFilterSorting,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
+    getInvestingFunds = (
+        authorization: string,
+        options: {
+            sorting?: string,
+            showIn?: string,
+            status?: string,
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
@@ -204,6 +195,9 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getInvestingFunds.');
+                }
         const {
             sorting,
             showIn,
@@ -247,16 +241,19 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<FundInvestingDetailsListItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelFundInvestingDetailsList>((response: Response) => {
         return response.json();
     })
     }
 
-    getInvestingPrograms = (        options: {
-            sorting?: ProgramsFilterSorting,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
+    getInvestingPrograms = (
+        authorization: string,
+        options: {
+            sorting?: string,
+            showIn?: string,
+            status?: string,
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
@@ -268,6 +265,9 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getInvestingPrograms.');
+                }
         const {
             sorting,
             showIn,
@@ -311,19 +311,25 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ProgramInvestingDetailsListItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelProgramInvestingDetailsList>((response: Response) => {
         return response.json();
     })
     }
 
-    getMostProfitableAssets = (        options: {
+    getMostProfitableAssets = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency
+            showIn?: string
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getMostProfitableAssets.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -351,15 +357,21 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelDashboardTradingAsset>((response: Response) => {
         return response.json();
     })
     }
 
-    getPortfolio = (        options: {
+    getPortfolio = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getPortfolio.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/portfolio", {
     })
@@ -377,22 +389,28 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardPortfolio>((response: Response) => {
         return response.json();
     })
     }
 
-    getPrivateTradingAssets = (        options: {
+    getPrivateTradingAssets = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
+            showIn?: string,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getPrivateTradingAssets.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -426,22 +444,28 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelDashboardTradingAsset>((response: Response) => {
         return response.json();
     })
     }
 
-    getPublicTradingAssets = (        options: {
+    getPublicTradingAssets = (
+        authorization: string,
+        options: {
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
+            showIn?: string,
+            status?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getPublicTradingAssets.');
+                }
         const {
             dateFrom,
             dateTo,
@@ -475,18 +499,24 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelDashboardTradingAsset>((response: Response) => {
         return response.json();
     })
     }
 
-    getRecommendations = (        options: {
-            currency?: Currency,
+    getRecommendations = (
+        authorization: string,
+        options: {
+            currency?: string,
             take?: number,
             onlyFollows?: boolean
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getRecommendations.');
+                }
         const {
             currency,
             take,
@@ -512,17 +542,60 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getTradingDetails = (        options: {
-            currency?: Currency,
+    getSummary = (
+        authorization: string,
+        options: {
+            currency?: string
+        } = {},
+        init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getSummary.');
+                }
+        const {
+            currency
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/summary", {
+    })
+
+    const query = buildQueryString(path, {
+        currency: currency
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            "Content-Type": contentType,
+            Authorization: authorization || ""
+        }
+    }).then(handleErrors).then<DashboardSummary>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getTradingDetails = (
+        authorization: string,
+        options: {
+            currency?: string,
             eventsTake?: number
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getTradingDetails.');
+                }
         const {
             currency,
             eventsTake
@@ -546,6 +619,7 @@ export default class DashboardApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<DashboardTradingDetails>((response: Response) => {
         return response.json();

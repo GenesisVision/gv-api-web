@@ -1,6 +1,6 @@
 import { InvestmentEventViewModel } from './InvestmentEventViewModel';
 
-export interface InvestmentEventViewModelItemsViewModel {
+export interface ItemsViewModelInvestmentEventViewModel {
     readonly items: Array<InvestmentEventViewModel>;
     readonly total: number;
 }

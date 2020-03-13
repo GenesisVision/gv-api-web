@@ -1,6 +1,6 @@
 import { TransactionViewModel } from './TransactionViewModel';
 
-export interface TransactionViewModelItemsViewModel {
+export interface ItemsViewModelTransactionViewModel {
     readonly items: Array<TransactionViewModel>;
     readonly total: number;
 }

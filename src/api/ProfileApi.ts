@@ -17,9 +17,14 @@ export default class ProfileApi {
         this.apiClient = apiClient;
     }
 
-    getProfileFull = (        options: {
+    getProfileFull = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getProfileFull.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile", {
     })
@@ -37,15 +42,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProfileFullViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getProfileHeader = (        options: {
+    getProfileHeader = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getProfileHeader.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/header", {
     })
@@ -63,15 +74,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ProfileHeaderViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getSocialLinks = (        options: {
+    getSocialLinks = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getSocialLinks.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks", {
     })
@@ -89,15 +106,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<SocialLinksViewModel>((response: Response) => {
         return response.json();
     })
     }
 
-    getVerificationToken = (        options: {
+    getVerificationToken = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling getVerificationToken.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/verification/token", {
     })
@@ -115,15 +138,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
     })
     }
 
-    removeAvatar = (        options: {
+    removeAvatar = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling removeAvatar.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/avatar/remove", {
     })
@@ -141,16 +170,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    removeFcmToken = (        options: {
+    removeFcmToken = (
+        authorization: string,
+        options: {
             body?: FcmTokenViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling removeFcmToken.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/push/token/remove", {
     })
@@ -168,15 +203,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    switchPublicInvestorOff = (        options: {
+    switchPublicInvestorOff = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling switchPublicInvestorOff.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/investor/public/off", {
     })
@@ -194,15 +235,21 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    switchPublicInvestorOn = (        options: {
+    switchPublicInvestorOn = (
+        authorization: string,
+        options: {
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling switchPublicInvestorOn.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/investor/public/on", {
     })
@@ -220,16 +267,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateAllSocialLinks = (        options: {
+    updateAllSocialLinks = (
+        authorization: string,
+        options: {
             body?: UpdateSocialLinksViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateAllSocialLinks.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks/all/update", {
     })
@@ -247,6 +300,7 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -255,11 +309,15 @@ export default class ProfileApi {
 
     updateAvatar = (
         fileId: string,
+        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}) => {
                 if (fileId === null || fileId === undefined) {
                 throw new Error('Required parameter fileId was null or undefined when calling updateAvatar.');
+                }
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateAvatar.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/avatar/update/{fileId}", {
@@ -279,16 +337,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateFcmToken = (        options: {
+    updateFcmToken = (
+        authorization: string,
+        options: {
             body?: FcmTokenViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateFcmToken.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/push/token", {
     })
@@ -306,16 +370,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updatePersonalDetails = (        options: {
+    updatePersonalDetails = (
+        authorization: string,
+        options: {
             body?: UpdatePersonalDetailViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updatePersonalDetails.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/personal/update", {
     })
@@ -333,16 +403,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateProfile = (        options: {
+    updateProfile = (
+        authorization: string,
+        options: {
             body?: UpdateProfileViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateProfile.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/update", {
     })
@@ -360,16 +436,22 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
     })
     }
 
-    updateSocialLinks = (        options: {
+    updateSocialLinks = (
+        authorization: string,
+        options: {
             body?: UpdateSocialLinkViewModel
         } = {},
         init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateSocialLinks.');
+                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks/update", {
     })
@@ -387,6 +469,7 @@ export default class ProfileApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
