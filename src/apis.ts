@@ -15,6 +15,7 @@ export { default as ProgramsApi } from "./api/ProgramsApi";
 export { default as RateApi } from "./api/RateApi";
 export { default as SearchApi } from "./api/SearchApi";
 export { default as SignalApi } from "./api/SignalApi";
+export { default as SocialApi } from "./api/SocialApi";
 export { default as TradingaccountApi } from "./api/TradingaccountApi";
 export { default as UsersApi } from "./api/UsersApi";
 export { default as WalletApi } from "./api/WalletApi";
