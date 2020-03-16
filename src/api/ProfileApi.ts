@@ -475,4 +475,41 @@ export default class ProfileApi {
         return response;
     })
     }
+
+    updateUserPlatformCurrency = (
+        authorization: string,
+        options: {
+            currency?: string
+        } = {},
+        init: RequestInit = {}) => {
+                if (authorization === null || authorization === undefined) {
+                throw new Error('Required parameter authorization was null or undefined when calling updateUserPlatformCurrency.');
+                }
+        const {
+            currency
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/currency/update", {
+    })
+
+    const query = buildQueryString(path, {
+        currency: currency
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            "Content-Type": contentType,
+            Authorization: authorization || ""
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
 }

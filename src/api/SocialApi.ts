@@ -121,12 +121,14 @@ export default class SocialApi {
     }
 
     getFeed = (        options: {
+            authorization?: string,
             userId?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}) => {
         const {
+            authorization,
             userId,
             skip,
             take
@@ -151,6 +153,7 @@ export default class SocialApi {
         body,
         headers: {
             "Content-Type": contentType,
+            Authorization: authorization || ""
         }
     }).then(handleErrors).then<ItemsViewModelPost>((response: Response) => {
         return response.json();

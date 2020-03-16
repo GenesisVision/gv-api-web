@@ -1,3 +1,5 @@
+import { Currency } from './Currency';
+
 export interface ProfileHeaderViewModel {
     id: string;
     name: string;
@@ -12,5 +14,6 @@ export interface ProfileHeaderViewModel {
     isNewUser: boolean;
     isPublicInvestor: boolean;
     isUserNameFilled: boolean;
+    platformCurrency: Currency;
 }
 

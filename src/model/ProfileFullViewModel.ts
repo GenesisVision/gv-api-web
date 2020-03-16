@@ -1,3 +1,4 @@
+import { Currency } from './Currency';
 import { UserVerificationStatus } from './UserVerificationStatus';
 
 export interface ProfileFullViewModel {
@@ -21,5 +22,6 @@ export interface ProfileFullViewModel {
     refUrl: string;
     verificationStatus: UserVerificationStatus;
     isPublicInvestor: boolean;
+    platformCurrency: Currency;
 }
 
