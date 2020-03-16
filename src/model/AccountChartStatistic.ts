@@ -1,3 +1,4 @@
+
 export interface AccountChartStatistic {
     tradingVolume: number;
     trades: number;

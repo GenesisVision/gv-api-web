@@ -1,3 +1,4 @@
+
 export interface TwoFactorAuthenticatorConfirm {
     code: string;
     sharedKey: string;

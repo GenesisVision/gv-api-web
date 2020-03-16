@@ -1,3 +1,4 @@
+
 export interface MakeSignalProviderProgram {
     id: string;
     periodLength: number;

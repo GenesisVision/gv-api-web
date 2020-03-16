@@ -17,7 +17,7 @@ export default class SocialApi {
         options: {
             body?: NewPost
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling addPost.');
                 }
@@ -37,6 +37,7 @@ export default class SocialApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -50,7 +51,7 @@ export default class SocialApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling deletePost.');
                 }
@@ -74,6 +75,7 @@ export default class SocialApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -88,7 +90,7 @@ export default class SocialApi {
         options: {
             body?: EditPost
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling editPost.');
                 }
@@ -112,6 +114,7 @@ export default class SocialApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -126,7 +129,7 @@ export default class SocialApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelPost> => {
         const {
             authorization,
             userId,
@@ -152,6 +155,7 @@ export default class SocialApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -165,7 +169,7 @@ export default class SocialApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling likePost.');
                 }
@@ -189,6 +193,7 @@ export default class SocialApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -202,7 +207,7 @@ export default class SocialApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling unlikePost.');
                 }
@@ -226,6 +231,7 @@ export default class SocialApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

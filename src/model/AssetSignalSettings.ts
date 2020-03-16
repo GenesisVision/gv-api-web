@@ -1,3 +1,4 @@
+
 export interface AssetSignalSettings {
     signalSuccessFee: number;
     signalVolumeFee: number;

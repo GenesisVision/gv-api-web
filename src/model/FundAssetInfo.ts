@@ -1,3 +1,4 @@
+
 export interface FundAssetInfo {
     asset: string;
     symbol: string;

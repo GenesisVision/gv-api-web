@@ -16,7 +16,7 @@ export default class RateApi {
         to: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RateModel> => {
                 if (from === null || from === undefined) {
                 throw new Error('Required parameter from was null or undefined when calling getRate.');
                 }
@@ -41,6 +41,7 @@ export default class RateApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<RateModel>((response: Response) => {
@@ -54,7 +55,7 @@ export default class RateApi {
         to: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RateModel> => {
                 if (exchange === null || exchange === undefined) {
                 throw new Error('Required parameter exchange was null or undefined when calling getRateExchange.');
                 }
@@ -83,6 +84,7 @@ export default class RateApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<RateModel>((response: Response) => {
@@ -94,7 +96,7 @@ export default class RateApi {
             from?: Array<string>,
             to?: Array<string>
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RatesModel> => {
         const {
             from,
             to
@@ -117,6 +119,7 @@ export default class RateApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<RatesModel>((response: Response) => {

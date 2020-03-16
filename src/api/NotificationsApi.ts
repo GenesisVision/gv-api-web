@@ -23,7 +23,7 @@ export default class NotificationsApi {
             conditionType?: string,
             conditionAmount?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling addNotificationsSettings.');
                 }
@@ -55,6 +55,7 @@ export default class NotificationsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -67,7 +68,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<number> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getNewNotificationsCount.');
                 }
@@ -87,6 +88,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -101,7 +103,7 @@ export default class NotificationsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<NotificationList> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getNotifications.');
                 }
@@ -127,6 +129,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -140,7 +143,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<FundNotificationSettingList> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getNotificationsFundSettings.');
                 }
@@ -164,6 +167,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -177,7 +181,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ManagerNotificationSettingList> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getNotificationsManagerSettings.');
                 }
@@ -201,6 +205,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -214,7 +219,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramNotificationSettingList> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getNotificationsProgramSettings.');
                 }
@@ -238,6 +243,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -250,7 +256,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<NotificationSettingList> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getNotificationsSettings.');
                 }
@@ -270,6 +276,7 @@ export default class NotificationsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -282,7 +289,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling readAllNotification.');
                 }
@@ -302,6 +309,7 @@ export default class NotificationsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -315,7 +323,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling readNotification.');
                 }
@@ -339,6 +347,7 @@ export default class NotificationsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -352,7 +361,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeNotificationsSettings.');
                 }
@@ -376,6 +385,7 @@ export default class NotificationsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -390,7 +400,7 @@ export default class NotificationsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling toggleNotificationSettings.');
                 }
@@ -418,6 +428,7 @@ export default class NotificationsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

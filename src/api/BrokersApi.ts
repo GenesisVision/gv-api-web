@@ -13,7 +13,7 @@ export default class BrokersApi {
 
     getBrokers = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<BrokersInfo> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers", {
     })
@@ -30,6 +30,7 @@ export default class BrokersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
@@ -39,7 +40,7 @@ export default class BrokersApi {
 
     getBrokersDemo = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<BrokersInfo> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers/demo", {
     })
@@ -56,6 +57,7 @@ export default class BrokersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
@@ -65,7 +67,7 @@ export default class BrokersApi {
 
     getBrokersExternal = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<BrokersInfo> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers/external", {
     })
@@ -82,6 +84,7 @@ export default class BrokersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
@@ -93,7 +96,7 @@ export default class BrokersApi {
         programId: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<BrokersProgramInfo> => {
                 if (programId === null || programId === undefined) {
                 throw new Error('Required parameter programId was null or undefined when calling getBrokersForProgram.');
                 }
@@ -114,6 +117,7 @@ export default class BrokersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<BrokersProgramInfo>((response: Response) => {

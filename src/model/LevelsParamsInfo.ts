@@ -1,3 +1,4 @@
+
 export interface LevelsParamsInfo {
     minAvailableToInvest: number;
     maxAvailableToInvest: number;

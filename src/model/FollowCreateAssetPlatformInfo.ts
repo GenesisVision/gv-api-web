@@ -1,3 +1,4 @@
+
 export interface FollowCreateAssetPlatformInfo {
     minVolumeFee: number;
     maxVolumeFee: number;

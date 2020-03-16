@@ -25,7 +25,7 @@ export default class EventsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<InvestmentEventViewModels> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getEvents.');
                 }
@@ -69,6 +69,7 @@ export default class EventsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

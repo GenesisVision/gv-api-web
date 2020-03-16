@@ -1,3 +1,4 @@
+
 export interface FundAssetPercent {
     asset: string;
     name: string;

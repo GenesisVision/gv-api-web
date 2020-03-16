@@ -1,3 +1,4 @@
+
 export interface ProgramFollowDetailsFullTradingAccountDetails {
     id: string;
     login: string;

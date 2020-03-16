@@ -24,7 +24,7 @@ export default class AuthApi {
     authorize = (        options: {
             body?: LoginViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signin", {
     })
@@ -41,6 +41,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -53,7 +54,7 @@ export default class AuthApi {
         options: {
             body?: ChangePasswordViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling changePassword.');
                 }
@@ -73,6 +74,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -85,7 +87,7 @@ export default class AuthApi {
             userId?: string,
             code?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
         const {
             userId,
             code
@@ -108,6 +110,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -120,7 +123,7 @@ export default class AuthApi {
         options: {
             body?: TwoFactorAuthenticatorConfirm
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling confirmTwoStepAuth.');
                 }
@@ -140,6 +143,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -152,7 +156,7 @@ export default class AuthApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createTwoStepAuth.');
                 }
@@ -172,6 +176,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -185,7 +190,7 @@ export default class AuthApi {
         options: {
             body?: PasswordModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createTwoStepAuthRecoveryCodes.');
                 }
@@ -205,6 +210,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -218,7 +224,7 @@ export default class AuthApi {
         options: {
             body?: TwoFactorCodeWithPassword
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling disableTwoStepAuth.');
                 }
@@ -238,6 +244,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -249,7 +256,7 @@ export default class AuthApi {
     forgotPassword = (        options: {
             body?: ForgotPasswordViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/forgot", {
     })
@@ -266,6 +273,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then< Response >((response: Response) => {
@@ -278,7 +286,7 @@ export default class AuthApi {
         options: {
             body?: PasswordModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getTwoStepAuthRecoveryCodes.');
                 }
@@ -298,6 +306,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -310,7 +319,7 @@ export default class AuthApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TwoFactorStatus> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getTwoStepAuthStatus.');
                 }
@@ -330,6 +339,7 @@ export default class AuthApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -342,7 +352,7 @@ export default class AuthApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling logoutFromAnotherDevices.');
                 }
@@ -362,6 +372,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -373,7 +384,7 @@ export default class AuthApi {
     register = (        options: {
             body?: RegisterViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signup", {
     })
@@ -390,6 +401,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then< Response >((response: Response) => {
@@ -401,7 +413,7 @@ export default class AuthApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<number> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling requestPhoneNumberVerificationCode.');
                 }
@@ -421,6 +433,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -432,7 +445,7 @@ export default class AuthApi {
     resendConfirmationLink = (        options: {
             body?: ResendConfirmationViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/resendconfirmationlink", {
     })
@@ -449,6 +462,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then< Response >((response: Response) => {
@@ -459,7 +473,7 @@ export default class AuthApi {
     resetPassword = (        options: {
             body?: ResetPasswordViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/reset", {
     })
@@ -476,6 +490,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -487,7 +502,7 @@ export default class AuthApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateAuthToken.');
                 }
@@ -507,6 +522,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -520,7 +536,7 @@ export default class AuthApi {
         options: {
             code?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling validatePhoneNumber.');
                 }
@@ -544,6 +560,7 @@ export default class AuthApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

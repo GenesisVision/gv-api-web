@@ -1,3 +1,4 @@
+
 export interface MakeTradingAccountSignalProvider {
     id: string;
     volumeFee: number;

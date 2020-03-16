@@ -22,7 +22,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (txId === null || txId === undefined) {
                 throw new Error('Required parameter txId was null or undefined when calling cancelWithdrawalRequest.');
                 }
@@ -46,6 +46,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -58,7 +59,7 @@ export default class WalletApi {
             requestId?: string,
             code?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
         const {
             requestId,
             code
@@ -81,6 +82,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then< Response >((response: Response) => {
@@ -93,7 +95,7 @@ export default class WalletApi {
         options: {
             body?: CreateWithdrawalRequestModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createWithdrawalRequest.');
                 }
@@ -113,6 +115,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -126,7 +129,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<WalletMultiAvailable> => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getAccountsAvailable.');
                 }
@@ -150,6 +153,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -162,7 +166,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<UserCommissionData> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getGMCommissionData.');
                 }
@@ -182,6 +186,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -200,7 +205,7 @@ export default class WalletApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelTransactionViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getTransactionsExternal.');
                 }
@@ -234,6 +239,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -252,7 +258,7 @@ export default class WalletApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelTransactionViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getTransactionsInternal.');
                 }
@@ -286,6 +292,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -298,7 +305,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<WithdrawalSummary> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getUserWithdrawalSummary.');
                 }
@@ -318,6 +325,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -331,7 +339,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<WalletMultiAvailable> => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getWalletAvailable.');
                 }
@@ -355,6 +363,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -368,7 +377,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<WalletSummary> => {
                 if (currency === null || currency === undefined) {
                 throw new Error('Required parameter currency was null or undefined when calling getWalletSummary.');
                 }
@@ -392,6 +401,7 @@ export default class WalletApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -405,7 +415,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (txId === null || txId === undefined) {
                 throw new Error('Required parameter txId was null or undefined when calling resendWithdrawalRequestEmail.');
                 }
@@ -429,6 +439,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -441,7 +452,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling switchPayFeeInGvtOff.');
                 }
@@ -461,6 +472,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -473,7 +485,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling switchPayFeeInGvtOn.');
                 }
@@ -493,6 +505,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -506,7 +519,7 @@ export default class WalletApi {
         options: {
             body?: InternalTransferRequest
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling transfer.');
                 }
@@ -526,6 +539,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -538,7 +552,7 @@ export default class WalletApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<WalletDepositSummary> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateDepositWallets.');
                 }
@@ -558,6 +572,7 @@ export default class WalletApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

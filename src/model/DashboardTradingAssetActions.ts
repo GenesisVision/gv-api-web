@@ -1,3 +1,4 @@
+
 export interface DashboardTradingAssetActions {
     canAddRequestInvest: boolean;
     canAddRequestWithdraw: boolean;

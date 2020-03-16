@@ -1,3 +1,4 @@
+
 export interface ManagerFinancialStatistic {
     successFee: number;
     entryFee: number;

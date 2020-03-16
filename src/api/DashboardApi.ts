@@ -29,7 +29,7 @@ export default class DashboardApi {
             chartPointsCount?: number,
             showIn?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardChart> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getChart.');
                 }
@@ -61,6 +61,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -73,7 +74,7 @@ export default class DashboardApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardChartAssets> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getChartAssets.');
                 }
@@ -93,6 +94,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -106,7 +108,7 @@ export default class DashboardApi {
         options: {
             topAssetsCount?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardAssets> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getHoldings.');
                 }
@@ -130,6 +132,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -144,7 +147,7 @@ export default class DashboardApi {
             currency?: string,
             eventsTake?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardInvestingDetails> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getInvestingDetails.');
                 }
@@ -170,6 +173,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -194,7 +198,7 @@ export default class DashboardApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelFundInvestingDetailsList> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getInvestingFunds.');
                 }
@@ -240,6 +244,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -264,7 +269,7 @@ export default class DashboardApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelProgramInvestingDetailsList> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getInvestingPrograms.');
                 }
@@ -310,6 +315,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -326,7 +332,7 @@ export default class DashboardApi {
             chartPointsCount?: number,
             showIn?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelDashboardTradingAsset> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getMostProfitableAssets.');
                 }
@@ -356,6 +362,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -368,7 +375,7 @@ export default class DashboardApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardPortfolio> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getPortfolio.');
                 }
@@ -388,6 +395,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -407,7 +415,7 @@ export default class DashboardApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelDashboardTradingAsset> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getPrivateTradingAssets.');
                 }
@@ -443,6 +451,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -462,7 +471,7 @@ export default class DashboardApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelDashboardTradingAsset> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getPublicTradingAssets.');
                 }
@@ -498,6 +507,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -513,7 +523,7 @@ export default class DashboardApi {
             take?: number,
             onlyFollows?: boolean
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getRecommendations.');
                 }
@@ -541,6 +551,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -554,7 +565,7 @@ export default class DashboardApi {
         options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardSummary> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getSummary.');
                 }
@@ -578,6 +589,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -592,7 +604,7 @@ export default class DashboardApi {
             currency?: string,
             eventsTake?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<DashboardTradingDetails> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getTradingDetails.');
                 }
@@ -618,6 +630,7 @@ export default class DashboardApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

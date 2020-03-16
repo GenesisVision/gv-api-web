@@ -1,3 +1,4 @@
+
 export interface FundChartStatistic {
     investors: number;
     creationDate: Date;

@@ -1,3 +1,4 @@
+
 export interface UpdatePersonalDetailViewModel {
     firstName: string;
     middleName: string;

@@ -1,3 +1,4 @@
+
 export interface ProgramChartStatistic {
     investors: number;
     lastPeriodStarts: Date;

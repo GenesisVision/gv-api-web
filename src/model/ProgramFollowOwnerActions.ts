@@ -1,3 +1,4 @@
+
 export interface ProgramFollowOwnerActions {
     canClose: boolean;
     canClosePeriod: boolean;

@@ -29,7 +29,7 @@ export default class TradingaccountApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportTrades.');
                 }
@@ -73,6 +73,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -90,7 +91,7 @@ export default class TradingaccountApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getAbsoluteProfitChart.');
                 }
@@ -124,6 +125,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -141,7 +143,7 @@ export default class TradingaccountApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AccountBalanceChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getBalanceChart.');
                 }
@@ -175,6 +177,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -194,7 +197,7 @@ export default class TradingaccountApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getOpenTrades.');
                 }
@@ -232,6 +235,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -250,7 +254,7 @@ export default class TradingaccountApi {
             currency?: string,
             currencies?: Array<any>
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AccountProfitPercentCharts> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
                 }
@@ -286,6 +290,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -308,7 +313,7 @@ export default class TradingaccountApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesSignalViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getTrades.');
                 }
@@ -352,6 +357,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -365,7 +371,7 @@ export default class TradingaccountApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PrivateTradingAccountFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getTradingAccountDetails.');
                 }
@@ -389,6 +395,7 @@ export default class TradingaccountApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

@@ -15,7 +15,7 @@ export default class FileApi {
         options: {
             quality?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFile.');
                 }
@@ -40,6 +40,7 @@ export default class FileApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then< Response >((response: Response) => {
@@ -52,7 +53,7 @@ export default class FileApi {
         options: {
             authorization?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<UploadResult> => {
                 if (uploadedFile === null || uploadedFile === undefined) {
                 throw new Error('Required parameter uploadedFile was null or undefined when calling uploadFile.');
                 }
@@ -76,6 +77,7 @@ export default class FileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             Authorization: authorization || ""
         }
     }).then(handleErrors).then<UploadResult>((response: Response) => {

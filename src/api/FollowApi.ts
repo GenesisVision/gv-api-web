@@ -21,7 +21,7 @@ export default class FollowApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
                 }
@@ -45,6 +45,7 @@ export default class FollowApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -61,7 +62,7 @@ export default class FollowApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getAbsoluteProfitChart.');
                 }
@@ -92,6 +93,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
@@ -112,7 +114,7 @@ export default class FollowApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesSignalViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getAssetTrades.');
                 }
@@ -153,6 +155,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
@@ -168,7 +171,7 @@ export default class FollowApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AccountBalanceChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getBalanceChart.');
                 }
@@ -199,6 +202,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<AccountBalanceChart>((response: Response) => {
@@ -211,7 +215,7 @@ export default class FollowApi {
         options: {
             authorization?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowAssetDetails.');
                 }
@@ -235,6 +239,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -258,7 +263,7 @@ export default class FollowApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelFollowDetailsListItem> => {
         const {
             authorization,
             sorting,
@@ -302,6 +307,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -316,7 +322,7 @@ export default class FollowApi {
         options: {
             onlyActive?: boolean
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelSignalSubscription> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForAsset.');
                 }
@@ -344,6 +350,7 @@ export default class FollowApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -358,7 +365,7 @@ export default class FollowApi {
         options: {
             onlyActive?: boolean
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelSignalSubscription> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForOwnAccount.');
                 }
@@ -386,6 +393,7 @@ export default class FollowApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -404,7 +412,7 @@ export default class FollowApi {
             currency?: string,
             currencies?: Array<any>
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramProfitPercentCharts> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
                 }
@@ -438,6 +446,7 @@ export default class FollowApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -451,7 +460,7 @@ export default class FollowApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
                 }
@@ -475,6 +484,7 @@ export default class FollowApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

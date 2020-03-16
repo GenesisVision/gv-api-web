@@ -30,7 +30,7 @@ export default class AssetsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling cancelChangeBroker.');
                 }
@@ -54,6 +54,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -68,7 +69,7 @@ export default class AssetsApi {
         options: {
             body?: ChangeBrokerProgramRequest
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling changeBroker.');
                 }
@@ -92,6 +93,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -106,7 +108,7 @@ export default class AssetsApi {
         options: {
             body?: TradingAccountPwdUpdate
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling changeTradingAccountPassword.');
                 }
@@ -130,6 +132,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -143,7 +146,7 @@ export default class AssetsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeCurrentPeriod.');
                 }
@@ -167,6 +170,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -181,7 +185,7 @@ export default class AssetsApi {
         options: {
             body?: TwoFactorCodeModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeFund.');
                 }
@@ -205,6 +209,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -219,7 +224,7 @@ export default class AssetsApi {
         options: {
             body?: TwoFactorCodeModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeInvestmentProgram.');
                 }
@@ -243,6 +248,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -256,7 +262,7 @@ export default class AssetsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeTradingAccount.');
                 }
@@ -280,6 +286,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -294,7 +301,7 @@ export default class AssetsApi {
         options: {
             body?: TwoFactorCodeModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling confirmProgram2FA.');
                 }
@@ -318,6 +325,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -331,7 +339,7 @@ export default class AssetsApi {
         options: {
             body?: NewExternalTradingAccountRequest
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createExternalTradingAccount.');
                 }
@@ -351,6 +359,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -364,7 +373,7 @@ export default class AssetsApi {
         options: {
             body?: NewFundRequest
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createFund.');
                 }
@@ -384,6 +393,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -397,7 +407,7 @@ export default class AssetsApi {
         options: {
             body?: NewTradingAccountRequest
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling createTradingAccount.');
                 }
@@ -417,6 +427,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -430,7 +441,7 @@ export default class AssetsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramLevelInfo> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getLevelsCalculator.');
                 }
@@ -454,6 +465,7 @@ export default class AssetsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -467,7 +479,7 @@ export default class AssetsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgram2FA.');
                 }
@@ -491,6 +503,7 @@ export default class AssetsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -504,7 +517,7 @@ export default class AssetsApi {
         options: {
             body?: MakeTradingAccountProgram
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling makeAccountProgram.');
                 }
@@ -524,6 +537,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -537,7 +551,7 @@ export default class AssetsApi {
         options: {
             body?: MakeTradingAccountSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling makeAccountSignalProvider.');
                 }
@@ -557,6 +571,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -571,7 +586,7 @@ export default class AssetsApi {
         options: {
             body?: TradingAccountDemoDeposit
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling makeDemoTradingAccountDeposit.');
                 }
@@ -595,6 +610,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -608,7 +624,7 @@ export default class AssetsApi {
         options: {
             body?: MakeTradingAccountSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling makeExternalAccountSignalProvider.');
                 }
@@ -628,6 +644,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -641,7 +658,7 @@ export default class AssetsApi {
         options: {
             body?: MakeSignalProviderProgram
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling makeSignalProviderProgram.');
                 }
@@ -661,6 +678,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -675,7 +693,7 @@ export default class AssetsApi {
         options: {
             body?: ProgramUpdate
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset.');
                 }
@@ -699,6 +717,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -713,7 +732,7 @@ export default class AssetsApi {
         options: {
             body?: ProgramUpdate
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset_1.');
                 }
@@ -737,6 +756,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -751,7 +771,7 @@ export default class AssetsApi {
         options: {
             body?: ProgramUpdate
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateAsset_2.');
                 }
@@ -775,6 +795,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -789,7 +810,7 @@ export default class AssetsApi {
         options: {
             body?: Array<FundAssetPart>
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateFundAssets.');
                 }
@@ -813,6 +834,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -826,7 +848,7 @@ export default class AssetsApi {
         options: {
             body?: CreateSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateSignalProviderSettings.');
                 }
@@ -846,6 +868,7 @@ export default class AssetsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

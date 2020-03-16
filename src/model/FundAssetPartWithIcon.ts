@@ -1,3 +1,4 @@
+
 export interface FundAssetPartWithIcon {
     icon: string;
     color: string;

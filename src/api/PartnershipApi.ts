@@ -20,7 +20,7 @@ export default class PartnershipApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling exportHistory.');
                 }
@@ -50,6 +50,7 @@ export default class PartnershipApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -63,7 +64,7 @@ export default class PartnershipApi {
         options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PartnershipDetails> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getDetails.');
                 }
@@ -87,6 +88,7 @@ export default class PartnershipApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -103,7 +105,7 @@ export default class PartnershipApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelReferralFriend> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getReferrals.');
                 }
@@ -133,6 +135,7 @@ export default class PartnershipApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -149,7 +152,7 @@ export default class PartnershipApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelRewardDetails> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getRewardsHistory.');
                 }
@@ -179,6 +182,7 @@ export default class PartnershipApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

@@ -21,7 +21,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProfileFullViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getProfileFull.');
                 }
@@ -41,6 +41,7 @@ export default class ProfileApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -53,7 +54,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProfileHeaderViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getProfileHeader.');
                 }
@@ -73,6 +74,7 @@ export default class ProfileApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -85,7 +87,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<SocialLinksViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getSocialLinks.');
                 }
@@ -105,6 +107,7 @@ export default class ProfileApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -117,7 +120,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getVerificationToken.');
                 }
@@ -137,6 +140,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -149,7 +153,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling removeAvatar.');
                 }
@@ -169,6 +173,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -182,7 +187,7 @@ export default class ProfileApi {
         options: {
             body?: FcmTokenViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling removeFcmToken.');
                 }
@@ -202,6 +207,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -214,7 +220,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling switchPublicInvestorOff.');
                 }
@@ -234,6 +240,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -246,7 +253,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling switchPublicInvestorOn.');
                 }
@@ -266,6 +273,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -279,7 +287,7 @@ export default class ProfileApi {
         options: {
             body?: UpdateSocialLinksViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateAllSocialLinks.');
                 }
@@ -299,6 +307,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -312,7 +321,7 @@ export default class ProfileApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (fileId === null || fileId === undefined) {
                 throw new Error('Required parameter fileId was null or undefined when calling updateAvatar.');
                 }
@@ -336,6 +345,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -349,7 +359,7 @@ export default class ProfileApi {
         options: {
             body?: FcmTokenViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateFcmToken.');
                 }
@@ -369,6 +379,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -382,7 +393,7 @@ export default class ProfileApi {
         options: {
             body?: UpdatePersonalDetailViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updatePersonalDetails.');
                 }
@@ -402,6 +413,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -415,7 +427,7 @@ export default class ProfileApi {
         options: {
             body?: UpdateProfileViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateProfile.');
                 }
@@ -435,6 +447,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -448,7 +461,7 @@ export default class ProfileApi {
         options: {
             body?: UpdateSocialLinkViewModel
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateSocialLinks.');
                 }
@@ -468,6 +481,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -481,7 +495,7 @@ export default class ProfileApi {
         options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling updateUserPlatformCurrency.');
                 }
@@ -505,6 +519,7 @@ export default class ProfileApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

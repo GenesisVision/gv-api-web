@@ -17,7 +17,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling cancelRequest.');
                 }
@@ -41,6 +41,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -55,7 +56,7 @@ export default class InvestmentsApi {
         options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<FundWithdrawInfo> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFundWithdrawInfo.');
                 }
@@ -83,6 +84,7 @@ export default class InvestmentsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -96,7 +98,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramWithdrawInfo> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramWithdrawInfo.');
                 }
@@ -120,6 +122,7 @@ export default class InvestmentsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -134,7 +137,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelAssetInvestmentRequest> => {
                 if (skip === null || skip === undefined) {
                 throw new Error('Required parameter skip was null or undefined when calling getRequests.');
                 }
@@ -162,6 +165,7 @@ export default class InvestmentsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -177,7 +181,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelAssetInvestmentRequest> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getRequestsByProgram.');
                 }
@@ -209,6 +213,7 @@ export default class InvestmentsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -224,7 +229,7 @@ export default class InvestmentsApi {
             amount?: number,
             walletId?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling investIntoFund.');
                 }
@@ -254,6 +259,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -269,7 +275,7 @@ export default class InvestmentsApi {
             amount?: number,
             walletId?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling investIntoProgram.');
                 }
@@ -299,6 +305,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -312,7 +319,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOff.');
                 }
@@ -336,6 +343,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -349,7 +357,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOn.');
                 }
@@ -373,6 +381,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -386,7 +395,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchReinvestOff.');
                 }
@@ -410,6 +419,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -423,7 +433,7 @@ export default class InvestmentsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling switchReinvestOn.');
                 }
@@ -447,6 +457,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -462,7 +473,7 @@ export default class InvestmentsApi {
             percent?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling withdrawFromFund.');
                 }
@@ -492,6 +503,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -507,7 +519,7 @@ export default class InvestmentsApi {
             amount?: number,
             withdrawAll?: boolean
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling withdrawFromProgram.');
                 }
@@ -537,6 +549,7 @@ export default class InvestmentsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

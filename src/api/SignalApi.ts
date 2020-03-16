@@ -23,7 +23,7 @@ export default class SignalApi {
         options: {
             body?: AttachToExternalSignalProviderCommon
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalCommonAccount.');
                 }
@@ -47,6 +47,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -61,7 +62,7 @@ export default class SignalApi {
         options: {
             body?: AttachToExternalSignalProviderExt
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalPrivateAccount.');
                 }
@@ -85,6 +86,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -99,7 +101,7 @@ export default class SignalApi {
         options: {
             body?: AttachToSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterInternal.');
                 }
@@ -123,6 +125,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -137,7 +140,7 @@ export default class SignalApi {
         options: {
             assetId?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling closeTradeInternal.');
                 }
@@ -165,6 +168,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -179,7 +183,7 @@ export default class SignalApi {
         options: {
             body?: DetachFromExternalSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterExternal.');
                 }
@@ -203,6 +207,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -217,7 +222,7 @@ export default class SignalApi {
         options: {
             body?: DetachFromSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterInternal.');
                 }
@@ -241,6 +246,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -259,7 +265,7 @@ export default class SignalApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesSignalViewModel> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getOpenSignalTrades.');
                 }
@@ -293,6 +299,7 @@ export default class SignalApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -309,7 +316,7 @@ export default class SignalApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelSignalTradingEvent> => {
                 if (authorization === null || authorization === undefined) {
                 throw new Error('Required parameter authorization was null or undefined when calling getSignalTradingLog.');
                 }
@@ -339,6 +346,7 @@ export default class SignalApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -352,7 +360,7 @@ export default class SignalApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelTradingAccountDetails> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getSubscriberAccountsForAsset.');
                 }
@@ -376,6 +384,7 @@ export default class SignalApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -390,7 +399,7 @@ export default class SignalApi {
         options: {
             body?: AttachToExternalSignalProviderExt
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateExternalSubscriptionSettings.');
                 }
@@ -414,6 +423,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -428,7 +438,7 @@ export default class SignalApi {
         options: {
             body?: AttachToSignalProvider
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling updateSubscriptionSettings.');
                 }
@@ -452,6 +462,7 @@ export default class SignalApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

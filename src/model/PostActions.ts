@@ -1,3 +1,4 @@
+
 export interface PostActions {
     isLiked: boolean;
     canEdit: boolean;

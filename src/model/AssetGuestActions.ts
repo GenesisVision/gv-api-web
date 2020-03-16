@@ -1,3 +1,4 @@
+
 export interface AssetGuestActions {
     canSubscribeToInternalSignal: boolean;
     canSubscribeToExternalSignalPrivateAccount: boolean;

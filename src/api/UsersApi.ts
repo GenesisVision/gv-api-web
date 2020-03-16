@@ -15,7 +15,7 @@ export default class UsersApi {
         id: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PublicProfile> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getManagerProfile.');
                 }
@@ -36,6 +36,7 @@ export default class UsersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<PublicProfile>((response: Response) => {
@@ -50,7 +51,7 @@ export default class UsersApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelUserDetailsList> => {
         const {
             facetId,
             sorting,
@@ -79,6 +80,7 @@ export default class UsersApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<ItemsViewModelUserDetailsList>((response: Response) => {

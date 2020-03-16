@@ -1,3 +1,4 @@
+
 export interface PersonalProgramDetailsList {
     isOwnAsset: boolean;
     isFavorite: boolean;

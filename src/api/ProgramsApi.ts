@@ -23,7 +23,7 @@ export default class ProgramsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
                 }
@@ -47,6 +47,7 @@ export default class ProgramsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -66,7 +67,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportProgramPeriods.');
                 }
@@ -103,6 +104,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -122,7 +124,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportProgramPeriodsFinStatistic.');
                 }
@@ -162,6 +164,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -183,7 +186,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling exportProgramTrades.');
                 }
@@ -224,6 +227,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -244,7 +248,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesSignalViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getAssetTrades.');
                 }
@@ -285,6 +289,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
@@ -300,7 +305,7 @@ export default class ProgramsApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramAbsoluteProfitChart.');
                 }
@@ -331,6 +336,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
@@ -346,7 +352,7 @@ export default class ProgramsApi {
             maxPointCount?: number,
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramBalanceChart> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramBalanceChart.');
                 }
@@ -377,6 +383,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<ProgramBalanceChart>((response: Response) => {
@@ -389,7 +396,7 @@ export default class ProgramsApi {
         options: {
             authorization?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramDetails.');
                 }
@@ -413,6 +420,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -431,7 +439,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<TradesViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramOpenTrades.');
                 }
@@ -466,6 +474,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<TradesViewModel>((response: Response) => {
@@ -485,7 +494,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramPeriodsViewModel> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramPeriods.');
                 }
@@ -523,6 +532,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -541,7 +551,7 @@ export default class ProgramsApi {
             currency?: string,
             currencies?: Array<any>
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramProfitPercentCharts> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramProfitPercentCharts.');
                 }
@@ -575,6 +585,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -591,7 +602,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<SignalProviderSubscribers> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramSubscribers.');
                 }
@@ -623,6 +634,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -651,7 +663,7 @@ export default class ProgramsApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ItemsViewModelProgramDetailsListItem> => {
         const {
             authorization,
             sorting,
@@ -705,6 +717,7 @@ export default class ProgramsApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
@@ -718,7 +731,7 @@ export default class ProgramsApi {
         authorization: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
                 }
@@ -742,6 +755,7 @@ export default class ProgramsApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }

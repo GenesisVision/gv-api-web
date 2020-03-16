@@ -1,3 +1,4 @@
+
 export interface NewExternalTradingAccountRequest {
     brokerAccountTypeId: string;
     key: string;

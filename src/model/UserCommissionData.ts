@@ -1,3 +1,4 @@
+
 export interface UserCommissionData {
     isPayingCommissionInGvt: boolean;
     gvtHolderTradingFee: number;

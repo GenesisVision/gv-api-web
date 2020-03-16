@@ -1,3 +1,4 @@
+
 export interface PlatformAsset {
     id: string;
     name: string;

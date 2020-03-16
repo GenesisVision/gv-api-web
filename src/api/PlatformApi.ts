@@ -20,7 +20,7 @@ export default class PlatformApi {
 
     getAllPlatformAssets = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PlatformAssets> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/assets", {
     })
@@ -37,6 +37,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<PlatformAssets>((response: Response) => {
@@ -48,7 +49,7 @@ export default class PlatformApi {
         asset: string,
         options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<AssetInfo> => {
                 if (asset === null || asset === undefined) {
                 throw new Error('Required parameter asset was null or undefined when calling getPlatformAssetInfo.');
                 }
@@ -69,6 +70,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<AssetInfo>((response: Response) => {
@@ -78,7 +80,7 @@ export default class PlatformApi {
 
     getPlatformDate = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<string> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/date", {
     })
@@ -95,6 +97,7 @@ export default class PlatformApi {
         method: "POST",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<string>((response: Response) => {
@@ -105,7 +108,7 @@ export default class PlatformApi {
     getPlatformEvents = (        options: {
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PlatformEvents> => {
         const {
             take
         } = options;
@@ -126,6 +129,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<PlatformEvents>((response: Response) => {
@@ -135,7 +139,7 @@ export default class PlatformApi {
 
     getPlatformInfo = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<PlatformInfo> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/info", {
     })
@@ -152,6 +156,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<PlatformInfo>((response: Response) => {
@@ -166,7 +171,7 @@ export default class PlatformApi {
             fundsTake?: number,
             newsTake?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<LandingInfo> => {
         const {
             eventsTake,
             followTake,
@@ -195,6 +200,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<LandingInfo>((response: Response) => {
@@ -205,7 +211,7 @@ export default class PlatformApi {
     getProgramLevels = (        options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<ProgramsLevelsInfo> => {
         const {
             currency
         } = options;
@@ -226,6 +232,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<ProgramsLevelsInfo>((response: Response) => {
@@ -236,7 +243,7 @@ export default class PlatformApi {
     getProgramLevelsParams = (        options: {
             currency?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<LevelsParamsInfo> => {
         const {
             currency
         } = options;
@@ -257,6 +264,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<LevelsParamsInfo>((response: Response) => {
@@ -270,7 +278,7 @@ export default class PlatformApi {
             client?: string,
             version?: string
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<CaptchaDetails> => {
                 if (route === null || route === undefined) {
                 throw new Error('Required parameter route was null or undefined when calling getRiskControlInfo.');
                 }
@@ -297,6 +305,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<CaptchaDetails>((response: Response) => {
@@ -306,7 +315,7 @@ export default class PlatformApi {
 
     getSitemapInfo = (        options: {
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<SiteMapInfo> => {
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/sitemap", {
     })
@@ -323,6 +332,7 @@ export default class PlatformApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<SiteMapInfo>((response: Response) => {

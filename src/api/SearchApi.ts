@@ -15,7 +15,7 @@ export default class SearchApi {
             mask?: string,
             take?: number
         } = {},
-        init: RequestInit = {}) => {
+        init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
         const {
             authorization,
             mask,
@@ -39,6 +39,7 @@ export default class SearchApi {
         method: "GET",
         body,
         headers: {
+            ...init.headers,
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
