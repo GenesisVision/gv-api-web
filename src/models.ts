@@ -121,7 +121,7 @@ export { ItemsViewModelFollowDetailsListItem } from "./model/ItemsViewModelFollo
 export { ItemsViewModelFundDetailsListItem } from "./model/ItemsViewModelFundDetailsListItem";
 export { ItemsViewModelFundInvestingDetailsList } from "./model/ItemsViewModelFundInvestingDetailsList";
 export { ItemsViewModelInvestmentEventViewModel } from "./model/ItemsViewModelInvestmentEventViewModel";
-export { ItemsViewModelPostWithComments } from "./model/ItemsViewModelPostWithComments";
+export { ItemsViewModelPost } from "./model/ItemsViewModelPost";
 export { ItemsViewModelProgramDetailsListItem } from "./model/ItemsViewModelProgramDetailsListItem";
 export { ItemsViewModelProgramInvestingDetailsList } from "./model/ItemsViewModelProgramInvestingDetailsList";
 export { ItemsViewModelPublicProfile } from "./model/ItemsViewModelPublicProfile";
@@ -191,7 +191,6 @@ export { Post } from "./model/Post";
 export { PostActions } from "./model/PostActions";
 export { PostImage } from "./model/PostImage";
 export { PostTag } from "./model/PostTag";
-export { PostWithComments } from "./model/PostWithComments";
 export { PowDetails } from "./model/PowDetails";
 export { PowResult } from "./model/PowResult";
 export { PrivateTradingAccountFull } from "./model/PrivateTradingAccountFull";

@@ -8,9 +8,11 @@ export interface Post {
     text: string;
     date: Date;
     likesCount: number;
+    isPinned: boolean;
     images: Array<PostImage>;
     tags: Array<PostTag>;
     author: ProfilePublicShort;
     actions: PostActions;
+    comments: Array<Post>;
 }
 
