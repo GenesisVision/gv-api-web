@@ -1,9 +1,11 @@
+import { Post } from './Post';
 import { PostActions } from './PostActions';
 import { PostImage } from './PostImage';
 import { PostTag } from './PostTag';
 import { ProfilePublicShort } from './ProfilePublicShort';
 
-export interface Post {
+export interface PostWithComments {
+    comments: Array<Post>;
     id: string;
     text: string;
     date: Date;

@@ -2,7 +2,7 @@ import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ItemsViewModelPost } from '../model/ItemsViewModelPost';
+import { ItemsViewModelPostWithComments } from '../model/ItemsViewModelPostWithComments';
 import { NewPost } from '../model/NewPost';
 
 export default class SocialApi {
@@ -129,7 +129,7 @@ export default class SocialApi {
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}): Promise<ItemsViewModelPost> => {
+        init: RequestInit = {}): Promise<ItemsViewModelPostWithComments> => {
         const {
             authorization,
             userId,
@@ -159,7 +159,7 @@ export default class SocialApi {
             "Content-Type": contentType,
             Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelPost>((response: Response) => {
+    }).then(handleErrors).then<ItemsViewModelPostWithComments>((response: Response) => {
         return response.json();
     })
     }
