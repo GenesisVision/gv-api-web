@@ -1,3 +1,4 @@
+import { Currency } from './Currency';
 import { SubscriptionMode } from './SubscriptionMode';
 
 export interface AttachToSignalProvider {
@@ -6,7 +7,6 @@ export interface AttachToSignalProvider {
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
-    fixedCurrency: FixedCurrencyEnum;
+    fixedCurrency: Currency;
 }
 
-type FixedCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

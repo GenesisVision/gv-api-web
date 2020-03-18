@@ -1,11 +1,11 @@
+import { Currency } from './Currency';
 
 export interface ProgramFollowDetailsFullTradingAccountDetails {
     id: string;
     login: string;
-    currency: CurrencyEnum;
+    currency: Currency;
     leverageMin: number;
     leverageMax: number;
     balance: number;
 }
 
-type CurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

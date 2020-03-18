@@ -1,6 +1,6 @@
 
 export interface BalanceChartPoint {
-    date: number;
+    date: Date;
     managerFunds: number;
     investorsFunds: number;
 }

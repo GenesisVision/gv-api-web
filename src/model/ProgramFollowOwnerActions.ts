@@ -12,5 +12,6 @@ export interface ProgramFollowOwnerActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canCloseOpenPositions: boolean;
 }
 

@@ -1,6 +1,6 @@
 import { DashboardTradingAsset } from './DashboardTradingAsset';
 
-export interface ItemsViewModelDashboardTradingAsset {
+export interface DashboardTradingAssetItemsViewModel {
     readonly items: Array<DashboardTradingAsset>;
     readonly total: number;
 }

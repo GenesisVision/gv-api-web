@@ -2,8 +2,9 @@ import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ItemsViewModelPost } from '../model/ItemsViewModelPost';
+import { FeedMode } from '../model/FeedMode';
 import { NewPost } from '../model/NewPost';
+import { PostItemsViewModel } from '../model/PostItemsViewModel';
 
 export default class SocialApi {
     private apiClient: ApiClient;
@@ -12,15 +13,10 @@ export default class SocialApi {
         this.apiClient = apiClient;
     }
 
-    addPost = (
-        authorization: string,
-        options: {
+    addPost = (        options: {
             body?: NewPost
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling addPost.');
-                }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/add", {
     })
@@ -39,7 +35,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -48,15 +43,11 @@ export default class SocialApi {
 
     deletePost = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling deletePost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling deletePost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/delete", {
@@ -77,7 +68,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -86,16 +76,12 @@ export default class SocialApi {
 
     editPost = (
         id: string,
-        authorization: string,
         options: {
             body?: EditPost
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling editPost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling editPost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/edit", {
@@ -116,7 +102,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -125,15 +110,11 @@ export default class SocialApi {
 
     followUser = (
         userId: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (userId === null || userId === undefined) {
                 throw new Error('Required parameter userId was null or undefined when calling followUser.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling followUser.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/{userId}/follow", {
@@ -154,7 +135,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -162,17 +142,17 @@ export default class SocialApi {
     }
 
     getFeed = (        options: {
-            authorization?: string,
             userId?: string,
-            onlyMyPosts?: boolean,
+            mode?: FeedMode,
+            hashTags?: Array<string>,
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}): Promise<ItemsViewModelPost> => {
+        init: RequestInit = {}): Promise<PostItemsViewModel> => {
         const {
-            authorization,
             userId,
-            onlyMyPosts,
+            mode,
+            hashTags,
             skip,
             take
         } = options;
@@ -182,7 +162,8 @@ export default class SocialApi {
 
     const query = buildQueryString(path, {
         UserId: userId,
-        OnlyMyPosts: onlyMyPosts,
+        Mode: mode,
+        HashTags: hashTags,
         Skip: skip,
         Take: take
     })
@@ -198,24 +179,19 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
-    }).then(handleErrors).then<ItemsViewModelPost>((response: Response) => {
+    }).then(handleErrors).then<PostItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
 
     likePost = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling likePost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling likePost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/like", {
@@ -236,7 +212,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -245,15 +220,11 @@ export default class SocialApi {
 
     pinPost = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling pinPost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling pinPost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/pin", {
@@ -274,7 +245,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -283,15 +253,11 @@ export default class SocialApi {
 
     unfollowUser = (
         userId: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (userId === null || userId === undefined) {
                 throw new Error('Required parameter userId was null or undefined when calling unfollowUser.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling unfollowUser.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/{userId}/unfollow", {
@@ -312,7 +278,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -321,15 +286,11 @@ export default class SocialApi {
 
     unlikePost = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling unlikePost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling unlikePost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/unlike", {
@@ -350,7 +311,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -359,15 +319,11 @@ export default class SocialApi {
 
     unpinPost = (
         id: string,
-        authorization: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling unpinPost.');
-                }
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling unpinPost.');
                 }
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/unpin", {
@@ -388,7 +344,6 @@ export default class SocialApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

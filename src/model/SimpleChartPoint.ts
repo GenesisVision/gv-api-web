@@ -1,6 +1,6 @@
 
 export interface SimpleChartPoint {
-    date: number;
+    date: Date;
     value: number;
 }
 

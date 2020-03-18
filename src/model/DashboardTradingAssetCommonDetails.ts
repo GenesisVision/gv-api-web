@@ -1,3 +1,4 @@
+import { Currency } from './Currency';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 
@@ -7,9 +8,8 @@ export interface DashboardTradingAssetCommonDetails {
     creationDate: Date;
     balance: number;
     login: string;
-    currency: CurrencyEnum;
+    currency: Currency;
     leverage: number;
     type: PrivateTradingAccountType;
 }
 
-type CurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

@@ -1,6 +1,10 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { AssetFilterType } from '../model/AssetFilterType';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { EventGroupType } from '../model/EventGroupType';
+import { InvestmentEventLocation } from '../model/InvestmentEventLocation';
+import { InvestmentEventType } from '../model/InvestmentEventType';
 import { InvestmentEventViewModels } from '../model/InvestmentEventViewModels';
 
 export default class EventsApi {
@@ -10,25 +14,20 @@ export default class EventsApi {
         this.apiClient = apiClient;
     }
 
-    getEvents = (
-        authorization: string,
-        options: {
-            eventLocation?: string,
+    getEvents = (        options: {
+            eventLocation?: InvestmentEventLocation,
             assetId?: string,
             from?: Date,
             to?: Date,
-            eventType?: string,
-            assetType?: string,
+            eventType?: InvestmentEventType,
+            assetType?: AssetFilterType,
             assetsIds?: Array<string>,
             forceFilterByIds?: boolean,
-            eventGroup?: string,
+            eventGroup?: EventGroupType,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}): Promise<InvestmentEventViewModels> => {
-                if (authorization === null || authorization === undefined) {
-                throw new Error('Required parameter authorization was null or undefined when calling getEvents.');
-                }
         const {
             eventLocation,
             assetId,
@@ -71,7 +70,6 @@ export default class EventsApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<InvestmentEventViewModels>((response: Response) => {
         return response.json();

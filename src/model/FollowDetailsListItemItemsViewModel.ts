@@ -1,6 +1,6 @@
 import { FollowDetailsListItem } from './FollowDetailsListItem';
 
-export interface ItemsViewModelFollowDetailsListItem {
+export interface FollowDetailsListItemItemsViewModel {
     readonly items: Array<FollowDetailsListItem>;
     readonly total: number;
 }

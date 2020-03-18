@@ -1,14 +1,13 @@
+import { Currency } from './Currency';
 import { SubscriptionMode } from './SubscriptionMode';
 
 export interface AttachToExternalSignalProviderCommon {
-    initialDepositCurrency: InitialDepositCurrencyEnum;
+    initialDepositCurrency: Currency;
     initialDepositAmount: number;
     mode: SubscriptionMode;
     percent: number;
     openTolerancePercent: number;
     fixedVolume: number;
-    fixedCurrency: FixedCurrencyEnum;
+    fixedCurrency: Currency;
 }
 
-type InitialDepositCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';
-type FixedCurrencyEnum = 'BTC' | 'ETH' | 'USDT' | 'USD' | 'GVT' | 'Undefined' | 'ADA' | 'XRP' | 'BCH' | 'LTC' | 'DOGE' | 'BNB' | 'EUR';

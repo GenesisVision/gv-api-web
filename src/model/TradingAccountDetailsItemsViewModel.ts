@@ -1,6 +1,6 @@
 import { TradingAccountDetails } from './TradingAccountDetails';
 
-export interface ItemsViewModelTradingAccountDetails {
+export interface TradingAccountDetailsItemsViewModel {
     readonly items: Array<TradingAccountDetails>;
     readonly total: number;
 }

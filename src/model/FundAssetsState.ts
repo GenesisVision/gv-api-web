@@ -1,7 +1,7 @@
 import { FundAssetPartWithIcon } from './FundAssetPartWithIcon';
 
 export interface FundAssetsState {
-    date: number;
+    date: Date;
     value: number;
     assets: Array<FundAssetPartWithIcon>;
 }

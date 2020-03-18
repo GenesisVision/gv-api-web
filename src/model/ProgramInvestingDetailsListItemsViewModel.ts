@@ -1,6 +1,6 @@
 import { ProgramInvestingDetailsList } from './ProgramInvestingDetailsList';
 
-export interface ItemsViewModelProgramInvestingDetailsList {
+export interface ProgramInvestingDetailsListItemsViewModel {
     readonly items: Array<ProgramInvestingDetailsList>;
     readonly total: number;
 }

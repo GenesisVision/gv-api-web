@@ -11,13 +11,11 @@ export default class SearchApi {
     }
 
     search = (        options: {
-            authorization?: string,
             mask?: string,
             take?: number
         } = {},
         init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
         const {
-            authorization,
             mask,
             take
         } = options;
@@ -41,7 +39,6 @@ export default class SearchApi {
         headers: {
             ...init.headers,
             "Content-Type": contentType,
-            Authorization: authorization || ""
         }
     }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
         return response.json();
