@@ -1,2 +1,0 @@
-
-export type ProgramsFilterSorting = 'ByTitleAsc' | 'ByTitleDesc' | 'ByEquityAsc' | 'ByEquityDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPeriodAsc' | 'ByPeriodDesc' | 'ByDrawdownAsc' | 'ByDrawdownDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByNewAsc' | 'ByNewDesc' | 'ByLevelProgressAsc' | 'ByLevelProgressDesc' | 'ByLevelAsc' | 'ByLevelDesc' | 'ByValueAsc' | 'ByValueDesc';
