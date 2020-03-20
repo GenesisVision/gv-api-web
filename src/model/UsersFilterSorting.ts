@@ -1,0 +1,2 @@
+
+export type UsersFilterSorting = 'ByNameAsc' | 'ByNameDesc' | 'ByAgeAsc' | 'ByAgeDesc' | 'ByAumAsc' | 'ByAumDesc' | 'ByFollowersAsc' | 'ByFollowersDesc' | 'ByInvestorsAsc' | 'ByInvestorsDesc' | 'ByPopularityAsc' | 'ByPopularityDesc' | 'ByProfitAsc' | 'ByProfitDesc' | 'ByTradingProfitAsc' | 'ByTradingProfitDesc' | 'ByInvestingProfitAsc' | 'ByInvestingProfitDesc';
