@@ -15,6 +15,5 @@ export interface DashboardTradingAssetActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
-    canCloseOpenPositions: boolean;
 }
 
