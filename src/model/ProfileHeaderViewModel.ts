@@ -6,6 +6,7 @@ export interface ProfileHeaderViewModel {
     email: string;
     url: string;
     avatar: string;
+    logoUrl: string;
     countryCode: string;
     notificationsCount: number;
     isKycConfirmed: boolean;

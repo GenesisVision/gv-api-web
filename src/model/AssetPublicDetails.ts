@@ -4,6 +4,7 @@ export interface AssetPublicDetails {
     title: string;
     description: string;
     logo: string;
+    logoUrl: string;
     url: string;
     color: string;
     creationDate: Date;

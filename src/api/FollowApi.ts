@@ -6,6 +6,7 @@ import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FollowDetailsListItemItemsViewModel } from '../model/FollowDetailsListItemItemsViewModel';
 import { FollowFilterSorting } from '../model/FollowFilterSorting';
+import { ImageQuality } from '../model/ImageQuality';
 import { ProgramFollowDetailsFull } from '../model/ProgramFollowDetailsFull';
 import { ProgramProfitPercentCharts } from '../model/ProgramProfitPercentCharts';
 import { SignalSubscriptionItemsViewModel } from '../model/SignalSubscriptionItemsViewModel';
@@ -249,17 +250,22 @@ export default class FollowApi {
     getFollowAssetDetails = (
         id: string,
         options: {
+            logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFollowAssetDetails.');
                 }
+        const {
+            logoQuality
+        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}", {
         id
     })
 
     const query = buildQueryString(path, {
+        logoQuality: logoQuality
     })
 
     let body = null;

@@ -5,6 +5,7 @@ export interface PlatformEvent {
     title: string;
     text: string;
     icon: string;
+    logoUrl: string;
     assetUrl: string;
     userUrl: string;
     value: string;

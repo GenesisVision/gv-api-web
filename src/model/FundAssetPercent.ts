@@ -4,6 +4,7 @@ export interface FundAssetPercent {
     name: string;
     percent: number;
     icon: string;
+    logoUrl: string;
     url: string;
 }
 

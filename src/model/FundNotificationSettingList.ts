@@ -5,6 +5,7 @@ export interface FundNotificationSettingList {
     title: string;
     url: string;
     logo: string;
+    logoUrl: string;
     color: string;
     settingsGeneral: Array<NotificationSettingViewModel>;
 }

@@ -4,6 +4,7 @@ export interface WalletBaseData {
     id: string;
     title: string;
     logo: string;
+    logoUrl: string;
     currency: Currency;
     available: number;
     rate: number;

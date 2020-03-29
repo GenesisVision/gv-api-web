@@ -15,6 +15,7 @@ export interface ProfileFullViewModel {
     birthday: Date;
     gender: boolean;
     avatar: string;
+    logoUrl: string;
     about: string;
     userName: string;
     index: string;

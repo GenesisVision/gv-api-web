@@ -6,6 +6,7 @@ export interface AssetFacet {
     title: string;
     description: string;
     logo: string;
+    logoUrl: string;
     url: string;
     sortType: FacetSortType;
     timeframe: Timeframe;

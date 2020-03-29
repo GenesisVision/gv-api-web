@@ -9,6 +9,7 @@ import { FundDetailsListItem } from '../model/FundDetailsListItem';
 import { FundDetailsListItemItemsViewModel } from '../model/FundDetailsListItemItemsViewModel';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
 import { FundsFilterSorting } from '../model/FundsFilterSorting';
+import { ImageQuality } from '../model/ImageQuality';
 import { ReallocationModelItemsViewModel } from '../model/ReallocationModelItemsViewModel';
 
 export default class FundsApi {
@@ -148,14 +149,16 @@ export default class FundsApi {
     getFundDetails = (
         id: string,
         options: {
-            currency?: Currency
+            currency?: Currency,
+            logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<FundDetailsFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getFundDetails.');
                 }
         const {
-            currency
+            currency,
+            logoQuality
         } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}", {
@@ -163,7 +166,8 @@ export default class FundsApi {
     })
 
     const query = buildQueryString(path, {
-        currency: currency
+        currency: currency,
+        logoQuality: logoQuality
     })
 
     let body = null;

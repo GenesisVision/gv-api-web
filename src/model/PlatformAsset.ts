@@ -5,6 +5,7 @@ export interface PlatformAsset {
     asset: string;
     description: string;
     icon: string;
+    logoUrl: string;
     color: string;
     mandatoryFundPercent: number;
     url: string;

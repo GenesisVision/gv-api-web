@@ -5,6 +5,7 @@ export interface ManagerNotificationSettingList {
     url: string;
     username: string;
     avatar: string;
+    logoUrl: string;
     about: string;
     settingsGeneral: Array<NotificationSettingViewModel>;
 }

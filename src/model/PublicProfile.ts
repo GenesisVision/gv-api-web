@@ -5,6 +5,7 @@ export interface PublicProfile {
     username: string;
     about: string;
     avatar: string;
+    logoUrl: string;
     regDate: Date;
     assets: Array<string>;
     url: string;

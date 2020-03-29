@@ -3,6 +3,7 @@ import { BrokerTradeServerType } from './BrokerTradeServerType';
 export interface BrokerDetails {
     id: string;
     logo: string;
+    logoUrl: string;
     name: string;
     type: BrokerTradeServerType;
     isKycRequired: boolean;

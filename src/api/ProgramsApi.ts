@@ -4,6 +4,7 @@ import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { Currency } from '../model/Currency';
 import { DashboardActionStatus } from '../model/DashboardActionStatus';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ImageQuality } from '../model/ImageQuality';
 import { PeriodStatus } from '../model/PeriodStatus';
 import { ProgramBalanceChart } from '../model/ProgramBalanceChart';
 import { ProgramDetailsListItemItemsViewModel } from '../model/ProgramDetailsListItemItemsViewModel';
@@ -427,17 +428,22 @@ export default class ProgramsApi {
     getProgramDetails = (
         id: string,
         options: {
+            logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getProgramDetails.');
                 }
+        const {
+            logoQuality
+        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}", {
         id
     })
 
     const query = buildQueryString(path, {
+        logoQuality: logoQuality
     })
 
     let body = null;

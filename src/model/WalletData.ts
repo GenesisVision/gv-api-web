@@ -11,6 +11,7 @@ export interface WalletData {
     id: string;
     title: string;
     logo: string;
+    logoUrl: string;
     isDepositEnabled: boolean;
     isWithdrawalEnabled: boolean;
     withdrawalCommission: number;

@@ -9,6 +9,7 @@ export interface NotificationViewModel {
     assetId: string;
     managerId: string;
     logo: string;
+    logoUrl: string;
     url: string;
     color: string;
     isUnread: boolean;

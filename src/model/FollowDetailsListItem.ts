@@ -11,6 +11,7 @@ export interface FollowDetailsListItem {
     title: string;
     description: string;
     logo: string;
+    logoUrl: string;
     creationDate: Date;
     currency: Currency;
     subscribersCount: number;

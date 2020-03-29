@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ImageQuality } from '../model/ImageQuality';
 import { PublicProfile } from '../model/PublicProfile';
 import { UserDetailsListItemsViewModel } from '../model/UserDetailsListItemsViewModel';
 import { UsersFilterSorting } from '../model/UsersFilterSorting';
@@ -15,17 +16,22 @@ export default class UsersApi {
     getManagerProfile = (
         id: string,
         options: {
+            logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<PublicProfile> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getManagerProfile.');
                 }
+        const {
+            logoQuality
+        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/users/{id}", {
         id
     })
 
     const query = buildQueryString(path, {
+        logoQuality: logoQuality
     })
 
     let body = null;

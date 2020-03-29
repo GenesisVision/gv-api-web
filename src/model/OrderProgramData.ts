@@ -7,6 +7,7 @@ export interface OrderProgramData {
     color: string;
     url: string;
     logo: string;
+    logoUrl: string;
     type: AssetType;
 }
 

@@ -7,6 +7,7 @@ import { ProfitChart } from './ProfitChart';
 export interface FundInvestingDetailsList {
     id: string;
     logo: string;
+    logoUrl: string;
     url: string;
     color: string;
     title: string;
