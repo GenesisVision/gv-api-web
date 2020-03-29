@@ -223,6 +223,7 @@ export { ProgramsFilterSorting } from "./model/ProgramsFilterSorting";
 export { ProgramsLevelsInfo } from "./model/ProgramsLevelsInfo";
 export { PublicProfile } from "./model/PublicProfile";
 export { PublicProfileItemsViewModel } from "./model/PublicProfileItemsViewModel";
+export { PublicProfilePersonalDetails } from "./model/PublicProfilePersonalDetails";
 export { RateItem } from "./model/RateItem";
 export { RateModel } from "./model/RateModel";
 export { RatesModel } from "./model/RatesModel";
