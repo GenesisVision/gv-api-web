@@ -183,6 +183,7 @@ export { PlatformUrlType } from "./model/PlatformUrlType";
 export { Post } from "./model/Post";
 export { PostActions } from "./model/PostActions";
 export { PostImage } from "./model/PostImage";
+export { PostImageResize } from "./model/PostImageResize";
 export { PostItemsViewModel } from "./model/PostItemsViewModel";
 export { PostTag } from "./model/PostTag";
 export { PowDetails } from "./model/PowDetails";
