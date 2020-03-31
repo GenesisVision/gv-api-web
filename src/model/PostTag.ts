@@ -1,7 +1,7 @@
 import { AssetDetails } from './AssetDetails';
 import { PlatformAsset } from './PlatformAsset';
 import { Post } from './Post';
-import { ProfilePublicShort } from './ProfilePublicShort';
+import { ProfilePublic } from './ProfilePublic';
 import { SocialPostTagType } from './SocialPostTagType';
 
 export interface PostTag {
@@ -9,7 +9,7 @@ export interface PostTag {
     number: number;
     type: SocialPostTagType;
     assetDetails: AssetDetails;
-    userDetails: ProfilePublicShort;
+    userDetails: ProfilePublic;
     platformAssetDetails: PlatformAsset;
     post: Post;
 }

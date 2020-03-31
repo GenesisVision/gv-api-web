@@ -3,10 +3,10 @@ import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { FeedMode } from '../model/FeedMode';
 import { NewPost } from '../model/NewPost';
 import { PostItemsViewModel } from '../model/PostItemsViewModel';
 import { RePost } from '../model/RePost';
+import { UserFeedMode } from '../model/UserFeedMode';
 
 export default class SocialApi {
     private apiClient: ApiClient;
@@ -139,16 +139,18 @@ export default class SocialApi {
 
     getFeed = (        options: {
             userId?: string,
-            mode?: FeedMode,
+            userMode?: UserFeedMode,
             hashTags?: Array<string>,
+            mask?: string,
             skip?: number,
             take?: number
         } = {},
         init: RequestInit = {}): Promise<PostItemsViewModel> => {
         const {
             userId,
-            mode,
+            userMode,
             hashTags,
+            mask,
             skip,
             take
         } = options;
@@ -158,8 +160,9 @@ export default class SocialApi {
 
     const query = buildQueryString(path, {
         UserId: userId,
-        Mode: mode,
+        UserMode: userMode,
         HashTags: hashTags,
+        Mask: mask,
         Skip: skip,
         Take: take
     })
