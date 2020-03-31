@@ -12,8 +12,8 @@ export interface ProgramDetailsFull {
     genesisRatio: number;
     investmentScale: number;
     volumeScale: number;
-    entryFeeSelected: number;
-    entryFeeCurrent: number;
+    managementFeeSelected: number;
+    managementFeeCurrent: number;
     successFeeSelected: number;
     successFeeCurrent: number;
     stopOutLevelSelected: number;

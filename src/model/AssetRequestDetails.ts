@@ -3,6 +3,7 @@ import { ProgramAssetDetails } from './ProgramAssetDetails';
 
 export interface AssetRequestDetails {
     entryFee: number;
+    managementFee: number;
     exitFee: number;
     withdrawPercent: number;
     isWithdrawAll: boolean;
