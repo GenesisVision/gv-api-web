@@ -6,6 +6,7 @@ export { default as EventsApi } from "./api/EventsApi";
 export { default as FileApi } from "./api/FileApi";
 export { default as FollowApi } from "./api/FollowApi";
 export { default as FundsApi } from "./api/FundsApi";
+export { default as GuidesApi } from "./api/GuidesApi";
 export { default as InvestmentsApi } from "./api/InvestmentsApi";
 export { default as NotificationsApi } from "./api/NotificationsApi";
 export { default as PartnershipApi } from "./api/PartnershipApi";
