@@ -142,6 +142,7 @@ export default class SocialApi {
             userMode?: UserFeedMode,
             hashTags?: Array<string>,
             mask?: string,
+            showTop?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -151,6 +152,7 @@ export default class SocialApi {
             userMode,
             hashTags,
             mask,
+            showTop,
             skip,
             take
         } = options;
@@ -163,6 +165,7 @@ export default class SocialApi {
         UserMode: userMode,
         HashTags: hashTags,
         Mask: mask,
+        ShowTop: showTop,
         Skip: skip,
         Take: take
     })
