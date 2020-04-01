@@ -8,6 +8,7 @@ export interface Post {
     text: string;
     date: Date;
     likesCount: number;
+    rePostsCount: number;
     isPinned: boolean;
     images: Array<PostImage>;
     tags: Array<PostTag>;
