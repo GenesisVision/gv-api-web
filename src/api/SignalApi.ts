@@ -8,8 +8,6 @@ import { DetachFromExternalSignalProvider } from '../model/DetachFromExternalSig
 import { DetachFromSignalProvider } from '../model/DetachFromSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { SignalTradingEventItemsViewModel } from '../model/SignalTradingEventItemsViewModel';
-import { TradeSorting } from '../model/TradeSorting';
-import { TradesSignalViewModel } from '../model/TradesSignalViewModel';
 import { TradingAccountDetailsItemsViewModel } from '../model/TradingAccountDetailsItemsViewModel';
 
 export default class SignalApi {
@@ -121,44 +119,6 @@ export default class SignalApi {
     })
     }
 
-    closeTradeInternal = (
-        id: string,
-        options: {
-            assetId?: string
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeTradeInternal.');
-                }
-        const {
-            assetId
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/trades/{id}/close", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-        assetId: assetId
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
-    })
-    }
-
     detachSlaveFromMasterExternal = (
         id: string,
         options: {
@@ -224,53 +184,6 @@ export default class SignalApi {
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
-    })
-    }
-
-    getOpenSignalTrades = (        options: {
-            sorting?: TradeSorting,
-            symbol?: string,
-            accountId?: string,
-            accountCurrency?: Currency,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<TradesSignalViewModel> => {
-        const {
-            sorting,
-            symbol,
-            accountId,
-            accountCurrency,
-            skip,
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/trades/open", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        Symbol: symbol,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        Skip: skip,
-        Take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
-        return response.json();
     })
     }
 
