@@ -439,4 +439,39 @@ export default class ProfileApi {
         return response;
     })
     }
+
+    updateUserSocialSettings = (        options: {
+            allowWriteToUserWall?: boolean,
+            allowCommentUserPosts?: boolean
+        } = {},
+        init: RequestInit = {}): Promise<Response> => {
+        const {
+            allowWriteToUserWall,
+            allowCommentUserPosts
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/social/settings/update", {
+    })
+
+    const query = buildQueryString(path, {
+        AllowWriteToUserWall: allowWriteToUserWall,
+        AllowCommentUserPosts: allowCommentUserPosts
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
 }

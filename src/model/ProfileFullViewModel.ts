@@ -24,5 +24,7 @@ export interface ProfileFullViewModel {
     verificationStatus: UserVerificationStatus;
     isPublicInvestor: boolean;
     platformCurrency: Currency;
+    socialAllowWriteToUserWall: boolean;
+    socialAllowCommentUserPosts: boolean;
 }
 

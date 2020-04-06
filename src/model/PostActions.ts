@@ -4,5 +4,6 @@ export interface PostActions {
     canEdit: boolean;
     canDelete: boolean;
     canPin: boolean;
+    canComment: boolean;
 }
 

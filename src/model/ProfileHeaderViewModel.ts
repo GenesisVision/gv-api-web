@@ -14,6 +14,7 @@ export interface ProfileHeaderViewModel {
     isTwoFactorEnabled: boolean;
     isNewUser: boolean;
     isPublicInvestor: boolean;
+    isBetaTester: boolean;
     isUserNameFilled: boolean;
     platformCurrency: Currency;
 }
