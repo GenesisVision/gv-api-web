@@ -11,6 +11,7 @@ export interface EditablePost {
     date: Date;
     likesCount: number;
     rePostsCount: number;
+    impressionsCount: number;
     isPinned: boolean;
     images: Array<PostImage>;
     tags: Array<PostTag>;

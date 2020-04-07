@@ -9,6 +9,7 @@ export interface Post {
     date: Date;
     likesCount: number;
     rePostsCount: number;
+    impressionsCount: number;
     isPinned: boolean;
     images: Array<PostImage>;
     tags: Array<PostTag>;

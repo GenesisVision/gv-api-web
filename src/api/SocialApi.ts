@@ -6,6 +6,7 @@ import { ErrorViewModel } from '../model/ErrorViewModel';
 import { NewPost } from '../model/NewPost';
 import { PostItemsViewModel } from '../model/PostItemsViewModel';
 import { RePost } from '../model/RePost';
+import { SocialSummary } from '../model/SocialSummary';
 import { UserFeedMode } from '../model/UserFeedMode';
 
 export default class SocialApi {
@@ -143,6 +144,7 @@ export default class SocialApi {
             hashTags?: Array<string>,
             mask?: string,
             showTop?: boolean,
+            showLiked?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -153,6 +155,7 @@ export default class SocialApi {
             hashTags,
             mask,
             showTop,
+            showLiked,
             skip,
             take
         } = options;
@@ -166,6 +169,7 @@ export default class SocialApi {
         HashTags: hashTags,
         Mask: mask,
         ShowTop: showTop,
+        ShowLiked: showLiked,
         Skip: skip,
         Take: take
     })
@@ -216,6 +220,33 @@ export default class SocialApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<EditablePost>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getSocialSummary = (        options: {
+        } = {},
+        init: RequestInit = {}): Promise<SocialSummary> => {
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/summary", {
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<SocialSummary>((response: Response) => {
         return response.json();
     })
     }
