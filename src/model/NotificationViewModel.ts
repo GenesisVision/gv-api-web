@@ -8,7 +8,6 @@ export interface NotificationViewModel {
     type: NotificationType;
     assetId: string;
     managerId: string;
-    logo: string;
     logoUrl: string;
     url: string;
     color: string;

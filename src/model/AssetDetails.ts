@@ -3,7 +3,6 @@ import { ProgramAssetDetails } from './ProgramAssetDetails';
 
 export interface AssetDetails {
     id: string;
-    logo: string;
     logoUrl: string;
     color: string;
     title: string;

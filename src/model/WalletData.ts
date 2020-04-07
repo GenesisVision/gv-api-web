@@ -10,7 +10,6 @@ export interface WalletData {
     readonly totalCcy: number;
     id: string;
     title: string;
-    logo: string;
     logoUrl: string;
     isDepositEnabled: boolean;
     isWithdrawalEnabled: boolean;

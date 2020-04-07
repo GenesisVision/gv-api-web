@@ -4,7 +4,6 @@ import { Tag } from './Tag';
 export interface Broker {
     name: string;
     description: string;
-    logo: string;
     logoUrl: string;
     terms: string;
     assets: string;

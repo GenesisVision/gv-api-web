@@ -5,7 +5,6 @@ export interface ProfileHeaderViewModel {
     name: string;
     email: string;
     url: string;
-    avatar: string;
     logoUrl: string;
     countryCode: string;
     notificationsCount: number;

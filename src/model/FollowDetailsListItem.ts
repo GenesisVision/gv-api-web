@@ -10,7 +10,6 @@ export interface FollowDetailsListItem {
     id: string;
     title: string;
     description: string;
-    logo: string;
     logoUrl: string;
     creationDate: Date;
     currency: Currency;

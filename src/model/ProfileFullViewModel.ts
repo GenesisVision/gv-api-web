@@ -14,7 +14,6 @@ export interface ProfileFullViewModel {
     phoneNumberConfirmed: boolean;
     birthday: Date;
     gender: boolean;
-    avatar: string;
     logoUrl: string;
     about: string;
     userName: string;

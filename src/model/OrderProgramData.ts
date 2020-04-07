@@ -6,7 +6,6 @@ export interface OrderProgramData {
     levelProgress: number;
     color: string;
     url: string;
-    logo: string;
     logoUrl: string;
     type: AssetType;
 }

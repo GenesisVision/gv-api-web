@@ -6,7 +6,6 @@ import { InvestmentEventItemViewModel } from './InvestmentEventItemViewModel';
 
 export interface InvestmentEventViewModel {
     title: string;
-    icon: string;
     logoUrl: string;
     date: Date;
     assetDetails: AssetDetails;

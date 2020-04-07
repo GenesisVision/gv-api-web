@@ -1,6 +1,5 @@
 
 export interface FundAssetPartWithIcon {
-    icon: string;
     logoUrl: string;
     color: string;
     url: string;

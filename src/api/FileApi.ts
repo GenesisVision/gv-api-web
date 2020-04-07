@@ -1,7 +1,6 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ImageQuality } from '../model/ImageQuality';
 import { UploadResult } from '../model/UploadResult';
 
 export default class FileApi {
@@ -9,44 +8,6 @@ export default class FileApi {
 
     constructor(apiClient: ApiClient) {
         this.apiClient = apiClient;
-    }
-
-    getFile = (
-        id: string,
-        options: {
-            quality?: ImageQuality
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFile.');
-                }
-        const {
-            quality
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/file/{id}", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-        quality: quality
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
-    })
     }
 
     uploadFile = (        options: {

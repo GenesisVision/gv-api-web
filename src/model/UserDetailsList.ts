@@ -4,7 +4,6 @@ import { Tag } from './Tag';
 export interface UserDetailsList {
     userId: string;
     username: string;
-    avatar: string;
     logoUrl: string;
     url: string;
     socialLinks: Array<SocialLinkViewModel>;

@@ -9,7 +9,6 @@ export interface AssetRequestDetails {
     isWithdrawAll: boolean;
     successFee: number;
     id: string;
-    logo: string;
     logoUrl: string;
     color: string;
     title: string;

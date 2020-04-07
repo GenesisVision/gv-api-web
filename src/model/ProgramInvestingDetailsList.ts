@@ -8,7 +8,6 @@ import { Tag } from './Tag';
 
 export interface ProgramInvestingDetailsList {
     id: string;
-    logo: string;
     logoUrl: string;
     url: string;
     color: string;

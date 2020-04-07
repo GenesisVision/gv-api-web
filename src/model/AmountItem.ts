@@ -5,7 +5,6 @@ export interface AmountItem {
     amount: number;
     currency: Currency;
     color: Color;
-    logo: string;
     logoUrl: string;
 }
 
