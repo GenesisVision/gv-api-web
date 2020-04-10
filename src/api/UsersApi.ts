@@ -53,7 +53,6 @@ export default class UsersApi {
     }
 
     getUsersList = (        options: {
-            facetId?: string,
             sorting?: UsersFilterSorting,
             timeframe?: UsersFilterTimeframe,
             tags?: Array<string>,
@@ -62,7 +61,6 @@ export default class UsersApi {
         } = {},
         init: RequestInit = {}): Promise<UserDetailsListItemsViewModel> => {
         const {
-            facetId,
             sorting,
             timeframe,
             tags,
@@ -74,7 +72,6 @@ export default class UsersApi {
     })
 
     const query = buildQueryString(path, {
-        FacetId: facetId,
         Sorting: sorting,
         Timeframe: timeframe,
         Tags: tags,
