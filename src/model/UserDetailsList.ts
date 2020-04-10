@@ -1,4 +1,3 @@
-import { SocialLinkViewModel } from './SocialLinkViewModel';
 import { Tag } from './Tag';
 
 export interface UserDetailsList {
@@ -6,14 +5,11 @@ export interface UserDetailsList {
     username: string;
     logoUrl: string;
     url: string;
-    socialLinks: Array<SocialLinkViewModel>;
     tags: Array<Tag>;
     regDate: Date;
     assetsUnderManagement: number;
     investorsCount: number;
     followersCount: number;
     totalProfit: number;
-    tradingProfit: number;
-    investingProfit: number;
 }
 

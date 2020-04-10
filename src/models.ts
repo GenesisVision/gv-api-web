@@ -302,6 +302,7 @@ export { UserDetailsListItemsViewModel } from "./model/UserDetailsListItemsViewM
 export { UserFeedMode } from "./model/UserFeedMode";
 export { UserVerificationStatus } from "./model/UserVerificationStatus";
 export { UsersFilterSorting } from "./model/UsersFilterSorting";
+export { UsersFilterTimeframe } from "./model/UsersFilterTimeframe";
 export { UsersPlatformInfo } from "./model/UsersPlatformInfo";
 export { UtmSource } from "./model/UtmSource";
 export { WalletBaseData } from "./model/WalletBaseData";

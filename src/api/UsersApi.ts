@@ -5,6 +5,7 @@ import { ImageQuality } from '../model/ImageQuality';
 import { PublicProfile } from '../model/PublicProfile';
 import { UserDetailsListItemsViewModel } from '../model/UserDetailsListItemsViewModel';
 import { UsersFilterSorting } from '../model/UsersFilterSorting';
+import { UsersFilterTimeframe } from '../model/UsersFilterTimeframe';
 
 export default class UsersApi {
     private apiClient: ApiClient;
@@ -54,6 +55,7 @@ export default class UsersApi {
     getUsersList = (        options: {
             facetId?: string,
             sorting?: UsersFilterSorting,
+            timeframe?: UsersFilterTimeframe,
             tags?: Array<string>,
             skip?: number,
             take?: number
@@ -62,6 +64,7 @@ export default class UsersApi {
         const {
             facetId,
             sorting,
+            timeframe,
             tags,
             skip,
             take
@@ -73,6 +76,7 @@ export default class UsersApi {
     const query = buildQueryString(path, {
         FacetId: facetId,
         Sorting: sorting,
+        Timeframe: timeframe,
         Tags: tags,
         Skip: skip,
         Take: take
