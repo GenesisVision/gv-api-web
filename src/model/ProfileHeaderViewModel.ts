@@ -1,3 +1,4 @@
+import { BetaTestingType } from './BetaTestingType';
 import { Currency } from './Currency';
 
 export interface ProfileHeaderViewModel {
@@ -13,7 +14,7 @@ export interface ProfileHeaderViewModel {
     isTwoFactorEnabled: boolean;
     isNewUser: boolean;
     isPublicInvestor: boolean;
-    isBetaTester: boolean;
+    betaTester: Array<BetaTestingType>;
     isUserNameFilled: boolean;
     platformCurrency: Currency;
 }

@@ -26,6 +26,7 @@ export { AttachToExternalSignalProviderCommon } from "./model/AttachToExternalSi
 export { AttachToExternalSignalProviderExt } from "./model/AttachToExternalSignalProviderExt";
 export { AttachToSignalProvider } from "./model/AttachToSignalProvider";
 export { BalanceChartPoint } from "./model/BalanceChartPoint";
+export { BetaTestingType } from "./model/BetaTestingType";
 export { Body } from "./model/Body";
 export { Broker } from "./model/Broker";
 export { BrokerAccountType } from "./model/BrokerAccountType";
