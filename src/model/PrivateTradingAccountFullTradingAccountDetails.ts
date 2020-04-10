@@ -10,5 +10,6 @@ export interface PrivateTradingAccountFullTradingAccountDetails {
     type: PrivateTradingAccountType;
     subscriptions: number;
     isExternal: boolean;
+    showTradingLog: boolean;
 }
 
