@@ -396,60 +396,6 @@ export default class WalletApi {
     })
     }
 
-    switchPayFeeInGvtOff = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/paygvtfee/off", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
-    })
-    }
-
-    switchPayFeeInGvtOn = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/paygvtfee/on", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
-        method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
-    })
-    }
-
     transfer = (        options: {
             body?: InternalTransferRequest
         } = {},

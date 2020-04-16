@@ -9,6 +9,7 @@ export interface BrokerAccountType {
     currencies: Array<string>;
     minimumDepositsAmount: { [key: string]: number; };
     isKycRequired: boolean;
+    isCountryNotUSRequired: boolean;
     isSignalsAvailable: boolean;
     isDepositRequired: boolean;
 }

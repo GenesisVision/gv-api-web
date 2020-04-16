@@ -11,6 +11,7 @@ export interface ProfileHeaderViewModel {
     notificationsCount: number;
     isKycConfirmed: boolean;
     isForexAllowed: boolean;
+    isCountryUS: boolean;
     isTwoFactorEnabled: boolean;
     isNewUser: boolean;
     isPublicInvestor: boolean;
