@@ -6,6 +6,7 @@ import { FcmTokenViewModel } from '../model/FcmTokenViewModel';
 import { ProfileFullViewModel } from '../model/ProfileFullViewModel';
 import { ProfileHeaderViewModel } from '../model/ProfileHeaderViewModel';
 import { SocialLinksViewModel } from '../model/SocialLinksViewModel';
+import { SocialViewMode } from '../model/SocialViewMode';
 import { UpdatePersonalDetailViewModel } from '../model/UpdatePersonalDetailViewModel';
 import { UpdateProfileViewModel } from '../model/UpdateProfileViewModel';
 import { UpdateSocialLinkViewModel } from '../model/UpdateSocialLinkViewModel';
@@ -441,21 +442,24 @@ export default class ProfileApi {
     }
 
     updateUserSocialSettings = (        options: {
-            allowWriteToUserWall?: boolean,
-            allowCommentUserPosts?: boolean
+            whoCanPostToMayWall?: SocialViewMode,
+            whoCanViewCommentsOnMyPosts?: SocialViewMode,
+            whoCanCommentOnMyPosts?: SocialViewMode
         } = {},
         init: RequestInit = {}): Promise<Response> => {
         const {
-            allowWriteToUserWall,
-            allowCommentUserPosts
+            whoCanPostToMayWall,
+            whoCanViewCommentsOnMyPosts,
+            whoCanCommentOnMyPosts
         } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/social/settings/update", {
     })
 
     const query = buildQueryString(path, {
-        AllowWriteToUserWall: allowWriteToUserWall,
-        AllowCommentUserPosts: allowCommentUserPosts
+        WhoCanPostToMayWall: whoCanPostToMayWall,
+        WhoCanViewCommentsOnMyPosts: whoCanViewCommentsOnMyPosts,
+        WhoCanCommentOnMyPosts: whoCanCommentOnMyPosts
     })
 
     let body = null;

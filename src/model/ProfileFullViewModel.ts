@@ -1,4 +1,5 @@
 import { Currency } from './Currency';
+import { SocialViewMode } from './SocialViewMode';
 import { UserVerificationStatus } from './UserVerificationStatus';
 
 export interface ProfileFullViewModel {
@@ -23,7 +24,8 @@ export interface ProfileFullViewModel {
     verificationStatus: UserVerificationStatus;
     isPublicInvestor: boolean;
     platformCurrency: Currency;
-    socialAllowWriteToUserWall: boolean;
-    socialAllowCommentUserPosts: boolean;
+    whoCanPostToMayWall: SocialViewMode;
+    whoCanCommentOnMyPosts: SocialViewMode;
+    whoCanViewCommentsOnMyPosts: SocialViewMode;
 }
 
