@@ -1,4 +1,5 @@
 import { DashboardProfits } from './DashboardProfits';
+import { LimitWithoutKyc } from './LimitWithoutKyc';
 
 export interface DashboardSummary {
     invested: number;
@@ -6,5 +7,6 @@ export interface DashboardSummary {
     wallets: number;
     total: number;
     profits: DashboardProfits;
+    limitWithoutKyc: LimitWithoutKyc;
 }
 

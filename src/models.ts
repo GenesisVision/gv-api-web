@@ -133,6 +133,7 @@ export { InvestmentRequestType } from "./model/InvestmentRequestType";
 export { LandingInfo } from "./model/LandingInfo";
 export { LevelInfo } from "./model/LevelInfo";
 export { LevelsParamsInfo } from "./model/LevelsParamsInfo";
+export { LimitWithoutKyc } from "./model/LimitWithoutKyc";
 export { LoginViewModel } from "./model/LoginViewModel";
 export { MakeSignalProviderProgram } from "./model/MakeSignalProviderProgram";
 export { MakeTradingAccountProgram } from "./model/MakeTradingAccountProgram";
