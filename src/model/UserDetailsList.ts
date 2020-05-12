@@ -1,3 +1,5 @@
+import { ProfilePublicShort } from './ProfilePublicShort';
+import { PublicProfilePersonalDetails } from './PublicProfilePersonalDetails';
 import { Tag } from './Tag';
 
 export interface UserDetailsList {
@@ -11,5 +13,8 @@ export interface UserDetailsList {
     investorsCount: number;
     followersCount: number;
     totalProfit: number;
+    about: string;
+    followers: Array<ProfilePublicShort>;
+    personalDetails: PublicProfilePersonalDetails;
 }
 
