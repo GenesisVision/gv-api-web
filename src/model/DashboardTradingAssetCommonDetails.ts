@@ -1,3 +1,4 @@
+import { AmountWithCurrency } from './AmountWithCurrency';
 import { Currency } from './Currency';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
@@ -11,5 +12,6 @@ export interface DashboardTradingAssetCommonDetails {
     currency: Currency;
     leverage: number;
     type: PrivateTradingAccountType;
+    balances: Array<AmountWithCurrency>;
 }
 
