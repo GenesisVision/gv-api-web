@@ -268,6 +268,7 @@ export { SocialLinksViewModel } from "./model/SocialLinksViewModel";
 export { SocialPostTagType } from "./model/SocialPostTagType";
 export { SocialSummary } from "./model/SocialSummary";
 export { SocialViewMode } from "./model/SocialViewMode";
+export { StringItemsViewModel } from "./model/StringItemsViewModel";
 export { SubscriptionMode } from "./model/SubscriptionMode";
 export { Tag } from "./model/Tag";
 export { Timeframe } from "./model/Timeframe";

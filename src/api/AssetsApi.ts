@@ -13,6 +13,7 @@ import { NewFundRequest } from '../model/NewFundRequest';
 import { NewTradingAccountRequest } from '../model/NewTradingAccountRequest';
 import { ProgramLevelInfo } from '../model/ProgramLevelInfo';
 import { ProgramUpdate } from '../model/ProgramUpdate';
+import { StringItemsViewModel } from '../model/StringItemsViewModel';
 import { TradingAccountCreateResult } from '../model/TradingAccountCreateResult';
 import { TradingAccountDemoDeposit } from '../model/TradingAccountDemoDeposit';
 import { TradingAccountPwdUpdate } from '../model/TradingAccountPwdUpdate';
@@ -24,6 +25,44 @@ export default class AssetsApi {
 
     constructor(apiClient: ApiClient) {
         this.apiClient = apiClient;
+    }
+
+    addFavoriteSymbol = (
+        id: string,
+        symbol: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<Response> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling addFavoriteSymbol.');
+                }
+                if (symbol === null || symbol === undefined) {
+                throw new Error('Required parameter symbol was null or undefined when calling addFavoriteSymbol.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add", {
+        id,
+        symbol
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
     }
 
     cancelChangeBroker = (
@@ -407,6 +446,39 @@ export default class AssetsApi {
     })
     }
 
+    getFavoriteSymbols = (
+        id: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<StringItemsViewModel> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getFavoriteSymbols.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<StringItemsViewModel>((response: Response) => {
+        return response.json();
+    })
+    }
+
     getLevelsCalculator = (
         id: string,
         options: {
@@ -603,6 +675,44 @@ export default class AssetsApi {
     })
 
     let body = JSON.stringify(options['body']);
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
+
+    removeFavoriteSymbol = (
+        id: string,
+        symbol: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<Response> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling removeFavoriteSymbol.');
+                }
+                if (symbol === null || symbol === undefined) {
+                throw new Error('Required parameter symbol was null or undefined when calling removeFavoriteSymbol.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove", {
+        id,
+        symbol
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
 
     let contentType = "application/json";
 
