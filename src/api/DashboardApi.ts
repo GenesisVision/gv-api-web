@@ -9,6 +9,7 @@ import { DashboardChartAssets } from '../model/DashboardChartAssets';
 import { DashboardInvestingDetails } from '../model/DashboardInvestingDetails';
 import { DashboardPortfolio } from '../model/DashboardPortfolio';
 import { DashboardSummary } from '../model/DashboardSummary';
+import { DashboardTradingAssetCredentials } from '../model/DashboardTradingAssetCredentials';
 import { DashboardTradingAssetItemsViewModel } from '../model/DashboardTradingAssetItemsViewModel';
 import { DashboardTradingDetails } from '../model/DashboardTradingDetails';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -123,6 +124,41 @@ export default class DashboardApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<DashboardSummary>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getExchangeAccountCredentials = (        options: {
+            exchangeAccountId?: string,
+            brokerId?: string
+        } = {},
+        init: RequestInit = {}): Promise<DashboardTradingAssetCredentials> => {
+        const {
+            exchangeAccountId,
+            brokerId
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/exchange/credentials", {
+    })
+
+    const query = buildQueryString(path, {
+        exchangeAccountId: exchangeAccountId,
+        brokerId: brokerId
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<DashboardTradingAssetCredentials>((response: Response) => {
         return response.json();
     })
     }
