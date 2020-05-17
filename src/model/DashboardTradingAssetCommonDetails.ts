@@ -13,5 +13,6 @@ export interface DashboardTradingAssetCommonDetails {
     leverage: number;
     type: PrivateTradingAccountType;
     balances: Array<AmountWithCurrency>;
+    supportedCurrencies: Array<Currency>;
 }
 
