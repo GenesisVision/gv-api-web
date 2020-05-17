@@ -53,6 +53,7 @@ export { DashboardAssets } from "./model/DashboardAssets";
 export { DashboardChart } from "./model/DashboardChart";
 export { DashboardChartAsset } from "./model/DashboardChartAsset";
 export { DashboardChartAssets } from "./model/DashboardChartAssets";
+export { DashboardExchangeTradingAsset } from "./model/DashboardExchangeTradingAsset";
 export { DashboardInvestingDetails } from "./model/DashboardInvestingDetails";
 export { DashboardPortfolio } from "./model/DashboardPortfolio";
 export { DashboardProfits } from "./model/DashboardProfits";

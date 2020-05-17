@@ -6,10 +6,10 @@ import { DashboardAssetStatus } from '../model/DashboardAssetStatus';
 import { DashboardAssets } from '../model/DashboardAssets';
 import { DashboardChart } from '../model/DashboardChart';
 import { DashboardChartAssets } from '../model/DashboardChartAssets';
+import { DashboardExchangeTradingAsset } from '../model/DashboardExchangeTradingAsset';
 import { DashboardInvestingDetails } from '../model/DashboardInvestingDetails';
 import { DashboardPortfolio } from '../model/DashboardPortfolio';
 import { DashboardSummary } from '../model/DashboardSummary';
-import { DashboardTradingAssetCredentials } from '../model/DashboardTradingAssetCredentials';
 import { DashboardTradingAssetItemsViewModel } from '../model/DashboardTradingAssetItemsViewModel';
 import { DashboardTradingDetails } from '../model/DashboardTradingDetails';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -132,7 +132,7 @@ export default class DashboardApi {
             exchangeAccountId?: string,
             brokerId?: string
         } = {},
-        init: RequestInit = {}): Promise<DashboardTradingAssetCredentials> => {
+        init: RequestInit = {}): Promise<DashboardExchangeTradingAsset> => {
         const {
             exchangeAccountId,
             brokerId
@@ -158,7 +158,7 @@ export default class DashboardApi {
             ...init.headers,
             "Content-Type": contentType,
         }
-    }).then(handleErrors).then<DashboardTradingAssetCredentials>((response: Response) => {
+    }).then(handleErrors).then<DashboardExchangeTradingAsset>((response: Response) => {
         return response.json();
     })
     }
