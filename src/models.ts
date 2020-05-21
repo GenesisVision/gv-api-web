@@ -192,6 +192,7 @@ export { PlatformUrlInfo } from "./model/PlatformUrlInfo";
 export { PlatformUrlType } from "./model/PlatformUrlType";
 export { Post } from "./model/Post";
 export { PostActions } from "./model/PostActions";
+export { PostAssetDetailsWithPrices } from "./model/PostAssetDetailsWithPrices";
 export { PostImage } from "./model/PostImage";
 export { PostImageResize } from "./model/PostImageResize";
 export { PostItemsViewModel } from "./model/PostItemsViewModel";
