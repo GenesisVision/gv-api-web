@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { FollowNotificationSettingList } from '../model/FollowNotificationSettingList';
 import { FundNotificationSettingList } from '../model/FundNotificationSettingList';
 import { ManagerNotificationSettingList } from '../model/ManagerNotificationSettingList';
 import { NotificationList } from '../model/NotificationList';
@@ -118,6 +119,39 @@ export default class NotificationsApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<NotificationList>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getNotificationsFollowSettings = (
+        id: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<FollowNotificationSettingList> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getNotificationsFollowSettings.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/follow/{id}", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<FollowNotificationSettingList>((response: Response) => {
         return response.json();
     })
     }
