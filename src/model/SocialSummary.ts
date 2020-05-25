@@ -1,10 +1,10 @@
-import { AssetDetails } from './AssetDetails';
 import { PlatformAsset } from './PlatformAsset';
-import { TrendHashTag } from './TrendHashTag';
+import { SocialSummaryHashTag } from './SocialSummaryHashTag';
+import { SocialSummaryStrategy } from './SocialSummaryStrategy';
 
 export interface SocialSummary {
-    trendHashTags: Array<TrendHashTag>;
-    trendAssets: Array<AssetDetails>;
-    trendPlatformAssets: Array<PlatformAsset>;
+    hotTopics: Array<SocialSummaryHashTag>;
+    topStrategies: Array<SocialSummaryStrategy>;
+    topAssets: Array<PlatformAsset>;
 }
 
