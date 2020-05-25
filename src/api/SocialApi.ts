@@ -140,6 +140,7 @@ export default class SocialApi {
 
     getFeed = (        options: {
             userId?: string,
+            tagContentId?: string,
             userMode?: UserFeedMode,
             hashTags?: Array<string>,
             mask?: string,
@@ -151,6 +152,7 @@ export default class SocialApi {
         init: RequestInit = {}): Promise<PostItemsViewModel> => {
         const {
             userId,
+            tagContentId,
             userMode,
             hashTags,
             mask,
@@ -165,6 +167,7 @@ export default class SocialApi {
 
     const query = buildQueryString(path, {
         UserId: userId,
+        TagContentId: tagContentId,
         UserMode: userMode,
         HashTags: hashTags,
         Mask: mask,

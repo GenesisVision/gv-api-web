@@ -296,6 +296,7 @@ export { TransactionExternalType } from "./model/TransactionExternalType";
 export { TransactionInternalType } from "./model/TransactionInternalType";
 export { TransactionViewModel } from "./model/TransactionViewModel";
 export { TransactionViewModelItemsViewModel } from "./model/TransactionViewModelItemsViewModel";
+export { TrendHashTag } from "./model/TrendHashTag";
 export { TwoFactorAuthenticator } from "./model/TwoFactorAuthenticator";
 export { TwoFactorAuthenticatorConfirm } from "./model/TwoFactorAuthenticatorConfirm";
 export { TwoFactorCodeModel } from "./model/TwoFactorCodeModel";
