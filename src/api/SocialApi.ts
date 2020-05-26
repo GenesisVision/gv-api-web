@@ -3,9 +3,11 @@ import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { MediaPostItemsViewModel } from '../model/MediaPostItemsViewModel';
 import { NewPost } from '../model/NewPost';
 import { PostItemsViewModel } from '../model/PostItemsViewModel';
 import { RePost } from '../model/RePost';
+import { SocialLinkType } from '../model/SocialLinkType';
 import { SocialSummary } from '../model/SocialSummary';
 import { UserFeedMode } from '../model/UserFeedMode';
 
@@ -141,6 +143,7 @@ export default class SocialApi {
     getFeed = (        options: {
             userId?: string,
             tagContentId?: string,
+            tagContentIds?: Array<string>,
             userMode?: UserFeedMode,
             hashTags?: Array<string>,
             mask?: string,
@@ -153,6 +156,7 @@ export default class SocialApi {
         const {
             userId,
             tagContentId,
+            tagContentIds,
             userMode,
             hashTags,
             mask,
@@ -168,6 +172,7 @@ export default class SocialApi {
     const query = buildQueryString(path, {
         UserId: userId,
         TagContentId: tagContentId,
+        TagContentIds: tagContentIds,
         UserMode: userMode,
         HashTags: hashTags,
         Mask: mask,
@@ -223,6 +228,47 @@ export default class SocialApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<EditablePost>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getSocialMedia = (        options: {
+            mask?: string,
+            type?: SocialLinkType,
+            skip?: number,
+            take?: number
+        } = {},
+        init: RequestInit = {}): Promise<MediaPostItemsViewModel> => {
+        const {
+            mask,
+            type,
+            skip,
+            take
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/media", {
+    })
+
+    const query = buildQueryString(path, {
+        Mask: mask,
+        Type: type,
+        Skip: skip,
+        Take: take
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<MediaPostItemsViewModel>((response: Response) => {
         return response.json();
     })
     }

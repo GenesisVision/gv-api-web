@@ -145,6 +145,8 @@ export { MakeTradingAccountProgram } from "./model/MakeTradingAccountProgram";
 export { MakeTradingAccountSignalProvider } from "./model/MakeTradingAccountSignalProvider";
 export { ManagerFinancialStatistic } from "./model/ManagerFinancialStatistic";
 export { ManagerNotificationSettingList } from "./model/ManagerNotificationSettingList";
+export { MediaPost } from "./model/MediaPost";
+export { MediaPostItemsViewModel } from "./model/MediaPostItemsViewModel";
 export { MigrationRequest } from "./model/MigrationRequest";
 export { MoneyLocation } from "./model/MoneyLocation";
 export { MoneyLocationType } from "./model/MoneyLocationType";
