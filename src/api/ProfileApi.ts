@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { BetaTestingType } from '../model/BetaTestingType';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FcmTokenViewModel } from '../model/FcmTokenViewModel';
@@ -166,6 +167,70 @@ export default class ProfileApi {
     })
 
     let body = JSON.stringify(options['body']);
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
+
+    switchBetaFeatureOff = (        options: {
+            feature?: BetaTestingType
+        } = {},
+        init: RequestInit = {}): Promise<Response> => {
+        const {
+            feature
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/beta/off", {
+    })
+
+    const query = buildQueryString(path, {
+        feature: feature
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then< Response >((response: Response) => {
+        return response;
+    })
+    }
+
+    switchBetaFeatureOn = (        options: {
+            feature?: BetaTestingType
+        } = {},
+        init: RequestInit = {}): Promise<Response> => {
+        const {
+            feature
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/beta/on", {
+    })
+
+    const query = buildQueryString(path, {
+        feature: feature
+    })
+
+    let body = null;
 
     let contentType = "application/json";
 
