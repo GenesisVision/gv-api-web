@@ -7,6 +7,7 @@ export interface MediaPost {
     type: SocialLinkType;
     author: string;
     authorUrl: string;
+    authorLogoUrl: string;
     title: string;
     text: string;
     date: Date;
