@@ -252,6 +252,7 @@ export default class FundsApi {
             mask?: string,
             ownerId?: string,
             showFavorites?: boolean,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -268,6 +269,7 @@ export default class FundsApi {
             mask,
             ownerId,
             showFavorites,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -287,6 +289,7 @@ export default class FundsApi {
         Mask: mask,
         OwnerId: ownerId,
         ShowFavorites: showFavorites,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })

@@ -296,6 +296,7 @@ export default class FollowApi {
             mask?: string,
             ownerId?: string,
             showFavorites?: boolean,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -311,6 +312,7 @@ export default class FollowApi {
             mask,
             ownerId,
             showFavorites,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -329,6 +331,7 @@ export default class FollowApi {
         Mask: mask,
         OwnerId: ownerId,
         ShowFavorites: showFavorites,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })

@@ -30,7 +30,8 @@ export default class DashboardApi {
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency
+            showIn?: Currency,
+            skipStatistic?: boolean
         } = {},
         init: RequestInit = {}): Promise<DashboardChart> => {
         const {
@@ -38,7 +39,8 @@ export default class DashboardApi {
             dateFrom,
             dateTo,
             chartPointsCount,
-            showIn
+            showIn,
+            skipStatistic
         } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart", {
@@ -49,7 +51,8 @@ export default class DashboardApi {
         DateFrom: dateFrom,
         DateTo: dateTo,
         ChartPointsCount: chartPointsCount,
-        ShowIn: showIn
+        ShowIn: showIn,
+        SkipStatistic: skipStatistic
     })
 
     let body = null;
@@ -241,6 +244,7 @@ export default class DashboardApi {
             mask?: string,
             ownerId?: string,
             showFavorites?: boolean,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -256,6 +260,7 @@ export default class DashboardApi {
             mask,
             ownerId,
             showFavorites,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -274,6 +279,7 @@ export default class DashboardApi {
         Mask: mask,
         OwnerId: ownerId,
         ShowFavorites: showFavorites,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })
@@ -306,6 +312,7 @@ export default class DashboardApi {
             mask?: string,
             ownerId?: string,
             showFavorites?: boolean,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -321,6 +328,7 @@ export default class DashboardApi {
             mask,
             ownerId,
             showFavorites,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -339,6 +347,7 @@ export default class DashboardApi {
         Mask: mask,
         OwnerId: ownerId,
         ShowFavorites: showFavorites,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })
@@ -364,14 +373,16 @@ export default class DashboardApi {
             dateFrom?: Date,
             dateTo?: Date,
             chartPointsCount?: number,
-            showIn?: Currency
+            showIn?: Currency,
+            skipStatistic?: boolean
         } = {},
         init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
         const {
             dateFrom,
             dateTo,
             chartPointsCount,
-            showIn
+            showIn,
+            skipStatistic
         } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/mostprofitable", {
@@ -381,7 +392,8 @@ export default class DashboardApi {
         DateFrom: dateFrom,
         DateTo: dateTo,
         ChartPointsCount: chartPointsCount,
-        ShowIn: showIn
+        ShowIn: showIn,
+        SkipStatistic: skipStatistic
     })
 
     let body = null;
@@ -434,6 +446,7 @@ export default class DashboardApi {
             chartPointsCount?: number,
             showIn?: Currency,
             status?: DashboardAssetStatus,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -444,6 +457,7 @@ export default class DashboardApi {
             chartPointsCount,
             showIn,
             status,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -457,6 +471,7 @@ export default class DashboardApi {
         ChartPointsCount: chartPointsCount,
         ShowIn: showIn,
         Status: status,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })
@@ -484,6 +499,7 @@ export default class DashboardApi {
             chartPointsCount?: number,
             showIn?: Currency,
             status?: DashboardAssetStatus,
+            skipStatistic?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -494,6 +510,7 @@ export default class DashboardApi {
             chartPointsCount,
             showIn,
             status,
+            skipStatistic,
             skip,
             take
         } = options;
@@ -507,6 +524,7 @@ export default class DashboardApi {
         ChartPointsCount: chartPointsCount,
         ShowIn: showIn,
         Status: status,
+        SkipStatistic: skipStatistic,
         Skip: skip,
         Take: take
     })
