@@ -14,14 +14,14 @@ export default class UsersApi {
         this.apiClient = apiClient;
     }
 
-    getManagerProfile = (
+    getUserProfile = (
         id: string,
         options: {
             logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<PublicProfile> => {
                 if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getManagerProfile.');
+                throw new Error('Required parameter id was null or undefined when calling getUserProfile.');
                 }
         const {
             logoQuality
