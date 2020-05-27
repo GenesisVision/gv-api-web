@@ -269,6 +269,7 @@ export { SiteMapInfo } from "./model/SiteMapInfo";
 export { SocialLinkType } from "./model/SocialLinkType";
 export { SocialLinkViewModel } from "./model/SocialLinkViewModel";
 export { SocialLinksViewModel } from "./model/SocialLinksViewModel";
+export { SocialPostPlatformAsset } from "./model/SocialPostPlatformAsset";
 export { SocialPostTagType } from "./model/SocialPostTagType";
 export { SocialSummary } from "./model/SocialSummary";
 export { SocialSummaryHashTag } from "./model/SocialSummaryHashTag";
