@@ -2,7 +2,7 @@
 export interface PublicProfilePersonalDetails {
     isFollow: boolean;
     canWritePost: boolean;
-    canFollow: boolean;
+    allowFollow: boolean;
     canCommentPosts: boolean;
 }
 
