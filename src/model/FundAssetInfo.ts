@@ -5,6 +5,7 @@ export interface FundAssetInfo {
     logoUrl: string;
     target: number;
     current: number;
+    currentAmount: number;
     url: string;
 }
 
