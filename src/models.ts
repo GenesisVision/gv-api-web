@@ -236,6 +236,7 @@ export { ProgramWithdrawInfo } from "./model/ProgramWithdrawInfo";
 export { ProgramsFilterSorting } from "./model/ProgramsFilterSorting";
 export { ProgramsLevelsInfo } from "./model/ProgramsLevelsInfo";
 export { PublicProfile } from "./model/PublicProfile";
+export { PublicProfileFollow } from "./model/PublicProfileFollow";
 export { PublicProfileItemsViewModel } from "./model/PublicProfileItemsViewModel";
 export { PublicProfilePersonalDetails } from "./model/PublicProfilePersonalDetails";
 export { RateItem } from "./model/RateItem";

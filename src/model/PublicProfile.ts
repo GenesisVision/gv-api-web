@@ -1,4 +1,3 @@
-import { ProfilePublicShort } from './ProfilePublicShort';
 import { PublicProfilePersonalDetails } from './PublicProfilePersonalDetails';
 import { SocialLinkViewModel } from './SocialLinkViewModel';
 
@@ -10,8 +9,8 @@ export interface PublicProfile {
     regDate: Date;
     assets: Array<string>;
     url: string;
-    followers: Array<ProfilePublicShort>;
-    following: Array<ProfilePublicShort>;
+    followers: number;
+    following: number;
     socialLinks: Array<SocialLinkViewModel>;
     personalDetails: PublicProfilePersonalDetails;
 }
