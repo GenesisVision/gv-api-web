@@ -1,7 +1,7 @@
-import { PlatformAsset } from './PlatformAsset';
 import { Post } from './Post';
 import { PostAssetDetailsWithPrices } from './PostAssetDetailsWithPrices';
 import { PostEvent } from './PostEvent';
+import { PostPlatformAssetDetailsWithPrices } from './PostPlatformAssetDetailsWithPrices';
 import { ProfilePublic } from './ProfilePublic';
 import { SocialPostTagType } from './SocialPostTagType';
 
@@ -11,7 +11,7 @@ export interface PostTag {
     type: SocialPostTagType;
     assetDetails: PostAssetDetailsWithPrices;
     userDetails: ProfilePublic;
-    platformAssetDetails: PlatformAsset;
+    platformAssetDetails: PostPlatformAssetDetailsWithPrices;
     post: Post;
     event: PostEvent;
 }

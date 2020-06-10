@@ -1,13 +1,11 @@
 import { ChangeState } from './ChangeState';
 import { Currency } from './Currency';
-import { SimpleChartPoint } from './SimpleChartPoint';
 
-export interface SocialPostPlatformAsset {
+export interface PostPlatformAssetDetailsWithPrices {
     price: number;
     priceCurrency: Currency;
     change24Percent: number;
     changeState: ChangeState;
-    chart: Array<SimpleChartPoint>;
     id: string;
     name: string;
     asset: string;
