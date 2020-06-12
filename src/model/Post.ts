@@ -5,6 +5,7 @@ import { ProfilePublic } from './ProfilePublic';
 
 export interface Post {
     id: string;
+    url: string;
     text: string;
     date: Date;
     likesCount: number;

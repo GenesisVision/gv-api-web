@@ -7,6 +7,7 @@ import { ProfilePublic } from './ProfilePublic';
 export interface EditablePost {
     textOriginal: string;
     id: string;
+    url: string;
     text: string;
     date: Date;
     likesCount: number;
