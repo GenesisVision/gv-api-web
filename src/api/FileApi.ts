@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { buildPathString, buildQueryString, handleErrors } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ImageLocation } from '../model/ImageLocation';
 import { UploadResult } from '../model/UploadResult';
 
 export default class FileApi {
@@ -11,14 +12,20 @@ export default class FileApi {
     }
 
     uploadFile = (        options: {
-            uploadedFile?: File
+            uploadedFile?: File,
+            location?: ImageLocation
         } = {},
         init: RequestInit = {}): Promise<UploadResult> => {
+        const {
+            uploadedFile,
+            location
+        } = options;
 
     const path = this.apiClient.apiUrl + buildPathString("/v2.0/file/upload", {
     })
 
     const query = buildQueryString(path, {
+        location: location
     })
 
     let body = null;

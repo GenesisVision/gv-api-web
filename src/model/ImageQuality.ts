@@ -1,2 +1,2 @@
 
-export type ImageQuality = 'Low' | 'Medium' | 'High';
+export type ImageQuality = 'Low' | 'Medium' | 'High' | 'Original';

@@ -123,6 +123,7 @@ export { Guide } from "./model/Guide";
 export { GuidesCategory } from "./model/GuidesCategory";
 export { GuidesCategoryItemsViewModel } from "./model/GuidesCategoryItemsViewModel";
 export { IOsAppVersion } from "./model/IOsAppVersion";
+export { ImageLocation } from "./model/ImageLocation";
 export { ImageQuality } from "./model/ImageQuality";
 export { InternalTransferRequest } from "./model/InternalTransferRequest";
 export { InternalTransferRequestType } from "./model/InternalTransferRequestType";
