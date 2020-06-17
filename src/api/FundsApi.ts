@@ -8,6 +8,8 @@ import { FundDetailsFull } from '../model/FundDetailsFull';
 import { FundDetailsListItem } from '../model/FundDetailsListItem';
 import { FundDetailsListItemItemsViewModel } from '../model/FundDetailsListItemItemsViewModel';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
+import { FundTradingEventType } from '../model/FundTradingEventType';
+import { FundTradingEventViewModelItemsViewModel } from '../model/FundTradingEventViewModelItemsViewModel';
 import { FundsFilterSorting } from '../model/FundsFilterSorting';
 import { ImageQuality } from '../model/ImageQuality';
 import { ReallocationModelItemsViewModel } from '../model/ReallocationModelItemsViewModel';
@@ -310,6 +312,56 @@ export default class FundsApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<FundDetailsListItemItemsViewModel>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getFundsTradingEvents = (
+        id: string,
+        options: {
+            dateFrom?: Date,
+            dateTo?: Date,
+            eventsType?: FundTradingEventType,
+            skip?: number,
+            take?: number
+        } = {},
+        init: RequestInit = {}): Promise<FundTradingEventViewModelItemsViewModel> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getFundsTradingEvents.');
+                }
+        const {
+            dateFrom,
+            dateTo,
+            eventsType,
+            skip,
+            take
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/events", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+        DateFrom: dateFrom,
+        DateTo: dateTo,
+        EventsType: eventsType,
+        Skip: skip,
+        Take: take
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<FundTradingEventViewModelItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
