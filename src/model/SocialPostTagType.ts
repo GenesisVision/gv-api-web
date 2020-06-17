@@ -1,2 +1,2 @@
 
-export type SocialPostTagType = 'Undefined' | 'Program' | 'Fund' | 'Follow' | 'User' | 'Asset' | 'Event' | 'Post';
+export type SocialPostTagType = 'Undefined' | 'Program' | 'Fund' | 'Follow' | 'User' | 'Asset' | 'Event' | 'Post' | 'Url';

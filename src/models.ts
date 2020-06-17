@@ -200,6 +200,7 @@ export { PostEvent } from "./model/PostEvent";
 export { PostImage } from "./model/PostImage";
 export { PostImageResize } from "./model/PostImageResize";
 export { PostItemsViewModel } from "./model/PostItemsViewModel";
+export { PostLink } from "./model/PostLink";
 export { PostPlatformAssetDetailsWithPrices } from "./model/PostPlatformAssetDetailsWithPrices";
 export { PostTag } from "./model/PostTag";
 export { PowDetails } from "./model/PowDetails";
