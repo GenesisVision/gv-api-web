@@ -1,2 +1,2 @@
 
-export type BetaTestingType = 'None' | 'Social';
+export type BetaTestingType = 'None' | 'Social' | 'TradingTerminal';
