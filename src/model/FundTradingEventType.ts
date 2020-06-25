@@ -1,2 +1,2 @@
 
-export type FundTradingEventType = 'Trade' | 'Investment' | 'Withdrawal' | 'FundsChallengeWinner';
+export type FundTradingEventType = 'Creation' | 'Investment' | 'Withdrawal' | 'Trade' | 'ChallengeWinner';
