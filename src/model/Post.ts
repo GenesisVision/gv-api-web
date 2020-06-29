@@ -13,6 +13,7 @@ export interface Post {
     impressionsCount: number;
     isPinned: boolean;
     isDeleted: boolean;
+    isHighlighted: boolean;
     images: Array<PostImage>;
     tags: Array<PostTag>;
     author: ProfilePublic;

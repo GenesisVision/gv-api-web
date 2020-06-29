@@ -12,9 +12,6 @@ export interface MediaPost {
     title: string;
     text: string;
     date: Date;
-    likesCount: number;
-    rePostsCount: number;
-    commentsCount: number;
     image: PostImage;
 }
 
