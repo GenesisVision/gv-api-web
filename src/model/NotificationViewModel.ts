@@ -1,4 +1,4 @@
-import { InvestmentProgramType } from './InvestmentProgramType';
+import { AssetGlobalType } from './AssetGlobalType';
 import { NotificationType } from './NotificationType';
 
 export interface NotificationViewModel {
@@ -12,6 +12,6 @@ export interface NotificationViewModel {
     url: string;
     color: string;
     isUnread: boolean;
-    assetType: InvestmentProgramType;
+    assetType: AssetGlobalType;
 }
 
