@@ -7,9 +7,9 @@ import { FundBalanceChart } from '../model/FundBalanceChart';
 import { FundDetailsFull } from '../model/FundDetailsFull';
 import { FundDetailsListItem } from '../model/FundDetailsListItem';
 import { FundDetailsListItemItemsViewModel } from '../model/FundDetailsListItemItemsViewModel';
+import { FundHistoryEventType } from '../model/FundHistoryEventType';
+import { FundHistoryEventViewModelItemsViewModel } from '../model/FundHistoryEventViewModelItemsViewModel';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
-import { FundTradingEventType } from '../model/FundTradingEventType';
-import { FundTradingEventViewModelItemsViewModel } from '../model/FundTradingEventViewModelItemsViewModel';
 import { FundsFilterSorting } from '../model/FundsFilterSorting';
 import { ImageQuality } from '../model/ImageQuality';
 import { ReallocationModelItemsViewModel } from '../model/ReallocationModelItemsViewModel';
@@ -316,18 +316,18 @@ export default class FundsApi {
     })
     }
 
-    getFundsTradingEvents = (
+    getFundsHistoryEvents = (
         id: string,
         options: {
             dateFrom?: Date,
             dateTo?: Date,
-            eventsType?: FundTradingEventType,
+            eventsType?: FundHistoryEventType,
             skip?: number,
             take?: number
         } = {},
-        init: RequestInit = {}): Promise<FundTradingEventViewModelItemsViewModel> => {
+        init: RequestInit = {}): Promise<FundHistoryEventViewModelItemsViewModel> => {
                 if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundsTradingEvents.');
+                throw new Error('Required parameter id was null or undefined when calling getFundsHistoryEvents.');
                 }
         const {
             dateFrom,
@@ -361,7 +361,7 @@ export default class FundsApi {
             ...init.headers,
             "Content-Type": contentType,
         }
-    }).then(handleErrors).then<FundTradingEventViewModelItemsViewModel>((response: Response) => {
+    }).then(handleErrors).then<FundHistoryEventViewModelItemsViewModel>((response: Response) => {
         return response.json();
     })
     }

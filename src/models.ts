@@ -111,14 +111,15 @@ export { FundCreateAssetPlatformInfo } from "./model/FundCreateAssetPlatformInfo
 export { FundDetailsFull } from "./model/FundDetailsFull";
 export { FundDetailsListItem } from "./model/FundDetailsListItem";
 export { FundDetailsListItemItemsViewModel } from "./model/FundDetailsListItemItemsViewModel";
+export { FundHistoryEventType } from "./model/FundHistoryEventType";
+export { FundHistoryEventViewModel } from "./model/FundHistoryEventViewModel";
+export { FundHistoryEventViewModelItemsViewModel } from "./model/FundHistoryEventViewModelItemsViewModel";
 export { FundInvestingDetailsList } from "./model/FundInvestingDetailsList";
 export { FundInvestingDetailsListItemsViewModel } from "./model/FundInvestingDetailsListItemsViewModel";
 export { FundNotificationSettingList } from "./model/FundNotificationSettingList";
 export { FundOwnerActions } from "./model/FundOwnerActions";
 export { FundProfitPercentCharts } from "./model/FundProfitPercentCharts";
-export { FundTradingEventType } from "./model/FundTradingEventType";
 export { FundTradingEventViewModel } from "./model/FundTradingEventViewModel";
-export { FundTradingEventViewModelItemsViewModel } from "./model/FundTradingEventViewModelItemsViewModel";
 export { FundWithdrawInfo } from "./model/FundWithdrawInfo";
 export { FundsFilterSorting } from "./model/FundsFilterSorting";
 export { GeeTestDetails } from "./model/GeeTestDetails";
