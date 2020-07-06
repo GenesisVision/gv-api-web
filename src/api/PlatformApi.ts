@@ -19,11 +19,11 @@ export default class PlatformApi {
         this.apiClient = apiClient;
     }
 
-    getAllPlatformAssets = (        options: {
+    getAllPlatformTradingAssets = (        options: {
         } = {},
         init: RequestInit = {}): Promise<PlatformAssets> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/assets", {
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/trading/assets", {
     })
 
     const query = buildQueryString(path, {
