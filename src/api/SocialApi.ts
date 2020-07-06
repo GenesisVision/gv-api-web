@@ -5,6 +5,7 @@ import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { MediaPostItemsViewModel } from '../model/MediaPostItemsViewModel';
 import { NewPost } from '../model/NewPost';
+import { Post } from '../model/Post';
 import { PostItemsViewModel } from '../model/PostItemsViewModel';
 import { RePost } from '../model/RePost';
 import { SocialLinkType } from '../model/SocialLinkType';
@@ -199,11 +200,44 @@ export default class SocialApi {
     })
     }
 
-    getPost = (
+    getOriginalPost = (
         id: string,
         options: {
         } = {},
         init: RequestInit = {}): Promise<EditablePost> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getOriginalPost.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/original", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<EditablePost>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getPost = (
+        id: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<Post> => {
                 if (id === null || id === undefined) {
                 throw new Error('Required parameter id was null or undefined when calling getPost.');
                 }
@@ -227,7 +261,7 @@ export default class SocialApi {
             ...init.headers,
             "Content-Type": contentType,
         }
-    }).then(handleErrors).then<EditablePost>((response: Response) => {
+    }).then(handleErrors).then<Post>((response: Response) => {
         return response.json();
     })
     }
