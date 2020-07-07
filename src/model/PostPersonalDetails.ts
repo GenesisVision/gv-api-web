@@ -1,5 +1,5 @@
 
-export interface PostActions {
+export interface PostPersonalDetails {
     isLiked: boolean;
     canEdit: boolean;
     canDelete: boolean;

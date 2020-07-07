@@ -1,8 +1,9 @@
 import { Post } from './Post';
-import { PostActions } from './PostActions';
 import { PostImage } from './PostImage';
+import { PostPersonalDetails } from './PostPersonalDetails';
 import { PostTag } from './PostTag';
 import { ProfilePublic } from './ProfilePublic';
+import { ProfilePublicShort } from './ProfilePublicShort';
 
 export interface EditablePost {
     textOriginal: string;
@@ -11,7 +12,9 @@ export interface EditablePost {
     text: string;
     date: Date;
     likesCount: number;
+    likesUsers: Array<ProfilePublicShort>;
     rePostsCount: number;
+    rePostsUsers: Array<ProfilePublicShort>;
     impressionsCount: number;
     isPinned: boolean;
     isDeleted: boolean;
@@ -19,7 +22,7 @@ export interface EditablePost {
     images: Array<PostImage>;
     tags: Array<PostTag>;
     author: ProfilePublic;
-    actions: PostActions;
+    personalDetails: PostPersonalDetails;
     comments: Array<Post>;
 }
 

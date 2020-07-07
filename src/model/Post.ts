@@ -1,7 +1,8 @@
-import { PostActions } from './PostActions';
 import { PostImage } from './PostImage';
+import { PostPersonalDetails } from './PostPersonalDetails';
 import { PostTag } from './PostTag';
 import { ProfilePublic } from './ProfilePublic';
+import { ProfilePublicShort } from './ProfilePublicShort';
 
 export interface Post {
     id: string;
@@ -9,7 +10,9 @@ export interface Post {
     text: string;
     date: Date;
     likesCount: number;
+    likesUsers: Array<ProfilePublicShort>;
     rePostsCount: number;
+    rePostsUsers: Array<ProfilePublicShort>;
     impressionsCount: number;
     isPinned: boolean;
     isDeleted: boolean;
@@ -17,7 +20,7 @@ export interface Post {
     images: Array<PostImage>;
     tags: Array<PostTag>;
     author: ProfilePublic;
-    actions: PostActions;
+    personalDetails: PostPersonalDetails;
     comments: Array<Post>;
 }
 

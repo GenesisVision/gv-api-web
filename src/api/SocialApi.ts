@@ -7,6 +7,7 @@ import { MediaPostItemsViewModel } from '../model/MediaPostItemsViewModel';
 import { NewPost } from '../model/NewPost';
 import { Post } from '../model/Post';
 import { PostItemsViewModel } from '../model/PostItemsViewModel';
+import { ProfilePublicShortItemsViewModel } from '../model/ProfilePublicShortItemsViewModel';
 import { RePost } from '../model/RePost';
 import { SocialLinkType } from '../model/SocialLinkType';
 import { SocialSummary } from '../model/SocialSummary';
@@ -150,6 +151,7 @@ export default class SocialApi {
             mask?: string,
             showTop?: boolean,
             showLiked?: boolean,
+            showOnlyUserPosts?: boolean,
             skip?: number,
             take?: number
         } = {},
@@ -163,6 +165,7 @@ export default class SocialApi {
             mask,
             showTop,
             showLiked,
+            showOnlyUserPosts,
             skip,
             take
         } = options;
@@ -179,6 +182,7 @@ export default class SocialApi {
         Mask: mask,
         ShowTop: showTop,
         ShowLiked: showLiked,
+        ShowOnlyUserPosts: showOnlyUserPosts,
         Skip: skip,
         Take: take
     })
@@ -262,6 +266,72 @@ export default class SocialApi {
             "Content-Type": contentType,
         }
     }).then(handleErrors).then<Post>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getPostLikesUsers = (
+        id: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getPostLikesUsers.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/users/likes", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
+        return response.json();
+    })
+    }
+
+    getPostRepostsUsers = (
+        id: string,
+        options: {
+        } = {},
+        init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling getPostRepostsUsers.');
+                }
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/users/reposts", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "GET",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
         return response.json();
     })
     }
@@ -458,6 +528,44 @@ export default class SocialApi {
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
+    })
+    }
+
+    spamReport = (
+        id: string,
+        options: {
+            text?: string
+        } = {},
+        init: RequestInit = {}): Promise<EditablePost> => {
+                if (id === null || id === undefined) {
+                throw new Error('Required parameter id was null or undefined when calling spamReport.');
+                }
+        const {
+            text
+        } = options;
+
+    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/report", {
+        id
+    })
+
+    const query = buildQueryString(path, {
+        text: text
+    })
+
+    let body = null;
+
+    let contentType = "application/json";
+
+    return this.apiClient.fetch(query, {
+        ...init,
+        method: "POST",
+        body,
+        headers: {
+            ...init.headers,
+            "Content-Type": contentType,
+        }
+    }).then(handleErrors).then<EditablePost>((response: Response) => {
+        return response.json();
     })
     }
 
