@@ -534,6 +534,7 @@ export default class SocialApi {
     spamReport = (
         id: string,
         options: {
+            reason?: string,
             text?: string
         } = {},
         init: RequestInit = {}): Promise<EditablePost> => {
@@ -541,6 +542,7 @@ export default class SocialApi {
                 throw new Error('Required parameter id was null or undefined when calling spamReport.');
                 }
         const {
+            reason,
             text
         } = options;
 
@@ -549,6 +551,7 @@ export default class SocialApi {
     })
 
     const query = buildQueryString(path, {
+        reason: reason,
         text: text
     })
 
