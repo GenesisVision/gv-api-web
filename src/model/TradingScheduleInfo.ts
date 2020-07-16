@@ -1,6 +1,7 @@
 import { DayOfWeekType } from './DayOfWeekType';
 
-export interface TradingScheduleViewModel {
+export interface TradingScheduleInfo {
+    hasTradingSchedule: boolean;
     dayStart: DayOfWeekType;
     hourStart: number;
     minuteStart: number;

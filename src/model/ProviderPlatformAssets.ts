@@ -1,9 +1,8 @@
 import { AssetProvider } from './AssetProvider';
-import { TradingScheduleViewModel } from './TradingScheduleViewModel';
+import { TradingScheduleInfo } from './TradingScheduleInfo';
 
 export interface ProviderPlatformAssets {
     type: AssetProvider;
-    hasTradingSchedule: boolean;
-    tradingSchedule: Array<TradingScheduleViewModel>;
+    tradingSchedule: TradingScheduleInfo;
 }
 

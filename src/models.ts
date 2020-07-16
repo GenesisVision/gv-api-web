@@ -309,7 +309,7 @@ export { TradingAccountDetailsItemsViewModel } from "./model/TradingAccountDetai
 export { TradingAccountMaxCreateAmount } from "./model/TradingAccountMaxCreateAmount";
 export { TradingAccountMinCreateAmount } from "./model/TradingAccountMinCreateAmount";
 export { TradingAccountPwdUpdate } from "./model/TradingAccountPwdUpdate";
-export { TradingScheduleViewModel } from "./model/TradingScheduleViewModel";
+export { TradingScheduleInfo } from "./model/TradingScheduleInfo";
 export { TransactionAssetDetails } from "./model/TransactionAssetDetails";
 export { TransactionDetailItem } from "./model/TransactionDetailItem";
 export { TransactionDetailsActions } from "./model/TransactionDetailsActions";
