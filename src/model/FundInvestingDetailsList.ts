@@ -3,6 +3,7 @@ import { FundAssetPercent } from './FundAssetPercent';
 import { PersonalInvestingFundDetailsList } from './PersonalInvestingFundDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
+import { TradingScheduleInfo } from './TradingScheduleInfo';
 
 export interface FundInvestingDetailsList {
     id: string;
@@ -16,6 +17,7 @@ export interface FundInvestingDetailsList {
     totalAssetsCount: number;
     topFundAssets: Array<FundAssetPercent>;
     owner: ProfilePublicShort;
+    tradingSchedule: TradingScheduleInfo;
     statistic: ProfitChart;
     personalDetails: PersonalInvestingFundDetailsList;
     balance: AmountWithCurrency;
