@@ -7,7 +7,6 @@ export interface PersonalFundDetails {
     isInvested: boolean;
     canInvest: boolean;
     canWithdraw: boolean;
-    canCancelRequest: boolean;
     ownerActions: FundOwnerActions;
     hasNotifications: boolean;
     value: number;
