@@ -8,6 +8,7 @@ export interface FundHistoryEventViewModel {
     type: FundHistoryEventType;
     amount: number;
     asset: BasePlatformAsset;
+    logoUrl: string;
     trades: Array<FundTradingEventViewModel>;
     reallocateAssets: Array<FundAssetPartWithIcon>;
 }
