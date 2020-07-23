@@ -10,6 +10,6 @@ export interface FundHistoryEventViewModel {
     asset: BasePlatformAsset;
     logoUrl: string;
     trades: Array<FundTradingEventViewModel>;
-    reallocateAssets: Array<FundAssetPartWithIcon>;
+    newAssets: Array<FundAssetPartWithIcon>;
 }
 
