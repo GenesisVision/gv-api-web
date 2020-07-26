@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BrokersInfo } from '../model/BrokersInfo';
 import { BrokersProgramInfo } from '../model/BrokersProgramInfo';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -15,15 +15,10 @@ export default class BrokersApi {
         } = {},
         init: RequestInit = {}): Promise<BrokersInfo> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/brokers", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -31,7 +26,7 @@ export default class BrokersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
         return response.json();
@@ -42,15 +37,10 @@ export default class BrokersApi {
         } = {},
         init: RequestInit = {}): Promise<BrokersInfo> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers/demo", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/brokers/demo", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -58,7 +48,7 @@ export default class BrokersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
         return response.json();
@@ -69,15 +59,10 @@ export default class BrokersApi {
         } = {},
         init: RequestInit = {}): Promise<BrokersInfo> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers/external", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/brokers/external", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -85,7 +70,7 @@ export default class BrokersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<BrokersInfo>((response: Response) => {
         return response.json();
@@ -97,20 +82,13 @@ export default class BrokersApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<BrokersProgramInfo> => {
-                if (programId === null || programId === undefined) {
-                throw new Error('Required parameter programId was null or undefined when calling getBrokersForProgram.');
-                }
+            checkRequiredParameter(programId, "programId", "getBrokersForProgram");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/brokers/{programId}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/brokers/{programId}", {
         programId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -118,7 +96,7 @@ export default class BrokersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<BrokersProgramInfo>((response: Response) => {
         return response.json();

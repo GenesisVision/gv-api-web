@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ExchangeInfoItemsViewModel } from '../model/ExchangeInfoItemsViewModel';
 
@@ -14,15 +14,10 @@ export default class ExchangesApi {
         } = {},
         init: RequestInit = {}): Promise<ExchangeInfoItemsViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/exchanges", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/exchanges", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -30,7 +25,7 @@ export default class ExchangesApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ExchangeInfoItemsViewModel>((response: Response) => {
         return response.json();

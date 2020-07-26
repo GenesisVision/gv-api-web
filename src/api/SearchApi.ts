@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { CommonPublicAssetsViewModel } from '../model/CommonPublicAssetsViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 
@@ -16,24 +16,14 @@ export default class SearchApi {
             skipStatistic?: boolean
         } = {},
         init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
-        const {
-            mask,
-            take,
-            skipStatistic
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/search", {
-    })
-
-    const query = buildQueryString(path, {
-        mask: mask,
-        take: take,
-        skipStatistic: skipStatistic
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/search", {
+    },  {
+        mask: options['mask'],
+        take: options['take'],
+        skipStatistic: options['skipStatistic']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -41,7 +31,7 @@ export default class SearchApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
         return response.json();

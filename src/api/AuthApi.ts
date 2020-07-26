@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangePasswordViewModel } from '../model/ChangePasswordViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ForgotPasswordViewModel } from '../model/ForgotPasswordViewModel';
@@ -26,15 +26,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signin", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/signin", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -42,7 +37,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -54,15 +49,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/change", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/password/change", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -70,7 +60,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -82,22 +72,13 @@ export default class AuthApi {
             code?: string
         } = {},
         init: RequestInit = {}): Promise<string> => {
-        const {
-            userId,
-            code
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signup/confirm", {
-    })
-
-    const query = buildQueryString(path, {
-        userId: userId,
-        code: code
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/signup/confirm", {
+    },  {
+        userId: options['userId'],
+        code: options['code']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -105,7 +86,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -117,15 +98,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/confirm", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa/confirm", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -133,7 +109,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
@@ -144,15 +120,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa/create", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -160,7 +131,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
         return response.json();
@@ -172,15 +143,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes/new", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa/recoverycodes/new", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -188,7 +154,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
@@ -200,15 +166,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/disable", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa/disable", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -216,7 +177,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -228,15 +189,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/forgot", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/password/forgot", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -244,7 +200,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -256,15 +212,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa/recoverycodes", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -272,7 +223,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
         return response.json();
@@ -283,15 +234,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<TwoFactorStatus> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/2fa", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -299,7 +245,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TwoFactorStatus>((response: Response) => {
         return response.json();
@@ -310,15 +256,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/devices/logout", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/token/devices/logout", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -326,7 +267,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -338,15 +279,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signup", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/signup", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -354,7 +290,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -365,15 +301,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<number> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/phone/code", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/phone/code", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -381,7 +312,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<number>((response: Response) => {
         return response.text() as unknown as number;
@@ -393,15 +324,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/resendconfirmationlink", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/resendconfirmationlink", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -409,7 +335,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -421,15 +347,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/reset", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/password/reset", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -437,7 +358,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -448,15 +369,10 @@ export default class AuthApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/token/update", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -464,7 +380,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -475,20 +391,12 @@ export default class AuthApi {
             code?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            code
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/phone/verify", {
-    })
-
-    const query = buildQueryString(path, {
-        code: code
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/auth/phone/verify", {
+    },  {
+        code: options['code']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -496,7 +404,7 @@ export default class AuthApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

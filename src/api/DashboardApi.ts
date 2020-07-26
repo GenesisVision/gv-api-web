@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { CommonPublicAssetsViewModel } from '../model/CommonPublicAssetsViewModel';
 import { Currency } from '../model/Currency';
 import { DashboardAssetStatus } from '../model/DashboardAssetStatus';
@@ -34,30 +34,17 @@ export default class DashboardApi {
             skipStatistic?: boolean
         } = {},
         init: RequestInit = {}): Promise<DashboardChart> => {
-        const {
-            assets,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            skipStatistic
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart", {
-    })
-
-    const query = buildQueryString(path, {
-        Assets: assets,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        SkipStatistic: skipStatistic
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/chart", {
+    },  {
+        Assets: options['assets'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        ShowIn: options['showIn'],
+        SkipStatistic: options['skipStatistic']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -65,7 +52,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardChart>((response: Response) => {
         return response.json();
@@ -76,15 +63,10 @@ export default class DashboardApi {
         } = {},
         init: RequestInit = {}): Promise<DashboardChartAssets> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart/assets", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/chart/assets", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -92,7 +74,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardChartAssets>((response: Response) => {
         return response.json();
@@ -103,20 +85,12 @@ export default class DashboardApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<DashboardSummary> => {
-        const {
-            currency
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/summary", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/summary", {
+    },  {
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -124,7 +98,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardSummary>((response: Response) => {
         return response.json();
@@ -136,22 +110,13 @@ export default class DashboardApi {
             brokerId?: string
         } = {},
         init: RequestInit = {}): Promise<DashboardExchangeTradingAsset> => {
-        const {
-            exchangeAccountId,
-            brokerId
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/exchange/credentials", {
-    })
-
-    const query = buildQueryString(path, {
-        exchangeAccountId: exchangeAccountId,
-        brokerId: brokerId
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/trading/exchange/credentials", {
+    },  {
+        exchangeAccountId: options['exchangeAccountId'],
+        brokerId: options['brokerId']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -159,7 +124,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardExchangeTradingAsset>((response: Response) => {
         return response.json();
@@ -170,20 +135,12 @@ export default class DashboardApi {
             topAssetsCount?: number
         } = {},
         init: RequestInit = {}): Promise<DashboardAssets> => {
-        const {
-            topAssetsCount
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/holdings", {
-    })
-
-    const query = buildQueryString(path, {
-        topAssetsCount: topAssetsCount
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/holdings", {
+    },  {
+        topAssetsCount: options['topAssetsCount']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -191,7 +148,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardAssets>((response: Response) => {
         return response.json();
@@ -203,22 +160,13 @@ export default class DashboardApi {
             eventsTake?: number
         } = {},
         init: RequestInit = {}): Promise<DashboardInvestingDetails> => {
-        const {
-            currency,
-            eventsTake
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        eventsTake: eventsTake
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/investing", {
+    },  {
+        currency: options['currency'],
+        eventsTake: options['eventsTake']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -226,7 +174,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardInvestingDetails>((response: Response) => {
         return response.json();
@@ -249,44 +197,24 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<FundInvestingDetailsListItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            status,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing/funds", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Status: status,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/investing/funds", {
+    },  {
+        Sorting: options['sorting'],
+        ShowIn: options['showIn'],
+        Status: options['status'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        FacetId: options['facetId'],
+        Mask: options['mask'],
+        OwnerId: options['ownerId'],
+        ShowFavorites: options['showFavorites'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -294,7 +222,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundInvestingDetailsListItemsViewModel>((response: Response) => {
         return response.json();
@@ -317,44 +245,24 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<ProgramInvestingDetailsListItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            status,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing/programs", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Status: status,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/investing/programs", {
+    },  {
+        Sorting: options['sorting'],
+        ShowIn: options['showIn'],
+        Status: options['status'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        FacetId: options['facetId'],
+        Mask: options['mask'],
+        OwnerId: options['ownerId'],
+        ShowFavorites: options['showFavorites'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -362,7 +270,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramInvestingDetailsListItemsViewModel>((response: Response) => {
         return response.json();
@@ -377,28 +285,16 @@ export default class DashboardApi {
             skipStatistic?: boolean
         } = {},
         init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            skipStatistic
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/mostprofitable", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        SkipStatistic: skipStatistic
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/trading/mostprofitable", {
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        ShowIn: options['showIn'],
+        SkipStatistic: options['skipStatistic']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -406,7 +302,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
         return response.json();
@@ -417,15 +313,10 @@ export default class DashboardApi {
         } = {},
         init: RequestInit = {}): Promise<DashboardPortfolio> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/portfolio", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/portfolio", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -433,7 +324,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardPortfolio>((response: Response) => {
         return response.json();
@@ -451,34 +342,19 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            status,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/private", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        Status: status,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/trading/private", {
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        ShowIn: options['showIn'],
+        Status: options['status'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -486,7 +362,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
         return response.json();
@@ -504,34 +380,19 @@ export default class DashboardApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            status,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/public", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        Status: status,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/trading/public", {
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        ShowIn: options['showIn'],
+        Status: options['status'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -539,7 +400,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
         return response.json();
@@ -552,24 +413,14 @@ export default class DashboardApi {
             onlyFollows?: boolean
         } = {},
         init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
-        const {
-            currency,
-            take,
-            onlyFollows
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/recommendations", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        take: take,
-        onlyFollows: onlyFollows
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/recommendations", {
+    },  {
+        currency: options['currency'],
+        take: options['take'],
+        onlyFollows: options['onlyFollows']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -577,7 +428,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
         return response.json();
@@ -589,22 +440,13 @@ export default class DashboardApi {
             eventsTake?: number
         } = {},
         init: RequestInit = {}): Promise<DashboardTradingDetails> => {
-        const {
-            currency,
-            eventsTake
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        eventsTake: eventsTake
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/dashboard/trading", {
+    },  {
+        currency: options['currency'],
+        eventsTake: options['eventsTake']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -612,7 +454,7 @@ export default class DashboardApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<DashboardTradingDetails>((response: Response) => {
         return response.json();

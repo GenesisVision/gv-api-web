@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AssetInvestmentRequestItemsViewModel } from '../model/AssetInvestmentRequestItemsViewModel';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -18,20 +18,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling cancelRequest.');
-                }
+            checkRequiredParameter(id, "id", "cancelRequest");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{id}/cancel", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/requests/{id}/cancel", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -39,7 +32,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -52,24 +45,14 @@ export default class InvestmentsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<FundWithdrawInfo> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundWithdrawInfo.');
-                }
-        const {
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getFundWithdrawInfo");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/funds/{id}/withdraw/info", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/funds/{id}/withdraw/info", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
+    },  {
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -77,7 +60,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundWithdrawInfo>((response: Response) => {
         return response.json();
@@ -89,20 +72,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ProgramWithdrawInfo> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramWithdrawInfo.');
-                }
+            checkRequiredParameter(id, "id", "getProgramWithdrawInfo");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/withdraw/info", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/withdraw/info", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -110,7 +86,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramWithdrawInfo>((response: Response) => {
         return response.json();
@@ -123,24 +99,15 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<AssetInvestmentRequestItemsViewModel> => {
-                if (skip === null || skip === undefined) {
-                throw new Error('Required parameter skip was null or undefined when calling getRequests.');
-                }
-                if (take === null || take === undefined) {
-                throw new Error('Required parameter take was null or undefined when calling getRequests.');
-                }
+            checkRequiredParameter(skip, "skip", "getRequests");
+            checkRequiredParameter(take, "take", "getRequests");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{skip}/{take}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/requests/{skip}/{take}", {
         skip,
         take
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -148,7 +115,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AssetInvestmentRequestItemsViewModel>((response: Response) => {
         return response.json();
@@ -162,28 +129,17 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<AssetInvestmentRequestItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getRequestsByProgram.');
-                }
-                if (skip === null || skip === undefined) {
-                throw new Error('Required parameter skip was null or undefined when calling getRequestsByProgram.');
-                }
-                if (take === null || take === undefined) {
-                throw new Error('Required parameter take was null or undefined when calling getRequestsByProgram.');
-                }
+            checkRequiredParameter(id, "id", "getRequestsByProgram");
+            checkRequiredParameter(skip, "skip", "getRequestsByProgram");
+            checkRequiredParameter(take, "take", "getRequestsByProgram");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/requests/{id}/{skip}/{take}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/requests/{id}/{skip}/{take}", {
         id,
         skip,
         take
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -191,7 +147,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AssetInvestmentRequestItemsViewModel>((response: Response) => {
         return response.json();
@@ -205,26 +161,15 @@ export default class InvestmentsApi {
             walletId?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling investIntoFund.');
-                }
-        const {
-            amount,
-            walletId
-        } = options;
+            checkRequiredParameter(id, "id", "investIntoFund");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/funds/{id}/invest", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/funds/{id}/invest", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        amount: amount,
-        walletId: walletId
-    })
-
+    },  {
+        amount: options['amount'],
+        walletId: options['walletId']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -232,7 +177,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -246,26 +191,15 @@ export default class InvestmentsApi {
             walletId?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling investIntoProgram.');
-                }
-        const {
-            amount,
-            walletId
-        } = options;
+            checkRequiredParameter(id, "id", "investIntoProgram");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/invest", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/invest", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        amount: amount,
-        walletId: walletId
-    })
-
+    },  {
+        amount: options['amount'],
+        walletId: options['walletId']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -273,7 +207,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -285,20 +219,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOff.');
-                }
+            checkRequiredParameter(id, "id", "switchAutoJoinOff");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/off", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/autojoin/off", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -306,7 +233,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -318,20 +245,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling switchAutoJoinOn.');
-                }
+            checkRequiredParameter(id, "id", "switchAutoJoinOn");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/autojoin/on", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/autojoin/on", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -339,7 +259,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -351,20 +271,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling switchReinvestOff.');
-                }
+            checkRequiredParameter(id, "id", "switchReinvestOff");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/reinvest/off", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/reinvest/off", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -372,7 +285,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -384,20 +297,13 @@ export default class InvestmentsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling switchReinvestOn.');
-                }
+            checkRequiredParameter(id, "id", "switchReinvestOn");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/reinvest/on", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/reinvest/on", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -405,7 +311,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -419,26 +325,15 @@ export default class InvestmentsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling withdrawFromFund.');
-                }
-        const {
-            percent,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "withdrawFromFund");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/funds/{id}/withdraw", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/funds/{id}/withdraw", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        percent: percent,
-        currency: currency
-    })
-
+    },  {
+        percent: options['percent'],
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -446,7 +341,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -460,26 +355,15 @@ export default class InvestmentsApi {
             withdrawAll?: boolean
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling withdrawFromProgram.');
-                }
-        const {
-            amount,
-            withdrawAll
-        } = options;
+            checkRequiredParameter(id, "id", "withdrawFromProgram");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/investments/programs/{id}/withdraw", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/investments/programs/{id}/withdraw", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        amount: amount,
-        withdrawAll: withdrawAll
-    })
-
+    },  {
+        amount: options['amount'],
+        withdrawAll: options['withdrawAll']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -487,7 +371,7 @@ export default class InvestmentsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

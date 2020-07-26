@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AssetFilterType } from '../model/AssetFilterType';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { EventGroupType } from '../model/EventGroupType';
@@ -30,44 +30,24 @@ export default class EventsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<InvestmentEventViewModels> => {
-        const {
-            eventLocation,
-            assetId,
-            from,
-            to,
-            dateFrom,
-            dateTo,
-            eventType,
-            assetType,
-            assetsIds,
-            forceFilterByIds,
-            eventGroup,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/events", {
-    })
-
-    const query = buildQueryString(path, {
-        EventLocation: eventLocation,
-        AssetId: assetId,
-        From: from,
-        To: to,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        EventType: eventType,
-        AssetType: assetType,
-        AssetsIds: assetsIds,
-        ForceFilterByIds: forceFilterByIds,
-        EventGroup: eventGroup,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/events", {
+    },  {
+        EventLocation: options['eventLocation'],
+        AssetId: options['assetId'],
+        From: options['from'],
+        To: options['to'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        EventType: options['eventType'],
+        AssetType: options['assetType'],
+        AssetsIds: options['assetsIds'],
+        ForceFilterByIds: options['forceFilterByIds'],
+        EventGroup: options['eventGroup'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -75,7 +55,7 @@ export default class EventsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<InvestmentEventViewModels>((response: Response) => {
         return response.json();

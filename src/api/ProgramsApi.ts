@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { Currency } from '../model/Currency';
 import { DashboardActionStatus } from '../model/DashboardActionStatus';
@@ -29,20 +29,13 @@ export default class ProgramsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
-                }
+            checkRequiredParameter(id, "id", "addToFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/favorite/add", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/favorite/add", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -50,7 +43,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -63,24 +56,14 @@ export default class ProgramsApi {
             symbol?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeAssetTrade.');
-                }
-        const {
-            symbol
-        } = options;
+            checkRequiredParameter(id, "id", "closeAssetTrade");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/trades/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/trades/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Symbol: symbol
-    })
-
+    },  {
+        Symbol: options['symbol']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -88,7 +71,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -107,36 +90,20 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<string> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling exportProgramPeriods.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            numberMin,
-            numberMax,
-            status,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "exportProgramPeriods");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/periods/export", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/periods/export", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        NumberMin: numberMin,
-        NumberMax: numberMax,
-        Status: status,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        NumberMin: options['numberMin'],
+        NumberMax: options['numberMax'],
+        Status: options['status'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -144,7 +111,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -163,36 +130,20 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<string> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling exportProgramPeriodsFinStatistic.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            numberMin,
-            numberMax,
-            status,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "exportProgramPeriodsFinStatistic");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/periods/export/statistic", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/periods/export/statistic", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        NumberMin: numberMin,
-        NumberMax: numberMax,
-        Status: status,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        NumberMin: options['numberMin'],
+        NumberMax: options['numberMax'],
+        Status: options['status'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -200,7 +151,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -221,40 +172,22 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<string> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling exportProgramTrades.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            symbol,
-            sorting,
-            accountId,
-            accountCurrency,
-            isFollow,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "exportProgramTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/trades/export", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/trades/export", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Symbol: symbol,
-        Sorting: sorting,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        IsFollow: isFollow,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Symbol: options['symbol'],
+        Sorting: options['sorting'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        IsFollow: options['isFollow'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -262,7 +195,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -283,40 +216,22 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TradesSignalViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getAssetTrades.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            symbol,
-            sorting,
-            accountId,
-            accountCurrency,
-            isFollow,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getAssetTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/trades", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/trades", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Symbol: symbol,
-        Sorting: sorting,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        IsFollow: isFollow,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Symbol: options['symbol'],
+        Sorting: options['sorting'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        IsFollow: options['isFollow'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -324,7 +239,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
         return response.json();
@@ -340,30 +255,17 @@ export default class ProgramsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramAbsoluteProfitChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramAbsoluteProfitChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/charts/profit/absolute", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/charts/profit/absolute", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -371,7 +273,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
         return response.json();
@@ -387,30 +289,17 @@ export default class ProgramsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<ProgramBalanceChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramBalanceChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramBalanceChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/charts/balance", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/charts/balance", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -418,7 +307,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramBalanceChart>((response: Response) => {
         return response.json();
@@ -431,24 +320,14 @@ export default class ProgramsApi {
             logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramDetails.');
-                }
-        const {
-            logoQuality
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramDetails");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        logoQuality: logoQuality
-    })
-
+    },  {
+        logoQuality: options['logoQuality']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -456,7 +335,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramFollowDetailsFull>((response: Response) => {
         return response.json();
@@ -474,34 +353,19 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TradesViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramOpenTrades.');
-                }
-        const {
-            sorting,
-            symbol,
-            accountId,
-            accountCurrency,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramOpenTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/trades/open", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/trades/open", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        Symbol: symbol,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        Sorting: options['sorting'],
+        Symbol: options['symbol'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -509,7 +373,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradesViewModel>((response: Response) => {
         return response.json();
@@ -528,36 +392,20 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<ProgramPeriodsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramPeriods.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            numberMin,
-            numberMax,
-            status,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramPeriods");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/periods", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/periods", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        NumberMin: numberMin,
-        NumberMax: numberMax,
-        Status: status,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        NumberMin: options['numberMin'],
+        NumberMax: options['numberMax'],
+        Status: options['status'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -565,7 +413,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramPeriodsViewModel>((response: Response) => {
         return response.json();
@@ -582,32 +430,18 @@ export default class ProgramsApi {
             currencies?: Array<Currency>
         } = {},
         init: RequestInit = {}): Promise<ProgramProfitPercentCharts> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramProfitPercentCharts.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency,
-            currencies
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramProfitPercentCharts");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/charts/profit/percent", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/charts/profit/percent", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency,
-        currencies: currencies
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency'],
+        currencies: options['currencies']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -615,7 +449,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -630,28 +464,16 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<SignalProviderSubscribers> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgramSubscribers.');
-                }
-        const {
-            status,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getProgramSubscribers");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/subscribers", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/subscribers", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Status: status,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        Status: options['status'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -659,7 +481,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SignalProviderSubscribers>((response: Response) => {
         return response.json();
@@ -688,56 +510,30 @@ export default class ProgramsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<ProgramDetailsListItemItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            tags,
-            programCurrency,
-            levelMin,
-            levelMax,
-            levelsSet,
-            investorId,
-            includeWithInvestments,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Tags: tags,
-        ProgramCurrency: programCurrency,
-        LevelMin: levelMin,
-        LevelMax: levelMax,
-        LevelsSet: levelsSet,
-        InvestorId: investorId,
-        IncludeWithInvestments: includeWithInvestments,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs", {
+    },  {
+        Sorting: options['sorting'],
+        ShowIn: options['showIn'],
+        Tags: options['tags'],
+        ProgramCurrency: options['programCurrency'],
+        LevelMin: options['levelMin'],
+        LevelMax: options['levelMax'],
+        LevelsSet: options['levelsSet'],
+        InvestorId: options['investorId'],
+        IncludeWithInvestments: options['includeWithInvestments'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        FacetId: options['facetId'],
+        Mask: options['mask'],
+        OwnerId: options['ownerId'],
+        ShowFavorites: options['showFavorites'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -745,7 +541,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramDetailsListItemItemsViewModel>((response: Response) => {
         return response.json();
@@ -757,20 +553,13 @@ export default class ProgramsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
-                }
+            checkRequiredParameter(id, "id", "removeFromFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/programs/{id}/favorite/remove", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/programs/{id}/favorite/remove", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -778,7 +567,7 @@ export default class ProgramsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

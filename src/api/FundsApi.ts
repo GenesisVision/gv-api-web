@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -26,20 +26,13 @@ export default class FundsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
-                }
+            checkRequiredParameter(id, "id", "addToFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/favorite/add", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/favorite/add", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -47,7 +40,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -63,30 +56,17 @@ export default class FundsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundAbsoluteProfitChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getFundAbsoluteProfitChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/charts/profit/absolute", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/charts/profit/absolute", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -94,7 +74,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
         return response.json();
@@ -110,30 +90,17 @@ export default class FundsApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<FundBalanceChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundBalanceChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getFundBalanceChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/charts/balance", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/charts/balance", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -141,7 +108,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundBalanceChart>((response: Response) => {
         return response.json();
@@ -155,26 +122,15 @@ export default class FundsApi {
             logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<FundDetailsFull> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundDetails.');
-                }
-        const {
-            currency,
-            logoQuality
-        } = options;
+            checkRequiredParameter(id, "id", "getFundDetails");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        logoQuality: logoQuality
-    })
-
+    },  {
+        currency: options['currency'],
+        logoQuality: options['logoQuality']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -182,7 +138,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundDetailsFull>((response: Response) => {
         return response.json();
@@ -200,34 +156,19 @@ export default class FundsApi {
             chartAssetsCount?: number
         } = {},
         init: RequestInit = {}): Promise<FundProfitPercentCharts> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundProfitPercentCharts.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency,
-            currencies,
-            chartAssetsCount
-        } = options;
+            checkRequiredParameter(id, "id", "getFundProfitPercentCharts");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/charts/profit/percent", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/charts/profit/percent", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency,
-        currencies: currencies,
-        chartAssetsCount: chartAssetsCount
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency'],
+        currencies: options['currencies'],
+        chartAssetsCount: options['chartAssetsCount']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -235,7 +176,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -260,48 +201,26 @@ export default class FundsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<FundDetailsListItemItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            assets,
-            investorId,
-            includeWithInvestments,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Assets: assets,
-        InvestorId: investorId,
-        IncludeWithInvestments: includeWithInvestments,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds", {
+    },  {
+        Sorting: options['sorting'],
+        ShowIn: options['showIn'],
+        Assets: options['assets'],
+        InvestorId: options['investorId'],
+        IncludeWithInvestments: options['includeWithInvestments'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        FacetId: options['facetId'],
+        Mask: options['mask'],
+        OwnerId: options['ownerId'],
+        ShowFavorites: options['showFavorites'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -309,7 +228,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundDetailsListItemItemsViewModel>((response: Response) => {
         return response.json();
@@ -326,32 +245,18 @@ export default class FundsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<FundHistoryEventViewModelItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFundsHistoryEvents.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            eventsType,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getFundsHistoryEvents");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/history", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/history", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        EventsType: eventsType,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        EventsType: options['eventsType'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -359,7 +264,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundHistoryEventViewModelItemsViewModel>((response: Response) => {
         return response.json();
@@ -370,20 +275,12 @@ export default class FundsApi {
             chartPointsCount?: number
         } = {},
         init: RequestInit = {}): Promise<FundDetailsListItem> => {
-        const {
-            chartPointsCount
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/challenge/winner", {
-    })
-
-    const query = buildQueryString(path, {
-        chartPointsCount: chartPointsCount
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/challenge/winner", {
+    },  {
+        chartPointsCount: options['chartPointsCount']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -391,7 +288,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundDetailsListItem>((response: Response) => {
         return response.json();
@@ -407,30 +304,17 @@ export default class FundsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<ReallocationModelItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getReallocatingHistory.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getReallocatingHistory");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/reallocations", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/reallocations", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -438,7 +322,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ReallocationModelItemsViewModel>((response: Response) => {
         return response.json();
@@ -450,20 +334,13 @@ export default class FundsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
-                }
+            checkRequiredParameter(id, "id", "removeFromFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/funds/{id}/favorite/remove", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/funds/{id}/favorite/remove", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -471,7 +348,7 @@ export default class FundsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

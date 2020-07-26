@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BetaTestingType } from '../model/BetaTestingType';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -24,15 +24,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<ProfileFullViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -40,7 +35,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProfileFullViewModel>((response: Response) => {
         return response.json();
@@ -51,15 +46,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<ProfileHeaderViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/header", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/header", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -67,7 +57,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProfileHeaderViewModel>((response: Response) => {
         return response.json();
@@ -78,15 +68,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<SocialLinksViewModel> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/sociallinks", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -94,7 +79,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SocialLinksViewModel>((response: Response) => {
         return response.json();
@@ -105,15 +90,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/verification/token", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/verification/token", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -121,7 +101,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -132,15 +112,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/avatar/remove", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/avatar/remove", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -148,7 +123,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -160,15 +135,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/push/token/remove", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/push/token/remove", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -176,7 +146,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -187,20 +157,12 @@ export default class ProfileApi {
             feature?: BetaTestingType
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            feature
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/beta/off", {
-    })
-
-    const query = buildQueryString(path, {
-        feature: feature
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/beta/off", {
+    },  {
+        feature: options['feature']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -208,7 +170,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -219,20 +181,12 @@ export default class ProfileApi {
             feature?: BetaTestingType
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            feature
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/beta/on", {
-    })
-
-    const query = buildQueryString(path, {
-        feature: feature
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/beta/on", {
+    },  {
+        feature: options['feature']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -240,7 +194,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -251,15 +205,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/investor/public/off", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/investor/public/off", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -267,7 +216,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -278,15 +227,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/investor/public/on", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/investor/public/on", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -294,7 +238,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -306,15 +250,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks/all/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/sociallinks/all/update", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -322,7 +261,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -334,20 +273,13 @@ export default class ProfileApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (fileId === null || fileId === undefined) {
-                throw new Error('Required parameter fileId was null or undefined when calling updateAvatar.');
-                }
+            checkRequiredParameter(fileId, "fileId", "updateAvatar");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/avatar/update/{fileId}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/avatar/update/{fileId}", {
         fileId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -355,7 +287,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -367,15 +299,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/push/token", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/push/token", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -383,7 +310,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -395,15 +322,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/personal/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/personal/update", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -411,7 +333,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -423,15 +345,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/update", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -439,7 +356,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -451,15 +368,10 @@ export default class ProfileApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/sociallinks/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/sociallinks/update", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -467,7 +379,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -478,20 +390,12 @@ export default class ProfileApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            currency
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/currency/update", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/currency/update", {
+    },  {
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -499,7 +403,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -512,24 +416,14 @@ export default class ProfileApi {
             whoCanCommentOnMyPosts?: SocialViewMode
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            whoCanPostToMayWall,
-            whoCanViewCommentsOnMyPosts,
-            whoCanCommentOnMyPosts
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/profile/social/settings/update", {
-    })
-
-    const query = buildQueryString(path, {
-        WhoCanPostToMayWall: whoCanPostToMayWall,
-        WhoCanViewCommentsOnMyPosts: whoCanViewCommentsOnMyPosts,
-        WhoCanCommentOnMyPosts: whoCanCommentOnMyPosts
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/profile/social/settings/update", {
+    },  {
+        WhoCanPostToMayWall: options['whoCanPostToMayWall'],
+        WhoCanViewCommentsOnMyPosts: options['whoCanViewCommentsOnMyPosts'],
+        WhoCanCommentOnMyPosts: options['whoCanCommentOnMyPosts']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -537,7 +431,7 @@ export default class ProfileApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { AccountBalanceChart } from '../model/AccountBalanceChart';
 import { Currency } from '../model/Currency';
@@ -25,20 +25,13 @@ export default class FollowApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling addToFavorites.');
-                }
+            checkRequiredParameter(id, "id", "addToFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/favorite/add", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/favorite/add", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -46,7 +39,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -59,24 +52,14 @@ export default class FollowApi {
             symbol?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeAssetTrade.');
-                }
-        const {
-            symbol
-        } = options;
+            checkRequiredParameter(id, "id", "closeAssetTrade");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/trades/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/trades/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Symbol: symbol
-    })
-
+    },  {
+        Symbol: options['symbol']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -84,7 +67,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -100,30 +83,17 @@ export default class FollowApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getAbsoluteProfitChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getAbsoluteProfitChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/charts/profit/absolute", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/charts/profit/absolute", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -131,7 +101,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
         return response.json();
@@ -152,40 +122,22 @@ export default class FollowApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TradesSignalViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getAssetTrades.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            symbol,
-            sorting,
-            accountId,
-            accountCurrency,
-            isFollow,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getAssetTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/trades", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/trades", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Symbol: symbol,
-        Sorting: sorting,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        IsFollow: isFollow,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Symbol: options['symbol'],
+        Sorting: options['sorting'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        IsFollow: options['isFollow'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -193,7 +145,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
         return response.json();
@@ -209,30 +161,17 @@ export default class FollowApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AccountBalanceChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getBalanceChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getBalanceChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/charts/balance", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/charts/balance", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -240,7 +179,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AccountBalanceChart>((response: Response) => {
         return response.json();
@@ -253,24 +192,14 @@ export default class FollowApi {
             logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFollowAssetDetails.');
-                }
-        const {
-            logoQuality
-        } = options;
+            checkRequiredParameter(id, "id", "getFollowAssetDetails");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        logoQuality: logoQuality
-    })
-
+    },  {
+        logoQuality: options['logoQuality']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -278,7 +207,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramFollowDetailsFull>((response: Response) => {
         return response.json();
@@ -302,46 +231,25 @@ export default class FollowApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<FollowDetailsListItemItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            tags,
-            subscriberId,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Tags: tags,
-        SubscriberId: subscriberId,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow", {
+    },  {
+        Sorting: options['sorting'],
+        ShowIn: options['showIn'],
+        Tags: options['tags'],
+        SubscriberId: options['subscriberId'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        ChartPointsCount: options['chartPointsCount'],
+        FacetId: options['facetId'],
+        Mask: options['mask'],
+        OwnerId: options['ownerId'],
+        ShowFavorites: options['showFavorites'],
+        SkipStatistic: options['skipStatistic'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -349,7 +257,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FollowDetailsListItemItemsViewModel>((response: Response) => {
         return response.json();
@@ -362,24 +270,14 @@ export default class FollowApi {
             onlyActive?: boolean
         } = {},
         init: RequestInit = {}): Promise<SignalSubscriptionItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForAsset.');
-                }
-        const {
-            onlyActive
-        } = options;
+            checkRequiredParameter(id, "id", "getFollowSubscriptionsForAsset");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/subscriptions", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/subscriptions", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        onlyActive: onlyActive
-    })
-
+    },  {
+        onlyActive: options['onlyActive']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -387,7 +285,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SignalSubscriptionItemsViewModel>((response: Response) => {
         return response.json();
@@ -400,24 +298,14 @@ export default class FollowApi {
             onlyActive?: boolean
         } = {},
         init: RequestInit = {}): Promise<SignalSubscriptionItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFollowSubscriptionsForOwnAccount.');
-                }
-        const {
-            onlyActive
-        } = options;
+            checkRequiredParameter(id, "id", "getFollowSubscriptionsForOwnAccount");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/account/own/{id}/subscriptions", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/account/own/{id}/subscriptions", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        onlyActive: onlyActive
-    })
-
+    },  {
+        onlyActive: options['onlyActive']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -425,7 +313,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SignalSubscriptionItemsViewModel>((response: Response) => {
         return response.json();
@@ -442,32 +330,18 @@ export default class FollowApi {
             currencies?: Array<Currency>
         } = {},
         init: RequestInit = {}): Promise<ProgramProfitPercentCharts> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency,
-            currencies
-        } = options;
+            checkRequiredParameter(id, "id", "getProfitPercentCharts");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/charts/profit/percent", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/charts/profit/percent", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency,
-        currencies: currencies
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency'],
+        currencies: options['currencies']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -475,7 +349,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -487,20 +361,13 @@ export default class FollowApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeFromFavorites.');
-                }
+            checkRequiredParameter(id, "id", "removeFromFavorites");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/follow/{id}/favorite/remove", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/follow/{id}/favorite/remove", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -508,7 +375,7 @@ export default class FollowApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

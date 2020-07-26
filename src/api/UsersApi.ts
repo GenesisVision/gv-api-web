@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ImageQuality } from '../model/ImageQuality';
 import { PublicProfile } from '../model/PublicProfile';
@@ -21,24 +21,14 @@ export default class UsersApi {
             logoQuality?: ImageQuality
         } = {},
         init: RequestInit = {}): Promise<PublicProfile> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getUserProfile.');
-                }
-        const {
-            logoQuality
-        } = options;
+            checkRequiredParameter(id, "id", "getUserProfile");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/users/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/users/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        logoQuality: logoQuality
-    })
-
+    },  {
+        logoQuality: options['logoQuality']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -46,7 +36,7 @@ export default class UsersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PublicProfile>((response: Response) => {
         return response.json();
@@ -58,20 +48,13 @@ export default class UsersApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<PublicProfileFollow> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getUserProfileFollowDetails.');
-                }
+            checkRequiredParameter(id, "id", "getUserProfileFollowDetails");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/users/{id}/follow", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/users/{id}/follow", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -79,7 +62,7 @@ export default class UsersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PublicProfileFollow>((response: Response) => {
         return response.json();
@@ -94,28 +77,16 @@ export default class UsersApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<UserDetailsListItemsViewModel> => {
-        const {
-            sorting,
-            timeframe,
-            tags,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/users", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        Timeframe: timeframe,
-        Tags: tags,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/users", {
+    },  {
+        Sorting: options['sorting'],
+        Timeframe: options['timeframe'],
+        Tags: options['tags'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -123,7 +94,7 @@ export default class UsersApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<UserDetailsListItemsViewModel>((response: Response) => {
         return response.json();

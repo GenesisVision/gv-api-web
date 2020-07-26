@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AbsoluteProfitChart } from '../model/AbsoluteProfitChart';
 import { AccountBalanceChart } from '../model/AccountBalanceChart';
 import { AccountProfitPercentCharts } from '../model/AccountProfitPercentCharts';
@@ -23,24 +23,14 @@ export default class TradingaccountApi {
             symbol?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeAccountAssetTrade.');
-                }
-        const {
-            symbol
-        } = options;
+            checkRequiredParameter(id, "id", "closeAccountAssetTrade");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/trades/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/trades/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Symbol: symbol
-    })
-
+    },  {
+        Symbol: options['symbol']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -48,7 +38,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -69,40 +59,22 @@ export default class TradingaccountApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<string> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling exportTrades.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            symbol,
-            sorting,
-            accountId,
-            accountCurrency,
-            isFollow,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "exportTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/trades/export", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/trades/export", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Symbol: symbol,
-        Sorting: sorting,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        IsFollow: isFollow,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Symbol: options['symbol'],
+        Sorting: options['sorting'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        IsFollow: options['isFollow'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -110,7 +82,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -126,30 +98,17 @@ export default class TradingaccountApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AbsoluteProfitChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getAbsoluteProfitChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getAbsoluteProfitChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/charts/profit/absolute", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/charts/profit/absolute", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -157,7 +116,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AbsoluteProfitChart>((response: Response) => {
         return response.json();
@@ -173,30 +132,17 @@ export default class TradingaccountApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<AccountBalanceChart> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getBalanceChart.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency
-        } = options;
+            checkRequiredParameter(id, "id", "getBalanceChart");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/charts/balance", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/charts/balance", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -204,7 +150,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AccountBalanceChart>((response: Response) => {
         return response.json();
@@ -222,34 +168,19 @@ export default class TradingaccountApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TradesViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getOpenTrades.');
-                }
-        const {
-            sorting,
-            symbol,
-            accountId,
-            accountCurrency,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getOpenTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/trades/open", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/trades/open", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        Symbol: symbol,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        Sorting: options['sorting'],
+        Symbol: options['symbol'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -257,7 +188,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradesViewModel>((response: Response) => {
         return response.json();
@@ -274,32 +205,18 @@ export default class TradingaccountApi {
             currencies?: Array<Currency>
         } = {},
         init: RequestInit = {}): Promise<AccountProfitPercentCharts> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProfitPercentCharts.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            maxPointCount,
-            currency,
-            currencies
-        } = options;
+            checkRequiredParameter(id, "id", "getProfitPercentCharts");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/charts/profit/percent", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/charts/profit/percent", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        MaxPointCount: maxPointCount,
-        Currency: currency,
-        currencies: currencies
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        MaxPointCount: options['maxPointCount'],
+        Currency: options['currency'],
+        currencies: options['currencies']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -307,7 +224,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AccountProfitPercentCharts>((response: Response) => {
         return response.json();
@@ -328,40 +245,22 @@ export default class TradingaccountApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TradesSignalViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getTrades.');
-                }
-        const {
-            dateFrom,
-            dateTo,
-            symbol,
-            sorting,
-            accountId,
-            accountCurrency,
-            isFollow,
-            skip,
-            take
-        } = options;
+            checkRequiredParameter(id, "id", "getTrades");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}/trades", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}/trades", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Symbol: symbol,
-        Sorting: sorting,
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        IsFollow: isFollow,
-        Skip: skip,
-        Take: take
-    })
-
+    },  {
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Symbol: options['symbol'],
+        Sorting: options['sorting'],
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        IsFollow: options['isFollow'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -369,7 +268,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradesSignalViewModel>((response: Response) => {
         return response.json();
@@ -381,20 +280,13 @@ export default class TradingaccountApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<PrivateTradingAccountFull> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getTradingAccountDetails.');
-                }
+            checkRequiredParameter(id, "id", "getTradingAccountDetails");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/tradingaccount/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/tradingaccount/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -402,7 +294,7 @@ export default class TradingaccountApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PrivateTradingAccountFull>((response: Response) => {
         return response.json();

@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AssetInfo } from '../model/AssetInfo';
 import { CaptchaDetails } from '../model/CaptchaDetails';
 import { Currency } from '../model/Currency';
@@ -23,15 +23,10 @@ export default class PlatformApi {
         } = {},
         init: RequestInit = {}): Promise<PlatformAssets> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/trading/assets", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/trading/assets", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -39,7 +34,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PlatformAssets>((response: Response) => {
         return response.json();
@@ -51,20 +46,13 @@ export default class PlatformApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<AssetInfo> => {
-                if (asset === null || asset === undefined) {
-                throw new Error('Required parameter asset was null or undefined when calling getPlatformAssetInfo.');
-                }
+            checkRequiredParameter(asset, "asset", "getPlatformAssetInfo");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/asset/{asset}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/asset/{asset}", {
         asset
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -72,7 +60,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<AssetInfo>((response: Response) => {
         return response.json();
@@ -83,15 +71,10 @@ export default class PlatformApi {
         } = {},
         init: RequestInit = {}): Promise<string> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/date", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/date", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -99,7 +82,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -110,20 +93,12 @@ export default class PlatformApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<PlatformEvents> => {
-        const {
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/events", {
-    })
-
-    const query = buildQueryString(path, {
-        take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/events", {
+    },  {
+        take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -131,7 +106,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PlatformEvents>((response: Response) => {
         return response.json();
@@ -142,15 +117,10 @@ export default class PlatformApi {
         } = {},
         init: RequestInit = {}): Promise<PlatformInfo> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/info", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/info", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -158,7 +128,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PlatformInfo>((response: Response) => {
         return response.json();
@@ -173,28 +143,16 @@ export default class PlatformApi {
             newsTake?: number
         } = {},
         init: RequestInit = {}): Promise<LandingInfo> => {
-        const {
-            eventsTake,
-            followTake,
-            programsTake,
-            fundsTake,
-            newsTake
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/landing", {
-    })
-
-    const query = buildQueryString(path, {
-        eventsTake: eventsTake,
-        followTake: followTake,
-        programsTake: programsTake,
-        fundsTake: fundsTake,
-        newsTake: newsTake
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/landing", {
+    },  {
+        eventsTake: options['eventsTake'],
+        followTake: options['followTake'],
+        programsTake: options['programsTake'],
+        fundsTake: options['fundsTake'],
+        newsTake: options['newsTake']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -202,7 +160,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<LandingInfo>((response: Response) => {
         return response.json();
@@ -213,20 +171,12 @@ export default class PlatformApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<ProgramsLevelsInfo> => {
-        const {
-            currency
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/levels", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/levels", {
+    },  {
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -234,7 +184,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramsLevelsInfo>((response: Response) => {
         return response.json();
@@ -245,20 +195,12 @@ export default class PlatformApi {
             currency?: Currency
         } = {},
         init: RequestInit = {}): Promise<LevelsParamsInfo> => {
-        const {
-            currency
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/levels/parameters", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/levels/parameters", {
+    },  {
+        currency: options['currency']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -266,7 +208,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<LevelsParamsInfo>((response: Response) => {
         return response.json();
@@ -280,26 +222,15 @@ export default class PlatformApi {
             version?: string
         } = {},
         init: RequestInit = {}): Promise<CaptchaDetails> => {
-                if (route === null || route === undefined) {
-                throw new Error('Required parameter route was null or undefined when calling getRiskControlInfo.');
-                }
-        const {
-            client,
-            version
-        } = options;
+            checkRequiredParameter(route, "route", "getRiskControlInfo");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/riskcontrol", {
-    })
-
-    const query = buildQueryString(path, {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/riskcontrol", {
+    },  {
         Route: route,
-        Client: client,
-        Version: version
-    })
-
+        Client: options['client'],
+        Version: options['version']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -307,7 +238,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<CaptchaDetails>((response: Response) => {
         return response.json();
@@ -318,15 +249,10 @@ export default class PlatformApi {
         } = {},
         init: RequestInit = {}): Promise<SiteMapInfo> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/sitemap", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/platform/sitemap", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -334,7 +260,7 @@ export default class PlatformApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SiteMapInfo>((response: Response) => {
         return response.json();

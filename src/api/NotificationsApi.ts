@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FollowNotificationSettingList } from '../model/FollowNotificationSettingList';
 import { FundNotificationSettingList } from '../model/FundNotificationSettingList';
@@ -25,28 +25,16 @@ export default class NotificationsApi {
             conditionAmount?: number
         } = {},
         init: RequestInit = {}): Promise<string> => {
-        const {
-            assetId,
-            managerId,
-            type,
-            conditionType,
-            conditionAmount
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/add", {
-    })
-
-    const query = buildQueryString(path, {
-        AssetId: assetId,
-        ManagerId: managerId,
-        Type: type,
-        ConditionType: conditionType,
-        ConditionAmount: conditionAmount
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/add", {
+    },  {
+        AssetId: options['assetId'],
+        ManagerId: options['managerId'],
+        Type: options['type'],
+        ConditionType: options['conditionType'],
+        ConditionAmount: options['conditionAmount']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -54,7 +42,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;
@@ -65,15 +53,10 @@ export default class NotificationsApi {
         } = {},
         init: RequestInit = {}): Promise<number> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/new", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/new", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -81,7 +64,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<number>((response: Response) => {
         return response.text() as unknown as number;
@@ -93,22 +76,13 @@ export default class NotificationsApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<NotificationList> => {
-        const {
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications", {
-    })
-
-    const query = buildQueryString(path, {
-        skip: skip,
-        take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications", {
+    },  {
+        skip: options['skip'],
+        take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -116,7 +90,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<NotificationList>((response: Response) => {
         return response.json();
@@ -128,20 +102,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<FollowNotificationSettingList> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getNotificationsFollowSettings.');
-                }
+            checkRequiredParameter(id, "id", "getNotificationsFollowSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/follow/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/follow/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -149,7 +116,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FollowNotificationSettingList>((response: Response) => {
         return response.json();
@@ -161,20 +128,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<FundNotificationSettingList> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getNotificationsFundSettings.');
-                }
+            checkRequiredParameter(id, "id", "getNotificationsFundSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/funds/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/funds/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -182,7 +142,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<FundNotificationSettingList>((response: Response) => {
         return response.json();
@@ -194,20 +154,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ManagerNotificationSettingList> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getNotificationsManagerSettings.');
-                }
+            checkRequiredParameter(id, "id", "getNotificationsManagerSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/managers/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/managers/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -215,7 +168,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ManagerNotificationSettingList>((response: Response) => {
         return response.json();
@@ -227,20 +180,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ProgramNotificationSettingList> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getNotificationsProgramSettings.');
-                }
+            checkRequiredParameter(id, "id", "getNotificationsProgramSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/programs/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/programs/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -248,7 +194,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramNotificationSettingList>((response: Response) => {
         return response.json();
@@ -259,15 +205,10 @@ export default class NotificationsApi {
         } = {},
         init: RequestInit = {}): Promise<NotificationSettingList> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -275,7 +216,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<NotificationSettingList>((response: Response) => {
         return response.json();
@@ -286,15 +227,10 @@ export default class NotificationsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/all/read", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/all/read", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -302,7 +238,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -314,20 +250,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling readNotification.');
-                }
+            checkRequiredParameter(id, "id", "readNotification");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/{id}/read", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/{id}/read", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -335,7 +264,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -347,20 +276,13 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeNotificationsSettings.');
-                }
+            checkRequiredParameter(id, "id", "removeNotificationsSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/remove/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/remove/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -368,7 +290,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -381,24 +303,15 @@ export default class NotificationsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<string> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling toggleNotificationSettings.');
-                }
-                if (enable === null || enable === undefined) {
-                throw new Error('Required parameter enable was null or undefined when calling toggleNotificationSettings.');
-                }
+            checkRequiredParameter(id, "id", "toggleNotificationSettings");
+            checkRequiredParameter(enable, "enable", "toggleNotificationSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/notifications/settings/{id}/{enable}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/notifications/settings/{id}/{enable}", {
         id,
         enable
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -406,7 +319,7 @@ export default class NotificationsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<string>((response: Response) => {
         return response.text() as unknown as string;

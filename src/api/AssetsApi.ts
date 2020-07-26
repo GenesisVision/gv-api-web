@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -34,24 +34,15 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling addFavoriteSymbol.');
-                }
-                if (symbol === null || symbol === undefined) {
-                throw new Error('Required parameter symbol was null or undefined when calling addFavoriteSymbol.');
-                }
+            checkRequiredParameter(id, "id", "addFavoriteSymbol");
+            checkRequiredParameter(symbol, "symbol", "addFavoriteSymbol");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add", {
         id,
         symbol
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -59,7 +50,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -71,20 +62,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling cancelChangeBroker.');
-                }
+            checkRequiredParameter(id, "id", "cancelChangeBroker");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change/cancel", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/broker/change/cancel", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -92,7 +76,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -105,20 +89,13 @@ export default class AssetsApi {
             body?: ChangeBrokerProgramRequest
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling changeBroker.');
-                }
+            checkRequiredParameter(id, "id", "changeBroker");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/broker/change", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -126,7 +103,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -139,20 +116,13 @@ export default class AssetsApi {
             body?: TradingAccountPwdUpdate
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling changeTradingAccountPassword.');
-                }
+            checkRequiredParameter(id, "id", "changeTradingAccountPassword");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/password/change", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/password/change", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -160,7 +130,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -172,20 +142,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeCurrentPeriod.');
-                }
+            checkRequiredParameter(id, "id", "closeCurrentPeriod");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/period/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/period/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -193,7 +156,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -206,20 +169,13 @@ export default class AssetsApi {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeFund.');
-                }
+            checkRequiredParameter(id, "id", "closeFund");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/funds/{id}/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -227,7 +183,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -240,20 +196,13 @@ export default class AssetsApi {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeInvestmentProgram.');
-                }
+            checkRequiredParameter(id, "id", "closeInvestmentProgram");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -261,7 +210,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -273,20 +222,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeTradingAccount.');
-                }
+            checkRequiredParameter(id, "id", "closeTradingAccount");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/close", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/close", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -294,7 +236,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -307,20 +249,13 @@ export default class AssetsApi {
             body?: TwoFactorCodeModel
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling confirmProgram2FA.');
-                }
+            checkRequiredParameter(id, "id", "confirmProgram2FA");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/confirm", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/2fa/confirm", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -328,7 +263,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -340,15 +275,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/exchange/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/exchange/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -356,7 +286,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
         return response.json();
@@ -368,15 +298,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/external/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -384,7 +309,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
         return response.json();
@@ -396,15 +321,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/funds/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -412,7 +332,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -424,15 +344,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -440,7 +355,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
         return response.json();
@@ -452,20 +367,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<StringItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFavoriteSymbols.');
-                }
+            checkRequiredParameter(id, "id", "getFavoriteSymbols");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/symbol/favorite", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -473,7 +381,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<StringItemsViewModel>((response: Response) => {
         return response.json();
@@ -485,20 +393,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ProgramLevelInfo> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getLevelsCalculator.');
-                }
+            checkRequiredParameter(id, "id", "getLevelsCalculator");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/levels/info", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/levels/info", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -506,7 +407,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProgramLevelInfo>((response: Response) => {
         return response.json();
@@ -518,20 +419,13 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgram2FA.');
-                }
+            checkRequiredParameter(id, "id", "getProgram2FA");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/get", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/2fa/get", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -539,7 +433,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
         return response.json();
@@ -551,15 +445,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/fromaccount/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -567,7 +456,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -579,15 +468,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/signal/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -595,7 +479,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -608,20 +492,13 @@ export default class AssetsApi {
             body?: TradingAccountDemoDeposit
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling makeDemoTradingAccountDeposit.');
-                }
+            checkRequiredParameter(id, "id", "makeDemoTradingAccountDeposit");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/demo/deposit", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/demo/deposit", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -629,7 +506,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -641,15 +518,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromexchangeaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/fromexchangeaccount/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -657,7 +529,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -669,15 +541,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/fromaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/external/fromaccount/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -685,7 +552,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -697,15 +564,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromsignalprovider/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/fromsignalprovider/create", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -713,7 +575,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -726,24 +588,15 @@ export default class AssetsApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeFavoriteSymbol.');
-                }
-                if (symbol === null || symbol === undefined) {
-                throw new Error('Required parameter symbol was null or undefined when calling removeFavoriteSymbol.');
-                }
+            checkRequiredParameter(id, "id", "removeFavoriteSymbol");
+            checkRequiredParameter(symbol, "symbol", "removeFavoriteSymbol");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove", {
         id,
         symbol
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -751,7 +604,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -764,20 +617,13 @@ export default class AssetsApi {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset.');
-                }
+            checkRequiredParameter(id, "id", "updateAsset");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/follow/{id}/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/follow/{id}/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -785,7 +631,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -798,20 +644,13 @@ export default class AssetsApi {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset_1.');
-                }
+            checkRequiredParameter(id, "id", "updateAsset_1");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/funds/{id}/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -819,7 +658,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -832,20 +671,13 @@ export default class AssetsApi {
             body?: ProgramUpdate
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset_2.');
-                }
+            checkRequiredParameter(id, "id", "updateAsset_2");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/programs/{id}/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -853,7 +685,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -866,20 +698,13 @@ export default class AssetsApi {
             body?: Array<FundAssetPart>
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateFundAssets.');
-                }
+            checkRequiredParameter(id, "id", "updateFundAssets");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/assets/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/funds/{id}/assets/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -887,7 +712,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -899,15 +724,10 @@ export default class AssetsApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/edit", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/assets/signal/edit", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -915,7 +735,7 @@ export default class AssetsApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

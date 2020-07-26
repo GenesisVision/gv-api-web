@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -25,15 +25,10 @@ export default class SocialApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/add", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/add", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -41,7 +36,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -53,20 +48,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling deletePost.');
-                }
+            checkRequiredParameter(id, "id", "deletePost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/delete", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/delete", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -74,7 +62,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -86,15 +74,10 @@ export default class SocialApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/edit", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/edit", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -102,7 +85,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -114,20 +97,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (userId === null || userId === undefined) {
-                throw new Error('Required parameter userId was null or undefined when calling followUser.');
-                }
+            checkRequiredParameter(userId, "userId", "followUser");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/user/{userId}/follow", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/user/{userId}/follow", {
         userId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -135,7 +111,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -156,40 +132,22 @@ export default class SocialApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<PostItemsViewModel> => {
-        const {
-            userId,
-            tagContentId,
-            tagContentIds,
-            userMode,
-            hashTags,
-            mask,
-            showTop,
-            showLiked,
-            showOnlyUserPosts,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed", {
-    })
-
-    const query = buildQueryString(path, {
-        UserId: userId,
-        TagContentId: tagContentId,
-        TagContentIds: tagContentIds,
-        UserMode: userMode,
-        HashTags: hashTags,
-        Mask: mask,
-        ShowTop: showTop,
-        ShowLiked: showLiked,
-        ShowOnlyUserPosts: showOnlyUserPosts,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed", {
+    },  {
+        UserId: options['userId'],
+        TagContentId: options['tagContentId'],
+        TagContentIds: options['tagContentIds'],
+        UserMode: options['userMode'],
+        HashTags: options['hashTags'],
+        Mask: options['mask'],
+        ShowTop: options['showTop'],
+        ShowLiked: options['showLiked'],
+        ShowOnlyUserPosts: options['showOnlyUserPosts'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -197,7 +155,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<PostItemsViewModel>((response: Response) => {
         return response.json();
@@ -209,20 +167,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<EditablePost> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getOriginalPost.');
-                }
+            checkRequiredParameter(id, "id", "getOriginalPost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/original", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/original", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -230,7 +181,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<EditablePost>((response: Response) => {
         return response.json();
@@ -242,20 +193,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Post> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getPost.');
-                }
+            checkRequiredParameter(id, "id", "getPost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -263,7 +207,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<Post>((response: Response) => {
         return response.json();
@@ -275,20 +219,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getPostLikesUsers.');
-                }
+            checkRequiredParameter(id, "id", "getPostLikesUsers");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/users/likes", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/users/likes", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -296,7 +233,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
         return response.json();
@@ -308,20 +245,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getPostRepostsUsers.');
-                }
+            checkRequiredParameter(id, "id", "getPostRepostsUsers");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/users/reposts", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/users/reposts", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -329,7 +259,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
         return response.json();
@@ -343,26 +273,15 @@ export default class SocialApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<MediaPostItemsViewModel> => {
-        const {
-            mask,
-            type,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/media", {
-    })
-
-    const query = buildQueryString(path, {
-        Mask: mask,
-        Type: type,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/media", {
+    },  {
+        Mask: options['mask'],
+        Type: options['type'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -370,7 +289,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<MediaPostItemsViewModel>((response: Response) => {
         return response.json();
@@ -381,15 +300,10 @@ export default class SocialApi {
         } = {},
         init: RequestInit = {}): Promise<SocialSummary> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/summary", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/summary", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -397,7 +311,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SocialSummary>((response: Response) => {
         return response.json();
@@ -409,20 +323,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling likePost.');
-                }
+            checkRequiredParameter(id, "id", "likePost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/like", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/like", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -430,7 +337,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -442,20 +349,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling pinPost.');
-                }
+            checkRequiredParameter(id, "id", "pinPost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/pin", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/pin", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -463,7 +363,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -475,15 +375,10 @@ export default class SocialApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/repost", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/repost", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -491,7 +386,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -503,20 +398,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling revertDeletingPost.');
-                }
+            checkRequiredParameter(id, "id", "revertDeletingPost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/delete/revert", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/delete/revert", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -524,7 +412,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -538,26 +426,15 @@ export default class SocialApi {
             text?: string
         } = {},
         init: RequestInit = {}): Promise<EditablePost> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling spamReport.');
-                }
-        const {
-            reason,
-            text
-        } = options;
+            checkRequiredParameter(id, "id", "spamReport");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/report", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/report", {
         id
-    })
-
-    const query = buildQueryString(path, {
-        reason: reason,
-        text: text
-    })
-
+    },  {
+        reason: options['reason'],
+        text: options['text']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -565,7 +442,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<EditablePost>((response: Response) => {
         return response.json();
@@ -577,20 +454,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (userId === null || userId === undefined) {
-                throw new Error('Required parameter userId was null or undefined when calling unfollowUser.');
-                }
+            checkRequiredParameter(userId, "userId", "unfollowUser");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/user/{userId}/unfollow", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/user/{userId}/unfollow", {
         userId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -598,7 +468,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -610,20 +480,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling unlikePost.');
-                }
+            checkRequiredParameter(id, "id", "unlikePost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/unlike", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/unlike", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -631,7 +494,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -643,20 +506,13 @@ export default class SocialApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling unpinPost.');
-                }
+            checkRequiredParameter(id, "id", "unpinPost");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/social/feed/{id}/unpin", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/unpin", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -664,7 +520,7 @@ export default class SocialApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;

@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { CreateWithdrawalRequestModel } from '../model/CreateWithdrawalRequestModel';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -25,20 +25,13 @@ export default class WalletApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (txId === null || txId === undefined) {
-                throw new Error('Required parameter txId was null or undefined when calling cancelWithdrawalRequest.');
-                }
+            checkRequiredParameter(txId, "txId", "cancelWithdrawalRequest");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/cancel/{txId}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/withdraw/request/cancel/{txId}", {
         txId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -46,7 +39,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -58,22 +51,13 @@ export default class WalletApi {
             code?: string
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-        const {
-            requestId,
-            code
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/confirm", {
-    })
-
-    const query = buildQueryString(path, {
-        requestId: requestId,
-        code: code
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/withdraw/request/confirm", {
+    },  {
+        requestId: options['requestId'],
+        code: options['code']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -81,7 +65,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -93,15 +77,10 @@ export default class WalletApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/new", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/withdraw/request/new", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -109,7 +88,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -121,20 +100,13 @@ export default class WalletApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<WalletMultiAvailable> => {
-                if (currency === null || currency === undefined) {
-                throw new Error('Required parameter currency was null or undefined when calling getAccountsAvailable.');
-                }
+            checkRequiredParameter(currency, "currency", "getAccountsAvailable");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/accounts/{currency}/available", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/accounts/{currency}/available", {
         currency
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -142,7 +114,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<WalletMultiAvailable>((response: Response) => {
         return response.json();
@@ -153,15 +125,10 @@ export default class WalletApi {
         } = {},
         init: RequestInit = {}): Promise<UserCommissionData> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/fee/gvtholding", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/fee/gvtholding", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -169,7 +136,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<UserCommissionData>((response: Response) => {
         return response.json();
@@ -185,30 +152,17 @@ export default class WalletApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TransactionViewModelItemsViewModel> => {
-        const {
-            transactionType,
-            dateFrom,
-            dateTo,
-            currency,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/transactions/external", {
-    })
-
-    const query = buildQueryString(path, {
-        TransactionType: transactionType,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Currency: currency,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/transactions/external", {
+    },  {
+        TransactionType: options['transactionType'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Currency: options['currency'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -216,7 +170,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TransactionViewModelItemsViewModel>((response: Response) => {
         return response.json();
@@ -232,30 +186,17 @@ export default class WalletApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<TransactionViewModelItemsViewModel> => {
-        const {
-            transactionType,
-            dateFrom,
-            dateTo,
-            currency,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/transactions/internal", {
-    })
-
-    const query = buildQueryString(path, {
-        TransactionType: transactionType,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        Currency: currency,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/transactions/internal", {
+    },  {
+        TransactionType: options['transactionType'],
+        DateFrom: options['dateFrom'],
+        DateTo: options['dateTo'],
+        Currency: options['currency'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -263,7 +204,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TransactionViewModelItemsViewModel>((response: Response) => {
         return response.json();
@@ -274,15 +215,10 @@ export default class WalletApi {
         } = {},
         init: RequestInit = {}): Promise<WithdrawalSummary> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/info", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/withdraw/info", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -290,7 +226,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<WithdrawalSummary>((response: Response) => {
         return response.json();
@@ -302,20 +238,13 @@ export default class WalletApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<WalletMultiAvailable> => {
-                if (currency === null || currency === undefined) {
-                throw new Error('Required parameter currency was null or undefined when calling getWalletAvailable.');
-                }
+            checkRequiredParameter(currency, "currency", "getWalletAvailable");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/{currency}/available", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/{currency}/available", {
         currency
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -323,7 +252,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<WalletMultiAvailable>((response: Response) => {
         return response.json();
@@ -335,20 +264,13 @@ export default class WalletApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<WalletSummary> => {
-                if (currency === null || currency === undefined) {
-                throw new Error('Required parameter currency was null or undefined when calling getWalletSummary.');
-                }
+            checkRequiredParameter(currency, "currency", "getWalletSummary");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/{currency}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/{currency}", {
         currency
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -356,7 +278,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<WalletSummary>((response: Response) => {
         return response.json();
@@ -368,20 +290,13 @@ export default class WalletApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (txId === null || txId === undefined) {
-                throw new Error('Required parameter txId was null or undefined when calling resendWithdrawalRequestEmail.');
-                }
+            checkRequiredParameter(txId, "txId", "resendWithdrawalRequestEmail");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/withdraw/request/resend/{txId}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/withdraw/request/resend/{txId}", {
         txId
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -389,7 +304,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -401,15 +316,10 @@ export default class WalletApi {
         } = {},
         init: RequestInit = {}): Promise<Response> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/transfer", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/transfer", {
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -417,7 +327,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -428,15 +338,10 @@ export default class WalletApi {
         } = {},
         init: RequestInit = {}): Promise<WalletDepositSummary> => {
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/wallet/deposit/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/wallet/deposit/update", {
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -444,7 +349,7 @@ export default class WalletApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<WalletDepositSummary>((response: Response) => {
         return response.json();

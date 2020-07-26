@@ -1,5 +1,15 @@
 import querystring from "querystring";
 
+export const checkRequiredParameter = (value: any, paramName: string, methodName: string) => {
+    if (value === null || value === undefined)
+        throw new Error(`Required parameter ${paramName} was null or undefined when calling ${methodName}.`);
+}
+
+export const buildPathAndQuery = (apiUrl: string, methodPath: string, pathParams: { [key: string]: any }, queryParams: { [key: string]: any }): string => {
+    const path = apiUrl + buildPathString(methodPath, pathParams)
+    return buildQueryString(path, queryParams)
+}
+
 export const buildPathString = (path: string, pathParams: { [key: string]: any }): string => {
     if (!path.match(/^\//)) {
         path = '/' + path;

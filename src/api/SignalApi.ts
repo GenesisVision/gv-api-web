@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AttachToExternalSignalProviderCommon } from '../model/AttachToExternalSignalProviderCommon';
 import { AttachToExternalSignalProviderExt } from '../model/AttachToExternalSignalProviderExt';
 import { AttachToSignalProvider } from '../model/AttachToSignalProvider';
@@ -23,20 +23,13 @@ export default class SignalApi {
             body?: AttachToExternalSignalProviderCommon
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalCommonAccount.');
-                }
+            checkRequiredParameter(id, "id", "attachSlaveToMasterExternalCommonAccount");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/attach/{id}/common", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/external/attach/{id}/common", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -44,7 +37,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -57,20 +50,13 @@ export default class SignalApi {
             body?: AttachToExternalSignalProviderExt
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterExternalPrivateAccount.');
-                }
+            checkRequiredParameter(id, "id", "attachSlaveToMasterExternalPrivateAccount");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/attach/{id}/private", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/external/attach/{id}/private", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -78,7 +64,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -91,20 +77,13 @@ export default class SignalApi {
             body?: AttachToSignalProvider
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling attachSlaveToMasterInternal.');
-                }
+            checkRequiredParameter(id, "id", "attachSlaveToMasterInternal");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/attach/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/attach/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -112,7 +91,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -125,20 +104,13 @@ export default class SignalApi {
             body?: DetachFromExternalSignalProvider
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterExternal.');
-                }
+            checkRequiredParameter(id, "id", "detachSlaveFromMasterExternal");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/detach/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/external/detach/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -146,7 +118,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -159,20 +131,13 @@ export default class SignalApi {
             body?: DetachFromSignalProvider
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling detachSlaveFromMasterInternal.');
-                }
+            checkRequiredParameter(id, "id", "detachSlaveFromMasterInternal");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/detach/{id}", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/detach/{id}", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -180,7 +145,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -194,26 +159,15 @@ export default class SignalApi {
             take?: number
         } = {},
         init: RequestInit = {}): Promise<SignalTradingEventItemsViewModel> => {
-        const {
-            accountId,
-            accountCurrency,
-            skip,
-            take
-        } = options;
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/trades/log", {
-    })
-
-    const query = buildQueryString(path, {
-        AccountId: accountId,
-        AccountCurrency: accountCurrency,
-        Skip: skip,
-        Take: take
-    })
-
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/trades/log", {
+    },  {
+        AccountId: options['accountId'],
+        AccountCurrency: options['accountCurrency'],
+        Skip: options['skip'],
+        Take: options['take']
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -221,7 +175,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<SignalTradingEventItemsViewModel>((response: Response) => {
         return response.json();
@@ -233,20 +187,13 @@ export default class SignalApi {
         options: {
         } = {},
         init: RequestInit = {}): Promise<TradingAccountDetailsItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getSubscriberAccountsForAsset.');
-                }
+            checkRequiredParameter(id, "id", "getSubscriberAccountsForAsset");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/attach/{id}/accounts", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/attach/{id}/accounts", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = null;
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -254,7 +201,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then<TradingAccountDetailsItemsViewModel>((response: Response) => {
         return response.json();
@@ -267,20 +214,13 @@ export default class SignalApi {
             body?: AttachToExternalSignalProviderExt
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateExternalSubscriptionSettings.');
-                }
+            checkRequiredParameter(id, "id", "updateExternalSubscriptionSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/external/{id}/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/external/{id}/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -288,7 +228,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
@@ -301,20 +241,13 @@ export default class SignalApi {
             body?: AttachToSignalProvider
         } = {},
         init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateSubscriptionSettings.');
-                }
+            checkRequiredParameter(id, "id", "updateSubscriptionSettings");
 
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/signal/{id}/update", {
+    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/signal/{id}/update", {
         id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
+    },  {
+    });
     let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
 
     return this.apiClient.fetch(query, {
         ...init,
@@ -322,7 +255,7 @@ export default class SignalApi {
         body,
         headers: {
             ...init.headers,
-            "Content-Type": contentType,
+            "Content-Type": "application/json",
         }
     }).then(handleErrors).then< Response >((response: Response) => {
         return response;
