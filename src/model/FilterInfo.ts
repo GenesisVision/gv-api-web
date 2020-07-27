@@ -6,5 +6,6 @@ export interface FilterInfo {
     walletExternalTransactions: Array<FilterItemInfo>;
     events: EventFilters;
     assets: Array<FilterItemInfo>;
+    fundsHistoryEvents: Array<FilterItemInfo>;
 }
 

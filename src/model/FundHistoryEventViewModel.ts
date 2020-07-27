@@ -6,6 +6,7 @@ import { FundTradingEventViewModel } from './FundTradingEventViewModel';
 export interface FundHistoryEventViewModel {
     date: Date;
     type: FundHistoryEventType;
+    description: string;
     amount: number;
     asset: BasePlatformAsset;
     logoUrl: string;

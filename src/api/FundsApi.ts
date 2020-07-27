@@ -7,7 +7,7 @@ import { FundBalanceChart } from '../model/FundBalanceChart';
 import { FundDetailsFull } from '../model/FundDetailsFull';
 import { FundDetailsListItem } from '../model/FundDetailsListItem';
 import { FundDetailsListItemItemsViewModel } from '../model/FundDetailsListItemItemsViewModel';
-import { FundHistoryEventType } from '../model/FundHistoryEventType';
+import { FundHistoryEventFilterType } from '../model/FundHistoryEventFilterType';
 import { FundHistoryEventViewModelItemsViewModel } from '../model/FundHistoryEventViewModelItemsViewModel';
 import { FundProfitPercentCharts } from '../model/FundProfitPercentCharts';
 import { FundsFilterSorting } from '../model/FundsFilterSorting';
@@ -240,7 +240,7 @@ export default class FundsApi {
         options: {
             dateFrom?: Date,
             dateTo?: Date,
-            eventsType?: FundHistoryEventType,
+            eventsType?: FundHistoryEventFilterType,
             skip?: number,
             take?: number
         } = {},
