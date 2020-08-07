@@ -21,6 +21,8 @@ export interface ProgramDetailsFull {
     availableInvestmentBase: number;
     availableInvestmentLimit: number;
     totalAvailableInvestment: number;
+    canShowPeriodHistory: boolean;
+    canShowFinancialStatistic: boolean;
     personalDetails: PersonalProgramDetails;
 }
 

@@ -114,6 +114,7 @@ export { FundCreateAssetPlatformInfo } from "./model/FundCreateAssetPlatformInfo
 export { FundDetailsFull } from "./model/FundDetailsFull";
 export { FundDetailsListItem } from "./model/FundDetailsListItem";
 export { FundDetailsListItemItemsViewModel } from "./model/FundDetailsListItemItemsViewModel";
+export { FundHistoryEventFilterType } from "./model/FundHistoryEventFilterType";
 export { FundHistoryEventType } from "./model/FundHistoryEventType";
 export { FundHistoryEventViewModel } from "./model/FundHistoryEventViewModel";
 export { FundHistoryEventViewModelItemsViewModel } from "./model/FundHistoryEventViewModelItemsViewModel";

@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangePasswordViewModel } from '../model/ChangePasswordViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ForgotPasswordViewModel } from '../model/ForgotPasswordViewModel';
@@ -15,491 +15,279 @@ import { TwoFactorCodeWithPassword } from '../model/TwoFactorCodeWithPassword';
 import { TwoFactorStatus } from '../model/TwoFactorStatus';
 
 export default class AuthApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    authorize = (        options: {
-            body?: LoginViewModel
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signin", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  authorize = (
+    options: {
+      body?: LoginViewModel
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/signin",
+        body: JSON.stringify(options['body']),
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    changePassword = (        options: {
-            body?: ChangePasswordViewModel
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/change", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  changePassword = (
+    options: {
+      body?: ChangePasswordViewModel
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/password/change",
+        body: JSON.stringify(options['body']),
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    confirmEmail = (        options: {
-            userId?: string,
-            code?: string
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-        const {
-            userId,
-            code
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signup/confirm", {
-    })
-
-    const query = buildQueryString(path, {
-        userId: userId,
-        code: code
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  confirmEmail = (
+    options: {
+      userId?: string,
+      code?: string
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        queryParams: {  userId: options['userId'],   code: options['code']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/signup/confirm",
+        
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    confirmTwoStepAuth = (        options: {
-            body?: TwoFactorAuthenticatorConfirm
-        } = {},
-        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/confirm", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  confirmTwoStepAuth = (
+    options: {
+      body?: TwoFactorAuthenticatorConfirm
+      } = {},
+    init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
+    
+    return generateMethod<Promise<RecoveryCodesViewModel>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa/confirm",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    createTwoStepAuth = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createTwoStepAuth = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
+    
+    return generateMethod<Promise<TwoFactorAuthenticator>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa/create",
+        
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    createTwoStepAuthRecoveryCodes = (        options: {
-            body?: PasswordModel
-        } = {},
-        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes/new", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createTwoStepAuthRecoveryCodes = (
+    options: {
+      body?: PasswordModel
+      } = {},
+    init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
+    
+    return generateMethod<Promise<RecoveryCodesViewModel>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa/recoverycodes/new",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    disableTwoStepAuth = (        options: {
-            body?: TwoFactorCodeWithPassword
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/disable", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  disableTwoStepAuth = (
+    options: {
+      body?: TwoFactorCodeWithPassword
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa/disable",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    forgotPassword = (        options: {
-            body?: ForgotPasswordViewModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/forgot", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  forgotPassword = (
+    options: {
+      body?: ForgotPasswordViewModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/password/forgot",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    getTwoStepAuthRecoveryCodes = (        options: {
-            body?: PasswordModel
-        } = {},
-        init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa/recoverycodes", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getTwoStepAuthRecoveryCodes = (
+    options: {
+      body?: PasswordModel
+      } = {},
+    init: RequestInit = {}): Promise<RecoveryCodesViewModel> => {
+    
+    return generateMethod<Promise<RecoveryCodesViewModel>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa/recoverycodes",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<RecoveryCodesViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getTwoStepAuthStatus = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<TwoFactorStatus> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/2fa", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getTwoStepAuthStatus = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<TwoFactorStatus> => {
+    
+    return generateMethod<Promise<TwoFactorStatus>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/2fa",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TwoFactorStatus>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    logoutFromAnotherDevices = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/devices/logout", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  logoutFromAnotherDevices = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/token/devices/logout",
+        
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    register = (        options: {
-            body?: RegisterViewModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/signup", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  register = (
+    options: {
+      body?: RegisterViewModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/signup",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    requestPhoneNumberVerificationCode = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<number> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/phone/code", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  requestPhoneNumberVerificationCode = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<number> => {
+    
+    return generateMethod<Promise<number>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/phone/code",
+        
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<number>((response: Response) => {
-        return response.text() as unknown as number;
     })
-    }
+  };
 
-    resendConfirmationLink = (        options: {
-            body?: ResendConfirmationViewModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/resendconfirmationlink", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  resendConfirmationLink = (
+    options: {
+      body?: ResendConfirmationViewModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/resendconfirmationlink",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    resetPassword = (        options: {
-            body?: ResetPasswordViewModel
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/password/reset", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  resetPassword = (
+    options: {
+      body?: ResetPasswordViewModel
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/password/reset",
+        body: JSON.stringify(options['body']),
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    updateAuthToken = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/token/update", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateAuthToken = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/token/update",
+        
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    validatePhoneNumber = (        options: {
-            code?: string
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-        const {
-            code
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/auth/phone/verify", {
-    })
-
-    const query = buildQueryString(path, {
-        code: code
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  validatePhoneNumber = (
+    options: {
+      code?: string
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        queryParams: {  code: options['code']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/phone/verify",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 }

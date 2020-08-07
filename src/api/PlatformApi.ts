@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { AssetInfo } from '../model/AssetInfo';
 import { CaptchaDetails } from '../model/CaptchaDetails';
 import { Currency } from '../model/Currency';
@@ -13,331 +13,177 @@ import { ProgramsLevelsInfo } from '../model/ProgramsLevelsInfo';
 import { SiteMapInfo } from '../model/SiteMapInfo';
 
 export default class PlatformApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    getAllPlatformTradingAssets = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<PlatformAssets> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/trading/assets", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getAllPlatformTradingAssets = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<PlatformAssets> => {
+    
+    return generateMethod<Promise<PlatformAssets>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/trading/assets",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<PlatformAssets>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPlatformAssetInfo = (
-        asset: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<AssetInfo> => {
-                if (asset === null || asset === undefined) {
-                throw new Error('Required parameter asset was null or undefined when calling getPlatformAssetInfo.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/asset/{asset}", {
-        asset
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPlatformAssetInfo = (
+    asset: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<AssetInfo> => {
+    
+    return generateMethod<Promise<AssetInfo>>({
+        init,
+        pathParams: {  asset  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/asset/{asset}",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<AssetInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPlatformDate = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<string> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/date", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPlatformDate = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/date",
+        
+        returnType: "primitive",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<string>((response: Response) => {
-        return response.text() as unknown as string;
     })
-    }
+  };
 
-    getPlatformEvents = (        options: {
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<PlatformEvents> => {
-        const {
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/events", {
-    })
-
-    const query = buildQueryString(path, {
-        take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPlatformEvents = (
+    options: {
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<PlatformEvents> => {
+    
+    return generateMethod<Promise<PlatformEvents>>({
+        init,
+        queryParams: {  take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/events",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<PlatformEvents>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPlatformInfo = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<PlatformInfo> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/info", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPlatformInfo = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<PlatformInfo> => {
+    
+    return generateMethod<Promise<PlatformInfo>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/info",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<PlatformInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPlatformLandingInfo = (        options: {
-            eventsTake?: number,
-            followTake?: number,
-            programsTake?: number,
-            fundsTake?: number,
-            newsTake?: number
-        } = {},
-        init: RequestInit = {}): Promise<LandingInfo> => {
-        const {
-            eventsTake,
-            followTake,
-            programsTake,
-            fundsTake,
-            newsTake
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/landing", {
-    })
-
-    const query = buildQueryString(path, {
-        eventsTake: eventsTake,
-        followTake: followTake,
-        programsTake: programsTake,
-        fundsTake: fundsTake,
-        newsTake: newsTake
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPlatformLandingInfo = (
+    options: {
+      eventsTake?: number,
+      followTake?: number,
+      programsTake?: number,
+      fundsTake?: number,
+      newsTake?: number
+      } = {},
+    init: RequestInit = {}): Promise<LandingInfo> => {
+    
+    return generateMethod<Promise<LandingInfo>>({
+        init,
+        queryParams: {  eventsTake: options['eventsTake'],   followTake: options['followTake'],   programsTake: options['programsTake'],   fundsTake: options['fundsTake'],   newsTake: options['newsTake']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/landing",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<LandingInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getProgramLevels = (        options: {
-            currency?: Currency
-        } = {},
-        init: RequestInit = {}): Promise<ProgramsLevelsInfo> => {
-        const {
-            currency
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/levels", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getProgramLevels = (
+    options: {
+      currency?: Currency
+      } = {},
+    init: RequestInit = {}): Promise<ProgramsLevelsInfo> => {
+    
+    return generateMethod<Promise<ProgramsLevelsInfo>>({
+        init,
+        queryParams: {  currency: options['currency']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/levels",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<ProgramsLevelsInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getProgramLevelsParams = (        options: {
-            currency?: Currency
-        } = {},
-        init: RequestInit = {}): Promise<LevelsParamsInfo> => {
-        const {
-            currency
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/levels/parameters", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getProgramLevelsParams = (
+    options: {
+      currency?: Currency
+      } = {},
+    init: RequestInit = {}): Promise<LevelsParamsInfo> => {
+    
+    return generateMethod<Promise<LevelsParamsInfo>>({
+        init,
+        queryParams: {  currency: options['currency']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/levels/parameters",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<LevelsParamsInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getRiskControlInfo = (
-        route: string,
-        options: {
-            client?: string,
-            version?: string
-        } = {},
-        init: RequestInit = {}): Promise<CaptchaDetails> => {
-                if (route === null || route === undefined) {
-                throw new Error('Required parameter route was null or undefined when calling getRiskControlInfo.');
-                }
-        const {
-            client,
-            version
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/riskcontrol", {
-    })
-
-    const query = buildQueryString(path, {
-        Route: route,
-        Client: client,
-        Version: version
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getRiskControlInfo = (
+    route: string,
+    options: {
+      client?: string,
+      version?: string
+      } = {},
+    init: RequestInit = {}): Promise<CaptchaDetails> => {
+    
+    return generateMethod<Promise<CaptchaDetails>>({
+        init,
+        queryParams: {  Route: route,   Client: options['client'],   Version: options['version']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/riskcontrol",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<CaptchaDetails>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getSitemapInfo = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<SiteMapInfo> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/platform/sitemap", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getSitemapInfo = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<SiteMapInfo> => {
+    
+    return generateMethod<Promise<SiteMapInfo>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/platform/sitemap",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<SiteMapInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 }

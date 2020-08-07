@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -22,903 +22,487 @@ import { TwoFactorAuthenticator } from '../model/TwoFactorAuthenticator';
 import { TwoFactorCodeModel } from '../model/TwoFactorCodeModel';
 
 export default class AssetsApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    addFavoriteSymbol = (
-        id: string,
-        symbol: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling addFavoriteSymbol.');
-                }
-                if (symbol === null || symbol === undefined) {
-                throw new Error('Required parameter symbol was null or undefined when calling addFavoriteSymbol.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add", {
-        id,
-        symbol
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  addFavoriteSymbol = (
+    id: string,
+    symbol: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id,   symbol  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    cancelChangeBroker = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling cancelChangeBroker.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change/cancel", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  cancelChangeBroker = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/broker/change/cancel",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    changeBroker = (
-        id: string,
-        options: {
-            body?: ChangeBrokerProgramRequest
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling changeBroker.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/broker/change", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  changeBroker = (
+    id: string,
+    options: {
+      body?: ChangeBrokerProgramRequest
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/broker/change",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    changeTradingAccountPassword = (
-        id: string,
-        options: {
-            body?: TradingAccountPwdUpdate
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling changeTradingAccountPassword.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/password/change", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  changeTradingAccountPassword = (
+    id: string,
+    options: {
+      body?: TradingAccountPwdUpdate
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/password/change",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    closeCurrentPeriod = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeCurrentPeriod.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/period/close", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  closeCurrentPeriod = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/period/close",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    closeFund = (
-        id: string,
-        options: {
-            body?: TwoFactorCodeModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeFund.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/close", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  closeFund = (
+    id: string,
+    options: {
+      body?: TwoFactorCodeModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/{id}/close",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    closeInvestmentProgram = (
-        id: string,
-        options: {
-            body?: TwoFactorCodeModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeInvestmentProgram.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/close", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  closeInvestmentProgram = (
+    id: string,
+    options: {
+      body?: TwoFactorCodeModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/close",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    closeTradingAccount = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling closeTradingAccount.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/close", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  closeTradingAccount = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/close",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    confirmProgram2FA = (
-        id: string,
-        options: {
-            body?: TwoFactorCodeModel
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling confirmProgram2FA.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/confirm", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  confirmProgram2FA = (
+    id: string,
+    options: {
+      body?: TwoFactorCodeModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/2fa/confirm",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    createExchangeAccount = (        options: {
-            body?: NewExchangeAccountRequest
-        } = {},
-        init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/exchange/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createExchangeAccount = (
+    options: {
+      body?: NewExchangeAccountRequest
+      } = {},
+    init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
+    
+    return generateMethod<Promise<TradingAccountCreateResult>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/exchange/create",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    createExternalTradingAccount = (        options: {
-            body?: NewExternalTradingAccountRequest
-        } = {},
-        init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createExternalTradingAccount = (
+    options: {
+      body?: NewExternalTradingAccountRequest
+      } = {},
+    init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
+    
+    return generateMethod<Promise<TradingAccountCreateResult>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/external/create",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    createFund = (        options: {
-            body?: NewFundRequest
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createFund = (
+    options: {
+      body?: NewFundRequest
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    createTradingAccount = (        options: {
-            body?: NewTradingAccountRequest
-        } = {},
-        init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  createTradingAccount = (
+    options: {
+      body?: NewTradingAccountRequest
+      } = {},
+    init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
+    
+    return generateMethod<Promise<TradingAccountCreateResult>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/create",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TradingAccountCreateResult>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getFavoriteSymbols = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<StringItemsViewModel> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getFavoriteSymbols.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getFavoriteSymbols = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<StringItemsViewModel> => {
+    
+    return generateMethod<Promise<StringItemsViewModel>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<StringItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getLevelsCalculator = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<ProgramLevelInfo> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getLevelsCalculator.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/levels/info", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getLevelsCalculator = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<ProgramLevelInfo> => {
+    
+    return generateMethod<Promise<ProgramLevelInfo>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/levels/info",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<ProgramLevelInfo>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getProgram2FA = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling getProgram2FA.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/2fa/get", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getProgram2FA = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<TwoFactorAuthenticator> => {
+    
+    return generateMethod<Promise<TwoFactorAuthenticator>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/2fa/get",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<TwoFactorAuthenticator>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    makeAccountProgram = (        options: {
-            body?: MakeTradingAccountProgram
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeAccountProgram = (
+    options: {
+      body?: MakeTradingAccountProgram
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/fromaccount/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    makeAccountSignalProvider = (        options: {
-            body?: MakeTradingAccountSignalProvider
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeAccountSignalProvider = (
+    options: {
+      body?: MakeTradingAccountSignalProvider
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/signal/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    makeDemoTradingAccountDeposit = (
-        id: string,
-        options: {
-            body?: TradingAccountDemoDeposit
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling makeDemoTradingAccountDeposit.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/demo/deposit", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeDemoTradingAccountDeposit = (
+    id: string,
+    options: {
+      body?: TradingAccountDemoDeposit
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/demo/deposit",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    makeExchangeAccountProgram = (        options: {
-            body?: MakeExchangeAccountProgram
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromexchangeaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeExchangeAccountProgram = (
+    options: {
+      body?: MakeExchangeAccountProgram
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/fromexchangeaccount/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    makeExternalAccountSignalProvider = (        options: {
-            body?: MakeTradingAccountSignalProvider
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/external/fromaccount/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeExternalAccountSignalProvider = (
+    options: {
+      body?: MakeTradingAccountSignalProvider
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/external/fromaccount/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    makeSignalProviderProgram = (        options: {
-            body?: MakeSignalProviderProgram
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/fromsignalprovider/create", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  makeSignalProviderProgram = (
+    options: {
+      body?: MakeSignalProviderProgram
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/fromsignalprovider/create",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    removeFavoriteSymbol = (
-        id: string,
-        symbol: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling removeFavoriteSymbol.');
-                }
-                if (symbol === null || symbol === undefined) {
-                throw new Error('Required parameter symbol was null or undefined when calling removeFavoriteSymbol.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove", {
-        id,
-        symbol
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  removeFavoriteSymbol = (
+    id: string,
+    symbol: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id,   symbol  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    updateAsset = (
-        id: string,
-        options: {
-            body?: ProgramUpdate
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/follow/{id}/update", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateAsset = (
+    id: string,
+    options: {
+      body?: ProgramUpdate
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/follow/{id}/update",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    updateAsset_0 = (
-        id: string,
-        options: {
-            body?: ProgramUpdate
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset_1.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/update", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateAsset_0 = (
+    id: string,
+    options: {
+      body?: ProgramUpdate
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/{id}/update",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    updateAsset_1 = (
-        id: string,
-        options: {
-            body?: ProgramUpdate
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateAsset_2.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/programs/{id}/update", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateAsset_1 = (
+    id: string,
+    options: {
+      body?: ProgramUpdate
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/{id}/update",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    updateFundAssets = (
-        id: string,
-        options: {
-            body?: Array<FundAssetPart>
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-                if (id === null || id === undefined) {
-                throw new Error('Required parameter id was null or undefined when calling updateFundAssets.');
-                }
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/funds/{id}/assets/update", {
-        id
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateFundAssets = (
+    id: string,
+    options: {
+      body?: Array<FundAssetPart>
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/{id}/assets/update",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    updateSignalProviderSettings = (        options: {
-            body?: CreateSignalProvider
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/assets/signal/edit", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = JSON.stringify(options['body']);
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  updateSignalProviderSettings = (
+    options: {
+      body?: CreateSignalProvider
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/signal/edit",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 }

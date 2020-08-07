@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { CommonPublicAssetsViewModel } from '../model/CommonPublicAssetsViewModel';
 import { Currency } from '../model/Currency';
 import { DashboardAssetStatus } from '../model/DashboardAssetStatus';
@@ -19,603 +19,295 @@ import { ProgramInvestingDetailsListItemsViewModel } from '../model/ProgramInves
 import { ProgramsFilterSorting } from '../model/ProgramsFilterSorting';
 
 export default class DashboardApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    getChart = (        options: {
-            assets?: Array<string>,
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            showIn?: Currency,
-            skipStatistic?: boolean
-        } = {},
-        init: RequestInit = {}): Promise<DashboardChart> => {
-        const {
-            assets,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            skipStatistic
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart", {
-    })
-
-    const query = buildQueryString(path, {
-        Assets: assets,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        SkipStatistic: skipStatistic
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getChart = (
+    options: {
+      assets?: Array<string>,
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      showIn?: Currency,
+      skipStatistic?: boolean
+      } = {},
+    init: RequestInit = {}): Promise<DashboardChart> => {
+    
+    return generateMethod<Promise<DashboardChart>>({
+        init,
+        queryParams: {  Assets: options['assets'],   DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   ShowIn: options['showIn'],   SkipStatistic: options['skipStatistic']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/chart",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardChart>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getChartAssets = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<DashboardChartAssets> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/chart/assets", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getChartAssets = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<DashboardChartAssets> => {
+    
+    return generateMethod<Promise<DashboardChartAssets>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/chart/assets",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardChartAssets>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getDashboardSummary = (        options: {
-            currency?: Currency
-        } = {},
-        init: RequestInit = {}): Promise<DashboardSummary> => {
-        const {
-            currency
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/summary", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getDashboardSummary = (
+    options: {
+      currency?: Currency
+      } = {},
+    init: RequestInit = {}): Promise<DashboardSummary> => {
+    
+    return generateMethod<Promise<DashboardSummary>>({
+        init,
+        queryParams: {  currency: options['currency']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/summary",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardSummary>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getExchangeAccountCredentials = (        options: {
-            exchangeAccountId?: string,
-            brokerId?: string
-        } = {},
-        init: RequestInit = {}): Promise<DashboardExchangeTradingAsset> => {
-        const {
-            exchangeAccountId,
-            brokerId
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/exchange/credentials", {
-    })
-
-    const query = buildQueryString(path, {
-        exchangeAccountId: exchangeAccountId,
-        brokerId: brokerId
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getExchangeAccountCredentials = (
+    options: {
+      exchangeAccountId?: string,
+      brokerId?: string
+      } = {},
+    init: RequestInit = {}): Promise<DashboardExchangeTradingAsset> => {
+    
+    return generateMethod<Promise<DashboardExchangeTradingAsset>>({
+        init,
+        queryParams: {  exchangeAccountId: options['exchangeAccountId'],   brokerId: options['brokerId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading/exchange/credentials",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardExchangeTradingAsset>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getHoldings = (        options: {
-            topAssetsCount?: number
-        } = {},
-        init: RequestInit = {}): Promise<DashboardAssets> => {
-        const {
-            topAssetsCount
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/holdings", {
-    })
-
-    const query = buildQueryString(path, {
-        topAssetsCount: topAssetsCount
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getHoldings = (
+    options: {
+      topAssetsCount?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardAssets> => {
+    
+    return generateMethod<Promise<DashboardAssets>>({
+        init,
+        queryParams: {  topAssetsCount: options['topAssetsCount']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/holdings",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardAssets>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getInvestingDetails = (        options: {
-            currency?: Currency,
-            eventsTake?: number
-        } = {},
-        init: RequestInit = {}): Promise<DashboardInvestingDetails> => {
-        const {
-            currency,
-            eventsTake
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        eventsTake: eventsTake
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getInvestingDetails = (
+    options: {
+      currency?: Currency,
+      eventsTake?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardInvestingDetails> => {
+    
+    return generateMethod<Promise<DashboardInvestingDetails>>({
+        init,
+        queryParams: {  currency: options['currency'],   eventsTake: options['eventsTake']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/investing",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardInvestingDetails>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getInvestingFunds = (        options: {
-            sorting?: FundsFilterSorting,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            facetId?: string,
-            mask?: string,
-            ownerId?: string,
-            showFavorites?: boolean,
-            skipStatistic?: boolean,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<FundInvestingDetailsListItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            status,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing/funds", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Status: status,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getInvestingFunds = (
+    options: {
+      sorting?: FundsFilterSorting,
+      showIn?: Currency,
+      status?: DashboardAssetStatus,
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      facetId?: string,
+      mask?: string,
+      ownerId?: string,
+      showFavorites?: boolean,
+      skipStatistic?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<FundInvestingDetailsListItemsViewModel> => {
+    
+    return generateMethod<Promise<FundInvestingDetailsListItemsViewModel>>({
+        init,
+        queryParams: {  Sorting: options['sorting'],   ShowIn: options['showIn'],   Status: options['status'],   DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   FacetId: options['facetId'],   Mask: options['mask'],   OwnerId: options['ownerId'],   ShowFavorites: options['showFavorites'],   SkipStatistic: options['skipStatistic'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/investing/funds",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<FundInvestingDetailsListItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getInvestingPrograms = (        options: {
-            sorting?: ProgramsFilterSorting,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            facetId?: string,
-            mask?: string,
-            ownerId?: string,
-            showFavorites?: boolean,
-            skipStatistic?: boolean,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<ProgramInvestingDetailsListItemsViewModel> => {
-        const {
-            sorting,
-            showIn,
-            status,
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            facetId,
-            mask,
-            ownerId,
-            showFavorites,
-            skipStatistic,
-            skip,
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/investing/programs", {
-    })
-
-    const query = buildQueryString(path, {
-        Sorting: sorting,
-        ShowIn: showIn,
-        Status: status,
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        FacetId: facetId,
-        Mask: mask,
-        OwnerId: ownerId,
-        ShowFavorites: showFavorites,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getInvestingPrograms = (
+    options: {
+      sorting?: ProgramsFilterSorting,
+      showIn?: Currency,
+      status?: DashboardAssetStatus,
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      facetId?: string,
+      mask?: string,
+      ownerId?: string,
+      showFavorites?: boolean,
+      skipStatistic?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<ProgramInvestingDetailsListItemsViewModel> => {
+    
+    return generateMethod<Promise<ProgramInvestingDetailsListItemsViewModel>>({
+        init,
+        queryParams: {  Sorting: options['sorting'],   ShowIn: options['showIn'],   Status: options['status'],   DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   FacetId: options['facetId'],   Mask: options['mask'],   OwnerId: options['ownerId'],   ShowFavorites: options['showFavorites'],   SkipStatistic: options['skipStatistic'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/investing/programs",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<ProgramInvestingDetailsListItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getMostProfitableAssets = (        options: {
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            showIn?: Currency,
-            skipStatistic?: boolean
-        } = {},
-        init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            skipStatistic
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/mostprofitable", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        SkipStatistic: skipStatistic
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getMostProfitableAssets = (
+    options: {
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      showIn?: Currency,
+      skipStatistic?: boolean
+      } = {},
+    init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<DashboardTradingAssetItemsViewModel>>({
+        init,
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   ShowIn: options['showIn'],   SkipStatistic: options['skipStatistic']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading/mostprofitable",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPortfolio = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<DashboardPortfolio> => {
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/portfolio", {
-    })
-
-    const query = buildQueryString(path, {
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPortfolio = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<DashboardPortfolio> => {
+    
+    return generateMethod<Promise<DashboardPortfolio>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/portfolio",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardPortfolio>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPrivateTradingAssets = (        options: {
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
-            skipStatistic?: boolean,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            status,
-            skipStatistic,
-            skip,
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/private", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        Status: status,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPrivateTradingAssets = (
+    options: {
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      showIn?: Currency,
+      status?: DashboardAssetStatus,
+      skipStatistic?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<DashboardTradingAssetItemsViewModel>>({
+        init,
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   ShowIn: options['showIn'],   Status: options['status'],   SkipStatistic: options['skipStatistic'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading/private",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPublicTradingAssets = (        options: {
-            dateFrom?: Date,
-            dateTo?: Date,
-            chartPointsCount?: number,
-            showIn?: Currency,
-            status?: DashboardAssetStatus,
-            skipStatistic?: boolean,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
-        const {
-            dateFrom,
-            dateTo,
-            chartPointsCount,
-            showIn,
-            status,
-            skipStatistic,
-            skip,
-            take
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading/public", {
-    })
-
-    const query = buildQueryString(path, {
-        DateFrom: dateFrom,
-        DateTo: dateTo,
-        ChartPointsCount: chartPointsCount,
-        ShowIn: showIn,
-        Status: status,
-        SkipStatistic: skipStatistic,
-        Skip: skip,
-        Take: take
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPublicTradingAssets = (
+    options: {
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      showIn?: Currency,
+      status?: DashboardAssetStatus,
+      skipStatistic?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<DashboardTradingAssetItemsViewModel>>({
+        init,
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   ShowIn: options['showIn'],   Status: options['status'],   SkipStatistic: options['skipStatistic'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading/public",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardTradingAssetItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getRecommendations = (        options: {
-            currency?: Currency,
-            take?: number,
-            onlyFollows?: boolean
-        } = {},
-        init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
-        const {
-            currency,
-            take,
-            onlyFollows
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/recommendations", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        take: take,
-        onlyFollows: onlyFollows
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getRecommendations = (
+    options: {
+      currency?: Currency,
+      take?: number,
+      onlyFollows?: boolean
+      } = {},
+    init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
+    
+    return generateMethod<Promise<CommonPublicAssetsViewModel>>({
+        init,
+        queryParams: {  currency: options['currency'],   take: options['take'],   onlyFollows: options['onlyFollows']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/recommendations",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getTradingDetails = (        options: {
-            currency?: Currency,
-            eventsTake?: number
-        } = {},
-        init: RequestInit = {}): Promise<DashboardTradingDetails> => {
-        const {
-            currency,
-            eventsTake
-        } = options;
-
-    const path = this.apiClient.apiUrl + buildPathString("/v2.0/dashboard/trading", {
-    })
-
-    const query = buildQueryString(path, {
-        currency: currency,
-        eventsTake: eventsTake
-    })
-
-    let body = null;
-
-    let contentType = "application/json";
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getTradingDetails = (
+    options: {
+      currency?: Currency,
+      eventsTake?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardTradingDetails> => {
+    
+    return generateMethod<Promise<DashboardTradingDetails>>({
+        init,
+        queryParams: {  currency: options['currency'],   eventsTake: options['eventsTake']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": contentType,
-        }
-    }).then(handleErrors).then<DashboardTradingDetails>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 }

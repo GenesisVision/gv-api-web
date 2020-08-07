@@ -8,6 +8,7 @@ export interface DashboardTradingAssetActions {
     canClose: boolean;
     hasTerminal: boolean;
     canMakeProgramFromPrivateTradingAccount: boolean;
+    canMakeExchangeProgramFromPrivateTradingAccount: boolean;
     canMakeSignalProviderFromPrivateTradingAccount: boolean;
     canMakeSignalProviderFromPrivateExternalTradingAccount: boolean;
     canMakeProgramFromSignalProvider: boolean;
