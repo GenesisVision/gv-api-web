@@ -1,5 +1,5 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { EditPost } from '../model/EditPost';
 import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -14,516 +14,343 @@ import { SocialSummary } from '../model/SocialSummary';
 import { UserFeedMode } from '../model/UserFeedMode';
 
 export default class SocialApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    addPost = (        options: {
-            body?: NewPost
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/add", {
-    },  {
-    });
-    let body = JSON.stringify(options['body']);
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  addPost = (
+    options: {
+      body?: NewPost
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/add",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    deletePost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "deletePost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/delete", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  deletePost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/delete",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    editPost = (        options: {
-            body?: EditPost
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/edit", {
-    },  {
-    });
-    let body = JSON.stringify(options['body']);
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  editPost = (
+    options: {
+      body?: EditPost
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/edit",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    followUser = (
-        userId: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(userId, "userId", "followUser");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/user/{userId}/follow", {
-        userId
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  followUser = (
+    userId: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  userId  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/user/{userId}/follow",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    getFeed = (        options: {
-            userId?: string,
-            tagContentId?: string,
-            tagContentIds?: Array<string>,
-            userMode?: UserFeedMode,
-            hashTags?: Array<string>,
-            mask?: string,
-            showTop?: boolean,
-            showLiked?: boolean,
-            showOnlyUserPosts?: boolean,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<PostItemsViewModel> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed", {
-    },  {
-        UserId: options['userId'],
-        TagContentId: options['tagContentId'],
-        TagContentIds: options['tagContentIds'],
-        UserMode: options['userMode'],
-        HashTags: options['hashTags'],
-        Mask: options['mask'],
-        ShowTop: options['showTop'],
-        ShowLiked: options['showLiked'],
-        ShowOnlyUserPosts: options['showOnlyUserPosts'],
-        Skip: options['skip'],
-        Take: options['take']
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getFeed = (
+    options: {
+      userId?: string,
+      tagContentId?: string,
+      tagContentIds?: Array<string>,
+      userMode?: UserFeedMode,
+      hashTags?: Array<string>,
+      mask?: string,
+      showTop?: boolean,
+      showLiked?: boolean,
+      showOnlyUserPosts?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<PostItemsViewModel> => {
+    
+    return generateMethod<Promise<PostItemsViewModel>>({
+        init,
+        queryParams: {  UserId: options['userId'],   TagContentId: options['tagContentId'],   TagContentIds: options['tagContentIds'],   UserMode: options['userMode'],   HashTags: options['hashTags'],   Mask: options['mask'],   ShowTop: options['showTop'],   ShowLiked: options['showLiked'],   ShowOnlyUserPosts: options['showOnlyUserPosts'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<PostItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getOriginalPost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<EditablePost> => {
-            checkRequiredParameter(id, "id", "getOriginalPost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/original", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getOriginalPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<EditablePost> => {
+    
+    return generateMethod<Promise<EditablePost>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/original",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<EditablePost>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Post> => {
-            checkRequiredParameter(id, "id", "getPost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Post> => {
+    
+    return generateMethod<Promise<Post>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<Post>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPostLikesUsers = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
-            checkRequiredParameter(id, "id", "getPostLikesUsers");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/users/likes", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPostLikesUsers = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
+    
+    return generateMethod<Promise<ProfilePublicShortItemsViewModel>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/users/likes",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getPostRepostsUsers = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
-            checkRequiredParameter(id, "id", "getPostRepostsUsers");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/users/reposts", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getPostRepostsUsers = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<ProfilePublicShortItemsViewModel> => {
+    
+    return generateMethod<Promise<ProfilePublicShortItemsViewModel>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/users/reposts",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<ProfilePublicShortItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getSocialMedia = (        options: {
-            mask?: string,
-            type?: SocialLinkType,
-            skip?: number,
-            take?: number
-        } = {},
-        init: RequestInit = {}): Promise<MediaPostItemsViewModel> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/media", {
-    },  {
-        Mask: options['mask'],
-        Type: options['type'],
-        Skip: options['skip'],
-        Take: options['take']
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getSocialMedia = (
+    options: {
+      mask?: string,
+      type?: SocialLinkType,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<MediaPostItemsViewModel> => {
+    
+    return generateMethod<Promise<MediaPostItemsViewModel>>({
+        init,
+        queryParams: {  Mask: options['mask'],   Type: options['type'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/media",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<MediaPostItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    getSocialSummary = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<SocialSummary> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/summary", {
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getSocialSummary = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<SocialSummary> => {
+    
+    return generateMethod<Promise<SocialSummary>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/summary",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<SocialSummary>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    likePost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "likePost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/like", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  likePost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/like",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    pinPost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "pinPost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/pin", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  pinPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/pin",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    rePost = (        options: {
-            body?: RePost
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/repost", {
-    },  {
-    });
-    let body = JSON.stringify(options['body']);
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  rePost = (
+    options: {
+      body?: RePost
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/repost",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    revertDeletingPost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "revertDeletingPost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/delete/revert", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  revertDeletingPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/delete/revert",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    spamReport = (
-        id: string,
-        options: {
-            reason?: string,
-            text?: string
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "spamReport");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/report", {
-        id
-    },  {
-        reason: options['reason'],
-        text: options['text']
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  spamReport = (
+    id: string,
+    options: {
+      reason?: string,
+      text?: string
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        queryParams: {  reason: options['reason'],   text: options['text']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/report",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    unfollowUser = (
-        userId: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(userId, "userId", "unfollowUser");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/user/{userId}/unfollow", {
-        userId
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  unfollowUser = (
+    userId: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  userId  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/user/{userId}/unfollow",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    unlikePost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "unlikePost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/unlike", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  unlikePost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/unlike",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 
-    unpinPost = (
-        id: string,
-        options: {
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-            checkRequiredParameter(id, "id", "unpinPost");
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/social/feed/{id}/unpin", {
-        id
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  unpinPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/{id}/unpin",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 }

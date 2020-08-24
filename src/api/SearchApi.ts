@@ -1,40 +1,31 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { CommonPublicAssetsViewModel } from '../model/CommonPublicAssetsViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 
 export default class SearchApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    search = (        options: {
-            mask?: string,
-            take?: number,
-            skipStatistic?: boolean
-        } = {},
-        init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/search", {
-    },  {
-        mask: options['mask'],
-        take: options['take'],
-        skipStatistic: options['skipStatistic']
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  search = (
+    options: {
+      mask?: string,
+      take?: number,
+      skipStatistic?: boolean
+      } = {},
+    init: RequestInit = {}): Promise<CommonPublicAssetsViewModel> => {
+    
+    return generateMethod<Promise<CommonPublicAssetsViewModel>>({
+        init,
+        queryParams: {  mask: options['mask'],   take: options['take'],   skipStatistic: options['skipStatistic']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/search",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<CommonPublicAssetsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 }

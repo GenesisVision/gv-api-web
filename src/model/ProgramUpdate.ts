@@ -10,6 +10,8 @@ export interface ProgramUpdate {
     stopOutLevel: number;
     investmentLimit: number;
     tradesDelay: TradesDelay;
+    hourProcessing: number;
+    isProcessingRealTime: boolean;
     id: string;
 }
 

@@ -1,7 +1,10 @@
 import { PersonalProgramDetails } from './PersonalProgramDetails';
+import { ProgramDailyPeriodDetails } from './ProgramDailyPeriodDetails';
+import { ProgramType } from './ProgramType';
 import { TradesDelay } from './TradesDelay';
 
 export interface ProgramDetailsFull {
+    type: ProgramType;
     level: number;
     levelProgress: number;
     periodDuration: number;
@@ -23,6 +26,7 @@ export interface ProgramDetailsFull {
     totalAvailableInvestment: number;
     canShowPeriodHistory: boolean;
     canShowFinancialStatistic: boolean;
+    dailyPeriodDetails: ProgramDailyPeriodDetails;
     personalDetails: PersonalProgramDetails;
 }
 

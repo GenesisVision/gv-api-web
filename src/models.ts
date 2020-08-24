@@ -230,6 +230,7 @@ export { ProgramAssetPlatformInfo } from "./model/ProgramAssetPlatformInfo";
 export { ProgramBalanceChart } from "./model/ProgramBalanceChart";
 export { ProgramChartStatistic } from "./model/ProgramChartStatistic";
 export { ProgramCreateAssetPlatformInfo } from "./model/ProgramCreateAssetPlatformInfo";
+export { ProgramDailyPeriodDetails } from "./model/ProgramDailyPeriodDetails";
 export { ProgramDetailsFull } from "./model/ProgramDetailsFull";
 export { ProgramDetailsListItem } from "./model/ProgramDetailsListItem";
 export { ProgramDetailsListItemItemsViewModel } from "./model/ProgramDetailsListItemItemsViewModel";
@@ -244,6 +245,7 @@ export { ProgramNotificationSettingList } from "./model/ProgramNotificationSetti
 export { ProgramPeriodViewModel } from "./model/ProgramPeriodViewModel";
 export { ProgramPeriodsViewModel } from "./model/ProgramPeriodsViewModel";
 export { ProgramProfitPercentCharts } from "./model/ProgramProfitPercentCharts";
+export { ProgramType } from "./model/ProgramType";
 export { ProgramUpdate } from "./model/ProgramUpdate";
 export { ProgramWithdrawInfo } from "./model/ProgramWithdrawInfo";
 export { ProgramsFilterSorting } from "./model/ProgramsFilterSorting";

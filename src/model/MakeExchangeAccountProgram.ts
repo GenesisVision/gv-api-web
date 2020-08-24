@@ -5,7 +5,7 @@ export interface MakeExchangeAccountProgram {
     id: string;
     currency: Currency;
     hourProcessing: number;
-    stopOutLevel: number;
+    isProcessingRealTime: boolean;
     tradesDelay: TradesDelay;
     managementFee: number;
     successFee: number;

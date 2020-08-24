@@ -3,10 +3,12 @@ import { Currency } from './Currency';
 import { PersonalProgramDetailsList } from './PersonalProgramDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
 import { ProfitChart } from './ProfitChart';
+import { ProgramType } from './ProgramType';
 import { Tag } from './Tag';
 
 export interface ProgramDetailsListItem {
     id: string;
+    type: ProgramType;
     logoUrl: string;
     url: string;
     description: string;

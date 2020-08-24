@@ -1,58 +1,44 @@
 import ApiClient from "../ApiClient";
-import { buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { GuidesCategoryItemsViewModel } from '../model/GuidesCategoryItemsViewModel';
 
 export default class GuidesApi {
-    private apiClient: ApiClient;
+  private apiClient: ApiClient;
 
-    constructor(apiClient: ApiClient) {
-        this.apiClient = apiClient;
-    }
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
 
-    getGuides = (        options: {
-        } = {},
-        init: RequestInit = {}): Promise<GuidesCategoryItemsViewModel> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/guides", {
-    },  {
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  getGuides = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<GuidesCategoryItemsViewModel> => {
+    
+    return generateMethod<Promise<GuidesCategoryItemsViewModel>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/guides",
+        
+        returnType: "structure",
         method: "GET",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then<GuidesCategoryItemsViewModel>((response: Response) => {
-        return response.json();
     })
-    }
+  };
 
-    passGuide = (        options: {
-            id?: string
-        } = {},
-        init: RequestInit = {}): Promise<Response> => {
-
-    const query = buildPathAndQuery(this.apiClient.apiUrl, "/v2.0/guides/pass", {
-    },  {
-        id: options['id']
-    });
-    let body = null;
-
-    return this.apiClient.fetch(query, {
-        ...init,
+  passGuide = (
+    options: {
+      id?: string
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        queryParams: {  id: options['id']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/guides/pass",
+        
+        
         method: "POST",
-        body,
-        headers: {
-            ...init.headers,
-            "Content-Type": "application/json",
-        }
-    }).then(handleErrors).then< Response >((response: Response) => {
-        return response;
     })
-    }
+  };
 }
