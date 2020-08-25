@@ -13,6 +13,8 @@ export interface PersonalInvestingProgramDetailsList {
     profit: number;
     profitPercent: number;
     invested: number;
+    successFeePersonal: number;
+    managementFeePersonal: number;
     status: AssetInvestmentStatus;
 }
 

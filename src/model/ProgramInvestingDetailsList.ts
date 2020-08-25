@@ -23,6 +23,10 @@ export interface ProgramInvestingDetailsList {
     investorsCount: number;
     periodStarts: Date;
     periodEnds: Date;
+    managementFeeSelected: number;
+    managementFeeCurrent: number;
+    successFeeSelected: number;
+    successFeeCurrent: number;
     owner: ProfilePublicShort;
     brokerDetails: BrokerDetails;
     personalDetails: PersonalInvestingProgramDetailsList;

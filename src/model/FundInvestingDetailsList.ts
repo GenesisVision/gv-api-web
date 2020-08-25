@@ -14,6 +14,10 @@ export interface FundInvestingDetailsList {
     description: string;
     creationDate: Date;
     investorsCount: number;
+    entryFeeCurrent: number;
+    entryFeeSelected: number;
+    exitFeeCurrent: number;
+    exitFeeSelected: number;
     totalAssetsCount: number;
     topFundAssets: Array<FundAssetPercent>;
     owner: ProfilePublicShort;

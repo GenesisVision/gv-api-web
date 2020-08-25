@@ -7,6 +7,7 @@ export interface PersonalInvestingFundDetailsList {
     canWithdraw: boolean;
     share: number;
     value: number;
+    exitFeePersonal: number;
     status: AssetInvestmentStatus;
 }
 
