@@ -60,6 +60,7 @@ export { DashboardExchangeTradingAsset } from "./model/DashboardExchangeTradingA
 export { DashboardInvestingDetails } from "./model/DashboardInvestingDetails";
 export { DashboardPortfolio } from "./model/DashboardPortfolio";
 export { DashboardProfits } from "./model/DashboardProfits";
+export { DashboardProgramDetails } from "./model/DashboardProgramDetails";
 export { DashboardSummary } from "./model/DashboardSummary";
 export { DashboardTimeframeProfit } from "./model/DashboardTimeframeProfit";
 export { DashboardTradingAsset } from "./model/DashboardTradingAsset";
