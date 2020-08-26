@@ -1,7 +1,7 @@
 import { FundAssetPercent } from './FundAssetPercent';
 import { TradingScheduleInfo } from './TradingScheduleInfo';
 
-export interface FundAssetDetails {
+export interface DashboardFundDetails {
     topFundAssets: Array<FundAssetPercent>;
     totalAssetsCount: number;
     tradingSchedule: TradingScheduleInfo;

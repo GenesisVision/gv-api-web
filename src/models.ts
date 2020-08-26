@@ -57,6 +57,7 @@ export { DashboardChart } from "./model/DashboardChart";
 export { DashboardChartAsset } from "./model/DashboardChartAsset";
 export { DashboardChartAssets } from "./model/DashboardChartAssets";
 export { DashboardExchangeTradingAsset } from "./model/DashboardExchangeTradingAsset";
+export { DashboardFundDetails } from "./model/DashboardFundDetails";
 export { DashboardInvestingDetails } from "./model/DashboardInvestingDetails";
 export { DashboardPortfolio } from "./model/DashboardPortfolio";
 export { DashboardProfits } from "./model/DashboardProfits";
@@ -102,7 +103,6 @@ export { FollowDetailsListItemItemsViewModel } from "./model/FollowDetailsListIt
 export { FollowFilterSorting } from "./model/FollowFilterSorting";
 export { FollowNotificationSettingList } from "./model/FollowNotificationSettingList";
 export { ForgotPasswordViewModel } from "./model/ForgotPasswordViewModel";
-export { FundAssetDetails } from "./model/FundAssetDetails";
 export { FundAssetInfo } from "./model/FundAssetInfo";
 export { FundAssetPart } from "./model/FundAssetPart";
 export { FundAssetPartWithIcon } from "./model/FundAssetPartWithIcon";

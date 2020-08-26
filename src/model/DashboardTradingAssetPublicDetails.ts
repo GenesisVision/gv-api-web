@@ -1,5 +1,5 @@
+import { DashboardFundDetails } from './DashboardFundDetails';
 import { DashboardProgramDetails } from './DashboardProgramDetails';
-import { FundAssetDetails } from './FundAssetDetails';
 
 export interface DashboardTradingAssetPublicDetails {
     logoUrl: string;
@@ -7,6 +7,6 @@ export interface DashboardTradingAssetPublicDetails {
     title: string;
     url: string;
     programDetails: DashboardProgramDetails;
-    fundDetails: FundAssetDetails;
+    fundDetails: DashboardFundDetails;
 }
 
