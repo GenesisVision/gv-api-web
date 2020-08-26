@@ -5,6 +5,7 @@ import { CreateSignalProvider } from '../model/CreateSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FundAssetPart } from '../model/FundAssetPart';
 import { MakeExchangeAccountProgram } from '../model/MakeExchangeAccountProgram';
+import { MakeProgram } from '../model/MakeProgram';
 import { MakeSignalProviderProgram } from '../model/MakeSignalProviderProgram';
 import { MakeTradingAccountProgram } from '../model/MakeTradingAccountProgram';
 import { MakeTradingAccountSignalProvider } from '../model/MakeTradingAccountSignalProvider';
@@ -378,6 +379,22 @@ export default class AssetsApi {
         init,
         apiClient: this.apiClient,
         path: "/v2.0/assets/tradingaccounts/external/fromaccount/create",
+        body: JSON.stringify(options['body']),
+        
+        method: "POST",
+    })
+  };
+
+  makeProgram = (
+    options: {
+      body?: MakeProgram
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/programs/create",
         body: JSON.stringify(options['body']),
         
         method: "POST",

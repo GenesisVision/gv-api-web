@@ -151,6 +151,7 @@ export { LevelsParamsInfo } from "./model/LevelsParamsInfo";
 export { LimitWithoutKyc } from "./model/LimitWithoutKyc";
 export { LoginViewModel } from "./model/LoginViewModel";
 export { MakeExchangeAccountProgram } from "./model/MakeExchangeAccountProgram";
+export { MakeProgram } from "./model/MakeProgram";
 export { MakeSignalProviderProgram } from "./model/MakeSignalProviderProgram";
 export { MakeTradingAccountProgram } from "./model/MakeTradingAccountProgram";
 export { MakeTradingAccountSignalProvider } from "./model/MakeTradingAccountSignalProvider";
