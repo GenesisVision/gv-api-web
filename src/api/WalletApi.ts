@@ -71,23 +71,6 @@ export default class WalletApi {
     })
   };
 
-  getAccountsAvailable = (
-    currency: Currency,
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<WalletMultiAvailable> => {
-    
-    return generateMethod<Promise<WalletMultiAvailable>>({
-        init,
-        pathParams: {  currency  },
-        apiClient: this.apiClient,
-        path: "/v2.0/wallet/accounts/{currency}/available",
-        
-        returnType: "structure",
-        method: "GET",
-    })
-  };
-
   getGMCommissionData = (
     options: {
       } = {},
