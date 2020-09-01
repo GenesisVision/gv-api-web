@@ -117,6 +117,23 @@ export default class AssetsApi {
     })
   };
 
+  closeExchangeAccount = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/exchange/{id}/close",
+        
+        
+        method: "POST",
+    })
+  };
+
   closeFund = (
     id: string,
     options: {
