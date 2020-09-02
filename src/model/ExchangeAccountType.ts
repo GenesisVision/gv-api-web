@@ -5,6 +5,7 @@ export interface ExchangeAccountType {
     name: string;
     description: string;
     type: BrokerTradeServerType;
+    currencies: Array<string>;
     minimumDepositsAmount: { [key: string]: number; };
     isKycRequired: boolean;
     isCountryNotUSRequired: boolean;
