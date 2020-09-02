@@ -11,5 +11,6 @@ export interface AssetPublicDetails {
     status: string;
     isOwnAsset: boolean;
     typeExt: AssetTypeExt;
+    systemUrl: string;
 }
 
