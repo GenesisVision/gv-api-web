@@ -406,14 +406,14 @@ export default class AssetsApi {
     options: {
       body?: MakeProgram
       } = {},
-    init: RequestInit = {}): Promise<Response> => {
+    init: RequestInit = {}): Promise<TradingAccountCreateResult> => {
     
-    return generateMethod<Promise<Response>>({
+    return generateMethod<Promise<TradingAccountCreateResult>>({
         init,
         apiClient: this.apiClient,
         path: "/v2.0/assets/programs/create",
         body: JSON.stringify(options['body']),
-        
+        returnType: "structure",
         method: "POST",
     })
   };
