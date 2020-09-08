@@ -1,0 +1,2 @@
+
+export type BinanceOrderRejectReason = 'None' | 'UnknownInstrument' | 'MarketClosed' | 'PriceQuantityExceedsHardLimits' | 'UnknownOrder' | 'DuplicateOrder' | 'UnknownAccount' | 'InsufficientBalance' | 'AccountInactive' | 'AccountCannotSettle';
