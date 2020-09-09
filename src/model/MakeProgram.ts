@@ -9,8 +9,8 @@ export interface MakeProgram {
     stopOutLevel: number;
     investmentLimit: number;
     tradesDelay: TradesDelay;
-    entryFee: number;
     successFee: number;
+    managementFee: number;
     depositAmount: number;
     depositWalletId: string;
     currency: Currency;

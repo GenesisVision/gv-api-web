@@ -6,8 +6,8 @@ export interface MakeTradingAccountProgram {
     stopOutLevel: number;
     investmentLimit: number;
     tradesDelay: TradesDelay;
-    entryFee: number;
     successFee: number;
+    managementFee: number;
     title: string;
     description: string;
     logo: string;

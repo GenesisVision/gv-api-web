@@ -4,7 +4,7 @@ export interface MakeSignalProviderProgram {
     periodLength: number;
     stopOutLevel: number;
     investmentLimit: number;
-    entryFee: number;
     successFee: number;
+    managementFee: number;
 }
 
