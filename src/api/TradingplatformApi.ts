@@ -2,6 +2,7 @@ import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { StringItemsViewModel } from '../model/StringItemsViewModel';
 import { TradingPlatformBinanceOrdersMode } from '../model/TradingPlatformBinanceOrdersMode';
 
 export default class TradingplatformApi {
@@ -10,6 +11,24 @@ export default class TradingplatformApi {
   constructor(apiClient: ApiClient) {
     this.apiClient = apiClient;
   }
+
+  addTradingPlatformFavoriteSymbol = (
+    id: string,
+    symbol: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id,   symbol  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/accounts/{id}/symbols/favorite/{symbol}/add",
+        
+        
+        method: "POST",
+    })
+  };
 
   getTradingPlatformBinanceOrders = (
     options: {
@@ -28,6 +47,41 @@ export default class TradingplatformApi {
         
         returnType: "structure",
         method: "GET",
+    })
+  };
+
+  getTradingPlatformFavoriteSymbols = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<StringItemsViewModel> => {
+    
+    return generateMethod<Promise<StringItemsViewModel>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/accounts/{id}/symbols/favorite",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  removeTradingPlatformFavoriteSymbol = (
+    id: string,
+    symbol: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id,   symbol  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/accounts/{id}/symbols/favorite/{symbol}/remove",
+        
+        
+        method: "POST",
     })
   };
 }

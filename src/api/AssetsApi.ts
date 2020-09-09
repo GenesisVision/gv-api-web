@@ -15,7 +15,6 @@ import { NewFundRequest } from '../model/NewFundRequest';
 import { NewTradingAccountRequest } from '../model/NewTradingAccountRequest';
 import { ProgramLevelInfo } from '../model/ProgramLevelInfo';
 import { ProgramUpdate } from '../model/ProgramUpdate';
-import { StringItemsViewModel } from '../model/StringItemsViewModel';
 import { TradingAccountCreateResult } from '../model/TradingAccountCreateResult';
 import { TradingAccountDemoDeposit } from '../model/TradingAccountDemoDeposit';
 import { TradingAccountPwdUpdate } from '../model/TradingAccountPwdUpdate';
@@ -28,24 +27,6 @@ export default class AssetsApi {
   constructor(apiClient: ApiClient) {
     this.apiClient = apiClient;
   }
-
-  addFavoriteSymbol = (
-    id: string,
-    symbol: string,
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<Response> => {
-    
-    return generateMethod<Promise<Response>>({
-        init,
-        pathParams: {  id,   symbol  },
-        apiClient: this.apiClient,
-        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/add",
-        
-        
-        method: "POST",
-    })
-  };
 
   cancelChangeBroker = (
     id: string,
@@ -269,23 +250,6 @@ export default class AssetsApi {
     })
   };
 
-  getFavoriteSymbols = (
-    id: string,
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<StringItemsViewModel> => {
-    
-    return generateMethod<Promise<StringItemsViewModel>>({
-        init,
-        pathParams: {  id  },
-        apiClient: this.apiClient,
-        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite",
-        
-        returnType: "structure",
-        method: "GET",
-    })
-  };
-
   getLevelsCalculator = (
     id: string,
     options: {
@@ -429,24 +393,6 @@ export default class AssetsApi {
         apiClient: this.apiClient,
         path: "/v2.0/assets/programs/fromsignalprovider/create",
         body: JSON.stringify(options['body']),
-        
-        method: "POST",
-    })
-  };
-
-  removeFavoriteSymbol = (
-    id: string,
-    symbol: string,
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<Response> => {
-    
-    return generateMethod<Promise<Response>>({
-        init,
-        pathParams: {  id,   symbol  },
-        apiClient: this.apiClient,
-        path: "/v2.0/assets/tradingaccounts/{id}/symbol/favorite/{symbol}/remove",
-        
         
         method: "POST",
     })
