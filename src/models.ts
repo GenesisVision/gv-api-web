@@ -153,6 +153,7 @@ export { InvestmentEventViewModelItemsViewModel } from "./model/InvestmentEventV
 export { InvestmentEventViewModels } from "./model/InvestmentEventViewModels";
 export { InvestmentRequestStatus } from "./model/InvestmentRequestStatus";
 export { InvestmentRequestType } from "./model/InvestmentRequestType";
+export { InvestorFinancialStatistic } from "./model/InvestorFinancialStatistic";
 export { LandingInfo } from "./model/LandingInfo";
 export { LevelInfo } from "./model/LevelInfo";
 export { LevelsParamsInfo } from "./model/LevelsParamsInfo";

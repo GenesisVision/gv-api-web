@@ -70,6 +70,7 @@ export default class ProgramsApi {
       numberMax?: number,
       status?: PeriodStatus,
       timeframe?: Timeframe,
+      showInvestorReport?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -78,7 +79,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<string>>({
         init,
         pathParams: {  id  },
-        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}/periods/export/analytics",
         
@@ -96,6 +97,7 @@ export default class ProgramsApi {
       numberMax?: number,
       status?: PeriodStatus,
       timeframe?: Timeframe,
+      showInvestorReport?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -104,7 +106,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<string>>({
         init,
         pathParams: {  id  },
-        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}/periods/export/financialstatistic",
         
@@ -122,6 +124,7 @@ export default class ProgramsApi {
       numberMax?: number,
       status?: PeriodStatus,
       timeframe?: Timeframe,
+      showInvestorReport?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -130,7 +133,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<string>>({
         init,
         pathParams: {  id  },
-        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}/periods/export",
         
@@ -148,6 +151,7 @@ export default class ProgramsApi {
       numberMax?: number,
       status?: PeriodStatus,
       timeframe?: Timeframe,
+      showInvestorReport?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -156,7 +160,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<string>>({
         init,
         pathParams: {  id  },
-        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}/periods/export/statistic",
         
@@ -315,6 +319,7 @@ export default class ProgramsApi {
       numberMax?: number,
       status?: PeriodStatus,
       timeframe?: Timeframe,
+      showInvestorReport?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -323,7 +328,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<ProgramPeriodsViewModel>>({
         init,
         pathParams: {  id  },
-        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}/periods",
         

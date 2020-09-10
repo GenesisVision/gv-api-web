@@ -1,3 +1,4 @@
+import { InvestorFinancialStatistic } from './InvestorFinancialStatistic';
 import { ManagerFinancialStatistic } from './ManagerFinancialStatistic';
 import { PeriodStatus } from './PeriodStatus';
 
@@ -19,5 +20,6 @@ export interface ProgramPeriodViewModel {
     investorsProfitWithdraw: number;
     platformSuccessFee: number;
     managerStatistic: ManagerFinancialStatistic;
+    investorStatistic: InvestorFinancialStatistic;
 }
 
