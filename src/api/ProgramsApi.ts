@@ -115,6 +115,33 @@ export default class ProgramsApi {
     })
   };
 
+  exportDailyProgramInvestorReport = (
+    id: string,
+    options: {
+      dateFrom?: Date,
+      dateTo?: Date,
+      numberMin?: number,
+      numberMax?: number,
+      status?: PeriodStatus,
+      timeframe?: Timeframe,
+      showInvestorReport?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        pathParams: {  id  },
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   NumberMin: options['numberMin'],   NumberMax: options['numberMax'],   Status: options['status'],   Timeframe: options['timeframe'],   ShowInvestorReport: options['showInvestorReport'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/programs/{id}/periods/export/investorreport",
+        
+        returnType: "primitive",
+        method: "GET",
+    })
+  };
+
   exportProgramPeriods = (
     id: string,
     options: {
